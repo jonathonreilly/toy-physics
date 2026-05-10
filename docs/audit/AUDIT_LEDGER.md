@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1099 |
+| unaudited | 1098 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 242 |
+| ~~audited_conditional~~ | 243 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 242 |
+| `audited_conditional` | 243 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1197 |
+| `unaudited` | 1196 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 805 |
 | `decoration` | 13 |
 | `meta` | 106 |
-| `no_go` | 195 |
+| `no_go` | 196 |
 | `open_gate` | 101 |
-| `positive_theorem` | 724 |
+| `positive_theorem` | 723 |
 
 | criticality | count |
 |---|---:|
@@ -587,6 +587,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_projection_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_washout_axiom_boundary_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3409,6 +3410,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Physical local scalar observables must be source-response coefficients of the unique additive CPT-even generator W[J] = log|det(D+J)| - log|det D|.  _(class `F`)_
 - **chain closes:** False — The finite-dimensional algebra checked by the runner closes, but the physical selection rule identifying local scalar observables with W[J] source-response coefficients is not supplied by any cited authority. Therefore the inadmissibility of the active-space ratio and uniqueness of the physical 1/sqrt(2) normalization do not follow from the restricted packet.
 - **rationale:** Issue: the note's selection of Gamma_1 over the active chiral bridge depends on the unproved observable-principle premise that physical local scalar observables are exactly W[J] source-response coefficients. Why this blocks: the runner verifies A-class matrix identities and determinant responses after that premise is accepted, but it does not derive the physical observable/readout map or prove the active-space ratio is inadmissible. Repair target: register and audit a retained upstream theorem deriving the W-source observable selection for the retained local Higgs family. Claim boundary until fixed: conditional algebra supports 1/sqrt(2) only under the observable-principle premise.
+- **auditor confidence:** high
+
+### `dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_BREAKING_TRIPLET_AXIOM_LAW_ATTEMPT_NOTE_2026-04-15.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Boundary claim that the breaking triplet has an exact rank-three zero-locus/source-complement description and that the current stack does not fix its coefficients.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1366-2c4c-7e82-a9b6-46494b1bc702`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "Aligned and generic samples lie on the same canonical active support class" while having distinct triplet values, so "the current stack does not derive a positive axiom-side triplet value law."  _(class `A`)_
+- **chain closes:** False — The local algebraic decomposition, rank-three span, CP formula, and sample-level non-fixity checks close as algebra. The broader no-positive-current-stack-law conclusion imports unprovided exact theorem packages and an unproven exhaustiveness claim about the current bank; no one-hop authorities are listed.
+- **rationale:** Issue: the note assumes the exact positive-section Hermitian CP theorem, breaking-triplet CP theorem, PMNS global Hermitian mode package, and breaking-slot boundary results, but none are supplied as one-hop authorities. Why this blocks: the runner checks algebraic identities and one pair of samples, including a hard-coded `True` for the global no-law conclusion, not an exhaustive proof that the current exact stack cannot derive the triplet coefficients. Repair target: wire the named authorities and add an explicit current-bank exhaustiveness/source-law boundary theorem or runner that proves which constraints are available. Claim boundary until fixed: the packet supports a local rank-three algebraic breaking-sector decomposition, not the global current-stack no-positive-law theorem.
 - **auditor confidence:** high
 
 ### `dm_neutrino_cascade_geometry_note_2026-04-14`
