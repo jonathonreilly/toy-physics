@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 63 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 224 |
+| **retained_bounded** | 225 |
 | open_gate | 11 |
 | unaudited | 1164 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 373 |
+| `audited_clean` | 374 |
 | `audited_conditional` | 223 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -393,6 +390,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_support_localization_split_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_wavefield_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -8246,6 +8244,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The note has no attached runner and no ledger dependencies, yet it synthesizes many numerical and theoretical inputs into a structural theorem about spectral gravity and many-body trajectory emergence.
 - **rationale:** Issue: The spectral-trajectory dichotomy is presented as a structural theorem, but the row provides no runner and no audited dependency chain for the cited sign-selectivity, boundary-law shift, CDT-like flow, Hartree failures, Penrose/DP/BH failures, or BMV ordering claims. Why this blocks: the conclusion may be a coherent synthesis, but it does not follow from the note alone and imports multiple unratified numerical and physical bridges. Repair target: split the theorem into explicit dependencies on audited spectral-success notes, audited trajectory-failure notes, and a separate derivation of the one-body-trace versus many-body-expectation bridge, with runner or proof artifacts for each load-bearing step. Claim boundary until fixed: it is safe to treat this as a bounded interpretive synthesis and research program, not as an audit-clean theorem that gravity is fundamentally spectral or that trajectory GR emerges from spectral flow plus many-body coarse-graining.
 - **auditor confidence:** high
+
+### `staggered_3d_self_gravity_sign_note_2026-04-11`
+
+- **Note:** [`STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md`](../../docs/STAGGERED_3D_SELF_GRAVITY_SIGN_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the script-defined open 3D staggered cubic lattice with MASS=0.30, G_SELF=50.0, MU2=0.001, DT=0.10, N_STEPS=20, SIGMA=1.35, and side lengths 9, 11, 13, the computed blocked-envelope contraction is present for both source signs and the trajectory readouts do not give sign-selective closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1285-7502-7270-a5b9-058c04a4abe0`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact outputs show blocked width ratios of about 0.632-0.640 and core probability excesses about +0.428-0.429 for both source signs, while the shell-averaged potential gradient flips sign perfectly.  _(class `C`)_
+- **chain closes:** True — The runner constructs the finite staggered lattice Hamiltonian, solves the screened self-field from the evolving packet density, evolves the packet, and computes the stated blocked width, core, drift, and shell-gradient diagnostics without hard-coded output values. The conclusion closes only as this bounded finite-parameter computational statement, not as a broader physical self-gravity or asymptotic theorem.
+- **rationale:** Clean for the bounded runner-defined claim: the code computes the six sign/size cases and the stdout matches the note's contraction, core-excess, and shell-gradient sign claims. There are no cited dependencies and no external comparator or imported target value. The clean boundary is narrow: it does not establish sign-selective trajectory closure, a continuum limit, parameter robustness beyond the listed sweep, or a physical gravity bridge outside the specified parity-coupled scalar law.
+- **auditor confidence:** medium
 
 ### `staggered_backreaction_capture_closure_note`
 
