@@ -15553,6 +15553,14 @@
       "to": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
     },
     {
+      "from": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+      "to": "nn_lattice_rescaled_continuum_identification_note_2026-05-10"
+    },
+    {
+      "from": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+      "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+    },
+    {
       "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
       "to": "lattice_nn_deterministic_rescale_note"
     },
@@ -52191,6 +52199,20 @@
       "runner_path": "scripts/lattice_nn_rescaled_c2_derivation.py",
       "title": "Rescaled NN Lattice c2_inf Phase-Saddle Support Note"
     },
+    "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10": {
+      "claim_id": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (alpha-constrained residual-closure diagnostic",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
+        "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+      ],
+      "note_hash": "c1feb5b939ea57a6230920fc1494201f59c74ef0ea8d2d1b0c30133b20201d55",
+      "path": "docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md",
+      "runner_path": "scripts/lattice_nn_rescaled_C_arm_alpha_constrained_refit.py",
+      "title": "Rescaled NN Lattice C_arm Alpha-Constrained Refit Note"
+    },
     "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10": {
       "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -66183,7 +66205,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 242,
+      "bounded_theorem": 243,
       "decoration": 1,
       "meta": 59,
       "no_go": 19,
@@ -66192,7 +66214,7 @@
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 724,
+      "bounded_theorem": 725,
       "decoration": 1,
       "meta": 59,
       "no_go": 126,
@@ -66200,10 +66222,10 @@
       "open_gate": 114,
       "positive_theorem": 592
     },
-    "edge_count": 8279,
-    "leaf_count": 534,
-    "node_count": 2065,
+    "edge_count": 8281,
+    "leaf_count": 535,
+    "node_count": 2066,
     "root_count": 768,
-    "runners_with_path": 1680
+    "runners_with_path": 1681
   }
 }

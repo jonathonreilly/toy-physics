@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_C_arm_alpha_constrained_refit.py
+runner_sha256: e6e1d7ca9e08598df778363965607b3627c4930ea74aadc636cd93729ce372a0
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 73.66
+status: ok
+----- stdout -----
+====================================================================================================
+NN LATTICE RESCALED-LANE C_arm ALPHA-CONSTRAINED REFIT
+  Scoped comparison protocol: alpha = 1/2
+  Estimator: C_arm(h) := sigma_arm(h) / sqrt(h),  per-h, no log-fit
+====================================================================================================
+
+Analytic constant (C_arm support note closed form):
+  c                  = exp(-BETA pi^2 / 16) = 0.610498
+  L_2                = 2 L_total / 3        = 26.666667
+  C_arm_analytic     = sqrt(L_2 / (sqrt(2)/c + 2)) = 2.485529
+
+Unconstrained 2-parameter fit (upstream continuum note):
+  C_arm_unconstrained = 2.7107
+  alpha_unconstrained = 0.5256     (geodesic prediction: 0.5)
+
+----------------------------------------------------------------------------------------------------
+OPTIONAL: extend grid by one factor of 2 (h = 0.015625)
+----------------------------------------------------------------------------------------------------
+  [info] measuring h = 0.015625 via the upstream measure_arm_distribution(...) - this takes ~70s
+  [info] h = 0.015625: dt = 73.5s, n = 6558721, mu = (+3.0239, -3.0239), sigma = (0.3115, 0.3115), MI = 1.000000, d_TV = 1.000000, Born = 1.43e-15
+
+====================================================================================================
+PER-h ALPHA-CONSTRAINED C_arm  (alpha fixed at 1/2)
+====================================================================================================
+
+           h   sigma_a   sigma_b    C_arm_a    C_arm_b      C_arm     res_an     res_un  note
+  --------------------------------------------------------------------------------------------------------------
+    1.000000    2.9876    2.9876     2.9876     2.9876     2.9876   +20.200%   +10.215%  coarse-h transient
+    0.500000    2.0785    2.0643     2.9394     2.9194     2.9294   +17.858%    +8.068%  coarse-h transient
+    0.250000    1.3198    1.3096     2.6396     2.6192     2.6294    +5.788%    -2.999%  fine-h (used in upstream fit)
+    0.125000    0.8990    0.8979     2.5428     2.5396     2.5412    +2.240%    -6.253%  fine-h (used in upstream fit)
+    0.062500    0.6282    0.6282     2.5128     2.5128     2.5128    +1.097%    -7.301%  fine-h (used in upstream fit)
+    0.031250    0.4416    0.4416     2.4981     2.4981     2.4981    +0.504%    -7.844%  fine-h (used in upstream fit)
+    0.015625    0.3115    0.3115     2.4922     2.4922     2.4922    +0.268%    -8.061%  new finer point (measured)
+
+====================================================================================================
+CLOSURE SUMMARY
+====================================================================================================
+
+  Finest measured h          = 0.015625
+  sigma_arm(h_finest) (avg)  = 0.311525
+  C_arm_constrained_extrap   = sigma_arm(h_finest) / sqrt(h_finest)
+                             = 2.492201
+
+  C_arm support analytic     = 2.485529
+  Upstream unconstrained fit = 2.710700
+
+  Residual (extrap vs analytic)        = +0.268%
+  Residual (extrap vs unconstrained C) = -8.061%
+
+  At h = 0.03125 (acceptance criterion):
+    C_arm_constrained     = 2.498067
+    residual vs analytic  = +0.504%   (acceptance: |residual| <= 2%)
+    BOUNDED PASS: residual < 1% under alpha-constrained fit.
+    The 8.3% reported gap is removed by the scoped fit protocol.
+    Analytic and numerical constants agree pointwise at h = 0.03125.
+
+  At h = 0.015625 (newly measured this run):
+    sigma_arm (avg)       = 0.311525
+    C_arm_constrained     = 2.492201
+    residual vs analytic  = +0.268%
+    The residual continues to shrink monotonically as h -> 0,
+    consistent with the bounded geodesic saddle model being
+    the leading-order comparison surface.
+
+  Convergence of (C_arm(h) - C_arm_analytic)/C_arm_analytic:
+             h  res_an (%)
+      0.250000      +5.788
+      0.125000      +2.240
+      0.062500      +1.097
+      0.031250      +0.504
+      0.015625      +0.268
+
+  Runner gates:
+    h = 0.03125 residual <= 2%: PASS
+    finest residual <= 2%:      PASS
+    residuals shrink with h:    PASS
+    finest Born residual <1e-12:PASS
+    finest arm symmetry/drift:  PASS
+
+----- stderr -----
+
