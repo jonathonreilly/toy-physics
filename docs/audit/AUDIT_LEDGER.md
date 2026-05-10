@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1090 |
+| unaudited | 1089 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 263 |
+| ~~audited_conditional~~ | 264 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 263 |
+| `audited_conditional` | 264 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1157 |
+| `unaudited` | 1156 |
 
 | claim_type | count |
 |---|---:|
@@ -574,6 +574,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3307,6 +3308,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The best repair found on the broad compact box is 2.308603400914 from global differential evolution, staying above the preferred recovered floor Lambda_+(x_*) = 1.586874714730 by 7.217286861842e-01.  _(class `B`)_
 - **chain closes:** False — The numerical search result is consistent with the runner stdout, but the restricted packet supplies no cited authority for the exact shift-quotient bundle implementation or for the preferred recovered floor. The conclusion therefore depends on unlisted imported premises from runner modules rather than closing from the note and one-hop authorities.
 - **rationale:** Issue: the load-bearing inequality uses quotient_gauge_h, PREFERRED_RECOVERED_LIFT, and repair_from_slack_point from unprovided runner imports while the audit ledger lists no one-hop authorities. Why this blocks: a hostile reviewer cannot verify from the restricted packet that the searched object is the exact shift-quotient bundle or that the comparator floor is a retained-grade input. Repair target: add direct dependency edges and cited notes for the exact bundle construction and preferred recovered floor, then audit those dependencies. Claim boundary until fixed: the completed runner supports a numerical candidate on the stated implemented domain, not a closed bounded theorem.
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional bounded scan of the fixed line m=-0.14, s=0, delta in [1.05, delta_edge], asserting monotone endpoint reduction under imported source-surface premises.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11f8-c01e-7b21-b5b5-77b2b48f271f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the tested feasible interval, both transport-facing objectives are driven to the same endpoint delta_edge.  _(class `B`)_
+- **chain closes:** False — The note explicitly says the active slack chart, preferred quotient, repair threshold, and split-2 compression come from other notes, but no one-hop authorities are supplied. The runner imports those premises and checks hard-coded expected values, so the restricted packet does not establish the carrier setup or prior ridge reduction.
+- **rationale:** Issue: the endpoint reduction relies on unlisted carrier, bundle, active-half-plane, and split-2 reduction authorities. Why this blocks: with no cited authorities, the audited packet cannot justify the active chart, preferred floor, quotient, or that this tested line is the residual search surface. Repair target: add the missing direct dependency edges and re-audit after those inputs are retained-grade, with the runner premises exposed. Claim boundary until fixed: a reproducible numerical scan under imported project definitions, not a closed bounded theorem.
 - **auditor confidence:** high
 
 ### `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15`
