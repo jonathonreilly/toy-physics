@@ -1,0 +1,97 @@
+==============================================================================================================
+NN LATTICE DETERMINISTIC-RESCALE + RG-STRENGTH GRAVITY PROBE
+  3 edges/node + step_scale = h/sqrt(3)
+  Physical: W=20.0, L=40.0, k=5.0, mass at y=8.0
+  Strength schemes: ['fixed', 'inv_sqrt_h', 'inv_h', 'inv_h_119', 'inv_h_150']
+  h grid: [1.0, 0.5, 0.25, 0.125, 0.0625]
+==============================================================================================================
+
+--- scheme: fixed ---
+        h     strength     nodes      gravity         k=0        Born   time
+  -------------------------------------------------------------------------
+   1.0000  5.000000e-04      1681    -0.116678   +0.00e+00  5.85e-16     0s
+   0.5000  5.000000e-04      6561    +0.138226   +0.00e+00  2.96e-16     0s
+   0.2500  5.000000e-04     25921    +0.077415   +0.00e+00  3.43e-16     1s
+   0.1250  5.000000e-04    103041    +0.034466   +0.00e+00  4.97e-16     2s
+   0.0625  5.000000e-04    410881    +0.014810   +0.00e+00  5.24e-16     7s
+
+--- scheme: inv_sqrt_h ---
+        h     strength     nodes      gravity         k=0        Born   time
+  -------------------------------------------------------------------------
+   1.0000  5.000000e-04      1681    -0.116678   +0.00e+00  5.85e-16     0s
+   0.5000  7.071068e-04      6561    +0.159796   +0.00e+00  2.96e-16     0s
+   0.2500  1.000000e-03     25921    +0.104860   +0.00e+00  3.43e-16     1s
+   0.1250  1.414214e-03    103041    +0.054254   +0.00e+00  4.97e-16     2s
+   0.0625  2.000000e-03    410881    +0.026829   +0.00e+00  5.24e-16     7s
+
+--- scheme: inv_h ---
+        h     strength     nodes      gravity         k=0        Born   time
+  -------------------------------------------------------------------------
+   1.0000  5.000000e-04      1681    -0.116678   +0.00e+00  5.85e-16     0s
+   0.5000  1.000000e-03      6561    +0.183567   +0.00e+00  2.96e-16     0s
+   0.2500  2.000000e-03     25921    +0.139274   +0.00e+00  3.43e-16     1s
+   0.1250  4.000000e-03    103041    +0.081192   +0.00e+00  4.97e-16     2s
+   0.0625  8.000000e-03    410881    +0.043284   +0.00e+00  5.24e-16     7s
+
+--- scheme: inv_h_119 ---
+        h     strength     nodes      gravity         k=0        Born   time
+  -------------------------------------------------------------------------
+   1.0000  5.000000e-04      1681    -0.116678   +0.00e+00  5.85e-16     0s
+   0.5000  1.140764e-03      6561    +0.193117   +0.00e+00  2.96e-16     0s
+   0.2500  2.602684e-03     25921    +0.154040   +0.00e+00  3.43e-16     1s
+   0.1250  5.938094e-03    103041    +0.092606   +0.00e+00  4.97e-16     2s
+   0.0625  1.354792e-02    410881    +0.048826   +0.00e+00  5.24e-16     7s
+
+--- scheme: inv_h_150 ---
+        h     strength     nodes      gravity         k=0        Born   time
+  -------------------------------------------------------------------------
+   1.0000  5.000000e-04      1681    -0.116678   +0.00e+00  5.85e-16     0s
+   0.5000  1.414214e-03      6561    +0.209207   +0.00e+00  2.96e-16     0s
+   0.2500  4.000000e-03     25921    +0.179561   +0.00e+00  3.43e-16     1s
+   0.1250  1.131371e-02    103041    +0.110192   +0.00e+00  4.97e-16     2s
+   0.0625  3.200000e-02    410881    +0.050953   +0.00e+00  5.24e-16     7s
+
+==============================================================================================================
+ANALYSIS
+==============================================================================================================
+
+Born safety on the refinement window:
+  fixed       : max Born = 5.85e-16  (CLEAN)
+  inv_sqrt_h  : max Born = 5.85e-16  (CLEAN)
+  inv_h       : max Born = 5.85e-16  (CLEAN)
+  inv_h_119   : max Born = 5.85e-16  (CLEAN)
+  inv_h_150   : max Born = 5.85e-16  (CLEAN)
+  threshold: 1e-10
+
+k=0 control (gravity must vanish at k=0):
+  fixed       : max |k=0| = 0.00e+00  (CLEAN)
+  inv_sqrt_h  : max |k=0| = 0.00e+00  (CLEAN)
+  inv_h       : max |k=0| = 0.00e+00  (CLEAN)
+  inv_h_119   : max |k=0| = 0.00e+00  (CLEAN)
+  inv_h_150   : max |k=0| = 0.00e+00  (CLEAN)
+
+Power-law fit gravity ~ C * h^alpha (h ∈ {0.25, 0.125, 0.0625} only):
+  fixed       : alpha = +1.1930  C = 4.0706e-01  R^2 = 0.9998
+  inv_sqrt_h  : alpha = +0.9833  C = 4.1294e-01  R^2 = 0.9996
+  inv_h       : alpha = +0.8430  C = 4.5487e-01  R^2 = 0.9981
+  inv_h_119   : alpha = +0.8288  C = 4.9673e-01  R^2 = 0.9957
+  inv_h_150   : alpha = +0.9086  C = 6.6335e-01  R^2 = 0.9834
+
+Continuum stability (mean and max-relative-deviation on h ∈ {0.25, 0.125, 0.0625}):
+  fixed       : mean gravity = +0.042230  max rel dev = 0.8332
+  inv_sqrt_h  : mean gravity = +0.061981  max rel dev = 0.6918
+  inv_h       : mean gravity = +0.087917  max rel dev = 0.5842
+  inv_h_119   : mean gravity = +0.098491  max rel dev = 0.5640
+  inv_h_150   : mean gravity = +0.113568  max rel dev = 0.5811
+
+VERDICT
+  Born-clean refinement window: PASS
+  k=0 control on all schemes: PASS
+
+  NO PROMOTION: no scheme passes |alpha| <= 0.15
+    AND max_rel_dev <= 0.05
+
+  Interpretation: simple 1/h-style strength scaling is
+  insufficient on the rescaled lane to give a clean
+  continuum-limit gravity. The bounded null result tightens.
+
