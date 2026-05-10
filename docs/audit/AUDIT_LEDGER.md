@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1113 |
+| unaudited | 1112 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 231 |
+| ~~audited_conditional~~ | 232 |
 | ~~audited_failed~~ | 21 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 231 |
+| `audited_conditional` | 232 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 65 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1211 |
+| `unaudited` | 1210 |
 
 | claim_type | count |
 |---|---:|
@@ -520,6 +520,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_born_dense_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_born_largen_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_dense_joint_highn_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1653,6 +1654,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "The boundary is sharp rather than smoothly extendable" based on the tabulated finite sweep over N = 80, 100 and connect_radius = 2.8..3.4.  _(class `C`)_
 - **chain closes:** False — The current completed runner stdout does not match the source note's stated sample sizes or several load-bearing numerical rows. The missing step is a synchronized or pinned run artifact plus explicit boundary criteria for the claimed sharp rollover.
 - **rationale:** Issue: the note is stale relative to the supplied runner stdout, including seeds/realizations and key gravity/purity values at N=80 r=3.0,3.2,3.4 and N=100 r=3.2,3.4. Why this blocks: the claimed sharp boundary and Born-stability conclusions rest on those numerical rows, so the source note does not close from the current artifact. Repair target: update the note from the completed runner or attach the exact cached old run, and add quantitative pass/fail criteria for boundary sharpness. Claim boundary until fixed: the packet supports only that the current runner produced a small finite exploratory sweep with mixed and noisy behavior, not the stated numerical claim.
+- **auditor confidence:** high
+
+### `central_band_dense_joint_highn_note`
+
+- **Note:** [`CENTRAL_BAND_DENSE_JOINT_HIGHN_NOTE.md`](../../docs/CENTRAL_BAND_DENSE_JOINT_HIGHN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the reported high-N dense central-band sweep rows for N=80,100 and npl=60,70,80 under the supplied wrapper output.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1341-be72-7151-a44c-fd2524a5fd92`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Born-safe dense central-band coexistence survives at N=80 and N=100 only inside a narrow density window.  _(class `B`)_
+- **chain closes:** False — The note's numeric rows match the supplied stdout, but the computation is delegated to unsupplied functions from scripts.central_band_dense_joint_card. With no cited authorities and no source for the graph construction, Born metric, purity, or gravity delta implementations, the restricted packet does not close the claimed bounded theorem.
+- **rationale:** Issue: the load-bearing sweep depends on imported implementations not present in the restricted packet. Why this blocks: stdout confirms the wrapper's reported table but does not establish that the corrected dense central-band graph family, Born harness, purity floor, or gravity delta are computed from retained inputs rather than imported premises. Repair target: add the underlying central_band_dense_joint_card implementation or a retained dependency/certificate that defines and audits those functions. Claim boundary until fixed: the note is only a report of this runner output, not a closed bounded theorem about the dense central-band family.
 - **auditor confidence:** high
 
 ### `central_band_dense_joint_note`
