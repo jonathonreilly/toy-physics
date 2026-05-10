@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 701,
+    "critical": 700,
     "high": 25,
     "leaf": 268,
     "medium": 148
@@ -7289,24 +7289,26 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_gamma_orbit_selector_bridge_note_2026-04-18",
-      "claim_scope": "The displayed linear Koide-coordinate map pulls the cyclic selector 2r0^2 = r1^2 + r2^2 back exactly to the symmetric orbit-slot cone u^2+v^2+w^2 = 4(uv+uw+vw), with the usual positive-amplitude Q=2/3 equivalence.",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
+      "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "claim_type_provenance": "default_positive_theorem",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 6,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 11.43,
-      "note_path": "docs/KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md",
-      "queue_reason": "audit_in_progress",
+      "cross_confirmation_status": null,
+      "deps": [
+        "koide_gamma_orbit_selector_bridge_note_2026-04-18"
+      ],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.426,
+      "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/frontier_koide_gamma_orbit_selector_bridge.py",
-      "transitive_descendants": 344
+      "runner_path": "scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py",
+      "transitive_descendants": 343
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15857,29 +15859,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_vector_gauge_field_kk_tower.py",
-      "transitive_descendants": 343
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_gamma_orbit_selector_bridge_note_2026-04-18"
-      ],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.426,
-      "note_path": "docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_koide_gamma_axis_covariant_full_cube_orbit_law.py",
       "transitive_descendants": 343
     },
     {
@@ -37462,5 +37441,5 @@
     }
   ],
   "ready_count": 107,
-  "total_pending": 1142
+  "total_pending": 1141
 }
