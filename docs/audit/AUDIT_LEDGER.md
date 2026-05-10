@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 231 |
+| **retained_bounded** | 232 |
 | open_gate | 11 |
 | unaudited | 1094 |
-| audit_in_progress | 1 |
 | meta | 65 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 25 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 378 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 258 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `boundary_law_robustness_note_2026-04-11` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -135,6 +132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -1505,6 +1503,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** d=3 is the highest dimension with a Rydberg series -- multiple bound states with distinct energy levels and exponentially localized wavefunctions; this is what atoms require for chemistry.  _(class `C`)_
 - **chain closes:** False — The runner genuinely computes spectra for the stated finite lattices, but the conclusion that stable matter anthropically implies exactly d=3 imports an unproved bridge from these bounded diagnostics to chemistry and excludes d=2 by an external complexity premise. The claimed d>=4 fall-to-center behavior is also not actually demonstrated by the runner's own fall-to-center diagnostic, which remains false in the displayed scans.
 - **rationale:** The numerical part is not merely a printed constant: the source builds sparse lattice Laplacians and Coulomb potentials, diagonalizes them, and reports eigenvalue/localization diagnostics. However, the audited packet supplies no retained authority or bridge theorem connecting the finite, regularized, small-lattice results to continuum atomic stability or to the anthropic exclusion of d=2. The runner also labels d=4 and d=5 as fall-to-center in interpretive prose despite the implemented IPR threshold never flagging fall-to-center in the provided output.
+- **auditor confidence:** high
+
+### `boundary_law_robustness_note_2026-04-11`
+
+- **Note:** [`BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded finite-run numerical diagnostic that the provided runner reports high S-versus-counted-boundary R^2 on the stated fixed 2D periodic staggered-lattice envelope and small partition cross-check.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e11d7-1ac1-7302-8309-b0477a890c97`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the fixed audit parameter envelope, every counted BFS-ball fit satisfies R^2 > 0.95, and the 80-configuration >=3-radii subgrid also satisfies R^2 > 0.95 in 80/80 configurations, with the small side=10, G=10 partition cross-check also above 0.95.  _(class `C`)_
+- **chain closes:** True — The note's narrowed claim matches the runner output and source: the code constructs the fixed lattices, evolves the model, computes Dirac-sea correlation-matrix entropies, fits S against boundary size, separates automatic two-point fits, and reports the stated R^2 thresholds. This closes only for the fixed finite-run diagnostic, not for any general boundary-law or holography claim.
+- **rationale:** The load-bearing result is a genuine finite-run computation in the supplied runner rather than a hard-coded printout, renaming, or external comparator match. The cited companion authority is retained_bounded, and the source note explicitly confines the conclusion to the fixed audit envelope, excluding theorem-level, parameter-independent, and holographic interpretations. A second auditor should keep the claim boundary tight: this is clean only as the reported bounded numerical diagnostic on the exact grid and readout.
 - **auditor confidence:** high
 
 ### `branch_entanglement_robustness_note_2026-04-11`
