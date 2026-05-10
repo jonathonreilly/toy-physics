@@ -1,0 +1,192 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bridge_lanes_promotion_2026_05_10_lanes.py
+runner_sha256: 31cb14b80d804e1990574aeb8862949725fe41bdddd8378fe54740f63268baef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+========================================================================================
+Bridge-Dependent Lanes Promotion Evaluation — runner for BRIDGE_LANES_PROMOTION_PROPOSAL_NOTE_2026-05-10_lanes.md
+========================================================================================
+Loaded audit ledger with 1904 rows
+
+========================================================================================
+Section A: Audit-ledger reads (no mutations)
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: ledger row 'alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30' exists  (keys present: ['audit_date', 'audit_state_snapshot', 'audit_status'])
+  [PASS] Lane 1: alpha_s direct Wilson loop: 'alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30' field 'claim_type' matches expected  (expected='bounded_theorem', actual='bounded_theorem')
+  [PASS] Lane 1: alpha_s direct Wilson loop: 'alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30' field 'effective_status' matches expected  (expected='audited_conditional', actual='audited_conditional')
+  [PASS] Lane 2: Higgs mass from axiom: ledger row 'higgs_mass_from_axiom_note' exists  (keys present: ['audit_date', 'audit_state_snapshot', 'audit_status'])
+  [PASS] Lane 2: Higgs mass from axiom: 'higgs_mass_from_axiom_note' field 'claim_type' matches expected  (expected='bounded_theorem', actual='bounded_theorem')
+  [PASS] Lane 2: Higgs mass from axiom: 'higgs_mass_from_axiom_note' field 'effective_status' matches expected  (expected='unaudited', actual='unaudited')
+  [PASS] Lane 3: gauge-scalar bridge: ledger row 'gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03' exists  (keys present: ['audit_date', 'audit_state_snapshot', 'audit_status'])
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03' field 'claim_type' matches expected  (expected='bounded_theorem', actual='bounded_theorem')
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03' field 'effective_status' matches expected  (expected='retained_bounded', actual='retained_bounded')
+  [PASS] Lane 3: gauge-scalar bridge: ledger row 'gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03' exists  (keys present: ['audit_date', 'audit_state_snapshot', 'audit_status'])
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03' field 'claim_type' matches expected  (expected='no_go', actual='no_go')
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03' field 'effective_status' matches expected  (expected='retained_no_go', actual='retained_no_go')
+  [PASS] Lane 3: gauge-scalar bridge: ledger row 'gauge_scalar_temporal_completion_theorem_note' exists  (keys present: ['audit_date', 'audit_state_snapshot', 'audit_status'])
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_completion_theorem_note' field 'claim_type' matches expected  (expected='bounded_theorem', actual='bounded_theorem')
+  [PASS] Lane 3: gauge-scalar bridge: 'gauge_scalar_temporal_completion_theorem_note' field 'effective_status' matches expected  (expected='retained_bounded', actual='retained_bounded')
+
+========================================================================================
+Section B: Structural retained content non-empty per lane
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: structural_retained is non-empty  (length=78)
+  [PASS] Lane 2: Higgs mass from axiom: structural_retained is non-empty  (length=91)
+  [PASS] Lane 3: gauge-scalar bridge: structural_retained is non-empty  (length=98)
+
+========================================================================================
+Section C: Residual admissions enumerated per lane
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: at least one residual admission listed  (count=7)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'convention_c_iso' has 'kind' in {engineering, structural}  (kind='engineering')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'convention_c_iso' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'convention_c_iso' has non-empty 'note'  (len=99)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sommer_scale_r0_literature' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sommer_scale_r0_literature' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sommer_scale_r0_literature' has non-empty 'note'  (len=98)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'four_loop_qcd_running' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'four_loop_qcd_running' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'four_loop_qcd_running' has non-empty 'note'  (len=75)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'threshold_matching' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'threshold_matching' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'threshold_matching' has non-empty 'note'  (len=62)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sea_quark_full_qcd_bridge' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sea_quark_full_qcd_bridge' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sea_quark_full_qcd_bridge' has non-empty 'note'  (len=62)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'l3a_trace_surface' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'l3a_trace_surface' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'l3a_trace_surface' has non-empty 'note'  (len=78)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'g_bare_canonical_normalization' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'g_bare_canonical_normalization' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'g_bare_canonical_normalization' has non-empty 'note'  (len=91)
+  [PASS] Lane 2: Higgs mass from axiom: at least one residual admission listed  (count=7)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_curvature_to_physical_m_h_v_squared_matching_theorem' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_curvature_to_physical_m_h_v_squared_matching_theorem' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_curvature_to_physical_m_h_v_squared_matching_theorem' has non-empty 'note'  (len=91)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'n_taste_16_uniform_channel' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'n_taste_16_uniform_channel' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'n_taste_16_uniform_channel' has non-empty 'note'  (len=80)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'v_ew_vev' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'v_ew_vev' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'v_ew_vev' has non-empty 'note'  (len=40)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'u_0_plaquette_lattice_value' has 'kind' in {engineering, structural}  (kind='engineering')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'u_0_plaquette_lattice_value' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'u_0_plaquette_lattice_value' has non-empty 'note'  (len=81)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'cw_rge_correction_chain' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'cw_rge_correction_chain' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'cw_rge_correction_chain' has non-empty 'note'  (len=66)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'wilson_taste_breaking_correction' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'wilson_taste_breaking_correction' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'wilson_taste_breaking_correction' has non-empty 'note'  (len=77)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_spacing_convergence' has 'kind' in {engineering, structural}  (kind='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_spacing_convergence' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_spacing_convergence' has non-empty 'note'  (len=66)
+  [PASS] Lane 3: gauge-scalar bridge: at least one residual admission listed  (count=1)
+  [PASS] Lane 3: gauge-scalar bridge: admission 'c_iso_e_witness_compute_frontier' has 'kind' in {engineering, structural}  (kind='engineering')
+  [PASS] Lane 3: gauge-scalar bridge: admission 'c_iso_e_witness_compute_frontier' has 'closed_by_w2_nlo' boolean  (value=False)
+  [PASS] Lane 3: gauge-scalar bridge: admission 'c_iso_e_witness_compute_frontier' has non-empty 'note'  (len=76)
+
+========================================================================================
+Section D: Per-lane verdict matches four-criterion logic
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict='pending_partial' has engineering admission  (engineering count=1)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict='pending_partial' has unclosed structural admission  (unclosed_structural=6)
+  [PASS] Lane 2: Higgs mass from axiom: verdict='blocked' has unclosed structural residual  (unclosed_structural=6)
+  [PASS] Lane 3: gauge-scalar bridge: verdict='already_promoted' consistent (engineering-only residuals)  (engineering=1, structural_unclosed=0)
+
+========================================================================================
+Section E: No PDG/observed/fitted derivation inputs in verdict logic
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '0.1180' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '0.1181' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '125.10' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '125.25' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '246.22' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '0.5934' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 1: alpha_s direct Wilson loop: verdict logic does not consume '0.4410' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '0.1180' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '0.1181' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '125.10' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '125.25' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '246.22' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '0.5934' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 2: Higgs mass from axiom: verdict logic does not consume '0.4410' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '0.1180' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '0.1181' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '125.10' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '125.25' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '246.22' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '0.5934' as input  (checked in structural_retained + verdict_reason)
+  [PASS] Lane 3: gauge-scalar bridge: verdict logic does not consume '0.4410' as input  (checked in structural_retained + verdict_reason)
+
+========================================================================================
+Section F: Engineering vs structural residual classification audit
+========================================================================================
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'convention_c_iso' classified as 'engineering' (matches expected)  (actual='engineering', expected='engineering')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sommer_scale_r0_literature' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'four_loop_qcd_running' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'threshold_matching' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'sea_quark_full_qcd_bridge' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'l3a_trace_surface' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 1: alpha_s direct Wilson loop: admission 'g_bare_canonical_normalization' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_curvature_to_physical_m_h_v_squared_matching_theorem' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'n_taste_16_uniform_channel' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'v_ew_vev' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'u_0_plaquette_lattice_value' classified as 'engineering' (matches expected)  (actual='engineering', expected='engineering')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'cw_rge_correction_chain' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'wilson_taste_breaking_correction' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 2: Higgs mass from axiom: admission 'lattice_spacing_convergence' classified as 'structural' (matches expected)  (actual='structural', expected='structural')
+  [PASS] Lane 3: gauge-scalar bridge: admission 'c_iso_e_witness_compute_frontier' classified as 'engineering' (matches expected)  (actual='engineering', expected='engineering')
+
+========================================================================================
+Section G: Cross-lane coherence and prioritization
+========================================================================================
+  [PASS] exactly one lane is 'already_promoted' (Lane 3 = gauge-scalar)  (n_promoted=1)
+  [PASS] exactly one lane is 'pending_partial' (Lane 1 = alpha_s)  (n_pending=1)
+  [PASS] exactly one lane is 'blocked' (Lane 2 = Higgs)  (n_blocked=1)
+  [PASS] Lane 1: alpha_s direct Wilson loop: L3a residual is honestly NOT closed by W2  (L3a remains a sharpened bounded obstruction; matter-rep gate still open)
+  [PASS] Lane 1: alpha_s direct Wilson loop: C-iso residual honestly NOT yet at ε_witness  (SU(3) NLO closes the bound form; ξ >= 430 named compute frontier remains)
+  [PASS] Lane 3: gauge-scalar bridge: C-iso residual honestly NOT yet at ε_witness  (SU(3) NLO closes the bound form; ξ >= 430 named compute frontier remains)
+
+========================================================================================
+Section H: Prioritization guidance internally consistent
+========================================================================================
+  [PASS] Lane 2 (Higgs): lattice-physical matching theorem is listed as residual admission  (Nature-grade non-perturbative gap; same-shape with cycles 5, 9, 11)
+  [PASS] Lane 2 (Higgs): matching theorem is classified as 'structural' (not engineering)  (kind='structural')
+  [PASS] Lane 1 (alpha_s): all four standard QCD imports listed as residual admissions  (found=['four_loop_qcd_running', 'sea_quark_full_qcd_bridge', 'sommer_scale_r0_literature', 'threshold_matching'], expected=['four_loop_qcd_running', 'sea_quark_full_qcd_bridge', 'sommer_scale_r0_literature', 'threshold_matching'])
+  [PASS] Lane 1 (alpha_s): 'threshold_matching' classified as 'structural' (literature dependency)  (kind='structural')
+  [PASS] Lane 1 (alpha_s): 'sea_quark_full_qcd_bridge' classified as 'structural' (literature dependency)  (kind='structural')
+  [PASS] Lane 1 (alpha_s): 'sommer_scale_r0_literature' classified as 'structural' (literature dependency)  (kind='structural')
+  [PASS] Lane 1 (alpha_s): 'four_loop_qcd_running' classified as 'structural' (literature dependency)  (kind='structural')
+  [PASS] Lane 3 (gauge-scalar): structural bridge has no unclosed structural residual  (unclosed_structural_count=0)
+
+========================================================================================
+Section I: Cited one-hop dependency files exist on disk
+========================================================================================
+  [PASS] dep file exists: docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md)
+  [PASS] dep file exists: docs/ALPHA_S_DIRECT_WILSON_LOOP_HONEST_STATUS_AUDIT_NOTE_2026-05-02.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/ALPHA_S_DIRECT_WILSON_LOOP_HONEST_STATUS_AUDIT_NOTE_2026-05-02.md)
+  [PASS] dep file exists: docs/HIGGS_MASS_FROM_AXIOM_NOTE.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
+  [PASS] dep file exists: docs/HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/HIGGS_MASS_FROM_AXIOM_STATUS_CORRECTION_AUDIT_NOTE_2026-05-02.md)
+  [PASS] dep file exists: docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
+  [PASS] dep file exists: docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
+  [PASS] dep file exists: docs/GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
+  [PASS] dep file exists: docs/N_F_BOUNDED_Z2_REDUCTION_THEOREM_NOTE_2026-05-07_w2.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/N_F_BOUNDED_Z2_REDUCTION_THEOREM_NOTE_2026-05-07_w2.md)
+  [PASS] dep file exists: docs/N_F_V3_NORMALIZATION_BOUNDED_NOTE_2026-05-07_w2norm.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/N_F_V3_NORMALIZATION_BOUNDED_NOTE_2026-05-07_w2norm.md)
+  [PASS] dep file exists: docs/L3A_V3_TRACE_SURFACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_l3a.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/L3A_V3_TRACE_SURFACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_l3a.md)
+  [PASS] dep file exists: docs/C_ISO_DERIVED_THEOREM_NOTE_2026-05-07_w3.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/C_ISO_DERIVED_THEOREM_NOTE_2026-05-07_w3.md)
+  [PASS] dep file exists: docs/C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo.md)
+  [PASS] dep file exists: docs/EXACT_TIER_PATH_INTEGRAL_BOUNDED_NOTE_2026-05-07_exact.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/EXACT_TIER_PATH_INTEGRAL_BOUNDED_NOTE_2026-05-07_exact.md)
+  [PASS] dep file exists: docs/EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness.md)
+  [PASS] dep file exists: docs/MINIMAL_AXIOMS_2026-05-03.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/MINIMAL_AXIOMS_2026-05-03.md)
+  [PASS] dep file exists: docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md)
+  [PASS] dep file exists: docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md  (path=/private/tmp/cl3-review-open-prs-20260510T121408Z-61220/docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
+
+========================================================================================
+=== TOTAL: PASS=137, FAIL=0 ===
+========================================================================================
+
+----- stderr -----
+
