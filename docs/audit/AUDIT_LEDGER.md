@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 121 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1118 |
+| unaudited | 1117 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 228 |
+| ~~audited_conditional~~ | 229 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 387 |
-| `audited_conditional` | 228 |
+| `audited_conditional` | 229 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1216 |
+| `unaudited` | 1215 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 787 |
+| `bounded_theorem` | 788 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 194 |
 | `open_gate` | 100 |
-| `positive_theorem` | 738 |
+| `positive_theorem` | 737 |
 
 | criticality | count |
 |---|---:|
@@ -516,6 +516,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `central_band_born_dense_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1567,6 +1568,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_output_empty`
   - `archived_session_log_or_named_numeric_output_missing`
   - `seed_strength_and_geometry_independence_sweeps_not_reproducible`
+- **auditor confidence:** high
+
+### `central_band_born_dense_sweep_note`
+
+- **Note:** [`CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md`](../../docs/CENTRAL_BAND_BORN_DENSE_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite completed dense corrected-Born sweep for the central-band hard-geometry lane at N = 25, 40, 60, npl = 35, 45, 60, six seeds, eight realizations, y_cut = 2.0, p_collapse = 0.2.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e132c-e541-72f1-860f-f0cdb3c6ca68`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The dense pocket appears at npl = 60, where both LN + |y| and LN + |y| + collapse stay Born-clean to machine precision.  _(class `C`)_
+- **chain closes:** False — The qualitative npl = 60 pocket is supported by the completed stdout, but the source note's retained-row numbers are stale for several collapse rows relative to the supplied runner stdout. The runner is also a thin wrapper around unsupplied imported computation functions, so the restricted packet does not fully verify the claimed exact propagation and corrected -P(empty) implementation.
+- **rationale:** Issue: the note reports exact retained-row means/maxima that disagree with the supplied current stdout for multiple LN + |y| + collapse rows, and the load-bearing corrected-Born implementation is imported from an unsupplied helper module. Why this blocks: a clean audit cannot certify the precise corrected-Born sweep note from stale numbers and an unverifiable computation core. Repair target: update the note to the current stdout values and provide or cite an audited/self-contained source for build_graph and born_metric_for_graph. Claim boundary until fixed: the supplied stdout supports a qualitative finite npl = 60 Born-clean pocket under the wrapper's reported computation.
 - **auditor confidence:** high
 
 ### `central_band_dense_joint_note`
