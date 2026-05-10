@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1171 |
+| unaudited | 1170 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 216 |
+| ~~audited_conditional~~ | 217 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 370 |
-| `audited_conditional` | 216 |
+| `audited_conditional` | 217 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1239 |
+| `unaudited` | 1238 |
 
 | claim_type | count |
 |---|---:|
@@ -654,6 +654,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -7787,6 +7788,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The refinement step preserves exact zero-source reduction, the dynamic pocket keeps all rows TOWARD, and the dynamic mass exponent stays essentially linear.  _(class `C`)_
 - **chain closes:** True — For the declared exact lattice, source-driven field rule, calibration target, and source strengths, the runner recomputes the frozen zero-source check, table, and fitted exponents exactly. There are no cited dependencies or external comparator claims to import.
 - **rationale:** The source note makes a narrow bounded numerical claim, not a retained physical bridge: refinement to h=0.25 preserves zero-source reduction, positive deflection sign, and near-linear dynamic mass scaling under the declared parameters. The runner output matches the frozen table and exposes the same amplitude limitation, with mean dynamic/instantaneous ratio 0.055. Residual risk is that this remains calibration- and architecture-specific, but that limitation is explicitly inside the claim boundary.
+- **auditor confidence:** high
+
+### `source_driven_field_recovery_sweep_note`
+
+- **Note:** [`SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md`](../../docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact-lattice numerical sweep and conservative pocket replay for source-driven weak-field recovery under the stated calibration targets and source strengths.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e125d-94d9-74b0-877d-0a6fd10c0757`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The frozen broad sweep on the exact 3D lattice shows 4/4 TOWARD rows with dynamic F~M near 1 for small target max |f_dyn| and drift away from linear scaling as the target field grows.  _(class `C`)_
+- **chain closes:** False — The supplied sweep stdout reproduces the broad-sweep table, but the runner delegates the lattice, field construction, propagation, constants, and power fit to an unprovided imported module. The note also relies on a conservative pocket replay whose runner source and stdout are named but absent, so the full weak-field-pocket claim does not close from the restricted packet.
+- **rationale:** Issue: the supplied runner is a thin wrapper over scripts.minimal_source_driven_field_probe, and the conservative pocket runner/stdout supporting part of the note are not included. Why this blocks: without those artifacts or retained dependencies, a reviewer cannot verify that the weak-field pocket is computed from the stated architecture rather than imported implementation choices. Repair target: supply and audit the imported probe module plus the pocket runner/log, or make the primary runner self-contained with explicit threshold checks. Claim boundary until fixed: the supplied stdout records a calibration sweep, but retained-grade weak-field recovery remains conditional on the missing implementation artifacts.
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_pocket_note`
