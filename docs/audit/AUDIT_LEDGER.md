@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 236 |
 | open_gate | 12 |
-| unaudited | 1093 |
+| unaudited | 1092 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 247 |
+| ~~audited_conditional~~ | 248 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 247 |
+| `audited_conditional` | 248 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1191 |
+| `unaudited` | 1190 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 807 |
+| `bounded_theorem` | 808 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
 | `open_gate` | 102 |
-| `positive_theorem` | 721 |
+| `positive_theorem` | 720 |
 
 | criticality | count |
 |---|---:|
@@ -605,6 +605,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `family_companion_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4075,6 +4076,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** From |D_mu H_0|^2, the charged term is g^2 v^2/4 W_mu^+ W^{-mu} and the neutral mass matrix is v^2/4 [[g^2, -g g_Y], [-g g_Y, g_Y^2]], whose eigenvalues are 0 and (g^2+g_Y^2)v^2/4.  _(class `A`)_
 - **chain closes:** True — Within the note's explicit assumptions, the Pauli-matrix action on the neutral doublet vacuum gives the charged mass term and the neutral 2x2 mass matrix directly. The zero and massive eigenvectors also give the photon/Z rotation and the photon coupling to T3+Y without importing numerical electroweak data.
 - **rationale:** The scoped theorem is an exact class-A algebraic closure over explicitly stated SM Higgs-sector assumptions, not a numerical match, renaming, or decoration of a single upstream parent. No experimental M_W, M_Z, sin^2(theta_W), or alpha_EM value is used to obtain the mass matrix or charge normalization. The cached runner exits nonzero with one failed status-string surface check, but all load-bearing algebraic checks pass; that failure is a non-load-bearing runner/documentation artifact rather than a defect in the theorem chain.
+- **auditor confidence:** high
+
+### `family_companion_compare_note`
+
+- **Note:** [`FAMILY_COMPANION_COMPARE_NOTE.md`](../../docs/FAMILY_COMPANION_COMPARE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Static bounded comparison asserting shared weak-field F~M linearity across the retained grown transfer basin, alternative connectivity family, and second grown-family complex slices, with a stated control-surface mismatch.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1377-866f-7dd1-9c80-3e03bffb536f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "retained narrow comparison positive: shared weak-field linearity, with control-surface mismatch isolated rather than averaged away"  _(class `B`)_
+- **chain closes:** False — The comparison imports F~M/control facts from other family notes, but the restricted one-hop packet omits the retained grown-transfer authority and the FM-transfer authorities needed for the quoted 1.000 and 0.999994 values. The runner does not recompute controls or F~M values; it prints hard-coded rows.
+- **rationale:** Issue: the shared-law comparison rests on static copied values, with at least the grown-transfer source and FM-transfer value sources absent from the one-hop authority packet. Why this blocks: a hostile referee cannot verify the cross-family shared weak-field law from the supplied authorities, and the runner only renders constants rather than recomputing the observables. Repair target: add the missing dependency edges or a consolidated retained authority, then replace the comparison runner with one that recomputes the controls and F~M values on the stated observables. Claim boundary until fixed: the note can serve only as a support comparison card, not as a retained shared-law theorem.
 - **auditor confidence:** high
 
 ### `fifth_family_complex_boundary_note`
