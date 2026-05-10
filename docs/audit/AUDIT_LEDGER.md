@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1091 |
+| unaudited | 1090 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 248 |
+| ~~audited_conditional~~ | 249 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 395 |
-| `audited_conditional` | 248 |
+| `audited_conditional` | 249 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1189 |
+| `unaudited` | 1188 |
 
 | claim_type | count |
 |---|---:|
@@ -612,6 +612,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `gate_b_farfield_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `gate_b_grown_propagating_field_radical_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_nonlabel_sign_grown_transfer_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `gauge_vacuum_plaquette_compressed_rim_evaluation_theorem_note_2026-04-17` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_distinct_shell_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -4412,6 +4413,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** finite gamma does not produce a coherent detector-line phase ramp on this retained grown row, the escape ratio stays at 1.000 to three decimals, and only a tiny centroid shift survives.  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the gamma=0 reduction and the full gamma sweep on the declared drift=0.2, restore=0.7 row. The negative result closes because the note only claims a bounded no-go for this minimal retarded-like field state and explicitly excludes broader field-theory, transfer, horizon, or trapping claims.
 - **rationale:** The runner directly checks the load-bearing failure mode: gamma=0 has zero field and amplitude error relative to the static baseline, while nonzero gamma leaves escape at 1.000 to three decimals and produces no coherent detector-line phase ramp. The source note scopes the result as a bounded no-go for one minimal causal-memory update, so it does not overclaim a generated-family transfer or self-consistent propagating field theory. Residual boundary: this clean verdict retains only the negative result for this particular retarded-like field ansatz on the specified grown row.
+- **auditor confidence:** high
+
+### `gate_b_grown_propagating_field_radical_note`
+
+- **Note:** [`GATE_B_GROWN_PROPAGATING_FIELD_RADICAL_NOTE.md`](../../docs/GATE_B_GROWN_PROPAGATING_FIELD_RADICAL_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the supplied single-seed, retained-row propagating feedback-field runner and its reported phase-ramp, escape, residual, and weak-field-scaling metrics.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e137b-d663-7933-a0d9-531e474114bb`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact reduction passes, but the propagated feedback does not generate a meaningful causal phase ramp or a near-linear weak-field class.  _(class `C`)_
+- **chain closes:** False — The runner does compute the reported finite metrics, and the note matches stdout. The broader self-consistent fixed-point no-go does not close because the code performs only one feedback iteration and the retained baseline/weak-field bar are invoked without cited authority in the restricted packet.
+- **rationale:** Issue: the note frames the result as a self-consistent fixed-point retained-row no-go, but the runner uses ITERATIONS=1 and no cited authority is supplied for the retained grown baseline or near-linear weak-field bar. Why this blocks: a one-step single-seed numerical falsifier is weaker than the claimed fixed-point architecture closure, and the baseline/bar cannot be audited from unlisted authorities. Repair target: either split the claim to the exact one-step runner result or add an audited convergence runner plus direct dependencies for the retained baseline and weak-field criterion. Claim boundary until fixed: the supplied runner reports flat phase/escape response and F~M≈0.256 for seed 0 under one feedback update.
 - **auditor confidence:** high
 
 ### `gate_b_grown_propagating_field_v2_note`
