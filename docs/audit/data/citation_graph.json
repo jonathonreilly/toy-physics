@@ -4221,6 +4221,30 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton"
+    },
+    {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "born_rule_analysis_2026-04-11"
+    },
+    {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "self_gravity_born_hardening_note"
+    },
+    {
+      "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "to": "staggered_fermion_card_2026-04-11"
+    },
+    {
       "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
       "to": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d"
     },
@@ -38305,6 +38329,24 @@
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
     },
+    "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction": {
+      "claim_id": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+        "conventions_unification_companion_note_2026-05-08",
+        "born_rule_analysis_2026-04-11",
+        "self_gravity_born_hardening_note",
+        "staggered_fermion_card_2026-04-11"
+      ],
+      "note_hash": "a00772ee52f30978027fd9ea065a8e3c0d13b08ca0e15cd27f21ba1b1ce81390",
+      "path": "docs/CLOSURE_C_BB_F2_1_CORRECTION_NOTE_2026-05-10_cBB_correction.md",
+      "runner_path": "scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py",
+      "title": "C-B(b) Born-as-Source Open-Gate Propagation Note"
+    },
     "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c": {
       "claim_id": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
       "claim_type_author_hint": "bounded_theorem",
@@ -66667,7 +66709,7 @@
       "meta": 59,
       "no_go": 23,
       "none": 1626,
-      "open_gate": 28,
+      "open_gate": 29,
       "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
@@ -66676,13 +66718,13 @@
       "meta": 59,
       "no_go": 130,
       "none": 449,
-      "open_gate": 116,
+      "open_gate": 117,
       "positive_theorem": 593
     },
-    "edge_count": 8346,
+    "edge_count": 8352,
     "leaf_count": 537,
-    "node_count": 2077,
+    "node_count": 2078,
     "root_count": 769,
-    "runners_with_path": 1692
+    "runners_with_path": 1693
   }
 }

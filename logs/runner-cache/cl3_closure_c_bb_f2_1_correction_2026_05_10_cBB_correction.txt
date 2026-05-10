@@ -1,0 +1,69 @@
+===== runner cache v1 =====
+runner: scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py
+runner_sha256: e35fd7cd59cf489ba48b8638d5e3127b017c85d3c24f122cc5dea103f8b41783
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+# C-B(b) Born-as-source open-gate propagation runner
+# Source note: docs/CLOSURE_C_BB_F2_1_CORRECTION_NOTE_2026-05-10_cBB_correction.md
+
+============================================================================
+T1: CONVENTIONS-UNIFICATION CITATION CONTENT
+============================================================================
+  [PASS] T1.a: conventions-unification companion exists
+         CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md, lines=235
+  [PASS] T1.b: cited companion has no case-insensitive Born content
+         case-insensitive born count=0
+  [PASS] T1.c: cited companion is actually convention bookkeeping
+         label/labeling and unit terms present
+
+============================================================================
+T2: LANDED GNEWTONG2 BORN-AS-SOURCE CITATION
+============================================================================
+  [PASS] T2.a: gnewtonG2 source note exists
+         G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+  [PASS] T2.b: gnewtonG2 uses the conventions-unification companion for BornOp
+         BornOp row and companion citation found
+  [PASS] T2.c: gnewtonG2 makes a Born-as-source claim surface
+         Born-as-source wording and density notation present
+
+============================================================================
+T3: LANDED T2 GNEWTON HOSTILE-REVIEW DEFECT RECORD
+============================================================================
+  [PASS] T3.a: T2 G_Newton hostile-review note exists
+         CLOSURE_T2_GNEWTON_REAUDIT_NOTE_2026-05-10_t2gnewton.md
+  [PASS] T3.b: F2.1 citation defect is explicitly recorded
+         F2.1, citation defect, and zero-match evidence present
+  [PASS] T3.c: downstream C-B(b) load is named without acting as a verdict
+         downstream C-B(b) mass-coupling chain is named
+
+============================================================================
+T4: OPEN-GATE BOUNDARY FOR DOWNSTREAM C-B(b)
+============================================================================
+  [PASS] T4.a: Born-as-source remains an explicit named premise/open gate
+         Born-as-source admission wording present in landed sources
+  [PASS] T4.b: Born+gravity hardening source exists and is bounded/no-go
+         hardening note names a bounded no-go boundary
+  [PASS] T4.c: staggered fermion card imports rho = |psi|^2 as H2
+         H2 position-density input is imported/admitted, not derived here
+  [PASS] T4.d: no direct retained-grade Born derivation is asserted by this runner
+         runner checks an open gate, not a retained promotion
+
+============================================================================
+T5: SOURCE-NOTE POLICY SURFACE
+============================================================================
+  [PASS] T5.a: source note declares canonical open_gate claim type
+         claim_type surface is canonical for audit parsing
+  [PASS] T5.b: source note avoids branch-local and audit-verdict authority
+         no PR-number authority, branch-local state, or audit verdicts
+  [PASS] T5.c: source note names physical Cl(3) and Z^3 explicitly
+         repo baseline is named without bare shorthand labels
+  [PASS] T5.d: source note preserves the narrow salvage boundary
+         downstream chain is not promoted or retagged by review-loop
+
+=== TOTAL: PASS=17, FAIL=0 ===
+
+----- stderr -----
+

@@ -2556,6 +2556,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_claude_complex_action_grown_companion_terminal_synthesis.py"
     },
+    "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py"
+    },
     "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c": {
       "assert_count": 1,
       "counts": {
@@ -22162,6 +22174,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py": {
+      "assert_count": 1,
+      "claims": [
+        "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/cl3_closure_c_l1c_2026_05_10_cL1c.py": {
@@ -44293,13 +44320,13 @@
     "decoration_candidates": 162,
     "dominant_class_distribution": {
       "A": 112,
-      "B": 160,
+      "B": 161,
       "C": 652,
       "D": 250,
       "none": 406
     },
-    "runners_classified": 1580,
+    "runners_classified": 1581,
     "runners_with_C": 817,
-    "runners_with_D": 444
+    "runners_with_D": 445
   }
 }
