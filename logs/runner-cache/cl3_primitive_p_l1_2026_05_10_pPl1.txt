@@ -1,0 +1,126 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_l1_2026_05_10_pPl1.py
+runner_sha256: 898b0929d57254514bff0de06d6d1247a26b40d884e9100b3a8d4391c8df288e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+Primitive Design Probe P-L1 — QCD beta_2/beta_3 channel-weight
+                              terminal admission
+Date: 2026-05-10
+Source-note authority:
+  docs/PRIMITIVE_P_L1_CHANNEL_WEIGHT_PROPOSAL_NOTE_2026-05-10_pPl1.md
+========================================================================
+
+Section 1 — DOCUMENT the terminal admission shape
+  [PASS] TVZ 1980 MSbar 3-loop has 6 nonzero N_f-monomial channels | channels = ['C_A (T_F n_f)^2', 'C_A^2 (T_F n_f)', 'C_A^3', 'C_F (T_F n_f)^2', 'C_F C_A (T_F n_f)', 'C_F^2 (T_F n_f)']
+  [PASS] TVZ c_AAA = 2857/54 is a pure rational (no zeta values) | = 2857/54 = 52.9074
+  [PASS] VVL 1997 MSbar 4-loop weights live in Q + Q*zeta_3 | VVL 1997 hep-ph/9701390 explicit form
+    -> The missing primitive is a function from primitive 1PI graph
+       cohomology classes to Q + Q*zeta_3 + ..., NOT a scheme choice.
+
+Section 2 — RETAINED beta_0 = 7, beta_1 = 26 at N_f = 6
+  [PASS] beta_0 from S1: (11 N_color - 2 N_quark)/3 | = (33 - 12)/3 = 7
+  [PASS] beta_0 from Casimirs: (11/3) C_A - (4/3) T_F N_f | = 11 - 4 = 7
+  [PASS] beta_1 = (34/3) C_A^2 - (20/3) C_A T_F N_f - 4 C_F T_F N_f | = 102 - 60 - 16 = 26
+    -> beta_0, beta_1 are RETAINED (universal at 1-, 2-loop).
+    -> Both are scheme-independent (MSbar = MOM = lattice = <P>).
+
+Section 3 — P_L1-A: Connes-Kreimer Hopf-Subdivergence Primitive
+  [PASS] Toy 1PI graph 'self-energy bubble' has loop number 1 | loops = E - V + 1 = 2 - 2 + 1 = 1
+  [PASS] Primitive 1PI graph has trivial Connes-Kreimer coproduct | Delta(prim) = prim tensor 1 + 1 tensor prim (no proper subdivergences)
+    -> Hopf-algebra organization factorizes beta_n cleanly:
+       beta_n = sum_{Gamma : ell(Gamma) = n+1, primitive}
+                  (sym(Gamma))^{-1} * T(Gamma) * R(Gamma)
+       T(Gamma): RETAINED (Casimir tensor, group theory)
+       sym(Gamma): RETAINED (graph automorphism count)
+       R(Gamma): NOT RETAINED (period evaluation function)
+  [PASS] P_L1-A toy: channel weight C_A^3 from one primitive graph | period unknown -> weight unknown; target = 2857/54
+  [ADMITTED] P_L1-A: period evaluation function R(Gamma) -> Q + Q*zeta_3 | Connes-Kreimer Hopf algebra organizes BPHZ subtraction but does NOT compute graph periods; admitting P_L1-A is notational rewrap of the existing terminal admission
+    -> P_L1-A: NEGATIVE on closure.
+       Sub-finding (positive structural): organizes the 6-channel
+       decomposition cleanly via T(Gamma) projection.
+
+Section 4 — P_L1-B: <P>-scheme Heat-Kernel Bootstrap Primitive
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^1 = 4/3 | = 4/3
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^2 = -8/9 | = -8/9
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^3 = 32/81 | = 32/81
+  [PASS] <P>_HK_SU(3) Taylor coef of s_t^4 = -32/243 | = -32/243
+  [PASS] <P>_HK_SU(3) Taylor expansion (4 terms) matches direct evaluation | direct = 0.001332444839, taylor = 0.001332444839
+    -> P_L1-B bootstrap conjecture: beta_2^<P> = 32/81
+                                                = 0.3951
+    -> MSbar comparator at N_f = 6: beta_2^MSbar = -65/2
+                                                  = -32.5000
+  [PASS] P_L1-B bootstrap value differs from MSbar by ~ order 80x | |beta_2^MSbar / beta_2^bootstrap| = 82.3
+  [ADMITTED] P_L1-B: equating <P>_HK probe expectation with flow derivative | <P>_HK is the single-plaquette EXPECTATION VALUE in the heat-kernel limit, NOT the running-coupling flow derivative; they coincide at 1-loop and 2-loop (universal coefficients) but diverge at 3-loop+
+    -> P_L1-B: NEGATIVE on closure.
+       Sub-finding (positive structural): <P>-scheme IS framework-
+       native; scheme distinction is real (X-L1-MSbar Section 6).
+
+Section 5 — P_L1-C: Combinatorial Symmetry-Factor Sum-Rule Primitive
+  [PASS] Channel C_F^3 value at SU(3) = 64/27 | = 64/27
+  [PASS] Channel C_A^3 value at SU(3) = 27 | = 27
+  [PASS] Channel C_F (T_F n_f)^2 at SU(3), N_f=6 = 12 | = 12
+  [PASS] Channel C_F C_A (T_F n_f) at SU(3), N_f=6 = 12 | = 12
+    -> P_L1-C factorization: c_alpha = sum_{Gamma} (sym)^-1 * P(Gamma)
+       sym, T-projection: RETAINED (combinatorial + group theory)
+       P(Gamma): NEW PRIMITIVE (graph-period oracle)
+    -> P_L1-C target reconstruction at C_A^3 channel: c_AAA = 2857/54
+       Reconstruction requires graph-period oracle returning
+       Brown-Schnetz periods of the ~7-10 primitive 3-loop graphs
+       contributing to C_A^3. Oracle is NOT retained.
+  [ADMITTED] P_L1-C: graph-period oracle P : Primitive 1PI Graphs -> Q + Q*zeta_3 | factorizes the missing primitive cleanly but admits one of comparable mathematical strength (Brown-Schnetz period evaluation = master-integral computation in Schwinger-parameter form)
+    -> P_L1-C: NEGATIVE on closure.
+       Sub-finding (positive structural): cleanest known formulation
+       of the open admission as a 'period oracle' on graph cohomology.
+
+Section 6 — TVZ closed-form polynomial cross-check
+  [PASS] TVZ 1980 beta_2 polynomial at N_f = 6 evaluates to -65/2 | = 2857/2 - 5033/3 + 325*36/54 = -65/2
+  [PASS] TVZ polynomial is degree 2 in n_f (no quartic-Casimir term) | quartic-Casimir contributions would require deg >= 3 in n_f
+
+Section 7 — Hypothetical P_L1-D (open design problem)
+    Hypothetical primitive P_L1-D:
+      An algorithmically specifiable function
+        P_Cl(3) : 1PI Graph -> Q[zeta_n]
+      that:
+        1. Reproduces 3-loop TVZ values 2857/54, ..., 1/2
+           from the Cl(3) lattice substrate alone
+           (without dim-reg or Brown-Schnetz period theory).
+        2. Reproduces 4-loop VVL Q + Q*zeta_3 weights
+           similarly.
+  [ADMITTED] P_L1-D: Cl(3)/Z^3-native period functor on primitive 1PI graphs | no such functor is currently known; the framework's Z^3 lattice substrate carries no canonical period extension to graphs that reproduces continuum perturbative Q[zeta_n] periods; establishing one would itself be a major result
+    -> P_L1-D: OPEN DESIGN PROBLEM.
+
+========================================================================
+Honest verdict
+========================================================================
+
+  Candidate primitives stress-tested:
+    P_L1-A (Connes-Kreimer Hopf-Subdivergence):  NEGATIVE on closure
+    P_L1-B (<P>-scheme HK bootstrap):            NEGATIVE on closure
+    P_L1-C (Combinatorial sum-rule):             NEGATIVE on closure
+    P_L1-D (Cl(3)/Z^3 period functor):           OPEN DESIGN PROBLEM
+
+  Sub-findings (positive):
+    - The terminal admission can be sharpened to:
+      'no Cl(3)/Z^3-native period functor on primitive 1PI graphs'
+    - Hopf-algebra organization is genuine but non-load-bearing
+    - <P>-scheme is framework-native at probe-expectation level
+    - Sum-rule factorization is the cleanest known form of the gap
+
+  Conclusion:
+    No clean primitive proposed here closes the L1 channel-weight
+    terminal admission. The X-L1-MSbar bounded admission stands;
+    beta_2, beta_3 continue to be imported from QCD literature as
+    'imported authority for a bounded-tier theorem'.
+
+  Tally:  PASS = 21, FAIL = 0, ADMITTED = 4
+
+  Verdict: primitive_design_proposal
+           NEGATIVE on closure for all three candidate primitives
+           POSITIVE on sharpening the shape of the open admission
+========================================================================
+----- stderr -----
+
