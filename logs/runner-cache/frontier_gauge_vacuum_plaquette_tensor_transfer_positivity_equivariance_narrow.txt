@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_positivity_equivariance_narrow.py
+runner_sha256: 995f96c511cd7dfae5ff16508e85167b12e1ae15ab60c114aec59d9d8e004f3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: tensor-word positivity + sigma-equivariance
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: instance W = {0, 1, 2, 3}, sigma = (0 1)(2 3), simple M_+
+----------------------------------------------------------------------------------------
+  [PASS (A)] sigma is an involution: sigma^2 = I and sigma^T = sigma
+  [PASS (A)] D is sigma-invariant (sigma D sigma = D)
+  [PASS (A)] M_+ has entries in Z_{>=0}
+  [PASS (A)] M_- := sigma M_+ sigma has entries in Z_{>=0}
+  [PASS (A)] conjugacy (1): sigma M_+ sigma = M_- by construction
+  [PASS (A)] M_+ + M_- is sigma-equivariant: sigma (M_+ + M_-) sigma = M_+ + M_-
+  [PASS (A)] (T1) every entry of Word(D, M_+, M_-) is a polynomial in {d_0, d_1} with nonnegative integer coefficients
+  [PASS (A)] (T1) Word(D, M_+, M_-) evaluated at d_0 = d_1 = 1 has every entry >= 0
+  [PASS (A)] (T2) sigma * Word * sigma = Word (sigma-equivariance)
+  [PASS (A)] eta is sigma-invariant: sigma eta = eta
+  [PASS (A)] (T3) sigma y = y (image of sigma-invariant vector is sigma-invariant)
+  [PASS (A)] (T3) every entry of y is a polynomial in (a, b, d_0, d_1) with nonnegative integer coefficients
+
+----------------------------------------------------------------------------------------
+Part 2: instance W = {0, ..., 5}, sigma = (0 1)(2 3)(4 5)
+----------------------------------------------------------------------------------------
+  [PASS (A)] sigma_6 is an involution
+  [PASS (A)] D_6 is sigma_6-invariant
+  [PASS (A)] M_+ on 6x6 has entries in Z_{>=0}
+  [PASS (A)] M_- := sigma M_+ sigma on 6x6 has entries in Z_{>=0}
+  [PASS (A)] (T1) on 6x6 instance: every entry is a polynomial in {d_0, d_1, d_2} with nonnegative integer coefficients
+  [PASS (A)] (T2) on 6x6 instance: sigma * Word * sigma = Word
+  [PASS (A)] (T3) on 6x6 instance: sigma y = y
+
+----------------------------------------------------------------------------------------
+Part 3: degenerate boundary case M_+ = M_- = 0 gives Word = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] the conjugacy holds vacuously when M_+ = 0
+  [PASS (A)] (T1) Word = 0 in the degenerate boundary case
+  [PASS (A)] (T2) sigma * 0 * sigma = 0 trivially
+
+----------------------------------------------------------------------------------------
+Part 4: confirmation that the conjugacy hypothesis is the load-bearing input
+----------------------------------------------------------------------------------------
+  [PASS (A)] A_arb has nonnegative integer entries
+  [PASS (A)] conjugacy (1) holds for the constructed pair (M_+ = A, M_- = sigma A sigma)
+  [PASS (A)] (T1) on the (M_+ = A, M_- = sigma A sigma) instance: every entry is a polynomial with nonnegative integer coefficients in {d_0, d_1}
+  [PASS (A)] (T2) on the (M_+ = A, M_- = sigma A sigma) instance: sigma * Word * sigma = Word
+
+----------------------------------------------------------------------------------------
+Part 5: structural explicit checks of the proof's algebraic steps
+----------------------------------------------------------------------------------------
+  [PASS (A)] intermediate D * (M_+ + M_-) is entry-wise polynomially nonneg
+  [PASS (A)] intermediate D * (M_+ + M_-) * D is entry-wise polynomially nonneg
+  [PASS (A)] intermediate D * (M_+ + M_-) * D * (M_+ + M_-)^T is entry-wise polynomially nonneg
+  [PASS (A)] sigma * M_+ * sigma = M_- (the conjugacy hypothesis)
+  [PASS (A)] sigma * M_- * sigma = M_+ (squaring the involution)
+  [PASS (A)] sigma * (M_+ + M_-) * sigma = M_- + M_+ = (M_+ + M_-)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let W be any nonempty finite index set, and let sigma : W -> W be
+    any involution. Let D = diag(d_w) be a diagonal matrix on R^W with
+    strictly positive entries and d_{sigma(w)} = d_w. Let M_+, M_- be
+    matrices with entries in Z_{>= 0} satisfying
+        sigma M_+ sigma = M_-.
+    Define Word(D, M_+, M_-) := D (M_+ + M_-) D (M_+ + M_-)^T D.
+
+  CONCLUSION:
+    (T1) Every entry of Word(D, M_+, M_-) is a nonnegative real.
+    (T2) sigma * Word * sigma = Word.
+    (T3) For any sigma-invariant nonneg vector eta, Word * eta is
+         sigma-invariant and nonnegative.
+
+  Audit-lane class:
+    (A) - pure nonnegative-matrix linear algebra. No Wilson character
+    coefficient identification, no SU(3) representation theory, no
+    Peter-Weyl / Perron / boundary-character bridge consumed.
+
+  This narrow theorem isolates the abstract algebraic core of the
+  runner-checked one-word packet from the parent
+  gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note,
+  per the auditor-named OR-narrow path "split note scoped only to the
+  one finite tensor-word packet".
+
+
+========================================================================================
+  TOTAL: PASS=32, FAIL=0
+========================================================================================
+
+SUMMARY: PASS=32 FAIL=0
+
+----- stderr -----
+
