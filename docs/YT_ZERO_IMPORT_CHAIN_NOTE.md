@@ -6,6 +6,24 @@ matching-rule conditional through `kappa_EW`; do not cite the EW `sqrt(9/8)`
 step as an unconditional retained derivation.
 **Script:** `scripts/frontier_yt_zero_import_chain.py`
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this note `audited_conditional`. The
+substantive technical findings (Ward-identity construction, QFP
+insensitivity, color projection bookkeeping, output-labelling
+clarification of the earlier `g_s_evolved(M_Pl)/sqrt(6)` confusion) are
+sound at the stated scope. The conditional perimeter is exactly the
+upstream-import gap described in the audit verdict: the runner imports
+`<P> = 0.5934`, `u_0`, `alpha_LM`, and `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` rather than deriving them
+inline from Cl(3) on `Z^3`, and it hard-codes `R_conn = 8/9` (the
+exact Fierz channel fraction `F_adj = 8/9` is itself a
+`retained_bounded` channel-counting authority, not a Cl(3) algebra
+derivation in this runner). The `kappa_EW = 0` connected-trace EW
+normalization is also conditional rather than derived. See "Open
+upstream imports" below for the full register. Audit verdict and
+effective status are set by the independent audit lane only; nothing
+in this rigorization edit promotes status.
+
 ---
 
 ## 1. Result
@@ -189,3 +207,58 @@ uses its own package carrier):
 - `scripts/frontier_yt_color_projection_correction.py` -- color projection
 - `scripts/frontier_color_projection_mc.py` -- R_conn MC verification
 - `scripts/frontier_yt_qfp_insensitivity.py` -- QFP robustness check
+
+---
+
+## 8. Open upstream imports (audit conditional perimeter)
+
+The audit lane requires an explicit register of which numerical
+ingredients in section 2's chain are imported from upstream modules
+versus derived inline by the y_t runner. The chain is "zero-import"
+in the sense of using no SM observable as an input; it is **not**
+self-contained from Cl(3) on `Z^3` alone, because several lattice and
+algebraic anchors are routed through upstream modules.
+
+| Ingredient | Imported from | Conditional on |
+|---|---|---|
+| `<P> = 0.5934` (SU(3) plaquette at `beta = 6`) | [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py) (`CANONICAL_PLAQUETTE`) | retained-grade promotion of the canonical plaquette surface as a Cl(3)-on-`Z^3` derivation; until then the y_t chain is conditional on this Monte Carlo evaluation |
+| `u_0 = <P>^{1/4}` | same module (`CANONICAL_U0`) | algebraic consequence once `<P>` is admitted |
+| `alpha_LM = alpha_bare / u_0` | same module (`CANONICAL_ALPHA_LM`) | CMT specialization once `u_0` is admitted |
+| `alpha_s(v) = alpha_bare / u_0^2` | same module (`CANONICAL_ALPHA_S_V`) | CMT specialization once `u_0` is admitted |
+| `R_conn = 8/9 = (N_c^2 - 1)/N_c^2` | hard-coded in the runner; corresponds to the exact Fierz channel fraction `F_adj` | retained-grade `F_adj` Fierz authority; treated here as `retained_bounded` channel-counting input |
+| `K_EW(0) = 9/8` (connected-trace specialization) | section 2 chain at `kappa_EW = 0` | the no-go closure stated in section 4 already flags this as a matching-rule selector that is not derived from current retained primitives; the EW physical readout is therefore explicitly conditional on `kappa_EW = 0` |
+| Hierarchy theorem `v = M_Pl * (7/8)^{1/4} * alpha_LM^16` | derived inline; uses `alpha_LM` from above | conditional on the upstream `alpha_LM` import |
+| 2-loop SM RGE coefficients `b_1, b_2, b_3, ...` | group theory of the derived gauge + matter content | algebraic; not a numerical import |
+| Ward identity `y_t(M_Pl) = g_lattice / sqrt(6)` | derived inline from SU(3) color-flavor locking | algebraic; not a numerical import |
+
+The audit-conditional perimeter is therefore precisely the
+`canonical_plaquette_surface` import plus the `kappa_EW = 0`
+selector. Both are independently flagged in the import audit table
+in section 3 of this note. The Ward-identity logic, QFP
+insensitivity, color-projection bookkeeping, hierarchy theorem, and
+backward-RGE iteration are not part of the conditional perimeter at
+the stated scope.
+
+### Audit-aware repair path
+
+Per `audit_ledger.json`, `notes_for_re_audit_if_any` for
+`yt_zero_import_chain_note`, the cheapest route to a stronger audit
+verdict is one of the following two paths:
+
+1. **Promote the upstream bridge.** Land a retained-grade audited note
+   for `canonical_plaquette_surface` deriving `<P>`, `u_0`, and
+   `alpha_LM` from Cl(3) on `Z^3`, and separately land a retained-grade
+   `kappa_EW = 0` connected-trace bridge note. After both upstream
+   bridges are retained, this chain note's conditional perimeter
+   shrinks to algebra and re-audit can target a stronger verdict.
+2. **Inline the derivations.** Replace the `canonical_plaquette_surface`
+   import with inline runner code that computes `<P>` and the
+   downstream `u_0`, `alpha_LM` quantities from Cl(3) on `Z^3` directly
+   in `frontier_yt_zero_import_chain.py`, and similarly inline the
+   connected-trace selector. This makes the runner self-contained but
+   duplicates work that is more naturally factored into a separate
+   bridge.
+
+Either repair removes the conditional perimeter; this rigorization
+edit only sharpens the boundary of what currently is and is not in
+that perimeter, without changing audit status.
