@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1143 |
+| unaudited | 1142 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 232 |
+| ~~audited_conditional~~ | 233 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 232 |
+| `audited_conditional` | 233 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1210 |
+| `unaudited` | 1209 |
 
 | claim_type | count |
 |---|---:|
@@ -611,6 +611,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -5243,6 +5244,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Applying the stated ABSS fixed-point formula with p = 3 and tangent weights (1,2) gives eta = (1/3)(1/3 + 1/3) = 2/9.  _(class `A`)_
 - **chain closes:** False — The symbolic eta evaluation closes after p = 3, weights (1,2), and the ABSS formula/normalization are accepted. The missing step is a retained or self-contained derivation of the admitted Cl(3)/Z^3-to-ambient APS setup and the exact ABSS fixed-point formula in this restricted packet.
 - **rationale:** The runner is not a trivial printout: it performs symbolic Rodrigues, eigenvalue, fixed-locus, weight, and eta-sum checks. But the load-bearing result is an algebraic closure after the admitted C3 route, the ABSS fixed-point formula, and its normalization are taken as inputs. The packet supplies no cited retained authority or self-contained proof for those imports, and the source explicitly leaves the physical-observable bridge delta_physical = eta_APS open.
+- **auditor confidence:** high
+
+### `koide_cl3_selector_gap_note_2026-04-19`
+
+- **Note:** [`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`](../../docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded selector-gap claim that the displayed doublet-A, baryon Schur, SU(3)-modified coupling, and eigenvalue-degeneracy routes fail to derive m_* from the supplied one-hop inputs.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1230-54d3-75d1-b90e-a8f2e659a5d3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** “No Cl(3)-algebraic route closes the gap” between the displayed candidate selector values and the physical selected point m_* ≈ -1.1605.  _(class `B`)_
+- **chain closes:** False — The note shows a bounded gap only if several imported structures are accepted, but the restricted packet does not close the Cl+(3) doublet/H-matrix construction, baryon coupling uniformity, SU(3) embedding constants, or the H_* physical m_* bridge. The source note also explicitly leaves the full 4x4 block and kappa_* derivation open, so the broad “no Cl(3)-algebraic route” conclusion is not established.
+- **rationale:** Issue: the global selector-gap/no-Cl(3)-route conclusion relies on unsupported imported structures and on an m_* physical witness that the cited authority marks as out of scope/open. Why this blocks: the supplied one-hop authority only retains the local V(m) coefficient assignment and honest V_eff-vs-m_* gap, not the doublet, baryon, SU(3), degeneracy, or H_* bridge needed for exhaustion. Repair target: provide direct retained dependencies or runners for each listed route and a theorem excluding or resolving the stated full-4x4/kappa_* open routes. Claim boundary until fixed: the note may be cited as an open selector-gap inventory, not as a closed bounded theorem that Cl(3) alone cannot derive m_*.
+- **open / conditional deps cited:**
+  - `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_cone_completing_root_narrow_theorem_note_2026-05-02`

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 708,
+    "critical": 707,
     "high": 25,
     "leaf": 268,
     "medium": 148
@@ -7462,29 +7462,6 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_distance_law_definitive.py",
-      "transitive_descendants": 342
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.422,
-      "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 342
     },
     {
@@ -37617,6 +37594,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 114,
-  "total_pending": 1149
+  "ready_count": 113,
+  "total_pending": 1148
 }
