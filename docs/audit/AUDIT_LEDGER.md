@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1093 |
+| unaudited | 1092 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 259 |
+| ~~audited_conditional~~ | 260 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 259 |
+| `audited_conditional` | 260 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1159 |
+| `unaudited` | 1158 |
 
 | claim_type | count |
 |---|---:|
@@ -574,6 +574,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -3333,6 +3334,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
   - `PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`
   - `S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`
+- **auditor confidence:** high
+
+### `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_WEAK_TRIPLET_TRANSFER_CLASS_THEOREM_NOTE_2026-04-15.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the algebraic block-diagonal transfer-class statement conditional on the asserted 1+2 source bundle and 1+2 DM target bundle.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11e9-22f3-75b0-9f43-a8e22c9905a1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given source and target involutions with one odd slot and two even slots, any linear transfer map intertwining them must have block form L = [[c_odd,0,0],[0,m_11,m_12],[0,m_21,m_22]].  _(class `A`)_
+- **chain closes:** False — The block-form algebra closes as a parity-intertwiner identity, but the asserted source and target bundle facts are imported from the current stack and are not provided as retained cited authorities in the restricted packet. The runner also verifies those facts by reading external notes not included as one-hop dependencies.
+- **rationale:** Issue: the theorem's algebraic parity block reduction is valid only after accepting the imported 1+2 source bundle and 1+2 target bundle. Why this blocks: those carrier/readout premises are not closed by any cited retained authority in the packet, and the runner's first five checks read external notes rather than deriving the bundle from the axiom. Repair target: add retained one-hop dependencies or a theorem/runner deriving the source and target decompositions inside the restricted chain. Claim boundary until fixed: this is a conditional algebraic classification of parity-compatible maps, not standalone closure of the DM transfer class from Cl(3) on Z^3.
+- **open / conditional deps cited:**
+  - `PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md`
+  - `DM_NEUTRINO_TRIPLET_EVEN_RESPONSE_THEOREM_NOTE_2026-04-15.md`
 - **auditor confidence:** high
 
 ### `dm_neutrino_weak_vector_theorem_note_2026-04-15`
