@@ -1,13 +1,69 @@
 # Historical Potential Publication Discoveries Log
 
-**Date opened:** 2026-04-11  
-**Status:** historical planning inventory; not part of the live reviewer path
+---
+
+**This is a historical planning inventory / discovery-log note. It
+does not establish any retained claim and does not assert audit-row
+status for any listed item.**
+For retained claims on individual discoveries, see the per-discovery
+notes referenced from the `## Audit scope` block below.
+
+---
+
+**Date opened:** 2026-04-11
+**Status:** support / historical planning inventory record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / historical planning inventory record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Purpose:** cumulative repo-wide log of results that look novel, publishable,
 or methodologically important enough to preserve for future paper planning.
 
 This is **not** a paper outline and **not** a claim that every item below is
 already publication-ready. It is a running inventory of findings worth keeping
 visible when paper planning starts.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **historical planning inventory / discovery-log
+note**. It is **not** a single retained theorem and **must not** be
+audited as one. The audit ledger row for
+`work_history.potential_publication_discoveries_log` classified this
+source as conditional/open_gate with auditor's repair target:
+
+> either gate this work-history inventory out of the audit ledger
+> or register/verify the cited evidence notes and runners item by
+> item.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a historical planning inventory record rather than to register and
+verify each cited evidence note and runner item-by-item here. That
+verification belongs in a dedicated review-loop or per-D-item audit
+pass. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The whole-repo D01–D45 ledger, per-item discovery descriptions,
+  per-item lane assignments, per-item status labels (`retained`,
+  `bounded-retained`, `methodological`, `negative-result`,
+  `exploratory-lead`), and "Why it matters" / "Evidence" columns
+  below are **historical planning-inventory memory only**.
+- The note's status labels are **historical discovery-log labels,
+  not the publication-capture dispositions used in
+  `PUBLICATION_MATRIX.md`**.
+- The retained-status surface for any individual discovery is the
+  audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-discovery
+  notes cited in each row's Evidence column, **not** this discovery
+  log.
+- Retained-grade does **NOT** propagate from this discovery log to
+  any individual D-item, status label, or successor paper-planning
+  pass.
+
+For any retained claim about a listed discovery, audit the
+corresponding dedicated evidence note and its runner as a separate
+scoped claim — not this historical planning inventory.
+
+---
 
 See also:
 

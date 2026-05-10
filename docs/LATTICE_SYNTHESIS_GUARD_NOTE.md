@@ -1,10 +1,63 @@
 # Lattice Synthesis Guard Note
 
+---
+
+**This is a synthesis-guard / integration-guidance note. It does not
+establish any retained claim.**
+For retained claims on lattice / ordered-lattice content, see the
+per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
-**Status:** support / narrow synthesis guard note; NN refinement is a bounded bridge, not a continuum theorem and not a tier-ratifiable continuum claim.
+**Status:** support / synthesis-guard record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / synthesis-guard record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Narrow synthesis guard: NN refinement is a bounded bridge, not a
+continuum theorem and not a tier-ratifiable continuum claim.
 
 This note records the integration guard for the ordered-lattice branch after the
 weak-field reopening.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **synthesis-guard / integration-guidance note** for
+the ordered-lattice branch after the weak-field reopening. It is
+**not** a single retained theorem and **must not** be audited as one.
+The audit ledger row for `lattice_synthesis_guard_note` classified
+this source as conditional/bounded_theorem with auditor's repair
+target:
+
+> register a runner/proof note for the load-bearing step or cite an
+> audited retained dependency.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a synthesis-guard guidance record rather than to register a
+runner or cite an audited retained dependency for the integration
+guard here. Those steps belong in dedicated review-loop or per-claim
+audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "canonical lattice state" rollup, "why synthesis should stay
+  unchanged" guidance, "safe synthesis wording" prescriptions, and
+  weak-field-pocket / NN-refinement / complementarity narrative
+  below are **historical synthesis-guard memory only**.
+- The retained-status surface for any ordered-lattice, weak-field
+  pocket, NN-refinement, or complementarity sub-claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes,
+  **not** this synthesis-guard record.
+- Retained-grade does **NOT** propagate from this synthesis-guard
+  note to any sub-claim, integration verdict, or successor synthesis.
+
+For any retained claim about lattice content, audit the corresponding
+dedicated note and its runner as a separate scoped claim — not this
+synthesis-guard record.
+
+---
 
 ## Canonical lattice state
 

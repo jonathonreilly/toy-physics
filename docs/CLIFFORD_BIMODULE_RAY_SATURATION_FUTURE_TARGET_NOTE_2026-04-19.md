@@ -1,15 +1,72 @@
 # Clifford Bimodule Ray-Saturation Theorem — Future Target
 
+---
+
+**This is a future-target / research-target definition note. It does
+not establish any retained claim, has no proof, and has no runner.**
+For retained claims on the scalar-selector / quark-amplitude surface,
+see the per-claim notes referenced from the `## Audit scope` block
+below.
+
+---
+
 **Type:** open_gate
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** open_gate — future mathematical target (status line rephrased 2026-04-28 per audit-lane verdict). This is a named research target; it is not a theorem, has no runner, has no proof, and is not part of the current publishable claim surface. Named and scoped as the concrete math target that, if proven,
-would derive STRC
+**Status:** support / future-target definition only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / future-target definition only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Future mathematical target (status line rephrased 2026-04-28 per
+audit-lane verdict). This is a named research target; it is not a
+theorem, has no runner, has no proof, and is not part of the current
+publishable claim surface. Named and scoped as the concrete math
+target that, if proven, would derive STRC
 (`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`) from
 retained structure alone and reduce the full scalar-selector axiom
 cost from ~1 observable principle (Scenario A) to 0 (Scenario C). No
 retention is claimed here.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **future-target / proposed-theorem definition note**.
+It is **not** a single retained theorem and **must not** be audited as
+one. The audit ledger row for
+`clifford_bimodule_ray_saturation_future_target_note_2026-04-19`
+classified this source as conditional/open_gate with auditor's repair
+target:
+
+> provide a theorem note or runner deriving STRC-LO from retained
+> bimodule unitarity, supp = 6/7, and delta_A1 = 1/42 without
+> importing STRC.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a future-target definition note rather than to supply the proof or
+runner deriving STRC-LO here. That derivation is a separate research
+target. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The proposed ray-saturation theorem statement, approach hints,
+  axiom-cost compression scenarios, and target-significance
+  narrative below are **future-research framing only**.
+- The note explicitly states "no proof," "no runner," and "no
+  retention is claimed here."
+- The retained-status surface for STRC, the scalar-selector axiom
+  cost, or any quark up-amplitude derivation is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes
+  (`QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md` and
+  related), **not** this future-target definition.
+- Retained-grade does **NOT** propagate from this future-target note
+  to any putative theorem, runner, or successor closure.
+
+For any retained claim about STRC-LO, ray saturation, or scalar-
+selector axiom-cost reduction, audit the corresponding dedicated
+note (when it exists) and its runner as a separate scoped claim —
+not this future-target definition.
 
 ---
 

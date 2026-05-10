@@ -1,7 +1,57 @@
 # DM Neutrino Two-Higgs Closure Attacks
 
-**Date:** 2026-04-15  
-**Status:** bounded - bounded or caveated result note
+---
+
+**This is an attack-paths inventory / planning record. It does not
+establish any retained claim.**
+For retained claims on the DM neutrino two-Higgs closure surface, see
+the per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
+**Date:** 2026-04-15
+**Status:** support / attack-paths inventory record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / attack-paths inventory record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **attack-paths inventory / planning record** for the
+DM neutrino two-Higgs closure derivation surface. It is **not** a
+single retained theorem and **must not** be audited as one. The audit
+ledger row for `dm_neutrino_two_higgs_closure_attacks_note_2026-04-15`
+classified this source as conditional/bounded_theorem with auditor's
+repair target:
+
+> register a runner/proof note for the load-bearing step or cite an
+> audited retained dependency.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an attack-paths inventory rather than to register a runner or
+cite an audited retained dependency for the inventoried attack paths
+here. Those steps belong in dedicated review-loop or per-attack-path
+audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The Gap A / Gap B sub-targets, Approach A1/A2/A3 + B1/B2/B3
+  attack inventories, "strongest execution choice" recommendations,
+  and "uniquely minimal" framing language below are **historical
+  attack-paths memory only**.
+- The retained-status surface for any DM two-Higgs neutrino
+  extension, right-Gram bridge, residual-sheet, or CP-admissible
+  closure is the audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus
+  the per-claim notes, **not** this attack inventory.
+- Retained-grade does **NOT** propagate from this attack inventory
+  to any approach-path, recommendation, or successor closure.
+
+For any retained claim about DM neutrino two-Higgs closure, audit
+the corresponding dedicated note and its runner as a separate scoped
+claim — not this attack-paths inventory.
+
+---
 
 ## Exact live gaps
 

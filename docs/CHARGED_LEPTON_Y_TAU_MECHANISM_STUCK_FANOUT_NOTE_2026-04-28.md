@@ -1,20 +1,77 @@
 # `y_τ` Identity Mechanism — Stuck Fan-Out
 
+---
+
+**This is a fan-out / mechanism-recommendation note. It does not
+establish any retained claim and does not derive `y_τ`.**
+For retained claims on Lane 6 (Phase-1 6B) components, see the
+per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
 **Type:** open_gate
 
 **Date:** 2026-04-28
-**Status:** open_gate — branch-local **stuck fan-out** note on
+**Status:** support / fan-out recommendation record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / fan-out recommendation record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+**Lane:** 6 — Charged-lepton mass retention (Phase-1 6B)
+**Loop:** `charged-lepton-pickup-20260428`
+
+Branch-local **stuck fan-out** note on
 `frontier/charged-lepton-pickup-20260428`. Cycle 4 of the charged-
 lepton loop: required stuck fan-out per Deep Work Rules before any
 honest stop. After Cycles 2 + 3 closed both gauge-anchor candidates
 (SA-A SU(2), SA-B U(1)_Y), generates 5 orthogonal non-gauge-anchor
 mechanism candidates, synthesizes, identifies best remaining
-attack frame. **Result: SA-C-prime (generation-flavor-symmetry
-anchor via landed EW A^4 bridges) emerges as cleanest single-
-cycle continuation; cross-sector lepton-quark ratio (M5) is the
-strongest backup.**
-**Lane:** 6 — Charged-lepton mass retention (Phase-1 6B)
-**Loop:** `charged-lepton-pickup-20260428`
+attack frame.
+
+**Recorded recommendation (no theorem closed):** SA-C-prime
+(generation-flavor-symmetry anchor via landed EW A^4 bridges)
+emerged as the cleanest single-cycle continuation candidate, with
+cross-sector lepton-quark ratio (M5) as the strongest backup
+candidate. This is a process classification / candidate ordering only.
+
+## Audit scope (operational narrowing 2026-05-10)
+
+This file's load-bearing content is a **process classification and
+mechanism-candidate recommendation**, not a first-principles
+computation or algebraic derivation of `y_τ`. The audit ledger row for
+`charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28`
+classified this source as `audited_renaming`/open_gate with auditor's
+repair target:
+
+> Cycle 5 must supply the actual A4 representation assignments,
+> Clebsch-Gordan computation, and retained bridge from those inputs
+> to a y_tau coefficient.
+
+The minimal-scope response in this PR is to **narrow** this document
+operationally to its actual content — a fan-out mechanism inventory
+and continuation recommendation — rather than to materialize the A4
+representation assignments, Clebsch-Gordan computation, or `y_τ`
+coefficient bridge here. Those steps belong in dedicated Cycle 5 /
+review-loop work. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The six candidate mechanisms (M1–M5 + SA-C-prime), synthesis
+  agreements/contradictions, and "cleanest single-cycle
+  continuation" recommendation below are **historical
+  fan-out / process memory only**.
+- The note explicitly **does not derive `y_τ`**; M3 is not attempted
+  and no Clebsch-Gordan computation is supplied.
+- The retained-status surface for any `y_τ` mechanism claim is the
+  audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim
+  Cycle 5 / charged-lepton notes, **not** this fan-out record.
+- Retained-grade does **NOT** propagate from this fan-out note to
+  any candidate mechanism, recommendation outcome, or successor
+  cycle.
+
+For any retained claim about `y_τ` mechanisms or Lane 6 Phase-1 6B
+closure status, audit the corresponding dedicated note and its runner
+as a separate scoped claim — not this fan-out record.
 
 ---
 

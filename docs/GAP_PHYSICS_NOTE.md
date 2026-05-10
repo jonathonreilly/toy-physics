@@ -1,8 +1,59 @@
 # Gap-as-Physics: Investigation Note
 
+---
+
+**This is an investigation / experiment-cluster record. It does not
+establish any retained claim.**
+For retained claims on gap-physics topics, see the per-claim notes
+referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-02
 **Branch:** claude/distracted-napier
-**Status:** bounded - bounded or caveated result note
+**Status:** support / investigation record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / investigation record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **investigation / experiment-cluster record** for the
+"gap as object in its own right" exploration on the
+`claude/distracted-napier` branch. It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`gap_physics_note` classified this source as conditional/bounded_theorem
+with auditor's repair target:
+
+> register a runner/proof note for the load-bearing step or cite an
+> audited retained dependency.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an investigation/experiment-cluster record rather than to register
+a primary runner or cite an audited retained dependency for the
+gap-stability findings here. Those steps belong in dedicated
+review-loop or per-experiment audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The Exp 1–Exp 5c experiment results, fill-fraction tables,
+  tapered-profile findings, and "no phase transition" / "weakly
+  constrained" verdicts below are **historical investigation memory
+  only**.
+- The retained-status surface for any gap-stability, decoherence,
+  or amplitude-throughput sub-claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes, **not**
+  this investigation record.
+- Retained-grade does **NOT** propagate from this investigation
+  note to any experiment finding, profile classification, or
+  successor cleanup.
+
+For any retained claim about gap-as-physics content, audit the
+corresponding dedicated note (or its `main`-side replacement) and its
+runner as a separate scoped claim — not this investigation record.
+
+---
 
 ## Motivation
 

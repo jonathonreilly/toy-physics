@@ -1,12 +1,60 @@
 # Audit Low-Hanging-Fruit Leverage Map for Retained Promotion
 
+---
+
+**This is a synthesis/overview note. It does not establish any retained claim.**
+For retained claims, see the per-claim notes referenced from the
+`## Audit scope` block below.
+
+---
+
 **Date:** 2026-05-01
-**Status:** support / audit-cohort assessment. This note is a navigation
-artifact for the audit lane: it ranks the highest-leverage critical/high
-audit blockers on `main` and assesses whether the unblocking work is
-"low-hanging fruit" (small fix) or substantive science work.
+**Status:** support / audit-cohort assessment only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / audit-cohort assessment only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Lane:** audit-hygiene + audit-strategy. No physics claim is added or
 removed.
+
+This note is a navigation artifact for the audit lane: it ranks the
+highest-leverage critical/high audit blockers on `main` and assesses
+whether the unblocking work is "low-hanging fruit" (small fix) or
+substantive science work.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **audit-strategy / cohort-assessment overview note**.
+It is **not** a single retained theorem and **must not** be audited as
+one. The audit ledger row for
+`audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01`
+classified this source as conditional/positive_theorem with auditor's
+repair target:
+
+> register a compact audit-strategy runner that consumes the exact
+> ledger/queue JSON fields and PR-fix artifacts to regenerate the
+> cohort tables, or declare generated audit data as dependencies.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an audit-strategy / cohort-assessment overview note rather than to
+register the runner or declare generated-audit-data dependencies
+here. Those steps belong in dedicated review-loop or per-cohort audit
+passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The Cohort A / Cohort B classification, leverage tables, PR-fix
+  status callouts, and `low-hanging-fruit` triage labels below are
+  **historical audit-strategy memory only**.
+- The retained-status surface for any audit-row status is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-row audit
+  notes, **not** this leverage map.
+- Retained-grade does **NOT** propagate from this leverage map to
+  any cohort row, PR-fix outcome, or successor audit cycle.
+
+For any retained claim about audit-row status or cohort triage,
+audit the corresponding ledger row and its primary runner as a
+separate scoped claim — not this overview leverage map.
 
 ---
 

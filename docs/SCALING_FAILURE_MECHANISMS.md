@@ -1,6 +1,60 @@
 # Scaling Failure Mechanisms
 
-**Status:** bounded - bounded or caveated result note
+---
+
+**This is a mechanism-inventory / diagnostic-narrative note. It does
+not establish any retained claim.**
+For retained claims on scaling-failure or saturation diagnostics, see
+the per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
+**Status:** support / mechanism-inventory record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / mechanism-inventory record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **mechanism-inventory / diagnostic-narrative note**
+for scaling-failure diagnoses across the gravity / decoherence /
+spectral lanes. It is **not** a single retained theorem and **must
+not** be audited as one. The audit ledger row for
+`scaling_failure_mechanisms` classified this source as
+conditional/bounded_theorem with auditor's repair target:
+
+> attach the scaling/decoherence logs or scripts that compute Q_sat,
+> H, purity, and the reported correlations, and emit asserted
+> runner checks.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a mechanism-inventory diagnostic record rather than to attach the
+scaling/decoherence logs, build asserted runner checks, or
+materialize Q_sat / H / purity / correlation computations here.
+Those steps belong in dedicated review-loop or per-mechanism audit
+passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The Q_sat saturation narrative, env-label-sharing mechanism,
+  reduced-variable model framing, the `r=-0.89` vs `r=0.24`
+  correlation comparison, and "fix candidates" inventory below are
+  **historical mechanism-diagnostic memory only**.
+- The retained-status surface for any saturation, decoherence, or
+  correlation sub-claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-mechanism notes,
+  **not** this diagnostic narrative.
+- Retained-grade does **NOT** propagate from this mechanism-
+  inventory note to any saturation reading, correlation value, or
+  successor scaling diagnosis.
+
+For any retained claim about scaling-failure mechanisms, audit the
+corresponding dedicated note and its runner as a separate scoped
+claim — not this mechanism-inventory record.
+
+---
+
 ## Gravity: Phase-Valley Saturation
 
 **Reduced variable:** `Q_sat = k × ΣΔS` (total phase deficit across the beam)
