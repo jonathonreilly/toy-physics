@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 71 |
+| **retained** | 72 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1092 |
+| unaudited | 1091 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 406 |
+| `audited_clean` | 407 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1190 |
+| `unaudited` | 1189 |
 
 | claim_type | count |
 |---|---:|
@@ -331,6 +331,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `moving_source_cross_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `multipole_tidal_response_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `native_gauge_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
 | `neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -7341,6 +7342,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The centered quadrupole keeps the centroid essentially pinned but opens a real width/tidal channel, and the width response grows with quadrupole separation.  _(class `C`)_
 - **chain closes:** True — The live probe reproduces the frozen controls and finite quadrupole rows: same-site and neutral controls are zero, the dipole mainly shifts centroid, and the centered quadrupoles give near-zero centroid change with positive width response at a = 1.0 and a = 2.0. The source explicitly excludes full tensor gravity and a general multipole theory.
 - **rationale:** The retained content is a narrow finite-runner claim, not a physical tidal-field theorem: the current runner recomputes the same-site cancellation, q_test = 0 inert control, dipole baseline, and two centered quadrupole width responses. The quadrupole rows support the stated shape-sensitive width channel while the note explicitly disclaims full tensor gravity, relativistic tidal fields, and a general multipole expansion. Residual risk is only finite-configuration scope, plus a harmless rounded-ratio mismatch where the prose says 1.969 and the live runner prints +1.968; the audit does not retain anything beyond the tested ordered-lattice configuration.
+- **auditor confidence:** high
+
+### `naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`NAIVE_LATTICE_FERMION_TWO_POWER_D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/NAIVE_LATTICE_FERMION_TWO_POWER_D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact zero locus and species count for the defined standard naive lattice Dirac operator on a hypercubic lattice: 2^d zeros/species, hence 16 at d=4, with no regulator-independent or framework-bridge claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1447-20c5-7b00-8bcc-fc8c6e03e5ea`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using {gamma_mu, gamma_nu}=2 delta_mu_nu, (-i a D_naive(k))^2 = (sum_mu sin^2(k_mu a)) I, so D_naive(k)=0 iff sin(k_mu a)=0 for every mu.  _(class `A`)_
+- **chain closes:** True — The conclusion follows by algebra from the explicitly defined naive operator and Clifford anticommutation relation. On k_mu a in (-pi, pi], the only sine zeros are 0 and pi in each coordinate, giving {0, pi/a}^d and cardinality 2^d.
+- **rationale:** The note cleanly proves the narrow naive-operator zero-locus theorem and the d=4 count 16. Its boundary section explicitly excludes regulator-independence, Nielsen-Ninomiya-as-universal-2^d, CL3 hierarchy use, and physical-framework bridge claims. The Wilson/staggered runner checks are non-load-bearing context and do not broaden the audited claim.
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`
