@@ -16965,6 +16965,26 @@
       "to": "complex_selectivity_compare_note"
     },
     {
+      "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "to": "yt_zero_import_chain_note"
+    },
+    {
+      "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "to": "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain"
+    },
+    {
+      "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "to": "yt_bottom_yukawa_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "to": "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03"
+    },
+    {
       "from": "propagator_family_unification_note",
       "to": "source_resolved_wavefield_mechanism_note"
     },
@@ -53946,6 +53966,23 @@
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
     },
+    "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq": {
+      "claim_id": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "yt_zero_import_chain_note",
+        "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain",
+        "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "three_gen_z3_fourier_diagonalization_theorem_note_2026-05-03"
+      ],
+      "note_hash": "513896e3a7185658a314756442be1115f870c80ee2062c268e53a27ab0b1388e",
+      "path": "docs/PRIMITIVE_P_HEAVYQ_SPECIES_PROPOSAL_NOTE_2026-05-10_pPheavyq.md",
+      "runner_path": "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py",
+      "title": "Primitive P-HeavyQ Species Differentiation \u2014 Open-Gate Candidate Inventory"
+    },
     "primordial_spectrum_note": {
       "claim_id": "primordial_spectrum_note",
       "claim_type_author_hint": null,
@@ -65841,7 +65878,7 @@
       "meta": 59,
       "no_go": 18,
       "none": 1626,
-      "open_gate": 19,
+      "open_gate": 20,
       "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
@@ -65850,13 +65887,13 @@
       "meta": 59,
       "no_go": 125,
       "none": 449,
-      "open_gate": 107,
+      "open_gate": 108,
       "positive_theorem": 591
     },
-    "edge_count": 8236,
-    "leaf_count": 535,
-    "node_count": 2054,
+    "edge_count": 8241,
+    "leaf_count": 534,
+    "node_count": 2055,
     "root_count": 766,
-    "runners_with_path": 1669
+    "runners_with_path": 1670
   }
 }

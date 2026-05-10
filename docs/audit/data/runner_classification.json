@@ -14376,6 +14376,18 @@
       "dominant_class": null,
       "runner": "scripts/portable_package_hierarchy_classifier.py"
     },
+    "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py"
+    },
     "primordial_spectrum_note": {
       "assert_count": 0,
       "counts": {
@@ -22727,6 +22739,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py": {
+      "assert_count": 0,
+      "claims": [
+        "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_quark_antiquark_color_singlet_check.py": {
@@ -43674,11 +43701,11 @@
       "A": 111,
       "B": 160,
       "C": 643,
-      "D": 237,
+      "D": 238,
       "none": 406
     },
-    "runners_classified": 1557,
-    "runners_with_C": 805,
-    "runners_with_D": 427
+    "runners_classified": 1558,
+    "runners_with_C": 806,
+    "runners_with_D": 428
   }
 }
