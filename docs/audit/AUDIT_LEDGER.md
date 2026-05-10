@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1109 |
+| unaudited | 1108 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 234 |
+| ~~audited_conditional~~ | 235 |
 | ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 389 |
-| `audited_conditional` | 234 |
+| `audited_conditional` | 235 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1207 |
+| `unaudited` | 1206 |
 
 | claim_type | count |
 |---|---:|
@@ -525,6 +525,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_layernorm_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `chiral_3plus1d_boundary_phase_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `chiral_layer_oscillation_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1865,6 +1866,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The observed-window table and the L/n interpretation assert specific classical/phase-kill AWAY windows and use the L=28 row as diagnostic evidence for wrap/recurrence behavior.  _(class `C`)_
 - **chain closes:** False — The current runner output contradicts several note entries: n=15 lambda=1.333, n=21 lambda=1.333, and n=25 lambda=0.560 are listed as classical/phase-kill AWAY when stdout says TOWARD. The L=28 diagnostic also reverses key signs, with n=21 classical/phase-kill TOWARD and n=31 classical/phase-kill AWAY in stdout.
 - **rationale:** Issue: the note's claimed exact sweep table and diagnostic interpretation are stale relative to the supplied completed runner output. Why this blocks: the bounded theorem is specifically about the finite parameter sweep, so incorrect AWAY/TOWARD windows break the chain on its own terms even though the runner source performs a genuine computation. Repair target: regenerate the table and L=28 interpretation from the current runner, then add assertions tying each listed lambda window to stdout. Claim boundary until fixed: only the raw runner stdout establishes the computed signs, not the note's published window summary.
+- **auditor confidence:** high
+
+### `chiral_layer_oscillation_2026-04-09`
+
+- **Note:** [`CHIRAL_LAYER_OSCILLATION_2026-04-09.md`](../../docs/CHIRAL_LAYER_OSCILLATION_2026-04-09.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite N-sweep sign-noninvariance diagnostic for the shell-difference gravity proxy at n=15, theta0=0.3, strength=5e-4, mass offset +3, and N in {12,14,16,18,20}.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1349-66ec-7a21-84f2-c8c1f9363e93`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The current frozen runner checks the canonical 3+1D chiral-walk implementation at n=15 and observes both signs across the finite N sweep.  _(class `C`)_
+- **chain closes:** False — The source note and supplied stdout agree that the runner output contains both positive and negative signals. The claim that this is a property of the canonical 3+1D chiral walk does not close from the restricted packet because the actual evolve/probability_density implementation is imported from an unsupplied script.
+- **rationale:** Issue: the primary runner delegates the propagator and density computation to `frontier_chiral_3plus1d_converged`, whose source is not supplied. Why this blocks: stdout verifies a finite sign flip was reported, but clean closure for a bounded theorem about the canonical 3+1D chiral walk requires auditing the code that defines the walk and boundary behavior. Repair target: include or cite the imported implementation as a direct audit input, or make the runner self-contained, then rerun the finite N sweep. Claim boundary until fixed: the supplied artifact supports only that this runner output reports both signs on the stated finite sweep.
 - **auditor confidence:** high
 
 ### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`
