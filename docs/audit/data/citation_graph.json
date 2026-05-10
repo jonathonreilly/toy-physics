@@ -625,6 +625,14 @@
       "to": "ai_methodology.llm_skill_pack_2026-04-25"
     },
     {
+      "from": "alpha_s_derived_narrow_theorem_note_2026-05-10",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "alpha_s_derived_narrow_theorem_note_2026-05-10",
+      "to": "alpha_s_derived_note"
+    },
+    {
       "from": "alpha_s_derived_note",
       "to": "plaquette_self_consistency_note"
     },
@@ -3027,6 +3035,10 @@
     {
       "from": "causal_source_placement_robustness_note",
       "to": "causal_field_portability_note"
+    },
+    {
+      "from": "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
     },
     {
       "from": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -22965,6 +22977,22 @@
       "to": "alpha_s_derived_note"
     },
     {
+      "from": "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10",
+      "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
+    },
+    {
+      "from": "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10",
+      "to": "native_gauge_closure_note"
+    },
+    {
       "from": "yt_ward_identity_derivation_theorem",
       "to": "native_gauge_closure_note"
     },
@@ -34994,6 +35022,20 @@
       "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
     },
+    "alpha_s_derived_narrow_theorem_note_2026-05-10": {
+      "claim_id": "alpha_s_derived_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "alpha_s_derived_note"
+      ],
+      "note_hash": "8074176dcb67f7f8a002e72b512cae0b5c59e9bdb35b98330812d97ddc24b716",
+      "path": "docs/ALPHA_S_DERIVED_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_alpha_s_tadpole_power_identity.py",
+      "title": "alpha_s Derived Narrow Theorem (Tadpole-Power Coupling-Chain Identity)"
+    },
     "alpha_s_derived_note": {
       "claim_id": "alpha_s_derived_note",
       "claim_type_author_hint": null,
@@ -37111,6 +37153,19 @@
       "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
+    },
+    "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10": {
+      "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "charged_lepton_koide_cone_algebraic_equivalence_note"
+      ],
+      "note_hash": "f582604a001bdca03326e9ff14f9e84fb5ba2123adbaad735e7fb5b76e5e0bd3",
+      "path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py",
+      "title": "Charged-Lepton Koide-Cone Algebraic Equivalence Narrow Theorem"
     },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -65909,6 +65964,22 @@
       "runner_path": "scripts/frontier_vertex_power.py",
       "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`"
     },
+    "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10": {
+      "claim_id": "yt_ward_identity_derivation_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "yt_ward_identity_derivation_theorem",
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+        "yt_ew_color_projection_theorem",
+        "native_gauge_closure_note"
+      ],
+      "note_hash": "2d76b271cc73676e61c5fbdc7edb133e93570cbf2506e429f98b3e8e8427e1f8",
+      "path": "docs/YT_WARD_IDENTITY_DERIVATION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_yt_ward_identity_derivation_narrow.py",
+      "title": "YT_WARD Identity Derivation Narrow Theorem (g_bare Pin and y_t Ratio)"
+    },
     "yt_ward_identity_derivation_theorem": {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "claim_type_author_hint": "bounded_theorem",
@@ -66790,7 +66861,7 @@
       "no_go": 23,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 96
+      "positive_theorem": 99
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66799,12 +66870,12 @@
       "no_go": 130,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 596
+      "positive_theorem": 599
     },
-    "edge_count": 8356,
-    "leaf_count": 540,
-    "node_count": 2083,
+    "edge_count": 8363,
+    "leaf_count": 543,
+    "node_count": 2086,
     "root_count": 773,
-    "runners_with_path": 1696
+    "runners_with_path": 1699
   }
 }
