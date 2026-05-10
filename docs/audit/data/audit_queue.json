@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 668,
+    "critical": 667,
     "high": 22,
     "leaf": 264,
     "medium": 146
@@ -5905,29 +5905,6 @@
       "ready": true,
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "transitive_descendants": 660
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.157,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
-      "transitive_descendants": 570
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -34885,6 +34862,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
-  "total_pending": 1100
+  "ready_count": 119,
+  "total_pending": 1099
 }

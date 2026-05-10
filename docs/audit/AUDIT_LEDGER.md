@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 233 |
 | open_gate | 11 |
-| unaudited | 1094 |
+| unaudited | 1093 |
 | meta | 66 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 24 |
-| ~~audited_conditional~~ | 258 |
+| ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 380 |
-| `audited_conditional` | 258 |
+| `audited_conditional` | 259 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 24 |
-| `unaudited` | 1160 |
+| `unaudited` | 1159 |
 
 | claim_type | count |
 |---|---:|
@@ -603,6 +603,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `gauge_vacuum_plaquette_local_environment_factorization_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4598,6 +4599,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   - `G_BARE_DERIVATION_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the claimed exact identification of the residual plaquette factor R_beta^env as the compressed unmarked spatial Wilson environment after half-slice and local mixed-kernel stripping.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11e5-10f7-7702-b395-e260cdf815fc`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** After stripping the two marked half-slice multipliers and the exact normalized mixed-kernel local factor, what remains is exactly the compression of the unmarked spatial Wilson environment on the marked source sector, called R_beta^env.  _(class `F`)_
+- **chain closes:** False — The restricted packet does not include retained proofs of the accepted Wilson 3+1 surface, the source-sector factorization, or the local/environment factorization used to justify the stripping. The runner also injects a generic diagonal positive witness rho_env rather than deriving the unmarked spatial environment compression.
+- **rationale:** Issue: the load-bearing identification of the residual factor with the compressed unmarked spatial environment is asserted from unavailable upstream factorization theorems and then checked with an arbitrary positive conjugation-symmetric diagonal witness. Why this blocks: the runner verifies structural consistency after rho_env is chosen, not that the Wilson unmarked spatial environment actually compresses to that residual operator. Repair target: provide retained upstream factorization authorities plus a runner that constructs R_beta^env from the unmarked spatial Wilson environment rather than setting a witness sequence. Claim boundary until fixed: this remains an open gate isolating the remaining object, with only bounded finite coefficient support from the companion note.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09`
