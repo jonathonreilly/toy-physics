@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 124 |
-| **retained_bounded** | 235 |
+| **retained_bounded** | 236 |
 | open_gate | 12 |
-| unaudited | 1094 |
+| unaudited | 1093 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 393 |
+| `audited_clean` | 394 |
 | `audited_conditional` | 246 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1192 |
+| `unaudited` | 1191 |
 
 | claim_type | count |
 |---|---:|
@@ -192,6 +192,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_card_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `electrostatics_superposition_proxy_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `em_gravity_coexistence_2x2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `emergent_product_law_audit_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `emergent_product_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `equivalence_principle_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `eta_188_structural_origin_partial_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -3891,6 +3892,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The qualitative finding survives: the matter-coupled grown graph has a higher effective dimension and a denser peak shell than the uniform control, with hardened k=4 multi-seed G-sweep support claimed for robustness.  _(class `C`)_
 - **chain closes:** False — The supplied primary runner closes only a single-seed qualitative comparison and has no PASS-classified checks. The note's broader robustness and alternative-control claims rely on companion runners/caches that are named but not supplied in the restricted packet.
 - **rationale:** Issue: the note's retained-strength statements depend on unsupplied companion G-sweep, multi-seed, and alternative-control runner artifacts, while the supplied runner only shows one seed against a uniform-in-box control. Why this blocks: a hostile reviewer cannot verify seed robustness, the k=4 retained operating point, or that the geometry difference is isolated from control-design differences. Repair target: provide and audit the companion runner sources/stdout or split this into a narrow single-seed runner claim. Claim boundary until fixed: the supplied runner supports only that this seed and control produce a higher fitted d_eff and peak radial density for the matter-coupled case.
+- **auditor confidence:** high
+
+### `emergent_product_law_audit_2026-04-11`
+
+- **Note:** [`EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md`](../../docs/EMERGENT_PRODUCT_LAW_AUDIT_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite mass-sweep magnitude scaling on the side=14, G=50, mu^2=0.001 open 3D staggered cross-field Poisson surface with frozen-source control.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1373-c4a4-79f0-9de6-0a131f8296e6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the audited open 3D staggered cross-field Poisson surface (`side=14`, `G=50`, `mu^2=0.001`), two-orbital Hartree dynamics produces `|F| ~ M_A^1.0146 M_B^0.9863` with `R^2 = 0.999993`, and the frozen-source control gives `|F| ~ M_A^1.0081 M_B^0.9919` with `R^2 = 0.999998`.  _(class `C`)_
+- **chain closes:** True — The completed runner source and stdout compute the stated exponents on the stated finite surface, and the note confines the interpretation to bounded |F| product-law scaling from field linearity. No unlisted dependency is needed for that scoped numerical claim.
+- **rationale:** The runner builds the lattice, solves Poisson fields from rho=M|psi|^2, evolves cross-field Hamiltonians, measures F=-M<grad phi>, and fits the mass sweep; the stdout matches the retained numbers. The separate source and test mass factors are explicit model definitions, so the clean result is only a bounded field-linearity/magnitude theorem on this one surface. The sign diagnostic would block attraction wording, but not the retained |F| scaling claim.
 - **auditor confidence:** high
 
 ### `emergent_product_law_note`
