@@ -12821,6 +12821,22 @@
       "to": "koide_positive_paths_first_principles_note_2026-04-18"
     },
     {
+      "from": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
       "to": "koide_circulant_character_bridge_note_2026-04-18"
     },
@@ -12979,6 +12995,18 @@
     {
       "from": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
       "to": "koide_cl3_selector_gap_note_2026-04-19"
+    },
+    {
+      "from": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
       "from": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
@@ -48128,6 +48156,22 @@
       "runner_path": null,
       "title": "Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation \u2014 Candidate Extension Note"
     },
+    "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10": {
+      "claim_id": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "c25ecbbe5b97c48dbf19dab2b5c84c134fc7c629b936f9416f6e8f1bc8d3c0d8",
+      "path": "docs/KOIDE_CIRCULANT_Q_TWO_THIRDS_ALGEBRAIC_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_circulant_q_two_thirds_algebraic_narrow.py",
+      "title": "Koide Q = 2/3 Circulant Algebraic Narrow Theorem"
+    },
     "koide_circulant_wilson_target_note_2026-04-18": {
       "claim_id": "koide_circulant_wilson_target_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -48468,6 +48512,21 @@
       "path": "docs/KOIDE_HOSTILE_REVIEW_GUARD_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_hostile_review_guard.py",
       "title": "Koide Hostile-Review Guard"
+    },
+    "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10": {
+      "claim_id": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+      ],
+      "note_hash": "75ad53ddb0ce87147b384ad8a9a2854127cf22c3a286dfecd5b7ca64e1be732f",
+      "path": "docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_ALGEBRAIC_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_kappa_block_total_frobenius_algebraic_narrow.py",
+      "title": "Koide kappa Block-Total Frobenius Algebraic Narrow Theorem"
     },
     "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19": {
       "claim_id": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
@@ -66734,7 +66793,7 @@
       "no_go": 23,
       "none": 1626,
       "open_gate": 29,
-      "positive_theorem": 95
+      "positive_theorem": 97
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66743,12 +66802,12 @@
       "no_go": 130,
       "none": 449,
       "open_gate": 117,
-      "positive_theorem": 595
+      "positive_theorem": 597
     },
-    "edge_count": 8352,
-    "leaf_count": 539,
-    "node_count": 2080,
+    "edge_count": 8359,
+    "leaf_count": 540,
+    "node_count": 2082,
     "root_count": 771,
-    "runners_with_path": 1695
+    "runners_with_path": 1697
   }
 }
