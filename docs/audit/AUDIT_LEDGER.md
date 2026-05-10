@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1079 |
+| unaudited | 1078 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 257 |
+| ~~audited_conditional~~ | 258 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 257 |
+| `audited_conditional` | 258 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1177 |
+| `unaudited` | 1176 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 812 |
+| `bounded_theorem` | 813 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
 | `open_gate` | 104 |
-| `positive_theorem` | 717 |
+| `positive_theorem` | 716 |
 
 | criticality | count |
 |---|---:|
@@ -669,6 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -6757,6 +6758,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** If v is outside C_{t+1}(S), no predecessor u with (u,v) in R lies in C_t(S), so all inputs to the R-local update at v are equal in the two histories.  _(class `A`)_
 - **chain closes:** True — The induction proof closes directly from the recursive definition of C_t(S) and the locality definition of the update rule. The runner is consistent with this scoped graph-reachability theorem and does not import physical-spacetime or metric assumptions.
 - **rationale:** The live claim is only a finite graph/DAG forward-reachability bound, not an emergent-relativity or physical light-cone result. Within that boundary, the proof is a standard induction on ticks and uses no hidden bridge beyond the declared R-locality premise. The runner completed and checks representative dependency-support recurrences with explicit non-claim guards.
+- **auditor confidence:** high
+
+### `lattice_nn_mass_response_note`
+
+- **Note:** [`LATTICE_NN_MASS_RESPONSE_NOTE.md`](../../docs/LATTICE_NN_MASS_RESPONSE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite NN lattice mass-response report with mass encoded as a fixed-node field-strength multiplier: deterministic rows h={1,0.5,0.25,0.125,0.0625} and alpha-ratio probe at h={0.5,0.25}, with no F proportional to M or continuum promotion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1398-d843-7431-86b6-71b69fe1deae`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "the nearest-neighbor lattice has a retained positive mass response under the Born-safe refinement path"  _(class `B`)_
+- **chain closes:** False — The cited deterministic rows are Born-clean, but the displayed path includes gravity=-0.116678 at h=1, so the positive-path conclusion only closes after narrowing to the post-sign-flip rows h<=0.5. The alpha=1.5 stability subclaim is not present in the supplied one-hop authorities and the imported alpha-sweep source is not included for verification.
+- **rationale:** Issue: the headline positive-path wording overclaims the table because one retained deterministic row is negative. Why this blocks: positivity is established only on the refined rows after the h=0.5 sign flip, and the alpha=1.5 claim relies on an unsupplied imported runner module rather than a supplied one-hop authority. Repair target: narrow the theorem to the positive refined window and add a direct audited alpha-sweep authority/source cache for alpha=1.5. Claim boundary until fixed: Born-clean bounded finite-row response, positive only after the sign flip, not an F proportional to M law.
 - **auditor confidence:** high
 
 ### `lattice_nn_rg_alpha_sweep_note`
