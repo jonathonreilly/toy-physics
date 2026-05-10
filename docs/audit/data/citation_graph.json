@@ -15661,6 +15661,22 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
       "from": "oh_static_constraint_lift_note",
       "to": "restricted_strong_field_closure_note"
     },
@@ -52051,6 +52067,22 @@
       "runner_path": "scripts/frontier_observable_principle_audit.py",
       "title": "Observable-Principle From-Axiom Note \u2014 Status Correction Audit"
     },
+    "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "claim_id": "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "observable_principle_from_axiom_note"
+      ],
+      "note_hash": "2a50efc2939350ac20c9c49f2e0d13cb3a7affb42e729d150a68d1489e8fa740",
+      "path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_observable_principle_from_axiom_chain_audit_map_synthesis.py",
+      "title": "Observable Principle From Axiom Chain Audit Map Synthesis Meta Note"
+    },
     "observable_principle_from_axiom_note": {
       "claim_id": "observable_principle_from_axiom_note",
       "claim_type_author_hint": "bounded_theorem",
@@ -65723,7 +65755,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 237,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65732,16 +65764,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8225,
+    "edge_count": 8229,
     "leaf_count": 532,
-    "node_count": 2049,
+    "node_count": 2050,
     "root_count": 764,
-    "runners_with_path": 1664
+    "runners_with_path": 1665
   }
 }

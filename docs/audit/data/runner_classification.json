@@ -12948,6 +12948,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_observable_principle_audit.py"
     },
+    "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_observable_principle_from_axiom_chain_audit_map_synthesis.py"
+    },
     "observable_principle_from_axiom_note": {
       "assert_count": 0,
       "counts": {
@@ -33373,6 +33385,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_observable_principle_from_axiom_chain_audit_map_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "observable_principle_from_axiom_chain_audit_map_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_oh_schur_boundary_action.py": {
       "assert_count": 1,
       "claims": [
@@ -43537,13 +43564,13 @@
     "decoration_candidates": 161,
     "dominant_class_distribution": {
       "A": 111,
-      "B": 160,
+      "B": 161,
       "C": 642,
       "D": 235,
       "none": 404
     },
-    "runners_classified": 1552,
-    "runners_with_C": 804,
+    "runners_classified": 1553,
+    "runners_with_C": 805,
     "runners_with_D": 425
   }
 }
