@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1079 |
+| unaudited | 1078 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
 | ~~audited_conditional~~ | 257 |
-| ~~audited_failed~~ | 25 |
+| ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 398 |
 | `audited_conditional` | 257 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 69 |
+| `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1177 |
+| `unaudited` | 1176 |
 
 | claim_type | count |
 |---|---:|
@@ -818,6 +818,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `lattice_gravity_resolution_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `memory_decay_diagnosis_2026-04-11` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `moonshot_other_testables_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -6665,6 +6666,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Across the full 3 x 3 x 8 = 72 rows, retained weak-field rows: 4/72.  _(class `C`)_
 - **chain closes:** True — The primary runner completed within the audit budget and reproduced the canonical row, retained-row count, positive/all-b-positive counts, Born-clean count, and standard-strength contrast. This audit is scoped only to the finite sweep and criteria, not to a blanket lattice unification theorem or an independently derived field-strength selection law.
 - **rationale:** Within the bounded claim scope, the note's numerical claims match the current completed runner output and the runner computes the weak-field sweep rather than setting the retained rows by fiat. The one-hop dependency supports the fixed-standard-strength contrast used for the reopening framing. Residual risk is only interpretive: causal language about the mechanism must remain bounded to this tested sweep.
+- **auditor confidence:** high
+
+### `lattice_gravity_resolution_note`
+
+- **Note:** [`LATTICE_GRAVITY_RESOLUTION_NOTE.md`](../../docs/LATTICE_GRAVITY_RESOLUTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded audit of the supplied lattice-gravity resolution note's 2D resolution narrative and 3D dense spent-delay ultra-weak attractive-window claim against the one-hop hierarchy note and the 3D dense 10-property runner.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1397-0355-7fc1-9be0-769c08ffc70b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note's load-bearing 3D claim is that the dense spent-delay branch at strength 5e-5 has a retained same-family barrier card and that z = 2, 3, 4, 5, 6 are genuinely attractive on the retained tested window.  _(class `C`)_
+- **chain closes:** False — The restricted packet supports at most the supplied runner's 3D dense z = 2, 3, 4, 5 hierarchy-aligned window, while the note claims z = 2..6 and the cited hierarchy authority is explicitly narrowed to runner-computed z = 3 and z = 5. The 2D 9/9 attraction and b^(-0.94) distance-law table has no supplied runner or one-hop authority that closes it.
+- **rationale:** Issue: the note overclaims beyond both its supplied runner and its only cited authority, especially by retaining z = 6 and the 2D all-b distance-law table without supporting restricted evidence. Why this blocks: a bounded theorem cannot be audited clean when its stated retained window includes points the runner does not compute and the cited authority explicitly excludes from ratification. Repair target: split the runner-supported 3D z = 2..5 card from the broader narrative, add or cite audited artifacts for z = 6 and the 2D b-window, and align the hierarchy dependency scope. Claim boundary until fixed: only the raw supplied runner output for the h = 1.0, L = 12, W = 6, max_d = 3, strength 5e-5 3D card is locally evidenced.
 - **auditor confidence:** high
 
 ### `lattice_kernel_transfer_norm_note`
