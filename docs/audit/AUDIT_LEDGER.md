@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 226 |
 | open_gate | 11 |
-| unaudited | 1148 |
+| unaudited | 1147 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 233 |
+| ~~audited_conditional~~ | 234 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 377 |
-| `audited_conditional` | 233 |
+| `audited_conditional` | 234 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1216 |
+| `unaudited` | 1215 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 776 |
+| `bounded_theorem` | 777 |
 | `decoration` | 13 |
 | `meta` | 75 |
 | `no_go` | 193 |
 | `open_gate` | 105 |
-| `positive_theorem` | 765 |
+| `positive_theorem` | 764 |
 
 | criticality | count |
 |---|---:|
@@ -711,6 +711,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
+| `wave_static_matrixfree_fixed_beam_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -10199,6 +10200,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The fixed-beam probe still shows material boundary sensitivity, and the effect persists at medium H.  _(class `C`)_
 - **chain closes:** False — The source note's claim is not limited to the supplied default H=0.5 run; it explicitly relies on H=0.35 persistence, but no completed H=0.35 stdout is provided. The runner source also delegates the wave, beam, propagation, readout, and constants to an unprovided module, so the restricted packet cannot verify the computation end to end. The second audit correctly keeps the bounded theorem conditional pending the missing runner dependency and completed medium-H artifact.
 - **rationale:** The source note's claim is not limited to the supplied default H=0.5 run; it explicitly relies on H=0.35 persistence, but no completed H=0.35 stdout is provided. The runner source also delegates the wave, beam, propagation, readout, and constants to an unprovided module, so the restricted packet cannot verify the computation end to end. The second audit correctly keeps the bounded theorem conditional pending the missing runner dependency and completed medium-H artifact.
+- **auditor confidence:** high
+
+### `wave_static_matrixfree_fixed_beam_boundary_note`
+
+- **Note:** [`WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE.md`](../../docs/WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-grid computational probe of matrix-free fixed-beam static field-box sensitivity at shared H = 0.35, beam PW = 6.0, source z = 3.0, and field PW 6.0 versus 9.0.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12ad-544d-7c12-801a-e1a9492a1e74`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At medium H, enlarging only the field/static solve box still moves dS by 26.21%, rel_MS by 46.52%, while dM moves only 0.57%.  _(class `C`)_
+- **chain closes:** False — The quoted numerical conclusion requires a completed H = 0.35 run and visible closure of the wave/beam DAG implementation. The supplied stdout is only a timeout, and the runner imports solve_wave, grow, prop_beam, cz, and constants from an unprovided module with no cited authorities.
+- **rationale:** Issue: the restricted packet does not contain a completed run or the imported wave/beam DAG implementation needed to verify the quoted dM, dS, and rel_MS values. Why this blocks: with no one-hop authorities, the runner source alone does not close the comparator construction or reproduce the note's H = 0.35 table, and the timeout itself is not scientific evidence. Repair target: provide the missing direct dependency or a self-contained runner plus completed --h 0.35 stdout or cached certificate. Claim boundary until fixed: proposed bounded computational probe, not retained-grade closure.
 - **auditor confidence:** high
 
 ### `wave_static_matrixfree_moving_source_fixed_beam_boundary_note`
