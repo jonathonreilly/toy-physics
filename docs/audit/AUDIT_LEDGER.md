@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 63 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 222 |
+| **retained_bounded** | 223 |
 | open_gate | 11 |
 | unaudited | 1169 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 371 |
+| `audited_clean` | 372 |
 | `audited_conditional` | 220 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -227,6 +224,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -4247,6 +4245,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note asserts that frozen artifact chains establish transfer of fixed-lattice Newtonian/Born/distance/decoherence results to grown geometry, especially the far-field table with 36/36 TOWARD and F~M=1.00 for each drift/restore row.  _(class `B`)_
 - **chain closes:** False — The packet does not include completed runner stdout for the primary far-field harness and provides no one-hop dependencies or source/output for the other artifact chains named in the synthesis. The missing step is completed artifact evidence for the tabulated non-primary results and a completed primary run matching the far-field table.
 - **rationale:** Issue: the synthesis rests on artifact-chain results, but the restricted packet contains only the primary far-field runner source and a timed-out stdout, while the distance-law, joint-package, no-restore, connectivity, and 2D confirmation artifacts are not provided. Why this blocks: the broad conclusion that full Newtonian physics transfers to grown geometry imports unverified runner outputs and artifact chains not closed inside the packet. Repair target: provide completed cached stdout for the primary harness plus the cited runner sources/logs or retained one-hop notes for each table row. Claim boundary until fixed: at most, the packet shows a concrete far-field harness design that attempts to test grown-geometry gravity and F~M, not the full synthesis.
+- **auditor confidence:** high
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Local H_hw=1 finite-dimensional algebra check: the supplied translation-character projectors and C3 cycle generate full M_3(C) with scalar commutant; physical-species and substrate claims are excluded.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1271-d529-7323-93b6-40a7be2df501`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** the local exact M_3(C) observable algebra on H_hw=1 reconstructs from the supplied translation-projector + C3 cycle generators, with no input from the substrate-fundamentality premise  _(class `A`)_
+- **chain closes:** True — Within the audited scope, the only load-bearing inputs are the explicitly constructed local generators in the runner. The runner verifies rank-one projectors, full 9-dimensional generated algebra, and scalar commutant; excluded physical bridge claims are not needed for this bounded theorem.
+- **rationale:** Clean for the bounded algebraic scope. The runner source constructs the local diagonal translation operators and C3 cycle, derives the projectors, checks generated algebra dimension 9, and checks commutant dimension 1. These are finite-dimensional A-class algebra checks over supplied local inputs, not hidden physical-species or substrate-fundamentality derivations. The clean verdict does not extend beyond the note's explicit boundary.
 - **auditor confidence:** high
 
 ### `geometry_superposition_dag_ensemble_note_2026-04-11`
