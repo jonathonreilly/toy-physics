@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 119 |
+| **retained_no_go** | 120 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1149 |
+| unaudited | 1148 |
 | meta | 78 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 379 |
+| `audited_clean` | 380 |
 | `audited_conditional` | 222 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 776 |
 | `decoration` | 13 |
 | `meta` | 85 |
-| `no_go` | 192 |
+| `no_go` | 193 |
 | `open_gate` | 103 |
-| `positive_theorem` | 761 |
+| `positive_theorem` | 760 |
 
 | criticality | count |
 |---|---:|
@@ -280,6 +280,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `lattice_3d_dense_refinement_reconciliation_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_dense_window_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `lattice_3d_tapered_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `lattice_complementarity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -5612,6 +5613,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The implication from linear response to F~M = 1 closes as standard log-log slope algebra once the upstream Kubo coefficient and the runner's selected linearity subset are accepted. It does not establish an independent positive theorem because the F~M result is forced by the same measured linearity condition used to define the subset.
 - **rationale:** Issue: the decisive step is the algebraic identity that a response proportional to s has log-log slope 1. Why this blocks: the runner's headline 15/41 subset is selected by measured linearity ratios across the same strengths used to fit F~M, so the near-1 F~M result is a corollary of the subset definition rather than an independent derivation of a new battery condition. Repair target: present this as a bounded range-of-validity diagnostic under the true-Kubo parent, or add an independent criterion that does not mathematically enforce the F~M slope. Claim boundary until fixed: the runner supports that its selected linearity-regime families have the reported F~M statistics, conditional on the upstream Kubo coefficient.
 - **decoration parent:** `linear_response_true_kubo_note`
+- **auditor confidence:** high
+
+### `lattice_3d_dense_refinement_reconciliation_note`
+
+- **Note:** [`LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](../../docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the ordered 3D dense spent-delay h = 0.5 refinement preserves the earlier positive hierarchy narrative under the stated L=12, W=6, strength=5e-5, fixed physical connectivity, and corrected coordinate mapping.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12cf-03a5-7173-8548-6e6343861814`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The older h = 0.5 positive-refinement narrative does not survive the corrected comparison because h = 0.5 has no hierarchy-aligned attractive distance rows under the corrected physical mapping.  _(class `C`)_
+- **chain closes:** True — The source note and completed runner agree that h=0.5 has MIXED barrier read, no distance fit, and 0/5 attractive hierarchy-aligned no-barrier rows, while h=1.0 has 5/5 such rows. The cited authority is retained-grade for the imported harness constants, and no extra open dependency is needed for this scoped no-go.
+- **rationale:** The runner constructs the ordered 3D lattice, applies round(coord / h), keeps fixed physical connectivity, propagates with the spent-delay action, and computes the barrier plus no-barrier rows rather than hard-coding the negative verdict. This cleanly supports only the bounded reconciliation/no-go: the older h=0.5 positive-refinement story fails on this harness. It does not audit broader continuum, 4D, action-power, project-ranking, or global canonical-branch claims.
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_spent_delay_note`
