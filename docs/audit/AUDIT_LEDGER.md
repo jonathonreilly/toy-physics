@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 234 |
 | open_gate | 12 |
-| unaudited | 1097 |
+| unaudited | 1096 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 245 |
+| ~~audited_conditional~~ | 246 |
 | ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 392 |
-| `audited_conditional` | 245 |
+| `audited_conditional` | 246 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1195 |
+| `unaudited` | 1194 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 806 |
+| `bounded_theorem` | 807 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
 | `open_gate` | 101 |
-| `positive_theorem` | 722 |
+| `positive_theorem` | 721 |
 
 | criticality | count |
 |---|---:|
@@ -596,6 +596,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_pns_attack_cascade_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -3680,6 +3681,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The core no-go step is a valid algebraic symmetry argument over existing inputs: same H_pin plus a mu<->tau row swap makes H-intrinsic and mu<->tau-even scalar selectors blind, while Jarlskog changes sign under the odd row transposition. However, the packet provides no cited retained authority for the load-bearing input that these are exactly the two surviving sigma_hier branches at the physical pin. The runner source also imports H_mat, pinned constants, count_passes, and jarlskog_sin_dcp from frontier_sigma_hier_uniqueness_theorem, and it does not enumerate all permutations to verify exclusivity.
 - **open / conditional deps cited:**
   - `frontier_sigma_hier_uniqueness_theorem`
+- **auditor confidence:** high
+
+### `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21`
+
+- **Note:** [`DM_SPLIT2_DENSE_GRID_LIPSCHITZ_DOMINANCE_SUPPORT_NOTE_2026-04-21.md`](../../docs/DM_SPLIT2_DENSE_GRID_LIPSCHITZ_DOMINANCE_SUPPORT_NOTE_2026-04-21.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Empirical dense-grid, seeded-optimization, and empirical-Lipschitz support for eta_best < 1 on CAP_BOX and ENDPOINT_BOX, excluding rigorous interval certification.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e136f-0dce-70a0-a8cd-de427f200d1c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The observed margin to transport closure is much larger than the empirical interpolation error on the two residual split-2 boxes.  _(class `B`)_
+- **chain closes:** False — The restricted packet has no cited authorities, but the note and runner depend on an unprovided neighborhood-isolation authority and imported point_data/box definitions. The only supplied runner stdout is a timeout, so the reported grid maxima and empirical-Lipschitz margins are not verified by a completed artifact.
+- **rationale:** Issue: the claim's numerical support rests on unlisted carrier/box authorities and imported computation code, while the supplied stdout is only RUNNER_TIMEOUT after 240s. Why this blocks: given the one-hop packet, a hostile auditor cannot verify that the two boxes are the correct residual neighborhoods or that eta_best was computed over the claimed feasible carrier set. Repair target: add the missing direct dependency edges/source artifacts for the carrier-side box isolation and point_data pipeline, then provide a completed cached or sliced runner log. Claim boundary until fixed: an asserted computational support packet, not an audit-clean bounded theorem.
 - **auditor confidence:** high
 
 ### `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15`
