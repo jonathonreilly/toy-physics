@@ -48,13 +48,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 672 |
+| `bounded_theorem` | 674 |
 | `decoration` | 10 |
 | `meta` | 56 |
 | `no_go` | 189 |
 | `open_gate` | 110 |
-| `positive_theorem` | 785 |
-| `unset` | 5 |
+| `positive_theorem` | 788 |
 
 | criticality | count |
 |---|---:|
@@ -85,9 +84,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 4 | `alpha_s_derived_note` | bounded_theorem | critical | 357 | 31.98 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `native_gauge_closure_note` | bounded_theorem | critical | 643 | 29.33 | `audited_clean` | **retained_bounded** |
 | 6 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 28.99 | `audited_conditional` | ~~audited_conditional~~ |
-| 7 | `minimal_axioms_2026-05-03` | meta | critical | 552 | 28.61 | `unaudited` | meta |
-| 8 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 145 | 28.19 | `unaudited` | unaudited |
-| 9 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | - | critical | 89 | 27.99 | `unaudited` | unaudited |
+| 7 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 145 | 28.19 | `unaudited` | unaudited |
+| 8 | `minimal_axioms_2026-05-03` | meta | critical | 551 | 28.11 | `unaudited` | meta |
+| 9 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 89 | 27.99 | `unaudited` | unaudited |
 | 10 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 541 | 27.58 | `audited_clean` | open_gate |
 | 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 236 | 25.89 | `audited_clean` | **retained_bounded** |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 514 | 25.51 | `audited_conditional` | ~~audited_conditional~~ |
@@ -102,8 +101,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16` | positive_theorem | critical | 200 | 21.65 | `audited_conditional` | ~~audited_conditional~~ |
 | 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 396 | 21.63 | `audited_conditional` | ~~audited_conditional~~ |
 | 23 | `universal_gr_discrete_global_closure_note` | bounded_theorem | critical | 149 | 20.23 | `audited_conditional` | ~~audited_conditional~~ |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | - | critical | 123 | 19.95 | `unaudited` | unaudited |
-| 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | - | critical | 84 | 19.91 | `unaudited` | unaudited |
+| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 123 | 19.95 | `unaudited` | unaudited |
+| 25 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | positive_theorem | critical | 84 | 19.91 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -1391,15 +1390,15 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
 - **auditor:** `claude-opus-fresh-context-phaseA-2026-05-10-9e21b8a6`  (claude-opus; independence=fresh_context)
 - **load-bearing step:** Step 1 ABJ anomaly-to-inconsistency implication for chiral gauge content (admission (i)) plus Step 4 single-clock codimension-1 exclusion of d_t>1, with Steps 2-3 routed via NATIVE_GAUGE_CLOSURE_NOTE and CPT_EXACT_NOTE  _(class `B`)_
-- **chain closes:** False — Chain does NOT close on main. Admission (i) (ABJ anomaly-to-inconsistency on the lattice) is a bare external admission: the proposed companion file AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md does not exist on main (PR 402 was closed without merge, confirmed by ls). The three load-bearing companion notes that DO exist on main (NATIVE_GAUGE_CLOSURE_NOTE.md, CPT_EXACT_NOTE.md, AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md) are all proposed_retained / audit-pending, not audit-ratified retained. Source note explicitly states the row is a B-class conditional bridge and does not propose retained promotion.
-- **rationale:** Runner executes cleanly (exit 0; 86 PASS, 2 ASSERTION, 0 FAIL) and verifies the algebraic load-bearing pieces: (A) anomaly arithmetic on LH content (Tr[Y]=0, Tr[Y^3]=-16/9, Tr[SU(3)^2 Y]=1/3, SU(3)^3=2, full-spectrum cancellation with SM hypercharges), (B) Clifford-algebra chirality dichotomy (Cl(3) omega central, Cl(4)/Cl(1,3) gamma_5 anticommuting involution with 8+8 split), (C) ultrahyperbolic forbidden-region witness vs delta-local Fourier support and CTC sample. (D) single-clock claim is recorded as an [ASSERTION] not a numerical check. The proof is self-described as a B-class conditional bridge with one bare external admission (ABJ on the lattice) to references [1,2]; the Wess-Zumino/Fujikawa companion (PR 402) is confirmed absent from main. The three internalized companion notes are themselves proposed_retained/audit-pending. Tie-break rule applies: load-bearing cited authorities are audit-pending/conditional and one admission is open external, so the canonical verdict is audited_conditional rather than retained.
+- **chain closes:** False — Chain does NOT close on main. Admission (i) (ABJ anomaly-to-inconsistency on the lattice) is a bare external admission: the proposed companion file AXIOM_FIRST_LATTICE_WESS_ZUMINO_FUJIKAWA_Z4_THEOREM_NOTE_2026-05-02.md does not exist on main (PR 402 was closed without merge, confirmed by ls). The three load-bearing companion notes that DO exist on main (NATIVE_GAUGE_CLOSURE_NOTE.md, CPT_EXACT_NOTE.md, AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md) are all candidate retained-grade / audit-pending, not audit-ratified retained. Source note explicitly states the row is a B-class conditional bridge and does not propose retained promotion.
+- **rationale:** Runner executes cleanly (exit 0; 86 PASS, 2 ASSERTION, 0 FAIL) and verifies the algebraic load-bearing pieces: (A) anomaly arithmetic on LH content (Tr[Y]=0, Tr[Y^3]=-16/9, Tr[SU(3)^2 Y]=1/3, SU(3)^3=2, full-spectrum cancellation with SM hypercharges), (B) Clifford-algebra chirality dichotomy (Cl(3) omega central, Cl(4)/Cl(1,3) gamma_5 anticommuting involution with 8+8 split), (C) ultrahyperbolic forbidden-region witness vs delta-local Fourier support and CTC sample. (D) single-clock claim is recorded as an [ASSERTION] not a numerical check. The proof is self-described as a B-class conditional bridge with one bare external admission (ABJ on the lattice) to references [1,2]; the Wess-Zumino/Fujikawa companion (PR 402) is confirmed absent from main. The three internalized companion notes are themselves candidate retained-grade/audit-pending. Tie-break rule applies: load-bearing cited authorities are audit-pending/conditional and one admission is open external, so the canonical verdict is audited_conditional rather than retained.
 - **open / conditional deps cited:**
   - `anomaly_forces_time_theorem`
   - `admission_i_ABJ_lattice_inconsistency_BARE_EXTERNAL (PR 402 closed without merge; cited Adler 1969 [1] / Bell-Jackiw 1969 [2])`
   - `anomaly_forces_time_theorem`
-  - `NATIVE_GAUGE_CLOSURE_NOTE.md (proposed_retained, audit-pending)`
+  - `NATIVE_GAUGE_CLOSURE_NOTE.md (candidate retained-grade, audit-pending)`
   - `anomaly_forces_time_theorem`
-  - `CPT_EXACT_NOTE.md (proposed_retained, audit-pending)`
+  - `CPT_EXACT_NOTE.md (candidate retained-grade, audit-pending)`
   - `anomaly_forces_time_theorem`
   - `AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md (positive_theorem lattice form / bounded_theorem continuum, audit-pending)`
 - **auditor confidence:** high
@@ -2880,7 +2879,7 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **auditor:** `claude-opus-fresh-context-phaseA-2026-05-10-5bf4d82f`  (claude-opus; independence=fresh_context)
 - **load-bearing step:** Algebraic packaging of (M1)-(M5): from imported lambda^2 = alpha_s(v)/n_pair, A^2 = n_pair/n_color, rho = 1/n_quark, eta^2 = (n_quark-1)/n_quark^2, and Thales reading (1-rho)^2+eta^2 = 1-rho, derive |V_us|_0^2, |V_cb|_0^2, |V_ts|_0^2, |V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2) (with exact n_pair cancellation), and |V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2).  _(class `A`)_
 - **chain closes:** True — The local algebra is closed and verified by the runner: 32/32 PASS, exit_code 0. Each (M1)-(M5) identity reduces to imported Wolfenstein/CP-phase/Thales identities and canonical alpha_s(v); the n_pair cancellation in (M4) is explicitly regression-tested (Wolfenstein A^2 lambda^6 (rho^2+eta^2) form numerically equals compact alpha_s(v)^3/(8 n_color^2) form). All five cited one-hop authorities exist on disk and the note's scope guards are present in source.
-- **rationale:** The note explicitly declares its conditional packaging scope and disclaims retained-grade upstream closure. The local algebra closes exactly (runner 32/32 PASS) and the five (M1)-(M5) identities follow from the cited inputs as claimed. However, at least one load-bearing one-hop authority is non-retained: ALPHA_S_DERIVED_NOTE.md carries explicit bounded status (status amended 2026-05-01 from proposed_retained to bounded), and the parent CKM_ATLAS_AXIOM_CLOSURE_NOTE itself is a conditional packaging note. Per tie-break (load-bearing cited authority is bounded/conditional), the verdict is audited_conditional rather than retained.
+- **rationale:** The note explicitly declares its conditional packaging scope and disclaims retained-grade upstream closure. The local algebra closes exactly (runner 32/32 PASS) and the five (M1)-(M5) identities follow from the cited inputs as claimed. However, at least one load-bearing one-hop authority is non-retained: ALPHA_S_DERIVED_NOTE.md carries explicit bounded status (status amended 2026-05-01 from candidate retained-grade to bounded), and the parent CKM_ATLAS_AXIOM_CLOSURE_NOTE itself is a conditional packaging note. Per tie-break (load-bearing cited authority is bounded/conditional), the verdict is audited_conditional rather than retained.
 - **open / conditional deps cited:**
   - `ckm_magnitudes_structural_counts -> ALPHA_S_DERIVED_NOTE (bounded; plaquette beta=6 analytic insertion is open work; v->M_Z bridge is bounded standard infrastructure)`
   - `ckm_magnitudes_structural_counts -> CKM_CP_PHASE_STRUCTURAL_IDENTITY -> parent CKM_ATLAS_AXIOM_CLOSURE_NOTE (imports r^2 = rho^2+eta^2 = 1/6 from parent atlas, not independently re-derived)`

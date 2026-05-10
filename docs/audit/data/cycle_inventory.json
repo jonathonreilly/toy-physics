@@ -149,10 +149,10 @@
       "max_transitive_descendants": 514,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "anomaly_forces_time_theorem",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
           "transitive_descendants": 514
@@ -285,10 +285,10 @@
           "transitive_descendants": 149
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "universal_gr_discrete_global_closure_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
           "transitive_descendants": 149
@@ -361,10 +361,10 @@
           "transitive_descendants": 149
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "universal_gr_discrete_global_closure_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
           "transitive_descendants": 149
@@ -450,10 +450,10 @@
           "transitive_descendants": 149
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "universal_gr_discrete_global_closure_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
           "transitive_descendants": 149
@@ -530,10 +530,10 @@
           "transitive_descendants": 149
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "universal_gr_discrete_global_closure_note",
           "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
           "transitive_descendants": 149
@@ -1553,10 +1553,10 @@
           "transitive_descendants": 89
         },
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
           "transitive_descendants": 89

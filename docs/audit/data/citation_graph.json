@@ -13594,10 +13594,6 @@
     },
     {
       "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
-      "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
       "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
     },
     {
@@ -51029,10 +51025,9 @@
         "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
         "axiom_first_spin_statistics_theorem_note_2026-04-29",
         "staggered_dirac_realization_gate_note_2026-05-03",
-        "minimal_axioms_2026-05-03",
         "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
       ],
-      "note_hash": "67acf23776cd0448b9c49d6b508f7a7a90d7b466dfc9033e231fdcbc99c2837c",
+      "note_hash": "2cb0df7cce2b4107fe8361d951cfade858d4270924336964da5c2e9534b4bff9",
       "path": "docs/STAGGERED_DIRAC_GRASSMANN_FORCING_THEOREM_NOTE_2026-05-07.md",
       "runner_path": "scripts/probe_grassmann_forcing_dependency_chain.py",
       "title": "Staggered-Dirac Substep 1 \u2014 Grassmann Partition Forcing (Block 02)"
@@ -57056,7 +57051,7 @@
       "open_gate": 114,
       "positive_theorem": 622
     },
-    "edge_count": 6765,
+    "edge_count": 6764,
     "leaf_count": 548,
     "node_count": 1934,
     "root_count": 843,
