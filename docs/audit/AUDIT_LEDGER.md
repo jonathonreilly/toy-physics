@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1142 |
+| unaudited | 1141 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 233 |
+| ~~audited_conditional~~ | 234 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 233 |
+| `audited_conditional` | 234 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1209 |
+| `unaudited` | 1208 |
 
 | claim_type | count |
 |---|---:|
@@ -687,6 +687,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `su3_dabc_symmetric_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `synthesis_note_3d` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
 | `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -8997,6 +8998,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** All quantities are computed by exhaustive enumeration in the runner using finite loops over the declared L_s=3 PBC sites, links, plaquettes, incidence maps, adjacency pairs, and tensor slots; each verification is a deterministic equality/cardinality check.  _(class `A`)_
 - **chain closes:** True — The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
 - **rationale:** The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
+- **auditor confidence:** high
+
+### `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the combined Blocks 4+5 bounded theorem as written; the supplied packet supports only Block 4 L_s=3 staging checks, while the Block 5 bridge-gap limb remains conditional.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1234-2700-7d52-a940-26539fab457e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The broad verdict rests on the comparison `|P_all-forward,L=2 - bridge_target| = 0.16 = 543 x epsilon_witness` together with the standard-Wilson L_s=2 degeneracy to rule out the L_s=2 route and motivate L_s>=3.  _(class `B`)_
+- **chain closes:** False — Blocks 1-3 and the supplied Block 4 runner support finite algebraic staging checks only. The decisive P_all-forward value, bridge target, epsilon witness, and Block 5 orientation verification are not closed by the supplied retained authorities or runner artifact; the Block 4 diagonal plaquette tensor is also asserted by the runner rather than derived from the trace tensor.
+- **rationale:** Issue: the combined no-L_s=2/bridge-gap verdict depends on imported open-gate numerics and an unsupplied Block 5 runner, while the supplied runner only stages Block 4. This blocks clean retention because the load-bearing comparison is cross-note input verification, not a closed computation from retained one-hop inputs. Repair target: supply retained authority/source/stdout for the L_s=2 Perron value, bridge target, epsilon witness, and orientation enumeration, and derive the plaquette tensor representation rather than shape-checking a hard-coded diagonal tensor. Until fixed, the safe boundary is Block 4 staging only, not the bridge-gap or L_s=2 closure verdict.
+- **open / conditional deps cited:**
+  - `SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `su3_wilson_closed_form_fanout_theorem_note_2026-05-04`
