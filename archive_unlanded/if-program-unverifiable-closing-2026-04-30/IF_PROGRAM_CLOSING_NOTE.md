@@ -1,7 +1,19 @@
 # IF Decoherence Program: Uniform-DAG Closure and Topology Outcome
 
 **Date:** 2026-04-01
-**Status:** uniform-architecture search closed; IF / CL route proposed_retained on gap-controlled topology
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/if-program-unverifiable-closing-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/if-program-unverifiable-closing-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `if_program_closing_note`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the source promotes a retained repo-facing IF/CL topology outcome, but it provides no executable artifact, no runner output, and no explicit one-hop source notes for the dense-DAG failures, modular/gap-controlled positives, large-N visibility caveat, or seven failed local emergence attempts. Why this blocks: a program-closing retained claim cannot be verified from uncited narrative summaries; a hostile reviewer cannot check whether the same observable, topology family, IF/CL machinery, and gravity/decoherence criteria are being compared consistently. Repair target: split the memo into explicit cited inputs, add or cite the runners/logs for dense-uniform failure, modular-gap positive, large-N visibility, and local-emergence failures, then state a narrower claim whose conclusion follows from those one-hop artifacts. Claim boundary until fixed: safely treat this as a planning/triage memo: IF/CL and gap-controlled topology are current working hypotheses, while broad dense-connected architecture search should not be reopened without new cited evidence."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 ## What was retained
 

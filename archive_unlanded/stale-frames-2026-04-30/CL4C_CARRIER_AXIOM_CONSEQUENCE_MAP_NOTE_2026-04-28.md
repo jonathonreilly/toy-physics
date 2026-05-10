@@ -1,17 +1,24 @@
 # Cl_4(C) Carrier-Axiom Consequence Map (Cross-Lane)
 
 **Date:** 2026-04-28
-**Status:** open branch-local **conditional-closure consequence
-map** on `physics-loop/cl4c-carrier-axiom-consequence-map-20260428`.
-Cycle 1. Audit-grade. Traces downstream consequences across lanes
-conditional on adopting the irreducible Cl_4(C) module axiom on
-`P_A H_cell` ("Axiom*"), which is the minimal carrier-axiom class
-identified by the Cycle-5 A5 audit of the C1 gate loop (PR #169).
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/stale-frames-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Lanes covered:** 1 (gravity/area-law), 4D (neutrino Dirac/Majorana),
 4F (Σm_ν), 5 (Hubble), Planck.
 **Loop:** `cl4c-carrier-axiom-consequence-map-20260428`
 **Runner:** `scripts/frontier_cl4c_carrier_axiom_consequence_map.py`
 **Log:** `outputs/frontier_cl4c_carrier_axiom_consequence_map_2026-04-28.txt`
+
+---
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/stale-frames-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `cl4c_carrier_axiom_consequence_map_note_2026-04-28`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the consequence map depends on the stale carrier-axiom wrapper frame and presents an active downstream cascade from that frame. Why this blocks: after the forced/minimal Axiom* narrative failed audit, leaving this map in active docs would keep a failed closure story available as support. Repair target: if Axiom* is later adopted or reintroduced, rebuild a new consequence map from the audited extension decision and current dependencies. Claim boundary until fixed: the 2026-04-28 map is archive-only recovery material, not an active claim note."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ---
 

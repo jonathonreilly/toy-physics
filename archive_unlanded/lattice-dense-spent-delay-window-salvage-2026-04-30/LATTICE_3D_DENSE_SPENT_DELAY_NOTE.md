@@ -1,7 +1,19 @@
 # 3D Dense Spent-Delay Lattice Note
 
 **Date:** 2026-04-04  
-**Status:** proposed_retained bounded 3D dense spent-delay branch on the ordered-lattice family
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/lattice-dense-spent-delay-window-salvage-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `lattice_3d_dense_spent_delay_note`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the source note's load-bearing attractive-window claim includes z=6, but the named live runner and checked log only test z=2,3,4,5 and report hierarchy-aligned support as 4/4 points. Why this blocks: a hostile auditor cannot ratify a retained z=2..6 window when the allowed runner output omits one endpoint; the exact retained wording is stale relative to the executable artifact even though the z=2..5 card is reproducible. Repair target: update the runner to include z=6 with assertions for centroid, P_near, bias, and hierarchy sign, or revise the note's retained window and table to z=2..5; register the runner path in the audit ledger if this card remains load-bearing. Claim boundary until fixed: it is safe to claim the current runner's finite 3D dense spent-delay card: Born 7.39e-16, d_TV=0.3785, k=0 controls zero, F~M alpha about 0.34, nonzero MI/decoherence, N=12/15 positive centroid response after N=10 away, and hierarchy-aligned attraction at z=2..5; it is not safe to claim the z=2..6 window or any broader/asymptotic attraction theorem."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 ## Purpose
 
