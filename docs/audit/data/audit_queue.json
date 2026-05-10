@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 711,
+    "critical": 710,
     "high": 27,
     "leaf": 278,
     "medium": 152
@@ -7957,27 +7957,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 352
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_q_readout_factorization_theorem_2026-04-22",
-      "claim_scope": "Exact rank/kernel quotient of the explicitly supplied linear readout map L: R^4 -> Diag_3(R), L(u,v,w,z)=diag(u,v,w), on the stated \u0393_1/T_1 grammar.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 4,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.459,
-      "note_path": "docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_readout_factorization_theorem.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38809,6 +38788,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 105,
-  "total_pending": 1168
+  "ready_count": 104,
+  "total_pending": 1167
 }
