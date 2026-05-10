@@ -38574,6 +38574,17 @@
       "runner_path": "scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py",
       "title": "Connectivity Family V2 Elliptical Duplicate Note"
     },
+    "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10": {
+      "claim_id": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "3d41040cd1db14a035da5ea78e6778b8730e4d787e1773cd85ccfd86d31ca7bd",
+      "path": "docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py",
+      "title": "Connes-Kreimer Birkhoff Factorization \u2014 External Narrow Theorem"
+    },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
       "claim_type_author_hint": "meta",
@@ -66101,6 +66112,7 @@
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
     "complex_action_note",
+    "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
     "continuum_bridge_note",
     "continuum_limit_note",
     "cosmology_scale_identification_and_reduction_note",
@@ -66722,7 +66734,7 @@
       "no_go": 23,
       "none": 1626,
       "open_gate": 29,
-      "positive_theorem": 94
+      "positive_theorem": 95
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66731,12 +66743,12 @@
       "no_go": 130,
       "none": 449,
       "open_gate": 117,
-      "positive_theorem": 594
+      "positive_theorem": 595
     },
     "edge_count": 8352,
-    "leaf_count": 538,
-    "node_count": 2079,
-    "root_count": 770,
-    "runners_with_path": 1694
+    "leaf_count": 539,
+    "node_count": 2080,
+    "root_count": 771,
+    "runners_with_path": 1695
   }
 }

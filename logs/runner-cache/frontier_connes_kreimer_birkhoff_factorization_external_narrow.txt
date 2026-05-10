@@ -1,0 +1,64 @@
+===== runner cache v1 =====
+runner: scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py
+runner_sha256: 34b42345853c7d4d91c0cab0174872594103f12883cc089819b333f713e524b0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+# Connes-Kreimer Birkhoff factorization runner
+# Source note: docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md
+
+==============================================================================
+T1: rooted-tree coproduct
+==============================================================================
+  [PASS] Delta(t1) has the two counital terms
+         [('t1', '1'), ('1', 't1')]
+  [PASS] Delta(t2) has one admissible-cut term t1 x t1
+         [('t2', '1'), ('1', 't2'), ('t1', 't1')]
+
+==============================================================================
+T2: character convolution
+==============================================================================
+  [PASS] (phi * psi)(t1) = phi(t1) + psi(t1)
+  [PASS] (phi * psi)(t2) = phi(t2) + psi(t2) + phi(t1)psi(t1)
+
+==============================================================================
+T3: Laurent pole Rota-Baxter identity
+==============================================================================
+  [PASS] pole projection satisfies the Rota-Baxter identity on test pairs
+         results=[True, True, True]
+
+==============================================================================
+T4: Birkhoff recursion on t1
+==============================================================================
+  [PASS] phi_-(t1) removes the pole
+         phi_-=-1/e
+  [PASS] phi_+(t1) is the regular part
+         phi_+=alpha
+
+==============================================================================
+T5: Birkhoff recursion on t2
+==============================================================================
+  [PASS] prepared t2 has only a simple pole plus regular part
+         prepared=(-alpha + beta + e*gamma)/e
+  [PASS] phi_-(t2) cancels that pole
+         phi_-=-(-alpha + beta)/e
+  [PASS] phi_+(t2) is regular gamma
+         phi_+=gamma
+
+==============================================================================
+T6: convolution unit
+==============================================================================
+  [PASS] epsilon is the convolution unit on t1 and t2
+
+==============================================================================
+T7: source-note boundary
+==============================================================================
+  [PASS] note declares positive_theorem
+  [PASS] note avoids framework bridge and status overclaims
+
+=== TOTAL: PASS=13, FAIL=0 ===
+
+----- stderr -----
+
