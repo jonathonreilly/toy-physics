@@ -1,0 +1,65 @@
+Area-law coefficient-gap audit terminal-synthesis check
+note: docs/AREA_LAW_COEFFICIENT_GAP_AUDIT_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md
+
+PASS: synthesis note is meta
+PASS: does not promote any row to retained
+PASS: leaf claim_id cited: area_law_coefficient_gap_note
+PASS: substrate-forcing dep claim_id cited: planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30
+PASS: parity-gate dep claim_id cited
+PASS: CAR-edge dep claim_id cited
+PASS: native-CAR tightening dep claim_id cited
+PASS: broader-no-go dep claim_id cited
+PASS: cites audited_renaming terminal verdict
+PASS: cites two independent audited_renaming verdicts on substrate-forcing dep
+PASS: cites audited_conditional prior verdict on leaf
+PASS: cites cross_family independence on prior leaf audit
+PASS: cites carrier-identification premise (CIP) by name
+PASS: cites conditional-on-open-work failure mode
+PASS: repair-target language present (cites independent retained derivation)
+PASS: rules out small-bounded-note repair
+PASS: notes no alternative dep chain bypass
+PASS: names substrate-to-P_A forcing as the open block
+PASS: cites docs/audit/README.md authority
+PASS: cites hard rule 1 (audit-only retained grade)
+PASS: cites hard rule 2 (open gates / terminal block propagation)
+PASS: cites cycle-0008 cycle-break entry
+PASS: cites cycle-0009 cycle-break entry
+PASS: cites cycle-0010 cycle-break entry
+PASS: cites cycle-break repair_class=missing_dependency_edge
+PASS: Recommendation for future campaigns section present
+PASS: explicitly says do NOT spawn audit-backlog cycles
+PASS: explicitly says do NOT spawn retained-promotion attempts on substrate-forcing dep
+PASS: explicitly says no new vocabulary / tags / framings
+PASS: proposal_allowed: false declared
+PASS: proposal_allowed_reason justifies as backward-looking synthesis
+PASS: cites sibling QUARK terminal synthesis as template
+PASS: cites sibling KOIDE BAE terminal synthesis as template
+PASS: cites leaf source note in cross-references
+PASS: cites parity-gate dep source note in cross-references
+PASS: cites CAR-edge dep source note in cross-references
+PASS: cites native-CAR tightening dep source note in cross-references
+PASS: cites broader-no-go dep source note in cross-references
+PASS: cites substrate-forcing dep source note in cross-references
+PASS: cites MINIMAL_AXIOMS_2026-05-03 framework axioms
+PASS: cites AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02 template authority
+PASS: Review-loop rule section present
+PASS: review-loop rule notes block is terminal pending substrate-forcing theorem
+PASS: audit_ledger.json has rows table | rows count: 1943
+PASS: ledger has leaf row: area_law_coefficient_gap_note
+PASS: ledger has substrate-forcing dep row: planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30
+PASS: leaf row lists all ten expected blocking deps | deps count: 10
+PASS: leaf row is critical | criticality: 'critical'
+PASS: leaf row claim_type is positive_theorem | claim_type: 'positive_theorem'
+PASS: leaf has archived audited_conditional verdict with chain_closes=false | previous_audits count: 1
+PASS: archived verdict load_bearing_step names the carrier identification
+PASS: substrate-forcing dep has at least one archived audited_renaming verdict | audited_renaming count: 2
+PASS: all archived audited_renaming verdicts have non-empty rationale
+PASS: audit_queue.json records cycle-0008 with leaf as primary break target
+PASS: audit_queue.json records cycle-0009 with leaf as primary break target
+PASS: audit_queue.json records cycle-0010 with leaf as primary break target
+PASS: cycle-break entries on the leaf carry repair_class=cycle_break_required
+PASS: audit/README.md retains 'audited_<failure_mode>' terminal language
+PASS: audit/README.md retains conditional-on-open-work failure-mode language
+
+TOTAL: PASS=59 FAIL=0
+Area-law coefficient-gap audit terminal-synthesis check passed: leaf and all ten deps cited, substrate-forcing audited_renaming verdict + leaf audited_conditional verdict recorded, repair surface analysis present, audit-lane policy authority cited, cycle-break entries cycle-0008/0009/0010 cited, do-NOT-spawn-campaign-cycles recommendation present, live ledger and audit-queue state consistent with synthesis.

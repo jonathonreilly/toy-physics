@@ -516,6 +516,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py"
     },
+    "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_area_law_coefficient_gap_terminal_synthesis.py"
+    },
     "area_law_multipocket_selector_no_go_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -23586,6 +23598,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_area_law_coefficient_gap_terminal_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_area_law_multipocket_selector_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -43561,15 +43588,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 161,
+    "decoration_candidates": 162,
     "dominant_class_distribution": {
       "A": 111,
-      "B": 160,
+      "B": 161,
       "C": 642,
       "D": 235,
       "none": 405
     },
-    "runners_classified": 1553,
+    "runners_classified": 1554,
     "runners_with_C": 804,
     "runners_with_D": 425
   }

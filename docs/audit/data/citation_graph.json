@@ -781,6 +781,46 @@
       "to": "born_scattering_comparison_note"
     },
     {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "area_law_coefficient_gap_note"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "area_law_quarter_broader_no_go_note_2026-04-25"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
+      "from": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
+    },
+    {
       "from": "area_law_coefficient_gap_note",
       "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
     },
@@ -34708,6 +34748,28 @@
       "runner_path": "scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py",
       "title": "Area-Law Algebraic-Spectrum Entropy No-Go Note"
     },
+    "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10": {
+      "claim_id": "area_law_coefficient_gap_audit_terminal_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "area_law_coefficient_gap_note",
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "minimal_axioms_2026-05-03",
+        "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25",
+        "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+        "area_law_quarter_broader_no_go_note_2026-04-25",
+        "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02",
+        "area_law_native_car_semantics_tightening_note_2026-04-25"
+      ],
+      "note_hash": "17416d567e449eb899550c5f9654fe64f91a53e819c843faecf45a865018af57",
+      "path": "docs/AREA_LAW_COEFFICIENT_GAP_AUDIT_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_area_law_coefficient_gap_terminal_synthesis.py",
+      "title": "Area-Law Coefficient Gap Audit Terminal Synthesis Meta Note"
+    },
     "area_law_coefficient_gap_note": {
       "claim_id": "area_law_coefficient_gap_note",
       "claim_type_author_hint": null,
@@ -65755,7 +65817,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 238,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65764,16 +65826,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
+    "edge_count": 8239,
+    "leaf_count": 534,
+    "node_count": 2051,
     "root_count": 764,
-    "runners_with_path": 1665
+    "runners_with_path": 1666
   }
 }
