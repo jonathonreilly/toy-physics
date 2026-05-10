@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 68 |
+| **retained** | 69 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1096 |
+| unaudited | 1095 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 403 |
+| `audited_clean` | 404 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1194 |
+| `unaudited` | 1193 |
 
 | claim_type | count |
 |---|---:|
@@ -155,6 +155,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2407,6 +2408,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** the smallest stable discriminator we found is the anchor-local crossover: exact gamma=0 baseline plus `TOWARD -> AWAY` on the retained anchor row  _(class `B`)_
 - **chain closes:** False — The conclusion relies on comparison rows and mismatch details whose direct authorities are not in the supplied one-hop packet, especially the original grown-basin positive row and the second-family boundary-window statement. The supplied runner only renders hard-coded rows, so it does not independently close the missing comparison.
 - **rationale:** Issue: the source imports load-bearing row facts from unprovided authorities while presenting the table as a closed predictor comparison. Why this blocks: without those one-hop inputs, the claimed separation of positive families from diagnosed boundaries and the 'smallest stable discriminator' statement do not follow from the restricted packet. Repair target: add the missing dependency edges and use a runner that verifies row facts from cited outputs, or narrow the claim to only the supplied retained-grade authorities. Claim boundary until fixed: the packet supports only a partial bounded comparison, not the full predictor card.
+- **auditor confidence:** high
+
+### `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** External mathematical theorem: characters of the Connes-Kreimer rooted-tree Hopf algebra with values in a commutative unital Rota-Baxter target algebra admit the stated recursive convolution Birkhoff factorization; no CL3/framework or physics bridge is audited or claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e143a-7f81-7030-8a69-e52ecd10b000`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For every non-empty tree t, prepared_phi(t) = phi(t) + sum_c phi_-(P^c(t)) phi(R^c(t)), phi_-(t) = -T(prepared_phi(t)), and phi_+(t) = (id - T)(prepared_phi(t)), giving unique characters with phi = phi_-^{*-1} * phi_+.  _(class `A`)_
+- **chain closes:** True — The cited Connes-Kreimer authority excerpt contains the same recursive counterterm formula C(X) = -T(U(X) + sum C(X')U(X'')), the Rota-Baxter identity used to prove multiplicativity, and the convolution relation R = C * U giving the Birkhoff decomposition. The note's boundary explicitly confines the claim to this external Hopf-algebra theorem and excludes project-framework and physics uses.
+- **rationale:** The source note cleanly states the external theorem and does not import or assert any CL3 operator, perturbation expansion, hierarchy closure, numerical prediction, or physics bridge. The runner is not a proof of the theorem, but it appropriately spot-checks the coproduct, convolution, Rota-Baxter identity, low-depth recursion, unit identities, and no-framework boundary. Given the narrow theorem scope and cited external theorem, the chain closes without requiring a new framework bridge.
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
