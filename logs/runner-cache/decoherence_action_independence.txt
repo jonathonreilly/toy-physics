@@ -1,11 +1,38 @@
 ===== runner cache v1 =====
 runner: scripts/decoherence_action_independence.py
-runner_sha256: a648c7e45d00852ffde0ab83c38be8c5a45714ea41a34c679bd3f5b61939ef17
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.03
-status: timeout
+runner_sha256: c652dacdd4162a2daef389a5a798a6f96503be54bfa674a4f41e27eb2c326296
+timeout_sec: 450
+exit_code: 0
+elapsed_sec: 334.19
+status: ok
 ----- stdout -----
+========================================================================================
+DECOHERENCE ACTION INDEPENDENCE REPLAY
+  3D 1/L^2 lattice, zero field, valley-linear vs spent-delay
+  h values: 1.0, 0.5, 0.25
+========================================================================================
+
+h=1.00  nodes=5,733  layers=13  npl=441
+  spent_delay   d_TV=0.6317  MI=0.4188  pur_cl=0.6936  decoh=30.6%  S_norm=0.4645
+  valley_linear d_TV=0.6317  MI=0.4188  pur_cl=0.6936  decoh=30.6%  S_norm=0.4645
+  delta(spent - valley): d_tv=0.00e+00, mi=0.00e+00, pur_cl=0.00e+00, decoh=0.00e+00, s_norm=0.00e+00
+
+h=0.50  nodes=42,025  layers=25  npl=1681
+  spent_delay   d_TV=0.7868  MI=0.5684  pur_cl=0.5057  decoh=49.4%  S_norm=0.6733
+  valley_linear d_TV=0.7868  MI=0.5684  pur_cl=0.5057  decoh=49.4%  S_norm=0.6733
+  delta(spent - valley): d_tv=0.00e+00, mi=0.00e+00, pur_cl=0.00e+00, decoh=0.00e+00, s_norm=0.00e+00
+
+h=0.25  nodes=321,489  layers=49  npl=6561
+  spent_delay   d_TV=0.8341  MI=0.6376  pur_cl=0.5006  decoh=49.9%  S_norm=0.7670
+  valley_linear d_TV=0.8341  MI=0.6376  pur_cl=0.5006  decoh=49.9%  S_norm=0.7670
+  delta(spent - valley): d_tv=0.00e+00, mi=0.00e+00, pur_cl=0.00e+00, decoh=0.00e+00, s_norm=0.00e+00
+
+========================================================================================
+SUMMARY
+  The decoherence observables are identical across actions on the tested family.
+  max |delta|: d_tv=0.00e+00, mi=0.00e+00, pur_cl=0.00e+00, decoh=0.00e+00, s_norm=0.00e+00
+  Total time: 333.9s
+========================================================================================
 
 ----- stderr -----
 

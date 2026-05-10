@@ -15,6 +15,14 @@ beyond the retained 3D 1/L^2 branch.
 
 from __future__ import annotations
 
+# Heavy compute / decoherence-bath replay — exceeds the 120s default audit
+# timeout. Measured wall-clock at 2026-05-10: ~314s on the canonical
+# Python 3.12 machine; declaring 450s here gives ~40% margin while
+# keeping the audit-cache budget bounded. Without this declaration the
+# audit lane caches an empty stdout under `status: timeout`, blocking
+# the audit verdict (the cited row was UNAUDITED on origin/main).
+AUDIT_TIMEOUT_SEC = 450
+
 import math
 import os
 import time
