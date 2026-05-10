@@ -1,0 +1,172 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_s_L1_topological_2026_05_08_probeS_L1_topological.py
+runner_sha256: 992ad304dfb9d1c61c402b92bd4d429da7bb318a204833ec55134f978563a477
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================
+Probe S-L1-Topological — Chern-Simons / knot invariants and
+                          QCD beta_2/beta_3 channel weights
+Date: 2026-05-10
+Source-note authority:
+  docs/KOIDE_S_L1_TOPOLOGICAL_CHERN_SIMONS_NOTE_2026-05-08_probeS_L1_topological.md
+========================================================================
+
+Section 1 — SUPPORT: CS partition function on T^3 for SU(3)
+  [PASS] Z(T^3, SU(3)_1) = (k+1)(k+2)/2 reproduced | = 3 (enumerated 3)
+  [PASS] Z(T^3, SU(3)_2) = (k+1)(k+2)/2 reproduced | = 6 (enumerated 6)
+  [PASS] Z(T^3, SU(3)_3) = (k+1)(k+2)/2 reproduced | = 10 (enumerated 10)
+  [PASS] Z(T^3, SU(3)_5) = (k+1)(k+2)/2 reproduced | = 21 (enumerated 21)
+  [PASS] Z(T^3, SU(3)_10) = (k+1)(k+2)/2 reproduced | = 66 (enumerated 66)
+    -> CS partition function on T^3 is a single positive integer per (G, k).
+    -> Pure topology: no metric, no scheme, no regulator dependence.
+    -> Cannot encode the 6+ independent rationals of beta_n channel weights.
+
+Section 2 — SUPPORT: SU(3) quantum dimension [3]_q at CS root-of-unity
+  [PASS] SU(3) [3]_q at k=1 matches [3]_q = 1 | computed 1.000000+0.00e+00i; expected 1.000000
+  [PASS] SU(3) [3]_q at k=2 matches [3]_q = phi = (1+sqrt(5))/2 | computed 1.618034+-9.44e-17i; expected 1.618034
+  [PASS] SU(3) [3]_q at k=3 matches [3]_q = 2 | computed 2.000000+0.00e+00i; expected 2.000000
+  [PASS] SU(3) [3]_q at k=5 matches [3]_q = 1+sqrt(2) | computed 2.414214+0.00e+00i; expected 2.414214
+  [PASS] SU(3) [3]_q at k=10 [3]_q approaches 3 (classical limit) | computed 2.770912+0.00e+00i; expected ~3 (tol 0.3)
+  [PASS] SU(3) [3]_q at k=100 [3]_q -> 3 as k -> inf | computed 2.996280+0.00e+00i; expected ~3 (tol 0.01)
+    -> [3]_q is a cyclotomic algebraic integer in Q(zeta_(k+3)).
+    -> NOT in Q: e.g., [3]_q at k=2 is phi (irrational).
+    -> Classical limit k->inf reproduces only the Casimir-skeleton
+       dimension 3 — already supported, NOT new information.
+
+Section 3 — SUPPORT: Jones polynomial of trefoil (CS Wilson loop)
+  [PASS] Jones(trefoil) at SU(2)_1: q = exp(2*pi*i/3) gives algebraic value | V = 1.0000+0.0000i (real? True)
+  [PASS] Jones(trefoil) at SU(2)_2: q = exp(2*pi*i/4) gives algebraic value | V = -1.0000+-0.0000i (real? True)
+  [PASS] Jones(trefoil) at SU(2)_3: q = exp(2*pi*i/5) gives algebraic value | V = -0.8090+-1.3143i (real? False)
+  [PASS] Jones(trefoil) at SU(2)_4: q = exp(2*pi*i/6) gives algebraic value | V = 0.0000+-1.7321i (real? False)
+  [PASS] Jones(trefoil) coefficients are integers {-1, +1, +1} (skein-derived) | from Kauffman bracket; not framework-derived QCD rationals
+    -> Jones polynomial is a Laurent polynomial in q with INTEGER coefs.
+    -> Evaluated at CS roots of unity gives cyclotomic algebraic values.
+    -> Value field is Q(zeta_(k+2)) for SU(2)_k — NOT the QCD rational field.
+    -> Generally complex; beta_n channel weights are real rationals + real zeta_3.
+
+Section 4 — NEGATIVE: finite CS data does not derive beta_n weights
+  [PASS] CS Wilson-loop outputs live in cyclotomic Q(zeta_(k+h^vee)) | standard CS-knot polynomial output field
+  [PASS] beta_2 has 6 independent rational channel weights | from TVZ 1980 dim-reg MSbar 3-loop integrals
+  [PASS] CS partition Z(T^3, SU(3)_k) is ONE integer per level k | values for k=1..10: [3, 6, 10, 15, 21, 28, 36, 45, 55, 66]
+  [PASS] underspecification: 1 CS integer per level cannot determine 6 rationals | even ranging over k, CS gives only integers (k+1)(k+2)/2; no map from these to (2857/54, -1415/54, -205/18, 79/54, 11/9, 1/2)
+  [PASS] beta_3 contains zeta_3 terms in the literature comparator | this probe derives no CS map producing those terms
+    -> Q is contained in cyclotomic fields, so field containment alone
+       is not the theorem. The no-go is absence of a derived map from
+       finite CS/knot data to the QCD channel-weight vector.
+    -> The beta_3 zeta(3) terms remain literature comparators, not
+       framework-derived outputs of this topological construction.
+
+Section 5 — NEGATIVE: numerical h^vee != beta_0 mismatch
+  [PASS] h^vee(SU(3)) = 3 | dual Coxeter number for SU(3) = 3
+  [PASS] beta_0(QCD, N_f=6) = 7 | = 11/3 * 3 - 2/3 * 6 = 7
+  [PASS] h^vee != beta_0 at N_f=6 (3 != 7) | the conjectured identification k+h^vee = beta_0 is numerically false
+  [PASS] beta_0(N_f=0) = 11 (h^vee remains 3) | matter-content dependent; CS h^vee is matter-blind
+  [PASS] beta_0(N_f=3) = 9 (h^vee remains 3) | matter-content dependent; CS h^vee is matter-blind
+  [PASS] beta_0(N_f=6) = 7 (h^vee remains 3) | matter-content dependent; CS h^vee is matter-blind
+  [PASS] beta_0(N_f=11) = 11/3 (h^vee remains 3) | matter-content dependent; CS h^vee is matter-blind
+  [PASS] beta_0(N_f=16) = 1/3 (h^vee remains 3) | matter-content dependent; CS h^vee is matter-blind
+    -> h^vee(SU(3)) = 3 is a PURE GAUGE-TOPOLOGY number (depends only on SU(N)).
+    -> beta_0(QCD, N_f) is MATTER-CONTENT-DEPENDENT (varies with N_f).
+    -> No identification between these numbers exists for any N_f >= 0.
+
+Section 6 — NEGATIVE: underspecification (CS data << beta_n weight space)
+  [PASS] beta_0 (1-loop) has 1 independent rational(+zeta_3) weights | from standard MSbar literature (TVZ 1980 + VVL 1997)
+  [PASS] beta_1 (2-loop) has 1 independent rational(+zeta_3) weights | from standard MSbar literature (TVZ 1980 + VVL 1997)
+  [PASS] beta_2 (3-loop) has 6 independent rational(+zeta_3) weights | from standard MSbar literature (TVZ 1980 + VVL 1997)
+  [PASS] beta_3 (4-loop) has 14 independent rational(+zeta_3) weights | from standard MSbar literature (TVZ 1980 + VVL 1997)
+  [PASS] CS data on T^3 gives 1 integer (Z) per level + finite algebraic quantum dims | e.g., k=2: Z = 6, [3]_q = phi; k=3: Z = 10, [3]_q = 2
+  [PASS] CS data cardinality << beta_2 channel weight space | 1 integer + finite algebraic quantum dims cannot determine 6 independent rationals
+  [PASS] CS is scheme-independent; beta_n weights are scheme-dependent | structural mismatch: topological invariants cannot encode scheme-dependent rationals
+    -> 1 CS integer per level + finite algebraic quantum dims << 
+       6 beta_2 rationals + 14+ beta_3 rational+zeta_3 weights.
+    -> Scheme dependence of beta_n cannot be encoded in topological data.
+
+Section 7 — NEGATIVE: dimensional / metric-dependence mismatch
+  [PASS] CS on T^3 is 3-dimensional | T^3 is a 3-manifold; CS action integrand is a 3-form
+  [PASS] CS on T^3 is topological (metric-independent) | Z(M, G, k) depends only on diffeomorphism class of M
+  [PASS] QCD beta-functions are 4-dimensional | beta-function describes 4-dim Yang-Mills running
+  [PASS] QCD beta_n weights are scheme-dependent at n >= 2 | MSbar vs lattice PT vs MOM give different beta_2 weights
+  [PASS] 3-dim topological functional cannot encode 4-dim scheme-dependent rationals | structural no-go for CS-on-T^3 route to beta_n channel weights
+    -> CS on T^3 is 3-dim topological; QCD beta_n is 4-dim scheme-dependent.
+    -> Dimensional + metric-dependence mismatch is a structural no-go.
+    -> CS captures anomaly/theta-content, NOT perturbative running.
+
+Section 8 — NEGATIVE: O13 obstruction direct application
+  [PASS] O13 obstruction class is retained (2026-04-24 audit) | see docs/KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md
+  [PASS] Canonical CS isomorphism R/Z -> U(1) is chi(c) = exp(2*pi*i*c) | any phase from CS class has form (rational)*2*pi; CS values DO inherit 2*pi factor
+  [PASS] beta_2 weight 2857/54 is NOT (rational)*2*pi (= 52.9074, /2*pi = 8.420475) | 2857/54/(2*pi) is irrational because pi is irrational
+  [PASS] None of the 6 TVZ beta_2 channel weights are (rational)*2*pi | counted 0 of 6 weights matching pattern (target 0)
+    -> O13 obstruction: CS classes -> (rational)*2*pi phases.
+    -> beta_2 channel weights are pure rationals, NOT of (rational)*2*pi form.
+    -> CS-route bridge forecloses by direct application of O13.
+
+Section 9 — HOSTILE REVIEW: final identification is not derived
+  [BOUNDED-IMPORT] Import: Z^3 -> T^3 via periodic BCs | bounded stress-test import
+  [BOUNDED-IMPORT] Import: CS-on-T^3 with SU(3)_k | standard topological QFT import
+  [BOUNDED-IMPORT] Import: Wilson loops on knots | standard CS Wilson-loop import
+  [BOUNDED-IMPORT] Import: Level shift k -> k+h^vee | standard CS regularization import
+  [BOUNDED-IMPORT] Identification (knot polynomial value) <-> (beta_n channel weight) | NOT derived from retained structure or from the bounded imports; introducing it would be a new primitive bridge, not a derivation
+  [PASS] Even granting all imports, the load-bearing bridge is NOT derived | the topological-CS route fails because the final map is undefined
+    -> Even granting Z^3->T^3, CS-on-T^3, Wilson loops, level shift,
+       the final identification (knot polynomial = beta_n weight) is NOT
+       derived; it would be a new primitive bridge, not a derivation.
+
+Section 10 — BOUNDED IMPORTS
+  [BOUNDED-IMPORT] beta_2 channel weights in any scheme | scalar weights require 3-loop integral primitives (Probe X)
+  [BOUNDED-IMPORT] beta_3 channel weights in any scheme | scalar weights require 4-loop integral primitives (Probe X)
+  [BOUNDED-IMPORT] Topological-CS bridge for beta_2 | no derived CS map + O13 + dimensional gap + underspecification
+  [BOUNDED-IMPORT] Topological-CS bridge for beta_3 | no derived CS map to the literature zeta_3 terms
+  [PASS] Topological attack route contributes bounded negative evidence | this note does not promote a repo-wide terminality theorem
+    -> Topological / Chern-Simons / knot-polynomial route foreclosed.
+    -> Repo-wide channel-weight status is left to the audit/dependency lane.
+
+========================================================================
+PROBE S-L1-Topological RESULT
+========================================================================
+
+Claim type: bounded_theorem (NEGATIVE on the conjecture;
+            support-only on CS / knot-polynomial value reproduction)
+
+Support-only value results:
+  + CS partition function on T^3 for SU(3) at level k:
+      Z(T^3, SU(3)_k) = (k+1)(k+2)/2 reproduced
+  + SU(3) quantum dimension [3]_q at q = exp(2*pi*i/(k+3)):
+      [3]_q at k=2 = phi (golden ratio); k=5 = 1+sqrt(2);
+      classical limit k -> inf gives [3]_q -> 3
+  + Jones polynomial of trefoil V(3_1)(q) = -q^(-4)+q^(-3)+q^(-1)
+      reproduced symbolically and at CS levels k=1..4
+
+NEGATIVE on the conjecture:
+  - Finite CS / knot-polynomial data does not derive the QCD
+    beta_n channel-weight vector
+  - Level shift h^vee(SU(3)) = 3 != beta_0(QCD, N_f=6) = 7
+    (the conjectured CS-beta_0 identification is numerically false)
+  - One CS integer per level cannot determine 6 beta_2 rationals or
+    14+ beta_3 weights (irreducible underspecification)
+  - 3-dim topological CS != 4-dim metric-regulated YM running
+    (dimensional + scheme-dependence mismatch)
+  - O13 obstruction directly applies: CS classes -> (rational)*2*pi,
+    but beta_n weights are pure rationals (no 2*pi factor)
+  - Even granting all imports, the load-bearing knot-polynomial =
+    beta_n-weight identification is NOT derived; would be a new
+    primitive bridge
+
+BOUNDED imports:
+  ! beta_2 channel weights: NOT derived here in any scheme
+  ! beta_3 channel weights: NOT derived here in any scheme
+
+Net contribution to Lane 1:
+  - The topological / Chern-Simons / knot-polynomial route is
+    FORECLOSED for channel weights.
+  - This is bounded negative evidence only; it does not promote
+    a repo-wide channel-weight terminality theorem.
+  - Does NOT change current Lane 1 admission status.
+
+
+SUMMARY: PASS=47 FAIL=0 BOUNDED_IMPORT=9
+
+----- stderr -----
+

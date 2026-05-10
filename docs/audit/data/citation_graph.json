@@ -48297,6 +48297,17 @@
       "runner_path": "scripts/frontier_koide_reviewer_stress_test.py",
       "title": "Reviewer Stress-Test for the Koide Q and Delta Support Routes"
     },
+    "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological": {
+      "claim_id": "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (negative on the specific topological-CS /",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "d0237e2c9c8c61c9819f2393dca59744da3c28649ee9c5c84d0aa1f93f641387",
+      "path": "docs/KOIDE_S_L1_TOPOLOGICAL_CHERN_SIMONS_NOTE_2026-05-08_probeS_L1_topological.md",
+      "runner_path": "scripts/cl3_koide_s_L1_topological_2026_05_08_probeS_L1_topological.py",
+      "title": "Probe S-L1-Topological \u2014 Chern-Simons / Knot Invariants and the QCD \u03b2_2/\u03b2_3 Channel-Weight Obstruction"
+    },
     "koide_scale_selector_reparameterization_theorem_note_2026-04-20": {
       "claim_id": "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -65290,6 +65301,7 @@
     "koide_q_reduced_observable_restriction_theorem_2026-04-22",
     "koide_q_second_order_support_batch_note_2026-04-22",
     "koide_reviewer_stress_test_note_2026-04-21",
+    "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
     "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
     "koide_theta_hierarchy_open_scalar_note_2026-04-19",
     "koide_transport_gap_constant_no_go_note_2026-04-20",
@@ -65647,7 +65659,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 235,
+      "bounded_theorem": 236,
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
@@ -65656,7 +65668,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 717,
+      "bounded_theorem": 718,
       "decoration": 1,
       "meta": 59,
       "no_go": 124,
@@ -65665,9 +65677,9 @@
       "positive_theorem": 590
     },
     "edge_count": 8215,
-    "leaf_count": 531,
-    "node_count": 2047,
-    "root_count": 763,
-    "runners_with_path": 1662
+    "leaf_count": 532,
+    "node_count": 2048,
+    "root_count": 764,
+    "runners_with_path": 1663
   }
 }

@@ -10536,6 +10536,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_koide_reviewer_stress_test.py"
     },
+    "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological": {
+      "assert_count": 5,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_s_L1_topological_2026_05_08_probeS_L1_topological.py"
+    },
     "koide_scale_selector_reparameterization_theorem_note_2026-04-20": {
       "assert_count": 2,
       "counts": {
@@ -22370,6 +22382,21 @@
         "B": 0,
         "C": 4,
         "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_s_L1_topological_2026_05_08_probeS_L1_topological.py": {
+      "assert_count": 5,
+      "claims": [
+        "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -43485,11 +43512,11 @@
       "A": 111,
       "B": 160,
       "C": 642,
-      "D": 233,
+      "D": 234,
       "none": 404
     },
-    "runners_classified": 1550,
+    "runners_classified": 1551,
     "runners_with_C": 804,
-    "runners_with_D": 423
+    "runners_with_D": 424
   }
 }
