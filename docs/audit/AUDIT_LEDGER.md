@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 229 |
+| **retained_bounded** | 230 |
 | open_gate | 12 |
-| unaudited | 1125 |
+| unaudited | 1124 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 383 |
+| `audited_clean` | 384 |
 | `audited_conditional` | 223 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1223 |
+| `unaudited` | 1222 |
 
 | claim_type | count |
 |---|---:|
@@ -111,6 +111,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -851,6 +852,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The tested DAG family shows that the better-performing action switches from spent-delay to valley-linear as graph geometry becomes more regular.  _(class `C`)_
 - **chain closes:** True — The runner completed and reproduced the table in the note exactly. The clean scope is only the frozen finite replay, not the lattice limit or any universal UV/IR bridge.
 - **rationale:** The bounded claim is exactly the finite deterministic replay table, and the scoped runner computes the DAG family, both action scores, and the reported crossover rather than hard-coding the winner table. The note repeatedly limits the interpretation to a branch-specific tested slice, so no unaudited physical bridge is needed for this scoped claim.
+- **auditor confidence:** medium
+
+### `action_geometry_bridge_note`
+
+- **Note:** [`ACTION_GEOMETRY_BRIDGE_NOTE.md`](../../docs/ACTION_GEOMETRY_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite replay of the supplied Python DAG probe showing sign-changing valley-linear versus spent-delay toward-rate differences across the frozen regularity grid.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e131c-5ad1-7bb2-ac9d-7c58c1fb334f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The action preference does shift with regularity on the tested family, is not cleanly monotonic on this slice, and the safest label is mixed bridge.  _(class `C`)_
+- **chain closes:** True — The supplied runner source actually generates the DAGs, propagates both actions, and computes the reported table rather than printing fixed constants. The source note's safe interpretation is limited to the tested scripted slice and matches the completed stdout.
+- **rationale:** Clean for the bounded computational claim only: the note freezes the parameters, the runner computes the finite replay, and the stdout supports a mixed, non-monotonic shift in the scripted readout. The result does not rely on unlisted dependencies or external comparators, and the note explicitly does not claim a universal action unification or continuum theorem. Residual risk is scope creep if later citations treat this as a physical bridge beyond the frozen generated-DAG experiment.
 - **auditor confidence:** medium
 
 ### `action_normalization_note`
