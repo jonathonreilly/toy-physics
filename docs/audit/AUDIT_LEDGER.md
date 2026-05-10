@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 124 |
-| **retained_bounded** | 232 |
+| **retained_bounded** | 233 |
 | open_gate | 12 |
-| unaudited | 1103 |
+| unaudited | 1102 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 390 |
+| `audited_clean` | 391 |
 | `audited_conditional` | 239 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1201 |
+| `unaudited` | 1200 |
 
 | claim_type | count |
 |---|---:|
@@ -161,6 +161,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `dirac_source_smoothing_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_assumptions_audit_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2662,6 +2663,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The panel is supposed to compare centroid shift, peak shift, first-arrival layer, early mass-side accumulation, projected current, and shell imbalance on the same v3 harness to test whether gravity-readout signs align at a clean operating point.  _(class `C`)_
 - **chain closes:** False — The dependency now closes for retained bounded core results, including multi-observable gravity under primary readouts, but the supplied runner output does not report the observable-panel-specific readouts listed in this note. The missing step is a panel run or retained summary tying centroid, peak, first-arrival, early accumulation, current, and shell imbalance to the stated default sweep and sign-alignment questions.
 - **rationale:** Issue: the runner output is a mixed KG/convergence/AB harness summary, not the declared multi-readout observable panel result. Why this blocks: audited_clean would require the bounded panel computation to close on the named readouts without substituting a broader core-card closure or KG/AB successes for the panel-specific claim. Repair target: provide the actual panel output for the stated default sweep, including sign agreement/disagreement by readout and recurrence-window interpretation. Claim boundary until fixed: retained only as a conditional implementation-target note connected to the retained core card, not as a clean standalone observable-panel theorem.
+- **auditor confidence:** high
+
+### `dirac_source_smoothing_note`
+
+- **Note:** [`DIRAC_SOURCE_SMOOTHING_NOTE.md`](../../docs/DIRAC_SOURCE_SMOOTHING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical scan of point versus Gaussian source widths sigma 0.75, 1.25, and 2.00 at fixed m0=0.10, strength=5e-4, specified N-growth and distance-law sweeps in the supplied Dirac 3+1D runner.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1358-9892-7220-b780-e892576f1ecd`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The measured scan shows a partial trade-off only: sigma=1.25 gives the best N-growth sign count (4/5 TOWARD), but still fails monotonicity, and none of the Gaussian widths repair the mixed-sign distance-law offsets.  _(class `C`)_
+- **chain closes:** True — The runner source constructs the stated periodic 3+1D Dirac walk, Gaussian or point initial state, mass field, and signed sideband readouts, and the stdout matches the note's tabulated signs and values. Within the explicitly bounded parameter grid, the conclusion that tested Gaussian smoothing does not repair both stated failure modes follows.
+- **rationale:** The claim is narrowly bounded to a completed numerical scan, not a general no-go theorem for all smooth sources. The runner does not merely print constants: it builds gamma-projector shifts, evolves field and free states, computes density differences, and reports the sign/monotonicity summaries used by the note. No unlisted authority is needed for the bounded comparison as long as the claim boundary stays limited to these widths, offsets, layers, and readout definition.
 - **auditor confidence:** high
 
 ### `directional_b_density_stencil_note`
