@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 704,
+      "max_transitive_descendants": 705,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -24,7 +24,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 704
+          "transitive_descendants": 705
         },
         {
           "audit_status": "unaudited",
@@ -33,7 +33,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 704
+          "transitive_descendants": 705
         }
       ],
       "requires_lemma_extraction": false
@@ -52,7 +52,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 695,
+      "max_transitive_descendants": 696,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -61,7 +61,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_ENTROPY_DERIVED_NOTE.md",
           "title": "Bekenstein-Hawking Entropy Derived from Lattice Entanglement",
-          "transitive_descendants": 695
+          "transitive_descendants": 696
         },
         {
           "audit_status": "unaudited",
@@ -70,7 +70,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
           "title": "BH Entropy RT-Ratio Widom No-Go Theorem",
-          "transitive_descendants": 695
+          "transitive_descendants": 696
         }
       ],
       "requires_lemma_extraction": false
@@ -89,7 +89,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -98,7 +98,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/3D_CORRECTION_MASTER_NOTE.md",
           "title": "3D Correction Master Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -107,7 +107,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DISPERSION_RELATION_NOTE.md",
           "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -126,7 +126,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -135,7 +135,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -144,7 +144,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -163,7 +163,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -172,7 +172,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BORN_SCATTERING_COMPARISON_NOTE.md",
           "title": "Born/Eikonal Scattering Comparison with Lattice Lensing",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -181,7 +181,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
           "title": "Architecture Note: Directional Path Measure",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -200,7 +200,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -209,7 +209,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -218,7 +218,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
           "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -237,7 +237,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -246,7 +246,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
           "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -255,7 +255,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md",
           "title": "Discrete Einstein/Regge Lift on the Restricted Strong-Field Class",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -278,7 +278,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -287,7 +287,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -296,7 +296,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -305,7 +305,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_COEFFICIENT_GAP_NOTE.md",
           "title": "Area-Law Coefficient Gap Audit",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -332,7 +332,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -341,7 +341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -350,7 +350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -359,7 +359,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_COEFFICIENT_GAP_NOTE.md",
           "title": "Area-Law Coefficient Gap Audit",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -368,7 +368,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Area-Law Primitive Parity-Gate Carrier Theorem Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -395,7 +395,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -404,7 +404,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -413,7 +413,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -422,7 +422,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_COEFFICIENT_GAP_NOTE.md",
           "title": "Area-Law Coefficient Gap Audit",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -431,7 +431,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md",
           "title": "Area-Law Quarter Broader No-Go Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -462,7 +462,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -471,7 +471,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md",
           "title": "Universal GR Discrete Global Closure on `PL S^3 x R`",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -480,7 +480,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md",
           "title": "Universal GR Lorentzian Signature-Class Extension on `PL S^3 x R`",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -489,7 +489,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CONSTRAINT_ACTION_STATIONARITY_NOTE.md",
           "title": "Universal GR Constraint / Action-Stationarity Test on `PL S^3 x R`",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -498,7 +498,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_TENSOR_VARIATIONAL_CANDIDATE_NOTE.md",
           "title": "Universal GR Tensor Variational Candidate on `PL S^3 x R`",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -507,7 +507,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
           "title": "Universal GR Curvature Localization Blocker Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -542,7 +542,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -551,7 +551,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -560,7 +560,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
           "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -569,7 +569,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
           "title": "Area-Law Native CAR Semantics Tightening Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -578,7 +578,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -587,7 +587,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -596,7 +596,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
           "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -635,7 +635,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -644,7 +644,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -653,7 +653,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -662,7 +662,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
           "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -671,7 +671,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
           "title": "Area-Law Native CAR Semantics Tightening Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -680,7 +680,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -689,7 +689,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Primitive Coframe Boundary-Carrier Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -698,7 +698,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md",
           "title": "BH 1/4 Carrier from Framework Wald-Noether Charge Boundary Note (V1)",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -761,7 +761,7 @@
         }
       ],
       "length": 13,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -770,7 +770,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -779,7 +779,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -788,7 +788,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
           "title": "Planck-Scale Conditional Completion Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -797,7 +797,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -806,7 +806,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -815,7 +815,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
           "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -824,7 +824,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
           "title": "Area-Law Native CAR Semantics Tightening Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -833,7 +833,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -842,7 +842,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -851,7 +851,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -860,7 +860,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -869,7 +869,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -878,7 +878,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -945,7 +945,7 @@
         }
       ],
       "length": 14,
-      "max_transitive_descendants": 693,
+      "max_transitive_descendants": 694,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -954,7 +954,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
           "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -963,7 +963,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
           "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -972,7 +972,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
           "title": "Planck-Scale Lane Status Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -981,7 +981,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
           "title": "Planck-Scale Conditional Completion Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -990,7 +990,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
           "title": "Planck Boundary-Density Extension Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -999,7 +999,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
           "title": "Planck Source-Unit Normalization Support Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1008,7 +1008,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
           "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1017,7 +1017,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
           "title": "Area-Law Native CAR Semantics Tightening Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1026,7 +1026,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1035,7 +1035,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1044,7 +1044,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
           "title": "Anomaly Cancellation Forces 3+1 Spacetime",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1053,7 +1053,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
           "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1062,7 +1062,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
           "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         },
         {
           "audit_status": "unaudited",
@@ -1071,7 +1071,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
           "title": "Lorentz Kernel Positive Closure Note",
-          "transitive_descendants": 693
+          "transitive_descendants": 694
         }
       ],
       "requires_lemma_extraction": false
@@ -1090,7 +1090,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 640,
+      "max_transitive_descendants": 641,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1099,7 +1099,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md",
           "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3",
-          "transitive_descendants": 640
+          "transitive_descendants": 641
         },
         {
           "audit_status": "unaudited",
@@ -1108,7 +1108,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md",
           "title": "SU(3) Quadratic Casimir on V_3 \u2014 Algebraic K1-K3 Narrow Proof-Walk Bounded Note",
-          "transitive_descendants": 640
+          "transitive_descendants": 641
         }
       ],
       "requires_lemma_extraction": false
@@ -1127,7 +1127,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1136,7 +1136,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1145,7 +1145,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1164,7 +1164,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1173,7 +1173,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1182,7 +1182,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1201,7 +1201,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1210,7 +1210,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Infinite-Hierarchy Obstruction",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1219,7 +1219,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_HIERARCHY_OBSTRUCTION_LEMMAS_BOUNDED_NOTE_2026-05-10.md",
           "title": "Gauge-Vacuum Plaquette Hierarchy Obstruction Lemmas \u2014 Bounded Note",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1242,7 +1242,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1251,7 +1251,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1260,7 +1260,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1269,7 +1269,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
           "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1304,7 +1304,7 @@
         }
       ],
       "length": 6,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1313,7 +1313,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1322,7 +1322,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1331,7 +1331,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1340,7 +1340,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1349,7 +1349,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1358,7 +1358,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1397,7 +1397,7 @@
         }
       ],
       "length": 7,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1406,7 +1406,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md",
           "title": "G_bare Structural Normalization: Cl(3) -> End(V) -> su(3) -> Wilson Action Chain",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1415,7 +1415,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1424,7 +1424,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1433,7 +1433,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1442,7 +1442,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
           "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1451,7 +1451,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md",
           "title": "g_bare Constraint vs Convention \u2014 Convention-Layer Restatement",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1460,7 +1460,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md",
           "title": "g_bare Hilbert\u2013Schmidt Rigidity Theorem (Independent Rescaling-Freedom Closure)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1503,7 +1503,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1512,7 +1512,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1521,7 +1521,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1530,7 +1530,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1539,7 +1539,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1548,7 +1548,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1557,7 +1557,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1566,7 +1566,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1575,7 +1575,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1618,7 +1618,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1627,7 +1627,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1636,7 +1636,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1645,7 +1645,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1654,7 +1654,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1663,7 +1663,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1672,7 +1672,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1681,7 +1681,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1690,7 +1690,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1733,7 +1733,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1742,7 +1742,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1751,7 +1751,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1760,7 +1760,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1769,7 +1769,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1778,7 +1778,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1787,7 +1787,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1796,7 +1796,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1805,7 +1805,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1848,7 +1848,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 637,
+      "max_transitive_descendants": 638,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -1857,7 +1857,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1866,7 +1866,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1875,7 +1875,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1884,7 +1884,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1893,7 +1893,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1902,7 +1902,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "unaudited",
@@ -1911,7 +1911,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         },
         {
           "audit_status": "audited_conditional",
@@ -1920,7 +1920,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem",
-          "transitive_descendants": 637
+          "transitive_descendants": 638
         }
       ],
       "requires_lemma_extraction": false
@@ -1939,7 +1939,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 500,
+      "max_transitive_descendants": 501,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1948,7 +1948,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 500
+          "transitive_descendants": 501
         },
         {
           "audit_status": "unaudited",
@@ -1957,7 +1957,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 500
+          "transitive_descendants": 501
         }
       ],
       "requires_lemma_extraction": false
@@ -1976,7 +1976,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 487,
+      "max_transitive_descendants": 488,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -1985,7 +1985,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
           "title": "Route 2 Bilinear Tensor Carrier (Definition-Only)",
-          "transitive_descendants": 487
+          "transitive_descendants": 488
         },
         {
           "audit_status": "unaudited",
@@ -1994,7 +1994,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
           "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier",
-          "transitive_descendants": 487
+          "transitive_descendants": 488
         }
       ],
       "requires_lemma_extraction": false
@@ -2013,7 +2013,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 474,
+      "max_transitive_descendants": 475,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2022,7 +2022,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
           "title": "`y_t` Bridge Hessian Selector Note",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2031,7 +2031,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md",
           "title": "`y_t` Bridge Variational Selector Note",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         }
       ],
       "requires_lemma_extraction": false
@@ -2050,7 +2050,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 474,
+      "max_transitive_descendants": 475,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2059,7 +2059,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
           "title": "Constructive UV-Localized Bridge Class for `y_t`",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2068,7 +2068,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
           "title": "`y_t` Bridge Rearrangement Principle Note",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         }
       ],
       "requires_lemma_extraction": false
@@ -2099,7 +2099,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 474,
+      "max_transitive_descendants": 475,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2108,7 +2108,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BOUNDARY_THEOREM.md",
           "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2117,7 +2117,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2126,7 +2126,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
           "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2135,7 +2135,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md",
           "title": "`y_t` Bridge Higher-Order Corrections Note",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         },
         {
           "audit_status": "unaudited",
@@ -2144,7 +2144,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
           "title": "Constructive UV-Localized Bridge Class for `y_t`",
-          "transitive_descendants": 474
+          "transitive_descendants": 475
         }
       ],
       "requires_lemma_extraction": false
@@ -2163,7 +2163,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 450,
+      "max_transitive_descendants": 451,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2172,7 +2172,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
           "title": "Wolfenstein Lambda and A Structural Identities Theorem",
-          "transitive_descendants": 450
+          "transitive_descendants": 451
         },
         {
           "audit_status": "unaudited",
@@ -2181,7 +2181,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
           "title": "CKM CP-Phase Structural Identity Theorem",
-          "transitive_descendants": 450
+          "transitive_descendants": 451
         }
       ],
       "requires_lemma_extraction": false
@@ -2237,7 +2237,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 395,
+      "max_transitive_descendants": 396,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2246,7 +2246,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2255,7 +2255,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         }
       ],
       "requires_lemma_extraction": false
@@ -2278,7 +2278,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 395,
+      "max_transitive_descendants": 396,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2287,7 +2287,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2296,7 +2296,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2305,7 +2305,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         }
       ],
       "requires_lemma_extraction": false
@@ -2332,7 +2332,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 395,
+      "max_transitive_descendants": 396,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2341,7 +2341,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2350,7 +2350,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2359,7 +2359,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         },
         {
           "audit_status": "unaudited",
@@ -2368,7 +2368,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
           "title": "Taste-Staircase Transport Theorem (P2 Narrowing)",
-          "transitive_descendants": 395
+          "transitive_descendants": 396
         }
       ],
       "requires_lemma_extraction": false
@@ -2461,7 +2461,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 383,
+      "max_transitive_descendants": 384,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2470,7 +2470,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Bounded Note",
-          "transitive_descendants": 383
+          "transitive_descendants": 384
         },
         {
           "audit_status": "unaudited",
@@ -2479,7 +2479,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Closed-Form Note",
-          "transitive_descendants": 383
+          "transitive_descendants": 384
         }
       ],
       "requires_lemma_extraction": false
@@ -2498,7 +2498,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2507,7 +2507,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2516,7 +2516,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_CORRECTED_V_TASTE_TREE_LEVEL_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Corrected V_taste Tree-Level Mean-Field Formula Bounded Note",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
@@ -2535,7 +2535,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2544,7 +2544,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2553,7 +2553,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Corrected m_H_tree at Extremum, Leading Order in r \u2014 Bounded Note",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
@@ -2572,7 +2572,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2581,7 +2581,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2590,7 +2590,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_VTASTE_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson-Shifted V_taste Extremum at Leading Order in r \u2014 Bounded Note",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
@@ -2613,7 +2613,7 @@
         }
       ],
       "length": 3,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2622,7 +2622,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2631,7 +2631,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2640,7 +2640,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
           "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
@@ -2667,7 +2667,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2676,7 +2676,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2685,7 +2685,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2694,7 +2694,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
           "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2703,7 +2703,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md",
           "title": "Higgs-Channel Effective N_taste Boundary Bounded Note",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
@@ -2734,7 +2734,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 381,
+      "max_transitive_descendants": 382,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -2743,7 +2743,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
           "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2752,7 +2752,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2761,7 +2761,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
           "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2770,7 +2770,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md",
           "title": "SU(2)_L Weak 1-Loop \u03b2-Function Coefficient Structural Closed Form via S1: b_2 = 19/6",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         },
         {
           "audit_status": "unaudited",
@@ -2779,7 +2779,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
           "title": "Complete Prediction Chain: Cl(3) on Z^3",
-          "transitive_descendants": 381
+          "transitive_descendants": 382
         }
       ],
       "requires_lemma_extraction": false
