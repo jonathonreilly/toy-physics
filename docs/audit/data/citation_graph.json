@@ -4201,6 +4201,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "clifford_chirality_dimension_narrow_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -37809,6 +37813,19 @@
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
     },
+    "clifford_chirality_dimension_narrow_theorem_note_2026-05-10": {
+      "claim_id": "clifford_chirality_dimension_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (source-note proposal; cycle-0014 break attempt)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "6443bc4694fe50e0cce1a27d693db1bcdb3efff7e337bd6cf0095f6de62533ec",
+      "path": "docs/CLIFFORD_CHIRALITY_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_clifford_chirality_dimension_narrow.py",
+      "title": "Clifford Chirality-Dimension Narrow Theorem"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
       "claim_type_author_hint": null,
@@ -65759,7 +65776,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
@@ -65768,12 +65785,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
-    "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
+    "edge_count": 8230,
+    "leaf_count": 534,
+    "node_count": 2051,
     "root_count": 764,
-    "runners_with_path": 1665
+    "runners_with_path": 1666
   }
 }
