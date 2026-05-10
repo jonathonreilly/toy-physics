@@ -97,3 +97,36 @@ So the current result is best read as:
 > UV-centered class with a tight moment band; the remaining gap is no longer
 > broad-family diffuse survivors, but the microscopic derivation of that class
 > for the exact bridge itself.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the certificate depends on fixed physical
+input constants, an imported target `y_t`, chosen proxy bridge
+families, and runner-defined thresholds rather than deriving the class
+from the axiom. The note already states above that the result is a
+broad-family uniqueness certificate inside the scanned constructive
+family, conditioned on the upstream support hypotheses.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+scan survivor counts or the intrinsic-class identification.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream authorities the
+support hypotheses cite. It does not promote this note or change the
+audited claim scope.
+
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive bridge family the scan filters.
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+  for the leading positive local quadratic selector hypothesis.
+- [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+  for the subleading higher-order hypothesis used as a filter.
+- [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+  for the small-nonlocal-residual hypothesis used as a filter.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  and [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+  for the rearrangement and moment-closure inputs that justify the
+  `J_aff` / `c_2` band reading.

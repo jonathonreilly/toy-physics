@@ -152,6 +152,24 @@ Use this note when the question is:
 - why the proxy family is now secondary
 - how the current normal form follows from the axioms plus the bridge stack
 
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the runner's exact Schur algebra and
+covariance-projection identities are sound as algebraic statements, but
+the theorem-level upgrade depends on non-retained upstream authorities
+for UV-class uniqueness, Hessian selector, higher-order corrections,
+nonlocal corrections, and endpoint shift control, and the runner builds
+the normal-form coarse operator from the accepted package kernel and
+imposed nonlocal ratio. The honest read of this row is therefore the
+**exact algebraic coarse-graining identity** plus a **conditional
+identification** with the existing bridge stack normal form, not an
+independent first-principles bridge derivation.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+algebraic Schur identities or the normal-form construction.
+
 ## Audit dependency repair links
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.

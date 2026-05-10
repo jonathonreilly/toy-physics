@@ -132,6 +132,21 @@ The exact bridge may still reduce to a smaller bounded systematic, or it may
 ultimately close if a package-native transport theorem lands later. This note
 does not claim that final step.
 
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the load-bearing inequality is a valid
+triangle-inequality closure only after importing the additive-residual,
+quasi-local-stability, and ratio-validity hypotheses, and that the cited
+authorities include `audited_conditional` and `audited_numerical_match`
+notes, so retained status cannot propagate to this bound. The
+hypotheses are listed explicitly above; this addendum makes the auditor
+read explicit so the audit lane can treat the citations correctly.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+budget arithmetic.
+
 ## Audit dependency repair links
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
