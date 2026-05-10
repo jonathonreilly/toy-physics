@@ -3,9 +3,58 @@
 This note records the gravity-side follow-up for the generated hard-geometry
 lane.
 
-The retained log is:
+**Audit-conditional perimeter (2026-05-08):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and load-bearing step
+class `B`. The audit chain-closure explanation is exact: "The chain depends
+on an external retained log, generated-family construction, pruning rule,
+and fit calculation that are not included as cited authorities or runner
+output. The packet does not show the source data or computation
+establishing the quoted exponents and R^2 values." The audit-stated
+repair target is `missing_dependency_edge: add the retained mass-scaling
+log or a reproducible runner that recomputes the quoted LN threshold fits
+from raw generated-family data.` This rigorization edit only sharpens the
+boundary of the conditional perimeter; nothing here promotes audit
+status, and no audit JSON is modified.
 
-- [`logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-02-asymmetry-persistence-mass-scaling.txt)
+## Companion runner source (2026-05-10)
+
+The reproducible runner that recomputes the quoted LN threshold fits from
+raw generated-family data is registered against a sibling row:
+
+- runner: [`scripts/asymmetry_persistence_mass_scaling.py`](../scripts/asymmetry_persistence_mass_scaling.py)
+  (registered against `asymmetry_persistence_mass_scaling_note`,
+  `runner_sha256 = 675fc80c9bfb3381a55f964af42ff8f4803d3366ff8ab1d2cf4a01d603bc9646`,
+  exit_code 0, elapsed ~405 s)
+- runner cache: [`logs/runner-cache/asymmetry_persistence_mass_scaling.txt`](../logs/runner-cache/asymmetry_persistence_mass_scaling.txt)
+  (frozen stdout reproducing the threshold 0.10/0.20 LN fits quoted below)
+
+The runner uses the same retained generated-family construction and
+pruning rule as the rest of the asymmetry-persistence cluster, and emits
+the LN linear/layernorm power-law fits and R^2 values directly. This
+note remains a class-B citation row whose load-bearing fits are
+reproducible from the cited runner cache; it does not register a primary
+runner of its own and stays scoped to the gravity-side window summary
+the runner output supports.
+
+The original frozen log path quoted in the source note
+(`logs/2026-04-02-asymmetry-persistence-mass-scaling.txt`) is not
+present in the current repo logs tree; the live cache deposit above is
+the audit-aware substitute.
+
+## Cited authority chain
+
+- `scripts/asymmetry_persistence_mass_scaling.py` runner (registered
+  against `asymmetry_persistence_mass_scaling_note`, currently
+  `unaudited`).
+- shared infrastructure imports inside the runner:
+  `scripts/gap_topological_asymmetry_layernorm_combo.py`
+  (companion runner library; provides the LN regulated propagator and
+  measurement readout used by the asymmetry-persistence cluster).
+
+These imports are taken as admitted-context inputs at the audit
+perimeter of this row; their own audit lane is the one that closes
+them, not this note.
 
 ## Setup
 
@@ -39,4 +88,30 @@ The plain baseline is weaker:
 The generated hard-geometry lane has a real, bounded mass-response window.
 It is not a clean asymptotic gravity law, but it is a review-safe gravity-side
 signal on the retained generated family.
+
+## What is closed inside the audited scope (class-B conditional citation)
+
+- The threshold-`0.10` and threshold-`0.20` LN power-law fits and R^2
+  values quoted above are reproducible from the cited runner cache
+  `logs/runner-cache/asymmetry_persistence_mass_scaling.txt` as direct
+  stdout of the registered runner `scripts/asymmetry_persistence_mass_scaling.py`.
+- The bounded mass-response window claim is conditional on the LN
+  regulated propagator and asymmetry-persistence pruning rule provided
+  by `scripts/gap_topological_asymmetry_layernorm_combo.py` (admitted
+  context; closure lives on its own audit lane, not this row).
+
+## What remains open (named missing bridge)
+
+- Native registration of `scripts/asymmetry_persistence_mass_scaling.py`
+  against this note as its own primary runner (currently it is
+  registered against the sibling `asymmetry_persistence_mass_scaling_note`).
+  This row stays a class-B citation row pending that registration.
+
+## Boundary
+
+This note does not modify the audit ledger, does not promote audit
+status, does not introduce a new asymptotic gravity law, and does not
+register `mass_scaling.py` against this row. It only records the audit
+verdict, cites the live runner that reproduces the quoted fits, and
+declares the admitted-context imports.
 
