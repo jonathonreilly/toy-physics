@@ -191,3 +191,64 @@ A retained normalization selector would require registering the
 physical-observable selection theorem (physical local scalar
 observables = `W[J]` source-response coefficients) as an audit-clean
 upstream dependency.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authority
+the load-bearing observable-principle premise relies on, in response to
+the 2026-05-10 audit verdict's `missing_bridge_theorem` repair target
+(audit row: `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15`).
+It does not promote this note or change the audited claim scope, which
+remains conditional algebra on the `Y`/`Gamma_1` decomposition plus the
+imported observable-principle premise.
+
+One-hop authority cited:
+
+- [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+  — currently `audited_conditional` (audit row:
+  `observable_principle_from_axiom_note`). This is the upstream
+  conditional authority for the load-bearing premise that physical
+  local scalar observables are exact source derivatives of the unique
+  additive CPT-even scalar generator `W[J] = log|det(D+J)| - log|det D|`,
+  given premises P1 (scalar additivity), P2 (CPT-even phase blindness),
+  P3 (continuity / minimal regularity), and P4 (normalization choice).
+  Because this upstream authority is `audited_conditional` rather than
+  `audited_clean`/retained, the bosonic normalization selection of
+  `Gamma_1` over the active chiral bridge `Y` lifts only to
+  `audited_conditional` under the standard cite-chain rule (the
+  effective status is capped at the upstream effective status). This
+  matches the live audit row's `audited_conditional` verdict and does
+  not require any audit JSON edit.
+
+The runner-checked content of this note (Part 1 algebra: `Y` nilpotent,
+`Y + Y^dag = Gamma_1`, pseudoscalar orthogonal to scalar Higgs span;
+Part 2: `W[Y] = 0`, `W[Gamma_1] = 8 log|1 - j^2/m^2|`; Part 3 trace
+ratios `Tr(Gamma_1^dag Gamma_1)/16 = 1`, `Tr(Y^dag Y)/16 = 1/2`,
+full-space ratio `1/sqrt(2)`, active-space comparator `1`) is exact
+finite-dimensional matrix algebra on `C^16` and is independent of the
+cited upstream authority. The cite chain is what supplies the physical
+selection rule that promotes `1/sqrt(2)` from a comparator to the
+admissible bosonic normalization.
+
+## Honest auditor read
+
+The 2026-05-10 audit recorded this row as `audited_conditional` with the
+observation that A=12 algebraic checks close once the observable-principle
+premise is accepted, but the inadmissibility of the active-space ratio
+`1` and the uniqueness of `1/sqrt(2)` as the physical normalization do
+not follow from the runner alone — they require the upstream theorem
+that physical local scalar observables are exact `W[J]` source-response
+coefficients. The cite-chain repair above wires
+`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE` (`audited_conditional`) as that
+upstream authority. Effective status remains `audited_conditional`
+because the upstream is itself conditional on the four admitted
+premises P1-P4. The note's audit_status is unchanged by this addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation). It does not
+change any algebraic content, runner output, or load-bearing step
+classification. It records the upstream authority the audit verdict
+expected and matches the live cite-chain pattern used by the
+`DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md` cluster
+(commit `02ad4fadd`).
