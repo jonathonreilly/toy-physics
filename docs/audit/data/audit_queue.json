@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 706,
+    "critical": 705,
     "high": 25,
     "leaf": 268,
     "medium": 148
@@ -7245,30 +7245,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "rconn_derived_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01",
-        "yukawa_color_projection_theorem"
-      ],
-      "direct_in_degree": 14,
-      "effective_status": "unaudited",
-      "load_bearing_score": 15.873,
-      "note_path": "docs/RCONN_DERIVED_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 468
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -37569,6 +37545,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 112,
-  "total_pending": 1147
+  "ready_count": 111,
+  "total_pending": 1146
 }
