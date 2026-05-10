@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1146 |
+| unaudited | 1145 |
 | meta | 69 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 233 |
+| ~~audited_conditional~~ | 234 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 233 |
+| `audited_conditional` | 234 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1215 |
+| `unaudited` | 1214 |
 
 | claim_type | count |
 |---|---:|
@@ -625,6 +625,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `local_zsym_predictor_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mirror_gravity_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
@@ -6196,6 +6197,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The memory failure is not primarily a Yukawa-range artifact: mu^2 matters, but geometry scaling matters more, and the old screening-alone diagnosis is too strong.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the scaled-geometry decay and fixed-geometry survival/strengthening tables exactly, including the mu^2=0 and mu^2=0.22 anchor values quoted in the note.
 - **rationale:** The bounded diagnosis closes against scripts/frontier_memory_mu2_size_sweep.py. The current output matches the note's scaled-geometry rows, including N=61 mu2=0 memory +0.020854 vs mu2=0.22 +0.016780 and N=121 mu2=0 +0.001767 vs mu2=0.22 +0.000865, and it matches the fixed-geometry rows, including N=81 mu2=0 +0.231199 vs mu2=0.22 +0.244260 and N=121 mu2=0 +2.580905 vs mu2=0.22 +2.599619. The note does not promote a publication-grade memory claim; it only narrows the failure mode.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_localization_sweep_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Fixed-parameter localization-family sweep comparing topN, one-dimensional square-window, and Gaussian z-profile compressions under the supplied runner/stdout.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12c1-7855-74f3-97f5-fee92496a1e2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "once the family is meaningfully localized but still carries nontrivial support, the broad top-N control remains the least-bad mesoscopic source"  _(class `C`)_
+- **chain closes:** False — The runner table supports the narrow table-level observation that point-like cases have low capture and topN rows have much higher capture. The stronger least-bad mesoscopic-source conclusion requires an explicit dominance criterion for score, width ratio, support, and capture, plus retained authority for the imported 3D source-control setup, neither of which is present in the restricted packet.
+- **rationale:** Issue: the note promotes a qualitative table read into a least-bad mesoscopic-control conclusion without a formal utility/dominance rule and relies on an unprovided retained 3D source-control premise. Why this blocks: square radius 1 and square radius 2 trade lower capture for equal or better score, so the table alone does not force the claimed ordering unless capture is given a specified threshold or weight. Repair target: add the direct retained-family dependency and define an audited selection criterion or split the note to the narrower finite-sweep table observation. Claim boundary until fixed: the supplied runner stdout only supports that near-point localizations have low capture and that topN rows achieve much higher capture with still-high stability scores in this fixed sweep.
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_threshold_2d_note`
