@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1138 |
+| unaudited | 1137 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 212 |
-| ~~audited_failed~~ | 14 |
+| ~~audited_failed~~ | 15 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,10 +42,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 383 |
 | `audited_conditional` | 212 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 58 |
+| `audited_failed` | 59 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1235 |
+| `unaudited` | 1234 |
 
 | claim_type | count |
 |---|---:|
@@ -730,6 +730,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | B | - |
 | `equivalence_principle_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
+| `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `fifth_family_radial_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -3255,6 +3256,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** eta/eta_obs = (516 / 53009) * Y0^2 * F_CP * kappa_axiom / eta_obs  _(class `A`)_
 - **chain closes:** True — The source note states a bounded decomposition rather than a full structural derivation of every factor. The runner completed with PASS=38 FAIL=0 and verifies the ABC rational cancellation, exact product reconstruction, candidate near-fit mismatch, and explicit isolation of Y0^2 as phenomenological.
 - **rationale:** The audited bounded claim closes as an algebraic decomposition of the existing transport chain: ABC reduces exactly to 516/53009, the reconstructed product matches the runner's eta/eta_obs value, and the four named near-fit candidates are not exact framework forms. The clean verdict is limited to this bounded scope and does not promote Y0^2, PMNS-chart constants, or the ODE transport functional to first-principles retained derivations beyond the note's admitted residual boundary.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v2_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded prototype claim that the tested local pruning runs report a generated post-barrier gap while failing convergence and leaving the imposed-control detector comparison undefined.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12ee-b0af-72a2-896d-0a582b2e470e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The self-regulating prune rule reliably opens a larger post-barrier gap than the unpruned baseline, but at the tested thresholds it does not converge to a fixed point and the same-budget imposed-band control still loses detector signal in this parameterization.  _(class `A`)_
+- **chain closes:** False — The runner stdout supports positive generated_gap, conv=0.00, and imposed_pur=nan, but it does not print or assert the baseline_gap needed for the claimed larger-than-baseline gap. The same-budget imposed-control premise is also not closed because the code caps imposed removals by candidate count while the reported removed counts exceed the available unique node/candidate budgets.
+- **rationale:** Issue: the note's load-bearing baseline-gap and same-budget imposed-band comparison is not established by the supplied runner artifact. Why this blocks: a hostile referee cannot verify the claimed generated-vs-baseline separation or same-budget comparator semantics from stdout/source, and the reported removal counts are inconsistent with a unique-node same-budget control. Repair target: print and assert baseline_gap/gap deltas, use an actual unique removal budget for both generated and imposed controls, and fix the band-vs-random/readout wording. Claim boundary until fixed: the runner may be cited only as reporting positive generated_gap, no convergence, and undefined imposed_pur in this parameter sweep, not as a closed same-budget generated-vs-imposed bounded theorem.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_v3_note`
