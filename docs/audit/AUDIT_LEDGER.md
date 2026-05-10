@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1138 |
+| unaudited | 1139 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 236 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 237 |
+| `audited_conditional` | 236 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1205 |
+| `unaudited` | 1206 |
 
 | claim_type | count |
 |---|---:|
@@ -68,10 +68,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1524
+- runners classified: 1525
 - runners with (C) first-principles compute hits: 788
 - runners with (D) external comparator hits: 406
-- decoration candidates (no C, no D): 135
+- decoration candidates (no C, no D): 136
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -718,7 +718,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.potential_publication_discoveries_log` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -10329,19 +10328,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** Cross-runner disagreements cannot be attributed to the `4*pi` factor alone unless all other differences are controlled simultaneously.  _(class `A`)_
 - **chain closes:** False — The methodological inference is valid in form, but the restricted packet does not provide the runner contents or independent evidence that the listed Wilson runners are internally coherent or that older runners differed in the named ways.
 - **rationale:** The note is a support/meta control note, not a first-principles derivation from the axiom. Its conclusion imports repository-specific facts about runner conventions, screening regimes, observables, geometries, boundary conditions, and hopping conventions, none of which are closed by cited authorities or runner source in the restricted packet. The safe negative caution about over-attributing discrepancies is reasonable as a methodological rule, but the concrete same-convention and mixed-runner claims remain conditional on unprovided runner verification.
-- **auditor confidence:** high
-
-### `wilson_two_body_open_refined_note_2026-04-11`
-
-- **Note:** [`WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md`](../../docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that the fixed G=5, mu^2=0.22 open-lattice Wilson two-orbital Hartree sweep remains attractive, clean, and steeply non-Newtonian on the reported post-selected clean subset.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-gpt55-xhigh-019e0585-b04a-7422-95e6-b399c9fae8d0`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The note asserts that the clean attractive subset fits give a steep power law, including global |a_mut| ~ d^-3.669 and larger-side behavior near d^-3.7, so the open-boundary law does not soften toward d^-2 at fixed G=5, mu^2=0.22.  _(class `G`)_
-- **chain closes:** False — The restricted packet contains no cited retained authority, no runner stdout, and no runner source for the reported sweep and fits. The missing step is an auditable computation or certificate showing the 25 run outputs and regression exponents from the stated Wilson setup.
-- **rationale:** The source note is explicitly a bounded, post-selected characterization at fixed G=5 and mu^2=0.22, not a blind universal law derivation. Its load-bearing numerical exponents are asserted without runner output or source in the restricted packet, so the audit cannot verify that the reported acceleration rows and fits are produced from the stated dynamics. Because the claim depends on a chosen parameter surface and post-selected clean attractive rows, the result is conditional on the missing computational artifact rather than clean first-principles closure.
 - **auditor confidence:** high
 
 ### `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18`

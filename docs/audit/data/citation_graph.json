@@ -61621,9 +61621,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3d706af53e342f578d31d4fb313ac95480472685b8c21c4399e45d82a0112b05",
+      "note_hash": "9bea7b4f6305940da9f0a8f428ea00706a2986b5c0e6dba8da6baa1247d2eaf5",
       "path": "docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_wilson_two_body_open_refined.py",
       "title": "Wilson Two-Body Open-Lattice Refinement Note"
     },
     "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08": {
@@ -64245,6 +64245,6 @@
     "leaf_count": 530,
     "node_count": 2023,
     "root_count": 778,
-    "runners_with_path": 1632
+    "runners_with_path": 1633
   }
 }

@@ -1,5 +1,7 @@
 # Wilson Two-Body Open-Lattice Refinement Note
 
+**Primary runner:** scripts/frontier_wilson_two_body_open_refined.py
+
 **Date:** 2026-04-11  
 **Status:** bounded companion refinement note
 **Scripts:**  

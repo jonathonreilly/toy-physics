@@ -18780,6 +18780,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_wilson_two_body_open.py"
     },
+    "wilson_two_body_open_refined_note_2026-04-11": {
+      "assert_count": 6,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_wilson_two_body_open_refined.py"
+    },
     "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08": {
       "assert_count": 1,
       "counts": {
@@ -37068,6 +37080,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_wilson_two_body_open_refined.py": {
+      "assert_count": 6,
+      "claims": [
+        "wilson_two_body_open_refined_note_2026-04-11"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py": {
       "assert_count": 1,
       "claims": [
@@ -42726,15 +42753,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 135,
+    "decoration_candidates": 136,
     "dominant_class_distribution": {
-      "A": 24,
+      "A": 25,
       "B": 176,
       "C": 650,
       "D": 246,
       "none": 428
     },
-    "runners_classified": 1524,
+    "runners_classified": 1525,
     "runners_with_C": 788,
     "runners_with_D": 406
   }
