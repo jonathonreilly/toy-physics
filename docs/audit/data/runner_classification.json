@@ -8616,6 +8616,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py"
     },
+    "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 49
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_higgs_mass_12pct_gap_decomposition_2026_05_10_higgsS7.py"
+    },
     "higgs_mass_derived_note": {
       "assert_count": 0,
       "counts": {
@@ -21717,6 +21729,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_higgs_mass_12pct_gap_decomposition_2026_05_10_higgsS7.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 49
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py": {
@@ -43161,11 +43188,11 @@
       "A": 109,
       "B": 157,
       "C": 639,
-      "D": 229,
+      "D": 230,
       "none": 404
     },
-    "runners_classified": 1538,
-    "runners_with_C": 798,
-    "runners_with_D": 417
+    "runners_classified": 1539,
+    "runners_with_C": 799,
+    "runners_with_D": 418
   }
 }

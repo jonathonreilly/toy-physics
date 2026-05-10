@@ -9509,6 +9509,74 @@
       "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
     },
     {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_from_lattice_note"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_mass_derived_note"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "g_bare_derivation_note"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "higgs_mass_hierarchy_correction_note"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "yt_ew_matching_rule_m_stretch_attempt_note_2026-05-02"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
+    },
+    {
       "from": "higgs_mass_derived_note",
       "to": "taste_scalar_isotropy_theorem_note"
     },
@@ -44936,6 +45004,35 @@
       "runner_path": "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py",
       "title": "Higgs Lattice Eigenvalue Ratio (Mean-Field) \u2014 Narrow Theorem"
     },
+    "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7": {
+      "claim_id": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (per-sub-step accounting on the S7 step of the Lane-2 matching residual)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match",
+        "higgs_mass_from_axiom_note",
+        "minimal_axioms_2026-05-03",
+        "complete_prediction_chain_2026_04_15",
+        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1",
+        "higgs_from_lattice_note",
+        "higgs_mass_derived_note",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "g_bare_derivation_note",
+        "higgs_mass_hierarchy_correction_note",
+        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
+        "yt_ew_matching_rule_m_stretch_attempt_note_2026-05-02",
+        "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
+      ],
+      "note_hash": "9520de1989b1e5650b1cbe5f055ff78f8b40781e1935eecbc36c43db5b3540ff",
+      "path": "docs/HIGGS_MASS_12PCT_GAP_DECOMPOSITION_BOUNDED_NOTE_2026-05-10_higgsS7.md",
+      "runner_path": "scripts/cl3_higgs_mass_12pct_gap_decomposition_2026_05_10_higgsS7.py",
+      "title": "Higgs Mass \u2014 12% Gap Decomposition (S7 Sub-step Probe)"
+    },
     "higgs_mass_derived_note": {
       "claim_id": "higgs_mass_derived_note",
       "claim_type_author_hint": null,
@@ -65078,7 +65175,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 225,
+      "bounded_theorem": 226,
       "decoration": 1,
       "meta": 30,
       "no_go": 15,
@@ -65087,7 +65184,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 719,
+      "bounded_theorem": 720,
       "decoration": 1,
       "meta": 30,
       "no_go": 123,
@@ -65095,10 +65192,10 @@
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8130,
-    "leaf_count": 533,
-    "node_count": 2035,
+    "edge_count": 8147,
+    "leaf_count": 532,
+    "node_count": 2036,
     "root_count": 768,
-    "runners_with_path": 1650
+    "runners_with_path": 1651
   }
 }
