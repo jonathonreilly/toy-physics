@@ -46,7 +46,8 @@ note_text = NOTE_PATH.read_text()
 
 required = [
     "LH-Doublet Traceless Abelian Eigenvalue Ratio",
-    "Type:** positive_theorem",
+    # Post-axiom-reset retag (2026-05-03): bounded_theorem.
+    "Type:** bounded_theorem",
     "eigenvalue ratio **1 : (−3)**",
     "explicitly **does not** claim",
     "specific eigenvalues `+1/3` and `−1`",
@@ -54,7 +55,7 @@ required = [
     "GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
     "GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md",
     "class (A)",
-    "target_claim_type: positive_theorem",
+    "target_claim_type: bounded_theorem",
 ]
 for s in required:
     check(f"contains: {s!r}", s in note_text)
