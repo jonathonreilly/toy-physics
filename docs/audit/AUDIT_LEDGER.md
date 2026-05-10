@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 66 |
+| **retained** | 67 |
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1085 |
+| unaudited | 1084 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 397 |
+| `audited_clean` | 398 |
 | `audited_conditional` | 254 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1183 |
+| `unaudited` | 1182 |
 
 | claim_type | count |
 |---|---:|
@@ -261,6 +261,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -5663,6 +5664,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The note restates the determinant formula already supplied by the retained parent decomposition note using only A-class algebra and an A-only runner, with no independent comparator, compression theorem, or new physical observable. Why this blocks: Under the algebraic-decoration policy, a single-parent A-class corollary with zero D checks should not be surfaced as a separate retained positive theorem. Repair target: Box this result under hierarchy_matsubara_decomposition_note, or add a genuine independent theorem, comparator, or compression result showing the narrow determinant claim carries load-bearing content beyond the parent. Claim boundary until fixed: The exact determinant identity may be cited as an algebraic corollary of the retained Matsubara decomposition, not as a separate retained theorem.
 - **decoration parent:** `hierarchy_matsubara_decomposition_note`
 - **auditor confidence:** medium
+
+### `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`HIERARCHY_SEVEN_EIGHTHS_RIEMANN_DIRICHLET_DIMENSIONAL_ANCHOR_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/HIERARCHY_SEVEN_EIGHTHS_RIEMANN_DIRICHLET_DIMENSIONAL_ANCHOR_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone narrow arithmetic theorem: for integer d >= 2, the lattice ratio 1 - 1/(2d), eta-zeta quotient 1 - 2^(1-d), and alignment equation 2^(d-2)=d coincide at 7/8 exactly only at d = 4; no hierarchy-formula, Lt=4 physical-selection, or outer-exponent closure is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e138d-c1be-76e0-911a-455253fb55b5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The arithmetic equivalence { (c + 1/2)/(c + 1) at c = d - 1 } = { 1 - 2^(1 - d) } iff 2^(d - 2) = d, with the latter having unique integer solution d = 4 for d >= 2.  _(class `A`)_
+- **chain closes:** True — The conclusion follows from direct algebra, the in-note odd/even splitting proof of eta(s)/zeta(s)=1-2^(1-s) for s>1, and the monotonicity argument proving uniqueness of 2^(d-2)=d at integer d=4. No one-hop dependencies are needed for the scoped theorem.
+- **rationale:** The load-bearing step is a pure class-A arithmetic equivalence plus a standard series-splitting identity proven inside the source note. The runner checks only algebraic/symbolic/rational consequences and includes no external comparator, fitted input, or framework bridge. The runner's finite scans are not by themselves the full infinite-domain proof, but the note supplies the missing monotonicity proof for all integer d >= 5. The clean verdict applies only to the stated narrow theorem, not to the hierarchy formula, Lt=4 physical selection, or the (1/4) readout.
+- **auditor confidence:** high
 
 ### `hierarchy_spatial_bc_and_u0_scaling_note`
 
