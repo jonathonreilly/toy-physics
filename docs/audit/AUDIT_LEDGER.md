@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1127 |
+| unaudited | 1126 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 240 |
+| ~~audited_conditional~~ | 241 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 240 |
+| `audited_conditional` | 241 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1194 |
+| `unaudited` | 1193 |
 
 | claim_type | count |
 |---|---:|
@@ -598,6 +598,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `generated_geometry_synthesis_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -4498,6 +4499,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** But the residual environment operator already closed on main satisfies R_beta^env chi_(p,q) = rho_(p,q)(beta) chi_(p,q); therefore R_beta^env = C_(Z_beta^env).  _(class `F`)_
 - **chain closes:** False — The restricted packet does not include the parent residual-environment identification theorem or a derivation that the coefficients of the true unmarked spatial Wilson environment equal the residual operator eigenvalues. The runner packages a chosen positive symmetric rho_env sequence rather than constructing the unmarked spatial environment.
 - **rationale:** Issue: the load-bearing equality R_beta^env = C_(Z_beta^env) imports an already-closed residual-environment identification and equates the residual diagonal data with boundary character coefficients without that bridge in the packet. Why this blocks: the runner uses a generic hard-coded positive conjugation-symmetric rho_env, so it verifies packaging, not the physical unmarked spatial Wilson environment. Repair target: provide the retained parent theorem constructing R_beta^env from the unmarked spatial Wilson boundary integral, or a runner that computes those coefficients from the actual environment. Claim boundary until fixed: this is an open-gate reformulation of the remaining datum as boundary character data, not a closed derivation of the environment operator.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Structural identification of the spatial-environment boundary character data with a positive SU(3) character-tensor transfer built from Wilson coefficients and fusion intertwiners, with runner evidence limited to NMAX=4, MODE_MAX=80 and one tensor word.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e121a-d172-7171-8a20-c7cb2446e4a5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The unmarked spatial boundary character coefficients satisfy z_(p,q)^env(beta) = <chi_(p,q), (T_beta^env,tensor)^(L_perp-1) eta_beta^env>, and hence rho_(p,q)(beta) is the normalized tensor-transfer boundary amplitude sequence of this explicit positive operator.  _(class `A`)_
+- **chain closes:** False — The one-hop authority only supplies bounded single-link Wilson coefficients on a finite box, and the runner checks local coefficients, SU(3) recurrence primitives, and one hard-coded positive tensor word. The restricted packet does not construct the full spatial-environment transfer operator, prove the multi-word/general slice contraction, or derive the actual boundary state eta_beta^env and coefficients z_(p,q)^env.
+- **rationale:** Issue: the theorem identifies actual residual spatial-environment boundary amplitudes with an explicit tensor-transfer law, but the supplied evidence only verifies bounded local ingredients and one truncated tensor word. Why this blocks: the load-bearing bridge from arbitrary local Wilson/fusion ingredients to the actual full unmarked spatial-environment boundary data is admitted as out of scope and is not supplied by the retained_bounded one-hop authority. Repair target: provide an audited construction of the full untruncated tensor-transfer operator and boundary state, including convergence/positivity and multi-tensor-word coverage, or split the finite packet into a bounded theorem. Claim boundary until fixed: finite NMAX=4, MODE_MAX=80 local coefficient/fusion support plus one positive tensor-word example.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17`
