@@ -1,0 +1,84 @@
+
+==============================================================================
+G_Newton Self-Consistency Bounded Sharpening (planckP4) — verification
+==============================================================================
+
+==============================================================================
+Section 1: Z^3 Green function asymptotic (P1 input)
+==============================================================================
+[PASS] S1.0 numpy import
+[PASS] S1.1 4*pi*r*G(r=4) measured at L=16 -- ratio = 0.3468
+[PASS] S1.1 4*pi*r*G(r=4) measured at L=24 -- ratio = 0.5572
+[PASS] S1.1 4*pi*r*G(r=4) measured at L=32 -- ratio = 0.6694
+[PASS] S1.1 4*pi*r*G(r=4) measured at L=48 -- ratio = 0.7846
+[PASS] S1.2 4*pi*r*G(r) increases monotonically with L -- ratios = ['0.3468', '0.5572', '0.6694', '0.7846']
+[PASS] S1.3 largest-L ratio approaches asymptotic value 1 from below -- L=48: 4*pi*r*G(r) = 0.7846
+
+==============================================================================
+Section 2: Dimensional rigidity of G_Newton form (P1)
+==============================================================================
+[PASS] S2.1 dimensional search yields candidates -- 4 integer-exponent combinations found
+[PASS] S2.2 canonical Planck form G ~ hbar*c/M^2 in candidate set -- (a_s, c_LR, M_lat, hbar) = (0, 1, -2, 1)
+[PASS] S2.3 lattice-units G is dimensionless 1/(4*pi) -- G_lat = 0.079577
+[PASS] S2.4 Planck-anchor consistency cross-check -- G(hbar c / M_Pl^2) = 6.674302e-11, anchor = 6.674300e-11, rel_err = 3.14e-07 (anchor-only)
+[PASS] S2.5 no dimensional G form without explicit mass scale -- every M-free candidate uses hbar (which carries mass)
+
+==============================================================================
+Section 3: Barrier B(a) propagator-skeleton non-uniqueness
+==============================================================================
+[PASS] S3.1 multiple retained propagator skeletons exist -- 3 distinct skeletons in retained content
+[PASS] S3.2 Hamiltonian skeleton not forced by retained content -- GRAVITY_FULL_SELF_CONSISTENCY explicitly stipulates L^-1 = G_0, not derived
+[PASS] S3.3 static-Poisson limit consistent with multiple skeletons -- static-limit Poisson is sub-content of both Hamiltonian and d'Alembertian skeletons
+[PASS] S3.4 no retained skeleton-selection theorem in ledger -- found 0 matching retained theorems (expected 0)
+
+==============================================================================
+Section 4: Barrier B(b) Born-map non-uniqueness
+==============================================================================
+[PASS] S4.1 Born and DM-trace agree on pure states -- max diff = 0.00e+00
+[PASS] S4.2 mixed-state DM trace gives uniform density -- rho = [0.5, 0.5]
+[PASS] S4.3 pure-state Born map is target-side (depends on chosen psi) -- matches Barrier G4 of KOIDE_A1_PROBE_GRAVITY_PHASE
+[PASS] S4.4 no retained Born-as-gravity-source theorem in ledger -- found 0 matching retained theorems (expected 0)
+
+==============================================================================
+Section 5: Barrier B(c) test-mass-action non-derivation
+==============================================================================
+[PASS] S5.1 multiple weak-field action forms tested in retained content -- 3 alternatives in audit-tested family
+[PASS] S5.2 valley-linear S = L(1-phi) selected by empirical-match, not derivation -- spent-delay alternative gives F~sqrt(M); selection is by F~M=1 target match
+[PASS] S5.3 no retained weak-field-action derivation theorem in ledger -- found 0 matching retained theorems (expected 0)
+
+==============================================================================
+Section 6: Consistency vs derivation (cross-check)
+==============================================================================
+[PASS] S6.1 Planck-anchor reproduces G_Newton to anchor precision -- rel_err = 3.14e-07 (CONSISTENCY)
+[PASS] S6.2 M_Planck not retained from framework axiom -- Planck-from-structure lane has independent no-go's per audit ledger
+[PASS] S6.3 dimensional consistency != unconditional derivation -- feedback_consistency_vs_derivation_below_w2.md applied
+
+==============================================================================
+Section 7: Bounded-sharpening theorem statement
+==============================================================================
+[PASS] S7.1 P1 dimensional rigidity verified -- G_Newton form rigid given retained Z^3 Green function + dimensional inputs
+[PASS] S7.2 P2 Barrier B(a) propagator-skeleton non-uniqueness verified
+[PASS] S7.3 P2 Barrier B(b) Born-map non-uniqueness verified
+[PASS] S7.4 P2 Barrier B(c) test-mass-action non-derivation verified
+[PASS] S7.5 bounded sharpening synthesis (positive P1 + negative P2) -- G_Newton self-consistency status: SHARPENED, NOT FULLY CLOSED
+[PASS] S7.6 closure frontier identified (3 retained primitives needed) -- (a) propagator-skeleton selection theorem; (b) Born-as-gravity-source theorem; (c) weak-field-action derivation theorem
+
+==============================================================================
+=== TOTAL: PASS=32, FAIL=0 ===
+==============================================================================
+
+Bounded sharpening verified:
+  - P1 (positive): dimensional G_Newton form is rigid given
+    retained Z^3 Green function + dimensional inputs.
+  - P2 (negative): three named admissions are not derivable
+    from retained Cl(3)/Z^3 content alone.
+
+Status of GRAVITY_CLEAN_DERIVATION_NOTE: remains
+audited_conditional / bounded_theorem on three named admissions.
+
+Closing G_Newton unconditionally requires NEW retained primitives:
+  (a) propagator-skeleton selection theorem
+  (b) Born-as-gravity-source derivation theorem
+  (c) weak-field-action derivation theorem
+
+None of these exists in the audit ledger as of 2026-05-10.
