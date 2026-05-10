@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1145
+**Total pending:** 1146
 **Ready (all deps already at retained-grade or metadata tiers):** 80
 
 By criticality:
 - `critical`: 695
 - `high`: 25
 - `medium`: 144
-- `leaf`: 281
+- `leaf`: 282
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -20,14 +20,14 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 3 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 358 | 9.49 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_blended_readout_boundary_probe.py` |
 | 4 | `minimal_source_driven_field_probe_note` | bounded_theorem | unaudited | critical | 722 | 11.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/minimal_source_driven_field_probe.py` |
 | 5 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 712 | 16.48 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
-| 6 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 709 | 11.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
-| 7 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 707 | 27.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 6 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 710 | 11.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
+| 7 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 708 | 27.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 8 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 703 | 23.96 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
 | 9 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 703 | 10.96 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
 | 10 | `cpt_exact_note` | positive_theorem | unaudited | critical | 701 | 21.45 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
 | 11 | `poisson_self_gravity_loop_note` | bounded_theorem | unaudited | critical | 701 | 12.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/poisson_self_gravity_loop.py` |
-| 12 | `universal_gr_positive_background_local_closure_note` | bounded_theorem | unaudited | critical | 698 | 13.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
-| 13 | `s3_taste_cube_decomposition_note` | bounded_theorem | unaudited | critical | 697 | 15.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
+| 12 | `s3_taste_cube_decomposition_note` | bounded_theorem | unaudited | critical | 698 | 15.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
+| 13 | `universal_gr_positive_background_local_closure_note` | bounded_theorem | unaudited | critical | 698 | 13.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
 | 14 | `universal_qg_projective_schur_closure_note` | positive_theorem | unaudited | critical | 696 | 14.45 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 | 15 | `hopping_bilinear_hermiticity_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 696 | 10.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/hopping_bilinear_hermiticity_check.py` |
 | 16 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 696 | 9.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
@@ -87,15 +87,15 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 13 | `cycle-0013` | 7 | 692 | `area_law_native_car_semantics_tightening_note_2026-04-25` | critical | unaudited |
 | 14 | `cycle-0014` | 13 | 692 | `anomaly_forces_time_theorem` | critical | unaudited |
 | 15 | `cycle-0015` | 14 | 692 | `angular_kernel_underdetermination_no_go_note` | critical | unaudited |
-| 16 | `cycle-0016` | 2 | 638 | `su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10` | critical | unaudited |
-| 17 | `cycle-0017` | 2 | 635 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 18 | `cycle-0018` | 2 | 635 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
-| 19 | `cycle-0019` | 2 | 635 | `gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10` | critical | unaudited |
-| 20 | `cycle-0020` | 3 | 635 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
-| 21 | `cycle-0021` | 6 | 635 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 22 | `cycle-0022` | 7 | 635 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
-| 23 | `cycle-0023` | 8 | 635 | `alpha_s_derived_note` | critical | unaudited |
-| 24 | `cycle-0024` | 8 | 635 | `alpha_s_derived_note` | critical | unaudited |
-| 25 | `cycle-0025` | 8 | 635 | `alpha_s_derived_note` | critical | unaudited |
+| 16 | `cycle-0016` | 2 | 639 | `su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10` | critical | unaudited |
+| 17 | `cycle-0017` | 2 | 636 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 18 | `cycle-0018` | 2 | 636 | `g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09` | critical | unaudited |
+| 19 | `cycle-0019` | 2 | 636 | `gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10` | critical | unaudited |
+| 20 | `cycle-0020` | 3 | 636 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | critical | unaudited |
+| 21 | `cycle-0021` | 6 | 636 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
+| 22 | `cycle-0022` | 7 | 636 | `g_bare_constraint_vs_convention_restatement_note_2026-05-07` | critical | unaudited |
+| 23 | `cycle-0023` | 8 | 636 | `alpha_s_derived_note` | critical | unaudited |
+| 24 | `cycle-0024` | 8 | 636 | `alpha_s_derived_note` | critical | unaudited |
+| 25 | `cycle-0025` | 8 | 636 | `alpha_s_derived_note` | critical | unaudited |
 
 Full queue lives in `data/audit_queue.json`.

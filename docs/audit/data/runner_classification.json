@@ -10668,6 +10668,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_koide_z3_qubit_radian_bridge_no_go.py"
     },
+    "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 20
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py"
+    },
     "kubo_continuum_limit_families_note": {
       "assert_count": 0,
       "counts": {
@@ -22259,6 +22271,21 @@
         "B": 0,
         "C": 4,
         "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 20
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -43255,11 +43282,11 @@
       "A": 109,
       "B": 159,
       "C": 639,
-      "D": 230,
+      "D": 231,
       "none": 404
     },
-    "runners_classified": 1541,
+    "runners_classified": 1542,
     "runners_with_C": 799,
-    "runners_with_D": 418
+    "runners_with_D": 419
   }
 }

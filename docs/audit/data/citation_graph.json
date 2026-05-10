@@ -13273,6 +13273,18 @@
       "to": "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16"
     },
     {
+      "from": "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain",
+      "to": "confinement_string_tension_note"
+    },
+    {
+      "from": "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain",
+      "to": "qcd_low_energy_running_bridge_note_2026-05-01"
+    },
+    {
+      "from": "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain",
+      "to": "alpha_s_derived_note"
+    },
+    {
       "from": "kubo_continuum_limit_families_note",
       "to": "kubo_continuum_limit_note"
     },
@@ -48320,6 +48332,21 @@
       "runner_path": null,
       "title": "Koide Z\u00b3 Scalar Potential Support Note"
     },
+    "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain": {
+      "claim_id": "koide_z_quark_qcd_chain_note_2026-05-08_probez_quark_qcd_chain",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (negative; QCD-anchored chain route foreclosed for heavy quarks)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "confinement_string_tension_note",
+        "qcd_low_energy_running_bridge_note_2026-05-01",
+        "alpha_s_derived_note"
+      ],
+      "note_hash": "a8ebac937b7d3e45ab804f1bca2861f3748f82c11a65d22c36e034751c67ab18",
+      "path": "docs/KOIDE_Z_QUARK_QCD_CHAIN_NOTE_2026-05-08_probeZ_quark_qcd_chain.md",
+      "runner_path": "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py",
+      "title": "Probe Z-Quark-QCD-Chain \u2014 Heavy-Quark Mass via \u039b_QCD-Anchored \u03b1_s Chain: Bounded-Tier Source Note (NEGATIVE)"
+    },
     "kubo_continuum_limit_families_note": {
       "claim_id": "kubo_continuum_limit_families_note",
       "claim_type_author_hint": null,
@@ -65369,7 +65396,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 226,
+      "bounded_theorem": 227,
       "decoration": 1,
       "meta": 40,
       "no_go": 15,
@@ -65378,7 +65405,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 717,
+      "bounded_theorem": 718,
       "decoration": 1,
       "meta": 40,
       "no_go": 122,
@@ -65386,10 +65413,10 @@
       "open_gate": 111,
       "positive_theorem": 596
     },
-    "edge_count": 8181,
-    "leaf_count": 528,
-    "node_count": 2038,
+    "edge_count": 8184,
+    "leaf_count": 529,
+    "node_count": 2039,
     "root_count": 762,
-    "runners_with_path": 1654
+    "runners_with_path": 1655
   }
 }
