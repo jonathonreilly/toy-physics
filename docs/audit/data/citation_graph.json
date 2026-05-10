@@ -34486,6 +34486,17 @@
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "\u03b1_s Direct Wilson-Loop Honest-Status Audit"
     },
+    "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10": {
+      "claim_id": "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "e356fbed22432ff0301a4cddf865445a72668167bf926320ac958e82e2a18d7b",
+      "path": "docs/ALPHA_S_TADPOLE_IMPROVEMENT_VERTEX_POWER_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_alpha_s_tadpole_improvement_vertex_power_narrow.py",
+      "title": "Tadpole-Improvement Vertex-Power Narrow Theorem"
+    },
     "alt_connectivity_family_basin_note": {
       "claim_id": "alt_connectivity_family_basin_note",
       "claim_type_author_hint": null,
@@ -65071,6 +65082,7 @@
     "ai_methodology.skills.review-loop.skill",
     "ai_methodology.skills.reviewer-backpressure-integrator.skill",
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+    "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10",
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
@@ -65759,7 +65771,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
@@ -65768,12 +65780,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
-    "root_count": 764,
-    "runners_with_path": 1665
+    "leaf_count": 534,
+    "node_count": 2051,
+    "root_count": 765,
+    "runners_with_path": 1666
   }
 }
