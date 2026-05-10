@@ -1689,6 +1689,50 @@
       "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
     },
     {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "planck_from_structure_path_opening_meta_note_2026-05-10"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "bridge_lanes_promotion_proposal_note_2026-05-10_lanes"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "campaign_consistency_survey_note_2026-05-10_meta",
+      "to": "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+    },
+    {
       "from": "canonical_harness_index",
       "to": "self_consistency_forces_poisson_note"
     },
@@ -35493,6 +35537,29 @@
       "runner_path": "scripts/cl3_c_iso_su3_nnlo_2026_05_10_su3nnlo.py",
       "title": "SU(3) NNLO Convention C-iso Rational-Identification Support \u2014 Bounded Note"
     },
+    "campaign_consistency_survey_note_2026-05-10_meta": {
+      "claim_id": "campaign_consistency_survey_note_2026-05-10_meta",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08",
+        "conventions_unification_companion_note_2026-05-08",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "planck_from_structure_path_opening_meta_note_2026-05-10",
+        "bridge_lanes_promotion_proposal_note_2026-05-10_lanes",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+      ],
+      "note_hash": "cb90b6e718b96654ad751e0d0e63148740c8d7bd7f05037e0dadbffaa843b0f2",
+      "path": "docs/CAMPAIGN_CONSISTENCY_SURVEY_NOTE_2026-05-10_meta.md",
+      "runner_path": "scripts/frontier_campaign_consistency_survey_2026_05_10_meta.py",
+      "title": "Campaign Consistency Survey \u2014 Cross-PR Review (2026-05-08 to 2026-05-10)"
+    },
     "canonical_harness_index": {
       "claim_id": "canonical_harness_index",
       "claim_type_author_hint": null,
@@ -65013,7 +65080,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 225,
       "decoration": 1,
-      "meta": 29,
+      "meta": 30,
       "no_go": 15,
       "none": 1651,
       "open_gate": 23,
@@ -65022,16 +65089,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 29,
+      "meta": 30,
       "no_go": 123,
       "none": 451,
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8119,
+    "edge_count": 8130,
     "leaf_count": 533,
-    "node_count": 2034,
+    "node_count": 2035,
     "root_count": 768,
-    "runners_with_path": 1649
+    "runners_with_path": 1650
   }
 }

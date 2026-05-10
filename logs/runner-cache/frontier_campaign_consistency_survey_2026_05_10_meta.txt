@@ -1,0 +1,61 @@
+===== runner cache v1 =====
+runner: scripts/frontier_campaign_consistency_survey_2026_05_10_meta.py
+runner_sha256: 1b086ffee6c2c43c94f6059770341c3f36fa464809c837a83308389ebaf70957
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.07
+status: ok
+----- stdout -----
+[PASS] meta classification + survey-only
+[PASS] survey result: no contradictions detected
+[PASS] A1+A2 preserved
+[PASS] foundational meta #725 (physical-lattice)
+[PASS] foundational meta #728 (C_3-preserved)
+[PASS] foundational meta #729 (conventions-unification)
+[PASS] foundational meta #790 (BAE rename)
+[PASS] BAE 30-probe terminal synthesis #836
+[PASS] BAE + P admissions correctly counted
+[PASS] substrate-to-carrier #874 (P3)
+[PASS] substrate-to-carrier #875 (P4)
+[PASS] substrate-to-carrier #876 (P2)
+[PASS] substrate-to-carrier #877 (P1)
+[PASS] G_Newton three admissions named
+[PASS] G_Newton companion gnewtonG1
+[PASS] G_Newton companion gnewtonG2
+[PASS] G_Newton companion gnewtonG3
+[PASS] synthesis #882 timing vs G1/G2/G3
+[PASS] engineering landmark #843 (bridge-lane)
+[PASS] engineering landmark #845 (ε_witness)
+[PASS] engineering landmark #857 (NLO/N5LO)
+[PASS] cross-consistency Check 1 listed
+[PASS] cross-consistency Check 2 listed
+[PASS] cross-consistency Check 3 listed
+[PASS] cross-consistency Check 4 listed
+[PASS] cross-consistency Check 5 listed
+[PASS] cross-consistency Check 6 listed
+[PASS] cross-consistency Check 7 listed
+[PASS] cross-consistency Check 8 listed
+[PASS] cross-consistency Check 9 listed
+[PASS] cross-consistency Check 10 listed
+[PASS] cross-consistency Check 11 listed
+[PASS] conditionality chains enumerated
+[PASS] no silent admission introduction
+[PASS] no theorem promotion / retagging
+[PASS] authority disclaimer present
+[PASS] audit lane authority items listed
+[PASS] Probe 25 vs G2 cross-domain check
+[PASS] Probe 22 vs P1 cross-domain check
+[PASS] F3 finding consistency Probes 25/27/28
+[PASS] substep-4 staggered-Dirac referenced
+[PASS] C-iso eliminated as dominant systematic
+[PASS] audit lane authority preserved (does NOT adjudicate)
+[PASS] inventory section present
+[PASS] Probe 29 partial-falsification recorded
+[PASS] Lane 2 STRUCTURAL OBSTRUCTION recorded
+[PASS] paired runner self-reference
+[PASS] cached output path referenced
+
+=== TOTAL: PASS=48, FAIL=0 ===
+
+----- stderr -----
+

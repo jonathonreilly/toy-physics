@@ -1368,6 +1368,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_c_iso_su3_nnlo_2026_05_10_su3nnlo.py"
     },
+    "campaign_consistency_survey_note_2026-05-10_meta": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_campaign_consistency_survey_2026_05_10_meta.py"
+    },
     "carrier_orbit_invariance_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -23798,6 +23810,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_campaign_consistency_survey_2026_05_10_meta.py": {
+      "assert_count": 1,
+      "claims": [
+        "campaign_consistency_survey_note_2026-05-10_meta"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_carrier_orbit_invariance.py": {
       "assert_count": 1,
       "claims": [
@@ -43133,12 +43160,12 @@
     "dominant_class_distribution": {
       "A": 109,
       "B": 157,
-      "C": 638,
+      "C": 639,
       "D": 229,
       "none": 404
     },
-    "runners_classified": 1537,
-    "runners_with_C": 797,
+    "runners_classified": 1538,
+    "runners_with_C": 798,
     "runners_with_D": 417
   }
 }
