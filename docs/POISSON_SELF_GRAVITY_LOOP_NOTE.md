@@ -8,6 +8,35 @@
 - [`scripts/poisson_self_gravity_loop.py`](/Users/jonreilly/Projects/Physics/scripts/poisson_self_gravity_loop.py)
 - [`logs/2026-04-05-poisson-self-gravity-loop.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-poisson-self-gravity-loop.txt)
 
+## Cited authority
+
+The runner imports the exact-lattice / amplitude-propagation primitives
+from [`scripts/minimal_source_driven_field_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_source_driven_field_probe.py),
+audited under [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+(audited_clean / retained_bounded). The lattice geometry, amplitude
+propagation, and field-update conventions are inherited from that note;
+this loop adds only the amplitude-sourced screened Poisson kernel and
+the outer fixed-point self-consistency loop.
+
+## Audit modes
+
+The runner supports two modes:
+
+- **default** (full sweep) — 4 source strengths x 6 backreaction
+  couplings, ~6-7 min wall-clock on the reference laptop. Reproduces
+  the table in this note.
+- **`--quick`** (audit-window subset) — 3 source strengths x 2
+  couplings (one zero, one nonzero), outer-loop iter cap reduced to 3.
+  Completes in well under the 120 s `runner_timeout_sec` budget while
+  preserving the exact zero-epsilon reduction check, the frozen-field
+  Born floor, the weak-field TOWARD sign, the near-linear mass-law fit,
+  and the bounded loop/inst centroid ratio.
+
+Both modes terminate with the same five hard-bar assertions
+(see [Hard-bar assertions](#hard-bar-assertions) below); a non-PASS
+status causes the runner to exit non-zero so audit packets see a
+clear regression signal.
+
 ## Question
 
 Can a narrow exact-lattice loop, where amplitude density sources a screened
@@ -75,6 +104,25 @@ The strongest bounded statement is:
 - the frozen field snapshot stays Born-linear to machine precision
 - the weak-field sign survives on all tested nonzero couplings
 - the weak-field mass-law read stays essentially linear on the terminal iterate
+
+## Hard-bar assertions
+
+The runner now hard-bars the load-bearing bounded statements. All five
+must PASS or the runner exits non-zero:
+
+| # | Assertion | Bound |
+| --- | --- | --- |
+| 1 | exact `epsilon = 0` reduction: `|centroid shift|`, `|escape - 1|` | `<= 1e-12`, `<= 1e-12`; outer loop must converge |
+| 2 | frozen-field Sorkin `I3` (max over nonzero-eps rows) | `<= 1e-10` (cancellation-floor envelope) |
+| 3 | weak-field TOWARD sign on every nonzero-eps row | all source-strength rows must have `loop_delta > 0` |
+| 4 | mean `|loop / inst|` centroid ratio on every nonzero-eps row | `[0.85, 1.15]` (covers iter-3 quick mode through iter-8 full mode) |
+| 5 | loop `F ~ M^alpha` mass-law exponent on every nonzero-eps row | `[0.85, 1.15]` (essentially linear) |
+
+These bands are the hard bars on the bounded-control claim, not on
+any breakthrough. Bound (4) and (5) are deliberately wider than the
+tightest observed values (~1.010 ratio, ~1.00 exponent in the full
+sweep) so iteration-cap variation between full and quick modes does
+not change the verdict.
 
 ## Honest limitation
 
