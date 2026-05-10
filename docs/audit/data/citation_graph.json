@@ -13225,6 +13225,22 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+      "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
       "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
       "to": "koide_microscopic_scalar_selector_target_note_2026-04-18"
     },
@@ -48262,6 +48278,22 @@
       "runner_path": "scripts/frontier_koide_transport_gap_constant_no_go.py",
       "title": "Koide Transport-Gap Constant No-Go"
     },
+    "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
+      "claim_id": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (negative on the conjecture; support-only",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+      ],
+      "note_hash": "2cbe2be143df09d871733a205d34ab90b2d0763d50cb76396f2ff220e7978520",
+      "path": "docs/KOIDE_V_L1_QUARTIC_CASIMIR_BETA2_NOTE_2026-05-08_probeV_L1_quartic.md",
+      "runner_path": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py",
+      "title": "Probe V-L1-Quartic \u2014 Quartic Casimirs and the QCD \u03b2_2/\u03b2_3 Channel-Weight Obstruction"
+    },
     "koide_weighted_character_source_axis_theorem_note_2026-04-20": {
       "claim_id": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -65396,7 +65428,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 227,
+      "bounded_theorem": 228,
       "decoration": 1,
       "meta": 58,
       "no_go": 15,
@@ -65405,7 +65437,7 @@
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 710,
+      "bounded_theorem": 711,
       "decoration": 1,
       "meta": 58,
       "no_go": 122,
@@ -65413,10 +65445,10 @@
       "open_gate": 107,
       "positive_theorem": 591
     },
-    "edge_count": 8184,
-    "leaf_count": 529,
-    "node_count": 2039,
+    "edge_count": 8188,
+    "leaf_count": 530,
+    "node_count": 2040,
     "root_count": 762,
-    "runners_with_path": 1654
+    "runners_with_path": 1655
   }
 }

@@ -10620,6 +10620,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_koide_transport_gap_constant_no_go.py"
     },
+    "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py"
+    },
     "koide_weighted_character_source_axis_theorem_note_2026-04-20": {
       "assert_count": 1,
       "counts": {
@@ -22259,6 +22271,21 @@
         "B": 0,
         "C": 4,
         "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -43269,11 +43296,11 @@
       "A": 109,
       "B": 159,
       "C": 639,
-      "D": 231,
+      "D": 232,
       "none": 404
     },
-    "runners_classified": 1542,
+    "runners_classified": 1543,
     "runners_with_C": 799,
-    "runners_with_D": 419
+    "runners_with_D": 420
   }
 }
