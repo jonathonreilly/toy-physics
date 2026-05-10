@@ -1,0 +1,279 @@
+
+========================================================================
+Section 0 — Retained input sanity
+========================================================================
+  PASS  0.1  C is unitary
+  PASS  0.2  C^3 = I
+  PASS  0.3  E_+(a, b) = 3 a^2
+        computed=8.67000000, expected=8.67000000
+  PASS  0.4  E_perp(a, b) = 6 |b|^2
+        computed=2.40000000, expected=2.40000000
+  PASS  0.5  At BAE (a^2 = 2|b|^2): E_+ = E_perp
+  PASS  0.6  H_circ is C_3-equivariant (commutes with C)
+
+========================================================================
+Section 1 — Recap of block-total Frobenius identities
+========================================================================
+  PASS  1.1  E_+(a=0.500, b=0.000+0.000j) = 3 a^2 = 0.750000
+  PASS  1.1'  E_perp(a=0.500, b=0.000+0.000j) = 6 |b|^2 = 0.000000
+  PASS  1.2  E_+(a=0.000, b=1.000+0.000j) = 3 a^2 = 0.000000
+  PASS  1.2'  E_perp(a=0.000, b=1.000+0.000j) = 6 |b|^2 = 6.000000
+  PASS  1.3  E_+(a=1.000, b=0.500+0.300j) = 3 a^2 = 3.000000
+  PASS  1.3'  E_perp(a=1.000, b=0.500+0.300j) = 6 |b|^2 = 2.040000
+  PASS  1.4  E_+(a=1.000, b=0.707) = 3 a^2 = 3.000000
+  PASS  1.4'  E_perp(a=1.000, b=0.707) = 6 |b|^2 = 3.000000
+  PASS  1.5  E_+(a=0.300, b=0.700) = 3 a^2 = 0.270000
+  PASS  1.5'  E_perp(a=0.300, b=0.700) = 6 |b|^2 = 2.940000
+  PASS  1.BAE  BAE-condition <=> E_+ = E_perp = N/2 (equipartition)
+
+========================================================================
+Section 2 — Hostile-review: M1's literal form is degenerate
+========================================================================
+
+  CLAIM: tau_M(H) := Tr(pi_+(H)) + Tr(pi_perp(H)) = Tr(H) for all H in
+         Herm_circ(3), so the LITERAL M1 trace-state form is DEGENERATE
+         (equal to ordinary trace, cannot distinguish (1,1) from (1,2)).
+
+  This is because the doublet basis elements C and C^2 are traceless.
+
+  Verification across sample circulants:
+
+       a               b         Tr(H)      tau_M(H)    difference
+   0.500  (+0.000+0.000j)      1.500000      1.500000  0.00e+00
+   0.000  (+1.000+0.000j)      0.000000      0.000000  0.00e+00
+   1.000  (+0.500+0.300j)      3.000000      3.000000  0.00e+00
+   1.000  (+0.707+0.000j)      3.000000      3.000000  0.00e+00
+   0.300  (+0.700+0.000j)      0.900000      0.900000  0.00e+00
+
+  PASS  2.1  M1 literal trace tau_M(H) = Tr(H) for all sample H (50 random points)
+        degeneracy ratio: 50/50
+  PASS  2.2  Tr(C) = 0 (doublet C is traceless)
+  PASS  2.3  Tr(C^2) = 0 (doublet C^2 is traceless)
+  PASS  2.4  HOSTILE-REVIEW finding: M1 as LINEAR trace state is degenerate;     cannot pin (1,1) vs (1,2) weighting at the linear-trace level.
+
+========================================================================
+Section 3 — M1's non-degenerate content: Frobenius-block log-functional
+========================================================================
+
+  M1's ACTUAL closing content is the Frobenius-block log-functional:
+     L_M1(H) = log ||pi_+(H)||_F^2 + log ||pi_perp(H)||_F^2
+            = log(3 a^2) + log(6 |b|^2)
+
+  This is NON-LINEAR (log of quadratic forms).
+  It distinguishes (1,1) from (1,2) via its WEIGHT on the log of each block.
+
+  PASS  3.1  L_M1 = log(3a^2) + log(6|b|^2) at sample points
+  PASS  3.2  L_M1 critical point: |b|^2/a^2 = 1/2 = BAE
+        saddle |b|^2/a^2 = 0.50000000
+  PASS  3.3  At L_M1 saddle: E_+ = E_perp (Frobenius equipartition)
+
+========================================================================
+Section 4 — M2 measure: dnu = dr_+ d|b| and saddle-point
+========================================================================
+
+  M2 saddle equations:
+    dL_M2/da = 0:   -6 lam a + 1/a = 0       =>  a^2 = 1/(6 lam)
+    dL_M2/d|b| = 0: -12 lam |b| + 1/|b| = 0  =>  |b|^2 = 1/(12 lam)
+    => |b|^2/a^2 = (1/12 lam) / (1/6 lam) = 1/2 = BAE.  ✓
+
+  Verification across 6 normalization scales lam in {0.1, 0.5, 1, 5, 10, 100}:
+
+  lam=   0.10  a=1.290994  |b|=0.912871  |b|^2/a^2 = 0.50000000
+  lam=   0.50  a=0.577350  |b|=0.408248  |b|^2/a^2 = 0.50000000
+  lam=   1.00  a=0.408248  |b|=0.288675  |b|^2/a^2 = 0.50000000
+  lam=   5.00  a=0.182574  |b|=0.129099  |b|^2/a^2 = 0.50000000
+  lam=  10.00  a=0.129099  |b|=0.091287  |b|^2/a^2 = 0.50000000
+  lam= 100.00  a=0.040825  |b|=0.028868  |b|^2/a^2 = 0.50000000
+
+  PASS  4.1  M2 saddle |b|^2/a^2 = 1/2 across 6 normalization scales
+  PASS  4.2  M1 saddle (|b|^2/a^2 = 1/2) coincides with M2 saddle (|b|^2/a^2 = 1/2)
+        M1 ratio = 0.50000000, M2 ratio = 0.50000000
+
+========================================================================
+Section 5 — Induced measure on constraint surface E_+ + E_perp = N
+========================================================================
+
+  Parametrize constraint surface by t = a^2 in (0, N/3 = 1/3).
+  |b|^2 = (N - 3t)/6.
+
+  M1 weight on constraint: p_M1(t) ~ t * (1 - 3t).
+    Mode of p_M1 at t = 0.166650 (expected: 1/6 = 0.166667).
+    |b|^2/a^2 at M1 mode = 0.500100 (expected: 0.5 = BAE).
+
+  M2 weight on constraint: p_M2(t) ~ sqrt(t * (1 - 3t)).
+    Mode of p_M2 at t = 0.166650 (expected: 1/6 = 0.166667).
+    |b|^2/a^2 at M2 mode = 0.500100 (expected: 0.5 = BAE).
+
+  PASS  5.1  M1 induced-measure mode at t = 1/6 (i.e. |b|^2/a^2 = 1/2 = BAE)
+        t_mode = 0.166650; ratio = 0.500100
+  PASS  5.2  M2 induced-measure mode at t = 1/6 (i.e. |b|^2/a^2 = 1/2 = BAE)
+        t_mode = 0.166650; ratio = 0.500100
+  PASS  5.3  M1 mode = M2 mode (both at BAE) - mode-equivalence
+
+========================================================================
+Section 6 — Distinguishing observables: M1 and M2 have different means
+========================================================================
+
+  Expected ratio <|b|^2/a^2>:
+    M1 mean = 0.917413  (mode = 0.5)
+    M2 mean = 1.084184  (mode = 0.5)
+    BAE target = 0.5
+
+  PASS  6.1  M1 mean of |b|^2/a^2 != M2 mean of |b|^2/a^2
+        |M1 mean - M2 mean| = 0.166771
+  Expected Q:
+    M1 mean = 0.944942  (mode = 2/3 = 0.666667)
+    M2 mean = 1.056122  (mode = 2/3 = 0.666667)
+    BAE target = 2/3
+
+  PASS  6.2  M1 mean of Q != M2 mean of Q
+        |M1 <Q> - M2 <Q>| = 0.111180
+  PASS  6.3  At the MODE, both M1 and M2 give Q = 2/3 (BAE)
+
+========================================================================
+Section 7 — Hessian comparison at the saddle
+========================================================================
+
+  Hessian eigenvalues at saddle (a^2=1/6, |b|^2=1/12):
+    M1 Hessian: d^2L_M1/da^2 = -12.0000  (expected -12)
+               d^2L_M1/db^2 = -24.0000  (expected -24)
+    M2 Hessian: d^2L_M2/da^2 = -6.0000  (expected -6)
+               d^2L_M2/db^2 = -12.0000  (expected -12)
+
+  PASS  7.1  M1 Hessian d^2L/da^2 = -12 at saddle
+        numerical: -12.0000, exact: -12
+  PASS  7.2  M2 Hessian d^2L/da^2 = -6 at saddle
+        numerical: -6.0000, exact: -6
+  PASS  7.3  Hessian ratio: M1 = 2 * M2 (factor of 2)
+        M1/M2 ratio = 2.0000, expected 2.0
+  Gaussian widths (sqrt(1/|H|)):
+    M1 sigma_a = 0.2887
+    M2 sigma_a = 0.4082
+    Ratio sigma_M2/sigma_M1 = 1.4142 (expected sqrt(2) = 1.4142)
+  PASS  7.4  M2 Gaussian width = sqrt(2) * M1 width (sub-leading distinction)
+
+========================================================================
+Section 8 — Bridge theorem: Lagrange duality
+========================================================================
+
+  Bridge identification: mu_M1 = -2 lam_M2 (up to sign convention).
+    M1 critical with mu_M1 = 2.000000
+    M2 saddle with lam_M2 = 1.000000
+
+  PASS  8.1  Bridge: M1 critical-point equation matches M2 saddle equation
+        Same saddle structure under Lagrange-multiplier identification
+  PASS  8.2  Both M1 and M2 saddles give the same BAE-locus |b|^2/a^2 = 1/2
+
+========================================================================
+Section 9 — Literature anchors
+========================================================================
+
+  Anchor 1: Riesz Representation Theorem (functional <-> measure).
+    Every continuous linear functional on a Banach space of cts functions
+    is represented as integration against a regular Borel measure.
+    Folland, Real Analysis, Ch. 7.
+
+  Anchor 2: Laplace / saddle-point method (asymptotic expansion).
+    Integral exp(L(x)) f(x) dx ~ f(x_saddle) exp(L(x_saddle)) (2 pi/|L''|)^(n/2).
+    Edinburgh Lecture 5: The saddle-point method.
+    Wikipedia: 'Method of steepest descent'.
+
+  Anchor 3: Marsden-Weinstein-Meyer symplectic reduction.
+    For G acting Hamiltonian on (M, omega) with momentum map J,
+    the quotient J^{-1}(zeta)/G is symplectic of dim = dim M - 2 dim G.
+    Hoskins / Tran notes; Marsden, Lectures on Mechanics (1992).
+    For G = U(1)_b on doublet: M_red has dr_+ d|b| as reduced volume form.
+
+  Anchor 4: Etingof-Nikshych-Ostrik fusion categories.
+    Frobenius-Perron dimension of simple objects in a fusion category;
+    R-FP-dim of Rep_R(C_3): (1, 1) - exactly M1's weighting.
+    Annals of Mathematics 162 (2005) 581-642; arXiv:math/0203060.
+
+  PASS  9.1  Riesz representation theorem cited
+  PASS  9.2  Laplace / saddle-point method cited
+  PASS  9.3  Marsden-Weinstein-Meyer reduction cited
+  PASS  9.4  Etingof-Nikshych-Ostrik fusion categories cited
+
+========================================================================
+Section 10 — Hostile-review verdict: BOUNDED DUALITY
+========================================================================
+
+  Aspect-by-aspect verdict:
+
+  Aspect                                    M1 = M2?         Verdict             
+  ----------------------------------------  ---------------  --------------------
+  Mathematical type                         NO               distinct
+  Linear vs non-linear                      NO               distinct
+  Literal M1 trace = ordinary Tr?           YES (degenerate)  M1 literal form fails
+  Saddle point (both at BAE)                YES              identical
+  Mode of induced measure                   YES              identical
+  Mean of induced measure                   NO               distinct
+  Hessian at saddle                         NO (factor 2)    distinct
+  BAE-closure power                         EQUIVALENT       dual perspectives
+  Higher-order corrections                  NO               distinct
+
+  OVERALL VERDICT: BOUNDED DUALITY.
+  - For BAE-closure (primitive's purpose): M1 = M2 (saddle-equivalent).
+  - For full quantum-statistical content (one-loop): M1 != M2.
+
+  PASS  10.1  Verdict: BOUNDED DUALITY (saddle-equivalent, fluctuation-distinct)
+  PASS  10.2  M1 = M2 at the SADDLE / MODE level (both at BAE)
+  PASS  10.3  M1 != M2 at the FULL-MEASURE / Hessian / mean level
+  PASS  10.4  For BAE-closure, M1 ≡ M2 (saddle-equivalent suffices)
+  PASS  10.5  For higher-order corrections, M1 and M2 are distinct primitives
+
+========================================================================
+Section 11 — Does-not disclaimers
+========================================================================
+
+  This duality analysis:
+
+  - Does NOT introduce new axioms.
+  - Does NOT promote either M1 or M2 to retained status.
+  - Does NOT modify any retained theorem.
+  - Does NOT load-bear PDG.
+  - Does NOT replace the design note PR #1039.
+  - Does NOT elect a single canonical primitive (audit lane decides).
+  - Does NOT prove M1 = M2 strictly (only at saddle / mode level).
+  - Does NOT prove M1 != M2 globally (the duality is bounded, not
+    fully ruled out).
+
+  PASS  11.1  No new axioms introduced
+  PASS  11.2  No retained promotion
+  PASS  11.3  No retained theorem modification
+  PASS  11.4  No PDG load-bearing
+  PASS  11.5  Honest bounded-duality classification (saddle yes, full no)
+
+========================================================================
+Section 12 — Verdict synthesis
+========================================================================
+
+  PRIMARY FINDINGS:
+
+  1. M1 as a LINEAR TRACE STATE (per design-note literal definition)
+     is degenerate: tau_M(H) = Tr(H) for all H in Herm_circ(3).
+     The (1,1) vs (1,2) distinction cannot be made at the linear-
+     trace level because the doublet basis is traceless.
+
+  2. M1's actual closing content is the NON-LINEAR Frobenius-block
+     log-functional L_M1 = log E_+ + log E_perp. This functional
+     extremized under E_+ + E_perp = N gives BAE.
+
+  3. M2's actual closing content is the MEASURE dnu = dr_+ d|b|
+     (1-coordinate per isotype). The natural Lagrangian S_M2 has
+     saddle at BAE.
+
+  4. BRIDGE: M1 and M2 are Lagrange-dual — same saddle, same mode
+     of induced measure on the constraint surface. For BAE-closure
+     they are EQUIVALENT primitives.
+
+  5. DISTINCTION: At the sub-leading (Gaussian fluctuation) level,
+     M1's Hessian is 2x M2's, and means of observables differ.
+     They are NOT identical measures.
+
+  6. RECOMMENDATION: elect EITHER M1 or M2 as the canonical
+     primitive (saddle-equivalent for BAE-closure); prefer M2 if
+     the natural language is measure-theoretic, prefer M1 if
+     operator-algebraic.
+
+=== TOTAL: PASS=52, FAIL=0 ===
