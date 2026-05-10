@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 65 |
+| **retained** | 66 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1146 |
+| unaudited | 1145 |
 | meta | 77 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 378 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 226 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1223 |
+| `unaudited` | 1222 |
 
 | claim_type | count |
 |---|---:|
@@ -360,6 +360,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `second_grown_family_complex_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `second_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7651,6 +7652,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `science_3plus1_line_law_known_limits_note_2026-04-20 -> missing audited Wilson/Perron, rho1, complex-Givens, reduced-packet, interlacing-no-go, and live-target dependencies`
 - **auditor confidence:** high
+
+### `second_grown_family_complex_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Narrow anchor-row positive: drift=0.20 on the no-restore Gate B grown geometry with geometry-sector stencil satisfies the runner's Born-proxy, weak-field F~M, and TOWARD@0.1 to AWAY@0.5 complex-action gates over the tested seeds.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12c5-4d99-7bf3-bd38-447aae1f1250`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The probe passed the retained safety gates on the anchor row and showed the expected narrow crossover pattern.  _(class `C`)_
+- **chain closes:** True — The cited authority is retained_bounded for the second no-restore geometry-sector family, and the current runner separately computes the complex-action gate outcomes for the anchor row. The source note's safe read is explicitly limited to that anchor row and does not assert family-wide closure.
+- **rationale:** The audited claim is operational and narrow: the runner builds the grown geometry slice, applies the geometry-sector stencil, computes propagation/Born-proxy/centroid/probability observables, and gates the anchor-row result without hard-coded target row outputs. The one-hop dependency is retained-grade and supplies only the second-family slice, while the runner supplies the complex-action companion evidence. The note stays within the tested anchor-row boundary and explicitly denies family-wide generalization.
+- **auditor confidence:** medium
 
 ### `second_grown_family_note`
 
