@@ -11,6 +11,29 @@ theorem
 
 **Primary runner:** `scripts/frontier_koide_q_no_hidden_source_audit.py`
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this row `audited_conditional` (audit_date
+2026-05-05, auditor codex-cli-gpt-5.5, auditor_confidence high). The
+verdict accepts the symbolic algebra performed by the runner — that
+`K = 0 ⇔ y = 1 ⇔ Y = I_2` on the asserted normalized carrier
+`Y = diag(y, 2-y)` with `K = Y^(-1) - I` — but flags that the packet
+does not derive (a) the normalized second-order carrier itself, (b) the
+exact dual equation `K = Y^(-1) - I`, or (c) the readout from `Y = I_2`
+to the physical `Q = 2/3` route from retained upstream inputs. Audit
+verdict and effective status are set by the independent audit lane
+only; nothing in this rigorization edit promotes status. The note's
+Section 4 "Bottom line" already states this honestly; the present
+edit makes the audit-conditional perimeter explicit at the top of the
+note.
+
+The audit-stated cheapest re-audit path (verbatim from the ledger
+`notes_for_re_audit_if_any`):
+
+> missing_dependency_edge: provide retained upstream support for the
+> normalized second-order carrier, the exact dual equation, and the
+> `Y = I_2 -> kappa = 2 -> Q = 2/3` readout, then re-audit the scoped
+> closure.
+
 ---
 
 ## 1. Earlier carrier audit
@@ -110,3 +133,51 @@ The second-order route survives the hidden-source audit:
 That sharply narrows the remaining primitive. What it does **not** yet prove is
 that retained charged-lepton physics forces the physical lane to be source-free
 on that carrier.
+
+## 5. Audit-conditional perimeter
+
+This note's contribution is the **algebraic** narrowing inside the
+admitted normalized second-order carrier `Y = diag(y, 2-y)` with
+reduced source `K = Y^(-1) - I`: it shows the family of nonzero
+sources is a one-parameter selector reparameterization, and that
+`K = 0` is the unique datum-free point. That algebraic step is what
+the audit verdict accepts as internally consistent.
+
+The audit-conditional perimeter (i.e. what stays open) is exactly:
+
+1. derive the normalized second-order positive trace-2 carrier
+   `Y = diag(y, 2-y)` from retained upstream charged-lepton physics
+   (the carrier is admitted as input here);
+2. derive the exact dual equation `K = Y^(-1) - I` from a retained
+   reduced observable generator (this note imports it from the
+   companion reduced-observable note, which is itself
+   `audited_conditional` on the same gap);
+3. derive the readout from `Y = I_2` through `kappa = 2` to the
+   physical `Q = 2/3` from a retained Brannen / circulant identity
+   on the charged-lepton selector.
+
+Until at least (1) and (2) are supplied by retained upstream notes,
+this row remains a bounded algebraic hidden-source audit on the
+admitted normalized carrier rather than a physical-identification
+result. The runner's verdict line in `logs/runner-cache/` already
+states this scope explicitly:
+
+> This narrows the remaining primitive; it does not itself prove the
+> physical charged-lepton lane must be source-free there.
+
+## 6. Boundaries
+
+This note does **not**:
+
+- modify the parent row's audit-ledger entry;
+- promote the parent's `audit_status` from `audited_conditional`;
+- derive the normalized second-order carrier from retained upstream
+  inputs;
+- derive the exact dual equation from a retained observable generator;
+- close the physical `Q = 2/3` bridge.
+
+These are the same audit-named open dependencies that block the
+reduced observable restriction note and the normalized second-order
+effective action note in the same `Q` cluster (see audit ledger rows
+`koide_q_reduced_observable_restriction_theorem_2026-04-22` and
+`koide_q_normalized_second_order_effective_action_theorem_2026-04-22`).
