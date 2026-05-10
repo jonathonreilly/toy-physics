@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 69 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 238 |
-| _retained_pending_chain_ | 3 |
+| _retained_pending_chain_ | 4 |
 | open_gate | 11 |
-| unaudited | 856 |
+| unaudited | 855 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
@@ -38,13 +38,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 397 |
+| `audited_clean` | 398 |
 | `audited_conditional` | 419 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 905 |
+| `unaudited` | 904 |
 
 | claim_type | count |
 |---|---:|
@@ -62,7 +62,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 522 |
 | `leaf` | 650 |
 
-- **Retained pending chain closure:** 3
+- **Retained pending chain closure:** 4
 - **Citation cycles detected:** 36
 
 ### Runner classification (static heuristic)
@@ -410,6 +410,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_grassmann_forcing_theorem_note_2026-05-07` | bounded_theorem | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | claude-opus | B | - |
+| `staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07` | bounded_theorem | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | claude-opus | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -11643,6 +11644,19 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **load-bearing step:** Step 2 of restructured Theorem 1 proof — operator-algebra obstruction: bosonic CCR generators (with [a,a†]=I, a²≠0 on Fock) cannot satisfy the Cl(3) defining relations {γ_i,γ_j}=2δ_ij since γ_i²=I requires unit-square generators absent from the bosonic ladder algebra; combined with U2+U3 (A1-only retained Cl(3) chirality classification) this forces the matter measure to be the finite Grassmann partition with one (χ_x,χ̄_x) pair per site  _(class `B`)_
 - **chain closes:** True — After the 2026-05-10 restructure the only load-bearing upstream is the cl3 per-site uniqueness theorem at its narrowed A1-only U1–U3 scope, which the prompt specifies as audited_clean/retained. The bosonic-incompatibility argument (Step 2) is now internal operator-algebra content needing only Cl(3)'s defining relations — no per-site Hilbert-dim input (U4) and no spin-statistics S2 input. The prior cycles (substep1 ↔ dim_two, substep1 ↔ S2 → U4 → substep1) are eliminated. The script's K5 numerically exhibits σ_x²=I yet bosonic a²≠I (so the bosonic ladder has no unit-square Cl(3) generator candidate), K6 exhibits σ_+²=0 and {σ_+,σ_-}=I matching the U2 chirality 2-dim irrep, K7 records the CCR⊕CAR exhaustion, K8 records the bounded theorem. All eight K-checks PASS by inspection of the script logic; the cached runner log is acknowledged stale per the prompt. The only load-bearing cited authority is retained, so the bounded_theorem closes at the stated conditional scope.
 - **rationale:** The note self-types as bounded_theorem with explicit conditional scope (A1+A2+U2+U3 + standard finite Grassmann calculus). The restructured proof's load-bearing step is an internal operator-algebra obstruction (γ_i²=I unattainable for any bosonic ladder element), which the runner exhibits numerically via Pauli σ_x² (K5: σ_x²=I) and a 4-truncated bosonic Fock (K5: a²≠I) — both checks correct; K6 then exhibits the matching Grassmann/Pauli σ_+ realization on the 2-dim chirality irrep. The only load-bearing one-hop dependency is the cl3 per-site uniqueness theorem at its retained A1-only U1–U3 scope (audited_clean/retained per prompt); the formerly load-bearing U4 and S2 are explicitly removed and demoted to non-load-bearing context. No forbidden imports (no PDG, no MC, no same-surface family arguments, no new axioms beyond A1+A2). Nothing in the load-bearing path is unaudited/conditional/support/open, so the audited_conditional tie-break does not trigger. The stale runner-cache log does not affect the verdict since the prompt directs the script source as the source of truth, and the script implements the restructured A1-only argument correctly.
+- **auditor confidence:** high
+
+### `staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07`
+
+- **Note:** [`STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md`](../../docs/STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional on BlockT1 (Block 02 Grassmann forcing) + U2 (per-site Cl(3) chirality irrep dim 2 with central pseudoscalar omega = gamma_1 gamma_2 gamma_3) + F1 (Z_2 fermion parity) + NR (no-rooting irreducibility on C^8) + admissible bipartite-graph parity on Z^3, the staggered-Dirac kinetic operator on Z^3 has the unique form D_staggered = (1/2) sum_{x,mu} eta_mu(x) (chibar_{x+mu} chi_x - chibar_x chi_{x+mu}) with Kawamoto-Smit phases eta_1=1, eta_2=(-1)^{x_1}, eta_3=(-1)^{x_1+x_2}, unique up to global U(1) gauge + boundary-phase choice + axis-permutation gauge. Note explicitly does NOT assert retained-grade closure and inherits Block 02's S2 re-audit dependency disclaimer (now cleared as of 2026-05-10 Block 02 A1-only restructure but not yet propagated into this note's prose).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:fermion_parity_z2_grading_theorem_note_2026-05-02`)
+- **auditor:** `claude-opus-fresh-context-phaseB-2026-05-10-1368c5a0`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Step 5: spin-rotation T(x) = sigma_1^{x_1} sigma_2^{x_2} sigma_3^{x_3} substituted into diagonalization condition T-dagger(x) gamma_mu T(x+mu_hat) = eta_mu(x) I_2 yields Kawamoto-Smit phases eta_1=1, eta_2(x)=(-1)^{x_1}, eta_3(x)=(-1)^{x_1+x_2} via Pauli algebra; uniqueness in Step 6 up to global U(1) gauge, boundary phases, and axis-permutation gauge  _(class `C`)_
+- **chain closes:** True — Runner exact-arithmetic verification on sympy 2x2 Pauli matrices: PASS=24/24 over all 8 sites of the 2^3 unit cell x 3 directions, exit_code=0, elapsed 0.50s. Independently verifies T-dagger(x) gamma_mu T(x+mu_hat) = eta_mu(x) I_2 with derived eta values matching expected K-S phases at every (x, mu); also cross-checks chirality central pseudoscalar sigma_1 sigma_2 sigma_3 = i I_2 (U2 content). Class C: runner constructs Pauli matrices, T(x), and the diagonalization product from scratch in exact rational+i arithmetic. Algebraic forcing chain is sound at the level claimed (bounded support): BlockT1 supplies single-mode Grassmann constraint; U2 supplies per-site Pauli realization with omega central pseudoscalar; bipartite-graph parity on Z^3 is admissible standard graph theory; the Pauli-algebra calculation yielding (6) is closed at exact arithmetic. Uniqueness of T(x) is asserted up to gauge (global U(1) + boundary + axis permutation) but the runner only verifies the existence direction at the fundamental cell; uniqueness modulo gauge is argued in prose (Step 6) via standard linear algebra on the four (x_1 mod 2, x_2 mod 2) sublattices, not exhibited by the runner. This is acceptable for bounded_theorem scope.
+- **rationale:** Bounded theorem with explicit conditional scope; all load-bearing cited authorities now audit-clean or A1-only retained: Block 02 Grassmann forcing landed audited_clean today (2026-05-10) under the A1-only U2+U3 restructure (per task statement and Block 02 note's restructure section); per-site uniqueness note is at A1-only U1-U3 retained scope (per the note's 2026-05-08 narrowing). Runner is Class C, sympy exact arithmetic, PASS=24/24. The Pauli-algebra forcing of K-S phases from T(x) = sigma_1^{x_1} sigma_2^{x_2} sigma_3^{x_3} is mechanically verified at every site of the fundamental cell, and the central-pseudoscalar identity used in Step 2/3 is cross-checked. The note honestly disclaims retained-grade closure and seeds as bounded_theorem; the explicit conditional packaging matches what the runner+chain support. The note's own outstanding 'inherits S2 re-audit dependency' disclaimer (Status block) is now stale because Block 02 restructured to A1-only on 2026-05-10 dropping the S2 dependency, but this is at most a documentation-lag issue, not a load-bearing flaw. F1 (fermion_parity_z2_grading, audited_conditional per task) is cited in Step 4 to back the single-mode fermion operator identification (a = sigma_+, n = (I-sigma_3)/2) but is contextual/supportive: the K-S phase forcing in Steps 1-6 runs through BlockT1's single-mode Grassmann constraint + U2's Pauli realization + standard Pauli algebra; F1 is not used in the diagonalization derivation itself. Tie-break therefore does not force audited_conditional. NR (no-rooting) is cited for C^8 irreducibility commentary in Step 6 but is contextual to uniqueness, not to the existence/forcing of (6).
 - **auditor confidence:** high
 
 ### `staggered_dirac_realization_gate_note_2026-05-03`

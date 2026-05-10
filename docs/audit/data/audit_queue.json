@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 72,
     "high": 312,
-    "leaf": 196,
+    "leaf": 195,
     "medium": 288
   },
   "cycle_break_target_count": 37,
@@ -18995,32 +18995,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
-        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
-        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-        "fermion_parity_z2_grading_theorem_note_2026-05-02"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.085,
-      "note_path": "docs/STAGGERED_DIRAC_KAWAMOTO_SMIT_FORCING_THEOREM_NOTE_2026-05-07.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/probe_kawamoto_smit_phase_forcing.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "vector_magnetic_extension_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -23607,5 +23581,5 @@
     }
   ],
   "ready_count": 31,
-  "total_pending": 868
+  "total_pending": 867
 }

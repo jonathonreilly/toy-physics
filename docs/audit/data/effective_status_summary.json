@@ -53,13 +53,14 @@
     "retained": 69,
     "retained_bounded": 238,
     "retained_no_go": 122,
-    "retained_pending_chain": 3,
-    "unaudited": 856
+    "retained_pending_chain": 4,
+    "unaudited": 855
   },
-  "retained_pending_chain_count": 3,
+  "retained_pending_chain_count": 4,
   "retained_pending_chain_examples": [
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
     "diamond_signal_budget_hardening_note",
-    "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+    "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
   ]
 }
