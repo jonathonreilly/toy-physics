@@ -2316,6 +2316,18 @@
       "dominant_class": null,
       "runner": "scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py"
     },
+    "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py"
+    },
     "continuum_identification_note": {
       "assert_count": 1,
       "counts": {
@@ -22295,6 +22307,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_continuum_identification_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -40023,11 +40050,11 @@
       "A": 14,
       "B": 168,
       "C": 607,
-      "D": 213,
+      "D": 214,
       "none": 427
     },
-    "runners_classified": 1429,
+    "runners_classified": 1430,
     "runners_with_C": 719,
-    "runners_with_D": 352
+    "runners_with_D": 353
   }
 }

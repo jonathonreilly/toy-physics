@@ -32108,6 +32108,17 @@
       "runner_path": "scripts/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_SWEEP.py",
       "title": "Connectivity Family V2 Elliptical Duplicate Note"
     },
+    "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10": {
+      "claim_id": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "55c623953b27e490585493d40dfe4f0ce71251207d510a501bc36f3cb2d721d4",
+      "path": "docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py",
+      "title": "Connes-Kreimer Birkhoff Factorization \u2014 External Narrow Theorem"
+    },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
       "claim_type_author_hint": null,
@@ -57111,6 +57122,7 @@
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
     "complex_action_note",
     "confinement_string_tension_note",
+    "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
     "continuum_bridge_note",
     "continuum_limit_note",
     "cosmology_scale_identification_and_reduction_note",
@@ -57792,7 +57804,7 @@
       "no_go": 14,
       "none": 1703,
       "open_gate": 13,
-      "positive_theorem": 91
+      "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 619,
@@ -57800,12 +57812,12 @@
       "no_go": 119,
       "none": 462,
       "open_gate": 114,
-      "positive_theorem": 623
+      "positive_theorem": 624
     },
     "edge_count": 6883,
-    "leaf_count": 554,
-    "node_count": 1947,
-    "root_count": 838,
-    "runners_with_path": 1526
+    "leaf_count": 555,
+    "node_count": 1948,
+    "root_count": 839,
+    "runners_with_path": 1527
   }
 }
