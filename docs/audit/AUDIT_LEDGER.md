@@ -22,13 +22,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 224 |
 | open_gate | 11 |
-| unaudited | 1166 |
+| unaudited | 1165 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
 | ~~audited_conditional~~ | 223 |
 | ~~audited_failed~~ | 8 |
-| `decoration_under_cl3_color_automorphism_theorem` | 3 |
+| `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
 | `decoration_under_hierarchy_matsubara_decomposition_note` | 1 |
@@ -41,20 +41,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 373 |
 | `audited_conditional` | 223 |
-| `audited_decoration` | 10 |
+| `audited_decoration` | 11 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1234 |
+| `unaudited` | 1233 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 772 |
-| `decoration` | 12 |
+| `decoration` | 13 |
 | `meta` | 75 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 770 |
+| `positive_theorem` | 769 |
 
 | criticality | count |
 |---|---:|
@@ -706,6 +706,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_exact_interacting_bridge_transport_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | fresh_context | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | `decoration_under_moving_source_retarded_portability_note` | cross_family | codex-gpt-5.5 | A | `moving_source_retarded_portability_note` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | decoration | ~~audited_decoration~~ | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | fresh_context | codex-gpt-5.5 | A | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` |
@@ -1891,6 +1892,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
+- **auditor confidence:** high
+
+### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
+
+- **Note:** [`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Algebraic SU(3) fundamental⊗conjugate decomposition on the retained-bounded 3D symmetric-base carrier, including the unique rank-one singlet projector; no physical SM-color bridge audited.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_cl3_color_automorphism_theorem`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-audit-loop-019e1281-bf98-7df0-ab71-cbacd4b4600f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The standard Clebsch-Gordan decomposition for SU(N) gives N ⊗ N̄ = 1 ⊕ adj(N); with N_c = 3 this gives 3 ⊗ 3̄ = 1 ⊕ 8.  _(class `A`)_
+- **chain closes:** True — Given the retained-bounded SU(3) carrier with N_c = 3 and the admitted standard SU(N) representation rule, the decomposition, singlet multiplicity, octet dimension, and projector formula follow. The physical identification of this carrier with SM quark color remains outside this scoped algebraic corollary.
+- **rationale:** The algebra is correct: the note applies the standard N ⊗ N̄ = 1 ⊕ adj rule and trace projector to the single upstream SU(3), N_c = 3 carrier. The runner verifies normalization, generator invariance, projector idempotence, and complement rank, all as algebraic checks. It adds no external comparator, new physical observable, or independent bridge beyond the parent color-automorphism theorem, so it should be boxed as an algebraic corollary rather than retained as a separate theorem.
+- **decoration parent:** `cl3_color_automorphism_theorem`
 - **auditor confidence:** high
 
 ### `cl4c_carrier_axiom_consequence_map_note_2026-04-28`

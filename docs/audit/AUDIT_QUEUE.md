@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 1172
-**Ready (all deps already at retained-grade or metadata tiers):** 109
+**Total pending:** 1171
+**Ready (all deps already at retained-grade or metadata tiers):** 108
 
 By criticality:
-- `critical`: 715
+- `critical`: 714
 - `high`: 27
 - `medium`: 152
 - `leaf`: 278
@@ -19,52 +19,52 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 2 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 393 | 11.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 3 | `bell_inequality_derived_note` | bounded_theorem | unaudited | critical | 375 | 11.55 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bell_inequality.py` |
 | 4 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 352 | 9.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_blended_readout_boundary_probe.py` |
-| 5 | `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 352 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/cl3_quark_antiquark_color_singlet_check.py` |
-| 6 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | unaudited | critical | 352 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_3d_self_gravity_sign.py` |
-| 7 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | unaudited | critical | 351 | 12.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py` |
-| 8 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | unaudited | critical | 351 | 10.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_circulant_character_bridge_narrow.py` |
-| 9 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | unaudited | critical | 351 | 10.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
-| 10 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | unaudited | critical | 351 | 9.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py` |
-| 11 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | unaudited | critical | 351 | 9.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py` |
-| 12 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_circulant_parity_cp_tensor_narrow.py` |
-| 13 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_abcc_signature_forcing_theorem.py` |
-| 14 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_triplet_even_response_theorem.py` |
-| 15 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_pmns_asymptotic_source_no_go_2026_04_20.py` |
-| 16 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py` |
-| 17 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_a1_quartic_potential_derivation.py` |
-| 18 | `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_gamma_orbit_cyclic_return_candidate.py` |
-| 19 | `wave_static_boundary_sensitivity_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_boundary_sensitivity.py` |
-| 20 | `wave_static_direct_probe_fine_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_direct_probe.py` |
-| 21 | `wave_static_fixed_beam_boundary_sensitivity_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_fixed_beam_boundary_sensitivity.py` |
-| 22 | `wave_static_matrixfree_fixed_beam_boundary_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_matrixfree_fixed_beam_boundary.py` |
-| 23 | `wave_static_single_source_compare_note` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_single_source_compare.py` |
-| 24 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | unaudited | critical | 350 | 14.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_mass_reduction_to_dirac.py` |
-| 25 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 706 | 16.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
-| 26 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 702 | 11.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
-| 27 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 700 | 27.45 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
-| 28 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 697 | 23.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
-| 29 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 697 | 10.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
-| 30 | `cpt_exact_note` | positive_theorem | unaudited | critical | 695 | 21.44 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
-| 31 | `universal_gr_positive_background_local_closure_note` | bounded_theorem | unaudited | critical | 692 | 13.94 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
-| 32 | `s3_taste_cube_decomposition_note` | bounded_theorem | unaudited | critical | 690 | 15.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
-| 33 | `universal_qg_projective_schur_closure_note` | positive_theorem | unaudited | critical | 690 | 14.43 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 34 | `hopping_bilinear_hermiticity_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 690 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/hopping_bilinear_hermiticity_check.py` |
-| 35 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 690 | 9.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
-| 36 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 689 | 18.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
-| 37 | `universal_qg_uv_finite_partition_note` | positive_theorem | unaudited | critical | 689 | 15.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 38 | `poisson_exhaustive_uniqueness_note` | bounded_theorem | unaudited | critical | 689 | 13.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
-| 39 | `microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 689 | 11.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/microcausality_finite_range_h_bridge_2026_05_09.py` |
-| 40 | `universal_qg_canonical_refinement_net_note` | positive_theorem | unaudited | critical | 688 | 17.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 41 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 688 | 16.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 42 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 688 | 14.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
-| 43 | `bh_entropy_rt_ratio_widom_no_go_note` | no_go | unaudited | critical | 688 | 13.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_rt_ratio_widom.py` |
-| 44 | `bh_entropy_derived_note` | bounded_theorem | unaudited | critical | 688 | 13.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_derived.py` |
-| 45 | `light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09` | bounded_theorem | unaudited | critical | 688 | 9.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_crank_nicolson_lr_2026_05_09.py` |
-| 46 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 687 | 18.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
-| 47 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 687 | 15.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
-| 48 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | unaudited | critical | 687 | 14.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 49 | `light_cone_framing_note` | positive_theorem | unaudited | critical | 687 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_staggered_dispersion.py` |
-| 50 | `universal_gr_positive_background_extension_note` | positive_theorem | unaudited | critical | 687 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
+| 5 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | unaudited | critical | 352 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_3d_self_gravity_sign.py` |
+| 6 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | unaudited | critical | 351 | 12.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py` |
+| 7 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | unaudited | critical | 351 | 10.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_circulant_character_bridge_narrow.py` |
+| 8 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | unaudited | critical | 351 | 10.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
+| 9 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | unaudited | critical | 351 | 9.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py` |
+| 10 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20` | bounded_theorem | unaudited | critical | 351 | 9.46 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gauge_vacuum_plaquette_doublet_dense_root_count_certificate_2026_05_03.py` |
+| 11 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_circulant_parity_cp_tensor_narrow.py` |
+| 12 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_abcc_signature_forcing_theorem.py` |
+| 13 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_triplet_even_response_theorem.py` |
+| 14 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_pmns_asymptotic_source_no_go_2026_04_20.py` |
+| 15 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_strong_cp_gamma_transfer_nogo.py` |
+| 16 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_a1_quartic_potential_derivation.py` |
+| 17 | `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_gamma_orbit_cyclic_return_candidate.py` |
+| 18 | `wave_static_boundary_sensitivity_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_boundary_sensitivity.py` |
+| 19 | `wave_static_direct_probe_fine_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_direct_probe.py` |
+| 20 | `wave_static_fixed_beam_boundary_sensitivity_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_fixed_beam_boundary_sensitivity.py` |
+| 21 | `wave_static_matrixfree_fixed_beam_boundary_note` | positive_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_matrixfree_fixed_beam_boundary.py` |
+| 22 | `wave_static_single_source_compare_note` | bounded_theorem | unaudited | critical | 351 | 8.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/wave_static_single_source_compare.py` |
+| 23 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | unaudited | critical | 350 | 14.96 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_neutrino_mass_reduction_to_dirac.py` |
+| 24 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 706 | 16.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
+| 25 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 702 | 11.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
+| 26 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 700 | 27.45 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 27 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 697 | 23.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
+| 28 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 697 | 10.95 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
+| 29 | `cpt_exact_note` | positive_theorem | unaudited | critical | 695 | 21.44 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
+| 30 | `universal_gr_positive_background_local_closure_note` | bounded_theorem | unaudited | critical | 692 | 13.94 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
+| 31 | `s3_taste_cube_decomposition_note` | bounded_theorem | unaudited | critical | 690 | 15.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
+| 32 | `universal_qg_projective_schur_closure_note` | positive_theorem | unaudited | critical | 690 | 14.43 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 33 | `hopping_bilinear_hermiticity_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 690 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/hopping_bilinear_hermiticity_check.py` |
+| 34 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 690 | 9.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
+| 35 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 689 | 18.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
+| 36 | `universal_qg_uv_finite_partition_note` | positive_theorem | unaudited | critical | 689 | 15.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 37 | `poisson_exhaustive_uniqueness_note` | bounded_theorem | unaudited | critical | 689 | 13.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_poisson_exhaustive_uniqueness.py` |
+| 38 | `microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 689 | 11.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/microcausality_finite_range_h_bridge_2026_05_09.py` |
+| 39 | `universal_qg_canonical_refinement_net_note` | positive_theorem | unaudited | critical | 688 | 17.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 40 | `gravity_clean_derivation_note` | bounded_theorem | unaudited | critical | 688 | 16.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 41 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 688 | 14.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
+| 42 | `bh_entropy_rt_ratio_widom_no_go_note` | no_go | unaudited | critical | 688 | 13.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_rt_ratio_widom.py` |
+| 43 | `bh_entropy_derived_note` | bounded_theorem | unaudited | critical | 688 | 13.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bh_entropy_derived.py` |
+| 44 | `light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09` | bounded_theorem | unaudited | critical | 688 | 9.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_crank_nicolson_lr_2026_05_09.py` |
+| 45 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 687 | 18.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
+| 46 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 687 | 15.43 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
+| 47 | `universal_qg_inverse_limit_closure_note` | bounded_theorem | unaudited | critical | 687 | 14.93 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 48 | `light_cone_framing_note` | positive_theorem | unaudited | critical | 687 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_staggered_dispersion.py` |
+| 49 | `universal_gr_positive_background_extension_note` | positive_theorem | unaudited | critical | 687 | 10.93 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/universal_gr_positive_background_local_closure.py` |
+| 50 | `s3_time_theta_to_slice_coupling_note` | open_gate | unaudited | critical | 687 | 10.43 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 
 ## Citation cycle break targets
 
