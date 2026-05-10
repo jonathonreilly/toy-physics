@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1129 |
+| unaudited | 1128 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 238 |
+| ~~audited_conditional~~ | 239 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 238 |
+| `audited_conditional` | 239 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1196 |
+| `unaudited` | 1195 |
 
 | claim_type | count |
 |---|---:|
@@ -666,6 +666,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `retarded_field_delay_proxy_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -7393,6 +7394,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** rho_E = 0 and rho_E = 21/4 produce the same exact shell coupling but different exact center couplings on the same slice backbone, so the unresolved readout map blocks a unique Theta_R -> Lambda_R time-coupling theorem.  _(class `A`)_
 - **chain closes:** True — The bounded claim closes: the source note does not claim a unique time-coupling law, only a conditional family plus an obstruction. The one-hop readout note supplies the reduced P(rho_E) family, and the runner verifies that two admissible choices agree on shell coupling but differ on center coupling while the slice factor is exact and nonzero.
 - **rationale:** The load-bearing step is an algebraic obstruction over the supplied readout family and computed slice backbone, not a tuned comparator or a renaming of the target quantity. The runner does not establish the missing unique readout theorem; instead it checks the bounded statement the note actually makes: conditional exactness once P_R is supplied and non-uniqueness when the readout entry remains unresolved. Because the audited scope is explicitly bounded away from a unique Theta_R -> Lambda_R theorem, the hostile review objection becomes the note's stated obstruction rather than a closure failure.
+- **auditor confidence:** high
+
+### `quark_route2_source_domain_bridge_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the no-go that, given the enumerated typed-edge inventory, current Route-2 plus SU(3) support has no typed path from R_conn to the Route-2 center T/E ratio, while adding that bridge algebraically forces rho_E = 21/4.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1218-e33a-7a12-bcd1-c4c03278145c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** There is no current typed edge R_conn = 8/9 -> c_TE = gamma_T(center)/gamma_E(center) = -8/9.  _(class `A`)_
+- **chain closes:** False — The graph no-path and downstream arithmetic close only relative to the asserted finite typed-edge inventory. With no one-hop authorities supplied, the restricted packet cannot verify that this inventory is complete for the current support bank.
+- **rationale:** Issue: the source note relies on named Route-2/R_conn authorities and a complete current-bank typed-edge inventory, but the audit ledger supplies no one-hop authorities and the runner hard-codes CURRENT_TYPED_EDGES rather than deriving the inventory. Why this blocks: absence of a path proves the no-go only if the inventory is complete. Repair target: wire the named source notes as direct dependencies and audit a complete typed-edge inventory or runner that constructs it. Claim boundary until fixed: the conditional algebra bridge -> rho_E = 21/4 and the no-path result for the hard-coded graph remain valid.
 - **auditor confidence:** high
 
 ### `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28`
