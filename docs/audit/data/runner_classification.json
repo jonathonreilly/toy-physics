@@ -20256,6 +20256,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py"
     },
+    "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10": {
+      "assert_count": 4,
+      "counts": {
+        "A": 23,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_z3_character_isomorphism_color_generation.py"
+    },
     "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -39134,6 +39146,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_z3_character_isomorphism_color_generation.py": {
+      "assert_count": 4,
+      "claims": [
+        "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 23,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_z3_conjugate_support_trichotomy_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -43858,15 +43885,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 161,
+    "decoration_candidates": 162,
     "dominant_class_distribution": {
-      "A": 111,
+      "A": 112,
       "B": 160,
       "C": 645,
       "D": 242,
       "none": 406
     },
-    "runners_classified": 1564,
+    "runners_classified": 1565,
     "runners_with_C": 810,
     "runners_with_D": 434
   }

@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/frontier_z3_character_isomorphism_color_generation.py
+runner_sha256: 3a144abf8898ac2c877d078f72017ba56132743d299ffe9372fbe04dcb0c9186
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+==============================================================================
+Z_3 CHARACTER-ISOMORPHISM OPEN-GATE DIAGNOSTIC
+==============================================================================
+
+This verifies finite Z_3 representation algebra only.
+It does not derive a physical color/generation bridge.
+
+==============================================================================
+PART 1: ORDER-THREE PERMUTATION GENERATOR
+==============================================================================
+  P = [[0, 0, 1], [1, 0, 0], [0, 1, 0]]
+  [PASS] P has determinant 1  (det(P) = 1)
+  [PASS] P is orthogonal  (P P^T = I_3)
+  [PASS] P^3 = I_3  (order divides three)
+  [PASS] P is not the identity  (nontrivial cycle)
+
+==============================================================================
+PART 2: EIGENVALUES ARE CUBE ROOTS OF UNITY
+==============================================================================
+  [PASS] Characteristic polynomial is x^3 - 1  (char_poly = x**3 - 1)
+  [PASS] Eigenvalue 1 satisfies lambda^3 = 1  (lambda^3 = 1)
+  [PASS] Eigenvalue -1/2 - sqrt(3)*I/2 satisfies lambda^3 = 1  (lambda^3 = 1)
+  [PASS] Eigenvalue -1/2 + sqrt(3)*I/2 satisfies lambda^3 = 1  (lambda^3 = 1)
+  [PASS] Numerical eigenvalue sum is zero  (sum = 0.000000+0.000000j)
+
+==============================================================================
+PART 3: COMMON IMPOSED PERMUTATION ACTION
+==============================================================================
+  chi_label: e=3, c=0, c^2=0
+  [PASS] Permutation label character is (3, 0, 0)  ({'e': 3, 'c': 0, 'c^2': 0})
+  [PASS] Two spaces with the same imposed cycle have equal characters  (both use the same permutation matrix P)
+
+==============================================================================
+PART 4: REGULAR Z_3 DECOMPOSITION
+==============================================================================
+  [PASS] chi_0 has unit character norm  (norm = 1)
+  [PASS] chi_omega has unit character norm  (norm = 1)
+  [PASS] chi_omega^2 has unit character norm  (norm = 1)
+  [PASS] Regular label representation contains chi_0 once  (multiplicity = 1)
+  [PASS] Regular label representation contains chi_omega once  (multiplicity = 1)
+  [PASS] Regular label representation contains chi_omega^2 once  (multiplicity = 1)
+  [PASS] All three irreducibles occur with multiplicity one  ({'chi_0': '1', 'chi_omega': '1', 'chi_omega^2': '1'})
+
+==============================================================================
+PART 5: SU(3)_c CENTER Z_3 IS NOT THE REGULAR-LABEL BRIDGE
+==============================================================================
+  regular label character: (3, 0, 0)
+  center color character:  (3, 3*exp(2*I*pi/3), 3*exp(-2*I*pi/3))
+  [PASS] Center generator trace is nonzero  (trace(z) = 3*exp(2*I*pi/3))
+  [PASS] Permutation generator trace is zero  (trace(c) = 0)
+  [PASS] Center character differs from regular permutation character  (center=(3, 3 omega, 3 omega^2), regular=(3, 0, 0))
+  [PASS] Center character is three copies of one nontrivial scalar character  (not chi_0 + chi_omega + chi_omega^2)
+
+==============================================================================
+SUMMARY CLASS-A ASSERTIONS
+==============================================================================
+  [PASS] P^3 = I verified
+  [PASS] regular permutation character is (3, 0, 0)
+  [PASS] SU(3)_c center character is not the regular character
+
+==============================================================================
+Z_3 CHARACTER OPEN-GATE DIAGNOSTIC: PASS=22 FAIL=0
+==============================================================================
+
+----- stderr -----
+

@@ -22673,6 +22673,18 @@
       "to": "graph_first_su3_integration_note"
     },
     {
+      "from": "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10",
+      "to": "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10",
+      "to": "cl3_taste_generation_theorem"
+    },
+    {
+      "from": "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
       "from": "ai_methodology.canonical_framing_paragraph_2026-04-25",
       "to": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25"
     },
@@ -65275,6 +65287,21 @@
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note"
     },
+    "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10": {
+      "claim_id": "z3_character_isomorphism_color_generation_open_gate_note_2026-05-10",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25",
+        "cl3_taste_generation_theorem",
+        "yt_ward_identity_derivation_theorem"
+      ],
+      "note_hash": "ef561abe54b0f8bdbb640fd2f05602f439b6b8de514f3d08fa4c409cdee894f1",
+      "path": "docs/Z3_CHARACTER_ISOMORPHISM_COLOR_GENERATION_OPEN_GATE_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_z3_character_isomorphism_color_generation.py",
+      "title": "Z_3 Character-Isomorphism Open Gate for Color and Generation Labels"
+    },
     "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
       "claim_id": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -66065,7 +66092,7 @@
       "meta": 59,
       "no_go": 19,
       "none": 1626,
-      "open_gate": 24,
+      "open_gate": 25,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -66074,13 +66101,13 @@
       "meta": 59,
       "no_go": 126,
       "none": 449,
-      "open_gate": 112,
+      "open_gate": 113,
       "positive_theorem": 592
     },
-    "edge_count": 8264,
-    "leaf_count": 533,
-    "node_count": 2061,
+    "edge_count": 8267,
+    "leaf_count": 534,
+    "node_count": 2062,
     "root_count": 768,
-    "runners_with_path": 1676
+    "runners_with_path": 1677
   }
 }
