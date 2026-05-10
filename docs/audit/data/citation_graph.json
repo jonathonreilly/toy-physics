@@ -19381,6 +19381,18 @@
       "to": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
     },
     {
+      "from": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note"
+    },
+    {
+      "from": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note"
+    },
+    {
+      "from": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
       "from": "su3_cube_full_rho_perron_2026-05-04",
       "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
     },
@@ -60639,6 +60651,21 @@
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
     },
+    "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10": {
+      "claim_id": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "eaaf10d63faff9c826a24ca73f9bd829709a0dd1a649cc9c32978bb7193faf07",
+      "path": "docs/SU3_CHARACTER_DIAGONAL_CONVOLUTION_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py",
+      "title": "SU(3) Character Diagonal Convolution Equivalence Narrow Theorem"
+    },
     "su3_cube_full_rho_perron_2026-05-04": {
       "claim_id": "su3_cube_full_rho_perron_2026-05-04",
       "claim_type_author_hint": "bounded_theorem",
@@ -66379,7 +66406,7 @@
       "no_go": 19,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66388,12 +66415,12 @@
       "no_go": 126,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
-    "edge_count": 8305,
-    "leaf_count": 535,
-    "node_count": 2070,
+    "edge_count": 8308,
+    "leaf_count": 536,
+    "node_count": 2071,
     "root_count": 768,
-    "runners_with_path": 1685
+    "runners_with_path": 1686
   }
 }

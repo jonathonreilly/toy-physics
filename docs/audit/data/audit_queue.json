@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 26,
-    "leaf": 222,
+    "leaf": 223,
     "medium": 150
   },
   "cycle_break_target_count": 305,
@@ -36720,6 +36720,31 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
+        "gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note",
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SU3_CHARACTER_DIAGONAL_CONVOLUTION_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
       "claim_scope": null,
       "claim_type": "open_gate",
@@ -37388,5 +37413,5 @@
     }
   ],
   "ready_count": 6,
-  "total_pending": 1093
+  "total_pending": 1094
 }
