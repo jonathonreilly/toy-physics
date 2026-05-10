@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `shapiro_static_discriminator_note` | positive_theorem | unaudited | critical | 306 | 10.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/shapiro_static_discriminator.py` |
+| 1 | `shapiro_static_discriminator_note` | no_go | audit_in_progress | critical | 306 | 10.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/shapiro_static_discriminator.py` |
 | 2 | `complex_action_note` | bounded_theorem | unaudited | critical | 304 | 11.25 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_harness.py` |
 | 3 | `gravitomagnetic_note` | positive_theorem | unaudited | critical | 304 | 9.25 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gravitomagnetic_portable.py` |
 | 4 | `bell_inequality_derived_note` | bounded_theorem | unaudited | critical | 303 | 11.25 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_bell_inequality.py` |
