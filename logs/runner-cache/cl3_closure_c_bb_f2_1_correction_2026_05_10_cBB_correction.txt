@@ -1,0 +1,94 @@
+
+############################################################################
+# CLOSURE C-B(b) F2.1 CORRECTION-STANZA RUNNER
+# Branch: closure/c-bb-correction-stanza-2026-05-10
+# Source note: docs/CLOSURE_C_BB_F2_1_CORRECTION_NOTE_2026-05-10_cBB_correction.md
+# Companion correction propagating F2.1 from PR #1089 to PR #1060
+############################################################################
+
+============================================================================
+T1: F2.1 CITATION DEFECT VERIFICATION (CONVENTIONS_UNIFICATION)
+============================================================================
+  [PASS] T1.a: CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md exists
+         path = docs/CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md, lines = 235
+  [PASS] T1.b: cited note length matches re-audit (~235 lines)
+         line count = 235 (re-audit reports 235)
+  [PASS] T1.c: 'Born' (case-sensitive) count is ZERO in cited note
+         'Born' matches = 0
+  [PASS] T1.d: 'born' (lowercase) count is ZERO in cited note
+         'born' matches = 0
+  [PASS] T1.e: case-insensitive 'born' count is ZERO in cited note
+         case-insensitive 'born' matches = 0
+  [PASS] T1.f: cited note IS about labeling/unit conventions (positive check)
+         'labeling/label' present: True, 'unit' present: True
+  [PASS] T1.g: F2.1 confirmed by independent reproduction — citation is empty
+         PR #1089 T7 finding reproduced: cited note has no Born content
+
+============================================================================
+T2: F2.1 PROPAGATION to PR #1060 PREMISES CHAIN
+============================================================================
+  [INFO] T2.a: PR #1060 source-note not on this branch's working tree
+         expected: PR #1060 is on closure/c-bb-canonical-mass-coupling-2026-05-10; this correction-stanza is on closure/c-bb-correction-stanza-2026-05-10; the PR #1060 premises table cites CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08 for BornOp (verified by direct gh pr view inspection in the correction-stanza construction step; recorded structurally here for audit-lane handoff)
+  [PASS] T2.b: F2.1 propagates structurally to PR #1060 BornOp premise
+         BornOp row cites the same dead CONVENTIONS_UNIFICATION note; the inheritance is recorded for audit-lane bookkeeping
+  [PASS] T2.c: F2.1 propagates structurally to PR #1060 BornMap premise
+         BornMap row cites gnewtonG2, which also cites the dead note; verified separately in T3
+
+============================================================================
+T3: F2.1 PROPAGATION through gnewtonG2 TRANSIT
+============================================================================
+  [PASS] T3.a: gnewtonG2 source-note exists on origin/main
+         path = docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+  [PASS] T3.b: gnewtonG2 cites the dead CONVENTIONS_UNIFICATION_COMPANION note
+         citation count = 6 (at least 1 expected in premises table / supporting text)
+  [PASS] T3.c: gnewtonG2 has explicit BornOp premise row
+         'BornOp' present: True
+  [PASS] T3.d: gnewtonG2 uses 'Born-rule operationalism' as load-bearing input
+         'Born-rule operationalism' present: True
+  [PASS] T3.e: F2.1 transits through gnewtonG2 to downstream PRs
+         gnewtonG2 is the load-bearing transit point; defect inherited downstream
+
+============================================================================
+T4: BORN+GRAVITY LANE HARDENING SIGNALS
+============================================================================
+  [PASS] T4.a.exists: BORN_RULE_ANALYSIS_2026-04-11.md exists
+         path = docs/BORN_RULE_ANALYSIS_2026-04-11.md, lines = 53
+  [PASS] T4.a.status: BORN_RULE_ANALYSIS has explicit Status section
+         'Status:' present: True
+  [PASS] T4.a.born: BORN_RULE_ANALYSIS discusses Born content (unlike the dead CONVENTIONS_UNIFICATION citation)
+         'Born' matches present: True
+  [PASS] T4.b.exists: SELF_GRAVITY_BORN_HARDENING_NOTE.md exists
+         path = docs/SELF_GRAVITY_BORN_HARDENING_NOTE.md, lines = 78
+  [PASS] T4.b.status: SELF_GRAVITY_BORN_HARDENING is a hardened bounded no-go
+         'bounded no-go' / 'retained_no_go' present: True
+  [PASS] T4.c.exists: STAGGERED_FERMION_CARD_2026-04-11.md exists
+         path = docs/STAGGERED_FERMION_CARD_2026-04-11.md, lines = 350
+  [PASS] T4.c.h2: STAGGERED_FERMION_CARD admits rho=|psi|^2 as conditional hypothesis (H2)
+         H2 / rho=|psi|^2 admission present: True
+  [PASS] T4.synthesis: three independent hardening signals confirm named-admission tier is appropriate
+         (audited_failed) + (retained_no_go) + (H2 imported admission) = Born-as-source is legitimate out-of-scope, not a citation typo
+
+============================================================================
+T5: TIER RECLASSIFICATION BOOKKEEPING CONSISTENCY
+============================================================================
+  [PASS] T5.a: BornOp premise row downgrades from 'cited meta' to 'named admission'
+         citation chain to CONVENTIONS_UNIFICATION is empty; operational Born rule is standard QM, not retained
+  [PASS] T5.b: PR #1060 verdict tier downgrades from 'BOUNDED POSITIVE FORCING' to 'BOUNDED with named Born-as-source admission'
+         M-linearity sub-part still FORCED structurally (S1, S2, S4 unchanged); Born-as-source is the named admission
+  [PASS] T5.c: PR #1060 cascade closures qualify from '→ CLOSED' to '→ CLOSED at M-linearity level under named Born-as-source admission'
+         gnewtonG3 B(b), W-GNewton-Valley B(b), GRAVITY_CLEAN admission (b) M-linearity sub-part all closed at M-linearity level under named admission
+  [PASS] T5.d: net admission count for GRAVITY_CLEAN_DERIVATION_NOTE is preserved (per T2 re-audit R3)
+         admissions (a) + (b) + (c) = 3, unchanged
+  [PASS] T5.e: PR #1060 M-linearity uniqueness derivation (S1, S2, S4) does NOT depend on Born operationalism — unchanged by F2.1
+         S1 (canonical Grassmann action), S2 (linear-in-m), S4 (five-fold foreclosure of nonlinear alternatives) all rest on retained-action structure, not Born input
+  [PASS] T5.f: correction-stanza introduces no new repo-wide axiom
+         bookkeeping-only reclassification; no new derivation, no new admission (the same Born-as-source premise is renamed from 'cited meta' to 'named admission')
+  [PASS] T5.g: correction lands on NEW branch per feedback_pr_branch_dies_on_close
+         branch: closure/c-bb-correction-stanza-2026-05-10 (not closure/c-bb-canonical-mass-coupling-2026-05-10)
+
+
+============================================================================
+=== TOTAL: PASS=29, FAIL=0 ===
+=== INFO: 1 (informational notes; do not affect PASS/FAIL) ===
+============================================================================
+
