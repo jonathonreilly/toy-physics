@@ -20418,6 +20418,10 @@
     },
     {
       "from": "vacuum_critical_stability_note",
+      "to": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03"
+    },
+    {
+      "from": "vacuum_critical_stability_note",
       "to": "higgs_vacuum_explicit_systematic_note"
     },
     {
@@ -45271,9 +45275,9 @@
     },
     "higgs_mass_derived_note": {
       "claim_id": "higgs_mass_derived_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "taste_scalar_isotropy_theorem_note",
         "higgs_mechanism_note",
@@ -45292,7 +45296,7 @@
         "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
         "assumption_derivation_ledger"
       ],
-      "note_hash": "4bcfce2311ea5ce534b1a1601cc2b2625f3416db30f42cfb2c87bb781cdb6c80",
+      "note_hash": "010012913656cf4f815c05a5e43cf0ec4bbaaf9424552925ab091259876ecbec",
       "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Higgs Mass: Canonical Authority Boundary"
@@ -45410,11 +45414,11 @@
     },
     "higgs_mechanism_note": {
       "claim_id": "higgs_mechanism_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "257eff7c125c4c51b2a40dda438f965c7fb35ccce1272fe7c5d1723c1f1a5082",
+      "note_hash": "96dbef0e1393b125a740351ff614182a428b6155d272e64d847913d1226c8585",
       "path": "docs/HIGGS_MECHANISM_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs Mechanism Note"
@@ -61924,15 +61928,16 @@
     },
     "vacuum_critical_stability_note": {
       "claim_id": "vacuum_critical_stability_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
+        "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
         "higgs_vacuum_explicit_systematic_note",
         "higgs_mass_derived_note",
         "yt_color_projection_correction_note"
       ],
-      "note_hash": "5c6b6c4ef9b7d7a0e2750b2c5fa239729b3dd17baedafad13a26b991749fed79",
+      "note_hash": "58b7ea1ce1fbc103bdeee9b54e9570a2db6182a31cb3137b00dcfe19cb6e4f22",
       "path": "docs/VACUUM_CRITICAL_STABILITY_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Vacuum Critical Stability Companion"
@@ -65470,24 +65475,24 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 228,
+      "bounded_theorem": 231,
       "decoration": 1,
       "meta": 59,
       "no_go": 15,
-      "none": 1629,
+      "none": 1626,
       "open_gate": 19,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 711,
+      "bounded_theorem": 713,
       "decoration": 1,
       "meta": 59,
       "no_go": 122,
-      "none": 450,
+      "none": 449,
       "open_gate": 107,
-      "positive_theorem": 591
+      "positive_theorem": 590
     },
-    "edge_count": 8194,
+    "edge_count": 8195,
     "leaf_count": 529,
     "node_count": 2041,
     "root_count": 762,

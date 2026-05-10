@@ -2627,7 +2627,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "higgs_mass_derived_note",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
@@ -2681,7 +2681,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "higgs_mass_derived_note",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",
@@ -2748,7 +2748,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "higgs_mass_derived_note",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
           "title": "Higgs Mass: Canonical Authority Boundary",

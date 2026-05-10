@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 230 |
+| **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1129 |
+| unaudited | 1130 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 383 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 219 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1227 |
+| `unaudited` | 1228 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 777 |
+| `bounded_theorem` | 778 |
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 193 |
 | `open_gate` | 99 |
-| `positive_theorem` | 747 |
+| `positive_theorem` | 746 |
 
 | criticality | count |
 |---|---:|
@@ -250,7 +250,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
-| `higgs_mechanism_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
@@ -4924,19 +4923,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current Higgs runner shows that the framework has nontrivial quantitative Higgs behavior once the lattice Coleman-Weinberg mechanism is active.  _(class `C`)_
 - **chain closes:** True — For this bounded scope, the note does not claim an exact Higgs-mass derivation; it claims only that the runner exhibits nontrivial CW Higgs behavior and supports bounded studies. The completed runner computes CW potential/SSB scans and ballpark mass-ratio behavior, while its failed exact-coupling/crossing checks are consistent with the note's explicit boundary.
 - **rationale:** The source note is narrowly scoped: it is a support note for bounded Higgs quantitative behavior and explicitly excludes standalone exact m_H authority. The runner is not clean for exact Higgs closure, but that is not the claim under audit; the two completed failures show missing exact coupling/crossing closure and reinforce the boundary. Within the bounded scope, the source note and completed runner evidence close without promoting an exact Higgs-mass derivation.
-- **auditor confidence:** high
-
-### `higgs_mechanism_note`
-
-- **Note:** [`HIGGS_MECHANISM_NOTE.md`](../../docs/HIGGS_MECHANISM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Mechanism-level Higgs support only: scalar order-parameter/EWSB surface, CW SSB for O(1) bounded-runner inputs, and lattice-cutoff naturalness; not exact m_H closure.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-agent-019e0255-b9e8-7463-80e4-396d6deb9160`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** lattice Coleman-Weinberg electroweak symmetry breaking occurs naturally for O(1) comparison inputs on the current bounded runner  _(class `C`)_
-- **chain closes:** True — For the bounded mechanism-level scope, the runner source constructs the lattice BZ Coleman-Weinberg potential, scans O(1) inputs, and the cached run passes CW-SSB and hierarchy checks. The nonzero exit is driven by broader exact-mass and coupling-running checks that the source note explicitly excludes.
-- **rationale:** The audited claim is restricted to mechanism-level support, not exact Higgs-mass prediction. The completed cached runner passes the load-bearing Part 1 checks: CW SSB occurs across the O(1) bare-mass scan and the lattice BG measure is O(1). The two substantive runner failures, alpha_s running and yt crossing, block exact first-principles m_H closure but do not contradict the note's explicit boundary.
 - **auditor confidence:** high
 
 ### `higher_order_structural_theorems_note`
