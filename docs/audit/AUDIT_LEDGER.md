@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1125 |
+| unaudited | 1124 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 21 |
-| ~~audited_conditional~~ | 242 |
+| ~~audited_conditional~~ | 243 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 242 |
+| `audited_conditional` | 243 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 21 |
-| `unaudited` | 1192 |
+| `unaudited` | 1191 |
 
 | claim_type | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_taste_generation_theorem` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `claude_complex_action_grown_companion_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
+| `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `continuum_bridge_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2037,6 +2038,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the spectral decomposition of T/M_T and Cauchy-Schwarz, the connected ground-state correlator is bounded by ||A|| ||B|| exp(-n Delta_T), with the thermal bound obtained by adding a 6 q_beta trace-distance correction.  _(class `A`)_
 - **chain closes:** True — Within the stated finite-block conditional scope, the proof reduces to spectral decomposition, Cauchy-Schwarz, and trace-distance control. It does not derive the transfer-matrix gap or spatial cluster decomposition, but those are explicitly outside the audited claim boundary.
 - **rationale:** The audited claim is only the bounded finite-dimensional implication from an assumed transfer-matrix gap to temporal decay, and that implication closes by standard spectral algebra. The runner constructs random positive Hermitian transfer matrices, checks the spectral identity, ground-state bound, thermal trace-distance bound, and a no-gap counterexample; it does not hard-code a disputed physical gap. The clean boundary is narrow: this does not prove Delta_T > 0 on A_min and does not prove spatial cluster decomposition.
+- **auditor confidence:** high
+
+### `complex_action_note`
+
+- **Note:** [`COMPLEX_ACTION_NOTE.md`](../../docs/COMPLEX_ACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional finite-lattice one-parameter complex-kernel ansatz for gamma-dependent absorption and centroid behavior, including gamma=0 reduction and sampled I3 cancellation, not physical horizon unification.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e121f-809f-7e42-bd6c-62fc2c559a82`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The action is S = L(1 - f) + i * gamma * L * f, giving a kernel exp(i*k*L*(1-f)) * exp(-k*gamma*L*f).  _(class `E`)_
+- **chain closes:** False — The restricted packet supports the internal conditional-kernel behavior in the listed finite setup. It does not derive gamma or a physical horizon observable bridge, and the current runner stdout does not reproduce the note's weak-field exponent table.
+- **rationale:** Issue: the load-bearing imaginary action term is an introduced free-gamma ansatz, and absorption-biased centroid/escape behavior is labeled horizon-like without a derived gamma or horizon-specific observable. Why this blocks: no cited authority derives the imaginary term from retained primitives, and the runner checks only finite model behavior with no photon-sphere, Schwarzschild, Hawking, causal-horizon, or external comparator test. Repair target: derive gamma or the imaginary action term and add deterministic horizon-observable plus resolution/geometry checks, with runner output matching the note's numerical claims. Claim boundary until fixed: a conditional one-parameter complex-kernel model where gamma=0 reduces to the real-action propagator, linearity keeps I3 near machine zero in sampled tests, and positive gamma produces absorption-biased escape/centroid behavior in the listed setup.
 - **auditor confidence:** high
 
 ### `continuum_bridge_note`

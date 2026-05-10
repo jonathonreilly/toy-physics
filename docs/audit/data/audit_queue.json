@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 692,
+    "critical": 691,
     "high": 23,
     "leaf": 266,
     "medium": 150
@@ -6057,27 +6057,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "complex_action_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.262,
-      "note_path": "docs/COMPLEX_ACTION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/complex_action_harness.py",
-      "transitive_descendants": 306
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -35934,6 +35913,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 115,
-  "total_pending": 1131
+  "ready_count": 114,
+  "total_pending": 1130
 }
