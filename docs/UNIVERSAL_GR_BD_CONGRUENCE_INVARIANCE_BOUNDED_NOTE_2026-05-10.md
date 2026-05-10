@@ -54,10 +54,10 @@ holds **exactly** as a matrix-algebra identity over `R`.
 ```text
 B_{D'} ( h', k' )
    =  - Tr ( ( S^T D S )^{-1} ( S^T h S ) ( S^T D S )^{-1} ( S^T k S ) )
-   =  - Tr ( S^{-1} D^{-1} ( S^T )^{-1} S^T h S · S^{-1} D^{-1} ( S^T )^{-1} S^T k S )
-   =  - Tr ( S^{-1} · D^{-1} h D^{-1} k · S )                  [`( S^T )^{-1} S^T = I`]
-   =  - Tr ( D^{-1} h D^{-1} k · S · S^{-1} )                  [cyclic Tr]
-   =  - Tr ( D^{-1} h D^{-1} k )
+   =  - Tr ( S^{-1} D^{-1} ( S^T )^{-1} · S^T h S · S^{-1} D^{-1} ( S^T )^{-1} · S^T k S )
+   =  - Tr ( S^{-1} · D^{-1} · h · S · S^{-1} · D^{-1} · k · S )    [( S^T )^{-1} S^T = I]
+   =  - Tr ( S^{-1} · D^{-1} h D^{-1} k · S )                  [S · S^{-1} = I]
+   =  - Tr ( D^{-1} h D^{-1} k )                               [cyclic Tr: move S past]
    =  B_D ( h, k ).                                                       (4)
 ```
 
@@ -118,10 +118,17 @@ matrices, the congruence-transformed `h', k'` also satisfy `B_{D'}(h',
 k') = B_D(h, k)`. Confirms the parent's `3 + 1` symmetric-coefficient
 use case.
 
-(E) **Failure mode under non-congruence**: replacing the congruence `D'
-= S^T D S` with a similarity `D' = S D S^{-1}` (different transformation)
-gives `B_{D'} ≠ B_D` in general. The runner verifies a sampled
-counterexample to confirm the identity is specific to congruence.
+(E) **Failure mode under partial transformation**: applying the
+congruence to `D` alone (`D' = S^T D S`) but leaving `h, k`
+untransformed gives `B_{D'}(h, k) ≠ B_D(h, k)` in general. The
+runner verifies a sampled counterexample with `|B_D(h,k) −
+B_{D'}(h,k)| ≫ 0` to confirm the identity requires the **full**
+congruence on all three matrices `D, h, k`, not just on `D`. (Note:
+applying a *consistent* similarity `D' = S D S^{-1}`, `h' = S h
+S^{-1}`, `k' = S k S^{-1}` actually does preserve `B_D` by cyclic
+Tr — that is a different, equally-trivial invariance, not a
+counterexample. The substantive failure mode is the partial
+transformation above.)
 
 (F) **Forbidden-import audit**: imports limited to `numpy` plus stdlib.
 
