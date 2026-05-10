@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `gate_b_poisson_self_gravity_note` | no_go | unaudited | critical | 639 | 11.32 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gate_b_poisson_self_gravity_probe.py` |
+| 1 | `gate_b_poisson_self_gravity_note` | no_go | audit_in_progress | critical | 639 | 11.32 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gate_b_poisson_self_gravity_probe.py` |
 | 2 | `gravity_full_self_consistency_note` | bounded_theorem | unaudited | critical | 637 | 11.82 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 3 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | unaudited | critical | 636 | 19.82 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `staggered_fermion_card_2026-04-11` | bounded_theorem | unaudited | critical | 636 | 11.31 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_17card.py` |
