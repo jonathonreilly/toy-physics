@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 123 |
+| **retained_no_go** | 124 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1107 |
+| unaudited | 1106 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 389 |
+| `audited_clean` | 390 |
 | `audited_conditional` | 235 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1205 |
+| `unaudited` | 1204 |
 
 | claim_type | count |
 |---|---:|
@@ -154,6 +154,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2400,6 +2401,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The chain does not close from the restricted packet because the scale matching that identifies the fixed spectral-gap radius with the cosmological de Sitter curvature radius is asserted, not derived. The note also explicitly leaves the matter-content bridge for Omega_m/Omega_Lambda open.
 - **rationale:** No cited authority or runner is provided, so the claimed same-surface identification cannot be verified as a retained first-principles derivation. The algebraic consequences for w = -1 and Omega_Lambda follow only after accepting the asserted de Sitter scale identification and the standard flatness/matter-content relation. The source note itself states that first-principles cosmological scale matching and the matter-content bridge remain unclosed.
 - **auditor confidence:** high
+
+### `coupled_field_generated_family_probe_note`
+
+- **Note:** [`COUPLED_FIELD_GENERATED_FAMILY_PROBE_NOTE.md`](../../docs/COUPLED_FIELD_GENERATED_FAMILY_PROBE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the specified source-driven coupled-field runner on the compact generated 3D DAG sample: 16 layers, 24 nodes/layer, four seeds, s in {1e-4,2e-4,4e-4,8e-4}, FIELD_DECAY=0.7, and the fixed gain calibration used by the script.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e134b-8ede-7412-bb17-ed56fda822be`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The coupled-field fitted strength exponent is -0.23, so the sampled source-driven field preserves sign and zero-source reduction but does not exhibit a clean linear mass-scaling law.  _(class `C`)_
+- **chain closes:** True — Within that finite scoped sweep, the runner source computes the instantaneous and source-driven fields, zero-source reduction, sign counts, mean shifts, and log-log exponents, and the stdout matches the source note. The result does not establish any broader no-go for other coupled-field architectures, families, gain rules, or source laws.
+- **rationale:** The note is clean only as a bounded computational no-go. The runner does not hard-code the reported table; it constructs the fields over the generated families and computes the reduction check, sign survival, and fitted exponents, with no cited upstream dependency needed for the stated finite result. The source note accurately reports the runner output and keeps the safe conclusion to exact zero-source reduction, sign survival on sampled rows, and failure of clean linear scaling for this minimal architecture. Residual risk is scope control: it must not be cited as excluding unsampled architectures, parameters, DAG families, or a separately derived physical mass observable.
+- **auditor confidence:** medium
 
 ### `critical_exponents_topology_note_2026-04-10`
 
