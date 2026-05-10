@@ -2088,6 +2088,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_ckm_consecutive_primes_s3_koide_bridge.py"
     },
+    "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_ckm_cp_phase_rho_eta_to_delta_narrow.py"
+    },
     "ckm_cp_phase_structural_identity_theorem_note_2026-04-24": {
       "assert_count": 1,
       "counts": {
@@ -25072,6 +25084,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_ckm_cp_phase_rho_eta_to_delta_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_ckm_cp_phase_structural_identity.py": {
       "assert_count": 1,
       "claims": [
@@ -44133,11 +44160,11 @@
       "A": 112,
       "B": 160,
       "C": 647,
-      "D": 249,
+      "D": 250,
       "none": 406
     },
-    "runners_classified": 1574,
+    "runners_classified": 1575,
     "runners_with_C": 812,
-    "runners_with_D": 441
+    "runners_with_D": 442
   }
 }

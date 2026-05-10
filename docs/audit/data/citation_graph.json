@@ -37527,6 +37527,17 @@
       "runner_path": "scripts/frontier_ckm_consecutive_primes_s3_koide_bridge.py",
       "title": "Consecutive Primes and S3 Representation Structure from CKM Counts: Koide-Bridge Support"
     },
+    "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "76bd62f90080bd5491beedb1db3e1c99c7341cb180ca88f35a4ac7e0e04b6d2a",
+      "path": "docs/CKM_CP_PHASE_RHO_ETA_TO_DELTA_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_ckm_cp_phase_rho_eta_to_delta_narrow.py",
+      "title": "CKM CP-Phase rho-eta to delta Narrow Theorem"
+    },
     "ckm_cp_phase_structural_identity_theorem_note_2026-04-24": {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -65774,6 +65785,7 @@
     "chiral_split_mass_gravity_note",
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+    "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "claude_branch_retainability_note",
@@ -66401,7 +66413,7 @@
       "no_go": 20,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66410,12 +66422,12 @@
       "no_go": 127,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8307,
-    "leaf_count": 536,
-    "node_count": 2071,
-    "root_count": 768,
-    "runners_with_path": 1686
+    "leaf_count": 537,
+    "node_count": 2072,
+    "root_count": 769,
+    "runners_with_path": 1687
   }
 }
