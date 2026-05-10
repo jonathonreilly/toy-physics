@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 236 |
 | open_gate | 12 |
-| unaudited | 1094 |
+| unaudited | 1093 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 246 |
+| ~~audited_conditional~~ | 247 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,20 +40,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 394 |
-| `audited_conditional` | 246 |
+| `audited_conditional` | 247 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1192 |
+| `unaudited` | 1191 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 808 |
+| `bounded_theorem` | 807 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
-| `open_gate` | 101 |
+| `open_gate` | 102 |
 | `positive_theorem` | 721 |
 
 | criticality | count |
@@ -604,6 +604,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3957,6 +3958,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** eta/eta_obs = (516 / 53009) * Y0^2 * F_CP * kappa_axiom / eta_obs  _(class `A`)_
 - **chain closes:** True — The source note states a bounded decomposition rather than a full structural derivation of every factor. The runner completed with PASS=38 FAIL=0 and verifies the ABC rational cancellation, exact product reconstruction, candidate near-fit mismatch, and explicit isolation of Y0^2 as phenomenological.
 - **rationale:** The audited bounded claim closes as an algebraic decomposition of the existing transport chain: ABC reduces exactly to 516/53009, the reconstructed product matches the runner's eta/eta_obs value, and the four named near-fit candidates are not exact framework forms. The clean verdict is limited to this bounded scope and does not promote Y0^2, PMNS-chart constants, or the ODE transport functional to first-principles retained derivations beyond the note's admitted residual boundary.
+- **auditor confidence:** high
+
+### `evolving_network_prototype_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Gate B prototype read: current evolving-network runner shows positive generated gap values but no clean generated-vs-imposed purity comparison, so the discriminator remains open.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1375-a903-7821-b812-0c7387757539`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The generated hard-gap rule produces measurable gap growth, but the imposed random removal baseline often disconnects the graph enough that the purity comparison becomes undefined.  _(class `A`)_
+- **chain closes:** False — The conservative open-gate conclusion is directionally supported by the stdout: imposed purity is NaN in every row and generated gaps are positive. The chain does not close cleanly because the note says the control is random removal while the runner implements an imposed geometric band control, and the core DAG/decoherence/pruning helpers are imported from an unsupplied script.
+- **rationale:** Issue: the source note, stdout READ text, and runner source disagree on whether the imposed control is random removal or a geometric band. Why this blocks: the load-bearing claim is about the fairness and failure mode of that control, so the audited packet cannot establish the stated random-control conclusion. Repair target: reconcile the note/stdout with the actual band-control runner or supply a matching random-control run, and include the imported helper source or an audited dependency for it. Claim boundary until fixed: this is only evidence that the current supplied prototype is not a decisive Gate B discriminator.
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_v2_note`
