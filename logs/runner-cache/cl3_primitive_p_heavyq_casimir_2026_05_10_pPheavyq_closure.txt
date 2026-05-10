@@ -1,0 +1,304 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_heavyq_casimir_2026_05_10_pPheavyq_closure.py
+runner_sha256: ccf6bd7742292fc7b6cd4d43a2d68f13048fc588591cc7760b54d915ef5a688d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+
+========================================================================
+P-HeavyQ Casimir Closure No-Go — Bounded Obstruction Runner
+========================================================================
+
+Framework Casimir context (cited, not re-ratified):
+  N_c = 3 (forced by Z^3 spatial dimension)
+  C_F = (N_c^2-1)/(2 N_c) = 4/3 = 1.3333
+  C_A = N_c = 3 = 3
+  T_F = 1/2 = 0.5
+  F_adj = (N_c^2-1)/N_c^2 = 8/9 = 0.8889
+  7/8 = R_lat(3) = eta(4)/zeta(4) = 0.8750
+  sqrt(2) = BAE-condition context = 1.414214
+  C_F^2 = 16/9 = 1.777778 (= 2 * F_adj = 1.777778)
+
+========================================================================
+D1: rho_up = 16/9 = 2 * F_adj = C_F^2
+========================================================================
+
+Setup:
+  rho_up (measured) = 1.7600
+  16/9 = C_F^2 = 1.777778
+  16/9 = 2 * F_adj = 1.777778
+  Numerical gap: 1.0101%
+
+Exercise (1): Elon first-principles minimum
+  16/9 admits three exact forms:
+    (a) C_F^2 = (4/3)^2 = 1.777778
+    (b) 2 * F_adj = 2 * 8/9 = 1.777778
+    (c) (N_c^2-1)^2 / (4 * N_c^2) = 1.777778
+  Both (a) and (b) are cited framework quantities:
+    (a) appears as the abelian-ladder coefficient in K_2 MSbar-to-pole
+        (per YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17)
+    (b) appears as twice the q-qbar adjoint dimension fraction
+        (per EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01)
+
+Exercise (2): Literature search summary (offline)
+  - Brannen-Rivero (hep-ph/0505220): no quark rho_up derivation.
+  - Koide (arXiv:1210.4125, 1301.4143): Z_3-symmetric parameterization,
+    no explicit rho_up = 16/9 derivation.
+  - Wikipedia Koide formula: Q_up ~ (2/3)*1.33 ~ 8/9; mapping to rho
+    gives rho_up^2 ~ 10/3, rho_up ~ 1.826 -- NOT 16/9 = 1.778.
+  - No published Koide-Casimir derivation matches the 16/9 candidate.
+
+Exercise (3): Mathematics search (density of Casimirs)
+  Strict Casimir basis size: 63 distinct values in [0.5, 5]
+  In [1.0, 2.0]: 22 values
+  Density baseline:
+    5% gate: 99.80% random hit rate
+    2% gate: 77.95% random hit rate
+    1% gate: 53.30% random hit rate
+  Closest in basis to rho_up = 1.76:
+    value = 1.76389, gap = 0.2210%
+    value = 1.75000, gap = 0.5682%
+    value = 1.77778, gap = 1.0101%
+    value = 1.83333, gap = 4.1666%
+    value = 1.88562, gap = 7.1374%
+
+Exercise (4): Alternative diagnostic restatement
+  Define K_q = rho_q^2 / 2 (doublet/trivial isotype ratio)
+  K_up (measured) = 1.5488
+  Candidate: K_up = 3/2 (gives rho_up = sqrt(3) = 1.7321)
+    Gap: 1.5880%
+  Candidate: K_up = C_F^2 / (something) -- no clean fit
+
+Exercise (5): Derivation status — NOT CLOSED
+
+Tests:
+  PASS  D1 T1: 16/9 = C_F^2 = 2*F_adj is an exact cited equality
+        detail: C_F^2 = 1.7777777777777777, 2*F_adj = 1.7777777777777777
+  PASS  D1 T2: rho_up matches 16/9 numerically within 2%
+        detail: gap = 1.0101%
+  PASS  D1 T3: 1% density baseline is >= 50% (Casimir match at 1% NOT structurally informative)
+        detail: 1% baseline = 53.30%
+
+  Action-level check: 16/9 = C_F^2 is the K_2 abelian-ladder color
+  tensor at 2-loop QCD. This does NOT appear in the Brannen circulant
+  H_q = aI + bC + b_bar C^2 on hw=1 = C^3 (generation triplet).
+  The numerical equality is CONVENTION-LEVEL, NOT ACTION-LEVEL.
+  PASS  D1 T4: action-level identification of 16/9 as rho_up is not established
+        detail: 16/9 as K_2 coefficient lives in 2-loop QCD action, not Brannen Hamiltonian
+
+========================================================================
+D2: rho_dn = (7/8) + sqrt(2)/2
+========================================================================
+
+Setup:
+  rho_dn (measured) = 1.5450
+  (7/8) + sqrt(2)/2 = 1.582107
+  Numerical gap: 2.4017%
+
+Exercise (1): Elon first-principles minimum
+  (7/8) + sqrt(2)/2 is a sum of a rational and an irrational.
+  Rational + irrational sums are typically character values of finite
+  group representations, or eigenvalues of specific direct-sum operators.
+  Component parts in existing framework context:
+    - 7/8 = R_lat(3) = eta(4)/zeta(4) (per HIERARCHY_SEVEN_EIGHTHS_
+      RIEMANN_DIRICHLET_DIMENSIONAL_ANCHOR_NARROW_THEOREM_NOTE_2026-05-10)
+    - sqrt(2)/2 = 1/sqrt(2) = BAE-half (|b|/a = 1/sqrt(2) under BAE)
+  The sum combines two distinct source-stack context elements;
+  no cited action gives this sum directly.
+
+Exercise (2): Literature search summary
+  - No published Koide-style derivation gives quark rho as
+    (7/8) + 1/sqrt(2) or any analogous sum.
+  - Wikipedia notes Q_down ~ (2/3)*1.06 ~ 0.707, giving
+    rho_dn^2 ~ 2.24, rho_dn ~ 1.497 -- slightly smaller than
+    the runner's rho_dn = 1.545 and the (7/8)+sqrt(2)/2 = 1.582.
+
+Exercise (3): Mathematics search (character-value, density)
+  Density baseline (same basis as D1):
+    5% gate: 99.80%
+    2% gate: 77.95%
+    1% gate: 53.30%
+  Closest in basis to rho_dn = 1.545:
+    value = 1.52381, gap = 1.3715%
+    value = 1.58579, gap = 2.6399%
+    value = 1.50000, gap = 2.9126%
+    value = 1.41421, gap = 8.4651%
+    value = 1.38889, gap = 10.1043%
+  Character-value search:
+    S_3: {1, -1, 2, 0} -- none match rho_dn
+    A_4: {1, -1, 3, omega, omega_bar} -- none match
+    A_5: includes (1+sqrt(5))/2 = 1.618 -- close but not equal
+
+Exercise (4): Alternative diagnostic restatement
+  K_dn (measured) = 1.1935
+  Candidate: K_dn = 7/6 (gives rho_dn = sqrt(7/3) = 1.5275)
+    Gap: 1.1311%
+  Note: K_dn = 7/6 = (C_F + 1)/2, i.e., rho_dn^2 = C_F + 1 = 7/3.
+  Cleaner than (7/8)+sqrt(2)/2 algebraically.
+
+Exercise (5): Derivation status — NOT CLOSED
+
+Tests:
+  PASS  D2 T1: (7/8) + sqrt(2)/2 components are cited existing context
+        detail: 7/8 cited via Riemann-Dirichlet anchor; sqrt(2)/2 from BAE context
+  PASS  D2 T2: rho_dn matches (7/8)+sqrt(2)/2 within 5% but not 1%
+        detail: gap = 2.4017%
+  PASS  D2 T3: 2% density baseline >= 50% (rho_dn match at 2.40% NOT informative)
+        detail: 2% baseline = 77.95%
+  PASS  D2 T4: alternative diagnostic form sqrt(7/3) gives tighter gap than (7/8)+sqrt(2)/2
+        detail: sqrt(7/3) gap = 1.1311%, (7/8)+sqrt(2)/2 gap = 2.4017%
+  PASS  D2 T5: no action-level mechanism for (7/8)+sqrt(2)/2 as Brannen amplitude ratio
+        detail: Riemann-Dirichlet 7/8 in EW hierarchy is at scale-fourth-root, not first power
+
+========================================================================
+D3: rho_lep = sqrt(2)
+========================================================================
+
+Setup:
+  rho_lep (measured) = 1.4150
+  sqrt(2) = 1.414214
+  Numerical gap: 0.0556%
+
+Exercise (1): Elon first-principles minimum
+  sqrt(2) = BAE-condition: 2|b|/a = sqrt(2), |b|^2 = a^2/2.
+  Equivalent to F1 = (mu, nu) = (1, 1) multiplicity weighting on
+  C_3-isotype decomposition of Herm_circ(3).
+  Literal minimum: C_3 isotype decomposition AND a multiplicity-counting
+  principle giving (1, 1) weights.
+
+Exercise (2): Literature search summary
+  - Brannen (hep-ph/0505220): introduces sqrt(2) as charged-lepton-specific.
+  - Koide (Mod. Phys. Lett. A5, 2319, 1990): derives Q = 2/3 phenomenologically.
+  - Sumino (multiple papers): attempts derivation via new gauge symmetry.
+  - No cited source-stack derivation from SU(3) Casimirs.
+
+Exercise (3): Mathematics search
+  sqrt(2) appears widely: Pythagorean ratio, SU(2) doublet projection,
+  Frobenius norm of Pauli matrices, multiplicity-weighted equipartition.
+  In Cl(3) algebra: ||sigma_i||_F = sqrt(2), but the specific identification
+  with the Brannen amplitude ratio is BOUNDED per 30-probe campaign.
+
+Exercise (4): 30-probe BAE campaign findings
+  Campaign (PR #828 terminal synthesis) tested 30 distinct routes:
+    - Probe 14 (PR #784): no source-stack continuous U(1) projects to U(1)_b.
+    - Probe 17 (PR #787): U(1)_b is spectrum-non-preserving (no unitary similarity).
+    - Probes 25 + 27 + 28: F1 multiplicity (1,1) structurally absent
+      from the cited dynamics packet across free + interacting + all hw=N.
+    - Probe 29 (PR #825): framework predicts kappa = 1, empirical kappa = 2.
+      Partial-falsification candidate of charged-lepton spectral relation.
+
+Exercise (5): Derivation status — FORECLOSED FOR THIS ROUTE
+
+Tests:
+  PASS  D3 T1: rho_lep matches sqrt(2) at < 0.1% (structurally below density)
+        detail: gap = 0.0556%
+  PASS  D3 T2: BAE boundary is not promoted by this runner
+        detail: 30-probe synthesis PR #828; multiplicity-counting primitive absent from inventoried route
+  PASS  D3 T3: Probe 29 partial-falsification candidate is recorded
+        detail: framework predicts kappa = 1; empirical kappa = 2
+  PASS  D3 T4: D3 closure would require explicitly approving a multiplicity-counting primitive
+        detail: not derivable from C_3 rep theory on Herm_circ(3) per Probes 25, 27, 28
+
+========================================================================
+Shared structural obstruction (SO)
+========================================================================
+
+All three candidates D1, D2, D3 sit on the same algebraic surface:
+  H_q = a_q I + b_q C + b_bar_q C^2  on hw=1 = C^3
+  rho_q = 2 |b_q| / a_q
+  Q_q = (2 + rho_q^2) / 6   (Brannen-circulant identity)
+
+Deriving any rho_q requires deriving the ratio |b_q|^2 / a_q^2.
+Per 30-probe BAE campaign: no inventoried source-stack primitive supplies
+this ratio for charged leptons (rho_lep = sqrt(2)).
+Extending to quark sectors adds SU(3) color but does NOT touch the
+amplitude-ratio question (which is about generation structure on hw=1).
+
+SO: No inventoried source-stack primitive supplies multiplicity-counting on C_3-isotypes.
+
+Tests:
+  PASS  SO T1: shared obstruction across D1, D2, D3 is identified
+        detail: all three require multiplicity-counting primitive on Herm_circ(3)
+  PASS  SO T2: alternative diagnostic K_q form preserves the same open primitive requirement
+        detail: K_q != 1 for quarks has the same open primitive requirement as BAE (K_lep = 1)
+
+========================================================================
+Hostile density baseline (broader basis)
+========================================================================
+Broad Casimir basis size (powers + 2-Casimir products/sums): 528
+In [1.0, 2.0]: 198
+Density baseline (broad basis):
+  5% gate: 100.00%
+  2% gate: 100.00%
+  1% gate: 100.00%
+
+Tests:
+  PASS  HD T1: broad basis density baseline at 1% is saturated (>= 90%)
+        detail: 1% baseline = 100.00%
+  PASS  HD T2: rho_up at 1.01% gap is NOT structurally informative under broad basis
+        detail: any 1% match in [1.0, 2.0] is at-or-above density baseline
+  PASS  HD T3: rho_dn at 2.40% gap is NOT structurally informative
+        detail: 5% baseline = 100.00%
+
+========================================================================
+Cross-D verdict
+========================================================================
+
+D1 (rho_up = 16/9):
+  Numerical gap: 1.01% to measured rho_up = 1.76
+  Action-level: 16/9 = C_F^2 = 2*F_adj is cited context, but in K_2 QCD,
+                NOT in Brannen circulant on hw=1.
+  Density check: at 1% baseline >= 50% (convention-level coincidence)
+  Status: NOT closed by the existing source-stack route.
+
+D2 (rho_dn = (7/8)+sqrt(2)/2):
+  Numerical gap: 2.40% to measured rho_dn = 1.545
+  Action-level: no cited action gives the (7/8) + (1/sqrt(2)) sum.
+  Density check: at 2% baseline >= 50% (convention-level coincidence)
+  Alternative: sqrt(7/3) gives tighter 1.13% gap with cleaner algebra,
+               but shares the same open primitive requirement.
+  Status: NOT closed by the existing source-stack route.
+
+D3 (rho_lep = sqrt(2)):
+  Numerical gap: 0.06% (structurally below density)
+  Action-level: BAE-condition |b|^2/a^2 = 1/2 (multiplicity counting).
+  30-probe campaign (PR #828): FORECLOSED for this route.
+  Probe 29: partial-falsification candidate (kappa=1 vs empirical kappa=2).
+  Status: FORECLOSED for this route. BAE boundary unchanged.
+
+Shared structural obstruction (SO):
+  All three D1/D2/D3 require a multiplicity-counting primitive on the
+  C_3-isotype decomposition of Herm_circ(3). This primitive is
+  structurally absent from the inventoried source-stack routes per Probes 25, 27, 28 of
+  the 30-probe BAE campaign.
+
+Strategic outcome for P-Heavy-A:
+  - Remains a 4-parameter heuristic fit (rho_up, delta_up, rho_dn, delta_dn).
+  - The Casimir-derivation closure route is not closed in this
+    review-loop no-go scope.
+  - Alternative K_q = (3/2, 7/6) restatement is information only;
+    same open primitive requirement.
+
+Claim class: no_go / bounded obstruction. P-Heavy-A as a closed positive primitive is not closed;
+      as a phenomenological 4-parameter fit it stands.
+
+========================================================================
+Final tally
+========================================================================
+
+PASS = 18, FAIL = 0
+
+This is a NO-GO / BOUNDED-OBSTRUCTION runner. The PASS count reflects each
+independent check converging on the same negative conclusion: D1, D2,
+D3 are not derived by the existing source-stack route; the convention-level
+Casimir matches are within the density baseline.
+
+No new primitive added. No theorem reclassified. P-Heavy-A remains a
+4-parameter fit candidate; its Casimir-derivation closure route is
+structurally foreclosed.
+
+
+----- stderr -----
+

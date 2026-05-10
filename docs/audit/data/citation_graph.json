@@ -16965,6 +16965,42 @@
       "to": "complex_selectivity_compare_note"
     },
     {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29"
+    },
+    {
+      "from": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
       "from": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
       "to": "yt_zero_import_chain_note"
     },
@@ -54018,6 +54054,27 @@
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
     },
+    "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure": {
+      "claim_id": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10",
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "koide_bae_probe_kappa_prediction_test_partial_falsification_note_2026-05-09_probe29",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "d9bd96626409769b7c0d743028963b91da11ea6cd8fe8ab5c4eb697adf7760f5",
+      "path": "docs/PRIMITIVE_P_HEAVYQ_CASIMIR_CLOSURE_NOTE_2026-05-10_pPheavyq_closure.md",
+      "runner_path": "scripts/cl3_primitive_p_heavyq_casimir_2026_05_10_pPheavyq_closure.py",
+      "title": "P-HeavyQ Casimir Closure No-Go \u2014 Bounded Obstruction"
+    },
     "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq": {
       "claim_id": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
       "claim_type_author_hint": "open_gate",
@@ -65977,7 +66034,7 @@
       "bounded_theorem": 240,
       "decoration": 1,
       "meta": 59,
-      "no_go": 18,
+      "no_go": 19,
       "none": 1626,
       "open_gate": 22,
       "positive_theorem": 92
@@ -65986,15 +66043,15 @@
       "bounded_theorem": 722,
       "decoration": 1,
       "meta": 59,
-      "no_go": 125,
+      "no_go": 126,
       "none": 449,
       "open_gate": 110,
       "positive_theorem": 592
     },
-    "edge_count": 8254,
-    "leaf_count": 534,
-    "node_count": 2058,
+    "edge_count": 8263,
+    "leaf_count": 532,
+    "node_count": 2059,
     "root_count": 767,
-    "runners_with_path": 1673
+    "runners_with_path": 1674
   }
 }
