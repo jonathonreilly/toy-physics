@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1084 |
+| unaudited | 1083 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 254 |
+| ~~audited_conditional~~ | 255 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 398 |
-| `audited_conditional` | 254 |
+| `audited_conditional` | 255 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1182 |
+| `unaudited` | 1181 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 811 |
+| `bounded_theorem` | 812 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
 | `open_gate` | 103 |
-| `positive_theorem` | 718 |
+| `positive_theorem` | 717 |
 
 | criticality | count |
 |---|---:|
@@ -649,6 +649,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `k_dependence_review_safe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -5904,6 +5905,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note claims that gravity remains TOWARD for all tested graph perturbations, so almost any causal graph with forward edges gives gravitational attraction when field coupling and phase are present.  _(class `C`)_
 - **chain closes:** False — The completed runner contradicts the note's load-bearing table: the heavy_delete_70 row has grav = -2.583639e-05 and sign AWAY, not TOWARD. The broader statement that all tested perturbations preserve attraction therefore does not close even within the bounded harness.
 - **rationale:** Issue: the runner's current output falsifies the note's central empirical-computational step because one listed perturbation points AWAY and the note's table values are stale. Why this blocks: the conclusion that graph structure is almost irrelevant depends on every tested perturbation preserving TOWARD gravity, and the provided computation shows a counterexample. Repair target: update the note around the completed runner output, add an explicit pass/fail criterion for attraction robustness, and either remove the universal-sounding Gate B inference or prove a narrower graph class. Claim boundary until fixed: Born remains machine-clean in these tested rows and k=0/no-field controls vanish, but TOWARD gravity is not robust across the tested perturbation set.
+- **auditor confidence:** high
+
+### `k_dependence_review_safe_note`
+
+- **Note:** [`K_DEPENDENCE_REVIEW_SAFE_NOTE.md`](../../docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite fixed-window k-dependence rerun as quoted in the note supports only a graph-family, fit-window-sensitive statement and not a universal alpha(k) law.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e138e-af82-7d51-ac16-47f96f7fc842`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The per-seed exponents are all negative, but the confidence intervals overlap strongly and the ordering is not monotonic in k.  _(class `A`)_
+- **chain closes:** False — The overlap and nonmonotonicity inference follows if the quoted slopes and confidence intervals are accepted. The restricted packet does not include the cited log, runner source, runner stdout, or any comparison establishing fit-window sensitivity, so the computational premise is not closed.
+- **rationale:** Issue: the note's load-bearing numerical table is attributed to logs/2026-04-03-k-dependence-fixed-window-review.txt and scripts/k_dependence_ceiling.py, but neither completed log nor runner source/stdout is supplied as an auditable artifact. Why this blocks: a hostile reviewer cannot verify that the slopes, bootstrap intervals, fixed N window, shared seeds, or claimed fit-window sensitivity were actually produced by the stated computation. Repair target: wire the runner and completed log/stdout into the audit packet, or cite a retained artifact that records them, and include the comparison needed for fit-window sensitivity. Claim boundary until fixed: the note is a plausible safe wording proposal from quoted numbers, not a retained closed numerical theorem.
 - **auditor confidence:** high
 
 ### `kernel_vs_gravity_note`
