@@ -14436,6 +14436,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_primitive_p_lh_2026_05_10_pPlh.py"
     },
+    "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_primitive_p_lh_ncg_native_2026_05_10_pPlh_ncg_native.py"
+    },
     "primordial_spectrum_note": {
       "assert_count": 0,
       "counts": {
@@ -22870,6 +22882,21 @@
         "A": 0,
         "B": 0,
         "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_primitive_p_lh_ncg_native_2026_05_10_pPlh_ncg_native.py": {
+      "assert_count": 1,
+      "claims": [
+        "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
         "D": 4
       },
       "decoration_candidate": false,
@@ -43836,11 +43863,11 @@
       "A": 111,
       "B": 160,
       "C": 645,
-      "D": 241,
+      "D": 242,
       "none": 406
     },
-    "runners_classified": 1563,
-    "runners_with_C": 809,
-    "runners_with_D": 433
+    "runners_classified": 1564,
+    "runners_with_C": 810,
+    "runners_with_D": 434
   }
 }

@@ -1,0 +1,145 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_lh_ncg_native_2026_05_10_pPlh_ncg_native.py
+runner_sha256: 1d63eb16736a8e713cb872e6f64598ac153c253b469d20626ef3847ed22570f1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+
+============================================================================
+P-LH NCG-Native Open Gate
+KO-dim-6 J: bounded realization | Order-One: not forced on Cl(3)/Z^3
+Source-note: PRIMITIVE_P_LH_NCG_NATIVE_NOTE_2026-05-10_pPlh_ncg_native.md
+============================================================================
+
+============================================================================
+SECTION 0: Context — physical Cl(3)/Z^3 ingredients carried into this probe
+============================================================================
+  [PASS (ctx)] Cl⁺(3) bivector e_{12} = i σ_3 -- γ_1 γ_2 = i σ_3 in Pauli rep
+  [PASS (ctx)] Cl⁺(3) bivector e_{12}² = −I_2 (quaternionic i unit) -- anti-commutation forces square = -1
+  [PASS (ctx)] Quaternionic ij = k on bivectors -- abstract Cl⁺(3) ≅ ℍ structure
+  [PASS (ctx)] Quaternionic jk = i on bivectors -- abstract Cl⁺(3) ≅ ℍ structure
+  [PASS (ctx)] Quaternionic ki = j on bivectors -- abstract Cl⁺(3) ≅ ℍ structure
+  [PASS (ctx)] ω = γ_1γ_2γ_3 = +i I on ρ_+ summand -- U2: positive-chirality scalar action
+  [PASS (ctx)] ω = γ_1γ_2γ_3 = -i I on ρ_- summand -- U2: negative-chirality scalar action; ρ_± non-isomorphic
+
+============================================================================
+SECTION 1: KO-dim signature reading — Cl⁺(3) ≅ Cl(0,2), signature 6 mod 8
+============================================================================
+  [PASS (signature)] Cl(3,0) signature = 3 mod 8 (Cartan classification) -- Morita class: M_2(C) (real-dim 8 = 2³)
+  [PASS (signature)] Cl(0,3) signature = 5 mod 8 (Cartan classification) -- Morita class: H ⊕ H (split-biquaternions)
+  [PASS (signature)] Cl(0,2) signature = 6 mod 8 (Cartan classification) -- Morita class: H (quaternions)
+  [PASS (signature)] Cl⁺(3,0) ≅ Cl(0,2) ≅ ℍ (standard textbook result) -- even subalgebra of Cl(3,0) is at signature 6 mod 8
+  [PASS (signature)] KO-dim of Cl⁺(3) = 6 mod 8 (signature of Cl(0,2)) -- the even sub-algebra inherits KO-dim 6 from its Cartan class
+  [PASS (signature)] Cl⁺(3) as real algebra has dim 4 (one scalar + three bivectors) -- linear-independence over R: rank 4/4
+
+============================================================================
+SECTION 2: D2 = KO-dim-6 J — explicit construction (bounded realization)
+============================================================================
+  [PASS (D2)] γ² = I_4 (chirality involution on H_F = ρ_+ ⊕ ρ_-) -- γ = diag(+I_2, -I_2)
+  [PASS (D2)] D2: J² = +I (ε = +1, KO-dim 6 sign) -- J = σ_x_4 · K, real σ_x_4 with σ_x_4² = I
+  [PASS (D2)] D2: J²(random vector) = vector (antilinear computation cross-check) -- explicit antilinear verification on complex test vector
+  [PASS (D2)] D2: D = D† (self-adjoint) -- off-diagonal real symmetric Dirac-style operator
+  [PASS (D2)] D2: JD = DJ (ε' = +1, KO-dim 6 sign) -- linear parts of J·D and D·J coincide (real D)
+  [PASS (D2)] D2: Jγ = -γJ (ε'' = -1, KO-dim 6 sign) -- σ_x_4·γ = -γ·σ_x_4 (block-swap anticommutes with chirality)
+  [PASS (D2)] D2: full KO-dim-6 sign triple (ε, ε', ε'') = (+1, +1, -1) -- matches Connes 1995 canonical table at n = 6 (mod 8)
+  [PASS (D2)] D2 construction: uses physical Cl(3)/Z^3 Pauli-rep chirality model -- no D_F order-one input, no A_F approval
+  [PASS (D2)] D2 bounded statement: one KO-dim-6 J realization exists on H_F -- Jγ = -γJ swaps ρ_+ ↔ ρ_-; this is existence support, not forcing
+  [PASS (D2)] D2 VERDICT: KO-dim-6 J has bounded realization on physical Cl(3)/Z^3 model -- P-LH-3 is supported by an explicit construction, not promoted
+
+============================================================================
+SECTION 3: D1 = Order-One Condition — three obstructions (not forced)
+============================================================================
+  [PASS (D1-obstr)] Obstruction 3.a: D_F is not fixed by the current source context -- staggered-Dirac realization is open gate, not baseline Cl(3)/Z^3 content
+  [PASS (D1-obstr)] D_F candidate 1 (block-swap): self-adjoint -- off-diagonal real symmetric
+  [PASS (D1-obstr)] D_F candidate 2 (σ_x cross-coupling): self-adjoint -- off-diagonal real symmetric
+  [PASS (D1-obstr)] D_F candidate 1: anticommutes with γ ({D, γ} = 0) -- block-off-diagonal ⟹ odd under γ
+  [PASS (D1-obstr)] D_F candidate 2: anticommutes with γ -- block-off-diagonal ⟹ odd under γ
+  [PASS (D1-obstr)] D_F is not unique: two distinct admissible candidates -- current physical Cl(3)/Z^3 context does not fix D_F
+  [PASS (D1-obstr)] Obstruction 3.b: A_F = ℂ ⊕ ℍ ⊕ M_3(ℂ) is not derived here -- only ℍ ≅ Cl⁺(3) is represented; ℂ and M_3(ℂ) are imports
+  [PASS (D1-obstr)] PS-style algebra element exists on H_F: ρ_- block is σ_2 (not scalar) -- PS = M_2(ℍ) permits non-trivial ℍ-action on RH; SM = ℂ ⊕ ℍ forbids
+  [PASS (D1-obstr)] SM-style algebra element on H_F: ρ_- block IS scalar -- SM = ℂ ⊕ ℍ forces RH ⟶ scalar action (= U(1)_Y)
+  [PASS (D1-obstr)] A_F is not unique: SM (ℂ ⊕ ℍ) and PS (M_2(ℍ)) both fit on H_F -- the choice between SM and PS is the LH-content gap itself
+  [PASS (D1-obstr)] Generic D_F (block-swap) VIOLATES order-one even for SM-style algebra -- [[D, a], JbJ⁻¹] ≠ 0 for SM a, b — order-one not automatic
+  [PASS (D1-obstr)] Generic D_F also VIOLATES order-one for PS-style algebra -- [[D, a], JbJ⁻¹] ≠ 0 for PS-flavor b — confirms non-triviality
+  [PASS (D1-obstr)] Order-one satisfied trivially for D = 0 (vacuous case) -- D = 0 gives [[D, a], _] = 0 trivially
+  [PASS (D1-obstr)] Order-one set is strict subset of admissible D_F: D=0 in, swap not -- constraint is active; choice of order-one D_F is a primitive selection
+  [PASS (D1-obstr)] Obstruction 3.c: order-one is non-trivial selection (Chamseddine-Connes 2013) -- without order-one, generic D_F + larger algebra (PS) is admissible
+  [PASS (D1-obstr)] D1 VERDICT: order-one is not forced by the physical Cl(3)/Z^3 context -- obstructions 3.a + 3.b + 3.c justify open-gate boundary
+
+============================================================================
+SECTION 4: Compatibility of D1, D2 with current physical Cl(3)/Z^3 context
+============================================================================
+  [PASS (compat)] Compat: ω on ρ_+ is +iI; conj(ω) is -iI (ω → -ω under K) -- J·ω·J⁻¹ swaps ρ_+ ↔ ρ_-, consistent with U2
+  [PASS (compat)] Compat: order-one constraint set is non-empty (e.g., D = 0 trivially) -- order-one + ℂ ⊕ Cl⁺(3) algebra permits restricted D_F's (Section 3.c)
+  [PASS (compat)] Compat: D1 and D2 jointly compatible (NCG SM derivation hypothesis) -- {restricted D_F + order-one + KO-dim-6 J + ℂ ⊕ ℍ ⊕ M_3(ℂ)} consistent
+  [PASS (compat)] Compat insufficient for derivability: D1 fails derivation test (Section 3) -- consistency ≠ derivation; D1 remains an open candidate
+
+============================================================================
+SECTION 5: Tier assertions and honest verdict
+============================================================================
+  [PASS (tier)] No PDG observed values used -- structural exact-algebra checks only
+  [PASS (tier)] No lattice MC empirical measurements used -- Pauli-rep + Cartan classification only
+  [PASS (tier)] No fitted matching coefficients used -- exact arithmetic on small matrices
+  [PASS (tier)] No new repo-wide axioms introduced -- open-gate follow-on note; order-one is not approved
+  [PASS (tier)] No HK + DHR appeal -- Block 01 audit retired; respected
+  [PASS (tier)] No same-surface family arguments -- Cl(3)/Z^3 substrate-side derivation question only
+  [PASS (tier)] Audit-lane authority on tier preserved -- design-note follow-on; audit lane decides
+  [PASS (tier)] No theorem/status promotion requested -- follow-on records honest derivability split
+  [PASS (tier)] Consistent with upstream P-LH proposal (3 candidates, no closure) -- this note refines: D2 has bounded realization, D1 remains open
+  [PASS (tier)] Consistent with Connes-Chamseddine 2013 literature reading -- order-one's role as SM-vs-PS discriminator confirmed
+  [PASS (tier)] Net verdict tier: open_gate (D2 realization; D1 open obstruction) -- partial progress on LH-content; not closure
+  [PASS (tier)] D2 (KO-dim-6 J): bounded realization on physical Cl(3)/Z^3 model -- P-LH-3 of upstream gains explicit support but is not promoted
+  [PASS (tier)] D1 (order-one): not forced; explicit approval would be needed -- order-one remains open primitive candidate
+  [PASS (tier)] Governance boundary: order-one not approved by this runner -- future explicit user approval or derivation required
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+
+Question (P-LH-NCG-native follow-on):
+  Are the two NCG primitives in the {P-LH-1 + P-LH-3} pair
+  forced by the physical Cl(3)/Z^3 baseline, or do they remain
+  open candidate imports?
+
+RESULTS:
+
+  D2 = KO-dim-6 Real Structure J:
+    KO-dim signature on Cl⁺(3) ≅ Cl(0,2):  6 mod 8  ✓
+    Explicit J = σ_x_4 · K construction on H_F = ρ_+ ⊕ ρ_-:
+      J² = +I  (ε = +1, KO-dim 6 sign)  ✓
+      JD = DJ  (ε' = +1, KO-dim 6 sign) ✓
+      Jγ = -γJ (ε'' = -1, KO-dim 6 sign) ✓
+    Input boundary: construction uses the chosen physical Cl(3)/Z^3
+                    Pauli-rep chirality model
+    Basis freedom: compatible with U(2) gauge changes
+    VERDICT: bounded realization, not forced derivation
+
+  D1 = Order-One Condition  [[D, a], JbJ⁻¹] = 0:
+    Obstruction 3.a: D_F not fixed (open-gate dependency)
+    Obstruction 3.b: A_F not derived (only ℍ ≅ Cl⁺(3) is represented)
+    Obstruction 3.c: Order-one is non-trivial SELECTION
+                     (Chamseddine-Connes 2013: without it, PS emerges)
+    Joint test: PS-style algebra VIOLATES order-one on H_F ✓
+    VERDICT: not forced by physical Cl(3)/Z^3
+
+CONSEQUENCE for LH-content gap:
+  The route has a concrete KO-dim-6-compatible J construction.
+  Order-one remains unresolved and would need a future derivation
+  or explicit user approval before becoming load-bearing.
+
+HONEST DESIGN VERDICT:
+  - Partial progress: gives bounded support for D2 (KO-dim-6 J).
+  - Open: D1 (order-one) cannot be reduced into current source context
+    on the obstructions identified (D_F not unique, A_F not unique,
+    order-one is active selection per Chamseddine-Connes 2013).
+  - Governance: order-one is not approved here.
+
+AUTHORITY: audit lane owns all status decisions; this is an
+           open_gate follow-on with no primitive approval.
+
+=== TOTAL: PASS=57, FAIL=0 ===
+
+----- stderr -----
+

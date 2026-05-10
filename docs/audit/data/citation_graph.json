@@ -17073,6 +17073,10 @@
       "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
     },
     {
+      "from": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native",
+      "to": "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+    },
+    {
       "from": "propagator_family_unification_note",
       "to": "source_resolved_wavefield_mechanism_note"
     },
@@ -54140,6 +54144,19 @@
       "runner_path": "scripts/cl3_primitive_p_lh_2026_05_10_pPlh.py",
       "title": "P-LH-Content Open Gate \u2014 Three Candidate Substrate-Side Selectors of SM LH/RH Content over Pati-Salam (pPlh)"
     },
+    "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native": {
+      "claim_id": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate follow-on; no theorem promotion.",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+      ],
+      "note_hash": "988e5a26228edd3c84e647ece597ab1b593231a69e4aa130ed618b30b85f8313",
+      "path": "docs/PRIMITIVE_P_LH_NCG_NATIVE_NOTE_2026-05-10_pPlh_ncg_native.md",
+      "runner_path": "scripts/cl3_primitive_p_lh_ncg_native_2026_05_10_pPlh_ncg_native.py",
+      "title": "P-LH NCG-Native Open Gate \u2014 KO-dim-6 J Realization and Order-One Obstruction on the Physical Cl(3)/Z^3 Baseline (pPlh_ncg_native)"
+    },
     "primordial_spectrum_note": {
       "claim_id": "primordial_spectrum_note",
       "claim_type_author_hint": null,
@@ -66048,7 +66065,7 @@
       "meta": 59,
       "no_go": 19,
       "none": 1626,
-      "open_gate": 23,
+      "open_gate": 24,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -66057,13 +66074,13 @@
       "meta": 59,
       "no_go": 126,
       "none": 449,
-      "open_gate": 111,
+      "open_gate": 112,
       "positive_theorem": 592
     },
-    "edge_count": 8263,
+    "edge_count": 8264,
     "leaf_count": 533,
-    "node_count": 2060,
+    "node_count": 2061,
     "root_count": 768,
-    "runners_with_path": 1675
+    "runners_with_path": 1676
   }
 }
