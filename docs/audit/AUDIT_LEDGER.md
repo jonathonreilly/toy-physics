@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 12 |
-| unaudited | 1126 |
+| unaudited | 1125 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 222 |
+| ~~audited_conditional~~ | 223 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 222 |
+| `audited_conditional` | 223 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1224 |
+| `unaudited` | 1223 |
 
 | claim_type | count |
 |---|---:|
@@ -53,8 +53,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 193 |
-| `open_gate` | 99 |
-| `positive_theorem` | 743 |
+| `open_gate` | 100 |
+| `positive_theorem` | 742 |
 
 | criticality | count |
 |---|---:|
@@ -493,6 +493,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `accessible_prediction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_born_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_joint_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -825,6 +826,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 
 ## Audit findings (full)
+
+### `accessible_prediction_note`
+
+- **Note:** [`ACCESSIBLE_PREDICTION_NOTE.md`](../../docs/ACCESSIBLE_PREDICTION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audit of the note's asserted accessible-prediction map from rho=|psi|^2 Poisson sourcing to BMV entanglement, Born-gravity cross-constraint, extended source potential, mesoscopic backreaction, and decoherence corrections.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e131b-b985-7873-a914-7c53b1c04fad`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The framework treats gravity as sourced by the quantum density rho = |psi|^2" and therefore the five listed accessible predictions arise independent of lattice spacing.  _(class `F`)_
+- **chain closes:** False — The restricted packet contains no retained authority deriving the physical source law, branch/coherence readout, Born-gravity cross-constraint, or experimental comparator bridges from the framework axioms. The note and runner assume these bridges and then compute consequences of the assumptions.
+- **rationale:** Issue: the load-bearing physics is an asserted identification of framework gravity with rho=|psi|^2 Poisson sourcing plus additional readout claims, not a closed derivation. Why this blocks: without a cited retained bridge theorem, the BMV, extended-source, backreaction, and Born-gravity predictions are consequences of assumed semiclassical/quantum source rules rather than audited framework theorems. Repair target: add retained bridge theorems deriving the source law, branch-level entangling dynamics, and Born-gravity cross-constraint from the framework primitives, with runners that construct those maps instead of hard-coding formulas. Claim boundary until fixed: this can stand only as a prediction agenda conditional on those bridges.
+- **auditor confidence:** high
 
 ### `action_crossover_note`
 
