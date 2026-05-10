@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1172 |
+| unaudited | 1171 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 215 |
+| ~~audited_conditional~~ | 216 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 370 |
-| `audited_conditional` | 215 |
+| `audited_conditional` | 216 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1240 |
+| `unaudited` | 1239 |
 
 | claim_type | count |
 |---|---:|
@@ -654,6 +654,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scaling_failure_mechanisms` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `science_3plus1_line_law_known_limits_note_2026-04-20` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `seventh_family_diagonal_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `staggered_backreaction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
@@ -7786,6 +7787,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The refinement step preserves exact zero-source reduction, the dynamic pocket keeps all rows TOWARD, and the dynamic mass exponent stays essentially linear.  _(class `C`)_
 - **chain closes:** True — For the declared exact lattice, source-driven field rule, calibration target, and source strengths, the runner recomputes the frozen zero-source check, table, and fitted exponents exactly. There are no cited dependencies or external comparator claims to import.
 - **rationale:** The source note makes a narrow bounded numerical claim, not a retained physical bridge: refinement to h=0.25 preserves zero-source reduction, positive deflection sign, and near-linear dynamic mass scaling under the declared parameters. The runner output matches the frozen table and exposes the same amplitude limitation, with mean dynamic/instantaneous ratio 0.055. Residual risk is that this remains calibration- and architecture-specific, but that limitation is explicitly inside the claim boundary.
+- **auditor confidence:** high
+
+### `source_resolved_exact_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** For the specified H=0.5, W=3, L=20 lattice, boundary-clipped four-node source cluster, chosen Green kernel, and calibrated gain, the runner reports zero-source reduction, TOWARD sign on four source strengths, and approximately linear mass scaling.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e125a-6068-7481-bfcf-9169805e172f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The Green-kernel field keeps the weak-field TOWARD sign on all four retained source strengths, has F~M exponent 1.00, and has zero-source dynamic shift +0.000000e+00 in the frozen small exact lattice pocket.  _(class `C`)_
+- **chain closes:** False — The runner delegates the exact-lattice construction, propagation rule, centroid readout, K, source constants, and instantaneous comparator to scripts.minimal_source_driven_field_probe, whose source is not included and is not a cited authority. With no one-hop authorities supplied, those load-bearing definitions are outside the restricted packet.
+- **rationale:** Issue: the numerical pocket depends on an unprovided imported runner module for the exact lattice dynamics and readout, and the amplitude comparison also uses a calibrated gain/field target. Why this blocks: the audit cannot verify from the restricted packet that the zero-source reduction, TOWARD sign, or F~M exponent are computed from the claimed exact-lattice rules rather than inherited from hidden code choices. Repair target: include the imported module or a reduced self-contained runner and state the gain normalization as an explicit bounded assumption. Claim boundary until fixed: this is a reported calibrated toy-run stdout, not an audited retained bounded theorem.
 - **auditor confidence:** high
 
 ### `source_resolved_exact_green_self_consistent_note`
