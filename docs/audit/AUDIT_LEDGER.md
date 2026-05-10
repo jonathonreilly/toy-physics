@@ -21,13 +21,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 69 |
 | **retained_no_go** | 122 |
 | **retained_bounded** | 238 |
-| _retained_pending_chain_ | 4 |
+| _retained_pending_chain_ | 5 |
 | open_gate | 11 |
-| unaudited | 856 |
+| unaudited | 852 |
+| audit_in_progress | 2 |
 | meta | 49 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 418 |
+| ~~audited_conditional~~ | 419 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 2 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -38,13 +39,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 398 |
-| `audited_conditional` | 418 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 399 |
+| `audited_conditional` | 419 |
 | `audited_decoration` | 9 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 25 |
-| `unaudited` | 905 |
+| `unaudited` | 901 |
 
 | claim_type | count |
 |---|---:|
@@ -63,7 +65,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 522 |
 | `leaf` | 650 |
 
-- **Retained pending chain closure:** 4
+- **Retained pending chain closure:** 5
 - **Citation cycles detected:** 36
 
 ### Runner classification (static heuristic)
@@ -91,8 +93,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 10 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 236 | 25.89 | `audited_clean` | **retained_bounded** |
 | 11 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 532 | 25.56 | `audited_clean` | open_gate |
 | 12 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 514 | 25.51 | `audited_conditional` | ~~audited_conditional~~ |
-| 13 | `three_generation_structure_note` | bounded_theorem | critical | 370 | 25.04 | `unaudited` | unaudited |
-| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 231 | 24.86 | `unaudited` | unaudited |
+| 13 | `three_generation_structure_note` | bounded_theorem | critical | 370 | 25.04 | `audited_conditional` | ~~audited_conditional~~ |
+| 14 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 231 | 24.86 | `audit_in_progress` | audit_in_progress |
 | 15 | `left_handed_charge_matching_note` | bounded_theorem | critical | 423 | 24.23 | `audited_conditional` | ~~audited_conditional~~ |
 | 16 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 213 | 23.74 | `audited_conditional` | ~~audited_conditional~~ |
 | 17 | `one_generation_matter_closure_note` | bounded_theorem | critical | 356 | 23.48 | `unaudited` | unaudited |
@@ -110,6 +112,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `three_generation_observable_theorem_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -363,6 +367,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `restricted_strong_field_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_clean~~ | _retained_pending_chain_ | fresh_context | claude-opus | A | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -894,6 +899,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_block_closure_test_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `tensor_matching_completion_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `tensor_network_connection_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | weak | codex-gpt-5 | C | - |
+| `three_generation_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | B | - |
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_discrete_global_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | claude-opus | E | - |
@@ -10381,6 +10387,21 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **rationale:** The claim is an exact symmetry-theoretic boundary result, not a flavor-numerics or phenomenological claim. The runner verifies the invariant algebra dimension, the alpha I_3 + beta P_(A_1) form consequences, the forced two-value spectrum, and the Z_2 dimension jump. No hidden physical bridge is needed once the scope is restricted to the provided hw=1 carrier and exact S_3-invariant Hermitian class.
 - **auditor confidence:** high
 
+### `s3_taste_cube_decomposition_note`
+
+- **Note:** [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](../../docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-group representation-theoretic decomposition of the S_3 axis-permutation action on C^8=(C^2)^{otimes 3} as 4 A_1 + 2 E (no A_2), with hw=1 and hw=2 sectors each = A_1 + E. Bounded by the explicit admitted_context_input that the physical 'taste cube' interpretation rides on the open staggered-Dirac realization derivation gate.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:minimal_axioms_2026-05-03`)
+- **auditor:** `claude-opus-fresh-context-crossconfirm-2026-05-10-434283a8`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Exact S_3 character calculation on C^8=(C^2)^{otimes 3}: chi(e)=8, chi(2-cycle)=4, chi(3-cycle)=2; character orthogonality yields mult(A_1)=4, mult(A_2)=0, mult(E)=2, with each of hw=1 and hw=2 sectors carrying the standard permutation rep A_1+E.  _(class `A`)_
+- **chain closes:** True — The structural rep-theoretic claim is closed by classical S_3 character theory (chi(g)=|Fix(g)|, character orthogonality on the 3-class group of order 6) and the runner exhaustively verifies (i) unitarity and S_3 defining relations of U(g), (ii) Hamming-weight preservation by all six group elements, (iii) class characters chi(e)=8, chi(2c)=4, chi(3c)=2, (iv) multiplicities A_1=4, A_2=0, E=2 with dimension 8, and (v) the hw=1 and hw=2 sector restricted characters (3,1,0) matching A_1+E. The note correctly admits the staggered-Dirac realization gate as an upstream open dependency for any physical-flavor reading; the structural representation theorem itself does not invoke fermion content. Plain-text reference to the gate per PR #306 pattern; no upstream citation dep. claim_type=bounded_theorem until that gate closes is consistent with MINIMAL_AXIOMS_2026-05-03.md.
+- **rationale:** Cached log shows 57/57 PASS with exit_code=0; runner SHA256 recorded. The runner directly checks every load-bearing arithmetic of the load-bearing step: S_3 representation laws, Hamming preservation, class characters on C^8, the A_1/A_2/E multiplicities, and the hw-sector restricted characters. The note's safe statement and bounded scope are consistent with MINIMAL_AXIOMS_2026-05-03.md axiom-reset retag (positive -> bounded due to staggered-Dirac gate dependence of any physical-flavor reading), and the rep-theoretic content itself is independent of that gate.
+- **open / conditional deps cited:**
+  - `staggered_dirac_realization_gate`
+- **auditor confidence:** high
+
 ### `s3_time_bilinear_tensor_action_note`
 
 - **Note:** [`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`](../../docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
@@ -12750,6 +12771,23 @@ Claim boundary until fixed: safe to claim the periodic chiral sign windows are n
 - **chain closes:** True — Within the restricted packet, the runner explicitly enumerates the eight BZ corners, constructs the retained 3x3 generators, builds matrix units spanning M_3(C), and applies the standard kernel-invariance quotient argument. The conclusion follows as an algebraic closure of those finite checks and stated nonzero-quotient condition.
 - **rationale:** The load-bearing quotient step is a genuine finite-dimensional algebraic closure: algebra preservation makes ker(Q) invariant, and the constructed M_3(C) action has no proper invariant subspaces. The runner does not merely print constants; it enumerates corners and constructs projectors and matrix units from explicit matrices. The upstream retained authorities are not provided in full despite being named in the note, but the supplied runner independently checks the finite claims needed for this narrow corollary.
 - **auditor confidence:** medium
+
+### `three_generation_structure_note`
+
+- **Note:** [`THREE_GENERATION_STRUCTURE_NOTE.md`](../../docs/THREE_GENERATION_STRUCTURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** local algebraic/spectral content of three-generation matter structure on the physical-lattice surface (items 1-4); semantic-bridge items 5 (physical species sectors) and 6 (substrate-level physical-lattice reading) are explicitly out of scope and live in separate authority rows
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `claude-opus-fresh-context-first-2026-05-10-b48a542e`  (claude-opus; independence=fresh_context)
+- **load-bearing step:** Local algebraic/spectral content of three-generation matter structure on physical-lattice surface (in-scope items 1-4): (1) exact corner/orbit algebra 8 = 1+1+3+3; (2) three hw=1 species are lightest nonzero-mass species on Z^3; (3) rooting is not well-defined in Hamiltonian Cl(3) on Z^3; (4) hw=1 triplet carries exact irreducible algebra M_3(C), so no proper exact quotient survives.  _(class `B`)_
+- **chain closes:** True — In-scope chain closes for items (1) and (2) under the explicitly admitted-context staggered-Dirac realization gate. The fermi-point runner exhibits 7 EXACT PASS / 1 BOUNDED PASS / 0 FAIL, establishing exactly: 2^3=8 BZ corners, Wilson mass depends only on Hamming weight, degeneracies 1+3+3+1, C(3,1)=3, three hw=1 corners at distinct momenta, exact translation invariance on Z^3, and uniqueness of d=3 for C(d,1)=3. Item (3) no-rooting is closed by the cited rooting-undefined runner (PASS=37, FAIL=0 reported in note); item (4) M_3(C) irreducibility on hw=1 is closed by the observable-theorem runner (PASS=47, FAIL=0 reported) and by the cited sibling narrow-theorem packet THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02. Note correctly demotes the gate link by treating staggered-Dirac realization as admitted-context input and explicitly excludes semantic-bridge items 5/6 from in-scope load-bearing content. The bounded_theorem retag is consistent with MINIMAL_AXIOMS_2026-05-03.md.
+- **rationale:** Verdict matches the ledger entry recorded in the note (audited_conditional, 2026-05-05). The four in-scope load-bearing items are runner-verified or cited to runner-verified standalone packets, but the row is conditional on (a) the staggered-Dirac realization parent gate (open_gate by design per MINIMAL_AXIOMS_2026-05-03.md), and (b) the no-rooting sub-claim still lacking a standalone retained-grade narrow-theorem packet (load-bearing authority is presently the rooting-undefined runner only). Item (4)'s standalone retained-grade route via the sibling M_3(C) narrow-theorem packet is itself currently `unaudited` per the note, so retained-grade promotion is not yet warranted. The fermi-point runner cache (7 EXACT PASS, 1 BOUNDED PASS, 0 FAIL) cleanly supports items (1)-(2); items (3)-(4) rely on cited but separate packets/runners not directly verified in this audit slice. Bounded_theorem class with audited_conditional verdict is the canonical resolution under the open admitted-context gate.
+- **open / conditional deps cited:**
+  - `staggered_dirac_realization_gate (STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md, effective_status: open_gate; admitted-context input per MINIMAL_AXIOMS_2026-05-03.md)`
+  - `no-rooting sub-claim lacks standalone retained-grade narrow-theorem packet (load-bearing authority is frontier_generation_rooting_undefined.py runner only; not directly verified in this audit slice)`
+  - `M_3(C) sub-claim sibling packet THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md currently `unaudited` per same audit cycle`
+- **auditor confidence:** high
 
 ### `triage_no_promotion_note`
 

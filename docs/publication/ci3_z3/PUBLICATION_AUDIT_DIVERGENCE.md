@@ -19,10 +19,10 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 200 |
 | medium | `unaudited` | 102 |
-| critical | `audited_conditional` | 60 |
+| critical | `audited_conditional` | 61 |
 | high | `audited_conditional` | 49 |
 | medium | `audited_conditional` | 49 |
-| critical | `unaudited` | 40 |
+| critical | `unaudited` | 37 |
 | high | `audited_renaming` | 9 |
 | critical | `audited_renaming` | 6 |
 | medium | `audited_failed` | 6 |
@@ -30,7 +30,9 @@ publication tables phrase it.
 | high | `audited_numerical_match` | 4 |
 | critical | `audited_numerical_match` | 2 |
 | medium | `audited_renaming` | 2 |
+| critical | `audit_in_progress` | 1 |
 | critical | `open_gate` | 1 |
+| critical | `retained_pending_chain` | 1 |
 | high | `audited_failed` | 1 |
 | high | `retained_pending_chain` | 1 |
 
@@ -120,7 +122,7 @@ publication tables phrase it.
 | critical | `s3_boundary_link_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `s3_cap_uniqueness_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `s3_general_r_derivation_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `s3_taste_cube_decomposition_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `s3_taste_cube_decomposition_note` | `retained_pending_chain` | `audited_clean` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `s3_time_bilinear_tensor_primitive_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
 | critical | `s3_time_spacetime_tensor_primitive_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `s3_time_theta_to_slice_coupling_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
@@ -129,8 +131,8 @@ publication tables phrase it.
 | critical | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `strong_cp_theta_zero_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `three_generation_observable_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `three_generation_structure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
+| critical | `three_generation_observable_theorem_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `three_generation_structure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `universal_gr_discrete_global_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_gr_lorentzian_global_atlas_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_qg_canonical_refinement_net_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
