@@ -1,6 +1,6 @@
 # Causal Field Reconciliation Note
 
-**Date:** 2026-04-06 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict)
+**Date:** 2026-04-06 (status line rephrased + claim narrowed 2026-04-28 per audit-lane verdict; audit-status note added 2026-05-10)
 **Status:** bounded harness-boundary diagnostic for the fixed-anchor cross-family replay; the upstream center-family causal-field result is **not** asserted as valid by this note (the cited runner emits no executable verification and the cited diagnostic logs are missing).
 
 ## Artifact Chain
@@ -114,6 +114,39 @@ note retains the bounded harness-boundary diagnostic only.
   diagnostic logs are missing).
 - That source placement rather than family choice is load-bearing
   (this diagnosis depends on the missing diagnostic logs).
+
+## Audit-status note (2026-05-10)
+
+The 2026-05-05 audit verdict (`audited_conditional`, chain_closes=false)
+ratified the bounded fixed-anchor cross-family replay diagnostic — the
+exact-null control survives, and the configured forward-only and
+dynamic-cone ratios split across the three configured grown families
+rather than refuting the upstream center-family result — but flagged
+that the only one-hop dependency is itself `audited_conditional` rather
+than retained-grade.
+
+> "The supplied runner genuinely computes the fixed-anchor cross-family
+> replay and supports the bounded harness-boundary diagnostic. However,
+> the only cited authority is marked audited_conditional/support, so
+> retained-grade closure does not propagate under the rubric."
+
+Per-input current status:
+
+- [`CAUSAL_FIELD_PORTABILITY_NOTE.md`](CAUSAL_FIELD_PORTABILITY_NOTE.md)
+  — `audited_conditional` (bounded portability probe; the 2026-05-04
+  verdict pinned a missing-dependency edge for the imported
+  `evolving_network_prototype_v6` framework-operator module, and the
+  2026-05-10 audit-status note narrows the claim to a bounded
+  computational diagnostic on the configured fixed-anchor probe).
+
+Blocked-on: this reconciliation note stays `audited_conditional` until
+the cited portability authority advances to retained-grade or until
+the runner is cited directly as a bounded retained artifact under a
+retained portability-criterion theorem. The bounded harness-boundary
+diagnostic itself — that the low-SNR fixed-anchor replay diagnoses a
+configured-probe boundary rather than refuting the archived
+center-family result — is unaffected by this status note; the change
+is purely upstream propagation accounting on the one-hop dependency.
 
 ## What would close this lane (Path A future work)
 

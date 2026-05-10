@@ -1,7 +1,7 @@
 # Causal Field Portability Note
 
-**Date:** 2026-04-06  
-**Status:** support - structural or confirmatory support note
+**Date:** 2026-04-06 (audit-status note added 2026-05-10)
+**Status:** bounded portability probe — exact-null control plus diagnosed family boundary on the configured fixed-anchor cross-family replay; not a cross-family portability law.
 
 ## Artifact Chain
 
@@ -9,6 +9,54 @@
 - [`logs/2026-04-06-causal-field-portability-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-causal-field-portability-probe.txt)
 - causal propagating-field context:
   - [`archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/causal-field-stale-runners-2026-04-30/CAUSAL_PROPAGATING_FIELD_NOTE.md)
+
+## Audit-status note (2026-05-10)
+
+The 2026-05-04 audit verdict (`audited_conditional`, chain_closes=false)
+confirmed that the runner genuinely computes the reported ratios over
+families, seeds, fields, and detector centroids rather than printing
+constants, but flagged a missing-dependency edge: the runner imports
+the structured-growth, propagation, and detector-centroid operators
+from `evolving_network_prototype_v6.py`, and the audit packet does
+not provide an executable certificate that those imports implement
+the intended axiom-level operators.
+
+> "the restricted packet does not include the implementation of
+> build_structured_growth, propagate, or centroid_y from
+> evolving_network_prototype_v6. Without that imported module, the
+> derivation from the stated framework axiom cannot be independently
+> closed inside the packet."
+
+Admitted-context inputs (carrier framework, not derived in this note):
+
+- `build_structured_growth` (drift / restore grown geometry constructor
+  on the H=0.5 family, parameterised by `(N_LAYERS, HALF, drift, restore, seed)`)
+- `propagate` (forward amplitude propagation on the layered DAG with
+  background scalar field)
+- `centroid_y` (final-layer detector centroid readout)
+
+Configured probe parameters (proxy thresholds, not derived):
+
+- three grown families with drift/restore pairs `(0.20, 0.70)`,
+  `(0.05, 0.30)`, `(0.50, 0.90)` labeled center / portable-2 / portable-3
+- six seeds, source anchor target `(y, z) = (0, 3)` at
+  `SOURCE_LAYER = 2 * N_LAYERS // 3`
+- field strength `5e-5`, field epsilon `0.1`, dynamic cone values
+  `c ∈ {1.0, 0.5}`
+- forward-only ratio spread `0.423` and dynamic(c=0.5)/instantaneous
+  spread `0.352` interpreted as the family-boundary diagnostic on this
+  configured probe
+
+Blocked-on: this note stays `audited_conditional` until either
+`evolving_network_prototype_v6.py` is registered as a retained
+framework-operator carrier with executable verification of
+`build_structured_growth`, `propagate`, and `centroid_y` against
+the named axiom-level operators, or a retained portability-criterion
+theorem is supplied that derives the configured probe metric and
+threshold from the framework primitives. The bounded computational
+diagnostic — exact-null control survives, and the configured
+forward-only and dynamic-cone ratios split across the three
+configured grown families — is unaffected by this status note.
 
 ## Question
 
@@ -59,6 +107,10 @@ families.
 
 ## Final Verdict
 
-**diagnosed family boundary: the exact-null control survives, but the causal
-field ratios split by family instead of extending cleanly across the portable
-family chain**
+**bounded computational diagnostic on the configured fixed-anchor probe:
+the exact-null control survives, and the configured forward-only and
+dynamic-cone ratios split across the three configured grown families
+rather than tracking a cross-family portability law. This is the result
+of a probe with the fixed parameters and source anchor listed in the
+audit-status note above, not a derivation of a portability law from
+framework primitives.**
