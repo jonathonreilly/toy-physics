@@ -65247,6 +65247,17 @@
       "runner_path": "scripts/frontier_z2_hw1_mass_matrix_parametrization.py",
       "title": "Z_2 `hw=1` Mass-Matrix Parametrization Note"
     },
+    "z3_character_isomorphism_color_generation_theorem_note_2026-05-10": {
+      "claim_id": "z3_character_isomorphism_color_generation_theorem_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "3e6520b01a4db8576e12e4d5272abb6e68a57f34a0237ba4144830ce533e3783",
+      "path": "docs/Z3_CHARACTER_ISOMORPHISM_COLOR_GENERATION_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_z3_character_isomorphism_color_generation.py",
+      "title": "Z_3 Character Isomorphism \u2014 Color SU(3)_c Triplet \u2194 Generation S_3 Triplet"
+    },
     "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02": {
       "claim_id": "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -66026,6 +66037,7 @@
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
     "yt_zero_import_chain_note",
     "z2_hw1_mass_matrix_parametrization_note",
+    "z3_character_isomorphism_color_generation_theorem_note_2026-05-10",
     "z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02"
   ],
   "schema_version": 1,
@@ -66035,7 +66047,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 19,
-      "none": 1626,
+      "none": 1627,
       "open_gate": 22,
       "positive_theorem": 92
     },
@@ -66046,12 +66058,12 @@
       "no_go": 126,
       "none": 449,
       "open_gate": 110,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8263,
-    "leaf_count": 532,
-    "node_count": 2059,
-    "root_count": 767,
-    "runners_with_path": 1674
+    "leaf_count": 533,
+    "node_count": 2060,
+    "root_count": 768,
+    "runners_with_path": 1675
   }
 }
