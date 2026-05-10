@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1086 |
+| unaudited | 1085 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 253 |
+| ~~audited_conditional~~ | 254 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 253 |
+| `audited_conditional` | 254 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1184 |
+| `unaudited` | 1183 |
 
 | claim_type | count |
 |---|---:|
@@ -644,6 +644,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
+| `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -5582,6 +5583,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On H_c, setting s = q - c + delta gives s >= 0, so r = sqrt(s^2 + 1/4) is >= 1/2 and sqrt(r^2 - 1/4) = sqrt(s^2) = s; conversely r >= 1/2 makes sqrt(r^2 - 1/4) >= 0, giving q >= c - delta.  _(class `A`)_
 - **chain closes:** True — The image, inverse, and boundary claims close directly from real arithmetic, nonnegativity of square roots, and the half-plane condition s >= 0. No external dependencies or parent theorem are needed.
 - **rationale:** The source theorem is independently proved as a bounded algebraic identity. The runner stdout supports the symbolic inverse and boundary checks, but the generated classifier collapses retained checks to B/D context-heavy items; those framework-instance and parent-row context checks are not load-bearing. The discrepancy does not undermine the source proof because the algebra closes without importing the parent DM-neutrino construction.
+- **auditor confidence:** high
+
+### `hard_geometry_head_to_head_note`
+
+- **Note:** [`HARD_GEOMETRY_HEAD_TO_HEAD_NOTE.md`](../../docs/HARD_GEOMETRY_HEAD_TO_HEAD_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Head-to-head ranking of hard-geometry lanes by imported Born, purity, gravity, range, and density-optimum metrics.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e138c-790b-7ff0-a56f-f0b87a80a777`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The cleanest retained joint lane is dense central-band + layer norm" and the accompanying ranking of five hard-geometry lanes from already-retained metrics.  _(class `B`)_
+- **chain closes:** False — The note imports all load-bearing metric rows from unprovided retained artifacts, but the restricted packet lists no cited authorities. The primary runner only prints hard-coded prose, omits two ranked lanes, and disagrees with the note on the mirror range claim.
+- **rationale:** Issue: the ranking depends on metric rows and retained-status claims that are not present as one-hop authorities, while the runner hard-codes an inconsistent three-lane summary. Why this blocks: the auditor cannot verify the claimed ordering, N=100 mirror retention, Z2 x Z2 row, or grown-graph density optimum from the supplied packet. Repair target: add direct dependency edges to the underlying metric notes/artifacts and repair the runner to compute or read the retained artifacts for all five lanes. Claim boundary until fixed: this is only an unsupported narrative comparison of imported retained-row prose.
 - **auditor confidence:** high
 
 ### `hard_geometry_local_note`
