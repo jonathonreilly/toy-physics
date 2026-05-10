@@ -1044,6 +1044,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_bell_inequality.py"
     },
+    "beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 2,
+        "C": 8,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_beta_gbare_rescaling_abstract_identity_narrow.py"
+    },
     "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08": {
       "assert_count": 1,
       "counts": {
@@ -23871,6 +23883,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_beta_gbare_rescaling_abstract_identity_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 2,
+        "C": 8,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_beta_gbare_squared_rescaling_invariance.py": {
       "assert_count": 1,
       "claims": [
@@ -43565,12 +43592,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 642,
+      "C": 643,
       "D": 235,
       "none": 405
     },
-    "runners_classified": 1553,
-    "runners_with_C": 804,
-    "runners_with_D": 425
+    "runners_classified": 1554,
+    "runners_with_C": 805,
+    "runners_with_D": 426
   }
 }

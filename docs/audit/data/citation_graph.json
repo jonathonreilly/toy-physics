@@ -35449,6 +35449,17 @@
       "runner_path": "scripts/frontier_bell_inequality.py",
       "title": "Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements (Conditional Model Surface)"
     },
+    "beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10": {
+      "claim_id": "beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "04befddfc9bc8783dd3dafe927a3757eb1cca99d29f059f134051784adf659aa",
+      "path": "docs/BETA_GBARE_RESCALING_ABSTRACT_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_beta_gbare_rescaling_abstract_identity_narrow.py",
+      "title": "\u03b2\u2013g_bare Rescaling Abstract Identity Narrow Theorem"
+    },
     "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08": {
       "claim_id": "beta_gbare_squared_rescaling_invariance_bounded_note_2026-05-08",
       "claim_type_author_hint": "bounded_theorem",
@@ -65094,6 +65105,7 @@
     "axiom_reduction_note",
     "background_independence_note",
     "bell_inequality_derived_note",
+    "beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10",
     "beyond_lattice_qcd_note",
     "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
     "bmv_bounded_negative_note",
@@ -65759,7 +65771,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 90
+      "positive_theorem": 91
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 720,
@@ -65768,12 +65780,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
-    "root_count": 764,
-    "runners_with_path": 1665
+    "leaf_count": 534,
+    "node_count": 2051,
+    "root_count": 765,
+    "runners_with_path": 1666
   }
 }
