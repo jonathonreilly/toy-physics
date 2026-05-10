@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1170 |
+| unaudited | 1169 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 217 |
+| ~~audited_conditional~~ | 218 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 370 |
-| `audited_conditional` | 217 |
+| `audited_conditional` | 218 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1238 |
+| `unaudited` | 1237 |
 
 | claim_type | count |
 |---|---:|
@@ -492,6 +492,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_lane6_theorem_plan_note_2026-04-28` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `chiral_walk_synthesis_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1354,6 +1355,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At eta=20, s=0.004, c=0.25, the instantaneous field traps while the dynamic causal field escapes, with forward-only static not escaping and exposure-matched static also escaping.  _(class `C`)_
 - **chain closes:** True — The current runner computes the headline window, exposure-matched static proxy, c/eta/s tables, portability checks, and four-seed gate rather than merely asserting them in prose. Closure is only for this finite diagnostic and does not establish black-hole escape physics, self-consistent field closure, or an irreducible cone-geometry mechanism.
 - **rationale:** The repaired runner constructs the lattice-like propagation model, evaluates the field variants, and computes escape ratios from the stated finite setup; the target values are not hard-coded as expected constants. The completed cache exits successfully and includes the previously missing exposure-matched static, c/eta/s, portability, and four-seed robustness evidence. The clean verdict is bounded to the runner-defined diagnostic, while stale conditional labels and broader causal-gravity prose in the note are not promoted.
+- **auditor confidence:** high
+
+### `causal_field_portability_note`
+
+- **Note:** [`CAUSAL_FIELD_PORTABILITY_NOTE.md`](../../docs/CAUSAL_FIELD_PORTABILITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded fixed-anchor three-family causal-field probe reporting exact-null control and forward-only/dynamic ratio split, conditional on imported growth, propagation, and centroid operators.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1264-60b0-7930-b961-6bb6d3fd1980`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "the configured forward-only and dynamic-cone ratios split across the three configured grown families rather than tracking a cross-family portability law"  _(class `C`)_
+- **chain closes:** False — The runner computes the reported diagnostics from imported build_structured_growth, propagate, and centroid_y, but the restricted packet provides no cited retained authority or executable certificate for those operators. The stdout closes only as a black-box run over admitted-context imports, not as a closed bounded theorem from retained primitives.
+- **rationale:** Issue: the bounded diagnostic depends on imported framework operators whose implementation and axiom-level status are outside the supplied one-hop packet. Why this blocks: the ratio split may be a real runner output, but the audit cannot verify that the runner's carrier, propagation law, and detector centroid are the intended retained primitives. Repair target: add a direct retained operator-carrier dependency for evolving_network_prototype_v6.py or a theorem deriving the probe metric and thresholds from retained primitives. Claim boundary until fixed: this remains a bounded computational diagnostic, not a retained portability theorem.
 - **auditor confidence:** high
 
 ### `causal_propagating_field_note`
