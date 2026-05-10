@@ -4169,6 +4169,30 @@
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_note"
+    },
+    {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
+      "from": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -37574,6 +37598,24 @@
       "runner_path": "scripts/complex_action_grown_companion.py",
       "title": "Claude Complex-Action Grown Companion Note"
     },
+    "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10": {
+      "claim_id": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "claude_complex_action_grown_companion_note",
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "6a56e667406c00ce1454b7abf47b1fbf677c14e9e516288839f226cf8e784026",
+      "path": "docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_claude_complex_action_grown_companion_terminal_synthesis.py",
+      "title": "Claude Complex Action Grown Companion Terminal Synthesis Meta Note"
+    },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
       "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
       "claim_type_author_hint": "open_gate",
@@ -65371,7 +65413,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 226,
       "decoration": 1,
-      "meta": 40,
+      "meta": 41,
       "no_go": 15,
       "none": 1644,
       "open_gate": 22,
@@ -65380,16 +65422,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 717,
       "decoration": 1,
-      "meta": 40,
+      "meta": 41,
       "no_go": 122,
       "none": 451,
       "open_gate": 111,
       "positive_theorem": 596
     },
-    "edge_count": 8181,
-    "leaf_count": 528,
-    "node_count": 2038,
+    "edge_count": 8187,
+    "leaf_count": 527,
+    "node_count": 2039,
     "root_count": 762,
-    "runners_with_path": 1654
+    "runners_with_path": 1655
   }
 }
