@@ -49680,6 +49680,17 @@
       "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
+    "lepton_block_tree_level_exchange_d16_prime_theorem_note_2026-05-10": {
+      "claim_id": "lepton_block_tree_level_exchange_d16_prime_theorem_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "712b7d45ddcdcd968d9cf942062e822395a11a6f282fa1702557425066bb3575",
+      "path": "docs/LEPTON_BLOCK_TREE_LEVEL_EXCHANGE_D16_PRIME_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lepton_block_tree_level_exchange.py",
+      "title": "Lepton Block Tree-Level Exchange Identification (D16-prime)"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "claim_id": "lepton_charge_universality_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -65479,6 +65490,7 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
+    "lepton_block_tree_level_exchange_d16_prime_theorem_note_2026-05-10",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
@@ -65816,7 +65828,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 17,
-      "none": 1626,
+      "none": 1627,
       "open_gate": 19,
       "positive_theorem": 90
     },
@@ -65827,12 +65839,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 590
+      "positive_theorem": 591
     },
     "edge_count": 8236,
-    "leaf_count": 533,
-    "node_count": 2052,
-    "root_count": 764,
-    "runners_with_path": 1667
+    "leaf_count": 534,
+    "node_count": 2053,
+    "root_count": 765,
+    "runners_with_path": 1668
   }
 }
