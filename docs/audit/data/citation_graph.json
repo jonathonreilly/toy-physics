@@ -17101,6 +17101,26 @@
       "to": "quark_cp_carrier_completion_note_2026-04-18"
     },
     {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_note_2026-04-19"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_ray_phase_completion_note_2026-04-18"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "quark_cp_carrier_completion_note_2026-04-18"
+    },
+    {
+      "from": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
       "from": "quark_projector_ray_phase_completion_note_2026-04-18",
       "to": "quark_cp_carrier_completion_note_2026-04-18"
     },
@@ -56468,6 +56488,23 @@
       "runner_path": "scripts/frontier_quark_projector_parameter_audit.py",
       "title": "Quark Projector-Parameter Audit"
     },
+    "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10": {
+      "claim_id": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_note_2026-04-19",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "quark_projector_ray_phase_completion_note_2026-04-18",
+        "quark_cp_carrier_completion_note_2026-04-18",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02"
+      ],
+      "note_hash": "9bc6e28c8f7322009f3f13af32e5a22d81ba369f0043f1d48ca2e7d6061421c1",
+      "path": "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_quark_projector_parameter_audit_terminal_synthesis.py",
+      "title": "Quark Projector Parameter Audit Terminal Synthesis Meta Note"
+    },
     "quark_projector_ray_phase_completion_note_2026-04-18": {
       "claim_id": "quark_projector_ray_phase_completion_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -65334,7 +65371,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 226,
       "decoration": 1,
-      "meta": 39,
+      "meta": 40,
       "no_go": 15,
       "none": 1644,
       "open_gate": 22,
@@ -65343,16 +65380,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 717,
       "decoration": 1,
-      "meta": 39,
+      "meta": 40,
       "no_go": 122,
       "none": 451,
       "open_gate": 111,
       "positive_theorem": 596
     },
-    "edge_count": 8176,
-    "leaf_count": 527,
-    "node_count": 2037,
+    "edge_count": 8181,
+    "leaf_count": 528,
+    "node_count": 2038,
     "root_count": 762,
-    "runners_with_path": 1653
+    "runners_with_path": 1654
   }
 }
