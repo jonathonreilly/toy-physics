@@ -4489,6 +4489,30 @@
       "to": "sign_portability_invariant_note"
     },
     {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_transport_note_2026-04-17"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
       "from": "continuum_convergence_note",
       "to": "lattice_3d_l2_tail_stats_note"
     },
@@ -38596,6 +38620,24 @@
       "runner_path": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py",
       "title": "Connes-Kreimer Birkhoff Factorization \u2014 External Narrow Theorem"
     },
+    "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10": {
+      "claim_id": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
+        "observable_principle_from_axiom_note",
+        "yt_p2_taste_staircase_transport_note_2026-04-17",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "41a51403454312408feb82e197029e5116b553ed333602f9c6e9dc87c4d990d6",
+      "path": "docs/CONNES_KREIMER_BRIDGE_16FOLD_BLOCKING_NO_GO_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py",
+      "title": "Connes-Kreimer Bridge for the 16-Fold Blocking Composition \u2014 No-Go Theorem"
+    },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
       "claim_type_author_hint": "meta",
@@ -66743,7 +66785,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 23,
+      "no_go": 24,
       "none": 1626,
       "open_gate": 29,
       "positive_theorem": 96
@@ -66752,15 +66794,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 130,
+      "no_go": 131,
       "none": 449,
       "open_gate": 117,
       "positive_theorem": 596
     },
-    "edge_count": 8352,
+    "edge_count": 8358,
     "leaf_count": 540,
-    "node_count": 2081,
+    "node_count": 2082,
     "root_count": 772,
-    "runners_with_path": 1696
+    "runners_with_path": 1697
   }
 }
