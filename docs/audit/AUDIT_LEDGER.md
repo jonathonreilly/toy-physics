@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 124 |
-| **retained_bounded** | 236 |
+| **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1091 |
+| unaudited | 1090 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 394 |
+| `audited_clean` | 395 |
 | `audited_conditional` | 248 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1189 |
+| `unaudited` | 1188 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 809 |
+| `bounded_theorem` | 810 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 197 |
 | `open_gate` | 102 |
-| `positive_theorem` | 719 |
+| `positive_theorem` | 718 |
 
 | criticality | count |
 |---|---:|
@@ -209,6 +209,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5.5 | B | - |
 | `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4284,6 +4285,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `audit_queue_runner_path_null_for_named_primary_verifier`
   - `retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency`
   - `Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30`
+
+- **Note:** [`FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md`](../../docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional algebraic consequences of the assumed bare-coupling inputs g3^2=1, g2^2=1/(d+1), and gY^2=1/(d+2), including the d=3 alpha3/alpha_em ratio 9 and bare weak-angle identity 4/9.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e137a-9cce-78e0-8f37-adeeb909a17e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** if `g_3^2 = 1`, `g_2^2 = 1/(d + 1)`, and `g_Y^2 = 1/(d + 2)`, then `1/g_em^2 = 2d + 3`  _(class `A`)_
+- **chain closes:** True — The note explicitly limits itself to algebra after the coupling inputs are assumed, and the stated identities follow by direct substitution. It does not claim to derive the inputs or a physical low-energy readout.
+- **rationale:** Within the bounded scope, the load-bearing step is ordinary algebra over explicitly assumed inputs, not a claimed first-principles derivation. The runner verifies the same substitutions and also checks boundary language in extra files, but those extra files are not needed for the scoped conditional identity. No external comparator, renaming, or tuned numerical match is present in the source note's actual claim boundary.
 - **auditor confidence:** high
 
 ### `g_bare_derivation_note`
