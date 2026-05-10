@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
-| unaudited | 1171 |
+| unaudited | 1170 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 219 |
+| ~~audited_conditional~~ | 220 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 371 |
-| `audited_conditional` | 219 |
+| `audited_conditional` | 220 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1239 |
+| `unaudited` | 1238 |
 
 | claim_type | count |
 |---|---:|
@@ -629,6 +629,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_axis_alignment_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
@@ -6691,6 +6692,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the reduced graph-first PMNS family, J_chi(A_fwd) = chi = u + i v, and the current exact bank still annihilates this current on all retained routes.  _(class `A`)_
 - **chain closes:** False — The Fourier-projection identity is plausible as algebra over specified holonomies, but the restricted packet does not provide the holonomy/readout formulas or a proof that the listed sole-axiom routes annihilate J_chi. The missing step is a closed derivation of the native C3 holonomies and boundary vanishing from the axiom.
 - **rationale:** There are no cited authorities and no runner source or stdout, so the note must close from its own text. It defines J_chi and asserts both the value extraction J_chi(A_fwd)=u+iv and the route-wise boundary J_chi=0, but the restricted packet does not derive the native holonomy values or the current-bank annihilation theorem. The result therefore imports an unstated readout/boundary theorem rather than providing a first-principles axiom derivation.
+- **auditor confidence:** high
+
+### `pmns_commutant_eigenoperator_selector_note`
+
+- **Note:** [`PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`](../../docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded C3 Fourier decomposition of the stated hw=1 corner trace profile tr(P_i^* M P_i), including one-way projected Cl(3)-span odd-mode vanishing and one demonstrated non-Cl(3) nonzero odd example, excluding any PMNS q/tau observable bridge.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e126c-7a4d-7f83-8af5-fb134c303f34`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The runner verifies that the odd modes `(v_+, v_-)` vanish on the projected `Cl(3)` basis, hence on its span by linearity, and that they are nonzero on the demonstrated projected non-`Cl(3)` commutant generator.  _(class `A`)_
+- **chain closes:** False — The C3 Fourier identity itself closes for any 3-vector, and the PMNS q/tau bridge is correctly excluded. The supplied runner, however, does not compute the stated trace profile: `corner_profile` Hermitianizes the projected operator and takes a real trace, while the note states v_i = tr(P_i^* M P_i) and does not prove the demonstrated generator has a real/Hermitian profile.
+- **rationale:** Issue: the load-bearing runner checks a real Hermitianized trace profile rather than the literal corner-trace profile stated in the theorem. Why this blocks: the advertised exact theorem and the demonstrated non-Cl(3) example are not verified for the same object the note defines, so a hostile reviewer need not accept the one-way certificate as stated. Repair target: either define the theorem's profile as the real trace of the Hermitian part and verify the selected representative remains projected-commutant and non-Cl(3), or update the runner to compute the full complex tr(P_i^* M P_i) and check the stated claims directly. Claim boundary until fixed: the standard C3 Fourier decomposition of a real three-corner profile and the runner's real-part odd-mode check remain as a bounded algebraic calculation, with no PMNS-observable bridge.
 - **auditor confidence:** high
 
 ### `pmns_corner_transport_active_block_note`
