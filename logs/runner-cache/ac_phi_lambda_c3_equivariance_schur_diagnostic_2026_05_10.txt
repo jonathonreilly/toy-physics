@@ -1,0 +1,75 @@
+AC_phi_lambda preserved-C_3 structural foreclosure diagnostic
+Source note: docs/AC_PHI_LAMBDA_PRESERVED_C3_STRUCTURAL_FORECLOSURE_BOUNDED_THEOREM_NOTE_2026-05-10.md
+
+================================================================
+Section A: structural Schur check on the regular rep of Z/3Z on C^3
+================================================================
+PASS: U_C3 is a 3-cycle permutation matrix (U^3 = I)
+PASS: U_C3 has order 3 (U != I, U^2 != I)
+PASS: U_C3 is unitary (U^dagger U = I)
+PASS: spectrum of U_C3 is {1, omega, omega^2} | eigs=[1, -1/2 - sqrt(3)*I/2, -1/2 + sqrt(3)*I/2]
+PASS: H is Hermitian (H^dagger == H)
+PASS: H commutes with U_C3 ([H, U_C3] = 0)
+PASS: <c_alpha|H|c_alpha> = a (constant over alpha) | diag = [a, a, a]
+PASS: a = Tr(H) / 3 (cyclic identity) | Tr(H)/3 = a
+PASS: numerical instance a=3/2, b=7/10 gives diag (3/2, 3/2, 3/2) | diag_num = [3/2, 3/2, 3/2]
+PASS: eigenvalues of numerical H match the circulant spectrum formula | eigvals = [4/5, 29/10]
+PASS: counterfactual: non-C_3-equivariant H distinguishes corners | break_diag = [1, 2, 3]
+PASS: counterfactual: non-C_3-equivariant H does NOT commute with U_C3
+
+================================================================
+Section B: review-hygiene checks on the source note
+================================================================
+PASS: required source exists: foreclosure synthesis note | docs/AC_PHI_LAMBDA_PRESERVED_C3_STRUCTURAL_FORECLOSURE_BOUNDED_THEOREM_NOTE_2026-05-10.md
+PASS: required source exists: substep-4 AC narrowing note | docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md
+PASS: required source exists: preserved-C_3 interpretation note | docs/C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md
+PASS: required source exists: BAE rename meta note | docs/BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09.md
+PASS: required source exists: minimal axioms note | docs/MINIMAL_AXIOMS_2026-05-03.md
+PASS: note declares claim_type: bounded_theorem
+PASS: note declares status authority: independent audit lane only
+PASS: note declares proposal_allowed: false
+PASS: note does not declare audit-clean verdict
+PASS: note does not assert an Effective-status header
+PASS: note does not propose a new axiom
+PASS: note does not include a forbidden_imports_used: true line
+PASS: cites probe via markdown link: A3_ROUTE1_HIGGS_YUKAWA_C3_BREAKING_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r1.md
+PASS: cites probe via markdown link: A3_ROUTE2_SINGLE_CLOCK_C3_OBSTRUCTION_NOTE_2026-05-08_r2.md
+PASS: cites probe via markdown link: A3_ROUTE3_ANOMALY_INFLOW_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r3.md
+PASS: cites probe via markdown link: A3_ROUTE4_SPIN6_CHAIN_BOUNDED_OBSTRUCTION_NOTE_2026-05-08_r4.md
+PASS: cites probe via markdown link: A3_ROUTE5_NO_PROPER_QUOTIENT_SHARPENED_OBSTRUCTION_NOTE_2026-05-08_r5.md
+PASS: cites probe via markdown link: A3_R1_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r1hr.md
+PASS: cites probe via markdown link: A3_R2_HOSTILE_REVIEW_CONFIRMS_EXHAUSTION_NOTE_2026-05-08_r2hr.md
+PASS: cites probe via markdown link: A3_R3_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r3hr.md
+PASS: cites probe via markdown link: A3_R4_HOSTILE_REVIEW_CONFIRMED_NOTE_2026-05-08_r4hr.md
+PASS: cites probe via markdown link: A3_R5_HOSTILE_REVIEW_CONFIRMS_OBSTRUCTION_NOTE_2026-05-08_r5hr.md
+PASS: cites parent / canonical authority: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md
+PASS: cites parent / canonical authority: C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md
+PASS: cites parent / canonical authority: BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09.md
+PASS: cites parent / canonical authority: AUDIT_BACKLOG_CAMPAIGN_PROGRESS_SYNTHESIS_2026-05-02.md
+PASS: cites parent / canonical authority: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+PASS: cites parent / canonical authority: MINIMAL_AXIOMS_2026-05-03.md
+PASS: repo-canonical vocabulary present: Schur
+PASS: repo-canonical vocabulary present: regular representation
+PASS: repo-canonical vocabulary present: circulant
+PASS: repo-canonical vocabulary present: C_3
+PASS: repo-canonical vocabulary present: Z/3
+PASS: repo-canonical vocabulary present: Type I_3
+PASS: repo-canonical vocabulary present: AC_phi
+PASS: repo-canonical vocabulary present: AC_lambda
+PASS: repo-canonical vocabulary present: AC_φλ
+PASS: repo-canonical vocabulary present: BAE
+PASS: repo-canonical vocabulary present: preserved
+PASS: 10-probe inventory records `unaudited` ledger status
+PASS: AC_phi_lambda decomposition records AC_lambda.struct
+PASS: AC_phi_lambda decomposition records AC_lambda.label
+PASS: AC_phi_lambda decomposition records BAE as the open atom
+PASS: escape route named: Non-`C_3`-symmetric primitive
+PASS: escape route named: Spontaneous `C_3` breaking
+PASS: escape route named: External Higgs VEV
+PASS: escape route named: PDG mass input
+PASS: escape route named: Explicit labeling axiom
+PASS: note states 'not a new derivation'
+
+================================================================
+PASS = 61, FAIL = 0
+================================================================
