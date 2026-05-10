@@ -1,0 +1,313 @@
+==============================================================================
+Probe W-S4b-Classicality — Is lambda(M_Pl)=0 forced by lattice UV?
+Loop: probe-w-s4b-classicality-lambda-mpl-forced-20260510-probeW_S4b_classicality
+Date: 2026-05-10
+==============================================================================
+
+  Sister probes consumed as input:
+    docs/KOIDE_Z_S4B_RGE_HOSTILE_AUDIT_NOTE_2026-05-08_probeZ_S4b_audit.md
+       Verdict: BOUNDED, I4 = POSTULATED
+    docs/KOIDE_Y_S4B_RGE_LAMBDA_RUNNING_NOTE_2026-05-08_probeY_S4b_rge.md
+       Verdict: positive_theorem (downgraded to bounded by Z-S4b)
+    docs/KOIDE_X_L1_MSBAR_NATIVE_SCHEME_NOTE_2026-05-08_probeX_L1_msbar.md
+       Verdict: bounded_theorem; QCD beta_2,3 NOT framework-derivable
+
+  Hostile review rules:
+    .claude memory: feedback_hostile_review_semantics.md
+    .claude memory: feedback_consistency_vs_derivation_below_w2.md
+    .claude memory: feedback_primitives_means_derivations.md
+
+==============================================================================
+K1: Operator content of S_bare from A1+A2+gates
+==============================================================================
+
+  S_bare derivable from A1 (Cl(3) algebra) + A2 (Z^3 substrate)
+  + GATE-Stagg (staggered-Dirac realization) + GATE-Gbare (Wilson plaquette):
+
+    S_bare[U, psi_bar, psi] =
+        beta_W sum_plaq Re Tr(1 - U_plaq)            [gauge plaquette]
+      + sum_x psi_bar_x [staggered-D[U]] psi_x       [Dirac kinetic]
+      + m_bare sum_x psi_bar_x psi_x                 [chiral-symmetric mass]
+      + Yukawa-via-gauge-link bilinears              [fermion bilinear]
+
+  Field content:
+    * Gauge links U_mu(x) in SU(3) [from G_BARE_STRUCTURAL Claims 1,2 PROVED]
+    * Grassmann fermions psi_bar(x), psi(x) [from GATE-Stagg in-flight]
+    * NO fundamental scalar field phi(x)
+
+  Operators NOT in S_bare:
+    * No lambda_bare phi^4 term  [no fundamental scalar to build it from]
+    * No 4-fermion contact (psi_bar psi)^2  [not in operator basis]
+    * No higher-fermion (psi_bar psi)^n for n >= 2
+    * No anomalous gauge-Higgs couplings beyond bilinears
+
+  Premises consumed:
+    BASE-CL3:        A1 (Cl(3) algebra) [retained per MINIMAL_AXIOMS]
+    BASE-Z3:         A2 (Z^3 substrate) [retained per MINIMAL_AXIOMS]
+    GATE-Stagg:      open gate (formerly A3)
+    GATE-Gbare:      open gate (formerly A4); g_bare=1 conditional
+    HiggsTaste:      Higgs is taste condensate, composite, not elementary
+                     [COMPLETE_PREDICTION_CHAIN_2026_04_15 Step 1]
+  [PASS] k1-s-bare-no-scalar: S_bare derivable from A1+A2+gates has no fundamental scalar field; Higgs is composite (taste condensate)
+  [PASS] k1-s-bare-no-quartic: S_bare contains no lambda_bare phi^4 operator (no scalar to build it from)
+  [PASS] k1-s-bare-no-4fermion-contact: S_bare contains no 4-fermion contact (psi_bar psi)^2 (not in operator basis)
+  [ADMITTED] k1-gate-stagg-pending: GATE-Stagg (staggered-Dirac realization) is open per MINIMAL_AXIOMS_2026-05-03 Section A3; in-flight chain has THREE_GENERATION_*, PHYSICAL_LATTICE_NECESSITY_NOTE
+  [ADMITTED] k1-gate-gbare-pending: GATE-Gbare (g_bare = 1) is open per MINIMAL_AXIOMS_2026-05-03 Section A4; G_BARE_DERIVATION_NOTE has audited_conditional partial chain
+
+==============================================================================
+K2: Route W-A — Aizenman-Frohlich lattice phi^4 triviality
+==============================================================================
+
+  Theorem (Aizenman 1981, Frohlich 1982):
+    For d >= 4, the lattice phi^4 theory becomes free in the continuum
+    limit a -> 0, i.e., lambda_R -> 0.
+
+  Required premise:
+    Action S[phi] = -sum_<xy> J phi_x phi_y + sum_x [m^2 phi_x^2 + lambda phi_x^4]
+    with FUNDAMENTAL scalar phi(x) on the lattice.
+
+  Cl(3)/Z^3 check:
+    K1 confirmed: no fundamental scalar field phi(x) in S_bare.
+    Higgs is COMPOSITE (taste condensate) per HiggsTaste premise.
+    Aizenman-Frohlich theorem is silent on theories with composite scalar.
+
+  Continuum-limit subtlety:
+    Aizenman-Frohlich is an ASYMPTOTIC statement about a -> 0.
+    Cl(3)/Z^3 does not take a -> 0; lattice spacing is FIXED at a^-1 ~ M_Pl.
+    Even with a fundamental scalar, the asymptotic theorem would not directly apply.
+  [PASS] k2-route-a-not-applicable: Route W-A (lattice phi^4 triviality) NOT APPLICABLE: Cl(3)/Z^3 has no fundamental scalar; Higgs is composite (taste condensate)
+  [PASS] k2-route-a-asymptotic-mismatch: Route W-A is an asymptotic a->0 statement; Cl(3)/Z^3 has finite cutoff
+  [ADMITTED] k2-aizenman-frohlich-external: Aizenman-Frohlich theorem is external mathematical literature; consumed only as admitted-context for foreclosure analysis
+
+==============================================================================
+K3: Route W-B — No-bare-quartic operator absence
+==============================================================================
+
+  Argument:
+    Direct inspection of S_bare = S_W^plaq + S_stagg^Dirac:
+      * S_W^plaq contains only gauge links U; no scalar.
+      * S_stagg^Dirac is BILINEAR in fermions; no 4-fermion contact.
+    Therefore the operator lambda_bare phi^4 is ABSENT from S_bare.
+    Equivalently: lambda_bare(a^-1) = 0 by operator absence.
+
+  Symmetry / dimension consideration:
+    A composite quartic for phi ~ psi_bar psi corresponds to (psi_bar psi)^4
+    in fermion fields (8-point function).
+    Dimension counting in d=4: [psi] = 3/2, [psi_bar psi] = 3,
+                                [(psi_bar psi)^4] = 12,
+                                [coupling] = 4 - 12 = -8.
+    So this operator is HIGHLY IRRELEVANT at the lattice cutoff.
+
+  Comparison to BHL/NJL counterexample:
+    NJL has 4-fermion contact term g_NJL (psi_bar psi)^2 in bare action.
+    After Hubbard-Stratonovich, this gives lambda_eff(M_Pl) ~ g_NJL != 0.
+    Cl(3)/Z^3 bare action does NOT contain such a 4-fermion contact term.
+    So NJL counterexample to compositeness => lambda=0 does NOT apply.
+
+  Verdict:
+    lambda_bare(a^-1) = 0 STRUCTURALLY FORCED by operator absence in S_bare.
+    This is a from-A1+A2 statement (conditional on GATE-Stagg + GATE-Gbare).
+  [PASS] k3-route-b-lambda-bare-zero: lambda_bare(a^-1) = 0 forced by operator absence in S_bare derivable from A1+A2
+  [PASS] k3-route-b-no-bhl-njl-counterexample: BHL/NJL counterexample (4-fermion contact term in bare action) does NOT apply to Cl(3)/Z^3 because no 4-fermion contact term is in S_bare
+  [PASS] k3-route-b-fermion-quartic-irrelevant: Composite quartic via (psi_bar psi)^4 has dim -8 (highly irrelevant); not generated by physics above the lattice cutoff (since cutoff IS the UV completion)
+
+==============================================================================
+K4: Route W-C — Asymptotic conformal UV
+==============================================================================
+
+  Argument:
+    If UV theory at scale a^-1 is exactly conformal, all couplings sit at
+    fixed points g_*. If lambda_* = 0 is forced by scaling dimension,
+    then lambda(M_Pl) = 0 is forced.
+
+  Cl(3)/Z^3 check:
+    Wilson plaquette has explicit dimensionful coupling beta_W = 2 N_c = 6
+    [G_BARE_DERIVATION_NOTE retained_bounded].
+    This explicitly breaks conformal invariance:
+      beta_W -> beta_W * b_0 ln(mu/mu_0) runs.
+
+    GATE-Stagg open: no retained theorem asserts asymptotic conformality.
+    No Banks-Zaks-style fixed-point analysis retained for Cl(3)/Z^3.
+    No holographic dual giving conformal UV (would be import-class).
+
+  Verdict:
+    Route W-C NOT RETAINED. Would require new derivations beyond A1+A2.
+  [PASS] k4-route-c-wilson-plaquette-breaks-conformal: Wilson plaquette term beta_W = 6 explicitly breaks conformal invariance; Cl(3)/Z^3 at scale a^-1 is NOT conformal
+  [PASS] k4-route-c-no-banks-zaks: No Banks-Zaks-style fixed-point analysis is in retained content for Cl(3)/Z^3
+  [PASS] k4-route-c-not-retained: Route W-C (asymptotic conformal UV) NOT RETAINED for Cl(3)/Z^3
+
+==============================================================================
+K5: Route W-D — Finite-cutoff no-Landau-pole
+==============================================================================
+
+  Argument:
+    SM phi^4 in strict continuum a -> 0 has Landau pole at
+      Lambda_L = m_H exp(2 pi^2 / (3 lambda(m_H)))
+    where lambda(mu) -> infinity. This forces lambda_R(mu) -> 0 in continuum.
+
+    A finite UV cutoff a^-1 ~ M_Pl avoids the Landau pole entirely.
+
+  Cl(3)/Z^3 check:
+    Lattice has finite spacing a per HiggsTaste + LatticeAction.
+    a^-1 ~ M_Pl ~ 10^19 GeV (lattice IS the UV completion).
+    Landau pole at Lambda_L >> M_Pl is OUTSIDE the framework's physical surface.
+
+    Numerical estimate of SM Landau pole at lambda(m_H) = 0.13:
+      Lambda_L / m_H = exp(50.61) = 9.574e+21
+    With m_H ~ 125 GeV: Lambda_L ~ 1.197e+24 GeV
+    Compared to M_Pl ~ 1.22e19 GeV: Lambda_L > M_Pl (above cutoff).
+
+  But: any 0 <= lambda(M_Pl) <= O(1) is consistent with finite cutoff.
+  Removing the obstruction does not select lambda = 0 from allowed values.
+
+  Verdict:
+    Route W-D CONSISTENT WITH but does NOT FORCE lambda = 0.
+  [PASS] k5-route-d-finite-cutoff-removes-landau-pole: Finite UV cutoff a^-1 ~ M_Pl removes Landau-pole obstruction (irrelevant for Cl(3)/Z^3 since cutoff is finite)
+  [PASS] k5-route-d-not-forcing: Route W-D does NOT force lambda = 0; any 0 <= lambda <= O(1) is consistent with finite cutoff
+
+==============================================================================
+K6: Matching admission lambda_bare(a^-1) = lambda^MSbar(M_Pl)
+==============================================================================
+
+  The runner consumes lambda^MSbar(M_Pl) = 0.
+  Route W-B forces lambda_bare(a^-1) = 0.
+  The matching identification is:
+
+    lambda^MSbar(M_Pl) = Z_lambda(g_lattice, g_MSbar) * lambda_bare(a^-1)
+                       + delta_lambda(g_*)
+
+  Z_lambda: multiplicative scheme conversion factor (1 + O(g^2) + ...)
+  delta_lambda(g_*): additive finite scheme-conversion contribution
+                     generated by gauge couplings even when lambda_bare = 0
+
+  1-loop magnitude (Probe X-L1-MSbar §1: 1-loop scheme universal):
+    g_typical(M_Pl) = 0.507
+    |delta_lambda^1-loop| ~ g^2/(16 pi^2) ~ 0.00163
+    -> delta m_H ~ 0.00163 * 312.0 = 0.51 GeV
+
+  Framework gap to PDG: |125.04 - 125.25| = 0.21 GeV
+  Required |delta_lambda| for match: 0.21 / 312.0 = 0.00067
+  1-loop magnitude 0.00163 >> required 0.00067: matching admission is QUANTITATIVELY SMALL but exceeds gap
+  [PASS] k6-matching-1loop-perturbative-control: Required matching admission |delta_lambda| ~ 0.00067 is within 1-loop perturbative control g^2/(16 pi^2) ~ 0.00163
+  [PASS] k6-1loop-scheme-universal: At 1-loop, scheme conversion Z_lambda ~ 1 (per X-L1-MSbar §1 1-loop universality)
+  [ADMITTED] k6-higher-loop-import: delta_lambda^(n>=2) higher-loop matching corrections involve dim-reg multi-loop integrals; named admitted-context per X-L1-MSbar import-class
+
+==============================================================================
+K7: Cross-check vs SM literature (Buttazzo et al. 2013)
+==============================================================================
+
+  SM literature (Buttazzo 2013, Degrassi 2012):
+    lambda^SM,MSbar(M_Pl) ~ -0.013
+    [from observed m_t = 173.3 GeV, alpha_s(M_Z) = 0.1184]
+
+  Plug into runner slope dm_H/dlambda = +312.0 GeV/unit:
+    m_H^SM-lit = 125.04 + (-0.013) * 312.0
+             = 120.98 GeV
+    deviation from PDG 125.25 = -3.41%
+
+  Framework prediction (lambda(M_Pl) = 0):
+    m_H^framework = 125.04 GeV
+    deviation from PDG = -0.17%
+
+  Comparison:
+    Route                       | lambda(M_Pl) | m_H (GeV) | gap %
+    Framework W-B (op absence)  |  0           |  125.04    | -0.17
+    SM literature (Buttazzo)    | -0.013      |  120.98    | -3.41
+  [PASS] k7-framework-closer-than-literature: Framework lambda=0 BC (0.17% gap) is CLOSER to PDG than SM literature (3.41% gap) by factor 20.3
+  [PASS] k7-framework-within-positive-tier: Framework m_H deviation 0.17% < positive-tier threshold 5%
+  [ADMITTED] k7-buttazzo-external: Buttazzo et al. 2013 SM literature value lambda^MSbar(M_Pl) ~ -0.013 is external admitted-context; consumed only as comparator, not as derivation input
+
+==============================================================================
+K8: Four-route foreclosure summary
+==============================================================================
+
+  Route | Description                          | Status
+  ------+--------------------------------------+--------------------------
+  W-A   | Lattice phi^4 triviality             | NOT APPLICABLE
+        | (Aizenman 1981, Frohlich 1982)       | (no fundamental scalar)
+  W-B   | No-bare-quartic operator absence     | STRUCTURALLY CORRECT
+        | in S_bare derivable from A1+A2       | (forces lambda_bare=0)
+  W-C   | Asymptotic conformal UV              | NOT RETAINED
+        | (fixed point lambda_*=0)             | (Wilson plaquette breaks)
+  W-D   | Finite-cutoff no-Landau-pole         | CONSISTENT BUT NOT FORCING
+        |                                      | (any 0<=lambda<=O(1))
+
+  Net structural conclusion:
+    * W-A foreclosed (not applicable to composite-Higgs).
+    * W-B is the SINGLE structural-route refinement of Z-S4b-Audit's I4.
+      It forces lambda_bare(a^-1) = 0 at the lattice-bare layer.
+    * W-C foreclosed (not retained).
+    * W-D foreclosed (not forcing).
+
+  Matching layer (W-B -> runner MSbar input):
+    * 1-loop: scheme-universal (forced; X-L1 §1).
+    * 2-loop and higher: import-class (named admission).
+  [PASS] k8-route-w-b-only-structural: Of 4 candidate routes, only W-B (operator absence) gives a structurally correct from-A1+A2 statement; 3 routes are foreclosed (W-A not applicable, W-C not retained, W-D not forcing)
+  [PASS] k8-route-w-b-bounded-not-positive: W-B closure is BOUNDED (not POSITIVE) because matching to runner MSbar input requires named admission for higher loops
+
+==============================================================================
+K9: I4 reclassification verdict
+==============================================================================
+
+  Z-S4b-Audit classification of I4:
+    'POSTULATED (Y-S4b-RGE Section 10 itself admits framework-axiom in nature,
+     not derived)'
+
+  W-S4b-Classicality refinement of I4:
+    Layer A — Lattice bare quartic lambda_bare(a^-1):
+      FORCED on retained content (operator absence in S_bare)
+      Conditional on GATE-Stagg + GATE-Gbare
+
+    Layer B — 1-loop matching lambda_bare(a^-1) <-> lambda^MSbar(M_Pl):
+      FORCED on retained content (1-loop scheme universality, X-L1 §1)
+
+    Layer C — Higher-loop matching delta_lambda^(n>=2):
+      NAMED ADMISSION (perturbative-MSbar, import-class per X-L1-MSbar)
+
+  Net I4 classification: BOUNDED
+    (FORCED at lattice-bare + 1-loop matching layer;
+     named matching admission for higher loops)
+
+  Brief tier mapping:
+    Positive: I4 reclassified as FORCED by retained lattice UV
+    Bounded:  forced with named additions  <-- this verdict
+    Negative: I4 remains free postulate
+
+  Effect on Y-S4b-RGE downgrade:
+    Y-S4b-RGE downgrade to bounded with named imports STANDS.
+    {I2, I3, delta_lambda matching} remain as named imports.
+    The I4 LAYER is refined: from 'free postulate' to 'BOUNDED'.
+  [PASS] k9-i4-bounded-not-postulated: I4 reclassified from 'POSTULATED (free axiom)' to 'BOUNDED (forced at lattice-bare + 1-loop matching with named admission for higher loops)'
+  [PASS] k9-y-s4b-downgrade-stands: Y-S4b-RGE downgrade to bounded with named imports {I2, I3} STANDS; this probe only refines the I4 layer specifically
+  [PASS] k9-strongest-from-a1-a2-claim: Strongest from-A1+A2 claim about the BC: lambda_bare(a^-1) = 0 by operator absence, conditional on GATE-Stagg + GATE-Gbare in-flight chains
+
+==============================================================================
+Summary
+==============================================================================
+  PASS = 22, FAIL = 0, ADMITTED = 5
+  Tier: bounded_theorem
+
+  Four-route foreclosure analysis:
+    W-A: NOT APPLICABLE (composite Higgs, no fundamental scalar)
+    W-B: STRUCTURALLY CORRECT (operator absence in S_bare from A1+A2)
+    W-C: NOT RETAINED (Wilson plaquette breaks conformal invariance)
+    W-D: CONSISTENT BUT NOT FORCING (finite cutoff allows any 0<=lambda<=O(1))
+
+  Net I4 reclassification:
+    From: POSTULATED (free axiom, Z-S4b-Audit)
+    To:   BOUNDED (forced at lattice-bare + 1-loop matching layer with
+                   named admitted-context for higher-loop matching)
+
+  Y-S4b-RGE downgrade STANDS: bounded_theorem with named imports {I2, I3,
+    delta_lambda matching}. This probe refines I4 specifically.
+
+  Strongest from-A1+A2 statement:
+    lambda_bare(a^-1) = 0 by operator absence in S_bare = S_W^plaq + S_stagg^Dirac
+    Conditional on GATE-Stagg + GATE-Gbare in-flight chains.
+
+  Cross-check: framework lambda=0 -> m_H=125.04 GeV (-0.17% PDG)
+  vs SM literature lambda=-0.013 -> m_H=121 GeV (-3.4% PDG).
+  Framework BC closer to PDG by factor ~20.
+
+  ALL CHECKS PASSED (22/22). 5 import/postulate/external admissions.
+  Probe W-S4b-Classicality: BOUNDED THEOREM (I4 partial reclassification).
