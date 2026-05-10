@@ -4128,6 +4128,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_dm_leptogenesis_transport_status.py"
     },
+    "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_dm_leptogenesis_transport_status_terminal_synthesis.py"
+    },
     "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15": {
       "assert_count": 1,
       "counts": {
@@ -26210,6 +26222,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_dm_leptogenesis_transport_status_terminal_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_dm_leptogenesis_universal_yukawa_nogo.py": {
       "assert_count": 1,
       "claims": [
@@ -43129,15 +43156,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 158,
+    "decoration_candidates": 159,
     "dominant_class_distribution": {
       "A": 109,
-      "B": 157,
+      "B": 158,
       "C": 638,
       "D": 229,
       "none": 404
     },
-    "runners_classified": 1537,
+    "runners_classified": 1538,
     "runners_with_C": 797,
     "runners_with_D": 417
   }

@@ -5349,6 +5349,38 @@
       "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
     },
     {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_integral_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_hrad_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16"
+    },
+    {
       "from": "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15",
       "to": "dm_neutrino_schur_suppression_theorem_note_2026-04-15"
     },
@@ -39234,6 +39266,26 @@
       "runner_path": "scripts/frontier_dm_leptogenesis_transport_status.py",
       "title": "DM Leptogenesis Transport Status"
     },
+    "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10": {
+      "claim_id": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "dm_leptogenesis_transport_status_note_2026-04-16",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16",
+        "dm_leptogenesis_transport_integral_theorem_note_2026-04-16",
+        "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
+        "dm_leptogenesis_hrad_theorem_note_2026-04-16",
+        "dm_leptogenesis_equilibrium_conversion_theorem_note_2026-04-16"
+      ],
+      "note_hash": "b2d45c4484bd0d2fcf3bbe755a8ef3725287f3d255ded51ccd244a37482830fe",
+      "path": "docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_TERMINAL_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_dm_leptogenesis_transport_status_terminal_synthesis.py",
+      "title": "DM Leptogenesis Transport Status Terminal Synthesis Meta Note"
+    },
     "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15": {
       "claim_id": "dm_leptogenesis_universal_yukawa_no_go_note_2026-04-15",
       "claim_type_author_hint": null,
@@ -65013,7 +65065,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 225,
       "decoration": 1,
-      "meta": 29,
+      "meta": 30,
       "no_go": 15,
       "none": 1651,
       "open_gate": 23,
@@ -65022,16 +65074,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 29,
+      "meta": 30,
       "no_go": 123,
       "none": 451,
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8119,
+    "edge_count": 8127,
     "leaf_count": 533,
-    "node_count": 2034,
+    "node_count": 2035,
     "root_count": 768,
-    "runners_with_path": 1649
+    "runners_with_path": 1650
   }
 }
