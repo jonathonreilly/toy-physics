@@ -2928,6 +2928,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py"
     },
+    "cubic_invariant_rank_two_isotropy_narrow_theorem_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_cubic_invariant_rank_two_isotropy_narrow.py"
+    },
     "cycle_battery_note_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -25499,6 +25511,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_cubic_invariant_rank_two_isotropy_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "cubic_invariant_rank_two_isotropy_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_cyclic_projector_compression_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -43701,11 +43728,11 @@
       "A": 111,
       "B": 160,
       "C": 643,
-      "D": 238,
+      "D": 239,
       "none": 406
     },
-    "runners_classified": 1558,
-    "runners_with_C": 806,
-    "runners_with_D": 428
+    "runners_classified": 1559,
+    "runners_with_C": 807,
+    "runners_with_D": 429
   }
 }

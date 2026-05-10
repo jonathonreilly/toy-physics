@@ -38374,6 +38374,17 @@
       "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py",
       "title": "Cross-Sector A^2-Q_l-|V_cb| Bridge Support Note"
     },
+    "cubic_invariant_rank_two_isotropy_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cubic_invariant_rank_two_isotropy_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "cd31ee57e6dbb428b0b28c7edeece4d5d3263cc27932f9073caa92fd26f67bc8",
+      "path": "docs/CUBIC_INVARIANT_RANK_TWO_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_cubic_invariant_rank_two_isotropy_narrow.py",
+      "title": "Cubic-Invariant Rank-Two Isotropy Narrow Theorem"
+    },
     "cycle_battery_note_2026-04-10": {
       "claim_id": "cycle_battery_note_2026-04-10",
       "claim_type_author_hint": null,
@@ -65267,6 +65278,7 @@
     "cosmology_scale_identification_and_reduction_note",
     "coupled_field_generated_family_probe_note",
     "cross_family_universality_note",
+    "cubic_invariant_rank_two_isotropy_narrow_theorem_note_2026-05-10",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
     "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
@@ -65879,7 +65891,7 @@
       "no_go": 18,
       "none": 1626,
       "open_gate": 20,
-      "positive_theorem": 91
+      "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 722,
@@ -65888,12 +65900,12 @@
       "no_go": 125,
       "none": 449,
       "open_gate": 108,
-      "positive_theorem": 591
+      "positive_theorem": 592
     },
     "edge_count": 8241,
-    "leaf_count": 534,
-    "node_count": 2055,
-    "root_count": 766,
-    "runners_with_path": 1670
+    "leaf_count": 535,
+    "node_count": 2056,
+    "root_count": 767,
+    "runners_with_path": 1671
   }
 }
