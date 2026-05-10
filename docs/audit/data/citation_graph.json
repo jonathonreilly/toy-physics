@@ -45660,6 +45660,17 @@
       "runner_path": "scripts/hard_geometry_local_support_pilot.py",
       "title": "Hard Geometry Local Support Note"
     },
+    "hierarchy_bbs_rg_banach_contraction_external_scaffold_narrow_theorem_note_2026-05-10": {
+      "claim_id": "hierarchy_bbs_rg_banach_contraction_external_scaffold_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "6731483cd63df49eb34e318ec8fb392755e8bf70a93e4997903818acdf9ba491",
+      "path": "docs/HIERARCHY_BBS_RG_BANACH_CONTRACTION_EXTERNAL_SCAFFOLD_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_bbs_rg_banach_contraction_external_scaffold_narrow.py",
+      "title": "Hierarchy BBS RG Banach Contraction External Scaffold \u2014 Narrow Theorem"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "claim_id": "hierarchy_bosonic_bilinear_selector_note",
       "claim_type_author_hint": null,
@@ -65978,6 +65989,7 @@
     "half_plane_chart_equivalence_narrow_theorem_note_2026-05-02",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
+    "hierarchy_bbs_rg_banach_contraction_external_scaffold_narrow_theorem_note_2026-05-10",
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_matsubara_decomposition_note",
@@ -66401,7 +66413,7 @@
       "no_go": 20,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66410,12 +66422,12 @@
       "no_go": 127,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8307,
-    "leaf_count": 536,
-    "node_count": 2071,
-    "root_count": 768,
-    "runners_with_path": 1686
+    "leaf_count": 537,
+    "node_count": 2072,
+    "root_count": 769,
+    "runners_with_path": 1687
   }
 }
