@@ -1,0 +1,94 @@
+===== runner cache v1 =====
+runner: scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py
+runner_sha256: 2272e89e1bde56527ed844a0e1b8f67e83f973c461c2259edc59644eca2cf33d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.27
+status: ok
+----- stdout -----
+T1.4 - HF=96 Connes-Chamseddine construction candidate
+Claim boundary: bounded structural construction; not a closure.
+
+========================================================================
+1. Dimensional bookkeeping for H_F_tot = C^8 x C^3 x C^4
+========================================================================
+  [PASS] 8 * 3 * 4 = 96 matches Connes-Chamseddine H_F count (computed=96)
+  [PASS] I_96 is square 96x96
+
+========================================================================
+2. Staggered Cl(3) and Cl^+(3) lifted to H_F_tot
+========================================================================
+  [PASS] Gamma_1^2 = I_96 on H_F_tot
+  [PASS] Gamma_2^2 = I_96 on H_F_tot
+  [PASS] Gamma_3^2 = I_96 on H_F_tot
+  [PASS] Omega^2 = -I_96 on H_F_tot
+  [PASS] e12^2 = -I_96
+  [PASS] e13^2 = -I_96
+  [PASS] e23^2 = -I_96
+  [PASS] Cl^+(3) lifted span has flat rank 4
+
+========================================================================
+3. M_3(C) on hw=1 triplet, lifted on the C^8 taste factor
+========================================================================
+  [PASS] hw=1 M_3(C) generates rank 9 on C^8
+  [PASS] M_3(C) lift to H_F_tot has flat rank 9
+
+========================================================================
+4. Three-generation Z_3 hw=1 orbit on the C^3 factor
+========================================================================
+  [PASS] Z_3 cycle generates Z_3 on C^3
+  [PASS] P_gen idempotents sum to I_96
+  [PASS] C3_gen^3 = I_96 on the generation factor
+
+========================================================================
+5. CPT particle/antiparticle x chirality doubling on C^4
+========================================================================
+  [PASS] Pa + Pap = I_96
+  [PASS] chir_sigma3^2 = I_96
+
+========================================================================
+6. Finite chirality grading and KO-dim-6 J on H_F_tot
+========================================================================
+  [PASS] chir_total^2 = I_96
+  [PASS] chir_total is Hermitian
+  [PASS] Cswap_real^2 = -I_96 (real antisymmetric form)
+  [PASS] Cswap_real . conj(Cswap_real) = -I_96
+  [PASS] J^2 = +I_96 (KO-dim 6 sign)
+  [PASS] J chir_total = -chir_total J (KO-dim 6 chirality)
+
+========================================================================
+7. Candidate D_F operators on H_F_tot
+========================================================================
+  [PASS] D_scalar is self-adjoint
+  [PASS] D_min is self-adjoint
+  [PASS] D_min is odd under taste chirality Gam_stag (lifted)
+  [PASS] D_min is odd under full chir_total
+  [PASS] J D_min = D_min J
+
+========================================================================
+8. Lifted finite-algebra basis on H_F_tot
+========================================================================
+  [PASS] lifted taste-side algebra has 14 elements (len=14)
+  [PASS] lifted taste-side algebra has flat rank at least 13 (rank=13)
+
+========================================================================
+9. Order-one condition on H_F_tot
+========================================================================
+  [PASS] scalar D satisfies order-one vacuously on H_F_tot (max=0.000e+00, zero_pairs=196/196)
+  [PASS] minimal staggered D violates order-one on H_F_tot (max=5.543e+01, zero_pairs=70/196)
+  [PASS] order-one outcome on H_F_tot matches PR 1061's C^8 boundary
+
+========================================================================
+10. Source-only verdict
+========================================================================
+  [PASS] H_F_tot dimension equals 96 as expected
+  [PASS] All five algebra summand types lifted to H_F_tot
+  [PASS] KO-dim-6 real structure J assembled on H_F_tot
+  [PASS] Order-one D_F selection remains open on H_F_tot
+  [PASS] No new axiom or audit verdict is written by this runner
+
+TOTAL: PASS=38 FAIL=0
+Outcome class: BOUNDED_CONSTRUCTION (open D_F selection unchanged)
+
+----- stderr -----
+
