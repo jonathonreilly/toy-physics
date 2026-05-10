@@ -181,7 +181,7 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     if artifact_reason is not None:
         return artifact_reason
 
-    classifier_reason = classifier_promoted_to_class_a(row)
+    classifier_reason = classifier_promoted_to_class_a(row, rows)
     if classifier_reason is not None:
         return classifier_reason
 
@@ -303,30 +303,49 @@ def _categorize_criticality_bump(row: dict, target_criticality: str) -> str:
     return "soft_reset"
 
 
-def classifier_promoted_to_class_a(row: dict) -> str | None:
+_CLASSIFIER_KEYWORDS = (
+    "class-a",
+    "class a",
+    "algebraic",
+    "register a current runner",
+    "register a runner",
+)
+
+
+def classifier_promoted_to_class_a(row: dict, rows: dict[str, dict]) -> str | None:
     """Detect that the cited runner has been re-classified to class-A since audit.
 
-    Fires when a row whose audit recorded class-A count = 0 now has its
-    cited runner reaching `dominant_class: A` per the latest
-    `runner_classification.json`. This handles the case where the audit
-    verdict (typically `audited_conditional` with reason "no class-A
-    backing") was correct given the classifier's view at audit time, but
-    the classifier's view has since changed — most commonly because the
-    classifier itself was upgraded (e.g., the 2026-05-10 alias-resolution
-    fix that lets it see `sp.simplify(...)` as class-A when imported via
-    the standard `import sympy as sp` idiom).
+    Fires when a row whose audit explicitly flagged "no class-A backing"
+    on the cited runner now has the runner reaching `dominant_class: A`
+    per the latest `runner_classification.json`. The dominant case this
+    handles is a classifier upgrade (e.g., the 2026-05-10 alias-resolution
+    fix that lets the classifier see `sp.simplify(...)` as class-A when
+    imported via the standard `import sympy as sp` idiom).
 
     This trigger does NOT promote the row to a clean verdict — it only
     invalidates the stale conditional verdict so the audit lane re-evaluates
     with the now-visible class-A evidence.
 
-    Conservatism guards:
+    Conservatism guards (intentionally strict — most `audited_conditional`
+    rows have `A == 0` incidentally because the auditor's primary concern
+    was deps or scope, not missing class-A):
+
       1. Only fires for `audited_conditional` (other tiers are out of scope).
-      2. Requires the prior audit to have recorded `runner_check_breakdown.A == 0`
-         (i.e., the auditor specifically saw no class-A patterns at audit time).
-      3. Requires the current classifier `dominant_class == "A"` AND
-         `counts.A > 0` (not merely a tie).
-      4. Requires the runner to exist on disk (no phantom invalidations).
+      2. Requires the prior audit to have recorded
+         `runner_check_breakdown.A == 0` (auditor saw no class-A at audit).
+      3. Requires the current classifier to show `dominant_class == "A"`
+         AND `counts.A >= 5` (substantial class-A presence, not noise).
+      4. Requires the runner to exist on disk.
+      5. Requires every direct dependency to be retained-grade
+         (`retained` / `retained_no_go` / `retained_bounded`). If deps are
+         not clean, re-audit will produce the same conditional verdict
+         for `dependency_not_retained`, wasting auditor time.
+      6. Requires the prior audit's `notes_for_re_audit_if_any` or
+         `chain_closure_explanation` to mention runner-verification or
+         class-A keywords. This is the strict filter — the trigger only
+         fires when the auditor's stated reason for the conditional
+         verdict was specifically about runner / class-A insufficiency,
+         not about deps / scope / missing bridges.
     """
     if row.get("audit_status") != "audited_conditional":
         return None
@@ -345,7 +364,21 @@ def classifier_promoted_to_class_a(row: dict) -> str | None:
         return None
     if info.get("dominant_class") != "A":
         return None
-    if info.get("counts", {}).get("A", 0) <= 0:
+    if info.get("counts", {}).get("A", 0) < 5:
+        return None  # too few class-A patterns; likely classifier noise
+
+    # Dep-clean guard: re-audit only helps if deps are clean.
+    for dep_id in row.get("deps", []):
+        dep_status = rows.get(dep_id, {}).get("effective_status") or "unaudited"
+        if dep_status not in {"retained", "retained_no_go", "retained_bounded"}:
+            return None
+
+    # Keyword guard: the prior conditional verdict must have been about
+    # runner / class-A insufficiency, not about deps / scope / missing bridges.
+    notes = (row.get("notes_for_re_audit_if_any") or "").lower()
+    explanation = (row.get("chain_closure_explanation") or "").lower()
+    haystack = notes + " " + explanation
+    if not any(kw in haystack for kw in _CLASSIFIER_KEYWORDS):
         return None
 
     return f"classifier_promoted_to_class_A:{runner_path}"
