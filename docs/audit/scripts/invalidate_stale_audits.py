@@ -32,6 +32,11 @@ Triggers (any of):
   5. The audited runner hash changed since audit time, or an
      audited_conditional `runner_artifact_issue` row that asked for a current
      runner/log now has a fresh OK cache matching the current runner source.
+  6. The cited runner's classifier `dominant_class` has changed to `A` since
+     audit time (when the audit recorded `runner_check_breakdown.A == 0`).
+     This handles classifier upgrades — most relevantly the 2026-05-10
+     alias-resolution fix which made `sp.simplify(...)` calls visible as
+     class-A patterns. Only invalidates `audited_conditional` rows.
 
 When triggered, the prior audit fields are archived into previous_audits
 with an `invalidation_reason`, and audit_status is reset to unaudited.
@@ -49,8 +54,29 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = REPO_ROOT / "docs" / "audit" / "data"
 LEDGER_PATH = DATA_DIR / "audit_ledger.json"
+RUNNER_CLASSIFICATION_PATH = DATA_DIR / "runner_classification.json"
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 import runner_cache as rc  # noqa: E402
+
+
+def _load_runner_classification() -> dict:
+    """Load the latest runner classification (produced by classify_runner_passes.py)."""
+    if not RUNNER_CLASSIFICATION_PATH.exists():
+        return {}
+    try:
+        return json.loads(RUNNER_CLASSIFICATION_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+_RUNNER_CLASSIFICATION_CACHE: dict | None = None
+
+
+def _get_runner_classification() -> dict:
+    global _RUNNER_CLASSIFICATION_CACHE
+    if _RUNNER_CLASSIFICATION_CACHE is None:
+        _RUNNER_CLASSIFICATION_CACHE = _load_runner_classification()
+    return _RUNNER_CLASSIFICATION_CACHE
 
 # Strength rank used to compare 'before' and 'after' for a dep.
 # Must stay in sync with compute_effective_status.py RANK.
@@ -154,6 +180,10 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     artifact_reason = runner_artifact_issue_resolved(row)
     if artifact_reason is not None:
         return artifact_reason
+
+    classifier_reason = classifier_promoted_to_class_a(row)
+    if classifier_reason is not None:
+        return classifier_reason
 
     if snap is None:
         return None  # nothing to compare against; treat as fresh
@@ -271,6 +301,54 @@ def _categorize_criticality_bump(row: dict, target_criticality: str) -> str:
     # cross-confirmation → mirror the first-pass flow rather than
     # blowing away the clean evidence.
     return "soft_reset"
+
+
+def classifier_promoted_to_class_a(row: dict) -> str | None:
+    """Detect that the cited runner has been re-classified to class-A since audit.
+
+    Fires when a row whose audit recorded class-A count = 0 now has its
+    cited runner reaching `dominant_class: A` per the latest
+    `runner_classification.json`. This handles the case where the audit
+    verdict (typically `audited_conditional` with reason "no class-A
+    backing") was correct given the classifier's view at audit time, but
+    the classifier's view has since changed — most commonly because the
+    classifier itself was upgraded (e.g., the 2026-05-10 alias-resolution
+    fix that lets it see `sp.simplify(...)` as class-A when imported via
+    the standard `import sympy as sp` idiom).
+
+    This trigger does NOT promote the row to a clean verdict — it only
+    invalidates the stale conditional verdict so the audit lane re-evaluates
+    with the now-visible class-A evidence.
+
+    Conservatism guards:
+      1. Only fires for `audited_conditional` (other tiers are out of scope).
+      2. Requires the prior audit to have recorded `runner_check_breakdown.A == 0`
+         (i.e., the auditor specifically saw no class-A patterns at audit time).
+      3. Requires the current classifier `dominant_class == "A"` AND
+         `counts.A > 0` (not merely a tie).
+      4. Requires the runner to exist on disk (no phantom invalidations).
+    """
+    if row.get("audit_status") != "audited_conditional":
+        return None
+    runner_path = row.get("runner_path")
+    if not runner_path:
+        return None
+
+    breakdown = row.get("runner_check_breakdown") or {}
+    if breakdown.get("A", 0) != 0:
+        return None  # auditor already saw class-A; no promotion to invalidate on
+
+    classification = _get_runner_classification()
+    per_runner = classification.get("per_runner", {})
+    info = per_runner.get(runner_path)
+    if not info or not info.get("exists"):
+        return None
+    if info.get("dominant_class") != "A":
+        return None
+    if info.get("counts", {}).get("A", 0) <= 0:
+        return None
+
+    return f"classifier_promoted_to_class_A:{runner_path}"
 
 
 def runner_artifact_issue_resolved(row: dict) -> str | None:

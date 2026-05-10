@@ -96,9 +96,77 @@ def count_assert_pass_lines(source: str) -> int:
            len(re.findall(r"PASS\+?=", source))
 
 
+# Modules whose class-A patterns are reachable through `import X as Y` aliases.
+# When a runner does `import sympy as sp`, expressions like `sp.simplify(...)`
+# are functionally identical to the literal `sympy.simplify(...)` patterns above.
+# Tracking aliases per-source eliminates a systematic false-negative.
+_ALIASED_CLASS_A_RULES = {
+    "sympy": [
+        # (template, suffix that comes after the alias dot)
+        r"\b{alias}\.(?:simplify|Eq|expand|factor)\b",
+        r"assert\s+{alias}\.",
+    ],
+    "numpy": [
+        r"assert\s+{alias}\.allclose\(",
+    ],
+}
+
+# Match `import sympy as sp` style patterns. The bare `import sympy` case is
+# already handled by the literal `sympy.X` patterns. The `from sympy import`
+# form would require a different rule since the called name is just
+# `simplify(...)` with no module prefix, which is too noisy to match without
+# false positives.
+_IMPORT_ALIAS_RE = re.compile(
+    r"^\s*import\s+(\w+)\s+as\s+(\w+)\s*$", re.MULTILINE
+)
+
+
+def detect_module_aliases(source: str) -> dict[str, str]:
+    """Return {alias_name: original_module} for `import X as Y` lines.
+
+    Only handles modules that have class-A pattern rules (currently
+    sympy, numpy). The `import math as m` form is rare and not handled
+    because `math.isclose` is a single literal pattern and idiomatic
+    code uses `import math` (no alias).
+    """
+    aliases: dict[str, str] = {}
+    for m in _IMPORT_ALIAS_RE.finditer(source):
+        original, alias = m.group(1), m.group(2)
+        if original == "numpy" and alias == "np":
+            continue  # already covered by the literal `np.allclose` pattern
+        if original in _ALIASED_CLASS_A_RULES and alias != original:
+            aliases[alias] = original
+    return aliases
+
+
+def class_a_patterns_for_source(source: str) -> list[re.Pattern]:
+    """Return PATTERNS_A augmented with alias-substituted versions for this source.
+
+    For example, if the source contains `import sympy as sp`, this returns
+    PATTERNS_A plus regexes that match `sp.simplify`, `sp.Eq`, etc., so the
+    classifier sees the class-A patterns the runner actually uses.
+    """
+    aliases = detect_module_aliases(source)
+    if not aliases:
+        return list(PATTERNS_A)
+    extra: list[re.Pattern] = []
+    for alias, original in aliases.items():
+        templates = _ALIASED_CLASS_A_RULES.get(original, [])
+        for tpl in templates:
+            extra.append(re.compile(tpl.format(alias=re.escape(alias))))
+    return list(PATTERNS_A) + extra
+
+
 def classify_source(source: str) -> dict[str, int]:
     counts = {"A": 0, "B": 0, "C": 0, "D": 0}
-    for p in PATTERNS_A:
+    # Class-A patterns are augmented with import-alias substitutions per source.
+    # This fixes a systematic false-negative on runners that use the standard
+    # `import sympy as sp` idiom: the literal `sympy.X` patterns missed
+    # `sp.X` calls, leaving symbolically-verifying runners classified as
+    # D / None / C even when they did real class-A work. Verified across the
+    # repo: 130 runners use the alias and were misclassified prior to this fix.
+    patterns_a = class_a_patterns_for_source(source)
+    for p in patterns_a:
         counts["A"] += len(p.findall(source))
     for p in PATTERNS_B:
         counts["B"] += len(p.findall(source))
