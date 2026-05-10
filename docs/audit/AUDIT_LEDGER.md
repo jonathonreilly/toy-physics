@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1148 |
+| unaudited | 1149 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 232 |
+| ~~audited_conditional~~ | 231 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 232 |
+| `audited_conditional` | 231 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1216 |
+| `unaudited` | 1217 |
 
 | claim_type | count |
 |---|---:|
@@ -70,7 +70,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 - runners classified: 1537
 - runners with (C) first-principles compute hits: 797
-- runners with (D) external comparator hits: 416
+- runners with (D) external comparator hits: 417
 - decoration candidates (no C, no D): 158
 
 ## Top 25 by load-bearing score (topology only)
@@ -654,7 +654,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `pmns_three_flux_holonomy_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7114,19 +7113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full iterated loop does not stay machine-clean end-to-end on the tested nonzero coupling, so Born is preserved only at the per-step / frozen-snapshot level.  _(class `C`)_
 - **chain closes:** False — The nonzero-coupling row does not establish the stated converged-loop claim because both stepConv and endConv are False at max_iters=6. In the unconverged branch, the runner returns a relaxed field while detector probabilities use amplitudes propagated before the last relaxation, so the reported drift is a capped-iteration diagnostic rather than a converged full-loop result.
 - **rationale:** Issue: the note's full-loop Born-drift conclusion rests on the only nonzero row, where the runner reports nonconvergence for both the frozen snapshot and the end-to-end subset loops. Why this blocks: the note defines the target observable using converged loop outputs, but the supplied runner provides a six-iteration capped diagnostic with no PASS assertion and stale final amplitudes in the unconverged return path. Repair target: run or slice the loop until every slit subset converges and recompute final detector probabilities on the returned field, or explicitly re-scope the note to finite six-iteration outputs. Claim boundary until fixed: the zero-coupling reduction and printed frozen-step versus capped-loop numbers may be cited only as diagnostics, not as a converged full nonlinear-loop theorem.
-- **auditor confidence:** high
-
-### `poisson_self_gravity_loop_note`
-
-- **Note:** [`POISSON_SELF_GRAVITY_LOOP_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite numerical control claim for one h=0.25 exact-lattice Poisson-like self-field harness with fixed source patch, screened kernel, couplings, and source strengths.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e120a-fb50-7902-8100-594c90c4f7eb`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The strongest bounded statement is that the exact epsilon=0 reduction survives, the terminal frozen field remains Born-linear to machine precision, the weak-field sign survives, and the weak-field mass-law read stays essentially linear.  _(class `C`)_
-- **chain closes:** False — The numerical conclusion is load-bearing, but the supplied runner stdout is only a timeout and the runner imports the lattice implementation and K from scripts.minimal_source_driven_field_probe, which is not supplied. Under the restricted packet, the table values, convergence claims, and exact-lattice implementation cannot be verified.
-- **rationale:** Issue: the claim rests on finite runner results, but no completed stdout or cached certificate is supplied, and the runner's core lattice implementation is imported from an unprovided module. Why this blocks: the audit cannot verify the reported zero-epsilon reduction, Born residuals, sign, or mass-law exponents from the restricted inputs. Repair target: provide a completed or sliced deterministic run plus the imported runner dependency needed to inspect the exact-lattice construction. Claim boundary until fixed: this remains a described bounded harness, not an audited numerical theorem.
 - **auditor confidence:** high
 
 ### `poisson_self_gravity_loop_v3_note`

@@ -16525,6 +16525,10 @@
       "to": "gate_b_poisson_self_gravity_note"
     },
     {
+      "from": "poisson_self_gravity_loop_note",
+      "to": "minimal_source_driven_field_probe_note"
+    },
+    {
       "from": "poisson_self_gravity_mechanism_note",
       "to": "poisson_self_gravity_loop_note"
     },
@@ -53094,8 +53098,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "7ccad2ed200c2ddc3c6985831023200c2ab94034a6b04408ddbbe76655f0f751",
+      "deps": [
+        "minimal_source_driven_field_probe_note"
+      ],
+      "note_hash": "c93d108d781aa9e320c3389054d6deadd393c48e237ea47f497571d0b49fdd4e",
       "path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "title": "Poisson Self-Gravity Loop Note"
@@ -64766,7 +64772,6 @@
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
-    "poisson_self_gravity_loop_note",
     "poisson_self_gravity_loop_v3_note",
     "primordial_spectrum_note",
     "publication.ci3_z3.arxiv_draft",
@@ -65023,10 +65028,10 @@
       "open_gate": 113,
       "positive_theorem": 598
     },
-    "edge_count": 8118,
+    "edge_count": 8119,
     "leaf_count": 533,
     "node_count": 2034,
-    "root_count": 769,
+    "root_count": 768,
     "runners_with_path": 1649
   }
 }

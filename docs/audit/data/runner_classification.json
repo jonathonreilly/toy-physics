@@ -14077,15 +14077,15 @@
       "runner": "scripts/poisson_self_gravity_born_audit.py"
     },
     "poisson_self_gravity_loop_note": {
-      "assert_count": 0,
+      "assert_count": 8,
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 2
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "runner": "scripts/poisson_self_gravity_loop.py"
     },
     "poisson_self_gravity_loop_v3_note": {
@@ -41095,18 +41095,18 @@
       "exists": true
     },
     "scripts/poisson_self_gravity_loop.py": {
-      "assert_count": 0,
+      "assert_count": 8,
       "claims": [
         "poisson_self_gravity_loop_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 2,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 2
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/poisson_self_gravity_loop_v3.py": {
@@ -43131,14 +43131,14 @@
   "stats": {
     "decoration_candidates": 158,
     "dominant_class_distribution": {
-      "A": 108,
+      "A": 109,
       "B": 157,
       "C": 638,
       "D": 229,
-      "none": 405
+      "none": 404
     },
     "runners_classified": 1537,
     "runners_with_C": 797,
-    "runners_with_D": 416
+    "runners_with_D": 417
   }
 }

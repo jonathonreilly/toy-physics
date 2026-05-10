@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 695,
+    "critical": 696,
     "high": 27,
     "leaf": 281,
     "medium": 151
@@ -7966,6 +7966,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "minimal_source_driven_field_probe_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "source_driven_field_recovery_sweep_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.488,
+      "note_path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/minimal_source_driven_field_probe.py",
+      "transitive_descendants": 717
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -8106,6 +8129,29 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_cpt_exact.py",
+      "transitive_descendants": 696
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "poisson_self_gravity_loop_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_source_driven_field_probe_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.445,
+      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 696
     },
     {
@@ -11652,29 +11698,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_neutrino_majorana_phase_removal.py",
       "transitive_descendants": 400
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "minimal_source_driven_field_probe_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_driven_field_recovery_sweep_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.14,
-      "note_path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/minimal_source_driven_field_probe.py",
-      "transitive_descendants": 398
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38527,5 +38550,5 @@
     }
   ],
   "ready_count": 89,
-  "total_pending": 1154
+  "total_pending": 1155
 }
