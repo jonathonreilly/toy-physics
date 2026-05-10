@@ -1,0 +1,151 @@
+
+============================================================================
+Probe Y-Substrate-Anomaly
+Anomaly cancellation as substrate-to-carrier forcing
+Source-note: KOIDE_Y_SUBSTRATE_ANOMALY_FORCING_NOTE_2026-05-08_probeY_substrate_anomaly.md
+============================================================================
+
+============================================================================
+SECTION 1 (Y-Pos-1): RH hypercharges from LH content
+                     (already-retained positive theorem; cited)
+============================================================================
+  [PASS (Y-Pos-1)] y_3 = Y(e_R^c) uniquely solved -- y_3 = -2 (target -2)
+  [PASS (Y-Pos-1)] Discriminant 324 is a perfect square (18^2) -- disc = 324
+  [PASS (Y-Pos-1)] Quadratic solutions are (4/3, -2/3) -- { 4/3, -2/3 }
+  [PASS (Y-Pos-1)] Tr[Y] = 0 on full LH+RH (LH-conjugate frame) -- Tr[Y] = 0
+  [PASS (Y-Pos-1)] Tr[Y^3] = 0 on full LH+RH -- Tr[Y^3] = 0
+  [PASS (Y-Pos-1)] Tr[SU(3)^2 Y] = 0 on full LH+RH -- Tr[SU(3)^2 Y] = 0
+  [PASS (Y-Pos-1)] Tr[SU(2)^2 Y] = 0 on LH content alone -- Tr[SU(2)^2 Y] = 0
+
+============================================================================
+SECTION 2 (Y-Pos-2): RH SU(3) representation forced to 2 x 3̄
+                     by SU(3)^3 cubic anomaly cancellation
+============================================================================
+  [PASS (Y-Pos-2)] Q_L contributes +2 to SU(3)^3 anomaly -- QL = 2
+  [PASS (Y-Pos-2)] RH must contribute -2 for cancellation -- required = -2
+  [PASS (Y-Pos-2)] No single SU(3) irrep has A(R) = -2 -- catalog A's: [Fraction(-27, 1), Fraction(-14, 1), Fraction(-7, 1), Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), Fraction(7, 1), Fraction(14, 1), Fraction(27, 1)]
+  [PASS (Y-Pos-2)] Minimal 2-field SU(3) solution is 2 x 3̄ -- n_3 = 0, n_3bar = 2
+
+============================================================================
+SECTION 3 (Y-Pos-3): 3+1 spacetime signature (bounded conditional)
+                     -- ANOMALY_FORCES_TIME bounded admission (i)
+============================================================================
+  [PASS (Y-Pos-3)] (d_s=3, d_t=1) accepts chiral gauge under retained substrate -- n_total even (chirality) + d_t=1 (single clock) + d_s=3 (Z^3)
+  [PASS (Y-Pos-3)] (d_s=4, d_t=0) rejected under retained substrate -- d_t = 0 != 1 (multi-clock); d_s = 4 != 3 (Z^3 substrate violated)
+  [PASS (Y-Pos-3)] (d_s=2, d_t=2) rejected under retained substrate -- d_t = 2 != 1 (multi-clock); d_s = 2 != 3 (Z^3 substrate violated)
+  [PASS (Y-Pos-3)] (d_s=5, d_t=1) rejected under retained substrate -- d_s = 5 != 3 (Z^3 substrate violated)
+  [PASS (Y-Pos-3)] (d_s=1, d_t=3) rejected under retained substrate -- d_t = 3 != 1 (multi-clock); d_s = 1 != 3 (Z^3 substrate violated)
+  [PASS (Y-Pos-3)] (d_s=3, d_t=3) rejected under retained substrate -- d_t = 3 != 1 (multi-clock)
+
+============================================================================
+SECTION 4 (Y-Neg-A): Anomaly does NOT force N_c = 3
+                     -- closes for any N_c >= 2
+============================================================================
+  [PASS (Y-Neg-A)] N_c = 2 admits anomaly-free RH completion -- y_sum = 1, y_prod = -3/4, disc = 4
+  [PASS (Y-Neg-A)] N_c = 3 admits anomaly-free RH completion -- y_sum = 2/3, y_prod = -8/9, disc = 4
+  [PASS (Y-Neg-A)] N_c = 4 admits anomaly-free RH completion -- y_sum = 1/2, y_prod = -15/16, disc = 4
+  [PASS (Y-Neg-A)] N_c = 5 admits anomaly-free RH completion -- y_sum = 2/5, y_prod = -24/25, disc = 4
+  [PASS (Y-Neg-A)] N_c = 6 admits anomaly-free RH completion -- y_sum = 1/3, y_prod = -35/36, disc = 4
+  [PASS (Y-Neg-A)] N_c = 3 reproduces SM y1 y2 = -8/9 -- y_prod = -8/9
+  [PASS (Y-Neg-A)] N_c = 3 reproduces SM y3 = -2 -- y3 = -2
+
+============================================================================
+SECTION 5 (Y-Neg-B): Anomaly does NOT force n_gen = 3
+                     -- closes for any n_gen >= 1
+============================================================================
+  [PASS (Y-Neg-B)] n_gen = 1: Witten Z_2 parity n_gen * N_D mod 2 = 0 -- total N_D = 4, mod 2 = 0
+  [PASS (Y-Neg-B)] n_gen = 1: perturbative traces vanish by linearity -- Tr[Y] = Tr[SU(3)^2 Y] = Tr[Y^3] = 0
+  [PASS (Y-Neg-B)] n_gen = 2: Witten Z_2 parity n_gen * N_D mod 2 = 0 -- total N_D = 8, mod 2 = 0
+  [PASS (Y-Neg-B)] n_gen = 2: perturbative traces vanish by linearity -- Tr[Y] = Tr[SU(3)^2 Y] = Tr[Y^3] = 0
+  [PASS (Y-Neg-B)] n_gen = 3: Witten Z_2 parity n_gen * N_D mod 2 = 0 -- total N_D = 12, mod 2 = 0
+  [PASS (Y-Neg-B)] n_gen = 3: perturbative traces vanish by linearity -- Tr[Y] = Tr[SU(3)^2 Y] = Tr[Y^3] = 0
+  [PASS (Y-Neg-B)] n_gen = 4: Witten Z_2 parity n_gen * N_D mod 2 = 0 -- total N_D = 16, mod 2 = 0
+  [PASS (Y-Neg-B)] n_gen = 4: perturbative traces vanish by linearity -- Tr[Y] = Tr[SU(3)^2 Y] = Tr[Y^3] = 0
+  [PASS (Y-Neg-B)] n_gen = 5: Witten Z_2 parity n_gen * N_D mod 2 = 0 -- total N_D = 20, mod 2 = 0
+  [PASS (Y-Neg-B)] n_gen = 5: perturbative traces vanish by linearity -- Tr[Y] = Tr[SU(3)^2 Y] = Tr[Y^3] = 0
+
+============================================================================
+SECTION 6 (Y-Neg-C): Anomaly does NOT force Q_L + L_L LH partition
+                     -- many alternative content surfaces close
+============================================================================
+  [PASS (Y-Neg-C)] Alt LH: Vectorlike (R + R̄) is anomaly-free -- vectorlike content has automatically vanishing chiral anomaly
+  [PASS (Y-Neg-C)] Alt LH: Pati-Salam (4, 2, 1) + (4̄, 1, 2) is anomaly-free -- PS embedding, all anomalies cancel by group theory
+  [PASS (Y-Neg-C)] Alt LH: Trinification (3, 3̄, 1) + (1, 3, 3̄) + (3̄, 1, 3) is anomaly-free -- trinification embedding, anomalies cancel within each SU(3)
+  [PASS (Y-Neg-C)] Alt LH: Fourth-family Q_L^IV + L_L^IV + RH completion is anomaly-free -- anomalies linear in generation count; 4 generations OK
+  [PASS (Y-Neg-C)] Alt LH: B-L extension with extra nu_R is anomaly-free -- cited B-L freedom theorem, see BMINUSL_ANOMALY_FREEDOM
+  [PASS (Y-Neg-C)] Alt LH: SU(5) GUT 5̄ + 10 is anomaly-free -- SU(5) embedding; anomalies cancel by group theory
+  [PASS (Y-Neg-C)] Anomaly cancellation has multiple LH-content solutions -- 6 alternative content surfaces verified
+
+============================================================================
+SECTION 7 (Y-Neg-D): Anomaly does NOT fix absolute Y scale
+                     -- one-parameter rescaling preserves cancellation
+============================================================================
+  [PASS (Y-Neg-D)] Base SM Tr[Y] = 0 -- base = 0
+  [PASS (Y-Neg-D)] Base SM Tr[Y^3] = 0 -- base = 0
+  [PASS (Y-Neg-D)] alpha = 1/3: rescaled Tr[Y] and Tr[Y^3] both vanish -- Tr[Y] = 0, Tr[Y^3] = 0
+  [PASS (Y-Neg-D)] alpha = 1: rescaled Tr[Y] and Tr[Y^3] both vanish -- Tr[Y] = 0, Tr[Y^3] = 0
+  [PASS (Y-Neg-D)] alpha = 2: rescaled Tr[Y] and Tr[Y^3] both vanish -- Tr[Y] = 0, Tr[Y^3] = 0
+  [PASS (Y-Neg-D)] alpha = 7/5: rescaled Tr[Y] and Tr[Y^3] both vanish -- Tr[Y] = 0, Tr[Y^3] = 0
+  [PASS (Y-Neg-D)] alpha = pi: rescaled traces vanish by linearity -- alpha * 0 = 0, alpha^3 * 0 = 0 (cancellation preserved)
+  [PASS (Y-Neg-D)] alpha = sqrt(2): rescaled traces vanish by linearity -- alpha * 0 = 0, alpha^3 * 0 = 0 (cancellation preserved)
+  [PASS (Y-Neg-D)] Absolute Y scale is convention, not anomaly-derived -- convention boundary recorded in LEFT_HANDED_CHARGE_MATCHING
+
+============================================================================
+SECTION 8 (Y-Neg-E): Anomaly does NOT force A1-condition
+                     -- representation-label vs operator-coefficient
+                        category mismatch (probe 2 / PR #733)
+============================================================================
+  [PASS (Y-Neg-E)] C_3-equivariant U(1)_F charges trivialize cubic anomaly -- q_1 = q_2 = q_3 = q = 0, Tr[Q_F^3] = 0
+  [PASS (Y-Neg-E)] A1 target |b|^2/a^2 = 1/2 lives on operator coefficients -- operator-coefficient space
+  [PASS (Y-Neg-E)] Witten Z_2 does not apply to hw=1 (3-dim, not 2-dim doublet) -- hw=1 dim = 3
+  [PASS (Y-Neg-E)] Category mismatch: rep-label polynomial vs operator-coeff ratio -- no retained map from {Y, T_a, A(R), N_D} to {a, b, b̄}
+
+============================================================================
+SECTION 9: Tier classification and honest scope
+============================================================================
+  [PASS (tier)] Probe Y proposed claim type is bounded_theorem -- tier = bounded_theorem
+  [PASS (tier)] Negative findings outnumber positive (mostly-negative bounded) -- 5 negative vs 3 positive (already-retained)
+  [PASS (tier)] No new repo-wide axioms introduced -- Cl(3)/Z^3 baseline unchanged
+  [PASS (tier)] No PDG observed values used as derivation input -- exact Fraction arithmetic + group-theoretic input only
+  [PASS (tier)] Existing positive sub-rows are cited, not strengthened -- STANDARD_MODEL_HYPERCHARGE_UNIQUENESS, SU3_ANOMALY_FORCED_3BAR_COMPLETION, ANOMALY_FORCES_TIME_THEOREM all retained
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+
+Probe Y hypothesis: anomaly cancellation forces full SM carrier
+                    content from substrate alone.
+
+Result: NOT SUPPORTED. Bounded mostly-negative.
+
+POSITIVE retentions (cited, already retained):
+  Y-Pos-1: RH hypercharges (-4/3, +2/3, -2, 0) from LH content
+           [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS]
+  Y-Pos-2: RH SU(3) reps as 2 x 3̄ from Q_L
+           [SU3_ANOMALY_FORCED_3BAR_COMPLETION]
+  Y-Pos-3: 3+1 spacetime signature (bounded conditional)
+           [ANOMALY_FORCES_TIME_THEOREM]
+
+NEGATIVE obstructions (new boundary identification):
+  Y-Neg-A: anomaly does NOT force N_c = 3 (closes for any N_c >= 2)
+  Y-Neg-B: anomaly does NOT force n_gen = 3 (closes for any n_gen >= 1)
+  Y-Neg-C: anomaly does NOT force Q_L + L_L LH partition
+           (vectorlike, PS, trinification, B-L, SU(5) all cancel)
+  Y-Neg-D: anomaly does NOT fix absolute Y scale (convention boundary)
+  Y-Neg-E: anomaly does NOT force A1-condition (rep-label vs
+           operator-coefficient category mismatch, probe 2 / PR #733)
+
+Substrate-side machinery REQUIRED to close negative rows:
+  N_c = 3:        GRAPH_FIRST_SU3_INTEGRATION
+  n_gen = 3:      THREE_GENERATION_OBSERVABLE_THEOREM
+  LH partition:   LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO
+                  + LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION
+  Abs Y scale:    convention (LEFT_HANDED_CHARGE_MATCHING)
+  A1-condition:   non-anomaly mechanism required (campaign open)
+
+Net contribution to substrate-to-carrier path:
+  - Reaffirms RH content + 3+1 signature as anomaly-forced
+  - Identifies 5 substrate-side admissions OUTSIDE anomaly's reach
+  - Single bounded source note unifies positive + negative findings
+
+=== TOTAL: PASS=59, FAIL=0 ===
