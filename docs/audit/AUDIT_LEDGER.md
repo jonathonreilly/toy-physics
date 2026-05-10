@@ -23,11 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 227 |
 | open_gate | 11 |
 | unaudited | 1152 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 228 |
+| ~~audited_conditional~~ | 229 |
 | ~~audited_failed~~ | 9 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,9 +39,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
+| `audit_in_progress` | 2 |
 | `audited_clean` | 376 |
-| `audited_conditional` | 228 |
+| `audited_conditional` | 229 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 53 |
 | `audited_numerical_match` | 18 |
@@ -113,7 +112,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | **retained** | fresh_context | codex-gpt-5.5 | A | - |
-| `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -607,6 +605,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -5267,6 +5266,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given any local Wilson first-variation law dW_W on the Hermitian image of the adjacent-chain algebra, the cyclic descendant is determined by r0=dW_W(B0), r1=dW_W(B1), r2=dW_W(B2) and reconstructs H_cyc=(r0/3)B0+(r1/6)B1+(r2/6)B2, with Koide becoming 2 r0^2 = r1^2 + r2^2.  _(class `A`)_
 - **chain closes:** True — The scoped theorem is an exact finite-dimensional algebra statement over the cyclic basis and real trace pairing. It does not claim to derive the microscopic Wilson response law, selector mechanism, or charged-lepton readout, and those exclusions are explicit in the note.
 - **rationale:** The load-bearing step is not a physical readout or numerical fit; it is the orthogonal-basis reconstruction of the C3-cyclic Hermitian subspace and the algebraic substitution of a=r0/3, x=r1/6, y=r2/6 into the Koide cone. The cached runner exits 0 with PASS=19 FAIL=0 and checks basis containment, cyclic projection, response reconstruction, and the scalar Koide rewrite; the four D-class checks are only an observed charged-lepton witness, not needed for theorem closure. The note clearly limits its scope by stating that the microscopic Wilson law, selector mechanism, and final readout primitive are not derived here, so the positive theorem closes at the stated algebraic target-law level.
+- **auditor confidence:** high
+
+### `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Finite L=3 Wilson-Dirac/Z3 data compute a rank-two zero-mode character sector and endpoint-lift residuals, so the data do not canonically select a unique rank-one endpoint line, but the source note's verification/cache text is stale relative to the supplied runner.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-judicial-019e1293-37d7-7d71-8c8a-040a0a061073`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** Independently, the zero-mode character sector relevant to the selected endpoint has rank two; the retained data select a spectral projector/eigenspace, not a unique rank-one line inside it.  _(class `C`)_
+- **chain closes:** False — The current runner/source support the finite Wilson/Z3 rank-two no-go core, but the source note asserts a 13/14 run, a FAIL on A.3, and KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE as the verbatim cache, while the supplied executable evidence reports 14/14 PASS and the no-go flag TRUE. Under the audit rubric, completed runner/pass-accounting and flag mismatches are substantive artifact defects that block a clean cite until reconciled, even when the bounded computational core is otherwise supported.
+- **rationale:** The current runner/source support the finite Wilson/Z3 rank-two no-go core, but the source note asserts a 13/14 run, a FAIL on A.3, and KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE as the verbatim cache, while the supplied executable evidence reports 14/14 PASS and the no-go flag TRUE. Under the audit rubric, completed runner/pass-accounting and flag mismatches are substantive artifact defects that block a clean cite until reconciled, even when the bounded computational core is otherwise supported.
 - **auditor confidence:** high
 
 ### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 705,
+    "critical": 704,
     "high": 27,
     "leaf": 278,
     "medium": 151
@@ -7936,27 +7936,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_blended_readout_boundary_probe.py",
       "transitive_descendants": 352
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24",
-      "claim_scope": "For the supplied finite L=3 Wilson realization, the Wilson/Z3 data do not canonically select a unique rank-one selected eigenline and do not fix the endpoint lift.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.959,
-      "note_path": "docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py",
-      "transitive_descendants": 351
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38662,6 +38641,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 98,
-  "total_pending": 1161
+  "ready_count": 97,
+  "total_pending": 1160
 }
