@@ -4201,6 +4201,38 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -38056,6 +38088,26 @@
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
     },
+    "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c": {
+      "claim_id": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (scoped six-channel span plus",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+        "cl3_color_automorphism_theorem",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
+        "minimal_axioms_2026-04-11",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+      ],
+      "note_hash": "94f3744da4685b000f8ca9d12773051ddb7e859d820ac8bb76196f373a93a0a9",
+      "path": "docs/CLOSURE_C_L1_PER_GRAPH_CASIMIR_NOTE_2026-05-10_cL1c.md",
+      "runner_path": "scripts/cl3_closure_c_l1c_2026_05_10_cL1c.py",
+      "title": "Closure C-L1c --- Six-Channel Casimir Span and Assignment/Weight Split"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
       "claim_type_author_hint": null,
@@ -66264,7 +66316,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 245,
+      "bounded_theorem": 246,
       "decoration": 1,
       "meta": 59,
       "no_go": 19,
@@ -66273,7 +66325,7 @@
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 727,
+      "bounded_theorem": 728,
       "decoration": 1,
       "meta": 59,
       "no_go": 126,
@@ -66281,10 +66333,10 @@
       "open_gate": 114,
       "positive_theorem": 592
     },
-    "edge_count": 8288,
+    "edge_count": 8296,
     "leaf_count": 535,
-    "node_count": 2068,
+    "node_count": 2069,
     "root_count": 768,
-    "runners_with_path": 1683
+    "runners_with_path": 1684
   }
 }
