@@ -1,0 +1,117 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow.py
+runner_sha256: 6fd19245206377910a63ee12d1083cd544f9f5a439ed188bb419f6b37d091a79
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.58
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: 7/8 Riemann-Dirichlet d=4 anchor
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: Klein-four uniformity of sin^2 at L_t = 4 (T1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T1: sin^2((2n+1)pi/4) = 1/2 for n in {0,1,2,3} (uniform at L_t=4)  (values = ['1/2', '1/2', '1/2', '1/2'])
+
+----------------------------------------------------------------------------------------
+Part 2: non-uniformity at L_t = 6 and L_t = 8 (T2, T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T2: at L_t=6, sin^2 values are {1/4, 1, 1/4, 1/4, 1, 1/4} (non-uniform)  (values = ['1/4', '1', '1/4', '1/4', '1', '1/4'])
+  [PASS (A)] T3: at L_t=8, sin^2 values are non-uniform  (distinct values = 2)
+
+----------------------------------------------------------------------------------------
+Part 3: cross-L_t algebraic factor (7/8)^16 (T4, T5, T6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T4: |det_alg_factor| at L_t=4, c=3 equals (7/2)^16 (Fraction)  (value = 33232930569601/65536 = (7/2)^16 = 33232930569601/65536)
+  [PASS (A)] T5: |det_alg_factor| at L_t=2, c=3 equals 4^8 (Fraction)  (value = 65536 = 4^8 = 65536)
+  [PASS (A)] T6: (7/2)^16 / 4^16 = (7/8)^16 (Fraction; relational cross-check)  (ratio = 33232930569601/281474976710656, (7/8)^16 = 33232930569601/281474976710656)
+
+----------------------------------------------------------------------------------------
+Part 4: Riemann-Dirichlet identity eta(s)/zeta(s) = 1 - 2^(1-s) (T7, T8)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T7: eta(s)/zeta(s) = 1 - 2^(1-s) for s in {2,...,8} (Fraction)  (values = s=2:1/2, s=3:3/4, s=4:7/8, s=5:15/16, s=6:31/32, s=7:63/64, s=8:127/128)
+  [PASS (A)] T8: eta(4)/zeta(4) = 1 - 1/8 = 7/8 (Fraction)  (eta(4)/zeta(4) = 7/8 = 7/8 (7/8))
+  [PASS (A)] T8b (sanity): sympy-symbolic eta(4)/zeta(4) reduces to 7/8  (sympy ratio = 0.875000000000000)
+
+----------------------------------------------------------------------------------------
+Part 5: integer alignment equation 2^(d-2) = d uniqueness (T9)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T9: integer equation 2^(d-2) - d = 0 only at d = 4 among d in {2,...,8} (Fraction)  (diffs = d=2:-1, d=3:-1, d=4:0, d=5:3, d=6:10, d=7:25, d=8:56)
+
+----------------------------------------------------------------------------------------
+Part 6: per-mode lattice symbolic identity (T10, T11)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T10: (c+1/2)/(c+1) at c=d-1 equals 1 - 1/(2d) symbolically  (lhs - rhs simplifies to 0)
+  [PASS (A)] T11: at d=4, 1/(2d) = 1/8 = 2^(1-d) and 2^(d-2) = d = 4 (alignment zero)  (1/(2d)=1/8, 2^(1-d)=1/8, 2^(d-2)-d at d=4 = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: numeric (7/8)^(1/4) cross-check (informational)
+----------------------------------------------------------------------------------------
+  [INFO] (7/8)^(1/4) ~= 0.96717 relational cross-check (not load-bearing, not counted in PASS/FAIL)
+         (7/8)^(1/4) = 0.967168210133835 (25-digit: 0.9671682101338346544589309); framework rounded value 0.96717, gap = 1.79e-06
+
+----------------------------------------------------------------------------------------
+Part 8: negative scan at d in {2,3,5,6} — alignment fails (T13)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T13: at d in {2,3,5,6}, lattice and eta/zeta take distinct rational values  (d=2: lat=3/4, ez=1/2, gap=1/4 | d=3: lat=5/6, ez=3/4, gap=1/12 | d=5: lat=9/10, ez=15/16, gap=-3/80 | d=6: lat=11/12, ez=31/32, gap=-5/96)
+
+  Negative-scan rationals (informational):
+    d = 2: lattice 1 - 1/(2d) = 3/4; eta/zeta 1 - 2^(1-d) = 1/2; gap = 1/4
+    d = 3: lattice 1 - 1/(2d) = 5/6; eta/zeta 1 - 2^(1-d) = 3/4; gap = 1/12
+    d = 5: lattice 1 - 1/(2d) = 9/10; eta/zeta 1 - 2^(1-d) = 15/16; gap = -3/80
+    d = 6: lattice 1 - 1/(2d) = 11/12; eta/zeta 1 - 2^(1-d) = 31/32; gap = -5/96
+
+----------------------------------------------------------------------------------------
+Part 9: combined verification at d = 4 (T14)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T14: at d=4, (i) = (ii) = 7/8 and (iii) alignment zero (combined)  ((i)=7/8, (ii)=7/8, (iii) alignment residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 10: parent decomposition note (relational only, NOT load-bearing)
+----------------------------------------------------------------------------------------
+
+  Parent decomposition note (relational context, not load-bearing):
+    HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md is mentioned only as
+    related hierarchy-lane context. This runner does not read or
+    depend on that note or on the audit ledger.
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement (recapitulation):
+
+  HYPOTHESIS:
+    Let d >= 2 be an integer. Define
+       R_lat(c) := (c + 1/2) / (c + 1) at c = d - 1,
+       R_ez(s) := eta(s) / zeta(s)     at s = d,
+       alignment(d) := 2^(d - 2) - d.
+
+  CONCLUSION:
+    The simultaneous coincidence
+       R_lat(d - 1) = R_ez(d) = 7/8  AND  alignment(d) = 0
+    holds if and only if d = 4. At every other integer d >= 2, the
+    rationals R_lat(d - 1) and R_ez(d) are distinct.
+
+  Audit-lane class:
+    (A) — pure rational arithmetic + classical analytic-number-theory
+    identity. No external observed/fitted/literature/PDG input. No
+    framework axiom or admission consumed.
+
+  This narrow theorem is independent of:
+    - The framework's selection of L_t = 4 (separate, bilinear-selector).
+    - The (1/4) outer exponent in (7/8)^(1/4) (separate, heat-kernel).
+    - The full hierarchy formula v = M_Pl x alpha_LM^16 x (7/8)^(1/4).
+    - The alpha_LM substitution.
+    - The per-determinant geometric-mean readout.
+
+
+========================================================================================
+  TOTAL: PASS=14, FAIL=0
+========================================================================================
+
+----- stderr -----
+
