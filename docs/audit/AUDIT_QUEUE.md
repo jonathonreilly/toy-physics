@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | unaudited | critical | 626 | 10.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_boundary_law_robustness.py` |
+| 1 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | audit_in_progress | critical | 626 | 10.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_boundary_law_robustness.py` |
 | 2 | `discrete_einstein_regge_lift_note` | bounded_theorem | unaudited | critical | 626 | 9.79 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_universal_gr_isotropic_glue_operator.py` |
 | 3 | `gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09` | bounded_theorem | unaudited | critical | 573 | 10.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py` |
 | 4 | `dm_neutrino_weak_triplet_transfer_class_theorem_note_2026-04-15` | positive_theorem | unaudited | critical | 319 | 8.82 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dm_neutrino_weak_triplet_transfer_class_theorem.py` |

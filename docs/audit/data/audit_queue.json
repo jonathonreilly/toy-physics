@@ -5885,23 +5885,23 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "boundary_law_robustness_note_2026-04-11",
-      "claim_scope": null,
+      "claim_scope": "Audited only the finite-run numerical robustness diagnostic that the provided runner computes high S-versus-counted-boundary R^2 on the fixed 2D periodic staggered-lattice parameter envelope and small partition cross-check.",
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "deps": [
         "holographic_probe_note_2026-04-11"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unaudited",
+      "effective_status": "audit_in_progress",
       "load_bearing_score": 10.292,
       "note_path": "docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md",
-      "queue_reason": "unaudited",
+      "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_boundary_law_robustness.py",
       "transitive_descendants": 626
