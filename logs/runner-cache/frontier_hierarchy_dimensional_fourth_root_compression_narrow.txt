@@ -1,0 +1,120 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_dimensional_fourth_root_compression_narrow.py
+runner_sha256: 1ee57807d3e3dd10187dd147531186b620228e1004edbe9cbb9bf345b8a90d5a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: dimensional fourth-root compression at d=4
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: mass-dimension of f in d-dim Stefan-Boltzmann form (T1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T1: in d-dim Stefan-Boltzmann form f = C_d * T^d, [f] = d (sympy dim tracking)  (mass_dim(f) = d, expected = d)
+
+----------------------------------------------------------------------------------------
+Part 2: scale extraction M = f^(1/d) gives [M] = 1 (T2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T2: M = f^(1/d) gives [M] = 1 for d in {1,...,8} (Fraction)  (dims = d=1:[M]=1, d=2:[M]=1, d=3:[M]=1, d=4:[M]=1, d=5:[M]=1, d=6:[M]=1, d=7:[M]=1, d=8:[M]=1)
+
+----------------------------------------------------------------------------------------
+Part 3: at d = 4, 1/d = 1/4 (T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T3: at d=4, compression exponent 1/d = 1/4 exactly (Fraction)  (1/d at d=4 = 1/4 = 1/4)
+
+----------------------------------------------------------------------------------------
+Part 4: numeric cross-check (7/8)^(1/4) ~ 0.96717 (T4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T4: (7/8)^(1/4) ~= 0.96717 (5-sf relational cross-check)  ((7/8)^(1/4) = 0.967168210133835 (25-digit: 0.9671682101338346544589309); framework value 0.96717, gap = 1.79e-06)
+
+----------------------------------------------------------------------------------------
+Part 5: at d in {2, 3, 5, 6, 8}, 1/d in {1/2, 1/3, 1/5, 1/6, 1/8} (T5)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T5: at d in {2,3,5,6,8}, 1/d in {1/2,1/3,1/5,1/6,1/8} (Fraction)  (d=2:1/d=1/2, d=3:1/d=1/3, d=5:1/d=1/5, d=6:1/d=1/6, d=8:1/d=1/8)
+
+----------------------------------------------------------------------------------------
+Part 6: uniqueness of M = f^(1/d) by dim balance (T6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T6: equation d*alpha = 1 has unique solution alpha = 1/d (sympy.solve)  (solutions = [1/d])
+
+----------------------------------------------------------------------------------------
+Part 7: 1/d table for d in {1,...,8} — d=4 unique (T7)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T7: 1/d table on d in {1,...,8} — value 1/4 hit uniquely at d=4; strictly decreasing  (d=1:1/d=1, d=2:1/d=1/2, d=3:1/d=1/3, d=4:1/d=1/4, d=5:1/d=1/5, d=6:1/d=1/6, d=7:1/d=1/7, d=8:1/d=1/8)
+
+----------------------------------------------------------------------------------------
+Part 8: (7/8)^(1/4) != (7/8)^(1/3) != (7/8)^(1/5) (T8)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T8: (7/8)^(1/4) != (7/8)^(1/3) != (7/8)^(1/5) (numeric, 1e-4 tol)  ((7/8)^(1/4)=0.967168, (7/8)^(1/3)=0.956466, (7/8)^(1/5)=0.973647)
+
+----------------------------------------------------------------------------------------
+Part 9: dimensional consistency at d=4: (M^4)^(1/4) = M (T9)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T9: at d=4, (M^4)^(1/4) = M symbolically (sympy)  ((M^4)^(1/4) - M simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 10: cross-d roundtrip: (f^(1/d))^d = f for d in {1,...,8} (T10)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T10: (f^(1/d))^d = f for d in {1,...,8} symbolically (sympy)  (d=1:diff=0, d=2:diff=0, d=3:diff=0, d=4:diff=0, d=5:diff=0, d=6:diff=0, d=7:diff=0, d=8:diff=0)
+
+----------------------------------------------------------------------------------------
+Part 11: independence vs PR #1025 sister theorem (T11)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T11: present theorem and PR #1025 are independent at d=3 and d=4  (PR#1025 alignment at d=3 = -1 (fails), d=4 = 0 (holds); present 1/d at d=3 = 1/3, d=4 = 1/4)
+
+----------------------------------------------------------------------------------------
+Part 12: relational sister-theorem consistency (informational)
+----------------------------------------------------------------------------------------
+
+  Sister narrow theorem (relational context, NOT load-bearing here):
+    HIERARCHY_SEVEN_EIGHTHS_RIEMANN_DIRICHLET_DIMENSIONAL_ANCHOR_NARROW_THEOREM_NOTE_2026-05-10.md
+    proves 2^(d-2) = d (number-theoretic; d=4 unique). The present
+    theorem proves M = f^(1/d) (dimensional-analysis; 1/4 at d=4).
+    Both give 1/4 at d=4 for INDEPENDENT reasons. Downstream hierarchy
+    application (7/8)^(1/4) consumes BOTH narrow theorems; this runner
+    does not depend on the sister theorem or on the audit ledger.
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement (recapitulation):
+
+  HYPOTHESIS:
+    Let d >= 1 be an integer and let f be a free-energy density in
+    d-dim Euclidean thermal QFT in Stefan-Boltzmann form (f ~ T^d,
+    Kapusta-Gale ch. 3, Vassilevich hep-th/0306138, Laine-Vuorinen ch. 2).
+
+  CONCLUSION:
+    (a) [f] = d in natural units;
+    (b) the unique mass-dim-1 fractional-power scale extraction is
+        M = f^(1/d) (modulo dimensionless prefactor);
+    (c) at d = 4, 1/d = 1/4;
+    (d) among integer d >= 1, the value 1/d = 1/4 is taken uniquely
+        at d = 4.
+
+  Audit-lane class:
+    (A) — pure dimensional analysis on textbook Stefan-Boltzmann
+    scaling. No external observed/fitted/literature/PDG input. No
+    framework axiom or admission consumed.
+
+  This narrow theorem is independent of:
+    - The framework's selection of L_t = 4 (separate, bilinear-selector).
+    - The (7/8) base of the framework's compression factor (sister
+      narrow theorem HIERARCHY_SEVEN_EIGHTHS_RIEMANN_DIRICHLET).
+    - The full hierarchy formula v = M_Pl x alpha_LM^16 x (7/8)^(1/4).
+    - The alpha_LM substitution.
+    - The per-determinant geometric-mean readout.
+    - Identification of f with any specific framework determinant.
+
+
+========================================================================================
+  TOTAL: PASS=11, FAIL=0
+========================================================================================
+
+----- stderr -----
+
