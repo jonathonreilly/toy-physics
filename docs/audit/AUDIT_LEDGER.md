@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 118 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1111 |
+| unaudited | 1110 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
-| ~~audited_conditional~~ | 249 |
+| ~~audited_conditional~~ | 250 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 377 |
-| `audited_conditional` | 249 |
+| `audited_conditional` | 250 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 20 |
 | `audited_renaming` | 22 |
-| `unaudited` | 1178 |
+| `unaudited` | 1177 |
 
 | claim_type | count |
 |---|---:|
@@ -669,6 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_lower_level_end_to_end_closure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
+| `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `primordial_spectrum_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -7325,6 +7326,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the scalar family D_0^trip = u_0 I_3 and D_-^trip = u_- I_3, both lower-level response profiles remain scalar column sets, so neither sector realizes the required one-sided minimal PMNS class.  _(class `A`)_
 - **chain closes:** True — Within the scoped uniform-scalar lane, the note reduces the deformation to sector-scalar triplet blocks and scalar resolvent profiles. The cached runner constructs the uniform scalar Hamiltonian, verifies the scalar/degenerate response chain, and confirms the live retained lower-level PMNS closure rejects the resulting scalar packs.
 - **rationale:** The claim is a bounded no-go, not a positive PMNS construction: it only closes the uniform translation-invariant scalar deformation route. The load-bearing algebra shows that a uniform scalar condensate cannot split or mix the hw=1 generation triplets, and the induced active/passive response profiles remain scalar. The runner does not merely print constants; it constructs the finite Hamiltonian, computes the response profiles, and invokes the live retained closure stack, which rejects the scalar lane with PASS=22 FAIL=0. Residual risk is confined to the already-scoped reliance on the retained PMNS closure criterion itself, not to this uniform-scalar boundary argument.
+- **auditor confidence:** high
+
+### `poisson_self_gravity_loop_note`
+
+- **Note:** [`POISSON_SELF_GRAVITY_LOOP_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical control claim for one h=0.25 exact-lattice Poisson-like self-field harness with fixed source patch, screened kernel, couplings, and source strengths.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e120a-fb50-7902-8100-594c90c4f7eb`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The strongest bounded statement is that the exact epsilon=0 reduction survives, the terminal frozen field remains Born-linear to machine precision, the weak-field sign survives, and the weak-field mass-law read stays essentially linear.  _(class `C`)_
+- **chain closes:** False — The numerical conclusion is load-bearing, but the supplied runner stdout is only a timeout and the runner imports the lattice implementation and K from scripts.minimal_source_driven_field_probe, which is not supplied. Under the restricted packet, the table values, convergence claims, and exact-lattice implementation cannot be verified.
+- **rationale:** Issue: the claim rests on finite runner results, but no completed stdout or cached certificate is supplied, and the runner's core lattice implementation is imported from an unprovided module. Why this blocks: the audit cannot verify the reported zero-epsilon reduction, Born residuals, sign, or mass-law exponents from the restricted inputs. Repair target: provide a completed or sliced deterministic run plus the imported runner dependency needed to inspect the exact-lattice construction. Claim boundary until fixed: this remains a described bounded harness, not an audited numerical theorem.
 - **auditor confidence:** high
 
 ### `portable_card_extension_note`
