@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1107 |
+| unaudited | 1106 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 235 |
+| ~~audited_conditional~~ | 236 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 235 |
+| `audited_conditional` | 236 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1205 |
+| `unaudited` | 1204 |
 
 | claim_type | count |
 |---|---:|
@@ -548,6 +548,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
+| `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2431,6 +2432,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_path_registered_without_scripts_prefix`
   - `three_of_six_live_rows_degenerate`
   - `finite_size_scaling_and_multiseed_robustness_open`
+- **auditor confidence:** high
+
+### `cross_family_universality_note`
+
+- **Note:** [`CROSS_FAMILY_UNIVERSALITY_NOTE.md`](../../docs/CROSS_FAMILY_UNIVERSALITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-runner H=0.5 cross-family consistency claims for seed-mean dispersion and lensing across three grown-DAG parameter sets.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1351-1ea0-7372-b805-15a57587e55e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At H=0.5, the seed-mean dispersion (m_eff approx 5.9) and lensing slope (approx -1.3) show no detectable family effect across Fam1/Fam2/Fam3.  _(class `C`)_
+- **chain closes:** False — The supplied dispersion runner closes only the seed-mean dispersion near-tie and m_eff values at H=0.5. The lensing slopes/prefactors and the statistical phrase 'no detectable family effect' do not close because the restricted packet contains no lensing runner stdout and no variance/power test with hard thresholds.
+- **rationale:** Issue: the note's bounded claim includes lensing consistency and 'no detectable family effect', but the supplied completed runner/stdout covers only dispersion and reports no statistical power test. Why this blocks: close five-seed seed-mean dispersion fits support finite-runner consistency, not a closed exclusion of family effects or the lensing part of the claim. Repair target: provide and audit the lensing runner output/source with per-seed variance, power, and hard PASS thresholds, or split out a dispersion-only bounded claim. Claim boundary until fixed: H=0.5 seed-mean dispersion near-tie across the three grown-DAG parameter sets.
 - **auditor confidence:** high
 
 ### `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29`
