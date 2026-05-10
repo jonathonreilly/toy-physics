@@ -104,6 +104,40 @@ def clean_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str]:
     return retained_status, "self"
 
 
+def is_criticality_bump_soft_reset(row: dict) -> bool:
+    """True iff the row is in the criticality-bump soft-reset state:
+    `audit_status = audit_in_progress`, `blocker = awaiting_cross_confirmation`,
+    `claim_type_provenance` flags it as a criticality-bump soft-reset, and
+    `cross_confirmation.first_audit` is present with `status = awaiting_second`.
+
+    Set by `invalidate_stale_audits.soft_reset_to_cross_confirmation_pending`
+    when an existing audited_clean row's criticality bumps to `critical`
+    without prior cross-confirmation. The first-pass clean evidence remains
+    live in `cross_confirmation.first_audit`; the lane is just awaiting the
+    independent second auditor at the new tier.
+
+    For chain-closure purposes we treat such rows as if they were still at
+    their prior `audited_clean` effective_status: downstream rows whose
+    audits closed against this row's first-pass clean evidence are not
+    forced to re-audit just because the row's criticality changed. Once
+    cross-confirmation lands clean, nothing changes; if it disagrees, the
+    row exits this state (`cc.status = disagreement`) and downstream
+    chain closure is reassessed normally.
+    """
+    if row.get("audit_status") != "audit_in_progress":
+        return False
+    if row.get("blocker") != "awaiting_cross_confirmation":
+        return False
+    if row.get("claim_type_provenance") != "audited_pending_cross_confirmation_after_criticality_bump":
+        return False
+    cc = row.get("cross_confirmation") or {}
+    if not isinstance(cc, dict):
+        return False
+    if cc.get("status") != "awaiting_second":
+        return False
+    return cc.get("first_audit") is not None
+
+
 def intrinsic_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str]:
     if archived_failed_is_retained_no_go(row):
         return "retained_no_go", "archived_failed_no_go"
@@ -113,6 +147,12 @@ def intrinsic_status(row: dict, dep_effective: dict[str, str]) -> tuple[str, str
 
     if claim_type == "meta" and audit_status in {"unaudited", "audit_in_progress"}:
         return "meta", "metadata"
+    if audit_status == "audit_in_progress" and is_criticality_bump_soft_reset(row):
+        # First-pass clean evidence is preserved; treat as still-clean for
+        # chain closure so downstream rows aren't forced to re-audit while
+        # the row awaits its second-tier cross-confirmation.
+        clean_es, clean_reason = clean_status(row, dep_effective)
+        return clean_es, f"awaiting_cross_confirmation_after_criticality_bump:{clean_reason}"
     if audit_status in {"unaudited", "audit_in_progress"}:
         return audit_status, "awaiting_audit"
     if audit_status == "audited_decoration":

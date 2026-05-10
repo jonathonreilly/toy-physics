@@ -336,6 +336,107 @@ class ComputeEffectiveStatusTest(unittest.TestCase):
         new_rows, _cycles = m.compute_effective(rows)
         self.assertEqual(new_rows["child"]["effective_status"], "retained_pending_chain")
 
+    def test_criticality_bump_soft_reset_propagates_as_retained(self):
+        """A row in the criticality-bump soft-reset state (audit_in_progress
+        + awaiting_cross_confirmation + first_audit on file) keeps its
+        effective_status at retained. Downstream rows depending on it stay
+        retained — the criticality bump does not force them to re-audit."""
+        m = _import("compute_effective_status")
+        soft_reset_row = {
+            "claim_id": "soft_reset_dep",
+            "deps": [],
+            "audit_status": "audit_in_progress",
+            "blocker": "awaiting_cross_confirmation",
+            "claim_type": "positive_theorem",
+            "claim_type_provenance": "audited_pending_cross_confirmation_after_criticality_bump",
+            "cross_confirmation": {
+                "first_audit": {
+                    "auditor": "auditor-1",
+                    "auditor_family": "codex-gpt-5.5",
+                    "independence": "cross_family",
+                    "verdict": "audited_clean",
+                    "claim_type": "positive_theorem",
+                    "claim_scope": "test scope",
+                    "load_bearing_step_class": "A",
+                },
+                "second_audit": None,
+                "status": "awaiting_second",
+            },
+        }
+        rows = {
+            "soft_reset_dep": soft_reset_row,
+            "child": {
+                "claim_id": "child",
+                "deps": ["soft_reset_dep"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["soft_reset_dep"]["effective_status"], "retained")
+        self.assertTrue(
+            new_rows["soft_reset_dep"]["effective_status_reason"].startswith(
+                "awaiting_cross_confirmation_after_criticality_bump:"
+            )
+        )
+        # Child's chain still closes against the first-pass clean evidence.
+        self.assertEqual(new_rows["child"]["effective_status"], "retained")
+
+    def test_criticality_bump_soft_reset_with_disagreement_drops(self):
+        """Once cross-confirmation disagrees, the soft-reset state ends and
+        the row drops to audit_in_progress. Downstream rows then properly
+        see the chain break and are flagged for re-audit."""
+        m = _import("compute_effective_status")
+        rows = {
+            "disagreed_dep": {
+                "claim_id": "disagreed_dep",
+                "deps": [],
+                "audit_status": "audit_in_progress",
+                "blocker": "cross_confirmation_disagreement",  # not awaiting_cross_confirmation
+                "claim_type": "positive_theorem",
+                "claim_type_provenance": "audited_pending_cross_confirmation_after_criticality_bump",
+                "cross_confirmation": {
+                    "first_audit": {"verdict": "audited_clean"},
+                    "second_audit": {"verdict": "audited_conditional"},
+                    "status": "disagreement",
+                },
+            },
+            "child": {
+                "claim_id": "child",
+                "deps": ["disagreed_dep"],
+                "audit_status": "audited_clean",
+                "claim_type": "positive_theorem",
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["disagreed_dep"]["effective_status"], "audit_in_progress")
+        self.assertEqual(new_rows["child"]["effective_status"], "retained_pending_chain")
+
+    def test_born_critical_first_pass_does_not_trigger_soft_reset_path(self):
+        """A born-critical claim in first-pass audit_in_progress (NOT from a
+        criticality bump) keeps the standard audit_in_progress effective_status.
+        The soft-reset path requires the specific provenance flag set by
+        invalidate_stale_audits.py — apply_audit.py uses a different
+        provenance for first-pass rows."""
+        m = _import("compute_effective_status")
+        rows = {
+            "born_critical": {
+                "claim_id": "born_critical",
+                "deps": [],
+                "audit_status": "audit_in_progress",
+                "blocker": "awaiting_cross_confirmation",
+                "claim_type": "positive_theorem",
+                "claim_type_provenance": "audited_pending_cross_confirmation",  # NOT the bump suffix
+                "cross_confirmation": {
+                    "first_audit": {"verdict": "audited_clean"},
+                    "second_audit": None,
+                    "status": "awaiting_second",
+                },
+            },
+        }
+        new_rows, _ = m.compute_effective(rows)
+        self.assertEqual(new_rows["born_critical"]["effective_status"], "audit_in_progress")
+
     def test_main_drops_stale_top_level_timestamp_keys(self):
         m = _import("compute_effective_status")
         _patch_repo_root(m, self.tmp_root)
@@ -549,6 +650,184 @@ class AuditLintTest(unittest.TestCase):
             rc = m.main()
         self.assertEqual(rc, 1)
         self.assertIn("stale timestamp key", buf.getvalue())
+
+
+class InvalidateStaleAuditsCriticalityBumpTest(unittest.TestCase):
+    """Per FRESH_LOOK_REQUIREMENTS.md §4, criticality bumps fall into three
+    cases:
+
+    - 'noop': the existing audit already qualifies, OR the verdict is
+      terminal-non-clean (cross-confirmation doesn't apply).
+    - 'soft_reset': audited_clean + non-weak independence + bump to
+      critical without cross-confirmation. Mirrors apply_audit's
+      first-pass flow: audit_in_progress + awaiting_cross_confirmation,
+      first-audit evidence preserved as cross_confirmation.first_audit.
+    - 'invalidate': audit fundamentally fails the new tier
+      (e.g. weak independence bumping to high/critical).
+    """
+
+    def _categorize(self, *, audit_status="audited_clean", indep, cc_status, target):
+        m = _import("invalidate_stale_audits")
+        row = {"audit_status": audit_status, "independence": indep}
+        if cc_status is not None:
+            row["cross_confirmation"] = {"status": cc_status}
+        return m._categorize_criticality_bump(row, target)
+
+    def test_bump_to_medium_is_always_noop(self):
+        # No special requirement at medium. Even weak audits stay live.
+        self.assertEqual(self._categorize(indep="weak", cc_status=None, target="medium"), "noop")
+        self.assertEqual(self._categorize(indep=None, cc_status=None, target="medium"), "noop")
+        self.assertEqual(
+            self._categorize(audit_status="audited_conditional", indep="cross_family",
+                             cc_status=None, target="medium"),
+            "noop",
+        )
+
+    def test_bump_to_high_with_non_weak_indep_is_noop(self):
+        for indep in ("cross_family", "fresh_context", "strong"):
+            self.assertEqual(self._categorize(indep=indep, cc_status=None, target="high"), "noop")
+
+    def test_bump_to_high_with_weak_indep_invalidates(self):
+        self.assertEqual(self._categorize(indep="weak", cc_status=None, target="high"), "invalidate")
+        self.assertEqual(self._categorize(indep=None, cc_status=None, target="high"), "invalidate")
+
+    def test_bump_to_critical_with_cross_confirmation_is_noop(self):
+        for cc in ("confirmed", "third_confirmed_first", "third_confirmed_second"):
+            self.assertEqual(
+                self._categorize(indep="cross_family", cc_status=cc, target="critical"),
+                "noop",
+            )
+
+    def test_bump_to_critical_with_weak_indep_invalidates(self):
+        # Independence floor cannot be salvaged by cross-confirmation.
+        self.assertEqual(
+            self._categorize(indep="weak", cc_status="confirmed", target="critical"),
+            "invalidate",
+        )
+        self.assertEqual(
+            self._categorize(indep=None, cc_status=None, target="critical"),
+            "invalidate",
+        )
+
+    def test_bump_to_critical_clean_no_cc_is_soft_reset(self):
+        # The user's case: audited_clean + non-weak indep + bump to critical
+        # without cross-confirmation -> soft reset, not full invalidate.
+        self.assertEqual(
+            self._categorize(indep="cross_family", cc_status=None, target="critical"),
+            "soft_reset",
+        )
+        self.assertEqual(
+            self._categorize(indep="fresh_context", cc_status=None, target="critical"),
+            "soft_reset",
+        )
+        self.assertEqual(
+            self._categorize(indep="cross_family", cc_status="awaiting_second", target="critical"),
+            "soft_reset",
+        )
+
+    def test_terminal_non_clean_verdict_bumps_are_noops(self):
+        # Cross-confirmation doesn't apply to non-clean verdicts; criticality
+        # bump leaves them in their final state.
+        for status in ("audited_conditional", "audited_numerical_match",
+                       "audited_renaming", "audited_decoration", "audited_failed"):
+            self.assertEqual(
+                self._categorize(audit_status=status, indep="cross_family",
+                                 cc_status=None, target="critical"),
+                "noop",
+                f"terminal verdict {status} should be noop",
+            )
+
+    def test_detect_invalidation_emits_distinct_reason_prefixes(self):
+        m = _import("invalidate_stale_audits")
+        with mock.patch.object(m.rc, "runner_sha256", return_value=None):
+            base_snap = {
+                "criticality": "high",
+                "deps": [],
+                "dep_effective_status": {},
+                "runner_hash": None,
+            }
+            # Soft reset path: audited_clean + cross_family + bump to critical, no cc.
+            row_soft = {
+                "audit_status": "audited_clean",
+                "deps": [],
+                "criticality": "critical",
+                "independence": "cross_family",
+                "cross_confirmation": None,
+                "audit_state_snapshot": base_snap,
+            }
+            reason = m.detect_invalidation(row_soft, {})
+            self.assertIsNotNone(reason)
+            self.assertTrue(reason.startswith("criticality_soft_reset:high->critical"))
+
+            # Hard invalidate path: weak indep at high.
+            row_hard = {
+                "audit_status": "audited_clean",
+                "deps": [],
+                "criticality": "high",
+                "independence": "weak",
+                "cross_confirmation": None,
+                "audit_state_snapshot": {**base_snap, "criticality": "leaf"},
+            }
+            reason = m.detect_invalidation(row_hard, {})
+            self.assertIsNotNone(reason)
+            self.assertTrue(reason.startswith("criticality_increased:leaf->high"))
+
+            # Noop path: audited_clean + cross_family + bump to high.
+            row_noop = {
+                "audit_status": "audited_clean",
+                "deps": [],
+                "criticality": "high",
+                "independence": "cross_family",
+                "cross_confirmation": None,
+                "audit_state_snapshot": {**base_snap, "criticality": "leaf"},
+            }
+            self.assertIsNone(m.detect_invalidation(row_noop, {}))
+
+    def test_soft_reset_preserves_audit_evidence_as_first_audit(self):
+        """A soft reset must mirror apply_audit's first-pass flow: clean
+        evidence stays live as cross_confirmation.first_audit, audit_status
+        flips to audit_in_progress + awaiting_cross_confirmation."""
+        m = _import("invalidate_stale_audits")
+        row = {
+            "audit_status": "audited_clean",
+            "auditor": "test-auditor-1",
+            "auditor_family": "codex-gpt-5.5",
+            "auditor_model": "gpt-5.5",
+            "auditor_reasoning_effort": "xhigh",
+            "independence": "cross_family",
+            "audit_date": "2026-05-09T10:00:00+00:00",
+            "claim_type": "positive_theorem",
+            "claim_scope": "test scope",
+            "load_bearing_step_class": "A",
+            "cross_confirmation": None,
+            "previous_audits": [],
+        }
+        out = m.soft_reset_to_cross_confirmation_pending(
+            row, "criticality_soft_reset:high->critical"
+        )
+        self.assertEqual(out["audit_status"], "audit_in_progress")
+        self.assertEqual(out["blocker"], "awaiting_cross_confirmation")
+        self.assertEqual(out["claim_type_provenance"], "audited_pending_cross_confirmation_after_criticality_bump")
+        cc = out["cross_confirmation"]
+        self.assertEqual(cc["status"], "awaiting_second")
+        self.assertIsNone(cc["second_audit"])
+        first = cc["first_audit"]
+        self.assertEqual(first["auditor"], "test-auditor-1")
+        self.assertEqual(first["auditor_family"], "codex-gpt-5.5")
+        self.assertEqual(first["independence"], "cross_family")
+        self.assertEqual(first["claim_type"], "positive_theorem")
+        self.assertEqual(first["claim_scope"], "test scope")
+        self.assertEqual(first["load_bearing_step_class"], "A")
+        self.assertEqual(first["verdict"], "audited_clean")
+        # The clean evidence must NOT be archived to previous_audits — it
+        # is still live as the first audit. apply_audit's first-pass flow
+        # also doesn't archive on first-pass.
+        self.assertEqual(out["previous_audits"], [])
+        # The auditor + claim_type fields must remain on the live row
+        # (the cross-confirmation second pass needs them for comparison).
+        self.assertEqual(out["auditor"], "test-auditor-1")
+        self.assertEqual(out["claim_type"], "positive_theorem")
+        self.assertEqual(out["claim_scope"], "test scope")
 
 
 class ComputeAuditQueueTest(unittest.TestCase):

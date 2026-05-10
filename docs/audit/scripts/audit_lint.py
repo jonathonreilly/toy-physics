@@ -492,11 +492,43 @@ def main() -> int:
             crit_at_audit = snap.get("criticality") or "leaf"
             crit_rank = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
             if crit_rank.get(crit_now, 0) > crit_rank.get(crit_at_audit, 0):
-                add_warning(
-                    "criticality_bumped",
-                    f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
-                    "invalidate_stale_audits.py should reset"
-                )
+                # Mirror invalidate_stale_audits._categorize_criticality_bump
+                # so lint and invalidate stay in sync. Three outcomes per
+                # FRESH_LOOK_REQUIREMENTS §4:
+                #   - meets:      no notice, no warning.
+                #   - soft_reset: invalidate.py will move audited_clean ->
+                #                 audit_in_progress + awaiting_cross_confirmation
+                #                 on the next run. Notice (informational).
+                #   - invalidate: audit fundamentally fails the new tier
+                #                 (e.g. weak independence at high+). Warning.
+                indep = row.get("independence")
+                cc = row.get("cross_confirmation") or {}
+                cc_status = cc.get("status") if isinstance(cc, dict) else None
+                action = "noop"
+                if a != "audited_clean":
+                    action = "noop"  # terminal verdict, cross-conf doesn't apply
+                elif indep is None or indep == "weak":
+                    action = "invalidate"  # below independence floor at high+
+                elif crit_now == "high":
+                    action = "noop"
+                elif crit_now == "critical":
+                    if cc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}:
+                        action = "noop"
+                    else:
+                        action = "soft_reset"
+                if action == "invalidate":
+                    add_warning(
+                        "criticality_bumped",
+                        f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
+                        "audit fails new-tier independence floor — invalidate_stale_audits.py "
+                        "will hard-reset"
+                    )
+                elif action == "soft_reset":
+                    add_notice(
+                        "criticality_bumped_to_critical_awaits_cc",
+                        f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
+                        "first-pass clean stays live, awaiting independent second auditor"
+                    )
 
         # Hash drift.
         on_disk = hash_note_on_disk(row.get("note_path", ""))
