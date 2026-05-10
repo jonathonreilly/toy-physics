@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 718,
+    "critical": 717,
     "high": 26,
     "leaf": 277,
     "medium": 153
@@ -7939,27 +7939,6 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
-      "claim_scope": "Conditional IVT theorem: for the specified linear Hermitian path, det(H_base)>0 plus assumed path non-singularity implies endpoint det>0; physical grounding of PNS and completeness of basin enumeration are not audited.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.464,
-      "note_path": "docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py",
-      "transitive_descendants": 352
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "persistent_object_blended_readout_transfer_sweep_note_2026-04-16",
@@ -8191,6 +8170,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_circulant_parity_cp_tensor_narrow.py",
+      "transitive_descendants": 351
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_abcc_signature_forcing_theorem_note_2026-04-19",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.959,
+      "note_path": "docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_dm_abcc_signature_forcing_theorem.py",
       "transitive_descendants": 351
     },
     {
@@ -19777,29 +19779,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/cpt_squared_is_identity_check.py",
-      "transitive_descendants": 351
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_abcc_signature_forcing_theorem_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.959,
-      "note_path": "docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_dm_abcc_signature_forcing_theorem.py",
       "transitive_descendants": 351
     },
     {
@@ -38934,5 +38913,5 @@
     }
   ],
   "ready_count": 111,
-  "total_pending": 1174
+  "total_pending": 1173
 }

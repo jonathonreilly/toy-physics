@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 63 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 223 |
+| **retained_bounded** | 224 |
 | open_gate | 11 |
 | unaudited | 1167 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 372 |
+| `audited_clean` | 373 |
 | `audited_conditional` | 221 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -159,6 +156,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_3d_64_closure_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_assumptions_audit_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_continuum_limit_velocity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `dm_current_bank_quantitative_mapping_note_2026-04-21` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `dm_dple_abcc_no_go_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -2290,6 +2288,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the corrected retained five-basin chart, chamber survivors are {Basin 1, Basin 2, Basin X}, with F_4 true only for Basin 1, so chamber ∩ F_4 selects Basin 1 uniquely.  _(class `A`)_
 - **chain closes:** False — The finite algebraic/numerical check closes on the provided basin coordinates and runner definitions. The broader theorem still imports the retained five-basin source chart and selector structure without any cited retained authority or first-principles derivation in the restricted packet.
 - **rationale:** The runner does perform nontrivial finite computation of chamber membership, cubic coefficients, discriminants, Newton/sampling checks, and the final intersection; it is not merely printing constants. However, those computations are over hard-coded basin coordinates, H_base/J_B matrices, and an asserted selector framework, and the note explicitly says the five-basin source chart is not derived from Cl(3)/Z^3. The audited result is therefore a conditional algebraic support theorem on imported retained-chart inputs, not a clean first-principles closure.
+- **auditor confidence:** high
+
+### `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional IVT sign-preservation theorem for the stated linear Hermitian DM source path: PNS plus det(H_base)>0 implies endpoint determinant positivity; PNS itself and exhaustive physical-basin uniqueness are not derived.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1277-ce06-7180-b9d0-ea64ca0d5aff`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Under PMNS Non-Singularity, f(t) = det(H_base + t J_phys) is nowhere zero on [0,1], so IVT sign preservation from det(H_base) > 0 gives det(H_base + J_phys) > 0.  _(class `A`)_
+- **chain closes:** True — For the scoped conditional implication, PNS is an explicit antecedent, det(H_base)>0 is computed from the stated matrix, and continuity of the determinant gives endpoint positivity. The physical truth of PNS and global basin exhaustiveness are outside this audited scope.
+- **rationale:** The scoped theorem is a direct algebraic/topological closure: a continuous nonzero determinant path starting at positive determinant cannot end at negative determinant. The runner source computes determinants, sampled path crossings, eigenvalue behavior, and unitary-diagonalizer checks from the hard-coded matrices and basin coordinates; these are class A consistency checks, not hidden external comparators. This clean verdict does not certify the note's observational-grounding rhetoric for PNS, any claim that PNS is equivalent or weaker than A-BCC, or exhaustive chi^2=0 basin enumeration.
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
