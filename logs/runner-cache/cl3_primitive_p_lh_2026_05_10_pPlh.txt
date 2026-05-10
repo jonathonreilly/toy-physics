@@ -1,0 +1,135 @@
+
+============================================================================
+Primitive P-LH-Content Proposal
+Three candidate substrate-side primitives (P-LH-1, P-LH-2, P-LH-3)
+Source-note: PRIMITIVE_P_LH_CONTENT_PROPOSAL_NOTE_2026-05-10_pPlh.md
+============================================================================
+
+============================================================================
+SECTION 0: Retained chirality context (from Probe W)
+============================================================================
+  [PASS (ctx)] [Probe W carry] Cl⁺(3) bivectors identical in ρ_± -- (-σ_1)(-σ_2) = σ_1σ_2 — Z_2 grading does NOT distinguish chirality
+  [PASS (ctx)] [Probe W carry] ω = ±i on ρ_± -- ρ_± non-isomorphic (chirality irreps distinct)
+  [PASS (ctx)] Probe Y-Neg-C: anomaly does NOT force LH content -- PS, vectorlike, trinification, B-L, SU(5) all anomaly-free
+  [PASS (ctx)] Probe W-Neg-B: Z_2 grading does NOT force LH content -- Cl⁺(3) sits identically in both ρ_±
+
+============================================================================
+SECTION 1: P-LH-1 — Order-One Condition (Connes-Chamseddine)
+============================================================================
+  [PASS (P-LH-1)] P-LH-1 forcing: SM-style A_F closes block-diagonally on H_F = ρ_+ ⊕ ρ_- -- C acts on RH only, H acts on LH only — order-one compatible
+  [PASS (P-LH-1)] P-LH-1 PS-test: PS-style RH block is NOT a scalar multiple of I_2 -- PS quaternionic RH violates SM 'C only on RH' constraint
+  [PASS (P-LH-1)] P-LH-1 PS-test: PS algebra fails order-one (non-trivial RH commutant) -- PS H_R action on RH ≠ C scalar — order-one inner fluctuation forbidden
+  [PASS (P-LH-1)] P-LH-1 forcing: A_F = C ⊕ Cl⁺(3) under order-one (with M_3 omitted) -- exact-algebra reading on per-site model
+  [PASS (P-LH-1)] P-LH-1 independence: order-one is NEW, not derivable from retained -- retained Cl(3)/Z^3 + Pauli rep + Z_2 admit BOTH SM and PS
+  [PASS (P-LH-1)] P-LH-1 minimality: single condition [[D, a], b'] = 0 -- minimal addition for SM-vs-PS distinction in NCG
+  [PASS (P-LH-1)] P-LH-1 honest caveat: requires algebra C ⊕ Cl⁺(3) ⊕ M_3 to also be imposed -- order-one + A_F together force SM; either alone does not
+
+============================================================================
+SECTION 2: P-LH-2 — Asymmetric Algebra Action (LH-doublet/RH-singlet)
+============================================================================
+  [PASS (P-LH-2)] P-LH-2 forcing: SU(2)_L commutation on LH-block -- [J_1^L, J_2^L] = i J_3^L acts on ρ_+ only
+  [PASS (P-LH-2)] P-LH-2 forcing: SU(2)_L action vanishes on RH-block -- RH summand is SU(2) singlet by construction
+  [PASS (P-LH-2)] P-LH-2 forcing: P_LH + P_RH = I_4 -- complete decomposition of H_F
+  [PASS (P-LH-2)] P-LH-2 forcing: P_LH · P_RH = 0 -- orthogonal chirality projectors
+  [PASS (P-LH-2)] P-LH-2 PS-test: PS SU(2)_R = J_a^R supported only on RH-block -- (structural fact about PS construction)
+  [PASS (P-LH-2)] P-LH-2 PS-test: J_a^R is FORBIDDEN by P-LH-2 (Cl⁺(3) acts only on ρ_+) -- PS rejected BY CONSTRUCTION (not derived)
+  [PASS (P-LH-2)] P-LH-2 independence: asymmetric action is NEW (Probe W shows Cl⁺(3) symmetric) -- retained Cl(3)/Z^3 admits Cl⁺(3) acting on either or both summands
+  [PASS (P-LH-2)] P-LH-2 minimality FAIL: the primitive IS the admission (circular) -- stating 'Cl⁺(3) acts only on ρ_+' is equivalent to admitting SM LH/RH
+  [PASS (P-LH-2)] P-LH-2 verdict: fails structural-exclusion bar on minimality -- circular: the primitive is the admission
+
+============================================================================
+SECTION 3: P-LH-3 — KO-dim-6 Real Structure J
+============================================================================
+  [PASS (P-LH-3)] γ² = I_4 (chirality involution) -- γ = diag(+I_2, -I_2)
+  [PASS (P-LH-3)] P-LH-3 forcing: J² = +I (KO-dim 6 sign ε = +1) -- antilinear J = swap·K satisfies J² = +I
+  [PASS (P-LH-3)] P-LH-3 forcing: JγJ⁻¹ = -γ (KO-dim 6 sign ε'' = -1) -- swap·diag(I, -I)·swap = diag(-I, I) = -γ
+  [PASS (P-LH-3)] P-LH-3 forcing: D = D† (self-adjoint) -- off-diagonal swap is real symmetric
+  [PASS (P-LH-3)] P-LH-3 forcing: JD = DJ (KO-dim 6 sign ε' = +1) -- antilinear J commutes with real D up to K
+  [PASS (P-LH-3)] P-LH-3 forcing: [a, JbJ⁻¹] = 0 (commutant on SM-style A_F) -- a on ρ_+ commutes with JbJ⁻¹ on ρ_+ (image of b on ρ_-)
+  [PASS (P-LH-3)] P-LH-3 PS-test: KO-dim 6 ALONE admits Pati-Salam (load-bearing) -- Chamseddine-Connes 2013: A_F^PS = M_2(H_R) ⊕ M_2(H_L) ⊕ M_4(C) is the KO-dim 6 classification without order-one
+  [PASS (P-LH-3)] P-LH-3 verdict: fails alone, PASSES paired with P-LH-1 (order-one) -- {P-LH-1 + P-LH-3} = Connes-Chamseddine NCG SM derivation
+  [PASS (P-LH-3)] P-LH-3 independence: KO-dim-6 J is NEW (not in retained) -- retained Cl(3)/Z^3 has Cl(3) Z_2 grading but no real structure J
+  [PASS (P-LH-3)] P-LH-3 minimality: NOT minimal alone; minimal as pair {P-LH-1, P-LH-3} -- single addition fails; pair = NCG SM derivation
+
+============================================================================
+SECTION 4: Comparative table on structural-exclusion bar
+============================================================================
+  [PASS (table)] P-LH-1 (order-one): forcing=True, exclusion=True, independence=True, minimality=True -- passes conditional on algebra import
+  [PASS (table)] P-LH-1 (order-one): structural-bar passes = True -- matches verdict 'passes conditional on algebra import'
+  [PASS (table)] P-LH-2 (asymmetric pairing): forcing=True, exclusion=True, independence=False, minimality=False -- fails minimality (circular)
+  [PASS (table)] P-LH-2 (asymmetric pairing): structural-bar passes = False -- matches verdict 'fails minimality (circular)'
+  [PASS (table)] P-LH-3 (KO-dim-6 J alone): forcing=False, exclusion=False, independence=True, minimality=False -- fails alone
+  [PASS (table)] P-LH-3 (KO-dim-6 J alone): structural-bar passes = False -- matches verdict 'fails alone'
+  [PASS (table)] {P-LH-1 + P-LH-3}: forcing=True, exclusion=True, independence=True, minimality=True -- passes (Connes-Chamseddine NCG)
+  [PASS (table)] {P-LH-1 + P-LH-3}: structural-bar passes = True -- matches verdict 'passes (Connes-Chamseddine NCG)'
+  [PASS (table)] Bar synthesis: no single primitive on retained alone closes the gap -- best path is the NCG pair (order-one + KO-dim-6); imports 2 primitives
+
+============================================================================
+SECTION 5: Tier assertions (primitive_proposal_note; no retention)
+============================================================================
+  [PASS (tier)] No PDG observed values used -- structural exact-algebra checks only
+  [PASS (tier)] No lattice MC empirical measurements used -- Pauli-rep + structural verification
+  [PASS (tier)] No fitted matching coefficients used -- exact rationals + numerical Pauli-rep arithmetic
+  [PASS (tier)] No new repo-wide axioms introduced -- proposal-only; no retention requested
+  [PASS (tier)] No HK + DHR appeal -- Block 01 audit retired this; respected
+  [PASS (tier)] No same-surface family arguments -- structural exact-algebra checks distinct per primitive
+  [PASS (tier)] Audit-lane authority on tier preserved -- design-note proposes; audit lane decides
+  [PASS (tier)] No retained / positive_theorem promotion requested -- proposal-only; primitive design lane
+  [PASS (tier)] Consistent with Probe Y-Substrate-Anomaly (anomaly does not force LH) -- design-note presupposes Y-Neg-C as motivating gap
+  [PASS (tier)] Consistent with Probe W-Substrate-Chirality (Z_2 does not force LH) -- design-note presupposes W-Neg-A,B as motivating gap
+  [PASS (tier)] Honest distinction: P-LH-1 PASSES conditional, not absolute -- requires algebra import; not standalone closure
+  [PASS (tier)] Honest distinction: P-LH-2 FAILS minimality (circular) -- primitive renames admission; not a derivation
+  [PASS (tier)] Honest distinction: P-LH-3 FAILS alone (admits PS) -- KO-dim-6 alone insufficient; requires order-one pairing
+  [PASS (tier)] Net verdict: design-note records 3 candidates; none single-primitive closure -- best path = NCG pair {P-LH-1, P-LH-3}; imports 2 NCG primitives
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+
+Question (P-LH design):
+  Can a single substrate-side primitive force SM LH/RH content
+  over Pati-Salam and other anomaly-free alternatives?
+
+Result: No single primitive on retained Cl(3)/Z^3 alone
+        reaches clean structural exclusion of Pati-Salam.
+
+CANDIDATES:
+
+  P-LH-1 (Order-One Condition, Connes-Chamseddine analog):
+    Forcing:      YES (with C ⊕ Cl⁺(3) ⊕ M_3 algebra)
+    PS-exclusion: YES (PS violates order-one inner fluctuation)
+    Independence: YES (new condition not in retained)
+    Minimality:   YES (single condition)
+    VERDICT: passes conditional on algebra import
+
+  P-LH-2 (Asymmetric Algebra Action):
+    Forcing:      YES (by construction)
+    PS-exclusion: YES (PS forbidden by primitive fiat)
+    Independence: NO (the primitive IS the admission)
+    Minimality:   NO (renames admission, circular)
+    VERDICT: fails minimality / circular
+
+  P-LH-3 (KO-dim-6 Real Structure J):
+    Forcing:      NO (alone)
+    PS-exclusion: NO (alone — admits both SM and PS)
+    Independence: YES
+    Minimality:   NO (alone)
+    VERDICT: fails alone; passes paired with P-LH-1
+
+BEST PATH: pair {P-LH-1 + P-LH-3} = Connes-Chamseddine NCG
+           SM derivation (Chamseddine-Connes JHEP 2013, arXiv:1304.8050)
+
+HONEST DESIGN VERDICT:
+  - Closing the LH-content gap with a single substrate-side
+    primitive is hard. The natural NCG path imports TWO
+    primitives (order-one + KO-dim-6).
+  - This converts the LH-content admission from 'one
+    primitive unaccounted for' into 'two NCG primitives that
+    need substrate-side justification' — progress only IF the
+    NCG primitives admit a Cl(3)/Z^3-native derivation.
+  - That follow-on question is a separate campaign target.
+
+AUTHORITY: audit-lane retains all status decisions; this is a
+           primitive_proposal_note with no retention request.
+
+=== TOTAL: PASS=53, FAIL=0 ===
