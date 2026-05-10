@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 67 |
 | **retained_no_go** | 126 |
-| **retained_bounded** | 238 |
+| **retained_bounded** | 239 |
 | open_gate | 12 |
-| unaudited | 1076 |
+| unaudited | 1075 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 18 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 399 |
+| `audited_clean` | 400 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1174 |
+| `unaudited` | 1173 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 813 |
+| `bounded_theorem` | 814 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 198 |
 | `open_gate` | 104 |
-| `positive_theorem` | 716 |
+| `positive_theorem` | 715 |
 
 | criticality | count |
 |---|---:|
@@ -379,6 +379,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `second_grown_family_complex_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `second_grown_family_complex_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `second_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -8638,6 +8639,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The conclusion follows directly from the block covariance equations, unitarity, and invertibility of D. The cited retained authority is contextual rather than load-bearing for the algebraic lemma.
 - **rationale:** The theorem is a direct Schur-complement equivariance identity under the stated premises, with no physical bridge, tuned numerical input, or definition-as-derivation. The runner checks exact finite examples, premise-failure controls, and dependency retained-grade status; these support but do not replace the proof-level algebra. The note advertises random C3-covariant tests that are not present in the supplied runner source, but that mismatch is non-load-bearing for the scoped theorem.
 - **auditor confidence:** high
+
+### `second_grown_family_complex_boundary_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite seed-0 no-restore grown-family geometry-sector probe over drifts 0.18, 0.20, and 0.22 showing Born/weak-field guards at the anchor but no TOWARD-to-AWAY crossover.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e139e-88a0-7ca0-a0e2-c4774378c630`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** the gravitational response is AWAY already at gamma = 0, and it stays AWAY at gamma = 0.1 and gamma = 0.5  _(class `C`)_
+- **chain closes:** True — The source table matches the completed runner stdout: all tested rows have negative d01 and d05, so t01=0 and t05=0. The cited authority is retained-grade and is used only as prior narrow-positive context; no open bridge is needed for this bounded boundary diagnosis.
+- **rationale:** The runner constructs the seed-0 grown geometry, geometry-sector adjacency, source field, and propagated deltas rather than printing the contested signs as constants. The completed output supports the bounded claim that this single-seed three-drift window lacks the crossover while preserving the anchor Born proxy and weak-field scaling checks. The clean scope is only the stated seed, drifts, sector, and source setup, not a broad family no-go.
+- **auditor confidence:** medium
 
 ### `second_grown_family_complex_note`
 
