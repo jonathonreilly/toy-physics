@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1129 |
+| unaudited | 1128 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 220 |
+| ~~audited_conditional~~ | 221 |
 | ~~audited_failed~~ | 17 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 382 |
-| `audited_conditional` | 220 |
+| `audited_conditional` | 221 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1227 |
+| `unaudited` | 1226 |
 
 | claim_type | count |
 |---|---:|
@@ -599,6 +599,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -4937,6 +4938,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current Higgs runner shows that the framework has nontrivial quantitative Higgs behavior once the lattice Coleman-Weinberg mechanism is active.  _(class `C`)_
 - **chain closes:** True — For this bounded scope, the note does not claim an exact Higgs-mass derivation; it claims only that the runner exhibits nontrivial CW Higgs behavior and supports bounded studies. The completed runner computes CW potential/SSB scans and ballpark mass-ratio behavior, while its failed exact-coupling/crossing checks are consistent with the note's explicit boundary.
 - **rationale:** The source note is narrowly scoped: it is a support note for bounded Higgs quantitative behavior and explicitly excludes standalone exact m_H authority. The runner is not clean for exact Higgs closure, but that is not the claim under audit; the two completed failures show missing exact coupling/crossing closure and reinforce the boundary. Within the bounded scope, the source note and completed runner evidence close without promoting an exact Higgs-mass derivation.
+- **auditor confidence:** high
+
+### `higgs_mechanism_note`
+
+- **Note:** [`HIGGS_MECHANISM_NOTE.md`](../../docs/HIGGS_MECHANISM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Mechanism-level bounded claim that the supplied lattice CW runner exhibits EWSB for chosen O(1) inputs and supports structural hierarchy amelioration, without exact Higgs-mass closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e130f-d8b4-73d3-9149-20e2c84d5b4f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "lattice Coleman-Weinberg electroweak symmetry breaking occurs naturally for O(1) comparison inputs on the current bounded runner"  _(class `G`)_
+- **chain closes:** False — The note names HIGGS_MASS_DERIVED_NOTE.md as the authority boundary, but no one-hop authorities are supplied. The runner demonstrates selected numerical scenarios and hard-coded/printed structural claims rather than deriving the scalar order-parameter surface, physical cutoff identification, or naturalness conclusion from retained inputs in this packet.
+- **rationale:** Issue: the load-bearing mechanism claim depends on an omitted authority boundary and on selected runner inputs. Why this blocks: with no cited authorities, the physical identifications needed for Higgs mechanism derivation and hierarchy amelioration are not closed by the restricted packet, and the completed runner itself exits nonzero with failed gauge-running and y_t-crossing checks. Repair target: add the missing dependency edge to the Higgs authority note and/or a bridge theorem deriving the scalar carrier, cutoff identification, and O(1) input regime from retained primitives. Claim boundary until fixed: only a bounded numerical scenario showing SSB for the runner's chosen O(1) inputs is supported.
+- **open / conditional deps cited:**
+  - `HIGGS_MASS_DERIVED_NOTE.md`
+  - `VACUUM_CRITICAL_STABILITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `higher_order_structural_theorems_note`
