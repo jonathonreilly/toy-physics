@@ -52,9 +52,9 @@
       "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
     ]
   ],
-  "cycles_detected": 303,
+  "cycles_detected": 304,
   "effective_status_counts": {
-    "audited_conditional": 229,
+    "audited_conditional": 223,
     "audited_failed": 12,
     "audited_numerical_match": 18,
     "audited_renaming": 17,
@@ -71,7 +71,7 @@
     "retained": 66,
     "retained_bounded": 227,
     "retained_no_go": 119,
-    "unaudited": 1142
+    "unaudited": 1148
   },
   "retained_pending_chain_count": 0,
   "retained_pending_chain_examples": []

@@ -5,6 +5,31 @@
 flagship authority surface
 **Source branch reviewed:** `origin/frontier/hydrogen-helium-review`
 
+**Audit-conditional perimeter (2026-05-05):**
+In the cited audit snapshot, the audit lane classified this row `audited_conditional` with
+`auditor_confidence = medium`, `chain_closes = false`, `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+note asserts first-principles lattice computations, but the restricted
+packet provides no cited authority, runner output, or runner source
+to verify that the quoted numbers were actually computed from the
+stated operators. The missing step is a completed runner/source
+certificate showing the scripts instantiate the claimed Hamiltonians
+and produce the quoted readouts." The audit-stated repair target
+(`notes_for_re_audit_if_any`) is exact:
+"missing_dependency_edge: provide the preserved runner source plus
+completed stdout/cached certificates and include the one-hop
+retained lattice kinetic and Coulomb-kernel authority notes in the
+restricted packet." This is a **diagnostic companion / work-history
+note** that **does not propagate** as a flagship authority: the
+quoted numerical readouts (`E_2/E_1 = 0.25857`, helium `|E(He)| /
+|E(He^+)| = 1.3424` and Jastrow `1.4357`, etc.) are not pinned in
+this revision to a cached runner stdout under
+`logs/runner-cache/`, and the upstream lattice-kinetic and
+Coulomb-kernel authority notes are not yet wired as audit-graph
+one-hop dependencies on this row. Nothing in this source edit sets audit status; the note remains a diagnostic work-history record.
+See "Citation chain and audit-stated repair path (2026-05-10)"
+below.
+
 ## What Was Kept
 
 This salvage keeps only the branch material that remained scientifically useful
@@ -120,3 +145,44 @@ Two things are intentionally *not* part of this atomic reopen path:
 - the charged-lepton / `m_e` closure problem, which belongs under the existing
   charged-lepton hierarchy / Koide program rather than the atomic companion
   lane itself
+
+## Citation chain and audit-stated repair path (2026-05-10)
+
+The audit verdict (2026-05-05, see top of note) flags two missing
+items: the preserved runner source plus completed stdout/cached
+certificates, and the one-hop retained lattice-kinetic and
+Coulomb-kernel authority notes as audit-graph dependencies. The cited
+authority chain on this row currently stands as follows.
+
+| Cited authority | File | Ledger snapshot (2026-05-10) | Conditional on |
+|---|---|---|---|
+| Hydrogen lattice-spectrum companion runner | [`scripts/frontier_atomic_hydrogen_lattice_companion.py`](../../../scripts/frontier_atomic_hydrogen_lattice_companion.py) | preserved source; no cached stdout under `logs/runner-cache/` for this script as of 2026-05-10 | provide completed stdout / cached certificate |
+| Helium Hartree companion runner | [`scripts/frontier_atomic_helium_hartree_companion.py`](../../../scripts/frontier_atomic_helium_hartree_companion.py) | preserved source; no cached stdout under `logs/runner-cache/` for this script as of 2026-05-10 | provide completed stdout / cached certificate |
+| Helium Jastrow / VMC companion runner | [`scripts/frontier_atomic_helium_jastrow_companion.py`](../../../scripts/frontier_atomic_helium_jastrow_companion.py) | preserved source; no cached stdout under `logs/runner-cache/` for this script as of 2026-05-10 | provide completed stdout / cached certificate |
+| One-hop retained lattice kinetic operator / graph Hamiltonian | upstream retained lattice surface (cited, not wired here) | not yet wired as one-hop edge on this row | audit-graph one-hop authority |
+| One-hop retained Coulomb-kernel route on `Z^3` | upstream retained / accepted Coulomb-kernel surface (cited, not wired here) | not yet wired as one-hop edge on this row | audit-graph one-hop authority |
+| Live retained EW normalization lane (used as boundary disclaimer only) | retained on `main` per "Upstream Surfaces Used Here" | retained | this companion stays in dimensionless / coupling-relative units |
+
+The audit-stated repair path (verbatim from
+`audit_ledger.json/notes_for_re_audit_if_any`) is to **provide the
+preserved runner source plus completed stdout/cached certificates**
+and **include the one-hop retained lattice kinetic and Coulomb-kernel
+authority notes in the restricted packet**. The first half can be
+satisfied by depositing deterministic runner outputs under
+`logs/runner-cache/` for each of the three companion scripts and
+citing them inline against the quoted readouts; the second half
+requires either explicitly naming the canonical upstream lattice-
+kinetic / Coulomb-kernel authority notes as one-hop dependencies in
+the audit graph, or wrapping the relevant operator definitions
+into a self-contained derivation block in the runner source. Until
+either path lands, this row remains ledger-derived; at the cited audit snapshot it was conditional and this
+note remains a diagnostic work-history companion that does not
+propagate as a retained authority. The acknowledged residual is the
+pinning gap (no cached stdout backing the numerical readouts) plus
+the missing audit-graph dependency edges to the upstream lattice
+surfaces.
+
+This rigorization edit only sharpens the conditional perimeter and
+registers the cited authority chain; it does not set audit status or
+hand-author audit JSON. Generated audit outputs are regenerated by
+the review pipeline.

@@ -1645,6 +1645,10 @@
       "to": "action_power_scaling_sweep_note"
     },
     {
+      "from": "b_independence_mechanism_note",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "c3_symmetry_preserved_interpretation_note_2026-05-08",
       "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
     },
@@ -3219,6 +3223,18 @@
     {
       "from": "charged_lepton_y_tau_m3_premise_self_correction_note_2026-04-28",
       "to": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28"
+    },
+    {
+      "from": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+      "to": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26"
+    },
+    {
+      "from": "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "charged_lepton_y_tau_ward_identity_u1_anchor_stretch_attempt_note_2026-04-28",
@@ -15045,6 +15061,22 @@
       "to": "publication.ci3_z3.publication_matrix"
     },
     {
+      "from": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "to": "neutrino_majorana_finite_normal_grammar_no_go_note"
+    },
+    {
+      "from": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "to": "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28"
+    },
+    {
+      "from": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
       "from": "neutrino_retained_lanes_review_packet_2026-04-16",
       "to": "neutrino_retained_status_note_2026-04-16"
     },
@@ -19161,6 +19193,26 @@
       "to": "teleportation_protocol_note"
     },
     {
+      "from": "teleportation_native_record_apparatus_note",
+      "to": "teleportation_3d1_causal_record_channel_note"
+    },
+    {
+      "from": "teleportation_native_record_apparatus_note",
+      "to": "teleportation_apparatus_dynamics_closure_note"
+    },
+    {
+      "from": "teleportation_native_record_apparatus_note",
+      "to": "teleportation_record_field_closure_note"
+    },
+    {
+      "from": "teleportation_native_record_apparatus_note",
+      "to": "teleportation_measurement_record_note"
+    },
+    {
+      "from": "teleportation_native_record_apparatus_note",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "teleportation_native_transport_theory_note",
       "to": "teleportation_retained_axis_operator_algebra_closure_note"
     },
@@ -19187,6 +19239,26 @@
     {
       "from": "teleportation_remaining_open_item_attack_note",
       "to": "teleportation_native_record_apparatus_note"
+    },
+    {
+      "from": "teleportation_resource_from_poisson_note",
+      "to": "teleportation_poisson_resource_sweep_note"
+    },
+    {
+      "from": "teleportation_resource_from_poisson_note",
+      "to": "teleportation_resource_fidelity_note"
+    },
+    {
+      "from": "teleportation_resource_from_poisson_note",
+      "to": "teleportation_measurement_record_note"
+    },
+    {
+      "from": "teleportation_resource_from_poisson_note",
+      "to": "teleportation_apparatus_dynamics_closure_note"
+    },
+    {
+      "from": "teleportation_resource_from_poisson_note",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "teleportation_retention_theorem_attack_note",
@@ -35075,8 +35147,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "aa24e8dddc959b729a3989a27e5cca86e1d70e99722d3ecf59aba87be500c2af",
+      "deps": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "fb50abc6e29a15c042c03805495e52347b57767b08ab5a5d854be930224b2ed1",
       "path": "docs/B_INDEPENDENCE_MECHANISM_NOTE.md",
       "runner_path": null,
       "title": "B-Independence Mechanism Note"
@@ -36415,8 +36489,12 @@
       "claim_type_author_hint": "open_gate",
       "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "bd520e4ed9c19b2d70db15cb21dad1be8c1e3d0271f2d95c831ba0ab64562d15",
+      "deps": [
+        "yt_ward_identity_derivation_theorem",
+        "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "8f05776d1dab607101330570a25b554f1ad46b473a758d4a613a033b726d6d19",
       "path": "docs/CHARGED_LEPTON_Y_TAU_WARD_IDENTITY_SU2_ANCHOR_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Ward Identity from `SU(2)` Anchor \u2014 Stretch Attempt (SA-A)"
@@ -51271,8 +51349,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "1c2b939b78c81018143534d88304129a7f8133ae96c1064c6625cdc886a0051f",
+      "deps": [
+        "neutrino_majorana_finite_normal_grammar_no_go_note",
+        "neutrino_dirac_global_lift_partial_theorem_note_2026-04-28",
+        "minimal_axioms_2026-05-03",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "7e836684b781acf5ebe837539838194d1286d5df941b534e106a407c268da0cd",
       "path": "docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Normal-Grammar `U(1)` Rigidity Stretch Attempt \u2014 First-Principles Work From `A_min`"
@@ -60158,8 +60241,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "fe5f9ee1dab807c739d389792924b437e96de191e6e2b51780d376fef8af88a4",
+      "deps": [
+        "teleportation_3d1_causal_record_channel_note",
+        "teleportation_apparatus_dynamics_closure_note",
+        "teleportation_record_field_closure_note",
+        "teleportation_measurement_record_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "6020878c383a057ffac06f02fb5520c5dc1c8047b398e75c2d12c0cb72133855",
       "path": "docs/TELEPORTATION_NATIVE_RECORD_APPARATUS_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_native_record_apparatus.py",
       "title": "Native Teleportation Record Apparatus Note"
@@ -60325,8 +60414,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "79e892feba8bb7098bccf64c14419f9c4cf35ee2d8e5474f1a6adea5131acd3e",
+      "deps": [
+        "teleportation_poisson_resource_sweep_note",
+        "teleportation_resource_fidelity_note",
+        "teleportation_measurement_record_note",
+        "teleportation_apparatus_dynamics_closure_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "441d4eb2ebb1b5dfb3512b855a2b1d2c394992ba9974ebae3aea5a0758f2e039",
       "path": "docs/TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md",
       "runner_path": "scripts/frontier_teleportation_resource_from_poisson.py",
       "title": "Teleportation Resource From Poisson/CHSH: First Audit"
@@ -62644,7 +62739,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea890a9ecab337677464a0535255265be7cf7e9a23fd6355021fb520418d329a",
+      "note_hash": "a774d89dec651b001bd1f201d50864d01c8530d145d1b84b2cb9bd7fccc9ad18",
       "path": "docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md",
       "runner_path": null,
       "title": "Hydrogen / Helium Atomic Companion Note"
@@ -64526,7 +64621,6 @@
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
     "axiom_reduction_note",
-    "b_independence_mechanism_note",
     "background_independence_note",
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
@@ -64561,7 +64655,6 @@
     "charged_lepton_two_higgs_canonical_reduction_note",
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
-    "charged_lepton_y_tau_ward_identity_su2_anchor_stretch_attempt_note_2026-04-28",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
     "chiral_3plus1d_mixing_period_note",
@@ -64902,7 +64995,6 @@
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
-    "neutrino_normal_grammar_u1_rigidity_stretch_attempt_note_2026-04-28",
     "newton_persistent_pattern_control_note_2026-04-11",
     "next_chunk_recommendation",
     "nonlabel_grown_basin_note",
@@ -65090,7 +65182,6 @@
     "teleportation_measurement_record_note",
     "teleportation_microscopic_closure_note",
     "teleportation_native_axioms_theory_note",
-    "teleportation_native_record_apparatus_note",
     "teleportation_nature_grade_push_note",
     "teleportation_no_signaling_audit",
     "teleportation_noise_fault_controls_note",
@@ -65098,7 +65189,6 @@
     "teleportation_operator_consistent_end_to_end_note",
     "teleportation_record_field_closure_note",
     "teleportation_resource_fidelity_note",
-    "teleportation_resource_from_poisson_note",
     "teleportation_retained_axis_operator_algebra_closure_note",
     "teleportation_three_register_cross_encoding_note",
     "tensor_network_connection_note",
@@ -65207,10 +65297,10 @@
       "open_gate": 111,
       "positive_theorem": 596
     },
-    "edge_count": 8150,
-    "leaf_count": 532,
+    "edge_count": 8168,
+    "leaf_count": 527,
     "node_count": 2036,
-    "root_count": 767,
+    "root_count": 762,
     "runners_with_path": 1651
   }
 }
