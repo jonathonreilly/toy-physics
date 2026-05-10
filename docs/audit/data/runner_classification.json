@@ -12312,6 +12312,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_majorana_canonical_local_block.py"
     },
+    "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_neutrino_majorana_chain_audit_map_synthesis.py"
+    },
     "neutrino_majorana_charge_two_primitive_reduction_note": {
       "assert_count": 1,
       "counts": {
@@ -32742,6 +32754,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_neutrino_majorana_chain_audit_map_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py": {
       "assert_count": 1,
       "claims": [
@@ -43537,13 +43564,13 @@
     "decoration_candidates": 161,
     "dominant_class_distribution": {
       "A": 111,
-      "B": 160,
+      "B": 161,
       "C": 642,
       "D": 235,
       "none": 404
     },
-    "runners_classified": 1552,
-    "runners_with_C": 804,
+    "runners_classified": 1553,
+    "runners_with_C": 805,
     "runners_with_D": 425
   }
 }

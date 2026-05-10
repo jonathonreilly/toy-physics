@@ -14701,6 +14701,74 @@
       "to": "neutrino_majorana_pfaffian_extension_note"
     },
     {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "neutrino_majorana_operator_axiom_first_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "s3_boundary_link_theorem_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "staggered_fermion_card_2026-04-11"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_route2_source_domain_bridge_no_go_note_2026-04-28"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "s3_cap_uniqueness_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "universal_gr_isotropic_glue_operator_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "universal_gr_lorentzian_global_atlas_closure_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "universal_gr_tensor_action_blocker_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "source_driven_field_recovery_sweep_note"
+    },
+    {
+      "from": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+    },
+    {
       "from": "neutrino_majorana_charge_two_primitive_reduction_note",
       "to": "neutrino_majorana_operator_axiom_first_note"
     },
@@ -51136,6 +51204,35 @@
       "runner_path": "scripts/frontier_neutrino_majorana_canonical_local_block.py",
       "title": "Majorana Canonical One-Generation Local Block Theorem"
     },
+    "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "claim_id": "neutrino_majorana_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "neutrino_majorana_operator_axiom_first_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "observable_principle_from_axiom_note",
+        "s3_boundary_link_theorem_note",
+        "staggered_fermion_card_2026-04-11",
+        "quark_route2_source_domain_bridge_no_go_note_2026-04-28",
+        "s3_cap_uniqueness_note",
+        "universal_gr_isotropic_glue_operator_note",
+        "universal_gr_lorentzian_global_atlas_closure_note",
+        "universal_gr_tensor_action_blocker_note",
+        "source_driven_field_recovery_sweep_note",
+        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
+      ],
+      "note_hash": "39503cae77679f18cfd90f171c6ffa75b4140055fa709ab5c3d1184a2013241d",
+      "path": "docs/NEUTRINO_MAJORANA_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_neutrino_majorana_chain_audit_map_synthesis.py",
+      "title": "Neutrino Majorana Chain Audit Map Synthesis Meta Note"
+    },
     "neutrino_majorana_charge_two_primitive_reduction_note": {
       "claim_id": "neutrino_majorana_charge_two_primitive_reduction_note",
       "claim_type_author_hint": null,
@@ -65723,7 +65820,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 237,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
@@ -65732,16 +65829,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 719,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8225,
+    "edge_count": 8242,
     "leaf_count": 532,
-    "node_count": 2049,
+    "node_count": 2050,
     "root_count": 764,
-    "runners_with_path": 1664
+    "runners_with_path": 1665
   }
 }
