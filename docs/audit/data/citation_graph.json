@@ -37249,6 +37249,17 @@
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
     },
+    "ckm_cp_phase_structural_trig_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_cp_phase_structural_trig_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "f4ee3cd73a8ca8594dcc2e4a1564987b6b3b43844c0d3ff18c6191ebcec18176",
+      "path": "docs/CKM_CP_PHASE_STRUCTURAL_TRIG_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_ckm_cp_phase_structural_trig_narrow.py",
+      "title": "CKM CP-Phase Structural Trigonometric Narrow Theorem"
+    },
     "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25": {
       "claim_id": "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -65205,6 +65216,7 @@
     "chiral_split_mass_gravity_note",
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+    "ckm_cp_phase_structural_trig_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "claude_branch_retainability_note",
@@ -65830,7 +65842,7 @@
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
-      "positive_theorem": 91
+      "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 722,
@@ -65839,12 +65851,12 @@
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
-      "positive_theorem": 591
+      "positive_theorem": 592
     },
     "edge_count": 8236,
-    "leaf_count": 534,
-    "node_count": 2053,
-    "root_count": 765,
-    "runners_with_path": 1668
+    "leaf_count": 535,
+    "node_count": 2054,
+    "root_count": 766,
+    "runners_with_path": 1669
   }
 }

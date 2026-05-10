@@ -2088,6 +2088,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_ckm_cp_phase_structural_identity.py"
     },
+    "ckm_cp_phase_structural_trig_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_ckm_cp_phase_structural_trig_narrow.py"
+    },
     "ckm_cp_product_alpha_s_cross_sector_extraction_theorem_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -24721,6 +24733,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_ckm_cp_phase_structural_trig_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_cp_phase_structural_trig_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_ckm_cp_product_alpha_s_cross_sector_extraction.py": {
       "assert_count": 1,
       "claims": [
@@ -43648,9 +43675,9 @@
       "B": 160,
       "C": 642,
       "D": 237,
-      "none": 406
+      "none": 407
     },
-    "runners_classified": 1556,
+    "runners_classified": 1557,
     "runners_with_C": 804,
     "runners_with_D": 427
   }
