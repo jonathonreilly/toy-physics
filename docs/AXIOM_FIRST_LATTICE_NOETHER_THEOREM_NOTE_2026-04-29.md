@@ -1,6 +1,6 @@
 # Axiom-First Lattice Noether's Theorem on Cl(3) ⊗ Z^3
 
-**Date:** 2026-04-29 (originally); 2026-05-03 (sublattice repair); 2026-05-10 (gate-recategorization repair)
+**Date:** 2026-04-29 (originally); 2026-05-03 (sublattice repair); 2026-05-10 (gate-recategorization repair); 2026-05-10 (g_bare-removal repair)
 **Status:** source-note proposal — author-declared `bounded_theorem`; effective
 status set only by the independent audit lane.
 **Claim type:** bounded_theorem
@@ -139,7 +139,7 @@ memo:
   Noether theorem in this note applies to the `(2Z)^3` sublattice
   generators only.
 
-**Admitted context inputs (open gates per current axiom memo):**
+**Admitted context input (open gate per current axiom memo):**
 
 - **`staggered_dirac_realization_gate`.** The Grassmann partition
   with staggered Dirac action
@@ -155,19 +155,21 @@ memo:
   pending packaging. The action is invariant under both `T_{2a}`
   (two-site shift acting on lattice indices) and global `U(1)` phase
   (acting as `χ → e^{iα} χ`, `χ̄ → e^{-iα} χ̄`).
-- **`g_bare_canonical_normalization_gate`.** Canonical SU(3)
-  normalization (`g_bare = 1` plus the `u_0` / APBC surface)
-  recategorized from the prior `A4` axiom by
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md);
-  parent note: `G_BARE_DERIVATION_NOTE.md`. Used only via the SU(3)
-  gauge-invariance of `S_G`, i.e. the gauge `U(1)` subgroup is
-  automatically contained in the canonical action. The Noether
-  identities (N1)–(N3) below do not depend quantitatively on `g_bare`;
-  this gate's admission is structural (it fixes the form of `S_G`)
-  rather than numerical.
 
-When both gates close on `A_min`, the row becomes eligible for
-retagging by the independent audit lane.
+**Note on `g_bare` (NOT a load-bearing admission of this note).** The
+`g_bare = 1` canonical SU(3) normalization recategorized from the prior
+`A4` axiom (parent: `G_BARE_DERIVATION_NOTE.md`) is **not** a
+load-bearing input to (N1)–(N3). The Noether identities are quantitatively
+**`g_bare`-independent**: the gauge action `S_G` enters only through its
+SU(3) gauge invariance, whose form is fixed by the lattice-gauge content
+of `A_min` directly, not by the `g_bare` numerical normalization gate.
+Per the 2026-05-10 audit verdict's repair-target option "separately
+close or remove the structural `g_bare` dependency if it is not
+load-bearing", the `g_bare` gate is therefore **removed** from this
+note's named-admission list (2026-05-10 g_bare-removal repair below).
+
+When the staggered_dirac_realization_gate closes on `A_min`, the row
+becomes eligible for retagging by the independent audit lane.
 
 ## Statement
 
@@ -467,10 +469,15 @@ scope for this note.
 The proof uses the two current framework axioms `A1` (Cl(3)) and `A2`
 (`(2Z)^3` sublattice translation action) from
 [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), plus
-the two named admitted inputs `staggered_dirac_realization_gate` and
-`g_bare_canonical_normalization_gate`. The full hypothesis discussion
-is in §"Hypothesis set used" near the top of this note. No imports
-from the forbidden list.
+the one named admitted input `staggered_dirac_realization_gate`. The
+`g_bare` normalization gate, formerly listed alongside the carrier
+gate, is **removed** from the load-bearing input list per the
+2026-05-10 audit verdict's explicit option to "remove the structural
+`g_bare` dependency if it is not load-bearing": the Noether
+identities (N1)–(N3) are quantitatively `g_bare`-independent (see
+§"Hypothesis set used" near the top of this note for the precise
+non-load-bearing role of `S_G`'s normalization). No imports from the
+forbidden list.
 
 The "external import" is the variational Noether technique itself,
 which is an elementary finite-Grassmann manipulation, not a primitive
@@ -510,11 +517,13 @@ discharge anomaly cancellation.
 **Bounded theorem on the admitted staggered/Grassmann carrier.** (N1)–
 (N3) are proved by the standard variational argument adapted to the
 finite Grassmann staggered action, with the `(2Z)^3` sublattice scope
-matching what the runner verifies. Two named open gates are admitted
+matching what the runner verifies. One named open gate is admitted
 explicitly per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md):
-the staggered-Dirac realization gate (carrier of the action `M_KS`)
-and the `g_bare = 1` canonical-normalization gate (parent note
-`G_BARE_DERIVATION_NOTE.md`, structural use only).
+the staggered-Dirac realization gate (carrier of the action `M_KS`).
+The `g_bare = 1` canonical-normalization gate, formerly admitted
+alongside, is **removed** from this note's load-bearing input list
+per the 2026-05-10 audit verdict (Noether identities (N1)–(N3) are
+quantitatively `g_bare`-independent).
 
 **Sub-claim status:**
 
@@ -602,9 +611,16 @@ framework-axiom dependency on `minimal_axioms_2026-05-03`:
   canonical parent note pending packaging. Closure of this gate makes
   this row eligible for retagging from `bounded_theorem` to
   `positive_theorem`.
-- `g_bare_canonical_normalization_gate` — canonical SU(3)
-  normalization. Recategorized from prior axiom `A4` to an open-gate
-  derivation target by `MINIMAL_AXIOMS_2026-05-03.md`; canonical
-  parent note `G_BARE_DERIVATION_NOTE.md`. Used here only structurally
-  (form of `S_G`); the Noether identities (N1)–(N3) are
-  `g_bare`-independent.
+
+**Removed (2026-05-10 g_bare-removal repair):**
+- `g_bare_canonical_normalization_gate` — formerly listed here as a
+  named admission. The 2026-05-10 audit verdict's repair-target option
+  "separately close or remove the structural `g_bare` dependency if it
+  is not load-bearing" applies: the Noether identities (N1)–(N3) are
+  quantitatively `g_bare`-independent, with `S_G` entering only via
+  its SU(3) gauge invariance (form fixed directly by the lattice-gauge
+  content of `A_min`, not by the `g_bare` numerical normalization
+  gate). The gate is therefore removed from this note's named-admission
+  list. Sister authorities and other rows that genuinely depend on
+  `g_bare` are unchanged; this removal is local to this Noether note's
+  load-bearing chain.
