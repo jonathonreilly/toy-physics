@@ -24,6 +24,69 @@ retained bridge theorem derives taste-orbit states as physical SM
 generations rather than naming them generation candidates."* This note now
 adopts the narrower "generation-candidate" framing throughout.
 
+## Audit-driven dependency-edge rigorization (2026-05-10)
+
+The 2026-05-05 audit verdict on this row was `audited_conditional`
+(load-bearing 16.267) with rationale: "The internal algebraic checks close
+for the scoped representation statement once the taste-cube carrier and Y/T3
+operators are admitted. The broader generation-candidate framing remains
+conditional on the open staggered-Dirac/taste-carrier realization and does
+not close a physical-generation identification." The named repair target
+was: "dependency_not_retained: audit or replace the unaudited/open-gated
+taste-cube and three-generation authority inputs with retained-grade
+dependencies, then re-audit only the narrowed representation-theory claim."
+
+This rigorize pass makes the one-hop dependency status explicit so the audit
+graph can route directly to current ledger verdicts. It does not promote any
+sibling claim or change this row's `audited_conditional` status.
+
+**Cited authorities (one-hop deps):**
+
+- [`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`](./S3_TASTE_CUBE_DECOMPOSITION_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: unaudited` (audit-prep refresh 2026-05-10 already
+  narrowed its load-bearing scope to the abstract representation-theoretic
+  theorem `C^8 = 4 A_1 + 2 E` and explicitly defers the framework-carrier
+  identification to the staggered-Dirac open gate). This note's sections
+  A-C (S3 character decomposition, hw=1 = S3 irrep `A_1 + E`, Z3 orbit
+  `e1 -> e2 -> e3 -> e1`)
+  are the same scoped class-A representation theorem as that note's safe
+  statement; this row inherits its bounded scope.
+- [`THREE_GENERATION_STRUCTURE_NOTE.md`](./THREE_GENERATION_STRUCTURE_NOTE.md)
+  — `claim_type: bounded_theorem`, current ledger
+  `effective_status: unaudited` (audit-prep refresh 2026-05-07 narrowed its
+  load-bearing scope to the local algebraic/spectral content `8 = 1+1+3+3`
+  with `M_3(C)` no-proper-quotient theorem, and treats the staggered-Dirac
+  realization parent as admitted-context input). This note's section D
+  (Y/T3 spectra `{+1/3,+1/3,-1}` and `{-1/2,+1/2,+1/2}` on the hw=1 sector)
+  inherits the in-scope `M_3(C)` structure of that note's items (1)–(4).
+- [`MINIMAL_AXIOMS_2026-04-11.md`](./MINIMAL_AXIOMS_2026-04-11.md) — `meta`,
+  axiom-set authority. Provides the Z³ substrate and Cl(3) local algebra
+  axioms; staggered-Dirac realization is currently flagged as an open gate
+  rather than an axiom (per
+  [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](./STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md),
+  which is the canonical open gate for the framework-carrier reading of
+  `C^8 = (C^2)^{⊗3}` as the staggered-Dirac BZ-corner taste cube).
+
+**What the cite-chain does NOT close.** The two parent notes
+(`s3_taste_cube_decomposition_note`, `three_generation_structure_note`) are
+both currently `unaudited` rather than `retained_bounded`. The audit
+verdict's "dependency_not_retained" criterion is therefore not directly
+satisfied by this rigorize pass; the chain remains conditional on the parent
+audits being upgraded. The scoped representation-theory facts of items
+(1)–(4) of this note's statement are nonetheless internally closed via the
+finite-group character computation, and the runner
+`scripts/frontier_s3_action_taste_cube_decomposition.py` (PASS=57) verifies
+them numerically. Item (5) (the "generation-candidate framing")
+explicitly defers physical-generation identification to a separate retained
+bridge as already documented in the Statement and `Physical-generation
+identification` sections.
+
+**Admitted-context literature input.** Standard finite-group character
+theory for S₃ (permutation-character formula `chi(sigma) = |Fix(sigma)|`,
+decomposition of the 3-point permutation representation as `A_1 + E`) is
+universal mathematics input; not framework-derived.
+
 ## Statement (scope-narrowed)
 
 **Theorem (representation-theory, scope-narrowed).** The staggered-fermion

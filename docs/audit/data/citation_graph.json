@@ -4093,6 +4093,10 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
+      "from": "cl3_taste_generation_theorem",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
       "from": "cmw_2d_sublattice_no_ssb_theorem_note_2026-05-02",
       "to": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29"
     },
@@ -4698,6 +4702,18 @@
     },
     {
       "from": "diamond_sensor_prediction_note",
+      "to": "source_resolved_wavefield_escalation_note"
+    },
+    {
+      "from": "diamond_sensor_protocol_note",
+      "to": "retarded_field_causality_probe_note"
+    },
+    {
+      "from": "diamond_sensor_protocol_note",
+      "to": "retarded_field_delay_proxy_note"
+    },
+    {
+      "from": "diamond_sensor_protocol_note",
       "to": "source_resolved_wavefield_escalation_note"
     },
     {
@@ -5749,6 +5765,26 @@
       "to": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
     },
     {
+      "from": "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17"
+    },
+    {
+      "from": "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17"
+    },
+    {
       "from": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
       "to": "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16"
     },
@@ -5795,6 +5831,18 @@
     {
       "from": "dm_neutrino_source_surface_cubic_variational_obstruction_note_2026-04-17",
       "to": "dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17"
+    },
+    {
+      "from": "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
     },
     {
       "from": "dm_neutrino_source_surface_global_dominance_completeness_obstruction_note_2026-04-17",
@@ -5907,6 +5955,22 @@
     {
       "from": "dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem_note_2026-04-17",
       "to": "one_generation_matter_closure_note"
+    },
+    {
+      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+      "to": "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17"
+    },
+    {
+      "from": "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
+      "to": "dm_selector_branch_conclusion_note_2026-04-17"
     },
     {
       "from": "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16",
@@ -6149,6 +6213,18 @@
       "to": "dm_neutrino_source_surface_m_spectator_theorem_note_2026-04-16"
     },
     {
+      "from": "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17",
+      "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+    },
+    {
       "from": "dm_neutrino_source_surface_split2_boundary_band_transition_candidate_note_2026-04-18",
       "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
     },
@@ -6298,6 +6374,26 @@
     },
     {
       "from": "dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
+      "to": "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18"
+    },
+    {
+      "from": "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
       "to": "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18"
     },
     {
@@ -7495,6 +7591,58 @@
     {
       "from": "ewsb_pattern_from_higgs_y_note_2026-05-02",
       "to": "lhcm_repair_atlas_consolidation_note_2026-05-02"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "hierarchy_spatial_bc_and_u0_scaling_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "gauge_vacuum_plaquette_connected_hierarchy_theorem_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "yt_zero_import_authority_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "ew_coupling_derivation_note",
+      "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
     },
     {
       "from": "ew_current_fierz_channel_decomposition_note_2026-05-01",
@@ -8901,6 +9049,46 @@
       "to": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09"
     },
     {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "staggered_fermion_card_2026-04-11"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "gravity_clean_derivation_note"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "born_rule_analysis_2026-04-11"
+    },
+    {
+      "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "to": "newton_law_derived_note"
+    },
+    {
       "from": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
       "to": "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3"
     },
@@ -8959,6 +9147,82 @@
     {
       "from": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
       "to": "newton_law_derived_note"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "gravity_clean_derivation_note"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "to": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "gravity_clean_derivation_note"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "valley_linear_action_note"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "dimensional_gravity_table"
+    },
+    {
+      "from": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "to": "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3"
     },
     {
       "from": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
@@ -13602,6 +13866,10 @@
     },
     {
       "from": "minimal_absorbing_horizon_probe_note",
+      "to": "minimal_bidirectional_trapping_probe_note"
+    },
+    {
+      "from": "minimal_absorbing_horizon_probe_note",
       "to": "gate_b_nonlabel_connectivity_v1_note"
     },
     {
@@ -13615,6 +13883,10 @@
     {
       "from": "minimal_absorbing_horizon_probe_note",
       "to": "gate_b_farfield_note"
+    },
+    {
+      "from": "minimal_bidirectional_trapping_probe_note",
+      "to": "minimal_absorbing_horizon_probe_note"
     },
     {
       "from": "minimal_bidirectional_trapping_probe_note",
@@ -15205,6 +15477,34 @@
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
     },
     {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "physical_lattice_necessity_note"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
       "from": "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2",
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
     },
@@ -15459,6 +15759,46 @@
     {
       "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
       "to": "area_law_coefficient_gap_note"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "substrate_to_p_a_forcing_theorem_note_2026-04-30"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "anomaly_forces_time_theorem"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "to": "native_gauge_closure_note"
     },
     {
       "from": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
@@ -17737,6 +18077,22 @@
       "to": "source_resolved_exact_green_pocket_note"
     },
     {
+      "from": "source_resolved_wavefield_escalation_note",
+      "to": "source_resolved_wavefield_green_pocket_note"
+    },
+    {
+      "from": "source_resolved_wavefield_escalation_note",
+      "to": "source_resolved_propagating_green_pocket_note"
+    },
+    {
+      "from": "source_resolved_wavefield_escalation_note",
+      "to": "source_resolved_exact_green_pocket_note"
+    },
+    {
+      "from": "source_resolved_wavefield_escalation_note",
+      "to": "minimal_source_driven_field_probe_note"
+    },
+    {
       "from": "source_resolved_wavefield_green_pocket_note",
       "to": "source_resolved_propagating_green_pocket_note"
     },
@@ -18623,6 +18979,34 @@
     {
       "from": "tensor_block_closure_test_note",
       "to": "scalar_trace_tensor_no_go_note"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "oh_schur_boundary_action_note"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "discrete_einstein_regge_lift_note"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "finite_rank_source_to_metric_theorem_note"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "gr_class_expansion_finite_rank_target_note"
+    },
+    {
+      "from": "tensor_matching_completion_theorem_note",
+      "to": "minimal_axioms_2026-04-11"
     },
     {
       "from": "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
@@ -35333,9 +35717,9 @@
       "claim_id": "causal_field_portability_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2a9fb30bdad52c5a72731bda3149ef3ebfa21a73c1de3f29c0e784f81e4d8263",
+      "note_hash": "49c41235f0aebcc836e4d54691557d0285c695e85afeebc2365065f9fb5a4179",
       "path": "docs/CAUSAL_FIELD_PORTABILITY_NOTE.md",
       "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Portability Note"
@@ -35348,7 +35732,7 @@
       "deps": [
         "causal_field_portability_note"
       ],
-      "note_hash": "a9fddc6766587025d35aeeb5a236d2e2dea8d0423d82e58139a612712257350a",
+      "note_hash": "e501df9710c1e0ba7e9bc760642013c75809fec05eccc6705a0ee39321fa88b1",
       "path": "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md",
       "runner_path": "scripts/causal_field_portability_probe.py",
       "title": "Causal Field Reconciliation Note"
@@ -36711,9 +37095,10 @@
       "deps": [
         "s3_taste_cube_decomposition_note",
         "three_generation_structure_note",
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-04-11",
+        "staggered_dirac_realization_gate_note_2026-05-03"
       ],
-      "note_hash": "e2c73607cbc20ab5fed6e81835a11a1e7025902115febbf92d6375c6d726417c",
+      "note_hash": "93d5278c4a10ce4371ad17784c55c8051929f5e169574fac2a751708ff81b142",
       "path": "docs/CL3_TASTE_GENERATION_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Taste-Generation Theorem: Z\u00b3 Lattice Doubling \u2192 3 Tastes with Generation Structure"
@@ -36742,11 +37127,11 @@
     },
     "claude_complex_action_grown_companion_note": {
       "claim_id": "claude_complex_action_grown_companion_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c6fcc3b639ba574192e291596ca51afc0555c3661260b86652273099fae46239",
+      "note_hash": "47cec896dd614486e35d032ce806acf386c862d4fecacaefd6c2bfb267883456",
       "path": "docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md",
       "runner_path": "scripts/complex_action_grown_companion.py",
       "title": "Claude Complex-Action Grown Companion Note"
@@ -37424,9 +37809,9 @@
     },
     "diamond_nv_phase_ramp_signal_budget_note": {
       "claim_id": "diamond_nv_phase_ramp_signal_budget_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "source_resolved_wavefield_mechanism_note",
         "source_resolved_wavefield_escalation_note",
@@ -37436,7 +37821,7 @@
         "diamond_sensor_protocol_note",
         "diamond_sensor_prediction_note"
       ],
-      "note_hash": "a9c80556a1f11073c5bbdf529d601ab13afba915421f6113787ffea7b08a7a9a",
+      "note_hash": "d931917617abc9a9cf7f64bd167d929c69a0db5eb0ae16938f5e481ed7a5e14a",
       "path": "docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md",
       "runner_path": null,
       "title": "Diamond / NV Phase-Ramp Signal Budget Note"
@@ -37461,28 +37846,32 @@
     },
     "diamond_sensor_prediction_note": {
       "claim_id": "diamond_sensor_prediction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "retarded_field_causality_probe_note",
         "retarded_field_delay_proxy_note",
         "source_resolved_wavefield_escalation_note"
       ],
-      "note_hash": "03549e6c65e043f2473cce80c3aeefa7ea260b580a8921a4128d443841c6e9be",
+      "note_hash": "f4a97161548e4eaa70cd5d3c80b0896c84b80e5a4b169d241d74a4cc6eb64ebb",
       "path": "docs/DIAMOND_SENSOR_PREDICTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/diamond_sensor_prediction_probe.py",
       "title": "Diamond Sensor Prediction Note"
     },
     "diamond_sensor_protocol_note": {
       "claim_id": "diamond_sensor_protocol_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "d692ef66417cf7e37d47543bf54f4d4ff73090742644c2bbc65d171d5fd23792",
+      "deps": [
+        "retarded_field_causality_probe_note",
+        "retarded_field_delay_proxy_note",
+        "source_resolved_wavefield_escalation_note"
+      ],
+      "note_hash": "9b3d573376bbd4da034feb33ede8b3940ba0485c34d352b30eba97f74a8e4a55",
       "path": "docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/diamond_sensor_protocol_probe.py",
       "title": "Diamond Sensor Protocol Note"
     },
     "diamond_signal_budget_hardening_note": {
@@ -37810,9 +38199,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "94edf556047aada8528e25f85d3def7f85c333b2ff0d77c8d3dda6277e7e0d7d",
+      "note_hash": "422c21701f3aaa9202cd84d0f261f17e7220c6b12e83dc29055485fe7a1402f7",
       "path": "docs/DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py",
       "title": "DM A-BCC Basin Finite-Search Support Note"
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
@@ -39250,8 +39639,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "b670dd2072235e60c29c07b828fce84063e9e8c24d8a981d8e9ae1c534422ec4",
+      "deps": [
+        "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
+        "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17"
+      ],
+      "note_hash": "3f5e98bc476a48828de8b241c46492ffa6284ddc6da77d46628b8c768dfa538b",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_BUNDLE_WINDOW_TRICHOTOMY_CANDIDATE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_bundle_window_trichotomy_candidate.py",
       "title": "DM Neutrino Source-Surface Bundle-Window Trichotomy Candidate"
@@ -39309,8 +39704,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "9f6be7cf5652f49e47c14c8c589701e265634913a74014e095fbd6c2650ecf9e",
+      "deps": [
+        "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+      ],
+      "note_hash": "e9256fa32a32f9fa1667c44b443884a0bbd9900a1c0c0ae101d3331a99db30a2",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_ENDPOINT_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate.py",
       "title": "DM Neutrino Source-Surface Endpoint Window Bundle-Dominance Candidate"
@@ -39411,8 +39810,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "3078c3da5ea8a0527dca0d6e55aed2fee1f1e9592b4974f34bdafc33dc5ecb94",
+      "deps": [
+        "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16",
+        "dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16",
+        "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
+        "dm_selector_branch_conclusion_note_2026-04-17"
+      ],
+      "note_hash": "6b6e538760e4e4d75d812c3433f102c44c42b71125b12be31b1db47d423efad7",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py",
       "title": "DM Neutrino Source-Surface Microscopic Positive-Probe Representation Theorem"
@@ -39611,8 +40015,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "7291516d098b049b36f7efbbe65ab7fb5173731848184b8a25bd742adfadb811",
+      "deps": [
+        "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
+      ],
+      "note_hash": "600b0ff41f8b648d5b21eea478bef647b7d769ad41fdda087f79dac145d0f432",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT1_WINDOW_BUNDLE_DOMINANCE_CANDIDATE_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_split1_window_bundle_dominance_candidate.py",
       "title": "DM Neutrino Source-Surface Split-1 Window Bundle-Dominance Candidate"
@@ -39744,8 +40152,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "74527ac68fc8d364adbf8588a8a6e751b782e505c16f0c2d88965b03fdad5906",
+      "deps": [
+        "dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+        "dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate_note_2026-04-18",
+        "dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate_note_2026-04-18"
+      ],
+      "note_hash": "4cd00139ca67bfaf588e9fc2aab0a11d6a00e2a7a7a30976010d05165e703183",
       "path": "docs/DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py",
       "title": "DM Neutrino Source-Surface Split-2 Upper-m Slack-Floor Endpoint Candidate"
@@ -41334,8 +41748,22 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "81ee91a5c4381113cb950035686714e8083555b00e29797c51a8ac5fd6d566bb",
+      "deps": [
+        "alpha_s_derived_note",
+        "plaquette_self_consistency_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
+        "hierarchy_spatial_bc_and_u0_scaling_note",
+        "hierarchy_matsubara_decomposition_note",
+        "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
+        "native_gauge_closure_note",
+        "yt_ew_color_projection_theorem",
+        "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
+        "yt_zero_import_authority_note",
+        "higgs_mass_from_axiom_note",
+        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
+      ],
+      "note_hash": "21bac46b5978d3e9cdba42ca2556ab8df44ce30f40410feb248f95ceb4fa7c51",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
       "runner_path": "scripts/ew_coupling_bounded_status_runner_2026_05_03.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
@@ -41720,9 +42148,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "ea1071a99b1bd0e8ffd357cba35232305a5f4f8768fed872509db053a1d8d11d",
+      "note_hash": "2bf633005b6ed433074fcb72ce77d2dff9b9c8b55969879eca45626b501a9aa0",
       "path": "docs/FRAMEWORK_BARE_ALPHA_RATIO_ASSUMED_INPUT_IDENTITY_SUPPORT_NOTE_2026-04-30.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_framework_bare_alpha_3_alpha_em_dimension_fixed_ratio.py",
       "title": "Framework Bare Alpha Ratio Assumed-Input Identity Support Note"
     },
     "frontier_extension_lane_opening_note_2026-04-25": {
@@ -42002,6 +42430,28 @@
       "runner_path": null,
       "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route"
     },
+    "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2": {
+      "claim_id": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (position-density extension support for admission (b) of GRAVITY_CLEAN_DERIVATION_NOTE)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
+        "minimal_axioms_2026-05-03",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "conventions_unification_companion_note_2026-05-08",
+        "staggered_fermion_card_2026-04-11",
+        "gravity_clean_derivation_note",
+        "gravity_full_self_consistency_note",
+        "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3",
+        "born_rule_analysis_2026-04-11",
+        "newton_law_derived_note"
+      ],
+      "note_hash": "1bba15917c516052aa299a2657f102c6ba838e35a3ea4da59f063aa5f82d7c20",
+      "path": "docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md",
+      "runner_path": "scripts/cl3_g_newton_born_as_source_2026_05_10_gnewtonG2.py",
+      "title": "G_Newton Born Position-Density Extension \u2014 Bounded Support (gnewtonG2)"
+    },
     "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4": {
       "claim_id": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
       "claim_type_author_hint": "bounded_theorem",
@@ -42028,6 +42478,49 @@
       "path": "docs/G_NEWTON_SELF_CONSISTENCY_BOUNDED_SHARPENING_NOTE_2026-05-10_planckP4.md",
       "runner_path": "scripts/cl3_g_newton_self_consistency_2026_05_10_planckP4.py",
       "title": "G_Newton Self-Consistency \u2014 Bounded Sharpening (planckP4 probe)"
+    },
+    "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1": {
+      "claim_id": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "gravity_clean_derivation_note",
+        "gravity_full_self_consistency_note",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "minimal_axioms_2026-05-03",
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+      ],
+      "note_hash": "b37ce5614c914451d5459e1944a5a37a0492ae0efe6e4fd1ea8bf56f0cbb0f08",
+      "path": "docs/G_NEWTON_SKELETON_SELECTION_BOUNDED_NOTE_2026-05-10_gnewtonG1.md",
+      "runner_path": "scripts/cl3_g_newton_skeleton_selection_2026_05_10_gnewtonG1.py",
+      "title": "Skeleton-Selection Bounded Support: `L = H` Under Cited Hamiltonian Uniqueness"
+    },
+    "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3": {
+      "claim_id": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (conditional support for admission B(c) of planckP4 under cited Hamiltonian flow)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
+        "gravity_clean_derivation_note",
+        "valley_linear_action_note",
+        "dimensional_gravity_table",
+        "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3"
+      ],
+      "note_hash": "6b3b9e0bf68a4dc7da0ad1f31dea245b6681a13e6574acecf1315e139379823b",
+      "path": "docs/G_NEWTON_WEAK_FIELD_RESPONSE_BOUNDED_CLOSURE_NOTE_2026-05-10_gnewtonG3.md",
+      "runner_path": "scripts/cl3_g_newton_weak_field_response_2026_05_10_gnewtonG3.py",
+      "title": "G_Newton Weak-Field Response Form \u2014 Bounded Conditional Support (gnewtonG3 probe)"
     },
     "g_weak_from_framework_stretch_attempt_note_2026-05-03": {
       "claim_id": "g_weak_from_framework_stretch_attempt_note_2026-05-03",
@@ -43109,13 +43602,13 @@
     },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
       ],
-      "note_hash": "3b947b80b62537bc404875d1e20c12933b655db501d12122ae5a2f36cc824359",
+      "note_hash": "a373b2604f4c3032d3907f279f379024f5b46a02b0bd2743f63bea1372652a59",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer Theorem"
@@ -48763,9 +49256,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "b2051980eba2d6711d32782c8791e604e5903a44c13de4987ba745b73fbc99bb",
+      "note_hash": "f8f850dd2ff018193247eaaab42079f8c4c7f05c473075df9673cd91ce580d0f",
       "path": "docs/MEMORY_DECAY_DIAGNOSIS_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_memory_mu2_size_sweep.py",
       "title": "Memory Signal Decay \u2014 Root Cause: Yukawa Screening"
     },
     "memory_mu2_geometry_sweep_note_2026-04-11": {
@@ -48975,16 +49468,17 @@
     },
     "minimal_absorbing_horizon_probe_note": {
       "claim_id": "minimal_absorbing_horizon_probe_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
+        "minimal_bidirectional_trapping_probe_note",
         "gate_b_nonlabel_connectivity_v1_note",
         "gate_b_nonlabel_connectivity_v1_distance_note",
         "gate_b_nonlabel_connectivity_v1_joint_note",
         "gate_b_farfield_note"
       ],
-      "note_hash": "1d82202c175ace1875ef519cd1a6a16fb920ef01e252a2e11d10aa70abdc14ae",
+      "note_hash": "0ef151c6c8878b49ce27ddf6c750c7410c41c50e9cf9b9325350fbacc15d4b4e",
       "path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
       "title": "Minimal Absorbing Horizon Probe"
@@ -49013,16 +49507,17 @@
     },
     "minimal_bidirectional_trapping_probe_note": {
       "claim_id": "minimal_bidirectional_trapping_probe_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
+        "minimal_absorbing_horizon_probe_note",
         "gate_b_nonlabel_connectivity_v1_note",
         "gate_b_nonlabel_connectivity_v1_distance_note",
         "gate_b_nonlabel_connectivity_v1_joint_note",
         "gate_b_farfield_note"
       ],
-      "note_hash": "252bc60f4d5369ff25c9dc4af1acb85d9771cdcf93736993068681c9f1142852",
+      "note_hash": "2864a1a6b16610076dd193bd8e8eeab3c664e74b6a55e178a35183dff8c031ae",
       "path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_bidirectional_trapping_probe.py",
       "title": "Minimal Bidirectional Trapping Probe"
@@ -51338,6 +51833,25 @@
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "title": "Planck Finite-Response No-Go Note"
     },
+    "planck_from_structure_path_opening_meta_note_2026-05-10": {
+      "claim_id": "planck_from_structure_path_opening_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "conventions_unification_companion_note_2026-05-08",
+        "minimal_axioms_2026-05-03",
+        "physical_lattice_necessity_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "998744ff28722b9a94e79e9182d968713fd34494cee08e4302ad7834c9f95110",
+      "path": "docs/PLANCK_FROM_STRUCTURE_PATH_OPENING_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_planck_from_structure_path_opening.py",
+      "title": "Planck-from-Structure Path-Opening Meta Note"
+    },
     "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2": {
       "claim_id": "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2",
       "claim_type_author_hint": "positive_theorem",
@@ -51508,6 +52022,28 @@
       "path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_source_unit_normalization_support_theorem.py",
       "title": "Planck Source-Unit Normalization Support Theorem"
+    },
+    "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1": {
+      "claim_id": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+        "substrate_to_p_a_forcing_theorem_note_2026-04-30",
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
+        "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "cl3_sm_embedding_theorem",
+        "anomaly_forces_time_theorem",
+        "cpt_exact_note",
+        "native_gauge_closure_note"
+      ],
+      "note_hash": "2984e7dd16f2a489a6d5c9928056f42f5b5288d4ce82b7f6ce0dea9e46d9ac4b",
+      "path": "docs/PLANCK_SUBSTRATE_TO_CARRIER_FORCING_BOUNDED_NOTE_2026-05-10_planckP1.md",
+      "runner_path": "scripts/cl3_planck_substrate_to_carrier_forcing_2026_05_10_planckP1.py",
+      "title": "Planck Substrate-to-Carrier Forcing \u2014 Reflection-Positivity Route"
     },
     "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25": {
       "claim_id": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
@@ -56006,7 +56542,7 @@
         "minimal_bidirectional_trapping_probe_note",
         "physics_first_attack_plan"
       ],
-      "note_hash": "11ca143b7e7fe006ed21695f278ed8d127ba7892a6a552043c6685accc213257",
+      "note_hash": "64874a2348e522631917f4dced9a3ab92ed1d8a9425d61a2f626e9ce7b0bf651",
       "path": "docs/RETARDED_FIELD_DELAY_PROXY_NOTE.md",
       "runner_path": "scripts/retarded_field_delay_proxy_probe.py",
       "title": "Retarded Field Delay Proxy"
@@ -57744,11 +58280,16 @@
     },
     "source_resolved_wavefield_escalation_note": {
       "claim_id": "source_resolved_wavefield_escalation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "70169df97ec602f34ff4771c6e267d02f9f3d7ccbd7fb381df3e83eacdc8b6ea",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "source_resolved_wavefield_green_pocket_note",
+        "source_resolved_propagating_green_pocket_note",
+        "source_resolved_exact_green_pocket_note",
+        "minimal_source_driven_field_probe_note"
+      ],
+      "note_hash": "77094fa9722bd390bcaea438db999d5f12367cd72625cbd3a44508daebdf119c",
       "path": "docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md",
       "runner_path": "scripts/source_resolved_wavefield_escalation.py",
       "title": "Source-Resolved Wavefield Escalation"
@@ -59460,11 +60001,19 @@
     },
     "tensor_matching_completion_theorem_note": {
       "claim_id": "tensor_matching_completion_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "6ba3572fd6b4982b7c2c5dbb053072dde629938de959344fbb481491cc0aefef",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "oh_schur_boundary_action_note",
+        "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
+        "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
+        "discrete_einstein_regge_lift_note",
+        "finite_rank_source_to_metric_theorem_note",
+        "gr_class_expansion_finite_rank_target_note",
+        "minimal_axioms_2026-04-11"
+      ],
+      "note_hash": "9d4edeeaafa7e42ddf31af74d7ecde406256560fb67561ad101ed3f5ef352300",
       "path": "docs/TENSOR_MATCHING_COMPLETION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_tensor_matching_completion_theorem.py",
       "title": "Minimal Tensor Matching/Completion Theorem on the Retained Gravity Stack"
@@ -60133,9 +60682,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "12fff61cac271d01633940d9c88438880238347b2696a34bbaacc9d153a414b7",
+      "note_hash": "5d51a4a8e7b3c5d5fb7f17973197111ec00099a594361e4c870e9043a247f102",
       "path": "docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_polarization_frame_bundle.py",
       "title": "Universal GR Polarization-Frame Bundle Attempt on `PL S^3 x R`"
     },
     "universal_gr_polarization_frame_bundle_blocker_note": {
@@ -63616,7 +64165,6 @@
     "decoherence_decision_note",
     "decoherence_failure_analysis",
     "dense_prune_guard_seed_note",
-    "diamond_sensor_protocol_note",
     "dimension_selection_note",
     "dimensional_gravity_table",
     "dirac_core_card_note",
@@ -63679,11 +64227,6 @@
     "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
     "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
-    "dm_neutrino_source_surface_bundle_window_trichotomy_candidate_note_2026-04-18",
-    "dm_neutrino_source_surface_endpoint_window_bundle_dominance_candidate_note_2026-04-17",
-    "dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem_note_2026-04-17",
-    "dm_neutrino_source_surface_split1_window_bundle_dominance_candidate_note_2026-04-17",
-    "dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate_note_2026-04-18",
     "dm_neutrino_triplet_even_response_theorem_note_2026-04-15",
     "dm_neutrino_triplet_normalization_target_note_2026-04-15",
     "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
@@ -63721,7 +64264,6 @@
     "evolving_network_prototype_v4_note",
     "evolving_network_prototype_v5_note",
     "evolving_network_prototype_v6_note",
-    "ew_coupling_derivation_note",
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
     "experiment_backmatch_query_pack_note",
     "field_equation_derivation_note",
@@ -64068,7 +64610,6 @@
     "source_resolved_radical_geometry_probe_note",
     "source_resolved_self_consistent_generated_transfer_note",
     "source_resolved_support_localization_split_note",
-    "source_resolved_wavefield_escalation_note",
     "source_resolved_wavefield_v2_note",
     "spectral_closure_2026-04-09",
     "spectral_trajectory_theorem_2026-04-11",
@@ -64134,7 +64675,6 @@
     "teleportation_resource_from_poisson_note",
     "teleportation_retained_axis_operator_algebra_closure_note",
     "teleportation_three_register_cross_encoding_note",
-    "tensor_matching_completion_theorem_note",
     "tensor_network_connection_note",
     "tensor_support_center_excess_law_note",
     "thales_right_angle_narrow_theorem_note_2026-05-02",
@@ -64224,27 +64764,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 207,
+      "bounded_theorem": 219,
       "decoration": 1,
-      "meta": 28,
+      "meta": 29,
       "no_go": 15,
-      "none": 1659,
+      "none": 1651,
       "open_gate": 23,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 704,
+      "bounded_theorem": 713,
       "decoration": 1,
-      "meta": 28,
+      "meta": 29,
       "no_go": 123,
       "none": 451,
       "open_gate": 113,
-      "positive_theorem": 603
+      "positive_theorem": 598
     },
-    "edge_count": 7988,
+    "edge_count": 8084,
     "leaf_count": 530,
-    "node_count": 2023,
-    "root_count": 778,
-    "runners_with_path": 1632
+    "node_count": 2028,
+    "root_count": 769,
+    "runners_with_path": 1643
   }
 }

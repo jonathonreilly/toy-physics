@@ -1,0 +1,68 @@
+===== runner cache v1 =====
+runner: scripts/cl3_g_newton_born_as_source_2026_05_10_gnewtonG2.py
+runner_sha256: 0d2be4d87c335a0ff30025fe5ac85fd5a9dce1e2ef9459f12068e7511e0c117a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 2.17
+status: ok
+----- stdout -----
+==============================================================================
+G_Newton Born position-density extension support (gnewtonG2) -- verification
+==============================================================================
+
+==============================================================================
+Section 1: Unified Born-as-source map rho_grav(x) := <x|rho_hat|x> (P1)
+==============================================================================
+[PASS] S1.0 numpy import -- numpy available
+[PASS] S1.1 P1.2 pure-state reduction: rho_grav(x) = |psi(x)|^2 -- max |diff| = 0.00e+00
+[PASS] S1.2 P1.4 pure-state non-negativity rho_grav(x) >= 0 -- min rho_grav = 1.046512e-01
+[PASS] S1.3 P1.5 pure-state normalization sum_x rho_grav(x) = Tr rho_hat = 1 -- sum = 1.000000000000
+[PASS] S1.4 P1.3 mixed-state reduction: rho_grav(x) = sum_i p_i |psi_i(x)|^2 -- max |diff| = 0.00e+00
+[PASS] S1.5 P1.4 mixed-state non-negativity rho_grav(x) >= 0 -- min rho_grav = 0.000000e+00
+[PASS] S1.6 P1.5 mixed-state normalization sum_x rho_grav(x) = Tr rho_hat = 1 -- sum = 1.000000000000
+[PASS] S1.7 P1.1 linearity in rho_hat: rho_grav(a*rho1 + b*rho2) = a*rho_grav(rho1) + b*rho_grav(rho2) -- max |diff| = 0.00e+00
+[PASS] S1.8 P1.6 trace-operator form: rho_grav(x) = Tr(rho_hat * |x><x|) -- Tr(rho M_2) = 0.000000, diag = 0.000000
+
+==============================================================================
+Section 2: Prior 'divergence' is a category error (P2)
+==============================================================================
+[PASS] S2.1 prior probe S4.1 confirmed: MAP_a and MAP_b agree on pure states -- |psi|^2 = [1.0, 0.0], diag(rho) = [1.0, 0.0]
+[PASS] S2.2 coherent superposition |+> = (|0>+|1>)/sqrt(2) has same diag as mixed -- diagonal alone underdetermines the state -- diag(|+><+|) = [0.4999999999999999, 0.4999999999999999] vs diag(mixed) = [0.5, 0.5]
+[PASS] S2.3 coherent superposition state != mixed state (off-diagonals differ) -- |rho_coherent - rho_mixed|_max = 0.500000
+[PASS] S2.4 unified map is well-defined on each fixed state (pure) -- deterministic function of rho_hat
+[PASS] S2.5 unified map is well-defined on each fixed state (mixed) -- deterministic function of rho_hat
+[PASS] S2.6 P2.1 unified map agrees with pure Born on all pure states tested -- max |diff| = 1.11e-16
+
+==============================================================================
+Section 3: Consistency with cited content (P3)
+==============================================================================
+[PASS] S3.1 P3.1 cited Born-rule operationalism note exists -- path = CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08.md
+[PASS] S3.2 P3.2 physical-lattice repo baseline note exists -- path = PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md
+[PASS] S3.3 P3.2 position-density operator M_hat(x) = |x><x| is a canonical projector (Hermitian + PSD + idempotent) -- Hermitian=True, PSD=True, idempotent=True
+[PASS] S3.4 P3.2 lattice resolution of identity: sum_x |x><x| = I -- ||sum_x M_hat(x) - I||_max = 0.00e+00
+[PASS] S3.5 P3.3 statistical mixing consistency: rho_grav(sum p_i rho_i) = sum p_i rho_grav(rho_i) -- max |diff| = 0.00e+00
+[PASS] S3.6 P3.4 random PSD density operator gives non-negative rho_grav (compatible with H2 of STAGGERED_FERMION_CARD) -- min rho_grav = 1.271786e-01
+[PASS] S3.7 P3.4 random density operator: sum_x rho_grav(x) = Tr rho_hat = 1 -- sum rho_grav = 1.000000000000, Tr rho = 1.000000000000
+
+==============================================================================
+Section 4: Admission (b) bounded-support status
+==============================================================================
+[PASS] S4.1 parent planckP4 note exists in git history -- on-branch path exists = True, in-history = True
+[PASS] S4.2 GRAVITY_CLEAN_DERIVATION_NOTE intact, not promoted by this probe -- parent note is unchanged; this probe is a bounded support proposal for admission (b) only
+[PASS] S4.3 parent gravity-clean note still names the three admissions -- L^{-1} = G_0, rho = |psi|^2, S = L(1 - phi) all referenced
+[PASS] S4.4 no PDG observed values used as derivation input -- Born position-density extension uses only structural cited content
+[PASS] S4.5 no new repo-wide axioms introduced -- repo baseline semantics unchanged
+
+==============================================================================
+Section 5: Synthesis
+==============================================================================
+[PASS] S5.1 Born position-density bounded-support synthesis -- bounded support under cited content
+[PASS] S5.2 not corollary churn -- introduces unified position-density Born map definition not present in prior content -- <x|rho_hat|x> is structurally new framing, not a relabel of planckP4 B(b)
+[PASS] S5.3 audit boundary respected -- this is a source-note proposal -- claim_type, audit_status, effective_status remain audit-lane authority
+
+==============================================================================
+=== TOTAL: PASS=30, FAIL=0 ===
+==============================================================================
+
+----- stderr -----
+

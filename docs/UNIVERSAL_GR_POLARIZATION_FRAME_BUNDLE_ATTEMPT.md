@@ -8,6 +8,8 @@
 canonical covariant `3+1` polarization-frame / projector bundle before
 curvature localization
 
+**Primary runner:** scripts/frontier_universal_gr_polarization_frame_bundle.py
+
 ## Verdict
 
 The current universal stack does **not** derive a canonical polarization-frame
@@ -27,11 +29,12 @@ channels before localization.
 
 What it does give, exactly, is:
 
-- an exact rank-2 `A1` projector onto lapse and spatial trace;
+- an exact rank-2 scalar-channel projector (legacy irrep label `A_1`)
+  onto lapse and spatial trace;
 - an associated family of localized channel coefficients indexed by valid
   `3+1` polarization frames.
 
-The `A1` projector is canonical. The complement is not. So the current stack
+The scalar-channel projector is canonical. The complement is not. So the current stack
 has an exact minimal-covariance selector, but it is not yet a canonical full
 polarization section.
 
@@ -60,7 +63,7 @@ The audit runner records the frame dependence explicitly:
 
 So the current universal route determines:
 
-- a canonical `A1` section;
+- a canonical scalar-channel (`A_1`) section;
 - an associated family of candidate localizations on the complement;
 - not yet a canonical polarization section or projector bundle for the full
   symmetric kernel.
@@ -86,7 +89,7 @@ The smallest missing object is now:
 
 > a covariant `3+1` polarization-frame bundle, or equivalent projector
 > bundle, equipped with a distinguished connection that extends the exact
-> rank-2 `A1` projector on lapse and spatial trace to the complementary
+> rank-2 scalar-channel (`A_1`) projector on lapse and spatial trace to the complementary
 > `E \oplus T1` channels before curvature localization.
 
 That is the extra primitive required to turn the exact quotient kernel into a

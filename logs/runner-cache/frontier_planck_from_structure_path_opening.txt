@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_planck_from_structure_path_opening.py
+runner_sha256: e29a557f855ed645ec24de073ccbc642930fbfdd2688267ab00c3d417d32c243
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Planck-from-structure path-opening synthesis check
+note: docs/PLANCK_FROM_STRUCTURE_PATH_OPENING_META_NOTE_2026-05-10.md
+
+PASS: synthesis note is meta type
+PASS: synthesis note is meta claim_type
+PASS: does not declare pipeline status
+PASS: authority disclaimer present
+PASS: this-round PR cross-reference: #877 (P1 substrate-to-carrier forcing)
+PASS: this-round PR cross-reference: #876 (P2 hidden-character delta=0)
+PASS: this-round PR cross-reference: #874 (P3 orientation principle)
+PASS: this-round PR cross-reference: #875 (P4 G_Newton self-consistency)
+PASS: prior-round PR cross-reference: #845 (C-iso epsilon_witness closure)
+PASS: prior-round PR cross-reference: #857 (SU(3) NNLO/N5LO closed-form rationals)
+PASS: prior-round PR cross-reference: #790 (BAE rename)
+PASS: prior-round PR cross-reference: #836 (30-probe BAE terminal synthesis)
+PASS: prior-round PR cross-reference: #729 (conventions-unification companion)
+PASS: prior-round PR cross-reference: #725 (physical-lattice foundational interpretation)
+PASS: path-opening framing stated explicitly
+PASS: path-opening contrasted with closure
+PASS: conditional on audit ratification of P1+P2+P3
+PASS: conditional on substep-4 ratchet
+PASS: conditional on G_Newton three admissions
+PASS: G_Newton admission B(a) skeleton-selection recorded
+PASS: G_Newton admission B(b) Born-as-source recorded
+PASS: G_Newton admission B(c) valley-linear recorded
+PASS: BAE admission preserved (unchanged by this round)
+PASS: P (radian bridge) admission preserved
+PASS: strategic options listed (>=3 options)
+PASS: synthesis does not select option
+PASS: explicit list of what round did NOT do
+PASS: no theorem promotion stated
+PASS: no repo-wide axiom added stated
+PASS: no admission count aggregation
+PASS: no PDG-as-input claim preserved
+PASS: substep-4 AC narrowing rule preserved
+PASS: P1 (#877) proposed as bounded_theorem
+PASS: P2 (#876) proposed as positive_theorem
+PASS: P3 (#874) proposed as bounded_theorem
+PASS: P4 (#875) proposed as bounded sharpening (not closure)
+PASS: pre-round import surface table present
+PASS: conditional post-round import surface table present
+PASS: conventional scale anchor row addressed
+PASS: cross-references foundational note: MINIMAL_AXIOMS_2026-05-03
+PASS: cross-references foundational note: PHYSICAL_LATTICE_NECESSITY_NOTE
+PASS: cross-references foundational note: PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08
+PASS: cross-references foundational note: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac
+PASS: cross-references foundational note: KOIDE_BAE_30_PROBE_CAMPAIGN_TERMINAL_SYNTHESIS_META_NOTE_2026-05-09
+PASS: cross-references foundational note: CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08
+PASS: cross-references foundational note: BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE_2026-05-09
+PASS: minimal axioms note records physical Cl(3) local algebra
+PASS: minimal axioms note records physical Z^3 spatial substrate
+PASS: synthesis honors the physical Cl(3)/Z^3 baseline
+PASS: review-loop rule for future branches present
+PASS: review-loop rule notes synthesis is conditional
+PASS: What this note is NOT section present
+PASS: explicit no closure claim
+
+=== TOTAL: PASS=53, FAIL=0 ===
+Planck-from-structure path-opening synthesis check passed: all four this-round source proposals cross-referenced, prior-round wins cross-referenced, path-opening framing stated, conditionalities enumerated, G_Newton three admissions recorded, no theorem promotion, no repo-wide axiom added, strategic options listed without selection.
+
+----- stderr -----
+

@@ -1,5 +1,7 @@
 # Memory Signal Decay — Root Cause: Yukawa Screening
 
+**Primary runner:** scripts/frontier_memory_mu2_size_sweep.py
+
 **Status:** support - diagnostic explanation for memory-screening results
 **Date:** 2026-04-11
 

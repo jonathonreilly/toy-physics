@@ -3,11 +3,11 @@
 
 This is a small theory harness, not an experimental simulator.
 
-It prints the narrowest lab-facing protocol we can defend from the retained
-retarded / wavefield lanes:
+It prints the narrowest lab-facing protocol we can defend from the cited
+retarded / wavefield proxy lanes:
 
 - standard null: calibrated quasi-static coupling gives Y ~ 0 and flat phase
-- retained prediction: a phase-sensitive / lock-in readout should show a
+- cited proxy expectation: a phase-sensitive / lock-in readout should show a
   nonzero quadrature channel, a nonzero phase lag, and ideally a spatial phase
   ramp in widefield mode
 
@@ -28,7 +28,7 @@ class ScanClass:
     null_x: str
     null_y: str
     null_phi: str
-    retained_expectation: str
+    proxy_expectation: str
 
 
 SCAN_CLASSES = [
@@ -38,7 +38,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="weak / marginal phase-lag candidate",
+        proxy_expectation="weak / marginal phase-lag candidate",
     ),
     ScanClass(
         drive_band="low",
@@ -46,7 +46,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="weak phase lag if the lane is real",
+        proxy_expectation="weak phase lag if the lane is real",
     ),
     ScanClass(
         drive_band="mid",
@@ -54,7 +54,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="detectable quadrature becomes plausible",
+        proxy_expectation="detectable quadrature becomes plausible",
     ),
     ScanClass(
         drive_band="mid",
@@ -62,7 +62,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="stronger phase lag than near separation",
+        proxy_expectation="stronger phase lag than near separation",
     ),
     ScanClass(
         drive_band="high",
@@ -70,7 +70,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="stronger phase-sensitive response than low drive",
+        proxy_expectation="stronger phase-sensitive response than low drive",
     ),
     ScanClass(
         drive_band="high",
@@ -78,7 +78,7 @@ SCAN_CLASSES = [
         null_x="dominant",
         null_y="~0",
         null_phi="~0",
-        retained_expectation="best candidate for coherent Y / phase ramp",
+        proxy_expectation="best candidate for coherent Y / phase ramp",
     ),
 ]
 
@@ -93,18 +93,18 @@ def format_card() -> str:
     lines.append("Standard null:")
     lines.append("  calibrated quasi-static / instantaneous coupling -> Y ~ 0, phi ~ 0, flat phase")
     lines.append("")
-    lines.append("Retained prediction:")
+    lines.append("Cited proxy expectation:")
     lines.append("  a retarded / wave-like lane should produce nonzero Y, nonzero phi, and a spatial phase ramp")
     lines.append("")
     lines.append("Minimal controls:")
     lines.append("  drive off; source retracted or dummy load; pi reference flip; static-source baseline")
     lines.append("")
     lines.append("Protocol table:")
-    lines.append("| drive | separation | null X | null Y | null phi | retained expectation |")
+    lines.append("| drive | separation | null X | null Y | null phi | proxy expectation |")
     lines.append("| --- | --- | --- | --- | --- | --- |")
     for row in SCAN_CLASSES:
         lines.append(
-            f"| {row.drive_band} | {row.separation_band} | {row.null_x} | {row.null_y} | {row.null_phi} | {row.retained_expectation} |"
+            f"| {row.drive_band} | {row.separation_band} | {row.null_x} | {row.null_y} | {row.null_phi} | {row.proxy_expectation} |"
         )
     lines.append("")
     lines.append("Interpretation rule:")

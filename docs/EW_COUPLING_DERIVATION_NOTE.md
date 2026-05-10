@@ -40,6 +40,82 @@ that requires its own audit and is not a verifier for this note.
 
 ---
 
+## Input-authority chain (audit-explicit)
+
+The 2026-05-05 audit verdict (`audited_conditional`, critical, load-bearing
+9.281) flagged that the restricted packet did not supply retained-grade
+derivations of `alpha_LM = 0.0907`, SU(5) unification at `M_Pl`, the RGE
+authority, or the Planck-to-v boundary setup. The repair target was
+"missing_dependency_edge: provide retained upstream derivations or
+restricted-packet authorities for alpha_LM, SU(5) M_Pl matching, RGE
+coefficients/normalizations, and the y_t sensitivity computation."
+
+This section makes the input-side dependency chain explicit. Each row points
+to the authority that supplies the runner's hard-coded numeric input
+(`scripts/ew_coupling_bounded_status_runner_2026_05_03.py`). The audit ledger
+remains the only authority for current audit verdicts and effective status;
+this section does not derive any input, does not promote this row, and does
+not change the BOUNDED status of `g_2(v)` or `lambda(v)`.
+
+| Runner input | Runner value | Authority surface | Audit-ledger status (read-only) |
+|---|---|---|---|
+| `alpha_LM` (Planck-scale GUT coupling) | `0.0907` | [`ALPHA_S_DERIVED_NOTE.md`](./ALPHA_S_DERIVED_NOTE.md), [`PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](./PLAQUETTE_SELF_CONSISTENCY_NOTE.md), [`ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`](./ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md) | `audited_conditional` (alpha_s_derived_note); `audited_conditional` (plaquette_self_consistency_note); `unaudited` (alpha_lm_geometric_mean_identity decoration). Strongest current leg of the input chain. |
+| 1-loop U(1) running coefficient `b_1 = +4.10` | `+4.10` | [`SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md`](./SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md) (sister surface for SU(2) `b_2`); `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md` (taste-staircase corrections) | `unaudited` (su2_weak_beta_coefficient); `unaudited` (yt_p2_taste_staircase). Standard-textbook SM `b_1 = +4.10` is admitted-context literature input. |
+| `M_Pl / v` ratio (`ln(M_Pl/v) = 38.44`) | `38.44` | [`HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md`](./HIERARCHY_SPATIAL_BC_AND_U0_SCALING_NOTE.md), [`HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md`](./HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md), [`GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md`](./GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md) | `retained_bounded` (hierarchy_spatial_bc); `retained` (hierarchy_matsubara); `retained_bounded` (connected_hierarchy_theorem). This is the strongest leg of the input chain. |
+| Native SU(2) gauge structure (lattice `g_2² = 1/(d+1) = 1/4` at lattice scale) | structural | [`NATIVE_GAUGE_CLOSURE_NOTE.md`](./NATIVE_GAUGE_CLOSURE_NOTE.md), [`YT_EW_COLOR_PROJECTION_THEOREM.md`](./YT_EW_COLOR_PROJECTION_THEOREM.md), [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](./G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md). Plain-text file pointer: `docs/G_WEAK_FROM_FRAMEWORK_STRETCH_ATTEMPT_NOTE_2026-05-03.md` (cycle-break: that note already cites this one as the bounded surface for residual R1, so it is referenced as a plain-text file pointer here, not a markdown dependency). | `retained_bounded` (native_gauge_closure_note); `retained_bounded` (yt_ew_color_projection_theorem); `unaudited` (g_bare_canonical_convention); `unaudited` (g_weak_from_framework_stretch_attempt). Lattice-scale `g_2² = 1/4` is structural; only the v-scale running surface is bounded. |
+| `y_t` sensitivity baseline (`y_t(v)`, `m_t`) | `0.917`, `172.69 GeV` | [`YT_ZERO_IMPORT_AUTHORITY_NOTE.md`](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [`YT_EW_COLOR_PROJECTION_THEOREM.md`](./YT_EW_COLOR_PROJECTION_THEOREM.md) | `unaudited` (yt_zero_import_authority); `audited_conditional` (yt_ew_color_projection_theorem). The note's Part 5 sensitivity table is qualitative — used to confirm that EW couplings are subdominant to QCD beta in the y_t chain, not as a derivation input. |
+
+This section changes only discoverability of the runner inputs. It does not
+derive any of the five values, does not promote this note, and does not
+change the BOUNDED status of `g_2(v)` and `lambda(v)`.
+
+## Substantive residual (audit-explicit)
+
+The audit verdict is unchanged by the citations above: `g_2(v)` and `lambda(v)`
+remain BOUNDED, not derived. The runner's PASS=4/4 confirms that the note's
+lattice-scale and Landau-pole content is internally consistent, but that does
+not close the v-scale derivation.
+
+The substantive residual is two-part, mirroring the note's Parts 3 and 4:
+
+- **R1: SU(2) staircase running surface (M_Pl → v) for `g_2(v)`.** The note's
+  Part 3 establishes the Landau-pole barrier explicitly: 1-loop perturbative
+  running from M_Pl crosses `1/alpha_2 = 0` at `mu ~ 4e9 GeV`, so any
+  framework-native derivation of `g_2(v) = 0.646` must pass through a
+  non-perturbative matching surface (SU(2) Monte Carlo for `u_0(SU(2))`, or a
+  framework-native taste-staircase analogue). Sister authority (plain-text
+  file pointer for cycle safety: `docs/G_WEAK_FROM_FRAMEWORK_STRETCH_ATTEMPT_NOTE_2026-05-03.md`,
+  not a markdown dependency, because that note already cites this one as
+  the bounded surface for its residual R1) closes the lattice-scale piece
+  (`g_2² |_lattice = 1/(d+1) = 1/4`, `g_2_bare = 1/2`) using retained
+  primitives and INVERTS the cycle 12 obstruction framing: the v-scale gap is
+  now identified as a missing audit ratification of an already-bounded SU(2) running
+  chain, not a missing primitive. That stretch attempt remains `unaudited`
+  and does not promote `g_2(v)` to retained.
+
+- **R2: Higgs quartic `lambda(v)` boundary derivation.** The note's Part 4
+  records two complementary bounds (Coleman-Weinberg lower estimate
+  `lambda_CW = 3 y_t⁴ / 8π² = 0.034`; vacuum-stability upper window from
+  `lambda(M_Pl) > 0`). Closing this row would require deriving `m_H` from the
+  framework's G_5 condensate or a sister mechanism. Sister authorities are
+  the Higgs-side derivation surfaces — `docs/HIGGS_MASS_DERIVED_NOTE.md`
+  (full 3-loop RGE from `lambda(M_Pl) = 0` boundary) and
+  [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](./HIGGS_MASS_FROM_AXIOM_NOTE.md)
+  (tree-level mean-field). The first is given as a plain-text file pointer
+  for cycle safety, because `HIGGS_MASS_DERIVED_NOTE.md` already cites this
+  row in its `Input-authority chain` section as the `g_2(v)` and `g_1(v)`
+  authority surface; this row carries the Higgs-side `g_2(v)` precision
+  caveat that the Higgs lane inherits. See
+  [`HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md`](./HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md)
+  for the most recent bounded scoping of the Higgs-quartic boundary.
+
+Neither R1 nor R2 closes in this rigorize pass. The bounded scope of this
+note is unchanged and the audit verdict (`audited_conditional`) is the
+authoritative status. This section names the residuals so the audit graph can
+test the chain directly.
+
+---
+
 ## Motivation
 
 The y_t chain uses g_1(v) and g_2(v) imported from experiment:

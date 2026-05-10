@@ -1,0 +1,100 @@
+===== runner cache v1 =====
+runner: scripts/cl3_g_newton_weak_field_response_2026_05_10_gnewtonG3.py
+runner_sha256: 1965bc35c763035d4ea38f4939e3c19749e318f56427f8e155a93475baf7006e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+========================================================================
+SECTION 1: Cited Hamiltonian-flow propagator structure
+========================================================================
+  [PASS] S1.1 H_0 Hermitian
+  [PASS] S1.1 H_0 finite-range r=1
+  [PASS] S1.2 Bounded spectral norm (||H_0||_op = 2.0000)
+  [PASS] S1.3 Lieb-Robinson velocity finite (v_LR = 10.8731)
+  [PASS] S1.4 U(t) = exp(-iH_0 t) unitary
+  S1.5: Current content has graph metric d(x, y), not g_munu
+  [PASS] S1.5 No retained-grade metric tensor (graph distance only) (graph metric: d : Z^3 x Z^3 -> Z_>=0, not g_munu : T^*M -> R)
+
+========================================================================
+SECTION 2: Leading-order weak-field perturbation
+========================================================================
+  [PASS] S2.1 V_grav = m*phi*I Hermitian
+  [PASS] S2.2 H_total Hermitian
+  [PASS] S2.3 Uniform-phi factorization U_total = U_V * U_0 (commuting)
+  [PASS] S2.4 Spectrum-mean phase shift = m*phi (linear) (<dE> = 1.000000e-02, expected = 1.000000e-02)
+  [PASS] S2.5 Linear scaling delta_E vs phi (slope = m) (slope = 1.000000, expected = 1.000000)
+  [PASS] S2.5 Zero intercept (no phi^0 contamination) (intercept = -1.238e-17)
+
+========================================================================
+SECTION 3: Action-level interpretation -- valley-linear forced
+========================================================================
+  [PASS] S3.1 Linear response (S/L)(phi) = 1 - alpha*phi (slope = -0.500000, -alpha = -0.500000)
+  [PASS] S3.1 Zero intercept (linear-in-phi) (intercept = 1.000000)
+  [PASS] S3.2 Unit-normalized: slope = -1 (valley-linear) (slope = -1.000000)
+  [PASS] S3.3 R^2 of linear fit > 0.9999 (valley-linear is exact) (R^2 = 1.0000000000)
+  [PASS] S3.4 Hamiltonian flow gives valley-linear (slope -1)
+  [PASS] S3.4 Hamiltonian flow does NOT give spent-delay (slope -1/2) (computed slope -1.0000 != -0.5)
+
+========================================================================
+SECTION 4: Spent-delay obstruction -- requires metric tensor
+========================================================================
+  [PASS] S4.1 RMS residual (valley-linear, exponent=1.0) << spent-delay (0.5) (valley RMS = 3.745e-16, spent RMS = 1.447e-02)
+  [PASS] S4.2 Observed response matches valley-linear at phi=0.05 within 1e-3 (observed = 0.950000, valley = 0.950000)
+  [PASS] S4.2 Observed response does NOT match spent-delay at phi=0.05 (spent = 0.974679, error = 2.468e-02)
+  S4.3: Current content DOES NOT contain:
+        - smooth pseudo-Riemannian metric g_munu(x)
+        - Lorentzian line element ds^2 = g_munu dx^mu dx^nu
+        - proper-time integral S = m * integral ds
+        Current content DOES contain:
+        - Z^3 graph metric d : Z^3 x Z^3 -> Z_>=0 (discrete)
+        - single-clock spacing a_tau (a number, not a tensor field)
+        - Lieb-Robinson velocity v_LR (an effective rate, not a metric)
+  [PASS] S4.3 Spent-delay form requires absent retained-grade primitive (g_munu) (spent-delay needs covariant line-element; not in current content)
+  [PASS] S4.4 Valley-linear is forced by cited Hamiltonian flow under canonical coupling
+  [PASS] S4.4 Spent-delay requires retained-grade content not in ledger
+
+========================================================================
+SECTION 5: Numerical verification + sanity checks
+========================================================================
+  [PASS] S5.1 Valley-linear slope -1 stable across N in {8, 16, 24, 32} (slopes = [-1.0, -1.0, -1.0, -1.0])
+  [PASS] S5.2 Spectrum-mean shift linear in phi (slope = m) (slope = 1.000000)
+  [PASS] S5.3 2D lattice gives same valley-linear (slope = -1) (2D slope = -1.000000)
+  [PASS] S5.4 Quadratic-in-phi coefficient ~ 0 (no O(phi^2) for uniform phi) (|a_q| = 3.246e-13)
+  [PASS] S5.4 Linear coefficient = -1 (valley-linear) (b_q = -1.000000)
+  [PASS] S5.5 Sign: action decreases with phi (attractive) (slope = -1.0000 < 0)
+  [PASS] S5.6 Lieb-Robinson preserved under V_grav (v_LR_0 = 10.8731, v_LR_phi = 10.9275)
+  [PASS] S5.7 phi=0.1: response matches valley-linear (err < 1e-8) (resp = 0.9000000000, pred = 0.9000000000)
+  [PASS] S5.7 phi=0.2: response matches valley-linear (err < 1e-8) (resp = 0.8000000000, pred = 0.8000000000)
+  [PASS] S5.7 phi=0.3: response matches valley-linear (err < 1e-8) (resp = 0.7000000000, pred = 0.7000000000)
+  [PASS] S5.8 cited Hamiltonian-flow support is present
+  [PASS] S5.8 cited Lieb-Robinson support is present
+  [PASS] S5.8 Audit ledger does NOT have retained-grade metric tensor
+  S5.9: VERDICT -- VALLEY-LINEAR CONDITIONAL SUPPORT
+        from cited Hamiltonian flow + canonical V_grav = m*phi
+        spent-delay requires retained-grade metric tensor (NOT in ledger)
+        weak-field response form admission is SHARPENED to:
+        - bounded support: derived from canonical V_grav coupling
+        - residual admission: V_grav = m*phi itself (links to B(b))
+  [PASS] S5.9 Bounded support: weak-field response derived under canonical coupling
+
+========================================================================
+=== TOTAL: PASS=38, FAIL=0 ===
+========================================================================
+RESULT: BOUNDED CONDITIONAL SUPPORT
+Valley-linear weak-field response S = L(1 - phi) is forced at
+leading order in phi by the cited Hamiltonian flow + canonical
+Newtonian-limit coupling V_grav = m*phi(x). The spent-delay
+form S = L*sqrt(1 - phi) requires a retained-grade metric tensor
+g_munu, which is NOT in the audit ledger. Admission B(c) of the
+planckP4 sharpening note is therefore NARROWED: weak-field
+response form is derived from cited Hamiltonian flow +
+canonical V_grav coupling, but that coupling remains open
+from F~M=1 match. The residual admission V_grav = m*phi remains
+linked to admission B(b) of the planckP4 note (Born-as-grav-
+source). G_Newton three-admission frontier remains open, with
+(c) conditional on the canonical coupling plus cited Hamiltonian flow.
+
+----- stderr -----
+

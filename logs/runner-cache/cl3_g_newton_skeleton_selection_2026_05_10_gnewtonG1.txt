@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/cl3_g_newton_skeleton_selection_2026_05_10_gnewtonG1.py
+runner_sha256: 8491e3690299d6d0891547af4632d03ccaed6c2127f71b713adc8f268fadd639
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.74
+status: ok
+----- stdout -----
+
+############################################################################
+# G_NEWTON SKELETON-SELECTION BOUNDED-SUPPORT RUNNER
+# Branch: claude/skeleton-selection-bounded-2026-05-10-gnewtonG1
+# Source note: docs/G_NEWTON_SKELETON_SELECTION_BOUNDED_NOTE_2026-05-10_gnewtonG1.md
+############################################################################
+
+============================================================================
+T1: Cl(3) on Z^3 squared-KS scalar sector matches -Delta_lat
+============================================================================
+  [PASS] T1.a: D_KS is anti-Hermitian (D_KS^T = -D_KS)
+         max|D + D^T| = 0.000e+00
+  [PASS] T1.b: -D_KS^2 is Hermitian (symmetric)
+         max|H_sq - H_sq^T| = 0.000e+00
+  [PASS] T1.c: -D_KS^2 is positive semi-definite
+         min eigenvalue = -2.767e-16
+  [PASS] T1.d: -Delta_lat is positive semi-definite (PBC)
+         min eigenvalue = 1.215e-15
+  [PASS] T1.e: constant mode is in kernel of -Delta_lat
+         ||(-Delta) @ const|| = 0.000e+00
+  [PASS] T1.f: constant mode is in kernel of -D_KS^2 (scalar sector)
+         ||(-D_KS^2) @ const|| = 0.000e+00
+  [PASS] T1.g: both H_KS_sq and -Delta_lat have zero mode (kernel = const)
+         lowest -Delta = 1.215e-15, lowest -D_KS^2 = -2.767e-16
+
+============================================================================
+T2: Hamiltonian skeleton (L_H = H) in static sector
+============================================================================
+  [PASS] T2.a: L_H equals -Delta_lat (= H_spatial) by construction
+         max|L_H - (-Delta_lat)| = 0.000e+00
+
+============================================================================
+T3: Lattice d'Alembertian L_box = d_t^2 - Delta_lat in static sector
+============================================================================
+  [PASS] T3.a: d_t^2 on t-constant field is zero (static sector)
+         max|d_t^2 @ const_t| = 0.000e+00
+  [PASS] T3.b: L_box on t-constant field = -Delta_lat phi_s (static reduction)
+         max|L_box phi - (-Delta) phi_s| = 3.553e-15
+
+============================================================================
+T4: Euclidean K_E = d_tau^2 + H in static (zero-frequency) sector
+============================================================================
+  [PASS] T4.a: K_E |_static = H_spatial by zero-frequency reduction
+         max|K_E_static - (-Delta_lat)| = 0.000e+00
+  [PASS] T4.b: G_E |_static = G_0 = H^{-1} (static Euclidean propagator)
+         max|G_E - G_0| = 0.000e+00
+
+============================================================================
+T5: Wick-rotation correspondence T = exp(-a_tau H), U(t) = exp(-i t H)
+============================================================================
+  [PASS] T5.a: T = exp(-a_tau H) is Hermitian
+         max|T - T^dag| = 6.939e-18
+  [PASS] T5.b: T eigenvalues all positive (T positive)
+         min eigenvalue = 6.144e-06
+  [PASS] T5.c: ||T||_op <= 1 (R-RP bound)
+         ||T||_op = 1.000000
+  [PASS] T5.d: H = -log(T)/a_tau recovers nL (Wick rotation faithful)
+         max|H_from_T - (-Delta_lat)| = 8.882e-15
+  [PASS] T5.e: U(t) = exp(-i t H) is unitary on H_phys
+         max|U^dag U - I| = 2.220e-15
+  [PASS] T5.f: U(s) U(t) = U(s+t) (one-parameter group)
+         max|U(s) U(t) - U(s+t)| = 6.362e-16
+
+============================================================================
+T6: Closure identity L^{-1} = G_0 is definitional once L = H
+============================================================================
+  [PASS] T6.a: L^{-1} = G_0 (definitional from L = H)
+         max|L^{-1} - G_0| = 0.000e+00
+  [PASS] T6.b: G_0 @ L = I on range(L) (resolvent inverse)
+         max|G_0 L v - v| (v perp ker(L)) = 4.885e-15
+
+============================================================================
+T7: Single-clock generator uniqueness on finite-dim H_phys
+============================================================================
+  [PASS] T7.a: T spectrum positive (log uniquely defined)
+         all eigenvalues exp(-a_tau E) > 0
+  [PASS] T7.b: H = -log(T)/a_tau is unique (computed two ways)
+         max|H_way1 - H_way2| = 2.949e-13
+  [PASS] T7.c: distinct H => distinct U(t) (rules out trivial second clock)
+         max|U_orig - U_pert| = 1.477e-02 (must be > 1e-6)
+
+============================================================================
+T8: Control: L_screened = -Delta + mu^2 I has L^{-1} != G_0
+============================================================================
+  [PASS] T8.a: L_screened^{-1} != G_0 on range(H)  (control)
+         ||L_screened^{-1} v - G_0 v|| / ||G_0 v|| = 1.391e-01
+  [PASS] T8.b: discrepancy grows monotonically with mu^2
+         ||L_screened^-1 - G_0|| / ||G_0|| at mu^2 in [0.1, 0.5, 1.0, 2.0]: 0.032, 0.139, 0.238, 0.374
+  [PASS] T8.c: skeleton-selection L=H is non-trivial (alternatives exist)
+         alt (mu^2=2.0) deviation: 0.374 (must be > 0.1 to confirm L=H selection is non-trivial)
+
+
+============================================================================
+=== TOTAL: PASS=26, FAIL=0 ===
+============================================================================
+
+
+----- stderr -----
+

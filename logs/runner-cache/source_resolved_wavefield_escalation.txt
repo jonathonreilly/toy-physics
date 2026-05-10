@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/source_resolved_wavefield_escalation.py
-runner_sha256: 7483f2ee149b86a86b38ec2812ebc2aeda2b13b77253fa2aee8299344151566b
+runner_sha256: 6b3ea8ab71643532af77fbff91d64e41fda8261ca92afb6da49d40943fb2b15f
 timeout_sec: 1800
 exit_code: 0
-elapsed_sec: 54.95
+elapsed_sec: 105.77
 status: ok
 ----- stdout -----
 ============================================================================================================
@@ -22,7 +22,7 @@ REDUCTION CHECK
   zero-source same-site shift: +0.000000e+00
   zero-source wavefield shift: +0.000000e+00
 
-       s         inst         same         wave  phase_lag  ramp_slope  ramp_R2  wave/same
+       s         inst         same         wave  phase_lag  ramp_slope  ramp_R2  wave/inst
 ------------------------------------------------------------------------------------------------------------
   0.0010 +2.931018e-03 +3.658426e-03 +1.759245e-01     -0.740     -0.1215    0.959     60.022
   0.0020 +5.873223e-03 +7.321503e-03 +3.559416e-01     -1.473     -0.2444    0.959     60.604

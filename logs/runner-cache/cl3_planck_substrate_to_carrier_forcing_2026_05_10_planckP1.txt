@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/cl3_planck_substrate_to_carrier_forcing_2026_05_10_planckP1.py
+runner_sha256: 54a2bdaa39f8075e40dfa8abd642b3ece146d28e8a2521cf88635e96b5a663c3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.18
+status: ok
+----- stdout -----
+==============================================================================
+PLANCK SUBSTRATE-TO-CARRIER FORCING (RP ROUTE)
+==============================================================================
+
+Question: does the cited RP positivity bilinear single out P_A
+among the 17 rank-four equivariant projector classes admitted by
+the substrate-to-P_A symmetry-only enumeration?
+
+[PASS] 1. enumerate 17 rank-four equivariant projector classes: #candidates=17; max equivariance err=0.00e+00
+[PASS] 2. field-algebra ladders raise/lower Hamming weight by 1: chi^a raises (ok=True); chi-bar^a lowers (ok=True)
+[PASS] 3. chi^b |vac> lands in P_A and not in P_3: all chi^b |vac> in weight-1 (True); in P_A (True); not in P_3 (True)
+[PASS] 4. B_1(P_A) has full single-link bilinear sector: non-zero P_A-restricted bilinears=16/16; rank(P_A)=4
+[PASS] 5. degree-1 field generators from vacuum reach P_A but not P_3: reach H_1=True; reach H_3=False; states reached=[0, 1]
+[PASS] 6. P_A is unique among 17 candidates with full rank-four field-degree-1 image: #candidates with full deg-1 image = 1; match=('Et', 'EV')
+[PASS] 7. Hodge map takes P_A->P_3 and weight-1 -> weight-3 (Hodge image is degree-3 in field algebra): |H P_A H^-1 - P_3|=0.00e+00; H |a> has weight 3: True
+[PASS] 8. c_Widom = c_cell = 1/4 under P_A selection: c_cell=0.250000; c_Widom=0.250000; |delta|=0.00e+00
+
+=== TOTAL: PASS=8, FAIL=0 ===
+
+Verdict: BOUNDED PASS. The cited RP positivity bilinear, applied
+through the OS sesquilinear factorization on field-degree-1 observables,
+singles out P_A as the unique RP-compatible rank-four equivariant carrier
+among the 17 candidates. The Hodge-dual P_3 fails because the OS bilinear
+requires field-degree-1 operators, whose action on the vacuum lands in P_A,
+never in P_3.
+
+This bounded theorem provides an INDEPENDENT route to the substrate-to-
+carrier forcing support, distinct from the prior link-local first-variation
+route. Both routes select P_A.
+
+----- stderr -----
+

@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_e
 runner_sha256: 738ab8cbd4c8fb7e16209eef36938380532a0f9893be38aeca9967ffb63cd0d7
 timeout_sec: 600
 exit_code: 0
-elapsed_sec: 1.31
+elapsed_sec: 1.08
 status: ok
 ----- stdout -----
 ========================================================================================

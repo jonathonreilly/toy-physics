@@ -1,0 +1,39 @@
+===== runner cache v1 =====
+runner: scripts/diamond_sensor_prediction_probe.py
+runner_sha256: 652355a365f309a135bd4ef8b44e7610dc04e5e104f0e99fb3617326b53b2b23
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Diamond/NV phase-sensitive prediction card
+
+Observable:
+  lock-in quadrature Y, phase lag phi = atan2(Y, X), and widefield phase ramp
+
+Standard null:
+  after calibration, quasi-static / instantaneous coupling gives Y ~ 0 and flat phase
+
+Cited proxy expectation:
+  finite delay gives Y != 0, phi != 0, and a coherent spatial phase ramp
+
+Minimal controls:
+  drive off; source retracted / dummy load; pi reference flip; static-source baseline
+
+Toy scaling law:
+  Y/X ~ omega * tau, phi = atan(omega * tau)
+
+| f (Hz) | tau (us) | omega*tau | phi (deg) |
+| --- | ---: | ---: | ---: |
+| 100 | 0.000 | 0.000e+00 | 0.000e+00 |
+| 1000 | 0.000 | 0.000e+00 | 0.000e+00 |
+| 10000 | 0.000 | 0.000e+00 | 0.000e+00 |
+| 100 | 0.100 | 6.283e-05 | 3.600e-03 |
+| 1000 | 0.100 | 6.283e-04 | 3.600e-02 |
+| 10000 | 0.100 | 6.283e-03 | 3.600e-01 |
+| 100 | 1.000 | 6.283e-04 | 3.600e-02 |
+| 1000 | 1.000 | 6.283e-03 | 3.600e-01 |
+| 10000 | 1.000 | 6.283e-02 | 3.595e+00 |
+
+----- stderr -----
+

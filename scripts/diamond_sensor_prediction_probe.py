@@ -4,11 +4,11 @@
 This is a small theory harness, not an experimental simulator.
 
 It packages the smallest defensible lab-facing discriminator from the
-retained retarded / wavefield lanes:
+cited retarded / wavefield proxy lanes:
 
 - standard null: calibrated quasi-static / instantaneous response -> zero
   quadrature and flat phase
-- retained prediction: finite delay -> nonzero lock-in quadrature and a
+- cited proxy expectation: finite delay -> nonzero lock-in quadrature and a
   phase lag that grows with omega * tau
 
 The script prints a compact prediction card that a diamond/NV collaborator can
@@ -58,7 +58,7 @@ def format_card(points: list[PredictionPoint]) -> str:
     lines.append("Standard null:")
     lines.append("  after calibration, quasi-static / instantaneous coupling gives Y ~ 0 and flat phase")
     lines.append("")
-    lines.append("Retained prediction:")
+    lines.append("Cited proxy expectation:")
     lines.append("  finite delay gives Y != 0, phi != 0, and a coherent spatial phase ramp")
     lines.append("")
     lines.append("Minimal controls:")

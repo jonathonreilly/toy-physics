@@ -1,0 +1,40 @@
+===== runner cache v1 =====
+runner: scripts/diamond_sensor_protocol_probe.py
+runner_sha256: 1053ce4f610f0dc883dc5277a8843b9bd87e52152b6f41cc64797bddc02427dd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Diamond/NV phase-sensitive protocol card
+
+Observable:
+  lock-in quadrature Y, phase lag phi = atan2(Y, X), widefield phase ramp
+
+Standard null:
+  calibrated quasi-static / instantaneous coupling -> Y ~ 0, phi ~ 0, flat phase
+
+Cited proxy expectation:
+  a retarded / wave-like lane should produce nonzero Y, nonzero phi, and a spatial phase ramp
+
+Minimal controls:
+  drive off; source retracted or dummy load; pi reference flip; static-source baseline
+
+Protocol table:
+| drive | separation | null X | null Y | null phi | proxy expectation |
+| --- | --- | --- | --- | --- | --- |
+| low | near | dominant | ~0 | ~0 | weak / marginal phase-lag candidate |
+| low | far | dominant | ~0 | ~0 | weak phase lag if the lane is real |
+| mid | near | dominant | ~0 | ~0 | detectable quadrature becomes plausible |
+| mid | far | dominant | ~0 | ~0 | stronger phase lag than near separation |
+| high | near | dominant | ~0 | ~0 | stronger phase-sensitive response than low drive |
+| high | far | dominant | ~0 | ~0 | best candidate for coherent Y / phase ramp |
+
+Interpretation rule:
+  any real signal should survive calibration, flip sign under the pi control, and strengthen with drive and separation
+
+What this is not:
+  not an absolute gravity amplitude budget, and not a claim that the null is already beat
+
+----- stderr -----
+

@@ -345,7 +345,7 @@ def main() -> None:
 
     print(
         f"{'s':>8s} {'inst':>12s} {'same':>12s} {'wave':>12s} "
-        f"{'phase_lag':>10s} {'ramp_slope':>11s} {'ramp_R2':>8s} {'wave/same':>10s}"
+        f"{'phase_lag':>10s} {'ramp_slope':>11s} {'ramp_R2':>8s} {'wave/inst':>10s}"
     )
     print("-" * 108)
 
