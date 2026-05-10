@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1149 |
+| unaudited | 1148 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 231 |
+| ~~audited_conditional~~ | 232 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 376 |
-| `audited_conditional` | 231 |
+| `audited_conditional` | 232 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1217 |
+| `unaudited` | 1216 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 775 |
 | `decoration` | 13 |
 | `meta` | 75 |
-| `no_go` | 192 |
+| `no_go` | 193 |
 | `open_gate` | 105 |
-| `positive_theorem` | 766 |
+| `positive_theorem` | 765 |
 
 | criticality | count |
 |---|---:|
@@ -562,6 +562,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_pmns_asymptotic_source_no_go_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -3175,6 +3176,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The core no-go step is a valid algebraic symmetry argument over existing inputs: same H_pin plus a mu<->tau row swap makes H-intrinsic and mu<->tau-even scalar selectors blind, while Jarlskog changes sign under the odd row transposition. However, the packet provides no cited retained authority for the load-bearing input that these are exactly the two surviving sigma_hier branches at the physical pin. The runner source also imports H_mat, pinned constants, count_passes, and jarlskog_sin_dcp from frontier_sigma_hier_uniqueness_theorem, and it does not enumerate all permutations to verify exclusivity.
 - **open / conditional deps cited:**
   - `frontier_sigma_hier_uniqueness_theorem`
+- **auditor confidence:** high
+
+### `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15`
+
+- **Note:** [`DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md`](../../docs/DM_STRONG_CP_GAMMA_TRANSFER_NO_GO_NOTE_2026-04-15.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Current-stack boundary claim that the supplied strong-CP/CKM inputs, if they only fix weak Z_3 source orientation and quark-specific carrier data, do not determine the DM neutrino Hermitian breaking triplet.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e129f-d932-7732-acfe-52b08d038f57`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The current strong-CP package does not provide a three-real neutrino-side coefficient law; fixing phi = 2 pi / 3 still leaves a continuum of distinct triplets (delta,rho,gamma) and therefore distinct DM CP kernels.  _(class `B`)_
+- **chain closes:** False — The fixed-phase underdetermination is locally checked algebraically, but the claim about what the current strong-CP/CKM stack supplies depends on unlisted authorities. The runner reads docs/STRONG_CP_THETA_ZERO_NOTE.md and docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md even though the restricted one-hop dependency set is empty.
+- **rationale:** Issue: the no-go imports the content of the current strong-CP and CKM closures without those notes being supplied as one-hop retained-grade authorities, and the final runner pass is hard-coded true. Why this blocks: a hostile audit cannot verify that the current stack supplies only source orientation and no neutrino coefficient law from the restricted packet. Repair target: add the direct dependency edges for the strong-CP theta-zero and CKM tensor-slot notes, ensure they are retained-grade, and make the runner derive the final non-population conclusion from those inputs rather than asserting True. Claim boundary until fixed: the algebraic statement that a fixed phi = 2pi/3 does not by itself determine (delta,rho,gamma) is supported, but the current-stack no-go is not closed.
 - **auditor confidence:** high
 
 ### `dm_wilson_direct_descendant_boundary_arrest_triplet_y_maximin_note_2026-04-19`
