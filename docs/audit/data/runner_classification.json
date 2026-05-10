@@ -10548,6 +10548,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_koide_q_source_domain_canonical_descent.py"
     },
+    "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10": {
+      "assert_count": 6,
+      "counts": {
+        "A": 63,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_koide_q_two_thirds_z3_character_norm_split.py"
+    },
     "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20": {
       "assert_count": 1,
       "counts": {
@@ -32394,6 +32406,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_koide_q_two_thirds_z3_character_norm_split.py": {
+      "assert_count": 6,
+      "claims": [
+        "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 63,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_koide_qubit_lattice_dim_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -44076,14 +44103,14 @@
   "stats": {
     "decoration_candidates": 162,
     "dominant_class_distribution": {
-      "A": 112,
+      "A": 113,
       "B": 160,
       "C": 646,
       "D": 248,
       "none": 406
     },
-    "runners_classified": 1572,
+    "runners_classified": 1573,
     "runners_with_C": 811,
-    "runners_with_D": 440
+    "runners_with_D": 441
   }
 }

@@ -48633,6 +48633,17 @@
       "runner_path": "scripts/frontier_koide_q_source_domain_canonical_descent.py",
       "title": "Koide Q Source-Domain Canonical Descent Theorem"
     },
+    "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10": {
+      "claim_id": "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "229f0e2eee10df7f0444542add521e6a81a3bd4127541d03521ebfb5854f70a9",
+      "path": "docs/KOIDE_Q_TWO_THIRDS_Z3_CHARACTER_NORM_SPLIT_RECASTING_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_q_two_thirds_z3_character_norm_split.py",
+      "title": "Koide Q = 2/3 \u27fa Z_3 Character Norm Split (Recasting Theorem)"
+    },
     "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20": {
       "claim_id": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -65955,6 +65966,7 @@
     "koide_q_readout_factorization_theorem_2026-04-22",
     "koide_q_reduced_observable_restriction_theorem_2026-04-22",
     "koide_q_second_order_support_batch_note_2026-04-22",
+    "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10",
     "koide_reviewer_stress_test_note_2026-04-21",
     "koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological",
     "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
@@ -66320,7 +66332,7 @@
       "decoration": 1,
       "meta": 59,
       "no_go": 19,
-      "none": 1626,
+      "none": 1627,
       "open_gate": 26,
       "positive_theorem": 92
     },
@@ -66331,12 +66343,12 @@
       "no_go": 126,
       "none": 449,
       "open_gate": 114,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8296,
-    "leaf_count": 535,
-    "node_count": 2069,
-    "root_count": 768,
-    "runners_with_path": 1684
+    "leaf_count": 536,
+    "node_count": 2070,
+    "root_count": 769,
+    "runners_with_path": 1685
   }
 }
