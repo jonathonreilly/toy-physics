@@ -787,5 +787,253 @@ class RelabelUnverifiedCodexAuditsTest(unittest.TestCase):
         self.assertTrue(m.codex_family_meets_minimum("claude-opus"))
 
 
+class RestoreOveraggressivelyInvalidatedAuditsTest(unittest.TestCase):
+    """One-shot restoration of audits over-aggressively invalidated before
+    PR #907's policy refinement."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.tmp_root = Path(self._tmp.name)
+        self.fx = CleanLedgerFixture(self.tmp_root)
+
+    def _archived_audit(self, *, audit_status="audited_clean",
+                        independence="cross_family", cc_status=None,
+                        invalidation_reason="criticality_increased:medium->critical",
+                        claim_type="positive_theorem"):
+        archived = {
+            "audit_status": audit_status,
+            "independence": independence,
+            "auditor": "codex-test",
+            "auditor_family": "codex-gpt-5.5",
+            "claim_type": claim_type,
+            "claim_scope": "test scope",
+            "load_bearing_step_class": "A",
+            "audit_state_snapshot": {"criticality": "leaf", "deps": []},
+            "audit_date": "2026-05-09T11:00:00+00:00",
+            "archived_at": "2026-05-09T15:00:00+00:00",
+            "invalidation_reason": invalidation_reason,
+        }
+        if cc_status is not None:
+            archived["cross_confirmation"] = {
+                "first_audit": {"verdict": "audited_clean"},
+                "second_audit": None,
+                "status": cc_status,
+            }
+        return archived
+
+    def _seed_with_archived(self, cid: str, archived: dict, *,
+                            current_status="unaudited") -> dict:
+        return {
+            "claim_id": cid,
+            "note_path": f"docs/{cid.upper()}.md",
+            "note_hash": "deadbeef",
+            "deps": [],
+            "audit_status": current_status,
+            "previous_audits": [archived],
+        }
+
+    def _import_and_patch(self):
+        m = _import("restore_overaggressively_invalidated_audits")
+        m.REPO_ROOT = self.tmp_root
+        m.DATA_DIR = self.tmp_root / "docs" / "audit" / "data"
+        m.LEDGER_PATH = m.DATA_DIR / "audit_ledger.json"
+        return m
+
+    def test_categorize_archived_mirrors_invalidate_policy(self):
+        m = self._import_and_patch()
+        # leaf/medium: any audit qualifies
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(audit_status="audited_conditional"), "medium"),
+            "noop",
+        )
+        # high requires non-weak
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(independence="weak"), "high"),
+            "invalidate",
+        )
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(independence="cross_family"), "high"),
+            "noop",
+        )
+        # critical: cc-confirmed -> noop, weak -> invalidate, otherwise soft_reset
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(cc_status="confirmed"), "critical"),
+            "noop",
+        )
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(independence="weak"), "critical"),
+            "invalidate",
+        )
+        self.assertEqual(
+            m.categorize_criticality_bump_for_archived(
+                self._archived_audit(independence="cross_family"), "critical"),
+            "soft_reset",
+        )
+
+    def test_select_restore_candidates_picks_criticality_increased(self):
+        m = self._import_and_patch()
+        rows = {
+            "ok_to_restore": self._seed_with_archived(
+                "ok_to_restore",
+                self._archived_audit(invalidation_reason="criticality_increased:leaf->medium"),
+            ),
+            "soft_reset_target": self._seed_with_archived(
+                "soft_reset_target",
+                self._archived_audit(
+                    invalidation_reason="criticality_increased:high->critical",
+                    independence="cross_family", cc_status=None,
+                ),
+            ),
+            "weak_at_critical_skip": self._seed_with_archived(
+                "weak_at_critical_skip",
+                self._archived_audit(
+                    invalidation_reason="criticality_increased:leaf->critical",
+                    independence="weak",
+                ),
+            ),
+        }
+        crit, dep_weak = m.select_restore_candidates(rows)
+        self.assertIn("ok_to_restore", crit)
+        self.assertIn("soft_reset_target", crit)
+        self.assertNotIn("weak_at_critical_skip", crit)
+        self.assertEqual(dep_weak, [])
+
+    def test_select_restore_candidates_picks_dep_weakened_only_from_crit_set(self):
+        m = self._import_and_patch()
+        # downstream_in_set's dep is in crit_set; downstream_orphan's dep is not.
+        rows = {
+            "soft_reset_dep": self._seed_with_archived(
+                "soft_reset_dep",
+                self._archived_audit(
+                    invalidation_reason="criticality_increased:medium->critical",
+                ),
+            ),
+            "downstream_in_set": self._seed_with_archived(
+                "downstream_in_set",
+                self._archived_audit(
+                    invalidation_reason="dep_weakened:soft_reset_dep:retained_bounded->audit_in_progress",
+                    claim_type="positive_theorem",
+                ),
+            ),
+            "downstream_orphan": self._seed_with_archived(
+                "downstream_orphan",
+                self._archived_audit(
+                    invalidation_reason="dep_weakened:unrelated_dep:retained->unaudited",
+                    claim_type="positive_theorem",
+                ),
+            ),
+        }
+        crit, dep_weak = m.select_restore_candidates(rows)
+        self.assertIn("soft_reset_dep", crit)
+        dep_weak_cids = {cid for cid, _, _ in dep_weak}
+        self.assertEqual(dep_weak_cids, {"downstream_in_set"})
+
+    def test_other_invalidation_reasons_are_not_touched(self):
+        m = self._import_and_patch()
+        rows = {
+            "hash_drift": self._seed_with_archived(
+                "hash_drift",
+                self._archived_audit(invalidation_reason="runner_hash_changed:abc->def"),
+            ),
+            "deps_changed": self._seed_with_archived(
+                "deps_changed",
+                self._archived_audit(
+                    invalidation_reason="deps_changed:dep_added:new_dep_xyz",
+                ),
+            ),
+            "claim_scope_drift": self._seed_with_archived(
+                "claim_scope_drift",
+                self._archived_audit(
+                    invalidation_reason="dep_claim_scope_changed:some_dep",
+                ),
+            ),
+        }
+        crit, dep_weak = m.select_restore_candidates(rows)
+        self.assertEqual(crit, {})
+        self.assertEqual(dep_weak, [])
+
+    def test_restore_audit_from_previous_copies_archived_fields_back(self):
+        m = self._import_and_patch()
+        archived = self._archived_audit(
+            audit_status="audited_clean",
+            independence="fresh_context",
+            invalidation_reason="criticality_increased:leaf->critical",
+            cc_status=None,
+        )
+        row = {
+            "claim_id": "test_row",
+            "note_path": "docs/TEST.md",
+            "note_hash": "abc",
+            "deps": [],
+            "audit_status": "unaudited",  # over-aggressively invalidated
+            "claim_type": None,
+            "claim_type_provenance": "needs_reaudit_after_invalidation",
+            "auditor": None,
+            "previous_audits": [archived],
+        }
+        new_row = m.restore_audit_from_previous(row)
+        self.assertEqual(new_row["audit_status"], "audited_clean")
+        self.assertEqual(new_row["independence"], "fresh_context")
+        self.assertEqual(new_row["claim_type"], "positive_theorem")
+        self.assertEqual(new_row["claim_scope"], "test scope")
+        self.assertEqual(new_row["auditor"], "codex-test")
+        # The archive entry is removed from previous_audits.
+        self.assertEqual(new_row["previous_audits"], [])
+
+    def test_idempotent_on_already_audited_rows(self):
+        """A row that's currently audited (not unaudited) is not a candidate."""
+        m = self._import_and_patch()
+        rows = {
+            "live_audited": dict(
+                self._seed_with_archived(
+                    "live_audited",
+                    self._archived_audit(invalidation_reason="criticality_increased:leaf->medium"),
+                    current_status="audited_clean",
+                )
+            ),
+        }
+        crit, dep_weak = m.select_restore_candidates(rows)
+        self.assertEqual(crit, {})
+        self.assertEqual(dep_weak, [])
+
+    def test_main_writes_restored_ledger(self):
+        m = self._import_and_patch()
+        m.DATA_DIR.mkdir(parents=True, exist_ok=True)
+        archived_clean = self._archived_audit(
+            invalidation_reason="criticality_increased:leaf->medium",
+        )
+        archived_dep_weak = self._archived_audit(
+            invalidation_reason="dep_weakened:soft_reset_dep:retained->unaudited",
+        )
+        ledger = {
+            "schema_version": 1,
+            "rows": {
+                "soft_reset_dep": self._seed_with_archived("soft_reset_dep", archived_clean),
+                "downstream": self._seed_with_archived("downstream", archived_dep_weak),
+            },
+        }
+        m.LEDGER_PATH.write_text(json.dumps(ledger, indent=2, sort_keys=True))
+
+        with mock.patch.object(sys, "argv", ["restore", ""]):
+            sys.argv = ["restore"]
+            rc = m.main()
+        self.assertEqual(rc, 0)
+
+        out = json.loads(m.LEDGER_PATH.read_text(encoding="utf-8"))
+        soft = out["rows"]["soft_reset_dep"]
+        down = out["rows"]["downstream"]
+        self.assertEqual(soft["audit_status"], "audited_clean")
+        self.assertEqual(soft["claim_type"], "positive_theorem")
+        self.assertEqual(soft["previous_audits"], [])
+        self.assertEqual(down["audit_status"], "audited_clean")
+        self.assertEqual(down["previous_audits"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
