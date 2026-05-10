@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 231 |
 | open_gate | 12 |
-| unaudited | 1123 |
+| unaudited | 1122 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 223 |
+| ~~audited_conditional~~ | 224 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 223 |
+| `audited_conditional` | 224 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1221 |
+| `unaudited` | 1220 |
 
 | claim_type | count |
 |---|---:|
@@ -496,6 +496,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `accessible_prediction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `adaptive_coevolving_geometry_no_go` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_born_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_joint_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -944,6 +945,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On this fixed family, the mass-scaling exponent tracks the weak-field power of f in the action.  _(class `C`)_
 - **chain closes:** True — The source note's bounded claim is directly supported by the current runner output for the W=8 fixed family, and its one-hop dependency is retained_bounded for the matching S=L(1-f^p) power sweep on the W=10 fixed family. The note explicitly does not promote a universal architecture theorem or unique action derivation.
 - **rationale:** The load-bearing result is a bounded computational theorem: the runner constructs the lattice, field, action values, propagation, detector readout, Born check, TOWARD counts, and F∝M fits rather than importing the target exponents. The current output reproduces the note's load-bearing mass-scaling classes: sqrt gives 0.50, linear/exp/reciprocal give 1.00, quadratic gives 2.00, while no-coupling and hill/negative-linear actions do not give the desired TOWARD response. The one-hop dependency is already audited_clean with effective_status retained_bounded, so dependency closure is retained-grade for this bounded scope. Residual risk is confined to broader universality or exact tail laws, which the note explicitly leaves unpromoted.
+- **auditor confidence:** high
+
+### `adaptive_coevolving_geometry_no_go`
+
+- **Note:** [`ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md`](../../docs/ADAPTIVE_COEVOLVING_GEOMETRY_NO_GO.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the finite adaptive/coevolving node-placement scout: whether the supplied runner artifacts close the claim that distinguishability-weighted placement fails to yield a robust weak-field gravity signal.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1321-418b-7b73-b55b-8a9d354d394b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The sign is seed-sensitive and changes with placement strength, so this lane is not yet a clear positive.  _(class `C`)_
+- **chain closes:** False — The supplied stdout supports a weaker negative read, but it does not reproduce the note's load-bearing per-alpha TOWARD counts or mean shifts. The runner uses 16 seeds and prints N-sweep means, while the note cites 13/18-style sign counts and different alpha-level means from an unavailable artifact.
+- **rationale:** Issue: the note's stated seed-sensitive sign-count evidence is not emitted by the supplied runner stdout and its numerical means are stale or from a different run. Why this blocks: the bounded no-go as written relies on those sign-count statistics, so the restricted packet cannot verify the load-bearing statistical claim. Repair target: update the note to the current runner output or supply a deterministic runner/log that emits the stated alpha-level TOWARD counts and means. Claim boundary until fixed: the current stdout supports only the narrower observation that this completed N-sweep has no clean emergent retained-positive row under the printed criterion.
 - **auditor confidence:** high
 
 ### `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02`
