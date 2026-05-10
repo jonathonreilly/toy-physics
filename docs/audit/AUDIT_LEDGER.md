@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 231 |
 | open_gate | 11 |
-| unaudited | 1096 |
+| unaudited | 1095 |
 | meta | 65 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 257 |
+| ~~audited_conditional~~ | 258 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 378 |
-| `audited_conditional` | 257 |
+| `audited_conditional` | 258 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 25 |
-| `unaudited` | 1161 |
+| `unaudited` | 1160 |
 
 | claim_type | count |
 |---|---:|
@@ -499,6 +499,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -1292,6 +1293,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `audit/data/audit_ledger.json`
   - `audit/AUDIT_QUEUE.md`
+- **auditor confidence:** high
+
+### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the note's claimed L1 Lieb-Robinson bound, L3 lattice light cone, L4 finite Cl(3) norm support, and its L2 exponential cluster-decomposition statement after the 2026-05-09 mass-gap bridge repair.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11d2-ef45-7170-8c56-dd57cda7aaf3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Step 4 promotes the LR commutator bound to thermal connected-correlator clustering by applying the LR bound in imaginary time and invoking a mass gap/confinement input to obtain equation (3).  _(class `B`)_
+- **chain closes:** False — The LR/light-cone/norm portions are structurally supported, but the L2 spatial thermal connected-correlator bound does not close. The missing step is a retained derivation of Δ_T > 0 plus a retained theorem converting the gap/LR or transfer-matrix input into spatial cluster decomposition for the canonical Cl(3) ⊗ Z^3 Hamiltonian.
+- **rationale:** Issue: the note's L2 step still depends on an explicit mass-gap input and on a spatial gap-plus-LR or spatial transfer-matrix clustering theorem that the packet says is open. Why this blocks: LR bounds control commutators/light cones, and the cited bridge only proves a finite-block temporal spectral lemma conditional on Δ_T > 0, so the advertised spatial thermal connected-correlator bound for canonical states is not derived from retained inputs. Repair target: derive Δ_T > 0 on the canonical Cl(3) ⊗ Z^3 staggered + Wilson Hamiltonian and add a retained spatial cluster-decomposition theorem with constants. Claim boundary until fixed: retain only L1/L3/L4 and conditional temporal gap-to-clustering support, not unconditional L2 spatial clustering.
+- **open / conditional deps cited:**
+  - `CLUSTER_DECOMPOSITION_MASS_GAP_BRIDGE_THEOREM_NOTE_2026-05-09.md`
 - **auditor confidence:** high
 
 ### `axiom_first_lattice_noether_theorem_note_2026-04-29`
