@@ -1,7 +1,17 @@
 # Why h=0.125 Fails: Retained Derivation
 
 **Date:** 2026-04-06
-**Status:** proposed_retained negative — h=0.125 failure is diagnosed and quantified
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/h0125-unverifiable-numerical-diagnostics-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/h0125-unverifiable-numerical-diagnostics-2026-04-30/` (failure reason: unverifiable numerical diagnostics — the load-bearing numerical diagnosis is unsupported by any declared runner or one-hop derivation, and the explicit `P_det = (retention)^nl` formula is inconsistent with the printed P_det table by tens to more than one hundred orders of magnitude)
+- **Audit verdict_rationale (quoted verbatim from [audit_ledger.json](../../docs/audit/data/audit_ledger.json)):**
+
+  > Issue: the note's load-bearing numerical diagnosis is unsupported by any declared runner or one-hop derivation, and the explicit formula `P_det = (retention)^nl` is inconsistent with the printed P_det table by tens to more than one hundred orders of magnitude. Why this blocks: the retained negative claim depends on those numbers to distinguish boundary leakage, beam spreading, compounded loss, and statistical-noise AWAY behavior; without a reproducible computation or internally consistent formula, the diagnosis is not auditable. Repair target: add an executable h=0.125 failure diagnostic that computes T_interior/T_corner, beam sigma, detector probability including any geometric-spreading factor, and centroid SNR from the same propagation model, then update the note so every table entry follows from that runner. Claim boundary until fixed: safely claim only that boundary leakage and beam spreading are plausible failure hypotheses and that h=0.125 has not been retained by this note; do not retain the quantified root-cause diagnosis or SNR=0.5 noise conclusion.
+
+- **Do-not-cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Root cause
 

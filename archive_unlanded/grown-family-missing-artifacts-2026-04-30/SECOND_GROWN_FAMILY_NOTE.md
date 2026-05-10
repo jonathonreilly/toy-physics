@@ -1,7 +1,17 @@
 # Second Independent Grown Family
 
 **Date:** 2026-04-06
-**Status:** proposed_retained positive — second family at drift=0.05, restore=0.30
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/grown-family-missing-artifacts-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/grown-family-missing-artifacts-2026-04-30/` (failure reason: missing artifacts — the load-bearing battery script `scripts/second_grown_family_battery.py` is explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain)
+- **Audit verdict_rationale (quoted verbatim from [audit_ledger.json](../../docs/audit/data/audit_ledger.json)):**
+
+  > Issue: The note's retained positive result rests on a missing artifact, scripts/second_grown_family_battery.py, explicitly labeled as not yet frozen, and no frozen output is provided in the artifact chain. Why this blocks: the quoted F~M, Born, gravity, and complex-action control-battery numbers are unreviewable from the allowed source and artifacts, so the candidate retained-grade second-family claim cannot be independently reproduced or checked. Repair target: restore or recreate the exact battery script, add a frozen log and preferably a PASS/FAIL assertion runner, or replace this note with audit-clean sign/complex second-family notes that actually carry the evidence. Claim boundary until fixed: it is safe to say this note records a historical candidate at drift=0.05, restore=0.30; it is not safe to claim a retained second independent grown family from the current artifact chain.
+
+- **Do-not-cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Artifact chain
 
