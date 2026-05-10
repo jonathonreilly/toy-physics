@@ -7236,6 +7236,18 @@
       "dominant_class": null,
       "runner": "scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py"
     },
+    "gate_b_operator_cauchy_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/gate_b_operator_cauchy.py"
+    },
     "gate_b_poisson_self_gravity_note": {
       "assert_count": 0,
       "counts": {
@@ -39727,6 +39739,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/gate_b_operator_cauchy.py": {
+      "assert_count": 0,
+      "claims": [
+        "gate_b_operator_cauchy_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/gate_b_poisson_self_gravity_probe.py": {
       "assert_count": 0,
       "claims": [
@@ -44106,11 +44133,11 @@
       "A": 112,
       "B": 160,
       "C": 647,
-      "D": 248,
+      "D": 249,
       "none": 406
     },
-    "runners_classified": 1573,
+    "runners_classified": 1574,
     "runners_with_C": 812,
-    "runners_with_D": 440
+    "runners_with_D": 441
   }
 }

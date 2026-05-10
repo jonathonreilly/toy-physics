@@ -1,0 +1,156 @@
+===== runner cache v1 =====
+runner: scripts/gate_b_operator_cauchy.py
+runner_sha256: 0b7727ea159c4301d824c3915175bd40ffc047c966b78170d525010b4b8f9df6
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 5.06
+status: ok
+----- stdout -----
+==============================================================================================================
+GATE B FAMILY OPERATOR-CAUCHY CONTINUUM-BRIDGE PROBE
+==============================================================================================================
+  rows targeted:
+    - gate_b_connectivity_tolerance_note     (numerical bounded replay)
+    - restricted_strong_field_closure_note   (finite-box bounded theorem)
+
+  resolution-refinement axis: r in [1, 2, 3, 4]
+  ensemble-refinement axis:   N in [2, 4, 8, 16, 32, 64] at jitter=0.3
+  observable basis: [y_free, y_mass, shift, gain, fpm] x 3 mass-y positions = 15-dim
+
+==============================================================================================================
+PART 1: lattice-resolution refinement (ordered fixed-connectivity)
+==============================================================================================================
+  At refinement r:
+    N_LAYERS = 12*r + 1, HALF = 4*r
+    K_eff    = K_BASE / r       (fix physical wavelength)
+    field_s  = FIELD_BASE / r   (fix physical 1/d field amplitude)
+    mass-y positions kept at fixed fractions of HALF
+
+  r= 1  N_layers= 13  half= 4  K_eff= 5.000  field=5.00e-05  y_free/r= -0.0000  wallclock=  0.0s
+  r= 2  N_layers= 25  half= 8  K_eff= 2.500  field=2.50e-05  y_free/r= -0.0000  wallclock=  0.2s
+  r= 3  N_layers= 37  half=12  K_eff= 1.667  field=1.67e-05  y_free/r= -0.0000  wallclock=  0.7s
+  r= 4  N_layers= 49  half=16  K_eff= 1.250  field=1.25e-05  y_free/r= +0.0000  wallclock=  1.7s
+
+    r  observable vector (first 5 components shown; 15 total)
+    1  [-1.5038e-16  -7.1183e-05  -7.1183e-05  +1.8084e-05  +9.9518e-01, ...]
+    2  [-2.0005e-16  -7.6243e-06  -7.6243e-06  -3.5260e-06  +1.0011e+00, ...]
+    3  [-1.1633e-16  -1.1726e-06  -1.1726e-06  -7.6126e-07  +1.0009e+00, ...]
+    4  [+1.0341e-16  -3.0231e-07  -3.0231e-07  -1.9278e-07  +1.0010e+00, ...]
+
+   r1 ->  r2   ||vec(r1) - vec(r2)||_2     per-component diagnostic
+    1 ->   2               1.014650e-02      max-component-diff=7.121e-03
+    2 ->   3               1.123791e-02      max-component-diff=1.120e-02
+    3 ->   4               6.401611e-04      max-component-diff=6.292e-04
+
+  Fit on 3 pts:  ||vec(r) - vec(r+1)||_2 ~ C * (1/r)^p
+    p   = +2.7869  (Cauchy if p > 0.5 AND R^2 >= 0.85)
+    C   = 4.2035e-02
+    R^2 = 0.5998
+    Monotone decreasing: NO
+    GATE p > 0.5 AND R^2 >= 0.85 AND monotone: FAIL
+
+==============================================================================================================
+PART 2: ensemble refinement (jittered fixed-connectivity)
+==============================================================================================================
+  jitter=0.3 (worst-case point from the source-note jitter sweep)
+  N_LAYERS=13, HALF=5; K and field at base values
+
+  measured 64 seeds in 2.3s (36 ms/seed)
+
+     N1 ->    N2   ||vec(N1) - vec(N2)||_2
+      2 ->     4               1.464839e+00
+      4 ->     8               7.616884e-02
+      8 ->    16               8.409639e-01
+     16 ->    32               2.358620e-01
+     32 ->    64               1.646972e-01
+
+  Fit on 5 pts:  ||vec(N) - vec(2N)||_2 ~ C * N^r
+    r   = -0.4675  (Cauchy if r < -0.4 AND R^2 >= 0.85)
+    C   = 1.0114e+00
+    R^2 = 0.1798
+    Monotone decreasing: NO
+    GATE r < -0.4 AND R^2 >= 0.85 AND monotone: FAIL
+
+==============================================================================================================
+PART 3: restricted_strong_field_closure_note  -- structural diagnosis
+==============================================================================================================
+
+  The closure note's component runners
+    scripts/frontier_sewing_shell_source.py
+    scripts/frontier_oh_static_constraint_lift.py
+    scripts/frontier_oh_schur_boundary_action.py
+    scripts/frontier_microscopic_dirichlet_bridge_principle.py
+  all use a hardcoded size = 15 cubic box, R = 4 exterior cutoff,
+  and an O_h-symmetric star-supported source class whose seven
+  parameters (x1, x2, mix, lam_e, lam_t, m0, ms) are tuned to
+  satisfy the closure on exactly that box.  The residuals reported
+  in the source note are already at machine precision:
+    sewing identity      :  ext_err = 5.204e-17
+    static constraints   :  max residual = 1.789e-15
+    Schur stationarity   :  flux_err = 9.021e-17
+    Dirichlet trace match:  trace_match = 2.637e-16
+
+  Operator-Cauchy is conceptually mismatched for this row:
+
+    1. The theorem is an algebraic finite-box identity, not a
+       bounded numerical result with a continuum limit.
+    2. The source-class parameters were tuned to size=15.  At
+       size=17 or size=21 the seven numbers (m0, ms, x1, x2,
+       mix, lam_e, lam_t) would need re-tuning before the local
+       O_h closure could be expected to hold; this re-tuning is
+       not a continuum-limit operation but an algebraic re-
+       parametrization of the source class.
+    3. The static constraints H_0 psi = 2 pi psi^5 rho and
+       H_0 chi = -2 pi alpha psi^5 (rho + 2S) are pointwise
+       algebraic identities on the chosen box -- they admit no
+       sense of `infinite-box limit residual'.
+
+  The right method for that row is *algebraic verification at a
+  larger O_h-symmetric box with a re-tuned source class*, not a
+  Cauchy fit on a refinement axis.  This is documented as a
+  scope/method note rather than as a numerical fit.
+
+==============================================================================================================
+VERDICT
+==============================================================================================================
+
+  resolution-refinement (Part 1):  FAIL
+  ensemble-refinement   (Part 2):  FAIL
+  strong-field closure  (Part 3):  N/A (algebraic finite-box theorem; operator-Cauchy mismatched)
+
+  Operator-Cauchy continuum-bridge method does NOT extend cleanly to the Gate B family.
+
+  Structural reasons for the bounded scope:
+    - Part 1: refining the lattice resolution while holding
+      K, field amplitude, and mass-y position fixed in
+      physical units does not produce a monotone-decreasing
+      Cauchy increment.  The Gate B harness's action
+      S = L*(1 - phi) and its theta-weighted forward
+      propagator are not derived from a continuum PDE, so
+      lattice-resolution refinement of the discretization
+      does not converge to a continuum operator on this
+      observable basis.
+    - Part 2: ensemble averaging over seeds at the worst-
+      noise point of the source-note's jitter sweep does
+      not converge with the CLT-style rate (r ~ -1/2).
+      The harness's bounded-but-mixed connectivity-recompute
+      response (cf. source note table 1) is reproduced as a
+      structural feature of the harness, not as a noise-
+      averageable fluctuation.
+    - Part 3: the restricted-strong-field-closure row is a
+      finite-box algebraic theorem; the operator-Cauchy
+      method has no continuum axis to attack.
+
+  This is a SHARP BOUNDED NULL-RESULT: the Gate B family's
+  bounded scope is structural to its construction.  This
+  mirrors the alt-connectivity negative companion
+  and confirms that the operator-Cauchy bridge method is
+  a feature of the rescaled-NN lane, not of every
+  physical Cl(3) on Z^3 harness.
+
+  Expected no-go check (both tested Cauchy gates fail): PASS
+
+  Total wallclock: 5s
+
+----- stderr -----
+

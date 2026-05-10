@@ -8333,6 +8333,14 @@
       "to": "gate_b_grown_joint_package_note"
     },
     {
+      "from": "gate_b_operator_cauchy_note_2026-05-10",
+      "to": "gate_b_connectivity_tolerance_note"
+    },
+    {
+      "from": "gate_b_operator_cauchy_note_2026-05-10",
+      "to": "restricted_strong_field_closure_note"
+    },
+    {
       "from": "gate_b_strong_field_observable_split_note",
       "to": "gate_b_complex_action_falsifier_note"
     },
@@ -43961,6 +43969,20 @@
       "runner_path": "scripts/GATE_B_NONLABEL_SIGN_GROWN_TRANSFER.py",
       "title": "Gate B Non-Label Sign Grown Transfer Note"
     },
+    "gate_b_operator_cauchy_note_2026-05-10": {
+      "claim_id": "gate_b_operator_cauchy_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded numerical no-go for the tested",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "gate_b_connectivity_tolerance_note",
+        "restricted_strong_field_closure_note"
+      ],
+      "note_hash": "6f67bf65033e65fceeb2be28958c5831bb6a0cb69cf36d32b381dac4a68450a1",
+      "path": "docs/GATE_B_OPERATOR_CAUCHY_NOTE_2026-05-10.md",
+      "runner_path": "scripts/gate_b_operator_cauchy.py",
+      "title": "Gate B Family Operator-Cauchy Continuum-Bridge Probe"
+    },
     "gate_b_poisson_self_gravity_note": {
       "claim_id": "gate_b_poisson_self_gravity_note",
       "claim_type_author_hint": null,
@@ -66376,7 +66398,7 @@
       "bounded_theorem": 246,
       "decoration": 1,
       "meta": 59,
-      "no_go": 19,
+      "no_go": 20,
       "none": 1626,
       "open_gate": 27,
       "positive_theorem": 92
@@ -66385,15 +66407,15 @@
       "bounded_theorem": 728,
       "decoration": 1,
       "meta": 59,
-      "no_go": 126,
+      "no_go": 127,
       "none": 449,
       "open_gate": 115,
       "positive_theorem": 592
     },
-    "edge_count": 8305,
-    "leaf_count": 535,
-    "node_count": 2070,
+    "edge_count": 8307,
+    "leaf_count": 536,
+    "node_count": 2071,
     "root_count": 768,
-    "runners_with_path": 1685
+    "runners_with_path": 1686
   }
 }
