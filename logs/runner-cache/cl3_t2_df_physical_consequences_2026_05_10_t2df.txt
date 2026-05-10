@@ -1,0 +1,95 @@
+
+========================================================================
+0. Setup: the C^8 staggered taste cube
+========================================================================
+  [PASS] Gamma_1 squares to I
+  [PASS] Gamma_2 squares to I
+  [PASS] Gamma_3 squares to I
+  [PASS] Gamma_1, Gamma_2 anti-commute
+  [PASS] Gamma_1, Gamma_3 anti-commute
+  [PASS] Gamma_2, Gamma_3 anti-commute
+  [PASS] omega squares to -I (central pseudoscalar)
+
+========================================================================
+1. D_F = Gamma_1 + Gamma_2 + Gamma_3: spectrum
+========================================================================
+  [PASS] D_F is self-adjoint
+  [PASS] D_F is odd under gamma_stag (chirality grading)
+  [PASS] D_F^2 = 3 I (algebraic identity from Clifford relations)
+  [PASS] D_F spectrum has eigenvalue +sqrt(3) = +1.732051 (4 copies at +1.732051)
+  [PASS] D_F spectrum has eigenvalue -sqrt(3) = -1.732051 (4 copies at -1.732051)
+  [PASS] D_F has no zero eigenvalue (no massless mode in the spectrum)
+  [PASS] D_F spectrum is exactly {+sqrt(3) x 4, -sqrt(3) x 4}
+  eigenvalues: ['-1.732051', '-1.732051', '-1.732051', '-1.732051', '1.732051', '1.732051', '1.732051', '1.732051']
+
+========================================================================
+2. KO-dim 6 J = omega K state pairing
+========================================================================
+  [PASS] J = omega K maps each eigenstate to an eigenstate at the same eigenvalue
+  [PASS] J = omega K is norm-preserving (antiunitary)
+  [PASS] J^2 = -I
+
+========================================================================
+3. Eigenvalue degeneracies: no mass hierarchy
+========================================================================
+  [PASS] D_F positive spectrum has exactly ONE distinct eigenvalue (distinct = [1.732051])
+  [PASS] D_F gives one mass scale, not three (cannot generate hierarchy)
+
+========================================================================
+4. BAE-style relation: |b|^2 / a^2 from D_F structure
+========================================================================
+  [PASS] D_F(a=1, b=1) spectrum is a +/- b sqrt(3) (parametric form)
+  [PASS] BAE relation |b|^2/a^2 = 1/2 is NOT a derived consequence of D_F = sum Gamma_i (PR #1061 picks (a, b) = (0, 1); a = 0 makes the ratio undefined / NOT 1/2)
+
+========================================================================
+5. Charged-lepton mass ratios vs PDG (NEGATIVE comparison)
+========================================================================
+  PDG: m_e / m_tau = 2.875854e-04
+  PDG: m_mu / m_tau = 5.946353e-02
+  D_F prediction: m_e / m_tau = 1.000000
+  D_F prediction: m_mu / m_tau = 1.000000
+  [PASS] D_F predicts m_e / m_tau = 1; PDG ~3e-4. Relative miss > 1000x (miss = 3.48e+03x)
+  [PASS] D_F predicts m_mu / m_tau = 1; PDG ~6e-2. Relative miss > 10x (miss = 1.58e+01x)
+
+========================================================================
+6. Koide Q from D_F spectrum (NEGATIVE comparison)
+========================================================================
+  [PASS] D_F predicts Koide Q = 1/3 (degenerate spectrum lower bound)
+  [PASS] PDG Koide Q = 0.666661; near 2/3 = 0.666667
+  [PASS] D_F's Q = 1/3 disagrees with PDG Q ~ 2/3 (gap = 1/3) (|Q_DF - Q_PDG| = 0.3333)
+
+========================================================================
+7. What D_F = sum Gamma_i is and is not
+========================================================================
+  [PASS] D_F +sqrt(3) eigenspace is 4-dimensional
+  [PASS] Three-generation index lives inside this 4-dim degeneracy (open) (exactly the hw=1 triplet + 1 extra degree of freedom)
+  [PASS] D_F maps hw=1 OUT of hw=1 (hw=1 is not D_F-invariant) (max overlap of D_F|001> with hw=1 basis = 0.00e+00)
+  [PASS] P_hw1 does NOT commute with D_F (||[P_hw1, D_F]|| = 4.2426)
+
+========================================================================
+8. Additional structure required for SM Yukawa hierarchy
+========================================================================
+  REQUIRED: Yukawa kernel Y_l on flavor-indexed subspace producing m_e:m_mu:m_tau
+  REQUIRED: selector projecting onto a 3-dim generation subspace inside +sqrt(3) eigenspace
+  REQUIRED: order-one-compatible coupling between Y_l and the A_F = C + H + M_3(C) algebra
+  REQUIRED: Majorana / right-handed neutrino structure for the neutrino mass tower (separate gate)
+  [PASS] List of required additional structure recorded (not derived here)
+
+========================================================================
+9. Hostile-review final accounting
+========================================================================
+  [PASS] HR1: D_F spectrum is fully determined (no fit, no PDG import in derivation)
+  [PASS] HR2: D_F predicts degenerate spectrum; cannot match SM hierarchy
+  [PASS] HR3: KO-dim 6 J pairs states at same |lambda| (verified explicitly)
+  [PASS] HR4: No BAE-style free parameter ratio emerges from minimal D_F
+  [PASS] HR5: Negative verdict for SM Yukawa match is sharper than PR #1061's (PR #1061 stated 'does NOT give SM observable Yukawa hierarchy'; this runner makes it quantitative)
+  [PASS] HR6: No new axioms introduced; uses only Cl(3) algebra + staggered embedding
+  [PASS] HR7: No retention is claimed; deliverable is source-only narrowing
+
+========================================================================
+Final accounting
+========================================================================
+  PASS: 38
+  FAIL: 0
+
+  Overall: PASS (all structural and hostile-review checks)
