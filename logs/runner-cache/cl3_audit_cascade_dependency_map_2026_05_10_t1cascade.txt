@@ -1,0 +1,110 @@
+========================================================================
+Section 0 - Runner self-check
+========================================================================
+
+========================================================================
+Section 1 (T1) - Source-note path shape checks
+========================================================================
+
+========================================================================
+Section 2 (T2) - Per-cascade table coverage
+========================================================================
+
+========================================================================
+Section 3 (T3) - Status-verb terminology
+========================================================================
+
+========================================================================
+Section 4 (T4) - BAE-anchor cross-cascade interaction
+========================================================================
+
+========================================================================
+Section 5 (T5) - Staggered-Dirac realization gate
+========================================================================
+
+========================================================================
+Section 6 (T6) - Audit-lane-only verbs in disclaimer position
+========================================================================
+
+========================================================================
+Section 7 - Hostile-review (HR) asserts
+========================================================================
+
+========================================================================
+FINAL TALLY
+========================================================================
+[PASS] S0.1 - UPSTREAM_ASSERTIONS dictionary populated
+[PASS] S0.2 - All cascade keys A, B, C, D present
+[PASS] T1.A.notes - at least one source-note cited
+[PASS] T1.A.shape - docs/CLOSURE_C_BB_CANONICAL_MASS_COUPLING_NOTE_2026-05-10_cB... well-shaped
+[PASS] T1.B.notes - at least one source-note cited
+[PASS] T1.B.shape - docs/CLOSURE_C_STAGGERED_DIRAC_GATE_NOTE_2026-05-10_cStagger... well-shaped
+[PASS] T1.C.notes - at least one source-note cited
+[PASS] T1.C.shape - docs/PRIMITIVE_P_BAE_M1_M2_DUALITY_NOTE_2026-05-10_pPbae_dua... well-shaped
+[PASS] T1.C.shape - docs/PRIMITIVE_P_HEAVYQ_CASIMIR_CLOSURE_NOTE_2026-05-10_pPhe... well-shaped
+[PASS] T1.D.notes - at least one source-note cited
+[PASS] T1.D.shape - docs/SUBSTEP4_AC_LAMBDA_SEPARATE_CLOSURE_SHARPENED_NOTE_2026... well-shaped
+[PASS] T1.runner - scripts/cl3_closure_c_bb_2026_05_10_cBB.py well-shaped
+[PASS] T1.runner - scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py well-shaped
+[PASS] T1.runner - scripts/cl3_primitive_p_bae_duality_2026_05_10_pPbae_duality well-shaped
+[PASS] T1.runner - scripts/cl3_primitive_p_heavyq_casimir_2026_05_10_pPheavyq_c well-shaped
+[PASS] T1.runner - scripts/cl3_substep4_ac_lambda_separate_closure_2026_05_10_a well-shaped
+[PASS] T2.A - item present: gnewtonG3 B(b) load...
+[PASS] T2.A - item present: W-GNewton-Valley B(b) load (PR #1024)...
+[PASS] T2.A - item present: GRAVITY_CLEAN admission (b)...
+[PASS] T2.B - admission present: (A1) LH content
+[PASS] T2.B - admission present: (A2) D_F construction
+[PASS] T2.B - admission present: (A3) Order-one condition
+[PASS] T2.B - admission present: (A4) A_F unification
+[PASS] T2.C - item present: BAE primitive
+[PASS] T2.C - item present: P-HeavyQ D3
+[PASS] T2.C - item present: Heavy-quark species-DIFFERENTIATION
+[PASS] T2.D - atom present: AC_lambda atom (substep-4)
+[PASS] T2.D - atom present: AC_phi_lambda atom = BAE
+[PASS] T2.D - atom present: Substep-4 surface tier
+[PASS] T3 - status verb 'CLOSED' present in section 2 table
+[PASS] T3 - status verb 'BOUNDED' present in section 2 table
+[PASS] T3 - status verb 'RELOCATED' present in section 2 table
+[PASS] T3 - status verb 'OPEN' present in section 2 table
+[PASS] T3 - status verb 'STRUCTURALLY CLOSED' present in section 2 table
+[PASS] T3 - status verb 'TERMINALLY BOUNDED' present in section 2 table
+[PASS] T3 - status verb 'SHARPENED BOUNDED' present in section 2 table
+[PASS] T3 - status verb 'UNCHANGED' present in section 2 table
+[PASS] T3 - status verb 'NOT CLOSED' present in section 2 table
+[PASS] T4.1 - Cascade C references BAE primitive election
+[PASS] T4.2 - Cascade D references BAE as AC_phi_lambda anchor
+[PASS] T4.3 - 30-probe campaign (PR #828) terminal-bounded ceiling cited
+[PASS] T4.4 - Map note section 2 references both #1049 (cascade C) and #890 (cascade D)
+[PASS] T5.1 - Cascade A 'not closed' stanza names the staggered-Dirac gate
+[PASS] T5.2 - Cascade B 'not closed' stanza acknowledges open structure
+[PASS] T5.3 - Map note section 2 marks GRAVITY_CLEAN admission (a) as OPEN
+[PASS] T6 - prohibited pattern absent: 'we promote'
+[PASS] T6 - prohibited pattern absent: 'this note retains'
+[PASS] T6 - prohibited pattern absent: 'this note admits'
+[PASS] T6 - prohibited pattern absent: 'this note ratifies'
+[PASS] T6 - prohibited pattern absent: 'this note approves'
+[PASS] T6 - prohibited pattern absent: 'this note elects'
+[PASS] T6 - prohibited pattern absent: 'we elect'
+[PASS] T6 - prohibited pattern absent: 'we retain'
+[PASS] T6 - prohibited pattern absent: 'we admit'
+[PASS] T6 - prohibited pattern absent: 'we ratify'
+[PASS] T6 - prohibited pattern absent: 'we approve'
+[PASS] T6.info - audit-lane verb 'retain' usage (informational)
+[PASS] T6.info - audit-lane verb 'promote' usage (informational)
+[PASS] T6.info - audit-lane verb 'admit' usage (informational)
+[PASS] T6.info - audit-lane verb 'ratify' usage (informational)
+[PASS] T6.info - audit-lane verb 'approve' usage (informational)
+[PASS] T6.info - audit-lane verb 'elect' usage (informational)
+[PASS] HR1 - no new theorem/derivation language
+[PASS] HR2 - source-only package shape (3 files total)
+[PASS] HR3 - closed-PR state acknowledgement for cascade (B) PR #1061
+[PASS] HR4 - closed-PR state acknowledgement for cascade (D) PR #890
+[PASS] HR5 - no new repo-wide axioms
+[PASS] HR6 - cascade (A) links #1060 and PR #1024
+[PASS] HR6 - cascade (B) links #1061
+[PASS] HR6 - cascade (C) links #1049 and #1051
+[PASS] HR6 - cascade (D) links #890
+
+PASS: 71
+FAIL: 0
+TOTAL: PASS=71, FAIL=0
