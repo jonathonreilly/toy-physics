@@ -18,12 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 64 |
+| **retained** | 65 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
 | unaudited | 1147 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 376 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 377 |
 | `audited_conditional` | 232 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
@@ -112,7 +111,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -269,6 +267,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5.5 | A | - |
+| `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
@@ -5413,6 +5412,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The axis-matched second-order returns D_i = P_{T_1} Gamma_i W_i Gamma_i P_{T_1}|_{species} obey D_1 = diag(u,v,w), D_2 = diag(w,u,v), and D_3 = diag(v,w,u).  _(class `A`)_
 - **chain closes:** True — The runner directly constructs the finite matrices, projectors, bit-cycle, and template slots, then verifies exact slot images whose arbitrary-template result follows by linearity. Under the audit rubric this is an algebraic identity check over explicitly defined inputs, not a class C first-principles computation producing a new physical number from the axiom. The clean verdict is therefore ratified with the second audit's narrower A-class scope.
 - **rationale:** The runner directly constructs the finite matrices, projectors, bit-cycle, and template slots, then verifies exact slot images whose arbitrary-template result follows by linearity. Under the audit rubric this is an algebraic identity check over explicitly defined inputs, not a class C first-principles computation producing a new physical number from the axiom. The clean verdict is therefore ratified with the second audit's narrower A-class scope.
+- **auditor confidence:** high
+
+### `koide_gamma_orbit_cyclic_return_candidate_note_2026-04-18`
+
+- **Note:** [`KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md`](../../docs/KOIDE_GAMMA_ORBIT_CYCLIC_RETURN_CANDIDATE_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact algebraic reduction of the local Gamma_1 three-slot return, with cited full-cube cyclic transport, to the Hermitian circulant Koide carrier; excludes derivation of the microscopic values or selector law.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12a2-cc4c-7ab2-bcee-ced41d166332`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The exact retained Gamma_1 second-order return gives R_{Gamma_1}(W_1) = diag(u, v, w), and Fourier transport gives H_Gamma = F diag(u, v, w) F^dagger = (r0/3)B0 + (r1/6)B1 + (r2/6)B2 with r0 = u + v + w, r1 = 2u - v - w, r2 = sqrt(3)(v - w).  _(class `A`)_
+- **chain closes:** True — Within the scoped claim, the chain closes by finite matrix/projector algebra plus symbolic Fourier transport, and the cited retained full-cube orbit-law authority supplies the cross-axis cyclic family. The source note explicitly leaves the value law for (u, v, w) and the selector mechanism open.
+- **rationale:** The load-bearing step is exact linear algebra on an already specified three-slot return object, and the runner computes the finite Gamma/projector shape and symbolic circulant decomposition rather than deriving a hidden fitted parameter. The one-hop axis-covariant authority is retained-grade and closes the cross-axis basis step that the runner still labels as candidate. The observed charged-lepton witness imports measured amplitudes, but it is not used to claim a value-law or selector derivation, which the note correctly marks as open.
 - **auditor confidence:** high
 
 ### `koide_gamma_orbit_selector_bridge_note_2026-04-18`
