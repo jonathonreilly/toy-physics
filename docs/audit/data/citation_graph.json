@@ -13805,6 +13805,106 @@
       "to": "neutrino_dirac_z3_support_trichotomy_note"
     },
     {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "lhcm_repair_atlas_consolidation_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "left_handed_charge_matching_note"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "three_generation_observable_dep_chain_audit_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "to": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "lhcm_repair_atlas_consolidation_note_2026-05-02"
+    },
+    {
       "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "to": "graph_first_selector_derivation_note"
     },
@@ -49779,6 +49879,55 @@
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
       "title": "LH-Doublet Traceless Abelian Eigenvalue Ratio (Narrow Theorem)"
     },
+    "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "claim_id": "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "audit_backlog_campaign_progress_synthesis_2026-05-02",
+        "lhcm_repair_atlas_consolidation_note_2026-05-02",
+        "left_handed_charge_matching_note",
+        "three_generation_observable_dep_chain_audit_note_2026-05-02",
+        "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+        "lhcm_y_normalization_from_anomaly_and_convention_note_2026-05-02",
+        "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02",
+        "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10",
+        "minimal_axioms_2026-05-03",
+        "hypercharge_proof_walk_lattice_independence_bounded_note_2026-05-07",
+        "anomaly_cancellation_proof_walk_lattice_independence_bounded_note_2026-05-08",
+        "su5_decomposition_proof_walk_lattice_independence_bounded_note_2026-05-08",
+        "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
+        "quark_projector_parameter_audit_terminal_synthesis_meta_note_2026-05-10",
+        "dm_leptogenesis_transport_status_terminal_synthesis_meta_note_2026-05-10",
+        "claude_complex_action_grown_companion_terminal_synthesis_meta_note_2026-05-10",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10"
+      ],
+      "note_hash": "60321b774b8b474dcc44c4889bf97f606d874e39eaa70016678702235a573616",
+      "path": "docs/LHCM_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lhcm_chain_audit_map_synthesis.py",
+      "title": "LHCM Chain Audit Map Synthesis Meta Note"
+    },
+    "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10": {
+      "claim_id": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+        "minimal_axioms_2026-05-03",
+        "graph_first_selector_derivation_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10",
+        "lhcm_repair_atlas_consolidation_note_2026-05-02"
+      ],
+      "note_hash": "7a3f3fb6823b786e67264abfc94e046272c073d516ecea5dc0b95fb578fd51dd",
+      "path": "docs/LHCM_MATTER_ASSIGNMENT_BLOCK_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py",
+      "title": "LHCM Matter Assignment Block Proof-Walk Lattice-Independence Bounded Note"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -65753,27 +65902,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 238,
+      "bounded_theorem": 239,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 17,
       "none": 1626,
       "open_gate": 19,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 720,
+      "bounded_theorem": 721,
       "decoration": 1,
-      "meta": 59,
+      "meta": 60,
       "no_go": 124,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
-    "edge_count": 8229,
-    "leaf_count": 533,
-    "node_count": 2050,
+    "edge_count": 8254,
+    "leaf_count": 528,
+    "node_count": 2052,
     "root_count": 764,
-    "runners_with_path": 1665
+    "runners_with_path": 1667
   }
 }

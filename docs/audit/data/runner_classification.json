@@ -11460,6 +11460,30 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py"
     },
+    "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_lhcm_chain_audit_map_synthesis.py"
+    },
+    "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 5,
+        "C": 7,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -32378,6 +32402,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_lhcm_chain_audit_map_synthesis.py": {
+      "assert_count": 1,
+      "claims": [
+        "lhcm_chain_audit_map_synthesis_meta_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_lhcm_matter_assignment.py": {
       "assert_count": 1,
       "claims": [
@@ -32388,6 +32427,21 @@
         "B": 1,
         "C": 10,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 5,
+        "C": 7,
+        "D": 4
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -43564,13 +43618,13 @@
     "decoration_candidates": 161,
     "dominant_class_distribution": {
       "A": 111,
-      "B": 160,
-      "C": 642,
+      "B": 161,
+      "C": 643,
       "D": 235,
       "none": 405
     },
-    "runners_classified": 1553,
-    "runners_with_C": 804,
-    "runners_with_D": 425
+    "runners_classified": 1555,
+    "runners_with_C": 806,
+    "runners_with_D": 426
   }
 }
