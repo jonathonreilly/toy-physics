@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 126 |
 | **retained_bounded** | 237 |
 | open_gate | 12 |
-| unaudited | 1087 |
+| unaudited | 1086 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 252 |
+| ~~audited_conditional~~ | 253 |
 | ~~audited_failed~~ | 25 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 397 |
-| `audited_conditional` | 252 |
+| `audited_conditional` | 253 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1185 |
+| `unaudited` | 1184 |
 
 | claim_type | count |
 |---|---:|
@@ -642,6 +642,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `h0125_wider_replay_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `h0125_wider_w4_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -5517,6 +5518,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The note's conclusion depends on the Born, k=0, gravity, and alpha numerical row, but the live runner did not reach those diagnostics in a bounded restricted run.
 - **rationale:** Issue: the open-gate readout rests on a specific current runner output row, but the restricted live run did not produce the load-bearing Born=8.01e-15, k=0, gravity=+0.010955, alpha=0.499 diagnostics. Why this blocks: without current reproducible output, the note's numerical conclusion cannot be granted retained no-go or closed-gate force from the restricted packet alone. Repair target: provide a current completed runner output or a faster deterministic runner path that reproduces the exact retained width-4 row and justifies why that full-window z=3.0 readout is decisive. Claim boundary until fixed: the note remains a conditional open diagnostic suggesting the width-4 family stays near alpha~0.5, not an audited closed no-go.
 - **auditor confidence:** medium
+
+### `h0125_wider_w4_probe_note`
+
+- **Note:** [`H0125_WIDER_W4_PROBE_NOTE.md`](../../docs/H0125_WIDER_W4_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Auxiliary h=0.125 width-4 probe note asserting a bounded no-go based on named replay/log artifacts not supplied as one-hop authorities.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e138b-b9d7-7361-886a-17919b514ea7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "The finished retained width-4 result came from the targeted replay controls ... which kept the physical family at phys_l = 6 and still returned alpha = 0.499 on the full-window z = 3.0 row."  _(class `B`)_
+- **chain closes:** False — The asserted bounded no-go depends on closeout logs and a targeted replay script named in the note, but the audit packet lists no cited authorities and does not include those artifacts. The supplied primary runner timed out, and timeout alone is not evidence for or against the scientific claim.
+- **rationale:** Issue: the load-bearing alpha=0.499 result is imported from named closeout/replay artifacts that are not supplied as one-hop dependencies. Why this blocks: without those artifacts or a completed equivalent run, the bounded no-go cannot be checked from the restricted packet. Repair target: add the closeout logs/replay note or a completed cached certificate as direct dependencies, or provide a sliced runner that completes and reproduces the alpha result. Claim boundary until fixed: only the existence and intended role of an auxiliary scouting script is locally supported.
+- **auditor confidence:** high
 
 ### `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`
 
