@@ -1,10 +1,63 @@
 # Scalar-Selector this cycle Meta-Closure Status Note
 
+---
+
+**This is a meta-closure status / cycle-summary note. It does not
+establish any retained claim.**
+For retained claims on scalar-selector route closures, see the
+per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-19
+**Status:** support / meta-closure status record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / meta-closure status record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Scope:** Honest status update after the this cycle meta-closure return, taken
 before the April 19, 2026 7:00 PM America/New_York rate-limit reset.
-**Status:** support - structural or confirmatory support note
-four scalar-selector gates are now reviewer-grade derivations.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **meta-closure status / cycle-summary note** for the
+scalar-selector this-cycle meta-closure return. It is **not** a
+single retained theorem and **must not** be audited as one. The
+audit ledger row for
+`scalar_selector_cycle13_meta_closure_status_note_2026-04-19`
+classified this source as conditional/positive_theorem with auditor's
+repair target:
+
+> register the four route notes and the DIM-UNIQ/STRC theorem notes
+> as dependencies, add a structured accounting checker for the
+> route-to-meta-principle compression, and clarify the status line
+> to match the reviewer-bar caveat.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a meta-closure status record rather than to register the four
+route notes / DIM-UNIQ/STRC theorem notes as dependencies, add the
+accounting checker, or rewrite the in-body status reconciliation
+here. Those steps belong in dedicated review-loop or per-route audit
+passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "meta-axiom accounting `4 → 2`," DIM-UNIQ + STRC compression,
+  reviewer-bar accounting framing, and per-route MRU/Berry/DPLE/STRC
+  status table below are **historical meta-status memory only**.
+- The retained-status surface for any MRU, Berry, DPLE, STRC, or
+  DIM-UNIQ closure is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-route theorem notes,
+  **not** this meta-status record.
+- Retained-grade does **NOT** propagate from this status note to
+  any route, meta-principle compression, or successor closure.
+
+For any retained claim about scalar-selector route closure or
+meta-principle compression, audit the corresponding dedicated route
+or theorem note and its runner as a separate scoped claim — not
+this meta-closure status record.
+
+---
 
 ## Executive summary
 

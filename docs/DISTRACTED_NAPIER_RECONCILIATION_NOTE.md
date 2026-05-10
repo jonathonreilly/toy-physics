@@ -1,10 +1,62 @@
 # Distracted Napier Reconciliation Note
 
-**Date:** 2026-04-02  
+---
+
+**This is a branch-reconciliation / classification note. It does not
+establish any retained claim.**
+For retained claims on gap-physics / `distracted-napier` content, see
+the per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
+**Date:** 2026-04-02
+**Status:** support / branch-classification record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / branch-classification record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Scope:** branch-only science in `.claude/worktrees/distracted-napier`
 
 This note classifies the remaining branch-only gap-physics claims against the
 current `main` state after the later cleanup work.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **branch-reconciliation / classification note** for
+the `distracted-napier` worktree's gap-physics content. It is **not**
+a single retained theorem and **must not** be audited as one. The
+audit ledger row for `distracted_napier_reconciliation_note`
+classified this source as conditional/positive_theorem with auditor's
+repair target:
+
+> register a runner/proof note for the load-bearing step or cite an
+> audited retained dependency.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a branch-reconciliation classification record rather than to
+register a runner or cite an audited retained dependency for the
+classification verdicts here. Those steps belong in dedicated
+review-loop or per-claim audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "Already Superseded by `main`" / "Still Useful" / "Branch
+  History Only" classification verdicts and per-script "Status:
+  support" labels below are **historical branch-classification
+  memory only**.
+- The retained-status surface for any gap-physics, Born, gravity, or
+  decoherence sub-claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes, **not**
+  this branch-reconciliation record.
+- Retained-grade does **NOT** propagate from this reconciliation note
+  to any branch script, classification verdict, or successor cleanup.
+
+For any retained claim about gap-physics content, audit the
+corresponding dedicated note (or its `main`-side replacement) and its
+runner as a separate scoped claim — not this branch-reconciliation
+record.
+
+---
 
 ## Executive Summary
 

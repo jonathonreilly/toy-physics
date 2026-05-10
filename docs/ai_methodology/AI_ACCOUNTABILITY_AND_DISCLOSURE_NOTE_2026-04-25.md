@@ -1,10 +1,71 @@
 # AI Accountability And Disclosure Note
 
-**Date:** 2026-04-25  
-**Status:** package-level disclosure note for the methodology lane
+---
+
+**This is a methodology / disclosure / accountability-policy note.
+It does not establish any retained scientific claim and does not
+contain a first-principles physics derivation.**
+For retained scientific claims, see the per-claim physics notes
+referenced from the audit ledger; for the short manuscript framing
+paragraph and broader process surface, see the cross-references at
+the bottom of this file.
+
+---
+
+**Date:** 2026-04-25
+**Status:** support / methodology disclosure record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / methodology disclosure record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 
 This note is the longer repository-facing companion to the short framing
 paragraph used in papers.
+
+## Audit scope (operational narrowing 2026-05-10)
+
+This file's load-bearing content is a **methodology / accountability-
+policy disclosure**, not a first-principles physics derivation or an
+algebraic closure over retained inputs. The audit ledger row for
+`ai_methodology.ai_accountability_and_disclosure_note_2026-04-25`
+historically carried an operational-narrowing/meta classification with
+the auditor's reduced result that:
+
+> The load-bearing content is a disclosure/definition of process
+> responsibility, not a first-principles computation or algebraic
+> closure over retained inputs. There are no cited authorities or
+> runner evidence, so the note cannot be audited as a positive
+> theorem. The safe reduced result is only that this note records
+> the repository's declared AI-use and human-responsibility policy.
+
+The minimal-scope response in this PR is to **narrow** this document
+operationally to its actual content — a methodology disclosure /
+accountability-policy record — rather than to attach physics
+authorities or runner evidence here. That would be a category error:
+this note is not a physics claim. Until any future repositioning:
+
+- This file makes **no** retained scientific-claim assertions.
+- The disclosure of generative-AI use, the human-responsibility
+  enumeration, the "Why This Matters" framing, the control-surface
+  inventory, and the "Reading Rule" cross-references below are
+  **methodology / accountability-policy content only**.
+- This note records the repository's declared AI-use and
+  human-responsibility policy. It does **not** assert that any
+  physics result obtained with AI assistance is therefore correct
+  or audit-clean; that surface is the per-claim audit ledger.
+- The retained-status surface for any physics claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim physics
+  notes, **not** this methodology disclosure.
+- Retained-grade does **NOT** propagate from this methodology
+  disclosure to any physics claim, AI-assisted derivation, or
+  successor methodology revision.
+
+For any retained scientific claim, audit the corresponding dedicated
+physics note and its runner as a separate scoped claim — not this
+methodology disclosure.
+
+---
 
 ## Disclosure
 

@@ -1,7 +1,57 @@
 # Synthesis Note: 3D Extension of Discrete Causal DAG Model
 
+---
+
+**This is a synthesis/overview note. It does not establish any
+retained claim.**
+For retained claims on 3D causal-DAG sub-claims, see the per-claim
+notes referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-01
-**Status:** support - structural or confirmatory support note
+**Status:** support / 3D synthesis-overview record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / 3D synthesis-overview record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **3D synthesis / overview note** rolling up gravity,
+decoherence, Born-rule, and interference results on 3D discrete
+causal DAGs. It is **not** a single retained theorem and **must not**
+be audited as one. The audit ledger row for `synthesis_note_3d`
+classified this source as conditional/positive_theorem with auditor's
+repair target:
+
+> add a registered synthesis runner or manifest that invokes the
+> required 3D scripts, records the exact commands, and asserts the
+> combined gravity, decoherence, Born, and interference predicates.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a synthesis overview rather than to register a synthesis runner
+or manifest here. That step belongs in a dedicated review-loop or
+synthesis-runner audit pass. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "all four coexist" rollup, F~sqrt(M) mass-scaling readout,
+  CLT-ceiling delay table, Born-rule chokepoint claim, and
+  visibility/interference summary below are **historical 3D
+  synthesis memory only**.
+- The retained-status surface for any 3D gravity, decoherence,
+  Born-rule, or interference sub-claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes for each
+  underlying 3D script and runner, **not** this synthesis.
+- Retained-grade does **NOT** propagate from this synthesis note
+  to any sub-claim, coexistence verdict, or successor cycle.
+
+For any retained claim about 3D causal-DAG content, audit the
+corresponding dedicated note and its runner as a separate scoped
+claim — not this synthesis overview.
+
+---
 
 ## The claim
 

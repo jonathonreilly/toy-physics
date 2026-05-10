@@ -1,8 +1,58 @@
 # Higher-Dimension Status
 
-**Status:** bounded - bounded or caveated result note
-**Date:** 2026-04-01  
+---
+
+**This is a status-summary / overview note across multiple
+dimensional lanes. It does not establish any retained claim.**
+For retained claims on individual 3D / 4D / 5D sub-claims, see the
+per-claim notes referenced from the `## Audit scope` block below.
+
+---
+
+**Date:** 2026-04-01
+**Status:** support / status-summary record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / status-summary record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Purpose:** compact, review-safe summary of the current 3D / 4D / 5D state.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **multi-lane status-summary / overview note** across
+3D, 4D, and 5D dimensional lanes. It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`higher_dimension_status_2026-04-01` classified this source as
+conditional/bounded_theorem with auditor's repair target:
+
+> register a runner/proof note for the load-bearing step or cite an
+> audited retained dependency.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a status-summary overview rather than to register the per-claim
+runner/dependencies here. Those steps belong in dedicated review-loop
+or per-claim audit passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "What is solid on `main`" rollups, 3D/4D/5D modular
+  decoherence summaries, Born-rule chokepoint claims, distance-
+  scaling readouts, and 5D dense-pilot framings below are
+  **historical multi-lane status memory only**.
+- The retained-status surface for any 3D/4D/5D modular decoherence,
+  Born-rule chokepoint, or distance-law sub-claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes
+  for each underlying gravity, decoherence, Born, and distance-law
+  sub-claim, **not** this status overview.
+- Retained-grade does **NOT** propagate from this status overview
+  note to any sub-claim, dimensional verdict, or successor cycle.
+
+For any retained claim about higher-dimensional gravity, decoherence,
+Born rule, or distance scaling, audit the corresponding dedicated
+note and its runner as a separate scoped claim — not this status
+overview.
+
+---
 
 ## What is solid on `main`
 

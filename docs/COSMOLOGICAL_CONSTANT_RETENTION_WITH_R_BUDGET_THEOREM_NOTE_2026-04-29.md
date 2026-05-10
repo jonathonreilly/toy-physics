@@ -1,15 +1,72 @@
 # Cosmological Constant R-Budget Support Note (V1)
 
+---
+
+**This is a support / R-budget formalization note. It does not
+establish any retained claim and is conditional on non-retained
+upstream authorities.**
+For retained claims on the cosmological-constant spectral-gap surface
+or its upstream dependencies, see the per-claim notes referenced from
+the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-29
-**Status (actual current surface):** `bounded` support note —
-formalizes the spectral-gap identity `Λ = λ_1(S^3_R) = 3/R²`
+**Status:** support / R-budget formalization record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / R-budget formalization record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+**Primary runner:** `scripts/frontier_cosmological_constant_retention_with_r_budget.py`
+
+Formalizes the spectral-gap identity `Λ = λ_1(S^3_R) = 3/R²`
 (retained on `main`) into an explicit R-budget statement. The
 numerical value of Λ depends on R, and the current framework surface
 does not derive that numerical R. Axiom* remains a conditional/human
 decision surface rather than a forced premise. No retained or promoted
 publication relabel is proposed here. Bare `retained` / `promoted` is
 NOT used.
-**Primary runner:** `scripts/frontier_cosmological_constant_retention_with_r_budget.py`
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **R-budget formalization / support note** layered on
+non-retained one-hop upstream authorities. It is **not** a single
+retained theorem and **must not** be audited as one. The audit ledger
+row for
+`cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29`
+classified this source as conditional/bounded_theorem with auditor's
+repair target:
+
+> audit or repair the listed dependency rows
+> (cosmological_constant_spectral_gap_identity_theorem_note,
+> universal_gr_discrete_global_closure_note, s3_general_r_derivation_note)
+> to retained/equivalent closure, then re-audit this claim.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an R-budget formalization support record rather than to repair the
+upstream dependency rows here. That repair belongs in dedicated
+upstream review-loop passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The R-budget statement `Λ_framework = 3/R²` with `R = R_Λ`,
+  Axiom* conditional decision-surface narrative, and downstream
+  numerical-Λ accounting below are **conditional support content
+  only** — every step rests on the named non-retained upstream
+  authorities.
+- The retained-status surface for the spectral-gap identity, the
+  S^3_R topology, the discrete GR closure, or any Λ closure is the
+  audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim
+  upstream notes, **not** this R-budget note.
+- Retained-grade does **NOT** propagate from this R-budget note to
+  any sub-claim, Axiom* decision, or successor closure.
+
+For any retained claim about cosmological-constant retention,
+spectral-gap identity, or S^3 topology with general R, audit the
+corresponding dedicated upstream note and its runner as a separate
+scoped claim — not this R-budget formalization record.
+
+---
 
 **Cited authorities (one-hop deps):**
 - [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)

@@ -720,18 +720,6 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_audit_backlog_campaign_synthesis.py"
     },
-    "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 24,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_right_handed_sector.py"
-    },
     "audited_symmetry_synthesis_note": {
       "assert_count": 0,
       "counts": {
@@ -34936,7 +34924,6 @@
     "scripts/frontier_right_handed_sector.py": {
       "assert_count": 0,
       "claims": [
-        "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
         "one_generation_matter_closure_note"
       ],
       "counts": {

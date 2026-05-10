@@ -1,7 +1,59 @@
 # Science 3+1 Line Law: Known Limits Note
 
-**Status:** bounded - bounded or caveated result note
-Date: 2026-04-20
+---
+
+**This is a known-limits / scope-and-caveat overview note for the
+3+1 line law surface. It does not establish any retained claim.**
+For retained claims on the 3+1 line-law components, see the per-claim
+notes referenced from the `## Audit scope` block below.
+
+---
+
+**Date:** 2026-04-20
+**Status:** support / known-limits record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / known-limits record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **known-limits / scope-and-caveat overview note** for
+the 3+1 line-law surface on the clean science branch. It is **not** a
+single retained theorem and **must not** be audited as one. The
+audit ledger row for `science_3plus1_line_law_known_limits_note_2026-04-20`
+classified this source as conditional/bounded_theorem with auditor's
+repair target:
+
+> add explicit audited dependency edges or a primary runner/proof
+> bundle for each step of the closure chain and no-go.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a known-limits overview rather than to add audited dependency
+edges or a primary runner/proof bundle for each closure-chain step
+here. Those steps belong in dedicated review-loop or per-step audit
+passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "What Is Closed Exactly" canonical-Wilson-branch / `rho1` /
+  Givens-grammar / least-distortion / reduced-packet narrative,
+  multi-step closure chain, and "What Is Not Claimed" structural
+  no-go (compression-interlacing) below are **historical known-
+  limits memory only**.
+- The retained-status surface for any Wilson/Perron branch,
+  retained slice selector, Givens solve, reduced-packet closure,
+  or full-packet no-go sub-claim is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-step theorem notes,
+  **not** this known-limits record.
+- Retained-grade does **NOT** propagate from this known-limits note
+  to any closure step, scope caveat, or successor proof bundle.
+
+For any retained claim about the 3+1 line law or its known limits,
+audit the corresponding dedicated note and its runner as a separate
+scoped claim — not this known-limits overview.
+
+---
 
 ## Purpose
 

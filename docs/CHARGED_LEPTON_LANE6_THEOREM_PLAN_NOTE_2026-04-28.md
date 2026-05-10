@@ -1,17 +1,65 @@
 # Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering
 
-**Type:** open_gate
+---
+
+**This is a planning / roadmap note. It does not establish any retained claim.**
+For retained claims on Lane 6 components, see the per-claim notes
+referenced from the `## Audit scope` block below.
+
+---
+
+**Type:** meta
 
 **Date:** 2026-04-28
-**Status:** open_gate — branch-local theorem-plan note on
-`frontier/charged-lepton-pickup-20260428`. Reduces Lane 6 (charged-
-lepton mass retirement) to a sharp `m_e, m_μ, m_τ` closure roadmap
-using retained gauge content + retained electroweak hierarchy `v` +
-retained `y_t / g_s = 1/sqrt(6)` analog template + the Koide flagship
-lane's in-flight Q/δ closures. This is a planning/roadmap note; no
-theorem is closed here — see referenced sub-notes for the actual gates.
+**Status:** support / planning record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Lane:** 6 — Charged-lepton mass retention (full closure)
 **Loop:** `charged-lepton-pickup-20260428`
+
+Branch-local theorem-plan note on `frontier/charged-lepton-pickup-20260428`.
+Reduces Lane 6 (charged-lepton mass retirement) to a sharp
+`m_e, m_μ, m_τ` closure roadmap using retained gauge content +
+retained electroweak hierarchy `v` + retained `y_t / g_s = 1/sqrt(6)`
+analog template + the Koide flagship lane's in-flight Q/δ closures.
+This is a planning/roadmap note; no theorem is closed here — see
+referenced sub-notes for the actual gates.
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **planning / closure-roadmap note** for Lane 6
+(charged-lepton mass retention). It is **not** a single retained
+theorem and **must not** be audited as one. The audit ledger row for
+`charged_lepton_lane6_theorem_plan_note_2026-04-28` classified this
+source as conditional/open_gate with auditor's repair target:
+
+> provide retained-grade 6A and 6B theorem notes, with a runner or
+> derivation constructing y_tau rather than naming an anchor
+> candidate.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a planning record rather than to materialize the missing 6A and 6B
+theorem notes or to construct `y_τ` here. Those steps belong in
+dedicated review-loop or per-target audit passes. Until that work is
+done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The 6A/6B/6C target structure, phase ordering, anchor-candidate
+  inventory, and tier classifications below are **historical planning
+  memory only**.
+- The retained-status surface for any Lane 6 sub-claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes
+  cited under "Retained framework structure used" in §1, **not** this
+  plan.
+- Retained-grade does **NOT** propagate from this plan to any 6A/6B/6C
+  sub-target, anchor-candidate identification, or successor cycle.
+
+For any retained claim on Lane 6 closure status, audit the
+corresponding dedicated note and its runner as a separate scoped
+claim — not this roadmap plan.
 
 ---
 

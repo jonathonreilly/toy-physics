@@ -33164,11 +33164,11 @@
     },
     "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25": {
       "claim_id": "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "076fcf9dca16bd3a8975ec2e1560d63742a8bb65abb1662708e16fb8e6d6fe17",
+      "note_hash": "674500ffcd35fc155d5df4bba938876541109899aa06f87d3fe47484a2650c05",
       "path": "docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md",
       "runner_path": null,
       "title": "AI Accountability And Disclosure Note"
@@ -34804,13 +34804,13 @@
     },
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01": {
       "claim_id": "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "5d92113867f7e77321a20861391dc33d570184009072d94038ec2d9d54617a47",
+      "note_hash": "0b5fe24f5d70afbb2611402559e3686f1cbac3fcf58c78b4793670cccdb39f3d",
       "path": "docs/AUDIT_LHF_LEVERAGE_MAP_FOR_RETAINED_PROMOTION_NOTE_2026-05-01.md",
-      "runner_path": "scripts/frontier_right_handed_sector.py",
+      "runner_path": null,
       "title": "Audit Low-Hanging-Fruit Leverage Map for Retained Promotion"
     },
     "audited_symmetry_synthesis_note": {
@@ -36419,11 +36419,11 @@
     },
     "charged_lepton_lane6_theorem_plan_note_2026-04-28": {
       "claim_id": "charged_lepton_lane6_theorem_plan_note_2026-04-28",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "3a767e5bb67c35deb628fd4b5164c1bddd91d6e207d93d795ef1362bf8c1ea97",
+      "note_hash": "103865e6afd7e20083c86512834f01a2951b0f1cae76581509e32f1007051abb",
       "path": "docs/CHARGED_LEPTON_LANE6_THEOREM_PLAN_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 6 Charged-Lepton Theorem Plan: Closure Roadmap with Phase Ordering"
@@ -36539,11 +36539,11 @@
     },
     "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28": {
       "claim_id": "charged_lepton_y_tau_mechanism_stuck_fanout_note_2026-04-28",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "806ce8d9b053f4bbc4a492ad948629195f1b60f8856a3b43b747afb207741f17",
+      "note_hash": "8107d02157c9c32e1186e2b5431b6fe59cdb713f2e55c6f49d9abb911668bbfd",
       "path": "docs/CHARGED_LEPTON_Y_TAU_MECHANISM_STUCK_FANOUT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "`y_\u03c4` Identity Mechanism \u2014 Stuck Fan-Out"
@@ -37588,11 +37588,11 @@
     },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
       "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "ffe6f714e8aa33313874a2a8a06713093be1714e96796967da43ad9d2b27c683",
+      "note_hash": "a244126e81e87a00df8bb4618779549110e29e54768daef443f0e7b631859c35",
       "path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
@@ -37843,16 +37843,16 @@
     },
     "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29": {
       "claim_id": "cosmological_constant_retention_with_r_budget_theorem_note_2026-04-29",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [
         "cosmological_constant_spectral_gap_identity_theorem_note",
         "universal_gr_discrete_global_closure_note",
         "s3_general_r_derivation_note",
         "axiom_stack_minimality_cl4c_no_go_theorem_note_2026-04-29"
       ],
-      "note_hash": "5b75aa070ae4ac173ef820bb4d224cbf7802df0f07eae39ca5e09a60f3bd7f9d",
+      "note_hash": "bd457059889400391d9479b72809999b5cbd7b70b535f7e54cfed17db12b9cee",
       "path": "docs/COSMOLOGICAL_CONSTANT_RETENTION_WITH_R_BUDGET_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/frontier_cosmological_constant_retention_with_r_budget.py",
       "title": "Cosmological Constant R-Budget Support Note (V1)"
@@ -38623,11 +38623,11 @@
     },
     "distracted_napier_reconciliation_note": {
       "claim_id": "distracted_napier_reconciliation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "3081d398a8590778432e4232208189d92a79203d47050fc52b9d09a88162fa0e",
+      "note_hash": "dcd15bca6ad1b6b52b7dbfe8334a1428ceba187dc1b2cd5cb7f6ee51952c2c7b",
       "path": "docs/DISTRACTED_NAPIER_RECONCILIATION_NOTE.md",
       "runner_path": "scripts/gap_ln_born_check.py",
       "title": "Distracted Napier Reconciliation Note"
@@ -40793,11 +40793,11 @@
     },
     "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15": {
       "claim_id": "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "72b74d7bd0613cb82b1fe063b66468919812b4856108b19e048a109ea604706d",
+      "note_hash": "6db0f852b13f3982e68b7d197d7d0eb0e350ccc35ed8eb9a77da0cbc23be37b8",
       "path": "docs/DM_NEUTRINO_TWO_HIGGS_CLOSURE_ATTACKS_NOTE_2026-04-15.md",
       "runner_path": null,
       "title": "DM Neutrino Two-Higgs Closure Attacks"
@@ -43031,11 +43031,11 @@
     },
     "gap_physics_note": {
       "claim_id": "gap_physics_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "9430f19abd45f7834af28cc1954405da8741e5c57287ea1931838f88d8e1aa95",
+      "note_hash": "efa6b10dfb72f480594a288f376931ca7cd2c3d099dcd16f8196e90794607628",
       "path": "docs/GAP_PHYSICS_NOTE.md",
       "runner_path": "scripts/gap_stability_perturbation.py",
       "title": "Gap-as-Physics: Investigation Note"
@@ -45446,11 +45446,11 @@
     },
     "higher_dimension_status_2026-04-01": {
       "claim_id": "higher_dimension_status_2026-04-01",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "431792951752d71a1610b7625a92ab0be3adb341dff2853f2baedef1dafe7c11",
+      "note_hash": "fa90c329de163b39c0ea5d56ca1d27efeab5162d51f3db55f6b854b12236c175",
       "path": "docs/HIGHER_DIMENSION_STATUS_2026-04-01.md",
       "runner_path": null,
       "title": "Higher-Dimension Status"
@@ -48811,11 +48811,11 @@
     },
     "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30": {
       "claim_id": "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "0db3469239c5c9293af057ae8a96a320796d8c18328fff6924f14829a876c38e",
+      "note_hash": "93abbac29f76f0c1e1c38c8ce913167806d12a0daac15eb327b1a1cf692bc672",
       "path": "docs/LATTICE_3D_DENSE_SPENT_DELAY_Z2_Z5_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "3D Dense Spent-Delay `z=2..5` Support Note"
@@ -49162,11 +49162,11 @@
     },
     "lattice_synthesis_guard_note": {
       "claim_id": "lattice_synthesis_guard_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "b9e06290d1972580da24b31d3fd237c048c2683e9d0612891a2f43a7544c3202",
+      "note_hash": "d18b7a8bd0fb71c847f8673c243248e3bea7b7a06aef5de6dd8f43288dc44498",
       "path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note"
@@ -57452,11 +57452,11 @@
     },
     "scalar_selector_cycle13_meta_closure_status_note_2026-04-19": {
       "claim_id": "scalar_selector_cycle13_meta_closure_status_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "d81db15f4376ab79b35b8f0f0d051dc6e5795edec06015c6127c7949d13f884e",
+      "note_hash": "1d7bc8937539c2f2d1659b304dc9065dc7deab6334eb9ff35cd60e87c09922e3",
       "path": "docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Scalar-Selector this cycle Meta-Closure Status Note"
@@ -57572,11 +57572,11 @@
     },
     "scaling_failure_mechanisms": {
       "claim_id": "scaling_failure_mechanisms",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "cccd5178aed652222a99541a2b32ea15021978e3e39fa3eabc5c5cf5b330ea8d",
+      "note_hash": "368e402164eff972983fb90a0ecaf6df2251bf98c74b43e405853fafade4fa37",
       "path": "docs/SCALING_FAILURE_MECHANISMS.md",
       "runner_path": null,
       "title": "Scaling Failure Mechanisms"
@@ -57607,11 +57607,11 @@
     },
     "science_3plus1_line_law_known_limits_note_2026-04-20": {
       "claim_id": "science_3plus1_line_law_known_limits_note_2026-04-20",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "52544d9b0b480f69b23dbdce694a11559d17b678ef4b9db4bb47dd3d00e243cd",
+      "note_hash": "fbaec4d23b10ee148d630f76f562bb44a7e92131a7eca28f51b9eaba849f2814",
       "path": "docs/SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md",
       "runner_path": null,
       "title": "Science 3+1 Line Law: Known Limits Note"
@@ -57821,11 +57821,11 @@
     },
     "seventh_family_diagonal_note": {
       "claim_id": "seventh_family_diagonal_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "f4426406c80ec7d504c281ba7b6e761b8dec83856aeed1956da962988889b671",
+      "note_hash": "131c72dd98e7289f0d1ed5a8a8a3b2187a65d70b2b5499c164050bb2fd5c789c",
       "path": "docs/SEVENTH_FAMILY_DIAGONAL_NOTE.md",
       "runner_path": "scripts/SEVENTH_FAMILY_DIAGONAL_SWEEP.py",
       "title": "Seventh Family Diagonal Note"
@@ -60060,11 +60060,11 @@
     },
     "synthesis_note_3d": {
       "claim_id": "synthesis_note_3d",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "e145275ec311df81de8c78f90509f6124d548a81992ccf0a784efbffeb2dbaa6",
+      "note_hash": "4671a475d567d7cc97a5d3cbc1504688cf88d0542876b67e29e486980346edeb",
       "path": "docs/SYNTHESIS_NOTE_3D.md",
       "runner_path": null,
       "title": "Synthesis Note: 3D Extension of Discrete Causal DAG Model"
@@ -63006,14 +63006,14 @@
     },
     "work_history.potential_publication_discoveries_log": {
       "claim_id": "work_history.potential_publication_discoveries_log",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [
         "work_history.repo.review_feedback.publication_discovery_audit_2026-04-11",
         "repo.controlled_vocabulary"
       ],
-      "note_hash": "b47f83b079e23631d431c292f4c12ea634ee5e788dd9939708e6997413b6982c",
+      "note_hash": "7bcf9318c5dd7eeb013b244afe4bd8c780d4293cfc131a5eba6b9f92ba2b508e",
       "path": "docs/work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md",
       "runner_path": null,
       "title": "Historical Potential Publication Discoveries Log"
@@ -65398,25 +65398,25 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 227,
       "decoration": 1,
-      "meta": 40,
+      "meta": 58,
       "no_go": 15,
-      "none": 1644,
-      "open_gate": 22,
+      "none": 1629,
+      "open_gate": 19,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 718,
+      "bounded_theorem": 710,
       "decoration": 1,
-      "meta": 40,
+      "meta": 58,
       "no_go": 122,
-      "none": 451,
-      "open_gate": 111,
-      "positive_theorem": 596
+      "none": 450,
+      "open_gate": 107,
+      "positive_theorem": 591
     },
     "edge_count": 8184,
     "leaf_count": 529,
     "node_count": 2039,
     "root_count": 762,
-    "runners_with_path": 1655
+    "runners_with_path": 1654
   }
 }
