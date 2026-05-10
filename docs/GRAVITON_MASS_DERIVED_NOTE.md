@@ -1,22 +1,90 @@
-# Graviton Mass Derived from S^3 Topology
+# Lichnerowicz TT Spectral Arithmetic on S^3 with Imported Hubble Radius
 
 **Script:** `scripts/frontier_graviton_mass_derived.py`
-**Date:** 2026-04-12
-**Status:** BOUNDED PREDICTION
+**Date:** 2026-04-12 (audit-status note added 2026-05-10)
+**Status:** bounded conditional spectral-arithmetic companion — exact
+algebra from the cited continuum Lichnerowicz TT eigenvalues on `S^3` to
+a numerical `m_g^2 c^2 / hbar^2 = 6/R^2` value, conditional on (i) the
+imported continuum Lichnerowicz spectrum on `S^3` (Higuchi 1987;
+Deser & Nepomechie 1984; Gibbons & Hawking 1993), (ii) the imported
+Hubble-scale identification `R = c/H_0` with observed `H_0`, and (iii)
+the asserted physical bridge from the lowest TT spatial Lichnerowicz
+eigenvalue to a graviton mass term. The bridge is **not** derived inside
+this packet.
 
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
 
-## Theorem / Claim
+## Audit-status note (2026-05-10)
 
-On S^3 of radius R = c/H_0, the transverse-traceless graviton has a
-topological mass
+The audit verdict (`audited_renaming`, `chain_closes=false`) confirmed
+that the runner correctly evaluates the stated arithmetic, ratio bounds,
+the Higuchi-bound check, the Compton-wavelength conversion, and the
+`Lambda` relation, but flagged that the load-bearing physical bridge —
+the identification between the lowest compact-spatial TT Lichnerowicz
+eigenvalue on `S^3` and a graviton mass term in a Lorentzian effective
+action — is asserted, not derived from the framework operators.
 
-    m_g = sqrt(6) * hbar * H_0 / c^2 = 3.52 x 10^{-33} eV
+> "the runner computes the stated arithmetic ... but does not
+> instantiate the underlying framework operators or derive the mass
+> identification from first principles ... missing_bridge_theorem."
 
-arising from the lowest eigenvalue of the Lichnerowicz operator. This
-mass is topological (not Fierz-Pauli), so the vDVZ discontinuity does
-not apply and the m -> 0 limit is smooth.
+Admitted-context inputs (carrier framework, not derived in this note):
+
+- the continuum Lichnerowicz operator `Delta_L` on symmetric TT rank-2
+  tensors on a round `S^3` of radius `R`, with eigenvalues
+  `lambda_l^TT = [l(l+2) - 2] / R^2`, `l >= 2` (Higuchi 1987;
+  Deser & Nepomechie 1984; Gibbons & Hawking 1993)
+- the spatial topology / radius identification `R = c/H_0` with observed
+  `H_0 = 67.4 km/s/Mpc`, used here as a cosmology input on equal footing
+  with the bounded/conditional companion `Lambda` row, not as a derived
+  framework quantity
+- the asserted physical bridge `m_g^2 c^2 / hbar^2 = lambda_2^TT` from
+  the lowest compact-spatial TT eigenvalue to a graviton mass term —
+  imported from massive-gravity literature on de Sitter and not derived
+  inside the audit packet
+- the Higuchi unitarity inequality `m^2 >= 2 Lambda / 3` and the
+  Vainshtein-radius conversion (cited but not derived)
+
+Operationally narrowed claim (configured spectral arithmetic):
+
+Conditional on the three admitted inputs above, the runner verifies the
+following **algebra**:
+
+1. for the cited continuum Lichnerowicz spectrum, `lambda_2^TT = 6/R^2`;
+2. with `R = c/H_0` and `H_0 = 67.4 km/s/Mpc`, the numerical readout
+   `sqrt(lambda_2^TT) * (hbar/c)` evaluates to `~3.52 x 10^-33 eV/c^2`;
+3. the algebraic relation `lambda_2^TT = 2 * lambda_1^scalar` holds with
+   `lambda_1^scalar = 3/R^2`, so identifying `Lambda = lambda_1^scalar`
+   gives the conditional algebraic equality `m_g^2 = 2 Lambda` (in
+   `hbar = c = 1` units);
+4. the Higuchi inequality `m^2 >= 2 Lambda / 3` is satisfied by a factor
+   of three under the same conditional identifications;
+5. the Compton-wavelength conversion `lambda_g = hbar / (m_g c)`
+   evaluates to `R / sqrt(6) ~ 0.408 R_Hubble`.
+
+Retracted claims (not preserved inside this packet):
+
+- the framing as a derivation of a "graviton mass from S^3 topology" —
+  retracted to a conditional spectral arithmetic statement; the physical
+  identification of `lambda_2^TT` with a graviton mass term is an
+  imported bridge, not a derivation;
+- the "topological mass (not Fierz-Pauli) so vDVZ does not apply"
+  argument — the underlying claim that compact-spatial Lichnerowicz
+  curvature coupling avoids the vDVZ discontinuity at the quantum level
+  is qualitative and not theorem-grade inside this packet;
+- the specific physical "prediction" framing of `m_g = 3.52 x 10^-33 eV`
+  as a falsifiable framework prediction — retracted to a conditional
+  numerical value contingent on the imported spectral bridge and the
+  cosmology-scale `R = c/H_0` input.
+
+Blocked-on: this row stays `audited_renaming` until either a retained
+restricted-packet derivation is supplied that fixes the bridge from the
+compact-spatial TT Lichnerowicz eigenvalue to a Lorentzian effective
+graviton mass term inside the framework, or the row is moved to a
+manuscript-surface companion (with explicit "imported bridge" labels)
+and removed from the theorem-grade audit lane. The bounded conditional
+spectral arithmetic above is unaffected by this status note.
 
 ## Assumptions
 
