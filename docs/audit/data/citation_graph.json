@@ -51224,6 +51224,17 @@
       "runner_path": "scripts/cl3_n_f_v3_normalization_check_2026_05_07_w2norm.py",
       "title": "N_F = 1/2 V_3 Normalization \u2014 Bounded Theorem"
     },
+    "naive_lattice_fermion_2d_species_count_narrow_theorem_note_2026-05-10": {
+      "claim_id": "naive_lattice_fermion_2d_species_count_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "119b5fb409d348b9359a3f5dbd98835d962599d970d3272690f0d5fb3ec40756",
+      "path": "docs/NAIVE_LATTICE_FERMION_2D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_naive_lattice_fermion_2d_species_count_narrow.py",
+      "title": "Naive Lattice Fermion 2^d Species Count \u2014 Narrow Theorem"
+    },
     "native_gauge_closure_note": {
       "claim_id": "native_gauge_closure_note",
       "claim_type_author_hint": null,
@@ -66097,6 +66108,7 @@
     "moonshot_top20_frontiers",
     "moving_source_retarded_portability_note",
     "multipole_tidal_response_note",
+    "naive_lattice_fermion_2d_species_count_narrow_theorem_note_2026-05-10",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
     "neutrino_lane4_4f_sigma_m_nu_functional_form_theorem_note_2026-04-28",
@@ -66401,7 +66413,7 @@
       "no_go": 20,
       "none": 1626,
       "open_gate": 27,
-      "positive_theorem": 92
+      "positive_theorem": 93
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 728,
@@ -66410,12 +66422,12 @@
       "no_go": 127,
       "none": 449,
       "open_gate": 115,
-      "positive_theorem": 592
+      "positive_theorem": 593
     },
     "edge_count": 8307,
-    "leaf_count": 536,
-    "node_count": 2071,
-    "root_count": 768,
-    "runners_with_path": 1686
+    "leaf_count": 537,
+    "node_count": 2072,
+    "root_count": 769,
+    "runners_with_path": 1687
   }
 }

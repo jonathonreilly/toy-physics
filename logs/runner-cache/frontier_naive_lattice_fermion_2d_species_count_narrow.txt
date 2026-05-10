@@ -1,0 +1,116 @@
+===== runner cache v1 =====
+runner: scripts/frontier_naive_lattice_fermion_2d_species_count_narrow.py
+runner_sha256: 144a4658334fb5bef042a5e65cf84fd432df11b970be99407968bdc129f4b81d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: naive lattice fermion 2^d species count
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: d=4 naive action zero locus enumeration (T1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T1: at d=4, the 2^4=16 corners {0, pi}^4 are all zeros of sum_mu sin^2(k_mu a)  (corners with sum_mu sin^2 = 0: 16/16 (all zero: True))
+
+----------------------------------------------------------------------------------------
+Part 2: count of BZ corners at d in {2,3,4,5,6} (T2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T2: 2^d corners at d in {2,3,4,5,6} match {4,8,16,32,64}  (counts = {2: 4, 3: 8, 4: 16, 5: 32, 6: 64})
+
+----------------------------------------------------------------------------------------
+Part 3: Nielsen-Ninomiya no-go bound consistency (T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T3: naive count saturates Nielsen-Ninomiya lower bound 2^d for d in {1..6}  ((naive, NN_lower) at d=1..6: {1: (2, 2), 2: (4, 4), 3: (8, 8), 4: (16, 16), 5: (32, 32), 6: (64, 64)})
+
+----------------------------------------------------------------------------------------
+Part 4: Wilson term breaks chiral, lifts 2^d - 1 doublers (T4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T4: at d=4, Wilson term r/2 sum_mu (1 - cos(k_mu a)) lifts 2^d - 1 = 15 doublers  (unlifted corners (Wilson = 0): 1; lifted corners: 15)
+
+----------------------------------------------------------------------------------------
+Part 5: staggered (Kogut-Susskind) Kawamoto-Smit decomposition (T5)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T5: staggered Kawamoto-Smit decomposition: 2^d = 2^(d/2) * 2^(d/2) at even d; at d=4 -> 16 = 4*4  ((naive, taste, spin, taste*spin) at d=2,4,6: {2: (4, 2, 2, 4), 4: (16, 4, 4, 16), 6: (64, 8, 8, 64)})
+
+----------------------------------------------------------------------------------------
+Part 6: cross-check naive count at d=4 matches integer 16 (T6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T6: at d=4, 2^d = 16 matches the integer 16 in framework hierarchy formula (statement, not derivation)  (naive count 2^4 = 16; framework integer = 16)
+
+----------------------------------------------------------------------------------------
+Part 7: regulator-dependence of physical species (T7, informational)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T7: regulator-dependence reported (informational); naive saturates NN bound, others break >= 1 hypothesis  (regulator -> N_eff: {'naive (d=4)': 16, 'Wilson': 1, 'twisted-mass': 2, 'domain-wall': 1, 'overlap': 1, 'staggered (KS, d=4)': 4})
+
+----------------------------------------------------------------------------------------
+Part 8: Brillouin-zone zero locus algebraic identity (additional)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T8 (algebraic): sum_mu sin^2(k_mu a) = 0 at all 16 corners {0,pi}^4 (sympy)  (zero-locus matches at 16/16 corners)
+
+----------------------------------------------------------------------------------------
+Part 9: framework reference (relational only, NOT load-bearing)
+----------------------------------------------------------------------------------------
+
+  Framework relational reference (not load-bearing):
+    OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md is audited_conditional
+    and derives a 16 count via Observable Principle premises P1-P4.
+    The present narrow theorem provides an INDEPENDENT external-
+    physics anchor for 2^d = 16 at d = 4 via Nielsen-Ninomiya and
+    Karsten-Smit, and does NOT consume the framework note.
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement (recapitulation):
+
+  HYPOTHESIS:
+    Let d >= 1 be an integer and consider the naive lattice Dirac
+    operator on Z^d in momentum space:
+       D_naive(k) = (i/a) sum_{mu=1..d} gamma_mu sin(k_mu a),
+       k_mu a in (-pi, pi].
+    By gamma-matrix algebra: (-i a D_naive)^2 = (sum_mu sin^2(k_mu a)) I.
+
+  CONCLUSION:
+    D_naive(k) = 0 iff sin(k_mu a) = 0 for all mu iff k_mu a in {0, pi}
+    for all mu. The zero locus is {0, pi/a}^d with cardinality 2^d.
+    Hence the naive lattice action realises exactly 2^d fermion species
+    in the continuum limit. At d = 4: 2^4 = 16.
+
+  NIELSEN-NINOMIYA NO-GO (cited):
+    Any hermitean, local, translation-invariant, chiral-symmetric
+    lattice Dirac operator on Z^d has at least 2^d zero-crossings.
+    [Nielsen-Ninomiya, Nucl. Phys. B 185 (1981) 20; B 193 (1981) 173.]
+    The naive action saturates this bound.
+
+  KARSTEN / KARSTEN-SMIT (cited):
+    Direct enumeration of the BZ zero locus in agreement with the
+    above; chiral-anomaly content of the doublers.
+    [Karsten, Phys. Lett. B 104 (1981) 315; Karsten-Smit, Nucl. Phys.
+     B 183 (1981) 103.]
+
+  Audit-lane class:
+    (A) -- pure linear algebra (gamma-matrix anticommutator) plus
+    elementary trigonometric enumeration. No external observed /
+    fitted / literature-numerical input. No framework axiom consumed.
+
+  This narrow theorem is INDEPENDENT of:
+    - The framework's OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE
+      (audited_conditional; not consumed).
+    - The framework's alpha_LM^16 substitution.
+    - Regulator-independence of the 2^d count (different regulators
+      give different N_eff; this is REPORTED informationally in T7).
+    - The Wilsonian-transport composition of the 16 doublers.
+    - The framework's specific staggered substrate.
+
+
+========================================================================================
+  TOTAL: PASS=8, FAIL=0
+========================================================================================
+
+----- stderr -----
+
