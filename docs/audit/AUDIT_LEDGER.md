@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 232 |
 | open_gate | 11 |
-| unaudited | 1094 |
+| unaudited | 1093 |
 | meta | 65 |
 | ~~audited_numerical_match~~ | 21 |
 | ~~audited_renaming~~ | 25 |
-| ~~audited_conditional~~ | 258 |
+| ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 8 |
 | `decoration_under_cl3_color_automorphism_theorem` | 3 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 379 |
-| `audited_conditional` | 258 |
+| `audited_conditional` | 259 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
 | `audited_numerical_match` | 21 |
 | `audited_renaming` | 25 |
-| `unaudited` | 1159 |
+| `unaudited` | 1158 |
 
 | claim_type | count |
 |---|---:|
@@ -540,6 +540,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_sensor_prediction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `diamond_sensor_protocol_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `discrete_einstein_regge_lift_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
@@ -2483,6 +2484,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The panel is supposed to compare centroid shift, peak shift, first-arrival layer, early mass-side accumulation, projected current, and shell imbalance on the same v3 harness to test whether gravity-readout signs align at a clean operating point.  _(class `C`)_
 - **chain closes:** False — The dependency now closes for retained bounded core results, including multi-observable gravity under primary readouts, but the supplied runner output does not report the observable-panel-specific readouts listed in this note. The missing step is a panel run or retained summary tying centroid, peak, first-arrival, early accumulation, current, and shell imbalance to the stated default sweep and sign-alignment questions.
 - **rationale:** Issue: the runner output is a mixed KG/convergence/AB harness summary, not the declared multi-readout observable panel result. Why this blocks: audited_clean would require the bounded panel computation to close on the named readouts without substituting a broader core-card closure or KG/AB successes for the panel-specific claim. Repair target: provide the actual panel output for the stated default sweep, including sign agreement/disagreement by readout and recurrence-window interpretation. Claim boundary until fixed: retained only as a conditional implementation-target note connected to the retained core card, not as a clean standalone observable-panel theorem.
+- **auditor confidence:** high
+
+### `discrete_einstein_regge_lift_note`
+
+- **Note:** [`DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md`](../../docs/DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the restricted claim that the exact shell law and current same-charge bridge on the stated strong-field class are stationary points of one local Schur-complement boundary functional and thereby provide a bounded static-conformal 3+1 lift.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e11d8-c55d-7ff2-84d8-f69f0a8fe8b6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The same shell trace that minimizes the microscopic Schur boundary action is asserted to fix the local conformal lapse and metric source data, making this the restricted discrete 3+1 Einstein/Regge-style lift.  _(class `B`)_
+- **chain closes:** False — The Schur boundary action and stationarity are supported by the retained_bounded cited authority, but the lift from that boundary stationarity to an Einstein/Regge-style 3+1 field-equation interpretation imports the current static-conformal bridge and source/readout identifications without those bridge theorems being included in the restricted packet.
+- **rationale:** Issue: the note's boundary minimizer is supported, but the Einstein/Regge-style 3+1 interpretation depends on an unprovided bridge from shell trace to psi, chi, rho, and S as physical metric/source data. Why this blocks: the only cited authority closes the microscopic Schur boundary action, not the full static-conformal physical readout used by the source note's conclusion. Repair target: cite or include the retained local static-constraint lift and same-charge bridge theorem, with a runner that constructs the actual Lambda_R and bridge fields rather than using text checks and a generic SPD witness. Claim boundary until fixed: retained only as a bounded Schur-boundary stationarity restatement on the current source classes, not as an independently closed Einstein/Regge 3+1 lift.
 - **auditor confidence:** high
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
