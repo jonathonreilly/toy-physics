@@ -51827,6 +51827,17 @@
       "runner_path": null,
       "title": "Next Chunk Recommendation"
     },
+    "nn_lattice_rescaled_kernel_identification_note_2026-05-10": {
+      "claim_id": "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded numerical no-go for the Schr\u00f6dinger",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "347e5260325b26f685d4c73d1717c59e0b6c485b8374cfce890063dc4bddc452",
+      "path": "docs/NN_LATTICE_RESCALED_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
+      "runner_path": "scripts/lattice_nn_rescaled_kernel_identification.py",
+      "title": "NN Lattice Rescaled-Lane Kernel Identification"
+    },
     "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
       "claim_id": "no_per_site_bosonic_ccr_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -65286,6 +65297,7 @@
     "neutrino_majorana_nur_charge2_primitive_reduction_note",
     "newton_persistent_pattern_control_note_2026-04-11",
     "next_chunk_recommendation",
+    "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
     "nonlabel_grown_basin_note",
     "nonlinear_born_gravity_note",
     "observable_principle_from_axiom_note",
@@ -65572,7 +65584,7 @@
       "bounded_theorem": 233,
       "decoration": 1,
       "meta": 59,
-      "no_go": 15,
+      "no_go": 16,
       "none": 1626,
       "open_gate": 19,
       "positive_theorem": 90
@@ -65581,15 +65593,15 @@
       "bounded_theorem": 715,
       "decoration": 1,
       "meta": 59,
-      "no_go": 122,
+      "no_go": 123,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
     "edge_count": 8209,
-    "leaf_count": 530,
-    "node_count": 2043,
-    "root_count": 762,
-    "runners_with_path": 1658
+    "leaf_count": 531,
+    "node_count": 2044,
+    "root_count": 763,
+    "runners_with_path": 1659
   }
 }

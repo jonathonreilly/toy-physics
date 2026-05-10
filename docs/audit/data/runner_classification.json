@@ -12804,6 +12804,18 @@
       "dominant_class": null,
       "runner": "scripts/valley_linear_wide_tail_replay.py"
     },
+    "nn_lattice_rescaled_kernel_identification_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/lattice_nn_rescaled_kernel_identification.py"
+    },
     "no_per_site_bosonic_ccr_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -40055,6 +40067,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/lattice_nn_rescaled_kernel_identification.py": {
+      "assert_count": 0,
+      "claims": [
+        "nn_lattice_rescaled_kernel_identification_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/lattice_nn_rg_alpha_sweep.py": {
       "assert_count": 0,
       "claims": [
@@ -43376,12 +43403,12 @@
     "dominant_class_distribution": {
       "A": 109,
       "B": 160,
-      "C": 641,
+      "C": 642,
       "D": 232,
       "none": 404
     },
-    "runners_classified": 1546,
-    "runners_with_C": 801,
+    "runners_classified": 1547,
+    "runners_with_C": 802,
     "runners_with_D": 422
   }
 }
