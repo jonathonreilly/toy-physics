@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 26,
     "leaf": 222,
-    "medium": 147
+    "medium": 148
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -29989,6 +29989,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "lattice_nn_deterministic_rescale_note",
+        "lattice_nn_rg_gravity_note",
+        "lattice_nn_continuum_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 3.807,
+      "note_path": "docs/NN_LATTICE_RESCALED_RG_GRAVITY_SATURATION_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_response_exponents.py",
+      "transitive_descendants": 6
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "wave_direct_dm_h025_seed1_crossfamily_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -30167,32 +30193,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_nn_high_precision_note",
-        "lattice_nn_deterministic_rescale_note",
-        "lattice_nn_rg_gravity_note",
-        "lattice_nn_continuum_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.585,
-      "note_path": "docs/NN_LATTICE_RESCALED_RG_GRAVITY_SATURATION_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_response_exponents.py",
-      "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "valley_linear_robustness_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -30235,6 +30235,32 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 5
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "lattice_nn_deterministic_rescale_note",
+        "lattice_nn_continuum_note",
+        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 3.085,
+      "note_path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
       "transitive_descendants": 5
     },
     {
@@ -30292,6 +30318,31 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_hawking_temperature_check.py",
+      "transitive_descendants": 4
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.322,
+      "note_path": "docs/NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_continuum_identification.py",
       "transitive_descendants": 4
     },
     {
@@ -30577,31 +30628,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/cl3_g_newton_self_consistency_2026_05_10_planckP4.py",
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_nn_high_precision_note",
-        "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
-        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.5,
-      "note_path": "docs/NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_continuum_identification.py",
       "transitive_descendants": 3
     },
     {
@@ -31280,32 +31306,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_right_handed_species_dependence.py",
       "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_nn_high_precision_note",
-        "lattice_nn_deterministic_rescale_note",
-        "lattice_nn_continuum_note",
-        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.822,
-      "note_path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
-      "transitive_descendants": 4
     },
     {
       "audit_independence_required": "any_non_self",
@@ -32633,6 +32633,55 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_neutrino_majorana_partition_projective_transplant_obstruction.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
+        "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_C_arm_alpha_constrained_refit.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+        "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
+        "lattice_nn_deterministic_rescale_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NLO_SADDLE_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_C_arm_NLO_saddle.py",
       "transitive_descendants": 1
     },
     {
@@ -35560,7 +35609,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+      "claim_id": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
@@ -35569,40 +35618,17 @@
       "cross_confirmation_status": null,
       "deps": [
         "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
-        "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_C_arm_alpha_constrained_refit.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
         "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
-        "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
-        "lattice_nn_deterministic_rescale_note"
+        "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+        "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10"
       ],
       "direct_in_degree": 0,
       "effective_status": "unaudited",
       "load_bearing_score": 0.0,
-      "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NLO_SADDLE_NOTE_2026-05-10.md",
+      "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_C_arm_NLO_saddle.py",
+      "runner_path": "scripts/lattice_nn_rescaled_C_arm_NNLO_saddle.py",
       "transitive_descendants": 0
     },
     {
@@ -37301,5 +37327,5 @@
     }
   ],
   "ready_count": 6,
-  "total_pending": 1090
+  "total_pending": 1091
 }

@@ -1,0 +1,127 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_C_arm_NNLO_saddle.py
+runner_sha256: 3d5a1755e19d5c5d2fc207afbaa2901e9722cff733d85dbe67dc75cd82a42319
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+==============================================================================
+NNLO SADDLE CORRECTION FOR C_arm IN THE RESCALED NN HARNESS
+==============================================================================
+
+Frozen harness parameters:
+  BETA      = 0.8
+  k         = 5.0
+  L_total   = 40.0
+  L_1       = L_total / 3   = 13.3333    (origin -> slit)
+  L_2       = 2 L_total / 3 = 26.6667   (slit -> detector)
+  FANOUT    = 3.0
+  SLIT_Y    = 3.0     (inner aperture edge)
+  SLIT_W    = 2.0     (physical aperture width)
+  c         = exp(-BETA pi^2 / 16) = 0.610498
+
+------------------------------------------------------------------------------
+1) PHASE NNLO  (cos(omega h) closed-form coefficients)
+------------------------------------------------------------------------------
+  A = c / (F sqrt(2)) = 0.143896
+  B = c^2 / F         = 0.124236
+  r = A/(A+B)         = 0.536661
+  omega = k(sqrt(2)-1) = 2.071068
+
+  d2 = (r/2) omega^2                                = 1.150955   (from NLO note)
+  d4 = (r^2/4 - r/24) omega^4                       = 0.913297   (NEW)
+  d6 = (r^3/8 - r^2/24 + r/720) omega^6              = 0.636480   (NEW)
+  d8 = (r^4/16 - r^3/32 + r^2/576 + r^2/720 - r/40320) omega^8
+     = 0.420024
+
+  Cross-check: truncated series vs exact delta_a(h)
+           h       exact         h^2     h^2+h^4    h^2+h^4+h^6
+     0.50000    0.356719    0.287739    0.344820       0.354765
+     0.25000    0.075664    0.071935    0.075502       0.075658
+     0.12500    0.018209    0.017984    0.018207       0.018209
+     0.06250    0.004510    0.004496    0.004510       0.004510
+     0.03125    0.001125    0.001124    0.001125       0.001125
+
+  Verdict: the NLO note already evaluates cos(omega h) exactly (no
+  truncation), so d4, d6, d8 contribute ZERO new physics here.
+  These coefficients are reported for the analytic record.
+
+------------------------------------------------------------------------------
+2) q^6 SADDLE NNLO  (kurtosis-of-cumulants correction)
+------------------------------------------------------------------------------
+           h      sig0^2         dV_q4         dV_q6   |dV_q6|/sig^2
+     0.50000    4.190809  +3.854076e-02  +1.940103e-05     4.6294e-04%
+     0.25000    1.661325  +4.184500e-03  +8.889256e-06     5.3507e-04%
+     0.12500    0.786294  +8.270627e-04  +1.191174e-06     1.5149e-04%
+     0.06250    0.387857  +1.944362e-04  +1.508152e-07     3.8884e-05%
+     0.03125    0.193275  +4.785817e-05  +1.890780e-08     9.7828e-06%
+     0.01562    0.096556  +1.191791e-05  +2.365191e-09     2.4496e-06%
+
+  Verdict: q^6 saddle contributes < 1e-3 of sigma^2 throughout the
+  fit window -- sub-leading by ~1000x to the slit-aperture correction.
+
+------------------------------------------------------------------------------
+3) FINITE-SLIT-APERTURE NNLO  (complex-Gaussian truncated convolution)
+------------------------------------------------------------------------------
+  psi_det(y) propto exp(-y^2/(4 alpha_total)) * [erf(u_b(y)) - erf(u_a(y))]
+  alpha_pre  = L_1 s h,  alpha_post = L_2 s h,  alpha_total = alpha_pre + alpha_post
+  M = (alpha_pre + alpha_post)/(alpha_pre alpha_post)
+  u_{a,b}(y) = (SLIT_Y_{a,b} - y/(alpha_post M)) * sqrt(M)/2
+  SLIT_Y_a = 3.0, SLIT_Y_b = 5.0 (aperture [3, 5])
+
+  Per-h moments (from 1D quadrature of |psi_det|^2):
+           h    mu_meas    mu_NNLO   sig_meas   sig_NNLO    res_NNLO   res_NLO_only
+     0.25000     3.3168     3.4302     1.3198     1.3171     -0.205%        -2.339%
+     0.12500     3.1701     3.2268     0.8990     0.8996     +0.063%        -1.365%
+     0.06250     3.0895     3.1191     0.6282     0.6281     -0.020%        -0.862%
+     0.03125     3.0467     3.0616     0.4416     0.4417     +0.023%        -0.446%
+     0.01562     3.0239     3.0581     0.3115     0.2884     -7.407%        -0.246%
+
+  Max |residual| on 4-point fit window (h in (0.25, 0.125, 0.0625, 0.03125)): 0.205%
+
+  Note: at h = 0.015625, the slit y = 3 lies deep in the saddle tail
+  (exp(-y^2 * 2 Re(1/(4 alpha_total))) ~ 1e-46 at h = 0.0156), and the
+  closed-form Gaussian approximation underpredicts the true amplitude
+  sourced by ballistic non-Gaussian lattice terms.  This is OUTSIDE
+  the alpha fit window and reported for completeness.
+
+------------------------------------------------------------------------------
+4) ALPHA_NNLO_EFF AND ACCEPTANCE VERDICT
+------------------------------------------------------------------------------
+  Model                     alpha_eff   C_eff    |alpha - 0.5256|
+  LO     (C_arm support)    0.5000      2.4855   0.0256
+  NLO    (phase note)       0.5165      2.6186   0.0091
+  NNLO_q (phase + q^4+q^6)  0.5170      2.6234   0.0086
+  NNLO_full (+ aperture)    0.5247      2.7041   0.0009  <-- this note
+  EMPIRICAL  (continuum)    0.5256      2.7107   --
+
+  Local alpha at h_geom = sqrt(0.25 * 0.03125) = 0.08839:
+    LO          : alpha_local = 0.5000
+    NLO (phase) : alpha_local = 0.5090
+    NNLO (full) : alpha_local = 0.5175
+
+  alpha_NNLO_eff = 0.5247
+  alpha_emp      = 0.5256
+  Residual gap   = 0.0009
+
+  BOUNDED THEOREM: |alpha_NNLO - 0.5256| <= 0.005 on the fit window.
+  The slit-aperture NNLO correction closes the alpha residual inside
+  the scoped empirical comparison, without changing upstream authority.
+
+------------------------------------------------------------------------------
+BOUNDED-SUPPORT GUARDS
+------------------------------------------------------------------------------
+    PASS: delta_a(h) > 0 on fit window
+    PASS: Phase series h^2 + h^4 + h^6 matches exact to 1e-5 at h <= 0.25
+    PASS: |alpha_NNLO - 0.5256| <= 0.005 (strong-closure band)
+    PASS: alpha_NNLO_full > alpha_NLO (improvement)
+    PASS: alpha_NNLO_full <= 0.5256 (no overshoot)
+    PASS: Max |sigma residual| on fit window <= 1.0%
+    PASS: q^6 saddle term sub-leading (|dV_q6|/sigma^2 < 1e-2 on window)
+    PASS: finer measured h row is within 1% of LO C_LO
+
+  Outcome class: BOUNDED
+
+----- stderr -----
+
