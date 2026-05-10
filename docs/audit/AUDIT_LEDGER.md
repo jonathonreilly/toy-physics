@@ -18,12 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 61 |
+| **retained** | 62 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
 | unaudited | 1173 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 369 |
+| `audited_clean` | 370 |
 | `audited_conditional` | 214 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -51,12 +49,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 768 |
+| `bounded_theorem` | 766 |
 | `decoration` | 12 |
 | `meta` | 75 |
 | `no_go` | 192 |
 | `open_gate` | 105 |
-| `positive_theorem` | 769 |
+| `positive_theorem` | 771 |
 
 | criticality | count |
 |---|---:|
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -264,6 +261,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_cyclic_wilson_descendant_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_dweh_cyclic_compression_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5.5 | A | - |
 | `koide_gamma_orbit_selector_bridge_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_kappa_two_orbit_dimension_factorization_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
@@ -5121,6 +5119,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given E_+ + E_perp = Tr(M^2) = N, AM-GM uniquely maximizes log(E_+ E_perp) at E_+ = E_perp = N/2, hence kappa = 2 and Q = 2/3.  _(class `A`)_
 - **chain closes:** False — The AM-GM algebra closes once the Frobenius energy split and functional are admitted. The broader asserted uniqueness/forcing of the Frobenius form does not close: positive-definiteness does not rule out other Ad-invariant scalar/traceless weightings, and the runner only checks a sample alternative.
 - **rationale:** The runner verifies many algebraic identities for the chosen trace/Frobenius split and one PDG interior positivity check. But the note's stronger claim that the building blocks are structurally fixed is not established: the uniqueness argument for the Frobenius inner product is incomplete, since checking that (tr A)(tr B) alone is degenerate does not exclude positive combinations with Tr(AB). Therefore the presented chain does not close on its own terms as a uniqueness theorem, although the conditional AM-GM calculation is algebraically correct.
+- **auditor confidence:** high
+
+### `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18`
+
+- **Note:** [`KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md`](../../docs/KOIDE_GAMMA_AXIS_COVARIANT_FULL_CUBE_ORBIT_LAW_NOTE_2026-04-18.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact finite-matrix orbit identity for the runner-defined JW Gamma_i family, T1 species basis, full-cube C3 bit-cycle, and transported full-cube template W1(u,v,w,z), including nullity of the fourth slot in axis-matched returns.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-judicial-019e1256-fd1f-79b2-ba3e-71b35dc8c1e0`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** The axis-matched second-order returns D_i = P_{T_1} Gamma_i W_i Gamma_i P_{T_1}|_{species} obey D_1 = diag(u,v,w), D_2 = diag(w,u,v), and D_3 = diag(v,w,u).  _(class `A`)_
+- **chain closes:** True — The runner directly constructs the finite matrices, projectors, bit-cycle, and template slots, then verifies exact slot images whose arbitrary-template result follows by linearity. Under the audit rubric this is an algebraic identity check over explicitly defined inputs, not a class C first-principles computation producing a new physical number from the axiom. The clean verdict is therefore ratified with the second audit's narrower A-class scope.
+- **rationale:** The runner directly constructs the finite matrices, projectors, bit-cycle, and template slots, then verifies exact slot images whose arbitrary-template result follows by linearity. Under the audit rubric this is an algebraic identity check over explicitly defined inputs, not a class C first-principles computation producing a new physical number from the axiom. The clean verdict is therefore ratified with the second audit's narrower A-class scope.
 - **auditor confidence:** high
 
 ### `koide_gamma_orbit_selector_bridge_note_2026-04-18`
