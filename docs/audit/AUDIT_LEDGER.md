@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1143 |
+| unaudited | 1142 |
 | meta | 79 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 225 |
+| ~~audited_conditional~~ | 226 |
 | ~~audited_failed~~ | 12 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 382 |
-| `audited_conditional` | 225 |
+| `audited_conditional` | 226 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1222 |
+| `unaudited` | 1221 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 778 |
+| `bounded_theorem` | 779 |
 | `decoration` | 13 |
 | `meta` | 86 |
 | `no_go` | 193 |
 | `open_gate` | 103 |
-| `positive_theorem` | 758 |
+| `positive_theorem` | 757 |
 
 | criticality | count |
 |---|---:|
@@ -493,6 +493,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -1061,6 +1062,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Within the finite primitive-edge class whose local data are only the 16-state primitive cell, source-free state, rank-four projector, locality/additivity, and standard von Neumann or binary measurement entropy, there is no derivation of an entanglement area coefficient equal to 1/4.  _(class `A`)_
 - **chain closes:** True — The chain closes because the canonical entropy values from the stated finite data are computed directly and none equals 1/4 in natural units, while the tuned gapped-edge value requires p_* not fixed by the primitive rank pair (16,4). With no dependencies, there is no unresolved upstream status blocking the scoped no-go.
 - **rationale:** The no-go is scoped to exact finite-cell entropy constructions and a gapped two-level edge example, not to all possible entropy-carrier theorems. The note explicitly distinguishes the primitive trace Tr((I_16/16)P_A)=1/4 from von Neumann and binary entropy values, and the runner reproduces those finite arithmetic checks with current PASS=26 FAIL=0. No hidden physical identification is used to claim a positive entropy coefficient; the conclusion is negative and leaves positive routes open only if they add a selector or operational entropy theorem.
+- **auditor confidence:** high
+
+### `asymmetry_persistence_mass_window_note`
+
+- **Note:** [`ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md`](../../docs/ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the note's bounded mass-response-window claim and its quoted LN mass-scaling fits against the supplied runner source and stdout.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12e1-8701-7711-b80d-9f5b509e5f7c`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The generated hard-geometry lane has a real, bounded mass-response window, supported by the threshold-0.10 and threshold-0.20 LN power-law fits reproduced by the runner cache.  _(class `B`)_
+- **chain closes:** False — The quoted fit numbers match the supplied runner stdout, but the runner imports the generated-family construction, LN propagator, field computation, K_BAND, and pruning/readout machinery from files not included as one-hop authorities. With no listed cited authorities for this row, the restricted packet cannot close the construction or validate the admitted-context imports behind the claimed window.
+- **rationale:** Issue: the note's numerical fits are reproduced by stdout, but the load-bearing generated-family construction and LN/pruning/readout infrastructure are imported rather than closed inside the restricted packet. Why this blocks: without those direct dependencies, the runner is evidence of a computed fit only conditional on unverified upstream machinery, not a retained-grade bounded theorem. Repair target: add direct dependency edges and retained-grade audits for the imported construction/propagator/pruning machinery, or provide a self-contained runner/certificate for this row. Claim boundary until fixed: the row can cite the reproduced fit table only as conditional on the supplied runner and unclosed imports.
 - **auditor confidence:** high
 
 ### `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29`

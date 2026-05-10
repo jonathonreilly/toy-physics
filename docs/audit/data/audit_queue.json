@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 25,
     "leaf": 281,
-    "medium": 148
+    "medium": 147
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -27296,27 +27296,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "asymmetry_persistence_mass_window_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.585,
-      "note_path": "docs/ASYMMETRY_PERSISTENCE_MASS_WINDOW_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/asymmetry_persistence_mass_scaling.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "asymmetry_persistence_pilot_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38455,6 +38434,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 83,
-  "total_pending": 1149
+  "ready_count": 82,
+  "total_pending": 1148
 }
