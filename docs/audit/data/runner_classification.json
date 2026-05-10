@@ -516,6 +516,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_area_law_algebraic_spectrum_entropy_no_go.py"
     },
+    "area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09": {
+      "assert_count": 1,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_area_law_majorana_to_car_fock_equivalence_narrow.py"
+    },
     "area_law_multipocket_selector_no_go_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -23586,6 +23598,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_area_law_majorana_to_car_fock_equivalence_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 18,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_area_law_multipocket_selector_no_go.py": {
       "assert_count": 1,
       "claims": [
@@ -43565,12 +43592,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 642,
+      "C": 643,
       "D": 235,
       "none": 405
     },
-    "runners_classified": 1553,
-    "runners_with_C": 804,
+    "runners_classified": 1554,
+    "runners_with_C": 805,
     "runners_with_D": 425
   }
 }
