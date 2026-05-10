@@ -1,0 +1,57 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py
+runner_sha256: 932be39087565e65edc79bb6c0ca1793ebf8fea1772aeb66c48b4565d9dc0727
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+# Bougerol-Lacroix / Oseledets MET external theorem runner
+# Source note: docs/BOUGEROL_LACROIX_OSELEDETS_MET_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md
+
+==============================================================================
+T1: diagonal product exponents
+==============================================================================
+  [PASS (A)] diagonal product recovers log singular-value exponents
+         exponents=[-0.6931471805599453, -1.3862943611198906]
+
+==============================================================================
+T2: singular-value definition
+==============================================================================
+  [PASS (A)] diagonal singular-value MET formula matches known rates
+         vals=[-0.2231435513142097, -1.2039728043259361]
+
+==============================================================================
+T3: vector growth in top Oseledets direction
+==============================================================================
+  [PASS (A)] top-direction vector growth tends to lambda_1 in exact diagonal case
+         growth=-0.35667494393873245
+
+==============================================================================
+T4: degenerate no-gap boundary
+==============================================================================
+  [PASS (A)] equal diagonal rates give lambda_1 = lambda_2, so no spectral-gap claim is inferred
+         vals=[-0.6931471805599453, -0.6931471805599453]
+
+==============================================================================
+T5: diagonal operator bound
+==============================================================================
+  [PASS (A)] diagonal operator products obey the operator-norm vector bound
+         lhs=1.264911064067352, rhs=2.0
+
+==============================================================================
+T6: limit theorem boundary
+==============================================================================
+  [PASS (A)] exact diagonal examples agree at multiple N without asserting a general finite-N rate
+         rates=(-0.5108256237659907, -0.5108256237659907)
+
+==============================================================================
+T7: source-note boundary
+==============================================================================
+  [PASS (A)] note declares positive_theorem
+  [PASS (A)] note avoids spectral-rate and framework-bridge overclaims
+
+=== TOTAL: PASS=8, FAIL=0 ===
+
+----- stderr -----
+

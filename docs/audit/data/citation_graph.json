@@ -36187,6 +36187,17 @@
       "runner_path": "scripts/gaussian_beam_eikonal.py",
       "title": "Born/Eikonal Scattering Comparison with Lattice Lensing"
     },
+    "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10": {
+      "claim_id": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "19c26268ed4a8d66e02e26ac1ed91266cb415c72d27e09db7c7c7a0c2cdaeb09",
+      "path": "docs/BOUGEROL_LACROIX_OSELEDETS_MET_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py",
+      "title": "Bougerol-Lacroix / Oseledets MET - External Narrow Theorem"
+    },
     "bound_state_selection_note": {
       "claim_id": "bound_state_selection_note",
       "claim_type_author_hint": null,
@@ -66126,6 +66137,7 @@
     "bmv_threebody_note_2026-04-11",
     "born_lane_comparison_note",
     "born_rule_analysis_2026-04-11",
+    "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10",
     "bound_state_selection_note",
     "branch_cleanup_recommendation_2026-05-03",
     "breakthrough_direction_memo_2026-04-10",
@@ -66790,7 +66802,7 @@
       "no_go": 23,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 96
+      "positive_theorem": 97
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 729,
@@ -66799,12 +66811,12 @@
       "no_go": 130,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 596
+      "positive_theorem": 597
     },
     "edge_count": 8356,
-    "leaf_count": 540,
-    "node_count": 2083,
-    "root_count": 773,
-    "runners_with_path": 1696
+    "leaf_count": 541,
+    "node_count": 2084,
+    "root_count": 774,
+    "runners_with_path": 1697
   }
 }
