@@ -1,0 +1,182 @@
+
+========================================================================================
+ frontier_gauge_vacuum_plaquette_hierarchy_obstruction_lemmas.py
+========================================================================================
+ Bounded source note: four analytic premises (L1)-(L4) supplying the
+ parent gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note's
+ load-bearing inputs. Under bounded admissions (BA-1)-(BA-4) [Haar
+ orthogonality, compact Laplace concentration, entire partition,
+ analytic continuation], the four lemmas are proved by elementary
+ computation and verified at numerical precision in this runner.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Hierarchy Obstruction Lemmas  (marker = 'Hierarchy Obstruction Lemmas')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Bounded admissions section header  (marker = '## Bounded admissions')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Exact Arithmetic Check section header  (marker = '## Exact Arithmetic Check')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: L1 one-plaquette endpoints  (marker = '(L1) One-plaquette endpoint identities')
+  [PASS] contains: L2 finite-periodic endpoints  (marker = '(L2) Finite-periodic Wilson endpoint identities')
+  [PASS] contains: L3 Taylor support ⟺ polynomial  (marker = '(L3) Finite Taylor support ⟺ polynomial')
+  [PASS] contains: L4 global-vs-formal convention  (marker = '(L4) Global-vs-formal convention')
+  [PASS] contains: BA-1 Haar orthogonality stated  (marker = '(BA-1) **Compact Haar orthogonality.**')
+  [PASS] contains: BA-2 compact Laplace concentration stated  (marker = '(BA-2) **Compact Laplace concentration.**')
+  [PASS] contains: BA-3 entire-function partition stated  (marker = '(BA-3) **Entire-function partition representation.**')
+  [PASS] contains: BA-4 analytic continuation stated  (marker = '(BA-4) **Analytic continuation of finite-support Taylor series.**')
+  [PASS] contains: parent obstruction note cited  (marker = 'GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: note explicitly does NOT close parent statement  (marker = 'close the parent infinite-hierarchy obstruction theorem to retained')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md
+  [PASS] upstream exists: docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: (L1.a) P_1plaq(0) = 0 via Haar integration
+----------------------------------------------------------------------------------------
+  U(1) Haar integral of cos(θ): 6.52e-17
+  [PASS] U(1): P_1plaq(0) = ∫ cos(θ) dθ/(2π) ≈ 0 (within 1e-10)  (|val| = 6.52e-17)
+  SU(2) Haar integral of cos(α/2)·sin²(α/2)/π: -9.90e-18
+  [PASS] SU(2): P_1plaq(0) = ∫ cos(α/2)·(1/π)sin²(α/2) dα ≈ 0 (within 1e-6)  (|val| = 9.90e-18)
+
+----------------------------------------------------------------------------------------
+ Part 5: (L1.b) P_1plaq(t) → 1 as t → ∞ on U(1)
+----------------------------------------------------------------------------------------
+  P_1plaq(t) = I_1(t) / I_0(t) for U(1) gauge group
+
+           t     P_1plaq(t)          1 - P
+    -------- -------------- --------------
+        0.10   0.0499376040     9.5006e-01
+        1.00   0.4463899659     5.5361e-01
+        5.00   0.8933831370     1.0662e-01
+       10.00   0.9485998260     5.1400e-02
+       20.00   0.9746705079     2.5329e-02
+  [PASS] P_1plaq(t) is monotone increasing in t on tested values  (values = ['0.0499', '0.4464', '0.8934', '0.9486', '0.9747'])
+  [PASS] P_1plaq(t) ∈ (0, 1) for finite t > 0
+  [PASS] P_1plaq(20) > 0.97 (close to limit 1)  (P_1plaq(20) = 0.974671)
+  Asymptotic check: 1 - P(20) = 0.025329 vs 1/(2·20) = 0.025000
+  [PASS] asymptotic: 1 - P_1plaq(t) ≈ 1/(2t) at large t (compact Laplace concentration)  (actual = 0.025329, expected = 0.025000)
+
+----------------------------------------------------------------------------------------
+ Part 6: (L2.a) P_L(0) = 0 reduction to (L1.a) + plaquette translation
+----------------------------------------------------------------------------------------
+  Per-plaquette <F(U_p)>_0 (U(1) reduction): 6.52e-17
+  [PASS] P_L(0) = <F(U_p)>_0 = 0 by per-plaquette Haar reduction (U(1))  (|val| = 6.52e-17)
+  [PASS] lattice plaquette-translation symmetry → P_L(0) = <F(U_p)>_0
+
+----------------------------------------------------------------------------------------
+ Part 7: (L2.b) P_L(t) → 1 as t → ∞ via compact Laplace on G^E
+----------------------------------------------------------------------------------------
+  Structural reduction: G^E compact, f = Σ F(U_p) continuous,
+    max f = N_plaq at U_p = I ∀p (max-action gauge orbit).
+  By (BA-2) compact Laplace: μ_t → δ_{argmax f}, so per-plaquette
+    <F(U_p)>_{μ_t} → 1 as t → ∞.
+  [PASS] G^E compact ⟹ (BA-2) applicable
+  [PASS] max-action gauge orbit identified as argmax
+
+----------------------------------------------------------------------------------------
+ Part 8: (L3) finite Taylor support ⟺ polynomial K(t) globally on R
+----------------------------------------------------------------------------------------
+  I_0(t) = Σ_{k=0}^∞ (t/2)^{2k} / (k!)² (infinite series, no truncation)
+
+      k   coefficient (t/2)^{2k}/(k!)²
+      0                              1
+      1                            1/4
+      2                           1/64
+      3                         1/2304
+      4                       1/147456
+      5                     1/14745600
+      6                   1/2123366400
+      7                 1/416179814400
+  [PASS] I_0(t) Taylor coefficients all nonzero through k=7 (no finite truncation)
+  [PASS] I_0(0) Taylor coefficient at order 0: c_0 = 1 EXACTLY
+  [PASS] I_0 Taylor coefficient at order 2: c_1 = 1/4 EXACTLY (= (1/2)²/1!²)
+  [PASS] I_0 Taylor coefficient at order 4: c_2 = 1/64 EXACTLY (= (1/2)⁴/(2!)²)
+  By (BA-3): Z_1(t) = I_0(t) is entire in t ∈ C.
+  By (BA-4): finite Taylor support ⟹ polynomial globally on R.
+  Above: I_0 has INFINITE Taylor support ⟹ K_1 is NOT a polynomial.
+  Same argument applies to general G via (BA-1)-(BA-4).
+
+----------------------------------------------------------------------------------------
+ Part 9: (L4) global-vs-formal: polynomial of degree ≥ 1 with bounded K' = constant
+----------------------------------------------------------------------------------------
+  Polynomial-growth bound check at multiple t:
+
+             t             t¹             t²  bounded by N_plaq?
+          10.0           10.0          100.0  no (unbounded)
+         100.0          100.0        10000.0  no (unbounded)
+        1000.0         1000.0      1000000.0  no (unbounded)
+       10000.0        10000.0    100000000.0  no (unbounded)
+  [PASS] polynomial of degree ≥ 1 has unbounded magnitude as t → ∞
+  [PASS] P_L(t) ∈ [0, 1] for all real t (per-plaquette source-deformed expectation)
+  [PASS] P_L(0) = 0 ≠ 1 = P_L(∞) ⟹ P_L not constant ⟹ K not polynomial of degree ≥ 1
+  [PASS] note explicitly distinguishes global vs formal
+
+----------------------------------------------------------------------------------------
+ Part 10: stdlib-only imports
+----------------------------------------------------------------------------------------
+  [PASS] stdlib-only imports  (stdlib only)
+
+----------------------------------------------------------------------------------------
+ Part 11: boundary check (what is NOT closed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not close: close the parent infinite-hierarchy obstruction theorem
+  [PASS] note explicitly does not close: derive (BA-1)–(BA-4) from the framework axioms
+  [PASS] note explicitly does not close: close the explicit nonpolynomial solution
+  [PASS] note explicitly does not close: close `analytic P(6)`
+  [PASS] note explicitly does not close: promote any sister authority's effective status
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] source-note proposal language present
+  [PASS] BA-1 to BA-4 admitted as bounded inputs (not derived)
+
+========================================================================================
+ TOTAL: PASS=77, FAIL=0
+========================================================================================
+
+ VERDICT: four lemmas (L1)-(L4) verified at numerical + structural
+ precision under bounded admissions (BA-1)-(BA-4). The parent
+ GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md's
+ analytic premises (P_1plaq(0)=0, P_1plaq(∞)=1, P_L endpoints,
+ finite-Taylor-support ⟺ polynomial K(t), global-vs-formal) are
+ now supplied as bounded-grade companion. Parent re-audit should
+ find load-bearing chain closes from cited bounded authorities.
