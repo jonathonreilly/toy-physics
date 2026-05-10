@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 228 |
+| **retained_bounded** | 229 |
 | open_gate | 11 |
-| unaudited | 1144 |
+| unaudited | 1143 |
 | meta | 79 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 381 |
+| `audited_clean` | 382 |
 | `audited_conditional` | 225 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 56 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1223 |
+| `unaudited` | 1222 |
 
 | claim_type | count |
 |---|---:|
@@ -214,6 +214,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -3882,6 +3883,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the stated Wilson-source grammar, the six uniform plaquette orientations induce a_x=a_y=a_z=a_t=3w, and the APBC minimal cube sets the spatial sin^2 gaps to 1, giving K_O(omega)=3w(3+sin^2 omega). The normalization cancels in A_inf/A_2, and the exact endpoint ratio is 2/sqrt(3).
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
 - **auditor confidence:** high
+
+### `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03`
+
+- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-volume Wilson plaquette implicit inverse-response coordinate and susceptibility-flow identity for beta >= 0, with the thermodynamic-limit statement only under the stated existence and P < 1 hypotheses; no beta=6 plaquette or beta_eff evaluation is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e12db-e8e0-7451-9dc5-5a961902a9c2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Since R_O is bijective onto [0,1) and P_Lambda(beta) lies in [0,1), beta_eff,Lambda(beta) = R_O^(-1)(P_Lambda(beta)) exists and is unique, and substituting the definition gives P_Lambda(beta) = R_O(beta_eff,Lambda(beta)).  _(class `A`)_
+- **chain closes:** True — Within the bounded scope, the conclusion follows from the strict monotonicity/range of the compact SU(3) local response and the finite Wilson plaquette range, after which the coordinate identity and flow law are inverse-function consequences. The note explicitly does not claim an independent evaluated beta_eff(6), plaquette value, or closure of the parent observable bridge.
+- **rationale:** Clean only for the bounded implicit-coordinate theorem: given the defined Wilson plaquette expectation and local response map, existence/uniqueness of beta_eff and P = R_O(beta_eff) are algebraic inverse-map consequences. The runner performs consistency and firewall checks and does not import external plaquette, PDG, Monte Carlo, or perturbative-running values. The result remains a reparameterization of the exact Wilson expectation, not an evaluated physical bridge.
+- **auditor confidence:** medium
 
 ### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
 
