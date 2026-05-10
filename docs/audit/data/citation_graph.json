@@ -54129,6 +54129,17 @@
       "runner_path": "scripts/cl3_primitive_p_l1_d_2026_05_10_pPl1_d.py",
       "title": "P-L1-D Period-Functor Open Gate --- Negative Construction Probe"
     },
+    "primitive_p_lh_content_proposal_note_2026-05-10_pplh": {
+      "claim_id": "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate design-note; no theorem promotion.",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "aeef3de342538c628c752c1dd14aa81a0c7616c639f790aae38340caf7c46d21",
+      "path": "docs/PRIMITIVE_P_LH_CONTENT_PROPOSAL_NOTE_2026-05-10_pPlh.md",
+      "runner_path": "scripts/cl3_primitive_p_lh_2026_05_10_pPlh.py",
+      "title": "P-LH-Content Open Gate \u2014 Three Candidate Substrate-Side Selectors of SM LH/RH Content over Pati-Salam (pPlh)"
+    },
     "primordial_spectrum_note": {
       "claim_id": "primordial_spectrum_note",
       "claim_type_author_hint": null,
@@ -65794,6 +65805,7 @@
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
     "poisson_self_gravity_loop_v3_note",
+    "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
     "primordial_spectrum_note",
     "publication.ci3_z3.arxiv_draft",
     "publication.ci3_z3.release_environment",
@@ -66036,7 +66048,7 @@
       "meta": 59,
       "no_go": 19,
       "none": 1626,
-      "open_gate": 22,
+      "open_gate": 23,
       "positive_theorem": 92
     },
     "claim_type_seed_hint_counts": {
@@ -66045,13 +66057,13 @@
       "meta": 59,
       "no_go": 126,
       "none": 449,
-      "open_gate": 110,
+      "open_gate": 111,
       "positive_theorem": 592
     },
     "edge_count": 8263,
-    "leaf_count": 532,
-    "node_count": 2059,
-    "root_count": 767,
-    "runners_with_path": 1674
+    "leaf_count": 533,
+    "node_count": 2060,
+    "root_count": 768,
+    "runners_with_path": 1675
   }
 }
