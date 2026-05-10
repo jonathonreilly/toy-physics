@@ -19,10 +19,10 @@ publication tables phrase it.
 |---|---|---:|
 | high | `unaudited` | 200 |
 | medium | `unaudited` | 102 |
-| critical | `audited_conditional` | 61 |
+| critical | `audited_conditional` | 60 |
 | high | `audited_conditional` | 49 |
 | medium | `audited_conditional` | 49 |
-| critical | `unaudited` | 39 |
+| critical | `unaudited` | 40 |
 | high | `audited_renaming` | 9 |
 | critical | `audited_renaming` | 6 |
 | medium | `audited_failed` | 6 |
@@ -120,7 +120,7 @@ publication tables phrase it.
 | critical | `s3_boundary_link_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `s3_cap_uniqueness_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `s3_general_r_derivation_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `s3_taste_cube_decomposition_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `s3_taste_cube_decomposition_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `s3_time_bilinear_tensor_primitive_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
 | critical | `s3_time_spacetime_tensor_primitive_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `s3_time_theta_to_slice_coupling_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |

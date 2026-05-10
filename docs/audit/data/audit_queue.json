@@ -1,8 +1,8 @@
 {
   "by_criticality": {
-    "critical": 72,
+    "critical": 73,
     "high": 312,
-    "leaf": 193,
+    "leaf": 195,
     "medium": 288
   },
   "cycle_break_target_count": 37,
@@ -683,6 +683,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "s3_taste_cube_decomposition_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "direct_in_degree": 13,
+      "effective_status": "unaudited",
+      "load_bearing_score": 15.118,
+      "note_path": "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_s3_action_taste_cube_decomposition.py",
+      "transitive_descendants": 392
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -1111,7 +1134,6 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
@@ -1139,7 +1161,6 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03",
         "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
       ],
@@ -1846,7 +1867,6 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
@@ -19829,6 +19849,36 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+      "claim_scope": null,
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "three_generation_observable_theorem_note",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "three_generation_structure_note",
+        "s3_taste_cube_decomposition_note",
+        "site_phase_cube_shift_intertwiner_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/STAGGERED_DIRAC_BZ_CORNER_FORCING_THEOREM_NOTE_2026-05-07.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/probe_bz_corner_decomposition.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "staggered_graph_gauge_closure_results_2026-04-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -22791,6 +22841,38 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
+      "claim_scope": null,
+      "claim_type": null,
+      "claim_type_provenance": "needs_reaudit_after_invalidation",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_reeh_schlieder_theorem_note_2026-05-01",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+        "staggered_dirac_realization_gate_note_2026-05-03"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/STAGGERED_DIRAC_PHYSICAL_SPECIES_DIRECT_THEOREM_NOTE_2026-05-07.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/probe_three_states_direct_derivation.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "staggered_graph_observables_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -23518,6 +23600,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 31,
-  "total_pending": 865
+  "ready_count": 32,
+  "total_pending": 868
 }

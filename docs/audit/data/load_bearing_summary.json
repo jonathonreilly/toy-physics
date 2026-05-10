@@ -71,16 +71,16 @@
       "transitive_descendants": 89
     },
     {
-      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
-      "criticality": "critical",
-      "load_bearing_score": 27.582,
-      "transitive_descendants": 541
-    },
-    {
       "claim_id": "yt_ew_color_projection_theorem",
       "criticality": "critical",
       "load_bearing_score": 25.889,
       "transitive_descendants": 236
+    },
+    {
+      "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
+      "criticality": "critical",
+      "load_bearing_score": 25.558,
+      "transitive_descendants": 532
     },
     {
       "claim_id": "anomaly_forces_time_theorem",

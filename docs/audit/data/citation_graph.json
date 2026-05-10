@@ -12662,10 +12662,6 @@
     },
     {
       "from": "s3_taste_cube_decomposition_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "s3_taste_cube_decomposition_note",
       "to": "minimal_axioms_2026-05-03"
     },
     {
@@ -14198,10 +14194,6 @@
     },
     {
       "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -14222,10 +14214,6 @@
     },
     {
       "from": "three_generation_observable_theorem_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "three_generation_observable_theorem_note",
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
@@ -14243,10 +14231,6 @@
     {
       "from": "three_generation_observable_theorem_note",
       "to": "minimal_axioms_2026-05-03"
-    },
-    {
-      "from": "three_generation_structure_note",
-      "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
       "from": "three_generation_structure_note",
@@ -49237,10 +49221,9 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "96d66cdf43fcdcc9d29d8219200ff2bfdc79842b9ba2a1dbecf2320ca22ad644",
+      "note_hash": "80094ea11ce04902d1ab5b2c237b1041a0f8f8bf504acdf2096e185dde9a3e8f",
       "path": "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
       "runner_path": "scripts/frontier_s3_action_taste_cube_decomposition.py",
       "title": "S_3 Taste-Cube Decomposition Note"
@@ -52610,14 +52593,13 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
         "z2_hw1_mass_matrix_parametrization_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "c6f5612fa40def863f28c204414f4dd9d2e962d406d04b378b166b1a8841a959",
+      "note_hash": "b0eeabecb1a947ba910631c21c6f47cd85c9f78cf8085920fe8ad181d541680a",
       "path": "docs/THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py",
       "title": "Three-Generation Observable: No-Proper-Quotient Narrow Theorem"
@@ -52628,14 +52610,13 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "site_phase_cube_shift_intertwiner_note",
         "s3_taste_cube_decomposition_note",
         "s3_mass_matrix_no_go_note",
         "z2_hw1_mass_matrix_parametrization_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "5498284922c1f20156238c84498e9b686a77f9ec45043048885e42d56b7cc706",
+      "note_hash": "af393a445853380b58cdd3cfce8ac278cd745b5ec3b71fd27be344e45574d5af",
       "path": "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem Note"
@@ -52646,11 +52627,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03",
         "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
       ],
-      "note_hash": "bd82a4aacb49fcafd8198150ae51fe58bd4bac37c8814d2dae23102944426fba",
+      "note_hash": "a1c315514cd219bb7338a9eb248f858cdec7508774e525c4b80c38ac50bf75c1",
       "path": "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
       "runner_path": "scripts/frontier_generation_fermi_point.py",
       "title": "Three-Generation Matter Structure Note"
@@ -57051,7 +57031,7 @@
       "open_gate": 114,
       "positive_theorem": 622
     },
-    "edge_count": 6764,
+    "edge_count": 6760,
     "leaf_count": 548,
     "node_count": 1934,
     "root_count": 843,
