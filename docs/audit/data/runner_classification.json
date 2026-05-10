@@ -432,6 +432,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_anderson_phase_unscreened_periodic.py"
     },
+    "angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_angular_kernel_orbit_class_underdetermination_narrow.py"
+    },
     "angular_kernel_underdetermination_no_go_note": {
       "assert_count": 2,
       "counts": {
@@ -23535,6 +23547,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_angular_kernel_orbit_class_underdetermination_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_angular_kernel_underdetermination_nogo.py": {
       "assert_count": 2,
       "claims": [
@@ -43619,12 +43646,12 @@
     "dominant_class_distribution": {
       "A": 111,
       "B": 160,
-      "C": 642,
+      "C": 643,
       "D": 236,
       "none": 406
     },
-    "runners_classified": 1555,
-    "runners_with_C": 804,
+    "runners_classified": 1556,
+    "runners_with_C": 805,
     "runners_with_D": 426
   }
 }

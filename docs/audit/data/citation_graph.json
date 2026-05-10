@@ -34615,6 +34615,17 @@
       "runner_path": "scripts/frontier_anderson_phase_unscreened_periodic.py",
       "title": "Anderson Phase Map Note at `mu2 = 0.001`"
     },
+    "angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10": {
+      "claim_id": "angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "a91e9da57a6bc985fbbcf5111c979584f65f87a275d324b75553fafdbf851bce",
+      "path": "docs/ANGULAR_KERNEL_ORBIT_CLASS_UNDERDETERMINATION_NARROW_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_angular_kernel_orbit_class_underdetermination_narrow.py",
+      "title": "Angular-Kernel Orbit-Class Underdetermination Narrow No-Go"
+    },
     "angular_kernel_underdetermination_no_go_note": {
       "claim_id": "angular_kernel_underdetermination_no_go_note",
       "claim_type_author_hint": null,
@@ -65133,6 +65144,7 @@
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
+    "angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10",
     "architecture_options",
     "architecture_portability_sweep_note",
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25",
@@ -65815,7 +65827,7 @@
       "bounded_theorem": 240,
       "decoration": 1,
       "meta": 59,
-      "no_go": 17,
+      "no_go": 18,
       "none": 1626,
       "open_gate": 19,
       "positive_theorem": 90
@@ -65824,15 +65836,15 @@
       "bounded_theorem": 722,
       "decoration": 1,
       "meta": 59,
-      "no_go": 124,
+      "no_go": 125,
       "none": 449,
       "open_gate": 107,
       "positive_theorem": 590
     },
     "edge_count": 8236,
-    "leaf_count": 533,
-    "node_count": 2052,
-    "root_count": 764,
-    "runners_with_path": 1667
+    "leaf_count": 534,
+    "node_count": 2053,
+    "root_count": 765,
+    "runners_with_path": 1668
   }
 }
