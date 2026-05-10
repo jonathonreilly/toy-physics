@@ -26,6 +26,13 @@ card scripts and are not replayed here.
 
 from __future__ import annotations
 
+# Heavy compute / lattice-sweep runner — exceeds the 120s default audit
+# timeout. Measured wall-clock at 2026-05-10: ~229s on the canonical
+# Python 3.12 machine; declaring 300s here gives a comfortable margin.
+# Without this declaration the audit lane caches an empty stdout under
+# `status: timeout`, blocking the audit verdict.
+AUDIT_TIMEOUT_SEC = 300
+
 import math
 import time
 from dataclasses import dataclass
