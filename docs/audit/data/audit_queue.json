@@ -3,7 +3,7 @@
     "critical": 695,
     "high": 25,
     "leaf": 239,
-    "medium": 144
+    "medium": 145
   },
   "cycle_break_target_count": 305,
   "cycle_break_targets": [
@@ -31028,6 +31028,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "lattice_nn_high_precision_note",
+        "lattice_nn_deterministic_rescale_note",
+        "lattice_nn_rg_gravity_note",
+        "lattice_nn_continuum_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 2.585,
+      "note_path": "docs/NN_LATTICE_RESCALED_RG_GRAVITY_SATURATION_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/lattice_nn_rescaled_response_exponents.py",
+      "transitive_descendants": 2
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -32960,7 +32986,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10",
+      "claim_id": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
@@ -32970,16 +32996,16 @@
       "deps": [
         "lattice_nn_high_precision_note",
         "lattice_nn_deterministic_rescale_note",
-        "lattice_nn_rg_gravity_note",
-        "lattice_nn_continuum_note"
+        "lattice_nn_continuum_note",
+        "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
       "load_bearing_score": 1.5,
-      "note_path": "docs/NN_LATTICE_RESCALED_RG_GRAVITY_SATURATION_NOTE_2026-05-10.md",
+      "note_path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_response_exponents.py",
+      "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
       "transitive_descendants": 1
     },
     {
@@ -35949,7 +35975,7 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
+      "claim_id": "nn_lattice_rescaled_continuum_identification_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
       "claim_type_provenance": "author_hint",
@@ -35958,17 +35984,16 @@
       "cross_confirmation_status": null,
       "deps": [
         "lattice_nn_high_precision_note",
-        "lattice_nn_deterministic_rescale_note",
-        "lattice_nn_continuum_note",
+        "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10",
         "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
       ],
       "direct_in_degree": 0,
       "effective_status": "unaudited",
       "load_bearing_score": 0.0,
-      "note_path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
+      "note_path": "docs/NN_LATTICE_RESCALED_CONTINUUM_IDENTIFICATION_NOTE_2026-05-10.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
+      "runner_path": "scripts/lattice_nn_rescaled_continuum_identification.py",
       "transitive_descendants": 0
     },
     {
@@ -37528,5 +37553,5 @@
     }
   ],
   "ready_count": 31,
-  "total_pending": 1103
+  "total_pending": 1104
 }

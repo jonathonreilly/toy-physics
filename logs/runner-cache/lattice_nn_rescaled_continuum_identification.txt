@@ -1,0 +1,84 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_continuum_identification.py
+runner_sha256: 524d6b30e2d34b00c29bee55eda0a91574e1588dcc268f502c89796539331205
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 17.47
+status: ok
+----- stdout -----
+====================================================================================================
+NN LATTICE RESCALED-LANE GEODESIC SCALING DIAGNOSTIC
+  Field-free slit-detector decoherence response
+  Slits at y = ±3.0, physical length L = 40.0
+  Per-arm width prediction: sigma_arm(h) = C_arm * sqrt(h)
+====================================================================================================
+
+         h      mu_a      mu_b   sigma_a   sigma_b    MI_obs  d_TV_obs        Born   time
+  --------------------------------------------------------------------------------------------
+   1.00000   +3.4458   -3.4458    2.9876    2.9876    0.5022    0.7455  4.94e-16     0s
+   0.50000   +3.5638   -3.4126    2.0785    2.0643    0.7420    0.9046  3.92e-16     0s
+   0.25000   +3.3168   -3.2725    1.3198    1.3096    0.9470    0.9877  5.96e-16     0s
+   0.12500   +3.1701   -3.1666    0.8990    0.8979    0.9972    0.9996  9.90e-16     1s
+   0.06250   +3.0895   -3.0895    0.6282    0.6282    1.0000    1.0000  8.69e-16     4s
+   0.03125   +3.0467   -3.0467    0.4416    0.4416    1.0000    1.0000  1.23e-15    12s
+
+====================================================================================================
+ANALYSIS
+====================================================================================================
+
+Guards (per measurement):
+  Born clean (max = 1.23e-15): PASS
+  Centroid drift |mu - SLIT_Y| (max = 0.5638, tol < 1.0): PASS
+
+Fit  sigma_arm(h) = C_arm * h^alpha  on 4 points with h ≤ 0.25 (log-linear regression):
+  C_arm = 2.7107
+  alpha = +0.5256     (geodesic prediction: 0.5)
+  R^2   = 0.9996
+  Geodesic sqrt-h scaling (alpha ~ 0.5, R^2 >= 0.99): PASS
+
+Gaussian-arm prediction vs observation:
+  Model: arm-a ~ N(mu_a, sigma_h^2), arm-b ~ N(mu_b, sigma_h^2)
+         sigma_h = C_arm * h^alpha = 2.7107 * h^0.5256
+
+         h    MI_pred     MI_obs    MI_err   d_TV_pred   d_TV_obs   d_TV_err
+  --------------------------------------------------------------------------------
+   1.00000     0.5660     0.5022   +0.0639      0.7963     0.7455    +0.0508
+   0.50000     0.8055     0.7420   +0.0635      0.9358     0.9046    +0.0312
+   0.25000     0.9486     0.9470   +0.0017      0.9882     0.9877    +0.0006
+   0.12500     0.9967     0.9972   -0.0005      0.9995     0.9996    -0.0001
+   0.06250     1.0000     1.0000   -0.0000      1.0000     1.0000    -0.0000
+   0.03125     1.0000     1.0000   +0.0000      1.0000     1.0000    +0.0000
+
+Gaussian-arm prediction vs observation (h ≤ 0.125):
+  max |MI_pred - MI_obs| or |d_TV_pred - d_TV_obs| = 0.0005
+  Tolerance: < 0.05
+  Match: PASS
+
+====================================================================================================
+GEODESIC SCALING DIAGNOSTIC
+====================================================================================================
+
+BOUNDED DIAGNOSTIC: the rescaled NN harness's
+field-free slit-detector decoherence response has
+geodesic fixed-length scaling support characterized by:
+
+  - per-arm centroids near y = ±3.0 (aperture edges),
+    drift bounded by 0.564 on the
+    measured grid
+  - per-arm width sigma_arm(h) = C_arm * h^alpha with
+    C_arm = 2.7107, alpha = 0.5256, R^2 = 0.9996
+    (geodesic prediction: alpha = 0.5)
+  - Gaussian-arm prediction matches observed MI / d_TV to
+    within 0.0005 on h ≤ 0.125
+  - in the h → 0 limit each arm collapses to a delta at its
+    aperture edge in the fitted model, giving:
+      MI_∞    = log2(2) = 1.0   (perfect arm discrimination)
+      d_TV_∞  = 1.0            (orthogonal arm supports)
+      1-pur_∞ = 0.5            (inferred two-arm maximum mixing)
+
+This is a bounded finite-window diagnostic, not a full
+continuum-operator identification or audit verdict.
+
+
+----- stderr -----
+
