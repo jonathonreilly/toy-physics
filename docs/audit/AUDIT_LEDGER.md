@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 66 |
 | **retained_no_go** | 120 |
-| **retained_bounded** | 230 |
+| **retained_bounded** | 231 |
 | open_gate | 12 |
-| unaudited | 1124 |
+| unaudited | 1123 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,22 +39,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 384 |
+| `audited_clean` | 385 |
 | `audited_conditional` | 223 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1222 |
+| `unaudited` | 1221 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 783 |
+| `bounded_theorem` | 784 |
 | `decoration` | 13 |
 | `meta` | 105 |
 | `no_go` | 193 |
 | `open_gate` | 100 |
-| `positive_theorem` | 742 |
+| `positive_theorem` | 741 |
 
 | criticality | count |
 |---|---:|
@@ -116,6 +116,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_power_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_power_scaling_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `action_uniqueness_audit_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -917,6 +918,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On this fixed family, the mass-scaling law is clean: F∝M = p across the tested sweep.  _(class `C`)_
 - **chain closes:** True — The note's bounded claim is exactly the fixed-family replay produced by the runner: the current output reproduces Born 2.18e-15, F~M equal to each tested p, 7/7 TOWARD rows, and the listed tail slopes. The note explicitly does not claim a universal architecture-independent tail theorem or derivation of p=1.
 - **rationale:** The load-bearing claim is bounded to one fixed lattice family and five tested powers, with no cited dependencies and no external comparator bridge. The runner computes the fixed-family sweep rather than importing an observational target, and its current output matches the source note's frozen replay. Residual risk is limited to the runner's upstream implementation of measure_action, which was outside the permitted one-hop packet; the audited note itself avoids overclaiming a universal tail formula.
+- **auditor confidence:** high
+
+### `action_uniqueness_audit_2026-04-11`
+
+- **Note:** [`ACTION_UNIQUENESS_AUDIT_2026-04-11.md`](../../docs/ACTION_UNIQUENESS_AUDIT_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** On the specified 3D ordered nearest-neighbor lattice setup (h=0.5, W=8, L=12, f=s/r) and its weak-field continuum power-family model, weak-field-linear valley actions share Newtonian-regime F proportional to M behavior; no architecture-independent uniqueness is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e131e-9fcc-7ea1-8aaf-6eaaa6c57d84`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "On that family, multiple weak-field-linear valley actions behave equivalently in the Newtonian regime. That is a bounded family law, not a universal uniqueness theorem."  _(class `A`)_
+- **chain closes:** True — The narrowed bounded claim follows from the supplied runner: the lattice scan gives F~M=1 for several weak-field-linear actions, and the continuum integral verifies delta ~ s^alpha/b^alpha so alpha=1 is the Newtonian weak-field power. The universal uniqueness theorem does not close, but the source note explicitly excludes it from the retained scope.
+- **rationale:** The source note's operative claim is the bounded family law, not the runner's broader uniqueness rhetoric. The runner source computes the listed lattice propagation cases and the continuum power-law integral; its completed stdout supports the weak-field-linear equivalence and alpha=1 scaling within the stated family. The note also preserves the key limitation: finite tested actions and continuum power-family analysis do not establish arbitrary graph, kernel, or dimension uniqueness.
 - **auditor confidence:** high
 
 ### `action_uniqueness_note`
