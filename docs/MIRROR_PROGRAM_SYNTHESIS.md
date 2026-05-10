@@ -1,8 +1,76 @@
 # Mirror Symmetry Program: Complete Synthesis
 
+---
+
+**This is a synthesis/overview note. It does not establish any retained claim.**
+For retained claims, see the per-claim notes referenced from the
+`## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-03
 **Branches:** claude/distracted-napier (gap-physics + spectral program), main (mirror / higher-symmetry audit chain)
-**Status:** support - structural or confirmatory support note
+**Status:** support / historical synthesis only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / historical synthesis only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+## Audit scope (relabel 2026-05-10)
+
+This file is an **overview / program synthesis** for the mirror-symmetry
+program. It is **not** a single retained theorem and **must not** be
+audited as one. The audit ledger row for `mirror_program_synthesis`
+classified this source as conditional/positive_theorem with auditor's
+repair target:
+
+> other: add explicit ledger dependencies or split the synthesis into
+> separately audited Born, MI, ceiling/rank, gravity, exact-2D, and
+> structured-growth rows.
+
+The minimal-scope response in this PR is to **relabel** this document
+as an overview/program synthesis rather than to physically split it
+into atomic retained-claim files. Splitting is editorial work that
+belongs in a dedicated review-loop pass. Until that split is performed:
+
+- This file makes **no** retained-claim assertions of its own.
+- The Born, MI, ceiling/rank, gravity, exact-2D, structured-growth,
+  decoherence-exponent, and Z2-fragility rollups below are
+  **historical program memory only**.
+- The retained-status surface is the audit ledger
+  (`docs/audit/AUDIT_LEDGER.md`) plus the per-claim notes, **not**
+  this file.
+- Retained-grade does **NOT** propagate from this synthesis note to
+  any sub-claim, successor card, or successor runner.
+
+### Per-claim pointers
+
+The thematic sub-claims mentioned in this file have dedicated notes
+and runners where the live status, if any, lives.
+Inclusion in this list is **not** a status assertion: the live status
+is whatever the audit-ledger row for each linked note says today.
+
+- **Ceiling theorem (rank-1 transfer-matrix product on random DAGs)** —
+  consult `ceiling_formal_proof.py` and the relevant ceiling note(s).
+- **Z2 mirror Born compliance** — consult
+  `mirror_born_audit.py` and the per-claim Born note(s).
+- **Z2 MI / decoherence exponent** — consult
+  `mirror_mutual_information.py` and the per-claim MI note(s).
+- **Exact 2D mirror joint validation** — consult
+  `mirror_2d_validation.py` and the per-claim exact-2D note(s).
+- **Structured mirror growth (grown-lane Born sensitivity)** —
+  consult the per-claim structured-growth note; the synthesis-level
+  "8e-17 grown Born" headline is explicitly not retained as a
+  synthesis claim.
+- **Mass-scaling F~M, gravity, Z2-fragility** — no separate
+  audit-clean retained-claim note for the synthesis-level rollup
+  tracked here yet; treat as historical program memory and consult
+  per-runner logs for current numbers.
+
+For any retained claim about the mirror-symmetry program, audit the
+corresponding dedicated note and its runner as a separate scoped
+claim — not this overview synthesis.
 
 ## The Problem
 

@@ -1,13 +1,76 @@
 # Lane 4 Loop Close-Out: Honest Stop + Final Report
 
+---
+
+**This is a workstream close-out / final-report note. It does not establish any retained claim.**
+For retained claims on Lane 4 components, see the per-claim notes
+referenced from the `## Audit scope` block below.
+
+---
+
 **Date:** 2026-04-28
-**Status:** bounded workstream close-out / no-go inventory for Lane 4; no
-claim promotion and no axiom amendment. Per new physics-loop skill
-stop-condition: both Deep Work Rules requirements satisfied (≥1 stretch
-attempt in Cycle 3, ≥1 stuck fan-out in Cycle 4). Honest stop with
-workstream close-out + PR opening.
+**Status:** support / workstream close-out record only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / workstream close-out record only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
+
+Workstream close-out / no-go inventory for Lane 4; no claim promotion
+and no axiom amendment. Per new physics-loop skill stop-condition:
+both Deep Work Rules requirements satisfied (≥1 stretch attempt in
+Cycle 3, ≥1 stuck fan-out in Cycle 4). Honest stop with workstream
+close-out + PR opening.
+
 **Lane:** 4 — Neutrino quantitative closure
 **Loop:** `neutrino-quantitative-20260428`
+
+## Audit scope (relabel 2026-05-10)
+
+This file is a **workstream close-out / final-report note** for the
+Lane 4 `neutrino-quantitative-20260428` loop. It is **not** a single
+retained theorem and **must not** be audited as one. The audit ledger
+row for `neutrino_lane4_workstream_closeout_note_2026-04-28`
+classified this source as conditional/no_go with auditor's repair
+target:
+
+> other: register the cycle artifacts as dependencies and audit the
+> C2-X gate or the named SR attack frame that closes it.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a close-out record rather than to register the cycle artifacts as
+dependencies or to separately audit the C2-X gate / SR attack frames
+here. Those steps belong in dedicated review-loop or per-target audit
+passes. Until that work is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The cycle inventory, falsified-route summary (`R-X1`),
+  `C2-X` reformulation, candidate attack-frame list (`SR-1` /
+  `SR-2` / `SR-3`), and Deep Work Rules compliance summary below are
+  **historical close-out memory only**.
+- The retained-status surface for any Lane 4 sub-claim is the audit
+  ledger (`docs/audit/AUDIT_LEDGER.md`) plus the per-cycle notes
+  cited under §0 / §5 cross-references, **not** this close-out.
+- Retained-grade does **NOT** propagate from this close-out to any
+  cycle artifact, conditional theorem, attack frame, or successor
+  loop pivot.
+
+### Per-claim pointers
+
+The four cycle artifacts cited under §5 each have dedicated notes
+where the live status, if any, lives:
+
+- Cycle 1: `docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md`
+- Cycle 2: `docs/NEUTRINO_DIRAC_GLOBAL_LIFT_PARTIAL_THEOREM_NOTE_2026-04-28.md`
+- Cycle 3: `docs/NEUTRINO_NORMAL_GRAMMAR_U1_RIGIDITY_STRETCH_ATTEMPT_NOTE_2026-04-28.md`
+- Cycle 4: `docs/NEUTRINO_AXIOM3_READING_STUCK_FANOUT_NOTE_2026-04-28.md`
+
+The live status is whatever the audit-ledger row for each linked
+cycle note says today, not what this close-out records.
+
+For any retained claim on Lane 4 closure status, audit the
+corresponding dedicated cycle note and its runner as a separate
+scoped claim — not this workstream close-out.
 
 ---
 

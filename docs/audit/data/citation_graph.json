@@ -3229,6 +3229,18 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "chiral_walk_synthesis_2026-04-09",
+      "to": "chiral_walk_synthesis_2026-04-10_addendum"
+    },
+    {
+      "from": "chiral_walk_synthesis_2026-04-09",
+      "to": "chiral_3plus1d_recurrence_note"
+    },
+    {
+      "from": "chiral_walk_synthesis_2026-04-09",
+      "to": "chiral_3plus1d_mixing_period_note"
+    },
+    {
       "from": "chiral_walk_synthesis_2026-04-10_addendum",
       "to": "chiral_3plus1d_recurrence_note"
     },
@@ -36502,11 +36514,15 @@
     },
     "chiral_walk_synthesis_2026-04-09": {
       "claim_id": "chiral_walk_synthesis_2026-04-09",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "c94b9a9cbae2545df1536929224f66875dadbbb387a876415635f79f2d98c9bb",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "chiral_walk_synthesis_2026-04-10_addendum",
+        "chiral_3plus1d_recurrence_note",
+        "chiral_3plus1d_mixing_period_note"
+      ],
+      "note_hash": "db19fb90d5afd2564809180b6bf3a941e491fb5e16a5c79ef65114ed7db06b45",
       "path": "docs/CHIRAL_WALK_SYNTHESIS_2026-04-09.md",
       "runner_path": null,
       "title": "Chiral Walk Architecture \u2014 Complete Synthesis"
@@ -37601,11 +37617,11 @@
     },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "799953504dce52ad4ab54840f1f3ae45bead703a0ee8656a84f7a4c9c6c721cc",
+      "note_hash": "3d18895d8793db34554807f8fe1989e9a1b879cae99101336e854b37bb60546d",
       "path": "docs/CONTINUUM_BRIDGE_NOTE.md",
       "runner_path": null,
       "title": "Continuum / Asymptotic Bridge Note"
@@ -44056,11 +44072,11 @@
     },
     "generated_geometry_synthesis_note": {
       "claim_id": "generated_geometry_synthesis_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "3bece01a6609a69b34b950946075096168a4a943b9c5d2daf9628bbdb2a70420",
+      "note_hash": "05ca6b4b5d7e796717f0d283fb626afd8e77998680acdc18aaf86b5cfde8c045",
       "path": "docs/GENERATED_GEOMETRY_SYNTHESIS_NOTE.md",
       "runner_path": "scripts/gate_b_farfield_harness.py",
       "title": "Generated Geometry Synthesis"
@@ -45479,22 +45495,22 @@
     },
     "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28": {
       "claim_id": "hubble_lane5_c1_gate_residual_premise_attack_audit_note_2026-04-28",
-      "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "557a2094faa7ff4638bafc0722c4a9f02e70f41757f34db924dc34588761519b",
+      "note_hash": "1b4d7ccd3ecc467701aab5dba3187a22f983614a0f7087c43cd8809ccb364b42",
       "path": "docs/HUBBLE_LANE5_C1_GATE_RESIDUAL_PREMISE_ATTACK_AUDIT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 5 `(C1)` Absolute-Scale Gate \u2014 Residual-Premise Attack Audit"
     },
     "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30": {
       "claim_id": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "a58c078fa23b3588d7b09c9acd9173ffd2c3d623a95d6a1ce5ff7e95868ad73a",
+      "note_hash": "5ef44c298a5c544e5995747a3520e32e9ca85348f4b91a4b56ade4b16d184ecb",
       "path": "docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md",
       "runner_path": null,
       "title": "Hubble Lane 5 C1 Narrow Route No-Go Cluster"
@@ -50001,11 +50017,11 @@
     },
     "mirror_program_synthesis": {
       "claim_id": "mirror_program_synthesis",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "2a06714e82e6591183ea5d03f4d04a009553e679a865921a3ed9cfb11d935af2",
+      "note_hash": "ec22913eb2908026446341edf6dc32425418f28334a3d78ee50945e3c0c34974",
       "path": "docs/MIRROR_PROGRAM_SYNTHESIS.md",
       "runner_path": "scripts/mirror_born_audit.py",
       "title": "Mirror Symmetry Program: Complete Synthesis"
@@ -50562,22 +50578,22 @@
     },
     "neutrino_lane4_theorem_plan_note_2026-04-28": {
       "claim_id": "neutrino_lane4_theorem_plan_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "0311c840028fb83cce9e38645d1de1f6cae44b42811b3deca9f151550adf5dd2",
+      "note_hash": "1610b74f9b7332753ba9574288d24aff5deca82c294ed64b771ef0b5f00e4f6f",
       "path": "docs/NEUTRINO_LANE4_THEOREM_PLAN_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 4 Neutrino Theorem Plan: Closure Roadmap with Phase Ordering"
     },
     "neutrino_lane4_workstream_closeout_note_2026-04-28": {
       "claim_id": "neutrino_lane4_workstream_closeout_note_2026-04-28",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "no_go",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "4844604bb763e0e717b21ac9816a84936ab28d12ca89568d7a281fa08def3a43",
+      "note_hash": "83fb3a85ed2cae13527f8d748f9d79658c37971e1dc5c17a35f4e7ce9c31d6c5",
       "path": "docs/NEUTRINO_LANE4_WORKSTREAM_CLOSEOUT_NOTE_2026-04-28.md",
       "runner_path": null,
       "title": "Lane 4 Loop Close-Out: Honest Stop + Final Report"
@@ -64553,7 +64569,6 @@
     "chiral_bottleneck_card_proposal",
     "chiral_layer_oscillation_2026-04-09",
     "chiral_split_mass_gravity_note",
-    "chiral_walk_synthesis_2026-04-09",
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
@@ -65177,25 +65192,25 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 226,
       "decoration": 1,
-      "meta": 30,
+      "meta": 38,
       "no_go": 15,
-      "none": 1651,
-      "open_gate": 23,
+      "none": 1644,
+      "open_gate": 22,
       "positive_theorem": 90
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 720,
+      "bounded_theorem": 717,
       "decoration": 1,
-      "meta": 30,
-      "no_go": 123,
+      "meta": 38,
+      "no_go": 122,
       "none": 451,
-      "open_gate": 113,
-      "positive_theorem": 598
+      "open_gate": 111,
+      "positive_theorem": 596
     },
-    "edge_count": 8147,
+    "edge_count": 8150,
     "leaf_count": 532,
     "node_count": 2036,
-    "root_count": 768,
+    "root_count": 767,
     "runners_with_path": 1651
   }
 }
