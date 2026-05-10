@@ -12,6 +12,35 @@ law forces MRU and hence `kappa = 2`.
 **Primary runner:** `scripts/frontier_koide_moment_ratio_uniformity_theorem.py`
 **Companion runner:** `scripts/frontier_koide_mru_weight_class_obstruction_theorem.py`
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this row `audited_conditional` (claim_type
+`positive_theorem`, audit_date 2026-05-05, auditor codex-cli-gpt-5.5,
+auditor_confidence high). The verdict accepts the runner's symbolic
+algebra — that, **given** the canonical `SO(2)` quotient of the
+non-trivial real doublet to the two-slot pair `(rho_+, rho_perp)`, the
+reduced log-volume / extremal law has its unique positive stationary
+point at `rho_+ = rho_perp` and therefore forces `E_+ = E_perp` and
+`kappa = 2` — but flags that the packet does not derive that this
+quotient is the physical charged-lepton scalar carrier. The audit
+therefore reads the load-bearing step (`load_bearing_step_class = E`)
+as a **carrier choice introduced as exact** rather than a theorem from
+an independent retained input. Audit verdict and effective status are
+set by the independent audit lane only; nothing in this rigorization
+edit promotes status. The companion `KOIDE_MRU_DEMOTION_NOTE_2026-04-20`
+(retained on main) already reclassifies this MRU route as
+**supplementary / alternative-framing support** for operator-side
+`kappa = 2`, with two retained independent routes
+(`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19` and
+`KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19`)
+carrying the operator-side gate without any `SO(2)`-quotient postulate.
+
+The audit-stated cheapest re-audit path (verbatim from the ledger
+`notes_for_re_audit_if_any`):
+
+> missing_bridge_theorem: provide a retained derivation that the
+> charged-lepton scalar lane physically quotients the non-trivial real
+> doublet's `SO(2)` frame before the log-volume/extremal law is applied.
+
 ---
 
 ## 0. Executive summary
@@ -380,3 +409,85 @@ PYTHONPATH=scripts python3 scripts/frontier_koide_mru_weight_class_obstruction_t
 
 Both runners now validate the load-bearing reduction step rather than only the
 postulated equal-weight leaf.
+
+## 9. Audit-conditional perimeter
+
+The internal algebra of this note (Sections 1–7) is what the audit
+verdict accepts as internally consistent on the admitted reduced
+carrier:
+
+| Internal algebra step | Audit-accepted as internal consistency |
+|---|---|
+| Real-trace pairing on the cyclic basis `(B_0, B_1, B_2)` (Section 1) | yes |
+| `E_+ = r_0^2/3 = 3 a^2`, `E_perp = (r_1^2 + r_2^2)/6 = 6 |b|^2` (Section 1) | yes |
+| `r_1^2 + r_2^2` is `SO(2)`-orbit invariant on the doublet plane (Section 2) | yes |
+| Quotient-coordinate identification `rho_+^2 = E_+`, `rho_perp^2 = E_perp` (Section 2) | yes |
+| Reduced log-volume law `log det diag(rho_+, rho_perp) = log rho_+ + log rho_perp` (Section 3) | yes |
+| Lagrange stationarity at `rho_+^2 = rho_perp^2 = E_tot/2` and pullback to `kappa = 2` (Section 3) | yes |
+| Unreduced `det(alpha P_+ + beta P_perp) = alpha beta^2` and `(1,2)` weight contrast (Section 4) | yes |
+| `d = 3` real-isotype uniqueness (`1` singlet + `1` real doublet) (Section 5) | yes |
+
+The audit-conditional perimeter (i.e. what stays open) is exactly the
+load-bearing carrier-identification step:
+
+1. derive the physical `SO(2)` quotient of the non-trivial real doublet
+   on the **scalar charged-lepton lane** from a retained upstream
+   theorem rather than introducing it as the exact scalar carrier
+   (this is the `load_bearing_step_class = E` step the verdict flags);
+2. equivalently, derive that the scalar charged-lepton observable
+   principle on `Herm_circ(3)` factors through the two-slot real-isotype
+   quotient `(rho_+, rho_perp)` from retained upstream inputs.
+
+Until (1)/(2) is supplied by a retained upstream theorem, this row
+remains a bounded conditional theorem on the admitted reduced carrier
+(MRU follows once the quotient is granted), not a first-principles
+closure of the operator-side `kappa = 2` lane. The companion
+`KOIDE_MRU_DEMOTION_NOTE_2026-04-20` documents (Section 1.2) that
+spectrum-native scalar observables on `Herm_circ(3)` are **not**
+`SO(2)`-invariant in general — the determinant and `tr(H^3)` carry an
+explicit `cos(3 arg b)` channel — so the `SO(2)` quotient is strictly
+stronger than "scalar observables are spectrum-native" and is not a
+corollary of the retained observable principle on this branch.
+
+## 10. Path A future work (audit-stated repair target)
+
+To move this row's `audit_status` from `audited_conditional` toward
+retained-grade, the audit verdict's repair list requires:
+
+1. a retained upstream theorem deriving that the physical
+   charged-lepton scalar lane factors through the `SO(2)` quotient of
+   the non-trivial real doublet — i.e. that the only retained scalar
+   datum on `V_perp = span_R{B_1, B_2}` is its Frobenius radius — from
+   a retained framework input rather than as a local definition or
+   axiom;
+2. equivalently, a retained upstream theorem that decouples the
+   `cos(3 arg b)` channel of `Herm_circ(3)` scalar observables on the
+   physical charged-lepton lane.
+
+Per the demotion note already on main, the `kappa = 2` operator-side
+gate does **not** depend on supplying (1)/(2): two retained independent
+routes (`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19`
+and `KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19`)
+already carry it without any `SO(2)`-quotient postulate. The Path A
+work above is the audit-stated path to promote **this** row's status,
+not a prerequisite for the operator-side closure.
+
+## 11. Boundaries
+
+This note does **not**:
+
+- modify the parent row's audit-ledger entry;
+- promote the parent's `audit_status` from `audited_conditional`;
+- derive the `SO(2)` quotient of the non-trivial real doublet on the
+  scalar charged-lepton lane from retained upstream inputs;
+- override the `KOIDE_MRU_DEMOTION_NOTE_2026-04-20` reclassification
+  of this MRU route as supplementary / alternative-framing support;
+- close the operator-side `kappa = 2` gate (already carried on main by
+  the spectrum-operator bridge and block-total Frobenius routes
+  without any `SO(2)`-quotient assumption);
+- touch the spectrum-side `Q = 2/3` Berry / Brannen route or the
+  `delta = 2/9` Brannen-phase bridge.
+
+The same audit-named missing bridge theorem also blocks the companion
+row `koide_mru_weight_class_obstruction_theorem_note_2026-04-19`
+(`audited_renaming` for the same `SO(2)`-quotient carrier choice).
