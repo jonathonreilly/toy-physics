@@ -19,10 +19,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 66 |
-| **retained_no_go** | 122 |
+| **retained_no_go** | 123 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1114 |
+| unaudited | 1113 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 388 |
+| `audited_clean` | 389 |
 | `audited_conditional` | 231 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1212 |
+| `unaudited` | 1211 |
 
 | claim_type | count |
 |---|---:|
@@ -123,6 +123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_complex_failure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_failure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
 | `alt_connectivity_family_fm_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `alt_connectivity_family_operator_cauchy_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `anderson_phase_mu2_0001_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `architecture_portability_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -1067,6 +1068,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The runner reports that all 15 drift/seed rows pass the weak-field F~M test with mean F~M = 0.999994, so the alternative family preserves weak-field linearity on the tested no-restore grown slice.  _(class `C`)_
 - **chain closes:** True — The cited authorities are retained_bounded and the supplied runner source computes the F~M exponent from generated geometries, propagated fields, and centroid shifts rather than printing constants or importing the contested result. The conclusion closes only for the finite tested drift/seed slice, not as a family-wide theorem.
 - **rationale:** The load-bearing computation is a direct runner calculation across the stated finite sweep, with all 15 rows passing the stated tolerance. The runner source constructs the alternative connectivity, propagates fields at two weak source strengths, and computes the log-slope F~M value, so stdout is supported by actual computation. The upstream sign and basin authorities are retained_bounded, and the audited claim is limited to the tested no-restore grown slice.
+- **auditor confidence:** high
+
+### `alt_connectivity_family_operator_cauchy_note_2026-05-10`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_OPERATOR_CAUCHY_NOTE_2026-05-10.md`](../../docs/ALT_CONNECTIVITY_FAMILY_OPERATOR_CAUCHY_NOTE_2026-05-10.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go for the tested seed-ensemble operator-Cauchy adaptation at drift 0.10, seeds 0..63, source_z in {2.0,3.0,4.0}, and the stated 15-component observable vector/gate.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e133c-ea26-7021-ba76-4a794221dba2`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Both ensemble-Cauchy fits fail decisively: all-seeds has r = +0.1775, R^2 = 0.0318 and on-basin has r = +0.0585, R^2 = 0.0032, so neither satisfies the stated r < -0.4 and R^2 >= 0.85 gate.  _(class `C`)_
+- **chain closes:** True — The completed runner computes the observables, Cauchy increments, fits, and gate failures rather than printing only constants, and its stdout matches the note's reported numbers. The closure is only for this finite registered harness/gate; it does not prove absence of all possible continuum bridges or rigorously establish a heavy-tail law.
+- **rationale:** The bounded no-go follows from completed runner evidence: both ensemble variants fail the stated exponent and R^2 gates, with a clean zero-source guard. The cited basin and failure notes are retained_bounded and support the seed-selective/sign-flip context used in the diagnosis. The clean scope must remain finite and method-specific; the heavy-tail/no-h-like-axis discussion is explanatory support, not an audited universal theorem.
 - **auditor confidence:** high
 
 ### `alt_connectivity_family_sign_note`
