@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 65 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 227 |
+| **retained_bounded** | 226 |
 | open_gate | 11 |
 | unaudited | 1148 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 232 |
+| ~~audited_conditional~~ | 233 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -39,9 +39,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
 | `audited_clean` | 377 |
-| `audited_conditional` | 232 |
+| `audited_conditional` | 233 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
@@ -111,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -712,6 +710,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -10187,6 +10186,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** At the retained fine point H = 0.25 on the actual moving-source lane, rel_MS = 37.62% is worse than rel_MIeq = 23.16%, so the direct static comparator does not beat dIeq.  _(class `B`)_
 - **chain closes:** False — The supplied runner stdout does not contain the H = 0.25 fine-point run that carries the note's conclusion; it only reports H = 0.5 and H = 0.35. The missing step is a completed retained H = 0.25 runner artifact or independent derivation producing the quoted dM, dIeq, dS, and residual values.
 - **rationale:** Issue: the note's load-bearing fine-point comparison is not reproduced by the supplied runner stdout, while the runner source default explicitly runs only coarse and medium points and describes H = 0.25 as optional and expensive. Why this blocks: the audited packet does not close the actual H = 0.25 numeric claim, even though the code appears capable of computing it when invoked with the right argument. Repair target: provide a completed retained run, cached certificate, or included log for scripts/wave_static_direct_probe.py --hs 0.25 matching the quoted values. Claim boundary until fixed: the packet supports only that the direct-static probe was implemented and run at H = 0.5 and H = 0.35, not the stated fine-point negative.
+- **auditor confidence:** high
+
+### `wave_static_fixed_beam_boundary_sensitivity_note`
+
+- **Note:** [`WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE.md`](../../docs/WAVE_STATIC_FIXED_BEAM_BOUNDARY_SENSITIVITY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-grid fixed-beam boundary-sensitivity comparison for the direct static comparator under field-box enlargement at H=0.5 and claimed H=0.35.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-judicial-019e12a6-977c-7023-8573-2b43f1f99c83`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** The fixed-beam probe still shows material boundary sensitivity, and the effect persists at medium H.  _(class `C`)_
+- **chain closes:** False — The source note's claim is not limited to the supplied default H=0.5 run; it explicitly relies on H=0.35 persistence, but no completed H=0.35 stdout is provided. The runner source also delegates the wave, beam, propagation, readout, and constants to an unprovided module, so the restricted packet cannot verify the computation end to end. The second audit correctly keeps the bounded theorem conditional pending the missing runner dependency and completed medium-H artifact.
+- **rationale:** The source note's claim is not limited to the supplied default H=0.5 run; it explicitly relies on H=0.35 persistence, but no completed H=0.35 stdout is provided. The runner source also delegates the wave, beam, propagation, readout, and constants to an unprovided module, so the restricted packet cannot verify the computation end to end. The second audit correctly keeps the bounded theorem conditional pending the missing runner dependency and completed medium-H artifact.
 - **auditor confidence:** high
 
 ### `wave_static_matrixfree_moving_source_fixed_beam_boundary_note`
