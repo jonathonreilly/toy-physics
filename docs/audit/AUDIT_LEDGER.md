@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 232 |
 | open_gate | 12 |
-| unaudited | 1104 |
+| unaudited | 1103 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 238 |
+| ~~audited_conditional~~ | 239 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 390 |
-| `audited_conditional` | 238 |
+| `audited_conditional` | 239 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1202 |
+| `unaudited` | 1201 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 798 |
+| `bounded_theorem` | 799 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 729 |
+| `positive_theorem` | 728 |
 
 | criticality | count |
 |---|---:|
@@ -554,6 +554,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_decoherence_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `dirac_field_smoothing_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
@@ -2635,6 +2636,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The probe supports a harness mismatch diagnosis, not a clear Dirac architecture failure, because the detector proxy stays near 0.06-0.07 while the record-mixture purity is about 0.500 and the clean-vs-record residual is large.  _(class `C`)_
 - **chain closes:** False — The runner computes the reported toy-geometry metrics, but the restricted packet does not establish that the single-slit branch-sum construction is the actual Dirac which-path record channel or that the closure-card purity row is the detector concentration proxy used here. The architecture-level diagnosis therefore needs an unprovided readout/record-channel bridge.
 - **rationale:** Issue: the central proxy-versus-purity gap is computed after defining record purity from isolated single-slit branch weights, while the note uses it as an actual Dirac which-path record readout and as evidence about the current closure-card row. Why this blocks: those observable and harness-identification bridges are not provided by any cited authority, and the runner has no PASS criterion proving that the constructed branch mixture is the same channel the failed harness was meant to test. Repair target: add an audited theorem or dependency tying the 4-component walk, the path-record channel, and the closure-card proxy to the same normalized observable. Claim boundary until fixed: the runner supports only a bounded toy-geometry metric discrepancy for the implemented proxy and implemented branch-weight formula.
+- **auditor confidence:** high
+
+### `dirac_field_smoothing_note`
+
+- **Note:** [`DIRAC_FIELD_SMOOTHING_NOTE.md`](../../docs/DIRAC_FIELD_SMOOTHING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite Dirac-walk source-smoothing scan for the listed profiles at n=29 and m0=0.10, with note-level claims about nearby mass spot checks and gravity-readout interpretation included in scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1356-d61f-75a3-9e65-2ce3fcc36385`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "Broadening the source field helps the offset-distance law, and the Gaussian control is clearly better than the current localized profile on that metric. It does not fix the N-monotonicity failure..."  _(class `C`)_
+- **chain closes:** False — The m0=0.10 tables are consistent with the supplied runner stdout and source. The broader conclusion also relies on unprovided m0=0.08 and m0=0.12 spot-check outputs and on an unclosed TOWARD-bias/offset-law readout as the relevant gravity metric.
+- **rationale:** Issue: the completed runner evidence only covers the m0=0.10 scan, while the note also claims nearby-mass robustness and interprets the selected TOWARD-bias/offset-law metrics as gravity failures or improvements. Why this blocks: those robustness and physical-readout steps are not closed by any one-hop authority or supplied runner output. Repair target: provide completed m0=0.08 and m0=0.12 run artifacts and a retained bridge theorem for the chosen readout, or split the note to the finite m0=0.10 script-output claim. Claim boundary until fixed: the runner reports the listed finite m0=0.10 biases for the specified code path.
 - **auditor confidence:** high
 
 ### `dirac_observable_panel_note`
