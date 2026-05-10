@@ -492,11 +492,27 @@ def main() -> int:
             crit_at_audit = snap.get("criticality") or "leaf"
             crit_rank = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
             if crit_rank.get(crit_now, 0) > crit_rank.get(crit_at_audit, 0):
-                add_warning(
-                    "criticality_bumped",
-                    f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
-                    "invalidate_stale_audits.py should reset"
-                )
+                # Per FRESH_LOOK_REQUIREMENTS §4, a bump only requires re-audit
+                # when the new tier's independence / cross-confirmation
+                # requirements aren't already met by the existing audit.
+                # Mirror invalidate_stale_audits._audit_meets_criticality_requirements.
+                indep = row.get("independence")
+                cc = row.get("cross_confirmation") or {}
+                cc_status = cc.get("status") if isinstance(cc, dict) else None
+                meets = True
+                if crit_now == "high":
+                    meets = indep is not None and indep != "weak"
+                elif crit_now == "critical":
+                    meets = (
+                        indep is not None and indep != "weak"
+                        and cc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}
+                    )
+                if not meets:
+                    add_warning(
+                        "criticality_bumped",
+                        f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
+                        "invalidate_stale_audits.py should reset"
+                    )
 
         # Hash drift.
         on_disk = hash_note_on_disk(row.get("note_path", ""))

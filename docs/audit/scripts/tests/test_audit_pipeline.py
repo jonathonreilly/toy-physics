@@ -551,6 +551,101 @@ class AuditLintTest(unittest.TestCase):
         self.assertIn("stale timestamp key", buf.getvalue())
 
 
+class InvalidateStaleAuditsCriticalityBumpTest(unittest.TestCase):
+    """Per FRESH_LOOK_REQUIREMENTS.md §4, only criticality bumps that newly
+    require independence/cross-confirmation the existing audit lacks should
+    invalidate. Bumps that land in a tier the audit already meets are no-ops."""
+
+    def _meets(self, *, indep, cc_status, target):
+        m = _import("invalidate_stale_audits")
+        row = {"independence": indep}
+        if cc_status is not None:
+            row["cross_confirmation"] = {"status": cc_status}
+        return m._audit_meets_criticality_requirements(row, target)
+
+    def test_leaf_to_medium_bump_no_requirement(self):
+        # No special independence requirement at medium; even weak audits suffice.
+        self.assertTrue(self._meets(indep="weak", cc_status=None, target="medium"))
+        self.assertTrue(self._meets(indep=None, cc_status=None, target="medium"))
+
+    def test_high_requires_non_weak_independence(self):
+        self.assertFalse(self._meets(indep="weak", cc_status=None, target="high"))
+        self.assertFalse(self._meets(indep=None, cc_status=None, target="high"))
+        self.assertTrue(self._meets(indep="cross_family", cc_status=None, target="high"))
+        self.assertTrue(self._meets(indep="fresh_context", cc_status=None, target="high"))
+        self.assertTrue(self._meets(indep="strong", cc_status=None, target="high"))
+
+    def test_critical_requires_cross_confirmation(self):
+        # cross_family alone is not enough at critical
+        self.assertFalse(self._meets(indep="cross_family", cc_status=None, target="critical"))
+        self.assertFalse(self._meets(indep="cross_family", cc_status="pending", target="critical"))
+        # confirmed (any of the three accepted statuses) suffices
+        self.assertTrue(self._meets(indep="cross_family", cc_status="confirmed", target="critical"))
+        self.assertTrue(self._meets(indep="fresh_context", cc_status="third_confirmed_first", target="critical"))
+        self.assertTrue(self._meets(indep="cross_family", cc_status="third_confirmed_second", target="critical"))
+        # weak independence + cross-confirmation: still rejected (independence floor)
+        self.assertFalse(self._meets(indep="weak", cc_status="confirmed", target="critical"))
+
+    def test_detect_invalidation_skips_bump_when_already_compliant(self):
+        m = _import("invalidate_stale_audits")
+        # Stub the runner-cache lookup so it doesn't try to read disk.
+        with mock.patch.object(m.rc, "runner_sha256", return_value=None):
+            # Snapshot at high; current criticality high (was already this tier
+            # at audit) -> no bump, no invalidation.
+            row = {
+                "audit_status": "audited_clean",
+                "deps": [],
+                "criticality": "high",
+                "independence": "cross_family",
+                "cross_confirmation": None,
+                "audit_state_snapshot": {
+                    "criticality": "high",
+                    "deps": [],
+                    "dep_effective_status": {},
+                    "runner_hash": None,
+                },
+            }
+            self.assertIsNone(m.detect_invalidation(row, {}))
+
+            # Bump high -> critical with cross-confirmation already present:
+            # under refined rule, no invalidation.
+            row_with_cc = dict(row)
+            row_with_cc["criticality"] = "critical"
+            row_with_cc["cross_confirmation"] = {"status": "confirmed"}
+            self.assertIsNone(m.detect_invalidation(row_with_cc, {}))
+
+            # Bump high -> critical without cross-confirmation: invalidate.
+            row_without_cc = dict(row)
+            row_without_cc["criticality"] = "critical"
+            reason = m.detect_invalidation(row_without_cc, {})
+            self.assertIsNotNone(reason)
+            self.assertTrue(reason.startswith("criticality_increased:high->critical"))
+
+            # Bump leaf -> medium with weak independence: no invalidation
+            # (medium has no special requirement).
+            row_leaf_to_med = {
+                "audit_status": "audited_clean",
+                "deps": [],
+                "criticality": "medium",
+                "independence": "weak",
+                "cross_confirmation": None,
+                "audit_state_snapshot": {
+                    "criticality": "leaf",
+                    "deps": [],
+                    "dep_effective_status": {},
+                    "runner_hash": None,
+                },
+            }
+            self.assertIsNone(m.detect_invalidation(row_leaf_to_med, {}))
+
+            # Bump leaf -> high with weak independence: invalidate.
+            row_leaf_to_high = dict(row_leaf_to_med)
+            row_leaf_to_high["criticality"] = "high"
+            reason = m.detect_invalidation(row_leaf_to_high, {})
+            self.assertIsNotNone(reason)
+            self.assertTrue(reason.startswith("criticality_increased:leaf->high"))
+
+
 class ComputeAuditQueueTest(unittest.TestCase):
     def setUp(self):
         self._tmp = tempfile.TemporaryDirectory()

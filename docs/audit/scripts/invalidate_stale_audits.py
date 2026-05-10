@@ -11,9 +11,18 @@ Triggers (any of):
   3. A dependency's effective_status moved to a weaker tier since audit
      time. (A dep getting stronger is fine; getting weaker means the
      audit may have relied on a now-questionable input.)
-  4. This claim's criticality tier increased since audit time. A claim
-     audited at criticality=medium that is now criticality=critical needs
-     re-audit under the stricter cross-confirmation rule.
+  4. This claim's criticality tier increased since audit time AND the
+     existing audit does not already satisfy the independence /
+     cross-confirmation requirements of the new tier per
+     `docs/audit/FRESH_LOOK_REQUIREMENTS.md` §4. A claim audited at
+     criticality=medium that is now criticality=critical needs re-audit
+     under the stricter cross-confirmation rule, but a claim that was
+     already audited under cross-confirmation (e.g. because the same
+     auditor pair handled it as cross_family + confirmed) survives the
+     bump without re-audit. Concretely: bumps to `medium` are no-ops
+     (no new requirement), bumps to `high` require non-weak
+     independence, bumps to `critical` require recorded
+     cross-confirmation.
   5. The audited runner hash changed since audit time, or an
      audited_conditional `runner_artifact_issue` row that asked for a current
      runner/log now has a fresh OK cache matching the current runner source.
@@ -190,9 +199,39 @@ def detect_invalidation(row: dict, rows: dict[str, dict]) -> str | None:
     snap_crit = snap.get("criticality") or "leaf"
     cur_crit = row.get("criticality") or "leaf"
     if CRITICALITY_RANK.get(cur_crit, 0) > CRITICALITY_RANK.get(snap_crit, 0):
-        return f"criticality_increased:{snap_crit}->{cur_crit}"
+        if not _audit_meets_criticality_requirements(row, cur_crit):
+            return f"criticality_increased:{snap_crit}->{cur_crit}"
 
     return None
+
+
+def _audit_meets_criticality_requirements(row: dict, target_criticality: str) -> bool:
+    """True iff the existing audit row already satisfies the independence /
+    cross-confirmation requirements of `target_criticality` per
+    `docs/audit/FRESH_LOOK_REQUIREMENTS.md` §4.
+
+    Mapping:
+      - `leaf` / `medium`: no special requirement.
+      - `high`: `independence != weak`.
+      - `critical`: cross-confirmation present
+        (`cross_confirmation.status` in {confirmed, third_confirmed_first,
+         third_confirmed_second}).
+
+    A criticality bump that lands in a tier the existing audit already
+    meets does not invalidate the audit. Returning True from here means
+    "no re-audit forced by this bump alone" — other invalidation triggers
+    (hash drift, dep changes, runner drift) still apply.
+    """
+    if target_criticality in ("leaf", "medium"):
+        return True
+    indep = row.get("independence")
+    if indep is None or indep == "weak":
+        return False
+    if target_criticality == "high":
+        return True
+    cc = row.get("cross_confirmation") or {}
+    cc_status = cc.get("status") if isinstance(cc, dict) else None
+    return cc_status in {"confirmed", "third_confirmed_first", "third_confirmed_second"}
 
 
 def runner_artifact_issue_resolved(row: dict) -> str | None:
