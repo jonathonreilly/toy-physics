@@ -19224,6 +19224,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py"
     },
+    "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py"
+    },
     "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24": {
       "assert_count": 1,
       "counts": {
@@ -37909,6 +37921,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_wolfenstein_lambda_a_structural_identities.py": {
       "assert_count": 1,
       "claims": [
@@ -43647,11 +43674,11 @@
       "A": 111,
       "B": 160,
       "C": 642,
-      "D": 237,
+      "D": 238,
       "none": 406
     },
-    "runners_classified": 1556,
+    "runners_classified": 1557,
     "runners_with_C": 804,
-    "runners_with_D": 427
+    "runners_with_D": 428
   }
 }
