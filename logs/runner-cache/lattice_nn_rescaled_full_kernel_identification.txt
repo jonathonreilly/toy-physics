@@ -1,0 +1,139 @@
+===== runner cache v1 =====
+runner: scripts/lattice_nn_rescaled_full_kernel_identification.py
+runner_sha256: 3458906d14a0c8001cfe6dc5c4a5f3f21ad1aedf4d78fa521e6c49140f6b8fc3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.37
+status: ok
+----- stdout -----
+====================================================================================================
+NN LATTICE RESCALED-LANE FULL KERNEL IDENTIFICATION  A(y_s -> y_d)
+  Field-free, no slits, source at (x=0, y=y_s); detector at x = PHYS_L
+  Physical: W=20.0, L=40.0, k=5.0, BETA=0.8, FANOUT=3.0
+  y_s grid: [-6.0, -3.0, 0.0, 3.0, 6.0]
+  h  grid:  [0.25, 0.125, 0.0625]
+  c2_inf (analytic, PR #1007) = 0.029985
+====================================================================================================
+
+Control 1: k=0 single-source field-free amplitude at h=0.5, y_s=0
+  total |A|^2 = 5.545512e+03  (positive, no overflow): PASS
+  k=0 centroid drift (should vanish by symmetry) = +1.628e-17: PASS
+
+Control 2: k=0 single-source field-free amplitude at h=0.5, y_s=+3
+  centroid - y_s = +3.0000 - +3.0000 = -2.7534e-14: PASS
+
+====================================================================================================
+PRIMARY SWEEP
+====================================================================================================
+
+         h     y_s  y_s_snap    mu_disp      sigma   mag_R2          c2   phs_R2   centroid     drift    time
+  -----------------------------------------------------------------------------------------------------------------
+    0.2500   -6.00   -6.0000    -0.0000     2.2319   1.0000   +0.028768   1.0000    -6.0000   -0.0000    0.0s
+    0.2500   -3.00   -3.0000    -0.0000     2.2319   1.0000   +0.028768   1.0000    -3.0000   -0.0000    0.0s
+    0.2500   +0.00   +0.0000    -0.0000     2.2319   1.0000   +0.028768   1.0000    -0.0000   -0.0000    0.0s
+    0.2500   +3.00   +3.0000    -0.0000     2.2319   1.0000   +0.028768   1.0000    +3.0000   -0.0000    0.0s
+    0.2500   +6.00   +6.0000    -0.0000     2.2319   1.0000   +0.028768   1.0000    +6.0000   +0.0000    0.0s
+    0.1250   -6.00   -6.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    -6.0000   +0.0000    0.2s
+    0.1250   -3.00   -3.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    -3.0000   +0.0000    0.2s
+    0.1250   +0.00   +0.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    -0.0000   -0.0000    0.2s
+    0.1250   +3.00   +3.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    +3.0000   +0.0000    0.2s
+    0.1250   +6.00   +6.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    +6.0000   +0.0000    0.2s
+    0.0625   -6.00   -6.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -6.0000   +0.0000    0.7s
+    0.0625   -3.00   -3.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -3.0000   +0.0000    0.6s
+    0.0625   +0.00   +0.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -0.0000   -0.0000    0.6s
+    0.0625   +3.00   +3.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +3.0000   -0.0000    0.6s
+    0.0625   +6.00   +6.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +6.0000   +0.0000    0.6s
+
+====================================================================================================
+TRANSLATION-INVARIANCE SUMMARY (across y_s, at fixed h)
+====================================================================================================
+
+         h  sigma_min  sigma_max  rel_spr_s       c2_min       c2_max  rel_spr_c2  drift_max
+  ------------------------------------------------------------------------------------------------------
+    0.2500     2.2319     2.2319     0.0000    +0.028768    +0.028768      0.0000     0.0000
+    0.1250     1.5344     1.5344     0.0000    +0.029676    +0.029676      0.0000     0.0000
+    0.0625     1.0774     1.0774     0.0000    +0.029886    +0.029886      0.0000     0.0000
+
+====================================================================================================
+TRANSLATION-INVARIANCE ACCEPTANCE TESTS
+====================================================================================================
+
+  Acceptance criteria (per row, h fixed across y_s grid):
+    sigma(h) varies by < 5% (relative)
+    c2(h) varies by < 5% (relative)
+    centroid drift |mu - y_s| < 1.0 (absolute, in physical units)
+
+  h = 0.2500:  sigma_rel_spread = 0.0000 (PASS),  c2_rel_spread = 0.0000 (PASS),  drift_max = 0.0000 (PASS)
+  h = 0.1250:  sigma_rel_spread = 0.0000 (PASS),  c2_rel_spread = 0.0000 (PASS),  drift_max = 0.0000 (PASS)
+  h = 0.0625:  sigma_rel_spread = 0.0000 (PASS),  c2_rel_spread = 0.0000 (PASS),  drift_max = 0.0000 (PASS)
+
+Gaussian + quadratic R^2 check (per (h, y_s)):
+  min Gaussian-magnitude R^2 = 1.0000  (PASS, tol 0.95)
+  min Quadratic-phase  R^2 = 1.0000  (PASS, tol 0.95)
+
+Continuum c2 cross-check (vs PR #1007 analytic = 0.029985):
+  At finest h = 0.0625: <c2>_y_s = +0.029886, deviation from c2_inf_analytic = -0.33%
+
+====================================================================================================
+SLIT-ANCHORED CROSS-CHECK (connects to PR #968)
+====================================================================================================
+
+  No-slit kernel magnitude width fit  sigma_amp(h) = C_amp * h^alpha:
+    h = 0.0625:  <sigma_amp>_{y_s} = 1.0774
+    h = 0.1250:  <sigma_amp>_{y_s} = 1.5344
+    h = 0.2500:  <sigma_amp>_{y_s} = 2.2319
+    alpha = 0.5253    (predicted 0.5 for sqrt(h) law)
+    C_amp = 4.6071
+
+  PR #968 slit harness: slits at y = +/- SLIT_Y on layer nl//3
+    L_1 = L_total/3 = 13.3333  (source -> slit)
+    L_2 = 2 L_total/3 = 26.6667  (slit -> detector)
+    PR #968 measured C_arm = 2.7100
+
+  Saddle predictions (two anchoring lengths):
+    (A) L_2 anchoring (post-slit Huygens):
+        C_arm_pred(L_2) = sqrt(L_2/L_total) * C_amp = 0.8165 * 4.6071 = 3.7617
+        residual vs PR #968 = +38.81%
+    (B) L_1 anchoring (source-to-slit selection):
+        C_arm_pred(L_1) = sqrt(L_1/L_total) * C_amp = 0.5774 * 4.6071 = 2.6599
+        residual vs PR #968 = -1.85%
+
+  Best anchoring: L_1 (residual -1.85%, predicted C_arm = 2.6599)
+
+  Interpretation: the slit aperture acts to project the
+  no-slit kernel onto a narrower-than-naive width. The
+  L_1 anchoring is consistent with PR #968's
+  measured C_arm to within ~10%, matching the residual
+  reported in lattice_nn_rescaled_C_arm_derivation.py
+  (C_arm_coherent_slit residual = 8.31%).
+
+====================================================================================================
+VERDICT
+====================================================================================================
+
+BOUNDED IDENTIFICATION: the rescaled NN harness's full kernel
+A(y_s -> y_d) is translation-invariant Gaussian-magnitude with
+quadratic phase, both depending only on the displacement u = y_d - y_s.
+
+  Closed form (on this scoped harness, fits to within tolerance):
+
+      A(y_s -> y_d; h) = C_amp(h)
+                        * exp[-(y_d - y_s)^2 / (2 sigma^2(h))]
+                        * exp[i * (c0 + c2_inf * (y_d - y_s)^2)]
+
+  with sigma(h) ~ C_amp_lat * sqrt(h)  and  c2_inf ~= 0.02999
+  (PR #1007 closed form).
+
+  Translation invariance verified to:
+    h = 0.2500:  sigma rel-spread = 0.00%,  c2 rel-spread = 0.00%,  drift_max = 0.0000
+    h = 0.1250:  sigma rel-spread = 0.00%,  c2 rel-spread = 0.00%,  drift_max = 0.0000
+    h = 0.0625:  sigma rel-spread = 0.00%,  c2 rel-spread = 0.00%,  drift_max = 0.0000
+
+  Slit-anchored cross-check (PR #968 connection):
+    C_amp (no-slit, this runner)       = 4.6071
+    C_arm_pred(L_1) = sqrt(1/3)*C_amp = 2.6599  (residual -1.85%)
+    C_arm_pred(L_2) = sqrt(2/3)*C_amp = 3.7617  (residual +38.81%)
+    C_arm (PR #968)                    = 2.7100
+
+----- stderr -----
+
