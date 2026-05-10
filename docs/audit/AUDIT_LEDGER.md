@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1152 |
+| unaudited | 1151 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 229 |
+| ~~audited_conditional~~ | 230 |
 | ~~audited_failed~~ | 10 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 376 |
-| `audited_conditional` | 229 |
+| `audited_conditional` | 230 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 54 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1220 |
+| `unaudited` | 1219 |
 
 | claim_type | count |
 |---|---:|
@@ -533,6 +533,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distracted_napier_reconciliation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -2414,6 +2415,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The note is explicitly an integration theorem over a retained measurement stack, not an axiom-native derivation. However, the restricted packet provides no cited authorities and no dependency runner source for the stack it imports, so retained status and the bridge from sigma-chain to A-BCC cannot be verified within the packet. The included runner performs some direct algebraic endpoint checks, but its load-bearing closure checks are cross-runner/stdout dependency checks rather than first-principles computation.
 - **open / conditional deps cited:**
   - `DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `dm_abcc_signature_forcing_theorem_note_2026-04-19`
+
+- **Note:** [`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded Sylvester path-obstruction claim for the stated H_base/Basin 2/Basin X endpoints and the note's extension to a global C_base/C_neg chamber and spectral-flow statement.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1298-3e18-7701-89cc-22234dbef680`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By Lemma 3, gamma(0) has signature (1,0,2) and gamma(1) has signature (2,0,1); these are distinct connected components of GL(Herm_3), so gamma must exit GL(Herm_3) at det=0.  _(class `A`)_
+- **chain closes:** False — The distinct-component argument closes for endpoints whose signatures are independently established, including the listed Basin 2/X numerical endpoints. The note's broader claims that determinant-defined C_base/C_neg are single signature chambers and that arbitrary paths have exactly one zero crossing are supported only by finite scans/reparameterized line checks and are not proved by the restricted packet.
+- **rationale:** Issue: the proof promotes checked endpoint signatures and finite region scans into a universal chamber theorem, and it states total spectral-flow uniqueness for arbitrary paths where only net spectral flow/at least one crossing follows. Why this blocks: the advertised path-independent C_neg/C_base and exactly-one crossing conclusions are broader than the theorem and runner establish; the runner also disagrees with the note's PASS=54 by reporting PASS=43. Repair target: add an algebraic proof of the full parameter-domain chamber classification and correct the spectral-flow wording and runner count, or split out the clean Basin 2/X endpoint theorem. Claim boundary until fixed: H_base and the listed Basin 2/X endpoints have different inertias, so any continuous Hermitian path to those listed endpoints must hit det=0.
 - **auditor confidence:** high
 
 ### `dm_continuum_limit_velocity_note`
