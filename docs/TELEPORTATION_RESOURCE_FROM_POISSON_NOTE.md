@@ -4,6 +4,33 @@ Status: planning / first artifact. This note records a narrow audit of whether
 the existing Poisson-driven CHSH lane already yields an encoded two-qubit Bell
 resource for ordinary quantum state teleportation.
 
+**Audit-conditional perimeter (2026-05-08):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, `claim_type =
+open_gate`. The audit chain-closure explanation is exact: "The runner
+computes the reported reduced-resource diagnostics for the chosen
+extraction, but the packet does not close the native preparation/
+readout theorem selecting the last taste bit as a physical
+deterministic teleportation resource. The note itself keeps that
+bridge and broader mass/coupling/boundary hardening open." The
+audit-stated repair target (`notes_for_re_audit_if_any`) is exact:
+"missing_bridge_theorem: prove the native preparation/readout and
+last-taste-bit logical-carrier selection, then rerun the small-
+surface checks with the Poisson/CHSH machinery source included in
+the restricted packet." This is a **planning / first-artifact**
+note: the existing §"Limitation Status" already says the limitation
+"has moved, but is not closed" and lists open hardening items
+(beyond the two small default surfaces, mass/coupling/boundary
+sensitivity, native preparation/readout story, separate
+deterministic from postselection, restrict to quantum-state
+teleportation only). The audit-conditional perimeter is therefore
+exactly the absence of the native preparation/readout theorem
+selecting the last taste bit as a physical deterministic carrier;
+the runner certificate covers only the small-surface (`1D N=8`,
+`2D 4x4`) bounded extraction. Nothing in this edit promotes audit
+status; the note remains a first-artifact diagnostic. See "Citation
+chain and audit-stated repair path (2026-05-10)" below.
+
 It does not claim matter teleportation, charge transfer, mass transfer, or
 faster-than-light transport. The only audited object is a quantum state
 teleportation resource extracted from the two-species ground state used by
@@ -93,3 +120,40 @@ Still open before promotion:
   offline ground-state extraction.
 - Separate deterministic traced extraction from diagnostic postselection.
 - Keep the claim restricted to quantum state teleportation.
+
+## Citation chain and audit-stated repair path (2026-05-10)
+
+The audit verdict (2026-05-08, see top of note) flags that the
+runner's reduced-resource diagnostics support the small-surface
+positive observation, but the packet does not close the native
+preparation/readout theorem selecting the last taste bit as a
+deterministic teleportation resource. The cited authority chain on
+this row currently stands as follows.
+
+| Cited authority | Note / file | Effective status (2026-05-10) | Conditional on |
+|---|---|---|---|
+| Poisson/CHSH small-surface ground states | `scripts/frontier_bell_inequality.py` (imported by this runner) | source script in repo | restricted-packet inclusion of the Poisson/CHSH machinery source |
+| This row's runner | `scripts/frontier_teleportation_resource_from_poisson.py` | runner produces the quoted certificate | bounded extraction on `1D N=8` and `2D 4x4` only |
+| Adjacent retained Poisson resource sweep | [`TELEPORTATION_POISSON_RESOURCE_SWEEP_NOTE.md`](TELEPORTATION_POISSON_RESOURCE_SWEEP_NOTE.md) | `unaudited` (bounded_theorem) | adjacent diagnostic; not a substitute for the missing bridge theorem |
+| Adjacent retained resource fidelity note | [`TELEPORTATION_RESOURCE_FIDELITY_NOTE.md`](TELEPORTATION_RESOURCE_FIDELITY_NOTE.md) | `audited_clean` (bounded_theorem) | bounded fidelity protocol; not a derivation of last-taste-bit selection |
+| Adjacent retained measurement-record / apparatus-dynamics-closure | [`TELEPORTATION_MEASUREMENT_RECORD_NOTE.md`](TELEPORTATION_MEASUREMENT_RECORD_NOTE.md), [`TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md`](TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md) | `audited_clean` (bounded_theorem) | adjacent bounded results; do not select the last taste bit as native carrier |
+| Live retained axiom-set anchor | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | `unaudited` / `meta` | the repository axiom from which native preparation/readout must derive |
+
+The audit-stated repair path (verbatim from
+`audit_ledger.json/notes_for_re_audit_if_any`) is to **prove the
+native preparation/readout and last-taste-bit logical-carrier
+selection**, then **rerun the small-surface checks with the
+Poisson/CHSH machinery source included in the restricted packet**.
+The first half is a missing bridge theorem from `A_min` /
+retained Poisson-CHSH lane to a deterministic native carrier; the
+second half is a packet-completeness step that pins the existing
+runner to its full upstream chain. Until both land, this row
+remains `audited_conditional` and the §"Limitation Status" gating
+items above are unchanged. The acknowledged residual is exactly
+the missing native preparation/readout theorem; the small-surface
+positive numbers in the table are bounded diagnostics, not a
+deterministic resource derivation.
+
+This rigorization edit only sharpens the conditional perimeter and
+registers the cited authority chain; it does not promote audit status
+and does not modify any `docs/audit/data/*.json` file.

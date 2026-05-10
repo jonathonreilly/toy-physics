@@ -4,6 +4,33 @@
 **Status:** planning / first native apparatus-carrier candidate
 **Runner:** `scripts/frontier_teleportation_native_record_apparatus.py`
 
+**Audit-conditional perimeter (2026-05-05):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, `claim_type =
+open_gate`. The audit chain-closure explanation is exact: "The runner
+computes the stated bounded model, but the load-bearing apparatus and
+carrier are introduced as ideal/projective and classical/discrete
+model definitions rather than derived from the repository axiom. The
+missing step is a derivation of the native detector, durable record,
+and record-field dynamics from the underlying retained physics." The
+audit-stated repair target (`notes_for_re_audit_if_any`) is exact:
+"missing_bridge_theorem: derive the Bell-stabilizer transducer,
+durable pointer irreversibility, and local record-field carrier from
+the retained axiom rather than introducing them as ideal bounded
+model components." This is a **planning / first-artifact** note: the
+existing §"Nature-Grade Blockers" already enumerates that the
+Bell-stabilizer transducer remains ideal/projective, the codeword is
+a classical model of durable memory rather than a thermodynamic
+derivation, and the record-field pulses are local on a 3D+1 lattice
+but are not derived from a retained field equation. The
+audit-conditional perimeter is therefore exactly the absence of those
+three bridge theorems; the runner certificate covers only the bounded
+model **as an ideal apparatus-carrier candidate**, not a closure of
+the native preparation/readout theorem. Nothing in this edit promotes
+audit status; the strongest honest statement remains the
+planning-level one already on the note. See "Citation chain and
+audit-stated repair path (2026-05-10)" below.
+
 ## Scope
 
 This artifact attacks the largest remaining gap in the retained teleportation
@@ -183,3 +210,41 @@ The strongest honest statement remains planning-level:
 > Bell record from Alice's Bell branch, propagates it locally in 3D+1, preserves
 > Bob input-independence before arrival, and restores the state after decoded
 > delivery.
+
+## Citation chain and audit-stated repair path (2026-05-10)
+
+The audit verdict (2026-05-05, see top of note) names three load-
+bearing components that are introduced as ideal/projective bounded
+model definitions rather than derived from the retained axiom: the
+Bell-stabilizer transducer, durable pointer irreversibility, and the
+local record-field carrier. The cited authority chain on this row
+currently stands as follows.
+
+| Cited authority | Note / file | Effective status (2026-05-10) | Conditional on |
+|---|---|---|---|
+| Bounded apparatus-carrier model (this artifact) | `scripts/frontier_teleportation_native_record_apparatus.py` | runner produces the quoted certificate | bounded model only; not a derivation from `A_min` |
+| 3D+1 causal record channel parent | [`TELEPORTATION_3D1_CAUSAL_RECORD_CHANNEL_NOTE.md`](TELEPORTATION_3D1_CAUSAL_RECORD_CHANNEL_NOTE.md) | `audited_clean` (open_gate) | parent lane reference; same audit-grade open-gate scope |
+| Apparatus-dynamics closure note | [`TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md`](TELEPORTATION_APPARATUS_DYNAMICS_CLOSURE_NOTE.md) | `audited_clean` (bounded_theorem) | adjacent bounded result; not a substitute for the missing bridge theorems |
+| Record-field closure note | [`TELEPORTATION_RECORD_FIELD_CLOSURE_NOTE.md`](TELEPORTATION_RECORD_FIELD_CLOSURE_NOTE.md) | `audited_conditional` (open_gate) | adjacent open-gate; record-field carrier is also conditional there |
+| Measurement-record note | [`TELEPORTATION_MEASUREMENT_RECORD_NOTE.md`](TELEPORTATION_MEASUREMENT_RECORD_NOTE.md) | `audited_clean` (bounded_theorem) | bounded readout model; not a derivation of native detector dynamics |
+| Live retained axiom-set anchor | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | `unaudited` / `meta` | the repository axiom from which the three bridge theorems must derive |
+
+The audit-stated repair path (verbatim from
+`audit_ledger.json/notes_for_re_audit_if_any`) is to **derive the
+Bell-stabilizer transducer, durable pointer irreversibility, and
+local record-field carrier from the retained axiom rather than
+introducing them as ideal bounded model components**. Each of those
+three derivations is currently absent: the Bell-stabilizer
+transducer is supplied via projective `P_zx` and a stabilizer
+coupling rule, durable irreversibility is replaced by a length-8
+classical codeword with `min_hamming = 5`, and the record-field
+carrier is a local pulse rule on `Z^3` rather than a derived field
+equation. Until each bridge lands as a retained theorem from
+`A_min` (or as audited bounded support), this row remains
+`audited_conditional` and the planning-level statement above is the
+strongest claim. The acknowledged residual is exactly the three
+ideal-vs-derived gaps named in §"Nature-Grade Blockers".
+
+This rigorization edit only sharpens the conditional perimeter and
+registers the cited authority chain; it does not promote audit status
+and does not modify any `docs/audit/data/*.json` file.
