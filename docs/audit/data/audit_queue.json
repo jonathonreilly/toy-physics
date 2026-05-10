@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 695,
     "high": 25,
-    "leaf": 282,
+    "leaf": 281,
     "medium": 143
   },
   "cycle_break_target_count": 305,
@@ -31155,27 +31155,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "directional_b_density_stencil_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.822,
-      "note_path": "docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/directional_b_density_stencil_transfer.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "evolving_network_prototype_v2_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38375,6 +38354,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 79,
-  "total_pending": 1145
+  "ready_count": 78,
+  "total_pending": 1144
 }

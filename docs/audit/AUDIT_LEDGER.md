@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 230 |
 | open_gate | 11 |
-| unaudited | 1139 |
+| unaudited | 1138 |
 | meta | 97 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 211 |
+| ~~audited_conditional~~ | 212 |
 | ~~audited_failed~~ | 14 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 383 |
-| `audited_conditional` | 211 |
+| `audited_conditional` | 212 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1236 |
+| `unaudited` | 1235 |
 
 | claim_type | count |
 |---|---:|
@@ -527,6 +527,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
+| `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -2157,6 +2158,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The panel is supposed to compare centroid shift, peak shift, first-arrival layer, early mass-side accumulation, projected current, and shell imbalance on the same v3 harness to test whether gravity-readout signs align at a clean operating point.  _(class `C`)_
 - **chain closes:** False — The dependency now closes for retained bounded core results, including multi-observable gravity under primary readouts, but the supplied runner output does not report the observable-panel-specific readouts listed in this note. The missing step is a panel run or retained summary tying centroid, peak, first-arrival, early accumulation, current, and shell imbalance to the stated default sweep and sign-alignment questions.
 - **rationale:** Issue: the runner output is a mixed KG/convergence/AB harness summary, not the declared multi-readout observable panel result. Why this blocks: audited_clean would require the bounded panel computation to close on the named readouts without substituting a broader core-card closure or KG/AB successes for the panel-specific claim. Repair target: provide the actual panel output for the stated default sweep, including sign agreement/disagreement by readout and recurrence-window interpretation. Claim boundary until fixed: retained only as a conditional implementation-target note connected to the retained core card, not as a clean standalone observable-panel theorem.
+- **auditor confidence:** high
+
+### `directional_b_density_stencil_note`
+
+- **Note:** [`DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md`](../../docs/DIRECTIONAL_B_DENSITY_STENCIL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded runner-backed comparison that frozen 3-NN beats frozen 4-NN by accuracy on the expanded reference+tree+midlayer sample and diagnoses the 4-NN midlayer false-negative mode.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e12ec-532a-7e23-879f-776caf3067e4`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** "So once the midlayer sentinel is added to the existing reference+tree sample, the frozen 3-NN stencil becomes the better smooth law on the current expanded dataset."  _(class `B`)_
+- **chain closes:** False — The note's arithmetic matches the supplied runner stdout, but the sample definitions, overlap labels, density-load features, threshold search, tree control, and midlayer sentinel are imported from unprovided scripts/notes with no cited authorities. The restricted packet therefore verifies only transfer-run consistency, not closure of the inputs used by that transfer.
+- **rationale:** Issue: the load-bearing comparison relies on an existing dense reference sample, tree control, and midlayer sentinel whose construction and labels are not supplied as one-hop authorities. Why this blocks: under the restricted audit rules, the runner imports those input-generating routines but their validity cannot be assumed from stdout alone. Repair target: add direct dependency edges or bundled authority text for the bridge card, tree control, midlayer holdout, and definitions of overlap/density-load thresholds. Claim boundary until fixed: the note is a completed diagnostic run whose reported counts match its stdout, not a closed retained bounded theorem.
 - **auditor confidence:** high
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
