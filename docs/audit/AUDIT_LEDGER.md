@@ -20,10 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 61 |
 | **retained_no_go** | 119 |
-| **retained_bounded** | 231 |
+| **retained_bounded** | 232 |
 | open_gate | 11 |
 | unaudited | 1107 |
-| audit_in_progress | 1 |
 | meta | 67 |
 | ~~audited_numerical_match~~ | 20 |
 | ~~audited_renaming~~ | 22 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 378 |
+| `audited_clean` | 379 |
 | `audited_conditional` | 251 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `gravity_full_self_consistency_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -235,6 +232,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_scalar_plus_spinor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `graph_true_kg_vs_cn_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `gravitational_entanglement_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `gravity_full_self_consistency_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `growing_graph_dynamic_limit_diagnostic_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | C | - |
 | `growing_graph_dynamic_propagation_replacement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `growing_graph_expansion_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4887,6 +4885,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The effective graviton mass is identified with the lowest S^3 TT Lichnerowicz eigenvalue: m_g^2 c^2 / hbar^2 = lambda_2^TT = 6/R^2, with R = c/H_0.  _(class `F`)_
 - **chain closes:** False — The algebra from lambda_2^TT = 6/R^2 to the numerical mass closes, but the packet does not derive the physical bridge identifying the compact spatial Lichnerowicz eigenvalue with a graviton mass term. It also imports R = c/H_0 as an observed cosmological scale input.
 - **rationale:** The runner computes the stated arithmetic, bounds ratios, Higuchi ratio, Compton wavelength, and Lambda relation, but it does not instantiate the underlying framework operators or derive the mass identification from first principles. The load-bearing move is the asserted identity between the lowest TT eigenvalue and physical graviton mass-squared, which is a renaming/definition-like bridge in the restricted packet. The result also depends numerically on the imported H_0 radius choice, but the primary failure of theorem closure is the unproved eigenvalue-to-mass identification.
+- **auditor confidence:** high
+
+### `gravity_full_self_consistency_note`
+
+- **Note:** [`GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`](../../docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional algebraic implication that, if `G_0 = H^{-1}` and the stipulated closure identity `L^{-1} = G_0` hold, then `L = H = -Delta_lat`.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1213-7b42-79d1-acb5-b6ffdb4696be`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By class-A inversion of A2: `L = G_0^{-1} = H = -Delta_lat`.  _(class `A`)_
+- **chain closes:** True — Within the stated conditional scope, the conclusion follows by inversion of the stipulated identity together with the definition `G_0 = H^{-1}`. The note does not claim, and this audit does not validate, a derivation of `L^{-1} = G_0` from the Cl(3)-on-Z^3 axiom.
+- **rationale:** The audited claim is explicitly bounded to the conditional implication under the stipulated closure identity. The load-bearing step is a genuine class-A algebraic inversion over the stated hypotheses, so the scoped conclusion closes. No runner stdout or runner source was supplied, so the numerical checks described inside the note are not credited; they are also not necessary for the scoped algebraic implication. The bridge theorem deriving A2 from A1 remains outside this row's clean scope.
 - **auditor confidence:** high
 
 ### `gravity_sign_audit_2026-04-10`

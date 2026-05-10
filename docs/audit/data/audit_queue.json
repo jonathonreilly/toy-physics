@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 678,
+    "critical": 677,
     "high": 22,
     "leaf": 265,
     "medium": 149
@@ -5964,27 +5964,6 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "gravity_full_self_consistency_note",
-      "claim_scope": "Conditional algebraic implication that the stipulated closure identity `L^{-1}=G_0` and `G_0=H^{-1}` imply `L=H=-Delta_lat`, without deriving the closure identity from `Cl(3)` on `Z^3`.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 5,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 11.817,
-      "note_path": "docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 637
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "universal_gr_lorentzian_global_atlas_closure_note",
@@ -6301,6 +6280,29 @@
       "ready": true,
       "runner_path": "scripts/frontier_koide_gamma_orbit_selector_bridge.py",
       "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "newton_law_derived_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "gravity_full_self_consistency_note"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.634,
+      "note_path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_distance_law_definitive.py",
+      "transitive_descendants": 280
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -15738,29 +15740,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py",
-      "transitive_descendants": 280
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "newton_law_derived_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "gravity_full_self_consistency_note"
-      ],
-      "direct_in_degree": 9,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.634,
-      "note_path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_distance_law_definitive.py",
       "transitive_descendants": 280
     },
     {
@@ -35332,5 +35311,5 @@
     }
   ],
   "ready_count": 118,
-  "total_pending": 1114
+  "total_pending": 1113
 }
