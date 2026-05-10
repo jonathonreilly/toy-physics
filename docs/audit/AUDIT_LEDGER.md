@@ -22,12 +22,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 124 |
 | **retained_bounded** | 233 |
 | open_gate | 12 |
-| unaudited | 1103 |
+| unaudited | 1102 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
 | ~~audited_conditional~~ | 239 |
-| ~~audited_failed~~ | 23 |
+| ~~audited_failed~~ | 24 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 391 |
 | `audited_conditional` | 239 |
 | `audited_decoration` | 11 |
-| `audited_failed` | 67 |
+| `audited_failed` | 68 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1201 |
+| `unaudited` | 1200 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 800 |
+| `bounded_theorem` | 801 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 195 |
 | `open_gate` | 101 |
-| `positive_theorem` | 728 |
+| `positive_theorem` | 727 |
 
 | criticality | count |
 |---|---:|
@@ -767,6 +767,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dimensional_gravity_table` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `dirac_v4_convergence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2676,6 +2677,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The measured scan shows a partial trade-off only: sigma=1.25 gives the best N-growth sign count (4/5 TOWARD), but still fails monotonicity, and none of the Gaussian widths repair the mixed-sign distance-law offsets.  _(class `C`)_
 - **chain closes:** True — The runner source constructs the stated periodic 3+1D Dirac walk, Gaussian or point initial state, mass field, and signed sideband readouts, and the stdout matches the note's tabulated signs and values. Within the explicitly bounded parameter grid, the conclusion that tested Gaussian smoothing does not repair both stated failure modes follows.
 - **rationale:** The claim is narrowly bounded to a completed numerical scan, not a general no-go theorem for all smooth sources. The runner does not merely print constants: it builds gamma-projector shifts, evolves field and free states, computes density differences, and reports the sign/monotonicity summaries used by the note. No unlisted authority is needed for the bounded comparison as long as the claim boundary stays limited to these widths, offsets, layers, and readout definition.
+- **auditor confidence:** high
+
+### `dirac_v4_convergence_note`
+
+- **Note:** [`DIRAC_V4_CONVERGENCE_NOTE.md`](../../docs/DIRAC_V4_CONVERGENCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical convergence and boundary comparison for the Dirac v4 runner over the stated lattice sizes, layer counts, offsets, boundaries, and mass settings.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1359-7da9-7633-996c-49c75c2ca739`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At the tuned mass point, the closure score improves from the weaker 6/10 case to 7/10, but the remaining gravity monotonicity and distance-law failures persist.  _(class `C`)_
+- **chain closes:** False — The supplied stdout is for mass0=0.300, while the note's load-bearing claims are about mass0=0.10. The stdout also contradicts the note's reported values: closure is 6/10 rather than 7/10, and the distance-law sweep is 0/5 TOWARD rather than mixed 3/5 TOWARD.
+- **rationale:** Issue: the note's headline numerical claims are stale or unsupported relative to the supplied completed runner output. Why this blocks: the claimed m0=0.10 improvement and distance-law pattern do not follow from the restricted packet, and the current stdout gives different results. Repair target: supply the completed --mass0 0.10 run artifact or update the note to the actual mass0=0.300 output. Claim boundary until fixed: the supplied runner only supports a default-mass finite diagnostic showing 6/10 closure and persistent monotonicity/distance failures.
 - **auditor confidence:** high
 
 ### `directional_b_density_stencil_note`
