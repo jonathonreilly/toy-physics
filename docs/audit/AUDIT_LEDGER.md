@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 120 |
 | **retained_bounded** | 231 |
 | open_gate | 12 |
-| unaudited | 1123 |
+| unaudited | 1122 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 224 |
+| ~~audited_conditional~~ | 225 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 385 |
-| `audited_conditional` | 224 |
+| `audited_conditional` | 225 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1221 |
+| `unaudited` | 1220 |
 
 | claim_type | count |
 |---|---:|
@@ -498,6 +498,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `accessible_prediction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `adaptive_coevolving_geometry_no_go` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `alternative_coupled_field_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `asymmetry_persistence_born_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_joint_card_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `asymmetry_persistence_mass_scaling_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -1069,6 +1070,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The included runner source constructs the alternative connectivity rule, propagates fields through the generated slice, and computes the reported zero, neutral, sign, and scaling checks rather than printing constants. The note's conclusion is explicitly bounded to the tested rows and rejects family-wide closure.
 - **rationale:** The load-bearing step is a direct bounded computational sweep, and the runner source performs a nontrivial calculation of geometry, connectivity, source fields, propagation, centroids, and pass/fail gates. The note's quantitative claims match the cached stdout: 10/15 rows pass, passing rows cover all listed drifts, and the mean exponent among passes is 1.000035. The safe read does not overclaim all seeds, generic geometry closure, or family-wide validity.
 - **auditor confidence:** medium
+
+### `alternative_coupled_field_probe_note`
+
+- **Note:** [`ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md`](../../docs/ALTERNATIVE_COUPLED_FIELD_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical check of the specified edge-carried field rule on the exact 3D lattice with h=0.5, W=6, L=30, decay=0.72, gamma=0.85, and max-field calibration, reporting zero-source recovery, positive centroid shifts, and near-linear source-strength scaling.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1324-345e-7df1-88b3-9f1e023ceda6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The strongest bounded statement is that the alternative edge-carried architecture preserves exact zero-source recovery, keeps the weak-field TOWARD sign, and stays essentially linear in source strength.  _(class `C`)_
+- **chain closes:** False — The supplied stdout matches the note, but the runner imports H, K, Lattice3D, and _centroid_z from scripts.minimal_source_driven_field_probe, whose implementation is not in the restricted packet. With no cited authorities, the exact lattice propagation and TOWARD centroid readout cannot be independently audited from the supplied materials.
+- **rationale:** Issue: the bounded positive is carried by finite diagnostics from a runner whose load-bearing lattice, propagator, and centroid implementation is imported from an unprovided script, and the runner prints safe-read diagnostics rather than explicit pass/fail assertions. Why this blocks: the audit cannot verify that the claimed exact 3D lattice computation and TOWARD readout close from the restricted packet. Repair target: include or audit the imported lattice implementation, or provide a self-contained sliced runner with explicit thresholds for zero-source recovery, sign rows, and exponent bounds. Claim boundary until fixed: the supplied stdout reports the stated numbers for a completed run, but retained closure is conditional on the missing runner artifact.
+- **auditor confidence:** high
 
 ### `anderson_phase_mu2_0001_note_2026-04-11`
 
