@@ -533,6 +533,26 @@
       "to": "canonical_harness_index"
     },
     {
+      "from": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "to": "action_power_3d_gravity_sign_closure_note"
+    },
+    {
+      "from": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "to": "action_uniqueness_note"
+    },
+    {
+      "from": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "to": "nn_lattice_rescaled_kernel_identification_note_2026-05-10"
+    },
+    {
+      "from": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "to": "alt_connectivity_family_operator_cauchy_note_2026-05-10"
+    },
+    {
+      "from": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "to": "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10"
+    },
+    {
       "from": "action_uniqueness_note",
       "to": "action_power_scaling_sweep_note"
     },
@@ -33666,6 +33686,23 @@
       "runner_path": "scripts/action_power_3d_gravity_sign_closure.py",
       "title": "Action-Power 3D Barrier Gravity-Sign Closure"
     },
+    "action_power_3d_operator_cauchy_note_2026-05-10": {
+      "claim_id": "action_power_3d_operator_cauchy_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded operator-Cauchy gate failure)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "action_power_3d_gravity_sign_closure_note",
+        "action_uniqueness_note",
+        "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
+        "alt_connectivity_family_operator_cauchy_note_2026-05-10",
+        "nn_lattice_rescaled_operator_cauchy_convergence_note_2026-05-10"
+      ],
+      "note_hash": "9825d0cdca92f5c0328def23d739caae2c906467f77a66103167d895512ad6a5",
+      "path": "docs/ACTION_POWER_3D_OPERATOR_CAUCHY_NOTE_2026-05-10.md",
+      "runner_path": "scripts/action_power_3d_operator_cauchy.py",
+      "title": "Action-Power 3D Operator-Cauchy Continuum-Bridge Test"
+    },
     "action_power_note": {
       "claim_id": "action_power_note",
       "claim_type_author_hint": null,
@@ -66546,7 +66583,7 @@
       "bounded_theorem": 247,
       "decoration": 1,
       "meta": 59,
-      "no_go": 22,
+      "no_go": 23,
       "none": 1626,
       "open_gate": 27,
       "positive_theorem": 93
@@ -66555,15 +66592,15 @@
       "bounded_theorem": 729,
       "decoration": 1,
       "meta": 59,
-      "no_go": 129,
+      "no_go": 130,
       "none": 449,
       "open_gate": 115,
       "positive_theorem": 593
     },
-    "edge_count": 8327,
+    "edge_count": 8332,
     "leaf_count": 539,
-    "node_count": 2075,
+    "node_count": 2076,
     "root_count": 769,
-    "runners_with_path": 1690
+    "runners_with_path": 1691
   }
 }

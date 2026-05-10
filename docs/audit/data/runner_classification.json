@@ -216,6 +216,18 @@
       "dominant_class": null,
       "runner": "scripts/action_power_3d_gravity_sign_closure.py"
     },
+    "action_power_3d_operator_cauchy_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/action_power_3d_operator_cauchy.py"
+    },
     "action_power_note": {
       "assert_count": 0,
       "counts": {
@@ -21026,6 +21038,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/action_power_3d_operator_cauchy.py": {
+      "assert_count": 0,
+      "claims": [
+        "action_power_3d_operator_cauchy_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/action_power_canonical_harness.py": {
@@ -44241,11 +44268,11 @@
       "A": 112,
       "B": 160,
       "C": 651,
-      "D": 249,
+      "D": 250,
       "none": 406
     },
-    "runners_classified": 1578,
+    "runners_classified": 1579,
     "runners_with_C": 816,
-    "runners_with_D": 443
+    "runners_with_D": 444
   }
 }
