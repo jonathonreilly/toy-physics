@@ -1,0 +1,123 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py
+runner_sha256: 0a54ce2e3169dbce1e27d2489d023d38c4f03a434f63908adf0fea8afc9ee0db
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+CL3_PAULI_IRREP_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy verification of Cl(3,0) anticommutation, omega^2 = -I,
+      central pseudoscalar centrality, and chirality splitting
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: Pauli matrices and anticommutation (U1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U1) anticommutation: {sigma_1, sigma_1} == 2 I
+  [PASS (A)] (U1) anticommutation: {sigma_1, sigma_2} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_1, sigma_3} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_2, sigma_1} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_2, sigma_2} == 2 I
+  [PASS (A)] (U1) anticommutation: {sigma_2, sigma_3} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_3, sigma_1} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_3, sigma_2} == 0 I
+  [PASS (A)] (U1) anticommutation: {sigma_3, sigma_3} == 2 I
+
+----------------------------------------------------------------------------------------
+Part 2: positive-chirality irrep rho_+ and central pseudoscalar
+----------------------------------------------------------------------------------------
+  [PASS (A)] (rho_+): omega = sigma_1 sigma_2 sigma_3 == +i I  (omega = [[I, 0], [0, I]])
+  [PASS (A)] (P1 rho_+): omega^2 == -I
+  [PASS (A)] (P2 rho_+): omega sigma_1 == sigma_1 omega (centrality)
+  [PASS (A)] (P2 rho_+): omega sigma_2 == sigma_2 omega (centrality)
+  [PASS (A)] (P2 rho_+): omega sigma_3 == sigma_3 omega (centrality)
+
+----------------------------------------------------------------------------------------
+Part 3: negative-chirality irrep rho_- via parity conjugation
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U1 rho_-): {-sigma_1, -sigma_1} == 2 I
+  [PASS (A)] (U1 rho_-): {-sigma_1, -sigma_2} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_1, -sigma_3} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_2, -sigma_1} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_2, -sigma_2} == 2 I
+  [PASS (A)] (U1 rho_-): {-sigma_2, -sigma_3} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_3, -sigma_1} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_3, -sigma_2} == 0 I
+  [PASS (A)] (U1 rho_-): {-sigma_3, -sigma_3} == 2 I
+  [PASS (A)] (rho_-): omega = (-sigma_1)(-sigma_2)(-sigma_3) == -i I  (omega = [[-I, 0], [0, -I]])
+  [PASS (A)] (P1 rho_-): omega^2 == -I
+  [PASS (A)] (P2 rho_-): omega (-sigma_1) == (-sigma_1) omega (centrality)
+  [PASS (A)] (P2 rho_-): omega (-sigma_2) == (-sigma_2) omega (centrality)
+  [PASS (A)] (P2 rho_-): omega (-sigma_3) == (-sigma_3) omega (centrality)
+
+----------------------------------------------------------------------------------------
+Part 4: rho_+ and rho_- are inequivalent (different omega eigenvalues)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U3) rho_+ and rho_- have distinct central eigenvalues +i vs -i  (+i I != -i I (the chirality summands are non-isomorphic))
+
+----------------------------------------------------------------------------------------
+Part 5: central idempotents e_± splitting on the algebra
+----------------------------------------------------------------------------------------
+  [PASS (A)] (E in rho_+): e_+ == I (positive-chirality summand projects to identity)
+  [PASS (A)] (E in rho_+): e_- == 0 (negative-chirality summand projects to zero)
+  [PASS (A)] (E in rho_-): e_+ == 0
+  [PASS (A)] (E in rho_-): e_- == I
+  [PASS (A)] (E rho_+): e_+ + e_- == I
+  [PASS (A)] (E rho_+): e_+ e_- == 0
+  [PASS (A)] (E rho_+): e_+^2 == e_+
+  [PASS (A)] (E rho_+): e_-^2 == e_-
+  [PASS (A)] (E rho_-): e_+ + e_- == I
+  [PASS (A)] (E rho_-): e_+ e_- == 0
+  [PASS (A)] (E rho_-): e_+^2 == e_+
+  [PASS (A)] (E rho_-): e_-^2 == e_-
+
+----------------------------------------------------------------------------------------
+Part 6: corollary (C1) tensor-product dim formula = 2^|Lambda|
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) |Lambda| = 1: dim_C H_x = 2  (dim = 2)
+  [PASS (A)] (C1) |Lambda| = 2: dim_C ⊗ H_x = 2^2 = 4  (dim = 4)
+  [PASS (A)] (C1) |Lambda| = 3: dim_C ⊗ H_x = 2^3 = 8  (dim = 8)
+  [PASS (A)] (C1) |Lambda| = 4: dim_C ⊗ H_x = 2^4 = 16  (dim = 16)
+
+----------------------------------------------------------------------------------------
+Part 7: counterfactual probe — dim=1 representation cannot satisfy (Cl3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf) dim=1 with c_1 = 1, c_2 = 1: anticommutator = 2 != 0  (dim=1 representations cannot satisfy off-diagonal (Cl3))
+  [PASS (A)] (cf) dim=1 with c_1 = 1, c_2 = -1: anticommutator = -2 != 0  (dim=1 representations cannot satisfy off-diagonal (Cl3))
+  [PASS (A)] (cf) dim=1 with c_1 = -1, c_2 = 1: anticommutator = -2 != 0  (dim=1 representations cannot satisfy off-diagonal (Cl3))
+  [PASS (A)] (cf) dim=1 with c_1 = -1, c_2 = -1: anticommutator = 2 != 0  (dim=1 representations cannot satisfy off-diagonal (Cl3))
+
+----------------------------------------------------------------------------------------
+Part 8: explicit omega^2 = -I proof step expansion
+----------------------------------------------------------------------------------------
+  [PASS (A)] omega^2 step b -> c: swap (g_3 g_1) -> -(g_1 g_3)
+  [PASS (A)] omega^2 step c -> d: swap (g_2 g_1) -> -(g_1 g_2)
+  [PASS (A)] omega^2 step d -> e: cancel signs and write g_1^2 = I
+  [PASS (A)] omega^2 step e -> f: g_1^2 = I, then swap (g_3 g_2) -> -(g_2 g_3)
+  [PASS (A)] omega^2 step f -> g: collect signs
+  [PASS (A)] omega^2 final: -g_2^2 g_3^2 = -I
+  [PASS (A)] omega^2 overall: full expansion equals -I
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (U1) Pauli anticommutation {sigma_i, sigma_j} = 2 delta_{ij} I for 3x3 pairs
+    (P1) omega^2 = -I in both chirality summands
+    (P2) omega central: omega gamma_i = gamma_i omega in both summands
+    (rho_-) parity-conjugate irrep also satisfies (Cl3), (P1), (P2)
+    Central idempotents e_+ + e_- = I, e_+ e_- = 0, e_+^2 = e_+, e_-^2 = e_-
+    (U3) rho_+ != rho_- (distinct omega eigenvalues +i and -i)
+    (C1) tensor-product dim formula 2^|Lambda| for |Lambda| in {1,2,3,4}
+    Counterfactual: dim=1 representations cannot satisfy (Cl3)
+    omega^2 = -I step-by-step expansion matches proof in note
+
+========================================================================================
+TOTAL: PASS=56, FAIL=0
+========================================================================================
+
+----- stderr -----
+

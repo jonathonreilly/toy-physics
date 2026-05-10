@@ -2472,6 +2472,18 @@
       "dominant_class": "C",
       "runner": "scripts/verify_cl3_sm_embedding.py"
     },
+    "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py"
+    },
     "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -2927,6 +2939,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_cpt_exact.py"
+    },
+    "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_cpt_exact_real_anti_hermitian_d_exact_2026_05_10.py"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
       "assert_count": 0,
@@ -16800,6 +16824,18 @@
       "dominant_class": "C",
       "runner": "scripts/ceiling_formal_proof.py"
     },
+    "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 14,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py"
+    },
     "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
       "assert_count": 0,
       "counts": {
@@ -21321,6 +21357,51 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_cpt_exact_real_anti_hermitian_d_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 14,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/axiom_first_bekenstein_bound_check.py": {
@@ -44425,16 +44506,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 166,
+    "decoration_candidates": 168,
     "dominant_class_distribution": {
-      "A": 114,
+      "A": 117,
       "B": 163,
       "C": 652,
       "D": 250,
       "none": 406
     },
-    "runners_classified": 1585,
-    "runners_with_C": 817,
+    "runners_classified": 1588,
+    "runners_with_C": 818,
     "runners_with_D": 445
   }
 }

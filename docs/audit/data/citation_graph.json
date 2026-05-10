@@ -38259,6 +38259,17 @@
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
     },
+    "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "c9989cdb05e2d526d7b0b8b3d51857031893f5452db04ab26f2961c77df88e16",
+      "path": "docs/CL3_PAULI_IRREP_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py",
+      "title": "Cl(3) Pauli Irrep Uniqueness Narrow Theorem"
+    },
     "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02": {
       "claim_id": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -38884,6 +38895,17 @@
       "path": "docs/CPT_EXACT_NOTE.md",
       "runner_path": "scripts/frontier_cpt_exact.py",
       "title": "CPT Exact Preservation in the Cl(3) Staggered Framework"
+    },
+    "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "0b9ebb06f4771092b67f30d7ab8f9765c47336041fd79b2f4af6b65567cb7a0e",
+      "path": "docs/CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_cpt_exact_real_anti_hermitian_d_exact_2026_05_10.py",
+      "title": "CPT Exact \u2014 Real Anti-Hermitian D Narrow Theorem"
     },
     "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02": {
       "claim_id": "cpt_particle_antiparticle_lifetime_equality_theorem_note_2026-05-02",
@@ -60261,6 +60283,17 @@
       "runner_path": null,
       "title": "The Spectral--Trajectory Dichotomy in Discrete Self-Gravitating Quantum Mechanics"
     },
+    "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10": {
+      "claim_id": "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "2f746f008caf0f18c48bc7fda7ced8b42fa264bf7635ebca44aa91557de8c8e6",
+      "path": "docs/SPIN_STATISTICS_BEREZIN_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py",
+      "title": "Spin-Statistics \u2014 Berezin Determinant Narrow Theorem"
+    },
     "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
       "claim_id": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
       "claim_type_author_hint": "bounded_theorem",
@@ -66174,6 +66207,7 @@
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
+    "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
     "claude_branch_retainability_note",
     "claude_complex_action_carryover_note",
     "claude_complex_action_grown_companion_note",
@@ -66185,6 +66219,7 @@
     "continuum_limit_note",
     "cosmology_scale_identification_and_reduction_note",
     "coupled_field_generated_family_probe_note",
+    "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10",
     "cross_family_universality_note",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
@@ -66646,6 +66681,7 @@
     "source_resolved_wavefield_v2_note",
     "spectral_closure_2026-04-09",
     "spectral_trajectory_theorem_2026-04-11",
+    "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10",
     "staggered_3d_self_gravity_sign_note_2026-04-11",
     "staggered_backreaction_note",
     "staggered_backreaction_shell_spectral_note",
@@ -66796,7 +66832,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 247,
+      "bounded_theorem": 250,
       "decoration": 1,
       "meta": 59,
       "no_go": 23,
@@ -66805,7 +66841,7 @@
       "positive_theorem": 97
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 729,
+      "bounded_theorem": 732,
       "decoration": 1,
       "meta": 59,
       "no_go": 130,
@@ -66814,9 +66850,9 @@
       "positive_theorem": 597
     },
     "edge_count": 8356,
-    "leaf_count": 541,
-    "node_count": 2084,
-    "root_count": 774,
-    "runners_with_path": 1697
+    "leaf_count": 544,
+    "node_count": 2087,
+    "root_count": 777,
+    "runners_with_path": 1700
   }
 }
