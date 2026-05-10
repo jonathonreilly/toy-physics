@@ -21,8 +21,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 66 |
 | **retained_no_go** | 120 |
 | **retained_bounded** | 229 |
-| open_gate | 11 |
-| unaudited | 1127 |
+| open_gate | 12 |
+| unaudited | 1126 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 16 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 382 |
+| `audited_clean` | 383 |
 | `audited_conditional` | 222 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1225 |
+| `unaudited` | 1224 |
 
 | claim_type | count |
 |---|---:|
@@ -469,6 +469,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_canonical_projector_connection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_lambda_bypass_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_polarization_frame_bundle_attempt` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_polarization_frame_bundle_blocker_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | A | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -9878,6 +9879,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The trace congruence identity closes in-note as algebra. The global stationary patching conclusion imports finite-atlas, transition-cocycle, local nondegeneracy, and source/field-pairing covariance hypotheses, but the restricted packet contains no one-hop authorities for them.
 - **rationale:** Issue: the algebraic trace identity is closed, but the global finite-atlas stationary section statement depends on named imports that are not supplied as cited retained-grade authorities. Why this blocks: with no one-hop authorities, the atlas/cocycle, K_GR(D) nondegeneracy, and source/field-pairing covariance are unsupported premises. Repair target: add direct retained-grade dependency edges proving those inputs, or split the pure trace identity into a separate clean algebraic row. Claim boundary until fixed: exact congruence invariance of B_D is the safe in-note core.
 - **auditor confidence:** high
+
+### `universal_gr_polarization_frame_bundle_attempt`
+
+- **Note:** [`UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md`](../../docs/UNIVERSAL_GR_POLARIZATION_FRAME_BUNDLE_ATTEMPT.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited the source note as an open blocker: the supplied prototype records frame-dependent localization coefficients and no canonical full polarization-frame/projector bundle is derived.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-audit-loop-019e131a-4a06-7200-9d76-fdd38e9cb55f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Two valid `3+1` polarization frames related by a spatial rotation yield different localized channel coefficients for the same kernel, so the complement split is not canonical on the current stack.  _(class `A`)_
+- **chain closes:** True — The chain closes only for the open-gate scope: the note does not claim a completed canonical bundle and the runner computes a nonzero frame_delta for the proposed localization coefficients. This does not certify the upstream exactness claims or an exhaustive no-go theorem beyond the supplied blocker record.
+- **rationale:** Clean only as an open gate. The runner's load-bearing algebraic check shows frame-dependent complement-channel coefficients, while the note explicitly leaves the full covariant polarization-frame/projector bundle missing. The repair target is a theorem or primitive supplying a distinguished covariant frame/projector bundle with connection before curvature localization.
+- **auditor confidence:** medium
 
 ### `universal_gr_polarization_frame_bundle_blocker_note`
 
