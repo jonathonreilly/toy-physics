@@ -46,7 +46,7 @@ section("Part 1: note structure and scope discipline")
 note_text = NOTE_PATH.read_text()
 required = [
     "Three-Generation Observable: No-Proper-Quotient Narrow Theorem",
-    "Type:** positive_theorem",
+    "Type:** bounded_theorem",
     "M_3(ℂ)",
     "C₃[111]",
     "no proper quotient",
@@ -57,7 +57,7 @@ required = [
     "physical-species interpretation",
     "out of scope",
     "class (A)",
-    "target_claim_type: positive_theorem",
+    "target_claim_type: bounded_theorem",
 ]
 for s in required:
     check(f"contains: {s!r}", s in note_text)
