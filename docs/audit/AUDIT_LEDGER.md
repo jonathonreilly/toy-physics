@@ -18,12 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 62 |
+| **retained** | 63 |
 | **retained_no_go** | 119 |
 | **retained_bounded** | 222 |
 | open_gate | 11 |
 | unaudited | 1168 |
-| audit_in_progress | 1 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 17 |
@@ -40,8 +39,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 1 |
-| `audited_clean` | 370 |
+| `audited_clean` | 371 |
 | `audited_conditional` | 218 |
 | `audited_decoration` | 10 |
 | `audited_failed` | 52 |
@@ -112,7 +110,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
 | `action_power_3d_gravity_sign_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -357,6 +354,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `scalar_kg_rerun_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `schur_covariance_inheritance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `second_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_forces_poisson_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `self_consistency_structured_null_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7420,6 +7418,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `gravity scaling logs/scripts for Q_sat`
   - `decoherence entropy/purity correlation script`
+
+### `schur_covariance_inheritance_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Schur complement covariance inheritance for a finite-dimensional block decomposition V=V_1⊕W under a block-diagonal unitary action, assuming UMU†=M and invertible D.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e1266-b3d5-7250-9be6-ac117fbc2683`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Block expansion of U M U† = M gives U_1 A U_1† = A, U_1 B U_W† = B, and U_W D U_W† = D; since D^{-1} commutes with U_W, U_1(A-BD^{-1}B†)U_1† = A-BD^{-1}B†.  _(class `A`)_
+- **chain closes:** True — The conclusion follows directly from the block covariance equations, unitarity, and invertibility of D. The cited retained authority is contextual rather than load-bearing for the algebraic lemma.
+- **rationale:** The theorem is a direct Schur-complement equivariance identity under the stated premises, with no physical bridge, tuned numerical input, or definition-as-derivation. The runner checks exact finite examples, premise-failure controls, and dependency retained-grade status; these support but do not replace the proof-level algebra. The note advertises random C3-covariant tests that are not present in the supplied runner source, but that mismatch is non-load-bearing for the scoped theorem.
+- **auditor confidence:** high
 
 ### `science_3plus1_line_law_known_limits_note_2026-04-20`
 

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 723,
+    "critical": 722,
     "high": 26,
     "leaf": 275,
     "medium": 151
@@ -7915,29 +7915,6 @@
       "ready": true,
       "runner_path": "scripts/complex_action_grown_companion.py",
       "transitive_descendants": 392
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "schur_covariance_inheritance_narrow_theorem_note_2026-05-02",
-      "claim_scope": "Pure finite-dimensional Schur-complement covariance inheritance for a block-diagonal unitary action and invertible lower-right block, with no physical-applicability claim.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.07,
-      "note_path": "docs/SCHUR_COVARIANCE_INHERITANCE_NARROW_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_schur_covariance_inheritance_narrow.py",
-      "transitive_descendants": 379
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38936,6 +38913,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 116,
-  "total_pending": 1175
+  "ready_count": 115,
+  "total_pending": 1174
 }
