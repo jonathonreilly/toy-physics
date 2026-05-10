@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 119 |
 | **retained_bounded** | 227 |
 | open_gate | 11 |
-| unaudited | 1150 |
+| unaudited | 1149 |
 | meta | 68 |
 | ~~audited_numerical_match~~ | 18 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 230 |
+| ~~audited_conditional~~ | 231 |
 | ~~audited_failed~~ | 11 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 376 |
-| `audited_conditional` | 230 |
+| `audited_conditional` | 231 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 55 |
 | `audited_numerical_match` | 18 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1218 |
+| `unaudited` | 1217 |
 
 | claim_type | count |
 |---|---:|
@@ -496,6 +496,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -1202,6 +1203,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "For the gauge sector, the Wilson plaquette S_G = β Σ_P Re[1 - (1/N_c) tr U_P] is CPT-invariant by inspection" while the note also states the full SU(3) operator-level lift is deferred.  _(class `A`)_
 - **chain closes:** False — The restricted packet contains no cited authority and the source note explicitly defers the full algebraic-general SU(3) Wilson plaquette CPT identity, yet CPT3-CPT5 are stated for the full canonical action. The runner only checks small pure-staggered fermion blocks and does not construct gauge links or the plaquette CPT action.
 - **rationale:** Issue: the full-action CPT claim depends on the Wilson-plaquette SU(3) CPT lift, which is asserted by inspection and explicitly deferred. Why this blocks: CPT3-CPT5 are stated beyond the fermion-sector identities the runner actually verifies. Repair target: split a clean bounded fermion-sector theorem or add a direct SU(3) link/plaquette CPT theorem with an algebraic proof and runner that constructs the link transformation. Claim boundary until fixed: retain only the finite pure-staggered fermion-sector operator identities on the tested/canonical block class.
+- **auditor confidence:** high
+
+### `axiom_first_lattice_noether_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded lattice Noether identity for U(1) phase current and proposed (2Z)^3 sublattice momentum current on the admitted staggered-Dirac/Grassmann carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e129e-c89b-7951-98b8-79bcf364c924`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Promoting this finite shift to a site-dependent discrete shift parameter yields a finite-difference Ward identity with the canonical staggered sublattice-momentum density P^mu_x and hence partial^L_mu P^mu_x = 0 on shell.  _(class `A`)_
+- **chain closes:** False — The U(1) infinitesimal-current algebra closes on the admitted carrier, but the discrete-translation current (3) is introduced by a sketched finite-shift Ward bridge rather than derived. The E6 runner only checks a free periodic expectation-value instance, not the stated on-shell identity for the admitted canonical action.
+- **rationale:** Issue: the N1 bridge from two-site discrete translation symmetry to the specific local momentum density (3) is asserted, not proved. Why this blocks: the claim advertises N1-N3 as a bounded theorem, but the only direct support for N1 is a numerical free-block expectation check rather than a derivation of the local Ward current for arbitrary on-shell fields on the admitted carrier. Repair target: add a discrete Ward theorem deriving (3) from localized two-site translation on the admitted staggered action, or narrow the clean claim to N2/N3 plus an E6 free-block exhibit. Claim boundary until fixed: U(1) current and bilateral infinitesimal Noether identity on the admitted staggered carrier.
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`
