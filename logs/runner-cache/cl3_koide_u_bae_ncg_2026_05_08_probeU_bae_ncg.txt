@@ -1,0 +1,165 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py
+runner_sha256: 86df5d2893beefc7a16ffeaff1ab41c8850702c938b394dc2cc16b5613d4df87
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.43
+status: ok
+----- stdout -----
+========================================================================
+Probe U-BAE-NCG — Connes-Chamseddine NCG Spectral Triple
+Date: 2026-05-08
+Tier: no_go (bounded NCG route obstruction)
+Source: docs/KOIDE_U_BAE_NCG_SPECTRAL_TRIPLE_NOTE_2026-05-08_probeU_bae_ncg.md
+========================================================================
+
+Section 0 — Retained sanity (C_3 cycle, H_circ, eigenvalues, Brannen sqrt)
+  [PASS] 0.1: C_3 cycle is unitary | max |U†U - I| = 0.00e+00
+  [PASS] 0.2: C^3 = I (order 3) | max |C^3 - I| = 0.00e+00
+  [PASS] 0.3: det(C) = +1 | det(C) = 1.000000 (target 1.0)
+  [PASS] 0.4: H_circ Hermitian for sample (a=1, b=0.5+0.3i) | max |H - H†| = 0.00e+00
+  [PASS] 0.5: H_circ commutes with C (C_3-equivariant) | max |[H, C]| = 0.00e+00
+  [PASS] 0.6: closed-form eigenvalues match numerical | diff = 6.66e-16
+  [PASS] 0.7: Brannen square-root identification gives Koide Q = 2/3 at BAE | Q = 0.6666666667 (target 2/3 ≈ 0.66667)
+  [PASS] 0.8: BAE algebraic equivalence: a^2 = 2|b|^2 at |b|/a = 1/√2 | a^2 - 2|b|^2 = 0.00e+00
+
+Section 1 — NCG-AV1: spectral triple (A, H, D = H_circ) well-defined
+    Tests: D self-adjoint, finite-rank resolvent, [D, a] bounded.
+  [PASS] 1.1: D = H_circ is self-adjoint | max |D - D†| = 0.00e+00
+  [PASS] 1.2: D has compact resolvent (finite rank on hw=1) | rank(R) = 3 (finite, hence compact)
+  [PASS] 1.3: D eigenvalues match parameterization λ_k = a + 2|b| cos(arg(b) + 2πk/3) | (a, b) enters D directly; parameterization of H realized
+  [PASS] 1.4: [D, a] bounded for a = I (trivially) | [D, I] = 0
+  [PASS] 1.5: [D, a] bounded for generic Hermitian a | |[D, a]| = 1.8103 (finite)
+  [PASS] 1.6: parameterization of H by (a, b) achieved (D varies with b) | |D(b=0.5) - D(b=0.7)| = 0.4899
+  [ADMITTED] 1.7: Brannen square-root identification eigenvalues(D) = √m_k | imported from KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md R2
+
+Section 2 — NCG-AV2: heat-kernel Seeley-de Witt coefficients
+    Tests: a_0, a_2, a_4 computed; stationary points NOT at BAE.
+  [PASS] 2.1: a_0(D^2) = Tr(I) = dim(H) = 3 | a_0 = 3
+  [PASS] 2.2: Tr(D^2) = 3a^2 + 6|b|^2 (block-total Frobenius) | Tr(D^2) = 4.500000 (form 4.500000)
+  [PASS] 2.3: ∂a_2/∂|b| ≠ 0 at BAE point |b|/a = 1/√2 | ∂a_2/∂|b| at BAE = -8.4853 (nonzero)
+  [PASS] 2.4: ∂a_2/∂|b| = 0 only at |b| = 0 (NOT at BAE) | ∂a_2/∂|b||_{|b|=0} = -0.0
+  [PASS] 2.5: Tr(D^4) closed form at arg(b)=0 | Tr(D^4) = 16.125000 (form 16.125000)
+  [PASS] 2.6: ∂[Tr(D^4)]/∂|b| ≠ 0 at BAE point | ∂Tr(D^4)/∂|b| at BAE = 112.3675
+  [PASS] 2.7: ∂[Tr(D^4)]/∂|b| = 0 at |b| = 0 only (NOT at BAE) | ∂Tr(D^4)/∂|b||_{|b|=0} = 0.0
+  [PASS] 2.8: BAE point is not stationary for checked a_2 and a_4 coefficients | verified for a_0 (trivially), a_2 (above), a_4 (above)
+  [PASS] 2.9: Tr exp(-t D^2) expansion matches series at small t (BAE point) | |num - series| = 3.2524e-05 at t=0.01
+
+Section 3 — NCG-AV3: cutoff function f convention dependence
+    Tests: moments f_0, f_2, f_4 differ across natural cutoffs.
+    Gaussian: f_0 = 0.886227, f_2 = 0.443113, f_4 = 0.664670
+      f_2/f_0 = 0.500000, f_4/f_0 = 0.750000
+  [PASS] 3.1: Gaussian f_0 = √π/2 | f_0 = 0.886227 ≈ √π/2 = 0.886227
+  [PASS] 3.2: Gaussian f_2 = √π/4 | f_2 = 0.443113 ≈ √π/4 = 0.443113
+    Rational (1+x^2)^-4: f_0 = 0.490874, f_2 = 0.098175, f_4 = 0.098175
+      f_2/f_0 = 0.200000, f_4/f_0 = 0.200000
+  [PASS] 3.3: Rational moments computed | r_0 = 0.490874
+    Mod-Gaussian: f_0 = 0.837043, f_2 = 0.342167, f_4 = 0.381772
+      f_2/f_0 = 0.408781, f_4/f_0 = 0.456096
+  [PASS] 3.4: Modified-Gaussian moments computed | m_0 = 0.837043
+  [PASS] 3.5: f_2/f_0 spread > 0.1 across natural cutoffs (convention dependence) | spread = 0.3000 (Gauss/Rational/Mod-Gauss)
+  [PASS] 3.6: f_4/f_0 spread > 0.1 across natural cutoffs (convention dependence) | spread = 0.5500
+  [ADMITTED] 3.7: Probe 4 S2 barrier (cutoff f convention) preserved under D = H_circ | comparison to the existing spectral-action probe; this runner checks the cutoff spread above
+
+Section 4 — NCG-AV4: numerical scan of Tr f(D^2/Λ^2)
+    Tests: fixed-phase BAE non-criticality and phase/cutoff dependence.
+    exp(-x): phase-zero critical points {1.000}
+  [PASS] 4.1: exp(-x) phase-zero critical point near 1.0, NOT at BAE | phase-zero crits = {1.000} (near 1.0: True; at BAE: False)
+    exp(-x^2): phase-zero critical points {1.000}
+  [PASS] 4.2: exp(-x^2) phase-zero critical point near 1.0, NOT at BAE | phase-zero crits = {1.000} (near 1.0: True; at BAE: False)
+    (1+x)^-4: phase-zero critical points {1.000}
+  [PASS] 4.3: (1+x)^-4 phase-zero critical point near 1.0, NOT at BAE | phase-zero crits = {1.000} (near 1.0: True; at BAE: False)
+    exp(-x)(1+x): phase-zero critical points {}
+  [PASS] 4.4: exp(-x)(1+x) BAE non-criticality | phase-zero crits = {} (BAE = 0.707 not in)
+  [PASS] 4.5: BAE point is not stationary on the phase-zero slice for any tested cutoff | BAE_RATIO = 0.707107; phase-zero scan has no BAE critical point
+  [PASS] 4.6: BAE deviation from phase-zero critical point Δ ≈ 0.29 | Δ(|b|/a) = 0.2929
+    exp(-x): dS/d|b| at BAE, phase=2/9 = 0.569061
+    exp(-x^2): dS/d|b| at BAE, phase=2/9 = 0.414496
+    (1+x)^-4: dS/d|b| at BAE, phase=2/9 = 1.077570
+    exp(-x)(1+x): dS/d|b| at BAE, phase=2/9 = -0.016927
+  [PASS] 4.7: BAE is not stationary at the Brannen phase for tested cutoffs | phase=2/9 derivative is nonzero for each tested cutoff
+    exp(-x): BAE-stationary phases {0.350, 1.744, 2.444, 3.839, 4.539, 5.933}
+    exp(-x^2): BAE-stationary phases {0.503, 1.592, 2.597, 3.686, 4.691, 5.780}
+    (1+x)^-4: BAE-stationary phases {0.294, 1.800, 2.388, 3.895, 4.483, 5.989}
+    exp(-x)(1+x): BAE-stationary phases {}
+  [PASS] 4.8: BAE-stationary phases, when present, are cutoff-dependent | floating-phase zeros do not define a cutoff-independent framework selection
+  [ADMITTED] 4.9: Probe 4 S3 barrier preserved as cutoff/phase robustness failure | this runner checks the D = H_circ reformulation; audit decides the route-level no-go scope
+
+Section 5 — NCG-AV5: first-order condition gap [[D, a], J b J^-1] = 0
+    Tests: J, γ admission count; net primitive count under D = H_circ.
+  [PASS] 5.1: Cl(3) has natural involution α (real-structure candidate) | α(γ_i) = -γ_i extends to Cl(3); standard mathematical structure
+  [PASS] 5.2: Extension of α to hw=1 lepton states NOT unique | ≥ 3 natural antiunitary candidates; J not pinned
+  [PASS] 5.3: First-order condition [[D, a], JbJ^-1] = 0 nontrivial constraint | |[[D, a], JbJ^-1]| = 0.6314 (nonzero ⟹ J must be specifically chosen)
+  [PASS] 5.4: Net primitive admission count under D = H_circ = 4 | Probe U: 4 (J, γ, f, action principle); Probe 4: 4; same
+  [ADMITTED] 5.5: Probe 4 S1 barrier preserved under D = H_circ | D shifted from admitted to Brannen-square-root input; J, γ, f, principle remain
+
+Section 6 — NCG-AV6: spectral action via power sums; BAE not selectable
+    Tests: P_n stationary points; BAE not selectable from symmetric functionals.
+  [PASS] 6.1: P_1 = 3a (linear in a, no |b| dependence) | P_1 = 3.000000 (target 3a = 3.0)
+  [PASS] 6.2: P_2 = 3a^2 + 6|b|^2 | P_2 = 4.500000 (form 4.500000)
+  [PASS] 6.3: ∂P_2/∂|b| = 0 only at |b| = 0 (NOT at BAE) | ∂P_2/∂|b| at BAE = 8.4853
+  [PASS] 6.4: P_3 = 3a^3 + 18 a|b|^2 + 6|b|^3 cos(3 arg(b)) | P_3 = 8.250000 (form 8.250000)
+  [PASS] 6.5: P_4 = (a+2|b|)^4 + 2(a-|b|)^4 at arg(b)=0 | P_4 = 16.125000 (exact 16.125000)
+    ∂P_2/∂|b| at BAE = 8.485281
+    ∂P_3/∂|b| at BAE = 34.455844
+    ∂P_4/∂|b| at BAE = 112.367532
+    ∂P_6/∂|b| at BAE = 984.120454
+  [PASS] 6.6: ∂P_n/∂|b| ≠ 0 at BAE for checked n = 2, 3, 4, 6 on phase-zero slice | BAE is not selected by the checked low-order power sums
+  [ADMITTED] 6.7: spectral action Tr f(D^2/Λ^2) is a symmetric function of eigenvalues | By Newton-Girard, expressible as polynomial in {P_n}
+  [PASS] 6.8: BAE balances Frobenius (3a^2 = 6|b|^2) but unbalances (a, |b|) ratio | 3a^2 = 3.0000, 6|b|^2 = 3.0000 (equal at BAE)
+  [ADMITTED] 6.9: symmetric eigenvalue functionals do not by themselves provide the BAE isotype weight | a BAE route still needs an extra selector/weighting principle
+  [ADMITTED] 6.10: V-MaxEnt 'parameterizes H' target realized but insufficient | (a, b) enters D directly; the tested spectral functionals still do not robustly pin BAE
+
+Section 7 — Six-level closure synthesis (Probes 12-30, X, Y, V-MaxEnt, V-S_3, U)
+    Probes 12-30 / Probe 28 (operator-level (Hilbert states)): C_3 rep theory: (1, 2) real-dim on Herm_circ(3) → F1/BAE absent at operator level
+  [ADMITTED] 7.1: Probes 12-30 / Probe 28 closes BAE negatively at operator-level (Hilbert states) | C_3 rep theory: (1, 2) real-dim on Herm_circ(3)
+    Probe X (wave-function-level (∧^N tensors)): Pauli antisym → trivial-isotype singlet, b-decoupled → Slater singlet b-decoupled
+  [ADMITTED] 7.2: Probe X closes BAE negatively at wave-function-level (∧^N tensors) | Pauli antisym → trivial-isotype singlet, b-decoupled
+    Probe Y (topological-level (bundles, K-theory)): K_C3(pt) = Z⊕Z⊕Z; integer-quantized → (a, b) absent from topological data
+  [ADMITTED] 7.3: Probe Y closes BAE negatively at topological-level (bundles, K-theory) | K_C3(pt) = Z⊕Z⊕Z; integer-quantized
+    Probe V-MaxEnt (thermodynamic-level (states ρ at fixed H)): MaxEnt over states ρ at fixed H → (a, b) parameterizes H not ρ
+  [ADMITTED] 7.4: Probe V-MaxEnt closes BAE negatively at thermodynamic-level (states ρ at fixed H) | MaxEnt over states ρ at fixed H
+    Probe V-S_3 (larger-symmetry-level (S_3 reflection on Herm_circ(3))): S_3 rep symmetric under b ↔ b̄ → reflection rep does not pin |b|
+  [ADMITTED] 7.5: Probe V-S_3 closes BAE negatively at larger-symmetry-level (S_3 reflection on Herm_circ(3)) | S_3 rep symmetric under b ↔ b̄
+    Probe U (this probe) (NCG-spectral-action-level (D = H_circ)): spectral action via power sums; BAE not stationary → parameterization realized but insufficient
+  [ADMITTED] 7.6: Probe U (this probe) closes BAE negatively at NCG-spectral-action-level (D = H_circ) | spectral action via power sums; BAE not stationary
+  [ADMITTED] 7.7: All SIX accessible structural layers close BAE negatively | operator + wave-function + topology + thermodynamics + larger-symmetry + NCG-spectral-action
+  [ADMITTED] 7.8: Probe U uniquely PARAMETERIZES H via D = H_circ; others act on H | the D = H_circ formulation is the distinctive contribution of this note
+  [ADMITTED] 7.9: Probe U cross-confirms Probe 4 (PR #734) under D = H_circ reformulation | Probe 4 'S_b acts on H' barriers preserved under 'D = H_circ parameterizes H'
+
+Section 8 — Convention robustness (basis change, cycle inverse)
+  [PASS] 8.1: H_circ eigenvalues invariant under unitary basis change | Spectral action depends only on eigenvalues; convention-invariant
+  [PASS] 8.2: H_circ eigenvalues invariant under cycle-inverse (b ↔ b̄) | C_3-orientation-reversal symmetry preserved
+  [PASS] 8.3: Spectral action invariant under b ↔ b̄ (orientation-reversal) | |S(b) - S(b̄)| = 4.44e-16
+  [ADMITTED] 8.4: BAE condition |b|^2/a^2 = 1/2 is invariant under the checked symmetries | Convention-invariant; the failure mode is structural, not convention-driven
+
+Section 9 — Does-not disclaimers
+  [ADMITTED] 9.1: does NOT close BAE | BAE admission count UNCHANGED
+  [ADMITTED] 9.2: does NOT add new framework axiom | NCG used as an imported mathematical toolkit only
+  [ADMITTED] 9.3: does NOT add new admission | no new admission introduced
+  [ADMITTED] 9.4: does NOT modify retained theorem | Probes 12-30, X, Y, V-MaxEnt, V-S_3, Probe 4 unchanged
+  [ADMITTED] 9.5: does NOT promote downstream theorem | no retained-tier promotion
+  [ADMITTED] 9.6: does NOT load-bear PDG values | no PDG mass values used as derivation input
+  [ADMITTED] 9.7: does NOT promote external surveys | Connes-Chamseddine cited as toolkit, not retained authority
+  [ADMITTED] 9.8: does NOT replace Probe 4 (PR #734) | complements Probe 4 with 'parameterizes H' lens; conclusion preserved
+  [ADMITTED] 9.9: does NOT propose alternative κ as physical | BAE residual unchanged; no κ remapping
+  [ADMITTED] 9.10: does NOT promote sister bridge gaps | L3a, L3b, C-iso, W1.exact unchanged
+  [ADMITTED] 9.11: does NOT introduce new physics axioms | NCG used to test consequences of existing source content
+
+=== TOTAL: PASS=51, FAIL=0, ADMITTED=28 (computed=51) ===
+
+========================================================================
+VERDICT: BOUNDED NO-GO (NCG-spectral-action route)
+
+The finite Connes-Chamseddine-style spectral-triple model
+(A, H, D = H_circ) realizes the parameterizes-H target.
+But the route remains cutoff-, phase-, and real-structure
+dependent: phase-zero and Brannen-phase BAE are not stationary
+for the tested cutoffs, and floating-phase BAE stationarity is
+cutoff-dependent. This does not robustly force BAE.
+
+BAE admission count UNCHANGED. No new framework axiom.
+========================================================================
+
+----- stderr -----
+

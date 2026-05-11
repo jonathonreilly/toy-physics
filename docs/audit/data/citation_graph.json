@@ -13913,6 +13913,66 @@
       "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
     },
     {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_a1_probe_spectral_action_bounded_obstruction_note_2026-05-08_probe4"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
       "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
       "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
     },
@@ -50576,6 +50636,33 @@
       "runner_path": "scripts/frontier_koide_transport_gap_constant_no_go.py",
       "title": "Koide Transport-Gap Constant No-Go"
     },
+    "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg": {
+      "claim_id": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded NCG-spectral-action route obstruction; no",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "koide_a1_probe_spectral_action_bounded_obstruction_note_2026-05-08_probe4",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "9d291951fc65dc62f04bad78af5fb31e8b22a286ba8933f72ad176a405476251",
+      "path": "docs/KOIDE_U_BAE_NCG_SPECTRAL_TRIPLE_NOTE_2026-05-08_probeU_bae_ncg.md",
+      "runner_path": "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py",
+      "title": "Koide BAE Probe U \u2014 Connes-Chamseddine NCG Spectral Triple Attack on the C_3[111] Triplet"
+    },
     "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
       "claim_id": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
       "claim_type_author_hint": "no_go",
@@ -68680,7 +68767,7 @@
       "bounded_theorem": 281,
       "decoration": 1,
       "meta": 61,
-      "no_go": 35,
+      "no_go": 36,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68689,15 +68776,15 @@
       "bounded_theorem": 763,
       "decoration": 1,
       "meta": 61,
-      "no_go": 142,
+      "no_go": 143,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8521,
-    "leaf_count": 612,
-    "node_count": 2172,
+    "edge_count": 8536,
+    "leaf_count": 613,
+    "node_count": 2173,
     "root_count": 822,
-    "runners_with_path": 1785
+    "runners_with_path": 1786
   }
 }

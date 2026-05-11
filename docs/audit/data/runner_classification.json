@@ -11424,6 +11424,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_koide_transport_gap_constant_no_go.py"
     },
+    "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py"
+    },
     "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
       "assert_count": 1,
       "counts": {
@@ -24416,6 +24428,21 @@
         "B": 0,
         "C": 18,
         "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 16,
+        "D": 6
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -46791,12 +46818,12 @@
     "dominant_class_distribution": {
       "A": 145,
       "B": 172,
-      "C": 675,
+      "C": 676,
       "D": 259,
       "none": 421
     },
-    "runners_classified": 1672,
-    "runners_with_C": 852,
-    "runners_with_D": 469
+    "runners_classified": 1673,
+    "runners_with_C": 853,
+    "runners_with_D": 470
   }
 }
