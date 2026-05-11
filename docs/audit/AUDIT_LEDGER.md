@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 267 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1235 |
+| unaudited | 1234 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 182 |
+| ~~audited_conditional~~ | 183 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 441 |
-| `audited_conditional` | 182 |
+| `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1348 |
+| `unaudited` | 1347 |
 
 | claim_type | count |
 |---|---:|
@@ -736,6 +736,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `retardation_discriminator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -7989,6 +7990,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Once phi_ext = Pi_R^ext phi and sigma_R = H_0 phi_ext are fixed, Dirichlet uniqueness gives u = phi_ext and the two local static-conformal constraints uniquely force rho = sigma_R/(2 pi psi^5) and S = 0.5 rho (1/alpha - 1), while the Schur complement makes the exact trace the unique minimizer.  _(class `A`)_
 - **chain closes:** True — Within the stated finite-box O_h source class, the chain closes by finite-dimensional linear algebra: projector-shell identity, Dirichlet uniqueness, triangular solution of the restricted constraints, and positive-definite Schur minimization. The note explicitly keeps the result inside the scalar/static-conformal boundary and does not import a full Einstein/Regge or astrophysical bridge.
 - **rationale:** The current packet runner completed with PASS=41 FAIL=0 TOTAL=41, and the component code computes algebraic finite-box identities rather than checking an external comparator or tuning a target value. The source object is treated as the fixed bounded input class, not as a derived universal gravity source, and the audited conclusion is scoped accordingly. Minor roundoff-level differences between note snippets and current runner output do not affect the closure. No unclosed full-GR, Regge, no-horizon, echo, or astrophysical strong-field consequence is used by the bounded claim.
+- **auditor confidence:** high
+
+### `retardation_discriminator_note`
+
+- **Note:** [`RETARDATION_DISCRIMINATOR_NOTE.md`](../../docs/RETARDATION_DISCRIMINATOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite oscillating-source toy-harness result: the archived run shows delayed and instantaneous response curves differ, with exact/null controls to floating precision, sign split near f=0.15 for d>=5, family/seed robustness, and a failed global-delay fit.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The archived harness shows retarded minus instantaneous phase differences across frequency and delay, including nulls at f=0/d=0 and sign-split behavior at f=0.15 for delays at least 5.  _(class `C`)_
+- **chain closes:** False — The finite archived harness supports a delay-dependent toy observable, but the registered live cache times out, the runner lacks assertion gates, and the note's broader discriminator/exclusion-class language is not backed by a theorem over instantaneous emulator models. The displayed delay law is also not strictly monotone at the largest delay.
+- **rationale:** Issue: the frozen log supports the finite delayed-vs-instantaneous toy-harness signal, but the note presents a portable discriminator and qualitative no-instantaneous/static exclusion beyond the asserted finite replay; the live audit cache has no completed stdout and the runner has no hard checks. Why this blocks: retained-bounded status for the broader discriminator would require either a completed assertion runner or a formal model-class theorem excluding instantaneous emulators, not just the printed finite curves. Repair target: add a fast deterministic assertion runner for nulls, delay/frequency tables, portability, seed robustness, and fit residuals, and separately prove the instantaneous/static model-class exclusion. Claim boundary until fixed: the archived finite harness shows a delay-dependent phase-response difference in this implemented toy model only.
 - **auditor confidence:** high
 
 ### `retarded_field_causality_probe_note`
