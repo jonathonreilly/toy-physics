@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 97 |
+| **retained** | 98 |
 | **retained_no_go** | 133 |
 | **retained_bounded** | 283 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1191 |
+| unaudited | 1190 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 476 |
+| `audited_clean` | 477 |
 | `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1304 |
+| `unaudited` | 1303 |
 
 | claim_type | count |
 |---|---:|
@@ -449,6 +449,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_finite_response_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `primitive_p_lh_content_proposal_note_2026-05-10_pplh` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
@@ -7988,6 +7989,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current one-axiom Hilbert/information-flow surface fixes only phase classes exp(iS/kappa), while the same rank-four block supports CAR/Fock and non-CAR two-qubit or ququart semantics under the same Hilbert-flow axioms.  _(class `A`)_
 - **chain closes:** True — The no-go is scoped to the explicitly stated bare Hilbert-flow surface. Rescaling invariance blocks an absolute action scale, and explicit CAR and non-CAR realizations on the same C^4 active block demonstrate underdetermination of edge statistics.
 - **rationale:** The runner completed from cache with 27/27 PASS and checks the relevant algebraic invariances, finite-matrix obstruction, CAR construction, non-CAR alternatives, and identical unitary-flow compatibility. The proof does not derive a positive physical hbar or CAR bridge; it cleanly establishes the bounded negative result that those structures are not forced by the stated one-axiom surface. The final route through a separate Clifford/coframe principle is explicitly outside this no-go scope, so it does not weaken the scoped boundary claim.
+- **auditor confidence:** high
+
+### `plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`PLAQUETTE_HIERARCHY_POLYNOMIAL_BOUNDEDNESS_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/PLAQUETTE_HIERARCHY_POLYNOMIAL_BOUNDEDNESS_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra theorem over R[t]: leading-term asymptotic for nonconstant real polynomials, finite-limit-forces-constant, two-distinct-endpoint obstruction, and bounded-on-[0,+infinity)-forces-constant; no Wilson plaquette or physical source-surface inputs are audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** If a real polynomial p(t) has degree d >= 1, then p(t)/t^d tends to its nonzero leading coefficient, so |p(t)| diverges as t -> +infinity; hence finite limit or boundedness on [0,+infinity) forces p constant.  _(class `A`)_
+- **chain closes:** True — The proof is elementary polynomial algebra and the runner verifies the same leading-term, finite-limit, endpoint-obstruction, boundedness, and constant negative-control checks by exact SymPy algebra. The source explicitly excludes the parent Wilson/plaquette endpoint and hierarchy claims, so no external physical bridge is needed.
+- **rationale:** The audited claim is a standalone algebra theorem, not the parent plaquette obstruction. The note proves the leading-term asymptotic directly and derives the finite-limit, two-endpoint, and boundedness corollaries without importing any physical observable or comparator. The runner exits with PASS=52 FAIL=0 and checks the proof surface through exact symbolic limits, degree/leading-coefficient checks, endpoint obstruction examples, and constant negative controls. Residual risk is only misuse of this algebra fact by downstream physical notes, which is outside this claim scope.
 - **auditor confidence:** high
 
 ### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
