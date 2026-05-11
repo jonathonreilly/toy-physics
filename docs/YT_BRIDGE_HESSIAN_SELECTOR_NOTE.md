@@ -134,6 +134,11 @@ promote this note or change the audited claim scope.
   for the moment-band closure used to pin the leading expansion.
 - [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
   for the constructive-family endpoint-stability input the runner reuses.
-- [YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md](YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md)
+- `YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md`
   for the prior variational-selector statement this note refines at
-  leading order.
+  leading order. See-also cross-reference, not a load-bearing dependency
+  — backticked to break cycle-0004 in the citation graph. The substantive
+  refinement direction runs from this note's leading-order Hessian
+  derivation back to the prior conditional variational statement; the
+  prior statement is informational context, not a logical premise of
+  the present derivation.

@@ -327,8 +327,10 @@ Independent of this row, the audit lane has a separate Ward-route program
 that reaches `g_bare = 1` via different upstream authorities — see
 [`G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
 (now `retained_bounded`) and
-[`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
-(`audited_conditional`). That route is **not** the rescaling-freedom path
+`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`
+(`audited_conditional`; see-also cross-reference, not a load-bearing
+dependency — backticked to break cycle-0001 in the citation graph).
+That route is **not** the rescaling-freedom path
 this note depends on; it is a parallel disambiguation that does not change
 this row's intrinsic dep chain. Cross-reference only — the present theorem
 remains scoped to the rescaling-freedom reading and is not promoted by the

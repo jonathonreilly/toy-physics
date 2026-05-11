@@ -296,7 +296,14 @@ All results from `frontier_yt_qfp_insensitivity.py`:
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [yt_p2_taste_staircase_beta_functions_note_2026-04-17](YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md)
+- `yt_p2_taste_staircase_beta_functions_note_2026-04-17` /
+  `YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`
+  (see-also cross-reference, not a load-bearing dependency — backticked
+  to break cycles 0009, 0010, and 0011 in the citation graph. The
+  beta-functions note consumes this QFP 3% envelope as a load-bearing
+  upstream bound on the SM-surrogate flow comparison; the citation
+  graph direction is *beta_functions → qfp_insensitivity*, not the
+  reverse. This back-edge was a graph-bookkeeping artifact only.)
 - [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [yt_boundary_theorem](YT_BOUNDARY_THEOREM.md)
 - [yt_zero_import_authority_note](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
