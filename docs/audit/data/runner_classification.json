@@ -7140,6 +7140,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_g_bare_critical_feature_scan.py"
     },
+    "g_bare_forced_by_ward_rep_b_independence_abstract_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 7,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_g_bare_forced_by_ward_rep_b_abstract_narrow.py"
+    },
     "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09": {
       "assert_count": 1,
       "counts": {
@@ -31149,6 +31161,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_g_bare_forced_by_ward_rep_b_abstract_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "g_bare_forced_by_ward_rep_b_independence_abstract_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 7,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_g_bare_rigidity_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -46008,12 +46035,12 @@
     "dominant_class_distribution": {
       "A": 129,
       "B": 171,
-      "C": 666,
+      "C": 667,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1643,
-    "runners_with_C": 838,
-    "runners_with_D": 461
+    "runners_classified": 1644,
+    "runners_with_C": 839,
+    "runners_with_D": 462
   }
 }
