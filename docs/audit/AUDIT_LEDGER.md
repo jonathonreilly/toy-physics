@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 285 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1183 |
+| unaudited | 1182 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 194 |
+| ~~audited_conditional~~ | 195 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 480 |
-| `audited_conditional` | 194 |
+| `audited_conditional` | 195 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1296 |
+| `unaudited` | 1295 |
 
 | claim_type | count |
 |---|---:|
@@ -794,6 +794,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -9542,6 +9543,29 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The primary retained-lattice runner and the explicitly named spectral-control runners compute the raw, Lorentzian, detector-equalized, and source-side weighting cases. Their current outputs support the bounded conclusion that broad/flat source-defined spectra remain AWAY and only detector-output reweighting flips selected comparisons.
 - **rationale:** The note is clean as a bounded negative for broadband attraction under the tested source-defined spectral controls. The current artifacts reproduce the stated pattern: raw broad/flat spectra are AWAY, source-coupled and source-equalized controls do not rescue broadband TOWARD, and detector-equalized TOWARD behavior is explicitly framed as an output-dependent diagnostic rather than a source model. Residual risk is that this does not rule out a later physical k-selection mechanism, but the note lists that as open work.
 - **auditor confidence:** medium
+
+### `spectral_trajectory_theorem_2026-04-11`
+
+- **Note:** [`SPECTRAL_TRAJECTORY_THEOREM_2026-04-11.md`](../../docs/SPECTRAL_TRAJECTORY_THEOREM_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Interpretive synthesis framing for the spectral/trajectory dichotomy across separately claimed numerical and theoretical surfaces; no standalone runner, dependency chain, or independent structural theorem is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The note infers a structural spectral-versus-trajectory dichotomy by synthesizing sign selectivity, boundary-law shift, CDT-like spectral flow, Hartree force-law failures, Penrose/DP/BH failures, and many-body/external-source successes.  _(class `B`)_
+- **chain closes:** False — The row has runner_path=null and deps=[], yet its conclusion depends on many separate spectral, trajectory, many-body, Born-rule, and BMV-support claims. Without one-hop dependency wiring to those rows and retained-grade closure of their evidence, the dichotomy cannot be retained as an independently audited theorem.
+- **rationale:** Issue: the load-bearing step is a cross-note synthesis of many numerical and theoretical claims, but the audit row has no runner and no dependency chain. Why this blocks: a retained theorem about a structural spectral/trajectory split would require each cited sign-selectivity, boundary-law, CDT-flow, force-law, collapse/decoherence, Born-rule, and BMV support surface to be wired and retained-grade, not merely narrated in one broad note. Repair target: enumerate the cited downstream notes as direct dependencies or split the framing into a meta/open synthesis row whose status tracks those inputs. Claim boundary until fixed: the spectral/trajectory distinction may be used as interpretive framing, not as retained theorem-grade science.
+- **open / conditional deps cited:**
+  - `sign-selectivity surface cited in section 3.1`
+  - `boundary-law coefficient-shift surface cited in section 3.2`
+  - `CDT-like spectral-flow surface cited in section 3.3`
+  - `Wilson two-body Hartree distance-law surface cited in section 4.1`
+  - `partner-source scaling surface cited in section 4.2`
+  - `Penrose/DP/BH trajectory-failure surfaces cited in sections 4.3-4.5`
+  - `many-body/external-source card cited in section 5`
+  - `Born-rule independence surface cited in section 7`
+  - `BMV branch-entanglement probe cited in section 8`
+- **auditor confidence:** high
 
 ### `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10`
 
