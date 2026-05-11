@@ -1,0 +1,179 @@
+{
+  "actual_current_surface_status": "open / block27 post-block26 landed checkpoint; PR head contains only the block26 checkpoint after the previous landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral H3/H4 opportunities remain waiting on explicit production/certificate inputs",
+  "admitted_observation_status": null,
+  "artifact": "YT_PR230_BLOCK27_POST_BLOCK26_LANDED_CHECKPOINT",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block26_input_head": "8b0d95db83c6f8458b0547c1da32e690941e36a3",
+  "checks": {
+    "block26-forbidden-firewall-clean": true,
+    "block26-no-route-admitted": true,
+    "chunk063-and-combined-rows-not-committed": true,
+    "forbidden-firewall-clean": true,
+    "inspection-head-is-block26-checkpoint": true,
+    "inspection-head-is-current-pr-head-or-parent-of-block27": true,
+    "neutral-h3h4-required-paths-still-absent-on-pr-ref": true,
+    "only-block26-checkpoint-since-block26-input-head": true,
+    "parent-certificates-deny-proposal": true,
+    "parent-certificates-have-no-fails": true,
+    "parent-certificates-loaded": true,
+    "queue-rank1-source-higgs-not-admitted": true,
+    "queue-rank2-wz-not-admitted": true,
+    "queue-rank3-neutral-h3h4-not-admitted": true,
+    "source-higgs-required-paths-still-absent-on-pr-ref": true,
+    "two-source-prefix-still-62-of-63": true,
+    "wz-required-paths-still-absent-on-pr-ref": true
+  },
+  "commits_since_block26_input_head": [
+    "f1d72283b92fb1b76292ea8ba53d7586ad0c294d\tRecord PR230 block26 post-block25 checkpoint"
+  ],
+  "conditional_surface_status": "support if a future accepted same-surface canonical O_H plus strict C_ss/C_sH/C_HH pole rows exists, or if a strict W/Z matched physical-response packet or neutral H3/H4 physical-transfer authority is supplied",
+  "current_queue_decision": "yield this PR230 lane for supervisor continuation unless a real production/certificate input is supplied; do not rerun current-surface shortcut gates or count chunk063 completion alone as closure",
+  "disallowed_paths_since_block26_input_head": [],
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh_before_canonical_oh": false,
+    "assumed_k_top_equals_k_gauge": false,
+    "assumed_top_wz_covariance": false,
+    "inspected_active_chunk_output": false,
+    "promoted_scout_or_smoke_rows": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_or_operator": false,
+    "used_observed_wz_or_g2": false,
+    "used_observed_y_t_or_top_mass": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "generated_at": "2026-05-11T23:47:51.220282+00:00",
+  "git_head": "f1d72283b92fb1b76292ea8ba53d7586ad0c294d",
+  "git_head_subject": "Record PR230 block26 post-block25 checkpoint",
+  "hypothetical_axiom_status": null,
+  "inspected_head": "f1d72283b92fb1b76292ea8ba53d7586ad0c294d",
+  "inspected_head_subject": "Record PR230 block26 post-block25 checkpoint",
+  "inspection_ref": "HEAD",
+  "live_chunk_worker": {
+    "counted_pending_checkpoint_as_evidence": false,
+    "inspected_active_output": false,
+    "touched": false
+  },
+  "neutral_h3h4_required_paths_pr_ref": {
+    "neutral_h3_physical_transfer": false,
+    "neutral_h4_source_higgs_coupling": false
+  },
+  "origin_main_head": "b7fc51e26d3241c3c5334537363f6c05de8b1fa1",
+  "parents": {
+    "block23_remote_candidate_intake": "open / block23 remote-candidate intake checkpoint; current PR head and fetched remote candidate refs contain no admissible canonical O_H/source-Higgs packet, strict W/Z accepted-action response packet, or neutral H3/H4 physical-transfer packet",
+    "block26_post_block25_landed": "open / block26 post-block25 landed checkpoint; PR head contains only the block25 checkpoint after the previous landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral H3/H4 opportunities remain waiting on explicit production/certificate inputs",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "fms_oh_candidate_action": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "fms_source_overlap_readout": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 62 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "source_higgs_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 62 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+    "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "two_source_package": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
+    "wz_accepted_action_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
+    "wz_physical_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist"
+  },
+  "pass_count": 10,
+  "paths_since_block26_input_head": [
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/NO_GO_LEDGER.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK26.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml",
+    "docs/YT_PR230_BLOCK26_POST_BLOCK25_LANDED_CHECKPOINT_NOTE_2026-05-11.md",
+    "docs/audit/AUDIT_LEDGER.md",
+    "docs/audit/AUDIT_QUEUE.md",
+    "docs/audit/data/audit_ledger.json",
+    "docs/audit/data/audit_queue.json",
+    "docs/audit/data/citation_graph.json",
+    "docs/audit/data/effective_status_summary.json",
+    "docs/audit/data/load_bearing_summary.json",
+    "docs/audit/data/runner_classification.json",
+    "outputs/yt_pr230_block26_post_block25_landed_checkpoint_2026-05-11.json",
+    "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "scripts/frontier_yt_pr230_block26_post_block25_landed_checkpoint.py",
+    "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  ],
+  "pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30",
+  "pr_ref_head": "f1d72283b92fb1b76292ea8ba53d7586ad0c294d",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Block27 is a landed-checkpoint, not a new closure artifact.  The current PR head is the block26 checkpoint commit; no required source-Higgs, W/Z, or neutral H3/H4 certificate paths are present, the row prefix remains 62/63 with combined rows unwritten, and no forbidden import or live-worker output is used.",
+  "queue_pivot": [
+    {
+      "admission": "blocked_waiting_on_explicit_certificate_inputs",
+      "missing_roots": [
+        "canonical_higgs_operator_certificate",
+        "source_higgs_measurement_rows",
+        "source_higgs_production_certificate",
+        "two_source_combined_rows"
+      ],
+      "opportunity": "certified O_H plus production source-Higgs pole rows with Gram flatness",
+      "rank": 1
+    },
+    {
+      "admission": "blocked_waiting_on_explicit_certificate_inputs",
+      "missing_roots": [
+        "accepted_same_source_ew_action",
+        "canonical_higgs_operator_certificate",
+        "delta_perp_correction_certificate",
+        "fh_gauge_mass_response_certificate",
+        "fh_gauge_mass_response_measurement_rows",
+        "same_source_top_response_certificate",
+        "same_source_w_response_rows",
+        "strict_electroweak_g2_certificate",
+        "top_wz_matched_covariance_certificate",
+        "wz_correlator_mass_fit_rows"
+      ],
+      "opportunity": "strict W/Z physical-response packet with accepted action",
+      "rank": 2
+    },
+    {
+      "admission": "blocked_waiting_on_explicit_certificate_inputs",
+      "missing_roots": [
+        "neutral_h3_physical_transfer",
+        "neutral_h4_source_higgs_coupling"
+      ],
+      "opportunity": "same-surface neutral H3/H4 physical-transfer authority",
+      "rank": 3
+    }
+  ],
+  "source_higgs_required_paths_pr_ref": {
+    "canonical_higgs_operator_certificate": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_production_certificate": false,
+    "two_source_combined_rows": false
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained status",
+    "does not relabel C_sx/C_xx as C_sH/C_HH",
+    "does not identify taste-radial x with canonical O_H",
+    "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, u0, or unit conventions",
+    "does not promote W/Z scout or smoke rows to production evidence",
+    "does not inspect active chunk-worker output or pending checkpoints",
+    "does not treat the block26 checkpoint commit as new physics evidence"
+  ],
+  "wz_required_paths_pr_ref": {
+    "accepted_same_source_ew_action": false,
+    "canonical_higgs_operator_certificate": false,
+    "delta_perp_correction_certificate": false,
+    "fh_gauge_mass_response_certificate": false,
+    "fh_gauge_mass_response_measurement_rows": false,
+    "same_source_top_response_certificate": false,
+    "same_source_w_response_rows": false,
+    "strict_electroweak_g2_certificate": false,
+    "top_wz_matched_covariance_certificate": false,
+    "wz_correlator_mass_fit_rows": false
+  }
+}

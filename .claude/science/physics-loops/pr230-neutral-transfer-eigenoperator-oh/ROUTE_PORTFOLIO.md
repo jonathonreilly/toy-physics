@@ -671,3 +671,38 @@
    - Result: unchanged.  Reopen only with one of the explicit
      production/certificate inputs above; do not treat the block25 checkpoint
      commit or chunk063 completion alone as closure.
+
+## Selected Block27 Route
+
+**Post-block26 landed checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 3.
+- Claim-state movement: verifies that PR #230 head `f1d72283` moved only by
+  the block26 landed checkpoint after input head `8b0d95db`, then preserves the
+  ranked source-Higgs, W/Z, and neutral H3/H4 routes as waiting on explicit
+  production/certificate inputs.
+- Artifact: `YT_PR230_BLOCK27_POST_BLOCK26_LANDED_CHECKPOINT`.
+
+## Block27 Fan-Out Synthesis
+
+1. **Source-Higgs frame**
+   - Result: not admitted.  Accepted same-surface canonical `O_H`, production
+     `C_ss/C_sH/C_HH` pole rows, Gram/FV/IR authority, and the combined row
+     packet remain absent.
+
+2. **W/Z frame**
+   - Result: not admitted.  Accepted action, canonical `O_H`/sector-overlap
+     authority, production W/Z rows, same-source top rows, matched covariance,
+     strict non-observed `g2`, `delta_perp`, and final W-response rows remain
+     absent.
+
+3. **Neutral H3/H4 frame**
+   - Result: not admitted.  Physical neutral transfer/off-diagonal generator
+     authority and source/canonical-Higgs coupling authority remain absent.
+
+4. **Next admissible route**
+   - Result: unchanged.  Reopen only with one of the explicit
+     production/certificate inputs above; do not treat the block26 checkpoint
+     commit or chunk063 completion alone as closure.

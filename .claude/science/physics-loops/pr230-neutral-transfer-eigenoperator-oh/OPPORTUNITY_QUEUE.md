@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block26 post-block25 landed checkpoint.
+Campaign mode queue after block27 post-block26 landed checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -202,6 +202,27 @@ Block26 verifies that draft PR #230 head
 `8b0d95db83c6f8458b0547c1da32e690941e36a3` is only the block25 landed
 checkpoint after the previous landed-checkpoint input head
 `a864e5fe55391ace59047afde57cbc0c47928854`.  It adds no positive physics
+packet and admits no ranked route.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with Gram/FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral H3/H4 physical-transfer authority.
+
+Chunk063 completion alone remains support-only and is not a queue-admission
+condition.  Do not run another current-surface shortcut gate from this lane
+unless one of the explicit production/certificate inputs lands.
+
+## Block27 Post-Block26 Landed Checkpoint
+
+Block27 verifies that draft PR #230 head
+`f1d72283b92fb1b76292ea8ba53d7586ad0c294d` is only the block26 landed
+checkpoint after the previous landed-checkpoint input head
+`8b0d95db83c6f8458b0547c1da32e690941e36a3`.  It adds no positive physics
 packet and admits no ranked route.
 
 Queue remains:

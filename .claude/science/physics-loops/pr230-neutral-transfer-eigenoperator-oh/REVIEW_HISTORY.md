@@ -1035,3 +1035,48 @@ rg status/firewall review
 git diff --check
 # OK
 ```
+
+## Block27
+
+Local review run on 2026-05-11 19:37 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block27_post_block26_landed_checkpoint.py`
+- `outputs/yt_pr230_block27_post_block26_landed_checkpoint_2026-05-11.json`
+- `docs/YT_PR230_BLOCK27_POST_BLOCK26_LANDED_CHECKPOINT_NOTE_2026-05-11.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block27 landed-checkpoint runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Current PR head `f1d72283` contains only the block26 checkpoint after the previous landed-checkpoint input head.  No source-Higgs, W/Z, or neutral H3/H4 production/certificate input is present. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only and does not touch or inspect the live chunk worker. |
+| Audit Compatibility | PASS | Campaign status certificate remains PASS=361 FAIL=0; the final audit pipeline rerun has newly seeded=0 and 5 known warnings, strict lint is OK with the same 5 warnings, firewall review is exclusion-only, link check is clean, and `git diff --check` is clean. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block27_post_block26_landed_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block27_post_block26_landed_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=361 FAIL=0
+python3 link check for block27 note/handoff/PR body
+# missing_links=[]
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+rg status/firewall review
+# forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+git diff --check
+# OK
+```

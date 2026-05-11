@@ -138,6 +138,13 @@ source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
 production/certificate inputs.  No standalone block26 review PR should be
 opened unless PR #230 integration fails.
 
+Block27 follows the same direct PR #230 landing path.  It adds the
+post-block26 landed checkpoint at PR head `f1d72283` and records that the only
+post-block26-input movement is the block26 checkpoint commit itself; no ranked
+source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
+production/certificate inputs.  No standalone block27 review PR should be
+opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash
