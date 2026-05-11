@@ -601,3 +601,38 @@
      strict W/Z physical-response packet with matched covariance and strict
      non-observed `g2`, or a neutral primitive H3/H4 physical-transfer
      certificate.  Chunk063 completion alone is support-only.
+
+## Selected Block25 Route
+
+**Post-block24 landed checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 3.
+- Claim-state movement: verifies that PR #230 head `a864e5fe` moved only by
+  the block24 queue-pivot checkpoint after input head `82a01735f`, then
+  preserves the ranked source-Higgs, W/Z, and neutral H3/H4 routes as waiting
+  on explicit production/certificate inputs.
+- Artifact: `YT_PR230_BLOCK25_POST_BLOCK24_LANDED_CHECKPOINT`.
+
+## Block25 Fan-Out Synthesis
+
+1. **Source-Higgs frame**
+   - Result: not admitted.  Accepted same-surface canonical `O_H`, production
+     `C_ss/C_sH/C_HH` pole rows, Gram/FV/IR authority, and the combined row
+     packet remain absent.
+
+2. **W/Z frame**
+   - Result: not admitted.  Accepted action, canonical `O_H`/sector-overlap
+     authority, production W/Z rows, same-source top rows, matched covariance,
+     strict non-observed `g2`, `delta_perp`, and final W-response rows remain
+     absent.
+
+3. **Neutral H3/H4 frame**
+   - Result: not admitted.  Physical neutral transfer/off-diagonal generator
+     authority and source/canonical-Higgs coupling authority remain absent.
+
+4. **Next admissible route**
+   - Result: unchanged.  Reopen only with one of the explicit
+     production/certificate inputs above; do not treat the block24 checkpoint
+     commit or chunk063 completion alone as closure.

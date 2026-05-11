@@ -174,3 +174,24 @@ Updated queue after block20:
 3. If neither row route is active, attack the neutral primitive H3/H4
    physical-transfer/irreducibility certificate rather than another source-only
    alias gate.
+
+## Block25 Post-Block24 Landed Checkpoint
+
+Block25 verifies that draft PR #230 head
+`a864e5fe55391ace59047afde57cbc0c47928854` is only the block24
+queue-pivot checkpoint after the previous queue-pivot input head
+`82a01735f6118dcea381c23c0bc2ff4230cc4e33`.  It adds no positive physics
+packet and admits no ranked route.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with Gram/FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral H3/H4 physical-transfer authority.
+
+Chunk063 completion alone remains support-only and is not a queue-admission
+condition.  Do not run another current-surface shortcut gate from this lane
+unless one of the explicit production/certificate inputs lands.

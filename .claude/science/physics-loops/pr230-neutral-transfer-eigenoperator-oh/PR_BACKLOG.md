@@ -124,6 +124,13 @@ source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
 production/certificate inputs.  No standalone block24 review PR should be
 opened unless PR #230 integration fails.
 
+Block25 follows the same direct PR #230 landing path.  It adds the
+post-block24 landed checkpoint at PR head `a864e5fe` and records that the only
+post-block24-input movement is the block24 checkpoint commit itself; no ranked
+source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
+production/certificate inputs.  No standalone block25 review PR should be
+opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

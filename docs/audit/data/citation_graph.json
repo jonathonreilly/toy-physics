@@ -18757,7 +18757,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-11T23:03:06.185041+00:00",
+  "generated_at": "2026-05-11T23:19:35.359699+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42273,6 +42273,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block24_queue_pivot_admission_checkpoint.py",
       "title": "PR230 Block24 Queue-Pivot Admission Checkpoint"
     },
+    "yt_pr230_block25_post_block24_landed_checkpoint_note_2026-05-11": {
+      "claim_id": "yt_pr230_block25_post_block24_landed_checkpoint_note_2026-05-11",
+      "current_status": "open",
+      "current_status_raw": "open / post-block24 landed checkpoint; no ranked route is",
+      "deps": [],
+      "note_hash": "cc672ebdccee9eba0266baab3a07247804844920f86bbe6529586bf6f29a73e4",
+      "path": "docs/YT_PR230_BLOCK25_POST_BLOCK24_LANDED_CHECKPOINT_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_yt_pr230_block25_post_block24_landed_checkpoint.py",
+      "title": "PR230 Block25 Post-Block24 Landed Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -46500,6 +46510,7 @@
     "yt_pr230_assumption_import_stress_note_2026-05-01",
     "yt_pr230_block23_remote_candidate_intake_checkpoint_note_2026-05-11",
     "yt_pr230_block24_queue_pivot_admission_checkpoint_note_2026-05-11",
+    "yt_pr230_block25_post_block24_landed_checkpoint_note_2026-05-11",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -46763,13 +46774,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4689,
-    "leaf_count": 1128,
-    "node_count": 2119,
-    "root_count": 1626,
-    "runners_with_path": 1595,
+    "leaf_count": 1129,
+    "node_count": 2120,
+    "root_count": 1627,
+    "runners_with_path": 1596,
     "status_counts": {
       "bounded": 593,
-      "open": 108,
+      "open": 109,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 461,
