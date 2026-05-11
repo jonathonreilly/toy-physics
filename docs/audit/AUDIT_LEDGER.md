@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1278 |
+| unaudited | 1277 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 153 |
+| ~~audited_conditional~~ | 154 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,19 +43,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 153 |
+| `audited_conditional` | 154 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1391 |
+| `unaudited` | 1390 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 891 |
+| `bounded_theorem` | 890 |
 | `decoration` | 14 |
 | `meta` | 116 |
-| `no_go` | 220 |
+| `no_go` | 221 |
 | `open_gate` | 110 |
 | `positive_theorem` | 750 |
 
@@ -695,6 +695,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -7261,6 +7262,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For arbitrary positive diagonal Yukawa singular-value matrices D_u and D_d and fixed CKM unitary V, the construction Y_u = D_u and Y_d = V D_d gives U_u^dag U_d = V while leaving the singular values equal to the freely chosen diagonal entries, so CKM mixing does not determine quark Yukawa eigenvalues.  _(class `A`)_
 - **chain closes:** True — The negative boundary closes as an exact linear-algebra obstruction: the allowed one-Higgs gauge skeleton admits arbitrary 3x3 Yukawa matrices, the top Ward normalization supplies no generation projector, and a fixed CKM matrix is compatible with independently varied Yukawa singular values. Therefore the listed support surface leaves the target non-top ratios unconstrained.
 - **rationale:** The proof is a clean no-go: it does not attempt to derive numerical masses, does not reuse the top Ward identity as a hidden species-uniform physical identification, and the runner checks the load-bearing CKM/singular-value witness plus the gauge-selection freedom and scope firewall.
+- **auditor confidence:** high
+
+### `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27`
+
+- **Note:** [`QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md`](../../docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional Lane-3 retention firewall: given the current quark support notes and comparator constants read by the runner, the packet does not provide retained closure for m_u, m_d, m_s, m_c, or m_b; top remains the only retained quark mass, down-type ratios are not absolute masses, up-type partition/scalar support remains bounded, species-uniform Ward reuse for m_b fails, and CKM closure is not mass closure. This excludes retained authority for the support notes unless wired as dependencies, derivation of the open staggered-Dirac gate, and any positive five-mass theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-quark-lane3-firewall`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner reads the current Lane 3 stub, quark ratio packet, down-type note, up-amplitude scan, b-Yukawa analysis, and canonical alpha surface, then verifies that the current packet lacks the missing down-type bridge/scale theorem, up-type law, and species-differentiated non-top Yukawa primitive needed for retained five-mass closure.  _(class `B`)_
+- **chain closes:** False — The live runner reports PASS=17 FAIL=0 for the current repo-state firewall. The restricted audit row has no one-hop dependencies, so the notes and canonical surface that the runner reads are hidden imports rather than retained authorities for this claim.
+- **rationale:** Issue: the negative firewall is reproducible as a repo-state check, but its load-bearing inputs are multiple unwired support notes and the canonical alpha surface rather than retained one-hop dependencies. Why this blocks: an audit-clean no-go for Lane 3 retention must expose the authorities for the current support packet, ratio formulas, up-sector partition analysis, bottom-Yukawa scope boundary, and top-channel anchor. Repair target: add retained-grade dependency edges or a self-contained authority packet for those inputs, while keeping the staggered-Dirac realization gate explicit as bounded context. Claim boundary until fixed: the current executable check conditionally blocks promotion of the five non-top quark masses, but it is not itself a retained no-go theorem.
+- **open / conditional deps cited:**
+  - `lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`
+  - `QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md`
+  - `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
+  - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
+  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+  - `scripts/canonical_plaquette_surface.py`
 - **auditor confidence:** high
 
 ### `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28`
