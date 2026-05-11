@@ -17352,6 +17352,18 @@
       "dominant_class": "C",
       "runner": "scripts/probe_grassmann_forcing_dependency_chain.py"
     },
+    "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 20,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_staggered_dirac_hw1_three_eigenvalue_positive.py"
+    },
     "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07": {
       "assert_count": 1,
       "counts": {
@@ -37487,6 +37499,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_staggered_dirac_hw1_three_eigenvalue_positive.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 20,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_staggered_dirac_substep4_positive_ratchet.py": {
       "assert_count": 1,
       "claims": [
@@ -45345,14 +45372,14 @@
   "stats": {
     "decoration_candidates": 177,
     "dominant_class_distribution": {
-      "A": 123,
+      "A": 124,
       "B": 168,
       "C": 658,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1619,
+    "runners_classified": 1620,
     "runners_with_C": 826,
-    "runners_with_D": 448
+    "runners_with_D": 449
   }
 }

@@ -19125,6 +19125,30 @@
       "to": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02"
     },
     {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
       "from": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -60760,6 +60784,24 @@
       "runner_path": "scripts/probe_grassmann_forcing_dependency_chain.py",
       "title": "Staggered-Dirac Substep 1 \u2014 Grassmann Partition Forcing (Block 02)"
     },
+    "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10": {
+      "claim_id": "staggered_dirac_hw1_three_eigenvalue_structure_positive_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_theorem_note",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "55593032fed9f804280b90b266c44ed1affeadb3181cbce40aef2f917df089e5",
+      "path": "docs/STAGGERED_DIRAC_HW1_THREE_EIGENVALUE_STRUCTURE_POSITIVE_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_staggered_dirac_hw1_three_eigenvalue_positive.py",
+      "title": "Staggered-Dirac hw=1 Circulant Three-Eigenvalue Positive Theorem"
+    },
     "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07": {
       "claim_id": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
       "claim_type_author_hint": null,
@@ -67220,7 +67262,7 @@
       "no_go": 27,
       "none": 1628,
       "open_gate": 30,
-      "positive_theorem": 110
+      "positive_theorem": 111
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 745,
@@ -67229,12 +67271,12 @@
       "no_go": 134,
       "none": 451,
       "open_gate": 118,
-      "positive_theorem": 610
+      "positive_theorem": 611
     },
-    "edge_count": 8358,
-    "leaf_count": 570,
-    "node_count": 2118,
+    "edge_count": 8364,
+    "leaf_count": 571,
+    "node_count": 2119,
     "root_count": 795,
-    "runners_with_path": 1731
+    "runners_with_path": 1732
   }
 }
