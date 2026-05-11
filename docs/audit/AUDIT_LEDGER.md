@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1251 |
+| unaudited | 1250 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 176 |
+| ~~audited_conditional~~ | 177 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 176 |
+| `audited_conditional` | 177 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1364 |
+| `unaudited` | 1363 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 894 |
+| `bounded_theorem` | 895 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 225 |
 | `open_gate` | 111 |
-| `positive_theorem` | 742 |
+| `positive_theorem` | 741 |
 
 | criticality | count |
 |---|---:|
@@ -694,6 +694,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `lattice_family_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -6135,6 +6136,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The ordered lattice gives a clean distance-dependent magnitude law on the far-field window b >= 7: |delta| ~= 23.5071 * b^(-1.052), R^2 = 0.9850.  _(class `C`)_
 - **chain closes:** True — The active runner computes the stated lattice propagation, centroid shifts, k=0 control, and far-field power-law fit directly from the declared harness parameters, and the cache/frozen log match the note's table and fit. The note's own scope limits exclude the broader physical and asymptotic readings.
 - **rationale:** The bounded numerical claim closes for the stated no-barrier ordered-lattice harness: the runner constructs the lattice, propagates amplitudes, computes centroid shifts, verifies the k=0 zero control, and fits the declared b >= 7 window without hard-coding the output rows. The residual risk is scope, not computation: this clean verdict does not ratify a signed attractive deflection law, a random-connected architecture transfer, or an asymptotic 1/b theorem beyond the finite window.
+- **auditor confidence:** high
+
+### `lattice_family_validation_note`
+
+- **Note:** [`LATTICE_FAMILY_VALIDATION_NOTE.md`](../../docs/LATTICE_FAMILY_VALIDATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite ordered-2D-lattice two-harness synthesis at N=40, half_width=20, k=5.0: barrier card MI/purity/d_TV/gravity/k=0/Born companion plus no-barrier b in {3,5,7,10,13,16,19} magnitude fit; no one-card unification, signed attractive standard-strength gravity card, mass law, large-N scaling, or blanket lattice theorem is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the standard-strength slice, the ordered lattice family supports a real same-family two-harness bridge: Born-clean barrier coexistence, nontrivial MI/slit separation, real CL-bath decoherence, strong phase-mediated redistribution/lensing, and clean 1/b-like distance-law magnitude on the no-barrier branch.  _(class `C`)_
+- **chain closes:** False — The runner and retained dependencies support the qualitative bounded two-harness synthesis, but the source table is not current with the primary runner cache for the Born value, so the numerical row does not close exactly as written.
+- **rationale:** Issue: the note reports Born |I3|/P = 2.98e-16 for the barrier card, while the current SHA-pinned runner cache reports Born = 5.573785e-16. Why this blocks: both values are machine-clean, but a clean retained numerical synthesis must match the current runner artifact it cites, and this row also needs to be typed as a bounded finite harness result rather than a broad positive theorem. Repair target: refresh the note table to the current primary cache or explicitly pin the frozen log as the audited artifact, then re-audit under the bounded two-harness scope. Claim boundary until fixed: the ordered lattice artifacts support a finite same-family two-harness bridge with no gravity-law or one-card unification promotion, but the exact retained table is stale.
 - **auditor confidence:** high
 
 ### `lattice_field_strength_unification_note`

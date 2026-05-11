@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 156
+    "medium": 155
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27118,30 +27118,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "lattice_family_validation_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_distance_law_note",
-        "lattice_field_strength_unification_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.322,
-      "note_path": "docs/LATTICE_FAMILY_VALIDATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/lattice_family_validation.py",
-      "transitive_descendants": 9
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_2d_gravity_law_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -40213,6 +40189,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 107,
-  "total_pending": 1282
+  "ready_count": 106,
+  "total_pending": 1281
 }
