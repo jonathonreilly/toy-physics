@@ -1,0 +1,138 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_three_generation_hw1_distinct_characters_exact.py
+runner_sha256: 59c1d39e0018083285034d2fcdd37b3e451c5cfb64db12b17fbd8cc4578524a1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10
+Goal: sympy-symbolic verification of distinct joint characters
+and rank-1 sector-projector identities on C^3.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: setup retained-grade diagonal generators on C^3
+----------------------------------------------------------------------------------------
+  T_x = diag(-1, +1, +1)
+  T_y = diag(+1, -1, +1)
+  T_z = diag(+1, +1, -1)
+
+----------------------------------------------------------------------------------------
+Part 1: each T_a is an involution on C^3
+----------------------------------------------------------------------------------------
+  [PASS (A)] T_x^2 == I_3  (T_x^2 = Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]))
+  [PASS (A)] T_y^2 == I_3  (T_y^2 = Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]))
+  [PASS (A)] T_z^2 == I_3  (T_z^2 = Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]]))
+
+----------------------------------------------------------------------------------------
+Part 2: the three translations pairwise commute and are pairwise distinct
+----------------------------------------------------------------------------------------
+  [PASS (A)] [T_x, T_y] = 0
+  [PASS (A)] [T_x, T_z] = 0
+  [PASS (A)] [T_y, T_z] = 0
+  [PASS (A)] T_x != T_y
+  [PASS (A)] T_x != T_z
+  [PASS (A)] T_y != T_z
+
+----------------------------------------------------------------------------------------
+Part 3: joint character map chi(X_i) takes three distinct sign triples
+----------------------------------------------------------------------------------------
+  chi(X_1) = (-1, 1, 1)
+  chi(X_2) = (1, -1, 1)
+  chi(X_3) = (1, 1, -1)
+  [PASS (A)] chi(X_1) == (-1, +1, +1)
+  [PASS (A)] chi(X_2) == (+1, -1, +1)
+  [PASS (A)] chi(X_3) == (+1, +1, -1)
+
+----------------------------------------------------------------------------------------
+Part 4: chi is injective on (X_1, X_2, X_3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] chi(X_1) != chi(X_2)
+  [PASS (A)] chi(X_1) != chi(X_3)
+  [PASS (A)] chi(X_2) != chi(X_3)
+  [PASS (A)] image of chi has three distinct values (injectivity on three basis vectors)  (|im(chi)| = 3)
+
+----------------------------------------------------------------------------------------
+Part 5: eight joint sign-projectors P(s) partition unity on C^3
+----------------------------------------------------------------------------------------
+  [PASS (A)] P(chi(X_1)) = P(-1,+1,+1) == e_1 e_1^T  (got Matrix([[1, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] P(chi(X_2)) = P(+1,-1,+1) == e_2 e_2^T  (got Matrix([[0, 0, 0], [0, 1, 0], [0, 0, 0]]))
+  [PASS (A)] P(chi(X_3)) = P(+1,+1,-1) == e_3 e_3^T  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 1]]))
+  [PASS (A)] P(-1, -1, -1) == 0 (no basis vector has these joint signs)  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] P(-1, -1, 1) == 0 (no basis vector has these joint signs)  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] P(-1, 1, -1) == 0 (no basis vector has these joint signs)  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] P(1, -1, -1) == 0 (no basis vector has these joint signs)  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] P(1, 1, 1) == 0 (no basis vector has these joint signs)  (got Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] exactly three sign triples give nonzero (rank-1) projectors
+  [PASS (A)] exactly five sign triples give the zero operator
+
+----------------------------------------------------------------------------------------
+Part 6: P_i orthogonality and completeness
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_1^2 == P_1
+  [PASS (A)] P_2^2 == P_2
+  [PASS (A)] P_3^2 == P_3
+  [PASS (A)] P_1 P_2 == 0
+  [PASS (A)] P_1 P_3 == 0
+  [PASS (A)] P_2 P_3 == 0
+  [PASS (A)] P_2 P_1 == 0
+  [PASS (A)] P_3 P_1 == 0
+  [PASS (A)] P_3 P_2 == 0
+  [PASS (A)] P_1 + P_2 + P_3 == I_3 (completeness)
+  [PASS (A)] rank(P_1) == 1  (rank = 1)
+  [PASS (A)] rank(P_2) == 1  (rank = 1)
+  [PASS (A)] rank(P_3) == 1  (rank = 1)
+
+----------------------------------------------------------------------------------------
+Part 7: rank-1 sector decomposition C^3 = C X_1 + C X_2 + C X_3
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_1 X_1 == X_1
+  [PASS (A)] P_1 X_2 == 0
+  [PASS (A)] P_1 X_3 == 0
+  [PASS (A)] P_2 X_1 == 0
+  [PASS (A)] P_2 X_2 == X_2
+  [PASS (A)] P_2 X_3 == 0
+  [PASS (A)] P_3 X_1 == 0
+  [PASS (A)] P_3 X_2 == 0
+  [PASS (A)] P_3 X_3 == X_3
+  [PASS (A)] any v in C^3 reconstructs as v = sum_i P_i v (direct sum)  (P_1 v + P_2 v + P_3 v == v as symbolic identity)
+
+----------------------------------------------------------------------------------------
+Part 8: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'Three-Generation `hw=1` Distinct Translation Characters Narrow Theorem'
+  [PASS (A)] note contains: 'T_x = diag(-1, +1, +1)'
+  [PASS (A)] note contains: 'T_y = diag(+1, -1, +1)'
+  [PASS (A)] note contains: 'T_z = diag(+1, +1, -1)'
+  [PASS (A)] note contains: 'Status authority:** independent audit lane only'
+  [PASS (A)] note contains: 'C^3 = C X_1 \\oplus C X_2 \\oplus C X_3'
+  [PASS (A)] note contains: 'SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md'
+  [PASS (A)] note contains: 'Pattern A narrow rescope'
+  [PASS (A)] note contains: 'THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md'
+  [PASS (A)] note contains: 'Forbidden imports check'
+  [PASS (A)] narrow scope avoids forbidden claim: 'load-bears on generation_axiom_boundary'
+  [PASS (A)] narrow scope avoids forbidden claim: 'physical-species claim is hereby retained'
+  [PASS (A)] narrow scope avoids forbidden claim: 'no proper quotient'
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Each T_a is an involution on C^3
+    The three translations commute pairwise and are distinct
+    chi(X_i) takes three distinct sign triples (injectivity)
+    Eight joint sign-projectors partition unity
+    Three rank-1 sector projectors P_i = e_i e_i^T
+    Five remaining sign triples give zero operator
+    P_i P_j = delta_{ij} P_i and P_1 + P_2 + P_3 = I_3
+    Rank-1 sector decomposition C^3 = C X_1 + C X_2 + C X_3
+
+========================================================================================
+TOTAL: PASS=62, FAIL=0
+========================================================================================
+
+----- stderr -----
+

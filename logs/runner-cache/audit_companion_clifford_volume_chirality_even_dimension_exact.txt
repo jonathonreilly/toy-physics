@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_clifford_volume_chirality_even_dimension_exact.py
+runner_sha256: 29b81e6a0bd2707fb7510e4c63017910a61539b3a7e3bf277c91251efc8548a2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10
+Goal: verify (V) parity rule, even/odd dichotomy, and d_t-odd
+for d_s = 3 chirality at exact sympy matrix precision.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: explicit Clifford generators satisfy CAR for n in {2,3,4,5,6}
+----------------------------------------------------------------------------------------
+  [PASS (A)] Cl(2,0) generators satisfy CAR (positive metric): {gamma_mu, gamma_nu} = 2 delta  (dim = 2)
+  [PASS (A)] Cl(3,0) generators satisfy CAR (positive metric): {gamma_mu, gamma_nu} = 2 delta  (dim = 4)
+  [PASS (A)] Cl(4,0) generators satisfy CAR (positive metric): {gamma_mu, gamma_nu} = 2 delta  (dim = 4)
+  [PASS (A)] Cl(5,0) generators satisfy CAR (positive metric): {gamma_mu, gamma_nu} = 2 delta  (dim = 8)
+  [PASS (A)] Cl(6,0) generators satisfy CAR (positive metric): {gamma_mu, gamma_nu} = 2 delta  (dim = 8)
+
+----------------------------------------------------------------------------------------
+Part 2: (V) parity rule on omega for n in {2,3,4,5,6}
+----------------------------------------------------------------------------------------
+  [PASS (A)] (V) parity rule at n = 2: omega gamma_mu = (-1) gamma_mu omega  (all 2 generators verified)
+  [PASS (A)] (V) parity rule at n = 3: omega gamma_mu = (1) gamma_mu omega  (all 3 generators verified)
+  [PASS (A)] (V) parity rule at n = 4: omega gamma_mu = (-1) gamma_mu omega  (all 4 generators verified)
+  [PASS (A)] (V) parity rule at n = 5: omega gamma_mu = (1) gamma_mu omega  (all 5 generators verified)
+  [PASS (A)] (V) parity rule at n = 6: omega gamma_mu = (-1) gamma_mu omega  (all 6 generators verified)
+
+----------------------------------------------------------------------------------------
+Part 3: even-n case — omega anticommutes with every generator
+----------------------------------------------------------------------------------------
+  [PASS (A)] at n = 2 (even): {omega, gamma_mu} = 0 for every mu
+  [PASS (A)] at n = 4 (even): {omega, gamma_mu} = 0 for every mu
+  [PASS (A)] at n = 6 (even): {omega, gamma_mu} = 0 for every mu
+
+----------------------------------------------------------------------------------------
+Part 4: even-n case — explicit gamma_5 satisfying (C1)+(C2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] at n = 2: omega^2 = c I for scalar c (c = -1)
+  [PASS (A)] at n = 2: gamma_5 = i omega satisfies gamma_5^2 = +I  (gamma_5^2 = 1 I (c was -1))
+  [PASS (A)] at n = 2: {gamma_5, gamma_mu} = 0 for every mu (C2)
+  [PASS (A)] at n = 4: omega^2 = c I for scalar c (c = 1)
+  [PASS (A)] at n = 4: gamma_5 = omega satisfies gamma_5^2 = +I  (gamma_5^2 = 1 I (c was 1))
+  [PASS (A)] at n = 4: {gamma_5, gamma_mu} = 0 for every mu (C2)
+  [PASS (A)] at n = 6: omega^2 = c I for scalar c (c = -1)
+  [PASS (A)] at n = 6: gamma_5 = i omega satisfies gamma_5^2 = +I  (gamma_5^2 = 1 I (c was -1))
+  [PASS (A)] at n = 6: {gamma_5, gamma_mu} = 0 for every mu (C2)
+
+----------------------------------------------------------------------------------------
+Part 5: odd-n case — omega is central
+----------------------------------------------------------------------------------------
+  [PASS (A)] at n = 3 (odd): [omega, gamma_mu] = 0 for every mu (omega is central)
+  [PASS (A)] at n = 5 (odd): [omega, gamma_mu] = 0 for every mu (omega is central)
+
+----------------------------------------------------------------------------------------
+Part 6: odd-n case — exhaustive scan: no algebra element anticommutes with all generators
+----------------------------------------------------------------------------------------
+  [PASS (A)] at n = 3 (odd): exhaustive monomial scan — no basis element anticommutes with every generator  (0 candidate(s) out of 2^3 = 8 monomials)
+  [PASS (A)] at n = 5 (odd): exhaustive monomial scan — no basis element anticommutes with every generator  (0 candidate(s) out of 2^5 = 32 monomials)
+
+----------------------------------------------------------------------------------------
+Part 7: application at d_s = 3 — chirality-allowed d_t in {1, 3, 5, 7}
+----------------------------------------------------------------------------------------
+  [PASS (A)] chirality-allowed d_t at d_s = 3 are odd in [1, 7]: {1, 3, 5, 7}  (got [1, 3, 5, 7])
+
+----------------------------------------------------------------------------------------
+Part 8: counterfactual at d_t = 2 (n = 5 odd) — no gamma_5 exists
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual at d_s=3, d_t=2 (n=5): no basis monomial qualifies as gamma_5
+
+----------------------------------------------------------------------------------------
+Part 9: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'Clifford Volume-Element Chirality Forces Even Total Dimension Narrow Theorem'
+  [PASS (A)] note contains: 'Status authority:** independent audit lane only'
+  [PASS (A)] note contains: 'gamma_5^2 = +I'
+  [PASS (A)] note contains: '{ gamma_5, gamma_mu } = 0'
+  [PASS (A)] note contains: 'Pattern A narrow rescope'
+  [PASS (A)] note contains: 'ANOMALY_FORCES_TIME_THEOREM.md'
+  [PASS (A)] note contains: 'Forbidden imports check'
+  [PASS (A)] note contains: 'd_t in { 1, 3, 5, 7, ... }'
+  [PASS (A)] note contains: 'Honest open items'
+  [PASS (A)] note contains: 'Does **not** claim `d_t = 1`'
+  [PASS (A)] narrow scope avoids forbidden claim: 'closes admission (i)'
+  [PASS (A)] narrow scope avoids forbidden claim: 'promotes the parent to positive_theorem'
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    CAR for Cl(n, 0) at n = 2, 3, 4, 5, 6 on explicit matrix realizations
+    (V) parity rule omega gamma_mu = (-1)^(n-1) gamma_mu omega at n = 2..6
+    Even n in {2, 4, 6}: omega anticommutes with every generator;
+    explicit gamma_5 with gamma_5^2 = +I and {gamma_5, gamma_mu} = 0
+    Odd n in {3, 5}: omega central; exhaustive monomial scan finds
+    no algebra basis element anticommuting with every generator
+    Application at d_s = 3: chirality-allowed d_t in {1, 3, 5, 7}
+    Counterfactual at d_t = 2 (n = 5): no gamma_5 exists
+
+========================================================================================
+TOTAL: PASS=40, FAIL=0
+========================================================================================
+
+----- stderr -----
+

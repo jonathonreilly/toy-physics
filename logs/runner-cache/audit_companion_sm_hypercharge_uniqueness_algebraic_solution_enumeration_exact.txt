@@ -1,0 +1,107 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_sm_hypercharge_uniqueness_algebraic_solution_enumeration_exact.py
+runner_sha256: 35a9c842ccbff25d89cac3f63c3b7b9a36e1776a13dc425042e80751b9bde40d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10
+Goal: sympy-symbolic rational-solution enumeration of (A1)-(A3)+(N)+(Q)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup of the anomaly system
+----------------------------------------------------------------------------------------
+  (A1) 3(y1 + y2) + y3 + y4 = 0
+  (A2) y1 + y2 = 2/3
+  (A3) 3(y1^3 + y2^3) + y3^3 + y4^3 = -16/9
+  (N)  y4 = 0
+
+----------------------------------------------------------------------------------------
+Part 1: Step 1 reduction — y_4 = 0 and (A1)+(A2) imply y_3 = -2
+----------------------------------------------------------------------------------------
+  [PASS (A)] Step 1: y4 = 0 and (A1)+(A2) reduce to y3 = -2  (y3 = [-2])
+
+----------------------------------------------------------------------------------------
+Part 2: Step 2 — (A3) reduces to y_1^3 + y_2^3 = 56/27
+----------------------------------------------------------------------------------------
+  [PASS (A)] Step 2: A3 at (y4=0, y3=-2) is 3*(y1^3+y2^3) - 56/9  (A3_N - target = 0)
+  [PASS (A)] Step 2: setting A3_N = 0 forces y1^3 + y2^3 = 56/27  (3*(y1^3 + y2^3) = 56/9, so y1^3+y2^3 = 56/27)
+
+----------------------------------------------------------------------------------------
+Part 3: Step 3 — closed-form quadratic 9 t^2 - 6 t - 8 = 0 with rational roots
+----------------------------------------------------------------------------------------
+  [PASS (A)] discriminant of 9 t^2 - 6 t - 8 is 324 = 18^2 (perfect square)  (disc = 324, sqrt(disc) = 18)
+  [PASS (A)] rational roots of 9 t^2 - 6 t - 8 are exactly {4/3, -2/3}  (roots = [-2/3, 4/3])
+
+----------------------------------------------------------------------------------------
+Part 4: rational solution enumeration over Q^4 of (A1)+(A2)+(A3)+(N)
+----------------------------------------------------------------------------------------
+  [PASS (A)] rational solution set S_2 has exactly two elements  (|S_2| = 2)
+  [PASS (A)] S_2 = { (+4/3, -2/3, -2, 0), (-2/3, +4/3, -2, 0) }  (S_2 = {(4/3, -2/3, -2, 0), (-2/3, 4/3, -2, 0)})
+
+----------------------------------------------------------------------------------------
+Part 5: Q-labelling (Q): y_1 > 0 selects the unique tuple S_1
+----------------------------------------------------------------------------------------
+  [PASS (A)] imposing Q(u_R) > 0 (y_1 > 0) reduces S_2 to a singleton  (|S_1| = 1)
+  [PASS (A)] S_1 = { (+4/3, -2/3, -2, 0) }  (S_1 = {(4/3, -2/3, -2, 0)})
+
+----------------------------------------------------------------------------------------
+Part 6: one-generation electric-charge spectrum under Q = T_3 + Y/2
+----------------------------------------------------------------------------------------
+  [PASS (A)] Q(u_R) = +2/3
+  [PASS (A)] Q(d_R) = -1/3
+  [PASS (A)] Q(e_R) = -1
+  [PASS (A)] Q(ν_R) = 0
+  [PASS (A)] Q(u_L) = +2/3
+  [PASS (A)] Q(d_L) = -1/3
+  [PASS (A)] Q(ν_L) = 0
+  [PASS (A)] Q(e_L) = -1
+  [PASS (A)] electric-charge spectrum = { 0, +/-1/3, +/-2/3, +/-1 } (particles + antiparticles)  (spectrum = [-1, -2/3, -1/3, 0, 1/3, 2/3, 1])
+  [PASS (A)] denominators of the charge spectrum are exactly {1, 3}  (denominators = {1, 3})
+
+----------------------------------------------------------------------------------------
+Part 7: counterfactual — drop (N) gives a 1-parameter family
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: dropping (N) admits multiple rational solutions parameterized by y_4  (witnesses: [(1/3, 2), (2/3, 2), (-1, 1)])
+  [PASS (A)] counterfactual: y_4 = 1/3 yields y_3 != -2  (at y4 = 1/3, y3 = -7/3)
+
+----------------------------------------------------------------------------------------
+Part 8: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'SM Hypercharge Uniqueness Algebraic Solution-Enumeration Narrow Theorem'
+  [PASS (A)] note contains: 'Status authority:** independent audit lane only'
+  [PASS (A)] note contains: '3 (y_1 + y_2) + y_3 + y_4'
+  [PASS (A)] note contains: 'y_1 + y_2'
+  [PASS (A)] note contains: 'y_1^3 + y_2^3'
+  [PASS (A)] note contains: 'y_4 = 0'
+  [PASS (A)] note contains: 'Pattern A narrow rescope'
+  [PASS (A)] note contains: 'STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md'
+  [PASS (A)] note contains: 'Forbidden imports check'
+  [PASS (A)] note contains: 'S_2'
+  [PASS (A)] note contains: 'S_1'
+  [PASS (A)] narrow scope explicitly declines: 'derive the coefficients of (A1)-(A3)'  (appears under 'What this does NOT claim')
+  [PASS (A)] narrow scope explicitly declines: 'derive the requirement that an anomaly-cancelling'  (appears under 'What this does NOT claim')
+  [PASS (A)] narrow scope explicitly declines: 'derive the neutral-singlet identification'  (appears under 'What this does NOT claim')
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Step 1: y4 = 0 and (A1)+(A2) imply y3 = -2
+    Step 2: (A3) reduces to y1^3 + y2^3 = 56/27
+    Step 3: quadratic 9 t^2 - 6 t - 8 has discriminant 18^2, roots {4/3, -2/3}
+    Direct enumeration: S_2 = {(+4/3, -2/3, -2, 0), (-2/3, +4/3, -2, 0)}
+    Q-labelling: S_1 = {(+4/3, -2/3, -2, 0)}
+    Electric-charge spectrum: {0, +/-1/3, +/-2/3, +/-1}, denominators {1, 3}
+    Counterfactual: dropping y4 = 0 reopens a 1-parameter family
+
+========================================================================================
+TOTAL: PASS=35, FAIL=0
+========================================================================================
+
+----- stderr -----
+
