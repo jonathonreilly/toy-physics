@@ -8232,6 +8232,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py"
     },
+    "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow.py"
+    },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "assert_count": 1,
       "counts": {
@@ -31701,6 +31713,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py": {
       "assert_count": 1,
       "claims": [
@@ -45860,12 +45887,12 @@
     "dominant_class_distribution": {
       "A": 129,
       "B": 169,
-      "C": 664,
+      "C": 665,
       "D": 255,
       "none": 421
     },
-    "runners_classified": 1638,
-    "runners_with_C": 834,
+    "runners_classified": 1639,
+    "runners_with_C": 835,
     "runners_with_D": 459
   }
 }

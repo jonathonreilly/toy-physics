@@ -45643,6 +45643,17 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem"
     },
+    "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10": {
+      "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "bb35b3b483629db0c2fe3673fff5d2ae9b3ac6b9ee2ba8040560f26a1a147c0b",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_ONE_WORD_PACKET_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow.py",
+      "title": "Gauge-Vacuum Plaquette Spatial Environment Tensor-Transfer One-Word Packet Narrow Theorem"
+    },
     "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note",
       "claim_type_author_hint": "bounded_theorem",
@@ -67345,6 +67356,7 @@
     "gauge_vacuum_plaquette_perron_jacobi_underdetermination_note",
     "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09",
     "gauge_vacuum_plaquette_source_sector_matrix_element_factorization_note",
+    "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow_theorem_note_2026-05-10",
     "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
     "gauge_vacuum_plaquette_transfer_operator_character_recurrence_note",
     "generated_geometry_synthesis_note",
@@ -67818,7 +67830,7 @@
       "no_go": 29,
       "none": 1628,
       "open_gate": 33,
-      "positive_theorem": 119
+      "positive_theorem": 120
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 750,
@@ -67827,12 +67839,12 @@
       "no_go": 136,
       "none": 451,
       "open_gate": 121,
-      "positive_theorem": 619
+      "positive_theorem": 620
     },
     "edge_count": 8432,
-    "leaf_count": 582,
-    "node_count": 2137,
-    "root_count": 803,
-    "runners_with_path": 1750
+    "leaf_count": 583,
+    "node_count": 2138,
+    "root_count": 804,
+    "runners_with_path": 1751
   }
 }
