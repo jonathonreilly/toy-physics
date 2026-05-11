@@ -407,10 +407,58 @@ of the framework's NLO Wolfenstein protected-γ̄ surface.
   length without measurement of `alpha`, since the comparator is
   the JOINT sum `R_b^2 + R_t^2`.
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(P1)`-`(P5)` and the geometric
+`(P6)` law-of-cosines interpretation is certified at exact-symbolic
+precision via `sympy` in
+`scripts/audit_companion_ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream cited inputs `(N1)`, `(N2)`, `(N3)` and
+Wolfenstein `W1` (`lambda^2 = alpha_s/2`) verbatim, and checks each
+identity by computing `sympy.simplify(lhs - rhs)` and asserting the
+residual equals `0` exactly. The cited inputs themselves
+(`rho_bar = (4-alpha_s)/24`, `eta_bar = sqrt(5)(4-alpha_s)/24`,
+`R_b_bar^2 = (4-alpha_s)^2/96`, `lambda^2 = alpha_s/2`, structural
+counts `N_pair = 2`, `N_quark = 6`) are imported from upstream authority
+notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `(P1)` | `R_b_bar^2 == rho_bar^2 + eta_bar^2 == (4 - alpha_s)^2/96` | `sympy.simplify` residual `= 0` |
+| `(P2)` | `R_t_bar^2 == (1 - rho_bar)^2 + eta_bar^2 == (80 + alpha_s^2)/96` | `sympy.simplify` residual `= 0` |
+| `(P2)` LO | `R_t_bar^2 -> 5/6` at `alpha_s = 0` (atlas-LO recovery) | exact rational `5/6` |
+| `(P3)` | `R_b_bar^2 + R_t_bar^2 == 1 - alpha_s/12 + alpha_s^2/48` | `sympy.simplify` residual `= 0` |
+| `(P3)` defect | `1 - (R_b_bar^2 + R_t_bar^2) == alpha_s/12 - alpha_s^2/48` | `sympy.simplify` residual `= 0` |
+| `(P4)` | `R_b_bar^2 + R_t_bar^2 + rho_bar * lambda^2 == 1` (EXACT) | `sympy.simplify` residual `= 0` |
+| `(P4)` polynomial | residual polynomial in `alpha_s` is identically `0` (no `alpha_s^3` tail) | `expand(...)` returns `0` |
+| `(P5)` | `defect == alpha_s/(N_quark N_pair) - alpha_s^2/(N_quark N_pair^3)` at `(2, 6)` | `sympy.simplify` residual `= 0` |
+| `(P6)` | `defect^2 == 4 R_b_bar^2 R_t_bar^2 cos^2(alpha_bar)` (law of cosines, squared) | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm the load-bearing role of the cited
+inputs:
+
+- dropping the `(4 - alpha_s)` coupling factor in `eta_bar` breaks
+  `(P2)`, so `R_t_bar^2` no longer collapses to `(80 + alpha_s^2)/96`;
+- replacing `lambda^2 = alpha_s/2` with `lambda^2 = alpha_s` (i.e.
+  `n_pair = 1`) produces a non-zero `alpha_s` residual in `(P4)`,
+  confirming `W1` is load-bearing for the exact cancellation;
+- using only the atlas-LO `rho_bar = 1/6` (no NLO offset) leaves a
+  non-zero `alpha_s^2` residual in `(P4)`, so the cited `(N1)` form
+  is what makes the sum rule exact at NLO.
+
+The structural relations are therefore exact-symbolic over the cited
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_barred_triangle_pythagorean_rho_lambda_sum_rule.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_exact.py
 ```
 
 Expected result:
@@ -420,21 +468,20 @@ TOTAL: PASS=42, FAIL=0
 ```
 
 The runner uses the Python standard library plus the canonical
-`scripts/canonical_plaquette_surface.py` import. All upstream
-authorities are retained on `main`.
+`scripts/canonical_plaquette_surface.py` import. Upstream authorities are cited here; their audit status remains ledger-derived.
 
 ## Cross-References
 
 - [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
-  -- retained N1 (`rho_bar`), N2 (`eta_bar`), N3 (`R_b_bar^2`), N7
+  -- cited N1 (`rho_bar`), N2 (`eta_bar`), N3 (`R_b_bar^2`), N7
   (`alpha_bar - pi/2` slope) used in this note.
 - [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
-  -- retained atlas-LO `alpha_0 = pi/2`, `R_b² + R_t² = 1`.
+  -- cited atlas-LO `alpha_0 = pi/2`, `R_b² + R_t² = 1`.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-  -- retained `rho = 1/6`, `eta^2 = 5/36`.
+  -- cited `rho = 1/6`, `eta^2 = 5/36`.
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-  -- retained `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`.
+  -- cited `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`.
 - [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-  -- retained `N_quark = N_pair × N_color = 6`.
+  -- cited `N_quark = N_pair × N_color = 6`.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
-  -- canonical `alpha_s(v)` retained input.
+  -- canonical `alpha_s(v)` cited input.

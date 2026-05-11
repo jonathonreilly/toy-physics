@@ -1,0 +1,111 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (O1)-(O7) at exact precision
+parametric in alpha_s on the cited NLO protected-gamma-bar surface.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and cited inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  V_1 = (0, 0), V_2 = (1, 0)
+  V_3 = (rho_bar, eta_bar) = (1/6 - alpha_s/24, sqrt(5)*(4 - alpha_s)/24)
+
+----------------------------------------------------------------------------------------
+Part 1: (O3) Centroid G = (V_1 + V_2 + V_3)/3
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O3) G_x == (28 - alpha_s)/72 (parametric)  (residual = 0)
+  [PASS (B)] (O3) G_y == sqrt(5)(4 - alpha_s)/72 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (O1) Orthocenter H from altitude construction
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O1) H_x == rho_bar == (4 - alpha_s)/24 (altitude from V_3 vertical)  (residual = 0)
+  [PASS (B)] (O1) H_y == (20 + alpha_s)/(24 sqrt(5)) (parametric)  (residual = 0)
+  [PASS (B)] (O1) H_y * sqrt(5) is a degree-1 polynomial in alpha_s  (degree = 1)
+  [PASS (B)] (O1) H lies on altitude from V_2 (cross-check)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (O2) Apex-orthocenter offset H - V_3 = (0, alpha_s sqrt(5)/20)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O2) H_x - V_3_x == 0 (purely vertical offset)  (residual = 0)
+  [PASS (B)] (O2) H_y - V_3_y == alpha_s sqrt(5)/20 (parametric)  (residual = 0)
+  [PASS (B)] (O2) H_y - V_3_y == alpha_s/[N_pair^2 sqrt(N_quark - 1)] at (2, 6)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (O4) Circumcenter O re-derived from (N1, N2, N3)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O4) O_x == 1/2 (alpha_s-independent)  (value = 1/2)
+  [PASS (B)] (O4) O_y == -alpha_s sqrt(5)/40 (parametric)  (residual = 0)
+  [PASS (B)] (O4) O_y == -alpha_s/[N_pair^3 sqrt(N_quark - 1)] at (2, 6)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (O5) Euler line H = 3 G - 2 O
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O5) 3 G_x - 2 O_x == H_x (parametric)  (residual = 0)
+  [PASS (B)] (O5) 3 G_y - 2 O_y == H_y (parametric)  (residual = 0)
+  [PASS (B)] (O5) H, G, O are collinear (cross product = 0)  (residual = 0)
+  [PASS (B)] (O5) HG = 2 GO (x-component)  (residual = 0)
+  [PASS (B)] (O5) HG = 2 GO (y-component)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: (O6) H - V_3 = -2 (O - M) with M = hypotenuse midpoint (1/2, 0)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O6) H_x - V_3_x == -2 (O_x - M_x) (both equal 0)  (residual = 0)
+  [PASS (B)] (O6) H_y - V_3_y == -2 (O_y - M_y) (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: (O7) slope identification (H_y - V_3_y)/alpha_s = sqrt(5)/20 (= N7 slope)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O7) (H_y - V_3_y)/alpha_s == sqrt(5)/20 (N7 slope)  (residual = 0)
+  [PASS (B)] (O7) slope == 1/[N_pair^2 sqrt(N_quark - 1)] at (2, 6)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: (O9) atlas-LO recovery at alpha_s = 0
+----------------------------------------------------------------------------------------
+  [PASS (B)] (O9) H_LO == V_3_LO == (1/6, sqrt(5)/6) (right-angle vertex coincidence)  (H_LO = (1/6, sqrt(5)/6); V_3_LO = (1/6, sqrt(5)/6))
+  [PASS (B)] (O9) O_LO == (1/2, 0) (hypotenuse midpoint)  (O_LO = (1/2, 0))
+
+----------------------------------------------------------------------------------------
+Part 9: (O8) selection rule -- H, G are degree-1 polynomials in alpha_s
+----------------------------------------------------------------------------------------
+  [PASS (B)] H_x is degree-1 in alpha_s
+  [PASS (B)] H_y * sqrt(5) is degree-1 in alpha_s
+  [PASS (B)] G_x is degree-1 in alpha_s
+  [PASS (B)] G_y / sqrt(5) is degree-1 in alpha_s
+
+----------------------------------------------------------------------------------------
+Part 10: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: dropping (4-alpha_s) from eta_bar breaks H_y closed form  (alternate H_y is no longer (20 + alpha_s)/(24 sqrt(5)))
+  [PASS (B)] counterfactual: at rho_bar = 1/6 (atlas-LO), H_y differs from full NLO form  (alternate H_y at atlas-LO does not equal (20 + alpha_s)/(24 sqrt(5)))
+
+----------------------------------------------------------------------------------------
+Part 11: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  H_x = 0.1623623410, H_y = 0.3746029492
+  H_y - V_3_y = 0.0115497178
+  [PASS (B)] H_y - V_3_y ~ 0.01154972 at canonical alpha_s  (got 0.01154972)
+  [PASS (B)] H_x ~ 0.16236234 at canonical alpha_s  (got 0.16236234)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (O1) H = (rho_bar, (20 + alpha_s)/(24 sqrt(5))) (degree-1 in alpha_s)
+    (O2) H - V_3 = (0, alpha_s sqrt(5)/20)
+    (O3) G = ((28 - alpha_s)/72, sqrt(5)(4 - alpha_s)/72)
+    (O4) O = (1/2, -alpha_s sqrt(5)/40) [re-derived from (N1)-(N3)]
+    (O5) Euler line H = 3 G - 2 O, HG : GO = 2 : 1
+    (O6) H - V_3 = -2 (O - M) with M = (1/2, 0)
+    (O7) slope (H_y - V_3_y)/alpha_s = sqrt(5)/20 = cited N7 slope
+    (O8) H, G are degree-1 in alpha_s (selection rule)
+    (O9) atlas-LO recovery H_LO = V_3_LO = (1/6, sqrt(5)/6); O_LO = (1/2, 0)
+    Counterfactuals confirm the (4 - alpha_s) cancellation in eta_bar
+    is load-bearing for the closed-form structure.
+
+========================================================================================
+TOTAL: PASS=31, FAIL=0
+========================================================================================

@@ -1,0 +1,88 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (P1)-(P5) at exact precision
+parametric in alpha_s on the cited NLO protected-gamma-bar surface.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and cited inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  rho_bar  (N1)     = 1/6 - alpha_s/24
+  eta_bar  (N2)     = sqrt(5)*(4 - alpha_s)/24
+  R_b_bar^2 (N3)    = (4 - alpha_s)**2/96
+  lambda^2 (W1)     = alpha_s/2
+  N_pair = 2, N_quark = 6
+
+----------------------------------------------------------------------------------------
+Part 1: (P1) R_b_bar^2 = rho_bar^2 + eta_bar^2 = (4 - alpha_s)^2/96
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P1) rho_bar^2 + eta_bar^2 == (4 - alpha_s)^2/96 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (P2) R_t_bar^2 = (80 + alpha_s^2)/96
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P2) (1 - rho_bar)^2 + eta_bar^2 == (80 + alpha_s^2)/96 (parametric)  (residual = 0)
+  [PASS (B)] (P2) atlas-LO recovery R_t_bar^2 -> 5/6 at alpha_s = 0  (Rt_LO = 5/6)
+
+----------------------------------------------------------------------------------------
+Part 3: (P3) Pythagorean defect closed form
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P3) R_b_bar^2 + R_t_bar^2 == 1 - alpha_s/12 + alpha_s^2/48 (parametric)  (residual = 0)
+  [PASS (B)] (P3) defect = 1 - (R_b^2 + R_t^2) == alpha_s/12 - alpha_s^2/48  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (P4) EXACT sum rule R_b^2 + R_t^2 + rho_bar lambda^2 = 1
+----------------------------------------------------------------------------------------
+  [PASS (B)] rho_bar * lambda^2 == alpha_s(4 - alpha_s)/48 (parametric)  (residual = 0)
+  [PASS (B)] (P4) R_b_bar^2 + R_t_bar^2 + rho_bar * lambda^2 == 1 (parametric, EXACT)  (residual = 0)
+  [PASS (B)] (P4) residual polynomial is identically 0 (no alpha_s^k corrections)  (residual_poly = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (P5) defect coefficient structure
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P5) leading defect coefficient 1/12 == 1/(N_quark * N_pair) at (2, 6)  (value = 1/12)
+  [PASS (B)] (P5) sub-leading defect coefficient 1/48 == 1/(N_quark * N_pair^3) at (2, 6)  (value = 1/48)
+  [PASS (B)] (P5) defect == alpha_s/(N_quark N_pair) - alpha_s^2/(N_quark N_pair^3) at (2, 6)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: (P6) law-of-cosines geometric interpretation
+----------------------------------------------------------------------------------------
+  [PASS (B)] (P6) defect^2 == 4 R_b^2 R_t^2 cos^2(alpha_bar) (parametric, squared form)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: dropping (4-alpha_s) from eta_bar breaks (P2)  (alternate R_t_bar^2 is no longer (80 + alpha_s^2)/96)
+  [PASS (B)] counterfactual: at lambda^2 = alpha_s, (P4) sum != 1 (acquires alpha_s residual)  (residual = alpha_s*(4 - alpha_s)/48)
+  [PASS (B)] counterfactual: at rho_bar = 1/6 (atlas-LO), (P4) sum != 1 in alpha_s^2 term  (residual = alpha_s**2/48)
+
+----------------------------------------------------------------------------------------
+Part 8: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  R_b_bar^2 = 0.1581691786
+  R_t_bar^2 = 0.8334444967
+  rho_bar * lambda^2 = 0.0083863247
+  sum (should be 1.0) = 1.000000000000000
+  [PASS (B)] R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 ~ 1.0 at canonical alpha_s  (got 1.000000000000000)
+  [PASS (B)] defect ~ 0.008386 at canonical alpha_s  (got 0.008386)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (P1) R_b_bar^2 == rho_bar^2 + eta_bar^2 == (4 - alpha_s)^2/96
+    (P2) R_t_bar^2 == (80 + alpha_s^2)/96
+    (P3) R_b_bar^2 + R_t_bar^2 == 1 - alpha_s/12 + alpha_s^2/48
+    (P4) R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 == 1 (EXACT, no alpha_s^3+)
+    (P5) defect == alpha_s/(N_quark N_pair) - alpha_s^2/(N_quark N_pair^3)
+         leading 1/12, sub-leading 1/48 at (N_pair, N_quark) = (2, 6)
+    (P6) defect^2 == 4 R_b^2 R_t^2 cos^2(alpha_bar) (law-of-cosines)
+    Counterfactuals confirm (4 - alpha_s) coupling, lambda^2 = alpha_s/2,
+    and rho_bar NLO form are individually load-bearing for (P4) exactness.
+
+========================================================================================
+TOTAL: PASS=17, FAIL=0
+========================================================================================

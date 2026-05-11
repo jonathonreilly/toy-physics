@@ -323,10 +323,50 @@ Three layers of new content beyond prior branches:
   identification as a CKM-side input.
 - It does NOT use SUPPORT-tier or open inputs as derivation inputs.
 
+## Exact-symbolic verification
+
+The algebraic content of `(B1)`-`(B6)`, the universal Bernoulli relation
+`(MV1)`, and the cross-level decompositions `(D1)`, `(D2)` is certified
+at exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_multi_projection_bernoulli_family_exact.py`.
+The companion runner treats `(N_pair, N_color, N_quark)` as
+positive-integer symbols `(p, c, q)` with the framework constraint
+`q = p c`, and checks each identity via `sympy.simplify(lhs - rhs)`
+asserting the residual equals `0`. The cited atlas-side inputs
+(`A^2 = N_pair/N_color`, `rho = 1/N_quark`,
+`eta^2 = (N_quark - 1)/N_quark^2`, cited `N_pair = 2`,
+`N_color = 3`) are imported from upstream authority notes and are not
+re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `(MV1)` | `V(N) == M(N)/N` parametric in `N` | `sympy.simplify` residual `= 0` |
+| `(B1)`-`(B6)` | six Bernoulli values at `(p, c, q) = (2, 3, 6)` | exact rationals match `1/2, 2/3, 5/6, 1/4, 2/9, 5/36` |
+| `(B3)` | `M(N_quark) == 1 - rho` parametric in `q` | `sympy.simplify` residual `= 0` |
+| `(B6)` | `V(N_quark) == eta^2` parametric in `q` | `sympy.simplify` residual `= 0` |
+| `(B2)` | `M(N_color) == A^2 = N_pair/N_color` only at `(2, 3)` (specialization, not generic) | residual non-zero parametric, `= 0` at `(2, 3)` |
+| `(D1)` | `(1/p^2)(p/c) == 1/(p c)`; under `q = p c`, equals `1/q = rho` | `sympy.simplify` residual `= 0` |
+| `(D1)` framework | `V(N_pair) M(N_color) == 1/6` at `(2, 3, 6)` | exact rational `1/6` |
+| `(D2)` | `V(N_color) (1/N_pair) == (c-1)/(p c^2)` parametric | `sympy.simplify` residual `= 0` |
+| `(D2)` framework | `V(N_color) M(N_pair) == 1/9` at `(2, 3, 6)` | exact rational `1/9` |
+| `A^2 rho` | `A^2 rho == p/(c q)`; under `q = p c`, equals `1/c^2` | `sympy.simplify` residual `= 0` |
+| pair/color swap | `D1` and `D2` interchange variance/mean roles between `(p, c)` | structural duality confirmed |
+
+A counterfactual at `(p, c) = (3, 2)` (swap of the framework values)
+shows `A^2 rho = 1/c^2 = 1/4`, not `1/9`, confirming that the cited
+ordering `(N_pair, N_color) = (2, 3)` is load-bearing for the named
+`(D2) = 1/9` value.
+
+The structural relations are therefore exact-symbolic over the imported
+atlas-side inputs and the framework counts. No floating-point pin is
+required for any identity in this note (the family is purely rational
+under exact `sympy` arithmetic).
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_multi_projection_bernoulli_family.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_multi_projection_bernoulli_family_exact.py
 ```
 
 Expected result:
@@ -340,13 +380,13 @@ The runner uses Python's `fractions.Fraction` for exact-rational arithmetic.
 ## Cross-References
 
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-  -- retained `(W2)` `A² = N_pair/N_color` = M(N_color).
+  -- cited `(W2)` `A² = N_pair/N_color` = M(N_color).
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-  -- retained `ρ = 1/N_quark`, `η² = (N_quark − 1)/N_quark²` = V(N_quark).
+  -- cited `ρ = 1/N_quark`, `η² = (N_quark − 1)/N_quark²` = V(N_quark).
 - [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-  -- retained `N_pair = 2`, `N_color = 3`, `N_quark = N_pair × N_color = 6`.
+  -- cited `N_pair = 2`, `N_color = 3`, `N_quark = N_pair × N_color = 6`.
 - [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
-  -- retained N4 protection: `tan(γ̄) = √5` ⇒ `sin²(γ̄) = 5/6 = M(N_quark)`.
+  -- cited N4 protection: `tan(γ̄) = √5` ⇒ `sin²(γ̄) = 5/6 = M(N_quark)`.
 - [`CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
   and [`CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
   -- related CKM-side support notes; not needed as derivation inputs here.

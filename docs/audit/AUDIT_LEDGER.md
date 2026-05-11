@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1241 |
+| unaudited | 1247 |
 | audit_in_progress | 5 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 186 |
+| ~~audited_conditional~~ | 180 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 8 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 186 |
+| `audited_conditional` | 180 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1351 |
+| `unaudited` | 1357 |
 
 | claim_type | count |
 |---|---:|
@@ -578,16 +578,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `chiral_3plus1d_boundary_phase_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_layer_oscillation_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `ckm_first_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -1990,86 +1984,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **decoration parent:** `ckm_atlas_axiom_closure_note`
 - **auditor confidence:** high
 
-### `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the algebraic closed forms A1-A11 for alpha_bar on the NLO protected-gamma barred-triangle surface, conditional on the cited NLO barred-triangle inputs N4-N6 and structural constants.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_barred_apex_angle_ex-077`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Using N4, N5, and N6, tan(alpha_bar) = -[tan(beta_bar)+tan(gamma_bar)]/[1-tan(beta_bar)tan(gamma_bar)] simplifies exactly to -4 sqrt(5)/alpha_s.  _(class `A`)_
-- **chain closes:** True — The algebra from tan(gamma_bar)=sqrt(5), tan(beta_bar)=sqrt(5)(4-alpha_s)/(20+alpha_s), and alpha_bar=pi-gamma_bar-beta_bar closes internally and yields A1-A8 and A10 by standard trigonometry. The audit does not close the retained-grade status of those upstream premises.
-- **rationale:** The load-bearing step is a genuine algebraic identity over the supplied NLO barred-triangle premises, not a numerical fit. However, the restricted packet marks several cited authorities as unaudited or audited_conditional rather than retained-grade, including the NLO barred-triangle authority that supplies N4-N6. Under the rubric, that prevents audited_clean even though the local algebra is correct.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_CIRCUMRADIUS_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the exact circumradius, circumcenter, chord-distance, and even-power selection-rule identities only on the stated NLO protected-gamma barred-triangle surface, conditional on the supplied upstream NLO barred-apex and structural-count inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_barred_circumradius_-075`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Using N4, N5, and N6 gives tan(alpha_bar) = -4 sqrt(5) / alpha_s, so the law of sines yields R_bar^2 = 1/[4 sin^2(alpha_bar)] = 1/4 + alpha_s^2/320.  _(class `A`)_
-- **chain closes:** True — The algebra from the supplied N4, N5, N6, unit-base geometry, and retained N1-N3 apex coordinates closes to C1-C8 on its own terms. The remaining weakness is not the local derivation but the upstream authority grade of several cited inputs.
-- **rationale:** The load-bearing step is a genuine class A algebraic closure over the supplied NLO protected-gamma inputs, not a numerical fit or definition. The runner source recomputes the stated trigonometric and circumcenter identities and its 35 passing checks are all algebraic/internal checks. However, the restricted packet marks multiple cited authorities as unaudited or audited_conditional rather than retained-grade, so the claim cannot receive audited_clean under the rubric. No external comparator is load-bearing for the theorem.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_barred_orthocenter_euler_line_exact_closed_form_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the Euclidean triangle-center closed forms O1-O9 on the stated NLO barred-apex surface using only the supplied N1-N3/N7 apex inputs and standard triangle geometry.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_barred_orthocenter_e-074`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** For the orthocenter, the altitude construction gives H_y = rho_bar(1 - rho_bar)/eta_bar, and substituting retained N1 and N2 cancels the (4 - alpha_s) factor to give H_y = (20 + alpha_s)/(24 sqrt(5)).  _(class `A`)_
-- **chain closes:** True — The formulas for H, G, O, the Euler-line relation, and the apex/circumcenter anti-relation follow algebraically from the supplied barred-apex coordinates and Euclidean triangle-center definitions. The closure is conditional on the cited NLO barred-triangle and upstream CKM/alpha_s authorities being accepted.
-- **rationale:** The local derivation is a genuine class-A algebraic closure over the supplied NLO barred-apex inputs; no numerical tuning or external comparator is load-bearing. However, multiple cited authorities in the restricted packet are marked unaudited or audited_conditional rather than retained-grade, and the NLO barred-triangle parent explicitly has only conditional audit status. Under the rubric, that prevents a clean verdict even though this note's algebra closes on its own stated premises.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_barred_triangle_pythagorean_rho_lambda_sum_rule_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Algebraic NLO sum rule R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1 on the provided protected-gamma barred-apex surface with lambda^2 = alpha_s/2.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_barred_triangle_pyth-081`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Compute rho_bar * lambda^2 = (4 - alpha_s)/24 * alpha_s/2 = alpha_s(4 - alpha_s)/48, exactly matching the Pythagorean defect from R_b_bar^2 + R_t_bar^2.  _(class `A`)_
-- **chain closes:** True — Accepting the cited NLO barred-apex formulas and lambda^2 identity as inputs, P2-P4 follow by direct algebra. The closure is conditional on upstream authorities whose provided effective statuses are unaudited or audited_conditional.
-- **rationale:** The load-bearing mathematics is a genuine algebraic identity over the provided inputs, not a numerical fit. However, several cited authorities in the restricted packet are not retained-grade by the rubric, including unaudited and audited_conditional dependencies. Therefore the claim cannot be audited_clean even though the local algebra closes.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
 ### `ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25`
 
 - **Note:** [`CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
@@ -2155,23 +2069,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
-### `ckm_first_row_magnitudes_theorem_note_2026-04-24`
-
-- **Note:** [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](../../docs/CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited only the atlas-leading first-row Wolfenstein magnitude identities F1-F3 and the finite-lambda standard-matrix guardrail, conditioned on the supplied CKM atlas, Wolfenstein lambda/A, CP-radius, and alpha_s(v) authorities.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_first_row_magnitudes-084`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Squaring |V_ub|_0 = A lambda^3 sqrt(rho^2 + eta^2) and substituting A^2 = 2/3, lambda^2 = alpha_s(v)/2, and rho^2 + eta^2 = 1/6 gives |V_ub|_0^2 = alpha_s(v)^3/72, with |V_ud|_0^2 fixed by first-row normalization.  _(class `A`)_
-- **chain closes:** False — The algebra from the supplied identities to F1-F3 closes, including the 1/72 coefficient and row-completion formula. The audit chain does not close to retained-grade theorem status because load-bearing cited authorities for lambda/A, rho^2+eta^2, and alpha_s(v) are supplied as unaudited rather than retained-grade in the restricted packet.
-- **rationale:** The source note's own derivation is a straightforward algebraic substitution over upstream CKM atlas inputs, not a first-principles computation. The runner verifies those substitutions and the finite-lambda guardrail, but it imports the canonical alpha_s(v) constant and the CKM structural inputs rather than closing them independently. Under the rubric, unaudited cited authorities prevent an audited_clean verdict even when the downstream algebra is correct.
-- **open / conditional deps cited:**
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
 ### `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25`
 
 - **Note:** [`CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
@@ -2202,26 +2099,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Substitute the four parametric input identities into the five Wolfenstein-leading squared-magnitude formulas and apply n_quark = n_pair * n_color.  _(class `A`)_
 - **chain closes:** True — The scoped claim is purely algebraic and all substitutions close from the stated hypotheses. No cited external authority, numerical alpha_s value, physical CKM identification, or comparator is needed.
 - **rationale:** The correct audited object is a bounded theorem: exact closed forms follow conditionally from explicitly supplied identities and the count constraint. The runner's own PASS labels identify the load-bearing operations as Pattern A algebraic substitution; the provided automated classifier breakdown conflicts with those labels but does not expose a failed algebraic step. Because the note disclaims derivation of the hypotheses and physical/comparator interpretation, there are no hidden dependencies within the scoped row.
-- **auditor confidence:** high
-
-### `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the six Bernoulli entries, V(N)=M(N)/N relation, and D1/D2 cross-level factorizations as exact algebra over the cited CKM structural inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_multi_projection_ber-078`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The retained quantities factor as rho = V(N_pair) * M(N_color) and A^2 rho = V(N_color) * M(N_pair) after substituting N_pair = 2, N_color = 3, N_quark = 6, A^2 = 2/3, and rho = 1/6.  _(class `A`)_
-- **chain closes:** False — The algebra closes on its own terms, but the restricted packet marks multiple required upstream authorities as unaudited or audited_conditional rather than retained-grade. The missing step is retained-grade closure of the Wolfenstein, CP-phase, structural-counts, and protected-gamma inputs used by this packaging theorem.
-- **rationale:** The runner genuinely performs exact Fraction arithmetic for the stated Bernoulli identities and D1/D2 products, so the local load-bearing work is class A algebra. However, the derivation imports A^2, rho, eta^2, N_pair/N_color/N_quark, and sin^2(gamma_bar) from cited authorities whose effective statuses in the packet include unaudited and audited_conditional. Under the rubric, retained status does not propagate through those unresolved dependencies, so the claim cannot be audited_clean from this restricted packet.
-- **open / conditional deps cited:**
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-  - `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25`

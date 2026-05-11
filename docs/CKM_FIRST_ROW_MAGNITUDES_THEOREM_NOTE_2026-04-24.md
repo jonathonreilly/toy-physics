@@ -160,10 +160,56 @@ This note does **not** claim:
 - quark mass-ratio closure, hadronic matrix elements, or BSM flavor
   extensions.
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(F1)`, `(F2)`, `(F3)` and the
+row-sum closure is certified at exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_first_row_magnitudes_exact.py`. The
+companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream atlas inputs verbatim as exact `sympy.Rational`
+values, and checks each identity by computing
+`sympy.simplify(lhs - rhs)` and asserting the residual equals `0`
+exactly. The cited inputs themselves (`lambda^2 = alpha_s(v)/2`,
+`A^2 = 2/3`, `rho = 1/6`, `eta^2 = 5/36`, `rho^2 + eta^2 = 1/6`) are
+imported from upstream authority notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| CP radius | `rho^2 + eta^2 == 1/6` | `sympy.simplify` residual `= 0` |
+| `(F1)` | `|V_us|_0^2 == alpha_s(v)/2` | `sympy.simplify` residual `= 0` |
+| `(F1)` coefficient | rational coefficient `1/2` on `alpha_s` | exact rational |
+| `(F2)` | `A^2 lambda^6 (rho^2 + eta^2) == alpha_s(v)^3/72` | `sympy.simplify` residual `= 0` |
+| `(F2)` coefficient | rational coefficient `1/72` on `alpha_s^3` | exact rational |
+| `(F2)` magnitude | `|V_ub|_0 == alpha_s(v)^(3/2)/(6 sqrt(2))` | `sympy.simplify` residual `= 0` |
+| `(F3)` | `|V_ud|_0^2 == 1 - alpha_s(v)/2 - alpha_s(v)^3/72` | `sympy.simplify` residual `= 0` |
+| row-sum | `|V_us|_0^2 + |V_ub|_0^2 + |V_ud|_0^2 == 1` (parametric) | `sympy.simplify` residual `= 0` |
+| cross-ratio | `|V_us|_0^2 / |V_ub|_0^2 == 36/alpha_s^2` | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm the imported atlas inputs are each
+individually load-bearing for the closed-form coefficients:
+
+- substituting `rho^2 + eta^2 = 1` (no CP-radius suppression) collapses
+  `|V_ub|_0^2` to `alpha_s(v)^3/12`, not `alpha_s(v)^3/72`, so
+  `rho^2 + eta^2 = 1/6` is what fixes the `1/72` coefficient on `(F2)`;
+- substituting `A^2 = 1` collapses `|V_ub|_0^2` to `alpha_s(v)^3/48`,
+  so `A^2 = 2/3` is also load-bearing;
+- substituting `lambda^2 = alpha_s(v)` (i.e. `n_pair = 1`) collapses
+  `|V_us|_0^2` to `alpha_s(v)`, not `alpha_s(v)/2`, so
+  `lambda^2 = alpha_s(v)/2` from the Wolfenstein lambda/A subtheorem
+  is also load-bearing.
+
+The structural relations are therefore exact-symbolic over the imported
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_first_row_magnitudes.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_first_row_magnitudes_exact.py
 ```
 
 Expected final flags:

@@ -1,0 +1,94 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (A1)-(A11) parametric in alpha_s
+on the cited NLO protected-gamma-bar surface.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and cited inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  tan(beta_bar) (N5)  = sqrt(5)*(4 - alpha_s)/(alpha_s + 20)
+  tan(gamma_bar) (N4) = sqrt(5)
+
+----------------------------------------------------------------------------------------
+Part 1: (A1) tan(alpha_bar) = -4 sqrt(5)/alpha_s via tangent-of-sum
+----------------------------------------------------------------------------------------
+  [PASS (B)] (A1) tan(alpha_bar) == -4 sqrt(5)/alpha_s (parametric in alpha_s)  (residual = 0)
+  [PASS (B)] tan(beta_bar) + tan(gamma_bar) == 24 sqrt(5)/(20 + alpha_s)  (residual = 0)
+  [PASS (B)] 1 - tan(beta_bar) tan(gamma_bar) == 6 alpha_s/(20 + alpha_s)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (A2) cot, (A3) tan(alpha_bar - pi/2), (A4) arctan inversion
+----------------------------------------------------------------------------------------
+  [PASS (B)] (A2) cot(alpha_bar) == -(sqrt(5)/20) alpha_s  (residual = 0)
+  [PASS (B)] (A3) tan(alpha_bar - pi/2) == +(sqrt(5)/20) alpha_s  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (A5)-(A8) sin^2, cos^2, double-angle closed forms
+----------------------------------------------------------------------------------------
+  [PASS (B)] (A5) sin^2(alpha_bar) == 80/(80 + alpha_s^2)  (residual = 0)
+  [PASS (B)] (A6) cos^2(alpha_bar) == alpha_s^2/(80 + alpha_s^2)  (residual = 0)
+  [PASS (B)] (A8) cos(2 alpha_bar) == -(80 - alpha_s^2)/(80 + alpha_s^2)  (residual = 0)
+  [PASS (B)] (A7) sin(2 alpha_bar) == -8 sqrt(5) alpha_s/(80 + alpha_s^2)  (residual = 0)
+  [PASS (B)] sin^2(2 alpha_bar) + cos^2(2 alpha_bar) == 1 (sanity)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (A9) common denominator 80 + alpha_s^2 = 96 R_t_bar^2
+----------------------------------------------------------------------------------------
+  [PASS (B)] R_t_bar^2 == (80 + alpha_s^2)/96 (parametric)  (residual = 0)
+  [PASS (B)] (A9) 80 + alpha_s^2 == 96 R_t_bar^2  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (A10) parity selection rule -- arctan series odd-only
+----------------------------------------------------------------------------------------
+  [PASS (B)] (A10) coefficient of alpha_s^0 in (alpha_bar - pi/2) is 0  (coeff = 0)
+  [PASS (B)] (A10) coefficient of alpha_s^2 in (alpha_bar - pi/2) is 0  (coeff = 0)
+  [PASS (B)] (A10) coefficient of alpha_s^4 in (alpha_bar - pi/2) is 0  (coeff = 0)
+  [PASS (B)] (A10) coefficient of alpha_s^6 in (alpha_bar - pi/2) is 0  (coeff = 0)
+  [PASS (B)] (A10) coefficient of alpha_s^8 in (alpha_bar - pi/2) is 0  (coeff = 0)
+  [PASS (B)] (A10) linear coefficient (alpha_s^1) is sqrt(5)/20 (matches cited N7)  (c1 = sqrt(5)/20)
+  [PASS (B)] (A10) cubic coefficient (alpha_s^3) is -(sqrt(5)/20)^3/3 = -5 sqrt(5)/24000  (c3 = -sqrt(5)/4800, target = -sqrt(5)/4800)
+
+----------------------------------------------------------------------------------------
+Part 6: (A11) structural-integer factorization
+----------------------------------------------------------------------------------------
+  [PASS (B)] (A11) tan(alpha_bar) == -N_pair^2 sqrt(N_quark - 1)/alpha_s at (N_pair, N_quark) = (2, 6)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at tan(gamma_bar) = 1, tan(alpha_bar) is no longer -4 sqrt(5)/alpha_s  (alternate tan(alpha_bar) does not collapse to the closed form)
+  [PASS (B)] counterfactual: dropping (20+alpha_s) denominator from tan(beta_bar) breaks (A1)  (alternate tan(alpha_bar) does not collapse to single-monomial form)
+
+----------------------------------------------------------------------------------------
+Part 8: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  tan(alpha_bar) = -86.5822023401
+  sin^2(alpha_bar) = 0.9998666218, cos^2 = 0.0001333782
+  [PASS (B)] tan(alpha_bar) ~ -86.5822 at canonical alpha_s  (got -86.5822023401)
+  [PASS (B)] sin^2(alpha_bar) ~ 0.99986662 at canonical alpha_s  (got 0.9998666218)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (A1) tan(alpha_bar) == -4 sqrt(5)/alpha_s (from N5, N4, N6)
+    (A2) cot(alpha_bar) == -(sqrt(5)/20) alpha_s
+    (A3) tan(alpha_bar - pi/2) == +(sqrt(5)/20) alpha_s
+    (A5) sin^2(alpha_bar) == 80/(80 + alpha_s^2)
+    (A6) cos^2(alpha_bar) == alpha_s^2/(80 + alpha_s^2)
+    (A7) sin(2 alpha_bar) == -8 sqrt(5) alpha_s/(80 + alpha_s^2)
+    (A8) cos(2 alpha_bar) == -(80 - alpha_s^2)/(80 + alpha_s^2)
+    (A9) 80 + alpha_s^2 == 96 R_t_bar^2 (common denominator)
+    (A10) Taylor of (alpha_bar - pi/2) has only ODD powers of alpha_s
+         (linear coefficient sqrt(5)/20, cubic coefficient -5 sqrt(5)/24000)
+    (A11) tan(alpha_bar) == -N_pair^2 sqrt(N_quark - 1)/alpha_s at (2, 6)
+    Counterfactuals confirm tan(gamma_bar) = sqrt(5) (protection) and
+    the (20 + alpha_s) factor cancellation are individually load-bearing.
+
+========================================================================================
+TOTAL: PASS=24, FAIL=0
+========================================================================================

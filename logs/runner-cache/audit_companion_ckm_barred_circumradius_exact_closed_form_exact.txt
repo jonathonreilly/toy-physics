@@ -1,0 +1,100 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_barred_circumradius_exact_closed_form_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (C1)-(C4) and (C7) at exact
+precision parametric in alpha_s on the cited NLO protected-gamma-bar surface.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported cited inputs (N1)-(N6)
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  rho_bar           = 1/6 - alpha_s/24
+  eta_bar           = sqrt(5)*(4 - alpha_s)/24
+  R_b_bar^2 (N3)    = (4 - alpha_s)**2/96
+  tan(beta_bar) (N5)  = sqrt(5)*(4 - alpha_s)/(alpha_s + 20)
+  tan(gamma_bar) (N4) = sqrt(5)
+  N_pair = 2, N_quark = 6
+
+----------------------------------------------------------------------------------------
+Part 1: derive tan(alpha_bar) = -4 sqrt(5)/alpha_s via tangent-of-sum
+----------------------------------------------------------------------------------------
+  [PASS (B)] tan(alpha_bar) == -4 sqrt(5)/alpha_s (parametric in alpha_s)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: sin^2(alpha_bar), cos^2(alpha_bar) closed forms
+----------------------------------------------------------------------------------------
+  [PASS (B)] tan^2(alpha_bar) == 80/alpha_s^2  (residual = 0)
+  [PASS (B)] cos^2(alpha_bar) == alpha_s^2/(80 + alpha_s^2)  (residual = 0)
+  [PASS (B)] sin^2(alpha_bar) == 80/(80 + alpha_s^2)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (C1) R_bar^2 = 1/4 + alpha_s^2/320 via law of sines
+----------------------------------------------------------------------------------------
+  [PASS (B)] (C1) R_bar^2 = 1/(4 sin^2 alpha_bar) == 1/4 + alpha_s^2/320 (parametric)  (residual = 0)
+  [PASS (B)] (C1) R_bar^2 == 1/N_pair^2 + alpha_s^2/[N_pair^6 (N_quark-1)] at N_pair=2, N_quark=6  (residual = 0)
+  [PASS (B)] structural-integer factorization: N_pair^6 (N_quark - 1) == 320  (value = 320)
+  [PASS (B)] R_bar^2 is a degree-2 polynomial in alpha_s (no alpha_s^3, alpha_s^4, ...)  (degree = 2, coeffs = [1/320, 0, 1/4])
+
+----------------------------------------------------------------------------------------
+Part 4: (C2) R_bar = (1/2) sqrt(1 + alpha_s^2/80)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (C2) [(1/2) sqrt(1 + alpha_s^2/80)]^2 == R_bar^2 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (C3) circumcenter coordinates
+----------------------------------------------------------------------------------------
+  [PASS (B)] (C3) y_cc = (R_b_bar^2 - rho_bar)/(2 eta_bar) == -alpha_s sqrt(5)/40 (parametric)  (residual = 0)
+  [PASS (B)] (C3) y_cc == -alpha_s / [N_pair^3 sqrt(N_quark - 1)] at N_pair=2, N_quark=6  (residual = 0)
+  [PASS (B)] (C3) x_cc == 1/N_pair == 1/2 (alpha_s-independent)  (value = 1/2)
+
+----------------------------------------------------------------------------------------
+Part 6: (C4) Pythagorean check R_bar^2 = x_cc^2 + y_cc^2
+----------------------------------------------------------------------------------------
+  [PASS (B)] (C4) x_cc^2 + y_cc^2 == R_bar^2 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: (C7) R_bar cos(alpha_bar) = y_cc (chord-distance theorem)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (C7) R_bar * cos(alpha_bar) == y_cc (parametric, signed)  (residual = 0)
+  [PASS (B)] (C7) |y_cc| == R_bar * |cos(alpha_bar)| (chord-distance, unsigned)  (squared form residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: chord length 2 R_bar sin(alpha_bar) = 1 (unit-base) 
+----------------------------------------------------------------------------------------
+  [PASS (B)] [2 R_bar sin(alpha_bar)]^2 == 1 (unit-base length, parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 9: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: dropping (4-alpha_s) from eta_bar breaks the linear y_cc form  (alt y_cc simplifies to sqrt(5)*alpha_s*(alpha_s - 4)/160)
+  [PASS (B)] counterfactual: at tan(gamma_bar) = 1, tan(alpha_bar) is no longer -4 sqrt(5)/alpha_s  (tan_alpha (with tan_gamma=1) does not collapse to single alpha_s monomial)
+
+----------------------------------------------------------------------------------------
+Part 10: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  R_bar^2 = 0.250033348995
+  R_bar   = 0.500033347883
+  y_cc    = -0.005774858880
+  [PASS (B)] R_bar^2 ~ 0.250033349 at canonical alpha_s  (got 0.250033349)
+  [PASS (B)] y_cc ~ -5.7748 e-3 at canonical alpha_s  (got -5.774859e-03)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    tan(alpha_bar) == -4 sqrt(5)/alpha_s (from N5, N4, N6)
+    sin^2(alpha_bar), cos^2(alpha_bar) closed forms
+    (C1) R_bar^2 == 1/4 + alpha_s^2/320 (degree-2 polynomial)
+    (C2) R_bar   == (1/2) sqrt(1 + alpha_s^2/80)
+    (C3) (x_cc, y_cc) == (1/2, -alpha_s sqrt(5)/40)
+    (C4) R_bar^2 == x_cc^2 + y_cc^2 (Pythagorean)
+    (C7) R_bar cos(alpha_bar) == y_cc (chord-distance)
+    Structural-integer factorization N_pair^6 (N_quark - 1) = 320
+    Counterfactuals confirm (4 - alpha_s) cancellation and tan(gamma_bar)=sqrt(5)
+    are individually load-bearing for the closed-form structure.
+
+========================================================================================
+TOTAL: PASS=20, FAIL=0
+========================================================================================

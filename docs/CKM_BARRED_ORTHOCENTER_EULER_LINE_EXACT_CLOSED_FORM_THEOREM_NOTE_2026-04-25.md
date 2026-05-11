@@ -542,10 +542,59 @@ without the explicit construction.
   than currently available; the orthocenter is implicit in joint UTfit
   constraints at current sensitivity.
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(O1)`-`(O7)` and the supporting
+selection rule `(O8)` and atlas-LO recovery `(O9)` is certified at
+exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_barred_orthocenter_euler_line_exact_closed_form_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream cited inputs `(N1)`, `(N2)`, `(N3)` verbatim,
+builds H, G, O directly from the altitude / centroid /
+perpendicular-bisector constructions, and checks each closed-form
+identity by computing `sympy.simplify(lhs - rhs)` and asserting the
+residual equals `0` exactly. The cited inputs themselves
+(`rho_bar = (4-alpha_s)/24`, `eta_bar = sqrt(5)(4-alpha_s)/24`,
+`R_b_bar^2 = (4-alpha_s)^2/96`, the cited N7 slope `sqrt(5)/20`, and
+structural counts `N_pair = 2`, `N_quark = 6`) are imported from
+upstream authority notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `(O3)` | `G == ((28 - alpha_s)/72, sqrt(5)(4 - alpha_s)/72)` | `sympy.simplify` residual `= 0` |
+| `(O1)` | `H == (rho_bar, (20 + alpha_s)/(24 sqrt(5)))` | `sympy.simplify` residual `= 0` |
+| `(O1)` cross-check | H lies on altitude from V_2 perpendicular to V_1 V_3 | `sympy.simplify` residual `= 0` |
+| `(O1)` polynomial | `H_x` and `H_y * sqrt(5)` are degree-1 in `alpha_s` | `sympy.Poly(...).degree() == 1` |
+| `(O2)` | `H - V_3 == (0, alpha_s sqrt(5)/20)` | `sympy.simplify` residual `= 0` |
+| `(O2)` structural | `H_y - V_3_y == alpha_s/[N_pair^2 sqrt(N_quark - 1)]` at `(2, 6)` | `sympy.simplify` residual `= 0` |
+| `(O4)` | `O == (1/2, -alpha_s sqrt(5)/40)` re-derived from `(N1)`-`(N3)` | `sympy.simplify` residual `= 0` |
+| `(O5)` | `H == 3 G - 2 O` (Euler line), `HG = 2 GO` | `sympy.simplify` residual `= 0` |
+| `(O5)` collinearity | cross product `(G - O) x (H - O) = 0` | `sympy.simplify` residual `= 0` |
+| `(O6)` | `H - V_3 == -2 (O - M)` with `M = (1/2, 0)` | `sympy.simplify` residual `= 0` |
+| `(O7)` | `(H_y - V_3_y)/alpha_s == sqrt(5)/20` (cited N7 slope) | `sympy.simplify` residual `= 0` |
+| `(O8)` | `H_x, H_y * sqrt(5), G_x, G_y / sqrt(5)` all degree-1 in `alpha_s` | `sympy.Poly(...).degree() == 1` |
+| `(O9)` | `H_LO == V_3_LO == (1/6, sqrt(5)/6)`; `O_LO == (1/2, 0)` | `sympy.simplify` at `alpha_s = 0` residual `= 0` |
+
+Counterfactual probes confirm the load-bearing role of the cited
+inputs:
+
+- dropping the `(4 - alpha_s)` factor from `eta_bar` breaks the
+  cancellation that gives `H_y = (20 + alpha_s)/(24 sqrt(5))` cleanly;
+- using only the atlas-LO `rho_bar = 1/6` (no NLO offset) prevents
+  `H_y` from realizing the linear form `(20 + alpha_s)/(24 sqrt(5))`.
+
+The structural relations are therefore exact-symbolic over the cited
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_barred_orthocenter_euler_line_exact_closed_form.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_barred_orthocenter_euler_line_exact_closed_form_exact.py
 ```
 
 Expected result:
@@ -555,22 +604,21 @@ TOTAL: PASS=41, FAIL=0
 ```
 
 The runner uses the Python standard library plus the canonical
-`scripts/canonical_plaquette_surface.py` import. All upstream
-authorities are retained on `main`.
+`scripts/canonical_plaquette_surface.py` import. Upstream authorities are cited here; their audit status remains ledger-derived.
 
 ## Cross-References
 
 - [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
-  -- retained N1 (`ρ̄`), N2 (`η̄`), N3 (`R_b̄²`), N7 (linearization)
+  -- cited N1 (`ρ̄`), N2 (`η̄`), N3 (`R_b̄²`), N7 (linearization)
   used in this derivation.
 - [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
-  -- retained `α_0 = π/2`, hypotenuse-as-diameter, right-angle-vertex-
+  -- cited `α_0 = π/2`, hypotenuse-as-diameter, right-angle-vertex-
   orthocenter coincidence atlas-LO geometry.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
-  -- retained `ρ = 1/6`, `η² = 5/36`.
+  -- cited `ρ = 1/6`, `η² = 5/36`.
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-  -- retained `λ² = α_s(v)/2`, `A² = 2/3`.
+  -- cited `λ² = α_s(v)/2`, `A² = 2/3`.
 - [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-  -- retained `N_quark = 6`, `N_pair = 2`, `N_color = 3`.
+  -- cited `N_quark = 6`, `N_pair = 2`, `N_color = 3`.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
-  -- canonical `α_s(v)` retained input.
+  -- canonical `α_s(v)` cited input.

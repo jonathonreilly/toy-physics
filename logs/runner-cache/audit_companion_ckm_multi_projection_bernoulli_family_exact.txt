@@ -1,0 +1,91 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (B1)-(B6), (MV1) universal
+Bernoulli relation, and cross-level decompositions (D1), (D2).
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  abstract N  for universal Bernoulli relation
+  (p, c, q) = (N_pair, N_color, N_quark) with framework constraint q = p c
+
+----------------------------------------------------------------------------------------
+Part 1: (MV1) universal Bernoulli relation V(N) = M(N)/N
+----------------------------------------------------------------------------------------
+  [PASS (B)] (MV1) V(N) == M(N) / N (parametric in N)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (B1)-(B6) at cited (N_pair, N_color, N_quark) = (2, 3, 6)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B1) M(N_pair)  == 1/2 at N_pair = 2  (M(N_pair) = 1/2)
+  [PASS (B)] (B2) M(N_color) == 2/3 at N_color = 3  (M(N_color) = 2/3)
+  [PASS (B)] (B3) M(N_quark) == 5/6 at N_quark = 6  (M(N_quark) = 5/6)
+  [PASS (B)] (B4) V(N_pair)  == 1/4 at N_pair = 2  (V(N_pair) = 1/4)
+  [PASS (B)] (B5) V(N_color) == 2/9 at N_color = 3  (V(N_color) = 2/9)
+  [PASS (B)] (B6) V(N_quark) == 5/36 at N_quark = 6  (V(N_quark) = 5/36)
+
+----------------------------------------------------------------------------------------
+Part 3: connections to cited upstream identities
+----------------------------------------------------------------------------------------
+  [PASS (B)] M(N_color) == A^2 = N_pair/N_color at (N_pair, N_color) = (2, 3) (cited W2)  (residual at (2, 3) = 0)
+  [PASS (B)] counterfactual: M(N_color) != N_pair/N_color generically (only at p = c - 1)  (parametric residual is non-zero)
+  [PASS (B)] M(N_quark) == 1 - rho at q = N_quark (parametric)  (residual = 0)
+  [PASS (B)] V(N_quark) == eta^2 (parametric in q)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (D1) rho = V(N_pair) * M(N_color) under q = p c
+----------------------------------------------------------------------------------------
+  [PASS (B)] V(N_pair) M(N_color) parametric == ((p-1)/p^2) ((c-1)/c)  (residual = 0)
+  [PASS (B)] (D1) V(N_pair) M(N_color) == rho = 1/N_quark = 1/6 at (2, 3, 6)  (got 1/6, target 1/6)
+  [PASS (B)] (D1) parametric in parent's M_pair-style form: 1/p^2 * p/c == 1/(p c)  (residual = 0)
+  [PASS (B)] (D1) under framework constraint q = p c: 1/(p c) == rho = 1/q  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (D2) A^2 rho = V(N_color) * M(N_pair) under q = p c
+----------------------------------------------------------------------------------------
+  [PASS (B)] (D2) V(N_color) * (1/N_pair) == (c-1)/(p c^2) parametric  (residual = 0)
+  [PASS (B)] A^2 rho parametric == p/(c q); under q = p c reduces to 1/c^2  (residual = 0)
+  [PASS (B)] (D2) V(N_color) M(N_pair) == 1/9 at (2, 3, 6)  (got 1/9)
+  [PASS (B)] A^2 rho == 1/N_color^2 = 1/9 at (2, 3, 6)  (got 1/9)
+  [PASS (B)] (D2) == A^2 rho at framework counts (1/9 == 1/9)  (D2 = 1/9, A^2 rho = 1/9)
+
+----------------------------------------------------------------------------------------
+Part 6: (D1) <-> (D2) role-swap symmetry
+----------------------------------------------------------------------------------------
+  [PASS (B)] pair-variance * color-mean == 1/6 at framework counts (matches rho)  (got 1/6)
+  [PASS (B)] color-variance * pair-mean == 1/9 at framework counts (matches A^2 rho)  (got 1/9)
+  [PASS (B)] counterfactual: at (p, c) = (3, 2), A^2 rho == 1/4 != 1/9  (got 1/4 (= 1/c^2 with c=2))
+
+----------------------------------------------------------------------------------------
+Part 7: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  Tabulated values at framework counts (2, 3, 6):
+    M(N_pair)  = 1/2 (= 1/2)
+    M(N_color) = 2/3 (= 2/3 = A^2)
+    M(N_quark) = 5/6 (= 5/6 = 1 - rho)
+    V(N_pair)  = 1/4 (= 1/4)
+    V(N_color) = 2/9 (= 2/9)
+    V(N_quark) = 5/36 (= 5/36 = eta^2)
+    rho        = 1/6 (D1)
+    A^2 rho    = 1/9 (D2)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (MV1) V(N) == M(N) / N parametric in N
+    (B1)-(B6) all six Bernoulli values at cited (2, 3, 6)
+    M(N_color) == A^2 only at framework counts (not generic)
+    M(N_quark) == 1 - rho parametric in q
+    V(N_quark) == eta^2 parametric in q
+    (D1) V(N_pair) M(N_color) == rho = 1/N_quark under q = p c
+    (D2) V(N_color) M(N_pair) == A^2 rho == 1/9 at framework counts
+         (A^2 rho alone reduces to 1/N_color^2 under q = p c)
+    Pair/color role-swap symmetry between D1 and D2 confirmed
+    Counterfactual at (p, c) = (3, 2) breaks A^2 rho = 1/9.
+
+========================================================================================
+TOTAL: PASS=23, FAIL=0
+========================================================================================

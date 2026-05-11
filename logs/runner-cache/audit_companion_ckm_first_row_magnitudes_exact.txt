@@ -1,0 +1,81 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_first_row_magnitudes_theorem_note_2026-04-24
+Goal: sympy-symbolic verification of (F1), (F2), (F3) and the
+row-sum closure at exact precision over a free symbolic alpha_s(v).
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported atlas inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  lambda^2 = alpha_s/2
+  A^2      = 2/3
+  rho      = 1/6
+  eta^2    = 5/36
+  rho^2 + eta^2 = 1/6
+
+----------------------------------------------------------------------------------------
+Part 1: cited CP-radius reduction rho^2 + eta^2 = 1/6
+----------------------------------------------------------------------------------------
+  [PASS (B)] rho^2 + eta^2 == 1/6 (exact rational)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (F1) |V_us|_0^2 = lambda^2 = alpha_s(v)/2
+----------------------------------------------------------------------------------------
+  [PASS (B)] (F1) |V_us|_0^2 == alpha_s(v)/2 (parametric)  (residual = 0)
+  [PASS (B)] (F1) coefficient is the pure rational 1/2  (coefficient = 1/2)
+
+----------------------------------------------------------------------------------------
+Part 3: (F2) |V_ub|_0^2 = A^2 lambda^6 (rho^2 + eta^2) = alpha_s(v)^3/72
+----------------------------------------------------------------------------------------
+  [PASS (B)] (F2) A^2 lambda^6 (rho^2+eta^2) == alpha_s(v)^3/72 (parametric)  (residual = 0)
+  [PASS (B)] (F2) coefficient is the pure rational 1/72  (coefficient = 1/72)
+  [PASS (B)] (F2) |V_ub|_0 == alpha_s(v)^(3/2)/(6 sqrt(2))  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (F3) |V_ud|_0^2 = 1 - |V_us|_0^2 - |V_ub|_0^2
+----------------------------------------------------------------------------------------
+  [PASS (B)] (F3) |V_ud|_0^2 == 1 - alpha_s(v)/2 - alpha_s(v)^3/72 (parametric)  (residual = 0)
+  [PASS (B)] (F3) row-sum closure |V_us|_0^2 + |V_ub|_0^2 + |V_ud|_0^2 == 1 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: cross-check |V_us|_0^2 / |V_ub|_0^2 = 36/alpha_s^2
+----------------------------------------------------------------------------------------
+  [PASS (B)] |V_us|_0^2 / |V_ub|_0^2 == 36/alpha_s^2  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at rho^2 + eta^2 = 1, |V_ub|^2 = alpha_s^3/12 != alpha_s^3/72  (alternate form simplifies to alpha_s**3/12)
+  [PASS (B)] counterfactual: at A^2 = 1, |V_ub|^2 = alpha_s^3/48 != alpha_s^3/72  (alternate form simplifies to alpha_s**3/48)
+  [PASS (B)] counterfactual: at lambda^2 = alpha_s, |V_ub|^2 = alpha_s^3/9 != alpha_s^3/72  (alternate form simplifies to alpha_s**3/9)
+  [PASS (B)] counterfactual: at lambda^2 = alpha_s, |V_us|^2 = alpha_s != alpha_s/2  (alternate form simplifies to alpha_s)
+
+----------------------------------------------------------------------------------------
+Part 7: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  atlas-leading |V_us|_0 = 0.2272706
+  atlas-leading |V_ub|_0 = 0.0039130
+  atlas-leading |V_ud|_0 = 0.9738238
+  [PASS (B)] atlas-leading |V_us|_0 ~ 0.2272706 at canonical alpha_s  (got 0.2272706)
+  [PASS (B)] atlas-leading |V_ub|_0 ~ 0.0039130 at canonical alpha_s  (got 0.0039130)
+  [PASS (B)] atlas-leading |V_ud|_0 ~ 0.9738238 at canonical alpha_s  (got 0.9738238)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    rho^2 + eta^2 == 1/6 (CP-radius reduction)
+    (F1) |V_us|_0^2 == alpha_s(v)/2 (parametric in alpha_s)
+    (F2) |V_ub|_0^2 == alpha_s(v)^3/72 (parametric in alpha_s)
+    (F3) |V_ud|_0^2 == 1 - alpha_s(v)/2 - alpha_s(v)^3/72
+    Row-sum closure (F1) + (F2) + (F3) == 1 (parametric)
+    Cross-ratio |V_us|_0^2 / |V_ub|_0^2 == 36/alpha_s^2
+    Counterfactuals confirm rho^2+eta^2=1/6, A^2=2/3, lambda^2=alpha_s/2
+    are individually load-bearing for the closed-form coefficients.
+
+========================================================================================
+TOTAL: PASS=16, FAIL=0
+========================================================================================
