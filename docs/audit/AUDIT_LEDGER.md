@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 88 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
-| _retained_pending_chain_ | 2 |
+| _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1223 |
+| unaudited | 1222 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 452 |
+| `audited_clean` | 453 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1336 |
+| `unaudited` | 1335 |
 
 | claim_type | count |
 |---|---:|
@@ -65,7 +65,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 251 |
 | `leaf` | 743 |
 
-- **Retained pending chain closure:** 2
+- **Retained pending chain closure:** 3
 - **Citation cycles detected:** 256
 
 ### Runner classification (static heuristic)
@@ -199,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `clifford_chirality_dimension_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2387,6 +2388,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The provided runner source computes the lattice propagation, detector probabilities, centroids, Born I3 ratio, and gamma sweep from the specified lattice/action setup rather than printing hard-coded expected values. The exact Born ratios in the note are stale relative to the runner output, but the load-bearing qualitative claim of machine-clean Born behavior and the crossover interval is preserved.
 - **rationale:** The runner performs an actual bounded numerical computation for the specified exact-lattice setup and produces the gamma=0 reduction, near-machine-zero Born ratios, and TOWARD-to-AWAY crossover. No cited upstream authority is required in the restricted packet, and the note explicitly avoids broader geometry-generic or continuum claims. The only caveat is that the note's Born-test numeric entries do not exactly match the current cached runner stdout, so those specific frozen values should be refreshed even though the audited narrow conclusion still follows.
 - **auditor confidence:** medium
+
+### `clifford_chirality_dimension_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CLIFFORD_CHIRALITY_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CLIFFORD_CHIRALITY_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone complex Clifford-algebra parity theorem: for generators satisfying gamma_mu^2=+/-I and pairwise anticommutation, the volume element obeys omega*gamma_mu=(-1)^(n-1)*gamma_mu*omega; an internal chirality involution in Cl(n) exists iff n is even; with the meta axiom A2 fixing d_s=3, the conditional framework specialization is that chirality on Cl(d_s,d_t) requires d_t odd. No d_t=1 selection, anomaly arithmetic, Standard Model gauge content, staggered-Dirac realization, PDG comparator, or continuum multi-time result is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** _retained_pending_chain_  (reason: `chain_waiting_on:minimal_axioms_2026-05-03`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** A degree-r product gamma_S satisfies gamma_S gamma_mu = (-1)^(r - 1_{mu in S}) gamma_mu gamma_S, so a monomial can anticommute with every generator only when S is the full set and n is even; hence no nonzero Clifford-algebra element has the required anticommutation property for odd n.  _(class `A`)_
+- **chain closes:** True — The Clifford-basis parity argument proves the commutation and simultaneous-anticommutation dichotomy over the stated algebraic hypotheses. The only framework input is the meta axiom A2 value d_s=3, so the specialization to d_t odd follows by parity and remains conditional on the stated Cl(d_s,d_t) setup.
+- **rationale:** The load-bearing step is ordinary Clifford-basis algebra: the volume element sign follows from moving one generator through the other n-1 generators, and the monomial parity conditions rule out any odd-n internal element that anticommutes with every generator. The runner corroborates this with explicit finite Clifford representations for n=1 through n=6 and checks only algebraic class-A statements. Residual risk is only scope creep: the audited result forces d_t odd under the stated total-Clifford setup and A2, but it does not derive d_t=1 or any anomaly/gauge/fermion-content conclusion.
+- **auditor confidence:** high
 
 ### `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10`
 

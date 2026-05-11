@@ -69,12 +69,13 @@
     "retained": 88,
     "retained_bounded": 272,
     "retained_no_go": 131,
-    "retained_pending_chain": 2,
-    "unaudited": 1223
+    "retained_pending_chain": 3,
+    "unaudited": 1222
   },
-  "retained_pending_chain_count": 2,
+  "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
     "alpha_s_derived_narrow_theorem_note_2026-05-10",
-    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10"
+    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10",
+    "clifford_chirality_dimension_narrow_theorem_note_2026-05-10"
   ]
 }
