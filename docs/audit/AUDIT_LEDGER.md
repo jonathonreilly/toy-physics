@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 89 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 273 |
+| **retained_bounded** | 274 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1216 |
+| unaudited | 1215 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 455 |
+| `audited_clean` | 456 |
 | `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1329 |
+| `unaudited` | 1328 |
 
 | claim_type | count |
 |---|---:|
@@ -261,6 +261,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `fm_transfer_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `four_d_distance_width_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `fourth_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5.5 | B | - |
 | `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -4154,6 +4155,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Mass-law transfer agrees within uncertainty on the retained grown-row neighborhood (drift=0.2, restore=0.7).  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
+- **auditor confidence:** high
+
+### `four_d_distance_width_probe_note`
+
+- **Note:** [`FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md`](../../docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded width-limited 4D distance-law probe for the retained dimensional-gravity d=4 valley-linear row: W=5..7 live/cache-backed runner output and the W=8 frozen companion log show TOWARD support and width-sensitive tails; no asymptotic 4D law, Newtonian 1/b^2 closure, universality, or W=8 live-runner reproducibility is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current 4D ordered-lattice family is still a bounded support story: TOWARD survives across the tested widths, the far tail strengthens as width increases, and the width ladder is still too small to close an asymptotic law.  _(class `C`)_
+- **chain closes:** True — The source note explicitly narrows the claim to width-limited support, the SHA-fresh runner cache reproduces W=5..7, the W=8 companion log is present and only claimed as frozen support, and the one-hop dimensional-gravity dependency is retained_bounded for the d=4 cache/log row. No stronger asymptotic law is asserted in the audited scope.
+- **rationale:** The bounded claim closes because the runner/cache evidence matches the table actually claimed: W=5 has TOWARD 4/4, W=6 has TOWARD 5/5 with an early-tail fit only, W=7 has TOWARD 6/6 with far-tail b^(-0.96), and the W=8 log is present only as a frozen companion with TOWARD 6/6 and early-tail b^(-0.54). The note does not promote a stable tail exponent, Newtonian 1/b^2 closure, geometry independence, or W=8 live reproducibility. Residual risk is limited to future scope drift; widening this note to an asymptotic or universal 4D distance law would need a new audit.
 - **auditor confidence:** high
 
 ### `fourth_family_complex_boundary_note`

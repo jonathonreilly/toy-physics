@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1247
-**Ready (all deps already at retained-grade or metadata tiers):** 81
+**Total pending:** 1246
+**Ready (all deps already at retained-grade or metadata tiers):** 80
 
 By criticality:
 - `critical`: 751
 - `high`: 33
 - `medium`: 146
-- `leaf`: 317
+- `leaf`: 316
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -27,7 +27,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 10 | `gravitomagnetic_note` | bounded_theorem | audit_in_progress | critical | 448 | 9.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gravitomagnetic_portable.py` |
 | 11 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | audit_in_progress | critical | 439 | 9.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py` |
 | 12 | `valley_linear_action_note` | bounded_theorem | audit_in_progress | critical | 432 | 11.76 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/valley_linear_same_harness_compare.py` |
-| 13 | `dimensional_gravity_table` | bounded_theorem | audit_in_progress | critical | 430 | 11.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py` |
+| 13 | `dimensional_gravity_table` | bounded_theorem | audit_in_progress | critical | 430 | 14.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py` |
 | 14 | `kubo_continuum_limit_note` | bounded_theorem | audit_in_progress | critical | 430 | 10.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/kubo_continuum_limit.py` |
 | 15 | `action_crossover_note` | bounded_theorem | audit_in_progress | critical | 429 | 9.75 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/action_regularity_crossover.py` |
 | 16 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | audit_in_progress | critical | 428 | 9.74 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/valley_linear_asymptotic_bridge.py` |
