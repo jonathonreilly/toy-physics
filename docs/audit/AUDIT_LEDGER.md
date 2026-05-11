@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| **retained_no_go** | 127 |
+| **retained_no_go** | 128 |
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1261 |
+| unaudited | 1260 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,20 +41,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 427 |
+| `audited_clean` | 428 |
 | `audited_conditional` | 170 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1374 |
+| `unaudited` | 1373 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 896 |
+| `bounded_theorem` | 895 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 222 |
+| `no_go` | 223 |
 | `open_gate` | 112 |
 | `positive_theorem` | 742 |
 
@@ -309,6 +309,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `hubble_lane5_c1_a4_parity_gate_car_boundary_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a5_boolean_coframe_restriction_obstruction_note_2026-04-29` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | C | - |
@@ -5155,6 +5156,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current runner computes the stated correlation-matrix entropies/ranks and reports boundary-fit R^2 exceeding volume-fit R^2 for both G=0 and G=10 globally and per side, with boundary slopes 0.186053 and 0.211399 giving ratio 0.8801.  _(class `C`)_
 - **chain closes:** True — The finite-model computation directly evaluates the claimed observable and fit comparison under the stated parameters; the conclusion is only the bounded numerical boundary-preference statement and coefficient shift.
 - **rationale:** The audited claim is tightly bounded to the finite-lattice runner's fixed model, observable, regions, and fit criterion. The provided runner output matches the note's numerical values, including global entropy fits, rank fits, per-side boundary preference, and the gravity/free coefficient ratio. No stronger holographic, continuum, Bekenstein-Hawking, AdS/CFT, or quantum-gravity conclusion is needed for the scoped statement.
+- **auditor confidence:** high
+
+### `hubble_lane5_c1_a1_grassmann_boundary_car_obstruction_note_2026-04-29`
+
+- **Note:** [`HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md`](../../docs/HUBBLE_LANE5_C1_A1_GRASSMANN_BOUNDARY_CAR_OBSTRUCTION_NOTE_2026-04-29.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Finite-algebra no-go for the direct A1 shortcut: bulk CAR plus rank-four boundary support alone does not imply native CAR semantics on the compressed boundary block; no claim that C1 itself is impossible.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** There are rank-four projections with the same rank/parity data for which compressed bulk CAR operators fail CAR, so bulk Grassmann/CAR structure plus rank(P_A)=4 does not force CAR semantics on P_A H_cell without a reducing-module/morphism condition.  _(class `A`)_
+- **chain closes:** True — The runner constructs both a reducing rank-four projection that preserves selected CAR and a nonreducing rank-four projection that fails CAR, with PASS=5 FAIL=0. That counterexample closes the narrow implication obstruction without needing cosmological data or physical Hubble-scale closure.
+- **rationale:** The scoped claim is a finite-algebra no-go: rank-four compression of a bulk CAR representation does not by itself preserve CAR. The witness separates rank/parity data from the reducing-submodule condition, so the A1 shortcut needs an additional P_A Clifford/CAR module-morphism theorem. Residual risk is only scope creep; the result does not rule out C1 by another route and does not derive the physical primitive boundary carrier.
 - **auditor confidence:** high
 
 ### `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28`
