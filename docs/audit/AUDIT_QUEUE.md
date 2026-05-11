@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 449 | 13.31 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
+| 1 | `claude_complex_action_grown_companion_note` | bounded_theorem | audit_in_progress | critical | 449 | 13.31 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 2 | `poisson_self_gravity_loop_note` | bounded_theorem | unaudited | critical | 439 | 11.78 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/poisson_self_gravity_loop.py` |
 | 3 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | unaudited | critical | 408 | 13.68 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_effective_potential_endpoint.py` |
 | 4 | `newton_law_derived_note` | bounded_theorem | unaudited | critical | 405 | 14.66 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |
