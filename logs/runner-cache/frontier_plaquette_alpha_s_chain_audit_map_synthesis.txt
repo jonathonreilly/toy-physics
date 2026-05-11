@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_plaquette_alpha_s_chain_audit_map_synthesis.py
+runner_sha256: e59ab2ea289163c2b253520e0f061b352511f3ca4055239f40bda2a970f5c75a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+plaquette / alpha_s chain audit map synthesis check
+note: docs/PLAQUETTE_ALPHA_S_CHAIN_AUDIT_MAP_SYNTHESIS_META_NOTE_2026-05-10.md
+
+PASS: synthesis note is meta
+PASS: synthesis declares proposal_allowed: false
+PASS: synthesis does not declare itself audited_clean | header block must not pre-empt audit verdict
+PASS: root present: alpha_s_derived_note | audit_status='unaudited'
+PASS: root unaudited: alpha_s_derived_note | audit_status='unaudited'
+PASS: root present: plaquette_self_consistency_note | audit_status='unaudited'
+PASS: root unaudited: plaquette_self_consistency_note | audit_status='unaudited'
+PASS: chain transitive-closure size = 44 | actual=44
+PASS: chain audit_status[audited_clean] = 22 | actual=22
+PASS: chain audit_status[unaudited] = 12 | actual=12
+PASS: chain audit_status[audited_conditional] = 8 | actual=8
+PASS: chain audit_status[audited_decoration] = 2 | actual=2
+PASS: decoration frontier present + audited_decoration: gauge_vacuum_plaquette_perron_reduction_theorem_note | audit_status='audited_decoration'
+PASS: decoration frontier parent is gauge_vacuum_plaquette_transfer_operator_character_recurrence_note | actual_parent='gauge_vacuum_plaquette_transfer_operator_character_recurrence_note'
+PASS: decoration frontier parent retained-grade: gauge_vacuum_plaquette_transfer_operator_character_recurrence_note | parent_effective='retained_bounded'
+PASS: decoration frontier present + audited_decoration: g_bare_rescaling_freedom_removal_theorem_note_2026-05-03 | audit_status='audited_decoration'
+PASS: decoration frontier parent is cl3_color_automorphism_theorem | actual_parent='cl3_color_automorphism_theorem'
+PASS: decoration frontier parent retained-grade: cl3_color_automorphism_theorem | parent_effective='retained_bounded'
+PASS: conditional frontier present: g_bare_constraint_vs_convention_theorem_note_2026-05-03
+PASS: conditional frontier audited_conditional: g_bare_constraint_vs_convention_theorem_note_2026-05-03 | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=dependency_not_retained: g_bare_constraint_vs_convention_theorem_note_2026-05-03 | notes_prefix='dependency_not_retained'
+PASS: conditional frontier has all retained-grade deps: g_bare_constraint_vs_convention_theorem_note_2026-05-03 | non_retained_deps=[]
+PASS: conditional frontier present: su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03
+PASS: conditional frontier audited_conditional: su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03 | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=scope_too_broad: su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03 | notes_prefix='scope_too_broad'
+PASS: conditional frontier has all retained-grade deps: su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03 | non_retained_deps=[]
+PASS: conditional frontier present: gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note
+PASS: conditional frontier audited_conditional: gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=missing_bridge_theorem: gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note | notes_prefix='missing_bridge_theorem'
+PASS: conditional frontier has all retained-grade deps: gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note | non_retained_deps=[]
+PASS: conditional frontier present: gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note
+PASS: conditional frontier audited_conditional: gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=missing_bridge_theorem: gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note | notes_prefix='missing_bridge_theorem - derive and verify the actual spatial-environment slice tensor-transfer and boundary readout, or narrow the audited claim to the finite one-word support packet only.'
+PASS: conditional frontier has all retained-grade deps: gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note | non_retained_deps=[]
+PASS: conditional frontier present: gauge_vacuum_plaquette_local_environment_factorization_theorem_note
+PASS: conditional frontier audited_conditional: gauge_vacuum_plaquette_local_environment_factorization_theorem_note | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=missing_bridge_theorem: gauge_vacuum_plaquette_local_environment_factorization_theorem_note | notes_prefix='missing_bridge_theorem'
+PASS: conditional frontier has all retained-grade deps: gauge_vacuum_plaquette_local_environment_factorization_theorem_note | non_retained_deps=[]
+PASS: conditional frontier present: gauge_vacuum_plaquette_residual_environment_identification_theorem_note
+PASS: conditional frontier audited_conditional: gauge_vacuum_plaquette_residual_environment_identification_theorem_note | audit_status='audited_conditional'
+PASS: conditional frontier repair_class=missing_bridge_theorem: gauge_vacuum_plaquette_residual_environment_identification_theorem_note | notes_prefix='missing_bridge_theorem'
+PASS: conditional frontier has all retained-grade deps: gauge_vacuum_plaquette_residual_environment_identification_theorem_note | non_retained_deps=[]
+PASS: chain frontier matches expected (9 rows) | extra=[] missing=[]
+PASS: open-gate frontier present + audited_clean: staggered_dirac_realization_gate_note_2026-05-03 | audit_status='audited_clean'
+PASS: open-gate frontier effective_status=open_gate: staggered_dirac_realization_gate_note_2026-05-03 | effective_status='open_gate'
+PASS: no proper-claim interior unaudited row is independently ready | ready_unaudited=[]
+
+PASS=46 FAIL=0
+
+----- stderr -----
+
