@@ -196,7 +196,7 @@ formal-Taylor truncation argument near `t = 0` alone.
   for adjacent gauge-vacuum-plaquette analytic context (compact-Laplace
   concentration on the maximum-action gauge orbit appears in that
   retained authority on a sister surface).
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the framework baseline of physical `Cl(3)` local algebra and
   the `Z^3` spatial substrate. This bounded note does not invoke that
   baseline directly; it imports textbook compact-Lie-group analysis as

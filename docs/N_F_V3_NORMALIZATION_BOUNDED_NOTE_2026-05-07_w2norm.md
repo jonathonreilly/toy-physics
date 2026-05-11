@@ -108,7 +108,7 @@ a *continuous* convention scalar.
   `C_F = 4/3` on V_3 in canonical normalization.
 - [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md) —
   four-layer stratification with L3 = `N_F` admission.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) — A1 (Cl(3))
+- `MINIMAL_AXIOMS_2026-05-03.md` — A1 (Cl(3))
   + A2 (Z³).
 
 These are imported authorities for a bounded theorem. The row remains
@@ -276,13 +276,13 @@ The repair path is:
 - **Indirect repair** (admit the bridge as part of the
   staggered-Dirac realization gate): once the staggered-Dirac
   realization (open derivation target per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)) is
+  `MINIMAL_AXIOMS_2026-05-03.md`) is
   derived and audited, the per-site / lattice / Hilbert-space
   identification could be rechecked.
 
 ## Cross-references
 
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) —
+- `MINIMAL_AXIOMS_2026-05-03.md` —
   framework axioms A1 + A2.
 - [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) — SU(3) on V_3.
 - [`SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md`](SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md) — `C_F = 4/3`.

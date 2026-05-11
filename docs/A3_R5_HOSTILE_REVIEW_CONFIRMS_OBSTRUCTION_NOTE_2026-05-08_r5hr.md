@@ -263,7 +263,7 @@ claim_type_reason: |
 
 ## Hypothesis set used (axiom-reset 2026-05-03)
 
-Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note
+Per `MINIMAL_AXIOMS_2026-05-03.md`, this note
 depends on the staggered-Dirac realization derivation target, which is
 currently an open gate. The note's load-bearing claim depends on the BZ-corner
 doubler structure, the hw=1 triplet, and the no-proper-quotient theorem on

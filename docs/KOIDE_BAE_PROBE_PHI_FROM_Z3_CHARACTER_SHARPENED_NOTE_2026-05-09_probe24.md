@@ -27,7 +27,7 @@ not promote any downstream theorem.
 In this note:
 
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"BAE-condition"** = Brannen Amplitude Equipartition: the
   amplitude-ratio constraint `|b|²/a² = 1/2` for the `C_3`-equivariant
   Hermitian circulant `H = aI + bC + b̄C²` on `hw=1 ≅ ℂ³` (legacy
@@ -529,7 +529,7 @@ Target: `=== TOTAL: PASS=N, FAIL=0 ===`.
   — `H = aI + bC + b̄C²` family, R1–R3
 - [`KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md`](KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md)
   — `a_0 = √3·a, z = √3·b, a_0² − 2|z|² = 3a² − 6|b|²` algebraic identities
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) —
+- `MINIMAL_AXIOMS_2026-05-03.md` —
   framework axiom A1 (distinct from BAE-condition)
 
 ## Cited dependencies

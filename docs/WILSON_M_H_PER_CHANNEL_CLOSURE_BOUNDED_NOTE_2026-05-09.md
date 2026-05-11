@@ -211,9 +211,9 @@ perturbative-Taylor convergence radius of their respective forms.
   ORDERS_BOUNDED_NOTE_2026-05-08` derives the uniform-16 closure
   `r_{16} ≈ 0.26855`, and this note's S-dependent values are the
   natural per-`S` extension of that closure equation.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the staggered-Dirac realization-gate context.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for
+- `MINIMAL_AXIOMS_2026-05-03.md` for
   the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`).
 
 These are imported authorities for a bounded theorem. The row remains

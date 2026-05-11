@@ -107,7 +107,7 @@ recover `g_bare = 1`.
   normalization carried to (CN).
 - [`G_BARE_RIGIDITY_THEOREM_NOTE.md`](G_BARE_RIGIDITY_THEOREM_NOTE.md)
   for the upstream rigidity theorem (no scalar dilation of `T_a`).
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the open realization-gate context that this note does not close.
 
 These are imported authorities for a bounded theorem. The row remains

@@ -4,7 +4,7 @@
 **Type:** bounded_theorem
 **Admitted context inputs:** staggered-Dirac realization derivation target
 (canonical parent:
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md);
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`;
 see `MINIMAL_AXIOMS_2026-05-03.md`).
 **Status:** structural representation-theory / algebraic embedding-consistency
 theorem on the current graph-first SU(3) × SU(2) × U(1)_Y surface plus the
@@ -452,6 +452,6 @@ exact arithmetic). It checks:
   — graph-first SU(3) commutant
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
   — three-generation orbit algebra
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) — current
+- `MINIMAL_AXIOMS_2026-05-03.md` — current
   axiom set + open gates (staggered-Dirac realization derivation target)
 - Standard references: Georgi–Glashow (1974), Slansky (1981) tables.

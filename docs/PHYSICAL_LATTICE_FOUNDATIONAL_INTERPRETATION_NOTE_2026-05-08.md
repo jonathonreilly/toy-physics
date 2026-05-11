@@ -17,7 +17,7 @@ The repo baseline is the physical `Cl(3)` on `Z^3` framework:
 - A2: the physical spatial substrate is the cubic lattice `Z^3`.
 
 That language is already the framework surface in
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md). This note
+`MINIMAL_AXIOMS_2026-05-03.md`. This note
 does not add a third mathematical axiom. It records the review-rule
 consequence that the lattice should not be reclassified as a regulator,
 formal bookkeeping device, or optional new premise during review.

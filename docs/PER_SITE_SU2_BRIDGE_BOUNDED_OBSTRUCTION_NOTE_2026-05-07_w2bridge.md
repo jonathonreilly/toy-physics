@@ -128,7 +128,7 @@ closure.
 | [`CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md`](CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md) | unaudited | provides per-site `C²` (Pauli irrep) |
 | [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md) | audited_conditional | provides Cl(3) per-site uniqueness up to chirality |
 | [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md) | audited_conditional | provides `V = (C²)^{⊗3} = C^8` taste cube structure |
-| [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | meta | identifies the current A1/A2 axiom context |
+| `MINIMAL_AXIOMS_2026-05-03.md` | meta | identifies the current A1/A2 axiom context |
 
 These are imported authorities for a bounded theorem. The row remains
 unaudited until the independent audit lane reviews the claim and
@@ -249,7 +249,7 @@ independent_audit_required_before_effective_status_change: true
   — per-site `H_x = C²` (Pauli irrep).
 - [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
   — Cl(3) per-site uniqueness theorem.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — current framework axioms (A1: Cl(3), A2: Z³).
 
 Related non-load-bearing context: the older g_bare structural

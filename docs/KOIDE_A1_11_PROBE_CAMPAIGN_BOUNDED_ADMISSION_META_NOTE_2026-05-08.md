@@ -35,7 +35,7 @@ are linked below as targeted follow-up, not as theorem promotion.
 In this note:
 
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"A1-condition"** = the Brannen-Rivero amplitude-ratio constraint
   `|b|²/a² = 1/2` for the `C_3`-equivariant Hermitian circulant
   `H = aI + bC + b̄C²` on `hw=1 ≅ ℂ³`.
@@ -334,7 +334,7 @@ This note records, as repo-language clarification:
 
 ### Foundational baseline
 
-- Minimal axioms: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- Minimal axioms: `MINIMAL_AXIOMS_2026-05-03.md`
 - Physical-lattice baseline interpretation: [`PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md`](PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md)
 - Preserved-`C_3` interpretation: [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md)
 - Substep-4 AC narrowing (PDG-input prohibition): [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1243 |
+| unaudited | 1245 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 177 |
+| ~~audited_conditional~~ | 175 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 12 |
 | `audited_clean` | 433 |
-| `audited_conditional` | 177 |
+| `audited_conditional` | 175 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1353 |
+| `unaudited` | 1355 |
 
 | claim_type | count |
 |---|---:|
@@ -82,31 +82,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 948 | 92.39 | `unaudited` | meta |
-| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 913 | 45.34 | `audited_clean` | open_gate |
-| 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 460 | 44.35 | `unaudited` | unaudited |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 609 | 41.25 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 903 | 39.82 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 796 | 38.14 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 598 | 36.23 | `unaudited` | unaudited |
-| 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 413 | 36.19 | `unaudited` | unaudited |
-| 9 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 413 | 33.69 | `unaudited` | unaudited |
-| 10 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 482 | 33.42 | `unaudited` | unaudited |
-| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 889 | 32.30 | `audited_clean` | **retained_bounded** |
-| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 538 | 31.57 | `audited_clean` | **retained_bounded** |
-| 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 497 | 31.46 | `unaudited` | unaudited |
-| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 720 | 30.49 | `unaudited` | unaudited |
-| 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 495 | 30.45 | `unaudited` | unaudited |
-| 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 413 | 30.19 | `unaudited` | unaudited |
-| 17 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 419 | 28.71 | `unaudited` | unaudited |
-| 18 | `three_generation_structure_note` | bounded_theorem | critical | 589 | 28.20 | `unaudited` | unaudited |
-| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 646 | 27.84 | `unaudited` | unaudited |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 655 | 27.36 | `unaudited` | unaudited |
-| 21 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 413 | 27.19 | `unaudited` | unaudited |
-| 22 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 485 | 26.93 | `unaudited` | unaudited |
-| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 529 | 26.55 | `unaudited` | unaudited |
-| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 531 | 26.05 | `unaudited` | unaudited |
-| 25 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 677 | 25.91 | `audited_clean` | **retained_bounded** |
+| 1 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 460 | 44.35 | `unaudited` | unaudited |
+| 2 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 609 | 41.25 | `audited_conditional` | ~~audited_conditional~~ |
+| 3 | `minimal_axioms_2026-05-03` | meta | critical | 799 | 40.64 | `unaudited` | meta |
+| 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 903 | 39.82 | `audited_clean` | **retained_bounded** |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 796 | 38.14 | `unaudited` | meta |
+| 6 | `alpha_s_derived_note` | bounded_theorem | critical | 598 | 36.23 | `unaudited` | unaudited |
+| 7 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 413 | 36.19 | `unaudited` | unaudited |
+| 8 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 413 | 33.69 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 482 | 33.42 | `unaudited` | unaudited |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 889 | 32.30 | `audited_clean` | **retained_bounded** |
+| 11 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 538 | 31.57 | `audited_clean` | **retained_bounded** |
+| 12 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 497 | 31.46 | `unaudited` | unaudited |
+| 13 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 720 | 30.49 | `unaudited` | unaudited |
+| 14 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 495 | 30.45 | `unaudited` | unaudited |
+| 15 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 413 | 30.19 | `unaudited` | unaudited |
+| 16 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 419 | 28.71 | `unaudited` | unaudited |
+| 17 | `three_generation_structure_note` | bounded_theorem | critical | 589 | 28.20 | `unaudited` | unaudited |
+| 18 | `left_handed_charge_matching_note` | bounded_theorem | critical | 646 | 27.84 | `unaudited` | unaudited |
+| 19 | `plaquette_self_consistency_note` | bounded_theorem | critical | 655 | 27.36 | `unaudited` | unaudited |
+| 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 413 | 27.19 | `unaudited` | unaudited |
+| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 485 | 26.93 | `unaudited` | unaudited |
+| 22 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 529 | 26.55 | `unaudited` | unaudited |
+| 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 531 | 26.05 | `unaudited` | unaudited |
+| 24 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 677 | 25.91 | `audited_clean` | **retained_bounded** |
+| 25 | `cl3_sm_embedding_theorem` | positive_theorem | critical | 450 | 25.82 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -569,7 +569,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -655,7 +654,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_residual_environment_identification_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_character_measure_theorem_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `geometry_lane_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -1348,19 +1346,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "For the gauge sector, the Wilson plaquette S_G = β Σ_P Re[1 - (1/N_c) tr U_P] is CPT-invariant by inspection" while the note also states the full SU(3) operator-level lift is deferred.  _(class `A`)_
 - **chain closes:** False — The restricted packet contains no cited authority and the source note explicitly defers the full algebraic-general SU(3) Wilson plaquette CPT identity, yet CPT3-CPT5 are stated for the full canonical action. The runner only checks small pure-staggered fermion blocks and does not construct gauge links or the plaquette CPT action.
 - **rationale:** Issue: the full-action CPT claim depends on the Wilson-plaquette SU(3) CPT lift, which is asserted by inspection and explicitly deferred. Why this blocks: CPT3-CPT5 are stated beyond the fermion-sector identities the runner actually verifies. Repair target: split a clean bounded fermion-sector theorem or add a direct SU(3) link/plaquette CPT theorem with an algebraic proof and runner that constructs the link transformation. Claim boundary until fixed: retain only the finite pure-staggered fermion-sector operator identities on the tested/canonical block class.
-- **auditor confidence:** high
-
-### `axiom_first_lattice_noether_theorem_note_2026-04-29`
-
-- **Note:** [`AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded lattice Noether identity for U(1) phase current and proposed (2Z)^3 sublattice momentum current on the admitted staggered-Dirac/Grassmann carrier.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e129e-c89b-7951-98b8-79bcf364c924`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Promoting this finite shift to a site-dependent discrete shift parameter yields a finite-difference Ward identity with the canonical staggered sublattice-momentum density P^mu_x and hence partial^L_mu P^mu_x = 0 on shell.  _(class `A`)_
-- **chain closes:** False — The U(1) infinitesimal-current algebra closes on the admitted carrier, but the discrete-translation current (3) is introduced by a sketched finite-shift Ward bridge rather than derived. The E6 runner only checks a free periodic expectation-value instance, not the stated on-shell identity for the admitted canonical action.
-- **rationale:** Issue: the N1 bridge from two-site discrete translation symmetry to the specific local momentum density (3) is asserted, not proved. Why this blocks: the claim advertises N1-N3 as a bounded theorem, but the only direct support for N1 is a numerical free-block expectation check rather than a derivation of the local Ward current for arbitrary on-shell fields on the admitted carrier. Repair target: add a discrete Ward theorem deriving (3) from localized two-site translation on the admitted staggered action, or narrow the clean claim to N2/N3 plus an E6 free-block exhibit. Claim boundary until fixed: U(1) current and bilateral infinitesimal Noether identity on the admitted staggered carrier.
 - **auditor confidence:** high
 
 ### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
@@ -4720,22 +4705,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By Theorems 1 and 2, the unmarked spatial boundary character coefficients then satisfy structurally z_(p,q)^env(beta) = <chi_(p,q), (T_beta^env,tensor)^(L_perp-1) eta_beta^env>.  _(class `A`)_
 - **chain closes:** False — The finite runner verifies a constructed positive tensor word, but the note does not derive that this word is the actual unmarked spatial-environment slice transfer or that the stated boundary readout equals the actual z_(p,q)^env(beta). The source explicitly leaves the full untruncated beta=6 tensor-transfer construction, multi-word coverage, and Perron/boundary evaluation open.
 - **rationale:** Issue: the load-bearing boundary-character identity is asserted structurally, while the runner only checks one truncated positive tensor word built from local ingredients. Why this blocks: positivity and swap symmetry of that finite word do not prove that actual residual spatial-environment boundary amplitudes arise from the claimed transfer operator. Repair target: a retained bridge theorem and runner constructing the actual spatial-environment slice transfer, boundary state, and readout, or a split note scoped only to the one finite tensor-word packet. Claim boundary until fixed: bounded evidence for local Wilson coefficients, SU(3) fusion primitives, and one NMAX=4/MODE_MAX=80 positivity example.
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_susceptibility_flow_theorem_note`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact finite-volume Wilson plaquette susceptibility identities and the calculus flow law for the implicit one-plaquette reduction map, conditional on the admitted Wilson evaluation surface and upstream reduction-law setup.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-gauge_vacuum_plaquette_s-037`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Differentiating the implicit reduction law P_L(beta)=P_1plaq(beta_eff,L(beta)) gives chi_L(beta)=chi_1plaq(beta_eff,L(beta))*beta_eff,L'(beta), hence beta_eff,L'(beta)=chi_L(beta)/chi_1plaq(beta_eff,L(beta)).  _(class `A`)_
-- **chain closes:** False — The calculus step closes on its own terms, but the audited packet explicitly admits open upstream gates for the staggered-Dirac realization and g_bare=1/Wilson beta=6 normalization surface. Those dependencies prevent the full lane from closing as an unconditional positive theorem.
-- **rationale:** The central derivation is a genuine algebraic/calculus consequence of the implicit reduction law and susceptibility definitions, not a numerical match or renaming. The runner mostly verifies coefficient differentiations and imports/checks upstream plaquette constants and implicit-beta support values; it does not compute the Wilson susceptibility profile from first principles. Because the source note itself lists the staggered-Dirac realization gate and the g_bare=1 derivation target as admitted open inputs, the bounded theorem remains conditional under the rubric.
-- **open / conditional deps cited:**
-  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
-  - `G_BARE_DERIVATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note`

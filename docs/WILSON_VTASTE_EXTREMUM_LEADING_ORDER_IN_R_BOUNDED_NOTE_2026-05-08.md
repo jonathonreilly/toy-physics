@@ -155,10 +155,10 @@ matching the structural identity `60 / 12 = 5`.
 - [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md)
   for the parent tree-level `V_taste`, the mean-field setup, and the
   `r = 0` curvature `-4/u_0^2` to which (3) reduces.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the staggered-Dirac realization gate context; this note inherits
   the gate's open-derivation status without closing it.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`).
 
 These are imported authorities for a bounded theorem. The row remains

@@ -6,7 +6,7 @@
 **Status:** bounded support theorem on the framework's leading-order
 small-U Wilson-to-heat-kernel matching surface, conditional on (a) the
 canonical Cl(3) connection trace form `Tr(T_a T_b) = δ_{ab}/2`,
-(b) g_bare = 1 (open gate per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)),
+(b) g_bare = 1 (open gate per `MINIMAL_AXIOMS_2026-05-03.md`),
 (c) heat-kernel as the candidate Cl(3)-native gauge action (Block 04
 target — uniqueness vs Wilson NOT yet derived), and (d) leading-order
 small-U matching as the Brownian-time selection criterion (finite-β

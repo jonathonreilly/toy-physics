@@ -4,7 +4,7 @@
 **Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
 **Admitted context inputs:** staggered-Dirac realization derivation target
 (canonical parent:
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md),
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`,
 current generated `effective_status: open_gate`; the gate is
 intentionally open and this note treats it as admitted context).
 **Claim scope:** the local algebraic/spectral content of the three-generation
@@ -22,7 +22,7 @@ two residuals:
 
 1. *staggered-Dirac realization parent is `effective_status: open_gate`.*
    This is a legitimate open gate per
-   [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md); the
+   `MINIMAL_AXIOMS_2026-05-03.md`; the
    source author treats it as a bounded-theorem admitted-context input
    rather than as a defect to be repaired here.
 2. *no-rooting / `M_3(C)` sub-claims need retained-grade authority packets.*
@@ -183,9 +183,9 @@ Current main-branch runner state:
 
 ## Hypothesis set used (axiom-reset 2026-05-03)
 
-Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target**, which is currently an open gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
+Per `MINIMAL_AXIOMS_2026-05-03.md`, this note depends on the **staggered-Dirac realization derivation target**, which is currently an open gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
 
-Canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
+Canonical parent note: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md` (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
 
 - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
 - `THREE_GENERATION_STRUCTURE_NOTE.md`

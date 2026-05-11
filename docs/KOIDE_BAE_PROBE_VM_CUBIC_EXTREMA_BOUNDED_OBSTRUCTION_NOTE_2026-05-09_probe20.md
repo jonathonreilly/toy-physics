@@ -25,7 +25,7 @@ chain, and runner.
 
 In this note:
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **"BAE"** = Brannen Amplitude Equipartition condition `|b|^2 / a^2 = 1/2`
   for the `C_3`-equivariant Hermitian circulant `H = aI + bC + b̄C²` on
   `hw=1 ≅ ℂ³`. Historically labeled "A1-condition" prior to the
@@ -259,7 +259,7 @@ The residue therefore is NOT a consequence of:
 ## Cross-references
 
 - **Foundational notes:**
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md),
+  `MINIMAL_AXIOMS_2026-05-03.md`,
   [`KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`](KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md)
   (in-scope `V(m)` content; out-of-scope mass-tower claim).
 - **Algebraic backbone:**

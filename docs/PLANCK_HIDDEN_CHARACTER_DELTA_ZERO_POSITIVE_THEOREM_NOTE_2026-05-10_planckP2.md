@@ -78,8 +78,8 @@ via a sharpened mechanism, not the originally proposed gauge mechanism.
 
 | ID | Statement | Class |
 |---|---|---|
-| BASE-CL3 | Physical `Cl(3)` local algebra | repo baseline semantics; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| BASE-Z3 | `Z^3` spatial substrate | repo baseline semantics; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| BASE-CL3 | Physical `Cl(3)` local algebra | repo baseline semantics; see `MINIMAL_AXIOMS_2026-05-03.md` |
+| BASE-Z3 | `Z^3` spatial substrate | repo baseline semantics; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | PL | Physical-lattice reading; H_cell = (C^2)^{(x)4} time-locked primitive event cell with rho_cell = I_16/16 source-free state | cited state surface: [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md) (`retained_no_go`) plus [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md) (audit-pending) |
 | CC | Carrier P_A = Hamming-weight-1 packet on the per-axis Boolean event register; carrier reads c_cell = 1/4 | cited carrier surface: [`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md) (audit-pending) |
 | CL3SM | Cl^+(3) ≅ ℍ ⊃ SU(2), pseudoscalar omega ∉ Cl^+(3) generating U(1)_omega; staggered representation on V_8 = (C^2)^{(x)3} | cited algebraic content: [`CL3_SM_EMBEDDING_THEOREM.md`](CL3_SM_EMBEDDING_THEOREM.md) (audit-pending) |
@@ -498,7 +498,7 @@ The runner verifies:
 - **Anomaly-forced 3+1 (time slot in H_cell):**
   [`ANOMALY_FORCES_TIME_THEOREM.md`](ANOMALY_FORCES_TIME_THEOREM.md)
 - **Minimal axioms:**
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+  `MINIMAL_AXIOMS_2026-05-03.md`
 
 ## User-memory feedback rules respected
 

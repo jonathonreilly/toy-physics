@@ -27,7 +27,7 @@ from §5 remains the named open premise.
   corresponds to a third-link composite source rather than a one-link
   source. That theorem supplies the action-native provenance for the
   "first-order coframe locality" assumption used in Theorem 2 below.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — current framework memo restoring the repo-wide axioms to physical
   `Cl(3)` on `Z^3` and recategorizing the staggered-Dirac / Grassmann
   realization as an open gate rather than a framework axiom. The

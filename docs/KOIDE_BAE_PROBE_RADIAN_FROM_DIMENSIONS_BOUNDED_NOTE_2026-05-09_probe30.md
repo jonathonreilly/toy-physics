@@ -21,7 +21,7 @@ not promote any downstream theorem.
 ## Naming convention
 
 - **"framework axiom A1"** = retained `Cl(3)` local-algebra axiom per
-  [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+  `MINIMAL_AXIOMS_2026-05-03.md`.
 - **BAE** = Brannen Amplitude Equipartition: `|b|²/a² = 1/2` on the
   retained `C_3`-equivariant Hermitian circulant `H = aI + bC + b̄C²`
   on `hw=1 ≅ ℂ³`. Renaming captured in
@@ -665,7 +665,7 @@ Target: `=== TOTAL: PASS=N, FAIL=0 ===`.
   — `g_bare = 1` retained
 - [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
   — `<P>`, `M_Pl`, dimensional chain
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — A1+A2 framework axioms
 - [`PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md`](PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE_2026-05-08.md)
   — physical-lattice baseline

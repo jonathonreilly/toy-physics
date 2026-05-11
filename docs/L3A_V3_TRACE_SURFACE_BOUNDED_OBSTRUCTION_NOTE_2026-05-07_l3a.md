@@ -97,7 +97,7 @@ either:
      with V_3. Then operator-on-matter pairing forces the trace to be
      on V_3. *But* "matter = V_3" is the staggered-Dirac realization
      derivation gate (open per
-     [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)).
+     `MINIMAL_AXIOMS_2026-05-03.md`).
 
   2. **Irrep-trace convention.** Adopt "gauge trace is on the
      irreducible carrier of the gauge group" (V_3 inside V_full).
@@ -226,7 +226,7 @@ for those ten vectors.
 | [`CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md) | retained | provides baryon singlet uniqueness on V_3 |
 | [`CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md`](CL3_PER_SITE_HILBERT_DIM_TWO_THEOREM_NOTE_2026-05-02.md) | retained | provides per-site C² (Pauli irrep) |
 | [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md) | retained | provides Cl(3) per-site uniqueness |
-| [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | meta | A1 (Cl(3)) + A2 (Z³); names the staggered-Dirac realization gate |
+| `MINIMAL_AXIOMS_2026-05-03.md` | meta | A1 (Cl(3)) + A2 (Z³); names the staggered-Dirac realization gate |
 
 These are imported authorities for a bounded theorem. The row remains
 unaudited until the independent audit lane reviews the claim and
@@ -262,7 +262,7 @@ dependency chain.
 A future closure of L3a from Cl(3) + Z³ primitives must close the
 matter-rep / staggered-Dirac realization gate. The closest existing
 in-flight pieces (per
-[`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)):
+`MINIMAL_AXIOMS_2026-05-03.md`):
 
 - `PHYSICAL_LATTICE_NECESSITY_NOTE.md` — substrate-level physical-
   lattice reading.
@@ -373,7 +373,7 @@ distinguishing_content_from_w2_binary_bridge_norm: |
   — C_F = 4/3 on V_3 in canonical normalization.
 - [`G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
   — Cl(3) → End(V) → su(3) embedding canonicity.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — A1 (Cl(3)) + A2 (Z³); names the staggered-Dirac realization gate.
 
 ## Citation references (representation theory / lattice gauge)

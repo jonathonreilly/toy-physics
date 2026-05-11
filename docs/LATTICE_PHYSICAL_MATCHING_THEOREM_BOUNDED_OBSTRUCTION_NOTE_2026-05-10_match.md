@@ -48,8 +48,8 @@ The 2026-05-02 cluster obstruction note proved each of (a)-(d) fails analyticall
 
 | ID | Statement | Class |
 |---|---|---|
-| physical `Cl(3)` local algebra | baseline local algebra | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| `Z^3` spatial substrate | baseline spatial substrate | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| physical `Cl(3)` local algebra | baseline local algebra | framework baseline; `MINIMAL_AXIOMS_2026-05-03.md` |
+| `Z^3` spatial substrate | baseline spatial substrate | framework baseline; `MINIMAL_AXIOMS_2026-05-03.md` |
 | RP | A11 RP + OS reconstruction → `H_phys` with unique vacuum `Ω` | upstream authority: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md) |
 | TREE | `m_H_tree = v / (2 u_0) = 140.3 GeV` (tree-level mean-field bounded source surface; per Gap #3 lite 2026-05-10 the parent note labels this quantity `m_curv_tree` — a per-channel symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole. This matching-obstruction note continues to use the older `m_H_tree` symbol internally; the imported quantity should be read as `m_curv_tree` for first-principles-honest scope.) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
 | Plaq-MC | `<P>_iso(β=6, isotropic) = 0.5934` (registered MC datum on the cited source stack) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
@@ -142,7 +142,7 @@ The structural fact is that `m_H_HamLim = 151.0 GeV` is **further** from 125.25 
 ## 8. What this note does NOT establish
 
 - It does **not** close the matching theorem. The Nature-grade non-perturbative analytic gap remains open per the 2026-05-02 cluster obstruction synthesis.
-- It does **not** discharge the staggered-Dirac realization gate, the g_bare = 1 gate, or any other open framework gate per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md).
+- It does **not** discharge the staggered-Dirac realization gate, the g_bare = 1 gate, or any other open framework gate per `MINIMAL_AXIOMS_2026-05-03.md`.
 - It does **not** introduce new repo-wide axioms, new imports, or new derivation primitives.
 - It does **not** consume PDG values or any observed/fitted/literature numerical inputs as derivation inputs. The numerical sanity-check table in §6 records framework predictions vs PDG values for falsifiability-anchor purposes only.
 - It does **not** promote Lane 2 (Higgs mass from axiom) above its current `bounded_theorem` / `unaudited` status. The audit-ledger row for [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) remains owned by the independent audit lane.
@@ -231,7 +231,7 @@ audit_required_before_effective_status_change: true
 
 ### Framework axioms / structural
 
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
 - [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md)
 - [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 

@@ -228,7 +228,7 @@ and this combination is unaffected by available framework primitives.
 | [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) | retained-bounded | SU(3) on V_3; uniqueness of Pati-Salam direction |
 | [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) | retained | M_3(C) on hw=1 |
 | [`THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md`](THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md) | retained | no proper quotient |
-| [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | meta | A1+A2; named open gates |
+| `MINIMAL_AXIOMS_2026-05-03.md` | meta | A1+A2; named open gates |
 
 These are imported authorities for a bounded obstruction. The row
 remains unaudited until the independent audit lane reviews the claim
@@ -380,7 +380,7 @@ distinguishing_content_from_w2binary_l3a: |
   — M_3(C) on hw=1 corner triplet.
 - [`THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md`](THREE_GENERATION_OBSERVABLE_NO_PROPER_QUOTIENT_NARROW_THEOREM_NOTE_2026-05-02.md)
   — no proper quotient of M_3(C) on hw=1.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   — A1 + A2 framework axioms.
 
 ## Citation references (representation theory / lattice gauge)

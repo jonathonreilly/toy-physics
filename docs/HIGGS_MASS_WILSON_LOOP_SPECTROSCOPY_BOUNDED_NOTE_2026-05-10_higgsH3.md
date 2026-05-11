@@ -301,7 +301,7 @@ implements:
 - [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
   (file pointer; not a markdown link, to avoid known back-edges) for
   the framework's complete prediction chain context.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) for
+- `MINIMAL_AXIOMS_2026-05-03.md` for
   the repo baseline physical `Cl(3)` local algebra and `Z^3` spatial
   substrate.
 

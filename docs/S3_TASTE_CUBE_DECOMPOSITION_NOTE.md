@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-17 (audit-narrowing refresh: 2026-05-10)
 **Type:** bounded_theorem (axiom-reset retag 2026-05-03; was positive_theorem)
-**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md), `claim_type: open_gate`, `audit_status: audited_clean` as a meta-parent identity, not as a derivation closure).
+**Admitted context inputs:** staggered-Dirac realization derivation target (canonical parent: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`, `claim_type: open_gate`, `audit_status: audited_clean` as a meta-parent identity, not as a derivation closure).
 **Status:** bounded class-A representation-theoretic theorem on the eight-state
 taste cube `C^8 = (C^2)^{\otimes 3}` under tensor-position permutations.
 **Status authority:** independent audit lane only.
@@ -27,18 +27,18 @@ The earlier framing in this note also identified the eight-state cube as the
 axis-permutation symmetry. That framework-carrier identification is **not**
 closed in this note. It depends on the staggered-Dirac realization derivation
 target, which is the canonical open gate
-[`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md).
+`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`.
 This row's load-bearing claim is therefore narrowed to the abstract
 representation-theoretic theorem; the framework-carrier reading is recorded
 only as an admitted-context label, not as a load-bearing conclusion of this row.
 
 **Cited authorities (one-hop deps):**
 
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   (`claim_type: open_gate`) — canonical parent for the framework-carrier
   identification of `C^8 = (C^2)^{\otimes 3}` as the staggered-Dirac BZ-corner
   taste cube. Cited but **not closed** by this note.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) (meta) —
+- `MINIMAL_AXIOMS_2026-05-03.md` (meta) —
   records that the staggered-Dirac realization is currently an open gate, not
   an axiom; this note inherits that open status for any framework-carrier
   reading.
@@ -110,9 +110,9 @@ preservation, the class characters, and the multiplicity calculation
 
 ## Hypothesis set used (axiom-reset 2026-05-03)
 
-Per [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), this note depends on the **staggered-Dirac realization derivation target**, which is currently an open gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
+Per `MINIMAL_AXIOMS_2026-05-03.md`, this note depends on the **staggered-Dirac realization derivation target**, which is currently an open gate. The note's load-bearing claim defines or relies on fermion fields, fermion-number operators, fermion correlators, fermion bilinears, the staggered Dirac action, the BZ-corner doubler structure, the `hw=1` triplet, charged-lepton sector content, neutrino sector content, quark / hadron content, the Koide / PMNS / CKM observable surfaces, or the Grassmann CAR boundary structure — all of which depend on the staggered-Dirac realization derivation target listed in `MINIMAL_AXIOMS_2026-05-03.md`.
 
-Canonical parent note: [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md) (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
+Canonical parent note: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md` (`claim_type: open_gate`). In-flight supporting work (see `MINIMAL_AXIOMS_2026-05-03.md`):
 
 - `PHYSICAL_LATTICE_NECESSITY_NOTE.md`
 - `THREE_GENERATION_STRUCTURE_NOTE.md`

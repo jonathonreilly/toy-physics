@@ -200,7 +200,7 @@ the proposed A3 axiom.** The lane is exhausted.
 | [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md) | unaudited | AC_φ obstruction this hostile review reaffirms |
 | [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) | retained-bounded | SU(3) on V_3 |
 | [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) | retained | M_3(C) on hw=1 |
-| [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | meta | A1+A2; named open gates |
+| `MINIMAL_AXIOMS_2026-05-03.md` | meta | A1+A2; named open gates |
 
 These are imported authorities for a hostile-review confirmation. The row
 remains unaudited until the independent audit lane reviews the claim and
@@ -318,7 +318,7 @@ distinguishing_content_from_r4_note: |
 - [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md) — substep 4 AC_φ obstruction.
 - [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) — retained SU(3) on V_3.
 - [`THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md) — M_3(C) on hw=1.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) — A1 + A2 framework axioms.
+- `MINIMAL_AXIOMS_2026-05-03.md` — A1 + A2 framework axioms.
 
 ## Citation references (representation theory / Lie groups)
 

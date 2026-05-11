@@ -160,10 +160,10 @@ approximation `-4/u_0^2 + 60 r^2 / u_0^4`.
   which the `r = 0` limit reduces, and the +12% gap chain row 3
   (Wilson taste-breaking) that asserts a Wilson correction without
   computing it.
-- [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
   for the staggered-Dirac realization gate context; this note inherits
   the gate's open-derivation status without closing it.
-- [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- `MINIMAL_AXIOMS_2026-05-03.md`
   for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`) and the
   recategorized open derivation targets.
 

@@ -85,7 +85,7 @@ C_3-Fourier basis instead of corner basis). None is proposed here.
 
 | ID | Statement | Class |
 |---|---|---|
-| physical Cl(3) local algebra | Local Clifford algebra baseline | repo baseline; see [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
+| physical Cl(3) local algebra | Local Clifford algebra baseline | repo baseline; see `MINIMAL_AXIOMS_2026-05-03.md` |
 | Z^3 spatial substrate | Physical spatial lattice substrate | repo baseline; same source |
 | Tr-canon | Canonical Killing-Hilbert-Schmidt trace form on Cl(3) | source dependency: [`G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md`](G_BARE_HILBERT_SCHMIDT_RIGIDITY_THEOREM_NOTE_2026-05-07.md) |
 | Reflection positivity | Reflection positivity plus OS reconstruction -> H_phys, unique vacuum | source dependency: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md) |
@@ -257,7 +257,7 @@ is to avoid one-step relabelings of already-landed cycles. This note:
 - L3a 10-vector consolidation: [`L3A_V3_TRACE_SURFACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_l3a.md`](L3A_V3_TRACE_SURFACE_BOUNDED_OBSTRUCTION_NOTE_2026-05-07_l3a.md)
 - Cluster decomposition: [`AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-04-29.md)
 - Reflection positivity: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
-- MINIMAL_AXIOMS: [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
+- MINIMAL_AXIOMS: `MINIMAL_AXIOMS_2026-05-03.md`
 - Working-note and attack-vector scratch packets from the route campaign are
   branch-local material and are not a source authority for this note.
 
