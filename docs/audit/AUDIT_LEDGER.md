@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 73 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 240 |
+| **retained_bounded** | 241 |
 | open_gate | 13 |
-| unaudited | 1116 |
+| unaudited | 1115 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 409 |
+| `audited_clean` | 410 |
 | `audited_conditional` | 260 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1214 |
+| `unaudited` | 1213 |
 
 | claim_type | count |
 |---|---:|
@@ -270,6 +270,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
@@ -5808,6 +5809,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current Higgs runner shows that the framework has nontrivial quantitative Higgs behavior once the lattice Coleman-Weinberg mechanism is active.  _(class `C`)_
 - **chain closes:** True — For this bounded scope, the note does not claim an exact Higgs-mass derivation; it claims only that the runner exhibits nontrivial CW Higgs behavior and supports bounded studies. The completed runner computes CW potential/SSB scans and ballpark mass-ratio behavior, while its failed exact-coupling/crossing checks are consistent with the note's explicit boundary.
 - **rationale:** The source note is narrowly scoped: it is a support note for bounded Higgs quantitative behavior and explicitly excludes standalone exact m_H authority. The runner is not clean for exact Higgs closure, but that is not the claim under audit; the two completed failures show missing exact coupling/crossing closure and reinforce the boundary. Within the bounded scope, the source note and completed runner evidence close without promoting an exact Higgs-mass derivation.
+- **auditor confidence:** high
+
+### `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Given retained graph-first SU(3), retained/admitted Wilson g_bare=1 convention, admitted Cl(3) identity D_taste²=d·I with d=4, admitted mean-field factorization, and N_taste=16, the lattice-side mean-field curvature ratio is R_lattice=1/(4u_0²), with no physical Higgs-mass matching claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14a9-5cc6-7671-a2d1-f85a85463ba5`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** At mean field, W(J)=(N_tot/2)log(J²+4u_0²) gives W''(0)/N_tot=1/(4u_0²), and with N_taste=16 the defined ratio R_lattice=4/(u_0² N_taste)=1/(4u_0²).  _(class `A`)_
+- **chain closes:** True — Inside the stated bounded scope, the result is arithmetic plus differentiation of the declared generating functional. The two declared dependency rows are provided as retained_bounded, and the excluded physical bridge R_lattice=(m_H/v)² is not used.
+- **rationale:** The audited claim is narrow enough to close: it proves only the lattice-side mean-field identity under explicitly admitted inputs. The runner hard-codes the admitted constants, but for this bounded theorem those constants are the scope rather than a hidden derivation target. No external physical comparator or Higgs-mass bridge is being claimed.
 - **auditor confidence:** high
 
 ### `higgs_mechanism_note`
