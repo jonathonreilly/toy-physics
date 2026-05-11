@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1263 |
+| unaudited | 1262 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 168 |
+| ~~audited_conditional~~ | 169 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 168 |
+| `audited_conditional` | 169 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1376 |
+| `unaudited` | 1375 |
 
 | claim_type | count |
 |---|---:|
@@ -708,6 +708,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -7370,6 +7371,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Because I = R * Im(p) is one-real-dimensional, defining D_kappa := rho*kappa*Id_I and U_kappa := (1 - rho*kappa)*Id_I gives complementary real-linear maps whose evaluation on Im(p) equals the stated bridge family.  _(class `A`)_
 - **chain closes:** False — The algebraic construction closes after the stated inputs are accepted, but the restricted packet provides no cited retained-grade authority or first-principles derivation for the retained atoms, the bridge family, or the carrier identification. Those imported premises are load-bearing for the broader retained-physics claim.
 - **rationale:** The runner source faithfully performs scalar arithmetic and linearity/complementarity checks; it is not a first-principles computation from the framework axioms. The theorem is a valid algebraic lift conditional on the stated bridge family and retained constants, but those inputs are not closed by any provided cited authority. Therefore the restricted chain does not justify a retained-grade existence theorem from axioms alone.
+- **auditor confidence:** high
+
+### `quark_bimodule_norm_naturality_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact uniqueness of the BICAC split law from stipulated complementarity, endpoint normalization, and affine naturality on a one-real-dimensional ownership interval, excluding derivation of those structural assumptions from retained quark physics.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Endpoint normalization plus affine naturality gives D_a=D_{a*1+(1-a)*0}=aD_1+(1-a)D_0=a Id_I, hence U_a=(1-a)Id_I and BICAC at a=rho.  _(class `A`)_
+- **chain closes:** False — The affine one-dimensional algebra closes and the runner reports PASS=8 FAIL=0. The note explicitly states the three NORM naturality conditions are added structure not derived on this branch, and it also imports the open staggered-Dirac realization context for quark observables.
+- **rationale:** Issue: BICAC follows only after assuming complementarity, endpoint normalization, and affine naturality; the note says these assumptions are not themselves derived from retained quark-side physics. Why this blocks: the result is a clean conditional implication, not a retained derivation of the physical BICAC endpoint. Repair target: prove the NORM normalization/naturality conditions from retained quark-side structure and wire the stated staggered-Dirac realization dependency. Claim boundary until fixed: given the three NORM axioms on a one-dimensional interval, the BICAC profile is the unique normalized affine extension.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28`
