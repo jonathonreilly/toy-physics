@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1186 |
+| unaudited | 1185 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 192 |
+| ~~audited_conditional~~ | 193 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 479 |
-| `audited_conditional` | 192 |
+| `audited_conditional` | 193 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1299 |
+| `unaudited` | 1298 |
 
 | claim_type | count |
 |---|---:|
@@ -781,6 +781,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `quark_lane3_stuck_fanout_synthesis_2026-04-28` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `retardation_discriminator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -8464,6 +8465,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`
   - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
   - `scripts/canonical_plaquette_surface.py`
+- **auditor confidence:** high
+
+### `quark_lane3_stuck_fanout_synthesis_2026-04-28`
+
+- **Note:** [`QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md`](../../docs/QUARK_LANE3_STUCK_FANOUT_SYNTHESIS_2026-04-28.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional current-bank Lane 3 synthesis: under the specific support files and loop ledgers read by the runner, no existing typed route reaches retained non-top quark masses without adding new source/readout theorem content; this does not prove future Lane 3 closure impossible.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current support graph has no typed path from any existing Lane 3 support node to retained_non_top_quark_masses; adding one of the named missing theorem-content edges is what would create such a path.  _(class `B`)_
+- **chain closes:** False — The runner exits PASS=68 FAIL=0 for its internal current-bank graph and file-surface checks, but the claim is a synthesis over many authority notes and .claude loop ledgers that are not ledger dependencies. The source also admits the staggered-Dirac realization gate as open, so the row cannot be retained as an audit-grade theorem about the physical Lane 3 bank without explicit dependency wiring and retained-grade input closure.
+- **rationale:** Issue: the runner supports the current-bank graph synthesis it hard-codes and string-checks, but the source claim imports many Lane 3 authority surfaces and loop ledgers while the audit row has no dependencies and names the staggered-Dirac realization target as an open gate. Why this blocks: a retained bounded theorem saying every current Lane 3 route is exhausted cannot rest on unwired, mixed-status support files and sidecar loop artifacts outside the audit dependency chain. Repair target: either split this into an explicit open-gate/status synthesis row, or add dependency edges to the referenced one-Higgs, CKM/firewall, Route-2, five-sixths, S3/C3, RPSR, and loop-ledger inputs and re-audit after those inputs are retained or intentionally scoped as open. Claim boundary until fixed: the runner is usable as an internal current-bank inventory showing named missing theorem edges; it is not retained closure of the physical non-top quark-mass lane.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md`
+  - `QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md`
+  - `QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`
+  - `QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`
+  - `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`
+  - `QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`
+  - `QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md`
+  - `.claude/science/physics-loops/lane3-quark-mass-retention-20260428/ASSUMPTIONS_AND_IMPORTS.md`
+  - `.claude/science/physics-loops/lane3-quark-mass-retention-20260428/NO_GO_LEDGER.md`
+  - `.claude/science/physics-loops/lane3-quark-mass-retention-20260428/ROUTE_PORTFOLIO.md`
 - **auditor confidence:** high
 
 ### `quark_route2_e_channel_readout_naturality_no_go_note_2026-04-28`
