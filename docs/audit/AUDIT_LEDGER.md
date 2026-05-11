@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 85 |
+| **retained** | 86 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1226 |
+| unaudited | 1225 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 449 |
+| `audited_clean` | 450 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1339 |
+| `unaudited` | 1338 |
 
 | claim_type | count |
 |---|---:|
@@ -167,6 +167,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `background_independence_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | C | - |
 | `bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `beta_gbare_rescaling_abstract_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
+| `bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_bounded_negative_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -1517,6 +1518,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Combining Widom-Gioev-Klich with the diamond Fermi-surface integral and the asserted chi_eff(L)=L readout gives r(L)=S_ent(L)/(L ln chi_eff(L))->c_Widom(2D)=1/6, not 1/4.  _(class `C`)_
 - **chain closes:** False — The Widom entropy coefficient and the 2D diamond integral close from the packet. The denominator bridge does not: B-3 asserts the thresholded cross-layer singular-value count chi_eff(L)=L+o(L) from area-law intuition and finite-L numerics, but no theorem in the packet proves this C-7 readout asymptotic.
 - **rationale:** Issue: the non-standard C-7 transfer-rank readout is load-bearing and is not proven asymptotically. Why this blocks: the claimed limit of r(L) depends on ln chi_eff(L); a different polynomial exponent in chi_eff would change the coefficient and the runner only verifies finite sizes through L=64. Repair target: add an analytic derivation or cited theorem for chi_eff(L)=L(1+o(1)) under the stated 10^-6 relative singular-value threshold on the OBC carrier. Claim boundary until fixed: the packet supports the Widom entropy coefficient 1/6 and finite-L evidence against 1/4, but not retained-grade closure of the exact C-7 RT-ratio no-go.
+- **auditor confidence:** high
+
+### `bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`BH_QUARTER_WALD_NEWTON_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/BH_QUARTER_WALD_NEWTON_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone rational-algebra equivalence between abstract forms S_Wald(c,A)=A*c and S_BH(G,A)=A/(4G): equality for all A>0 iff 4Gc=1, with the c=1/4 and G=1 specializations and nontrivial positive-rational hyperbola checks; no Wald-Noether derivation, gravitational boundary/action-density bridge, coframe-carrier identification, Newton constant, or physical Bekenstein-Hawking coefficient is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For abstract positive rationals c, G, and A, the equation A*c = A/(4G) for all A>0 is equivalent to 4Gc=1, so c=1/4 implies G=1 and G=1 implies c=1/4 under that constraint.  _(class `A`)_
+- **chain closes:** True — The equivalence follows by factoring S_Wald-S_BH as A(4Gc-1)/(4G), then solving the resulting rational constraint. The runner verifies the factorization, equivalence, specializations, hyperbola examples, and symbolic sanity checks with PASS=19 and FAIL=0.
+- **rationale:** The restricted packet isolates a pure rational-algebra lemma: equality of A*c and A/(4G) for all positive A is exactly the constraint 4Gc=1. No physical Wald formula, gravitational action-density bridge, framework coframe carrier, Newton constant, or observed black-hole entropy input is consumed. Residual risk is downstream misuse as a physical BH-quarter derivation rather than the algebraic step needed after separate physical premises are supplied.
 - **auditor confidence:** high
 
 ### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
