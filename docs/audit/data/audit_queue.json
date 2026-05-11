@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 752,
+    "critical": 751,
     "high": 32,
     "leaf": 334,
     "medium": 169
@@ -6195,29 +6195,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
-      "transitive_descendants": 450
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "finite_rank_source_to_metric_theorem_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "oh_schur_boundary_action_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.817,
-      "note_path": "docs/FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_finite_rank_source_to_metric_theorem.py",
       "transitive_descendants": 450
     },
     {
@@ -40129,6 +40106,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 130,
-  "total_pending": 1287
+  "ready_count": 129,
+  "total_pending": 1286
 }

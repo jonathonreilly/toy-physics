@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1264 |
+| unaudited | 1263 |
 | audit_in_progress | 14 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 154 |
+| ~~audited_conditional~~ | 155 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 18 |
 | `audited_clean` | 433 |
-| `audited_conditional` | 154 |
+| `audited_conditional` | 155 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1374 |
+| `unaudited` | 1373 |
 
 | claim_type | count |
 |---|---:|
@@ -639,6 +639,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `family_companion_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -3854,6 +3855,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/FIFTH_FAMILY_RADIAL_BASIN.py_import_error_missing__build_radial_shell_connectivity`
   - `scripts/FIFTH_FAMILY_RADIAL_FM_TRANSFER.py_import_error_missing__build_radial_shell_connectivity`
   - `live_runner_output_not_reproducible`
+- **auditor confidence:** high
+
+### `finite_rank_source_to_metric_theorem_note`
+
+- **Note:** [`FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md`](../../docs/FINITE_RANK_SOURCE_TO_METRIC_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact finite-rank source-to-exterior Woodbury reconstruction plus exact Schur boundary stationarity and bounded scalar/isotropic coarse-grained metric residual improvement on the currently imported finite-rank grid. This excludes full tensorial 3+1 matching, full nonlinear GR, and any retained-grade promotion of the imported finite-rank operator or coarse-grained exterior-law modules.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-finite-rank-source-to-metric`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner imports finite-rank source construction, coarse-grained exterior-law projection, and Schur boundary action modules, then reports exact Woodbury reconstruction, Schur stationarity, and a bounded coarse residual improvement on that imported grid.  _(class `B`)_
+- **chain closes:** False — The Schur boundary-action dependency is retained_bounded, and the live runner reproduces the stated exact/bounded checks. But the finite-rank operator construction and coarse-grained exterior law are still imported from frontier modules with no dedicated retained authority notes in the one-hop chain, so the scalar-to-metric reduction does not close from the restricted packet alone.
+- **rationale:** Issue: the runner passes, but two load-bearing pieces are module imports rather than retained cited authorities: scripts/frontier_finite_rank_gravity_residual.py for the finite-rank operator/source construction and scripts/frontier_coarse_grained_exterior_law.py for the radial harmonic projection and residual map. Why this blocks: a clean retained_bounded source-to-metric row would otherwise inherit the correctness of those constructions without an audited theorem or inlined derivation. Repair target: add retained-grade notes for those two modules or inline their derivations/checks into this row's restricted packet, then re-audit the scalar-to-metric reduction. Claim boundary until fixed: the live runner supports a reproducible exact/bounded diagnostic on the imported grid, while full tensorial 3+1 closure and retained source-to-metric theorem status remain unclosed.
 - **auditor confidence:** high
 
 ### `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30`
