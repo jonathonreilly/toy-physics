@@ -2,6 +2,41 @@
 
 **Date:** 2026-04-07
 **Status:** proposed_retained negative — adding the second-order term `½·kubo₂·s²` to the first-order Kubo prediction does NOT explain the failing-family pathology. The linearity-regime subset stays at 15/44 families, residual sums actually grow slightly, and the documented failing families (`G2_asym_z`, `H1_ring`, `L1_longrange`, `OF9_stretched`, `K3_NL5`) either get worse, stay the same, or improve only marginally. This delineates the boundary of the Taylor-expansion line of attack: the first-order Kubo derivation is the dominant term in the linear regime but cannot be extended to the failing families by adding higher Taylor orders.
+**Claim type:** positive_theorem
+
+**Audit-conditional perimeter (2026-04-27):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, `claim_type =
+positive_theorem`, `independence = cross_family`, and load-bearing
+step class `C`. The audit chain-closure explanation is exact: "The
+live runner reproduces the second-order null result, but the note
+extrapolates that finite computation into a boundary claim about
+the Taylor-expansion approach and higher Taylor orders without a
+convergence/no-go theorem." The audit-stated repair target
+(`notes_for_re_audit_if_any`) is exact: "scope_too_broad: either
+narrow the source claim to the computed second-order null result,
+or add a theorem/computation bounding the Taylor remainder or
+demonstrating non-convergence/non-analyticity for the failing
+families, with the first-order and range-of-validity inputs
+explicitly audited." The generated audit ledger remains the authority for any terminal status. Nothing in this edit
+promotes audit status, narrows the source claim, or adds the
+missing convergence theorem; the note continues to extrapolate
+from the second-order replay to a Taylor-boundary diagnosis. The
+**conditional perimeter** is therefore the gap between (a) the
+actually replayed finite computation — second-order Kubo on the
+44-family battery, with the residual / linearity-regime numbers
+documented in §Result — and (b) the broader §"What this closes"
+language about *all higher Taylor orders* and *all Taylor
+expansions at s = 0*. Until either the source narrows to (a) or
+adds a remainder/non-analyticity theorem covering (b), the safe
+read of this note is the second-order replay and its three
+structural categories (finite-size `K3_NL5`, structural cancellation
+`G2_asym_z`, phase decorrelation `H1_ring` / `L1_longrange`) — not
+a closed all-orders Taylor no-go. The §"What stands" list
+explicitly preserves the first-order Kubo + range-of-validity
+positives (sibling notes); those rows are independently audited.
+See "Citation chain and audit-stated repair path (2026-05-10)"
+below.
 
 ## Artifact chain
 
@@ -231,3 +266,54 @@ expensive.
 > s = 0. The Kubo Taylor approach has a bounded reach of about 37% of
 > the cross-generator family set; the first-order Kubo derivation
 > stands on that subset and does not extend further by this method."
+
+## Citation chain and audit-stated repair path (2026-05-10)
+
+The audit verdict (2026-04-27, see top of note) flags that the
+note "extrapolates [the] finite computation into a boundary claim
+about the Taylor-expansion approach and higher Taylor orders
+without a convergence/no-go theorem." The cited authority chain
+on this row is registered explicitly below so the audit-graph
+one-hop edges from the source note to its load-bearing inputs
+are visible.
+
+| Cited authority | File / log | Role on this row |
+|---|---|---|
+| Active runner | [`scripts/linear_response_second_order_kubo.py`](../scripts/linear_response_second_order_kubo.py) | computes the third parallel propagator `C_j = d^2(amp_j)/ds^2` at s = 0 via the same path-sum recurrence, evaluates `kubo_2 = d^2(cz)/ds^2|_0`, runs four battery strengths `s in {0.001, 0.002, 0.004, 0.008}`, and writes the per-family residual / ratio table cited in §Result |
+| Frozen runner output | [`logs/2026-04-07-linear-response-second-order-kubo.txt`](../logs/2026-04-07-linear-response-second-order-kubo.txt) | preserves the linearity-regime count (15/44 first-order vs 15/44 first+second-order), the aggregate residual (5.6090 vs 5.7221), and the per-family kubo_1 / kubo_2 / ratio rows for the six families enumerated in the per-family pathology table |
+| Audit-lane runner cache | [`logs/runner-cache/linear_response_second_order_kubo.txt`](../logs/runner-cache/linear_response_second_order_kubo.txt) | runner-cache copy referenced by the audit-lane replay verifying the second-order null result |
+| Sibling first-order Kubo runner | [`scripts/linear_response_true_kubo.py`](../scripts/linear_response_true_kubo.py) | the literal first-order `<z*deltaH>_0` computation cited in §"What stands"; its closure is the input under which §"What this closes" defends the bounded 15/44 linearity reach |
+| Sibling first-order Kubo log | [`logs/2026-04-07-linear-response-true-kubo.txt`](../logs/2026-04-07-linear-response-true-kubo.txt) | preserved log for the sibling [`docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](LINEAR_RESPONSE_TRUE_KUBO_NOTE.md) |
+| Generator inputs | `scripts/universality_classifier.py`, `scripts/independent_generators_heldout.py`, `scripts/global_coherence_off_scaffold.py` | the same three import surfaces enumerating the 26 swept + 9 scaffolded + 9 off-scaffold families used by the runner |
+| Repo baseline anchor | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | `unaudited` / `meta` repo-baseline terminology anchor for the linear path-sum architecture |
+
+The audit-stated repair path (verbatim from the audit
+`notes_for_re_audit_if_any`) is to either (i) **narrow the source
+claim** to the computed second-order null result on the 44-family
+battery, or (ii) **add a theorem or computation bounding the
+Taylor remainder or demonstrating non-convergence / non-analyticity**
+for the failing families. Path (i) would require sharpening the
+§"What this closes" and §"Honest read" wording from "all Taylor
+terms at s = 0" / "the Kubo-Taylor approach has a bounded reach"
+to a strictly second-order statement, with the all-orders extrapolation
+withdrawn. Path (ii) would require a third-or-higher-order computation
+or an analytic remainder bound; neither is supplied here. Until one
+lands, the regenerated ledger leaves this row for independent audit,
+and the safe read is the second-order replay (computed §Result) plus
+the three structural
+categories (finite-size, structural cancellation, phase decorrelation)
+that the second-order replay observes — not an all-orders Taylor
+no-go. The acknowledged residual is the absence of a remainder /
+non-analyticity theorem covering Taylor orders beyond two; everything
+else (the second-order recurrence, the kubo_1 / kubo_2 numbers, the
+zero growth of the strict linearity-regime subset) is supported by
+the listed cited authorities.
+
+This rigorization edit only sharpens the conditional perimeter and
+registers the cited authority chain; it does not promote audit
+status, hand-author audit JSON, narrow the source text, or add the
+missing convergence theorem. The §"What this closes" / §"What this
+does not close" boundary continues to apply: the second-order replay
+result is supported, but the broader Taylor-boundary statement
+remains audit-conditional until a remainder bound or higher-order
+extension lands.

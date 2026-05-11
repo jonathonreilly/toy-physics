@@ -4661,6 +4661,22 @@
       "to": "fourth_family_quadrant_note"
     },
     {
+      "from": "complex_selectivity_compare_note",
+      "to": "claude_complex_action_grown_companion_note"
+    },
+    {
+      "from": "complex_selectivity_compare_note",
+      "to": "alt_connectivity_family_complex_failure_note"
+    },
+    {
+      "from": "complex_selectivity_compare_note",
+      "to": "second_grown_family_complex_boundary_note"
+    },
+    {
+      "from": "complex_selectivity_compare_note",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "complex_selectivity_predictor_note",
       "to": "second_grown_family_complex_note"
     },
@@ -4679,6 +4695,18 @@
     {
       "from": "complex_selectivity_predictor_note",
       "to": "fifth_family_complex_boundary_note"
+    },
+    {
+      "from": "complex_selectivity_predictor_note",
+      "to": "claude_complex_action_grown_companion_note"
+    },
+    {
+      "from": "complex_selectivity_predictor_note",
+      "to": "second_grown_family_complex_boundary_note"
+    },
+    {
+      "from": "complex_selectivity_predictor_note",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "composite_higgs_mechanism_stretch_attempt_note_2026-05-03",
@@ -7577,6 +7605,14 @@
       "to": "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
     },
     {
+      "from": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19",
       "to": "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19"
     },
@@ -7907,6 +7943,18 @@
     {
       "from": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
       "to": "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
+      "to": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
+      "to": "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18"
+    },
+    {
+      "from": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
@@ -15003,6 +15051,22 @@
     {
       "from": "light_cone_framing_note",
       "to": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09"
+    },
+    {
+      "from": "linear_response_derivation_note",
+      "to": "linear_response_true_kubo_note"
+    },
+    {
+      "from": "linear_response_derivation_note",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "linear_response_second_order_kubo_note",
+      "to": "linear_response_true_kubo_note"
+    },
+    {
+      "from": "linear_response_second_order_kubo_note",
+      "to": "minimal_axioms_2026-05-03"
     },
     {
       "from": "literature_backmatch_live_scan_note",
@@ -39956,33 +40020,40 @@
     },
     "complex_selectivity_compare_note": {
       "claim_id": "complex_selectivity_compare_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "second_grown_family_complex_note",
         "alt_connectivity_family_sign_note",
         "third_grown_family_sign_note",
-        "fourth_family_quadrant_note"
+        "fourth_family_quadrant_note",
+        "claude_complex_action_grown_companion_note",
+        "alt_connectivity_family_complex_failure_note",
+        "second_grown_family_complex_boundary_note",
+        "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "145d8cf2d1bd6f376e759143602d6566b7034b33beef9e84e5617bf8a0d883bc",
+      "note_hash": "9cd4586baa3eb1c7f6b96ec9d32bd7562d69ac3c5e08c0c6d9b32d38fd0bf0f4",
       "path": "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
       "title": "Complex Selectivity Compare Note"
     },
     "complex_selectivity_predictor_note": {
       "claim_id": "complex_selectivity_predictor_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "second_grown_family_complex_note",
         "alt_connectivity_family_complex_failure_note",
         "third_grown_family_complex_boundary_note",
         "fourth_family_complex_boundary_note",
-        "fifth_family_complex_boundary_note"
+        "fifth_family_complex_boundary_note",
+        "claude_complex_action_grown_companion_note",
+        "second_grown_family_complex_boundary_note",
+        "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "7b1a4bf031ff0c2e0f31989817aeb71289d2751de89b35c8349b62db4163d179",
+      "note_hash": "7b0b40da644d7efeb098b8733a6a7e679df2e3edf4007603cb24733fad2737a2",
       "path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
       "runner_path": "scripts/COMPLEX_SELECTIVITY_PREDICTOR_SCAN.py",
       "title": "Complex Selectivity Predictor Note"
@@ -43763,16 +43834,18 @@
     },
     "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
       "claim_type_seed_hint": "no_go",
       "deps": [
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19",
         "dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19",
-        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19"
+        "dm_wilson_direct_descendant_local_observable_coordinate_theorem_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "6f0807347cdae3dbf8134f1c70c7c6d299ed4b318efad328d49c2024099eabf6",
+      "note_hash": "f4388ff1eb15a6a7959159795618cc42aeaf46a9a132a73f3b68870b0913e9c3",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_MIXED_SPECTRAL_BRANCH_WEIGHT_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Canonical-Fiber Mixed Spectral / Branch-Weight No-Go"
@@ -44084,17 +44157,20 @@
     },
     "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19": {
       "claim_id": "dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
       "claim_type_seed_hint": "no_go",
       "deps": [
         "dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19",
         "dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19",
         "dm_wilson_direct_descendant_constructive_transport_plateau_j_iso_derivation_and_schur_isotropy_no_go_note_2026-04-19",
-        "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19"
+        "dm_wilson_direct_descendant_constructive_transport_plateau_observable_affine_no_go_note_2026-04-19",
+        "dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19",
+        "dm_wilson_direct_descendant_constructive_positive_closure_manifold_theorem_note_2026-04-18",
+        "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "2ae07da7b444a84e91b370d6fed9bc95b67a0daaf020bd794d42c7a035ae068a",
+      "note_hash": "57aa88570db1e1fcac2079a2863262bca43b45e40383693f38b382cd8004f92d",
       "path": "docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_2026_04_19.py",
       "title": "DM Wilson Direct-Descendant Transport-Fiber Minimal Local Spectral-Law No-Go"
@@ -52631,22 +52707,28 @@
     },
     "linear_response_derivation_note": {
       "claim_id": "linear_response_derivation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
-      "deps": [],
-      "note_hash": "a4f7f9a1939d37a77305216a40a2fc96592028f5fa498e9c1225903a9c633230",
+      "deps": [
+        "linear_response_true_kubo_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "06a41999ae55937f9cd39d81d93a996e13de29f371d89b2de26b4414f0a713ab",
       "path": "docs/LINEAR_RESPONSE_DERIVATION_NOTE.md",
       "runner_path": "scripts/linear_response_derivation.py",
       "title": "Linear-Response Derivation-Adjacent Analysis \u2014 Partial Positive"
     },
     "linear_response_second_order_kubo_note": {
       "claim_id": "linear_response_second_order_kubo_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "a29eaabbf73f3ea5bfe23690964a8a1b57b44c4cc6dffc09c6c9143378441da3",
+      "deps": [
+        "linear_response_true_kubo_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "a68d0aa00ae229df18101448c76b4acc88ab9200525db07ecfb7fe4125fb78b0",
       "path": "docs/LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md",
       "runner_path": "scripts/linear_response_second_order_kubo.py",
       "title": "Second-Order Kubo Extension \u2014 NEGATIVE (Boundary of Taylor-Expansion Approach)"
@@ -68941,8 +69023,6 @@
     "lensing_deflection_note",
     "lensing_k_sweep_note",
     "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10",
-    "linear_response_derivation_note",
-    "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
     "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10",
     "literature_positioning_note",
@@ -69293,27 +69373,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 301,
+      "bounded_theorem": 303,
       "decoration": 1,
       "meta": 64,
-      "no_go": 42,
-      "none": 1598,
-      "open_gate": 34,
-      "positive_theorem": 140
+      "no_go": 44,
+      "none": 1592,
+      "open_gate": 35,
+      "positive_theorem": 141
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 766,
+      "bounded_theorem": 768,
       "decoration": 1,
       "meta": 64,
       "no_go": 149,
-      "none": 449,
+      "none": 448,
       "open_gate": 122,
-      "positive_theorem": 629
+      "positive_theorem": 628
     },
-    "edge_count": 8625,
-    "leaf_count": 617,
+    "edge_count": 8641,
+    "leaf_count": 615,
     "node_count": 2180,
-    "root_count": 821,
+    "root_count": 819,
     "runners_with_path": 1792
   }
 }

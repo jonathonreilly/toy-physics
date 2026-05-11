@@ -2,6 +2,34 @@
 
 **Date:** 2026-04-07
 **Status:** proposed_retained partial positive — a derivation-adjacent heuristic (detector reweighting of |amp|² by 1/|z−z_src|, no parameter fit) gives **r = 0.56 overall and r = 0.72 off-scaffold correlation** with the measured first-order response and **81.8% sign agreement** across a combined 44-family set. Off-scaffold correlation is stronger than scaffolded (0.72 vs 0.40), the opposite of `free_coh`. The separately reported 79.5% "best threshold" number is in-sample tuned on the same dataset and should not be cited as a no-fit result. This is a heuristic, NOT yet the literal first-order Kubo expression `<z·δH>_0` (that is the subject of a follow-on lane).
+**Claim type:** open_gate
+
+**Audit-conditional perimeter (2026-04-27):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, `claim_type =
+open_gate`, `independence = cross_family`, and load-bearing step
+class `C`. The audit chain-closure explanation is exact: "The live
+runner reproduces the reported correlations and sign agreement, but
+the note itself says this detector-only reweighting is not the
+literal first-order Kubo term `<z*deltaH>_0` and omits the edge
+action perturbation and path-phase cross terms." The audit-stated
+repair target (`notes_for_re_audit_if_any`) is exact:
+"runner_artifact_issue: provide a symbolic or numerical true-Kubo
+derivation that differentiates the path-sum at s=0, includes the
+edge action perturbation and phase cross-terms, and compares that
+literal first-order observable on the same 44-family set." The
+follow-on lane explicitly named in §"The heuristic" of this note
+(`scripts/linear_response_true_kubo.py`) is the in-repo path that
+satisfies the repair target; it computes `<z*deltaH>_0` literally
+via a parallel propagator `B_j = d(amp_j)/ds` and is preserved as
+a sibling artifact, but it is not yet wired as a one-hop audit-graph
+dependency edge from this note. The generated audit ledger remains the authority for any terminal status. Nothing in this edit
+promotes audit status; the note remains a **derivation-adjacent**
+heuristic record. Its safe read is the no-fit pair (r = 0.56
+overall, r = 0.72 off-scaffold; 81.8% sign agreement) — the
+derivation framing in §"The derivation target, sharpened" remains
+a target for the literal Kubo lane, not a closed theorem here. See
+"Citation chain and audit-stated repair path (2026-05-10)" below.
 
 ## Artifact chain
 
@@ -229,3 +257,48 @@ The next move on this lane is either:
 > specific second-moment question, and the 'compact underlying
 > principle' row is modestly restored for the first time since the
 > classifier lane closed."
+
+## Citation chain and audit-stated repair path (2026-05-10)
+
+The audit verdict (2026-04-27, see top of note) flags that this
+detector-only reweighting "is not the literal first-order Kubo
+term `<z*deltaH>_0` and omits the edge action perturbation and
+path-phase cross terms." The cited authority chain on this row is
+registered explicitly below so the audit-graph one-hop edges from
+the source note to its load-bearing inputs are visible.
+
+| Cited authority | File / log | Role on this row |
+|---|---|---|
+| Active runner | [`scripts/linear_response_derivation.py`](../scripts/linear_response_derivation.py) | computes the heuristic `kubo = cz_weighted - cz_free` from free-beam amplitudes via the 1/|z-z_src| reweighting and the measured response `delta_z(s=0.001)/s` on the 44-family set; the no-fit pair (r overall, r off-scaffold, 36/44 sign agreement) is the load-bearing observable |
+| Frozen runner output | [`logs/2026-04-07-linear-response-derivation.txt`](../logs/2026-04-07-linear-response-derivation.txt) | preserves the Pearson correlations and per-family sign-agreement table cited in §Result without selection |
+| Audit-lane runner cache | [`logs/runner-cache/linear_response_derivation.txt`](../logs/runner-cache/linear_response_derivation.txt) | runner-cache copy referenced by the audit-lane replay verifying the reproduced correlations |
+| Sibling literal Kubo runner | [`scripts/linear_response_true_kubo.py`](../scripts/linear_response_true_kubo.py) | the audit-stated repair target referenced in §"The heuristic": computes the literal first-order term `<z*deltaH>_0` via a parallel propagator `B_j = d(amp_j)/ds`, includes edge action perturbation and phase cross-terms, on the same 44-family set; needs to be wired as a one-hop audit-graph dependency to satisfy the repair |
+| Sibling true-Kubo log | [`logs/2026-04-07-linear-response-true-kubo.txt`](../logs/2026-04-07-linear-response-true-kubo.txt) | preserved log cited in [`docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](LINEAR_RESPONSE_TRUE_KUBO_NOTE.md) (sibling note) |
+| Generator inputs | `scripts/universality_classifier.py`, `scripts/independent_generators_heldout.py`, `scripts/global_coherence_off_scaffold.py` | the three import surfaces enumerating the 26 swept + 9 scaffolded + 9 off-scaffold families used by the runner |
+| Repo baseline anchor | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | `unaudited` / `meta` repo-baseline terminology anchor for the linear path-sum architecture |
+
+The audit-stated repair path (verbatim from the audit
+`notes_for_re_audit_if_any`) is to provide the literal-Kubo
+comparison against `<z*deltaH>_0` on the same 44-family set;
+the sibling runner `scripts/linear_response_true_kubo.py` and its
+companion note `LINEAR_RESPONSE_TRUE_KUBO_NOTE.md` are exactly
+that artifact, but until that companion lands as an audit-graph
+one-hop dependency edge here, the regenerated ledger leaves this row
+for independent audit and the heuristic is read as
+derivation-**adjacent** (not derived
+end-to-end) per the existing §"What this clears and what it does
+not" disclosure. The acknowledged residual is the absence of the
+audit-graph dependency edge from this note to the literal first-order
+Kubo lane; everything else (the heuristic's free-beam reweighting,
+the no-fit correlation pair, the three honest sign disagreements
+in `H1_ring`, `G2_asym_z`, `L1_longrange`) is supported by the
+listed cited authorities.
+
+This rigorization edit only sharpens the conditional perimeter and
+registers the cited authority chain; it does not promote audit
+status, hand-author audit JSON, claim that the heuristic equals the
+literal first-order Kubo term, or move the `audited_conditional`
+verdict (which is terminal). The §"What this clears and what it
+does not" boundary continues to apply: the note remains a
+derivation-**adjacent** heuristic, not a closed first-principles
+derivation, until the literal Kubo lane is wired as a one-hop edge.

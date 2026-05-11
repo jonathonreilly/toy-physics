@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1194
-**Ready (all deps already at retained-grade or metadata tiers):** 68
+**Total pending:** 1200
+**Ready (all deps already at retained-grade or metadata tiers):** 70
 
 By criticality:
 - `critical`: 685
 - `high`: 33
-- `medium`: 164
-- `leaf`: 312
+- `medium`: 166
+- `leaf`: 316
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -18,7 +18,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 1 | `universal_gr_isotropic_glue_operator_note` | bounded_theorem | unaudited | critical | 488 | 11.43 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 2 | `source_driven_field_recovery_sweep_note` | bounded_theorem | unaudited | critical | 452 | 9.32 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_driven_field_recovery_sweep.py` |
 | 3 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | decoration | unaudited | critical | 442 | 19.79 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_alpha_lm_geometric_mean_identity.py` |
-| 4 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 437 | 12.28 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
+| 4 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 440 | 13.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 5 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 427 | 9.24 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` |
 | 6 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | unaudited | critical | 407 | 12.17 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py` |
 | 7 | `newton_law_derived_note` | bounded_theorem | unaudited | critical | 396 | 14.63 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |

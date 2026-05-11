@@ -2,8 +2,8 @@
   "criticality_counts": {
     "critical": 1022,
     "high": 58,
-    "leaf": 801,
-    "medium": 299
+    "leaf": 800,
+    "medium": 300
   },
   "flagship_signal_used": false,
   "node_count": 2180,
@@ -19,8 +19,8 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 85.827,
-      "transitive_descendants": 907
+      "load_bearing_score": 88.834,
+      "transitive_descendants": 912
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",

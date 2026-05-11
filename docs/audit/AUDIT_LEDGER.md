@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1186 |
+| unaudited | 1192 |
 | meta | 103 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 237 |
+| ~~audited_conditional~~ | 231 |
 | ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 429 |
-| `audited_conditional` | 237 |
+| `audited_conditional` | 231 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1289 |
+| `unaudited` | 1295 |
 
 | claim_type | count |
 |---|---:|
@@ -62,8 +62,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 1015 |
 | `high` | 57 |
-| `medium` | 266 |
-| `leaf` | 733 |
+| `medium` | 267 |
+| `leaf` | 732 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 252
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 907 | 85.83 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 912 | 88.83 | `unaudited` | meta |
 | 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 877 | 44.78 | `audited_clean` | open_gate |
 | 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 440 | 43.28 | `unaudited` | unaudited |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 583 | 41.19 | `audited_conditional` | ~~audited_conditional~~ |
@@ -589,8 +589,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
-| `complex_selectivity_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `complex_selectivity_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -640,8 +638,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_sigma_hier_h_intrinsic_no_go_theorem_note_2026-04-20` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_split2_dense_grid_lipschitz_dominance_support_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -700,8 +696,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `linear_response_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2561,32 +2555,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing imaginary action term is an introduced free-gamma ansatz, and absorption-biased centroid/escape behavior is labeled horizon-like without a derived gamma or horizon-specific observable. Why this blocks: no cited authority derives the imaginary term from retained primitives, and the runner checks only finite model behavior with no photon-sphere, Schwarzschild, Hawking, causal-horizon, or external comparator test. Repair target: derive gamma or the imaginary action term and add deterministic horizon-observable plus resolution/geometry checks, with runner output matching the note's numerical claims. Claim boundary until fixed: a conditional one-parameter complex-kernel model where gamma=0 reduces to the real-action propagator, linearity keeps I3 near machine zero in sampled tests, and positive gamma produces absorption-biased escape/centroid behavior in the listed setup.
 - **auditor confidence:** high
 
-### `complex_selectivity_compare_note`
-
-- **Note:** [`COMPLEX_SELECTIVITY_COMPARE_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded comparison that the listed signed-source family slices are more portable than the listed complex-action slices.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12c7-3efe-7d62-b787-b49f3e644bec`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** "signed-source transfer is the portable feature: exact zero / neutral controls survive on several distinct structured families" while "complex action is more selective" and fails or narrows on the compared slices.  _(class `B`)_
-- **chain closes:** False — The supplied one-hop authorities support second-family complex retention and signed-source positives for the alt, third, and fourth families, but they do not supply the original grown-basin row, the alt complex-action failure, the alt F~M transfer value, or the second-family boundary tightening. Those missing inputs are load-bearing for the selectivity split.
-- **rationale:** Issue: the comparison imports several named but unsupplied dependency results, and the runner only renders hard-coded comparison rows. Why this blocks: the claimed selectivity split cannot be derived from the restricted packet because key failure and boundary facts are outside the one-hop authorities. Repair target: add direct dependency edges and retained-grade authorities for the original grown-basin sign/complex results, alt complex failure/F~M transfer, and second-family boundary note, or narrow the claim to the supplied authorities. Claim boundary until fixed: only a partial comparison over the supplied retained family notes is supported.
-- **auditor confidence:** high
-
-### `complex_selectivity_predictor_note`
-
-- **Note:** [`COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded predictor over the listed structured-family cards: retained complex-action rows are claimed to coincide with exact gamma=0 plus anchor-local TOWARD->AWAY crossover, while diagnosed boundary rows fail it.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12c8-800c-76c1-b605-ef4cdba3e98e`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** the smallest stable discriminator we found is the anchor-local crossover: exact gamma=0 baseline plus `TOWARD -> AWAY` on the retained anchor row  _(class `B`)_
-- **chain closes:** False — The conclusion relies on comparison rows and mismatch details whose direct authorities are not in the supplied one-hop packet, especially the original grown-basin positive row and the second-family boundary-window statement. The supplied runner only renders hard-coded rows, so it does not independently close the missing comparison.
-- **rationale:** Issue: the source imports load-bearing row facts from unprovided authorities while presenting the table as a closed predictor comparison. Why this blocks: without those one-hop inputs, the claimed separation of positive families from diagnosed boundaries and the 'smallest stable discriminator' statement do not follow from the restricted packet. Repair target: add the missing dependency edges and use a runner that verifies row facts from cited outputs, or narrow the claim to only the supplied retained-grade authorities. Claim boundary until fixed: the packet supports only a partial bounded comparison, not the full predictor card.
-- **auditor confidence:** high
-
 ### `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10`
 
 - **Note:** [`CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md)
@@ -3929,24 +3897,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The restricted packet closes on its declared support scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified C-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
 - **auditor confidence:** high
 
-### `dm_wilson_direct_descendant_canonical_fiber_mixed_spectral_branch_weight_no_go_note_2026-04-19`
-
-- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_MIXED_SPECTRAL_BRANCH_WEIGHT_NO_GO_NOTE_2026-04-19.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_MIXED_SPECTRAL_BRANCH_WEIGHT_NO_GO_NOTE_2026-04-19.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** transport-column theorem and the canonical-fiber entropy note already reduced  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_fiber_schur_entropy_candidate_no_go_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_note_2026-04-19=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_SCHUR_ENTROPY_CANDIDATE_NO_GO_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`
-- **auditor confidence:** high
-
 ### `dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25`
 
 - **Note:** [`DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
@@ -3958,25 +3908,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact Schur factorization gives I_e^* D_-^(-1) I_e = L_e^(-1), and under D_- = D_-^* > 0 the completed-square identity gives u^* L_e u = min_v [u; v]^* D_- [u; v].  _(class `A`)_
 - **chain closes:** True — The note proves the scoped conclusions directly by finite-dimensional block factorization and positive-Hermitian quadratic completion. There are no one-hop dependencies and no imported physical bridge inside the audited finite-dimensional boundary theorem.
 - **rationale:** The finite-dimensional algebra closes under the note's explicit hypotheses: invertible F and L_e for the resolvent identity, and D_- = D_-^* > 0 for the variational and monotonicity statements. The runner is not a first-principles microscopic computation, but it consistently checks exact Schur/Feshbach/Dirichlet algebra and scope hygiene, with 46 PASS and 0 FAIL in the supplied live summary. Residual risk is limited to scope discipline: this clean verdict covers only the supplied-block theorem and does not certify any Wilson-native construction of D_-, charged support selection, or final DM closure.
-- **auditor confidence:** high
-
-### `dm_wilson_direct_descendant_transport_fiber_minimal_local_spectral_law_no_go_note_2026-04-19`
-
-- **Note:** [`DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md`](../../docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-19.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:leaf-resweep-2026-04-30`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** After the same-day spectral-completion theorem, the unresolved direct-descendant  _(class `B`)_
-- **chain closes:** False — No. One-hop dependencies are not all retained (dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19=audited_conditional), so the chain does not close under the leaf audit rule.
-- **rationale:** Issue: the load-bearing chain depends on non-retained one-hop authorities (dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_note_2026-04-19=audited_conditional, dm_wilson_direct_descendant_constructive_transport_plateau_normalized_schur_determinant_selector_note_2026-04-19=audited_conditional). Why this blocks: the leaf row can only audit clean if its cited inputs are already retained or if it has no open upstream premise. Repair target: audit or repair the listed dependency rows to retained/equivalent closure, then re-audit this claim. Claim boundary until fixed: safe to cite only at its declared support tier with the upstream dependency condition attached.
-- **open / conditional deps cited:**
-  - `DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_NORMALIZED_SCHUR_DETERMINANT_SELECTOR_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_J_ISO_DERIVATION_AND_SCHUR_ISOTROPY_NO_GO_NOTE_2026-04-19.md`
-  - `DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_OBSERVABLE_AFFINE_NO_GO_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `edge_deletion_boundary_note`
@@ -6970,32 +6901,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** From the trace equation 2 n_color * a + 2 * b = 0, one gets b = -n_color * a, hence a : b = 1 : (-n_color); with b = -1 this gives a = 1/n_color and the stated Q(u_L), Q(d_L) denominators by gcd parity reduction.  _(class `A`)_
 - **chain closes:** True — The scoped claim closes as elementary algebra and integer gcd reduction under the assumptions stated in the note. No physical bridge to SM hypercharge, no derivation of n_color = 3, and no derivation of the LH state count is needed because those are explicitly excluded from this narrow theorem.
 - **rationale:** The theorem is narrow but correctly bounded: it assumes the trace equation, positive integer n_color, and the named conventions before deriving only algebraic consequences. The proof and runner agree, and the parity denominator rule follows from gcd(n_color + 1, 2 n_color) = gcd(n_color + 1, 2), with the same result for Q(d_L). This is not an audit of the broader physical identification or of why n_color = 3; those are outside the stated claim boundary.
-- **auditor confidence:** high
-
-### `linear_response_derivation_note`
-
-- **Note:** [`LINEAR_RESPONSE_DERIVATION_NOTE.md`](../../docs/LINEAR_RESPONSE_DERIVATION_NOTE.md)
-- **claim_type:** `open_gate`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The first-moment Kubo predictor is defined as cz_weighted_by_1/|z-z_src| - cz_free and treated as a no-fit, derivation-adjacent predictor for measured d(cz)/ds across 44 families.  _(class `C`)_
-- **chain closes:** False — The live runner reproduces the reported correlations and sign agreement, but the note itself says this detector-only reweighting is not the literal first-order Kubo term <z*deltaH>_0 and omits the edge action perturbation and path-phase cross terms.
-- **rationale:** Issue: The source elevates a detector-only |amp|^2/|z-z_src| reweighting into a candidate retained-grade first-moment Kubo/first-principles predictor while explicitly admitting it is not the literal first-order Kubo expression <z*deltaH>_0. Why this blocks: the replayed r=0.5605 overall, r=0.7248 off-scaffold, and 36/44 sign agreement establish a no-fit heuristic correlation, but they do not derive the predictor from the propagator plus action or include the missing deltaH=kL delta f edge/path-phase terms. Repair target: provide a symbolic or numerical true-Kubo derivation that differentiates the path-sum at s=0, includes the edge action perturbation and phase cross-terms, and compares that literal first-order observable on the same 44-family set. Claim boundary until fixed: it is safe to claim the archived/live heuristic replay gives r=0.56 overall, r=0.72 off-scaffold, 81.8% no-fit sign agreement, and a 79.5% in-sample tuned threshold result; it is not yet safe to claim a retained derivation-grade or literal first-order Kubo predictor from this note alone.
-- **auditor confidence:** high
-
-### `linear_response_second_order_kubo_note`
-
-- **Note:** [`LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md`](../../docs/LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Adding the second-order term 1/2*kubo2*s^2 does not increase the strict linearity-regime subset and slightly worsens the aggregate residual at s=0.008 in the 44-family replay.  _(class `C`)_
-- **chain closes:** False — The live runner reproduces the second-order null result, but the note extrapolates that finite computation into a boundary claim about the Taylor-expansion approach and higher Taylor orders without a convergence/no-go theorem.
-- **rationale:** Issue: The runner verifies that the specific second-order correction does not improve the 44-family battery, but the note also claims a broader boundary of the Kubo-Taylor approach and says the failing nonlinearities are not fixed by more Taylor terms at s=0. Why this blocks: a second-order replay cannot rule out third or higher orders, prove non-analyticity, or establish that all Taylor expansions around s=0 fail for the structural families. Repair target: either narrow the source claim to the computed second-order null result, or add a theorem/computation bounding the Taylor remainder or demonstrating non-convergence/non-analyticity for the failing families, with the first-order and range-of-validity inputs explicitly audited. Claim boundary until fixed: it is safe to claim the live artifact reproduces +0 growth in the linearity-regime subset (15/44 to 15/44), sum |residual| worsening from 5.6090 to 5.7221 at s=0.008, and the listed per-family second-order pathologies; it is not safe to claim a retained no-go for all higher Taylor terms from this note alone.
 - **auditor confidence:** high
 
 ### `linear_response_true_kubo_note`
