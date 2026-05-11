@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 765,
+    "critical": 764,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6421,27 +6421,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/valley_linear_asymptotic_bridge.py",
-      "transitive_descendants": 428
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.245,
-      "note_path": "docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py",
       "transitive_descendants": 428
     },
     {
@@ -40752,6 +40731,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 131,
-  "total_pending": 1307
+  "ready_count": 130,
+  "total_pending": 1306
 }

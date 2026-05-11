@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1277 |
+| unaudited | 1276 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 155 |
+| ~~audited_conditional~~ | 156 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 155 |
+| `audited_conditional` | 156 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1390 |
+| `unaudited` | 1389 |
 
 | claim_type | count |
 |---|---:|
@@ -55,8 +55,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 221 |
-| `open_gate` | 110 |
-| `positive_theorem` | 749 |
+| `open_gate` | 111 |
+| `positive_theorem` | 748 |
 
 | criticality | count |
 |---|---:|
@@ -659,6 +659,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_sign_audit_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
@@ -4922,6 +4923,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** `sqrt(sigma)` status upgrade and no hadron-mass claim.  _(class `D`)_
 - **chain closes:** True — Yes. The registered runner exits cleanly and exposes 10 classified A/B/C/D checks for this leaf claim with no non-retained one-hop dependencies.
 - **rationale:** The restricted packet closes on its declared bounded scope: the source note has no non-retained one-hop dependencies and the registered runner passes with classified D-dominant checks. This audit ratifies only that bounded/support leaf surface, not any stronger retained-tier conclusion unless the source note is separately re-tiered. Residual risk: the audit relies on the registered runner as the executable witness and does not import broader publication framing.
+- **auditor confidence:** high
+
+### `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30`
+
+- **Note:** [`HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md`](../../docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Lane 1 B2 static-energy bridge scout assessing whether current full-QCD static-energy or force-scale inputs close a retained sqrt(sigma) import.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Modern full-QCD static-energy results are useful B2 bridge material, but they do not promote the repo's sqrt(sigma) row because the clean object is a force scale or convention-dependent finite-window sigma and the B5 framework-to-standard-QCD link remains open.  _(class `D`)_
+- **chain closes:** False — The runner reproduces the embedded TUMQCD/CLS arithmetic and the no-closure gate model with PASS=12/FAIL=0. The retained import does not close because the selected observable/sigma convention and the B5 framework-to-standard-QCD bridge remain open rather than derived from retained inputs.
+- **rationale:** Issue: the scout hard-codes external static-energy/force-scale values and correctly finds that no candidate closes retained B2, but the required unique sigma or force-scale observable and B5 framework-to-standard-QCD import theorem are still absent. Why this blocks: a retained sqrt(sigma) bridge cannot be claimed from external comparator arithmetic while the observable convention/window and framework import map are unresolved. Repair target: supply a retained B5 framework-to-standard-QCD import theorem and a declared unique force-scale or finite-window-tension observable with its convention residual. Claim boundary until fixed: the row is a bounded open-gate scout showing that modern static-energy data improve the bridge material but do not promote Lane 1 sqrt(sigma).
+- **open / conditional deps cited:**
+  - `HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md`
+  - `HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md`
+  - `HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md`
 - **auditor confidence:** high
 
 ### `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30`
