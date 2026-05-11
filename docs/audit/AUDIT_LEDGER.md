@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 270 |
+| **retained_bounded** | 271 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1231 |
+| unaudited | 1230 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 444 |
+| `audited_clean` | 445 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1344 |
+| `unaudited` | 1343 |
 
 | claim_type | count |
 |---|---:|
@@ -565,6 +565,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_repro_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `wave_3plus1d_promotions_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wave_amplification_near_horizon_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `wave_equation_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_equation_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -10356,6 +10357,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the widened h = 0.25, W = 12 replay for the 3D valley-linear branch, the far-tail fit on the tested z >= 5 window is b^(-1.17) with high R^2.  _(class `C`)_
 - **chain closes:** True — The note explicitly limits the claim to the tested finite-lattice replay and does not assert a universal continuum theorem. The completed runner output matches the frozen replay numbers stated in the note.
 - **rationale:** The bounded claim closes because the completed replay log reports the same barrier sanity checks, 9/9 TOWARD rows, and tail-fit exponents/R^2 values quoted by the note. The note preserves the correct claim boundary by saying this is a finite-lattice replay rather than a universal theorem.
+- **auditor confidence:** high
+
+### `wave_3plus1d_promotions_note`
+
+- **Note:** [`WAVE_3PLUS1D_PROMOTIONS_NOTE.md`](../../docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite (3+1)D wave-operator promotion: delta-pulse first arrival satisfies first_dt = r for r=2..8, and the moving-source retarded history differs from the layerwise stitched late-time-frozen comparator by 30.44%, 26.47%, and 30.72% on Fam1/Fam2/Fam3; no true c->infinity instantaneous comparator or combined three-signature closure is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The strict (3+1)D lightcone has first_dt = r to r = 8, and the moving-source (3+1)D retarded wave history differs from the stitched late-time-frozen comparator by 26-31% across Fam1/Fam2/Fam3.  _(class `C`)_
+- **chain closes:** True — The runner directly evolves the stated (3+1)D wave stencil, measures first arrivals, builds the moving-source retarded history, builds the stitched frozen comparator, and recomputes the three family gaps. This closes the bounded finite-comparator claim only; it does not derive an elliptic Poisson or c->infinity instantaneous branch.
+- **rationale:** The live runner and frozen cache reproduce the source note's two bounded tables: strict lightcone arrival first_dt=r for r=2..8 and M-I gaps of 30.44%, 26.47%, and 30.72% across the three grown families. The note explicitly states that the I branch is a stitched late-time frozen c=1 wave-solve comparator rather than a derived c->infinity solution, so the audited scope excludes the literal instantaneous interpretation and the combined three-signature closure. Residual risk is the absence of hard assertions in the runner and future misuse of this row as a true instantaneous-comparator theorem.
 - **auditor confidence:** high
 
 ### `wave_amplification_near_horizon_note`
