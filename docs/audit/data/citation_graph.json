@@ -10073,6 +10073,18 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
+      "to": "higgs_mass_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
+      "to": "higgs_mass_derived_note"
+    },
+    {
+      "from": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
+      "to": "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03"
+    },
+    {
       "from": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "to": "graph_first_su3_integration_note"
     },
@@ -46821,6 +46833,21 @@
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
     },
+    "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10": {
+      "claim_id": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "higgs_mass_retention_analysis_note_2026-04-18",
+        "higgs_mass_derived_note",
+        "higgs_vacuum_stability_new_physics_discrimination_note_2026-05-03"
+      ],
+      "note_hash": "8ee2f0f9626a53a6b034b825ecf33bb494b93b002e28cf906b44414588ba8d7f",
+      "path": "docs/HIGGS_LAMBDA_M_PL_BOUNDED_INTERVAL_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/higgs_lambda_m_pl_bounded_interval_diagnostic_2026_05_10.py",
+      "title": "Higgs lambda(M_Pl) Matching-Sign Gate Diagnostic"
+    },
     "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
       "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -67790,7 +67817,7 @@
       "meta": 59,
       "no_go": 29,
       "none": 1628,
-      "open_gate": 32,
+      "open_gate": 33,
       "positive_theorem": 119
     },
     "claim_type_seed_hint_counts": {
@@ -67799,13 +67826,13 @@
       "meta": 59,
       "no_go": 136,
       "none": 451,
-      "open_gate": 120,
+      "open_gate": 121,
       "positive_theorem": 619
     },
-    "edge_count": 8429,
+    "edge_count": 8432,
     "leaf_count": 582,
-    "node_count": 2136,
+    "node_count": 2137,
     "root_count": 803,
-    "runners_with_path": 1749
+    "runners_with_path": 1750
   }
 }

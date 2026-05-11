@@ -9156,6 +9156,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_derived.py"
     },
+    "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/higgs_lambda_m_pl_bounded_interval_diagnostic_2026_05_10.py"
+    },
     "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -41787,6 +41799,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/higgs_lambda_m_pl_bounded_interval_diagnostic_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py": {
       "assert_count": 1,
       "claims": [
@@ -45835,9 +45862,9 @@
       "B": 169,
       "C": 664,
       "D": 255,
-      "none": 420
+      "none": 421
     },
-    "runners_classified": 1637,
+    "runners_classified": 1638,
     "runners_with_C": 834,
     "runners_with_D": 459
   }
