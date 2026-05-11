@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 79 |
+| **retained** | 80 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 245 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1105 |
+| unaudited | 1104 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 420 |
+| `audited_clean` | 421 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1203 |
+| `unaudited` | 1202 |
 
 | claim_type | count |
 |---|---:|
@@ -276,6 +276,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
+| `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_matsubara_decomposition_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -5917,6 +5918,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Starting from Delta f(L_t,m) = (1/(2 L_t)) sum_omega ln(1 + m^2/[u_0^2(3+sin^2 omega)]), the small-m coefficient is A(L_t) = (1/(2 L_t u_0^2)) sum_omega 1/(3+sin^2 omega), giving A_2=1/(8u_0^2) and A_inf=1/(4 sqrt(3)u_0^2).  _(class `A`)_
 - **chain closes:** False — The algebra from the stated free-energy formula to A_2, A_4, A_inf, and C_inf^(4D) closes. The restricted packet does not derive the exact Matsubara free-energy density formula itself from the axiom, so the full claimed endpoint theorem is conditional on that imported starting formula.
 - **rationale:** The runner genuinely checks the small-m expansion and endpoint sums from the encoded Matsubara formula, but it does not derive that formula from first principles; it takes the temporal modes and free-energy density ansatz as inputs. Part 4 also imports canonical plaquette/alpha constants and compares to the observed electroweak prefactor, which is comparator evidence rather than closure of the physical insertion map. The note itself explicitly states that the physical selection/insertion of the dimension-4 normalization remains open.
+- **auditor confidence:** high
+
+### `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`HIERARCHY_JOINT_RIEMANN_DIRICHLET_DIMENSIONAL_FOURTH_ROOT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/HIERARCHY_JOINT_RIEMANN_DIRICHLET_DIMENSIONAL_FOURTH_ROOT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Framework-free integer-s theorem: eta(s)/zeta(s)=1-2^(1-s), g(s)=(eta(s)/zeta(s))^(1/s) is strictly increasing to 1 on integers s>=2, so g(s)=(7/8)^(1/4) iff s=4; the 1/4 exponent is also the d=4 dimensional-analysis exponent for simple-power scale extraction.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14bd-eac7-71a3-983a-d99040f6377b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** (eta(s)/zeta(s))^(1/s) = (7/8)^(1/4) among integer s >= 2 iff s = 4.  _(class `A`)_
+- **chain closes:** True — The eta-zeta quotient follows by odd/even sum splitting, the integer monotonicity proof follows from a valid log/Taylor termwise comparison, and uniqueness at s=4 follows immediately from strict monotonicity plus the exact value. The dimensional-analysis clause is scoped only as mass-dimension bookkeeping and does not assert a framework observable bridge.
+- **rationale:** Within the stated narrow scope, the proof closes self-containedly and the runner reports PASS=15, FAIL=0 on the relevant algebraic and monotonicity checks. The note explicitly excludes hierarchy-formula closure, alpha_LM^16 closure, M_Pl import, lattice-realization derivation, and identification of f with a framework free-energy density, so those absent physical bridges are not required for this audit. Ancillary runner checks about sister identities are not load-bearing for the verdict.
 - **auditor confidence:** high
 
 ### `hierarchy_matsubara_decomposition_note`
