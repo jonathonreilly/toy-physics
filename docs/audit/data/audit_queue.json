@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 757,
+    "critical": 756,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6445,27 +6445,6 @@
       "ready": true,
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "transitive_descendants": 425
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_q_so2_phase_erasure_support_note_2026-04-25",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 10,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.731,
-      "note_path": "docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_q_so2_phase_erasure_support.py",
-      "transitive_descendants": 424
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -40580,6 +40559,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 123,
-  "total_pending": 1299
+  "ready_count": 122,
+  "total_pending": 1298
 }

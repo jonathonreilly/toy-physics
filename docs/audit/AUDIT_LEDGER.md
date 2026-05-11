@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1269 |
+| unaudited | 1268 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 163 |
+| ~~audited_conditional~~ | 164 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 163 |
+| `audited_conditional` | 164 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1382 |
+| `unaudited` | 1381 |
 
 | claim_type | count |
 |---|---:|
@@ -678,6 +678,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
+| `koide_q_so2_phase_erasure_support_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5766,6 +5767,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The remaining Q bridge is compressed to the explicit primitive that the physical charged-lepton selector is source-free, K = 0, on the normalized second-order reduced carrier.  _(class `F`)_
 - **chain closes:** False — The packet explicitly leaves open why the physical charged-lepton selector should live on the admitted normalized second-order carrier and satisfy K = 0. The runner only checks algebraic equivalences around P_Q = 1/2 and does not derive the physical/source-law identification.
 - **rationale:** The source note is honest that it is a support batch and does not promote Q closure. Its load-bearing sharpening depends on an unproved identification of the physical charged-lepton selector with a source-free normalized reduced carrier. The runner verifies symbolic equivalences and some hard-coded representation-theoretic scalar matches, but it does not compute the missing primitive from the stated axiom packet.
+- **auditor confidence:** high
+
+### `koide_q_so2_phase_erasure_support_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic SO(2) phase-erasure support theorem for Q on the admitted Brannen square-root mass carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the Brannen square-root mass carrier sqrt(m_k)=V0(1+c cos(delta+2pi k/3)), the Koide ratio is exactly Q=(c^2+2)/6, independent of V0 and delta, so Q=2/3 iff c^2=2 and the Brannen phase lane is erased by Q.  _(class `A`)_
+- **chain closes:** False — The runner verifies the C3 trigonometry, Q formula, phase erasure, and support-only boundaries with PASS=23/FAIL=0. The retained chain does not close because the physical charged-lepton use of the Brannen carrier, the c^2=2/source-domain selection law, and the staggered-Dirac realization context remain open or unregistered as retained one-hop dependencies.
+- **rationale:** Issue: the exact formula Q=(c^2+2)/6 is algebra on an admitted Brannen square-root carrier and does not derive the physical carrier choice, c^2=2, or source-free reduced-carrier law from retained charged-lepton inputs. Why this blocks: retained Koide closure would require the physical source-domain/carrier selection and the staggered-Dirac realization context to be retained, not merely boundary-checked as open. Repair target: register retained one-hop authorities for the Brannen carrier/source-domain selection stack and the staggered-Dirac realization gate, or keep this as a standalone algebraic support lemma. Claim boundary until fixed: exact bounded phase-erasure support on the admitted carrier; no retained Q=2/3 or delta=2/9 closure.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+  - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
+  - `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25`
