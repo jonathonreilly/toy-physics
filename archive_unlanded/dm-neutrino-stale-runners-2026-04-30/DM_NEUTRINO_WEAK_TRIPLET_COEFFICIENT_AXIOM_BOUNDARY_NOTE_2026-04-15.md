@@ -1,8 +1,18 @@
 # DM Neutrino Weak-Triplet Coefficient Axiom Boundary
 
 **Date:** 2026-04-15  
-**Status:** exact single-axiom closure-boundary theorem for the DM transfer coefficients  
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/dm-neutrino-stale-runners-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Script:** `scripts/frontier_dm_neutrino_weak_triplet_coefficient_axiom_boundary.py`
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/dm-neutrino-stale-runners-2026-04-30/` (the directory name encodes the failure reason: stale runners on the DM-neutrino lane).
+- **Audit verdict_rationale (quoted verbatim from `docs/audit/data/audit_ledger.json`):**
+
+  > Issue: the primary runner reads absolute paths under /Users/jonBridger/... and raises FileNotFoundError before the c_odd and even-leg coefficient checks complete. Why this blocks: the note claims exact single-axiom transfer-coefficient closure, but the shipped verifier is stale and cannot reproduce the load-bearing result in the current repository. Repair target: replace stale absolute-path reads with repository-local retained dependencies and rerun the coefficient-normalization checks end to end. Claim boundary until fixed: the note can be treated only as an unreproduced coefficient-closure proposal; no audited transfer-coefficient closure is available from the current runner.
+
+- **Do not cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Framework sentence
 

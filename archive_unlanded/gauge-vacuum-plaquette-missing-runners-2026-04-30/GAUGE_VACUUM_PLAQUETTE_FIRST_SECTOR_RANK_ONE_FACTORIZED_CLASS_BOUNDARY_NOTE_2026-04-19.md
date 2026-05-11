@@ -1,8 +1,18 @@
 # Gauge-Vacuum Plaquette First-Sector Rank-One / Factorized-Class Boundary
 
 **Date:** 2026-04-19
-**Status:** exact proposed_retained-sector boundary on the plaquette/Wilson framework-point seam; the explicit positive rank-one first-sector transfer witness does **not** itself lie in the canonical Wilson factorized class, and the best audited proposed_retained diagonal fit still misses the completed triple
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py`
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/` (the directory name encodes the failure reason: declared runner path is missing).
+- **Audit verdict_rationale (quoted verbatim from `docs/audit/data/audit_ledger.json`):**
+
+  > Issue: the note declares a runner and expected PASS=6, but the runner path is missing, so the off-diagonal norm 0.250338180104 and diagonal-fit residuals 0.135462193897 / 0.228465896152 are not reproducible from the allowed artifacts. Why this blocks: those numbers are the proof that the rank-one witness lies outside the canonical Wilson factorized class and that the audited diagonal family misses the completed triple; without the runner or equivalent one-hop derivation, the theorem is unsupported. Repair target: restore the exact runner or replace the note with a current executable proof that constructs M, T_min, Z_min, performs the positive conjugation-symmetric diagonal search, and reproduces PASS=6 from cited retained inputs. Claim boundary until fixed: safely claim only that the remaining Wilson target is intended to be stricter than generic transfer existence; do not claim the specific non-factorization theorem, residual bounds, or retained-sector boundary.
+
+- **Do not cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ## Question
 
