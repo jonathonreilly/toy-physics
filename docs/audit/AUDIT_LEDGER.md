@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1188 |
+| unaudited | 1187 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 190 |
+| ~~audited_conditional~~ | 191 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 479 |
-| `audited_conditional` | 190 |
+| `audited_conditional` | 191 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1301 |
+| `unaudited` | 1300 |
 
 | claim_type | count |
 |---|---:|
@@ -778,6 +778,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -8337,6 +8338,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact C3 Hermitian circulant family can realize an arbitrary real generation spectrum unless an additional selection theorem fixes its parameters; even granting A1 and P1, A1 only gives Q=2/3 for an amplitude triple and leaves scale, phase, species assignment, and quark Yukawa readout open.  _(class `A`)_
 - **chain closes:** True — The no-go boundary follows from exact linear-algebraic degree-of-freedom facts about Hermitian C3 circulants plus the algebraic consequence of A1. Since the claim is negative, it is enough that even under the granted stronger premises A1/P1 the required quark-sector source data remain unspecified.
 - **rationale:** The runner directly checks the load-bearing algebra: C3 order/unitarity, Hermitian circulant structure, eigenvalue formula, inverse Fourier realization of arbitrary real triples, A1 implying Q=2/3, and the remaining live phase/scale/species/readout degrees of freedom. The claim makes no retained quark-mass prediction and explicitly firewalls observed masses, CKM, fitted Yukawas, and charged-lepton import. The negative boundary therefore closes on its own terms.
+- **auditor confidence:** high
+
+### `quark_c3_oriented_ward_splitter_support_note_2026-04-28`
+
+- **Note:** [`QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md`](../../docs/QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional bounded support claim for the C3-oriented Ward splitter: given the hw=1 triplet and induced C3[111] cycle, the Hermitian C3-equivariant normal form and Fourier-channel splitting are exact, but the retained physical triplet/C3 authority and staggered-Dirac realization gate are not closed by this row.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the retained hw=1 generation triplet with the retained induced C3[111] cycle, C3-equivariant Hermitian Ward endomorphisms have W(a,b,c)=aI+b(C+C^2)+c(C-C^2)/(i sqrt(3)), and nonzero generic c splits the S3 doublet while a generation-basis diagonal C3 readout is scalar.  _(class `B`)_
+- **chain closes:** False — The finite C3 normal-form algebra closes, and the runner reports PASS=51 FAIL=0, but the source and runner import authority surfaces for the hw=1 triplet, induced C3[111] cycle, prior S3 degeneracy, and the staggered-Dirac realization gate while the ledger row has no dependency edges. The canonical staggered-Dirac parent is an audited open_gate and several named authority surfaces are unaudited or audit_in_progress, so the retained physical support claim cannot close from the current packet.
+- **rationale:** Issue: the exact C3 matrix algebra is valid, but the claim is phrased on the retained hw=1 generation triplet and retained induced C3[111] cycle, and the source explicitly admits the staggered-Dirac realization derivation target as an open gate. Why this blocks: without ledger dependency edges and retained-grade closure for those authority surfaces, the row would promote a physical Ward splitter whose triplet/C3 inputs are not retained-grade in the audit graph. Repair target: add explicit dependency edges to the staggered-Dirac realization gate, the generation observable/C3 authority, and the S3 degeneracy boundary, then re-audit after those dependencies are retained or keep the row scoped as an abstract C3 finite-matrix lemma. Claim boundary until fixed: the abstract Hermitian C3 normal form and generic Fourier-channel splitting are usable finite algebra; it is not retained support for physical quark-mass Ward channels or a closed source/readout primitive.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`
+  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
 - **auditor confidence:** high
 
 ### `quark_c3_p1_positive_parent_readout_no_go_note_2026-04-28`
