@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 683,
     "high": 27,
-    "leaf": 241,
+    "leaf": 240,
     "medium": 157
   },
   "cycle_break_target_count": 265,
@@ -30626,27 +30626,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SINGLE_CLOCK_STONE_FINITE_DIM_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37110,6 +37089,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 12,
-  "total_pending": 1108
+  "ready_count": 11,
+  "total_pending": 1107
 }

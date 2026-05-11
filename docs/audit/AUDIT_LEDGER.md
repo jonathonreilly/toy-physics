@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 248 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1102 |
+| unaudited | 1101 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 261 |
-| ~~audited_failed~~ | 26 |
+| ~~audited_failed~~ | 27 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -43,10 +43,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 424 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1200 |
+| `unaudited` | 1199 |
 
 | claim_type | count |
 |---|---:|
@@ -865,6 +865,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_diamond_frequency_bridge_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | F | - |
 | `shapiro_five_family_portability_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `shapiro_scaling_direct_replay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
+| `single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `source_resolved_retarded_green_pocket_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_transverse_propagating_green_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `staggered_backreaction_capture_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -9321,6 +9322,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The mathematical realization is taken to be a sparse Hermitian operator H whose nonzero entries define the graph and whose exponentiation exp(iHt) defines unitary dynamics.  _(class `F`)_
 - **chain closes:** False — The runner and note assume the load-bearing sparse Hermitian H, then verify standard consequences: support gives a graph, Hermitian exponentiation is unitary, and the Schrodinger current is conserved. The missing step is a derivation that the verbal axiom uniquely or necessarily entails sparsity, Hermiticity, locality, and the specific Hamiltonian structure rather than defining them into H.
 - **rationale:** The numerical checks are mostly algebraic or model-demonstration checks after H has already been chosen as sparse and Hermitian. They do not derive the graph-unitary object from the single verbal axiom; they rename the original graph-plus-unitary package as conserved information flow and show familiar properties of that representation. Test 2 and Test 3 add self-consistency claims about locality and unitarity, but these rely on chosen graph models and imposed dissipative factors rather than closing a first-principles derivation.
+- **auditor confidence:** high
+
+### `single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`SINGLE_CLOCK_STONE_FINITE_DIM_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/SINGLE_CLOCK_STONE_FINITE_DIM_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional positive Hermitian T with 0<||T||op<=1 defines H_gen=-(1/τ)log(T), its unitary group U(t)=exp(-itH_gen), and the stated discrete/Stone uniqueness identities, including the headline U(τ)^*T U(0)=T condition.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e14c3-790b-7501-8608-3a7631bd093d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The note’s headline scope says U(t):=exp(-i t H_gen) is the unique strongly continuous one-parameter unitary group with U(τ)^* T U(0)=U(0)^* T U(0)=T and generator H_gen.  _(class `A`)_
+- **chain closes:** False — The spectral-log construction and Stone uniqueness parts close, but the stated U(τ)^*T U(0)=T condition does not hold for generic positive T. For eigenvalue λ, the constructed group gives U(τ)^*T acting as e^{i log λ}λ, which is not λ unless e^{i log λ}=1.
+- **rationale:** Issue: the headline scope includes U(τ)^* T U(0)=T for arbitrary positive Hermitian T, but the constructed U(t)=exp(-itH_gen) generally fails that identity. Why this blocks: this is not an excluded physical bridge; it is an internal algebraic condition stated in the audited claim scope, and the runner never checks it. Repair target: either remove that condition, replace it with a true invariant such as U(t)^*TU(t)=T, or add the extra spectral restriction needed for U(τ)=I, then rerun with an explicit check. Claim boundary until fixed: N1-N3 generator uniqueness and the T^n=U(-inτ) functional-calculus consistency remain valid, but the broader headline claim is false as written.
+- **open / conditional deps cited:**
+  - `SINGLE_CLOCK_STONE_FINITE_DIM_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md`
+  - `scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py`
 - **auditor confidence:** high
 
 ### `site_phase_cube_shift_intertwiner_note`
