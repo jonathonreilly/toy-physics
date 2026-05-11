@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 759,
+    "critical": 758,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6422,29 +6422,6 @@
       "ready": true,
       "runner_path": "scripts/valley_linear_asymptotic_bridge.py",
       "transitive_descendants": 428
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "axiom_reduction_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.235,
-      "note_path": "docs/AXIOM_FIRST_COLEMAN_MERMIN_WAGNER_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/axiom_first_coleman_mermin_wagner_check.py",
-      "transitive_descendants": 425
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -40624,6 +40601,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 125,
-  "total_pending": 1301
+  "ready_count": 124,
+  "total_pending": 1300
 }
