@@ -1445,6 +1445,22 @@
       "to": "architecture_note_directional_measure"
     },
     {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+    },
+    {
       "from": "boundary_law_robustness_note_2026-04-11",
       "to": "holographic_probe_note_2026-04-11"
     },
@@ -36219,6 +36235,22 @@
       "runner_path": "scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py",
       "title": "Bougerol-Lacroix / Oseledets MET - External Narrow Theorem"
     },
+    "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10": {
+      "claim_id": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10",
+        "plaquette_self_consistency_note",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+      ],
+      "note_hash": "712ecdecc1599c976cef142cfc14d784732d9b921404c48d3d782e672aeaa707",
+      "path": "docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_LYAPUNOV_BRIDGE_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py",
+      "title": "Bougerol-Lacroix Staggered-Blocking Lyapunov-Bridge \u2014 No-Go Narrow Theorem"
+    },
     "bound_state_selection_note": {
       "claim_id": "bound_state_selection_note",
       "claim_type_author_hint": null,
@@ -66941,7 +66973,7 @@
       "bounded_theorem": 253,
       "decoration": 1,
       "meta": 59,
-      "no_go": 23,
+      "no_go": 24,
       "none": 1628,
       "open_gate": 29,
       "positive_theorem": 102
@@ -66950,15 +66982,15 @@
       "bounded_theorem": 735,
       "decoration": 1,
       "meta": 59,
-      "no_go": 130,
+      "no_go": 131,
       "none": 451,
       "open_gate": 117,
       "positive_theorem": 602
     },
-    "edge_count": 8358,
+    "edge_count": 8362,
     "leaf_count": 552,
-    "node_count": 2095,
+    "node_count": 2096,
     "root_count": 783,
-    "runners_with_path": 1708
+    "runners_with_path": 1709
   }
 }
