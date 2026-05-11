@@ -1,0 +1,30 @@
+===== runner cache v1 =====
+runner: scripts/frontier_quark_top_qfp_attractor_route_no_go.py
+runner_sha256: 9e796ae15a7ec04b87ef5e95070518f10629f62932848111c137d68568fc997d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.43
+status: ok
+----- stdout -----
+Top-quark QFP attractor route no-go
+canonical plaquette=0.593400, u0=0.877681
+alpha_bare=0.079577472, alpha_s(v)=0.103303816
+v_ew=246.282818 GeV, g1(v)=0.463986, g2(v)=0.646288, g3(v)=1.139366
+[PASS (C)] QFP sign/bracket structure exists (instantaneous bracket y_qfp=1.5992, mt=278.49 GeV)
+scan yt_pl= 0.50 -> yt_v=1.002948, mt=174.66 GeV, rel=+1.14%
+scan yt_pl= 0.70 -> yt_v=1.106497, mt=192.69 GeV, rel=+11.58%
+scan yt_pl= 1.00 -> yt_v=1.176432, mt=204.87 GeV, rel=+18.64%
+scan yt_pl= 2.00 -> yt_v=1.235933, mt=215.24 GeV, rel=+24.64%
+scan yt_pl= 5.00 -> yt_v=1.254279, mt=218.43 GeV, rel=+26.49%
+scan yt_pl=10.00 -> yt_v=1.256967, mt=218.90 GeV, rel=+26.76%
+[PASS (D)] generic high-UV QFP band misses external top-mass target by more than 5% (mt range=204.87..218.90 GeV, closest_rel=18.64%)
+[PASS (C)] QFP focusing exists but does not imply correct location (UV factor=20.00, IR factor=1.253, compression=15.96)
+[PASS (D)] near-target scan point is a selected UV boundary, not generic attraction (best yt_pl=0.50, mt=174.66 GeV, rel=+1.14%)
+[PASS (C)] no-go: generic QFP-attractor route cannot replace a derived UV boundary (large-UV attractor is misplaced; successful point requires UV selection)
+
+========================================================================================
+TOTAL: PASS=5, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -18081,6 +18081,18 @@
       "to": "strc_lo_collinearity_theorem_note_2026-04-19"
     },
     {
+      "from": "quark_top_qfp_attractor_route_no_go_note_2026-05-10",
+      "to": "alpha_s_derived_note"
+    },
+    {
+      "from": "quark_top_qfp_attractor_route_no_go_note_2026-05-10",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "quark_top_qfp_attractor_route_no_go_note_2026-05-10",
+      "to": "yt_qfp_insensitivity_support_note"
+    },
+    {
       "from": "quark_up_amplitude_affine_support_scan_note_2026-04-19",
       "to": "quark_projector_parameter_audit_note_2026-04-19"
     },
@@ -59163,6 +59175,21 @@
       "runner_path": "scripts/frontier_quark_strc_observable_principle.py",
       "title": "Scalar-Tensor Ray Complementarity (STRC) \u2014 Historical Observable-Principle Framing (SUPERSEDED)"
     },
+    "quark_top_qfp_attractor_route_no_go_note_2026-05-10": {
+      "claim_id": "quark_top_qfp_attractor_route_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "alpha_s_derived_note",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "yt_qfp_insensitivity_support_note"
+      ],
+      "note_hash": "7623ff3d951915ed25d6f79029cbe9fb59a885891cdeb7eb7fe0907492ca8730",
+      "path": "docs/QUARK_TOP_QFP_ATTRACTOR_ROUTE_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_quark_top_qfp_attractor_route_no_go.py",
+      "title": "Top-Quark QFP Attractor Route No-Go"
+    },
     "quark_up_amplitude_affine_support_scan_note_2026-04-19": {
       "claim_id": "quark_up_amplitude_affine_support_scan_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -68262,7 +68289,7 @@
       "bounded_theorem": 275,
       "decoration": 1,
       "meta": 61,
-      "no_go": 32,
+      "no_go": 33,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68271,15 +68298,15 @@
       "bounded_theorem": 757,
       "decoration": 1,
       "meta": 61,
-      "no_go": 139,
+      "no_go": 140,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8459,
-    "leaf_count": 607,
-    "node_count": 2163,
+    "edge_count": 8462,
+    "leaf_count": 608,
+    "node_count": 2164,
     "root_count": 822,
-    "runners_with_path": 1776
+    "runners_with_path": 1777
   }
 }
