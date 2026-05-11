@@ -7,8 +7,13 @@ pipeline-derived status are set by the independent audit lane.
 **Primary runner:** [`scripts/frontier_wilson_bz_corner_hamming_staircase.py`](../scripts/frontier_wilson_bz_corner_hamming_staircase.py)
 
 **Closed-form companion (added 2026-05-09):**
-[`WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md`](WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md)
+`WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md`
 lifts this bounded proof-walk to a full closed-form theorem.
+(Backticked to break the length-2 citation cycle with the closed-form
+companion; citation graph direction is *closed_form → this_bounded*,
+since the closed-form note lifts the bounded proof-walk while this
+bounded note's combinatorial identity does not consume the
+closed-form theorem as an input.)
 It establishes T1 (closed-form formula `W(n)/r = 2·hw(n)` with
 multiplicities `binomial(4, k)`), T2 (`S_4` axis-permutation
 equivariance, including the spatial `C_3[111]` and full

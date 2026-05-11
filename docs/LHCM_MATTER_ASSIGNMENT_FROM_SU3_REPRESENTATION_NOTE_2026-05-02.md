@@ -190,7 +190,7 @@ This block (cycle 2) closes item (1) "matter assignment":
 
 - [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md) — parent
 - [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) — retained primitive supplying the gl(3)⊕gl(1) commutant
-- [`HYPERCHARGE_IDENTIFICATION_NOTE.md`](HYPERCHARGE_IDENTIFICATION_NOTE.md) — supplies SWAP-decomposition algebra (audited_renaming)
+- `HYPERCHARGE_IDENTIFICATION_NOTE.md` — sister cross-reference for SWAP-decomposition algebra (audited_renaming); backticked to break length-2 citation cycle with this LHCM matter-assignment note — citation graph direction is *hypercharge_identification → this_lhcm* (this note supplies the matter-assignment input that hypercharge_identification consumes in its proof; the reverse SWAP-algebra link is informational sibling, not load-bearing for this LHCM derivation)
 - `RH_SECTOR_ANOMALY_CANCELLATION_IDENTITIES_NOTE_2026-05-02.md` (sister
   support theorem; backticked to avoid length-3 cycle through
   HYPERCHARGE_IDENTIFICATION — that RH-sector note already cites

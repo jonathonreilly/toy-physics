@@ -31,8 +31,12 @@ families' summary thresholds).
 
 - `docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md` (the chosen family slice and its
   retained sign-law backing)
-- `docs/SIGN_PORTABILITY_INVARIANT_NOTE.md` (the parent comparison note,
-  whose load-bearing step this derivation is intended to back)
+- `docs/SIGN_PORTABILITY_INVARIANT_NOTE.md` (the parent comparison note
+  whose load-bearing step this derivation is intended to back; the
+  parent's existence is not itself a load-bearing input to the four-gate
+  proofs below, which derive from the runner-defined source/propagation/
+  readout maps alone — backtick form preserved here and below to break
+  the length-2 citation cycle, citation graph direction is *parent → this_derivation*)
 
 ## Family chosen and why
 
@@ -358,4 +362,9 @@ diagnostic but does not change the bounded-theorem claim.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [second_grown_family_sign_note](SECOND_GROWN_FAMILY_SIGN_NOTE.md)
-- [sign_portability_invariant_note](SIGN_PORTABILITY_INVARIANT_NOTE.md)
+- `sign_portability_invariant_note` (parent comparison note; backticked
+  to break length-2 citation cycle — citation graph direction is
+  *parent → this_derivation*, not the reverse, because the four-gate
+  proofs in sections T1-T4 above derive from the runner's source/
+  propagation/readout maps alone and do not consume any input from the
+  parent comparison surface)

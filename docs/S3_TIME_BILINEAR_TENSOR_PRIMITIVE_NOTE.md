@@ -45,10 +45,15 @@ the explicit class-A definition framing.
   the canonical Schur-boundary-action surface. Cited as the namesake of
   the support-side decomposition, not as the source of the
   `delta_A1`-decoupling derivation in this note.
-- [`S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`](S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md)
+- `S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`
   (`claim_type: open_gate`, `intrinsic_status: unaudited`) — Wave-1
   sibling note treating a related discrete bilinear-tensor action.
-  Cited as a sibling open-gate row, not as an authority closure.
+  Cited as a sibling open-gate row, not as an authority closure;
+  backticked to break length-2 citation cycle with the action note —
+  citation graph direction is *action → this_primitive* (the action
+  note imports `K_R` from this primitive; the reverse pointer is
+  informational sibling, not load-bearing for this primitive's
+  class-A definition).
 
 **Admitted-context derivation gap (real, not import-redirect):**
 
@@ -123,7 +128,9 @@ that `K_R` is a physical tensor primitive on the support block.
 Related current surfaces include
 [`S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md`](S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md),
 [`S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md`](S3_TIME_TRANSFER_MATRIX_BRIDGE_NOTE.md),
-and [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md).
+[`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](OH_SCHUR_BOUNDARY_ACTION_NOTE.md),
+and the action-side sibling `S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md`
+(backticked to maintain the length-2-cycle break above).
 This note does not treat those surfaces as retained-grade closure for the
 three upstream dependencies above; see "Audit boundary".
 
