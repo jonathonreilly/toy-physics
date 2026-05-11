@@ -1,7 +1,7 @@
 {
   "claim_type_counts": {
-    "bounded_theorem": 890,
-    "decoration": 14,
+    "bounded_theorem": 891,
+    "decoration": 13,
     "meta": 116,
     "no_go": 221,
     "open_gate": 110,
@@ -60,18 +60,17 @@
     "decoration_under_cl3_color_automorphism_theorem": 5,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": 1,
-    "decoration_under_hierarchy_matsubara_decomposition_note": 1,
     "decoration_under_koide_dweh_cyclic_compression_note_2026-04-18": 1,
     "decoration_under_linear_response_true_kubo_note": 1,
     "decoration_under_moving_source_retarded_portability_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 113,
     "open_gate": 13,
-    "retained": 83,
-    "retained_bounded": 256,
+    "retained": 82,
+    "retained_bounded": 257,
     "retained_no_go": 127,
     "retained_pending_chain": 2,
-    "unaudited": 1277
+    "unaudited": 1278
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
