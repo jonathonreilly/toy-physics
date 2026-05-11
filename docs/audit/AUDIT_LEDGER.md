@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 241 |
 | open_gate | 13 |
-| unaudited | 1115 |
+| unaudited | 1114 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 260 |
+| ~~audited_conditional~~ | 261 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 411 |
-| `audited_conditional` | 260 |
+| `audited_conditional` | 261 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1213 |
+| `unaudited` | 1212 |
 
 | claim_type | count |
 |---|---:|
@@ -628,6 +628,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `family_companion_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `fine_h_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `g_bare_derivation_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_closure_note_2026-04-18` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `gate_b_farfield_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -4451,6 +4452,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The scoped result is only algebraic substitution into formulas explicitly admitted in the note, with graph_first_su3 supplying the SU(3)/N_c = 3 surface. No derivation or uniqueness of g_bare = 1 is claimed.
 - **rationale:** The note cleanly frames g_bare = 1 as an admitted convention rather than a derived constraint, and the retained graph-first dependency supplies the SU(3) setting needed for N_c = 3. The β = 6 conclusion and the absence of a multiplicative curvature rescaling at g_bare = 1 are class-A consequences under that scoped convention. Runner checks include non-load-bearing supersession and upgrade checks, but those are not needed for this narrow claim and do not alter the closure.
 - **auditor confidence:** medium
+
+### `g_bare_constraint_vs_convention_theorem_note_2026-05-03`
+
+- **Note:** [`G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md`](../../docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Relative to the canonical Cl(3) normalization Tr(T_a T_b)=delta_ab/2 and Wilson matching beta=2N_c/g_bare^2, g_bare=1 is algebraically forced, with the claimed no-rescaling ambiguity delegated to the rescaling-freedom-removal dependency.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e14b0-8f2b-7743-82de-7af22ebc3d0d`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given (CN) and (WM) at N_c = 3 with beta = 2 N_c = 6, g_bare^2 = 2 N_c / beta = 6 / 6 = 1.  _(class `A`)_
+- **chain closes:** False — The local algebra closes, but the note's no-alternative claim depends on the rescaling-freedom-removal row. That dependency is supplied in the packet with effective_status decoration_under_cl3_color_automorphism_theorem, not retained-grade.
+- **rationale:** Issue: the decisive algebraic substitution is valid only as a relative statement, while the stronger constraint-vs-convention disambiguation relies on a non-retained dependency. Why this blocks: the cited rescaling-freedom-removal authority is classified as decoration_under_cl3_color_automorphism_theorem, so it cannot presently support an independent retained positive_theorem. Repair target: provide a retained-grade theorem removing the rescaling freedom or re-architect the claim to depend only on retained authorities. Claim boundary until fixed: local class-A result that CN plus beta=6 implies g_bare=1.
+- **open / conditional deps cited:**
+  - `g_bare_constraint_vs_convention_theorem_note_2026-05-03 -> g_bare_rescaling_freedom_removal_theorem_note_2026-05-03`
+- **auditor confidence:** high
 
 ### `g_bare_derivation_note`
 
