@@ -9,8 +9,9 @@ effective status are set by the independent audit lane.
 ## Claim
 
 Bounded note supplying the four analytic premises that the parent
-[`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
-treats as inputs (per its 2026-05-02 audit verdict's repair-target list).
+`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`
+treats as inputs (per its 2026-05-02 audit verdict's repair-target list;
+reader pointer only, not a load-bearing dependency of this lemma note).
 Each lemma is proved from textbook compact-Lie-group analysis premises
 (stated as bounded admissions in §"Bounded admissions"); none is derived
 from the framework baseline of physical `Cl(3)` local algebra on the
@@ -186,10 +187,11 @@ formal-Taylor truncation argument near `t = 0` alone.
 
 ## Dependencies
 
-- [`GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`](GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
-  for the parent context: the lemmas (L1)–(L4) supply the analytic
+- `GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md`
+  for parent context only: the lemmas (L1)–(L4) supply the analytic
   premises listed in that note's `open_dependency_paths` per its
-  2026-05-02 audit verdict.
+  2026-05-02 audit verdict. The load-bearing graph direction is
+  parent obstruction note -> this lemma note, not the reverse.
 - [`GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md`](GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
   for adjacent gauge-vacuum-plaquette analytic context (compact-Laplace
   concentration on the maximum-action gauge orbit appears in that

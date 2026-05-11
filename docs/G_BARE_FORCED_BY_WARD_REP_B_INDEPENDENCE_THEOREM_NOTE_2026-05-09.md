@@ -64,10 +64,13 @@ The theorem **does not** claim:
 - that the same-1PI pinning theorem is itself retained-grade (it is currently
   `audited_conditional`; the upgrade is conditional on its retention);
 - closure of the broader `G_BARE_*` family or the Nature-grade absolute
-  derivation of `g_bare = 1` from `A1 + A2` alone (the upstream Layer-L3
+  derivation of `g_bare = 1` from the repo baseline physical `Cl(3)`
+  local algebra plus `Z^3` spatial substrate alone (the upstream Layer-L3
   convention scalar `N_F = 1/2` remains the framework's single admitted
   convention, as documented in
-  [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md));
+  `G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`
+  (reader pointer; see-also cross-reference, not a load-bearing dependency
+  of this Ward-route upgrade));
 - that the historical narrow convention reading
   ([`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md))
   was incorrect — its scoped claim (`β = 6` given `g_bare = 1` admitted as a
@@ -159,7 +162,9 @@ the retained Ward Rep-B-independence theorem and the same-1PI pinning theorem
 that the framework already carries.
 
 The four-layer stratification of
-[`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md)
+`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`
+(reader pointer; see-also cross-reference, not a load-bearing dependency
+of this Ward-route upgrade)
 remains in place: the framework's single admitted convention is at Layer L3
 (the overall HS scalar `N_F = 1/2`), and the present note adds an independent
 route to the same conclusion that `g_bare = 1` is a derived (not admitted)
@@ -236,7 +241,9 @@ pinning row, currently `audited_conditional`).
   removing the convention-vs-derivation ambiguity at the `g_bare` row
   itself (the framework's single admitted convention layer remains at
   L3 / `N_F = 1/2` upstream, as documented in
-  [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md)).
+  `G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md` —
+  reader pointer; see-also cross-reference, not a load-bearing dependency
+  of this Ward-route upgrade).
 
 ## 9. What this theorem does NOT close
 
@@ -261,7 +268,8 @@ pinning row, currently `audited_conditional`).
 - [`G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md`](G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md)
   — historical narrow convention reading, superseded by the present
   forced-determination upgrade once retained.
-- [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`](G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md)
+- `G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_NOTE_2026-05-07.md`
+  (reader pointer; see-also cross-reference, not a load-bearing dependency)
   — four-layer stratification placing the framework's single convention at
   Layer L3 (`N_F = 1/2`); the present note provides an independent route
   to the same `g_bare = 1` conclusion via the Ward two-route argument.

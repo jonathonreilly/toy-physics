@@ -222,7 +222,9 @@ the algebraic computation itself. Promoting the verdict requires either
 
 The audit-recommended scope-narrowing branch lives in the companion
 note
-[`SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md`](SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md).
+`SU3_CASIMIR_FUNDAMENTAL_ALGEBRAIC_K1_K3_NARROW_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md`
+(reader pointer; see-also cross-reference, not a load-bearing dependency
+of this theorem's proof chain).
 That companion records a narrow proof-walk that scopes the audited
 claim explicitly to the algebraic K1-K3 statement (centrality of
 `C_2`, Schur scalar property, value `4/3`) on the cited 3-dim

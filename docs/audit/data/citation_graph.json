@@ -8618,10 +8618,6 @@
     },
     {
       "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
-      "to": "g_bare_derivation_note"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_distinct_shell_theorem_note",
       "to": "gauge_vacuum_plaquette_mixed_cumulant_audit_note"
     },
     {
@@ -8770,10 +8766,6 @@
     },
     {
       "from": "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10",
-      "to": "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_hierarchy_obstruction_lemmas_bounded_note_2026-05-10",
       "to": "gauge_vacuum_plaquette_reduction_existence_theorem_note"
     },
     {
@@ -8803,10 +8795,6 @@
     {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
-      "to": "g_bare_derivation_note"
     },
     {
       "from": "gauge_vacuum_plaquette_reduction_existence_theorem_note",
@@ -8847,10 +8835,6 @@
     {
       "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
-    },
-    {
-      "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
-      "to": "g_bare_derivation_note"
     },
     {
       "from": "gauge_vacuum_plaquette_spectral_measure_theorem_note",
@@ -9274,15 +9258,7 @@
     },
     {
       "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
-      "to": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09"
-    },
-    {
-      "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
       "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
-    },
-    {
-      "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
-      "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
     },
     {
       "from": "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
@@ -9339,10 +9315,6 @@
     {
       "from": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
       "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
-    },
-    {
-      "from": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
-      "to": "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
     },
     {
       "from": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
@@ -9427,10 +9399,6 @@
     {
       "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
       "to": "yt_ward_identity_derivation_theorem"
-    },
-    {
-      "from": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-      "to": "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09"
     },
     {
       "from": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
@@ -19519,10 +19487,6 @@
     {
       "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
-    },
-    {
-      "from": "su3_casimir_fundamental_theorem_note_2026-05-02",
-      "to": "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
     },
     {
       "from": "su3_cube_full_rho_perron_2026-05-04",
@@ -43766,12 +43730,10 @@
       "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09",
         "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "2d560cdfc3cf8c7b8d8721a6022d042b864ce35abb7b37fc14f5b11b62284f3b",
+      "note_hash": "1a5ea03a449b6ee35703b77e603f45772811ef1314a7c19b54fd1472b3aafd90",
       "path": "docs/G_BARE_CANONICAL_CONVENTION_NARROW_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
       "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
@@ -43854,10 +43816,9 @@
       "deps": [
         "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
         "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-        "g_bare_constraint_vs_convention_restatement_note_2026-05-07"
+        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
       ],
-      "note_hash": "ab68d86be37e187de3a301776df82c66f092cd78cf628ccd96abeccfe087f1ce",
+      "note_hash": "ebcaff01edcec5c97fb96603a16a3ba833422209d9c00fd04e8996c46d0d20a2",
       "path": "docs/G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md",
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
       "title": "g_bare Forced (Not Chosen) via Ward Rep-B-Independence \u2014 Upgrade Theorem"
@@ -43960,10 +43921,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "yt_ward_identity_derivation_theorem",
-        "g_bare_forced_by_ward_rep_b_independence_theorem_note_2026-05-09"
+        "yt_ward_identity_derivation_theorem"
       ],
-      "note_hash": "c08b576dcd229fd077977650491ff0d527039c849bf606c27d13705f8ca8372f",
+      "note_hash": "be7aa24ac3ce6aa0b50afb14e16b6804eb15b36cf8f7d42520e3eab46212db79",
       "path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route"
@@ -44721,11 +44681,10 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "staggered_dirac_realization_gate_note_2026-05-03",
-        "g_bare_derivation_note",
         "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "fe88c358371a63db92044baee530a4acb3c7d5e6d0b8f2caa9d72e04bee4f359",
+      "note_hash": "74fc56e6a8382fd42e7a985fb6155d9261336a3130375a8aa6e7b986bf011e4d",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem"
@@ -45013,11 +44972,10 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note",
         "gauge_vacuum_plaquette_reduction_existence_theorem_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "b7eb7d11768bb2b8684e17352b490fff93cc601344f2e5bea10f160da18dd669",
+      "note_hash": "1b25f563d9b517d091a83cee64d95ac66322e85c25bcb41773fa6c3970e21552",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_HIERARCHY_OBSTRUCTION_LEMMAS_BOUNDED_NOTE_2026-05-10.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_hierarchy_obstruction_lemmas.py",
       "title": "Gauge-Vacuum Plaquette Hierarchy Obstruction Lemmas \u2014 Bounded Note"
@@ -45092,10 +45050,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "staggered_dirac_realization_gate_note_2026-05-03",
-        "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "766f5d44f7eb74e9386db73f3c25af2f480fdb804db1ef246bbacf34541c4df7",
+      "note_hash": "8a44eb9c7b0d4df62ed376b54e0b10a6a4891e753c31776e482b12d97377c394",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py",
       "title": "Gauge-Vacuum Plaquette Reduction Existence and Uniqueness Theorem"
@@ -45220,10 +45177,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "staggered_dirac_realization_gate_note_2026-05-03",
-        "g_bare_derivation_note",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "77f948121d00f9d20491b31baa8ec9d805e5f4d3964469a969f91cd3db4ae678",
+      "note_hash": "3522ca08079b60a53a48b341527cca5b1c8ec4af3b7ead4205294e6855090994",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py",
       "title": "Gauge-Vacuum Plaquette Spectral-Measure Theorem"
@@ -61232,10 +61188,9 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "cl3_color_automorphism_theorem",
-        "su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10"
+        "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "0623b2eed25d484abb4c19ef41c2e2aca2b22a7231f9aa20d7fc1eac5a349839",
+      "note_hash": "085c892d5bdf3549c81dca984c39bcc6c5b6376e91c61ceed2c5483a8fe50cf3",
       "path": "docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
@@ -67076,8 +67031,8 @@
       "open_gate": 117,
       "positive_theorem": 606
     },
-    "edge_count": 8363,
-    "leaf_count": 555,
+    "edge_count": 8354,
+    "leaf_count": 557,
     "node_count": 2103,
     "root_count": 788,
     "runners_with_path": 1716
