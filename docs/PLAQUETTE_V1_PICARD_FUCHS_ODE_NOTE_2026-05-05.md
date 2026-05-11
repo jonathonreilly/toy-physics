@@ -6,7 +6,7 @@
 **Primary runner:** `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py`
 
 **All-order proof companion (added 2026-05-09):**
-[`PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md`](PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md)
+`PLAQUETTE_V1_PICARD_FUCHS_ODE_ALL_ORDER_PROOF_NOTE_2026-05-09.md`
 upgrades the truncated-series substitution and finite ODE-vs-Weyl
 agreement below to an all-order proof that `L · J(β) = 0` identically
 in `Q[[β]]` and that `J(β)` IS the analytic Frobenius branch at
@@ -14,6 +14,17 @@ in `Q[[β]]` and that `J(β)` IS the analytic Frobenius branch at
 finite-window-suffices theorem combined with the runner-internal
 D-finite parameter bounds `(R, D) = (3, 2)`. The independent audit
 lane decides whether that companion closes the all-order gap.
+(Backticked to break five nested length-2/3/4 citation cycles in the
+plaquette V=1 Picard-Fuchs cluster; citation graph direction is
+*all_order_proof → this_note*, since the all-order proof companion
+consumes this V=1 ODE statement as its target while this bounded
+ODE note's truncated-series claim does not consume the downstream
+all-order proof as an input. This single demotion cascades to break
+the four longer cycles through `bounded_synthesis_note_2026-05-06`,
+`minimality_proof_note_2026-05-06`,
+`koutschan_minimality_note_2026-05-06`, and
+`rank_bound_citation_note_2026-05-06`, since each runs through the
+same `this_note → all_order_proof` back-edge.)
 
 ## Claim
 

@@ -14049,10 +14049,6 @@
       "to": "left_handed_charge_matching_note"
     },
     {
-      "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
-      "to": "hypercharge_identification_note"
-    },
-    {
       "from": "lhcm_repair_atlas_consolidation_note_2026-05-02",
       "to": "left_handed_charge_matching_note"
     },
@@ -14491,10 +14487,6 @@
     {
       "from": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09",
       "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-    },
-    {
-      "from": "minimal_absorbing_horizon_probe_note",
-      "to": "minimal_bidirectional_trapping_probe_note"
     },
     {
       "from": "minimal_absorbing_horizon_probe_note",
@@ -16769,10 +16761,6 @@
       "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
     },
     {
-      "from": "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
-      "to": "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
-    },
-    {
       "from": "plaquette_v1_picard_fuchs_ode_rank_bound_citation_note_2026-05-06",
       "to": "plaquette_v1_picard_fuchs_ode_note_2026-05-05"
     },
@@ -18125,10 +18113,6 @@
       "to": "oh_schur_boundary_action_note"
     },
     {
-      "from": "s3_time_bilinear_tensor_primitive_note",
-      "to": "s3_time_bilinear_tensor_action_note"
-    },
-    {
       "from": "s3_time_constructed_support_tensor_primitive_note",
       "to": "tensor_support_center_excess_law_note"
     },
@@ -18847,10 +18831,6 @@
     {
       "from": "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09",
       "to": "second_grown_family_sign_note"
-    },
-    {
-      "from": "sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09",
-      "to": "sign_portability_invariant_note"
     },
     {
       "from": "sign_portability_invariant_note",
@@ -21523,10 +21503,6 @@
     {
       "from": "wigner_mode_low_d_sublattice_theorem_note_2026-05-02",
       "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
-    },
-    {
-      "from": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
-      "to": "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09"
     },
     {
       "from": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
@@ -50801,10 +50777,9 @@
       "deps": [
         "graph_first_selector_derivation_note",
         "graph_first_su3_integration_note",
-        "left_handed_charge_matching_note",
-        "hypercharge_identification_note"
+        "left_handed_charge_matching_note"
       ],
-      "note_hash": "52c0c2cd6c7320d83b520b343cf6b77f00fabdfc0b73d7b848837c8973918b2c",
+      "note_hash": "bd6a7e6811afc4071818adadd62e489f59939e5802e3eb5de2296a825c72f4c9",
       "path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_lhcm_matter_assignment.py",
       "title": "LHCM Matter Assignment from SU(3) Representation Content"
@@ -51347,13 +51322,12 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "minimal_bidirectional_trapping_probe_note",
         "gate_b_nonlabel_connectivity_v1_note",
         "gate_b_nonlabel_connectivity_v1_distance_note",
         "gate_b_nonlabel_connectivity_v1_joint_note",
         "gate_b_farfield_note"
       ],
-      "note_hash": "0ef151c6c8878b49ce27ddf6c750c7410c41c50e9cf9b9325350fbacc15d4b4e",
+      "note_hash": "f2444d0a556750c24fd4bab23cb8d0e79bb248dfb0682e803e89a32d1bf60edb",
       "path": "docs/MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md",
       "runner_path": "scripts/minimal_absorbing_horizon_probe.py",
       "title": "Minimal Absorbing Horizon Probe"
@@ -54326,10 +54300,8 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "plaquette_v1_picard_fuchs_ode_all_order_proof_note_2026-05-09"
-      ],
-      "note_hash": "dc1c78a675c6cdb0cb389fe8a0907468214a5411b691d195e706aa6feed2ee27",
+      "deps": [],
+      "note_hash": "f57516d2bd0b67d05e29e7a1b22938897ec70e6a92dc5c1ce4208d49fd53085e",
       "path": "docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py",
       "title": "Plaquette V=1 Picard-Fuchs ODE Note"
@@ -58913,10 +58885,9 @@
       "deps": [
         "s3_time_spacetime_tensor_primitive_note",
         "s3_time_transfer_matrix_bridge_note",
-        "oh_schur_boundary_action_note",
-        "s3_time_bilinear_tensor_action_note"
+        "oh_schur_boundary_action_note"
       ],
-      "note_hash": "23691d469229387abdd0ab191fab8d88cc315b61081449cabee6b2136c4450a5",
+      "note_hash": "254db49742b8a97669147cd8d12ed79922211655283f47fee9b07753554b1386",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_bilinear_tensor_primitive.py",
       "title": "Route 2 Bilinear Tensor Carrier (Definition-Only)"
@@ -59619,10 +59590,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "second_grown_family_sign_note",
-        "sign_portability_invariant_note"
+        "second_grown_family_sign_note"
       ],
-      "note_hash": "e649024ef33ca5331aa8eebb57d4d5b75aedbc7f0e5ef7386a8b22c1a50943b1",
+      "note_hash": "b829dd982daf66984f3bfaba5e62a0b4af8ebb5d12c2b227389e8c2c8a23da1e",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md",
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant: First-Principles Derivation Within the Second Grown Family"
@@ -64447,12 +64417,11 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09",
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03",
         "three_generation_structure_note"
       ],
-      "note_hash": "1ace971a2dfc26e76ac8b6edc76ce88309eda74a2d19513ca9981f435cf19ba4",
+      "note_hash": "bd753fb104738568823baf9c9a87d6012c46aa316900de101e3e69a2c5abae44",
       "path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
       "runner_path": "scripts/frontier_wilson_bz_corner_hamming_staircase.py",
       "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Bounded Note"
@@ -66984,6 +66953,7 @@
     "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
     "planck_parent_source_hidden_character_no_go_note_2026-04-24",
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+    "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
     "pmns_active_four_real_source_from_transport_note",
     "pmns_c3_nontrivial_current_boundary_note",
     "pmns_commutant_eigenoperator_selector_note",
@@ -67261,10 +67231,10 @@
       "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8364,
-    "leaf_count": 569,
+    "edge_count": 8358,
+    "leaf_count": 570,
     "node_count": 2118,
-    "root_count": 794,
+    "root_count": 795,
     "runners_with_path": 1731
   }
 }

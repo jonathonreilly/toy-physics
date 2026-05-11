@@ -54,7 +54,11 @@ it is NOT derived from A_min primitives in this note:
 ## Cluster note (2026-05-10): duplicate harness with bidirectional probe
 
 This probe and
-[`MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md`](MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md)
+`MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md`
+(backticked to break the length-2 citation cycle with the bidirectional
+probe — both notes are framings of the same bounded runner harness, so
+the cluster reference is informational, not load-bearing in either
+direction)
 share the identical runner harness and produce identical output (escape
 fraction `1.0002` at `alpha=0`, `0.4353` at `alpha=0.10`, `0.0903` at
 `alpha=0.30`, `0.0202` at `alpha=0.50`, `0.0000` at `alpha in {2.0, 10.0}`).
