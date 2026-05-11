@@ -10357,6 +10357,38 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "hierarchy_effective_potential_endpoint_note"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "vacuum_critical_stability_note"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "hierarchy_matsubara_determinant_ratio_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "higgs_mass_derived_note"
+    },
+    {
+      "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
       "to": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08"
     },
@@ -48300,6 +48332,26 @@
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_ratio_narrow.py",
       "title": "Hierarchy Matsubara Determinant Ratio \u2014 Narrow Algebraic Theorem"
     },
+    "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10": {
+      "claim_id": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_effective_potential_endpoint_note",
+        "vacuum_critical_stability_note",
+        "higgs_mass_from_axiom_note",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "hierarchy_bosonic_bilinear_selector_note",
+        "hierarchy_matsubara_determinant_ratio_narrow_theorem_note_2026-05-10",
+        "higgs_mass_derived_note",
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "ce5aedd5e93e382d6b80761618c343b0b9797b98fb95a6be907e856071b994e0",
+      "path": "docs/HIERARCHY_MATSUBARA_QUARTIC_COEFFICIENT_RATIO_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_matsubara_quartic_coefficient_ratio_narrow.py",
+      "title": "Hierarchy Matsubara Quartic Coefficient Ratio \u2014 Narrow Algebraic Theorem"
+    },
     "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10": {
       "claim_id": "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "positive_theorem",
@@ -70013,7 +70065,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 335,
+      "bounded_theorem": 336,
       "meta": 71,
       "no_go": 44,
       "none": 1561,
@@ -70021,17 +70073,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 793,
+      "bounded_theorem": 794,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8745,
+    "edge_count": 8753,
     "leaf_count": 621,
-    "node_count": 2190,
+    "node_count": 2191,
     "root_count": 802,
-    "runners_with_path": 1803
+    "runners_with_path": 1804
   }
 }

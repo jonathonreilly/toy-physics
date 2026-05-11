@@ -9312,6 +9312,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_matsubara_determinant_ratio_narrow.py"
     },
+    "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_hierarchy_matsubara_quartic_coefficient_ratio_narrow.py"
+    },
     "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -33527,6 +33539,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_matsubara_quartic_coefficient_ratio_narrow.py": {
+      "assert_count": 0,
+      "claims": [
+        "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_observable_principle_from_axiom.py": {
       "assert_count": 0,
       "claims": [
@@ -47273,15 +47300,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 199,
+    "decoration_candidates": 200,
     "dominant_class_distribution": {
-      "A": 150,
+      "A": 151,
       "B": 174,
       "C": 682,
       "D": 268,
       "none": 416
     },
-    "runners_classified": 1690,
+    "runners_classified": 1691,
     "runners_with_C": 865,
     "runners_with_D": 485
   }
