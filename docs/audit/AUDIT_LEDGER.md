@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1247 |
-| audit_in_progress | 5 |
+| unaudited | 1246 |
+| audit_in_progress | 6 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
@@ -41,14 +41,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 8 |
+| `audit_in_progress` | 9 |
 | `audited_clean` | 430 |
 | `audited_conditional` | 180 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1357 |
+| `unaudited` | 1356 |
 
 | claim_type | count |
 |---|---:|
@@ -113,6 +113,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `bound_state_selection_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `claude_complex_action_grown_companion_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | audit_in_progress | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
