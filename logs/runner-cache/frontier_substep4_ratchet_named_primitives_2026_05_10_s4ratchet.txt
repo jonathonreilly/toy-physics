@@ -1,0 +1,66 @@
+Substep-4 ratchet via named primitives meta check
+note: docs/SUBSTEP4_RATCHET_NAMED_PRIMITIVES_META_NOTE_2026-05-10_s4ratchet.md
+
+PASS: source note is meta
+PASS: source note Type field is meta
+PASS: does not declare a pipeline retained-grade verdict on substep-4
+PASS: does not declare audit-clean verdict for substep-4
+PASS: names AC_phi as primitive
+PASS: names AC_phi_lambda as primitive
+PASS: AC_phi reframed via preserved-C_3 stance
+PASS: AC_phi_lambda identified with BAE
+PASS: BAE + P campaign inventory cited
+PASS: substep-4 admission count = 2 named primitives
+PASS: substep-4 inventory does not introduce P
+PASS: named-primitive pattern source cited: #725
+PASS: named-primitive pattern source cited: #728
+PASS: named-primitive pattern source cited: #729
+PASS: named-primitive pattern source cited: #790
+PASS: 30-probe campaign cited (#836 BAE synthesis)
+PASS: forbidden promotion absent: positive_theorem promotion of substep-4
+PASS: forbidden promotion absent: substep-4 retained closure declared
+PASS: forbidden promotion absent: AC_phi closed
+PASS: forbidden promotion absent: AC_phi_lambda closed
+PASS: forbidden promotion absent: BAE closed
+PASS: no PDG numerical mass values inserted as derivation input
+PASS: explicitly disclaims PDG-input use
+PASS: no new mathematical axiom added
+PASS: minimal axioms note has physical Cl(3) A1
+PASS: minimal axioms note has physical Z^3 A2
+PASS: retained_bounded ratchet path described
+PASS: audit-lane authority preserved
+PASS: Planck P1 substrate-to-carrier consumer cited
+PASS: Planck P3 orientation principle consumer cited
+PASS: L3a consumer mentioned
+PASS: CLOSURE PROPOSAL outcome stated
+PASS: STRUCTURAL OBSTRUCTION outcome stated
+PASS: SHARPENED outcome stated
+PASS: cross-references: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE
+PASS: cross-references: KOIDE_BAE_30_PROBE_CAMPAIGN_TERMINAL_SYNTHESIS
+PASS: cross-references: BRANNEN_AMPLITUDE_EQUIPARTITION_BAE_RENAME_META_NOTE
+PASS: cross-references: PHYSICAL_LATTICE_FOUNDATIONAL_INTERPRETATION_NOTE
+PASS: cross-references: C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE
+PASS: cross-references: CONVENTIONS_UNIFICATION_COMPANION_NOTE
+PASS: cross-references: PLANCK_SUBSTRATE_TO_CARRIER_FORCING
+PASS: cross-references: PLANCK_ORIENTATION_PRINCIPLE
+PASS: cross-references: MINIMAL_AXIOMS_2026-05-03
+PASS: cross-references: cl3_staggered_dirac_substep4_ac_phi_lambda_rigorize_2026_05_09
+PASS: A3_ROUTE1 obstruction theorem cited
+PASS: A3_ROUTE5 obstruction theorem cited
+PASS: review-loop rule present
+PASS: user-memory feedback alignment cited: feedback_consistency_vs_derivation_below_w2
+PASS: user-memory feedback alignment cited: feedback_hostile_review_semantics
+PASS: user-memory feedback alignment cited: feedback_retained_tier_purity_and_package_wiring
+PASS: user-memory feedback alignment cited: feedback_physics_loop_corollary_churn
+PASS: user-memory feedback alignment cited: feedback_review_loop_source_only_policy
+PASS: explicitly explains not corollary churn
+PASS: differentiates from #836 BAE synthesis
+PASS: AC_phi structural bar honestly stated
+PASS: AC_phi_lambda structural bar honestly stated
+PASS: BAE expanded as Brannen Amplitude Equipartition
+PASS: BAE shorthand used
+PASS: P1 ratchet implication stated
+PASS: P3 ratchet implication stated
+
+=== TOTAL: PASS=60, FAIL=0 ===
+Substep-4 ratchet via named primitives check passed: AC_phi and AC_phi_lambda are named primitives matching the BAE+P campaign-terminal inventory; no new axiom; no theorem promotion; audit-lane authority preserved.

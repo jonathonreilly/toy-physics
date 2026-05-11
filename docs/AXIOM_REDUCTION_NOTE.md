@@ -1,20 +1,86 @@
 # Axiom Reduction: Honest Minimal Assumption Inventory
 
-**Date:** 2026-04-12
-**Purpose:** document counting every assumption in the framework. The point is
-to be explicit about what is assumed versus what is derived.
+**Date:** 2026-04-12 (originally); 2026-05-10 (audit-narrowing as
+`audited_conditional`: explicit `claim_type: meta` framing as
+inventory-only under named upstream pending derivation rows).
+**Purpose:** document counting every assumption in the framework. The
+point is to be explicit about what is assumed versus what is derived.
+**Claim type:** meta
+**Status authority:** independent audit lane only.
+**Authority role:** records a meta-inventory of named in-flight
+derivation-target rows. Explicitly **does not** propose retained,
+bounded, or positive-theorem promotion for any of the listed D-row
+items, and **does not** itself constitute a derivation closure.
+
+## Audit boundary
+
+The 2026-05-05 audit recorded the verdict `audited_conditional` with
+load-bearing class E (sentence-level meta narrative). The audit
+identified that this note's "derived" labels for D1–D10 are stated as
+meta-inventory summaries rather than as in-note bridge derivations or
+runner certificates. The 2026-05-10 audit-narrowing refresh adopts an
+explicit `claim_type: meta` framing: the note is an **inventory** of
+named D-row derivation-target rows, not a closure of the listed
+derivations.
+
+**Cited authorities (one-hop deps; cited as related, not as
+in-note closure):**
+
+The D-row "derived" labels in this note are summary annotations for the
+following authority surfaces, each of which carries its own audit verdict
+on `main`. None is closed in this note:
+
+- D1 (complex amplitudes) / D2 (linear superposition) / D3 (Born rule):
+  related surface
+  [`BORN_RULE_ANALYSIS_2026-04-11.md`](BORN_RULE_ANALYSIS_2026-04-11.md)
+  (`audit_status: unaudited`). Cited as related, not as authority
+  closure.
+- D5 (Poisson field equation) / Poisson uniqueness:
+  related surface
+  [`POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
+  (`audit_status: unaudited`). Cited as related, not as authority
+  closure.
+- D6 (valley-linear action) / D7 (coupling normalization) / D8
+  (conformal metric):
+  related surfaces
+  [`VALLEY_LINEAR_ACTION_NOTE.md`](VALLEY_LINEAR_ACTION_NOTE.md),
+  [`VALLEY_LINEAR_ROBUSTNESS_NOTE.md`](VALLEY_LINEAR_ROBUSTNESS_NOTE.md),
+  [`VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
+  (each `audit_status: unaudited`). Cited as related, not as authority
+  closure.
+
+**Admitted-context derivation gap (real, not import-redirect):**
+
+This note explicitly admits that the D1–D10 reductions listed below are
+**not** closed in-note. None of the related authority surfaces named
+above currently carries an `audited_clean` retained-grade derivation on
+`main`; there is therefore **no** upstream authority closure for the
+reduction labels used in Part 1.
+
+The note's contribution is the **inventory**: naming each ingredient,
+recording the legacy inventory rows it is (heuristically) reduced to, and
+naming the authority surface where the corresponding derivation is
+in-flight. The "Derived" column is an inventory label, not a positive
+in-note closure of the row.
+
+This is a **real derivation gap**, not a dependency-citation issue.
+Promotion of any D-row to a retained-grade derivation requires the
+corresponding authority surface to close on its own audit row.
 
 ---
 
 ## Part 1: Complete Inventory of All Assumptions
 
-Every ingredient the framework uses, with no omissions:
+Every ingredient the framework uses, with no omissions. The "Type" /
+"Description" columns are inventory labels referring to in-flight
+authority surfaces; they are **not** in-note derivations (see "Audit
+boundary" above).
 
 | # | Ingredient | Type | Description |
 |---|-----------|------|-------------|
 | A1 | Discrete graph | **Axiom** | Reality is a set of nodes with pairwise directed edges (a DAG or lattice). This is the substrate. |
 | A2 | Unitarity | **Axiom** | Probability is conserved: the propagator preserves total amplitude norm. Equivalently, amplitudes propagate linearly. |
-| C1 | d = 3 spatial dimensions | **Choice** | The graph is embedded in or has the topology of 3D space. Not derived from A1+A2. |
+| C1 | d = 3 spatial dimensions | **Choice** | The graph is embedded in or has the topology of 3D space. Not derived from the two legacy inventory rows. |
 | D1 | Complex amplitudes on edges | **Derived from A2** | Linear probability-conserving propagation on a graph requires complex amplitudes (real amplitudes cannot produce interference; see below). |
 | D2 | Linear superposition | **Derived from A2** | Unitarity on a graph IS linearity of the propagator. Nonlinear propagation breaks both Born rule and gravity sign simultaneously. |
 | D3 | Born rule (pairwise interference) | **Derived from D2** | For a linear propagator, the Sorkin parameter I_3 = 0 identically. This is a mathematical theorem, not a physical assumption. |
@@ -253,30 +319,46 @@ Even with the honest 2+1 count, several questions remain:
 
 ---
 
-## Part 7: Recommended Framing for Publication
+## Part 7: Recommended Framing for Publication (under audit-narrowed scope)
 
-**Do say:**
+The recommended framing below is conditional on the named upstream
+authority surfaces in "Audit boundary" closing on their own audit rows.
+This note itself does not close any of those surfaces; it records the
+inventory only.
+
+**Do say (only when the named upstream authority rows close clean):**
 - "The framework has two axioms (graph + unitarity) and one dimensional
   choice (d=3)."
-- "All other ingredients (Born rule, Poisson field equation, valley-linear
-  action, conformal metric, M1*M2 product law) are derived from
-  self-consistency or forced by the requirement of attractive Newtonian
-  gravity."
+- "Other ingredients (Born rule, Poisson field equation, valley-linear
+  action, conformal metric, `M1*M2` product law) have in-flight
+  derivation-target rows naming self-consistency or attraction-and-mass-
+  law constraints; each is recorded with a separate authority surface
+  (see Audit boundary)."
 - "The framework has zero continuous free parameters."
 
 **Do not say:**
-- "Two axioms derive all of gravity." (Omits the dimensional choice.)
+- "Two axioms derive all of gravity." (Omits the dimensional choice and
+  the named upstream pending derivation rows.)
 - "The Born rule is predicted." (It is a mathematical consequence of the
   assumed linearity, which is itself a consequence of unitarity. Saying
   "predicted" implies it could have come out differently, which it cannot
   for a linear propagator.)
-- "Poisson is derived from first principles." (It is derived from
-  self-consistency ON a nearest-neighbor lattice. The lattice structure
-  is part of A1.)
+- "Poisson is derived from first principles." (The current authority
+  surface
+  [`POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
+  is `unaudited`; the in-flight derivation is on a nearest-neighbor
+  lattice, where the lattice structure is part of A1.)
+- "This note discharges the D1–D10 reductions." (It does not. It is a
+  meta-inventory; the D-row derivations are upstream authority surfaces
+  with their own audit rows.)
 
-**The strongest honest claim:**
-Two axioms and one discrete choice (d=3) produce Newtonian gravity with
-the correct mass law, distance law, equivalence principle, time dilation,
-light bending factor of 2, and Born rule, with zero continuous free
-parameters. This is a significantly more minimal starting point than any
-competing framework.
+**The strongest honest claim (conditional):**
+Two axioms and one discrete choice (d=3) plus the named upstream pending
+derivation rows produce Newtonian gravity with the correct mass law,
+distance law, equivalence principle, time dilation, light bending factor
+of 2, and Born rule, with zero continuous free parameters. This is a
+significantly more minimal starting point than competing frameworks
+**when the named upstream authority surfaces close**. This note records
+the inventory; promotion of any item to a retained-grade derivation
+requires the corresponding authority surface to close on its own audit
+row.

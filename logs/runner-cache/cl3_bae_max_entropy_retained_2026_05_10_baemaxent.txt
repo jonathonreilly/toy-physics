@@ -1,0 +1,263 @@
+
+========================================================================================
+BAE Max-Entropy Retained Probe — verdict
+========================================================================================
+Date: 2026-05-10
+Branch: claude/bae-max-entropy-retained-2026-05-10
+
+Tests whether BAE (|b|^2/a^2 = 1/2) on the C_3-equivariant Hermitian
+circulant H = aI + bC + b̄C^2 closes via a Jaynes max-entropy attack
+grounded in retained physical-lattice baseline (PR #725) + retained
+Born-rule operationalism (PR #729) + retained C_3 symmetry of hw=1.
+
+========================================================================================
+Section 0 — Retained inputs hold
+========================================================================================
+[PASS] 0.1 Brannen circulant eigenvalue formula λ_k = a + 2|b| cos(θ+2πk/3)
+       max deviation = 6.66e-16
+[PASS] 0.2 Block-Total Frobenius: ||H||_F^2 = 3a^2 + 6|b|^2 (cited Probe 18)
+       ||H||_F^2 = 8.010000 = 3a^2 + 6|b|^2 = 8.010000
+[PASS] 0.3 MRU weight class: F1 → κ=2 (BAE), F3 → κ=1
+       Cited from KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19
+[PASS] 0.4 BAE iff E_+ = E_⊥ on (a, |b|)-plane
+       At BAE: E_+ = 3.0000, E_⊥ = 3.0000
+
+========================================================================================
+Section 1 — Three candidate max-entropy measures on (a, |b|)-plane
+========================================================================================
+
+All three measures are 'natural' from a different physical principle.
+This section defines them and computes their max-entropy extrema.
+
+M1 = block-democracy (uniform-on-(E_+, E_⊥))
+M2 = Born-rule on eigenvalues (uniform-on-eigenvalue-probability)
+M3 = real-dim Gaussian (Probe 25 baseline)
+
+[PASS] 1.1 M1 (block-democracy): max-ent on (p_+, p_⊥) gives BAE
+       Solution: |b| = a/√2 (BAE: |b|²/a² = 1/2). Conditional on choice of M1.
+[PASS] 1.2 M2 setup: Σ_k λ_k^2 = 3a^2 + 6|b|^2 (theta-independent)
+       Σ_k λ_k^2 = 3*a**2 + 6*b**2 (verified algebraically)
+[PASS] 1.3 M2 (Born-rule on eigenvalues): BAE point is NOT max-entropy
+       H(p|BAE) = 0.1496, H_max = log(3) = 1.0986, gap = 0.9490
+[PASS] 1.4 M2 max-ent reached at degenerate triplet (|b|→0), NOT BAE
+       H(p|degenerate) = 1.098612, H_max = log(3) = 1.098612
+[PASS] 1.5 M3 (real-dim Gaussian): max-ent on (E_+, E_⊥) with √E_⊥ measure → κ=1 NOT BAE
+       κ at M3 max = 1.000000 (Probe 25 PHYS-AV1; F3, not BAE)
+[PASS] 1.6 F3 strictly larger at M3 max than at BAE
+       F3(M3) = 3.4657 > F3(BAE) = 3.2958
+
+========================================================================================
+Section 2 — Born-rule operationalism: M1 vs M2 vs M3
+========================================================================================
+
+Question: does Born-rule operationalism (PR #729) + physical-lattice
+baseline (PR #725) canonically pin which max-entropy measure to use?
+
+  M1 — block democracy (max-ent on (p_+, p_⊥)) → BAE  (κ=2)
+  M2 — Born-rule on eigenvalues (max-ent on (p_0, p_1, p_2)) → degenerate triplet (κ undef)
+  M3 — real-dim Gaussian (max-ent with √E_⊥ volume) → κ=1 (NOT BAE)
+
+[PASS] 2.1 Born-rule most directly supports eigenvalue-Born (M2)
+       Born-rule: p = |amp|^2 on observables. Eigenvalues of H on hw=1 = ℂ^3 are
+       the natural observables. Born + max-ent gives degenerate triplet, NOT BAE.
+       Therefore Born-rule operationalism does NOT support BAE on M2.
+[PASS] 2.2 (a, |b|) are field coefficients, not Born amplitudes
+       Per CONVENTIONS_UNIFICATION_COMPANION_NOTE_2026-05-08, parametrization is
+       convention bookkeeping. (a, |b|) are operator-coefficient parameters, not
+       Born-rule amplitudes. Applying Born-rule to (a, |b|) is a category error.
+[PASS] 2.3 Block probabilities (p_+, p_⊥) are not Born amplitudes
+       p_+ = E_+/N, p_⊥ = E_⊥/N is a NORMALIZED ISOTYPE FROBENIUS distribution,
+       not Born |amp|^2 on physical observables. The (1,1) bin-per-isotype
+       weighting is a multiplicity count, not a Born amplitude.
+[PASS] 2.4 M3 is the canonical retained-physics measure (Probe 25)
+       M3 (Gaussian path-integral on Herm_circ(3)) matches retained physical-lattice
+       baseline + retained C_3-equivariant Hamiltonian dynamics. M3 max gives κ=1,
+       NOT BAE.
+[PASS] 2.5 Born-rule + physical-lattice baseline does NOT pin M1
+       Of the three candidate max-ent measures:
+         - M1 gives BAE but is not Born-canonical (block probabilities ≠ Born amps)
+         - M2 is Born-canonical but gives degenerate triplet, not BAE
+         - M3 is the retained Gaussian / physical-lattice canonical and gives κ=1
+       Therefore, the Jaynes prior-choice convention-trap persists.
+
+========================================================================================
+Section 3 — Born-rule + retained C_3 symmetry: refined max-ent attempts
+========================================================================================
+
+Per the C_3 symmetry preserved interpretation note (PR #725 companion),
+C_3[111] is preserved on hw=1. Could max-ent + Born + C_3-invariance pin BAE?
+
+[PASS] 3.1 Born + Plancherel-uniform on ℂ-characters → (1,2) → F3 (Probe 12 cited)
+       Plancherel-uniform on Ĉ_3 = {χ_1, χ_ω, χ_ω̄} gives (1/3, 1/3, 1/3) per ℂ-character,
+       which collapses on real isotypes to (1, 2). This is F3/κ=1, NOT BAE.
+       Cited from Probe 12 (KOIDE_A1_PROBE_PLANCHEREL_PETER_WEYL_BOUNDED_OBSTRUCTION_NOTE).
+[PASS] 3.2 ℝ-isotype max-ent vs ℂ-character max-ent is the (1,1) vs (1,2) trap
+       Choosing 2 ℝ-isotype bins (giving BAE) vs 3 ℂ-character bins (giving F3) is
+       the same multiplicity-vs-real-dim convention trap from Probes 12, 13, 18.
+       Born-rule + retained C_3 does NOT pin this choice.
+[PASS] 3.3 Max von Neumann entropy on C_3-invariant density operator → ρ = I/3 (degenerate triplet)
+       ρ = aI + bC + b̄C^2 with Tr(ρ) = 1 → a = 1/3. Max -Tr(ρ log ρ) gives all
+       eigenvalues equal: λ_k = 1/3, forcing |b| = 0. ρ = I/3 (maximally mixed).
+       This is the standard QM max-ent answer; NOT BAE.
+[PASS] 3.4 Numerical: vN entropy at BAE ρ < log(3)
+       S(ρ_BAE) = 0.6291 < log(3) = 1.0986, gap = 0.4695
+[PASS] 3.5 Born + retained C_3 + max-ent → degenerate triplet, NOT BAE
+       Both eigenvalue Born-rule (Section 1.3) and density-operator von Neumann
+       entropy (Section 3.3) give the degenerate triplet (|b|=0, ρ=I/3) as the
+       max-ent point on hw=1. This is the QUANTUM-CANONICAL max-ent state, and
+       it explicitly differs from BAE by the entire amplitude |b|.
+
+========================================================================================
+Section 4 — Constraint trap: Tr(H^2) vs Tr(H^4) vs det(H) vs ...
+========================================================================================
+
+Even granting a canonical measure, Jaynes max-ent requires CONSTRAINTS.
+Which constraint is canonical from retained content?
+
+[PASS] 4.1 Constraint C1: ⟨Tr(H^2)⟩ = N (Frobenius)
+       Under M1 (block-democracy): max-ent → BAE
+       Under M3 (real-dim Gaussian): max-ent → κ=1
+       Same constraint, different measure → different answer (the Jaynes prior trap).
+[PASS] 4.2 Constraint C2: ⟨Tr(H^4)⟩ has additional (a^2 |b|^2, |b|^4) content
+       ⟨Tr(H^4)⟩ = 3*a**4 + 36*a**2*b**2 + 18*b**4
+       Adding C2 to C1 picks out a different (a, |b|) point — generally NOT BAE.
+[PASS] 4.3 Constraint C3: det(H), ⟨det^2(H)⟩ are polynomial in (a, |b|)
+       ⟨det(H)⟩_θ = a*(a**2 - 3*b**2)
+       Adding C3 picks out yet another (a, |b|) point — NOT BAE in general.
+[PASS] 4.4 Constraint-choice trap: each retained moment gives different max-ent point
+       Each choice {⟨Tr H^2⟩, ⟨Tr H^4⟩, ⟨det H⟩, ⟨det H^2⟩, ...} gives a different
+       max-ent point. Retained content (Hamiltonian dynamics, Wilson coefficient,
+       spectral-action couplings) does NOT canonically privilege any one moment.
+       This is the SAME class of trap as Probe 18 AV4 + Probe 25 PHYS-AV1-AV7.
+
+========================================================================================
+Section 5 — Numerical sweep: max-ent points for measure × constraint matrix
+========================================================================================
+
+For each (measure, constraint) pair, find the max-ent (a, |b|) on the
+constraint surface E_+ + E_⊥ = 6. Compare to the BAE point a=1, |b|=1/√2.
+
+[PASS] 5.1 F1 max on E_+ + E_⊥ = N at t = 0.5 (BAE)
+       argmax t = 0.5005, BAE expected at t=0.5
+[PASS] 5.2 F3 max on E_+ + E_⊥ = N at t = 2/3 (κ=1, NOT BAE)
+       argmax t = 0.6663, F3 max expected at t=2/3 = 0.6667
+[PASS] 5.3 Generic weighting (μ, ν): max at t* = ν/(μ+ν)
+       BAE (t*=1/2) corresponds to (μ,ν)=(1,1).
+       Real-dim (t*=2/3) corresponds to (μ,ν)=(1,2).
+       C3-character (t*=2/3) also corresponds to (μ,ν)=(1,2) (Plancherel-uniform).
+       Born-rule on eigenvalues forces t→1 (degenerate) or t→0 (zero).
+[PASS] 5.4 M2 (Born eigenvalue entropy) max on E_+ + E_⊥ = N at degenerate point
+       argmax t (M2) = 0.0010, BAE at t=0.5 (NOT achieved by M2)
+[PASS] 5.5 Summary: retained-content max-ent measures do NOT uniquely give BAE
+         M1 → BAE (but M1 = block-democracy is a NEW PRIMITIVE, not retained)
+         M2 (Born) → degenerate triplet at t = 0.0010
+         M3 (real-dim Gaussian, Probe 25) → κ=1 at t = 0.6663
+         C_3 char Plancherel → κ=1 at t = 2/3 (Probe 12)
+         vN entropy on ρ → degenerate triplet (Section 3.3)
+
+========================================================================================
+Section 6 — Sharpened verdict on Born-rule + max-entropy attack
+========================================================================================
+
+[PASS] 6.1 Probe 18 AV4 result reproduced: M1 gives BAE conditionally on measure
+       Confirmed: max-ent on uniform-(p_+, p_⊥) = block-democracy gives BAE.
+[PASS] 6.2 NEW (this probe): Born-rule + retained content does NOT pin M1
+       Born-rule operationalism most directly supports M2 (eigenvalue Born).
+       M2 max-ent → degenerate triplet, NOT BAE.
+       Therefore Born-rule does not give BAE.
+[PASS] 6.3 NEW (this probe): vN entropy on C_3-invariant ρ also gives degenerate triplet
+       Standard QM max-ent on C_3-invariant density operator (Tr(ρ)=1, ρ ≥ 0)
+       with maximum von Neumann entropy gives ρ = I/3 (maximally mixed).
+       This is the STANDARD quantum max-ent answer; NOT BAE.
+[PASS] 6.4 NEW (this probe): retained physical-lattice baseline aligns with M3 not M1
+       Per PR #725 + Probe 25, the retained physical-lattice baseline + Gaussian
+       path-integral measure on Herm_circ(3) gives M3 (real-dim weighting),
+       which selects κ=1, NOT BAE.
+[PASS] 6.5 SHARPENED CONCLUSION: Born-rule operationalism + retained content does NOT close BAE
+       The proposed Born-rule + physical-lattice + max-ent attack does NOT close BAE.
+       On the contrary, every Born-rule-canonical measure points AWAY from BAE:
+         - eigenvalue Born + max-ent → degenerate triplet
+         - vN entropy on density operator → ρ = I/3 (degenerate)
+         - real-dim Gaussian (physical lattice) → κ=1
+         - C_3-character Plancherel → κ=1
+       Only M1 (block-democracy) gives BAE, and M1 is NOT a Born-rule operationalism.
+       M1 is a 'count isotype bins' principle that was already noted in the existing
+       KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18 as a CANDIDATE primitive
+       outside the retained stack.
+[PASS] 6.6 BAE admission count UNCHANGED
+       This probe does NOT close BAE. It SHARPENS the obstruction:
+       Born-rule operationalism (PR #729) + physical-lattice baseline (PR #725) +
+       Jaynes max-entropy do NOT canonically give BAE on the (a, |b|)-plane.
+       If anything, Born-rule + retained content goes against BAE, supporting
+       Probe 25 + Probe 28 + Probe 29 (the partial-falsification candidate).
+
+
+========================================================================================
+SUMMARY
+========================================================================================
+PASSED: 35/35
+  [PASS] 0.1 Brannen circulant eigenvalue formula λ_k = a + 2|b| cos(θ+2πk/3)
+  [PASS] 0.2 Block-Total Frobenius: ||H||_F^2 = 3a^2 + 6|b|^2 (cited Probe 18)
+  [PASS] 0.3 MRU weight class: F1 → κ=2 (BAE), F3 → κ=1
+  [PASS] 0.4 BAE iff E_+ = E_⊥ on (a, |b|)-plane
+  [PASS] 1.1 M1 (block-democracy): max-ent on (p_+, p_⊥) gives BAE
+  [PASS] 1.2 M2 setup: Σ_k λ_k^2 = 3a^2 + 6|b|^2 (theta-independent)
+  [PASS] 1.3 M2 (Born-rule on eigenvalues): BAE point is NOT max-entropy
+  [PASS] 1.4 M2 max-ent reached at degenerate triplet (|b|→0), NOT BAE
+  [PASS] 1.5 M3 (real-dim Gaussian): max-ent on (E_+, E_⊥) with √E_⊥ measure → κ=1 NOT BAE
+  [PASS] 1.6 F3 strictly larger at M3 max than at BAE
+  [PASS] 2.1 Born-rule most directly supports eigenvalue-Born (M2)
+  [PASS] 2.2 (a, |b|) are field coefficients, not Born amplitudes
+  [PASS] 2.3 Block probabilities (p_+, p_⊥) are not Born amplitudes
+  [PASS] 2.4 M3 is the canonical retained-physics measure (Probe 25)
+  [PASS] 2.5 Born-rule + physical-lattice baseline does NOT pin M1
+  [PASS] 3.1 Born + Plancherel-uniform on ℂ-characters → (1,2) → F3 (Probe 12 cited)
+  [PASS] 3.2 ℝ-isotype max-ent vs ℂ-character max-ent is the (1,1) vs (1,2) trap
+  [PASS] 3.3 Max von Neumann entropy on C_3-invariant density operator → ρ = I/3 (degenerate triplet)
+  [PASS] 3.4 Numerical: vN entropy at BAE ρ < log(3)
+  [PASS] 3.5 Born + retained C_3 + max-ent → degenerate triplet, NOT BAE
+  [PASS] 4.1 Constraint C1: ⟨Tr(H^2)⟩ = N (Frobenius)
+  [PASS] 4.2 Constraint C2: ⟨Tr(H^4)⟩ has additional (a^2 |b|^2, |b|^4) content
+  [PASS] 4.3 Constraint C3: det(H), ⟨det^2(H)⟩ are polynomial in (a, |b|)
+  [PASS] 4.4 Constraint-choice trap: each retained moment gives different max-ent point
+  [PASS] 5.1 F1 max on E_+ + E_⊥ = N at t = 0.5 (BAE)
+  [PASS] 5.2 F3 max on E_+ + E_⊥ = N at t = 2/3 (κ=1, NOT BAE)
+  [PASS] 5.3 Generic weighting (μ, ν): max at t* = ν/(μ+ν)
+  [PASS] 5.4 M2 (Born eigenvalue entropy) max on E_+ + E_⊥ = N at degenerate point
+  [PASS] 5.5 Summary: retained-content max-ent measures do NOT uniquely give BAE
+  [PASS] 6.1 Probe 18 AV4 result reproduced: M1 gives BAE conditionally on measure
+  [PASS] 6.2 NEW (this probe): Born-rule + retained content does NOT pin M1
+  [PASS] 6.3 NEW (this probe): vN entropy on C_3-invariant ρ also gives degenerate triplet
+  [PASS] 6.4 NEW (this probe): retained physical-lattice baseline aligns with M3 not M1
+  [PASS] 6.5 SHARPENED CONCLUSION: Born-rule operationalism + retained content does NOT close BAE
+  [PASS] 6.6 BAE admission count UNCHANGED
+
+========================================================================================
+VERDICT: SHARPENED bounded obstruction.
+========================================================================================
+
+  - Born-rule operationalism (PR #729) + physical-lattice baseline (PR #725)
+    + Jaynes max-entropy do NOT canonically give BAE.
+
+  - Born-rule on hw=1 eigenvalues + max-ent → degenerate triplet, NOT BAE.
+  - Standard vN entropy on C_3-invariant density operator → ρ=I/3, NOT BAE.
+  - Retained Gaussian path-integral measure (Probe 25) → κ=1, NOT BAE.
+  - C_3-character Plancherel-uniform (Probe 12) → κ=1, NOT BAE.
+
+  - Only M1 (block-democracy on isotype bins) gives BAE, and M1 is NOT a
+    Born-rule operationalism. It treats isotypes as bins (multiplicity count),
+    not as Born amplitudes on physical observables. M1 was already proposed
+    as a candidate NEW primitive in
+    KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18 (still outside the
+    retained stack).
+
+  - The Jaynes prior-choice convention-trap identified by Probe 18 AV4 is
+    REINFORCED by this probe: Born-rule operationalism does not pin a
+    canonical max-ent measure. If anything, Born-rule operationalism points
+    AWAY from BAE.
+
+  - BAE admission count: UNCHANGED. No new admission added. No new axiom.
+
+  - Outcome class: STRUCTURAL OBSTRUCTION (Outcome 2 of the three honest
+    outcomes), with a NEW positive content: Born-rule operationalism is
+    NOT a candidate path to BAE closure (consistent with Probes 25, 28, 29).

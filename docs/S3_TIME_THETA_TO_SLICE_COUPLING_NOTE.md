@@ -44,10 +44,13 @@ slice backbone, or readout map.
   authority and as the canonical statement of the open obstruction this
   row inherits.
 - [`QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
-  (`claim_type: no_go`, `audit_status: audited_clean`) — companion
+  (`claim_type: no_go`, `audit_status: audited_conditional` as of the
+  2026-05-10 fresh audit; previously `audited_clean`) — companion
   source-domain bridge no-go on the same Route-2 arm; cited for
   cross-confirmation that the readout-map blocker is not bypassed by a
-  source-domain detour.
+  source-domain detour, with the source-domain typed-edge inventory now
+  flagged as configured (hard-coded in the runner) rather than derived.
+  This row inherits that conditional status; it does not bypass it.
 
 **Admitted-context derivation gap (real, not import-redirect):**
 

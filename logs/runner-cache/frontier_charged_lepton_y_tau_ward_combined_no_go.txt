@@ -1,0 +1,68 @@
+==============================================================================
+CHARGED-LEPTON y_tau WARD IDENTITY COMBINED NO-GO
+Verification of Cycles 2 + 3 + 4 + 5 combined obstruction
+==============================================================================
+
+==============================================================================
+PART SA-A: SU(N_c) FIERZ FACTOR sqrt(2 N_c) ON (2, 3) BLOCK
+==============================================================================
+  [PASS] SU(N_c=3) fundamental: Tr(T^1 T^1) = 1/2  (Tr(T^1 T^1) = (0.5+0j))
+  [PASS] SU(N_c=3) fundamental: Tr(T^2 T^2) = 1/2  (Tr(T^2 T^2) = (0.5+0j))
+  [PASS] SU(N_c=3) fundamental: Tr(T^3 T^3) = 1/2  (Tr(T^3 T^3) = (0.5+0j))
+  [PASS] SU(N_c=3) fundamental: Tr(T^1 T^2) = 0 (off-diagonal)  (|Tr(T^1 T^2)| = 0.00e+00)
+  [PASS] SU(N_c=3) fundamental: Tr(T^1 T^3) = 0 (off-diagonal)  (|Tr(T^1 T^3)| = 0.00e+00)
+  [PASS] YT-lane factor 1/sqrt(2 N_c) = 1/sqrt(6) at N_c = 3  (1/sqrt(2*3) = 0.4082482905)
+  [PASS] Lepton (2, 1) block is color-singlet (N_c-rep dim = 1)  (by construction: e_R is SU(3) singlet, L_L is SU(3) singlet)
+  [PASS] Color-singlet rep has no nontrivial T^a generators -> no SU(N_c) Fierz analog  (the (2, 1) block lacks the structural primitive that produces the YT-lane sqrt(6) factor)
+
+==============================================================================
+PART SA-B: U(1)_Y IS ABELIAN -> NO FIERZ sqrt-RATIONAL FACTOR
+==============================================================================
+  [PASS] Yukawa hypercharge sum -Y(L_L) + Y(H) + Y(e_R) = 0 (gauge invariant)  (-(-1) + 1 + (-2) = 0)
+  [PASS] U(1)_Y product Y(L_L) Y(H) Y(e_R) is rational (not sqrt-rational)  (product = 2)
+  [PASS] U(1)_Y sum-of-squares is rational (not sqrt-rational)  (sum_Y^2 = 6)
+  [PASS] YT-lane sqrt(2 N_c) = sqrt(6) is irrational (sqrt-rational with non-square radicand)  (6 is not a perfect square; sqrt(6) is irrational)
+  [PASS] U(1) construction cannot produce sqrt(6): rationals stay rational under multiplication / sum  (abelian Fierz reduces to Y_i Y_j; no irrational factor emerges)
+
+==============================================================================
+PART M3: EW LATTICE A^4 = 4/9 IS WOLFENSTEIN, NOT ALTERNATING GROUP
+==============================================================================
+  [PASS] sin^2(theta_W) simplifies to (d+1)/(2d+3) symbolically  (sympy.simplify result: (d + 1)/(2*d + 3))
+  [PASS] At d = 3: sin^2(theta_W) = 4/9  (sympy.simplify result: 4/9)
+  [PASS] Wolfenstein A^4 = (2/3)^2 = 4/9 (algebraic identity)  (A^4 = (A^2)^2 = (2/3)^2 = 4/9)
+  [PASS] Alternating group A_4 has order 12 (4!/2)  (|A_4| = 12)
+  [PASS] Alternating group A_4 irrep dimension squares sum to 12 (= |A_4|)  (sum d_i^2 = 1 + 1 + 1 + 9 = 12)
+  [PASS] Alternating group A_4 structural quantities (12, 1, 1, 1, 3) are unrelated to 4/9  (no representation-theoretic A_4 quantity equals 4/9)
+
+==============================================================================
+PART M4: ANOMALY CANCELLATION DOES NOT FIX YUKAWA COEFFICIENTS
+==============================================================================
+  [PASS] Allowed monomial bar L_L H e_R: hypercharge sum = 0  (sum = 0)
+  [PASS] Rejected monomial bar L_L tilde H e_R: hypercharge sum = -2 (forbidden)  (sum = -2 (nonzero -> rejected))
+  [PASS] Y_e matrix entries (i, j) all have identical hypercharge sum -> Y_e free  (Y_e is unconstrained 3x3 complex; sample diagonal abs = [np.float64(0.9058346654131911), np.float64(2.2532667498661265), np.float64(0.9590297811153047)])
+
+==============================================================================
+PART M5: N_gen = N_color = 3 IS INTEGER-COUNTING (NOT YUKAWA)
+==============================================================================
+  [PASS] N_gen = 3 (retained, three-generation matter cluster)  (anomaly-forced + hw=1)
+  [PASS] N_color = 3 (retained, CKM_MAGNITUDES_STRUCTURAL_COUNTS)  (QCD color count)
+  [PASS] N_gen = N_color = 3 (integer equality)  (integer-valued retained equality)
+  [PASS] Auxiliary (N - 1) / N^2 = 2/9 at N = 3 (numerical, not structural)  (aux = 2/9 = 2/9)
+  [PASS] Boundary: N_gen = N_color closure does NOT derive Yukawa coefficient  (per CKM_KOIDE_CROSS_SECTOR boundary statement)
+
+==============================================================================
+PART M6: hw = 1 THREE-GENERATION HAS NO RETAINED YUKAWA CONNECTION
+==============================================================================
+  [PASS] Cl(3) Clifford algebra has dim 2^3 = 8  (dim = 8)
+  [PASS] hw = 1 retained on three-generation matter cluster  (anomaly-forced + hw=1 structural assignment)
+  [PASS] No retained 'hw = 1 -> Yukawa coefficient' identity in framework  (post-2026-04-28 survey confirms absence (BAE Probe 23 is probe tier, not retained))
+
+==============================================================================
+PART SURVEY: RESEARCH-LEVEL PREREQUISITES ABSENT FROM RETAINED
+==============================================================================
+  [PASS] M5-a prerequisite: no retained-grade D17-prime authority on the (2, 1) lepton-doublet block  (candidates: lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10:bounded_theorem:unaudited:unaudited; retained-grade: none)
+  [PASS] M1 prerequisite: Koide Q V8 closure attempt is at support tier (not retained)  (V8 note exists; status line indicates support/retreat)
+
+==============================================================================
+COMBINED NO-GO VERIFICATION: PASS=32 FAIL=0
+==============================================================================

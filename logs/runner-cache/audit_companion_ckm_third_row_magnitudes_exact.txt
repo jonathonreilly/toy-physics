@@ -1,0 +1,83 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_third_row_magnitudes_theorem_note_2026-04-24
+Goal: sympy-symbolic verification of (R1), (R2), (R3) and the named
+cross-identities |V_ts|_0^2 = |V_cb|_0^2 and |V_td|_0^2 / |V_ub|_0^2 = 5
+at exact precision over a free symbolic alpha_s(v).
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported atlas inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s(v) = alpha_s
+  lambda^2 = alpha_s/2
+  A^2      = 2/3
+  rho      = 1/6
+  eta^2    = 5/36
+
+----------------------------------------------------------------------------------------
+Part 1: cited Thales/distance reduction (1 - rho)^2 + eta^2 = 5/6
+----------------------------------------------------------------------------------------
+  [PASS (B)] (1 - rho)^2 = 25/36 (rho = 1/6)  (sympy reduces (1 - 1/6)^2 - 25/36 to 0)
+  [PASS (B)] Thales-style distance: (1 - rho)^2 + eta^2 == 5/6 (exact rational)  (residual = 0)
+  [PASS (B)] Wolfenstein-A Thales identity: (1 - rho)^2 + eta^2 == 1 - rho  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (R1) |V_td|_0^2 = (5/72) alpha_s(v)^3 exact-symbolic
+----------------------------------------------------------------------------------------
+  [PASS (B)] (R1) |V_td|_0^2 == (5/72) alpha_s(v)^3 (parametric in alpha_s)  (residual = 0)
+  [PASS (B)] (R1) via Thales reduction: A^2 lambda^6 (1 - rho) == (5/72) alpha_s(v)^3  (residual = 0)
+  [PASS (B)] (R1) coefficient is the pure rational 5/72  (coefficient = 5/72)
+
+----------------------------------------------------------------------------------------
+Part 3: (R2) |V_ts|_0^2 = alpha_s(v)^2 / 6 exact-symbolic
+----------------------------------------------------------------------------------------
+  [PASS (B)] (R2) |V_ts|_0^2 == alpha_s(v)^2 / 6 (parametric in alpha_s)  (residual = 0)
+  [PASS (B)] (R2) coefficient is the pure rational 1/6  (coefficient = 1/6)
+
+----------------------------------------------------------------------------------------
+Part 4: (R3) |V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2 unitarity completion
+----------------------------------------------------------------------------------------
+  [PASS (B)] (R3) |V_tb|_0^2 == 1 - alpha_s^2/6 - 5 alpha_s^3/72 (parametric in alpha_s)  (residual = 0)
+  [PASS (B)] (R3) row sum |V_td|_0^2 + |V_ts|_0^2 + |V_tb|_0^2 == 1 (parametric)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: named cross-identities |V_ts|_0^2 = |V_cb|_0^2 and |V_td|_0^2/|V_ub|_0^2 = 5
+----------------------------------------------------------------------------------------
+  [PASS (B)] atlas-leading |V_ts|_0^2 == |V_cb|^2 (alpha_s^2 / 6)  (residual = 0)
+  [PASS (B)] atlas-leading |V_td|_0^2 / |V_ub|_0^2 == 5  (ratio = 5)
+  [PASS (B)] atlas-leading |V_td|_0 / |V_ub|_0 == sqrt(5)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at eta^2 = 0, |V_td|_0^2 != 5 alpha_s^3 / 72  (alternate form simplifies to 25*alpha_s**3/432)
+  [PASS (B)] counterfactual: at A^2 = 1, |V_ts|_0^2 = alpha_s^2/4 != alpha_s^2/6  (alternate form simplifies to alpha_s**2/4)
+  [PASS (B)] counterfactual: at lambda^2 = alpha_s, |V_ts|_0^2 = 2 alpha_s^2/3 != alpha_s^2/6  (alternate form simplifies to 2*alpha_s**2/3)
+
+----------------------------------------------------------------------------------------
+Part 7: trailing numerical sanity (canonical alpha_s pin)
+----------------------------------------------------------------------------------------
+  canonical alpha_s(v) = 0.103303816122267
+  atlas-leading |V_td|_0 = 0.0087497
+  atlas-leading |V_ts|_0 = 0.0421736
+  atlas-leading |V_tb|_0 = 0.9990720
+  [PASS (B)] atlas-leading |V_td|_0 ~ 0.0087497 at canonical alpha_s  (got 0.0087497)
+  [PASS (B)] atlas-leading |V_ts|_0 ~ 0.0421736 at canonical alpha_s  (got 0.0421736)
+  [PASS (B)] atlas-leading |V_tb|_0 ~ 0.999072 at canonical alpha_s  (got 0.9990720)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Thales-style distance: (1-rho)^2 + eta^2 == 5/6 == 1 - rho
+    (R1) |V_td|_0^2 == (5/72) alpha_s(v)^3 (parametric in alpha_s)
+    (R2) |V_ts|_0^2 == alpha_s(v)^2 / 6 (parametric in alpha_s)
+    (R3) |V_tb|_0^2 == 1 - |V_td|_0^2 - |V_ts|_0^2 unitarity completion
+    Cross: |V_ts|_0^2 == |V_cb|^2; |V_td|_0^2 / |V_ub|_0^2 == 5
+    Counterfactuals confirm eta^2 = 5/36, A^2 = 2/3, lambda^2 = alpha_s/2
+    are each individually load-bearing for the closed-form coefficients.
+
+========================================================================================
+TOTAL: PASS=19, FAIL=0
+========================================================================================

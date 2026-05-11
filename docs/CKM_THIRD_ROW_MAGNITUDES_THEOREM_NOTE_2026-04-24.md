@@ -148,17 +148,73 @@ This note does **not** claim:
   entries;
 - quark masses, hadronic matrix elements, or BSM flavor extensions.
 
+## Exact-symbolic verification
+
+The algebraic-substitution content of `(R1)`, `(R2)`, `(R3)` and the
+named cross-identities is certified at exact-symbolic precision via
+`sympy` in
+`scripts/audit_companion_ckm_third_row_magnitudes_exact.py`. The
+companion runner treats `alpha_s(v)` as a free positive real symbol,
+imports the upstream atlas inputs verbatim as exact `sympy.Rational`
+values, and checks each identity by computing
+`sympy.simplify(lhs - rhs)` and asserting the residual equals `0`
+exactly. The cited inputs themselves (`lambda^2 = alpha_s(v)/2`,
+`A^2 = 2/3`, `rho = 1/6`, `eta^2 = 5/36`, and the Thales reduction
+`(1-rho)^2 + eta^2 = 5/6`) are imported from upstream authority notes
+and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| Thales | `(1-rho)^2 + eta^2 == 5/6` | `sympy.simplify` residual `= 0` |
+| Thales (Wolfenstein-A form) | `(1-rho)^2 + eta^2 == 1 - rho` | `sympy.simplify` residual `= 0` |
+| `(R1)` | `A^2 lambda^6 ((1-rho)^2 + eta^2) == (5/72) alpha_s(v)^3` | `sympy.simplify` residual `= 0` |
+| `(R1)` via Thales | `A^2 lambda^6 (1 - rho) == (5/72) alpha_s(v)^3` | `sympy.simplify` residual `= 0` |
+| `(R2)` | `A^2 lambda^4 == alpha_s(v)^2 / 6` | `sympy.simplify` residual `= 0` |
+| `(R3)` | `|V_tb|_0^2 == 1 - alpha_s(v)^2/6 - 5 alpha_s(v)^3/72` | `sympy.simplify` residual `= 0` |
+| `(R3)` row sum | `|V_td|_0^2 + |V_ts|_0^2 + |V_tb|_0^2 == 1` | `sympy.simplify` residual `= 0` |
+| Cross | `|V_ts|_0^2 == |V_cb|^2` | exact rational coefficient `1/6` |
+| Cross | `|V_td|_0^2 / |V_ub|_0^2 == 5` | `sympy.simplify` ratio `= 5` |
+| Cross | `|V_td|_0 / |V_ub|_0 == sqrt(5)` | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes also confirm that the imported atlas inputs are
+each individually load-bearing for the closed-form coefficients:
+
+- substituting `eta^2 = 0` (rho-only, no CP region) collapses
+  `|V_td|_0^2` to `25 alpha_s(v)^3 / 432`, not `5 alpha_s(v)^3 / 72`,
+  so `eta^2 = 5/36` is what fixes the `5/72` coefficient on `(R1)`;
+- substituting `A^2 = 1` collapses `|V_ts|_0^2` to `alpha_s(v)^2 / 4`,
+  not `alpha_s(v)^2 / 6`, so `A^2 = 2/3` is what fixes the `1/6`
+  coefficient on `(R2)`;
+- substituting `lambda^2 = alpha_s(v)` (i.e. `n_pair = 1`) collapses
+  `|V_ts|_0^2` to `2 alpha_s(v)^2 / 3`, again not `alpha_s(v)^2 / 6`,
+  so `lambda^2 = alpha_s(v)/2` from the Wolfenstein lambda/A
+  subtheorem is also load-bearing.
+
+The structural relations are therefore exact-symbolic over the imported
+inputs and do not depend on the floating-point pin of `alpha_s(v)`. The
+canonical numerical value of `alpha_s(v)` from
+`scripts/canonical_plaquette_surface.py` enters only the trailing
+sanity-pin section of the companion runner, which is not load-bearing
+for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_third_row_magnitudes.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_third_row_magnitudes_exact.py
 ```
 
-Expected final flags:
+Expected final flags from the primary runner:
 
 ```text
 CKM_THIRD_ROW_ATLAS_IDENTITIES_RETAINED=TRUE
 CKM_THIRD_ROW_EXACT_ALL_ORDERS_MONOMIAL_CLAIM=FALSE
+```
+
+Expected exact-symbolic companion result:
+
+```text
+TOTAL: PASS=19, FAIL=0
 ```
 
 (Note: the runner-emitted flag `CKM_THIRD_ROW_ATLAS_IDENTITIES_RETAINED`

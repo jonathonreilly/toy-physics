@@ -1,0 +1,269 @@
+
+========================================================================
+Lane 2 S4b — EWSB-Selection Probe Runner (s4bewsb)
+========================================================================
+Source note: docs/HIGGS_MASS_S4B_EWSB_SELECTION_BOUNDED_NOTE_2026-05-10_s4bewsb.md
+u_0 = <P>^(1/4) = 0.877681
+v_EW (framework) = 246.3030 GeV
+m_H_tree = v_EW / (2 u_0) = 140.3146 GeV
+V''_taste(0) = -5.1926  (tachyonic)
+
+========================================================================
+B1.1  v_EW retained on hierarchy chain
+========================================================================
+Hier (COMPLETE_PREDICTION_CHAIN §3.2):
+   M_Pl  = 1.221e+19 GeV
+   (7/8)^(1/4) = 0.967168
+   alpha_LM = alpha_bare / u_0 = 9.066784e-02
+   alpha_LM^16 = 2.085701e-17
+   v_EW (framework) = M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.3030 GeV
+   PDG comparator: 246.2200 GeV (used ONLY for falsifiability)
+   relative deviation: +0.0337%
+  PASS  B1.1.a v_EW computed from framework chain (no PDG input)
+        v_EW = 246.3030 GeV; expected ~246.28 from cited chain
+  PASS  B1.1.b v_EW agrees with PDG to ≤ 0.1% (falsifiability anchor)
+        deviation +0.0337%; PDG 246.22 is comparator only
+  PASS  B1.1.c v_EW location is bounded-supported by retained Hier
+        Setting Born-trace evaluation point φ* = v_EW does not require new imports
+
+========================================================================
+B1.2  EWSB-Q (Q = T_3 + Y/2) ≠ Higgs-mass operator construction
+========================================================================
+EWSB-Q: <H> = (0, v/sqrt(2))^T, Y_H = +1, T_3 = sigma_3/2.
+   T_3 <H> = (1/2) diag(+1,-1) (0, v/sqrt(2))^T = (0, -v/(2 sqrt(2)))^T
+   = -(1/2) <H>
+   Y/2 <H> = +(1/2) * 1 * <H> = +(1/2) <H>
+   Q <H>   = T_3 <H> + (1/2) Y <H> = 0   [Q annihilates VEV]
+
+RANK / OPERATOR CLASS comparison:
+   Q domain      : SU(2) doublet (dim = 2)
+   Ô_{m_H^2} domain : physical Higgs Hilbert (dim = infinite (post-EWSB physical scalar))
+
+EWSB_PATTERN_FROM_HIGGS_Y §5 explicit admissions (NOT closed):
+   (i)  'The Higgs potential V(H†H) = -μ²H†H + λ(H†H)² form
+        (admitted SM convention)'
+   (ii) 'The VEV v magnitude (admitted external observable)'
+   (iii) 'The W/Z mass formulas (require Higgs kinetic term + EW mixing
+         angle)'
+
+=> EWSB-Q derives Q (charge generator); §5 admits Higgs potential FORM
+   not derived. So EWSB content selects WHICH gauge generator survives,
+   not WHAT the curvature operator is.
+  PASS  B1.2.a Q is a 2x2 generator on SU(2) doublet (not curvature operator)
+        Q = T_3 + Y/2 acts as Lie-algebra annihilation on <H>
+  PASS  B1.2.b SM Higgs potential form is admitted SM convention (not retained)
+        Per EWSB_PATTERN_FROM_HIGGS_Y §5 explicit admission
+  PASS  B1.2.c VEV magnitude per EWSB note §5 is admitted external observable
+        Note §5: 'The VEV v magnitude (admitted external observable)'
+  PASS  B1.2.d EWSB-Q gives generator selection, NOT Ô_{m_H²} construction
+        Charge-generator domain ≠ post-EWSB Higgs Hilbert curvature domain
+
+========================================================================
+B1.3  Lattice curvature at φ = v_EW equals symmetric-point V''(0)
+========================================================================
+Dimensionless lattice mass at v_EW location:
+   m̂_v = v_EW / M_Pl = 2.017224e-17
+   (m̂_v)^2 = 4.069191e-34
+   |λ̂|^2 = 4 u_0^2 = 3.081298
+   ratio (m̂_v / |λ̂|)^2 = 1.320609e-34
+
+V''_taste(0)  = -5.192616    [tachyonic, V'' < 0]
+V''_taste(v̂) = -5.192616    [tachyonic, V'' < 0]
+|V''(v̂) - V''(0)| = 0.000000e+00
+relative |Δ| = 0.000000e+00
+
+Analytical leading-order correction: 2 (m̂_v / |λ̂|)^2 = 2.641218e-34
+  PASS  B1.3.a V''_taste(0) is tachyonic (V'' < 0)
+        V''(0) = -5.1926 = -N_taste / λ² = -4/u_0²
+  PASS  B1.3.b V''_taste(0) = -4/u_0² (Eq [3] of HIGGS_MASS_FROM_AXIOM)
+        computed -5.192616, expected -5.192616
+  PASS  B1.3.c V''_taste(v̂) is also tachyonic
+        Re-evaluating at v_EW does not switch sign
+  PASS  B1.3.d V''_taste(v̂) = V''_taste(0) to relative precision < 10^{-30}
+        actual rel |Δ| = 0.000e+00
+  PASS  B1.3.e Leading-order correction matches analytical expansion
+        rel diff 0.000e+00 vs analytic 2.641e-34
+
+========================================================================
+B1.4  Hypothesis equation evaluated on retained content
+========================================================================
+Brief's hypothesis equation:
+   m_H^2 = Tr(Ω_v · ∂²V_lattice/∂φ²|_{φ=v_EW})
+
+Strict reading (only retained ρ̂ available is the symmetric
+phase ρ̂_lat(0); Ω_v is precisely the open S4b-op residual):
+   m_H^2 = Tr(ρ̂_lat(0) · V''_taste(v_EW))
+
+Per-channel signed curvature at v_EW:
+   V''_taste(v̂)/N_taste = -3.245385e-01
+   * v_EW^2             = -19688.181644 GeV^2
+   sign                 = NEGATIVE (tachyonic)
+
+Alternative reading (parent T-S4H absolute-value identification):
+   m_H_tree^2 = |V''_taste|/N_taste · v_EW^2
+   |V''|/N_taste = 1/(4 u_0^2) = 0.324539
+   m_H_alt = sqrt(|V''|/N_taste) · v_EW = 140.3146 GeV
+   (this IS the tree-level mean-field shortcut, NOT a derivation)
+  PASS  B1.4.a Strict-reading hypothesis equation gives tachyonic m_H^2
+        sign-strict m_H^2 = -19688.1816 GeV^2 < 0
+  PASS  B1.4.b Strict m_H^2 is essentially V''(0)/N_taste · v_EW^2
+        computed -19688.1816, expected -19688.1816
+  PASS  B1.4.c Alternative |V''|/N_taste reading gives m_H = v/(2 u_0) = 140.31 GeV
+        m_H_alt = 140.3146; expected v/(2 u_0) = 140.3146
+  PASS  B1.4.d The alternative reading IS the tree-level mean-field shortcut
+        matches HIGGS_MASS_FROM_AXIOM Eq [6]: m_H_tree = 140.3 GeV
+  PASS  B1.4.e Alternative reading is +12% relative to PDG (the +12% gap)
+        deviation +12.03%; comparator-only
+
+========================================================================
+B1.5  m_H/v = 1/(2 u_0) is the symmetric-point identification itself
+========================================================================
+HIGGS_MASS_FROM_AXIOM Step 5(b) explicit framing:
+   '(m_H_tree/v)² := per-channel curvature at the symmetric point
+    = (4/u_0²)/N_taste = 1/(4 u_0²)'
+   '... treating the symmetric-point curvature as a proxy for the
+    post-EWSB mass at the natural EWSB scale v. This is the
+    standard mean-field estimate that becomes exact in the limit
+    where (i) all N_taste taste channels degenerate, (ii) gauge
+    corrections vanish, and (iii) the EWSB saddle aligns with the
+    symmetric-point curvature. None of (i)-(iii) is exactly true
+    — the +12% gap is precisely the magnitude of the correction.'
+
+|V''(0)| = N_taste / λ² = 5.192616
+|V''(0)| / N_taste = 1/(4 u_0²) = 0.324539
+sqrt(|V''(0)|/N_taste) = 0.569683
+1/(2 u_0)             = 0.569683
+Identity to relative precision: 0.000e+00
+
+=> m_H/v = 1/(2 u_0) is mathematically equivalent to
+   sqrt(|V''_taste(0)| / N_taste).
+   Reusing it 'at φ = v_EW' is reusing the symmetric-point
+   identification — circular at the S4 layer.
+  PASS  B1.5.a |V''_taste(0)| / N_taste = 1/(4 u_0²)
+        computed 0.324539; expected 0.324539
+  PASS  B1.5.b sqrt(|V''_taste(0)|/N_taste) = 1/(2 u_0)
+        reconstructed 0.569683; 1/(2 u_0) = 0.569683
+  PASS  B1.5.c m_H/v = 1/(2 u_0) IS the symmetric-point identification
+        Per HIGGS_MASS_FROM_AXIOM Step 5(b) explicit framing
+  PASS  B1.5.d Reusing m_H/v = 1/(2 u_0) at φ = v_EW is circular at S4 layer
+        It IS the asserted identification under question, not new content
+
+========================================================================
+B1.6  Sharpened S4b decomposition
+========================================================================
+Parent T-S4H (PR #915):
+   S4 ≡ S4a ∧ S4b
+   S4a (operational form m_H² = Tr(ρ̂_phys · Ô_{m_H²})) — bounded support
+   S4b (state-and-operator selection)                  — open
+
+This note's sub-decomposition:
+   S4b ≡ S4b-loc ∧ S4b-op
+   S4b-loc: evaluation-point location φ* = v_EW         — bounded support
+   S4b-op:  operator Ô_{m_H²} at φ* = v_EW              — open (load-bearing)
+
+S4b-loc supported by:
+   - Hier: v_EW = M_Pl · (7/8)^{1/4} · alpha_LM^16 = 246.28 GeV (retained)
+
+S4b-op blocked by THREE-FOLD obstruction:
+   (i)   Lattice V_taste(m) = -(N_taste/2) log(m² + 4 u_0²) has NO local
+         minimum at finite m (monotone decreasing for m > 0).
+   (ii)  SM Higgs potential V(H†H) = -μ²H†H + λ(H†H)² form is admitted
+         SM convention per EWSB_PATTERN_FROM_HIGGS_Y §5, NOT retained.
+   (iii) m_H/v = 1/(2 u_0) IS the symmetric-point identification (B1.5),
+         NOT independent post-EWSB content.
+
+Parent matching residual:
+   M ≡ S4 ∧ S7 ≡ S4a ∧ S4b ∧ S7 ≡ S4a ∧ (S4b-loc ∧ S4b-op) ∧ S7
+   Bounded-supported: S4a ∧ S4b-loc
+   OPEN: S4b-op ∧ S7
+   => Lane 2 remains blocked, but the open block is narrower.
+  PASS  B1.6.a S4b-loc bounded-supported by retained v_EW (Hier)
+        v_EW = 246.3030 GeV cited and retained
+  PASS  B1.6.b Lattice V_taste monotone decreasing for m > 0 (no minimum)
+        dV/dm < 0 for all sampled m > 0
+  PASS  B1.6.c SM Higgs potential form is admitted SM convention (not retained)
+        Per EWSB_PATTERN_FROM_HIGGS_Y §5 explicit admission
+  PASS  B1.6.d m_H/v = 1/(2 u_0) self-references the symmetric-point identification
+        Per B1.5 numerical reconstruction
+  PASS  B1.6.e S4b-op three-fold blockage prevents closure from retained content
+        Three independent obstructions (i)-(iii); none discharged
+  PASS  B1.6.f Sharpened residual: M ≡ S4a ∧ S4b-loc ∧ S4b-op ∧ S7; S4b-op∧S7 open
+        Lane 2 remains blocked; open block narrowed
+
+========================================================================
+B1.7  Sister-prediction precision asymmetry on hierarchy chain
+========================================================================
+Quantity                  Predicted          PDG    Deviation
+----------------------------------------------------------------
+v_EW                       246.3030     246.2200       +0.03% GeV
+alpha_s(M_Z)                 0.1181       0.1179       +0.17% 
+1/alpha_EM(M_Z)            127.6700     127.9500       -0.22% 
+m_t(pole, 2-loop)          172.5700     172.6900       -0.07% GeV
+m_H_tree (S4)              140.3146     125.2500      +12.03% GeV
+
+Sister-prediction max |deviation|: 0.219%
+Higgs-mass tree-level |deviation|: 12.028%
+Asymmetry ratio: 55.0x
+
+=> Retained chain (M_Pl, alpha_LM, u_0, etc.) carries sister-grade
+   precision. The structural obstruction is in S4 (symmetric-point
+   identification) and S7 (gap-closure functional), NOT in retained
+   chain content. Retained v_EW does not carry post-EWSB Higgs-
+   curvature information that could close S4b-op.
+  PASS  B1.7.a Retained sister predictions all sub-percent on same chain
+        max sister deviation = 0.219% (below 1%)
+  PASS  B1.7.b Higgs-mass tree-level prediction is +12% (+12.0%)
+        Higgs deviation = 12.028%
+  PASS  B1.7.c Asymmetry ratio (Higgs / sister-max) ≥ 10x
+        ratio = 55.0x; structural obstruction in S4/S7
+  PASS  B1.7.d Retained v_EW does not carry post-EWSB Higgs-curvature info
+        Same retained chain as sisters; structural problem isolated to S4/S7
+
+========================================================================
+Firewall: PDG values are NOT consumed as derivation input
+========================================================================
+Framework chain inputs (cited):
+   <P> = 0.5934      (lattice MC on Cl(3)/Z^3 surface)
+   M_Pl = 1.221e+19 GeV (framework UV cutoff)
+   N_taste = 16      (admitted, depends on staggered-Dirac gate)
+   (7/8)^(1/4) = 0.9672 (APBC correction)
+
+Derived (algebraic + chain):
+   u_0 = 0.877681, alpha_LM = 9.066784e-02
+   v_EW = 246.3030 GeV
+   m_H_tree = v/(2 u_0) = 140.3146 GeV
+
+PDG comparators (falsifiability anchor only):
+   PDG v_EW = 246.22 GeV (used to verify v_EW agreement)
+   PDG m_H = 125.25 GeV (used to verify +12% gap statement)
+
+=> No PDG value enters the derivation chain. All PDG comparators
+   are used AFTER framework values are constructed.
+  PASS  Firewall.a PDG_V_EW not used in v_EW derivation
+        v_EW = 246.3030 computed from M_Pl, (7/8)^{1/4}, alpha_LM^16
+  PASS  Firewall.b PDG_M_H not used in m_H_tree derivation
+        m_H_tree = 140.3146 computed from v/(2 u_0); PDG used as comparator only
+  PASS  Firewall.c No new repo-wide axioms introduced
+        All inputs are framework axioms (Cl(3), Z³) or cited retained content
+  PASS  Firewall.d No empirical fits or fitted matching coefficients
+        All numerical values are algebraic from <P> and M_Pl + cited corrections
+
+========================================================================
+Verdict
+========================================================================
+
+  Total checks: 35
+  PASS: 35
+  FAIL: 0
+
+  Verdict per brief's three honest outcomes:
+    Outcome 1 (CLOSURE): NOT achieved — S4b-op remains open.
+    Outcome 2 (STRUCTURAL OBSTRUCTION): partially yes — S4b-op blocked.
+    Outcome 3 (SHARPENED): YES — S4b ≡ S4b-loc (supported) ∧ S4b-op (open).
+
+  Lane 2 status: REMAINS BLOCKED.
+    Bounded-supported: S4a ∧ S4b-loc
+    OPEN: S4b-op ∧ S7
+    Open block is NARROWER than parent S4b ∧ S7.
+
+  All structural and numerical checks PASSED.

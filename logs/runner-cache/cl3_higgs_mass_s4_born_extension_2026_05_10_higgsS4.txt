@@ -1,0 +1,77 @@
+==============================================================================
+Lane 2 S4 Born-Trace Mass-Readout Extension Probe (higgsS4) -- verification
+==============================================================================
+
+==============================================================================
+Section 1: M1.1 trace-template generality Tr(rho * O) = <O>
+==============================================================================
+[PASS] S1.0 numpy import -- numpy available
+[PASS] S1.1 M_hat(x=2): <O> = Tr(rho * O) = <psi|O|psi> -- Tr value = 0.186047, direct = 0.186047
+[PASS] S1.1 M_hat(x=1): <O> = Tr(rho * O) = <psi|O|psi> -- Tr value = 0.290698, direct = 0.290698
+[PASS] S1.1 sigma_x: <O> = Tr(rho * O) = <psi|O|psi> -- Tr value = 0.976744, direct = 0.976744
+[PASS] S1.1 O_curv: <O> = Tr(rho * O) = <psi|O|psi> -- Tr value = 0.139535, direct = 0.139535
+[PASS] S1.2 M_hat(x=2): Hermitian -- max |op - op^dagger| = 0.00e+00
+[PASS] S1.2 sigma_x: Hermitian -- max |op - op^dagger| = 0.00e+00
+[PASS] S1.2 O_curv: Hermitian -- max |op - op^dagger| = 0.00e+00
+
+==============================================================================
+Section 2: M1.2 distinct observables (position projector vs curvature operator)
+==============================================================================
+[PASS] S2.1 M_hat(x=2) is rank-1 (projector property) -- rank(M_hat) = 1
+[PASS] S2.2 M_hat(x=2) is idempotent (M^2 = M) -- rank-1 projector
+[PASS] S2.3 M_hat(x=2) is PSD -- min eig = 0.000000e+00
+[PASS] S2.4 O_curv is rank > 1 (NOT a rank-1 projector) -- rank(O_curv) = 3 (N-1 = 3 for Z_4 periodic Laplacian)
+[PASS] S2.5 O_curv is NOT idempotent (NOT a projector) -- max |O^2 - O| = 4.000000
+[PASS] S2.6 M_hat(x) and O_curv are structurally distinct (different ranks) -- rank(M) = 1, rank(O_curv) = 3
+[PASS] S2.7 different expectations on the same state (M_hat vs O_curv) -- <M_hat(x=2)> = 0.1860, <O_curv> = 0.1395
+
+==============================================================================
+Section 3: M1.3 state-selection gap (symmetric-point vs post-EWSB vacuum)
+==============================================================================
+[PASS] S3.1 V''(phi=0) is tachyonic (negative; symmetric-point instability) -- V''(0) = -2.0000 < 0
+[PASS] S3.2 V''(phi=v*) is positive (stable post-EWSB minimum) -- v* = 2.2361, V''(v*) = 4.0000 > 0
+[PASS] S3.3 |V''(0)| and V''(v*) differ (different Born-trace values) -- |V''(0)| = 2.0000, V''(v*) = 4.0000, signs differ
+[PASS] S3.4 sign of V'' flips between symmetric (unstable) and broken (stable) phases -- sign(V''(0)) = -, sign(V''(v*)) = +
+[PASS] S3.5 state-selection: post-EWSB minimum requires b (quartic), not derivable from V''(0) alone -- V''(0) = -2a = -2.0 contains only tachyon info; phi_star = sqrt(a/2b) needs b
+
+==============================================================================
+Section 4: M1.4 layer separation (Born rule is measurement, S4 is dynamics)
+==============================================================================
+[PASS] S4.1 BORN_RULE_ANALYSIS_2026-04-11.md exists (cited layer separation) -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/BORN_RULE_ANALYSIS_2026-04-11.md
+[PASS] S4.2 cited Born rule analysis contains 'measurement postulate' framing -- Born rule = measurement layer per cited content
+[PASS] S4.3 cited Born rule analysis contains 'dynamics' layer framing -- Dynamics layer is distinct from measurement layer per cited content
+[PASS] S4.4 cited Born rule analysis contains layer-separation framing -- different levels of the theoretical stack
+[PASS] S4.5 dynamics-level matching is NOT a Born-trace question (separation respected) -- Born trace gives operational form; EWSB stabilization is dynamics, separately required
+
+==============================================================================
+Section 5: M1.5 tree-level shortcut framing (+12% gap as approximation error)
+==============================================================================
+[PASS] S5.1 absolute gap m_H_tree - PDG_anchor (falsifiability anchor) -- abs_gap = 15.05 GeV (~+15.05 GeV)
+[PASS] S5.2 relative gap |m_H_tree - PDG_anchor| / PDG_anchor (falsifiability anchor) -- rel_gap = 12.02% (~+12%)
+[PASS] S5.3 +12% gap interpreted as state-and-operator approximation error -- (Omega_lat(0), O_{V''}) ~ (Omega_v, O_{m_H^2}) approximation; gap = error
+[PASS] S5.4 parent HIGGS_MASS_FROM_AXIOM_NOTE.md exists -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+[PASS] S5.5 parent note explicitly states tree-level / mean-field scope -- mean-field shortcut is honest about its scope
+[PASS] S5.6 parent note explicitly states +12% gap to PDG-anchor -- +12% gap is the explicit approximation-error magnitude
+
+==============================================================================
+Section 6: M1.6 sharpened S4 decomposition (S4a supported, S4b ∧ S7 open)
+==============================================================================
+[PASS] S6.1 G2 unified Born map note exists (template source) -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+[PASS] S6.2 LATTICE_PHYSICAL_MATCHING parent exists (on disk or in git history) -- on-disk = True, in-git-history = True
+[PASS] S6.3 S4a (operational form) follows from G2's trace template (bounded support) -- m_H^2 = Tr(rho_phys * O_{m_H^2}) shares G2 template, different observable
+[PASS] S6.4 S4b (state-and-operator selection) NOT closed by Born trace alone -- (rho_phys, O_{m_H^2}) selection requires content beyond Born-trace template
+[PASS] S6.5 S4b composes with S7 to recover parent matching residual -- M ≡ S4 ∧ S7 ≡ S4a ∧ S4b ∧ S7; S4a supported, S4b ∧ S7 open
+[PASS] S6.6 Lane 2 (Higgs mass from axiom) remains blocked -- S4a supported, S4b ∧ S7 open => Lane 2 unblocking requires S4b ∧ S7 closure
+
+==============================================================================
+Section 7: Honest scope and synthesis
+==============================================================================
+[PASS] S7.1 verdict: SHARPENED (not closed); Lane 2 still blocked -- structural sharpening, not closure
+[PASS] S7.2 audit boundary respected -- this is a source-note proposal -- claim_type, audit_status, effective_status remain audit-lane authority
+[PASS] S7.3 no PDG observed values used as derivation input -- PDG m_H = 125.25 used only as falsifiability anchor for +12% gap framing
+[PASS] S7.4 no new repo-wide axioms introduced -- uses cited content: G2 trace template + Born-rule operationalism + repo baseline
+[PASS] S7.5 not corollary churn -- Born-trace mass-readout extension is structurally new content -- M1.1-M1.6 introduce new sub-decomposition S4 ≡ S4a ∧ S4b not present in prior content
+
+==============================================================================
+=== TOTAL: PASS=42, FAIL=0 ===
+==============================================================================

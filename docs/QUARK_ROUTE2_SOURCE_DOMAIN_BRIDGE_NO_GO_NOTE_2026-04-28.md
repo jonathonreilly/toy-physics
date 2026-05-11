@@ -1,14 +1,61 @@
 # Quark Route-2 Source-Domain Bridge No-Go
 
-**Date:** 2026-04-28
+**Date:** 2026-04-28 (audit-status note added 2026-05-10)
 
-**Status:** exact current-bank no-go / exact negative boundary for Lane 3
-target 3B. This block-03 stretch attempt attacks the typed source-domain
-residual exposed by block 02. It does not derive the up-type scalar law
+**Status:** bounded current-bank typed-edge no-go on the configured Route-2
+support / SU(3) connected-color bank, with the underlying typed-edge
+inventory hard-coded by the runner rather than derived. This block-03
+stretch attempt attacks the typed source-domain residual exposed by block
+02. It does not derive the up-type scalar law
 `beta_E / alpha_E = 21/4`, and it does not claim retained `m_u` or `m_c`.
 
 **Primary runner:**
 `scripts/frontier_quark_route2_source_domain_bridge_no_go.py`
+
+## Audit-status note (2026-05-10)
+
+The 2026-05-10 fresh audit verdict (`audited_conditional`,
+`chain_closes=false`) supersedes the prior 2026-05-01 `audited_clean`
+verdict and flagged a missing-dependency edge: the runner hard-codes the
+typed-edge inventory `CURRENT_TYPED_EDGES` rather than deriving it from
+the cited Route-2 / `R_conn` upstream authorities, and the audit packet
+does not provide one-hop authorities for the named Route-2/readout/`R_conn`
+inputs in a form the restricted packet can verify.
+
+> "the source note relies on named Route-2/R_conn authorities and a
+> complete current-bank typed-edge inventory, but the audit ledger
+> supplies no one-hop authorities and the runner hard-codes
+> CURRENT_TYPED_EDGES rather than deriving the inventory."
+
+Admitted-context inputs (named upstream authorities, cited but not closed
+inside this packet):
+
+- `quark_route2_exact_readout_map_note_2026-04-19` (`audited_clean`) —
+  exact bilinear carrier and restricted bright readout class
+- `quark_route2_exact_time_coupling_note_2026-04-19` (`audited_clean`) —
+  exact slice backbone `Lambda_R`
+- `rconn_derived_note` (latest verdict `audited_conditional`,
+  2026-05-10) — SU(3) connected color projection
+  `R_conn = (N_c^2 - 1)/N_c^2`
+
+Admitted-context inputs (configured runner constants, not derived):
+
+- the typed-edge inventory `CURRENT_TYPED_EDGES` enumerated in
+  `scripts/frontier_quark_route2_source_domain_bridge_no_go.py`
+- the conditional T-side candidates
+  `beta_T/alpha_T = -1`, `alpha_T/alpha_E = -2`
+- exact rational arithmetic over the configured bank
+
+Blocked-on: this row stays `audited_conditional` until either a retained
+inventory-derivation authority is registered that produces
+`CURRENT_TYPED_EDGES` from the named Route-2/`R_conn` authorities (so the
+finite typed graph is not hard-coded), or the named one-hop authorities
+are bundled into the audit packet at a grade that lets the restricted
+packet verify the inventory. The bounded computational diagnostic — over
+the configured typed-edge bank, no path exists from `R_conn = 8/9` to
+`gamma_T(center)/gamma_E(center) = -8/9`, and adding exactly that bridge
+forces `beta_E/alpha_E = 21/4` algebraically — is unaffected by this
+status note.
 
 ## 1. Question
 

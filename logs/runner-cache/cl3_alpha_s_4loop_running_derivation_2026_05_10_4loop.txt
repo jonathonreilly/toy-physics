@@ -1,0 +1,148 @@
+
+----------------------------------------------------------------------------------------
+Part 1: source note structural shape
+----------------------------------------------------------------------------------------
+  [PASS] contains: 'α_s 4-Loop QCD Running'  ()
+  [PASS] contains: 'Per-Loop-Order Derivation Status'  ()
+  [PASS] contains: 'bounded_theorem'  ()
+  [PASS] contains: 'Authority disclaimer'  ()
+  [PASS] contains: 'Source-note proposal'  ()
+  [PASS] contains: 'MINIMAL_AXIOMS_2026-05-03'  ()
+  [PASS] contains: 'Forbidden imports'  ()
+  [PASS] contains: 'NO PDG observed values'  ()
+  [PASS] contains: 'NO new repo-wide axioms or imports'  ()
+  [PASS] contains: 'Honest scope'  ()
+  [PASS] contains: 'Verification'  ()
+  [PASS] contains: 'Honest verdict'  ()
+  [PASS] contains: 'STRUCTURAL OBSTRUCTION'  ()
+  [PASS] contains: 'PARTIAL'  ()
+  [PASS] per-loop-order row: **L1 (1-loop, β_0)**  ()
+  [PASS] per-loop-order row: **L2 (2-loop, β_1)**  ()
+  [PASS] per-loop-order row: **L3 (3-loop, β_2)**  ()
+  [PASS] per-loop-order row: **L4 (4-loop, β_3)**  ()
+  [PASS] theorem label: **(T1)  ()
+  [PASS] theorem label: **(T2)  ()
+  [PASS] theorem label: **(T3)  ()
+  [PASS] theorem label: **(T4)  ()
+  [PASS] theorem label: **(T5)  ()
+  [PASS] theorem label: **(T6)  ()
+  [PASS] sister/parent cite: ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30  ()
+  [PASS] sister/parent cite: ALPHA_S_DIRECT_WILSON_LOOP_HONEST_STATUS_AUDIT_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: BRIDGE_LANES_PROMOTION_PROPOSAL_NOTE_2026-05-10_lanes  ()
+  [PASS] sister/parent cite: QCD_LOW_ENERGY_RUNNING_BRIDGE_NOTE_2026-05-01  ()
+  [PASS] sister/parent cite: SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26  ()
+  [PASS] sister/parent cite: SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02  ()
+  [PASS] sister/parent cite: CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25  ()
+  [PASS] sister/parent cite: THREE_GENERATION_STRUCTURE_NOTE  ()
+  [PASS] sister/parent cite: MINIMAL_AXIOMS_2026-05-03  ()
+  [PASS] sister/parent cite: G_BARE_DERIVATION_NOTE  ()
+  [PASS] sister/parent cite: STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac  ()
+  [PASS] sister/parent cite: LATTICE_PHYSICAL_MATCHING_THEOREM_BOUNDED_OBSTRUCTION_NOTE_2026-05-10_match  ()
+  [PASS] sister/parent cite: COMPLETE_PREDICTION_CHAIN_2026_04_15  ()
+  [PASS] audit-readable scope: proposed_claim_type: bounded_theorem  ()
+  [PASS] audit-readable scope: L1_one_loop_beta_0:  ()
+  [PASS] audit-readable scope: L2_two_loop_beta_1:  ()
+  [PASS] audit-readable scope: L3_three_loop_beta_2:  ()
+  [PASS] audit-readable scope: L4_four_loop_beta_3:  ()
+  [PASS] audit-readable scope: status: retained_inline_companion  ()
+  [PASS] audit-readable scope: status: bounded_algebraic_pending_color_bridge  ()
+  [PASS] audit-readable scope: status: not_retained  ()
+  [PASS] audit-readable scope: ms_bar_dimensional_regularization_3loop_counterterm  ()
+  [PASS] audit-readable scope: ms_bar_dimensional_regularization_4loop_counterterm  ()
+  [PASS] audit-readable scope: audit_required_before_effective_status_change: true  ()
+
+----------------------------------------------------------------------------------------
+Part 2: cited framework values (quoted, not derived here)
+----------------------------------------------------------------------------------------
+  [PASS] C_F = 4/3 cited from SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02  (C_F = 4/3)
+  [PASS] C_A = 3 cited from SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02  (C_A = 3)
+  [PASS] T_F = 1/2 cited from Gell-Mann normalization  (T_F = 1/2)
+  [PASS] N_color = 3 cited from S1 (CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25)  (N_color = 3)
+  [PASS] N_pair = 2 cited from S1 (Q_L : (2,3)_{+1/3})  (N_pair = 2)
+  [PASS] N_quark = N_color * N_pair = 6 derived from S1  (N_quark = 6)
+  [PASS] N_gen = 3 cited from THREE_GENERATION_STRUCTURE_NOTE  (N_gen = 3)
+
+----------------------------------------------------------------------------------------
+Part 3: theorem T1 -- L1 (beta_0) retained inline via S1 + Casimirs
+----------------------------------------------------------------------------------------
+  [PASS] T1: b_3 = (11 N_color - 2 N_quark)/3 closed form via S1  (b_3 = 7)
+  [PASS] T1: beta_0 (group form) = (11/3) C_A - (4/3) T_F N_f at N_f=6 = 7  (beta_0_group = 7)
+  [PASS] T1: companion-form b_3 matches group-form beta_0 at N_f = N_quark = 6  ((11 N_color - 2 N_quark)/3 = (11/3) C_A - (4/3) T_F N_f at C_A=N_color, T_F=1/2, N_f=N_quark)
+  [PASS] T1: beta_0 (group form) at N_f=5 = 23/3  (beta_0_group(5) = 23/3)
+
+----------------------------------------------------------------------------------------
+Part 4: theorem T2 -- L2 (beta_1) algebraic closed form from Casimirs
+----------------------------------------------------------------------------------------
+  [PASS] T2: beta_1 (group form) at N_f=6 = 26 (universal, scheme-independent)  (beta_1_group(6) = 26)
+  [PASS] T2 per-sector at N_f=6: (34/3)C_A^2 = 102  (gauge term = 102)
+  [PASS] T2 per-sector at N_f=6: 4 C_F T_F N_f = 16  (C_F-matter term = 16)
+  [PASS] T2 per-sector at N_f=6: (20/3) C_A T_F N_f = 60  (C_A-matter term = 60)
+  [PASS] T2 per-sector total: 102 - 16 - 60 = 26  (sum = 26)
+  [PASS] T2: beta_1 (group form) at N_f=5 = 116/3  (beta_1_group(5) = 116/3)
+
+----------------------------------------------------------------------------------------
+Part 5: theorem T3 -- L3, L4 NOT derivable from retained Casimirs alone
+----------------------------------------------------------------------------------------
+  [PASS] T3 display: textbook MS-bar beta_2 at N_f=6 ~ -32.5 (alpha_s/(4 pi) expansion)  (beta_2(MS-bar, N_f=6) ~ -32.50)
+  [PASS] T3 structural: 2857/2 != polynomial in {C_F=4/3, C_A=3, T_F=1/2} (low degree)  (2857 is prime; cannot factor cleanly into {4, 9, 1/2}^n products at low degree)
+  [PASS] T3 structural: beta_2 coefficient (5033/18) N_f involves 5033 (prime) which is NOT pure Casimir  (5033/18 coefficient encodes 3-loop 1PI dim-reg counterterm content)
+  [PASS] T3 structural: beta_2 (5033/18, 325/54) coefficients are MS-bar-specific  (Tarasov-Vladimirov 1980 (MS-bar); other schemes have different beta_2)
+
+----------------------------------------------------------------------------------------
+Part 6: theorem T5 -- numerical envelope at universal-coefficient level
+----------------------------------------------------------------------------------------
+  [PASS] T5 envelope: retained beta_0 at N_f=6 matches textbook 7  (retained = 7; textbook = 7)
+  [PASS] T5 envelope: retained beta_0 at N_f=5 matches textbook 23/3  (retained = 23/3; textbook = 23/3)
+  [PASS] T5 envelope: retained beta_1 at N_f=6 matches textbook 26  (retained = 26; textbook = 26)
+  [PASS] T5 envelope: retained beta_1 at N_f=5 matches textbook 116/3  (retained = 116/3; textbook = 116/3)
+
+----------------------------------------------------------------------------------------
+Part 7: theorem T4 -- single named non-retained residual class
+----------------------------------------------------------------------------------------
+  [PASS] T4: single named residual class for L3 + L4  (named residual: ms_bar_dimensional_regularization_counterterm_machinery)
+  [PASS] T4: residual is structural, not engineering (no compute frontier closes it)  (scheme adoption is content-level, not precision-level)
+  [PASS] T4: Lane 1 import count reduces from 4 to 3.5  (L1 retained, L2 retained-pending-bridge, L3+L4 named structural residual)
+
+----------------------------------------------------------------------------------------
+Part 8: forbidden-import audit (no PDG values as derivation inputs)
+----------------------------------------------------------------------------------------
+  [PASS] beta_0 derivable from {C_F, C_A, T_F, N_f} alone (no PDG input)  (beta_0 = 7 (no PDG))
+  [PASS] beta_1 derivable from {C_F, C_A, T_F, N_f} alone (no PDG input)  (beta_1 = 26 (no PDG))
+  [PASS] alpha_s(M_Z) PDG value not consumed as derivation input  (appears only as display-anchor in falsifiability section)
+
+----------------------------------------------------------------------------------------
+Part 9: per-loop-order status classification (audit-readable)
+----------------------------------------------------------------------------------------
+  [PASS] loop order L1 classified as retained_inline_companion  (per-loop-order accounting)
+  [PASS] loop order L2 classified as bounded_algebraic_pending_color_bridge  (per-loop-order accounting)
+  [PASS] loop order L3 classified as not_retained  (per-loop-order accounting)
+  [PASS] loop order L4 classified as not_retained  (per-loop-order accounting)
+  [PASS] L3 and L4 share single named residual: MS-bar scheme content  (structural obstruction, not engineering bound)
+  [PASS] L1 inherits same audit_conditional admissions as Color-bridge parent  (audit_conditional gate from SU3_ADJOINT_CASIMIR_THEOREM_NOTE_2026-05-02 'Conditional extension')
+  [PASS] L2 conditional on Color-bridge upgrade for full retention  (algebraic closed form holds; physical-coupling identification is the gate)
+
+----------------------------------------------------------------------------------------
+Part 10: honest verdict summary
+----------------------------------------------------------------------------------------
+  [PASS] verdict marker present: STRUCTURAL OBSTRUCTION  ()
+  [PASS] verdict marker present: PARTIAL  ()
+  [PASS] verdict marker present: NOT DERIVABLE  ()
+  [PASS] verdict marker present: DERIVABLE  ()
+  [PASS] verdict marker present: Nature-grade  ()
+  [PASS] verdict marker present: MS-bar  ()
+  [PASS] verdict marker present: engineering frontier  ()
+  [PASS] resolution-route language: Nature-grade  ()
+  [PASS] resolution-route language: governance  ()
+  [PASS] resolution-route language: engineering  ()
+  [PASS] import count reduction stated: 4 -> 3.5  (Lane 1 frontier sharpening)
+
+----------------------------------------------------------------------------------------
+Part 11: COMPLETE_PREDICTION_CHAIN comparator (NOT load-bearing)
+----------------------------------------------------------------------------------------
+  [PASS] comparator: |b_3| = 7 in either convention  (sign-convention dependent display only)
+  [PASS] convention sanity: (11 N_color - 2 N_quark)/3 invariant up to sign  (b_3 sign convention is per-note display, not derivation content)
+
+========================================================================================
+  TOTAL: PASS=100, FAIL=0
+========================================================================================

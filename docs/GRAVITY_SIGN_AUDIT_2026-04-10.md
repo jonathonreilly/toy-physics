@@ -2,9 +2,73 @@
 
 **Date:** 2026-04-10
 **Revised:** 2026-04-10 (after spot-check verification)
+**Audit-status note added:** 2026-05-10
 
 **Purpose:** Determine whether the TOWARD gravity results across all retained harnesses
 are genuine physical predictions or tautological consequences of sign conventions.
+
+## Audit-status note (2026-05-10)
+
+The 2026-05-04 audit verdict (`audited_conditional`, `chain_closes=false`)
+confirmed that the runner does instantiate Hamiltonians and evolve states,
+so it supports the narrow statement that the chosen couplings (parity and
+lapse) distinguish well from hill in the configured 1D external-potential
+test. The verdict flagged a missing bridge theorem: the load-bearing
+identification of the parity / lapse coupling is asserted from the
+literature (Zache 2020; Dempsey 2025) and not derived from the repository
+axioms inside the audit packet, and the irregular-graph directional
+observable scope is honestly admitted as a separate open lane.
+
+> "the load-bearing coupling identification is asserted rather than
+> derived from provided inputs ... missing_bridge_theorem: provide a
+> restricted retained derivation of the parity/lapse coupling from the
+> repository axioms, then separately audit the bounded irregular graph
+> directional observable scope."
+
+Admitted-context inputs (carrier framework, not derived in this note):
+
+- the parity coupling `H_diag = (m + Phi) * epsilon(x)` — imported from
+  Zache et al. 2020 and Dempsey et al. 2025 as the literature-correct
+  staggered-fermion scalar coupling
+- the Hermitian lapse coupling
+  `H_grav = sqrt(N) * H_flat * sqrt(N)`, `N = 1 + Phi/m` — imported as
+  the full-GR scalar variant
+- the screened Poisson `(L + mu^2 I) Phi = G * rho` framework operator,
+  and the retarded wave equation with `beta > 0`
+
+Configured probe parameters (proxy thresholds, not derived):
+
+- the configured 1D exact-lattice external-potential test
+  (`scripts/frontier_correct_coupling.py`, well `V<0` vs hill `V>0`)
+- the configured irregular random-geometric external-source test
+  (`scripts/frontier_two_sign_parity.py`)
+- the configured endogenous same-surface directional probe
+  (`scripts/frontier_irregular_directional_observable.py`),
+  reporting `0/9`, `0/9`, `4/9` and recorded as a blocker
+- the centered core-packet bounded reopen
+  (`scripts/frontier_irregular_sign_core_packet_gate.py`),
+  reporting `30/30`, `30/30`, `30/30` at `mu^2=0.1` and `28/30`, `30/30`,
+  `28/30` at `mu^2=0.001` — recorded as bounded reopen, not universal closure
+
+Blocked-on: this row stays `audited_conditional` until either a retained
+restricted-packet derivation is supplied that fixes the staggered-fermion
+parity / lapse scalar coupling from the repository axioms, or the
+irregular-graph directional observable lane lands a graph-native
+sign-selective observable that closes the universal-portability gap on
+families beyond the audited centered core-packet surface. The bounded
+computational diagnostic — under the parity and lapse couplings, the
+configured exact-lattice external-potential test splits well from hill,
+the canonical exact-force staggered card stays `17/17`, and the centered
+core-packet probe recovers a same-surface separator on the audited
+families — is unaffected by this status note.
+
+The 2026-04-25 Planck Pin retained closure provides an independent
+restricted-packet derivation of `c_cell = 1/4` from a discrete
+Wald-Noether charge on the framework's retained discrete GR action; that
+closure handles the BH coefficient and `G_Newton,lat = 1` boundary, but
+does not by itself fix the staggered-fermion scalar coupling sign on
+load-bearing irregular families and so does not retire this row's
+blocker.
 
 ## Executive Summary
 
