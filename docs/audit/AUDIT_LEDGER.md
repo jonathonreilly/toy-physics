@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 252 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1238 |
+| unaudited | 1241 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 193 |
+| ~~audited_conditional~~ | 190 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 428 |
-| `audited_conditional` | 193 |
+| `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1348 |
+| `unaudited` | 1351 |
 
 | claim_type | count |
 |---|---:|
@@ -561,7 +561,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `beyond_lattice_qcd_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `bh_entropy_rt_ratio_widom_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_born_dense_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_born_largen_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -583,7 +582,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `complex_action_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `cosmological_constant_spectral_gap_identity_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
@@ -667,7 +665,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -1580,19 +1577,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The scoped claim is a narrow external theorem statement, not a project-specific derivation or physical bridge. The load-bearing theorem is standardly cited in the note, the assumptions are stated, and the boundary excludes the common invalid extensions that would require additional retained inputs.
 - **auditor confidence:** high
 
-### `bound_state_selection_note`
-
-- **Note:** [`BOUND_STATE_SELECTION_NOTE.md`](../../docs/BOUND_STATE_SELECTION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite-lattice numerical Hamiltonians for d=2,3,4,5 with specified grid sizes, couplings, Dirichlet boundaries, and r_min=1 regularization were audited for negative eigenvalue counts and localization diagnostics.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-bound_state_selection_no-147`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** d=3 is the highest dimension with a Rydberg series -- multiple bound states with distinct energy levels and exponentially localized wavefunctions; this is what atoms require for chemistry.  _(class `C`)_
-- **chain closes:** False — The runner genuinely computes spectra for the stated finite lattices, but the conclusion that stable matter anthropically implies exactly d=3 imports an unproved bridge from these bounded diagnostics to chemistry and excludes d=2 by an external complexity premise. The claimed d>=4 fall-to-center behavior is also not actually demonstrated by the runner's own fall-to-center diagnostic, which remains false in the displayed scans.
-- **rationale:** The numerical part is not merely a printed constant: the source builds sparse lattice Laplacians and Coulomb potentials, diagonalizes them, and reports eigenvalue/localization diagnostics. However, the audited packet supplies no retained authority or bridge theorem connecting the finite, regularized, small-lattice results to continuum atomic stability or to the anthropic exclusion of d=2. The runner also labels d=4 and d=5 as fall-to-center in interpretive prose despite the implemented IPR threshold never flagging fall-to-center in the provided output.
-- **auditor confidence:** high
-
 ### `boundary_law_robustness_note_2026-04-11`
 
 - **Note:** [`BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](../../docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md)
@@ -2271,21 +2255,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
   - `ALPHA_S_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
-### `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02`
-
-- **Note:** [`CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](../../docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** SU(3) representation-theoretic three-fundamental tensor product contains one totally antisymmetric epsilon singlet; physical baryon color interpretation is audited only as conditional on the cited color-carrier bridge.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e127f-cd5b-72b3-ba0c-e813ba4a2c32`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** For SU(3), (3 tensor 3) tensor 3 = 6 tensor 3 plus 3bar tensor 3 = (10 plus 8) plus (1 plus 8) = 1 plus 8 plus 8 plus 10, with the singlet given by epsilon_abc q^a q^b q^c.  _(class `A`)_
-- **chain closes:** False — The SU(3) tensor-product and epsilon-singlet algebra closes from the admitted group theory once a physical fundamental SU(3)_c quark carrier is assumed. The one-hop authority explicitly bounds its result to an algebraic symmetric-base SU(3) carrier and defers the physical SM color identification, so the physical baryon-color conclusion does not close from this restricted packet.
-- **rationale:** Issue: the note treats q^a as a quark in the framework's SU(3)_c color carrier, but the sole cited authority explicitly says the identification of its 3D symmetric base with physical SM color is deferred. Why this blocks: the runner verifies standard SU(3) algebra after hard-setting N_c=3 and Gell-Mann generators, but it does not construct the physical quark-color carrier bridge. Repair target: cite or create a retained bridge theorem identifying the symmetric-base SU(3) representation with the physical quark color fundamental. Claim boundary until fixed: the algebraic SU(3) statement 3 tensor 3 tensor 3 has a unique antisymmetric singlet is valid, but baryon/Delta++ physical corollaries remain conditional.
-- **open / conditional deps cited:**
-  - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **auditor confidence:** high
 
 ### `cl3_color_automorphism_theorem`
@@ -5780,21 +5749,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the standard root-of-unity identity and the definitions of a_0 and z, the note derives a_0 = sqrt(3) a and z = sqrt(3) b, hence a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2.  _(class `A`)_
 - **chain closes:** True — The conclusions follow directly from the stated definitions and the cube-root identities 1 + omega + omega^2 = 0 and omega^3 = 1. No cited dependency, physical readout, fitted value, or external comparator is needed.
 - **rationale:** The proof is a genuine class-A algebraic closure over explicitly stated symbols and root-of-unity identities. The runner source performs exact symbolic checks of the same Fourier identities and includes no hidden physical bridge, tuned comparator, or imported dependency. The audited boundary is only the polynomial-algebra bridge, not any Koide, Wilson, charged-lepton, or selection-principle claim.
-- **auditor confidence:** high
-
-### `koide_cl3_selector_gap_note_2026-04-19`
-
-- **Note:** [`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`](../../docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded selector-gap claim that the displayed doublet-A, baryon Schur, SU(3)-modified coupling, and eigenvalue-degeneracy routes fail to derive m_* from the supplied one-hop inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e1230-54d3-75d1-b90e-a8f2e659a5d3`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** “No Cl(3)-algebraic route closes the gap” between the displayed candidate selector values and the physical selected point m_* ≈ -1.1605.  _(class `B`)_
-- **chain closes:** False — The note shows a bounded gap only if several imported structures are accepted, but the restricted packet does not close the Cl+(3) doublet/H-matrix construction, baryon coupling uniformity, SU(3) embedding constants, or the H_* physical m_* bridge. The source note also explicitly leaves the full 4x4 block and kappa_* derivation open, so the broad “no Cl(3)-algebraic route” conclusion is not established.
-- **rationale:** Issue: the global selector-gap/no-Cl(3)-route conclusion relies on unsupported imported structures and on an m_* physical witness that the cited authority marks as out of scope/open. Why this blocks: the supplied one-hop authority only retains the local V(m) coefficient assignment and honest V_eff-vs-m_* gap, not the doublet, baryon, SU(3), degeneracy, or H_* bridge needed for exhaustion. Repair target: provide direct retained dependencies or runners for each listed route and a theorem excluding or resolving the stated full-4x4/kappa_* open routes. Claim boundary until fixed: the note may be cited as an open selector-gap inventory, not as a closed bounded theorem that Cl(3) alone cannot derive m_*.
-- **open / conditional deps cited:**
-  - `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_cone_completing_root_narrow_theorem_note_2026-05-02`

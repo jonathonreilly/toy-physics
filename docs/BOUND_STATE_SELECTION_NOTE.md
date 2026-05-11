@@ -1,6 +1,47 @@
 # Bound State Selection: Stable Matter Only at d <= 3
 
 **Status:** bounded - bounded or caveated result note
+
+## Audit-conditional perimeter (2026-05-10)
+
+Prior independent audit feedback on an earlier revision identified the
+finite-lattice-to-continuum bridge as the load-bearing boundary:
+
+> "The numerical part is not merely a printed constant: the source
+> builds sparse lattice Laplacians and Coulomb potentials, diagonalizes
+> them, and reports eigenvalue/localization diagnostics. However, the
+> audited packet supplies no retained authority or bridge theorem
+> connecting the finite, regularized, small-lattice results to
+> continuum atomic stability or to the anthropic exclusion of d=2. The
+> runner also labels d=4 and d=5 as fall-to-center in interpretive
+> prose despite the implemented IPR threshold never flagging
+> fall-to-center in the provided output."
+
+The prior feedback repair target is `missing_bridge_theorem`: "provide a
+retained analytic or independently audited bridge from the finite
+regularized lattice diagnostics to continuum stable atomic chemistry,
+including the exclusion of d=2 and the claimed d>=4 fall-to-center
+behavior."
+
+**Load-bearing scope (after this rigorization edit).** The retained
+in-note content is the *finite-lattice diagnostic* listed in the
+Results table (eigenvalue counts, ground-state energies, IPR values,
+coupling-scan trends) at the modest lattice sizes specified; this is a
+bounded, finite-N regularized numerical experiment. The interpretive
+prose elsewhere in this note ("hydrogen-like Rydberg series",
+"fall-to-center for d ≥ 4", "anthropic selection ⇒ d = 3", and the
+Bounded-Claim "stable matter must exist ⇒ d = 3") is *not* covered by
+the cited authority chain and is read as bridge-conditional. The
+runner's "fall_to_center" column reports `False` for every row in the
+cached output (see the Caveats section below); the Interpretation /
+Bounded-Claim language extrapolates from the IPR *trend* under the
+coupling scan, which is bounded-only and is not promoted to a
+fall-to-center theorem.
+
+This source edit only sharpens the conditional perimeter; no new
+derivation is asserted and independent audit owns any current verdict
+or effective status after the source change.
+
 ## Question
 
 Does the d-dimensional Coulomb potential V(r) = -1/r^{d-2} support
@@ -73,11 +114,16 @@ wavefunctions. This is what atoms require for chemistry.
 
 ## Bounded Claim
 
-The lattice Hamiltonian reproduces the known dimension-dependent
-bound-state structure. d=3 is selected as the unique dimension that:
-(a) is high enough for complex spatial structure, and (b) supports stable
-atomic bound states with multiple energy levels. The anthropic selection
-principle "stable matter must exist" implies d = 3.
+The lattice Hamiltonian on the listed grid sizes (d = 2: 30×30; d = 3:
+16³; d = 4: 10⁴; d = 5: 5⁵) reproduces a dimension-dependent
+bound-state diagnostic in the printed bands of the Results table. On
+the cited authority chain, the retained bounded statement is the
+finite-lattice numerical reproduction itself; promotion of the
+diagnostic to "d = 3 is selected as the unique dimension supporting
+stable atoms" depends on a retained continuum-bridge theorem that the
+prior audit feedback identified as missing. The "anthropic selection ⇒ d = 3"
+prose is therefore a bridge-conditional reading, not a bounded theorem
+of the cited dependency chain.
 
 ## Caveats
 
@@ -85,8 +131,22 @@ principle "stable matter must exist" implies d = 3.
 - Dirichlet boundary conditions introduce finite-size effects
 - The regularization r_min = 1 (lattice spacing) affects the
   d >= 4 singularity
-- The "fall-to-center" for d=4 is detected via IPR trend, not analytically
+- The "fall-to-center" descriptor for d ≥ 4 is an *interpretive
+  reading of the IPR coupling-scan trend*, not an output of an
+  implemented IPR threshold. The cached runner output reports
+  `fall_to_center = False` for every row (see
+  `logs/runner-cache/frontier_bound_state_selection.txt`); in
+  particular, the runner does not flag d = 4 or d = 5 as
+  fall-to-center under its current IPR threshold. The
+  "fall-to-center trend" language is therefore not a runner-validated
+  claim and is bridge-conditional under the prior feedback boundary.
 - Angular momentum analysis not performed (would strengthen the argument)
+- No retained continuum-bridge theorem connects the finite-lattice
+  diagnostic to continuum atomic stability or to the d = 2 exclusion;
+  the prior feedback repair target is to supply such a retained bridge
+  theorem (or independently audited derivation) before any "stable
+  matter must exist ⇒ d = 3" reading can be promoted past
+  bridge-conditional.
 
 ## Script
 

@@ -12,6 +12,41 @@ audit pipeline after independent review.
 **Runner:** `scripts/cl3_baryon_qqq_color_singlet_check.py`
 **Log:** `outputs/cl3_baryon_qqq_color_singlet_check_2026-05-02.txt`
 
+## Audit-conditional perimeter (2026-05-10)
+
+Prior independent audit feedback on an earlier revision identified the
+symmetric-base-to-physical-color bridge as the load-bearing boundary:
+
+> "Issue: the note treats q^a as a quark in the framework's SU(3)_c
+> color carrier, but the sole cited authority explicitly says the
+> identification of its 3D symmetric base with physical SM color is
+> deferred. Why this blocks: the runner verifies standard SU(3) algebra
+> after hard-setting N_c=3 and Gell-Mann generators, but it does not
+> construct the physical quark-color carrier bridge. Repair target:
+> cite or create a retained bridge theorem identifying the symmetric-base
+> SU(3) representation with the physical quark color fundamental.
+> Claim boundary until fixed: the algebraic SU(3) statement 3 tensor 3
+> tensor 3 has a unique antisymmetric singlet is valid, but
+> baryon/Delta++ physical corollaries remain conditional."
+
+The prior feedback repair target is `missing_bridge_theorem`: "add or cite a
+retained theorem deriving the physical SM color/quark fundamental
+carrier from the symmetric-base SU(3), then re-audit the baryon
+corollaries under the narrowed scope."
+
+The sibling
+[`CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md`](CL3_QUARK_ANTIQUARK_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md)
+(under `cl3_color_automorphism_theorem`) has already absorbed the same
+boundary by treating the q-q̄ singlet as a
+purely algebraic channel-count corollary on the cited symmetric-base
+SU(3); the q-q-q baryon analogue here is in exactly the same algebraic
+posture. The Out-of-scope section below makes the corresponding
+narrowing explicit.
+
+This source edit only sharpens the conditional perimeter; no new
+derivation is asserted and independent audit owns any current verdict
+or effective status after the source change.
+
 ## Cited authorities (one hop)
 
 - [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md)
@@ -117,6 +152,25 @@ C3. **Antibaryons.** Same construction with antiquarks: 3̄ ⊗ 3̄ ⊗ 3̄ cont
 C4. **Δ⁺⁺ "puzzle" resolution.** The Δ⁺⁺ = uuu baryon has all three quarks identical (u-flavor) with all spins aligned (J = 3/2). Naively forbidden by Pauli, but resolved by the antisymmetric color singlet (B3): the color factor is the antisymmetric piece, allowing the spin-flavor-space part to be symmetric.
 
 C5. **Hadrons must be color singlets.** Combining R3 Block 03 (mesons q-q̄ → 1 ⊕ 8) and R5 Block 01 (baryons q-q-q → 1 ⊕ 8 ⊕ 8 ⊕ 10), the only color-singlet bound states of fundamental quark and antiquark fields are mesons (q-q̄), baryons (qqq), and antibaryons (q̄q̄q̄). These are exactly the observed asymptotic hadronic species.
+
+## Out of scope
+
+This note does not prove a baryon existence theorem on a physical SM
+color carrier, a confinement statement, an asymptotic-state theorem, or
+a new physical interpretation of the 10-plet decuplet channel. It does
+not assert a derivation of the physical quark-color carrier from the
+framework axiom. The single load-bearing claim is the algebraic
+`3 ⊗ 3 ⊗ 3 = 1 ⊕ 8 ⊕ 8 ⊕ 10` decomposition on the *cited symmetric-base
+SU(3) carrier* (per `CL3_COLOR_AUTOMORPHISM_THEOREM.md`) plus the unique
+totally antisymmetric ε-singlet. Any reading of (B4) — Pauli /
+spin-flavor symmetry — and corollaries C1, C2, C4 as a physical
+SM-baryon claim remains conditional on the upstream
+physical-color-bridge theorem that
+`CL3_COLOR_AUTOMORPHISM_THEOREM.md` explicitly defers ("Physical-
+identification bridge (deferred to a separate theorem)"). C3
+(antibaryon ε^{abc} q̄_a q̄_b q̄_c) and C5 (1+8 mesons + ε baryon
+asymptotic-channel inventory) remain physical-bridge-conditional in the
+same way.
 
 ## Review classification
 

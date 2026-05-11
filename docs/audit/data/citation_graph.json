@@ -4234,6 +4234,10 @@
     },
     {
       "from": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
+      "to": "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02"
+    },
+    {
+      "from": "cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02",
       "to": "cl3_color_automorphism_theorem"
     },
     {
@@ -37747,7 +37751,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "381a7dae4624df6245556236bdc747f48a55e641c1862722d3a04d6887074505",
+      "note_hash": "880ccaa68314d9ce6952647a7db75aca890964ea2da12cbe84c6fac245b38e76",
       "path": "docs/BOUND_STATE_SELECTION_NOTE.md",
       "runner_path": "scripts/frontier_bound_state_selection.py",
       "title": "Bound State Selection: Stable Matter Only at d <= 3"
@@ -39835,9 +39839,10 @@
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
+        "cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02",
         "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "a7278f02cf9ffc2764646320799e4e6a7128985cf043ab0c8b7e0e104bbfbb7e",
+      "note_hash": "d3158d7d6de617949e0ba4ec8b85ccb366321b6f285c3f0c0208c45246801e76",
       "path": "docs/CL3_BARYON_QQQ_COLOR_SINGLET_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/cl3_baryon_qqq_color_singlet_check.py",
       "title": "Three-Quark Baryon Color Singlet from Cited Cl(3) Color Structure"
@@ -50349,7 +50354,7 @@
       "deps": [
         "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
       ],
-      "note_hash": "84327f4d22c6908f10cab8735bf56675a45b6058450c48710dd9c7c84f25b3d7",
+      "note_hash": "022076262174eeaf1755bce600e20f04827ed2c9956ec6ec035c6ed4ebc11c08",
       "path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note"
@@ -69856,7 +69861,7 @@
       "open_gate": 116,
       "positive_theorem": 617
     },
-    "edge_count": 8713,
+    "edge_count": 8714,
     "leaf_count": 621,
     "node_count": 2189,
     "root_count": 809,
