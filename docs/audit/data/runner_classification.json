@@ -12000,6 +12000,18 @@
       "dominant_class": "D",
       "runner": "scripts/linear_response_true_kubo.py"
     },
+    "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_link_local_first_variation_selector_bridge_narrow.py"
+    },
     "local_zsym_predictor_note": {
       "assert_count": 0,
       "counts": {
@@ -34076,6 +34088,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_link_local_first_variation_selector_bridge_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_lorentz_boost_2d.py": {
       "assert_count": 1,
       "claims": [
@@ -45424,15 +45451,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 177,
+    "decoration_candidates": 178,
     "dominant_class_distribution": {
       "A": 124,
-      "B": 168,
+      "B": 169,
       "C": 658,
       "D": 252,
       "none": 420
     },
-    "runners_classified": 1622,
+    "runners_classified": 1623,
     "runners_with_C": 826,
     "runners_with_D": 451
   }

@@ -50945,6 +50945,17 @@
       "runner_path": "scripts/linear_response_true_kubo.py",
       "title": "True First-Order Kubo \u2014 Closed-Form Analytic Derivation"
     },
+    "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10": {
+      "claim_id": "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "bba9a8f35261393d5505fb79c721cec00b2d7ef1e04e5a9252ad73f0e434ed19",
+      "path": "docs/LINK_LOCAL_FIRST_VARIATION_SELECTOR_BRIDGE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_link_local_first_variation_selector_bridge_narrow.py",
+      "title": "Link-Local First-Variation Support Conditional Algebra Theorem"
+    },
     "literature_backmatch_live_scan_note": {
       "claim_id": "literature_backmatch_live_scan_note",
       "claim_type_author_hint": null,
@@ -66939,6 +66950,7 @@
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
+    "link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10",
     "literature_positioning_note",
     "local_zsym_predictor_note",
     "lorentz_violation_derived_note",
@@ -67286,7 +67298,7 @@
       "no_go": 27,
       "none": 1628,
       "open_gate": 30,
-      "positive_theorem": 113
+      "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 745,
@@ -67295,12 +67307,12 @@
       "no_go": 134,
       "none": 451,
       "open_gate": 118,
-      "positive_theorem": 613
+      "positive_theorem": 614
     },
     "edge_count": 8364,
-    "leaf_count": 573,
-    "node_count": 2121,
-    "root_count": 797,
-    "runners_with_path": 1734
+    "leaf_count": 574,
+    "node_count": 2122,
+    "root_count": 798,
+    "runners_with_path": 1735
   }
 }
