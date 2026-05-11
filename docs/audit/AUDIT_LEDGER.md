@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1252 |
+| unaudited | 1251 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 175 |
+| ~~audited_conditional~~ | 176 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 175 |
+| `audited_conditional` | 176 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1365 |
+| `unaudited` | 1364 |
 
 | claim_type | count |
 |---|---:|
@@ -698,6 +698,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6533,6 +6534,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Every scanned `topN` value stayed stable.  _(class `C`)_
 - **chain closes:** True — The note confines the claim to a fixed finite support sweep with explicit stability thresholds. The runner recomputes the lattice rows, two-stage sourced-response ratios, support carry, and stable set, and live/cached output match the reported max_rel_err=0.0066069 and min_carry=1.
 - **rationale:** The scoped bounded claim closes as a finite-compute result: the runner constructs the stated 2D harness and derives the reported sweep values rather than importing a target threshold or external comparator. The clean verdict is limited to the implemented parameter set, support list, and stability rule. Residual risk is implementation-model dependence on the helper lattice generator and chosen thresholds, not a closure gap for the finite no-collapse claim.
+- **auditor confidence:** high
+
+### `mirror_2d_validation_note`
+
+- **Note:** [`MIRROR_2D_VALIDATION_NOTE.md`](../../docs/MIRROR_2D_VALIDATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact 2D mirror validation at npl_half=12, yr=10.0, connect_radius=2.5, 8 seeds, k in {3,5,7}, retained N in {25,40,60,80,100}, comparing MI, 1-pur_min, d_TV, positive gravity read, k=0 control, and three-slit Born cleanliness; no promoted mass law, distance law, or beyond-sweep transfer is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The exact 2D mirror family is Born-clean and retains a strong bounded joint coexistence pocket; the strongest retained row is N = 60.  _(class `C`)_
+- **chain closes:** False — The numerical pocket is substantially supported by the primary runner and caches, but the chain does not close as a retained audit row because the load-bearing imported generator/linear propagator authority is not represented in the ledger dependencies and the current primary runner cache no longer exactly matches the note's Born-column values.
+- **rationale:** Issue: the note's exact-2D-mirror premise depends on mirror_born_audit.py and its cache, but the ledger row has no dependency edge for that imported authority; additionally, the current mirror_2d_validation runner cache reports machine-precision Born values that differ from the retained table's Born column. Why this blocks: a clean retained_bounded audit would not be invalidated by drift in the imported generator/linear propagator, and the source table is not fully current with the primary cache it says backs every row. Repair target: add machine-tracked dependency coverage for mirror_born_audit.py/cache or vendor/hash the imported authority in the primary runner audit state, then update the retained table to the current cache output or pin the frozen log as the audited output. Claim boundary until fixed: the current artifacts support a bounded exact-2D mirror coexistence pocket with Born cleanliness at machine precision and no gravity-law promotion, but the audit plumbing and stale table cells must be repaired before clean retention.
+- **open / conditional deps cited:**
+  - `scripts/mirror_born_audit.py`
+  - `logs/runner-cache/mirror_born_audit.txt`
 - **auditor confidence:** high
 
 ### `mirror_chokepoint_boundary_fit_note`
