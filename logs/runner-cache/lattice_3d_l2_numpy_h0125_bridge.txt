@@ -1,11 +1,101 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_3d_l2_numpy_h0125_bridge.py
-runner_sha256: 2600ca0d3bf9fd8b006823c58e057a90d489a23a579b684d8a9e1d0dbd4c8e48
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.38
-status: timeout
+runner_sha256: 25c516a8f6d613f9eb335fd6504dd1ff2b1e3eb78ae6b305f1f3d12dfcb99cc6
+timeout_sec: 700
+exit_code: 0
+elapsed_sec: 500.95
+status: ok
 ----- stdout -----
+====================================================================================
+3D 1/L^2 + h^2 NUMPY H=0.125 BRIDGE
+  fixed family: phys_l=6, phys_w=3, max_d_phys=3
+  source strength=5e-05
+  goal: retain the continuum bridge or freeze a bounded failure
+====================================================================================
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=1.0)
+  343 nodes, 7 layers, 8214 edges
+  Generated in 0.0s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 6.65e-16  [PASS] (0.0s)
+  2. d_TV = 0.4026
+  3. k=0 = 0.000000
+  5. Gravity z=3: -0.001374 (AWAY)
+  4. F~M: too few TOWARD points (1)
+  6. Decoherence = 32.0%
+  7. MI = 0.2638 bits
+  10. Distance law (s=5e-05):
+      z=2: -0.004612 (AWAY)
+      Distance time: 0.0s
+
+  TOTAL TIME: 0s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.5)
+  2197 nodes, 13 layers, 193548 edges
+  Generated in 0.0s
+======================================================================
+
+  Free propagation: 0.0s
+  1. Born |I3|/P = 1.66e-15  [PASS] (0.0s)
+  2. d_TV = 0.7748
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.012493 (TOWARD)
+  4. F~M alpha = 0.50
+  6. Decoherence = 49.9%
+  7. MI = 0.5607 bits
+  10. Distance law (s=5e-05):
+      z=2: +0.009909 (TOWARD)
+      Distance time: 0.0s
+
+  TOTAL TIME: 0s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.25)
+  15625 nodes, 25 layers, 5279064 edges
+  Generated in 0.9s
+======================================================================
+
+  Free propagation: 0.2s
+  1. Born |I3|/P = 3.48e-15  [PASS] (1.7s)
+  2. d_TV = 0.8199
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.014965 (TOWARD)
+  4. F~M alpha = 0.50
+  6. Decoherence = 50.0%
+  7. MI = 0.6180 bits
+  10. Distance law (s=5e-05):
+      z=2: +0.014016 (TOWARD)
+      Distance time: 0.2s
+
+  TOTAL TIME: 7s
+
+
+======================================================================
+3D DENSE + 1/L^2 KERNEL (h=0.125)
+  117649 nodes, 49 layers, 155692848 edges
+  Generated in 30.7s
+======================================================================
+
+  Free propagation: 18.1s
+  1. Born |I3|/P = 6.18e-15  [PASS] (151.9s)
+  2. d_TV = 0.7854
+  3. k=0 = 0.000000
+  5. Gravity z=3: +0.028440 (TOWARD)
+  4. F~M alpha = 0.50
+  6. Decoherence = 49.6%
+  7. MI = 0.5031 bits
+  10. Distance law (s=5e-05):
+      z=2: +0.024988 (TOWARD)
+      Distance time: 21.5s
+
+  TOTAL TIME: 493s
 
 ----- stderr -----
 

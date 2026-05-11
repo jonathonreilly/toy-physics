@@ -14,6 +14,15 @@ the F~M readout from the existing numpy card.
 
 from __future__ import annotations
 
+# Heavy compute / 3D continuum bridge replay — exceeds the 120s default
+# audit timeout. Measured wall-clock at 2026-05-10: ~501s on the canonical
+# Python 3.12 machine (CPU was 72% — most time in numpy linear-algebra
+# work); declaring 700s here gives ~40% margin while keeping the
+# audit-cache budget bounded. Without this declaration the audit lane
+# caches an empty stdout under `status: timeout`, blocking the audit
+# verdict (the cited row was UNAUDITED on origin/main).
+AUDIT_TIMEOUT_SEC = 700
+
 import os
 import sys
 

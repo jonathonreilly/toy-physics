@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1161 |
+| unaudited | 1162 |
 | meta | 102 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 258 |
+| ~~audited_conditional~~ | 257 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 429 |
-| `audited_conditional` | 258 |
+| `audited_conditional` | 257 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1263 |
+| `unaudited` | 1264 |
 
 | claim_type | count |
 |---|---:|
@@ -72,7 +72,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 - runners classified: 1679
 - runners with (C) first-principles compute hits: 858
-- runners with (D) external comparator hits: 475
+- runners with (D) external comparator hits: 476
 - decoration candidates (no C, no D): 195
 
 ## Top 25 by load-bearing score (topology only)
@@ -595,7 +595,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cosmology_scale_identification_and_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
-| `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_decoherence_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -2838,19 +2837,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Dark energy is identified with the fixed S^3 graph-Laplacian spectral gap, Lambda = lambda_1(S^3) = 3/R^2, with R fixed thereafter.  _(class `F`)_
 - **chain closes:** False — The algebraic implication fixed Lambda implies constant rho_Lambda and hence w = -1 closes, but the physical identification of dark energy with the fixed spectral gap is asserted rather than derived from a retained input or first-principles computation. The missing step is a bridge theorem establishing Lambda = lambda_1(S^3) as the physical dark-energy source with fixed R.
 - **rationale:** The load-bearing move is an asserted identity between physical dark energy/Lambda and a graph spectral gap, followed by standard cosmological algebra. The runner mostly prints and checks consequences of that premise; its numerical S^3 graph calculation does not derive the physical identification and its own finite-grid corrections do not match the claimed -1/4 coefficient. DESI comparisons are external comparator context, not framework-internal closure.
-- **auditor confidence:** high
-
-### `decoherence_action_independence_note`
-
-- **Note:** [`DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](../../docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Action-independence of the listed decoherence observables on the frozen 3D 1/L^2 replay for h = 1.0, 0.5, and 0.25.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12da-a48e-74e0-a7bd-8ea7482a0233`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Both actions reduce to S = L × const at zero field, so the amplitude magnitudes entering the decoherence observables are shared by both actions.  _(class `A`)_
-- **chain closes:** False — The packet does not provide retained definitions of the two action laws or the imported propagation harness needed to verify the zero-field reduction. The runner also has no completed stdout, but the timeout is not used as the terminal reason.
-- **rationale:** Issue: the claimed equality rests on an unsupported assertion that both action laws reduce to the same zero-field action and therefore give identical propagated magnitudes. Why this blocks: without the action-law definitions or completed replay artifact, a hostile reviewer cannot verify that action-dependent phases cannot alter interference magnitudes. Repair target: cite/audit the action-law and propagation-harness definitions and provide a completed deterministic replay or cached certificate for the stated h values. Claim boundary until fixed: the note may report an asserted bounded replay observation, not retained action-independence.
 - **auditor confidence:** high
 
 ### `dense_prune_guard_seed_note`

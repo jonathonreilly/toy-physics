@@ -3474,10 +3474,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "runner": "scripts/decoherence_action_independence.py"
     },
     "dense_prune_guard_seed_note": {
@@ -11814,7 +11814,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 1
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -25265,10 +25265,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/diamond_phase_ramp_bridge_card.py": {
@@ -43187,7 +43187,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 1
+        "D": 2
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -46981,11 +46981,11 @@
       "A": 145,
       "B": 172,
       "C": 679,
-      "D": 262,
-      "none": 421
+      "D": 263,
+      "none": 420
     },
     "runners_classified": 1679,
     "runners_with_C": 858,
-    "runners_with_D": 475
+    "runners_with_D": 476
   }
 }
