@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 153
+    "medium": 152
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27142,27 +27142,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "chiral_3plus1d_mixing_period_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.585,
-      "note_path": "docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
-      "transitive_descendants": 5
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "chiral_3plus1d_recurrence_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -40147,6 +40126,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 104,
-  "total_pending": 1279
+  "ready_count": 103,
+  "total_pending": 1278
 }

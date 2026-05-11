@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 258 |
+| **retained_bounded** | 259 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1248 |
+| unaudited | 1247 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 432 |
+| `audited_clean` | 433 |
 | `audited_conditional` | 178 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1361 |
+| `unaudited` | 1360 |
 
 | claim_type | count |
 |---|---:|
@@ -181,6 +181,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_two_higgs_canonical_reduction_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `chiral_3plus1d_coupled_coin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
+| `chiral_3plus1d_mixing_period_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -1890,6 +1891,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The factorized direct-sum coin (mix=0) gives V=0 loop response and R^2=0.063 dispersion fit; the coupled coin family lifts both observables monotonically with mix, reaching V=0.91 and R^2=0.48 near the coupled end.  _(class `C`)_
 - **chain closes:** True — The bounded claim is the measured monotone improvement of both observables under coin coupling on the named scan. The note correctly states this supports separability as a real blocker without claiming to recover a clean 3D KG law; the moderate dispersion R^2 caps any stronger interpretation.
 - **rationale:** Within the regime-finding scan scope, the chain closes by direct measurement on the runner. The note's interpretation 'coupling helps but not enough; better symmetry-matched generator still needed' matches the bounded measurement. No upgrade to a 3D transport theorem is implied.
+- **auditor confidence:** high
+
+### `chiral_3plus1d_mixing_period_note`
+
+- **Note:** [`CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md`](../../docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Periodic 3+1D chiral walk diagnostic at theta0=0.3, strength=5e-4, mass offset=3, n in {15,21,23,25,31}, L in {12,14,16,18,20,28}, comparing coherent, classical, and phase-kill AWAY-window sets plus local mixing-period arithmetic; no predictive recurrence/phase-offset law is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The bad windows move with lattice size n, and the same windows survive in the classical and phase-kill limits, so the sign problem is encoded in the local coin + shift dynamics, not only in coherent phase interference.  _(class `C`)_
+- **chain closes:** True — The runner computes the stated n/L sign windows for all three propagation modes and asserts the coherent, classical, and phase-kill AWAY-window sets against the note table. The local pi/theta0 and theta_eff period estimates are direct arithmetic and support only the diagnostic boundary that a universal pi/theta0 rule is insufficient.
+- **rationale:** The bounded diagnostic closes: the cached runner recomputes the periodic 3+1D table, shows size-dependent coherent AWAY windows, and verifies that classical and phase-kill AWAY sets persist rather than disappearing under decoherence. The clean scope is limited to this finite sweep and the arithmetic rejection of a fixed pi/theta0 alias; it does not derive a predictive recurrence or phase-offset law across lattice sizes.
 - **auditor confidence:** high
 
 ### `chiral_layer_oscillation_2026-04-09`
