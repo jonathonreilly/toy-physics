@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 265 |
+| **retained_bounded** | 266 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1237 |
+| unaudited | 1236 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 439 |
+| `audited_clean` | 440 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1350 |
+| `unaudited` | 1349 |
 
 | claim_type | count |
 |---|---:|
@@ -304,6 +304,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `h0125_wider_replay_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `h0125_wider_w4_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
+| `h2t_h0125_narrow_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -5088,6 +5089,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "The finished retained width-4 result came from the targeted replay controls ... which kept the physical family at phys_l = 6 and still returned alpha = 0.499 on the full-window z = 3.0 row."  _(class `B`)_
 - **chain closes:** False — The asserted bounded no-go depends on closeout logs and a targeted replay script named in the note, but the audit packet lists no cited authorities and does not include those artifacts. The supplied primary runner timed out, and timeout alone is not evidence for or against the scientific claim.
 - **rationale:** Issue: the load-bearing alpha=0.499 result is imported from named closeout/replay artifacts that are not supplied as one-hop dependencies. Why this blocks: without those artifacts or a completed equivalent run, the bounded no-go cannot be checked from the restricted packet. Repair target: add the closeout logs/replay note or a completed cached certificate as direct dependencies, or provide a sliced runner that completes and reproduces the alpha result. Claim boundary until fixed: only the existence and intended role of an auxiliary scouting script is locally supported.
+- **auditor confidence:** high
+
+### `h2t_h0125_narrow_bridge_note`
+
+- **Note:** [`H2T_H0125_NARROW_BRIDGE_NOTE.md`](../../docs/H2T_H0125_NARROW_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded negative h=0.125 dense 3D 1/L^2+h^2 bridge result: the reduced fixed-family audit reaches h=0.125 with Born clean where measurable but no recovered TOWARD/F~M bridge, and the retained bridge-family dependency remains at F~M about 0.50 rather than 1.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The reduced audit family reaches h=0.125 but stays AWAY with too few TOWARD points for F~M, while the larger bridge family reaches h=0.125 with TOWARD sign but F~M remains about 0.50, so the narrow F~M near 1 bridge claim fails.  _(class `C`)_
+- **chain closes:** True — The primary audit runner cache completes the reduced h ladder through h=0.125 and matches the source note's negative table. The direct bridge dependency is retained-bounded and supports the larger-family boundary that h=0.125 completion still does not produce Newtonian mass scaling.
+- **rationale:** The source note makes a narrow bounded negative claim, and the current runner cache supports it: Born is machine-clean where readable, k=0 is zero, but the reduced family never produces TOWARD points and the bridge-family dependency remains F~M about 0.50. The claim does not promote a continuum theorem or Newtonian h=0.125 bridge. Residual risk is limited to the finite two-family diagnostic and the exact h=0.125 harnesses.
 - **auditor confidence:** high
 
 ### `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`
