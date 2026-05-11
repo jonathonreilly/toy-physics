@@ -490,7 +490,7 @@ def plancherel_scalar_trace(H: np.ndarray) -> float:
     """tr_{Plancherel}(E(H^*H)) = (1/3) Σ_χ |λ_χ|^2.
 
     This is the canonical scalar trace from the uniform Plancherel
-    measure on \hat{C_3}.
+    measure on \\hat{C_3}.
     """
     H_squared = H.conj().T @ H
     components = character_components(H_squared)
