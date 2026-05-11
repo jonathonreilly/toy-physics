@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 73 |
+| **retained** | 74 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 241 |
 | open_gate | 13 |
-| unaudited | 1116 |
+| unaudited | 1115 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 410 |
+| `audited_clean` | 411 |
 | `audited_conditional` | 260 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1214 |
+| `unaudited` | 1213 |
 
 | claim_type | count |
 |---|---:|
@@ -139,6 +139,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bmv_bounded_negative_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `bmv_entanglement_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `bmv_threebody_note_2026-04-11` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | B | - |
 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
@@ -1607,6 +1608,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The note asserts the Banach-contraction/PDE result and the α-ranking but provides no proof, hypotheses, runner, or cited authority establishing the Lipschitz/contraction comparison. The broader measurement-vs-dynamics conclusion also depends on an unproved bridge from this Hartree iteration result to logical independence of gravity and quantum probability.
 - **rationale:** Issue: the load-bearing contraction-rate theorem is stated, not derived, and no one-hop authority or completed runner is supplied. Why this blocks: the negative conclusion that gravity does not select α=2 rests on that unverified fixed-point ranking plus a measurement/dynamics separation that is asserted rather than closed in the restricted packet. Repair target: supply a bounded theorem with explicit Banach-map hypotheses and proof, or a runner/log that computes the contraction ranking under stated norms, and separately scope the measurement-level independence claim. Claim boundary until fixed: this is only an interpretive note about what a prior Hartree convergence test would mean if the stated PDE comparison were established.
 - **auditor confidence:** medium
+
+### `bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`BOUGEROL_LACROIX_OSELEDETS_MET_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/BOUGEROL_LACROIX_OSELEDETS_MET_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** External narrow MET statement for i.i.d. invertible finite-dimensional real or complex matrix products assuming finite E log^+ ||A_0|| and finite E log^+ ||A_0^{-1}||, with no finite-N rate, spectral-gap, projective-action, or framework bridge claim.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14ae-cbd9-7383-87d2-276fd52b4460`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Under the stated integrability hypotheses, Oseledets' multiplicative ergodic theorem gives deterministic Lyapunov exponents and an invariant filtration with almost-sure vector growth limits.  _(class `B`)_
+- **chain closes:** True — Within the stated boundary, the note only records the standard Oseledets MET consequence under its hypotheses and explicitly excludes framework and spectral-gap extrapolations. The runner does not prove the external theorem, but it checks consistency examples and boundary hygiene without introducing an overclaim.
+- **rationale:** The scoped claim is a narrow external theorem statement, not a project-specific derivation or physical bridge. The load-bearing theorem is standardly cited in the note, the assumptions are stated, and the boundary excludes the common invalid extensions that would require additional retained inputs.
+- **auditor confidence:** high
 
 ### `bound_state_selection_note`
 
