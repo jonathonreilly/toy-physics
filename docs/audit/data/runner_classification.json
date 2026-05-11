@@ -8916,6 +8916,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py"
     },
+    "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hierarchy_lt4_physical_selection_proof_walk.py"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "assert_count": 0,
       "counts": {
@@ -31782,6 +31794,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_hierarchy_lt4_physical_selection_proof_walk.py": {
+      "assert_count": 2,
+      "claims": [
+        "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 8,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_matsubara_decomposition.py": {
       "assert_count": 0,
       "claims": [
@@ -45158,12 +45185,12 @@
     "dominant_class_distribution": {
       "A": 120,
       "B": 166,
-      "C": 656,
+      "C": 657,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1612,
-    "runners_with_C": 823,
-    "runners_with_D": 447
+    "runners_classified": 1613,
+    "runners_with_C": 824,
+    "runners_with_D": 448
   }
 }

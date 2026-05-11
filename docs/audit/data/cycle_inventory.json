@@ -39,7 +39,7 @@
         }
       ],
       "length": 8,
-      "max_transitive_descendants": 649,
+      "max_transitive_descendants": 650,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -48,7 +48,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/G_BARE_DERIVATION_NOTE.md",
           "title": "Derivation of g_bare = 1 from Canonical Cl(3) Normalization",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -57,7 +57,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
           "title": "g_bare Constraint vs Convention Disambiguation Theorem",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -66,7 +66,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
           "title": "Off-Surface Same-1PI Pinning Theorem for the Two-Ward `g_bare` Route",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -75,7 +75,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
           "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -84,7 +84,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_VERTEX_POWER_DERIVATION.md",
           "title": "`y_t` Vertex-Power Theorem: Why `alpha_s(v) = alpha_bare / u_0^2`",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -93,7 +93,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/ALPHA_S_DERIVED_NOTE.md",
           "title": "`alpha_s(M_Z)` Same-Surface-Derived Authority (bounded)",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "unaudited",
@@ -102,7 +102,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
           "title": "Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         },
         {
           "audit_status": "audited_conditional",
@@ -111,7 +111,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md",
           "title": "Gauge-Vacuum Plaquette Susceptibility-Flow Theorem",
-          "transitive_descendants": 649
+          "transitive_descendants": 650
         }
       ],
       "requires_lemma_extraction": false
@@ -130,7 +130,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 501,
+      "max_transitive_descendants": 502,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -139,7 +139,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
           "title": "Hypercharge U(1)_Y Identification from the Commutant",
-          "transitive_descendants": 501
+          "transitive_descendants": 502
         },
         {
           "audit_status": "unaudited",
@@ -148,7 +148,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
           "title": "LHCM Matter Assignment from SU(3) Representation Content",
-          "transitive_descendants": 501
+          "transitive_descendants": 502
         }
       ],
       "requires_lemma_extraction": false
@@ -167,7 +167,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 489,
+      "max_transitive_descendants": 490,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -176,7 +176,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
           "title": "Route 2 Bilinear Tensor Carrier (Definition-Only)",
-          "transitive_descendants": 489
+          "transitive_descendants": 490
         },
         {
           "audit_status": "unaudited",
@@ -185,7 +185,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
           "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier",
-          "transitive_descendants": 489
+          "transitive_descendants": 490
         }
       ],
       "requires_lemma_extraction": false
@@ -204,7 +204,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 480,
+      "max_transitive_descendants": 481,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -213,7 +213,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
           "title": "`y_t` Bridge Hessian Selector Note",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -222,7 +222,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_VARIATIONAL_SELECTOR_NOTE.md",
           "title": "`y_t` Bridge Variational Selector Note",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         }
       ],
       "requires_lemma_extraction": false
@@ -241,7 +241,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 480,
+      "max_transitive_descendants": 481,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -250,7 +250,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
           "title": "Constructive UV-Localized Bridge Class for `y_t`",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -259,7 +259,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
           "title": "`y_t` Bridge Rearrangement Principle Note",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         }
       ],
       "requires_lemma_extraction": false
@@ -290,7 +290,7 @@
         }
       ],
       "length": 5,
-      "max_transitive_descendants": 480,
+      "max_transitive_descendants": 481,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -299,7 +299,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BOUNDARY_THEOREM.md",
           "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -308,7 +308,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
           "title": "y_t Lane: Zero-Import Authority",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -317,7 +317,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
           "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -326,7 +326,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md",
           "title": "`y_t` Bridge Higher-Order Corrections Note",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         },
         {
           "audit_status": "unaudited",
@@ -335,7 +335,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
           "title": "Constructive UV-Localized Bridge Class for `y_t`",
-          "transitive_descendants": 480
+          "transitive_descendants": 481
         }
       ],
       "requires_lemma_extraction": false
@@ -436,7 +436,7 @@
         }
       ],
       "length": 4,
-      "max_transitive_descendants": 399,
+      "max_transitive_descendants": 400,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -445,7 +445,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md",
           "title": "P2 Taste-Staircase Beta Functions: Retained No-Go",
-          "transitive_descendants": 399
+          "transitive_descendants": 400
         },
         {
           "audit_status": "unaudited",
@@ -454,7 +454,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
           "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
-          "transitive_descendants": 399
+          "transitive_descendants": 400
         },
         {
           "audit_status": "unaudited",
@@ -463,7 +463,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
           "title": "Taste-Staircase Transport Theorem (P2 Narrowing)",
-          "transitive_descendants": 399
+          "transitive_descendants": 400
         },
         {
           "audit_status": "unaudited",
@@ -472,7 +472,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
           "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
-          "transitive_descendants": 399
+          "transitive_descendants": 400
         }
       ],
       "requires_lemma_extraction": false
@@ -491,7 +491,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 396,
+      "max_transitive_descendants": 397,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -500,7 +500,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Bounded Note",
-          "transitive_descendants": 396
+          "transitive_descendants": 397
         },
         {
           "audit_status": "unaudited",
@@ -509,7 +509,7 @@
           "effective_status": "unaudited",
           "note_path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_CLOSED_FORM_NOTE_2026-05-09.md",
           "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Closed-Form Note",
-          "transitive_descendants": 396
+          "transitive_descendants": 397
         }
       ],
       "requires_lemma_extraction": false

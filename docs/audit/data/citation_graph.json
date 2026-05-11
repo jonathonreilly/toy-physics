@@ -9785,6 +9785,38 @@
       "to": "complete_prediction_chain_2026_04_15"
     },
     {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "hierarchy_spatial_bc_and_u0_scaling_note"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "to": "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
       "to": "hierarchy_matsubara_decomposition_note"
     },
@@ -46181,6 +46213,26 @@
       "runner_path": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py",
       "title": "Hierarchy Joint Riemann-Dirichlet / Dimensional Fourth-Root \u2014 Narrow Theorem"
     },
+    "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10": {
+      "claim_id": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_matsubara_decomposition_note",
+        "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10",
+        "hierarchy_spatial_bc_and_u0_scaling_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "hierarchy_bosonic_bilinear_selector_note",
+        "observable_principle_from_axiom_note",
+        "cpt_exact_note",
+        "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "fd2b1fc2fa666ee149636e62b0ecd81a1043aceeb2aec39cce8ce5b6884a01e4",
+      "path": "docs/HIERARCHY_LT4_PHYSICAL_SELECTION_PROOF_WALK_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_lt4_physical_selection_proof_walk.py",
+      "title": "Hierarchy L_t = 4 Physical-Selection Proof-Walk Bounded Note"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "claim_id": "hierarchy_matsubara_decomposition_note",
       "claim_type_author_hint": null,
@@ -67065,7 +67117,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 258,
+      "bounded_theorem": 259,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67074,7 +67126,7 @@
       "positive_theorem": 109
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 740,
+      "bounded_theorem": 741,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67082,10 +67134,10 @@
       "open_gate": 117,
       "positive_theorem": 609
     },
-    "edge_count": 8345,
+    "edge_count": 8353,
     "leaf_count": 565,
-    "node_count": 2111,
+    "node_count": 2112,
     "root_count": 794,
-    "runners_with_path": 1724
+    "runners_with_path": 1725
   }
 }
