@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/frontier_area_law_majorana_to_car_fock_equivalence_narrow.py
+runner_sha256: 11daf3b0b68734c0853b5e2a9067350280665c91a735ddf8b4670c6d72692f66
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1 (T1, symbolic): Cl_4 relations imply CAR identities for c_a
+----------------------------------------------------------------------------------------
+  [PASS (A)] {c_1, c_1} reduces to 0 in Cl_4  (reduced = 0)
+  [PASS (A)] {c_1, c_2} reduces to 0 in Cl_4  (reduced = 0)
+  [PASS (A)] {c_2, c_1} reduces to 0 in Cl_4  (reduced = 0)
+  [PASS (A)] {c_2, c_2} reduces to 0 in Cl_4  (reduced = 0)
+  [PASS (A)] {c_1, c_1^dag} reduces to delta_{11} I in Cl_4  (reduced = 1, expected = 1)
+  [PASS (A)] {c_1, c_2^dag} reduces to delta_{12} I in Cl_4  (reduced = 0, expected = 0)
+  [PASS (A)] {c_2, c_1^dag} reduces to delta_{21} I in Cl_4  (reduced = 0, expected = 0)
+  [PASS (A)] {c_2, c_2^dag} reduces to delta_{22} I in Cl_4  (reduced = 1, expected = 1)
+
+----------------------------------------------------------------------------------------
+Part 2 (numerical baseline): canonical Cl_4 / CAR representation on C^4
+----------------------------------------------------------------------------------------
+  [PASS (A)] F(C^2) annihilation operators satisfy {a_i, a_j} = 0  (max error = 0.00e+00)
+  [PASS (A)] F(C^2) annihilation operators satisfy {a_i, a_j^dag} = delta_ij I  (max error = 0.00e+00)
+  [PASS (A)] canonical four Majoranas are Hermitian  (max ||g - g^dag|| = 0.00e+00)
+  [PASS (A)] canonical four Majoranas satisfy {g_i, g_j} = 2 delta_ij I  (max ||{g_i,g_j} - 2 delta_ij I|| = 0.00e+00)
+  [PASS (A)] canonical four Majoranas generate End(C^4) ~= M_4(C)  (complex span rank = 16 (expected 16))
+
+----------------------------------------------------------------------------------------
+Part 3 (numerical (T1)): CAR identities for c_a = (g_{2a-1} + i g_{2a})/2
+----------------------------------------------------------------------------------------
+  [PASS (A)] {c_a, c_b} = 0 numerically (canonical Cl_4 representation)  (max error = 0.00e+00)
+  [PASS (A)] {c_a, c_b^dag} = delta_ab I numerically (canonical Cl_4 representation)  (max error = 0.00e+00)
+
+----------------------------------------------------------------------------------------
+Part 4 (T2): Pauli intertwiner — second Cl_4 representation by unitary conjugation
+----------------------------------------------------------------------------------------
+  [PASS (A)] alternative Cl_4 representation: Hermiticity preserved  (max ||g'_i - g'_i^dag|| = 3.70e-16)
+  [PASS (A)] alternative Cl_4 representation: relations preserved  (max ||{g'_i, g'_j} - 2 delta_ij I|| = 2.85e-15)
+  [PASS (A)] intertwiner null space has dimension exactly one (Schur uniqueness)  (null_dim = 1)
+  [PASS (A)] intertwiner U is unitary (up to phase)  (||U U^dag - I|| = 1.12e-15)
+  [PASS (A)] U g_alt[i] U^dag = g_can[i] (Pauli intertwiner equation (4))  (max ||U g'_i U^dag - g_i|| = 1.37e-15)
+  [PASS (A)] U c'_a U^dag = a_a (CAR-level intertwiner)  (max CAR intertwiner error = 1.04e-15)
+
+----------------------------------------------------------------------------------------
+Part 5 (T3): rank-four Hilbert space alone does not force CAR
+----------------------------------------------------------------------------------------
+  [PASS (A)] commuting Pauli pair on C^2 (x) C^2: [A, B] = 0  (||[X (x) I, I (x) X]|| = 0.00e+00)
+  [PASS (A)] commuting Pauli pair on C^2 (x) C^2: {A, B} != 0 (so not CAR)  (||{X (x) I, I (x) X}|| = 4.00e+00)
+
+----------------------------------------------------------------------------------------
+Part 6: inverse map — recover Majoranas from CAR pair
+----------------------------------------------------------------------------------------
+  [PASS (A)] inverse map (c_a, c_a^dag) -> (gamma_{2a-1}, gamma_{2a}) recovers original  (max ||gamma_recovered - gamma|| = 0.00e+00)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let K be a four-dimensional complex Hilbert space and let
+    gamma_1, gamma_2, gamma_3, gamma_4 be Hermitian operators on K
+    satisfying  {gamma_i, gamma_j} = 2 delta_ij I_K  (complex Cl_4).
+    Define  c_a = (gamma_{2a-1} + i gamma_{2a}) / 2  for a in {1, 2}.
+
+  CONCLUSION:
+    (T1)  {c_a, c_b}        = 0       symbolically from Cl_4 alone.
+          {c_a, c_b^dag}    = delta_ab I_K     symbolically from Cl_4 alone.
+
+    (T2)  If (gamma_i) generate End(K) ~= M_4(C), then there exists a
+          unitary U: K -> F(C^2), unique up to overall phase, with
+              U c_a U^dag = a_a       a in {1, 2},
+          where (a_1, a_2) are the standard CAR annihilators on F(C^2).
+
+    (T3)  Hilbert dimension four alone is insufficient: the commuting
+          Pauli pair (X (x) I, I (x) X) on C^2 (x) C^2 has [.,.] = 0
+          and {.,.} != 0, so it is not a CAR pair.
+
+  Audit-lane class:
+    (A) — finite-dimensional algebra and Pauli-style Clifford
+    representation theory on an abstract complex Hilbert space C^4.
+    No physical horizon, substrate-to-P_A, Cl(3)/Z^3, Wald-Noether,
+    coframe-response, or BH-quarter authority is consumed.
+
+
+========================================================================================
+  TOTAL: PASS=24, FAIL=0
+========================================================================================
+
+----- stderr -----
+

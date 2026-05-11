@@ -35699,6 +35699,17 @@
       "runner_path": null,
       "title": "Area-Law Coefficient Gap Audit"
     },
+    "area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09": {
+      "claim_id": "area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "61c8f4c8af29a640c848ccd0f78b5f438f7af231e8ee31000b44e245ffff510d",
+      "path": "docs/AREA_LAW_MAJORANA_CAR_FOCK_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-09.md",
+      "runner_path": "scripts/frontier_area_law_majorana_to_car_fock_equivalence_narrow.py",
+      "title": "Area-Law Majorana-to-CAR-Fock Equivalence Narrow Theorem"
+    },
     "area_law_multipocket_selector_no_go_note_2026-04-25": {
       "claim_id": "area_law_multipocket_selector_no_go_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -67410,6 +67421,7 @@
     "architecture_options",
     "architecture_portability_sweep_note",
     "area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25",
+    "area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09",
     "area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25",
     "asymmetry_persistence_born_note",
     "asymmetry_persistence_collapse_note",
@@ -68145,7 +68157,7 @@
       "no_go": 31,
       "none": 1626,
       "open_gate": 34,
-      "positive_theorem": 132
+      "positive_theorem": 133
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
@@ -68154,12 +68166,12 @@
       "no_go": 138,
       "none": 450,
       "open_gate": 122,
-      "positive_theorem": 631
+      "positive_theorem": 632
     },
     "edge_count": 8447,
-    "leaf_count": 603,
-    "node_count": 2158,
-    "root_count": 820,
-    "runners_with_path": 1771
+    "leaf_count": 604,
+    "node_count": 2159,
+    "root_count": 821,
+    "runners_with_path": 1772
   }
 }
