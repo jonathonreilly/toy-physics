@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 100 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 290 |
+| **retained_bounded** | 291 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1173 |
+| unaudited | 1172 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 487 |
+| `audited_clean` | 488 |
 | `audited_conditional` | 197 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1286 |
+| `unaudited` | 1285 |
 
 | claim_type | count |
 |---|---:|
@@ -595,6 +595,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `two_sign_comparison_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `unit_singlet_overlap_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_bd_congruence_invariance_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_block_normalization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_canonical_projector_connection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_complement_canonical_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -10959,6 +10960,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given H_unit = (1 / sqrt(N_iso * N_c)) * I on the canonical pair basis, <basis pair (alpha_0,a_0)|H_unit|basis pair (alpha_0,a_0)> = 1 / sqrt(N_iso * N_c).  _(class `A`)_
 - **chain closes:** True — The scoped claim closes as finite-dimensional algebra: the diagonal identity operator contributes one unit on a normalized basis state and the prefactor gives 1/sqrt(N_iso*N_c). Gauge-coupling independence follows within the scope because no g_bare symbol or gauge-field operator appears in the stated H_unit definition.
 - **rationale:** The note explicitly states H_unit and the canonical pair-basis normalization as hypotheses, and it does not claim to derive that normalization from a physical residue, identify (N_iso,N_c) with Standard-Model content, or force a g_bare selection. Under that narrow scope, the overlap and absence of g_bare dependence are exact algebraic consequences rather than a renaming or tuned numerical match. The cached runner exits cleanly with PASS=19/FAIL=0; eighteen checks exercise the algebraic overlap/no-g_bare content, while one parent-ledger context check is non-load-bearing and not needed for closure. Residual risk is downstream over-citation outside this narrow theorem, not failure of the audited claim itself.
+- **auditor confidence:** high
+
+### `universal_gr_bd_congruence_invariance_bounded_note_2026-05-10`
+
+- **Note:** [`UNIVERSAL_GR_BD_CONGRUENCE_INVARIANCE_BOUNDED_NOTE_2026-05-10.md`](../../docs/UNIVERSAL_GR_BD_CONGRUENCE_INVARIANCE_BOUNDED_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Pure finite-dimensional real matrix trace identity only: with D and S invertible and B_D(h,k)=-Tr(D^{-1} h D^{-1} k), the full congruence transformation D'=S^T D S, h'=S^T h S, k'=S^T k S satisfies B_{D'}(h',k')=B_D(h,k), using only bounded textbook matrix algebra (cyclic trace and inverse-of-product). This excludes the parent universal-GR global atlas bookkeeping consequence, atlas/cocycle/nondegeneracy/pairing-covariance hypotheses, physical Cl(3)/Z^3 derivation of linear algebra, and any unconditional global stationary-section closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Cyclic-trace and inverse-of-product reduction of B_{D'}(h',k') to B_D(h,k), with live runner checking multiple finite dimensions, symmetric inputs, and partial-transformation failure mode.  _(class `A`)_
+- **chain closes:** True — The note is explicitly split to the pure trace identity and admits only bounded textbook finite-dimensional matrix algebra. The live runner reproduced PASS=70, FAIL=0 and confirms the note boundaries, imported modules, invariance checks, and non-claimed parent consequences.
+- **rationale:** The algebraic identity is correct by direct substitution: (S^T D S)^{-1}=S^{-1}D^{-1}(S^T)^{-1}, adjacent inverse factors cancel, and cyclicity removes the outer S^{-1}/S pair. The source note accurately excludes the parent's global stationary-section claim and the parent admitted-context hypotheses, so the bounded row closes cleanly on BA-1 alone.
 - **auditor confidence:** high
 
 ### `universal_gr_block_constraint_interpretation_note`
