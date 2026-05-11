@@ -9072,6 +9072,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_hierarchy_dimensional_compression.py"
     },
+    "hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_hierarchy_dimensional_fourth_root_compression_narrow.py"
+    },
     "hierarchy_effective_potential_endpoint_note": {
       "assert_count": 0,
       "counts": {
@@ -32458,6 +32470,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_hierarchy_dimensional_fourth_root_compression_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_effective_potential_endpoint.py": {
       "assert_count": 0,
       "claims": [
@@ -46085,15 +46112,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 183,
+    "decoration_candidates": 184,
     "dominant_class_distribution": {
-      "A": 131,
+      "A": 132,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1646,
+    "runners_classified": 1647,
     "runners_with_C": 839,
     "runners_with_D": 462
   }
