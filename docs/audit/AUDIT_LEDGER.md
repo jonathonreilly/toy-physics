@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 98 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 286 |
+| **retained_bounded** | 287 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1181 |
+| unaudited | 1180 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 481 |
+| `audited_clean` | 482 |
 | `audited_conditional` | 195 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1294 |
+| `unaudited` | 1293 |
 
 | claim_type | count |
 |---|---:|
@@ -543,6 +543,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block2_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -10088,6 +10089,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The safe read is that structureless causal DAGs can show TOWARD rows, and when they do the source-strength response stays close to linear on this pocket.  _(class `C`)_
 - **chain closes:** True — The runner directly constructs the stated random DAG pocket, propagates with the stated valley-linear field and kernel, and reports the TOWARD counts, local power-law fits, and no-field controls. No external dependency or graph-universality claim is needed for the narrowed harness-level statement.
 - **rationale:** The bounded claim closes as a direct numerical harness result: n=200 gives 28/32 TOWARD rows and n=500 gives 21/32 TOWARD rows, with F~M median 1.00 and zero no-field controls in both reported sizes. The source note's n=500 table value is stale relative to current runner output, but this does not change the load-bearing majority-TOWARD and near-linear positive-row conclusion. Exact-count citation should use the current runner values until the note table is refreshed.
+- **auditor confidence:** high
+
+### `su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`SU2_WEAK_BETA_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/SU2_WEAK_BETA_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact symbolic substitution theorem for the SU(2)_L one-loop beta coefficient only: given the cited retained/retained_bounded inputs for native SU(2)_L, structural SU(3)_c color count N_color=3, LH Weyl-doublet count N_W=(N_color+1)N_gen, N_gen=3, one complex Higgs doublet with two complex components, plus the named external Peskin-Schroeder SU(N) one-loop beta formula, the closed form b_2=(11/3)N_pair-(1/3)(N_color+1)N_gen-1/6=(22N_pair-2(N_color+1)N_gen-1)/6 and the framework value b_2=19/6 follow by exact Rational algebra. This does not derive the upstream gauge/count/Higgs inputs, does not derive the textbook beta formula, and does not claim alpha_2 running, thresholds, PDG comparison, or any broader electroweak closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Substitution of the retained/count inputs and named external one-loop beta formula into the SU(2)_L coefficient, followed by exact symbolic simplification and framework-count evaluation.  _(class `A`)_
+- **chain closes:** True — The source note is narrowed to the exact algebraic implication, all ledger dependencies are retained or retained_bounded, and the live companion runner reproduced all symbolic and Rational arithmetic checks with PASS=16, FAIL=0.
+- **rationale:** The note's load-bearing result is a pure exact-arithmetic consequence of its named inputs. The source note honestly marks the upstream gauge/count/Higgs facts and the Peskin-Schroeder formula as inputs rather than derived content, and the runner verifies the parametric form, factored form, sector decomposition, framework value 19/6, and stated corollaries without numerical fitting or phenomenological comparison.
 - **auditor confidence:** high
 
 ### `su3_adjoint_casimir_theorem_note_2026-05-02`
