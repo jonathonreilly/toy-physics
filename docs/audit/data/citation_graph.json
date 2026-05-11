@@ -13913,6 +13913,22 @@
       "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
     },
     {
+      "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
+      "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
+    },
+    {
+      "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
+      "to": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17"
+    },
+    {
+      "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
+      "to": "yt_bottom_yukawa_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
+      "to": "yt_zero_import_chain_note"
+    },
+    {
       "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -50560,6 +50576,22 @@
       "runner_path": "scripts/frontier_koide_transport_gap_constant_no_go.py",
       "title": "Koide Transport-Gap Constant No-Go"
     },
+    "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
+      "claim_id": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded obstruction; proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+        "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
+        "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
+        "yt_zero_import_chain_note"
+      ],
+      "note_hash": "4d23404658509bafe5f30d650c88435675bc8c1bea8465d33e55be6b061cc35e",
+      "path": "docs/KOIDE_U_HEAVY_MODULAR_SL2Z_NOTE_2026-05-08_probeU_heavy_modular.md",
+      "runner_path": "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py",
+      "title": "Probe U-Heavy-Modular \u2014 Heavy-Quark Yukawa Textures via SL(2,Z) Modular Flavor Symmetry on \u0393(3) at \u03c4 = \u03c9: Bounded No-Go / Obstruction Diagnostic"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "claim_id": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "claim_type_author_hint": "bounded_theorem",
@@ -68648,7 +68680,7 @@
       "bounded_theorem": 281,
       "decoration": 1,
       "meta": 61,
-      "no_go": 34,
+      "no_go": 35,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68657,15 +68689,15 @@
       "bounded_theorem": 763,
       "decoration": 1,
       "meta": 61,
-      "no_go": 141,
+      "no_go": 142,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8517,
-    "leaf_count": 611,
-    "node_count": 2171,
+    "edge_count": 8521,
+    "leaf_count": 612,
+    "node_count": 2172,
     "root_count": 822,
-    "runners_with_path": 1784
+    "runners_with_path": 1785
   }
 }

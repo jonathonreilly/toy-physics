@@ -1,0 +1,177 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py
+runner_sha256: c2b15fbe7658540db91ce01ae93544f919afeb706c1721c3e4d10a8783d10019
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================
+Probe U-Heavy-Modular: heavy-quark masses via SL(2,Z) modular flavor
+                       symmetry on Gamma(3) at tau = omega
+Source note: docs/KOIDE_U_HEAVY_MODULAR_SL2Z_NOTE_2026-05-08_probeU_heavy_modular.md
+========================================================================
+
+Section 1 -- Retained-grade anchor sanity
+  [PASS] alpha_bare = 1/(4 pi) | = 0.0795774715
+  [PASS] g_lattice = sqrt(4 pi alpha_LM) ~ 1.0676 | = 1.06741
+  [PASS] Ward BC y_t(M_Pl) = g_lattice/sqrt(6) ~ 0.4358 | = 0.43577
+  [PASS] Casimirs C_F=4/3, C_A=3, T_F=1/2 | C_F=4/3, C_A=3, T_F=1/2
+  [PASS] Z_3 q_L = (0, +1, -1) (retained-grade generation cycle) | q_L = (0, 1, -1)
+  [PASS] Z_3 q_R = (0, -1, +1) (conjugate to q_L) | q_R = (0, -1, 1)
+  [PASS] Z_3 conjugate triplet condition q_L(i) + q_R(i) = 0 mod 3 for each i | OK: q_L + q_R = (0, 0, 0)
+    -> Retained-grade inputs: Z_3 trichotomy, Wilson-chain anchors, Casimirs
+
+Section 2 -- Import classification
+  [ADMITTED] I1 SL(2,Z) modular flavor symmetry as a tool: IMPORTED | Feruglio 2017 framework; the tool is external/imported here and is not derived from the physical Cl(3) local algebra plus Z^3 spatial substrate
+  [ADMITTED] I2 Gamma(3) congruence subgroup of SL(2,Z): IMPORTED structure | classical analytic number theory; SL(2,Z)/Gamma(3) ~ A_4 is mathematical fact, not framework derivation
+  [ADMITTED] I3 C_3 in A_4 ~ SL(2,Z)/Gamma(3) <-> retained Z_3 trichotomy: PARTIALLY RETAINED | C_3 SELECTION RULE coincides with retained Z_3 trichotomy on Y_e (transports to Y_u, Y_d); IDENTIFICATION of modular C_3 with framework Z_3 is asserted, not derived
+  [ADMITTED] I4 Modulus tau = omega (C_3 fixed point / self-dual cusp): NOT RETAINED | would require an explicit structural assumption; framework's modulus identification with SL(2,Z) tau is not derivable from retained content
+  [ADMITTED] I5 Modular-form values phi_k(omega) at tau = omega: IMPORTED | evaluations of eta-products at algebraic points; classical analytic number theory, not on the physical Cl(3) local algebra plus Z^3 spatial substrate surface
+  [ADMITTED] I6 Yukawa Clebsch-Gordan coefficients from A_4 reps: IMPORTED | standard modular-flavor model construction; integer C-G's from A_4 representation theory, not from retained framework
+    -> 0 fully RETAINED, 1 PARTIALLY RETAINED (I3), 5 IMPORTED. Modular flavor toolkit is structurally redundant where it overlaps with retained Z_3 (I3), and imports new structure (I1, I2, I4, I5, I6) where it goes beyond. This pattern matches the 'tool overlaps with retained-grade content where it adds nothing new' obstruction.
+
+Section 3 -- SL(2,Z)/Gamma(3) ~ A_4 quotient structure (imported)
+  [PASS] |SL(2, Z/3Z)| = p^3 - p = 24 for p=3 | = 24
+  [PASS] |PSL(2, Z/3Z)| = 12 (order of A_4) | = 12
+  [PASS] C_3 subgroup of A_4: order 3 (cyclic generation symmetry) | C_3 = Z/3Z; the modular-flavor C_3 selection rule on the 3-dim faithful representation
+  [PASS] A_4 irreps {1, 1', 1'', 3}: sum of squared dims = 12 = |A_4| | 1^2 + 1^2 + 1^2 + 3^2 = 12
+    -> A_4 structure imported as classical group theory.
+    -> 3-dim faithful rep of A_4 is the modular-flavor
+       generation triplet on which Y_2(tau) transforms.
+
+Section 4 -- C_3 in A_4 vs retained Z_3 trichotomy: SELECTION COINCIDENCE
+  [PASS] Z_3 trichotomy q_H=0: Y_e[i,j] non-zero iff i=j (diagonal) | Y_support = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+  [PASS] C_3 in A_4 on 3 x 3 -> 1 contraction: diagonal selection | 3 x 3 = 1 + 1' + 1'' + 3 + 3; the 1 channel is sum_i phi_i phi_i', which has diagonal support i = j -- same as Z_3 trichotomy
+  [PASS] Selection rule from C_3 in A_4 = selection rule from Z_3 trichotomy | both force Y_q to a permutation pattern with diagonal support (on q_H = 0 / 1-singlet contraction)
+    -> C_3 selection content is ALREADY retained as Z_3 trichotomy.
+    -> Modular flavor adds NO new selection content beyond retained.
+    -> This is the key obstruction: the tool overlaps with retained
+       content where it adds nothing new (per probe verdict).
+
+Section 5 -- tau = omega as C_3 fixed point of SL(2,Z)
+  [PASS] omega satisfies omega^2 + omega + 1 = 0 (cube root of unity) | omega^2 + omega + 1 = 0.000000e+00+3.330669e-16j
+  [PASS] omega is in H (upper half plane): Im(omega) > 0 | omega = (-0.49999999999999983+0.8660254037844387j), Im = 0.866025
+  [PASS] omega is fixed by S T: omega = -1/(omega + 1) | -1/(omega+1) = (-0.5+0.8660254037844384j), omega = (-0.49999999999999983+0.8660254037844387j)
+  [PASS] (S T)^3 = -I in SL(2,Z), so S T has order 3 in PSL(2,Z) | (ST)^3 = [[-1, 0], [0, -1]] = -I
+  [ADMITTED] Identification of framework modulus with SL(2,Z) tau = omega | Even though omega is the C_3 fixed point and the framework's Z_3 cycle is retained, identifying the modular parameter with this point requires an explicit structural assumption (I4)
+    -> tau = omega is the C_3 fixed point of SL(2,Z) (mathematical fact).
+    -> Identifying the framework modulus with tau = omega is admitted.
+
+Section 6 -- Diagnostic C_3 root-of-unity weight-2 ansatz
+    Y_2(omega) = (1.0000+0.0000j, -0.5000+0.8660j, -0.5000-0.8660j)
+    |Y_1(omega)| = 1.0000
+    |Y_2(omega)| = 1.0000
+    |Y_3(omega)| = 1.0000
+  [PASS] diagnostic Y_diag entries all have magnitude 1 (cube roots of unity) | |Y_k| = ['1.0000', '1.0000', '1.0000']; equipartitioned
+  [PASS] rho(C_3) Y_diag gives a permutation of Y_diag (C_3 covariance) | rho(C_3) Y = ['1.0000+0.0000j', '-0.5000-0.8660j', '-0.5000+0.8660j']
+  [ADMITTED] actual Gamma(3) modular-form values at tau=omega | Eta-product values and derivatives are imported from analytic number theory; this runner does not derive or ratify them
+    -> Diagnostic C_3 vector is equipartitioned in magnitude.
+    -> Any actual modular-form values remain imported data.
+
+Section 7 -- Diagnostic circulant Yukawa matrix and SVD spectrum
+  [PASS] Tr(Y M^dagger) at tau = omega | Tr = 9.0000-0.0000j; expected 9 (3 rows x 3 |Y_k|^2 = 1 entries)
+    Y Y^dagger eigenvalues at tau = omega (circulant analytic): ['9.0000', '0.0000', '0.0000']
+    -> RANK-1 mass matrix; TWO massless generations at weight-2 only.
+  [PASS] Eigenvalue sum = Tr(Y M^dagger) = 9 | sum = 9.0000
+    Mass eigenvalues (sqrt of Y Y^dagger): (3.0000, 0.0000, 0.0000)
+  [PASS] Y Y^dagger at tau = omega is RANK-1 (one non-zero eigenvalue) | non-zero eigenvalues = 1; (9, 0, 0) means 2 generations massless
+  [PASS] Non-zero eigenvalue equals 9 (one massive generation) | m_max = sqrt(9.0000) = 3.0000 (target sqrt(9) = 3)
+  [PASS] Two generations are exactly massless in the diagnostic root-of-unity ansatz | m_mid = 6.753223e-16, m_min = 3.376612e-16; diagnostic ansatz fails to give 3 distinct masses
+    PDG m_t/m_c = 135.98 (3 non-zero hierarchical masses)
+    Diagnostic C_3 ansatz: 1 massive + 2 massless --
+      cannot match a 3-mass spectrum.
+  [ADMITTED] Yukawa Clebsch-Gordan coefficients from A_4 reps | standard modular-flavor model construction (Feruglio 2017); imports from A_4 representation theory
+    -> Diagnostic root-of-unity ansatz gives a RANK-1 mass matrix
+       with 2 massless quark generations.
+    -> PDG (m_t, m_c, m_u) is a 3-mass hierarchical spectrum;
+       diagnostic root-of-unity ansatz cannot match this.
+
+Section 8 -- Weight-4 modular forms add free parameters, not closure
+  [PASS] dim M_2(Gamma(3)) = 1 | = 1
+  [PASS] dim M_4(Gamma(3)) = 2 | = 2
+  [PASS] dim M_6(Gamma(3)) = 3 | = 3
+  [PASS] Weight-2 + weight-4 modular forms give 3 free parameters | params = 3; matches 3 mass values but FITS, not DERIVES
+  [ADMITTED] Weight-4+ modular forms add free parameters, not derivations | alpha, beta, gamma, ... are model-building inputs; even with these fitted to (m_t, m_c, m_u), the values are not framework-derivable; the modular toolkit becomes a parameterization of an unknown function rather than a derivation of the masses
+    -> Weight-2 alone: 1 parameter (normalization).
+    -> Weight-2 + 4: 3 parameters (fittable to m_t, m_c, m_u).
+    -> Fitting requires PDG inputs; this defeats the purpose of derivation.
+
+Section 9 -- Cross-mechanism closure gate (heavy quarks at 5%)
+    Closure attempts at modular-flavor mechanism:
+      [C_3 root-of-unity diagnostic] m_t/m_c diagnostic = INFINITY (rank-1 mass matrix; 2 massless gens), PDG = 135.98, within 5%? False
+  [PASS] C_3 root-of-unity diagnostic: m_t/m_c fails the 5% gate (rank-1 spectrum) | diagnostic ratio = INFINITY (2 of 3 gens massless); cannot match PDG 3-mass spectrum at any tolerance
+      [Weight-2 + weight-4, no PDG fit] m_t/m_c output = arbitrary (depends on alpha, beta free params)
+  [ADMITTED] Weight-2 + weight-4 closure: requires PDG fitting, not derivation | alpha, beta are free parameters; closing m_t/m_c at 5% requires PDG inputs, violating the 'no PDG inputs' derivation constraint
+      [Full fit to (m_t, m_c, m_u)] requires all 3 masses as inputs; not a derivation
+  [ADMITTED] Full modular-flavor fit to PDG masses: parameterization, not derivation | with sufficient weight-k modular forms, ANY mass spectrum can be fitted; this is parametrization, not derivation
+  [PASS] Tested retained-content modular-flavor route does not close m_t/m_c at 5% | diagnostic rank-1 matrix has m_c=0; weight-2+4 requires PDG fits
+    -> Bridging the heavy-quark Yukawa gap via SL(2,Z) modular flavor
+       symmetry on Gamma(3) at tau = omega requires PDG fitting
+       (which violates derivation constraint) or imports beyond the
+       toolkit (which makes the mechanism non-load-bearing).
+
+Section 10 -- Structural verdict (probe U-Heavy-Modular)
+    Probe X-L1-Threshold (#933): EW Wilson chain absolute heavy-
+        quark masses did not close.
+    Probe Y-L1-Ratios (#946): EW Wilson chain heavy-quark ratio
+        integer-difference did not close.
+    Probe Z-Quark-QCD-Chain (#958): parallel QCD-anchored chain
+        did not close.
+    Probe V-Quark-Dynamical (#981): chiral SSB + retained Yukawa
+        flow did not close (BOUNDED NEGATIVE); species-differentiation
+        primitive on y_q(M_Pl) identified as the lock.
+    Probe U-Heavy-Modular (this): SL(2,Z) modular flavor symmetry
+        on Gamma(3) at tau = omega does not close from retained
+        framework content alone;
+        the C_3 selection content already retained as Z_3 trichotomy,
+        the modular-form values are imports, the modulus tau = omega
+        requires an explicit structural assumption, the diagnostic
+        root-of-unity weight-2 Yukawa matrix is RANK-1 (one massive + two
+        massless gens; structurally rank-deficient), and weight-4+
+        modular forms add free parameters but NOT a derivation.
+
+    Combined verdict: these tested routes do not close heavy-quark
+    masses at the 5% gate from retained framework content alone.
+
+    What remains open: species-differentiation primitive on y_q(M_Pl)
+    -- candidates are the Koide Frobenius-equipartition condition plus
+    Koide sqrt(m)-amplitude identification in the circulant Fourier-basis
+    spectrum (not retained-grade) per YT_BOTTOM §5.2.
+  [ADMITTED] Probe U verdict: bounded no-go / obstruction diagnostic for heavy-quark gate | SL(2,Z) modular flavor structurally redundant with retained Z_3 trichotomy on the selection-rule axis; numerical content is imported; the modulus choice tau=omega requires an explicit structural assumption; the diagnostic root-of-unity weight-2 Yukawa matrix is rank-1 (1 massive + 2 massless gens), structurally inconsistent with PDG 3-mass spectrum
+
+Section 11 -- Constraints respected
+  [ADMITTED] No new repo axiom introduced | Inputs are retained-grade framework anchors plus an imported SL(2,Z) modular flavor toolkit that is not promoted to repo theory
+  [PASS] No PDG masses used as derivation input | PDG values appear ONLY as comparators after computation; the diagnostic root-of-unity Yukawa matrix has rank-1 spectrum (9, 0, 0); PDG used only to verify the negative result
+  [ADMITTED] Import classification applied | 6 ingredients tiered: 0 fully RETAINED, 1 PARTIALLY RETAINED (I3), 5 IMPORTED
+  [ADMITTED] Source-only PR pattern (per feedback_review_loop_source_only_policy) | 1 source-note + 1 runner + 1 cache; no support docs, no audit-ledger edits, no synthesis notes
+
+SUMMARY: PASS=32 FAIL=0 ADMITTED=16
+
+VERDICT
+-------
+BOUNDED NO-GO / obstruction diagnostic for the heavy-quark closure gate.
+SL(2,Z) modular flavor symmetry on Gamma(3) at tau = omega does not
+bridge the heavy-quark Yukawa-BC gap from retained framework content
+alone. The C_3 selection
+content of Gamma(3) is already retained as Z_3 trichotomy; the
+modular-form NUMERICAL VALUES at tau = omega are imported; the
+modulus tau = omega itself requires an explicit structural assumption;
+the diagnostic root-of-unity weight-2 Yukawa matrix is RANK-1
+(eigenvalues (9, 0, 0)), giving 1 massive + 2 massless quark
+generations -- a structurally rank-deficient comparator inconsistent
+with PDG's 3-mass hierarchy at any tolerance. Weight-4+ modular forms add free
+parameters but require PDG fitting, not derivation. The mechanism is
+structurally redundant with retained Z_3 trichotomy where they
+overlap, and imports new structure where it goes beyond.
+
+STRATEGIC RESULT: combined with X (#933), Y (#946), Z (#958), V
+(#981), the structural option for 'heavy-quark masses from {single
+chain, Yukawa+SSB, modular flavor at tau=omega}' does not close at
+the 5% gate from retained framework content alone. The species-differentiation
+primitive on y_q(M_Pl) -- candidates Koide Frobenius-equipartition
+condition plus Koide sqrt(m)-amplitude identification in the circulant
+Fourier-basis spectrum -- remains the open gap.
+
+----- stderr -----
+

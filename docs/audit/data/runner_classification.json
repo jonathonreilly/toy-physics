@@ -11424,6 +11424,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_koide_transport_gap_constant_no_go.py"
     },
+    "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 41
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "assert_count": 2,
       "counts": {
@@ -24407,6 +24419,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 41
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py": {
@@ -46765,11 +46792,11 @@
       "A": 145,
       "B": 172,
       "C": 675,
-      "D": 258,
+      "D": 259,
       "none": 421
     },
-    "runners_classified": 1671,
-    "runners_with_C": 851,
-    "runners_with_D": 468
+    "runners_classified": 1672,
+    "runners_with_C": 852,
+    "runners_with_D": 469
   }
 }
