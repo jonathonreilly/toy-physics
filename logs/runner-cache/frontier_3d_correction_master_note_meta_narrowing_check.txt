@@ -1,0 +1,101 @@
+===== runner cache v1 =====
+runner: scripts/frontier_3d_correction_master_note_meta_narrowing_check.py
+runner_sha256: 56ac72ed51557ee337f7a08fb82d168bd2b04d102374755b8a46df7158926ede
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.38
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A meta-narrowing companion: 3d_correction_master_note
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1 (Fact A1.a): d=2 forward-cone angular Gaussian, exact and small-beta limit
+----------------------------------------------------------------------------------------
+  [PASS (A)] d=2 unbounded forward-cone integral = (1/2) sqrt(pi/beta) symbolically  (got sqrt(pi)/(2*sqrt(beta)))
+  [PASS (A)] d=2 bounded integral at beta=10 matches half-Gaussian asymptote within 1e-6  (bounded=0.2802495608, asymptote=0.2802495608, diff=-6.01e-13)
+
+----------------------------------------------------------------------------------------
+Part 2 (Fact A1.b): d=3 forward-cone angular Gaussian (theta dtheta measure)
+----------------------------------------------------------------------------------------
+  [PASS (A)] d=3 bounded forward-cone integral = (1 - exp(-beta (pi/2)^2)) / (2 beta) symbolically  (diff = 0)
+  [PASS (A)] d=3 unbounded integral = 1/(2 beta) symbolically (large-beta asymptote)  (got 1/(2*beta))
+
+----------------------------------------------------------------------------------------
+Part 3 (Fact A1.c): the d=2 vs d=3 ratio is NOT a constant in beta
+----------------------------------------------------------------------------------------
+  [PASS (A)] I2_unbounded / I3_unbounded = sqrt(pi * beta) symbolically  (got ratio = sqrt(pi)*sqrt(beta))
+  [PASS (A)] Ratio sqrt(pi beta) genuinely varies with beta (not constant)  (ratios at beta=[('0.40', '1.1210'), ('0.80', '1.5853'), ('1.60', '2.2420')])
+
+----------------------------------------------------------------------------------------
+Part 4 (Fact A2): substrate dimensionality is fixed by axiom A2 to Z^3
+----------------------------------------------------------------------------------------
+  [PASS (A)] MINIMAL_AXIOMS_2026-05-03.md exists in docs/  (path = /private/tmp/cl3-review-loop-ZrI8A6/docs/MINIMAL_AXIOMS_2026-05-03.md)
+  [PASS (A)] MINIMAL_AXIOMS_2026-05-03.md mentions A2 with Z^3 cubic substrate  (file contents include 'A2', 'Z^3', and 'cubic')
+  [PASS (A)] MINIMAL_AXIOMS_2026-05-03.md confirms the framework axiom set is A1+A2 only  (file body contains explicit two-axioms phrasing)
+
+----------------------------------------------------------------------------------------
+Part 5 (Fact A3): 3D_CORRECTION_MASTER_NOTE.md content is process / retraction, not derivation
+----------------------------------------------------------------------------------------
+  [PASS (A)] 3D_CORRECTION_MASTER_NOTE.md exists in docs/  (path = /private/tmp/cl3-review-loop-ZrI8A6/docs/3D_CORRECTION_MASTER_NOTE.md)
+  [PASS (A)] master note contains 'What changed' section (retrospective record marker)  (marker = '## What changed')
+  [PASS (A)] master note contains 'Notes updated' section (retrospective record marker)  (marker = '## Notes updated')
+  [PASS (A)] master note contains 'Lesson learned' section (retrospective record marker)  (marker = '## Lesson learned')
+  [PASS (A)] master note documents status changes on three downstream notes  (confirms retraction-record framing, not derivation)
+
+----------------------------------------------------------------------------------------
+Companion summary
+----------------------------------------------------------------------------------------
+
+  Pattern A meta-narrowing companion summary:
+
+  HYPOTHESIS:
+    The master note is a process / retraction record documenting how
+    measurements made on a Z^2 regular-lattice surface (a non-canonical
+    surface relative to the framework axiom set MINIMAL_AXIOMS_2026-05-03)
+    did not transfer to the canonical Z^3 substrate.
+
+  CONCLUSIONS (independently verified algebraically here):
+    (Fact A1)  In d=2 ambient dimensions the angular-Gaussian forward-cone
+               integral has small-cone limit (1/2) sqrt(pi/beta); in d=3
+               it has small-cone limit 1/(2 beta). Their ratio is
+               sqrt(pi * beta), which is NOT a beta-independent constant.
+               This is the elementary measure-theoretic fact behind the
+               master note's '1/L vs 1/L^2 kernel scaling' sentence.
+
+    (Fact A2)  The framework axiom set in MINIMAL_AXIOMS_2026-05-03 fixes
+               the spatial substrate to Z^3 via A2. A Z^2 regular-lattice
+               readout therefore is not the canonical framework readout;
+               the transfer of conclusions from Z^2 to Z^3 requires an
+               additional bridge theorem (which the master note does not
+               supply, and which is not the master note's stated content).
+
+    (Fact A3)  The master note's content is process / retraction (status
+               changes, lessons learned), not derivation. Reclassifying
+               its claim_type from the seed default `default_positive_theorem`
+               to `meta` matches the content honestly. Meta-tier rows do
+               not propagate retained-grade and do not gate cycle resolution,
+               so this reclassification is the cleanest cycle-0003 break
+               from the meta side.
+
+  Audit-lane class:
+    (A) — pure measure-theoretic geometry (Fact A1) plus axiom-memo and
+    source-note classification documentation (Facts A2, A3). No external
+    numerical targets, fitted selectors, or unit-convention imports are
+    consumed. No load-bearing dependency on the cited dispersion / Born /
+    lensing runners' empirical outputs.
+
+  This narrow companion runner DOES NOT close the master note as a
+  positive theorem; it provides the algebraic content that supports the
+  master note's `meta` reclassification + cycle-0003 break path.
+
+
+
+========================================================================================
+  TOTAL: PASS=14, FAIL=0
+========================================================================================
+
+----- stderr -----
+

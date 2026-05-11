@@ -1,18 +1,6 @@
 {
   "edges": [
     {
-      "from": "3d_correction_master_note",
-      "to": "dispersion_relation_note"
-    },
-    {
-      "from": "3d_correction_master_note",
-      "to": "born_scattering_comparison_note"
-    },
-    {
-      "from": "3d_correction_master_note",
-      "to": "lensing_combined_invariant_note"
-    },
-    {
       "from": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
       "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
     },
@@ -33804,17 +33792,13 @@
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [
-        "dispersion_relation_note",
-        "born_scattering_comparison_note",
-        "lensing_combined_invariant_note"
-      ],
-      "note_hash": "b1a2460b82f9c0f7474d7dc2fec8e3e3fe85ca486c3a232a4fc98066118db0a3",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "ac25a55f06458adc758eabc36079b09c589586bdb152b788e5e62a3ea9083268",
       "path": "docs/3D_CORRECTION_MASTER_NOTE.md",
-      "runner_path": "scripts/dispersion_3d_lattice.py",
+      "runner_path": "scripts/frontier_3d_correction_master_note_meta_narrowing_check.py",
       "title": "3D Correction Master Note"
     },
     "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc": {
@@ -67331,6 +67315,7 @@
     }
   },
   "roots": [
+    "3d_correction_master_note",
     "accessible_prediction_note",
     "action_crossover_note",
     "action_geometry_bridge_note",
@@ -68156,25 +68141,25 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 273,
       "decoration": 1,
-      "meta": 60,
+      "meta": 61,
       "no_go": 31,
-      "none": 1627,
+      "none": 1626,
       "open_gate": 34,
       "positive_theorem": 132
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
       "decoration": 1,
-      "meta": 60,
+      "meta": 61,
       "no_go": 138,
-      "none": 451,
+      "none": 450,
       "open_gate": 122,
       "positive_theorem": 631
     },
-    "edge_count": 8450,
+    "edge_count": 8447,
     "leaf_count": 603,
     "node_count": 2158,
-    "root_count": 819,
+    "root_count": 820,
     "runners_with_path": 1771
   }
 }

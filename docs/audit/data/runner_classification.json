@@ -1,16 +1,16 @@
 {
   "per_claim": {
     "3d_correction_master_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 2,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/dispersion_3d_lattice.py"
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_3d_correction_master_note_meta_narrowing_check.py"
     },
     "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc": {
       "assert_count": 1,
@@ -25021,21 +25021,6 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/dispersion_3d_lattice.py": {
-      "assert_count": 0,
-      "claims": [
-        "3d_correction_master_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
     "scripts/dispersion_all_families.py": {
       "assert_count": 0,
       "claims": [
@@ -25366,6 +25351,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/frontier_3d_correction_master_note_meta_narrowing_check.py": {
+      "assert_count": 1,
+      "claims": [
+        "3d_correction_master_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_3plus1d_closure_card.py": {
@@ -46409,13 +46409,13 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 190,
+    "decoration_candidates": 191,
     "dominant_class_distribution": {
       "A": 138,
-      "B": 171,
+      "B": 172,
       "C": 671,
       "D": 256,
-      "none": 422
+      "none": 421
     },
     "runners_classified": 1658,
     "runners_with_C": 843,
