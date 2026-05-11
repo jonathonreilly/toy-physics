@@ -10301,6 +10301,22 @@
       "to": "yt_ward_identity_derivation_theorem"
     },
     {
+      "from": "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10",
+      "to": "c_iso_su3_nnlo_closure_bounded_note_2026-05-10_su3nnlo"
+    },
+    {
       "from": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
       "to": "higgs_mass_retention_analysis_note_2026-04-18"
     },
@@ -48057,6 +48073,22 @@
       "runner_path": "scripts/frontier_higgs_mass_derived.py",
       "title": "Higgs From Lattice: Bounded Quantitative Support"
     },
+    "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10": {
+      "claim_id": "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "higgs_mass_from_axiom_note",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "minimal_axioms_2026-05-03",
+        "c_iso_su3_nnlo_closure_bounded_note_2026-05-10_su3nnlo"
+      ],
+      "note_hash": "662fde4ad4e1e01d81becb9a68d30ab1b1368c1c9567398c1bfc739fe647107f",
+      "path": "docs/HIGGS_KAPPA_CURV_FROM_VTASTE_SYMMETRIC_POINT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_higgs_kappa_curv_narrow.py",
+      "title": "Symmetric-Point Curvature Ratio \u03ba_curv from V_taste \u2014 Narrow Algebraic Theorem"
+    },
     "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10": {
       "claim_id": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
       "claim_type_author_hint": "open_gate",
@@ -69594,7 +69626,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 325,
+      "bounded_theorem": 326,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69602,17 +69634,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 784,
+      "bounded_theorem": 785,
       "meta": 70,
       "no_go": 149,
       "none": 446,
       "open_gate": 116,
       "positive_theorem": 618
     },
-    "edge_count": 8678,
-    "leaf_count": 617,
-    "node_count": 2183,
+    "edge_count": 8682,
+    "leaf_count": 618,
+    "node_count": 2184,
     "root_count": 813,
-    "runners_with_path": 1795
+    "runners_with_path": 1796
   }
 }

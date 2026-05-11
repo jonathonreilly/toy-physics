@@ -9360,6 +9360,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_mass_derived.py"
     },
+    "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 6,
+        "B": 1,
+        "C": 1,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_higgs_kappa_curv_narrow.py"
+    },
     "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -33460,6 +33472,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_higgs_kappa_curv_narrow.py": {
+      "assert_count": 0,
+      "claims": [
+        "higgs_kappa_curv_from_vtaste_symmetric_point_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 6,
+        "B": 1,
+        "C": 1,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_higgs_lattice_eigenvalue_ratio_narrow.py": {
       "assert_count": 1,
       "claims": [
@@ -47076,11 +47103,11 @@
       "A": 150,
       "B": 172,
       "C": 680,
-      "D": 265,
+      "D": 266,
       "none": 416
     },
-    "runners_classified": 1683,
-    "runners_with_C": 860,
-    "runners_with_D": 481
+    "runners_classified": 1684,
+    "runners_with_C": 861,
+    "runners_with_D": 482
   }
 }
