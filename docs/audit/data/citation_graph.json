@@ -54764,6 +54764,17 @@
       "runner_path": "scripts/frontier_plaquette_bootstrap_framework_specific_positivity.py",
       "title": "Plaquette Bootstrap \u2014 Framework-Specific Positivity (3x3 Extension)"
     },
+    "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10": {
+      "claim_id": "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "02b50fdf0ab695f1022a17e0ee852a3ae2eaa7c8a2285aafaafc37482424a172",
+      "path": "docs/PLAQUETTE_HIERARCHY_POLYNOMIAL_BOUNDEDNESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_plaquette_hierarchy_polynomial_boundedness_narrow.py",
+      "title": "Plaquette-Hierarchy Polynomial-Boundedness Narrow Theorem"
+    },
     "plaquette_self_consistency_note": {
       "claim_id": "plaquette_self_consistency_note",
       "claim_type_author_hint": null,
@@ -67597,6 +67608,7 @@
     "planck_boundary_orientation_incidence_no_go_note_2026-04-30",
     "planck_parent_source_hidden_character_no_go_note_2026-04-24",
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+    "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10",
     "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
     "pmns_active_four_real_source_from_transport_note",
     "pmns_c3_nontrivial_current_boundary_note",
@@ -67866,7 +67878,7 @@
       "no_go": 30,
       "none": 1628,
       "open_gate": 33,
-      "positive_theorem": 121
+      "positive_theorem": 122
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 750,
@@ -67875,12 +67887,12 @@
       "no_go": 137,
       "none": 451,
       "open_gate": 121,
-      "positive_theorem": 621
+      "positive_theorem": 622
     },
     "edge_count": 8432,
-    "leaf_count": 586,
-    "node_count": 2141,
-    "root_count": 807,
-    "runners_with_path": 1754
+    "leaf_count": 587,
+    "node_count": 2142,
+    "root_count": 808,
+    "runners_with_path": 1755
   }
 }

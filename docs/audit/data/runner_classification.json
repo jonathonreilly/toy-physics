@@ -14448,6 +14448,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_plaquette_bootstrap_framework_specific_positivity.py"
     },
+    "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_plaquette_hierarchy_polynomial_boundedness_narrow.py"
+    },
     "plaquette_self_consistency_note": {
       "assert_count": 1,
       "counts": {
@@ -35939,6 +35951,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_plaquette_hierarchy_polynomial_boundedness_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_plaquette_self_consistency.py": {
       "assert_count": 1,
       "claims": [
@@ -45954,12 +45981,12 @@
     "dominant_class_distribution": {
       "A": 129,
       "B": 170,
-      "C": 665,
+      "C": 666,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1641,
-    "runners_with_C": 836,
+    "runners_classified": 1642,
+    "runners_with_C": 837,
     "runners_with_D": 460
   }
 }
