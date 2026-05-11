@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 77 |
+| **retained** | 78 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1108 |
+| unaudited | 1107 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 416 |
+| `audited_clean` | 417 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1206 |
+| `unaudited` | 1205 |
 
 | claim_type | count |
 |---|---:|
@@ -160,6 +160,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_complexification_split_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | B | - |
+| `cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2469,6 +2470,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By the sibling narrow theorem (K3), Cl(3,0) ⊗_R C ≅ M_2(C) ⊕ M_2(C), so Artin-Wedderburn gives exactly two irreducible complex modules, each of dimension 2.  _(class `B`)_
 - **chain closes:** True — The only load-bearing dependency, the complexification split note, is provided as retained, and the remaining steps are standard semisimple algebra representation theory admitted by the packet. The note explicitly excludes the physical per-site Hilbert-space bridge, so that missing bridge does not block this scoped algebraic claim.
 - **rationale:** The scoped theorem closes as an abstract algebra statement from the retained split Cl(3,0) ⊗_R C ≅ M_2(C) ⊕ M_2(C) plus Artin-Wedderburn and complete reducibility. The runner is only corroborative and partly hard-codes representative Pauli blocks, but the proof does not rely on the runner to derive the classification. No physical observable, lattice Hilbert-space identification, or sector-selection bridge is claimed inside this note.
+- **auditor confidence:** high
+
+### `cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CL3_GAMMA_INVOLUTION_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CL3_GAMMA_INVOLUTION_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the narrow finite-dimensional algebraic claim that the Pauli-realized Cl(3) gamma-involution on M_2(C) is the 2x2 adjugate, gives the gamma-norm determinant identity, has the stated grade signs, and does not by itself derive the full lattice determinant readout.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b7-c0f8-7110-94e8-400d03424323`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For all M in M_2(C), gamma(M) := sigma_2 M^T sigma_2 equals adj(M), so M gamma(M) = det(M) I_2 and the identity coefficient is det(M).  _(class `A`)_
+- **chain closes:** True — The cited Cl(3) to M_2(C) authority is retained, and the remaining steps are direct 2x2 matrix algebra. The source note explicitly excludes the lattice determinant bridge, so the open physical readout admission is not required for this scoped claim.
+- **rationale:** The load-bearing determinant identity follows from an explicit symbolic adjugate computation and the standard cofactor identity. The grade-action signs are likewise checked directly in the Pauli realization, and the full-lattice readout is correctly treated as a boundary rather than claimed closure. No hidden physics import or external comparator is used inside the audited scope.
 - **auditor confidence:** high
 
 ### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
