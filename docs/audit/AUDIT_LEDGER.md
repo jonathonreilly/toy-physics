@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1256 |
+| unaudited | 1255 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 172 |
+| ~~audited_conditional~~ | 173 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 172 |
+| `audited_conditional` | 173 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1369 |
+| `unaudited` | 1368 |
 
 | claim_type | count |
 |---|---:|
@@ -668,6 +668,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
+| `higher_symmetry_joint_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `k_dependence_review_safe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -5173,6 +5174,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Inside the declared fit window M in {2,3,5,8}, the dense Z2 x Z2 extension shows a positive-row mass-bump fit, with in-window negative rows disclosed and excluded by the runner's delta > 0 guard.  _(class `C`)_
 - **chain closes:** True — The source note's scoped numerical statements match the completed SHA-pinned cache, and the runner source computes the Z2xZ2 DAG rows and applies the declared delta > 0 fit filter rather than hard-coding the stated coefficients. The disclosed negative rows keep the claim bounded to the positive-row subfit and weak distance-sweep observations.
 - **rationale:** The clean result is limited to the exact finite runner surface and the explicitly narrowed positive-row subfit/distance-sweep facts. Residual risk is that the fit window and positive-row filter are analysis choices and do not by themselves imply a physical gravity law, rowwise positivity, Born safety, or upstream coexistence closure; those broader readings are outside the audited scope.
+- **auditor confidence:** high
+
+### `higher_symmetry_joint_validation_note`
+
+- **Note:** [`HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](../../docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded higher-symmetry joint-validation claim for Z2 x Z2 versus random/ring families, including the stated dense N=80/100/120 extension, excluding asymptotic gravity-law or distance-law closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The note claims Z2 x Z2 is Born-clean, k=0-clean, gravity-positive, and decoherence-leading through N=120 on a dense extension, while the ring family fails to survive the joint test as cleanly.  _(class `B`)_
+- **chain closes:** False — The N=25..80 joint log is present and supports the discovery-geometry table, and the mirror chokepoint dependency is retained_bounded. The cited dense-extension log for the N=80/100/120 rows is missing from the restricted packet, and this row has no registered runner/cache path in the ledger.
+- **rationale:** Issue: the load-bearing N=120 dense-extension claim is not backed by a present runner artifact or registered cache in the audit packet. Why this blocks: the N=25..80 table can be checked from the available log, but the stronger retained-through-N=120 statement depends on missing stdout. Repair target: check in/register the dense-extension log or runner-cache artifact, and wire the joint validator as the row runner. Claim boundary until fixed: available N=25..80 joint-validation observations only; no retained N=120 extension.
 - **auditor confidence:** high
 
 ### `holographic_probe_note_2026-04-11`

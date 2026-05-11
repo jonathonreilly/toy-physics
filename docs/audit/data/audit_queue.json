@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 161
+    "medium": 160
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27097,29 +27097,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "higher_symmetry_joint_validation_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.7,
-      "note_path": "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 12
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wilson_two_body_open_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -40324,6 +40301,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 111,
-  "total_pending": 1287
+  "ready_count": 110,
+  "total_pending": 1286
 }
