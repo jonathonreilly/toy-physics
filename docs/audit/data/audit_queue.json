@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 342,
+    "leaf": 341,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31081,22 +31081,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "inverse_problem_note",
+      "claim_id": "broken_graph_action_power_robustness_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type_provenance": "migration_hint",
       "criticality": "leaf",
       "criticality_rank": 0,
       "cross_confirmation_status": null,
-      "deps": [],
+      "deps": [
+        "inverse_problem_note",
+        "action_uniqueness_note",
+        "action_power_scaling_sweep_note"
+      ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 2.085,
-      "note_path": "docs/INVERSE_PROBLEM_NOTE.md",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/inverse_problem_graph_requirements.py",
-      "transitive_descendants": 2
+      "runner_path": "scripts/broken_graph_action_power_robustness.py",
+      "transitive_descendants": 1
     },
     {
       "audit_independence_required": "any_non_self",
@@ -33422,31 +33426,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_unruh_temperature_check.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "broken_graph_action_power_robustness_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "inverse_problem_note",
-        "action_uniqueness_note",
-        "action_power_scaling_sweep_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/broken_graph_action_power_robustness.py",
       "transitive_descendants": 1
     },
     {
@@ -39998,5 +39977,5 @@
     }
   ],
   "ready_count": 100,
-  "total_pending": 1272
+  "total_pending": 1271
 }

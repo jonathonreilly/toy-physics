@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 262 |
+| **retained_bounded** | 263 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1241 |
+| unaudited | 1240 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 436 |
+| `audited_clean` | 437 |
 | `audited_conditional` | 181 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1354 |
+| `unaudited` | 1353 |
 
 | claim_type | count |
 |---|---:|
@@ -321,6 +321,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hubble_lane5_c2_ckm_pmns_right_sensitive_selector_stretch_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
+| `inverse_problem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
@@ -5411,6 +5412,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The in-sample classifier rule (avg_deg >= 10.415 and reach_frac >= 0.859) is applied without refit to nine scripted independent generator families, yielding only 2/9 full-battery passes, 4/9 hard-coded prediction accuracy, and 6/9 no-refit rule accuracy.  _(class `C`)_
 - **chain closes:** True — The live runner rebuilds the nine named generator families, applies the same five-condition battery and frozen rule, and reproduces the negative table: only E1_er_p005 and E2_er_p020 pass, hard-coded predictions score 4/9, and the no-refit classifier rule scores 6/9.
 - **rationale:** The finite negative result closes on its own terms: the checked-in runner contains the nine generator constructors, the hard-coded prediction dictionary, the five-condition battery, and the frozen avg_deg/reach_frac rule, and live replay matches the source note's pass/fail and accuracy claims. The decisive rule failures R1, R3, and X1 all satisfy the frozen structural thresholds but fail the actual battery, while only the two Erdős-Rényi families pass the full package. This clean verdict is narrow: it certifies this deterministic nine-family held-out replay and the checked-in prediction table, not an exhaustive statistical theorem over all independent generator laws or independent timestamp proof beyond the artifact chain.
+- **auditor confidence:** high
+
+### `inverse_problem_note`
+
+- **Note:** [`INVERSE_PROBLEM_NOTE.md`](../../docs/INVERSE_PROBLEM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded inverse-problem graph-perturbation replay on the specified 3D valley-linear harness, where Born is clean for all five variants, TOWARD holds for baseline/asym/jitter/sparse, heavy_delete_70 is AWAY, and k=0/no-field controls are zero.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the specified h=0.5, W=8, L=12, max_d=3 harness, Born holds across all five variants while TOWARD holds for the four non-heavy-delete variants and fails for heavy_delete_70.  _(class `C`)_
+- **chain closes:** True — The runner constructs the five graph variants, computes Born, gravity sign, k=0, and no-field controls, and asserts the narrowed table stated in the note. The audited conclusion is explicitly bounded to this harness and does not claim universal graph-structure irrelevance.
+- **rationale:** The current cache reproduces the narrowed table exactly, including the heavy_delete_70 AWAY counterexample that retracts the older universal-robustness framing. The note's safe conclusion follows from the finite runner output and its assertions, with no hidden dependency needed for the bounded harness statement. Residual risk is the ordinary finite-sample limitation: different graph perturbations, strengths, phases, or lattice parameters are outside this audit.
 - **auditor confidence:** high
 
 ### `k_dependence_review_safe_note`
