@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 82 |
+| **retained** | 83 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1229 |
+| unaudited | 1228 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 446 |
+| `audited_clean` | 447 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1342 |
+| `unaudited` | 1341 |
 
 | claim_type | count |
 |---|---:|
@@ -148,6 +148,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_uniqueness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `affine_imaginary_slot_invariance_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `alt_connectivity_family_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_complex_failure_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `alt_connectivity_family_failure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
@@ -1047,6 +1048,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The scoped algebra closes exactly: P1, P2, and the four corollaries reduce to identities under D1/D2. The runner verifies only A-class symbolic consequences and does not rederive the upstream CMT or n_link inputs, which are treated as cited retained assumptions in this packet.
 - **rationale:** Issue: the audited statement is an exact algebraic consequence of D1/D2 and the retained n_link inputs, with no new physical observable, comparator, or independent compression beyond the alpha_s algebra packet. Why this blocks: under the Algebraic Decoration Policy, a closed algebraic corollary with zero D-class checks should not stand as a separate positive theorem row even though the identity is true. Repair target: box P1/P2 and the listed corollaries under the parent alpha_s_derived_note or a consolidated alpha_s algebra corollary inventory, or show that this identity is load-bearing for a non-decoration retained claim. Claim boundary until fixed: retain only the conditional algebraic identity as a corollary, not as an independent theorem.
 - **decoration parent:** `alpha_s_derived_note`
+- **auditor confidence:** high
+
+### `alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`ALPHA_S_TADPOLE_IMPROVEMENT_VERTEX_POWER_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/ALPHA_S_TADPOLE_IMPROVEMENT_VERTEX_POWER_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone algebraic identities over abstract positive reals alpha_bare and u_0: the vertex-power/link-power identities, geometric-mean identity, constant-ratio chain, u_0=1 boundary, unique positive inverse map, and abstract P^(1/4) substitution; no plaquette value, gauge group, beta normalization, g_bare gate, running bridge, or numerical alpha_s prediction is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given alpha_LM := alpha_bare/u_0 and alpha_s(v) := alpha_bare/u_0^2 for positive reals, T1-T6 follow by elementary algebra and substitution.  _(class `A`)_
+- **chain closes:** True — The conclusions are elementary algebraic consequences of the two definitions over positive reals, and the runner verifies the symbolic identities plus numerical scans. The closure is purely algebraic and does not make the exponent convention or any physical input a framework prediction.
+- **rationale:** The restricted packet states only an abstract algebra theorem: once alpha_LM and alpha_s(v) are defined by the two displayed formulas, T1-T6 follow without importing any plaquette, gauge, normalization, running, or external numerical authority. The live runner reproduces the symbolic checks, parametric scans, perturbation sanity checks, and scope guards with PASS=102 and FAIL=0. Residual risk is downstream misuse: this clean audit does not derive the vertex-power exponent or promote the parent alpha_s numerical chain.
 - **auditor confidence:** high
 
 ### `alt_connectivity_family_basin_note`
