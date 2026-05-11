@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1283 |
+| unaudited | 1282 |
 | audit_in_progress | 15 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 13 |
-| ~~audited_conditional~~ | 151 |
+| ~~audited_conditional~~ | 152 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,19 +43,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 22 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 151 |
+| `audited_conditional` | 152 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 13 |
-| `unaudited` | 1396 |
+| `unaudited` | 1395 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 891 |
+| `bounded_theorem` | 890 |
 | `decoration` | 14 |
 | `meta` | 116 |
-| `no_go` | 219 |
+| `no_go` | 220 |
 | `open_gate` | 110 |
 | `positive_theorem` | 751 |
 
@@ -699,6 +699,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -7504,6 +7505,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Koide theta theorem runners`
   - `DM PMNS theorem runners`
   - `quark a_u theorem runners`
+
+### `scalar_trace_tensor_no_go_note`
+
+- **Note:** [`SCALAR_TRACE_TENSOR_NO_GO_NOTE.md`](../../docs/SCALAR_TRACE_TENSOR_NO_GO_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional scalar-trace-only completion no-go: given the imported scalar boundary functional, imported vector/tensor/mixed probe families, and imported Einstein-residual evaluator, the current runner shows unchanged scalar shell/Schur data with nonzero independent tensorial Einstein channels, ruling out completions that factor only through that scalar data on the configured O_h and finite-rank witness classes. This excludes a self-contained retained derivation of those imported constructions and excludes positive tensor-valued completion or full nonlinear GR closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-scalar-trace-tensor-no-go`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** A completion principle that factors only through the current scalar shell trace / Schur data must assign the same output to probes with identical scalar data, while the imported vector, traceless-shear, and mixed probes activate independent tensorial Einstein channels.  _(class `B`)_
+- **chain closes:** False — The algebraic no-go closes given the imported scalar functional, probe families, and Einstein-residual evaluator, and the live runner reports PASS=6 FAIL=0. The restricted packet does not provide retained one-hop authorities for those imported constructions, so the no-go is conditional on the imports being correct.
+- **rationale:** Issue: the runner verifies scalar-data degeneracy and tensor-channel separation only after importing the scalar boundary functional, probe families, and Einstein-residual calculation from three upstream modules that are not retained dependencies of this note. Why this blocks: a no-go for all scalar-trace-only completions needs authority for the witness construction and residual evaluator, not just a runner that loads them. Repair target: add retained-grade cited notes for `frontier_tensorial_einstein_regge_completion.py`, `frontier_same_source_metric_ansatz_scan.py`, and `frontier_coarse_grained_exterior_law.py`, or inline a self-contained derivation of the functional, probes, and residuals in this runner. Claim boundary until fixed: the configured witness is a valid conditional diagnostic ruling out scalar-only completion on the imported O_h and finite-rank classes, but it is not a retained no-go.
+- **open / conditional deps cited:**
+  - `scripts/frontier_tensorial_einstein_regge_completion.py`
+  - `scripts/frontier_same_source_metric_ansatz_scan.py`
+  - `scripts/frontier_coarse_grained_exterior_law.py`
+- **auditor confidence:** high
 
 ### `schur_covariance_inheritance_narrow_theorem_note_2026-05-02`
 
