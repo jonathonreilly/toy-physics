@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1245 |
+| unaudited | 1244 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 175 |
+| ~~audited_conditional~~ | 176 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 12 |
 | `audited_clean` | 433 |
-| `audited_conditional` | 175 |
+| `audited_conditional` | 176 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1355 |
+| `unaudited` | 1354 |
 
 | claim_type | count |
 |---|---:|
@@ -686,6 +686,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -6586,6 +6587,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** S4 mirror is the strongest scalable MI lane in this extension, while the exact chokepoint MI chain remains the synthesis-grade retained result.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's S4 mirror, S4 random, strict-mirror, and original-mirror MI tables, including the corrected N=80 S4 mirror value and the caveat that this extension is broader rather than more canonical.
 - **rationale:** The bounded MI extension closes against scripts/mirror_mutual_information_canonical_families.py. Current output matches the note's S4 mirror values N=25 0.7213±0.073, N=40 0.5956±0.067, N=60 0.5248±0.067, N=80 0.2559±0.047; matched S4 random is lower at each retained row; strict mirror reproduces N=15 0.9196±0.033 and N=25 0.6578±0.091 before failing at larger N. The note keeps the exact chokepoint chain as the synthesis-grade result and treats this as a bounded extension.
+- **auditor confidence:** high
+
+### `mirror_mutual_information_chokepoint_note`
+
+- **Note:** [`MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite dense-card mirror mutual-information diagnostic only: on npl_half=60, connect_radius=5.0, k=5.0, layer2_prob=0.0, 16 seeds, mirror MI exceeds matched random at N=40,60,80 and falls below matched random at N=100; descriptive fits are not asymptotic laws and no whole-window mirror advantage is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-mirror-mi-chokepoint`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the single parameter card npl_half=60, connect_radius=5.0, k=5.0, layer2_prob=0.0, 16 seeds, mirror MI exceeds matched random MI at N=40,60,80 and falls below matched random at N=100.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite table, but the cited upstream mirror_chokepoint_note is retained only for the strict NPL_HALF=25, connect_radius=4.0, N=15/25 pocket and explicitly excludes this dense card. The dense-card family support is therefore not wired as a direct retained dependency, and the runner has no assertion gates for the retained sentence.
+- **rationale:** Issue: the finite MI table is live-reproducible, but the clean claim chain cites the strict-card mirror parent rather than a retained authority for the dense NPL_HALF=60/connect_radius=5.0 card, and the runner prints measurements without pass/fail assertions for the claimed N=40/60/80 advantage and N=100 reversal. Why this blocks: a retained_bounded audit would otherwise let the row inherit closure from a parent whose audited scope excludes the parameter card actually used here. Repair target: add the correct dense-card retained dependency or make the row explicitly self-contained, then add a certificate/cache with hard assertions for the card parameters, seed count, N=40/60/80 mirror>random checks, and N=100 reversal. Claim boundary until fixed: the printed finite MI table may be cited as a reproducible diagnostic from this runner, but not as a clean retained mirror-family theorem or whole-window/asymptotic advantage.
 - **auditor confidence:** high
 
 ### `monopole_derived_note`

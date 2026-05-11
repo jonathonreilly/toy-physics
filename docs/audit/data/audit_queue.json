@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 727,
-    "high": 33,
+    "high": 32,
     "leaf": 334,
     "medium": 169
   },
@@ -24817,29 +24817,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "mirror_mutual_information_chokepoint_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.807,
-      "note_path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
-      "transitive_descendants": 13
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "valley_linear_action_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -39184,6 +39161,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 120,
-  "total_pending": 1263
+  "ready_count": 119,
+  "total_pending": 1262
 }
