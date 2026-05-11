@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 273,
+    "leaf": 272,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31127,31 +31127,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "universality_classifier_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "global_coherence_off_scaffold_note",
-        "independent_generators_heldout_note",
-        "local_zsym_predictor_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/UNIVERSALITY_CLASSIFIER_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/universality_classifier.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "vector_sector_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -38495,6 +38470,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 37,
-  "total_pending": 1203
+  "ready_count": 36,
+  "total_pending": 1202
 }
