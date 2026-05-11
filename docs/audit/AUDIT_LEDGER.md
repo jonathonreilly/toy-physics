@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 257 |
+| **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1244 |
+| unaudited | 1243 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
@@ -42,13 +42,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 12 |
-| `audited_clean` | 432 |
+| `audited_clean` | 433 |
 | `audited_conditional` | 177 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1354 |
+| `unaudited` | 1353 |
 
 | claim_type | count |
 |---|---:|
@@ -188,6 +188,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_slice_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `cyclic_projector_compression_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `dimensional_gravity_table` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
 | `dirac_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_source_smoothing_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_weak_coupling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2552,6 +2553,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Combined with the known upper bound from orbital and atomic stability (d <= 3), this uniquely gives d = 3.  _(class `B`)_
 - **chain closes:** False — The runner itself finds that d=3,4,5 pass the advertised three observables, so the unique d=3 conclusion depends on orbital and atomic stability inputs that are not included as one-hop authorities. The lower-bound numerics also use a selected 2D propagation readout through hand-coded analytic d-dimensional potentials, not a closed theorem equating that readout with self-consistent d-dimensional gravity.
 - **rationale:** Issue: the note imports the d<=3 upper bound and the phase-to-force/readout bridge without retained cited support. Why this blocks: without those inputs, the supplied evidence only shows that the selected runner criteria pass for d=3,4,5 and fail for d<=2 under chosen parameters. Repair target: add retained one-hop stability authorities and a bridge theorem tying the runner readout to the claimed gravitational observable, or split the note to the finite numerical lower-bound claim. Claim boundary until fixed: runner-specific evidence for excluding d<=2 under the stated setup, not a retained dimension-selection theorem.
+- **auditor confidence:** high
+
+### `dimensional_gravity_table`
+
+- **Note:** [`DIMENSIONAL_GRAVITY_TABLE.md`](../../docs/DIMENSIONAL_GRAVITY_TABLE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite cache-backed dimensional-gravity inventory only: the structural prescription kernel=1/L^(d-1), field=s/r^(d-2), action S=L(1-f), measure=h^(d-1), plus the registered d=3 and d=4 cache/log rows asserted by the certificate runner. The d=2 numerical row is diagnostic-only, the 4D distance law remains width-limited, and no universality across dimensions, h values, widths, families, or asymptotic regimes is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260511-dimensional-gravity-table`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The d=3 and d=4 rows are backed by registered cached artifacts and asserted by the certificate runner, while the d=2 row is diagnostic-only and not load-bearing.  _(class `B`)_
+- **chain closes:** True — Within the narrowed finite scope, the note's load-bearing rows are exactly the d=3 and d=4 values read from SHA-fresh registered caches/logs by the certificate runner. The note now explicitly excludes d=2 numerical support, 4D asymptotic closure, and any universality theorem from the audited claim.
+- **rationale:** The live certificate runner passes 7/7, verifies SHA-fresh cache/log provenance for the d=3 and d=4 table entries, and checks that the 4D row is presented as width-limited rather than as a closed Newtonian asymptotic law. The table's previously stale d=3 Born entry has been reconciled to the registered cache value, and the d=2 row is explicitly non-load-bearing. Residual risk is confined to any future promotion of the diagnostic d=2 row, slow companion-runner-only columns, or asymptotic/universal language beyond this finite inventory.
 - **auditor confidence:** high
 
 ### `dirac_core_card_note`

@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 725,
-    "high": 34,
+    "high": 33,
     "leaf": 334,
     "medium": 169
   },
@@ -24859,27 +24859,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dimensional_gravity_table",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.087,
-      "note_path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py",
-      "transitive_descendants": 16
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_mutual_information_chokepoint_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -31059,6 +31038,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "four_d_distance_width_probe_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "dimensional_gravity_table"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/four_d_distance_width_probe.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -35199,29 +35201,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "four_d_distance_width_probe_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "dimensional_gravity_table"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/four_d_distance_width_probe.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "frozen_stars_rigorous_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -39324,5 +39303,5 @@
     }
   ],
   "ready_count": 99,
-  "total_pending": 1262
+  "total_pending": 1261
 }
