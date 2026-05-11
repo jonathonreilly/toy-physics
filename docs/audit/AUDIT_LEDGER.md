@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| **retained_no_go** | 130 |
+| **retained_no_go** | 131 |
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1249 |
+| unaudited | 1248 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,20 +41,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 431 |
+| `audited_clean` | 432 |
 | `audited_conditional` | 178 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1362 |
+| `unaudited` | 1361 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 894 |
+| `bounded_theorem` | 893 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 226 |
+| `no_go` | 227 |
 | `open_gate` | 111 |
 | `positive_theorem` | 741 |
 
@@ -492,6 +492,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
+| `structured_mirror_bornsafe_scan_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `structured_mirror_reconciliation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `structureless_dag_gravity_harness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `structureless_dag_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -9092,6 +9093,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
+- **auditor confidence:** high
+
+### `structured_mirror_bornsafe_scan_note`
+
+- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Registered 32-configuration structured-mirror sliced runner only: six-seed Born |I3|/P recomputation over the documented best candidate, grid corners, center, near-best neighbourhood, and jittered slice remains above 1e-14; the full 540-config exhaustion claim and successor-lane conclusion are not audited as closed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the registered 32-config sliced runner, no structured-mirror configuration reaches the corrected Born-safety threshold (1e-14).  _(class `C`)_
+- **chain closes:** True — The runner directly recomputes the sliced configurations using the scan's measure_config path and exits zero only if the sliced Born minimum stays above the 1e-14 safety threshold. The cache reports a minimum of 4.6428e-03, so the bounded sliced no-go closes on its own stated threshold.
+- **rationale:** The clean result is narrow: it ratifies only the registered 32-config sliced null result. The runner recomputes Born values rather than printing constants, covers the documented near-best candidate plus representative slice points, and fails closed if any sliced config reaches the threshold. Residual risk is the explicitly excluded full-grid exhaustion claim, which still requires a registered full-grid cache before it can be audited as closed.
 - **auditor confidence:** high
 
 ### `structured_mirror_reconciliation_note`
