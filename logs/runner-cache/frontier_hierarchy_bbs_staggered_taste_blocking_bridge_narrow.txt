@@ -1,0 +1,62 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_narrow.py
+runner_sha256: 9f4460f01d10b60644aecceadf5e68ebee82572ccb7aa90aaf172599a03f323c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.24
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow no-go: BBS staggered taste-blocking bridge (four obstructions)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: (O1) BBS hypothesis-domain enumeration  (T1)
+----------------------------------------------------------------------------------------
+  [PASS] T1 (O1): BBS published domain = 4d |phi|^4 + 4d weakly SAW; lattice gauge + staggered Dirac NOT in BBS domain. Cited: BBS x2, Balaban x3.  (BBS domain entries verified (2 in-domain, 3 out-of-domain))
+
+----------------------------------------------------------------------------------------
+Part 2: (O2) per-rung b_3 sequence  (T2)
+----------------------------------------------------------------------------------------
+  [PASS] T2 (O2): b_3^{(k)} = (1 + 2 k) / 3, k = 0..16; b_3^{(0)} = 1/3 (UV marginal), b_3^{(16)} = 11 (pure gauge); strictly monotone increasing.  (Fraction-exact: b_3^{(0)} = 1/3, b_3^{(16)} = 11, monotone OK)
+
+----------------------------------------------------------------------------------------
+Part 3: (O2) cumulative coefficient identity  (T3)
+----------------------------------------------------------------------------------------
+  [PASS] T3 (O2): Sum_{k=0}^{15} b_3^{(k)} = Sum_{k=0}^{15} (1 + 2 k) / 3 = 256 / 3 exactly (Fraction + SymPy).  (Fraction sum = 256/3, SymPy sum = 256/3, target = 256/3)
+
+----------------------------------------------------------------------------------------
+Part 4: (O2) Landau-pole inequality at framework alpha_LM  (T4)
+----------------------------------------------------------------------------------------
+  [PASS] T4 (O2): cumulative coefficient |ln alpha_LM| * 32 / (3 pi^2) ~= 2.5940 exceeds u_0 ~= 0.8777 at framework alpha_LM ~= 0.0907 (Landau-pole crossing).  (cumulative = 2.5940, u_0 = 0.8777, inequality OK: True, central band ~2.594 OK: True)
+
+----------------------------------------------------------------------------------------
+Part 5: (O3) categorical-type contrast  (T5)
+----------------------------------------------------------------------------------------
+  [PASS] T5 (O3): alpha_LM = alpha_bare / u_0 = 1 / (4 pi u_0) is a coupling ratio (SymPy rational function of u_0); kappa is an operator-norm parameter on a Banach space. Categorical-type contrast: rational-function-in-u_0 vs operator-norm-on-Banach.  (symbolic identity OK, numeric alpha_LM ~ 0.09067, rational-function witness OK)
+
+----------------------------------------------------------------------------------------
+Part 6: (O4) Coulombic-tail non-finite-range witness  (T6)
+----------------------------------------------------------------------------------------
+  [PASS] T6 (O4): 4d Coulombic kernel G(r) = 1/(4 pi^2 r^2) has power-law decay |x|^{-2}, NOT exponential e^{-|x|/L}. Consecutive ratios at r in [1, 2, 4, 8, 16] are constant = 4 (signature of pure r^{-2}); ratio against e^{-r/2} diverges as r -> infinity, confirming the Coulombic tail is structurally slower than any L-shell exponential.  (power-law ratios constant: True, Coulombic/exponential ratio at infinity: oo)
+
+----------------------------------------------------------------------------------------
+Part 7: joint-sufficiency / disjunction check  (T7)
+----------------------------------------------------------------------------------------
+  [PASS] T7: Joint-sufficiency: (O1) v (O2) v (O3) v (O4) holds AND all four independent obstructions are individually established.  (O1=True, O2=True, O3=True, O4=True, disjunction=True, all-four=True)
+
+----------------------------------------------------------------------------------------
+Part 8: negative-cross-check  (T8)
+----------------------------------------------------------------------------------------
+  [PASS] T8: Negative-cross-check: bridge not verifiable under any of (O1)-(O4); four counter-evidence statements recorded.  (counter-evidence entries: 4, all four populated)
+
+========================================================================================
+  Final tally: PASS = 8, FAIL = 0
+  Target:      PASS = 8, FAIL = 0
+========================================================================================
+
+All structural obstruction checks passed.
+
+----- stderr -----
+

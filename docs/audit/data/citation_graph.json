@@ -9733,6 +9733,22 @@
       "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
     },
     {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
       "from": "hierarchy_bosonic_bilinear_selector_note",
       "to": "hierarchy_spatial_bc_and_u0_scaling_note"
     },
@@ -46100,6 +46116,22 @@
       "runner_path": "scripts/frontier_hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go.py",
       "title": "Hierarchy alpha_LM Exponent / Species-Count Bridge \u2014 Regulator-Dependence No-Go Note"
     },
+    "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10": {
+      "claim_id": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "plaquette_self_consistency_note",
+        "observable_principle_from_axiom_note",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+      ],
+      "note_hash": "5bb7ec5c3d6e9221c940f012335d2ac712d308763a239ab9a4c750f3bbae40b2",
+      "path": "docs/HIERARCHY_BBS_STAGGERED_TASTE_BLOCKING_BRIDGE_NARROW_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_narrow.py",
+      "title": "Hierarchy BBS Staggered Taste Blocking Bridge \u2014 Narrow No-Go"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "claim_id": "hierarchy_bosonic_bilinear_selector_note",
       "claim_type_author_hint": null,
@@ -66987,7 +67019,7 @@
       "bounded_theorem": 254,
       "decoration": 1,
       "meta": 59,
-      "no_go": 26,
+      "no_go": 27,
       "none": 1628,
       "open_gate": 29,
       "positive_theorem": 106
@@ -66996,15 +67028,15 @@
       "bounded_theorem": 736,
       "decoration": 1,
       "meta": 59,
-      "no_go": 133,
+      "no_go": 134,
       "none": 451,
       "open_gate": 117,
       "positive_theorem": 606
     },
-    "edge_count": 8348,
-    "leaf_count": 558,
-    "node_count": 2103,
+    "edge_count": 8352,
+    "leaf_count": 559,
+    "node_count": 2104,
     "root_count": 789,
-    "runners_with_path": 1716
+    "runners_with_path": 1717
   }
 }
