@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 98 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 284 |
+| **retained_bounded** | 285 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1184 |
+| unaudited | 1183 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 479 |
+| `audited_clean` | 480 |
 | `audited_conditional` | 194 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1297 |
+| `unaudited` | 1296 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 898 |
+| `bounded_theorem` | 899 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 228 |
 | `open_gate` | 111 |
-| `positive_theorem` | 735 |
+| `positive_theorem` | 734 |
 
 | criticality | count |
 |---|---:|
@@ -503,6 +503,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_new_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_new_family_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `source_resolved_generated_support_recovery_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_generated_support_recovery_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_wavefield_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -9364,6 +9365,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The registered runner cache is complete and matches the source note's finite tables. The audited scope is the numerical readout and explicit non-closure boundary, not a thresholded classifier or retained mass-scaling theorem.
 - **rationale:** The finite runner output supports the note's bounded conclusion: the kNN-floor tweak broadens detector support and gives two TOWARD rows, but the fitted exponents remain far from the linear mass-scaling closure being sought. The source explicitly disclaims full generated-family transfer and weak-field mass-law recovery. Residual risk is that the runner has no hard assertions, so any future drift should be rechecked against the registered table.
 - **auditor confidence:** medium
+
+### `source_resolved_generated_support_recovery_basin_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite compact generated-DAG basin probe around the kNN-floor support-recovery tweak: for seeds 0..3, N_LAYERS=16, NODES_PER_LAYER=24, CONNECT_RADIUS=3.2, source strength 0.004, and the nine k_nearest/min_edges grid points, centroid shifts remain TOWARD and detector support_frac stays above the baseline 0.311; no new field architecture or mass-scaling closure is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The nine-point k_nearest/min_edges grid around the kNN-floor tweak has positive centroid shifts on every row, TOWARD sign counts of at least 2/4, and support_frac values 0.427-0.458, all above the baseline generated-family support_frac 0.311.  _(class `C`)_
+- **chain closes:** True — The direct dependencies are retained-grade, and the runner recomputes the baseline plus nine-grid basin table exactly as quoted. The clean scope is limited to the finite basin readout: all scanned tweak rows are TOWARD and have support_frac greater than the baseline, so the recovery is not a one-point fluke on this tiny grid.
+- **rationale:** The bounded claim closes because the runner computes the compact generated-DAG families and reproduces the baseline and all nine tweak rows without importing empirical values or broadening the architecture. The safe conclusion is exactly finite-grid: the kNN-floor support recovery persists over a small nearby grid and improves support_frac over baseline while keeping TOWARD centroid sign. The scope excludes full generated-family transfer and mass-scaling closure, consistent with the retained dependency boundary.
+- **auditor confidence:** high
 
 ### `source_resolved_generated_support_recovery_note`
 

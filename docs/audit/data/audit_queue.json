@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 285,
+    "leaf": 284,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31102,31 +31102,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_generated_support_recovery_basin_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_resolved_generated_support_recovery_note",
-        "source_resolved_generated_family_probe_note",
-        "source_resolved_generated_support_mass_scaling_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_BASIN_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/source_resolved_generated_support_recovery_basin.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "spectral_trajectory_theorem_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38761,6 +38736,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 49,
-  "total_pending": 1215
+  "ready_count": 48,
+  "total_pending": 1214
 }
