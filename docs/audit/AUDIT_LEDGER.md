@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1270 |
+| unaudited | 1269 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 162 |
+| ~~audited_conditional~~ | 163 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 162 |
+| `audited_conditional` | 163 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1383 |
+| `unaudited` | 1382 |
 
 | claim_type | count |
 |---|---:|
@@ -699,6 +699,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
 | `pmns_oriented_cycle_selection_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `pmns_twisted_flux_transfer_holonomy_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7153,6 +7154,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the aligned hw=1 active patch, the native positive transfer kernel T_seed = xbar I + ybar(C + C^2) has one dominant symmetric mode and one doubly-degenerate orthogonal mode, and those two eigenvalues reconstruct (xbar, ybar).  _(class `E`)_
 - **chain closes:** False — The exact spectral inversion closes only after T_seed has already been specified with xbar and ybar. The restricted packet does not derive that transfer kernel or its active-block normalization from independent hw=1 corner-to-corner dynamics.
 - **rationale:** Issue: The note names T_seed = xbar I + ybar(C + C^2) as the native positive transfer kernel and then recovers the same seed coefficients by eigenvalue inversion; the runner likewise constructs the kernel from supplied xbar and ybar, including a separate 2*xbar normalization in the active-block shadow. Why this blocks: This establishes an exact algebraic reparameterization of an already supplied C3 circulant kernel, not a native dynamical law that recovers PMNS microscopic data from independent transport. Repair target: Derive the hw=1 transfer kernel and its active-block normalization from primitive corner-to-corner dynamics without inserting the target seed coefficients, and make the runner construct that object from those primitive inputs. Claim boundary until fixed: The result may be cited as the exact spectral identity for an already specified positive aligned C3 transfer kernel, plus its blindness to zero-sum off-seed breaking, but not as a native recovery law for the PMNS seed data.
+- **auditor confidence:** high
+
+### `pmns_twisted_flux_transfer_holonomy_boundary_note`
+
+- **Note:** [`PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md`](../../docs/PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic holonomy-value law and one-holonomy non-selection boundary for the PMNS twisted flux transfer carrier on the admitted graph-first cycle frame.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For T(xbar,ybar,phi)=xbar I + ybar(e^{i phi}C+e^{-i phi}C^2), tr(T)/3 recovers xbar and tr(C^2T)/3 recovers ybar e^{i phi}, but one flux holonomy has a 2-real kernel on the reduced PMNS oriented-cycle family and does not select a unique point.  _(class `A`)_
+- **chain closes:** False — The runner verifies the holonomy recovery and non-selection boundary with PASS=16/FAIL=0. The retained chain does not close because the canonical graph-first PMNS cycle frame and staggered-Dirac realization context are admitted/open rather than retained one-hop dependencies.
+- **rationale:** Issue: the twisted-transfer holonomy law is exact algebra on the admitted canonical graph-first cycle frame, but that frame and the broader staggered-Dirac realization context are not retained in this row's dependency packet. Why this blocks: retained bounded status would require retained upstream authority for the carrier/frame before the holonomy-value law can be used as PMNS science rather than conditional algebra. Repair target: register and retain the staggered-Dirac/canonical graph-first PMNS cycle-frame authority, or split this as a standalone matrix-algebra lemma with no PMNS-frame claim. Claim boundary until fixed: exact conditional holonomy recovery for the admitted carrier and a bounded no-unique-selection result for one holonomy probe.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `pmns_uniform_scalar_deformation_boundary_note`
