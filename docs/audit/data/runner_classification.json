@@ -312,6 +312,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_alpha_lm_geometric_mean_identity.py"
     },
+    "alpha_s_derived_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_alpha_s_tadpole_power_identity.py"
+    },
     "alpha_s_derived_note": {
       "assert_count": 0,
       "counts": {
@@ -1679,6 +1691,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py"
+    },
+    "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py"
     },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "assert_count": 0,
@@ -21348,6 +21372,36 @@
       "assert_count": 0,
       "claims": [
         "asymmetry_persistence_pilot_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_alpha_s_tadpole_power_identity.py": {
+      "assert_count": 1,
+      "claims": [
+        "alpha_s_derived_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10"
       ],
       "counts": {
         "A": 0,
@@ -44512,9 +44566,9 @@
       "B": 163,
       "C": 652,
       "D": 250,
-      "none": 406
+      "none": 408
     },
-    "runners_classified": 1588,
+    "runners_classified": 1590,
     "runners_with_C": 818,
     "runners_with_D": 445
   }

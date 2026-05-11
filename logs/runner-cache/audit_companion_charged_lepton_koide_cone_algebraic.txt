@@ -1,0 +1,98 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_charged_lepton_koide_cone_algebraic.py
+runner_sha256: 078147d859d67daa14b89b76ce9347d78053b7198d066f8ad5d670269f3eef53
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.37
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy-symbolic verification of Q = 2/3 <=> a_0^2 = 2|z|^2
+under the C_3 character Fourier transform on positive 3-vectors
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic v = (v1, v2, v3)
+  a_0 = sqrt(3)*(v1 + v2 + v3)/3
+  z   = sqrt(3)*(v1 + v2*exp(-2*I*pi/3) + v3*exp(2*I*pi/3))/3
+  |z|^2 (simplified) = v1**2/3 - v1*v2/3 - v1*v3/3 + v2**2/3 - v2*v3/3 + v3**2/3
+  [PASS (A)] |z|^2 reduces to (1/3)(v1^2+v2^2+v3^2 - (v1 v2 + v2 v3 + v3 v1))  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 1: Plancherel/Parseval (E1): |v|^2 = a_0^2 + 2 |z|^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (E1) Plancherel: v1^2 + v2^2 + v3^2 - (a_0^2 + 2|z|^2) reduces to 0  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: linear-sum identity (E3): (v_1 + v_2 + v_3)^2 = 3 a_0^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (E3) (v_1 + v_2 + v_3)^2 - 3 a_0^2 reduces to 0  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: closed form (E4): Q(v) = (a_0^2 + 2|z|^2) / (3 a_0^2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (E4) Q(v) - (a_0^2 + 2|z|^2) / (3 a_0^2) reduces to 0 parametrically  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: forward direction of (P1): Q = 2/3 => a_0^2 = 2|z|^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] forward (P1): solving (a_0^2 + 2|z|^2)/(3 a_0^2) = 2/3 gives a_0^2 = 2|z|^2  (sympy.solve returned a_0^2 ∈ [2*B], expected {2*B})
+
+----------------------------------------------------------------------------------------
+Part 5: reverse direction of (P1): a_0^2 = 2|z|^2 => Q = 2/3
+----------------------------------------------------------------------------------------
+  [PASS (A)] reverse (P1): substituting a_0^2 = 2|z|^2 into Q gives Q = 2/3  (Q under a_0^2 = 2|z|^2 = 2/3)
+
+----------------------------------------------------------------------------------------
+Part 6: full parametric forward direction in (v1, v2, v3)
+----------------------------------------------------------------------------------------
+  Koide condition (Q=2/3) in (v1,v2,v3): v1**2 - 4*v1*v2 - 4*v1*v3 + v2**2 - 4*v2*v3 + v3**2 = 0
+  [PASS (A)] Koide LHS in C_3 chars: 3(a_0^2 + 2|z|^2) - 2(3 a_0^2) = 3 (2|z|^2 - a_0^2)  (diff = 0)
+  [PASS (A)] parametric (P1): Koide LHS = 0 <=> 2|z|^2 - a_0^2 = 0 (zero iff char cone)  ((Koide_lhs - target_chars) = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: geometric corollary - 45-degree angle from diagonal
+----------------------------------------------------------------------------------------
+  [PASS (A)] geometric corollary: at Q = 2/3, cos^2(angle(v, (1,1,1))) = 1/2  (cos^2 at Q=2/3 = 1/2)
+  [PASS (A)] underlying identity: cos^2(angle) * Q * 3 = 1 parametric in (v1, v2, v3)  (diff = 0)
+  [PASS (A)] geometric corollary: at a_0^2 = 2|z|^2, sigma = 1/2  (sigma at cone = 1/2)
+  [PASS (A)] identity: cos^2(angle(v, (1,1,1))) = sigma(v) = a_0^2 / |v|^2  (cos^2 equals trivial-character fraction)
+
+----------------------------------------------------------------------------------------
+Part 8: numerical FP cross-checks at three independent samples
+----------------------------------------------------------------------------------------
+  [PASS (A)] exact sample 1: abstract on-cone vector gives Q = 2/3  (Q (sample 1) = 2/3)
+  [PASS (A)] (E4) at sample 2 (1, 5/3, 3/5): Q matches closed-form (a_0^2 + 2|z|^2)/(3 a_0^2)  (Q = 19/49, E4 form = 19/49)
+  [PASS (A)] off-cone sample 3 (1,1,2): Q = 3/8 != 2/3 (off the Koide cone)  (Q = 3/8)
+
+----------------------------------------------------------------------------------------
+Part 9: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: at Q = 1/3 the equivalence cone reduces to |z|^2 = 0 (diagonal)  (sympy.solve returned |z|^2 ∈ [0] (confirms Q != 2/3 changes the cone))
+  [PASS (A)] counterfactual: at Q = 1 the equivalence cone reduces to |z|^2 = a_0^2  (sympy.solve returned |z|^2 ∈ [A])
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (E1) Plancherel: |v|^2 = a_0^2 + 2|z|^2 parametric in (v1, v2, v3)
+    (E3) (v_1+v_2+v_3)^2 = 3 a_0^2 parametric
+    (E4) Q(v) = (a_0^2 + 2|z|^2)/(3 a_0^2) parametric
+    Forward (P1): Q = 2/3 algebraically implies a_0^2 = 2|z|^2
+    Reverse (P1): a_0^2 = 2|z|^2 algebraically implies Q = 2/3
+    Parametric (P1): Koide LHS = 0 <=> 2|z|^2 - a_0^2 = 0
+    Geometric corollary: Q = 2/3 <=> cos^2(angle(v,(1,1,1))) = 1/2
+    cos^2(angle) = sigma(v) = a_0^2 / |v|^2
+    FP sanity at three abstract samples (on-cone, generic, off-cone)
+    Counterfactual: Q = 1/3 and Q = 1 give different cones
+
+========================================================================================
+TOTAL: PASS=17, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -625,6 +625,10 @@
       "to": "ai_methodology.llm_skill_pack_2026-04-25"
     },
     {
+      "from": "alpha_s_derived_narrow_theorem_note_2026-05-10",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
       "from": "alpha_s_derived_note",
       "to": "plaquette_self_consistency_note"
     },
@@ -34994,6 +34998,19 @@
       "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
       "title": "alpha_LM Geometric-Mean Identity Theorem"
     },
+    "alpha_s_derived_narrow_theorem_note_2026-05-10": {
+      "claim_id": "alpha_s_derived_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "yt_ew_color_projection_theorem"
+      ],
+      "note_hash": "7ded53dc702a6ae58941269c2ba9eb1477d9c2ad9ec2ccc770a8f290b4ede164",
+      "path": "docs/ALPHA_S_DERIVED_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_alpha_s_tadpole_power_identity.py",
+      "title": "alpha_s Derived Narrow Theorem (Tadpole-Power Coupling-Chain Identity)"
+    },
     "alpha_s_derived_note": {
       "claim_id": "alpha_s_derived_note",
       "claim_type_author_hint": null,
@@ -37122,6 +37139,17 @@
       "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
+    },
+    "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10": {
+      "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "b9ef043d6503f97083dab246ad2e71749f95a1fd2f0caa9a21f1c4dac4b34256",
+      "path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py",
+      "title": "Charged-Lepton Koide-Cone Algebraic Equivalence Narrow Theorem"
     },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -66188,6 +66216,7 @@
     "central_band_layernorm_note",
     "central_band_mass_window_note",
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+    "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
     "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
     "charged_lepton_lane6_theorem_plan_note_2026-04-28",
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
@@ -66838,7 +66867,7 @@
       "no_go": 23,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 97
+      "positive_theorem": 99
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 732,
@@ -66847,12 +66876,12 @@
       "no_go": 130,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 597
+      "positive_theorem": 599
     },
-    "edge_count": 8356,
-    "leaf_count": 544,
-    "node_count": 2087,
-    "root_count": 777,
-    "runners_with_path": 1700
+    "edge_count": 8357,
+    "leaf_count": 546,
+    "node_count": 2089,
+    "root_count": 778,
+    "runners_with_path": 1702
   }
 }

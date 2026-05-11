@@ -1,0 +1,87 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_alpha_s_tadpole_power_identity.py
+runner_sha256: 73b84396803b078fe05c9f6773da3dd210b8084d1552af498edf6088ce9c83b6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.32
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+ALPHA_S_DERIVED_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy-symbolic verification of (P1) alpha_LM^2 = alpha_bare * alpha_s(v)
+and (P2) alpha_s(v) / alpha_LM = 1/u_0 under retained CMT D14-D15 inputs
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic alpha_bare (positive real) = alpha_bare
+  symbolic u_0 (positive real)        = u_0
+  cited n_link(gauge coupling) = 1
+  cited n_link(vacuum polarization) = 2
+  (D1) alpha_LM    = alpha_bare / u_0   = alpha_bare/u_0
+  (D2) alpha_s(v)  = alpha_bare / u_0^2 = alpha_bare/u_0**2
+
+----------------------------------------------------------------------------------------
+Part 1: parametric (P1) alpha_LM^2 = alpha_bare * alpha_s(v)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P1) alpha_LM^2 - alpha_bare * alpha_s(v) reduces to 0 parametrically  (diff = 0)
+  [PASS (A)] (P1) LHS reduces to alpha_bare^2 / u_0^2 (tadpole-power form)  (got alpha_bare**2/u_0**2)
+
+----------------------------------------------------------------------------------------
+Part 2: parametric (P2) alpha_s(v) / alpha_LM = 1 / u_0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P2) alpha_s(v) / alpha_LM reduces to 1 / u_0 parametrically  (got 1/u_0)
+  [PASS (A)] (P2) ratio is independent of alpha_bare (alpha_bare not in free_symbols of ratio)  (free_symbols of (P2) ratio = {u_0})
+
+----------------------------------------------------------------------------------------
+Part 3: derivable corollaries
+----------------------------------------------------------------------------------------
+  [PASS (A)] corollary 1: alpha_s(v)^2 / alpha_LM^4 = 1 / alpha_bare^2  (got alpha_bare**(-2))
+  [PASS (A)] corollary 2: alpha_LM / alpha_bare = 1 / u_0  (got 1/u_0)
+  [PASS (A)] corollary 3: alpha_s(v) / alpha_bare = 1 / u_0^2  (got u_0**(-2))
+  [PASS (A)] corollary 4: alpha_LM^2 / alpha_s(v) = alpha_bare  (got alpha_bare)
+  [PASS (A)] cross-check: corollary 2 squared equals corollary 3  (corr2^2 - corr3 = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: free-symbol bookkeeping after substitution
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P1) LHS - RHS difference has empty free symbols after simplify  (free_symbols = set())
+  [PASS (A)] (P1) LHS retains free symbols {alpha_bare, u_0}  (free_symbols of (P1) LHS = {u_0, alpha_bare})
+
+----------------------------------------------------------------------------------------
+Part 5: numerical FP cross-check at one independent random sample
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P1) FP sanity at sample (alpha_bare=0.23, u_0=0.876): LHS == RHS  (|LHS - RHS| = 0.000e+00)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probes (n_link split is load-bearing)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: at n_link = (1, 1), (P1) collapses to a non-identity  (diff = alpha_bare**2*(1 - u_0)/u_0**2 (nonzero confirms n_link = (1, 2) load-bearing))
+  [PASS (A)] counterfactual: at n_link(vp) = 0 (no CMT), (P1) fails parametrically  (diff = -alpha_bare**2 + alpha_bare**2/u_0**2)
+
+----------------------------------------------------------------------------------------
+Part 7: parametric CMT form (general n_link, sanity)
+----------------------------------------------------------------------------------------
+  [PASS (A)] parametric CMT: (P1) holds iff n_link(vp) = 2 * n_link(g)  (diff = 0 (parametric in n_link = n; (D2)'s n_vp = 2 satisfies n_vp = 2 n_g at n_g = 1))
+  [PASS (A)] counterfactual: at n_g = 2 with n_vp = 3 (not 4), (P1) fails parametrically  (diff at n_g=2, n_vp=3 = alpha_bare**2*(1 - u_0)/u_0**4 (confirms n_vp = 2 n_g locks the algebra))
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (P1) alpha_LM^2 = alpha_bare * alpha_s(v) parametric in (alpha_bare, u_0)
+    (P2) alpha_s(v) / alpha_LM = 1 / u_0 parametric in (alpha_bare, u_0)
+    Four corollary identities all reduce to 0 parametrically
+    (P1) LHS retains expected free-symbol set {alpha_bare, u_0}
+    FP numerical cross-check passes at one independent random sample
+    Counterfactual: n_link(vp) != 2 n_link(g) collapses (P1)
+    Parametric CMT form: (P1) holds iff n_link(vp) = 2 n_link(g) (n_g = 1, n_vp = 2)
+
+========================================================================================
+TOTAL: PASS=16, FAIL=0
+========================================================================================
+
+----- stderr -----
+
