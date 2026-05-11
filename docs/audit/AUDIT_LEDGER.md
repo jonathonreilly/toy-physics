@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 74 |
+| **retained** | 75 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 241 |
 | open_gate | 13 |
-| unaudited | 1114 |
+| unaudited | 1113 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 411 |
+| `audited_clean` | 412 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1212 |
+| `unaudited` | 1211 |
 
 | claim_type | count |
 |---|---:|
@@ -156,6 +156,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_complexification_split_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | B | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2394,6 +2395,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** In Cl(3,0) tensor_R C, e_+ = (1 - i omega)/2 and e_- = (1 + i omega)/2 are complete central orthogonal idempotents, giving Cl(3,0) tensor_R C isomorphic to M_2(C) direct-sum M_2(C).  _(class `A`)_
 - **chain closes:** True — The chain closes from the Clifford relations plus admitted finite-dimensional real and complex representation theory. The Pauli realization and central-idempotent split establish the algebra decomposition, and Artin-Wedderburn/Schur gives the two-dimensional irreducible modules.
 - **rationale:** The note remains inside abstract Clifford algebra and standard finite-dimensional representation theory. K1-K4 are algebraic consequences of the defining relations, the Pauli realisation, the central idempotent split, and the standard module theory of M_2(C). The runner provides exact symbolic A-class checks and does not import a physical bridge, comparator, tuned scale, or sector chosen to match an observation.
+- **auditor confidence:** high
+
+### `cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CL3_FAITHFUL_IRREP_DIM_TWO_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CL3_FAITHFUL_IRREP_DIM_TWO_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Purely algebraic finite-dimensional complex representation theory of abstract Cl(3,0): faithful irreducibles are 2-dimensional and finite-dimensional complex representations decompose into sums of the two chirality 2-dimensional irreps.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b1-3217-7182-9319-9a7006e838f1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By the sibling narrow theorem (K3), Cl(3,0) ⊗_R C ≅ M_2(C) ⊕ M_2(C), so Artin-Wedderburn gives exactly two irreducible complex modules, each of dimension 2.  _(class `B`)_
+- **chain closes:** True — The only load-bearing dependency, the complexification split note, is provided as retained, and the remaining steps are standard semisimple algebra representation theory admitted by the packet. The note explicitly excludes the physical per-site Hilbert-space bridge, so that missing bridge does not block this scoped algebraic claim.
+- **rationale:** The scoped theorem closes as an abstract algebra statement from the retained split Cl(3,0) ⊗_R C ≅ M_2(C) ⊕ M_2(C) plus Artin-Wedderburn and complete reducibility. The runner is only corroborative and partly hard-codes representative Pauli blocks, but the proof does not rely on the runner to derive the classification. No physical observable, lattice Hilbert-space identification, or sector-selection bridge is claimed inside this note.
 - **auditor confidence:** high
 
 ### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
