@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 270,
+    "leaf": 269,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31127,27 +31127,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_static_matrixfree_shared_geometry_compare_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/wave_static_matrixfree_shared_geometry_compare.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wide_family_h0125_bridge_reopen_audit",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38426,6 +38405,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 34,
-  "total_pending": 1200
+  "ready_count": 33,
+  "total_pending": 1199
 }

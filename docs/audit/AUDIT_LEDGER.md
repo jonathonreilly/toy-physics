@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 292 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1169 |
+| unaudited | 1168 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 199 |
+| ~~audited_conditional~~ | 200 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 489 |
-| `audited_conditional` | 199 |
+| `audited_conditional` | 200 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1282 |
+| `unaudited` | 1281 |
 
 | claim_type | count |
 |---|---:|
@@ -823,6 +823,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `vector_sector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
+| `wave_static_matrixfree_shared_geometry_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wilson_test_mass_continuum_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -11387,6 +11388,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At H = 0.35 with fixed beam geometry, the moving-source exact static comparator remains field-box sensitive, but the 9.0 -> 12.0 large-box branch shows low rel_MS and smaller dS movement without meeting the strict stability bar.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces both source-note comparisons: field PW 6.0 -> 9.0 and 9.0 -> 12.0. The note keeps the conclusion mixed and bounded, explicitly withholding continuum-quality promotion.
 - **rationale:** The note accurately preserves both sides of the runner output. The 6.0 -> 9.0 comparison is still materially box-dependent, with dS move 20.84% and rel_MS move 86.21%, while dM is stable; the 9.0 -> 12.0 comparison improves to dS move 5.52% and rel_MS 3.18% -> 2.42% but still does not pass a strict stability criterion. This closes only the stated mixed diagnostic: no boundary-stable moving-source comparator is retained yet, but the medium-H large-box branch remains a plausible stabilization candidate.
+- **auditor confidence:** high
+
+### `wave_static_matrixfree_shared_geometry_compare_note`
+
+- **Note:** [`WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md`](../../docs/WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite direct-vs-matrix-free static-engine comparison on the two frozen shared geometries H=0.35 and H=0.25, including solver residuals, max field mismatch, rel field mismatch, rel(dS), and rel_MS; not a formal drop-in-replacement theorem or a repair of the static-vs-retarded comparator mismatch.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the shared H=0.35 and H=0.25 geometries, the direct and matrix-free static solvers agree to small field and propagated-response mismatch, but the runner prints that matrix-free is close rather than proven identical.  _(class `C`)_
+- **chain closes:** False — The runner/logs close the finite comparison tables, but the source's drop-in-replacement language is stronger than the artifact because no asserted acceptance criterion or convergence theorem ties the observed mismatches to solver residuals; the runner itself reports close but not yet proven identical.
+- **rationale:** Issue: the default cache/live run and frozen H=0.25 log support the numerical closeness tables, but the artifact does not define a pass/fail tolerance for calling the matrix-free solver a drop-in replacement. Why this blocks: without a residual-tied acceptance criterion or proof that both methods converge to the same finite-grid Poisson solution, the audited packet establishes a strong finite comparison, not an equivalence theorem. Repair target: add runner assertions for field and propagated-response tolerances tied to residuals, or prove finite-grid convergence of both algorithms to the same solution. Claim boundary until fixed: cite only the two-geometry direct-vs-matrix-free comparison and the fact that the remaining rel_MS mismatch is comparator science rather than solver-engine mismatch.
 - **auditor confidence:** high
 
 ### `wave_static_single_source_compare_note`
