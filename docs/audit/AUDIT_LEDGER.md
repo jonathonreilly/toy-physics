@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1286 |
+| unaudited | 1285 |
 | audit_in_progress | 14 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 12 |
-| ~~audited_conditional~~ | 150 |
+| ~~audited_conditional~~ | 151 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,21 +43,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 21 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 150 |
+| `audited_conditional` | 151 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 12 |
-| `unaudited` | 1399 |
+| `unaudited` | 1398 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 890 |
+| `bounded_theorem` | 891 |
 | `decoration` | 14 |
 | `meta` | 116 |
 | `no_go` | 219 |
 | `open_gate` | 110 |
-| `positive_theorem` | 752 |
+| `positive_theorem` | 751 |
 
 | criticality | count |
 |---|---:|
@@ -654,6 +654,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_lane_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `gravity_sign_audit_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -4699,6 +4700,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the narrowed scope, the runner stdout matches the note's signs and classifications for every ratified row. The z=2, z=4, z=6, and z=7 dense rows are explicitly outside the audited scope and are not ratified here.
 - **rationale:** The scoped claim is an algebraic sign-interpretation over runner-computed observables, and the supplied runner computes the relevant rows rather than printing fixed classifications. No one-hop authorities are listed, so no dependency-retention blocker is available inside the restricted packet. Clean status applies only to the narrowed z=3 and z=5 dense rows plus the other printed runner rows; the broader z=2..6 dense table is not part of this verdict.
 - **auditor confidence:** medium
+
+### `gravity_sign_audit_2026-04-10`
+
+- **Note:** [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../../docs/GRAVITY_SIGN_AUDIT_2026-04-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Configured sign-coupling diagnostic only: in the current 1D exact-lattice external-potential runner, imported parity and lapse scalar couplings distinguish a well from a hill, while the old identity coupling remains a negative control. This excludes a retained repository derivation of the parity/lapse coupling and excludes universal irregular-graph directional closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-gravity-sign`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Under the corrected parity and lapse couplings, well vs hill are distinguishable in the exact-lattice external-potential test, but the coupling identification is imported and the irregular graph directional observable remains open.  _(class `B`)_
+- **chain closes:** False — The runner instantiates the configured Hamiltonians and reproduces the bounded well/hill split, but the restricted packet does not derive the parity/lapse scalar coupling from retained repository axioms and explicitly leaves the irregular graph directional observable lane open.
+- **rationale:** Issue: the note's decisive coupling identification is admitted from external literature rather than derived from retained one-hop repository authorities, and the source also states that the graph-native irregular directional observable is not closed. Why this blocks: a bounded runner split under an imported parity/lapse coupling cannot promote the row to a retained gravity-sign theorem for the framework. Repair target: supply a retained restricted-packet theorem deriving the parity/lapse scalar coupling from repository axioms, then separately close a graph-native same-surface directional observable for the irregular families. Claim boundary until fixed: the configured exact-lattice external-potential diagnostic supports a bounded negative-control result for identity coupling and a parity/lapse well-vs-hill split, but not a universal retained gravity-sign claim.
+- **auditor confidence:** high
 
 ### `growing_graph_dynamic_limit_diagnostic_note`
 
