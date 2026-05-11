@@ -1,0 +1,46 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py
+runner_sha256: 534e688fb0a0c49ab669ba9589c883113978d2409dac247f4460a80f6804405d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Symbolic cancellation
+----------------------------------------------------------------------------------------
+  [PASS] A^2 lambda^2 = alpha/n_color under the supplied definitions  (residual=0)
+  [PASS] A^2 lambda^4 = alpha^2/(n_pair*n_color) under the same definitions  (residual=0)
+
+----------------------------------------------------------------------------------------
+Positive rational instances
+----------------------------------------------------------------------------------------
+  [PASS] 1.1 product cancellation instance  (lhs=2/15, rhs=2/15)
+  [PASS] 1.2 squared corollary instance  (lhs=2/75, rhs=2/75)
+  [PASS] 2.1 product cancellation instance  (lhs=1/11, rhs=1/11)
+  [PASS] 2.2 squared corollary instance  (lhs=7/605, rhs=7/605)
+  [PASS] 3.1 product cancellation instance  (lhs=1/17, rhs=1/17)
+  [PASS] 3.2 squared corollary instance  (lhs=13/3179, rhs=13/3179)
+  [PASS] 4.1 product cancellation instance  (lhs=19/207, rhs=19/207)
+  [PASS] 4.2 squared corollary instance  (lhs=361/19044, rhs=361/19044)
+
+----------------------------------------------------------------------------------------
+Perturbed hypotheses do not pass
+----------------------------------------------------------------------------------------
+  [PASS] cancellation depends on the supplied A^2 definition  (perturbed_residual=alpha/(n_color*n_pair))
+  [PASS] cancellation depends on the supplied lambda^2 definition  (perturbed_residual=-alpha/(n_color*(n_pair + 1)))
+
+----------------------------------------------------------------------------------------
+Boundary checks
+----------------------------------------------------------------------------------------
+  [PASS] no numerical target is imported
+  [PASS] no external Wolfenstein parameter is used
+  [PASS] claim is only the algebraic cancellation under supplied hypotheses
+
+========================================================================================
+  TOTAL: PASS=15, FAIL=0
+========================================================================================
+
+----- stderr -----
+

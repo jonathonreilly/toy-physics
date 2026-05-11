@@ -20340,6 +20340,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py"
     },
+    "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 10,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py"
+    },
     "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -40337,6 +40349,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 10,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_wolfenstein_lambda_a_structural_identities.py": {
       "assert_count": 1,
       "claims": [
@@ -46220,15 +46247,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 187,
+    "decoration_candidates": 188,
     "dominant_class_distribution": {
-      "A": 135,
+      "A": 136,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1651,
+    "runners_classified": 1652,
     "runners_with_C": 839,
     "runners_with_D": 462
   }

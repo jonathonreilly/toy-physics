@@ -65398,6 +65398,17 @@
       "runner_path": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py",
       "title": "Wilson-Shifted V_taste Extremum at Leading Order in r \u2014 Bounded Note"
     },
+    "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10": {
+      "claim_id": "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "12dd20e6e5523e0e67d1294d34bffdcc9b9936069451b524bb631e49263ceb49",
+      "path": "docs/WOLFENSTEIN_LAMBDA_A_PRODUCT_CANCELLATION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_wolfenstein_lambda_a_product_cancellation_narrow.py",
+      "title": "Wolfenstein Lambda-A Product Cancellation - Narrow Algebra Theorem"
+    },
     "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10": {
       "claim_id": "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "positive_theorem",
@@ -68011,6 +68022,7 @@
     "wilson_normalization_reconciliation_note_2026-04-11",
     "wilson_two_body_open_note_2026-04-11",
     "wilson_two_body_open_refined_note_2026-04-11",
+    "wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10",
     "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10",
     "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
     "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
@@ -68056,7 +68068,7 @@
       "no_go": 31,
       "none": 1627,
       "open_gate": 34,
-      "positive_theorem": 126
+      "positive_theorem": 127
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 754,
@@ -68065,12 +68077,12 @@
       "no_go": 138,
       "none": 451,
       "open_gate": 122,
-      "positive_theorem": 625
+      "positive_theorem": 626
     },
     "edge_count": 8446,
-    "leaf_count": 596,
-    "node_count": 2151,
-    "root_count": 814,
-    "runners_with_path": 1764
+    "leaf_count": 597,
+    "node_count": 2152,
+    "root_count": 815,
+    "runners_with_path": 1765
   }
 }
