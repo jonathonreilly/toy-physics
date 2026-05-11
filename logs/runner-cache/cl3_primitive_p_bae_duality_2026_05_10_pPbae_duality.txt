@@ -1,0 +1,66 @@
+===== runner cache v1 =====
+runner: scripts/cl3_primitive_p_bae_duality_2026_05_10_pPbae_duality.py
+runner_sha256: 712b53cf07c787285c1d64f4efdd1258501da51857fec0e1e263d183b14bc43a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Finite C_3-circulant block energies
+----------------------------------------------------------------------------------------
+  [PASS (A)] 1.1 E_plus formula  (E_plus=3)
+  [PASS (A)] 1.2 E_perp formula  (E_perp=3)
+  [PASS (A)] 2.1 E_plus formula  (E_plus=12)
+  [PASS (A)] 2.2 E_perp formula  (E_perp=7.5)
+  [PASS (A)] 3.1 E_plus formula  (E_plus=1.6875)
+  [PASS (A)] 3.2 E_perp formula  (E_perp=1.875)
+  [PASS (A)] BAE sample has E_plus = E_perp  (E_plus=3, E_perp=3)
+  [PASS (A)] BAE sample has |b|^2/a^2 = 1/2  (ratio=0.5)
+
+----------------------------------------------------------------------------------------
+Literal M1 trace-state expression is degenerate
+----------------------------------------------------------------------------------------
+  [PASS (A)] 1.1 tau_literal equals ordinary trace  (tau=3, trace=3)
+  [PASS (A)] 2.1 tau_literal equals ordinary trace  (tau=6, trace=6)
+  [PASS (A)] 3.1 tau_literal equals ordinary trace  (tau=2.25, trace=2.25)
+  [PASS (A)] tau_literal is blind to the doublet amplitude at fixed a  (tau_values=[3.75, 3.75, 3.75], E_perp_values=[0.0, 0.24, 1.5])
+
+----------------------------------------------------------------------------------------
+Equal block-log saddle
+----------------------------------------------------------------------------------------
+  [PASS (A)] N=1 stationary point is E_plus=N/2  (dL=0)
+  [PASS (A)] N=1 stationary point is a maximum  (left_d=2.66667, right_d=-2.66667, second=-8)
+  [PASS (A)] N=2.5 stationary point is E_plus=N/2  (dL=0)
+  [PASS (A)] N=2.5 stationary point is a maximum  (left_d=1.06667, right_d=-1.06667, second=-1.28)
+  [PASS (A)] N=9 stationary point is E_plus=N/2  (dL=0)
+  [PASS (A)] N=9 stationary point is a maximum  (left_d=0.296296, right_d=-0.296296, second=-0.0987654)
+
+----------------------------------------------------------------------------------------
+BAE translation
+----------------------------------------------------------------------------------------
+  [PASS (A)] E_plus = E_perp implies |b|^2/a^2 = 1/2  (E_plus=8.67, E_perp=8.67)
+  [PASS (A)] off-BAE sample breaks block-energy equipartition  (ratio=0.280276816609)
+
+----------------------------------------------------------------------------------------
+Saddle-equivalence is not full-measure equivalence
+----------------------------------------------------------------------------------------
+  [PASS (A)] half-scaled variant has the same stationary point  (x_star=0.5)
+  [PASS (A)] half-scaled variant has half the curvature  (full=-8, half=-4)
+  [PASS (A)] bare reduced-coordinate measure carries no interior selector by itself  (density samples=[1.0, 1.0, 1.0])
+
+----------------------------------------------------------------------------------------
+Boundary checks
+----------------------------------------------------------------------------------------
+  [PASS (A)] no empirical input is used
+  [PASS (A)] no primitive is elected
+  [PASS (A)] no retained-grade status is written by the runner
+  [PASS (A)] claim remains a bounded finite-algebra theorem
+
+========================================================================================
+  TOTAL: PASS=27, FAIL=0
+========================================================================================
+
+----- stderr -----
+

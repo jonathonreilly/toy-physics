@@ -55712,6 +55712,17 @@
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
     },
+    "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality": {
+      "claim_id": "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "b4933a5384c2920efc81d66cbbd184a7741f264710ce3df149fda7b105ae53f8",
+      "path": "docs/PRIMITIVE_P_BAE_M1_M2_DUALITY_NOTE_2026-05-10_pPbae_duality.md",
+      "runner_path": "scripts/cl3_primitive_p_bae_duality_2026_05_10_pPbae_duality.py",
+      "title": "P-BAE M1/M2 Candidate Duality - Narrow Bounded Theorem"
+    },
     "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10": {
       "claim_id": "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
       "claim_type_author_hint": "no_go",
@@ -67769,6 +67780,7 @@
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
     "poisson_self_gravity_loop_v3_note",
+    "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality",
     "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
     "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
     "primordial_spectrum_note",
@@ -68016,7 +68028,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 271,
+      "bounded_theorem": 272,
       "decoration": 1,
       "meta": 60,
       "no_go": 31,
@@ -68025,7 +68037,7 @@
       "positive_theorem": 126
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 753,
+      "bounded_theorem": 754,
       "decoration": 1,
       "meta": 60,
       "no_go": 138,
@@ -68034,9 +68046,9 @@
       "positive_theorem": 625
     },
     "edge_count": 8444,
-    "leaf_count": 594,
-    "node_count": 2149,
-    "root_count": 813,
-    "runners_with_path": 1762
+    "leaf_count": 595,
+    "node_count": 2150,
+    "root_count": 814,
+    "runners_with_path": 1763
   }
 }

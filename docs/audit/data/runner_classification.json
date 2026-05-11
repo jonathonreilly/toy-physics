@@ -15180,6 +15180,18 @@
       "dominant_class": null,
       "runner": "scripts/portable_package_hierarchy_classifier.py"
     },
+    "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/cl3_primitive_p_bae_duality_2026_05_10_pPbae_duality.py"
+    },
     "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10": {
       "assert_count": 0,
       "counts": {
@@ -24383,6 +24395,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_primitive_p_bae_duality_2026_05_10_pPbae_duality.py": {
+      "assert_count": 1,
+      "claims": [
+        "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/cl3_primitive_p_heavyq_2026_05_10_pPheavyq.py": {
@@ -46166,15 +46193,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 185,
+    "decoration_candidates": 186,
     "dominant_class_distribution": {
-      "A": 133,
+      "A": 134,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1649,
+    "runners_classified": 1650,
     "runners_with_C": 839,
     "runners_with_D": 462
   }
