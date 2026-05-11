@@ -9,16 +9,6 @@
   },
   "cycle_examples": [
     [
-      "g_bare_derivation_note",
-      "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
-      "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
-      "yt_ward_identity_derivation_theorem",
-      "yt_vertex_power_derivation",
-      "alpha_s_derived_note",
-      "plaquette_self_consistency_note",
-      "gauge_vacuum_plaquette_susceptibility_flow_theorem_note"
-    ],
-    [
       "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
       "c3_symmetry_preserved_interpretation_note_2026-05-08"
     ],
@@ -34,9 +24,37 @@
     [
       "hypercharge_identification_note",
       "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    ],
+    [
+      "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
+      "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
+      "dm_neutrino_codd_bosonic_normalization_theorem_note_2026-04-15",
+      "pmns_selector_unique_amplitude_slot_note",
+      "pmns_selector_class_space_uniqueness_note",
+      "pmns_selector_sector_odd_reduction_note",
+      "pmns_sector_exchange_nonforcing_note",
+      "pmns_sector_orientation_orbit_note",
+      "pmns_selector_bank_nonrealization_note",
+      "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
+      "neutrino_dirac_z3_support_trichotomy_note",
+      "neutrino_mass_reduction_to_dirac_note",
+      "publication.ci3_z3.derivation_atlas",
+      "publication.ci3_z3.claims_table",
+      "publication.ci3_z3.quantitative_summary_table",
+      "publication.ci3_z3.prediction_surface_2026-04-15",
+      "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
+      "neutrino_mass_derived_note",
+      "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
+      "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
+      "dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18",
+      "dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
+      "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
+      "dm_neutrino_source_surface_shift_quotient_bundle_theorem_note_2026-04-16",
+      "dm_neutrino_exact_h_source_surface_preimage_bundle_theorem_note_2026-04-16",
+      "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
     ]
   ],
-  "cycles_detected": 269,
+  "cycles_detected": 264,
   "effective_status_counts": {
     "audited_conditional": 260,
     "audited_failed": 26,

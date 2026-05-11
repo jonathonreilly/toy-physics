@@ -9257,10 +9257,6 @@
       "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
     },
     {
-      "from": "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
-      "to": "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
-    },
-    {
       "from": "g_bare_derivation_note",
       "to": "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03"
     },
@@ -21857,10 +21853,6 @@
       "to": "yt_constructive_uv_bridge_note"
     },
     {
-      "from": "yt_bridge_hessian_selector_note",
-      "to": "yt_bridge_variational_selector_note"
-    },
-    {
       "from": "yt_bridge_higher_order_corrections_note",
       "to": "yt_constructive_uv_bridge_note"
     },
@@ -22109,14 +22101,6 @@
       "to": "yt_bridge_operator_closure_note"
     },
     {
-      "from": "yt_constructive_uv_bridge_note",
-      "to": "yt_bridge_rearrangement_principle_note"
-    },
-    {
-      "from": "yt_constructive_uv_bridge_note",
-      "to": "yt_boundary_theorem"
-    },
-    {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_zero_import_authority_note"
     },
@@ -22223,14 +22207,6 @@
     {
       "from": "yt_exact_schur_normal_form_uniqueness_note",
       "to": "yt_bridge_rearrangement_principle_note"
-    },
-    {
-      "from": "yt_explicit_systematic_budget_note",
-      "to": "yt_bridge_higher_order_corrections_note"
-    },
-    {
-      "from": "yt_explicit_systematic_budget_note",
-      "to": "yt_bridge_nonlocal_corrections_note"
     },
     {
       "from": "yt_explicit_systematic_budget_note",
@@ -22795,10 +22771,6 @@
     {
       "from": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
       "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
-    },
-    {
-      "from": "yt_qfp_insensitivity_support_note",
-      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
     },
     {
       "from": "yt_qfp_insensitivity_support_note",
@@ -43759,10 +43731,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "g_bare_rescaling_freedom_removal_theorem_note_2026-05-03",
-        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
-        "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19"
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
       ],
-      "note_hash": "25a92d9a9847bae2ae96abb078d099c2062d6305fd391dd33c3ca803deb1dc06",
+      "note_hash": "9da8ff466466f2ffdf319dcf3286f56000f9d562e25f38457bfaeb6aa715d535",
       "path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "title": "g_bare Constraint vs Convention Disambiguation Theorem"
@@ -65192,10 +65163,9 @@
         "yt_interacting_bridge_locality_note",
         "yt_bridge_rearrangement_principle_note",
         "yt_bridge_moment_closure_note",
-        "yt_constructive_uv_bridge_note",
-        "yt_bridge_variational_selector_note"
+        "yt_constructive_uv_bridge_note"
       ],
-      "note_hash": "090cc26005e6f767c37d0cf5e6893b6e29436a095c42b84f3eb6aa284084803e",
+      "note_hash": "d3307f612aac8d5475df4f7312b073453bea4128d780d337c7e723c67505efdf",
       "path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
       "runner_path": "scripts/frontier_yt_bridge_hessian_selector.py",
       "title": "`y_t` Bridge Hessian Selector Note"
@@ -65409,11 +65379,9 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "yt_interacting_bridge_locality_note",
-        "yt_bridge_operator_closure_note",
-        "yt_bridge_rearrangement_principle_note",
-        "yt_boundary_theorem"
+        "yt_bridge_operator_closure_note"
       ],
-      "note_hash": "a7fc1d2fb165b4ac29c19c84139d2dbfa944b1eac25a913cdd72814ffc4a044a",
+      "note_hash": "29e01edbf2197fb27eb68d9d3b53848e2160b4f94d09e48dd2d834388ded7a4e",
       "path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
       "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Constructive UV-Localized Bridge Class for `y_t`"
@@ -65569,11 +65537,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "yt_bridge_higher_order_corrections_note",
-        "yt_bridge_nonlocal_corrections_note",
         "yt_exact_schur_normal_form_uniqueness_note"
       ],
-      "note_hash": "7c6882af06fa9c15e48aa68f09c14968e5ba37c213176f2ff668aff5cf8936ad",
+      "note_hash": "b9fd91681d427d01c41a41644c98796d6b88002a23c8499cd27ef115cb811c88",
       "path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "title": "`y_t` Residual-Budget and Bridge Cross-Check Note"
@@ -66095,12 +66061,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
         "yt_ward_identity_derivation_theorem",
         "yt_boundary_theorem",
         "yt_zero_import_authority_note"
       ],
-      "note_hash": "e4b1b5cde1e8a9a12aaf000bb24a0381f71df091911d45b8c84fea58f04ded0b",
+      "note_hash": "0339aab4875d7ee73493563c84c191d558ed7914662a42cd8b1f2f0db92f848b",
       "path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
       "title": "y_t Quasi-Fixed-Point Insensitivity Support Note"
@@ -67134,7 +67099,7 @@
       "open_gate": 117,
       "positive_theorem": 609
     },
-    "edge_count": 8353,
+    "edge_count": 8346,
     "leaf_count": 565,
     "node_count": 2112,
     "root_count": 794,

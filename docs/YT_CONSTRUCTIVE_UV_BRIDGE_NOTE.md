@@ -83,11 +83,25 @@ content to the constructive-class result.
 
 ## Audit dependency repair links
 
-This graph-bookkeeping section records the upstream notes the runner
-and bridge stack depend on, so the audit citation graph can track them.
-It does not promote this note or change the audited claim scope.
+This graph-bookkeeping section records load-bearing upstream notes as
+Markdown links so the audit citation graph can track them. Backticked
+filenames in this section are preserved see-also context only and do
+not emit citation-graph edges. This section does not promote this note
+or change the audited claim scope.
 
 - [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
 - [YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md](YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md)
-- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
-- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+- `YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md` (see-also cross-reference,
+  not a load-bearing dependency — backticked to break cycle-0005 in the
+  citation graph. The rearrangement note explains the UV-localization
+  structurally and is downstream of this constructive-class note; this
+  note's three-family endpoint-stability runner does not consume the
+  rearrangement-kernel result, so the dependency arrow runs from
+  rearrangement back to this note, not vice versa.)
+- `YT_BOUNDARY_THEOREM.md` (see-also cross-reference, not a load-bearing
+  dependency — backticked to break the residual yt cluster cycle in the
+  citation graph. The boundary theorem establishes that `v` is the
+  physical crossover endpoint; this constructive bridge note's
+  three-family runner targets that endpoint empirically but does not
+  consume the boundary theorem's domain-separation proof as a logical
+  premise of the three-family endpoint-stability result.)

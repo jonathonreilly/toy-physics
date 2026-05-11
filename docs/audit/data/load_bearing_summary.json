@@ -19,14 +19,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 78.301,
-      "transitive_descendants": 891
+      "load_bearing_score": 78.27,
+      "transitive_descendants": 872
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 42.253,
-      "transitive_descendants": 862
+      "load_bearing_score": 42.221,
+      "transitive_descendants": 843
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -37,14 +37,14 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 39.127,
-      "transitive_descendants": 558
+      "load_bearing_score": 39.119,
+      "transitive_descendants": 555
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 38.225,
-      "transitive_descendants": 845
+      "load_bearing_score": 38.2,
+      "transitive_descendants": 831
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
@@ -55,8 +55,8 @@
     {
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
-      "load_bearing_score": 35.347,
-      "transitive_descendants": 650
+      "load_bearing_score": 35.124,
+      "transitive_descendants": 557
     },
     {
       "claim_id": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
@@ -65,22 +65,22 @@
       "transitive_descendants": 371
     },
     {
-      "claim_id": "yt_ward_identity_derivation_theorem",
-      "criticality": "critical",
-      "load_bearing_score": 31.847,
-      "transitive_descendants": 650
-    },
-    {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "criticality": "critical",
       "load_bearing_score": 31.323,
       "transitive_descendants": 452
     },
     {
+      "claim_id": "yt_ward_identity_derivation_theorem",
+      "criticality": "critical",
+      "load_bearing_score": 31.301,
+      "transitive_descendants": 445
+    },
+    {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 31.202,
-      "transitive_descendants": 832
+      "load_bearing_score": 31.178,
+      "transitive_descendants": 818
     },
     {
       "claim_id": "anomaly_forces_time_theorem",
@@ -95,16 +95,16 @@
       "transitive_descendants": 450
     },
     {
-      "claim_id": "yt_ew_color_projection_theorem",
-      "criticality": "critical",
-      "load_bearing_score": 29.855,
-      "transitive_descendants": 654
-    },
-    {
       "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
       "criticality": "critical",
       "load_bearing_score": 29.539,
       "transitive_descendants": 371
+    },
+    {
+      "claim_id": "yt_ew_color_projection_theorem",
+      "criticality": "critical",
+      "load_bearing_score": 29.425,
+      "transitive_descendants": 485
     },
     {
       "claim_id": "three_generation_structure_note",
@@ -115,8 +115,8 @@
     {
       "claim_id": "left_handed_charge_matching_note",
       "criticality": "critical",
-      "load_bearing_score": 27.498,
-      "transitive_descendants": 722
+      "load_bearing_score": 27.229,
+      "transitive_descendants": 599
     },
     {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
@@ -151,14 +151,14 @@
     {
       "claim_id": "cl3_color_automorphism_theorem",
       "criticality": "critical",
-      "load_bearing_score": 25.369,
-      "transitive_descendants": 660
+      "load_bearing_score": 25.285,
+      "transitive_descendants": 623
     },
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 24.847,
-      "transitive_descendants": 650
+      "load_bearing_score": 24.736,
+      "transitive_descendants": 602
     },
     {
       "claim_id": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
