@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 414 |
-| critical | `audited_conditional` | 92 |
+| critical | `unaudited` | 417 |
+| critical | `audited_conditional` | 89 |
 | critical | `audited_numerical_match` | 10 |
 | critical | `audited_renaming` | 7 |
 | medium | `unaudited` | 3 |
@@ -387,7 +387,7 @@ publication tables phrase it.
 | critical | `pmns_current_bank_value_selection_nogo_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | critical | `pmns_graph_commutant_cycle_value_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `pmns_graph_first_axis_alignment_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
+| critical | `pmns_graph_first_axis_alignment_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_graph_first_cycle_frame_support_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_hw1_source_transfer_boundary_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_lower_level_end_to_end_closure_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
@@ -408,10 +408,10 @@ publication tables phrase it.
 | critical | `pmns_selector_unique_amplitude_slot_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_sigma_zero_nogo_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
-| critical | `pmns_three_flux_holonomy_closure_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
+| critical | `pmns_three_flux_holonomy_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_transfer_operator_dominant_mode_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
 | critical | `poisson_exhaustive_uniqueness_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `primordial_spectrum_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md |
+| critical | `primordial_spectrum_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md |
 | critical | `proton_lifetime_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `q_integer_spectrum_theorem_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |

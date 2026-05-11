@@ -6137,6 +6137,18 @@
       "to": "dm_neutrino_source_surface_parity_mixing_selection_obstruction_note_2026-04-17"
     },
     {
+      "from": "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
+      "to": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
+      "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
+      "to": "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15"
+    },
+    {
       "from": "dm_neutrino_odd_mixed_bridge_extension_note_2026-04-15",
       "to": "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15"
     },
@@ -7179,6 +7191,22 @@
     {
       "from": "dm_neutrino_two_higgs_23_symmetric_slot_no_go_note_2026-04-15",
       "to": "dm_neutrino_singlet_doublet_cp_slot_tool_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
+      "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
+      "to": "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
+      "to": "charged_lepton_two_higgs_canonical_reduction_note"
+    },
+    {
+      "from": "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
+      "to": "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15"
     },
     {
       "from": "dm_neutrino_two_higgs_minimality_theorem_note_2026-04-15",
@@ -18045,6 +18073,22 @@
       "to": "pmns_oriented_cycle_reduced_channel_nonselection_note"
     },
     {
+      "from": "pmns_graph_first_axis_alignment_note",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
+      "from": "pmns_graph_first_axis_alignment_note",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "pmns_graph_first_axis_alignment_note",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
+      "from": "pmns_graph_first_axis_alignment_note",
+      "to": "pmns_graph_first_cycle_frame_support_note"
+    },
+    {
       "from": "pmns_minimal_branch_nonselection_note",
       "to": "gauge_matter_closure_gates_2026-04-12"
     },
@@ -18241,6 +18285,22 @@
       "to": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
     },
     {
+      "from": "pmns_three_flux_holonomy_closure_note",
+      "to": "pmns_twisted_flux_transfer_holonomy_boundary_note"
+    },
+    {
+      "from": "pmns_three_flux_holonomy_closure_note",
+      "to": "pmns_c3_character_holonomy_closure_note"
+    },
+    {
+      "from": "pmns_three_flux_holonomy_closure_note",
+      "to": "pmns_oriented_cycle_channel_value_law_note"
+    },
+    {
+      "from": "pmns_three_flux_holonomy_closure_note",
+      "to": "pmns_graph_first_cycle_frame_support_note"
+    },
+    {
       "from": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
       "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
     },
@@ -18427,6 +18487,18 @@
     {
       "from": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native",
       "to": "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+    },
+    {
+      "from": "primordial_spectrum_note",
+      "to": "cosmology_scale_identification_and_reduction_note"
+    },
+    {
+      "from": "primordial_spectrum_note",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "primordial_spectrum_note",
+      "to": "emergent_geometry_growth_note_2026-04-10"
     },
     {
       "from": "propagator_family_unification_note",
@@ -42485,8 +42557,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "d4f68ae275f0d160f7970c26f61fa5dd7fb250df519dadf36e3148c3f2814a3e",
+      "deps": [
+        "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+        "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15"
+      ],
+      "note_hash": "768f683245ab8aa714eefe765dade3a3c262e4326df4c04c81fa6d9625dea630",
       "path": "docs/DM_NEUTRINO_ODD_CIRCULANT_CURRENT_STACK_ZERO_LAW_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_odd_circulant_current_stack_zero_law.py",
       "title": "DM Neutrino Odd-Circulant Current-Stack Zero Law"
@@ -43473,8 +43549,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "ff0c0cfbd910ad42895eb799d92760150fd97baf12ce79ea44abf7d85b7f850c",
+      "deps": [
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+        "dm_neutrino_two_higgs_right_gram_bridge_note_2026-04-15",
+        "charged_lepton_two_higgs_canonical_reduction_note",
+        "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15"
+      ],
+      "note_hash": "4f04ac599fc0375424d149b7f1afdfbecd77f3ea151fa576cf29291de782e9f5",
       "path": "docs/DM_NEUTRINO_TWO_HIGGS_CONTINUITY_SHEET_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_two_higgs_continuity_sheet_theorem.py",
       "title": "DM Neutrino Two-Higgs Continuity Sheet Theorem"
@@ -56785,8 +56866,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "ee6b2335962a75eb6a04dea0135c5794d08eb2da63ebea18d2bf05f274c0f222",
+      "deps": [
+        "z2_hw1_mass_matrix_parametrization_note",
+        "site_phase_cube_shift_intertwiner_note",
+        "graph_first_selector_derivation_note",
+        "pmns_graph_first_cycle_frame_support_note"
+      ],
+      "note_hash": "29c72bd4e69f949ae7cea64e3f56a8accee73f482ea2309f5c07240db251c6c9",
       "path": "docs/PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md",
       "runner_path": "scripts/frontier_pmns_graph_first_axis_alignment.py",
       "title": "PMNS Graph-First Axis Alignment"
@@ -57128,8 +57214,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "27b87b237e8d1324825a12185474b982504a3f86940df62869314a86368f58d7",
+      "deps": [
+        "pmns_twisted_flux_transfer_holonomy_boundary_note",
+        "pmns_c3_character_holonomy_closure_note",
+        "pmns_oriented_cycle_channel_value_law_note",
+        "pmns_graph_first_cycle_frame_support_note"
+      ],
+      "note_hash": "bf9b1b15a1f52a0fb145bc4a8c7b5e40ef303a470e47708632599d6759cf77ec",
       "path": "docs/PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_pmns_three_flux_holonomy_closure.py",
       "title": "PMNS Three-Flux Holonomy Closure"
@@ -57419,8 +57510,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "0e62a38fae2230ca03e48f97772c6687f71216dd59a6be40b029eb6c6bc686ff",
+      "deps": [
+        "cosmology_scale_identification_and_reduction_note",
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "emergent_geometry_growth_note_2026-04-10"
+      ],
+      "note_hash": "027c9bb9a3abd4310a93886d63a50ab83cede9daa29f2c36dff4958bb8cf4f7a",
       "path": "docs/PRIMORDIAL_SPECTRUM_NOTE.md",
       "runner_path": "scripts/frontier_primordial_spectrum.py",
       "title": "Primordial Power Spectrum from Graph Growth"
@@ -69188,12 +69283,10 @@
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15",
     "dm_neutrino_cascade_geometry_note_2026-04-14",
     "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
-    "dm_neutrino_odd_circulant_current_stack_zero_law_note_2026-04-15",
     "dm_neutrino_odd_circulant_z2_slot_theorem_note_2026-04-15",
     "dm_neutrino_triplet_even_response_theorem_note_2026-04-15",
     "dm_neutrino_triplet_normalization_target_note_2026-04-15",
     "dm_neutrino_two_higgs_closure_attacks_note_2026-04-15",
-    "dm_neutrino_two_higgs_continuity_sheet_theorem_note_2026-04-15",
     "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15",
     "dm_neutrino_weak_matching_obstruction_note_2026-04-15",
     "dm_neutrino_weak_vector_theorem_note_2026-04-15",
@@ -69493,13 +69586,11 @@
     "pmns_c3_nontrivial_current_boundary_note",
     "pmns_commutant_eigenoperator_selector_note",
     "pmns_corner_transport_active_block_note",
-    "pmns_graph_first_axis_alignment_note",
     "pmns_graph_first_cycle_frame_support_note",
     "pmns_hw1_source_transfer_boundary_note",
     "pmns_lower_level_end_to_end_closure_note",
     "pmns_oriented_cycle_channel_value_law_note",
     "pmns_selector_three_identity_support_note_2026-04-21",
-    "pmns_three_flux_holonomy_closure_note",
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
@@ -69507,7 +69598,6 @@
     "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality",
     "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
     "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
-    "primordial_spectrum_note",
     "publication.ci3_z3.arxiv_draft",
     "publication.ci3_z3.release_environment",
     "publication.ci3_z3.reproducibility_freeze_2026-04-14",
@@ -69766,10 +69856,10 @@
       "open_gate": 116,
       "positive_theorem": 617
     },
-    "edge_count": 8695,
-    "leaf_count": 622,
+    "edge_count": 8713,
+    "leaf_count": 621,
     "node_count": 2189,
-    "root_count": 814,
+    "root_count": 809,
     "runners_with_path": 1801
   }
 }
