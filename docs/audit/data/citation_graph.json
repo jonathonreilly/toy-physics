@@ -10109,6 +10109,14 @@
       "to": "higgs_mass_hierarchy_correction_note"
     },
     {
+      "from": "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10",
+      "to": "hierarchy_dimensional_compression_note"
+    },
+    {
+      "from": "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10",
+      "to": "hierarchy_effective_potential_endpoint_note"
+    },
+    {
       "from": "hierarchy_formula_honest_status_note_2026-05-10",
       "to": "hierarchy_bosonic_bilinear_selector_note"
     },
@@ -10699,6 +10707,26 @@
     {
       "from": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
       "to": "neutrino_dirac_z3_support_trichotomy_note"
+    },
+    {
+      "from": "higher_order_structural_theorems_note",
+      "to": "hw1_second_order_return_shape_theorem_note"
+    },
+    {
+      "from": "higher_order_structural_theorems_note",
+      "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
+    },
+    {
+      "from": "higher_order_structural_theorems_note",
+      "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
+    },
+    {
+      "from": "higher_order_structural_theorems_note",
+      "to": "structural_no_go_survey_note"
+    },
+    {
+      "from": "higher_order_structural_theorems_note",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
     },
     {
       "from": "higher_symmetry_joint_validation_note",
@@ -19959,6 +19987,14 @@
     {
       "from": "sin2thetaw_proof_walk_lattice_independence_bounded_note_2026-05-08",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "single_axiom_information_note",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "single_axiom_information_note",
+      "to": "single_axiom_hilbert_note"
     },
     {
       "from": "sin_squared_theta_w_gut_from_su5_note_2026-05-02",
@@ -47858,6 +47894,20 @@
       "runner_path": "scripts/frontier_hierarchy_bosonic_bilinear_selector.py",
       "title": "Hierarchy Bosonic-Bilinear Selector Note"
     },
+    "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10": {
+      "claim_id": "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_dimensional_compression_note",
+        "hierarchy_effective_potential_endpoint_note"
+      ],
+      "note_hash": "fc4b98d48522dd1842f21c8e199110c73aa48a9e132b4fbc046cc4c8be6d8024",
+      "path": "docs/HIERARCHY_DIMENSIONAL_COMPRESSION_AUDITED_SCOPE_NARROW_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_dimensional_compression.py",
+      "title": "Hierarchy Dimensional Compression Audited-Scope Narrowing Bounded Note"
+    },
     "hierarchy_dimensional_compression_note": {
       "claim_id": "hierarchy_dimensional_compression_note",
       "claim_type_author_hint": null,
@@ -47886,7 +47936,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "01cc8cbe0ad93a0e071b2bc94263f305453e549d81c121cdbd8a5c958294b434",
+      "note_hash": "32188208178055c0d4ea5f2a6b9a943ad80d2ac484bb4e9cbbee8cf92abbbce0",
       "path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
       "title": "Hierarchy Effective-Potential Endpoint Note"
@@ -48407,9 +48457,15 @@
       "claim_id": "higher_order_structural_theorems_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "9d63166997ebd1218bbff448687a2723fc93f12701f8f791d0ae911b3de8d30b",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hw1_second_order_return_shape_theorem_note",
+        "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+        "structural_no_go_survey_note",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+      ],
+      "note_hash": "036f75aa0e1ddd8e4029181494e4a0f32bd055ccc346264ea017d07bb64dfc26",
       "path": "docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md",
       "runner_path": "scripts/frontier_higgs_dressed_propagator_v1.py",
       "title": "Higher-Order Structural Theorems on the Charged-Lepton Sector"
@@ -62349,14 +62405,17 @@
     },
     "single_axiom_information_note": {
       "claim_id": "single_axiom_information_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "e21db42f7aba12b3d93ed339e4aba81735db1f071465e4f5990f7ca38f921142",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "single_axiom_hilbert_note"
+      ],
+      "note_hash": "676c4bf2e6b43839b020866a71f59a86b829f1c4786c61ef8cbc2acd60331144",
       "path": "docs/SINGLE_AXIOM_INFORMATION_NOTE.md",
       "runner_path": "scripts/frontier_single_axiom_information.py",
-      "title": "Single Axiom: Conserved Information Flow Unifies Graph + Unitarity"
+      "title": "Sparse Hermitian H + Hermitian-Exponentiation Readout + Locality Empirical Probe: Operational Reduction Note"
     },
     "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10": {
       "claim_id": "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10",
@@ -69267,7 +69326,6 @@
     "higgs_from_lattice_note",
     "higgs_mechanism_note",
     "higher_dimension_status_2026-04-01",
-    "higher_order_structural_theorems_note",
     "higher_symmetry_gravity_probe_note",
     "holographic_probe_note_2026-04-11",
     "hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28",
@@ -69510,7 +69568,6 @@
     "sigma_mnu_f3_stuck_fanout_synthesis_note_2026-04-28",
     "signed_gravity_response_lane_status_note_2026-04-26",
     "single_axiom_hilbert_note",
-    "single_axiom_information_note",
     "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10",
     "site_phase_cube_shift_intertwiner_note",
     "sixth_family_complex_boundary_note",
@@ -69694,25 +69751,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 330,
-      "meta": 70,
+      "bounded_theorem": 331,
+      "meta": 71,
       "no_go": 44,
-      "none": 1565,
+      "none": 1564,
       "open_gate": 36,
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 789,
-      "meta": 70,
+      "bounded_theorem": 791,
+      "meta": 71,
       "no_go": 149,
-      "none": 446,
+      "none": 445,
       "open_gate": 116,
-      "positive_theorem": 618
+      "positive_theorem": 617
     },
-    "edge_count": 8686,
-    "leaf_count": 621,
-    "node_count": 2188,
-    "root_count": 816,
-    "runners_with_path": 1800
+    "edge_count": 8695,
+    "leaf_count": 622,
+    "node_count": 2189,
+    "root_count": 814,
+    "runners_with_path": 1801
   }
 }

@@ -9168,6 +9168,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_hierarchy_bosonic_bilinear_selector.py"
     },
+    "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hierarchy_dimensional_compression.py"
+    },
     "hierarchy_dimensional_compression_note": {
       "assert_count": 0,
       "counts": {
@@ -17394,10 +17406,10 @@
         "A": 0,
         "B": 0,
         "C": 7,
-        "D": 0
+        "D": 10
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
+      "dominant_class": "D",
       "runner": "scripts/frontier_single_axiom_information.py"
     },
     "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10": {
@@ -33313,6 +33325,7 @@
     "scripts/frontier_hierarchy_dimensional_compression.py": {
       "assert_count": 0,
       "claims": [
+        "hierarchy_dimensional_compression_audited_scope_narrow_bounded_note_2026-05-10",
         "hierarchy_dimensional_compression_note"
       ],
       "counts": {
@@ -38891,10 +38904,10 @@
         "A": 0,
         "B": 0,
         "C": 7,
-        "D": 0
+        "D": 10
       },
       "decoration_candidate": false,
-      "dominant_class": "C",
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_site_phase_cube_shift_intertwiner.py": {
@@ -47210,12 +47223,12 @@
     "dominant_class_distribution": {
       "A": 150,
       "B": 174,
-      "C": 682,
-      "D": 266,
+      "C": 681,
+      "D": 267,
       "none": 416
     },
     "runners_classified": 1688,
     "runners_with_C": 863,
-    "runners_with_D": 483
+    "runners_with_D": 484
   }
 }

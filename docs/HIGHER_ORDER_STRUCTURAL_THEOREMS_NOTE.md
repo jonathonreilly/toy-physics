@@ -1,7 +1,30 @@
 # Higher-Order Structural Theorems on the Charged-Lepton Sector
 
-**Date:** 2026-04-17
-**Status:** exact structural theorem; bundled three-theorem note plus one companion survey and observational-pin closure spec
+**Date:** 2026-04-17 (originally); 2026-05-10 (audit-narrowing refresh:
+explicit class-A conditional framing per the 2026-05-05 prior independent
+audit feedback and its `missing_dependency_edge`
+re-audit guidance).
+**Status:** scope-narrowed bounded bundled-theorem note — algebraic
+class-A closures of Theorems 4-7 conditional on six named
+upstream-authority imports (the audit-named missing dependency edges
+listed in §"Audit boundary" below). Prior audit feedback on the
+pre-refresh row (2026-05-05) recorded a conditional boundary on those
+six dependency edges, with re-audit
+guidance to provide one-hop retained authorities and companion runner
+sources for each theorem so they can be re-audited separately.
+**Claim type (in-note framing):** bounded_theorem — bundled class-A
+algebraic closures conditional on imported retained authorities. The
+pre-refresh audit-ledger row recorded `claim_type: bounded_theorem` with
+a conditional verdict; this source refresh records that boundary without
+proposing any audit-side verdict or `claim_type` revision.
+**Status authority:** independent audit lane only.
+**Authority role:** records that the bundled theorem statements close as
+class-A consequences of the imported retained authorities listed in
+§"Audit boundary". **Does not** propose retained, positive-theorem, or
+charged-lepton-closure promotion. The charged-lepton mass hierarchy
+problem itself is **not** closed by this bundle (see §"What this note
+does not claim" below); each theorem identifies a sharply-posed
+candidate primitive whose future retention would close that problem.
 **Runners (8):**
 - `scripts/frontier_higgs_dressed_propagator_v1.py` (7 PASS)
 - `scripts/frontier_higgs_dressed_propagator_transport_identity.py` (10 PASS)
@@ -13,14 +36,100 @@
 
 Total: 133 PASS, 0 FAIL.
 
-## Purpose
+## Audit boundary (2026-05-10 refresh of prior 2026-05-05 feedback)
 
-This note develops three additional structural theorems on the
-retained `Cl(3)/Z^3` surface that close the three natural
-framework-derives-Koide routes, plus the `S_2`-breaking primitive
-survey and the observational-pin closure specification. Each
-theorem is a corollary of the retained authorities; none requires
-additional axioms.
+The 2026-05-05 independent audit on the previous note revision recorded
+a conditional verdict (load-bearing-step class A, criticality `critical`,
+transitive descendants 266). The audit's `chain_closure_explanation`:
+
+> *The core transport identity is an algebraic check once the Γ_1
+> hopping table and retained Cl(3)-covariant lift assumptions are
+> granted, but those authorities are not supplied in the restricted
+> packet. The broader bundled conclusions also rely on unstated
+> retained surveys, Dirac-bridge readout, observational pins, and
+> companion runners not provided here.*
+
+The audit's `verdict_rationale`:
+
+> *The supplied runner genuinely computes Clifford/projector identities
+> and numerical comparisons, but it also imports the G1 observational
+> chamber pin and PDG charged-lepton masses for comparator scoring. Its
+> own caveat states that the H-lift and lambda choice are not retained
+> primitives, so the numerical near-match cannot be treated as a closed
+> retained derivation. With no cited authorities supplied, the note's
+> references to Theorem 2, the Dirac-bridge theorem, variational
+> surveys, S_2-breaking surveys, and observational-pin closure remain
+> open dependencies rather than closed inputs.*
+
+The audit's `notes_for_re_audit_if_any`:
+
+> *missing_dependency_edge: provide the one-hop retained authorities
+> and companion runner sources for Theorem 2, Dirac-bridge readout, the
+> variational survey, fourth-order cancellation, S_2-breaking survey,
+> and observational-pin closure, then re-audit each theorem
+> separately.*
+
+This note adopts the explicit class-A conditional framing. The six
+named missing dependency edges from the re-audit guidance are listed
+in §"Imported one-hop authorities and companion runners" below; each is
+a real upstream import, not a re-derivation. The load-bearing step is
+`(imported retained authorities) ⇒ Theorems 4-7 algebraic identities`,
+evaluated mechanically by the eight runners.
+
+**Imported one-hop authorities and companion runners (cited, not
+re-derived in this note):**
+
+| # | Audit-named dependency edge | One-hop authority (cited) | Companion runner source (cited) |
+|---|---|---|---|
+| 1 | Theorem 2 (`Γ_1` hopping table; `lift_int` existence) | retained Higgs-dressed-propagator pre-work from the [`hw=1` second-order-return shape theorem](HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md) and the charged-lepton review surface; the `Γ_1` hopping table is imported here, not re-derived | [`frontier_higgs_dressed_propagator_v1.py`](../scripts/frontier_higgs_dressed_propagator_v1.py) and [`frontier_higgs_dressed_propagator_transport_identity.py`](../scripts/frontier_higgs_dressed_propagator_transport_identity.py) exercise the transport identity once the hopping table is granted |
+| 2 | Dirac-bridge readout (`U_e = I_3` constraint; physical-mass = diagonal-entry rule, eigenvalue channel excluded) | imported charged-lepton readout authorities: [`CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md`](CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md) and the [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md) local `Γ_1` bridge | [`frontier_higgs_dressed_propagator_v1.py`](../scripts/frontier_higgs_dressed_propagator_v1.py) uses the imported `U_e = I_3` rule to score diagonal vs. eigenvalue channels |
+| 3 | Variational-principle survey (the six retained-vs-AD-HOC candidates classified in Theorem 5) | imported `log|det(D + J)|` partition extremum and Matsubara `K_{ii}` shape surface from the charged-lepton review, plus the [`STRUCTURAL_NO_GO_SURVEY_NOTE.md`](STRUCTURAL_NO_GO_SURVEY_NOTE.md) Candidate-B `α = β` no-go cited in the H-5 row | [`frontier_koide_cone_variational_principle_survey.py`](../scripts/frontier_koide_cone_variational_principle_survey.py) and [`frontier_koide_cone_real_irrep_democracy.py`](../scripts/frontier_koide_cone_real_irrep_democracy.py) |
+| 4 | Fourth-order signed Clifford ordering cancellation (Theorem 6) | imported spatial-Clifford parity selection rules and EWSB `φ`-monomial weight formula from the [`DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md) `M(φ)` packet and the [`hw=1` shape theorem](HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md); the 21-of-81 even-axis-count enumeration is mechanical | [`frontier_fourth_order_mixed_gamma_return.py`](../scripts/frontier_fourth_order_mixed_gamma_return.py) |
+| 5 | `S_2`-breaking primitive survey (Theorem 6 companion; eight retained channels) | imported anomaly-trace, lattice-geometric, chirality, `Cl(3)` bilinear, and Schur-cascade authorities summarized by the charged-lepton review surface; channel 6 (neutrino-mixing Hermitian lifted to `T_2`) is explicitly recorded as post-hoc rather than retained | [`frontier_s2_breaking_primitive_survey.py`](../scripts/frontier_s2_breaking_primitive_survey.py) |
+| 6 | Observational-pin closure (Theorem 7) | imported PDG `(m_e, m_μ, m_τ)` triple as observational pin; imported chamber constraints from the [`CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md) bounded charged-lepton package | [`frontier_charged_lepton_observational_pin_closure.py`](../scripts/frontier_charged_lepton_observational_pin_closure.py) |
+
+Each row records both an imported one-hop authority and a companion
+runner source. The companion runners exercise the algebraic closures
+mechanically; they do not derive the imported retained authorities.
+
+**Audit-recorded honest caveats (from the runner's own `VERDICT` line
+and from §"Numerical artifact in the eigenvalue channel"):**
+
+- The numerical near-match `Q_eig = 0.6664` and `cos-sim = 0.9963` in
+  the **eigenvalue** channel of `Σ(W)` is excluded from the physical
+  charged-lepton readout by the imported Dirac-bridge `U_e = I_3`
+  constraint (dependency edge #2 above). In the physical diagonal
+  channel, the best `cos-sim` across 27 tested `W(H)` variants is
+  0.919, well below the 0.99 threshold for a structural match. The
+  runner's `VERDICT: FRAMEWORK_DERIVES_KOIDE = INCONCLUSIVE` line
+  makes this caveat explicit; the prior audit feedback treated the
+  caveat as a real boundary, not a weakening.
+- The `H-lift` and `λ` choice in the eigenvalue-channel near-match are
+  **not** retained primitives. They are auxiliary inputs to the
+  numerical artifact diagnostic, not load-bearing for the algebraic
+  closures of Theorems 4-7.
+- The PDG `(m_e, m_μ, m_τ)` triple in Theorem 7 is an **observational
+  pin** (real external input), not a retained derivation; this is
+  recorded in the prior audit feedback and in the parent note's
+  `Repo status: bounded` line in §"Theorem 7".
+
+The bundled theorem statements close as class-A algebraic identities
+once the six imported authorities are granted. None of the four
+named candidate primitives (Primitives A, B, C, plus the open
+observational-pin route in §"Three named missing primitives") is
+retained on the current framework surface; each is a sharply-posed
+construction target for future retention work.
+
+## Purpose (scope-narrowed)
+
+Conditional on the six imported one-hop authorities and companion
+runner sources listed above, this note develops three structural
+theorems on the current physical `Cl(3)` local algebra and `Z^3`
+spatial substrate surface that close the three natural
+framework-derives-Koide routes as class-A algebraic identities, plus
+the `S_2`-breaking primitive survey and the observational-pin closure
+specification. Each theorem is a class-A corollary of the imported
+retained authorities; none requires additional axioms.
 
 ## Theorem 4: canonical intermediate-subspace-lift transport identity
 
@@ -312,6 +421,16 @@ retention work.
 - The observational-pin closure of Theorem 7 is bounded on the current
   repo surface. It does not supply a new numerical forecast beyond SM
   baseline.
+- The eigenvalue-channel numerical artifact (`Q_eig = 0.6664`,
+  `cos-sim = 0.9963`) is **excluded** from the physical charged-lepton
+  readout by the imported Dirac-bridge `U_e = I_3` constraint. The
+  diagonal-channel `cos-sim = 0.919` is below the 0.99 threshold for
+  a structural match.
+- This note does **not** modify the parent audit-ledger row, **does
+  not** promote any current or prior audit verdict,
+  **does not** re-derive any of the six imported one-hop authorities,
+  and **does not** extend the audited scope beyond the bundled class-A
+  algebraic closures.
 
 ## Paper-safe wording
 

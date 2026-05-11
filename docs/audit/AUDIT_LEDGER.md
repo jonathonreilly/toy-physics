@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 252 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1227 |
-| meta | 109 |
+| unaudited | 1230 |
+| meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
-| ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 203 |
+| ~~audited_renaming~~ | 17 |
+| ~~audited_conditional~~ | 201 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,16 +42,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 428 |
-| `audited_conditional` | 203 |
+| `audited_conditional` | 201 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
-| `audited_renaming` | 18 |
-| `unaudited` | 1336 |
+| `audited_renaming` | 17 |
+| `unaudited` | 1340 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 869 |
+| `bounded_theorem` | 870 |
 | `decoration` | 14 |
 | `meta` | 115 |
 | `no_go` | 221 |
@@ -63,16 +63,16 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 1015 |
 | `high` | 58 |
 | `medium` | 268 |
-| `leaf` | 738 |
+| `leaf` | 739 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 219
+- **Citation cycles detected:** 223
 
 ### Runner classification (static heuristic)
 
 - runners classified: 1688
 - runners with (C) first-principles compute hits: 863
-- runners with (D) external comparator hits: 483
+- runners with (D) external comparator hits: 484
 - decoration candidates (no C, no D): 199
 
 ## Top 25 by load-bearing score (topology only)
@@ -81,31 +81,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 919 | 90.34 | `unaudited` | meta |
-| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 884 | 45.29 | `audited_clean` | open_gate |
-| 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 444 | 43.80 | `unaudited` | unaudited |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 585 | 41.20 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 873 | 39.77 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 771 | 37.59 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 577 | 36.17 | `unaudited` | unaudited |
-| 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 396 | 36.13 | `unaudited` | unaudited |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 465 | 33.36 | `unaudited` | unaudited |
-| 10 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 396 | 33.13 | `unaudited` | unaudited |
-| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 859 | 32.25 | `audited_clean` | **retained_bounded** |
-| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 519 | 31.52 | `audited_clean` | **retained_bounded** |
-| 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 478 | 31.40 | `unaudited` | unaudited |
-| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 696 | 30.45 | `unaudited` | unaudited |
-| 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 476 | 30.40 | `unaudited` | unaudited |
-| 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 396 | 29.13 | `unaudited` | unaudited |
-| 17 | `three_generation_structure_note` | bounded_theorem | critical | 570 | 28.16 | `unaudited` | unaudited |
-| 18 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 402 | 28.16 | `unaudited` | unaudited |
-| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 621 | 27.78 | `unaudited` | unaudited |
-| 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 396 | 27.13 | `unaudited` | unaudited |
-| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 466 | 26.87 | `unaudited` | unaudited |
-| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 628 | 26.80 | `unaudited` | unaudited |
-| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 510 | 26.50 | `unaudited` | unaudited |
-| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 510 | 26.00 | `unaudited` | unaudited |
-| 25 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 650 | 25.85 | `audited_clean` | **retained_bounded** |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 920 | 90.35 | `unaudited` | meta |
+| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 885 | 45.29 | `audited_clean` | open_gate |
+| 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 445 | 43.80 | `unaudited` | unaudited |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 587 | 41.20 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 875 | 39.77 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 774 | 38.10 | `unaudited` | meta |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 579 | 36.18 | `unaudited` | unaudited |
+| 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 398 | 36.14 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 467 | 33.37 | `unaudited` | unaudited |
+| 10 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 398 | 33.14 | `unaudited` | unaudited |
+| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 861 | 32.25 | `audited_clean` | **retained_bounded** |
+| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 521 | 31.53 | `audited_clean` | **retained_bounded** |
+| 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 480 | 31.41 | `unaudited` | unaudited |
+| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 698 | 30.45 | `unaudited` | unaudited |
+| 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 478 | 30.40 | `unaudited` | unaudited |
+| 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 398 | 29.14 | `unaudited` | unaudited |
+| 17 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 404 | 28.16 | `unaudited` | unaudited |
+| 18 | `three_generation_structure_note` | bounded_theorem | critical | 572 | 28.16 | `unaudited` | unaudited |
+| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 623 | 27.79 | `unaudited` | unaudited |
+| 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 398 | 27.14 | `unaudited` | unaudited |
+| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 468 | 26.87 | `unaudited` | unaudited |
+| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 630 | 26.80 | `unaudited` | unaudited |
+| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 512 | 26.50 | `unaudited` | unaudited |
+| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 512 | 26.00 | `unaudited` | unaudited |
+| 25 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 652 | 25.85 | `audited_clean` | **retained_bounded** |
 
 
 ## Applied audits
@@ -667,9 +667,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
-| `higher_order_structural_theorems_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `k_dependence_review_safe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -853,7 +851,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_field_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `s3_time_tensor_primitive_prototype_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `single_axiom_hilbert_note` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
-| `single_axiom_information_note` | meta | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `teleportation_conclusion_boundary_note` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 
 
@@ -5530,19 +5527,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The runner genuinely computes the condensate-density ratio from its finite lattice Dirac operator and then performs the advertised root comparisons. However, the load-bearing conclusion is a numerical closeness claim at chosen parameters and against the imported observed prefactor C_obs, not a first-principles closure of the physical determinant-to-VEV map. The note itself caveats that the sign, placement, order parameter derivation, and full determinant-to-VEV theorem remain open.
 - **auditor confidence:** high
 
-### `hierarchy_effective_potential_endpoint_note`
-
-- **Note:** [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](../../docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the algebraic extraction of the small-m effective-potential coefficient and endpoint ratio from the stated Matsubara free-energy density formula.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-hierarchy_effective_pote-139`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Starting from Delta f(L_t,m) = (1/(2 L_t)) sum_omega ln(1 + m^2/[u_0^2(3+sin^2 omega)]), the small-m coefficient is A(L_t) = (1/(2 L_t u_0^2)) sum_omega 1/(3+sin^2 omega), giving A_2=1/(8u_0^2) and A_inf=1/(4 sqrt(3)u_0^2).  _(class `A`)_
-- **chain closes:** False — The algebra from the stated free-energy formula to A_2, A_4, A_inf, and C_inf^(4D) closes. The restricted packet does not derive the exact Matsubara free-energy density formula itself from the axiom, so the full claimed endpoint theorem is conditional on that imported starting formula.
-- **rationale:** The runner genuinely checks the small-m expansion and endpoint sums from the encoded Matsubara formula, but it does not derive that formula from first principles; it takes the temporal modes and free-energy density ansatz as inputs. Part 4 also imports canonical plaquette/alpha constants and compares to the observed electroweak prefactor, which is comparator evidence rather than closure of the physical insertion map. The note itself explicitly states that the physical selection/insertion of the dimension-4 normalization remains open.
-- **auditor confidence:** high
-
 ### `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10`
 
 - **Note:** [`HIERARCHY_JOINT_RIEMANN_DIRICHLET_DIMENSIONAL_FOURTH_ROOT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/HIERARCHY_JOINT_RIEMANN_DIRICHLET_DIMENSIONAL_FOURTH_ROOT_NARROW_THEOREM_NOTE_2026-05-10.md)
@@ -5636,21 +5620,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `HIGGS_MASS_DERIVED_NOTE.md`
   - `VACUUM_CRITICAL_STABILITY_NOTE.md`
-- **auditor confidence:** high
-
-### `higher_order_structural_theorems_note`
-
-- **Note:** [`HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`](../../docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bundled higher-order charged-lepton note only against the supplied source text and the primary Higgs-dressed-propagator runner packet.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-higher_order_structural_-081`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The Γ_1 hopping structure maps species i to intermediate state I(i), so diag(P_T1 Γ_1 lift_int(X) Γ_1 P_T1)|species = diag(X).  _(class `A`)_
-- **chain closes:** False — The core transport identity is an algebraic check once the Γ_1 hopping table and retained Cl(3)-covariant lift assumptions are granted, but those authorities are not supplied in the restricted packet. The broader bundled conclusions also rely on unstated retained surveys, Dirac-bridge readout, observational pins, and companion runners not provided here.
-- **rationale:** The supplied runner genuinely computes Clifford/projector identities and numerical comparisons, but it also imports the G1 observational chamber pin and PDG charged-lepton masses for comparator scoring. Its own caveat states that the H-lift and lambda choice are not retained primitives, so the numerical near-match cannot be treated as a closed retained derivation. With no cited authorities supplied, the note's references to Theorem 2, the Dirac-bridge theorem, variational surveys, S_2-breaking surveys, and observational-pin closure remain open dependencies rather than closed inputs.
-- **open / conditional deps cited:**
-  - `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
 - **auditor confidence:** high
 
 ### `higher_symmetry_gravity_probe_note`
@@ -8629,19 +8598,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A finite-dimensional Hilbert space with local tensor product structure is claimed to encode graph topology, locality, unitarity, and the Born rule as one axiom.  _(class `E`)_
 - **chain closes:** False — The chain does not close from the single axiom alone because the Hamiltonian, its Hermiticity, its local support restriction, and the rule for reading interaction support as graph topology are additional inputs. The note itself acknowledges that H and the local-interaction qualifier do real load-bearing work beyond the tensor-product Hilbert space.
 - **rationale:** The runner numerically demonstrates consequences after constructing Hamiltonians with selected support, choosing Born-rule probabilities, and comparing unitary/Lindblad examples, but it does not derive those structures from the single Hilbert-space axiom. The conclusion mainly repackages several specifications into the phrase "local tensor product Hilbert space" and then reads graph/locality/unitarity back out of the added Hamiltonian data. This is a definitional compression rather than a first-principles derivation from the stated axiom.
-- **auditor confidence:** high
-
-### `single_axiom_information_note`
-
-- **Note:** [`SINGLE_AXIOM_INFORMATION_NOTE.md`](../../docs/SINGLE_AXIOM_INFORMATION_NOTE.md)
-- **claim_type:** `meta`
-- **claim_scope:** Audited whether the note derives graph substrate and unitary dynamics as inseparable consequences of a single conserved-information-flow axiom from the restricted packet.
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-single_axiom_information-084`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The mathematical realization is taken to be a sparse Hermitian operator H whose nonzero entries define the graph and whose exponentiation exp(iHt) defines unitary dynamics.  _(class `F`)_
-- **chain closes:** False — The runner and note assume the load-bearing sparse Hermitian H, then verify standard consequences: support gives a graph, Hermitian exponentiation is unitary, and the Schrodinger current is conserved. The missing step is a derivation that the verbal axiom uniquely or necessarily entails sparsity, Hermiticity, locality, and the specific Hamiltonian structure rather than defining them into H.
-- **rationale:** The numerical checks are mostly algebraic or model-demonstration checks after H has already been chosen as sparse and Hermitian. They do not derive the graph-unitary object from the single verbal axiom; they rename the original graph-plus-unitary package as conserved information flow and show familiar properties of that representation. Test 2 and Test 3 add self-consistency claims about locality and unitarity, but these rely on chosen graph models and imposed dissipative factors rather than closing a first-principles derivation.
 - **auditor confidence:** high
 
 ### `single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10`

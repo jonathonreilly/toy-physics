@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-Single Axiom: Conserved Information Flow Unifies Graph + Unitarity
-===================================================================
+Operational reduction: sparse Hermitian H plus readout conventions
+=================================================================
 
-CLAIM: The two axioms (graph substrate + unitary dynamics) are inseparable
-aspects of a single axiom: "conserved information flow on a network."
+CLAIM BOUNDARY: given a sparse Hermitian H plus the readout conventions
+"support = graph edges" and "U = exp(iHt)", the graph, current, and
+unitary dynamics are mechanically linked. The runner does not derive
+sparsity, Hermiticity, locality, or the readout conventions from a
+single verbal axiom.
 
 THE ARGUMENT:
   "There exist distinguishable things, and information flows between them
@@ -13,21 +16,22 @@ THE ARGUMENT:
   - "Flows between them" -> edges (locality)
   - "Without being created or destroyed" -> unitarity
 
-TEST 1 — Conserved flow derives the graph:
-  Start with N abstract states and a conserved probability current J_ij.
-  Show that nonzero J_ij define a graph, and conservation + positivity
-  forces the transition matrix to be unitary.
+TEST 1 — Consequences of the admitted sparse Hermitian H:
+  Start with a chosen sparse Hermitian H. Check that its support defines
+  a graph, its exponentiation is unitary, and its Schrodinger current is
+  locally conserved.
 
-TEST 2 — The graph cannot be removed (locality is forced):
+TEST 2 — Locality comparator:
   A fully connected unitary on N sites has N^2 parameters vs ~dN for
   nearest-neighbor. Show that self-consistent physics (Poisson, attractive
   gravity, beta~1) CONVERGES for sparse U but DIVERGES for dense U.
 
-TEST 3 — Unitarity cannot be removed:
+TEST 3 — Dissipation comparator:
   Non-unitary (dissipative) dynamics breaks Born rule (I_3 != 0) and
-  mass law (beta != 1). Unitarity is forced by physical consistency.
+  mass law (beta != 1). This is a comparator for the admitted unitary
+  baseline, not a derivation of unitarity from the verbal axiom.
 
-TEST 4 — The pair (G, U) is irreducible:
+TEST 4 — The pair (G, U) is non-factorable inside the tested models:
   Changing G changes U's eigenvalues; the physics (beta, alpha, I_3) depend
   on both simultaneously. (G, U) cannot be factored.
 
@@ -124,11 +128,11 @@ def solve_poisson(N: int, source_pos: tuple[int, int, int],
 
 
 # ============================================================================
-# TEST 1: Conserved flow derives the graph
+# TEST 1: Consequences of the admitted sparse Hermitian H
 # ============================================================================
 
 def test1_conserved_flow_derives_graph():
-    """Start from ONLY conserved probability current; derive graph + unitarity.
+    """Start from a chosen sparse Hermitian H and test its readouts.
 
     Construction:
       1. Start with a SPARSE Hermitian matrix H (real symmetric, sparse).
@@ -143,10 +147,11 @@ def test1_conserved_flow_derives_graph():
       - The conserved current (through the Schrodinger equation)
       - The unitary dynamics (via exponentiation)
 
-    These three are inseparable: you cannot have one without the others.
+    These three are mechanically linked once H and the readout conventions
+    are admitted.
     """
     print("=" * 72)
-    print("TEST 1: Conserved flow derives graph + unitarity")
+    print("TEST 1: Numerical consequences of admitted sparse Hermitian H")
     print("=" * 72)
 
     results = {}
@@ -242,15 +247,15 @@ def test1_conserved_flow_derives_graph():
           f"{'PASS' if all_local else 'MARGINAL'}  "
           f"(min ratio = {min(r['locality_ratio'] for r in results.values()):.1f}x)")
     confirmed = all_unitary and all_conserved and all_local
-    print(f"\n    One Hermitian H defines graph + current + unitary simultaneously.")
-    print(f"    Conserved flow -> graph + unitarity.  "
-          f"[{'CONFIRMED' if confirmed else 'PARTIAL'}]")
+    print(f"\n    One admitted Hermitian H defines graph + current + unitary readouts.")
+    print(f"    H plus readout conventions -> graph + unitarity.  "
+          f"[{'PASS' if confirmed else 'PARTIAL'}]")
 
     return results
 
 
 # ============================================================================
-# TEST 2: Graph cannot be removed — locality forced by self-consistency
+# TEST 2: Locality comparator
 # ============================================================================
 
 def test2_locality_forced():
@@ -265,7 +270,7 @@ def test2_locality_forced():
     The 1/r force law that produces Newtonian gravity requires locality.
     """
     print("\n" + "=" * 72)
-    print("TEST 2: Locality is forced — dense graphs break physics")
+    print("TEST 2: Locality comparator — dense/non-geometric graphs break distance law")
     print("=" * 72)
 
     results = {}
@@ -403,13 +408,13 @@ def test2_locality_forced():
     print(f"    Dense graph has no distance law:           {dense_fail}")
     print(f"    Random graph has noisy / wrong exponent:   {random_noisy}")
     confirmed = sparse_ok and dense_fail
-    print(f"    Locality is forced by self-consistency.    [{'CONFIRMED' if confirmed else 'PARTIAL'}]")
+    print(f"    Locality is supported within these chosen probes. [{'PASS' if confirmed else 'PARTIAL'}]")
 
     return results
 
 
 # ============================================================================
-# TEST 3: Unitarity cannot be removed
+# TEST 3: Dissipation comparator
 # ============================================================================
 
 def test3_unitarity_forced():
@@ -428,7 +433,7 @@ def test3_unitarity_forced():
     This breaks beta = 1 (mass linearity / distance-independence).
     """
     print("\n" + "=" * 72)
-    print("TEST 3: Unitarity is forced — dissipation breaks physics")
+    print("TEST 3: Dissipation comparator — imposed loss breaks the unitary baseline")
     print("=" * 72)
 
     results = {}
@@ -523,18 +528,18 @@ def test3_unitarity_forced():
     print(f"    Effective alpha steepens: unitary = {results[0.0]['alpha_eff']:.3f},"
           f" severe = {results[0.3]['alpha_eff']:.3f}")
     mass_broken = cv_max > 2 * cv_unitary and cv_max > 0.05
-    print(f"    Unitarity is forced by 'physics must work'.  "
-          f"[{'CONFIRMED' if mass_broken else 'PARTIAL'}]")
+    print(f"    Unitary baseline is required within this comparison. "
+          f"[{'PASS' if mass_broken else 'PARTIAL'}]")
 
     return results
 
 
 # ============================================================================
-# TEST 4: (G, U) is irreducible — one object, not two
+# TEST 4: (G, U) is non-factorable inside the tested models
 # ============================================================================
 
 def test4_irreducible_pair():
-    """Show that (G, U) cannot be factored: changing G changes U's physics.
+    """Show that changing the chosen graph Hamiltonian changes U's physics.
 
     1. Different graph topologies produce different spectra for the same
        nearest-neighbor Hamiltonian -> different U.
@@ -543,7 +548,7 @@ def test4_irreducible_pair():
     3. Taking U from one graph and applying it to another produces wrong physics.
     """
     print("\n" + "=" * 72)
-    print("TEST 4: (G, U) is irreducible — one object, not two")
+    print("TEST 4: Graph-Hamiltonian pair is non-factorable in tested models")
     print("=" * 72)
 
     results = {}
@@ -696,13 +701,14 @@ def test4_irreducible_pair():
     print(f"    (If separable, fidelity = 1; actual << 1)")
 
     print(f"\n  VERDICT:")
-    print(f"    Different G -> different spectra -> different U:     CONFIRMED")
+    print(f"    Different G -> different spectra -> different U:     PASS")
     print(f"    Small G perturbation changes physics:               "
           f"delta_P_return = {return_diff:.6f}")
     print(f"    U from wrong graph gives wrong physics:             "
           f"fidelity = {fidelity:.6f}")
     all_pass = (spectral_shift > 1e-6 and propagator_diff > 1e-4 and fidelity < 0.99)
-    print(f"    (G, U) is IRREDUCIBLE — one object.  [{'CONFIRMED' if all_pass else 'PARTIAL'}]")
+    print(f"    The tested graph-Hamiltonian pairs are non-factorable. "
+          f"[{'PASS' if all_pass else 'PARTIAL'}]")
 
     return results
 
@@ -713,12 +719,12 @@ def test4_irreducible_pair():
 
 def main():
     print("=" * 72)
-    print("SINGLE AXIOM: Conserved Information Flow Unifies Graph + Unitarity")
+    print("OPERATIONAL REDUCTION: Sparse Hermitian H + readout conventions")
     print("=" * 72)
     print()
-    print("CLAIM: 'There exist distinguishable things, and information flows")
-    print("between them without being created or destroyed.'")
-    print("This single statement entails BOTH a graph AND unitary dynamics.")
+    print("CLAIM BOUNDARY: given sparse Hermitian H plus support-as-edges")
+    print("and Hermitian-exponentiation readout, four numerical consequences")
+    print("follow. This runner does not derive those inputs from a verbal axiom.")
     print()
 
     t_start = time.time()
@@ -734,44 +740,47 @@ def main():
     # Summary
     # ========================================================================
     print("\n" + "=" * 72)
-    print("SUMMARY: Single Axiom Unification")
+    print("SUMMARY: Operational Reduction")
     print("=" * 72)
 
     print("""
-  TEST 1 (Conserved flow -> graph + unitarity):
+  TEST 1 (admitted sparse Hermitian H -> graph + unitarity readouts):
     A sparse Hermitian H simultaneously defines:
     - The graph (nonzero H_ij = edges)
     - A unitary U = exp(iHt) (Hermitian => unitary)
     - Locally conserved probability current J_ij
-    Graph, current, and unitarity are inseparable aspects of one object.
+    Graph, current, and unitarity are linked after H and the readout
+    conventions are supplied.
 
-  TEST 2 (Locality is forced):
+  TEST 2 (locality comparator):
     Cubic lattice: 1/r Poisson field with correct power law.
     Complete graph: flat field, no distance dependence at all.
     Random sparse: noisy, no clean 1/r law.
-    Only geometrically-local graphs produce Newtonian physics.
+    In these chosen probes, the geometrically-local lattice is the one
+    that produces the usable distance law.
 
-  TEST 3 (Unitarity is forced):
+  TEST 3 (dissipation comparator):
     Unitary evolution preserves norm -> mass is distance-independent.
     Dissipative evolution loses norm exponentially -> effective mass
     decays with distance, breaking the mass law (beta != 1).
 
-  TEST 4 ((G, U) is irreducible):
+  TEST 4 ((G, U) is non-factorable in the tested models):
     Different graphs produce different spectra and different physics.
     Adding one edge to G measurably changes U and observables.
     U from one topology gives wrong physics on another (fidelity << 1).
 
   CONCLUSION:
-    The two axioms (graph + unitarity) are not independent.
-    They are inseparable aspects of a single axiom:
-
-      "Conserved information flow on a network."
+    Given sparse Hermitian H, the support-as-edges convention, and the
+    Hermitian-exponentiation readout, the graph/current/unitary package
+    is mechanically coherent. This is bounded operational support for a
+    definitional renaming, not a derivation of the admitted inputs from
+    a single verbal axiom.
 
     - Hermitian H -> unitary exp(iHt) + conserved current J_ij
     - Nonzero H_ij -> graph edges
-    - Self-consistent physics requires locality (sparse graph)
-    - Self-consistent physics requires unitarity (norm preservation)
-    - The irreducible object is the GRAPH-UNITARY: (G, U)
+    - Locality is supported by the chosen sparse-vs-dense comparators
+    - The unitary baseline is supported by the imposed-dissipation comparator
+    - The tested graph-Hamiltonian package is non-factorable: (G, U)
 """)
     print(f"  Total runtime: {dt:.1f} s")
 
