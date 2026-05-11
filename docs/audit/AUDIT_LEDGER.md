@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 264 |
+| **retained_bounded** | 265 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1238 |
+| unaudited | 1237 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 438 |
+| `audited_clean` | 439 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1351 |
+| `unaudited` | 1350 |
 
 | claim_type | count |
 |---|---:|
@@ -286,6 +286,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
+| `global_coherence_predictor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_first_su3_integration_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `graph_laplacian_core_card_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4743,6 +4744,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On nine off-scaffold generators, the frozen free_coh >= 7.96e-04 rule scores 5/9, matching the old two-property rule on the same batch.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the finite off-scaffold table, L2 accuracy 5/9, old-rule accuracy 5/9, and pre-committed structural baseline 8/9. This closes the finite bounded negative, not a universal simple-classifier exclusion theorem.
 - **rationale:** The finite off-scaffold comparison closes from the source note and current runner output. The safe claim is bounded to this nine-generator hand-specified batch, one frozen free_coh threshold, and one old two-property comparator. Residual risk is only scope drift: the result should not be read as excluding all scalar metrics or all simple classifiers.
+- **auditor confidence:** high
+
+### `global_coherence_predictor_note`
+
+- **Note:** [`GLOBAL_COHERENCE_PREDICTOR_NOTE.md`](../../docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Historical scaffolded global-coherence finite replay: free_coh >= 7.9597e-04 gives 7/9 scaffolded held-out accuracy versus 6/9 for the old two-property rule, with the retained off-scaffold dependency limiting this to scaffold-specific evidence and closing the classifier lane.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The live replay asserts the archived scaffolded 7/9 free_coh result against the old 6/9 two-property rule, while the source note's 2026-04-07 update and dependency restrict that result to scaffold-specific historical evidence.  _(class `C`)_
+- **chain closes:** True — The primary runner completes and asserts the bounded archived scaffolded numbers, and the direct dependency is retained-bounded for the off-scaffold reversal. The clean scope excludes any generator-agnostic predictor or simple-classifier exhaustion theorem.
+- **rationale:** The source note has been narrowed to historical finite evidence, and the runner cache reproduces the archived 7/9 versus 6/9 scaffolded result. The retained off-scaffold dependency supplies the reversal that prevents this from being promoted as a generator-agnostic law or live classifier program. Residual risk is ordinary finite-sample/scaffold specificity; broader metric-search closure or analytic path-sum derivation is not audited here.
 - **auditor confidence:** high
 
 ### `graph_first_selector_derivation_note`
