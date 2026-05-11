@@ -1,13 +1,11 @@
 ===== runner cache v1 =====
 runner: scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py
-runner_sha256: 5e03e9de20e7c4e35597841c80e3102b8728113ebe3ef437e586cd8a6c9115cc
+runner_sha256: 3854ed375fb0419ba23dfb25bad71b673424954dc89f1ac375e053d82760f3d1
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.20
+elapsed_sec: 0.13
 status: ok
 ----- stdout -----
-/private/tmp/cl3-review-open-prs-20260509b.7sXhoj/scripts/cl3_koide_a1_probe_plancherel_peter_weyl_2026_05_09_probe12.py:493: SyntaxWarning: invalid escape sequence '\h'
-  measure on \hat{C_3}.
 === Section 1: Retained inputs ===
 
 
