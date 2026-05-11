@@ -11472,6 +11472,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py"
     },
+    "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "assert_count": 2,
       "counts": {
@@ -24467,6 +24479,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py": {
@@ -46900,11 +46927,11 @@
       "A": 145,
       "B": 172,
       "C": 677,
-      "D": 261,
+      "D": 262,
       "none": 421
     },
-    "runners_classified": 1676,
-    "runners_with_C": 855,
-    "runners_with_D": 473
+    "runners_classified": 1677,
+    "runners_with_C": 856,
+    "runners_with_D": 474
   }
 }

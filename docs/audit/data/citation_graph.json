@@ -14081,6 +14081,34 @@
       "to": "yt_zero_import_chain_note"
     },
     {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "to": "qcd_low_energy_running_bridge_note_2026-05-01"
+    },
+    {
       "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -50838,6 +50866,25 @@
       "runner_path": "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py",
       "title": "Probe U-Heavy-Modular \u2014 Heavy-Quark Yukawa Textures via SL(2,Z) Modular Flavor Symmetry on \u0393(3) at \u03c4 = \u03c9: Bounded No-Go / Obstruction Diagnostic"
     },
+    "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence": {
+      "claim_id": "koide_u_l1_resurgence_trans_series_note_2026-05-08_probeu_l1_resurgence",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (negative closure for the resurgence route;",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "yt_ew_color_projection_theorem",
+        "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
+        "minimal_axioms_2026-04-11",
+        "qcd_low_energy_running_bridge_note_2026-05-01"
+      ],
+      "note_hash": "676e4ac64db1e1fb592ed2288ac0e0d3098adbce10bca3156a3446db658bdb1e",
+      "path": "docs/KOIDE_U_L1_RESURGENCE_TRANS_SERIES_NOTE_2026-05-08_probeU_L1_resurgence.md",
+      "runner_path": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py",
+      "title": "Probe U-L1-Resurgence \u2014 QCD Trans-Series and Stokes Structure for \u03b2_2, \u03b2_3: Bounded-Tier Source Note"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "claim_id": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "claim_type_author_hint": "bounded_theorem",
@@ -68943,7 +68990,7 @@
       "bounded_theorem": 282,
       "decoration": 1,
       "meta": 61,
-      "no_go": 38,
+      "no_go": 39,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68952,15 +68999,15 @@
       "bounded_theorem": 764,
       "decoration": 1,
       "meta": 61,
-      "no_go": 145,
+      "no_go": 146,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8564,
-    "leaf_count": 615,
-    "node_count": 2176,
+    "edge_count": 8571,
+    "leaf_count": 616,
+    "node_count": 2177,
     "root_count": 822,
-    "runners_with_path": 1789
+    "runners_with_path": 1790
   }
 }

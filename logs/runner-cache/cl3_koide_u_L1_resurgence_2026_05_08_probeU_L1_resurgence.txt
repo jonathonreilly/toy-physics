@@ -1,0 +1,166 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py
+runner_sha256: d038ed716191bb423c906380c6d5e98a5c21a712946dfd72c318c5d088c7eb35
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================
+Probe U-L1-Resurgence — QCD trans-series & Stokes structure for beta_2, beta_3
+Date: 2026-05-10
+Source-note authority:
+  docs/KOIDE_U_L1_RESURGENCE_TRANS_SERIES_NOTE_2026-05-08_probeU_L1_resurgence.md
+========================================================================
+
+Section 1 — Existing beta content from probe X-L1-MSbar
+  [PASS] beta_0 = 7 from S1 + Casimir (X-L1) | = 7
+  [PASS] beta_1 = 26 from Casimir algebra (X-L1) | = 26
+    -> beta_0, beta_1 are the starting point for the imported resurgence analysis.
+
+Section 2 — SUPPORT-ONLY: Borel-plane IR renormalon position
+  [PASS] Borel-plane IR renormalon at z_* = 4*pi/beta_0 | = 4*pi/7 = 1.795196
+  [PASS] z_* ≈ 1.7952 in dimensionless Borel-plane units (with beta_0=7) | z_* = 1.7952
+    -> Borel-plane IR singularity location follows from beta_0=7 inside the imported renormalon toolkit.
+    -> This is support-only structure inside the imported toolkit, parameterized by beta_0.
+
+Section 3 — SUPPORT-ONLY: UV renormalon positions
+  [PASS] UV renormalon n=1 at z = -4*pi/(7*1) = -1.7952 | = -1.795196
+  [PASS] UV renormalon n=2 at z = -4*pi/(7*2) = -0.8976 | = -0.897598
+  [PASS] UV renormalon n=3 at z = -4*pi/(7*3) = -0.5984 | = -0.598399
+  [PASS] UV renormalon n=4 at z = -4*pi/(7*4) = -0.4488 | = -0.448799
+  [PASS] UV renormalon n=5 at z = -4*pi/(7*5) = -0.3590 | = -0.359039
+    -> UV renormalon ladder follows from beta_0=7 inside the imported toolkit.
+    -> Together with IR renormalon, defines the FULL Borel-plane singularity structure.
+
+Section 4 — SUPPORT-ONLY: asymptotic factorial growth rate
+  [PASS] Asymptotic geometric base 1/z_* = beta_0/(4*pi) | = 7/(4*pi) = 0.557042
+  [PASS] Geometric base ≈ 0.557 (with beta_0 = 7) | = 0.5570
+    -> Growth-rate base 1/z_* = beta_0/(4*pi) follows from beta_0 inside the imported toolkit.
+    -> Combined with Gamma(n+b) gives full asymptotic form beta_n ~ Gamma(n+b) * (beta_0/(4*pi))^(n+1) * const.
+
+Section 5 — STRUCTURAL: asymptotic ratio test on literature beta_n
+    Literature beta_n values (MS-bar, N_f=6, t'Hooft convention):
+      beta_0 = 7.0000
+      beta_1 = 26.0000
+      beta_2 = 32.5000
+      beta_3 = 643.8333
+
+    Consecutive ratios beta_{n+1}/beta_n:
+      beta_1/beta_0 = 26.000/7.000 = 3.7143
+      beta_2/beta_1 = 32.500/26.000 = 1.2500
+      beta_3/beta_2 = 643.833/32.500 = 19.8103
+  [PASS] Consecutive beta-ratios are positive and finite | ratios = [3.7143, 1.2500, 19.8103]
+  [PASS] Ratio pattern documented (factorial trend NOT yet manifest at small n) | ratios: ['3.714', '1.250', '19.810'], asymptotic base = beta_0/(4*pi) = 0.5570
+  [PASS] Resurgence asymptotic prediction at n=10 (b=1): ratio ~ 6.13 | = base * (10+1) = 6.1275
+    -> Resurgence ASYMPTOTIC ratio formula relies on subleading exponent b which is NOT retained.
+    -> Small-n ratios (n=0,1,2) cannot be precisely predicted from leading resurgence alone.
+
+Section 6 — BOUNDED ADMISSION: Stokes constant S_IR not retained
+  [ADMITTED] Stokes constant S_IR connecting perturbative ↔ IR renormalon | requires QCD instanton moduli computation; not in current framework stack; identification of YM instantons with framework Z^3 monopole sector is structurally suggestive but unproved
+    -> S_IR closed form = NOT retained on framework substrate alone.
+    -> Candidate follow-on: postulate QCD-instanton ↔ framework identification.
+
+Section 7 — BOUNDED ADMISSION: subleading exponent b not closed-form
+  [PASS] Leading-piece b ≈ 1 - beta_1/beta_0^2 ≈ 23/49 ≈ 0.469 (retained piece only) | = 1 - 26/7^2 = 0.4694
+  [ADMITTED] Subleading exponent b at full scheme-dependent order | requires anomalous dimension of <G^2> at higher loops; not in current framework content; same obstruction as for beta_2 channel weights
+    -> Leading retained piece b ≈ 0.469 documented; FULL b is bounded admission.
+
+Section 8 — BOUNDED ADMISSION: finite-n corrections at n=2,3 not retained
+  [ADMITTED] 1/n corrections to leading resurgence formula at n=2,3 | O(1) at small n; require full Borel transform B[beta](z); same integral content as original perturbative beta_2, beta_3
+  [ADMITTED] Subleading singularities in Borel plane (instantons, multi-instantons) | additional non-perturbative content beyond IR renormalon; requires multi-instanton saddle data from QCD path integral; not in current framework content
+    -> Resurgence does NOT bypass the integral primitives at finite loop order.
+    -> Small-n beta_n requires full Borel data, equivalent in content to original perturbative integrals.
+
+Section 9 — NUMERICAL COMPARATOR: leading resurgence vs literature
+    Leading resurgence formula:
+      beta_n^asymp = (S_IR/(2*pi)) * Gamma(n+b) * (beta_0/(4*pi))^(n+1)
+    With benchmark S_IR = 1.0, b = 0.4694, base = 0.5570:
+      beta_2^asymp = (1/(2*pi)) * Gamma(2.4694) * 0.5570^3
+                 = (1/6.2832) * 1.3013 * 0.1728
+                 ≈ 0.035799
+      beta_3^asymp = (1/(2*pi)) * Gamma(3.4694) * 0.5570^4
+                 = (1/6.2832) * 3.2135 * 0.0963
+                 ≈ 0.049244
+
+    Literature MS-bar values at N_f=6 (t'Hooft convention):
+      beta_2 = 65/2 = 32.5
+      beta_3 ≈ 3863/6 ≈ 643.83 (or alt 2472.28)
+
+    Effective S_IR needed to match literature (with b=23/49):
+      S_IR^eff(n=2) = beta_2 / pred_2(S=1) ≈ 907.84
+      S_IR^eff(n=3) = beta_3 / pred_3(S=1) ≈ 13074.37
+
+    The fact that S_IR^eff(n=2) and S_IR^eff(n=3) are both >> O(1) is
+    consistent with the standard fact that Stokes constants for QCD
+    gluon condensate channel are large (Beneke 1998, Section 5),
+    AND that subleading-resurgence corrections at small n accumulate,
+    inflating the effective S_IR^eff.
+
+    HONEST INTERPRETATION: at small n, S_IR^eff is NOT well-approximated
+    by the leading-resurgence form alone — finite-n corrections matter.
+    The fact that S_IR^eff ratio grows with n indicates nontrivial
+    subleading-resurgence content not captured by the leading formula.
+    Bounded admission stands.
+  [PASS] Leading resurgence formula with benchmark S_IR=1, b=23/49 evaluated at n=2 | pred_2 = 0.035799
+  [PASS] Leading resurgence formula with benchmark S_IR=1, b=23/49 evaluated at n=3 | pred_3 = 0.049244
+  [PASS] Effective Stokes constant S_IR^eff(n=2) is macroscopic (>> O(1)) | S_IR^eff(n=2) = 907.84 >> 1, confirms leading resurgence does NOT match small-n exactly
+  [PASS] Effective Stokes constant S_IR^eff(n=3) is macroscopic (>> O(1)) | S_IR^eff(n=3) = 13074.37 >> 1, confirms leading resurgence does NOT match small-n exactly
+  [PASS] S_IR^eff(n=3) > S_IR^eff(n=2) (ratio grows with n at small n) | S_IR^eff(n=3)/S_IR^eff(n=2) = 14.40; finite-n corrections accumulate, NOT a derivation
+  [ADMITTED] Closed-form derivation of S_IR_eff(n=2), S_IR_eff(n=3) from framework content | S_IR is a free parameter at this level; matching to literature is a fit, not a derivation
+    -> Leading resurgence asymptotic is in the right ballpark
+       once S_IR is fit, but this is NOT a derivation — bounded.
+
+Section 10 — HOSTILE-REVIEW critical examination
+    Hostile Q1: Is Borel position load-bearing or interpretive?
+  [PASS] Borel-plane IR renormalon position 4*pi/beta_0 is support-only structure | parameterized by beta_0 inside imported toolkit; support beyond X-L1
+    Hostile Q2: Does this add retention beyond X-L1?
+  [PASS] Probe U adds Borel-plane geometry support (orthogonal to X-L1's color skeleton) | different structural content; X-L1 retains color tensors, U imports Borel geometry
+    Hostile Q3: Is QCD-instanton ↔ framework identification rigorous?
+  [ADMITTED] Identification of QCD instanton sector with framework monopole sector | structurally suggestive (3-fold Z_3 center) but NO explicit map; candidate follow-on, NOT load-bearing for this probe
+    Hostile Q4: Does benchmark S_IR close beta_2?
+  [ADMITTED] Benchmark S_IR fitting to literature beta_2 closes beta_2 | FIT not derivation; even with leading resurgence formula valid, S_IR comes from outside current framework content
+    Hostile Q5: Are there remaining avenues?
+      Yes — trans-asymptotic resummation, exact Borel transform on
+      framework substrate, full instanton ↔ Z^3 identification all
+      remain candidate follow-on probes (not load-bearing here).
+    -> Hostile-review verdict: route is honestly no-go with specific support observations and clearly named obstructions.
+
+========================================================================
+PROBE U-L1-Resurgence VERDICT
+========================================================================
+
+Claim type: no_go
+            (support-only Borel-plane geometry and asymptotic
+             growth from beta_0 inside imported toolkit; negative
+             on closed-form derivation of beta_2, beta_3 via resurgence)
+
+Imported toolkit: resurgence/renormalon theory as mathematical tool
+                  for this bounded route check, not a new axiom.
+
+Support-only structural observations:
+  + IR renormalon at z_* = 4*pi/beta_0 = 4*pi/7 (toolkit + beta_0)
+  + UV renormalon ladder at z = -4*pi/(7*n), n = 1, 2, 3, ...
+  + Asymptotic growth rate (beta_0/(4*pi))^(n+1) = (7/(4*pi))^(n+1)
+  + Renormalon picture skeleton parameterized by beta_0
+  + Leading beta_0/beta_1 piece of subleading exponent: 1 - beta_1/beta_0^2 ≈ 23/49
+
+BOUNDED admissions:
+  - Stokes constant S_IR closed form: NOT retained (instanton ↔ framework)
+  - Subleading exponent b at full order: NOT retained (anomalous dim of <G^2>)
+  - Finite-n corrections at n=2, 3: NOT retained (full Borel transform)
+  - beta_2 closed form via resurgence: NOT retained (compound of above)
+  - beta_3 closed form via resurgence: NOT retained (same)
+
+Net contribution to Lane 1:
+  - Uses beta_0 = 7 already on main via X-L1
+  - Adds imported-toolkit Borel-plane geometry support
+  - Adds imported-toolkit asymptotic factorial growth support
+  - Does NOT close beta_2 or beta_3 (bounded admission stands)
+  - Identifies candidate follow-on: postulate QCD-instanton ↔ framework identification
+
+
+SUMMARY: PASS=22 FAIL=0 ADMITTED=7
+
+----- stderr -----
+
