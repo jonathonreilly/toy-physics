@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 683,
     "high": 27,
-    "leaf": 239,
+    "leaf": 238,
     "medium": 157
   },
   "cycle_break_target_count": 265,
@@ -30626,29 +30626,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SPIN_STATISTICS_CARDINALITY_PAULI_EXCLUSION_NARROW_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/audit_companion_spin_statistics_cardinality_pauli_exclusion_exact_2026_05_10.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37074,6 +37051,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 9,
-  "total_pending": 1106
+  "ready_count": 8,
+  "total_pending": 1105
 }

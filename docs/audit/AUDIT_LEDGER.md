@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 80 |
+| **retained** | 81 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 250 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1100 |
+| unaudited | 1099 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 426 |
+| `audited_clean` | 427 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1198 |
+| `unaudited` | 1197 |
 
 | claim_type | count |
 |---|---:|
@@ -440,6 +440,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_wavefield_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
@@ -9753,6 +9754,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given finite Grassmann generators satisfying (G1)-(G3) and Berezin rules (B1)-(B2), the quadratic Berezin partition Z_F = int prod_x dchi-bar_x dchi_x exp(-sum_{x,y} chi-bar_x M_xy chi_y) equals det(M), and odd-graded insertions anticommute under exchange.  _(class `A`)_
 - **chain closes:** True — The scoped inputs are exactly the Grassmann relations and Berezin rules stated in the note, and the determinant identity plus odd-odd sign follow by finite exterior-algebra/Berezin coefficient extraction. No physical Hilbert-space bridge, bosonic no-go theorem, lattice-operator property, or external comparator is needed for this bounded claim.
 - **rationale:** Within the narrow algebraic scope, the claim closes as a standard finite Berezin-calculus identity. The runner evidence is entirely class-A algebraic checking and is consistent with the proof; the note explicitly excludes the physical spin-statistics bridge and downstream positivity surfaces from the audited load.
+- **auditor confidence:** high
+
+### `spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`SPIN_STATISTICS_CARDINALITY_PAULI_EXCLUSION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/SPIN_STATISTICS_CARDINALITY_PAULI_EXCLUSION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional complex linear algebra: CCR has no nonzero finite-dimensional representation, the one-mode CAR has a 2-dimensional irreducible carrier, and CAR implies squared-creation nilpotence and occupation spectrum {0,1}.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c8-9769-7ae1-9103-472c44aa4fc7`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Taking the finite-dimensional trace of [a, a†] = I gives 0 = Tr([a, a†]) = Tr(I) = D, while the explicit 2×2 CAR matrices give (a†)^2 = 0 and n^2 = n.  _(class `A`)_
+- **chain closes:** True — The scoped claims (C1)-(P2) close from admitted trace linear algebra and the explicit CAR matrices in the packet. The cited Cl(3) retained authority is only needed for the corollary dimensional match, not for the CAR/CCR algebra itself.
+- **rationale:** The theorem is explicitly scoped to finite-dimensional algebra and does not claim the physical lattice carrier bridge. The load-bearing trace obstruction, CAR realization, Pauli nilpotence, and number-operator idempotence are standard characteristic-zero algebraic consequences and are checked by the runner without importing a physical observable or tuned comparator.
 - **auditor confidence:** high
 
 ### `staggered_3d_self_gravity_sign_note_2026-04-11`
