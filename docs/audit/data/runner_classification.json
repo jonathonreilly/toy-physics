@@ -21024,6 +21024,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_yt_explicit_systematic_budget.py"
     },
+    "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 0,
+        "D": 57
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_fierz_projection_defense_narrow.py"
+    },
     "yt_gauge_crossover_theorem": {
       "assert_count": 0,
       "counts": {
@@ -41286,6 +41298,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_yt_fierz_projection_defense_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 0,
+        "D": 57
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_gauge_crossover_theorem.py": {
       "assert_count": 0,
       "claims": [
@@ -46738,11 +46765,11 @@
       "A": 145,
       "B": 172,
       "C": 675,
-      "D": 257,
+      "D": 258,
       "none": 421
     },
-    "runners_classified": 1670,
+    "runners_classified": 1671,
     "runners_with_C": 851,
-    "runners_with_D": 467
+    "runners_with_D": 468
   }
 }

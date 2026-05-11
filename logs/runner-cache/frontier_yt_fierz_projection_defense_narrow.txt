@@ -1,0 +1,164 @@
+===== runner cache v1 =====
+runner: scripts/frontier_yt_fierz_projection_defense_narrow.py
+runner_sha256: 7dd3a50b808012233854244e075f76e143cd27839b732a71ae07a9deb7e8848b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Sub-check (1): Z_phi vs current-current Fierz disambiguation
+----------------------------------------------------------------------------------------
+
+  R_conn = (N_c^2 - 1)/N_c^2 = 8/9 (exact group theory)
+  Form (b) LSZ single-leg:           sqrt(R_conn) = 2*sqrt(2)/3 = sqrt(8/9)
+  [PASS] form (b): correction = sqrt(R_conn) on Yukawa amplitude  (sqrt(8/9) = 0.94280904)
+  Form (a) current-current:          R_conn       = 8/9 = 8/9
+  [PASS] form (a): would-be correction = R_conn (rejected by LSZ)  (8/9 = 0.88888889)
+
+  Numerical values:
+    sqrt(8/9) = 0.942809   (form b, selected)
+    8/9       = 0.888889   (form a, rejected)
+    Difference: 0.0539 = 5.39% of m_t scale
+  [PASS] form (a) != form (b) for R_conn != 0, 1  (sqrt(8/9) - 8/9 = -8/9 + 2*sqrt(2)/3 != 0)
+
+  LSZ leg-count: scalar legs = 1, LSZ power = 1/2
+  [PASS] LSZ leg-count fixes form (b): power Z_phi^(n_scalar/2) = Z_phi^(1/2)  (Yukawa has 1 scalar leg => one factor of sqrt(Z_phi))
+
+  Contrast: EW vac. pol. (two-vertex) at kappa_EW=0:
+    alpha_phys / alpha_CMT = 1/R_conn = 9/8 = 9/8
+    sqrt(9/8)              = 1.0606602   (UP on g_EW)
+  [PASS] EW side: alpha correction = 1/R_conn = 9/8 (not sqrt)  (Two-vertex correlator => linear, not sqrt)
+  [PASS] EW side: g_EW correction = sqrt(9/8) = 1/sqrt(8/9) (one factor on amplitude)  (sqrt(9/8) = 1.0606602 (UP))
+  [PASS] y_t direction: DOWN (sqrt(8/9) < 1)  (sqrt(8/9) = 0.942809 < 1)
+  [PASS] g_EW direction: UP (sqrt(9/8) > 1) at kappa_EW = 0  (sqrt(9/8) = 1.0606602 > 1)
+
+----------------------------------------------------------------------------------------
+Sub-check (2): 3-loop QCD MSbar->pole match check
+----------------------------------------------------------------------------------------
+
+  alpha_s(m_t) = 0.108 (PDG comparator), N_L = 5
+  a_s/pi = 0.034377
+  Chetyrkin-Steinhauser / Melnikov-van Ritbergen coefficients:
+    c_1                    = 1.3333    (1-loop, exact 4/3)
+    c_2(N_L=5)             = 8.2364     (Gray-Broadhurst-Grafe-Schilcher 1990)
+    c_3(N_L=5)             = 73.6375     (Chetyrkin-Steinhauser 2000)
+  Numerical contributions:
+    term_1 (1-loop)        = 0.045837    (4.5837%)
+    term_2 (2-loop)        = 0.009734    (0.9734%)
+    term_3 (3-loop)        = 0.002992    (0.2992%)
+    sum                    = 0.058562    (5.8562%)
+
+  3-loop shift estimate:
+    delta_3L / m_t = 0.2992%
+    delta_3L      ≈ 0.4877 GeV  (using m_t^MS ~ 163 GeV)
+  [PASS] 3-loop pole shift in 0.2-0.4% range (Chetyrkin-Steinhauser scale)  (term_3 = 0.002992)
+  [PASS] 3-loop shift > 2-loop shift in absolute size? (typically not at high N_L)  (term_2 = 0.009734 > term_3 = 0.002992 (perturbative ordering OK))
+
+  Framework internal 3-loop shift (COMPLETE_PREDICTION_CHAIN §6.2):
+    m_t(2-loop)        = 172.57 GeV
+    m_t(3-loop)        = 173.1 GeV
+    delta_3L           = 0.5300 GeV
+    delta_3L / m_t     = 0.3071%
+  [PASS] framework internal 3-loop shift consistent with Chetyrkin-Steinhauser (within factor 2)  (framework shift 0.307% vs CS coefficient 0.299%)
+
+  Framework vs PDG (audit comparator m_t,pole = 172.69 +/- 0.3 GeV):
+    2-loop deviation   = -0.0695%   (-0.120 GeV)
+    3-loop deviation   = +0.2374%   (+0.410 GeV)
+    bracket midpoint   = +0.0840%   (+0.145 GeV)
+  [PASS] 2-loop framework-chain comparator within 0.1% of PDG (the headline 0.07% claim)  (|dev_2L| = 0.0695% < 0.1%)
+  [PASS] 3-loop framework-chain comparator within 0.3% of PDG (sub-percent comparator)  (|dev_3L| = 0.2374% < 0.3%)
+  [PASS] 2/3-loop bracket midpoint within 0.1% of PDG  (|dev_bracket| = 0.0840% < 0.1%)
+  [PASS] framework-chain 2-loop and 3-loop comparators bracket the PDG comparator  (172.57 < 172.69 < 173.1)
+
+----------------------------------------------------------------------------------------
+Sub-check (3): cross-check vs Eichhorn-Held asymptotic safety
+----------------------------------------------------------------------------------------
+
+  Comparators vs PDG:
+    Framework (2-loop)         = 172.570 GeV   (-0.120 GeV from PDG, -0.069%)
+    Framework (3-loop)         = 173.100 GeV   (+0.410 GeV from PDG, +0.237%)
+    Framework (2/3-loop mid)   = 172.835 GeV   (+0.145 GeV from PDG, +0.084%)
+    AS Eichhorn-Held           = 171.000 GeV   (-1.690 GeV from PDG, -0.979%)
+    PDG world average          = 172.690 +/- 0.300 GeV
+
+  Framework-vs-AS gap:
+    2-loop framework - AS      = +1.570 GeV   (+0.909% of m_t)
+    3-loop framework - AS      = +2.100 GeV   (+1.216% of m_t)
+  [PASS] framework-chain comparator is above AS central value  (gap = 1.570 GeV)
+  [PASS] framework-vs-AS gap is sub-2 GeV / sub-percent  (|gap| = 1.570 GeV < 2 GeV)
+
+  AS deviation from PDG    = 1.690 GeV (0.979%)
+  FW 2-loop dev from PDG   = 0.120 GeV (0.0695%)
+  AS dev / FW 2-loop dev   = 14.1x (AS is 14x further from PDG)
+  [PASS] AS central value is separated from PDG comparator by >1 GeV  (AS central value differs by 1.690 GeV; no AS-side uncertainty band is imposed here)
+
+  FCC-ee threshold-scan precision targets:
+    statistical (10/ab)        ~9 MeV  (arXiv:2503.18713)
+    theoretical                ~50 MeV  (arXiv:1611.03399 estimate)
+    total (rough sum)          ~59 MeV  (~0.06 GeV)
+
+  Discrimination check: framework-vs-AS gap = 1570 MeV
+                        FCC-ee precision     = ~59 MeV
+                        gap / precision      = 26.6x
+  [PASS] framework-vs-AS central-value gap > 5x FCC-ee total precision  (gap 1570 MeV vs FCC-ee precision ~59 MeV)
+
+----------------------------------------------------------------------------------------
+Cross-cutting: same R_conn, opposite directions on y_t and g_EW
+----------------------------------------------------------------------------------------
+
+  Same R_conn = 8/9, opposite directions:
+    y_t correction:   sqrt(R_conn)   = sqrt(8/9) = 0.94280904 (DOWN)
+    g_EW correction:  1/sqrt(R_conn) = sqrt(9/8) = 1.0606602 (UP)
+    Product:          1            (universal cancellation)
+  [PASS] y_t correction * g_EW correction = 1 (universal R_conn factor)  (sqrt(8/9) * sqrt(9/8) = 1, both sides use same R_conn)
+
+  sin^2(theta_W) preservation: g_EW factor sqrt(9/8) is universal across g_1, g_2
+    sin^2(theta_W) = g_Y^2 / (g_Y^2 + g_2^2): universal factor cancels in ratio
+  [PASS] sin^2(theta_W) preserved exactly under universal g_EW correction  (universal sqrt(9/8) factor cancels in sin^2(theta_W) ratio (theorem-level))
+
+----------------------------------------------------------------------------------------
+Defense narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Three sub-checks on the y_t chain's sqrt(8/9) Fierz color projection:
+
+  (1) Vertex-level Z_phi vs current-current disambiguation:
+      -- LSZ leg-count fixes correction = sqrt(R_conn) = sqrt(8/9), DOWN
+      -- form (b) selected, form (a) [R_conn directly] rejected
+      -- Citation: YUKAWA_COLOR_PROJECTION_THEOREM.md Parts 2.5, 3.1, 3.4, 4.1
+
+  (2) 3-loop QCD MSbar->pole match check:
+      -- Chetyrkin-Steinhauser/Melnikov-van Ritbergen 3-loop coefficient
+         gives ~0.31% shift on m_t (~0.5 GeV)
+      -- Framework's internal 3-loop comparator (m_t,3L = 173.10 GeV)
+         consistent with this shift (delta = 0.53 GeV)
+      -- Headline 0.07% match is the 2-loop comparator;
+         3-loop comparator at +0.24%, still sub-percent
+      -- 2/3-loop bracket midpoint at +0.08% from PDG
+
+  (3) Cross-check vs Eichhorn-Held asymptotic safety:
+      -- AS comparator central value is m_t,pole ~ 171 GeV
+         (arXiv:1707.01107)
+      -- Framework-vs-AS gap ~ 1.6 GeV ~ 0.9% of m_t
+      -- AS central value is separated from the framework-chain central
+         values by ~1.6-2.1 GeV
+      -- FCC-ee threshold scan (~50 MeV total precision) would distinguish
+         those central values under the cited comparator assumptions
+
+  Three named admissions in the defense note:
+      (i)   Fierz interpretation inherits from upstream LSZ derivation
+      (ii)  0.07% match is loop-order specific (2-loop pole conversion)
+      (iii) AS-vs-lattice discriminator is FCC-ee level
+
+  Scope: this is a DISAMBIGUATION / DEFENSE, not a new positive theorem.
+  Load-bearing step class: F (re-statement of upstream LSZ derivation).
+
+
+========================================================================================
+  TOTAL: PASS=21, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -22865,6 +22865,22 @@
       "to": "yt_exact_schur_normal_form_uniqueness_note"
     },
     {
+      "from": "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
       "from": "yt_flagship_boundary_note",
       "to": "yt_zero_import_authority_note"
     },
@@ -67031,6 +67047,22 @@
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
       "title": "`y_t` Residual-Budget and Bridge Cross-Check Note"
     },
+    "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10": {
+      "claim_id": "yt_fierz_projection_defense_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "complete_prediction_chain_2026_04_15",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01"
+      ],
+      "note_hash": "62e001c80d488230d96cebf123ccd68cb3041ca750131ea7c68f91f2e6a0c170",
+      "path": "docs/YT_FIERZ_PROJECTION_DEFENSE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_yt_fierz_projection_defense_narrow.py",
+      "title": "Defense of the sqrt(8/9) Fierz Color Projection in the y_t Chain"
+    },
     "yt_flagship_boundary_note": {
       "claim_id": "yt_flagship_boundary_note",
       "claim_type_author_hint": null,
@@ -68613,7 +68645,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 280,
+      "bounded_theorem": 281,
       "decoration": 1,
       "meta": 61,
       "no_go": 34,
@@ -68622,7 +68654,7 @@
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 762,
+      "bounded_theorem": 763,
       "decoration": 1,
       "meta": 61,
       "no_go": 141,
@@ -68630,10 +68662,10 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8513,
-    "leaf_count": 610,
-    "node_count": 2170,
+    "edge_count": 8517,
+    "leaf_count": 611,
+    "node_count": 2171,
     "root_count": 822,
-    "runners_with_path": 1783
+    "runners_with_path": 1784
   }
 }
