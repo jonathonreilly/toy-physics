@@ -1,0 +1,145 @@
+
+======================================================================
+Section 0 — Setup sanity: C_3 cycle on hw=1, circulant H
+======================================================================
+[PASS]  0.1  C is unitary
+[PASS]  0.2  C has order 3 (C^3 = I)
+[PASS]  0.3  det(C) = +1 (3-cycle is even permutation)
+         det(C) = 1.000000+0.000000j
+[PASS]  0.4  H = aI + bC + b̄C² is Hermitian
+[PASS]  0.5  [H, C] = 0 (C_3-equivariance)
+
+======================================================================
+Section 1 — Eigenvalues and eigenvectors of H_circ
+======================================================================
+[PASS]  1.1.0  e_0 is eigenvector of C with eigenvalue ω^(-0)
+         C e_0 - ω^(-0) e_0 = 0.00e+00
+[PASS]  1.1.1  e_1 is eigenvector of C with eigenvalue ω^(-1)
+         C e_1 - ω^(-1) e_1 = 3.39e-16
+[PASS]  1.1.2  e_2 is eigenvector of C with eigenvalue ω^(-2)
+         C e_2 - ω^(-2) e_2 = 5.27e-16
+[PASS]  1.2  Eigenvalues of H_circ match formula λ_k = a + 2|b| cos(φ - 2πk/3)
+         numeric: [1.38311266 2.32740195 3.78948539], formula: [1.38311266 2.32740195 3.78948539]
+[PASS]  1.3  Σ_k λ_k = 3a (trace identity, |b|-independent)
+         sum = 7.500000, 3a = 7.500000
+[PASS]  1.4  Σ_k λ_k² = 3a² + 6|b|² (Frobenius identity)
+         sum sq = 21.690000, 3a² + 6|b|² = 21.690000
+
+======================================================================
+Section 2 — PA-AV1: Slater det of 3 fermions filling 3 mass eigenstates
+======================================================================
+[PASS]  2.1  Slater(3 fillings) total energy = 3a, INDEPENDENT of |b|, φ
+         all 25 (|b|, φ) values gave 7.500000 (= 3 · 2.5 = 7.5)
+[PASS]  2.2  ⟨Slater|Slater⟩ = |det(eigvecs)|² = 1 (orthonormality)
+         |det|^2 = 1.0000000000
+[PASS]  2.3  ∧^3 V is 1-dimensional (Pauli forces unique 3-particle state)
+         C(3,3) = 1; the Slater determinant is unique up to phase.
+[PASS]  2.4  PA-AV1: Pauli total energy decouples from b (no BAE constraint)
+         E_Slater = 3a; minimizing E gives a→0, NOT BAE.
+
+======================================================================
+Section 3 — PA-AV2: 2-fermion antisymmetric subspace ∧^2 V
+======================================================================
+[PASS]  3.1  tr(∧^2 H) = (n-1) tr(H) = 6a (for n=3)
+         sum = 15.000000, 6a = 15.000000
+[PASS]  3.2  tr((∧^2 H)²) = 12a² + 6|b|² (algebraic identity)
+         sum sq = 77.940000, predicted = 77.940000
+[PASS]  3.3  E_perp(∧^2 H) = 6|b|² = E_perp(H) (antisym preserves |b|²)
+         E_perp(∧^2 H) = 2.940000, E_perp(H) = 2.940000, 6|b|² = 2.940000
+[PASS]  3.4  E_+(∧^2 H) = 4 · E_+(H) (E_+ rescales by (n-1)^2 = 4)
+         E_+(H) = 18.750000, E_+(∧^2 H) = 75.000000, ratio = 4.000000
+[PASS]  3.5  PA-AV2: ∧^2 H rescales κ by factor 4, does NOT pin |b|²/a²
+         κ(H) = 12.7551, κ(∧^2 H) = 51.0204, ratio = 4.0000
+
+======================================================================
+Section 4 — PA-AV3: C_3 character of ε_{ijk}; Pauli singlet is C_3-trivial
+======================================================================
+[PASS]  4.1  ε_{ijk} totally antisymmetric (sum over permutations check)
+[PASS]  4.2  (C ⊗ C ⊗ C) · ε = sign(C) · ε = +ε (3-cycle is even)
+         ||transformed - sign(C) · ε|| = 0.00e+00
+[PASS]  4.3  det(C) = +1 ⟹ Pauli singlet is C_3-trivial isotype
+         det(C) = 1.000000+0.000000j
+[PASS]  4.4  PA-AV3: Pauli ground state ∈ C_3 trivial isotype (a-only sector)
+         ε_{ijk} is C_3-invariant; antisymmetrization projects onto trivial isotype.
+
+======================================================================
+Section 5 — Slater determinant matrix elements: explicit a, b dependence test
+======================================================================
+[PASS]  5.1  Slater total energy ⟨Σ_k λ_k⟩ = 3a, identical across all (b, φ)
+         all 66 (b, φ) values: max deviation = 1.78e-15
+[PASS]  5.2  Var_b(E_Slater) = 0 (b-independent)
+         variance = 5.26e-31
+
+======================================================================
+Section 6 — Pauli on C_3-irrep-labeled wavefunctions
+======================================================================
+[PASS]  6.1  Slater(e_0, e_1, e_2) is unit-norm volume form
+         |Slater| = 1.000000, phase = -1.5708
+[PASS]  6.2  C ⊗ C ⊗ C on ∧^3 V acts by det(C) = +1 (Slater is C_3-invariant)
+         ratio = 1.000000+0.000000j
+[PASS]  6.3  Slater structure: orthonormality determined by C-eigenstates, NOT by H
+         Pauli antisymmetrization commutes with C_3 character labeling, decoupled from (a, b).
+
+======================================================================
+Section 7 — Wave-function-level extremization with Pauli constraint
+======================================================================
+[PASS]  7.1  ⟨Slater|H|Slater⟩ = 3a (b-independent; min(a)=0, NOT BAE)
+         Pauli total energy decouples from b.
+[PASS]  7.2  ⟨Slater|H²|Slater⟩ = tr(H²) = 3a² + 6|b|² (no κ constraint)
+         computed = 20.250000, predicted 3a² + 6|b|² = 20.250000
+[PASS]  7.3  Constrained extremization of F_Pauli at fixed N: no BAE forcing
+         Lagrange multiplier on tr(H²)=N gives single equation in 2 unknowns; one-parameter family.
+
+======================================================================
+Section 8 — Convention robustness: Slater on alternative bases
+======================================================================
+[PASS]  8.1  Slater(|0⟩, |1⟩, |2⟩) = ±1 (site-basis volume form)
+[PASS]  8.2  C ⊗ C ⊗ C on site Slater = sign(C) · site Slater (C_3-invariant)
+         ratio = 1.000000+0.000000j
+[PASS]  8.3  Slater is C_3-invariant under all C_3-equivariant basis changes
+         det(C^k) = +1 for k=0,1,2; volume form is preserved.
+
+======================================================================
+Section 9 — Comparison: Pauli (wave-function) vs Probe 28 (interactions)
+======================================================================
+[PASS]  9.1  Probe 28 (operator-level): F1 absent in interacting dynamics
+         Reference: KOIDE_BAE_PROBE_INTERACTING_DYNAMICS_BOUNDED_OBSTRUCTION_NOTE_2026-05-09_probe28.md
+[PASS]  9.2  Probe X (wave-function-level): Pauli is C_3-trivial, cannot close BAE
+         Pauli antisymmetric ground state is C_3-invariant (in trivial isotype).
+[PASS]  9.3  Combined: F1 / BAE absent from BOTH operator + wave-function levels
+         Closing BAE requires an additional primitive (consistent with prior probes).
+
+======================================================================
+Section 10 — Sharpened structural conclusion
+======================================================================
+[PASS]  10.1  THEOREM PAULI-DECOUPLE (sharpened structural rejection)
+         Pauli antisymmetrization is C_3-trivial; cannot constrain |b|^2/a^2.
+[PASS]  10.2  Root cause: det(C_3 generator) = +1 (3-cycle ∈ A_3)
+         Even permutation; antisymmetric volume form is C_3-invariant.
+[PASS]  10.3.2  sign of 2-cycle = (-1)^1 = -1
+         For n=3 (our case), Pauli is C_n-trivial; structurally invariant.
+[PASS]  10.3.3  sign of 3-cycle = (-1)^2 = 1
+         For n=3 (our case), Pauli is C_n-trivial; structurally invariant.
+[PASS]  10.3.4  sign of 4-cycle = (-1)^3 = -1
+         For n=3 (our case), Pauli is C_n-trivial; structurally invariant.
+[PASS]  10.3.5  sign of 5-cycle = (-1)^4 = 1
+         For n=3 (our case), Pauli is C_n-trivial; structurally invariant.
+[PASS]  10.3.6  sign of 6-cycle = (-1)^5 = -1
+         For n=3 (our case), Pauli is C_n-trivial; structurally invariant.
+
+======================================================================
+Section 11 — Does-not-do disclaimers
+======================================================================
+[PASS]  Probe X DOES NOT close BAE.
+[PASS]  Probe X DOES NOT add any new axiom or admission.
+[PASS]  Probe X DOES NOT modify any parent theorem.
+[PASS]  Probe X DOES NOT change downstream theorem status.
+[PASS]  Probe X DOES NOT load-bear PDG values.
+[PASS]  Probe X DOES NOT use external surveys as source authority.
+[PASS]  Probe X DOES NOT replace Probes 12-30 (it complements them at wave-function level).
+[PASS]  Probe X DOES NOT propose an alternative κ value as physical.
+
+======================================================================
+=== TOTAL: PASS=53, FAIL=0 ===
+======================================================================
+

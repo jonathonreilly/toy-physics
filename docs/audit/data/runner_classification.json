@@ -11616,6 +11616,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_koide_weighted_character_source_axis_theorem.py"
     },
+    "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_x_bae_pauli_2026_05_08_probeX_bae_pauli.py"
+    },
     "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar": {
       "assert_count": 2,
       "counts": {
@@ -24809,6 +24821,21 @@
         "B": 0,
         "C": 1,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_x_bae_pauli_2026_05_08_probeX_bae_pauli.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 14,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -47304,12 +47331,12 @@
     "dominant_class_distribution": {
       "A": 151,
       "B": 174,
-      "C": 682,
+      "C": 683,
       "D": 268,
       "none": 416
     },
-    "runners_classified": 1691,
-    "runners_with_C": 865,
-    "runners_with_D": 485
+    "runners_classified": 1692,
+    "runners_with_C": 866,
+    "runners_with_D": 486
   }
 }

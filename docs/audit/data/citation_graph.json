@@ -14581,6 +14581,50 @@
       "to": "no_per_site_chirality_theorem_note_2026-05-02"
     },
     {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "axiom_first_spin_statistics_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
       "to": "qcd_low_energy_running_bridge_note_2026-05-01"
     },
@@ -51860,6 +51904,29 @@
       "runner_path": "scripts/frontier_koide_weighted_character_source_axis_theorem.py",
       "title": "Koide Weighted Character-Source Axis Theorem"
     },
+    "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli": {
+      "claim_id": "koide_x_bae_pauli_antisymmetrization_note_2026-05-08_probex_bae_pauli",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
+        "minimal_axioms_2026-05-03",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "three_generation_observable_theorem_note",
+        "axiom_first_spin_statistics_theorem_note_2026-04-29",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "fdd841ca5b1336df4c9cb7b662cc2ae1e933e2832546ee2922a8e57b6c284129",
+      "path": "docs/KOIDE_X_BAE_PAULI_ANTISYMMETRIZATION_NOTE_2026-05-08_probeX_bae_pauli.md",
+      "runner_path": "scripts/cl3_koide_x_bae_pauli_2026_05_08_probeX_bae_pauli.py",
+      "title": "Koide BAE Probe X \u2014 Pauli Antisymmetrization on the C_3[111] Triplet"
+    },
     "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar": {
       "claim_id": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
       "claim_type_author_hint": "open_gate",
@@ -70065,7 +70132,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 336,
+      "bounded_theorem": 337,
       "meta": 71,
       "no_go": 44,
       "none": 1561,
@@ -70073,17 +70140,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 794,
+      "bounded_theorem": 795,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8753,
-    "leaf_count": 621,
-    "node_count": 2191,
+    "edge_count": 8764,
+    "leaf_count": 622,
+    "node_count": 2192,
     "root_count": 802,
-    "runners_with_path": 1804
+    "runners_with_path": 1805
   }
 }
