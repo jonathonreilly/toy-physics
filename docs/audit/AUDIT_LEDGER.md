@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1272 |
+| unaudited | 1271 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 160 |
+| ~~audited_conditional~~ | 161 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 160 |
+| `audited_conditional` | 161 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1385 |
+| `unaudited` | 1384 |
 
 | claim_type | count |
 |---|---:|
@@ -677,6 +677,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
+| `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5748,6 +5749,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The remaining Q bridge is compressed to the explicit primitive that the physical charged-lepton selector is source-free, K = 0, on the normalized second-order reduced carrier.  _(class `F`)_
 - **chain closes:** False — The packet explicitly leaves open why the physical charged-lepton selector should live on the admitted normalized second-order carrier and satisfy K = 0. The runner only checks algebraic equivalences around P_Q = 1/2 and does not derive the physical/source-law identification.
 - **rationale:** The source note is honest that it is a support batch and does not promote Q closure. Its load-bearing sharpening depends on an unproved identification of the physical charged-lepton selector with a source-free normalized reduced carrier. The runner verifies symbolic equivalences and some hard-coded representation-theoretic scalar matches, but it does not compute the missing primitive from the stated axiom packet.
+- **auditor confidence:** high
+
+### `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25`
+
+- **Note:** [`KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`](../../docs/KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded exact source-domain descent algebra from the admitted C3-commutant source grammar A = span{P_plus, P_perp} to strict onsite C3-fixed scalar source functions.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** If the retained C3-commutant source grammar A = span{P_plus, P_perp} is descended to strict onsite C3-fixed scalar source functions by a scalar-preserving, trace-preserving local source-domain map, then the descent is uniquely E_loc(X) = Tr(X)I/3 and erases the reduced traceless Z coordinate modulo the common scalar background.  _(class `A`)_
+- **chain closes:** False — The finite-dimensional descent algebra is verified by the runner with PASS=55/FAIL=0. The retained chain does not close because the note admits the staggered-Dirac realization gate and reads several authority files for the Q/source-domain context without registered retained one-hop dependencies proving the physical source-domain law.
+- **rationale:** Issue: the exact descent E_loc(X)=Tr(X)I/3 and Z-erasure algebra is proved only after admitting the C3-commutant source grammar and the staggered-Dirac/charged-lepton source-domain context; the runner also reads unregistered authority files to enforce the boundary. Why this blocks: retained Koide-route support requires those context inputs and the physical onsite-descent law to be retained one-hop authorities, not assumptions inside this row. Repair target: register and retain the staggered-Dirac realization gate plus the Q background-zero/source-domain authority notes, or split the row to a purely self-contained finite linear-algebra lemma with no physical Q implication. Claim boundary until fixed: exact bounded linear-algebra descent and Z-erasure modulo scalar background, conditional on the admitted source-domain context.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+  - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
+  - `KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md`
+  - `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
 - **auditor confidence:** high
 
 ### `koide_reviewer_stress_test_note_2026-04-21`
