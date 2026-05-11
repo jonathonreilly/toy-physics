@@ -92,7 +92,9 @@ J_0 = lambda^6 A^2 eta
 
 The `lambda^2 = alpha_s(v)/2` and `A^2 = 2/3` factors used in this
 factorisation are named separately in
-[`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md).
+`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
+(sibling companion subtheorem under the same CKM atlas; backticked to
+avoid length-2 cycle).
 
 The phase identities are pure structural numbers. The numerical value of
 `J_0` still inherits the separately cited `alpha_s(v)` input from the

@@ -21,8 +21,10 @@ lane.
 - [`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`](./CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) —
   promoted CKM atlas package.
 - `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md` — `5/6 = C_F - T_F` bridge support.
-- [`CKM_FROM_MASS_HIERARCHY_NOTE.md`](./CKM_FROM_MASS_HIERARCHY_NOTE.md) —
-  GST relation provenance.
+- `CKM_FROM_MASS_HIERARCHY_NOTE.md` (GST relation provenance; backticked
+  to avoid length-2 cycle — that note already cites this one as the
+  load-bearing one-hop authority for the down-type mass-ratio readings
+  in its PATH C cite-chain disposition).
 - [`CL3_TASTE_GENERATION_THEOREM.md`](./CL3_TASTE_GENERATION_THEOREM.md) —
   generation structure from the taste cube.
 - [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](./OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) — hierarchy theorem `v = M_Pl (7/8)^{1/4} alpha_LM^16`.
