@@ -1,0 +1,52 @@
+loop: v-scale-planck-convention
+cycle: 02
+block_slug: cluster-decomp-p1
+branch: physics-loop/v-scale-g1-cluster-decomp-20260510
+target_claim_type: bounded_theorem
+actual_current_surface_status: bounded support
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+
+source_note:
+  path: docs/OBSERVABLE_GENERATOR_ADDITIVITY_FROM_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-05-10.md
+  type: bounded_theorem
+  proposes_parent_flip: false
+
+parent_row:
+  cid: observable_principle_from_axiom_note
+  effective_status_at_session_start: audited_conditional
+  proposed_change: none
+
+runner:
+  path: scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py
+  result: "PASS=12 FAIL=0"
+
+current_status_surface: bounded support
+honest_status_text: |
+  Bounded structural-equivalence theorem on the finite-Grassmann surface
+  Z[J] = det(D+J) of the staggered Cl(3) hopping operator over a finite
+  block of Z^3. Proves (A1) <=> (A2) <=> (A3) where (A1) is P1 from the
+  parent observable-principle note, (A2) is W = log|Z| up to constant,
+  (A3) is W is the cumulant generating functional with mixed kernels
+  vanishing across no-cut-bond partitions.
+
+  Honest scope: the equivalence narrows P1 by showing it is
+  mathematically identical to the canonical cumulant-generator
+  definition in finite Grassmann field theory; it does NOT retire P1
+  because the definitional selection between additive-class and
+  non-additive functionals of Z[J] remains.
+
+  Parent row OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md remains
+  audited_conditional; no flip proposed.
+
+next_action: open review PR
+stop_condition: "PR opened; awaiting independent audit"
+
+v_gate:
+  v1_status: passed (verdict-identified obstruction quoted)
+  v2_status: passed (three-way equivalence + runner)
+  v3_status: failed_retained_bar (standard math can do most; the new framing of A3 as load-bearing equivalent of P1 is the marginal addition)
+  v4_status: passed (non-trivial cluster-decomp + cut-bond counterfactual)
+  v5_status: passed (distinct from cycle-08 enumeration and 2026-05-09 P2/P3/P4 update)
+  retained_promotion_eligible: false
+  bounded_support_eligible: true
