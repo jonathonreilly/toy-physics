@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 80 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 247 |
+| **retained_bounded** | 248 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1103 |
+| unaudited | 1102 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 423 |
+| `audited_clean` | 424 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1201 |
+| `unaudited` | 1200 |
 
 | claim_type | count |
 |---|---:|
@@ -397,6 +397,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `restricted_strong_field_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `scalar_3plus1_temporal_ratio_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -8805,6 +8806,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retarded field does not collapse to the instantaneous row on refinement, but the split is not uniformly one-directional across the compact and refined rows.  _(class `C`)_
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the candidate retained-grade surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as candidate retained-grade. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
+- **auditor confidence:** high
+
+### `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`S1_REP_DIMENSION_READOFF_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/S1_REP_DIMENSION_READOFF_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded algebraic implication that a labelled rep-literal (p, c), with stipulated slot read-offs n_pair = p and n_color = c, gives n_quark = p*c, A^2 = p/c, and the listed rational corollaries.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c2-00bf-7d60-8435-b206a502322e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** From the definitions n_pair = p, n_color = c, and A^2 := n_pair / n_color, the forced closed form is A^2 = p / c.  _(class `A`)_
+- **chain closes:** True — The chain closes inside the scoped assumptions: D1-D3 explicitly define the read-offs and product, and R1-R4 plus C1-C3 are immediate algebraic consequences. No excluded physical bridge, gauge identification, PDG comparator, or derivation of the framework instance (2, 3) is needed for this bounded claim.
+- **rationale:** The note is narrowly scoped as an implication from explicit operational definitions, not as a derivation of those definitions or of the framework values. The runner hard-codes the stipulated read-offs, but for this claim that is not a defect because those read-offs are the stated hypotheses; it then verifies the quotient, product, corollaries, and example substitutions at exact symbolic precision. Within that boundary, the algebra is closed and there are no open dependency edges.
 - **auditor confidence:** high
 
 ### `s3_boundary_link_theorem_note`
