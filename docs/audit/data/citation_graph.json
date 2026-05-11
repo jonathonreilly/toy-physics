@@ -4525,6 +4525,10 @@
       "to": "plaquette_self_consistency_note"
     },
     {
+      "from": "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10",
+      "to": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "continuum_convergence_note",
       "to": "lattice_3d_l2_tail_stats_note"
     },
@@ -38815,6 +38819,19 @@
       "runner_path": "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py",
       "title": "Connes-Kreimer Bridge for the 16-Fold Blocking Composition \u2014 No-Go Theorem"
     },
+    "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10": {
+      "claim_id": "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "2ea08cb20971d43e2e21231151a9fb1f4a4f4ee2570c31f5134c9213ff703c28",
+      "path": "docs/CONNES_KREIMER_PARTIAL_SUM_RB_B4_EXTERNAL_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_connes_kreimer_partial_sum_rb_b4_external_bounded.py",
+      "title": "Connes-Kreimer Partial-Sum Rota-Baxter on B4 External Bounded Note"
+    },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
       "claim_type_author_hint": "meta",
@@ -67205,7 +67222,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 261,
+      "bounded_theorem": 262,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67214,7 +67231,7 @@
       "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 743,
+      "bounded_theorem": 744,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67222,10 +67239,10 @@
       "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8361,
-    "leaf_count": 567,
-    "node_count": 2116,
+    "edge_count": 8362,
+    "leaf_count": 568,
+    "node_count": 2117,
     "root_count": 794,
-    "runners_with_path": 1729
+    "runners_with_path": 1730
   }
 }

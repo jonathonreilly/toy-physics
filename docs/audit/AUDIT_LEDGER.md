@@ -23,7 +23,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 251 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1098 |
+| unaudited | 1099 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -46,11 +46,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1196 |
+| `unaudited` | 1197 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 836 |
+| `bounded_theorem` | 837 |
 | `decoration` | 15 |
 | `meta` | 106 |
 | `no_go` | 207 |
@@ -61,7 +61,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 1017 |
 | `high` | 52 |
-| `medium` | 261 |
+| `medium` | 262 |
 | `leaf` | 677 |
 
 - **Retained pending chain closure:** 2
@@ -69,10 +69,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1617
+- runners classified: 1618
 - runners with (C) first-principles compute hits: 826
 - runners with (D) external comparator hits: 448
-- decoration candidates (no C, no D): 175
+- decoration candidates (no C, no D): 176
 
 ## Top 25 by load-bearing score (topology only)
 
