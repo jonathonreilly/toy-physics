@@ -1,0 +1,56 @@
+========================================================================
+Cl(3) γ-involution determinant identity — narrow theorem runner
+========================================================================
+
+[Part 1] (G1) γ-involution = symplectic adjoint (cofactor)
+[G1 symbolic] γ(M) = adj(M):  PASS
+
+[Part 2] (G2)/(G2') γ-norm identity (symbolic)
+[G2 symbolic] M·γ(M) = det(M)·I_2:  PASS
+[G2 symbolic] ⟨M·γ(M)⟩_0 = det(M):  PASS
+
+[Part 3] (G2') γ-norm identity (numerical, 10 random M)
+[G2 numerical] |M|_γ = √|det(M)| on 10 random M: 10/10 PASS
+
+[Part 4] (G3) γ on vector grade (σ_i, I_2)
+[G3 vector] γ(σ_0=I_2) = +σ_0=I_2:  PASS
+[G3 vector] γ(σ_1) = -σ_1:  PASS
+[G3 vector] γ(σ_2) = -σ_2:  PASS
+[G3 vector] γ(σ_3) = -σ_3:  PASS
+
+[Part 5] (G3) γ on bivector grade (σ_i σ_j, i≠j)
+[G3 bivector] γ(σ_1σ_2) = -σ_1σ_2:  PASS
+[G3 bivector] γ(σ_1σ_3) = -σ_1σ_3:  PASS
+[G3 bivector] γ(σ_2σ_1) = -σ_2σ_1:  PASS
+[G3 bivector] γ(σ_2σ_3) = -σ_2σ_3:  PASS
+[G3 bivector] γ(σ_3σ_1) = -σ_3σ_1:  PASS
+[G3 bivector] γ(σ_3σ_2) = -σ_3σ_2:  PASS
+
+[Part 6] (G3) γ on pseudoscalar (matrix-level)
+[G3 pseudoscalar] γ(σ_1σ_2σ_3) = +σ_1σ_2σ_3 (matrix-level): PASS
+
+[Part 7] (G3) γ action on full Cl(3) 8-element basis
+[G3 basis] γ(I_2) = +I_2:  PASS
+[G3 basis] γ(σ_1) = -σ_1:  PASS
+[G3 basis] γ(σ_2) = -σ_2:  PASS
+[G3 basis] γ(σ_3) = -σ_3:  PASS
+[G3 basis] γ(σ_1 σ_2) = -σ_1 σ_2:  PASS
+[G3 basis] γ(σ_1 σ_3) = -σ_1 σ_3:  PASS
+[G3 basis] γ(σ_2 σ_3) = -σ_2 σ_3:  PASS
+[G3 basis] γ(ω = σ_1σ_2σ_3) = +ω = σ_1σ_2σ_3:  PASS
+
+[Part 8] (G4) Per-element γ-norm vs per-determinant readout boundary
+[G4 boundary] block-diagonal |det|^{1/2} = ∏|M_i|_γ: 5/5 PASS
+[G4 boundary] hopping → det(D_hop) ≠ det(M_1)·det(M_2):  PASS  (gap = -27/16)
+
+========================================================================
+SUMMARY: PASS=8 FAIL=0 TOTAL=8
+  PASS   G1
+  PASS   G2-symbolic
+  PASS   G2-numerical
+  PASS   G3-vector
+  PASS   G3-bivector
+  PASS   G3-pseudoscalar
+  PASS   G3-basis
+  PASS   G4-boundary
+========================================================================
