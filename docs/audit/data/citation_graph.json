@@ -14157,6 +14157,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
       "from": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09",
       "to": "microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09"
     },
@@ -43438,6 +43442,17 @@
       "runner_path": "scripts/FAMILY_COMPANION_COMPARE.py",
       "title": "Family Companion Compare Note"
     },
+    "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10": {
+      "claim_id": "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "247dc436847ddf9b83a469cb7237e14ba8a68d7d261720859e78556b0a5de05a",
+      "path": "docs/FERMION_PARITY_PAULI_TENSOR_INVOLUTION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_fermion_parity_pauli_tensor_exact_2026_05_10.py",
+      "title": "Fermion-Parity Pauli-Tensor Involution Narrow Theorem"
+    },
     "fermion_parity_z2_grading_theorem_note_2026-05-02": {
       "claim_id": "fermion_parity_z2_grading_theorem_note_2026-05-02",
       "claim_type_author_hint": "positive_theorem",
@@ -50708,6 +50723,19 @@
       "path": "docs/LHCM_Y_NORMALIZATION_FROM_ANOMALY_AND_CONVENTION_NOTE_2026-05-02.md",
       "runner_path": "scripts/frontier_lhcm_y_normalization.py",
       "title": "LHCM Y Normalization from Anomaly Cancellation and Electric-Charge Convention"
+    },
+    "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10": {
+      "claim_id": "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+      ],
+      "note_hash": "82ec99a6e475041c6bd1372dbacb3739f1c81dc21c1edfb0a1a291426fbd093f",
+      "path": "docs/LIEB_ROBINSON_EQUAL_TIME_TENSOR_LOCALITY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_lieb_robinson_equal_time_tensor_locality_exact_2026_05_10.py",
+      "title": "Lieb-Robinson (M1) Equal-Time Tensor-Locality Narrow Theorem"
     },
     "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09": {
       "claim_id": "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09",
@@ -59937,6 +59965,17 @@
       "runner_path": "scripts/frontier_single_axiom_information.py",
       "title": "Single Axiom: Conserved Information Flow Unifies Graph + Unitarity"
     },
+    "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10": {
+      "claim_id": "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "31bc9c14f41e8b771dbc0c0e8ce894a895da82f612135b9fd237c7ba35c3c8cd",
+      "path": "docs/SINGLE_CLOCK_STONE_FINITE_DIM_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py",
+      "title": "Single-Clock Stone Finite-Dim Uniqueness Narrow Theorem"
+    },
     "site_phase_cube_shift_intertwiner_note": {
       "claim_id": "site_phase_cube_shift_intertwiner_note",
       "claim_type_author_hint": null,
@@ -66510,6 +66549,7 @@
     "evolving_network_prototype_v6_note",
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
     "experiment_backmatch_query_pack_note",
+    "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10",
     "field_equation_derivation_note",
     "fifth_family_complex_boundary_note",
     "fifth_family_radial_boundary_note",
@@ -66837,6 +66877,7 @@
     "signed_gravity_response_lane_status_note_2026-04-26",
     "single_axiom_hilbert_note",
     "single_axiom_information_note",
+    "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10",
     "site_phase_cube_shift_intertwiner_note",
     "sixth_family_complex_boundary_note",
     "sixth_family_sheared_boundary_note",
@@ -67022,7 +67063,7 @@
       "no_go": 27,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 106
+      "positive_theorem": 109
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 736,
@@ -67031,12 +67072,12 @@
       "no_go": 134,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 606
+      "positive_theorem": 609
     },
-    "edge_count": 8352,
-    "leaf_count": 559,
-    "node_count": 2104,
-    "root_count": 789,
-    "runners_with_path": 1717
+    "edge_count": 8353,
+    "leaf_count": 562,
+    "node_count": 2107,
+    "root_count": 791,
+    "runners_with_path": 1720
   }
 }

@@ -6624,6 +6624,18 @@
       "dominant_class": null,
       "runner": "scripts/FAMILY_COMPANION_COMPARE.py"
     },
+    "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_fermion_parity_pauli_tensor_exact_2026_05_10.py"
+    },
     "fermion_parity_z2_grading_theorem_note_2026-05-02": {
       "assert_count": 0,
       "counts": {
@@ -11820,6 +11832,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_lhcm_y_normalization.py"
     },
+    "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_lieb_robinson_equal_time_tensor_locality_exact_2026_05_10.py"
+    },
     "light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09": {
       "assert_count": 1,
       "counts": {
@@ -16571,6 +16595,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_single_axiom_information.py"
+    },
+    "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py"
     },
     "site_phase_cube_shift_intertwiner_note": {
       "assert_count": 1,
@@ -21698,6 +21734,36 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/audit_companion_fermion_parity_pauli_tensor_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_lieb_robinson_equal_time_tensor_locality_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/audit_companion_reflection_positivity_gauge_half_cauchy_schwarz_exact_2026_05_10.py": {
       "assert_count": 1,
       "claims": [
@@ -21711,6 +21777,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/audit_companion_sm_hypercharge_uniqueness_algebraic_solution_enumeration_exact.py": {
@@ -44971,9 +45052,9 @@
       "B": 166,
       "C": 656,
       "D": 250,
-      "none": 413
+      "none": 416
     },
-    "runners_classified": 1605,
+    "runners_classified": 1608,
     "runners_with_C": 823,
     "runners_with_D": 447
   }

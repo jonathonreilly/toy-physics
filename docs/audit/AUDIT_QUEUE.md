@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1119
-**Ready (all deps already at retained-grade or metadata tiers):** 23
+**Total pending:** 1122
+**Ready (all deps already at retained-grade or metadata tiers):** 25
 
 By criticality:
 - `critical`: 689
 - `high`: 26
 - `medium`: 156
-- `leaf`: 248
+- `leaf`: 251
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -23,7 +23,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 6 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 723 | 11.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
 | 7 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 721 | 27.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 8 | `cpt_exact_note` | positive_theorem | unaudited | critical | 715 | 21.48 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
-| 9 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 712 | 16.98 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
+| 9 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 713 | 17.48 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
 | 10 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 709 | 9.97 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
 | 11 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 708 | 18.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
 | 12 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 706 | 15.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |

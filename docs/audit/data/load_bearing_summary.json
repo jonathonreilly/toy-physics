@@ -2,11 +2,11 @@
   "criticality_counts": {
     "critical": 1027,
     "high": 52,
-    "leaf": 737,
+    "leaf": 740,
     "medium": 288
   },
   "flagship_signal_used": false,
-  "node_count": 2104,
+  "node_count": 2107,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -19,14 +19,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 78.298,
-      "transitive_descendants": 889
+      "load_bearing_score": 78.299,
+      "transitive_descendants": 890
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 41.75,
-      "transitive_descendants": 860
+      "load_bearing_score": 41.752,
+      "transitive_descendants": 861
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -49,8 +49,8 @@
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 37.051,
-      "transitive_descendants": 749
+      "load_bearing_score": 37.053,
+      "transitive_descendants": 750
     },
     {
       "claim_id": "alpha_s_derived_note",
