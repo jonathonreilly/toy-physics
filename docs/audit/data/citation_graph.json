@@ -4369,6 +4369,26 @@
       "to": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
     },
     {
+      "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "to": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered"
+    },
+    {
+      "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "to": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "to": "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
       "to": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1"
     },
@@ -38667,6 +38687,23 @@
       "runner_path": "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py",
       "title": "T1.4 - 96-Dim Connes-Chamseddine H_F Construction Candidate on the Cl(3)/Z^3 Substrate"
     },
+    "closure_t2_df_physical_consequences_note_2026-05-10_t2df": {
+      "claim_id": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+        "cl3_sm_embedding_theorem",
+        "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
+        "staggered_dirac_kawamoto_smit_forcing_theorem_note_2026-05-07",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "a4b78ab6c23196f926b388bb1e10fd55406f2f9357b47ef66196a51df2879a60",
+      "path": "docs/CLOSURE_T2_DF_PHYSICAL_CONSEQUENCES_NOTE_2026-05-10_t2df.md",
+      "runner_path": "scripts/cl3_t2_df_physical_consequences_2026_05_10_t2df.py",
+      "title": "T2.7: Physical Consequences of D_F = Gamma_1 + Gamma_2 + Gamma_3"
+    },
     "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton": {
       "claim_id": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
       "claim_type_author_hint": "open_gate",
@@ -67347,7 +67384,7 @@
       "bounded_theorem": 264,
       "decoration": 1,
       "meta": 59,
-      "no_go": 27,
+      "no_go": 28,
       "none": 1628,
       "open_gate": 30,
       "positive_theorem": 114
@@ -67356,15 +67393,15 @@
       "bounded_theorem": 746,
       "decoration": 1,
       "meta": 59,
-      "no_go": 134,
+      "no_go": 135,
       "none": 451,
       "open_gate": 118,
       "positive_theorem": 614
     },
-    "edge_count": 8372,
-    "leaf_count": 574,
-    "node_count": 2123,
+    "edge_count": 8377,
+    "leaf_count": 575,
+    "node_count": 2124,
     "root_count": 798,
-    "runners_with_path": 1736
+    "runners_with_path": 1737
   }
 }
