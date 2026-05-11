@@ -2772,6 +2772,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py"
     },
+    "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 20,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_closure_t1_z10_z20_2026_05_10_t1z10z20.py"
+    },
     "closure_t2_df_physical_consequences_note_2026-05-10_t2df": {
       "assert_count": 0,
       "counts": {
@@ -23194,6 +23206,21 @@
         "B": 0,
         "C": 3,
         "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_closure_t1_z10_z20_2026_05_10_t1z10z20.py": {
+      "assert_count": 0,
+      "claims": [
+        "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 20,
+        "D": 4
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -45644,12 +45671,12 @@
     "dominant_class_distribution": {
       "A": 126,
       "B": 169,
-      "C": 661,
+      "C": 662,
       "D": 254,
       "none": 420
     },
-    "runners_classified": 1630,
-    "runners_with_C": 830,
-    "runners_with_D": 455
+    "runners_classified": 1631,
+    "runners_with_C": 831,
+    "runners_with_D": 456
   }
 }

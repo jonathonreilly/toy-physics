@@ -4393,6 +4393,26 @@
       "to": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
     },
     {
+      "from": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "to": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a"
+    },
+    {
+      "from": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "to": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+    },
+    {
       "from": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
       "to": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered"
     },
@@ -38785,6 +38805,23 @@
       "runner_path": "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py",
       "title": "T1.4 - 96-Dim Connes-Chamseddine H_F Construction Candidate on the Cl(3)/Z^3 Substrate"
     },
+    "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20": {
+      "claim_id": "closure_t1_z10_z20_bz_integrals_note_2026-05-10_t1z10z20",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (numerically positive at SU(3), N_f=0; scope-bounded)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+      ],
+      "note_hash": "4f1db168379c1ae1e262ccc4fd630f69e56ed684c79fcd02c7fd7ba569fe8fec",
+      "path": "docs/CLOSURE_T1_Z10_Z20_BZ_INTEGRALS_NOTE_2026-05-10_t1z10z20.md",
+      "runner_path": "scripts/cl3_closure_t1_z10_z20_2026_05_10_t1z10z20.py",
+      "title": "Closure T1 --- Numerical Computation of Z_10^{HK->MS}, Z_20^{HK->MS} via 4D Brillouin-Zone Integration: Bounded-Tier Source Note"
+    },
     "closure_t2_df_physical_consequences_note_2026-05-10_t2df": {
       "claim_id": "closure_t2_df_physical_consequences_note_2026-05-10_t2df",
       "claim_type_author_hint": "no_go",
@@ -67541,7 +67578,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 268,
+      "bounded_theorem": 269,
       "decoration": 1,
       "meta": 59,
       "no_go": 28,
@@ -67550,7 +67587,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 750,
+      "bounded_theorem": 751,
       "decoration": 1,
       "meta": 59,
       "no_go": 135,
@@ -67558,10 +67595,10 @@
       "open_gate": 119,
       "positive_theorem": 614
     },
-    "edge_count": 8397,
+    "edge_count": 8402,
     "leaf_count": 579,
-    "node_count": 2129,
+    "node_count": 2130,
     "root_count": 799,
-    "runners_with_path": 1742
+    "runners_with_path": 1743
   }
 }
