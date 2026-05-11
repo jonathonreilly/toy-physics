@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1242 |
+| unaudited | 1241 |
 | audit_in_progress | 2 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 188 |
+| ~~audited_conditional~~ | 189 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,20 +43,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 4 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 189 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1352 |
+| `unaudited` | 1351 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 877 |
+| `bounded_theorem` | 876 |
 | `decoration` | 13 |
 | `meta` | 115 |
 | `no_go` | 219 |
-| `open_gate` | 113 |
+| `open_gate` | 114 |
 | `positive_theorem` | 747 |
 
 | criticality | count |
@@ -668,6 +668,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_cl3_selector_gap_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -5716,6 +5717,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the standard root-of-unity identity and the definitions of a_0 and z, the note derives a_0 = sqrt(3) a and z = sqrt(3) b, hence a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2.  _(class `A`)_
 - **chain closes:** True — The conclusions follow directly from the stated definitions and the cube-root identities 1 + omega + omega^2 = 0 and omega^3 = 1. No cited dependency, physical readout, fitted value, or external comparator is needed.
 - **rationale:** The proof is a genuine class-A algebraic closure over explicitly stated symbols and root-of-unity identities. The runner source performs exact symbolic checks of the same Fourier identities and includes no hidden physical bridge, tuned comparator, or imported dependency. The audited boundary is only the polynomial-algebra bridge, not any Koide, Wilson, charged-lepton, or selection-principle claim.
+- **auditor confidence:** high
+
+### `koide_cl3_selector_gap_note_2026-04-19`
+
+- **Note:** [`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`](../../docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open selector-gap inventory for the charged-lepton m_* problem: the cited parent supports only the V_eff coefficient assignment and V_eff-vs-m_* gap, while the listed doublet, baryon, SU(3), degeneracy, H_* witness, full-4x4, transport, and kappa_* routes remain pending direct retained dependencies or runners.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-koide-cl3-selector-gap`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The global Cl(3)-alone selector-gap/no-route conclusion is treated as an open selector-gap inventory, with only the parent V_eff coefficient assignment supported by the one-hop authority.  _(class `B`)_
+- **chain closes:** False — The direct parent is retained for the local V(m) coefficient assignment only; it explicitly excludes the charged-lepton mass selector, H_* witness, PDG comparator, transport observation, and broader route-exhaustion claims. No runner or retained one-hop dependency closes the listed route failures or the global Cl(3)-alone non-derivability statement.
+- **rationale:** Issue: the note still contains broad route-exhaustion and no-Cl(3)-route language, but the cited parent authority only supports the V_eff coefficient assignment and the V_eff-vs-m_* gap. Why this blocks: a reader cannot infer that the doublet, baryon, SU(3), degeneracy, H_* witness, full-4x4, transport, or kappa_* routes are exhausted from the one-hop dependency. Repair target: split each route into a direct retained dependency or runner-backed negative result, and leave the global Cl(3)-alone non-derivability statement as an open gate until those routes are closed. Claim boundary until fixed: this row may be cited as an open selector-gap inventory and as a pointer to the parent V_eff gap, not as a closed bounded no-go theorem.
 - **auditor confidence:** high
 
 ### `koide_cone_completing_root_narrow_theorem_note_2026-05-02`

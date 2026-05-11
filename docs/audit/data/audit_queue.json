@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 701,
+    "critical": 700,
     "high": 38,
     "leaf": 335,
     "medium": 178
@@ -5572,29 +5572,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 439
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.665,
-      "note_path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 405
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38928,6 +38905,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 96,
-  "total_pending": 1252
+  "ready_count": 95,
+  "total_pending": 1251
 }
