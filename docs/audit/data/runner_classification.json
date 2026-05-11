@@ -7320,6 +7320,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_g_newton_born_as_source_2026_05_10_gnewtonG2.py"
     },
+    "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_g_newton_mass_linear_poisson_composition_bounded.py"
+    },
     "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4": {
       "assert_count": 1,
       "counts": {
@@ -31545,6 +31557,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_g_newton_mass_linear_poisson_composition_bounded.py": {
+      "assert_count": 1,
+      "claims": [
+        "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_g_weak_from_framework.py": {
       "assert_count": 0,
       "claims": [
@@ -46490,15 +46517,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 192,
+    "decoration_candidates": 193,
     "dominant_class_distribution": {
-      "A": 140,
+      "A": 141,
       "B": 172,
       "C": 672,
       "D": 256,
       "none": 421
     },
-    "runners_classified": 1661,
+    "runners_classified": 1662,
     "runners_with_C": 845,
     "runners_with_D": 463
   }

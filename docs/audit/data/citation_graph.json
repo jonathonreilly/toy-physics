@@ -9633,6 +9633,26 @@
       "to": "newton_law_derived_note"
     },
     {
+      "from": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
+      "from": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "to": "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3"
+    },
+    {
+      "from": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "to": "gravity_clean_derivation_note"
+    },
+    {
+      "from": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "to": "gravity_full_self_consistency_note"
+    },
+    {
+      "from": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "to": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+    },
+    {
       "from": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
       "to": "koide_a1_probe_gravity_phase_bounded_obstruction_note_2026-05-08_probe3"
     },
@@ -44632,6 +44652,23 @@
       "runner_path": "scripts/cl3_g_newton_born_as_source_2026_05_10_gnewtonG2.py",
       "title": "G_Newton Born Position-Density Extension \u2014 Bounded Support (gnewtonG2)"
     },
+    "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10": {
+      "claim_id": "g_newton_mass_linear_poisson_composition_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+        "g_newton_weak_field_response_bounded_closure_note_2026-05-10_gnewtong3",
+        "gravity_clean_derivation_note",
+        "gravity_full_self_consistency_note",
+        "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4"
+      ],
+      "note_hash": "78ecbf9241923b1f8de463604f8cdac250bf6b9620fcbd9423880c417a3fc1a6",
+      "path": "docs/G_NEWTON_MASS_LINEAR_POISSON_COMPOSITION_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_g_newton_mass_linear_poisson_composition_bounded.py",
+      "title": "G-Newton Mass-Linear Poisson Composition Bounded Theorem"
+    },
     "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4": {
       "claim_id": "g_newton_self_consistency_bounded_sharpening_note_2026-05-10_planckp4",
       "claim_type_author_hint": "bounded_theorem",
@@ -68190,7 +68227,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 274,
+      "bounded_theorem": 275,
       "decoration": 1,
       "meta": 61,
       "no_go": 31,
@@ -68199,7 +68236,7 @@
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 756,
+      "bounded_theorem": 757,
       "decoration": 1,
       "meta": 61,
       "no_go": 138,
@@ -68207,10 +68244,10 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8450,
+    "edge_count": 8455,
     "leaf_count": 606,
-    "node_count": 2161,
+    "node_count": 2162,
     "root_count": 822,
-    "runners_with_path": 1774
+    "runners_with_path": 1775
   }
 }

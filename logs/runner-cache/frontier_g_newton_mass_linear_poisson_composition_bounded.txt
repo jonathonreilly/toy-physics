@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_newton_mass_linear_poisson_composition_bounded.py
+runner_sha256: 95d586cd8b8798ba2e1de22222f8c7ce85a3fb18fe188d4676d3f9dffe95e718
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+G-Newton mass-linear Poisson composition bounded theorem
+
+========================================================================================
+Dependency packet exists
+========================================================================================
+[PASS] dependency source present: docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+[PASS] dependency source present: docs/G_NEWTON_WEAK_FIELD_RESPONSE_BOUNDED_CLOSURE_NOTE_2026-05-10_gnewtonG3.md
+[PASS] dependency source present: docs/G_NEWTON_SELF_CONSISTENCY_BOUNDED_SHARPENING_NOTE_2026-05-10_planckP4.md
+[PASS] dependency source present: docs/GRAVITY_CLEAN_DERIVATION_NOTE.md
+[PASS] dependency source present: docs/GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md
+
+========================================================================================
+Finite-stencil Laplacian linearity
+========================================================================================
+[PASS] -Delta_lat(alpha f + beta g) linear on L=8 (max_abs_err=2.132e-14)
+[PASS] -Delta_lat(alpha f + beta g) linear on L=16 (max_abs_err=2.132e-14)
+[PASS] nearest-neighbor stencil has coefficients 6, -1, 0 (origin=6.0, nn=-1.0, far=0.0)
+
+========================================================================================
+Periodic Poisson inverse linearity
+========================================================================================
+[PASS] (-Delta_lat)^(-1)(alpha rho1 + beta rho2) = alpha V1 + beta V2 (rel_err=3.532e-16)
+[PASS] Poisson residual closes on zero-mean source (max_abs_residual=8.882e-15)
+
+========================================================================================
+Mass-source map linearity
+========================================================================================
+[PASS] sum_x rho_mass(x; M) = M for normalized rho_grav (max_abs_err=1.776e-15)
+[PASS] rho_mass(alpha M) = alpha rho_mass(M) (max_abs_err=0.000e+00)
+[PASS] rho_mass(M1 + M2) = rho_mass(M1) + rho_mass(M2) (max_abs_err=2.776e-17)
+
+========================================================================================
+End-to-end V(.; M) = M V_unit
+========================================================================================
+[PASS] Gaussian source: V(M)=M V_unit for M grid (max_rel_err=2.288e-16)
+[PASS] Point source: V(M)=M V_unit for M grid (max_rel_err=9.305e-17)
+[PASS] V(M1 + M2) = V(M1) + V(M2) (rel_err=2.776e-16)
+[PASS] multi-source mass superposition is linear (rel_err=6.651e-17)
+
+========================================================================================
+TOTAL: PASS=17, FAIL=0
+========================================================================================
+
+----- stderr -----
+
