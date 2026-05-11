@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 269,
+    "leaf": 268,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31127,30 +31127,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wide_family_h0125_bridge_reopen_audit",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "lattice_3d_l2_numpy_h0125_bridge_note",
-        "h2t_h0125_narrow_bridge_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wilson_two_body_open_refined_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38405,6 +38381,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 33,
-  "total_pending": 1199
+  "ready_count": 32,
+  "total_pending": 1198
 }

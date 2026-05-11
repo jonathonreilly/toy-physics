@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 292 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1168 |
+| unaudited | 1167 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 200 |
+| ~~audited_conditional~~ | 201 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 489 |
-| `audited_conditional` | 200 |
+| `audited_conditional` | 201 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1281 |
+| `unaudited` | 1280 |
 
 | claim_type | count |
 |---|---:|
@@ -824,6 +824,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `wide_family_h0125_bridge_reopen_audit` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wilson_test_mass_continuum_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -11440,6 +11441,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Across G in {5, 10} and three graph families with seeds 42..46, attractive coupling produces w_asym < 1 in 14/15 runs with mean width effects 9.5% and 13.5%; one growing run flips with w_asym = 1.0725.  _(class `C`)_
 - **chain closes:** True — The bounded claim is purely numerical from the runner: counts of w_asym < 1 across 15 runs, mean width effects, and shell-force counts. The note correctly does NOT promote this to closure of the off-lattice blocker; the bounded scope here is exactly the regime-finding fact that weak-coupling is the strongest currently observed sign-sensitive regime.
 - **rationale:** Within the stated 14/15 numerical scope on the named graph battery, the chain closes by direct measurement. The note explicitly enumerates what it does not close (universal sign-selection, clean 0/40 repulsive shell-force, frozen retained semantics), so the bounded interpretation matches the source's safe read. No upgrade to retained closure is implied.
+- **auditor confidence:** high
+
+### `wide_family_h0125_bridge_reopen_audit`
+
+- **Note:** [`WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md`](../../docs/WIDE_FAMILY_H0125_BRIDGE_REOPEN_AUDIT.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded reopen decision for the h=0.125 3D 1/L^2+h^2 bridge family: retained dependencies support the fixed/reduced-family negative through h=0.125 with clean Born/k=0 but F~M about 0.50 or no recovered TOWARD/F~M bridge; the wider phys_w=4 continuation and no-live-reopen conclusion remain conditional pending a retained direct artifact/dependency.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current fixed bridge family now resolves as a bounded negative for weak-field closure and the first wider phys_w=4 continuation also resolves as a bounded negative on the tested retained row.  _(class `C`)_
+- **chain closes:** False — The direct retained dependencies close the fixed and reduced h=0.125 negative results, but this row also claims the first wider phys_w=4 continuation resolves as a bounded negative and has no primary runner or retained one-hop dependency carrying that wider replay table.
+- **rationale:** Issue: the fixed/reduced-family h=0.125 negatives are supported by retained-bounded dependencies, but the note's wider-family reopen conclusion imports a phys_w=4 replay and no-live-reopen decision that are not supplied as a primary runner output or retained one-hop dependency. Why this blocks: the audit packet can verify the fixed-family F~M about 0.50 and reduced-family no-bridge results, but cannot independently verify the wider-family alpha=0.499 row or the exhaustive reopen conclusion. Repair target: add a retained direct note/log/runner artifact for the phys_w=4 continuation, or narrow this row to the already-retained fixed/reduced-family negative. Claim boundary until fixed: cite this as a conditional reopen assessment whose fixed-family h=0.125 negative core is retained by its dependencies.
+- **open / conditional deps cited:**
+  - `missing retained direct artifact for scripts/lattice_3d_l2_wide.py phys_w=4 continuation table`
 - **auditor confidence:** high
 
 ### `wide_lattice_h2t_distance_law_note`
