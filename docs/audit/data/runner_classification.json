@@ -11484,6 +11484,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py"
     },
+    "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 15,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_v_bae_maxent_2026_05_08_probeV_bae_maxent.py"
+    },
     "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3": {
       "assert_count": 1,
       "counts": {
@@ -24578,6 +24590,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_v_bae_maxent_2026_05_08_probeV_bae_maxent.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 15,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_v_bae_s3_2026_05_08_probeV_bae_s3.py": {
@@ -46980,12 +47007,12 @@
     "dominant_class_distribution": {
       "A": 145,
       "B": 172,
-      "C": 679,
+      "C": 680,
       "D": 263,
       "none": 420
     },
-    "runners_classified": 1679,
-    "runners_with_C": 858,
-    "runners_with_D": 476
+    "runners_classified": 1680,
+    "runners_with_C": 859,
+    "runners_with_D": 477
   }
 }

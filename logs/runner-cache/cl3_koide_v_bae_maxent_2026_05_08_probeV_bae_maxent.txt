@@ -1,0 +1,187 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_v_bae_maxent_2026_05_08_probeV_bae_maxent.py
+runner_sha256: 1c44291f6563f87b882fd8f63d99ee8e500c29cd871fad06961f99bb938cbedf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+
+======================================================================
+Section 0 — Input sanity: C_3 cycle, circulant H, Born density
+======================================================================
+[PASS]  0.1  C is unitary
+[PASS]  0.2  C has order 3 (C^3 = I)
+[PASS]  0.3  H = aI + bC + bbar C^2 is Hermitian
+[PASS]  0.4  [H, C] = 0 (C_3-equivariance)
+[PASS]  0.5  Gibbs state has Tr = 1
+         Tr(rho) = 1.000000
+[PASS]  0.6  Gibbs state is PSD (eigenvalues >= 0)
+         min eigval = 5.894725e-02
+[PASS]  0.7  Gibbs state commutes with H
+[PASS]  0.8  Born density p_x >= 0
+         min p_x = 3.333333e-01
+[PASS]  0.9  Born density Sum_x p_x = 1
+         sum = 1.000000
+
+======================================================================
+Section 1 — MaxEnt: variational derivation of Gibbs state
+======================================================================
+[PASS]  1.1  Gibbs state S_gibbs > 0
+         S_gibbs(beta=1.5) = 0.6587, E = 1.0517
+[PASS]  1.2  Gibbs is entropy maximizer at fixed (Tr=1, Tr-rho-H=E)
+         S_gibbs = 0.6587, max constraint-projected random S = -inf (0 valid)
+[PASS]  1.3  Z = Tr(e^{-beta H}) = sum exp(-beta lambda_k)
+         Z = 0.398963
+
+======================================================================
+Section 2 — TH-AV1: Gibbs from MaxEnt on circulants — no BAE pin
+======================================================================
+[PASS]  2.1  Circulant eigenvalues = a + 2|b| cos(phi - 2*pi*k/3)
+         max diff = 1.08e-15
+[PASS]  2.2  Gibbs distribution p_k smooth across |b|/a sweep (no jump at BAE)
+         max ||p(bm_i+1) - p(bm_i)|| over Δ|b|=0.04 = 0.0321
+[PASS]  2.3  At BAE point, Gibbs p_k is NOT (1/3, 1/3, 1/3) — no isotype equipartition
+         p_BAE = [0.05135812 0.47432094 0.47432094], range = 0.4230
+[PASS]  2.4  Gibbs at (a=1.0, b=(0.5+0j)) satisfies Tr(rho)=1, Tr(rho H)=E
+         Tr=1.0000, E=0.6506
+[PASS]  2.4  Gibbs at (a=1.0, b=(0.7071067811865475+0j)) satisfies Tr(rho)=1, Tr(rho H)=E
+         Tr=1.0000, E=0.4128
+[PASS]  2.4  Gibbs at (a=1.0, b=(1.5+0.5j)) satisfies Tr(rho)=1, Tr(rho H)=E
+         Tr=1.0000, E=-1.0855
+[PASS]  2.5  MaxEnt with (Tr=1, Tr-H=E) does NOT optimize over (a, b)
+         rho = e^{-beta H}/Z; (a, b) are H's parameters, not state's
+
+======================================================================
+Section 3 — TH-AV2: Liouville on Herm_circ(3) phase space
+======================================================================
+[PASS]  3.1  Herm_circ(3) is 3-real-dim configuration space
+         dofs: (a, Re b, Im b)
+[PASS]  3.2  Isotype split: 1 (trivial) + 2 (doublet) = 3
+         Probe 28 confirmed (1, 2) real-dim split on Herm_circ(3)
+[PASS]  3.3  Equipartition over (a, Re b, Im b) gives ⟨|b|^2⟩/⟨a^2⟩ = 2 k_a/k_b
+         Depends on coupling constants k_a, k_b in H, not on MaxEnt itself
+[PASS]  3.4  Equipartition does NOT force k_a/k_b = 1/4 (i.e., |b|^2/a^2 = 1/2)
+         k_a, k_b are external; (1, 1) weighting is the BAE admission
+
+======================================================================
+Section 4 — TH-AV3: Isotype-equipartition E_+ = E_perp recovers BAE
+======================================================================
+[PASS]  4.1  ||H||_F^2 = E_+ + E_perp at (a=1.0, b=(0.5+0j))
+         ||H||_F^2=4.5000, E_++E_perp=4.5000
+[PASS]  4.1  ||H||_F^2 = E_+ + E_perp at (a=2.0, b=(1+0.5j))
+         ||H||_F^2=19.5000, E_++E_perp=19.5000
+[PASS]  4.1  ||H||_F^2 = E_+ + E_perp at (a=1.0, b=(0.7071+0j))
+         ||H||_F^2=5.9999, E_++E_perp=5.9999
+[PASS]  4.2  BAE point: |b|^2/a^2 = 1/2
+         |b|^2/a^2 = 0.5000
+[PASS]  4.3  E_+ = E_perp at BAE point
+         E_+ = 3.0000, E_perp = 3.0000
+[PASS]  4.4  Tr(rho H) = E does NOT imply E_+(H) = E_perp(H)
+         Tr is sum over both isotypes; isotype-equipartition is extra constraint
+[PASS]  4.5  Imposing E_+ = E_perp ⟺ imposing (1, 1) multiplicity = BAE admission
+         Equivalent to declaring 1 dof per isotype, weighted equally
+[PASS]  4.6  E_+ = E_perp algebraic ⟺ |b|^2/a^2 = 1/2
+         Matches the cited MRU weight-class relation; (1, 1) → kappa=2 → BAE
+
+======================================================================
+Section 5 — TH-AV4: Counting-of-degrees no-bridge
+======================================================================
+[PASS]  5.1  bbar = conj(b); not independent dof
+         b=(0.5+0.3j), bbar=(0.5-0.3j)
+[PASS]  5.2  Equal-coupling equipartition over (a, Re b, Im b) gives |b|^2/a^2 = 2
+         |b|^2/a^2 = 2.0000; opposite of BAE
+[PASS]  5.3  Sum of eigenvalues = 3a (trace constraint)
+         sum(lambda_k) = 4.5000, 3a = 4.5000
+[PASS]  5.4  (1/3) sum (lambda_k - a)^2 = 2 |b|^2 (eigenvalue variance)
+         var = 1.0400, 2|b|^2 = 1.0400
+
+======================================================================
+Section 6 — TH-AV5: Boltzmann/Gibbs has no special structure at BAE
+======================================================================
+[PASS]  6.1  Free energy F(|b|) is smooth across BAE (no kink)
+         max |F''| = 0.0006; F at BAE = -0.4615
+[PASS]  6.2  Entropy S(|b|) is smooth across BAE (no kink)
+         max |S''| = 0.0006; S at BAE = 0.8701
+[PASS]  6.3  Energy ⟨H⟩(|b|) is smooth across BAE (no kink)
+         max |E''| = 0.0012; E at BAE = 0.4086
+[PASS]  6.4  No thermodynamic phase transition at BAE point
+         F, S, E all C^infty across |b|/a = 1/sqrt(2)
+[PASS]  6.5  Max entropy on grid does NOT occur at BAE point
+         max S at |b|=0.0500, BAE at |b|=0.7071
+
+======================================================================
+Section 7 — TH-AV6: Classical equipartition does NOT pin |b|^2/a^2 = 1/2
+======================================================================
+[PASS]  7.1  Equal-coupling MB sampling gives ⟨|b|^2⟩/⟨a^2⟩ ~ 2
+         sampled ratio = 2.0059, expected = 2.0
+[PASS]  7.2  k_b = 4 k_a gives ⟨|b|^2⟩/⟨a^2⟩ ~ 1/2
+         sampled ratio = 0.5015, expected = 0.5
+[PASS]  7.3  k_b = 0.5 k_a gives ⟨|b|^2⟩/⟨a^2⟩ ~ 4
+         sampled ratio = 4.0118, expected = 4.0
+[PASS]  7.4  Classical equipartition: ratio depends on couplings, not on MaxEnt
+         k_a/k_b = 1/4 needed for BAE; equivalent to (1,1) multiplicity
+
+======================================================================
+Section 8 — Probe comparison and claim boundary
+======================================================================
+[PASS]  8.1  Operator level (Probes 12-30): (1, 2) real-dim canonical, F1/BAE absent
+         C_3 isotype split; trivial 1-real-dim + doublet 2-real-dim
+[PASS]  8.2  Wave-function route not load-bearing in this runner
+         No wave-function companion theorem is used to prove the MaxEnt decoupling
+[PASS]  8.3  Topological route not load-bearing in this runner
+         No topological companion theorem is used to prove the MaxEnt decoupling
+[PASS]  8.4  Thermodynamic level (Probe V, this probe): Gibbs from MaxEnt, no BAE pin
+         rho = e^{-beta H}/Z; F, S, E all smooth in (a, b)
+[PASS]  8.5  No broader route-family closure claimed by this runner
+         Claim is limited to the thermodynamic / MaxEnt route
+
+======================================================================
+Section 9 — Convention robustness (basis change, beta sweep)
+======================================================================
+[PASS]  9.1  Relabeled basis: eigenvalues of H unchanged (basis-invariant)
+         max diff = 0.00e+00
+[PASS]  9.2  Entropy(beta) at BAE point smooth — no special beta
+         max |S''(beta)| = 0.0250
+[PASS]  9.3  Entropy at phi = entropy at phi + 2*pi/3 (C_3-symmetric)
+         S(phi)=0.813653, S(phi+2pi/3)=0.813653, diff=0.00e+00
+
+======================================================================
+Section 10 — Sharpened terminal residue: thermodynamic route
+======================================================================
+[PASS]  10.1  Thermodynamic route residue: BAE still requires (1, 1) multiplicity
+         MaxEnt/Gibbs does not derive |b|^2/a^2 = 1/2
+[PASS]  10.2  Isotype-equipartition E_+ = E_perp ⟺ (1, 1) admission
+         Equivalent to MRU weight-class theorem with kappa = 2
+[PASS]  10.3  No new admission — BAE admission count UNCHANGED
+         Probe V is a no-go route check with bounded support
+[PASS]  10.4  No new physics axiom — MaxEnt is standard variational calc
+         Jaynes 1957 MaxEnt principle; Lagrange multiplier derivation
+[PASS]  10.5  No PDG values, no lattice MC, no fitted matching
+         All computations use the physical Cl(3) and Z^3 baseline plus cited source surfaces
+
+======================================================================
+Section 11 — Does-not disclaimers
+======================================================================
+[PASS]  11.1  Does NOT close BAE-condition
+         BAE admission count unchanged; MaxEnt cannot derive |b|^2/a^2 = 1/2
+[PASS]  11.2  Does NOT add new axiom or admission
+         No new physics primitives; standard MaxEnt + cited source surfaces
+[PASS]  11.3  Does NOT modify source theorem
+         Uses cited BlockTotalFrob, MRU, and Born-density surfaces only
+[PASS]  11.4  Does NOT promote downstream theorem
+         Source-note proposal; audit lane sets effective status
+[PASS]  11.5  Does NOT load-bear PDG values
+         No fitted constants; pure structural argument
+[PASS]  11.6  Does NOT promote external surveys to source authority
+         Jaynes 1957 cited as standard mathematical machinery, not a physics primitive
+[PASS]  11.7  Does NOT replace operator-level probes
+         Complements them at a structurally distinct thermodynamic layer
+
+======================================================================
+=== TOTAL: PASS=64, FAIL=0 ===
+======================================================================
+
+
+----- stderr -----
+

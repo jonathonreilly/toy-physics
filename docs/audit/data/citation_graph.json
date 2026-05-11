@@ -14117,6 +14117,70 @@
       "to": "qcd_low_energy_running_bridge_note_2026-05-01"
     },
     {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "axiom_first_kms_condition_theorem_note_2026-05-01"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
       "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -51040,6 +51104,34 @@
       "runner_path": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py",
       "title": "Probe U-L1-Resurgence \u2014 QCD Trans-Series and Stokes Structure for \u03b2_2, \u03b2_3: Bounded-Tier Source Note"
     },
+    "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent": {
+      "claim_id": "koide_v_bae_maxentropy_thermal_note_2026-05-08_probev_bae_maxent",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (thermodynamic-level route rejection;",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "axiom_first_kms_condition_theorem_note_2026-05-01",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "three_generation_observable_theorem_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+      ],
+      "note_hash": "d1fe7c4fc9cebb78bd2b30427f395ff1742e2af44056eacf68ec1f48aac0d2cf",
+      "path": "docs/KOIDE_V_BAE_MAXENTROPY_THERMAL_NOTE_2026-05-08_probeV_bae_maxent.md",
+      "runner_path": "scripts/cl3_koide_v_bae_maxent_2026_05_08_probeV_bae_maxent.py",
+      "title": "Koide BAE Probe V \u2014 MaxEntropy / Thermodynamic Attack on the C_3[111] Triplet"
+    },
     "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3": {
       "claim_id": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
       "claim_type_author_hint": "no_go",
@@ -69204,7 +69296,7 @@
       "bounded_theorem": 285,
       "decoration": 1,
       "meta": 63,
-      "no_go": 41,
+      "no_go": 42,
       "none": 1621,
       "open_gate": 34,
       "positive_theorem": 134
@@ -69213,15 +69305,15 @@
       "bounded_theorem": 764,
       "decoration": 1,
       "meta": 63,
-      "no_go": 148,
+      "no_go": 149,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 631
     },
-    "edge_count": 8609,
-    "leaf_count": 616,
-    "node_count": 2179,
+    "edge_count": 8625,
+    "leaf_count": 617,
+    "node_count": 2180,
     "root_count": 821,
-    "runners_with_path": 1792
+    "runners_with_path": 1793
   }
 }
