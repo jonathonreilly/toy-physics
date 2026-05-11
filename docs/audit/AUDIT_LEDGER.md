@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 99 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 289 |
+| **retained_bounded** | 290 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1177 |
+| unaudited | 1176 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 485 |
+| `audited_clean` | 486 |
 | `audited_conditional` | 195 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1290 |
+| `unaudited` | 1289 |
 
 | claim_type | count |
 |---|---:|
@@ -559,6 +559,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_3d_initial_ramp_probe_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_3d_operator_consistent_end_to_end_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_3d_readout_convention_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `teleportation_3d_resource_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `teleportation_adiabatic_convergence_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_adiabatic_prep_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_adiabatic_time_evolution_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -10360,6 +10361,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Raw xi_5 = Z_r * product_{a != r} Z_a, so it is a signed logical Z_r only after fixing spectator taste bits and is not the traced retained-bit operator Z_r tensor I_spectator.  _(class `A`)_
 - **chain closes:** True — The conclusion follows from the explicit Pauli tensor identity and the finite runner checks: retained Z_r/X_r factor as logical operators tensored with spectator identity, raw xi_5 fails traced factorization, and fixed spectator branches reduce raw xi_5 to signed Z_r. The note keeps the claim bounded to side=2/4 operator algebra and does not claim hardware readout or end-to-end teleportation resource closure.
 - **rationale:** The runner's seven acceptance gates are A-class algebraic/factorization checks and directly test the contested observable distinction rather than importing an external comparator or hidden dependency. Within the stated finite side=2/4 scope, the no-go for substituting raw xi_5 into traced retained-axis Z/Bell measurements closes. The note also preserves the valid reduced use: raw xi_5 remains allowed only in explicitly fixed spectator-branch algebra or in a future branch-conditioned workflow.
+- **auditor confidence:** high
+
+### `teleportation_3d_resource_probe_note`
+
+- **Note:** [`TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md`](../../docs/TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite numerical 3D side=2 teleportation-resource probe only: for the dense two-species N=8/H2_dim=64 Poisson-backed ground-state construction at mass=0 and G in {0,100,500,1000}, using retained last-taste-axis logical extraction and ideal ordinary two-qubit teleportation diagnostics, the null row stays non-resource, the G=500 and G=1000 rows are high Bell-frame resources in the Psi+ frame, Bob pre-message pairwise no-record input distance is at machine precision, and fixed Phi+ teleportation is poor unless the Bell frame is tracked. This excludes matter, mass, charge, energy, object, or faster-than-light transport; excludes physical preparation/readout workflow, side>2 scaling, dense side=4 claims, and unconditional teleportation-lane closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Dense finite-state computation of the 3D side=2 two-species ground state, reduction to a retained-axis two-qubit resource, Bell-frame overlap/fidelity diagnostics, and no-record input-independence checks.  _(class `C`)_
+- **chain closes:** True — The row is explicitly bounded to the smallest exact 3D side=2 numerical artifact with no ledger dependencies. The live runner reproduced the refreshed table and all acceptance gates: null non-resource, at least one non-null high Bell-frame resource, clean Bob pre-message input-independence, retained-axis extraction, and no side>2 scaling claim.
+- **rationale:** The source note's quantitative table matches the live runner modulo harmless last-digit ordering in no-signaling distances. The runner constructs the finite Hamiltonian, traces to the retained-axis logical two-qubit resource, applies standard ideal teleportation diagnostics, and reports the expected Psi+ Bell-frame boundary. The note is careful not to claim physical object transport, preparation/readout closure, or larger-surface scaling, so the bounded numerical readout is supported.
 - **auditor confidence:** high
 
 ### `teleportation_adiabatic_convergence_robustness_note`
