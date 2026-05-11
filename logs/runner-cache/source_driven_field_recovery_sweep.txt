@@ -1,13 +1,13 @@
 ===== runner cache v1 =====
 runner: scripts/source_driven_field_recovery_sweep.py
-runner_sha256: 2c2510d4f829b446dfd4976a57e954bd044c87f1636804ea6e066ccdf7cdf056
+runner_sha256: fb89e12f339058995362a70113f0097cfa959524d6d01be33760cde2eafefd72
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 103.94
+elapsed_sec: 62.96
 status: ok
 ----- stdout -----
 ====================================================================================
-SOURCE-DRIVEN FIELD RECOVERY SWEEP
+STAGE 1 — BROAD CALIBRATION SWEEP
   weak-field calibration sweep on the exact 3D lattice
 ====================================================================================
 telegraph parameters: c=0.45, damp=0.35
@@ -23,11 +23,49 @@ target max   toward      F~M  largest delta
      0.040     4/4    0.855  +9.073752e-02
      0.080     4/4    0.642  +1.105259e-01
 
+====================================================================================
+STAGE 2 — CONSERVATIVE POCKET REPLAY
+  exact 3D lattice, telegraph-style field, one conservative weak-field row
+====================================================================================
+h=0.5, W=6, L=30, c_field=0.4, damp=0.35, target_max=0.01
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 3.632538e-01
+
+       s         inst      dynamic   dyn/inst   max|f_dyn|
+--------------------------------------------------------------------
+  0.0010 +2.702607e-03 +3.601586e-03      1.333 1.250000e-03
+  0.0020 +5.393344e-03 +7.129776e-03      1.322 2.500000e-03
+  0.0040 +1.073461e-02 +1.396546e-02      1.301 5.000000e-03
+  0.0080 +2.122358e-02 +2.675231e-02      1.260 1.000000e-02
+
+POCKET SAFE READ
+  instantaneous F~M exponent: 0.99
+  dynamic F~M exponent: 0.96
+  dynamic TOWARD rows: 4/4
+  mean |dyn/inst| ratio: 1.304
+
+====================================================================================
+EXPLICIT THRESHOLD CHECKS
+====================================================================================
+  [PASS] pocket zero-source dynamic shift exactly zero (observed: +0.000000e+00)
+  [PASS] pocket TOWARD survives (4/4)
+  [PASS] pocket dynamic F~M exponent near linear (|alpha-1| <= 0.05; observed 0.965)
+  [PASS] broad sweep TOWARD survives across every target row (7/7)
+  [PASS] broad sweep exponent drift: smallest target near linear, largest target drifts away (smallest=0.997, largest=0.642)
+
+  total PASS: 5/5
+
+====================================================================================
 SAFE READ
+====================================================================================
   the minimal source-driven field has a real weak-field recovery pocket
   when the calibrated dynamic field stays small
   as the field calibration grows, the mass exponent drifts away from 1
   so the architecture is not dead, but it is calibration-sensitive
+
+RUNNER PASS=5 FAIL=0
 
 ----- stderr -----
 

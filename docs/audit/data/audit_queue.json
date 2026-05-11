@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 679,
+    "critical": 680,
     "high": 27,
     "leaf": 274,
     "medium": 162
@@ -7061,6 +7061,27 @@
     }
   ],
   "queue": [
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "source_driven_field_recovery_sweep_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.275,
+      "note_path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/source_driven_field_recovery_sweep.py",
+      "transitive_descendants": 437
+    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -37751,6 +37772,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 35,
-  "total_pending": 1142
+  "ready_count": 36,
+  "total_pending": 1143
 }

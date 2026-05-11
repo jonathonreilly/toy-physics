@@ -61037,7 +61037,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1f4b50ab5923bdcce54ea6fe6a666c22ad3e85dcc8ba18bc47f623b217a51811",
+      "note_hash": "0ddd435048f012f5265695d2ff4b85007af431e5988f1e3394678ea3341cb80d",
       "path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md",
       "runner_path": "scripts/source_driven_field_recovery_sweep.py",
       "title": "Source-Driven Field Recovery Sweep"

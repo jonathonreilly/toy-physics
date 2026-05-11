@@ -17173,15 +17173,15 @@
       "runner": "scripts/source_driven_field_recovery_h025_pocket.py"
     },
     "source_driven_field_recovery_sweep_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 8
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "runner": "scripts/source_driven_field_recovery_sweep.py"
     },
     "source_resolved_exact_green_h025_pocket_note": {
@@ -45118,7 +45118,7 @@
       "exists": true
     },
     "scripts/source_driven_field_recovery_sweep.py": {
-      "assert_count": 0,
+      "assert_count": 1,
       "claims": [
         "source_driven_field_recovery_sweep_note"
       ],
@@ -45126,10 +45126,10 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 8
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/source_resolved_exact_green_h025_pocket.py": {
@@ -46387,11 +46387,11 @@
       "A": 138,
       "B": 171,
       "C": 670,
-      "D": 255,
-      "none": 423
+      "D": 256,
+      "none": 422
     },
     "runners_classified": 1657,
     "runners_with_C": 842,
-    "runners_with_D": 462
+    "runners_with_D": 463
   }
 }
