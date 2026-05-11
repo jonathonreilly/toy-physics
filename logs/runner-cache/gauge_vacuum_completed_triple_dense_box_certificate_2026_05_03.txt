@@ -3,7 +3,7 @@ runner: scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.p
 runner_sha256: 4512d493e808d15b902e11f30780a1156f9cd932e1b37f290a1fe00ef2d09115
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 14.58
+elapsed_sec: 9.03
 status: ok
 ----- stdout -----
 ================================================================================
@@ -22,7 +22,7 @@ status: ok
 --- Build recurrence-matrix infrastructure ---
 
 --- Dense 6x6x5x8 = 1440 grid sweep ---
-  swept 1440 grid points in 0.5 s
+  swept 1440 grid points in 0.2 s
   min gap                     = 7.791551e-03
   median gap                  = 2.039034e-01
   max gap                     = 2.856130e-01

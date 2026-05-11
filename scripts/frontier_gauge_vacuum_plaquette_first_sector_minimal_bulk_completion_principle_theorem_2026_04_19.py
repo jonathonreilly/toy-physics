@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Canonical minimal-positive extension theorem for the first-sector Wilson
+Bounded minimal-bulk completion witness check for the first-sector Wilson
 factorized cone.
 
 The first-sector seam already fixes the retained coefficient packet `rho_ret`
@@ -11,10 +11,10 @@ on the first-symmetric support. Inside the exact Wilson factorized class
 admissible extensions are the nonnegative conjugation-symmetric full packets
 extending that retained data.
 
-Because the transfer map is positive and monotone in the coefficient packet,
-the zero extension is not merely an added preference rule. It is the unique
-coefficientwise least extension and the unique Loewner-minimal positive
-extension of the retained Wilson object inside the canonical factorized cone.
+For the explicit witness tails used by the source note, the zero extension is
+the coefficientwise least extension and minimizes the sampled positive
+bulk-tail functionals. The universal Loewner-minimal theorem for arbitrary
+admissible tails is not checked here and remains an open derivation gap.
 """
 
 from __future__ import annotations
@@ -117,27 +117,16 @@ def transfer_from_packet(weights: list[tuple[int, int]], rho: np.ndarray) -> np.
 
 def main() -> int:
     print("=" * 118)
-    print("GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION PRINCIPLE")
+    print("GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION WITNESS CHECK")
     print("=" * 118)
     print()
     print("Question:")
     print("  Once the retained first-sector packet rho_ret is fixed, is there already")
-    print("  one canonical Wilson-native positive extension law inside the factorized")
-    print("  cone, or is a separate completion principle still being postulated?")
+    print("  one bounded zero-extension witness inside the factorized cone, while")
+    print("  the universal Loewner/completion principle remains open?")
 
     truncated_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md")
     extension_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md")
-    # Stale-path: the tail-underdetermination note was moved to
-    # `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/`
-    # because its dedicated runner (declared but missing on disk) blocked an
-    # audit of THAT note. The substring checks below verify historical
-    # tail-underdetermination content that the archive preserves verbatim.
-    # Redirect to the archive location.
-    tail_note = read(
-        "archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/"
-        "GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md"
-    )
-
     rho_ret, z00 = retained_packet()
     _jmat, weights, index = build_recurrence_matrix(5)
     rho0 = zero_extension(weights, index, rho_ret)
@@ -170,8 +159,10 @@ def main() -> int:
         "Extend it by zero" in extension_note and "factorized class" in extension_note,
     )
     check(
-        "The tail-underdetermination theorem already shows nonzero higher-weight tails remain allowed above that retained packet",
-        "positive decaying higher-weight-tail extension" in tail_note and "not determine" in tail_note,
+        "The explicit witness tails add nonzero higher-weight mass above the retained packet",
+        ma["tail_support"] > 0 and mb["tail_support"] > 0
+        and ma["tail_mass"] > 0.0 and mb["tail_mass"] > 0.0,
+        f"(supportA,supportB,massA,massB)=({ma['tail_support']},{mb['tail_support']},{ma['tail_mass']:.3e},{mb['tail_mass']:.3e})",
     )
     check(
         "Among admissible nonnegative extensions, the zero extension is the unique coefficientwise least element",
@@ -179,20 +170,20 @@ def main() -> int:
         f"(tail_mass0,tail_minA,tail_minB)=({m0['tail_mass']:.3e},{ma['tail_min']:.3e},{mb['tail_min']:.3e})",
     )
     check(
-        "The Wilson factorized transfer map is monotone on that cone: every admissible positive tail produces a positive-semidefinite Loewner increment",
+        "The two explicit witness tails produce positive-semidefinite Loewner increments",
         float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
         and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12,
         f"(eigminA,eigminB)=({float(np.min(np.linalg.eigvalsh(delta_a))):.3e},{float(np.min(np.linalg.eigvalsh(delta_b))):.3e})",
     )
     check(
-        "Therefore the zero extension is the unique Loewner-minimal positive extension of the retained Wilson object inside the canonical factorized cone",
+        "For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested positive increments",
         float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
         and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12
         and m0["tail_mass"] == 0.0,
         f"||T_A-T_0||={np.linalg.norm(delta_a):.3e}",
     )
     check(
-        "Equivalently it uniquely minimizes every positive bulk-tail functional such as total tail mass, weighted tail mass, squared l2 mass, and support size",
+        "The zero extension minimizes the sampled positive bulk-tail functionals: total mass, weighted mass, squared l2 mass, and support size",
         ma["tail_mass"] > 0.0
         and mb["tail_mass"] > 0.0
         and ma["tail_dim_mass"] > 0.0
@@ -207,14 +198,13 @@ def main() -> int:
     print("\n" + "=" * 118)
     print("RESULT")
     print("=" * 118)
-    print("  Exact Wilson-native completion law:")
-    print("    - admissible extensions are nonnegative conjugation-symmetric full")
-    print("      coefficient sequences extending rho_ret in the canonical factorized class")
-    print("    - the minimal-support zero extension is the unique least element")
-    print("      both coefficientwise and in Loewner order on the induced transfer cone")
-    print("    - equivalently it uniquely minimizes every positive bulk-tail functional")
-    print("    - so the selected branch is the canonical minimal positive extension of")
-    print("      the retained Wilson object, not an extra ad hoc branch-choice rule")
+    print("  Bounded witness result:")
+    print("    - rho_ret has an explicit zero extension in the canonical factorized class")
+    print("    - the two witness positive tails remain above that zero extension")
+    print("      in coefficient order and in the tested Loewner increments")
+    print("    - the zero extension minimizes the sampled positive tail functionals")
+    print("    - the universal Loewner-minimal theorem for arbitrary admissible tails")
+    print("      remains an open derivation gap")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1

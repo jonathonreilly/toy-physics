@@ -139,7 +139,7 @@ ok("1c. Frobenius form is Ad-invariant: Tr(U^†AU·U^†BU) = Tr(AB) for U in U
 # definiteness of B_1 fixes c_1 > 0 uniquely up to scale; B_2 fails PD
 # (zero on traceless matrices), so only Tr(AB) is PD-canonical.
 B_2_on_traceless = sp.trace(X_tr) * sp.trace(X_tr)
-ok("1d. Only Tr(AB) is positive-definite on Herm(3) (the non-Tr alternative vanishes on traceless)",
+ok("1d. Tested non-Tr alternative vanishes on a non-zero traceless matrix",
    sp.trace(X_tr) == 0 and B_2_on_traceless == 0,
    f"Tr(X_tr) = {sp.trace(X_tr)}; alternative form vanishes on non-zero traceless matrix")
 
@@ -431,7 +431,7 @@ composite_ok = (
     and sp.simplify(kappa_value - 2) == 0
     and Q_value == sp.Rational(2, 3)
 )
-ok("8. COMPOSITE: AM-GM on log(E_+ · E_perp) forces kappa = 2 and Q = 2/3",
+ok("8. COMPOSITE: conditional on fixed Frobenius normalization, AM-GM on log(E_+ · E_perp) gives kappa = 2 and Q = 2/3",
    composite_ok,
    "chain (1)->(2)->(3)->(4)->(5)->(6)->(7)->(8) is gap-free and executable")
 
@@ -440,7 +440,7 @@ ok("8. COMPOSITE: AM-GM on log(E_+ · E_perp) forces kappa = 2 and Q = 2/3",
 # ==========================================================================
 
 print("=" * 72)
-print("FROBENIUS ISOTYPE SPLIT UNIQUENESS (I1 strengthening)")
+print("FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on fixed Frobenius normalization)")
 print("=" * 72)
 for line in log:
     print(line)
@@ -449,19 +449,20 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Each building block of the AM-GM attack is structurally fixed on the")
-    print("  admitted matrix-space route:")
+    print("  Conditional on the fixed Frobenius matrix-space normalization, the")
+    print("  AM-GM route has executable internal support:")
     print("    Tr(M^2)    = canonical Frobenius form on matrix algebra")
-    print("    P_0 = J/3  = unique C_3-singlet Hermitian projector")
-    print("    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2  [forced]")
-    print("    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2  [forced]")
+    print("    P_0 = J/3  = C_3-singlet Hermitian projector")
+    print("    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2")
+    print("    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2")
     print("    pieces positive and additive (Pythagoras)")
     print()
     print("  AM-GM then forces the extremum at E_+ = E_perp, giving")
     print("  kappa = a^2/|b|^2 = 2 and Q = 2/3.")
     print()
-    print("  Conclusion: this is the strongest current executable internal support")
-    print("  chain for the Koide Q route under {Cl(3), Herm_circ(3), C_3 action}.")
+    print("  Conclusion: this is executable internal support for the Koide Q route")
+    print("  under {Cl(3), Herm_circ(3), C_3 action} plus the fixed Frobenius")
+    print("  normalization convention.")
     print("  The physical/source-law bridge from this extremum to the charged-lepton")
     print("  packet remains a separate open item.")
     print()

@@ -1,19 +1,19 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py
-runner_sha256: 27e39e0392c8e49eb36e71bf8bdaf58833dc9df1df249886e4e2e2d5818d551f
+runner_sha256: 52bd6a9d83f8fcf7e0263724dbe6b4f090cc4b073990c9cb7cf4279bd1229b74
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 22.46
+elapsed_sec: 9.40
 status: ok
 ----- stdout -----
 ======================================================================================================================
-GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION PRINCIPLE
+GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION WITNESS CHECK
 ======================================================================================================================
 
 Question:
   Once the retained first-sector packet rho_ret is fixed, is there already
-  one canonical Wilson-native positive extension law inside the factorized
-  cone, or is a separate completion principle still being postulated?
+  one bounded zero-extension witness inside the factorized cone, while
+  the universal Loewner/completion principle remains open?
 
   z00_min                                     = 0.349606952458
   rho_ret                                     = [1.0, 0.267139565315, 0.267139565315, 0.0]
@@ -23,23 +23,22 @@ Question:
 
   [PASS] The truncated-packet theorem already fixes one exact retained packet rho_ret from the completed first-sector triple
   [PASS] The zero-extension theorem already proves that rho_ret admits one explicit full nonnegative conjugation-symmetric extension inside the canonical Wilson factorized class
-  [PASS] The tail-underdetermination theorem already shows nonzero higher-weight tails remain allowed above that retained packet
+  [PASS] The explicit witness tails add nonzero higher-weight mass above the retained packet  ((supportA,supportB,massA,massB)=(2,3,1.000e-01,8.000e-02))
   [PASS] Among admissible nonnegative extensions, the zero extension is the unique coefficientwise least element  ((tail_mass0,tail_minA,tail_minB)=(0.000e+00,0.000e+00,0.000e+00))
-  [PASS] The Wilson factorized transfer map is monotone on that cone: every admissible positive tail produces a positive-semidefinite Loewner increment  ((eigminA,eigminB)=(-1.094e-16,-3.212e-16))
-  [PASS] Therefore the zero extension is the unique Loewner-minimal positive extension of the retained Wilson object inside the canonical factorized cone  (||T_A-T_0||=2.606e-04)
-  [PASS] Equivalently it uniquely minimizes every positive bulk-tail functional such as total tail mass, weighted tail mass, squared l2 mass, and support size  ((massA,massB)=(1.000e-01,8.000e-02))
+  [PASS] The two explicit witness tails produce positive-semidefinite Loewner increments  ((eigminA,eigminB)=(-1.096e-16,-3.212e-16))
+  [PASS] For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested positive increments  (||T_A-T_0||=2.606e-04)
+  [PASS] The zero extension minimizes the sampled positive bulk-tail functionals: total mass, weighted mass, squared l2 mass, and support size  ((massA,massB)=(1.000e-01,8.000e-02))
 
 ======================================================================================================================
 RESULT
 ======================================================================================================================
-  Exact Wilson-native completion law:
-    - admissible extensions are nonnegative conjugation-symmetric full
-      coefficient sequences extending rho_ret in the canonical factorized class
-    - the minimal-support zero extension is the unique least element
-      both coefficientwise and in Loewner order on the induced transfer cone
-    - equivalently it uniquely minimizes every positive bulk-tail functional
-    - so the selected branch is the canonical minimal positive extension of
-      the retained Wilson object, not an extra ad hoc branch-choice rule
+  Bounded witness result:
+    - rho_ret has an explicit zero extension in the canonical factorized class
+    - the two witness positive tails remain above that zero extension
+      in coefficient order and in the tested Loewner increments
+    - the zero extension minimizes the sampled positive tail functionals
+    - the universal Loewner-minimal theorem for arbitrary admissible tails
+      remains an open derivation gap
 
 PASS=7 FAIL=0
 

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_koide_frobenius_isotype_split_uniqueness.py
-runner_sha256: 5da9b9ac4ede9e3e6ea949783eb1dd8e80fff620c19192f5cfff0c929e2350ef
+runner_sha256: 9e7cba5dc52366e5c7dcda1f3ae0597d3c5ff696d29aa5f8a88ef233a5ff9803
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.85
+elapsed_sec: 0.42
 status: ok
 ----- stdout -----
 
@@ -18,13 +18,13 @@ status: ok
     (8) AM-GM max at E_+ = E_perp ⟹ kappa = 2 ⟹ Q = 2/3
 
 ========================================================================
-FROBENIUS ISOTYPE SPLIT UNIQUENESS (I1 strengthening)
+FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on fixed Frobenius normalization)
 ========================================================================
 === (1) Frobenius form on Herm_circ(3) ===
   [PASS] 1a. Tr(M^2) = 3a^2 + 6|b|^2 = 3a^2 + 6(x^2+y^2): Tr(M^2) = 3*a**2 + 6*x**2 + 6*y**2
   [PASS] 1b. For Hermitian M, Tr(M^dagger M) = Tr(M^2) (symbolic identity): M = M^dagger ⟹ Tr(M^dagger M) = Tr(M^2)
   [PASS] 1c. Frobenius form is Ad-invariant: Tr(U^†AU·U^†BU) = Tr(AB) for U in U(3): Tr(AB) = 16, Tr(conj) = 16
-  [PASS] 1d. Only Tr(AB) is positive-definite on Herm(3) (the non-Tr alternative vanishes on traceless): Tr(X_tr) = 0; alternative form vanishes on non-zero traceless matrix
+  [PASS] 1d. Tested non-Tr alternative vanishes on a non-zero traceless matrix: Tr(X_tr) = 0; alternative form vanishes on non-zero traceless matrix
 
 === (2) Singlet projector uniqueness ===
   [PASS] 2a. P_0^2 = P_0 (idempotent): P_0 is a projector
@@ -62,24 +62,25 @@ FROBENIUS ISOTYPE SPLIT UNIQUENESS (I1 strengthening)
   [PASS] 7c. Q = (1 + 2/kappa)/d = 2/3 at kappa=2, d=3: Q = 2/3
 
 === (8) Composite forcing consistency ===
-  [PASS] 8. COMPOSITE: AM-GM on log(E_+ · E_perp) forces kappa = 2 and Q = 2/3: chain (1)->(2)->(3)->(4)->(5)->(6)->(7)->(8) is gap-free and executable
+  [PASS] 8. COMPOSITE: conditional on fixed Frobenius normalization, AM-GM on log(E_+ · E_perp) gives kappa = 2 and Q = 2/3: chain (1)->(2)->(3)->(4)->(5)->(6)->(7)->(8) is gap-free and executable
 
 Total: 28 PASS, 0 FAIL
 
 Verdict:
-  Each building block of the AM-GM attack is structurally fixed on the
-  admitted matrix-space route:
+  Conditional on the fixed Frobenius matrix-space normalization, the
+  AM-GM route has executable internal support:
     Tr(M^2)    = canonical Frobenius form on matrix algebra
-    P_0 = J/3  = unique C_3-singlet Hermitian projector
-    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2  [forced]
-    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2  [forced]
+    P_0 = J/3  = C_3-singlet Hermitian projector
+    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2
+    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2
     pieces positive and additive (Pythagoras)
 
   AM-GM then forces the extremum at E_+ = E_perp, giving
   kappa = a^2/|b|^2 = 2 and Q = 2/3.
 
-  Conclusion: this is the strongest current executable internal support
-  chain for the Koide Q route under {Cl(3), Herm_circ(3), C_3 action}.
+  Conclusion: this is executable internal support for the Koide Q route
+  under {Cl(3), Herm_circ(3), C_3 action} plus the fixed Frobenius
+  normalization convention.
   The physical/source-law bridge from this extremum to the charged-lepton
   packet remains a separate open item.
 

@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1156 |
-| meta | 101 |
+| unaudited | 1159 |
+| meta | 102 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
 | ~~audited_conditional~~ | 259 |
-| ~~audited_failed~~ | 27 |
+| ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -44,19 +44,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 429 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 13 |
-| `audited_failed` | 71 |
+| `audited_failed` | 67 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1257 |
+| `unaudited` | 1261 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 856 |
 | `decoration` | 15 |
-| `meta` | 109 |
+| `meta` | 110 |
 | `no_go` | 219 |
 | `open_gate` | 117 |
-| `positive_theorem` | 753 |
+| `positive_theorem` | 752 |
 
 | criticality | count |
 |---|---:|
@@ -837,14 +837,11 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_triplet_even_response_theorem_note_2026-04-15` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_neutrino_weak_triplet_coefficient_axiom_boundary_note_2026-04-15` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | B | - |
 | `edge_deletion_boundary_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `equivalence_principle_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | G | - |
 | `evolving_network_prototype_v2_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `fifth_family_complex_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `fifth_family_radial_fm_transfer_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `fifth_family_radial_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
-| `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | no_go | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | C | - |
-| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | A | - |
 | `gravitomagnetic_note` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -855,7 +852,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `if_program_closing_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `inverse_problem_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `kernel_vs_gravity_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
-| `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_spent_delay_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `lattice_gravity_resolution_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_high_precision_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -4232,19 +4228,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The load-bearing statement is a bounded algebraic/numerical harness result: global scalar amplitude cancels in the centroid ratio under the linear propagation used by the fixed family, and packet-shape dependence is directly measured by the same runner. No open dependency is imported, and the note keeps the claim boundary narrow by excluding persistent-pattern inertial-mass closure. Residual risk is limited to the uninspected implementation behind the imported lattice propagator, not to an overclaim in this source note.
 - **auditor confidence:** high
 
-### `equivalence_principle_note`
-
-- **Note:** [`EQUIVALENCE_PRINCIPLE_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the bounded statement that a lattice uniform-field beam sweep reportedly gives near-linear force-response exponents and does not derive equality of inertial and gravitational mass.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-equivalence_principle_no-217`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** A uniform-field deflection sweep on the lattice produces force responses that scale near-linearly with field strength and source strength, with exponents 1.008 and 0.998, while layer scaling is sub-quadratic at 1.14.  _(class `G`)_
-- **chain closes:** False — The bounded demotion of the equivalence-principle claim is internally clear, but the reported measured exponents are not supported by a runner, fit data, uncertainty model, or cited retained authority in the restricted packet.
-- **rationale:** The note explicitly avoids the strong equivalence-principle conclusion and correctly states that the missing force observable, mass-extraction theorem, source-normalization theorem, and action-coupling derivation prevent that chain from closing. However, even the bounded positive content relies on reported numerical exponents without the underlying runner, source code, fit tables, or upstream authority. With no cited authorities and no runner source available, the restricted packet cannot verify the measured sweep that carries the bounded claim.
-- **auditor confidence:** high
-
 ### `eta_188_structural_origin_partial_note_2026-05-03`
 
 - **Note:** [`ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md`](../../docs/ETA_188_STRUCTURAL_ORIGIN_PARTIAL_NOTE_2026-05-03.md)
@@ -5010,19 +4993,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The retained claim is a no-go, not support for the remaining beta-dependent program. The obstruction closes by exact small-beta algebra: equal analytic expansions of the same plaquette observable require equal first derivatives at beta=0, and the candidate constant lift has the wrong derivative. The runner hard-codes the elementary Haar slope rather than independently deriving Haar integration, but the source derivation is explicit enough and the runner checks the decisive slope mismatch for the scoped no-go. Residual risk is limited to normalization conventions for the plaquette/action; within the conventions stated in the note, the conclusion follows.
 - **auditor confidence:** high
 
-### `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Audited only the current explicit beta=6 spatial_pair witness family on the stated 1440-point dense grid over tau_transfer, tau_boundary, asym_decay, and linear_decay, with optimal scalar fitting inside gap_at as implemented by the supplied runner.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-gauge_vacuum_plaquette_f-285`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** A dense 6×6×5×8 grid over the audited parameter box has minimum gap 7.791551e-03 at the stated boundary corner, so no sampled point realizes the completed triple exactly.  _(class `C`)_
-- **chain closes:** False — The runner computes a genuine dense-grid numerical search and supports the sampled-grid statement. It does not prove absence of an exact realization in the continuous parameter box between grid points; an interval, analytic, or certified global optimizer step is missing.
-- **rationale:** The supplied runner source does perform an actual first-principles-style computation through the imported recurrence/family machinery and sweeps the advertised 1440 grid points, rather than merely printing constants. However, the note's stronger no-realization conclusion over the audited parameter box is not established by a finite dense grid alone, and the note itself admits the dense grid is not a symbolic or interval-arithmetic global certificate. Therefore the chain does not close for the continuous-family no-go claim, though it does support a narrower empirical sampled-grid claim.
-- **auditor confidence:** high
-
 ### `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19`
 
 - **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_FIRST_HANKEL_TO_DM_BOUNDARY_NOTE_2026-04-19.md)
@@ -5089,23 +5059,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The ordered complex-Givens grammar G12 · G13 · G23 contains exact solutions of the reduced projected-source packet equation for (E1, E2, S12, S13), with a unique least-Frobenius-distance solution among audited exact solutions.  _(class `B`)_
 - **chain closes:** False — The runner numerically solves the reduced packet equation, but it imports the selected retained slice, sparse target preimage, response law, and live target from unprovided modules. With no cited authorities supplied, those load-bearing inputs are not closed inside the restricted packet.
 - **rationale:** The runner is not a trivial printout: it constructs a complex-Givens chain, solves least-squares residuals, deduplicates solutions, and checks packet, pair, selector-gap, and live-target errors. However, the computation is conditional on imported upstream structures and target data rather than deriving the selected retained slice and reduced target packet from the axiom within the provided packet. The live DM target check is also an external comparator-style closure, not a first-principles derivation. Therefore the stated theorem does not close from the restricted inputs alone.
-- **auditor confidence:** high
-
-### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19`
-
-- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the order-minimality and positive-tail monotonicity claim inside the canonical Wilson factorized cone described in the note and runner.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-gauge_vacuum_plaquette_f-184`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Among all full nonnegative conjugation-symmetric extensions of rho_ret, the minimal-support zero extension is the unique least element in the coefficient order and therefore uniquely minimizes every positive bulk-tail functional.  _(class `A`)_
-- **chain closes:** False — The coefficientwise least-element part is an algebraic consequence of nonnegative tails with fixed retained coefficients. The Loewner-minimal extension does not close as stated because the runner checks only two hand-chosen positive tails and the supplied packet does not prove monotonicity for every admissible nonnegative conjugation-symmetric extension.
-- **rationale:** The runner imports three upstream notes by substring checks even though no cited authorities are supplied in the restricted packet, so those imported premises cannot count as closed inputs. Its universal monotonicity and uniqueness claims are not proved by the finite witness checks on tails A and B. The coefficient-order zero-extension result is valid on its own terms, but the claimed equivalence to unique Loewner-minimality for all admissible extensions is not established by the provided note and code.
-- **open / conditional deps cited:**
-  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md`
-  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md`
-  - `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19`
@@ -6433,19 +6386,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** H_e -> H_cyc := P_cyc(H_e), with P_cyc(X)=(1/3) sum_{k=0}^2 C^k X C^{-k}, has image span_R{B0,B1,B2} and is reconstructed from r0,r1,r2 by H_cyc=(r0/3)B0+(r1/6)B1+(r2/6)B2.  _(class `A`)_
 - **chain closes:** True — The audited scope is a finite-dimensional linear-algebra theorem: cyclic group averaging is a canonical projector, its image is the stated circulant Hermitian basis, and the trace responses reconstruct the projected component. This does not audit the upstream microscopic source law, Koide selector principle, or charged-lepton readout, which the note explicitly leaves open.
 - **rationale:** Within the bounded algebraic scope, the load-bearing step closes: the note states the projector, the basis-level action, the generic coefficient formula, and the response reconstruction, and the cached runner confirms all algebraic identities with PASS=11 FAIL=0. The two D-class checks are only witness/comparator checks for the observed amplitude target and are not needed to prove the compression theorem. This clean verdict must not be read as closing the microscopic source law for (r0,r1,r2), the selector principle, or the final charged-lepton readout, all of which remain explicitly outside this claim scope.
-- **auditor confidence:** high
-
-### `koide_frobenius_isotype_split_uniqueness_note_2026-04-21`
-
-- **Note:** [`KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`](../../docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the internal algebraic AM-GM route from the admitted Herm_circ(3) scalar/traceless Frobenius energy split to kappa = 2 and Q = 2/3, not the physical/source-law bridge.
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-koide_frobenius_isotype_-227`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Given E_+ + E_perp = Tr(M^2) = N, AM-GM uniquely maximizes log(E_+ E_perp) at E_+ = E_perp = N/2, hence kappa = 2 and Q = 2/3.  _(class `A`)_
-- **chain closes:** False — The AM-GM algebra closes once the Frobenius energy split and functional are admitted. The broader asserted uniqueness/forcing of the Frobenius form does not close: positive-definiteness does not rule out other Ad-invariant scalar/traceless weightings, and the runner only checks a sample alternative.
-- **rationale:** The runner verifies many algebraic identities for the chosen trace/Frobenius split and one PDG interior positivity check. But the note's stronger claim that the building blocks are structurally fixed is not established: the uniqueness argument for the Frobenius inner product is incomplete, since checking that (tr A)(tr B) alone is degenerate does not exclude positive combinations with Tr(AB). Therefore the presented chain does not close on its own terms as a uniqueness theorem, although the conditional AM-GM calculation is algebraically correct.
 - **auditor confidence:** high
 
 ### `koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18`

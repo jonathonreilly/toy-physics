@@ -8869,6 +8869,14 @@
       "to": "science_3plus1_line_law_known_limits_note_2026-04-20"
     },
     {
+      "from": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+      "to": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
+      "to": "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+    },
+    {
       "from": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
       "to": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19"
     },
@@ -44346,14 +44354,14 @@
     },
     "equivalence_principle_note": {
       "claim_id": "equivalence_principle_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta demotion (no positive theorem, no bounded numeric claim).",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "c36fa4a8ff75e0d71527758ea25c5e8570f9ddc2307109b81077438f9536da94",
+      "note_hash": "c9ce3c8620e7aefe980a771bd430666a5b33e0827f03d0c35f330fec259835d5",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
-      "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
+      "title": "Equivalence Principle \u2014 Meta Demotion (No Measured-Exponent Claim)"
     },
     "eta_188_structural_origin_partial_note_2026-05-03": {
       "claim_id": "eta_188_structural_origin_partial_note_2026-05-03",
@@ -45942,11 +45950,11 @@
     },
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "cd07702a3ab6b0e7bcec19c6ce4db61748edd503d8d8b3cf73b59aa095d4cd59",
+      "note_hash": "a12178aeada2133fda14ef8d39f07a21dc8f6e3001e85b3feee11d5e77ad3ba3",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md",
       "runner_path": "scripts/gauge_vacuum_completed_triple_dense_box_certificate_2026_05_03.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Completed Triple Current Transfer-Family Boundary"
@@ -46036,11 +46044,14 @@
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "0752aa4197e1029ed1762eca85cc76449a4674d15a8af041b23d283cb285b691",
+      "deps": [
+        "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
+        "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
+      ],
+      "note_hash": "b3226ff9164fa559787bb92407fa4876d49105e6aa4b0c5dc612f3186e6143e0",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion Principle"
@@ -49946,14 +49957,14 @@
     },
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21": {
       "claim_id": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (conditional AM-GM result; not a uniqueness theorem).",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "91ae42e8a95284b58915763db4a1fd67bcffaa800395f7b1e91f55b4474c4d8b",
+      "note_hash": "a8215395bae071c98d7658ce85a64eab71a110fd6bc5dba1649e066cec8b4bb1",
       "path": "docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_koide_frobenius_isotype_split_uniqueness.py",
-      "title": "Q-Route Block-by-Block Forcing: Frobenius Isotype Split Uniqueness"
+      "title": "Koide AM-GM Result Conditional on a Fixed Frobenius Normalization"
     },
     "koide_full_lattice_schur_inheritance_note_2026-04-18": {
       "claim_id": "koide_full_lattice_schur_inheritance_note_2026-04-18",
@@ -68588,7 +68599,6 @@
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
-    "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19",
     "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
     "gauge_vacuum_plaquette_framework_point_underdetermination_note",
     "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
@@ -69074,27 +69084,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 282,
+      "bounded_theorem": 284,
       "decoration": 1,
-      "meta": 62,
-      "no_go": 39,
-      "none": 1626,
+      "meta": 63,
+      "no_go": 40,
+      "none": 1622,
       "open_gate": 34,
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 764,
       "decoration": 1,
-      "meta": 62,
-      "no_go": 146,
+      "meta": 63,
+      "no_go": 147,
       "none": 450,
       "open_gate": 122,
-      "positive_theorem": 633
+      "positive_theorem": 631
     },
-    "edge_count": 8586,
+    "edge_count": 8588,
     "leaf_count": 616,
     "node_count": 2178,
-    "root_count": 822,
+    "root_count": 821,
     "runners_with_path": 1791
   }
 }
