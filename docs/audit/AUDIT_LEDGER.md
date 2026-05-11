@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1115 |
+| unaudited | 1114 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 256 |
+| ~~audited_conditional~~ | 257 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 407 |
-| `audited_conditional` | 256 |
+| `audited_conditional` | 257 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1213 |
+| `unaudited` | 1212 |
 
 | claim_type | count |
 |---|---:|
@@ -530,6 +530,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_cpt_theorem_stretch_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `beyond_lattice_qcd_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -1396,6 +1397,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Promoting this finite shift to a site-dependent discrete shift parameter yields a finite-difference Ward identity with the canonical staggered sublattice-momentum density P^mu_x and hence partial^L_mu P^mu_x = 0 on shell.  _(class `A`)_
 - **chain closes:** False — The U(1) infinitesimal-current algebra closes on the admitted carrier, but the discrete-translation current (3) is introduced by a sketched finite-shift Ward bridge rather than derived. The E6 runner only checks a free periodic expectation-value instance, not the stated on-shell identity for the admitted canonical action.
 - **rationale:** Issue: the N1 bridge from two-site discrete translation symmetry to the specific local momentum density (3) is asserted, not proved. Why this blocks: the claim advertises N1-N3 as a bounded theorem, but the only direct support for N1 is a numerical free-block expectation check rather than a derivation of the local Ward current for arbitrary on-shell fields on the admitted carrier. Repair target: add a discrete Ward theorem deriving (3) from localized two-site translation on the admitted staggered action, or narrow the clean claim to N2/N3 plus an E6 free-block exhibit. Claim boundary until fixed: U(1) current and bilateral infinitesimal Noether identity on the admitted staggered carrier.
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Reflection positivity and vacuum-subtracted transfer-matrix positivity for the canonical finite-lattice staggered plus Wilson plaquette action on A_min, including the staggered+Wilson determinant input.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e1490-59d0-78c2-9573-cb79335c9f9e`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The combined-sector RP proof quotes det(M) >= 0 on the canonical staggered+Wilson surface and the OS/STW/Menotti factorisation identities (7) and (10) to conclude <Theta(F) F>_full = <psi_F|psi_F> >= 0.  _(class `B`)_
+- **chain closes:** False — The proof does not close from the packet because the OS/STW/Menotti factorisation theorems are cited but not included as direct dependencies, and the full staggered+Wilson determinant positivity step is either runner-supported or delegated to a named bridge note absent from the dependency packet. The note itself records that the full staggered+Wilson extension is not a single closed-form derivation across A_min.
+- **rationale:** Issue: the full canonical staggered+Wilson RP claim depends on external factorisation theorems and on det(M) >= 0 for the Wilson-augmented operator, but the audit packet supplies no direct dependencies and the runner only gives finite structural exhibits. Why this blocks: CL3 retained-grade closure requires proof-level bridge inputs, not numerical spot checks or uncited theorem imports, for configuration-by-configuration positivity. Repair target: add and audit direct dependency edges for the OS/STW/Menotti factorisation hypotheses and the staggered+Wilson determinant-positivity bridge, or split the claim so only the staggered-only sector is theorem-grade. Claim boundary until fixed: clean at most as a staggered-only theorem with standard RP factorisation dependencies supplied; the staggered+Wilson action remains conditional.
+- **open / conditional deps cited:**
+  - `STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`
+  - `Osterwalder-Seiler 1978 / Sharatchandra-Thun-Weisz 1981 / Menotti-Pelissetto 1987 factorisation authorities`
 - **auditor confidence:** high
 
 ### `axiom_reduction_note`

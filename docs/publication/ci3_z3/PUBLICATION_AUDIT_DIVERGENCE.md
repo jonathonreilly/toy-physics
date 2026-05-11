@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 410 |
-| critical | `audited_conditional` | 94 |
+| critical | `unaudited` | 409 |
+| critical | `audited_conditional` | 95 |
 | critical | `audited_numerical_match` | 10 |
 | critical | `audited_renaming` | 8 |
 | critical | `audited_failed` | 5 |
@@ -43,7 +43,7 @@ publication tables phrase it.
 | critical | `area_law_primitive_car_edge_identification_theorem_note_2026-04-25` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `area_law_quarter_broader_no_go_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `baryon_charge_integrality_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `bell_inequality_derived_note` | `audited_numerical_match` | `audited_numerical_match` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
