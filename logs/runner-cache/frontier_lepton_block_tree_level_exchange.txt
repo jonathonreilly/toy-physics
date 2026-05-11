@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_block_tree_level_exchange.py
+runner_sha256: 9f33b14080e97cee38963083cd2239ebf57f3a423f8821c18d6ff3205744197b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+==============================================================================
+LEPTON BLOCK TREE-LEVEL B-EXCHANGE IDENTIFICATION
+==============================================================================
+
+Verification of the bounded lepton-block exchange enumeration:
+  conditional on imported representation/hypercharge/action inputs,
+  the unique nonzero order-g_i^2 exchange between L_L and e_R is
+  single-B-exchange (U(1)_Y).
+
+
+==============================================================================
+PART 1: LEPTON SECTOR FIELD ASSIGNMENTS
+==============================================================================
+  [PASS] L_L: SU(2) doublet (iso dim 2)  (iso dim = 2)
+  [PASS] L_L: color singlet (color dim 1)  (color dim = 1)
+  [PASS] L_L: electroweak hypercharge Y_EW = -1/2  (Y_EW = -1/2)
+  [PASS] e_R: SU(2) singlet (iso dim 1)  (iso dim = 1)
+  [PASS] e_R: color singlet (color dim 1)  (color dim = 1)
+  [PASS] e_R: electroweak hypercharge Y_EW = -1  (Y_EW = -1)
+  [PASS] Repo doubled convention: Y(L_L) = -1, Y(e_R) = -2, Y(H) = +1  (L_L=-1, e_R=-2, H=1)
+  [PASS] Convention bridge: Y_EW = Y_doubled/2  (Y_EW(L_L)=-1/2, Y_EW(e_R)=-1)
+
+==============================================================================
+PART 2: SINGLE-GLUON EXCHANGE EXCLUDED (BOTH COLOR-SINGLET)
+==============================================================================
+  [PASS] L_L is SU(3) color-singlet => SU(3) generators T^a act as 0  (T^a = 0 on the trivial rep)
+  [PASS] e_R is SU(3) color-singlet => SU(3) generators T^a act as 0  (T^a = 0 on the trivial rep)
+  [PASS] Single-gluon exchange amplitude on lepton block = 0  (M_G ~ g_3^2 * <L_L|T^a|L_L> * <e_R|T^a|e_R> = 0)
+  [PASS] Symbolic: M_G = g_3^2 * 0 * 0 = 0 (sympy.simplify)  (M_G = 0)
+
+==============================================================================
+PART 3: SINGLE-W EXCHANGE EXCLUDED (e_R IS ISO-SINGLET)
+==============================================================================
+  [PASS] e_R is SU(2)_L iso-singlet => SU(2) generators T^a act as 0  (T^a = 0 on the iso-singlet rep)
+  [PASS] L_L is SU(2)_L iso-doublet => SU(2) Casimir C_F = 3/4 (nonzero)  (C_F(SU(2) fund) = 3/4)
+  [PASS] Symbolic: M_W = g_2^2 * (T^a)_LL * 0 = 0 (sympy.simplify)  (M_W = 0)
+  [PASS] Numerical: SU(2) Casimir C_F = (N^2-1)/(2 N) = 3/4 at N = 2  (C_F = 0.75)
+
+==============================================================================
+PART 4: SINGLE-B EXCHANGE IS THE UNIQUE TREE CONTRIBUTION
+==============================================================================
+  [PASS] L_L electroweak hypercharge Y_EW(L_L) = -1/2 is nonzero  (Y_EW(L_L) = -1/2)
+  [PASS] e_R electroweak hypercharge Y_EW(e_R) = -1 is nonzero  (Y_EW(e_R) = -1)
+  [PASS] Symbolic: M_B = g_1^2 * Y_EW(L_L) * Y_EW(e_R) / q^2 = g_1^2/(2 q^2)  (M_B = g_1**2/(2*q**2))
+  [PASS] Charge product Y_EW(L_L) * Y_EW(e_R) = (-1/2) * (-1) = 1/2 (rational)  (Y_LL * Y_eR = 1/2)
+  [PASS] Doubled-convention product is 2 before coupling-normalization conversion  (Y_doubled(L_L) * Y_doubled(e_R) = 2)
+  [PASS] Numerical: |Y(L_L) Y(e_R)| = 0.5 (math.isclose)  (|Y product| = 0.5)
+
+==============================================================================
+PART 5: HIGGS EXCHANGE EXCLUDED (D9 COMPOSITE-HIGGS, NO FUNDAMENTAL SCALAR)
+==============================================================================
+  [PASS] Bare framework action has NO fundamental Higgs (D9)  (composite-Higgs identification: H_unit = (1/sqrt(Z^2)) Sum psi-bar psi)
+  [PASS] No tree-level Higgs propagator in Gamma^(4) (bare action level)  (Higgs is composite, not fundamental)
+
+==============================================================================
+PART 6: FIERZ-ANALOG IS RATIONAL (NOT SQRT-RATIONAL)
+==============================================================================
+  [PASS] YT D12 SU(N_c) Fierz factor = 1/(2 N_c) = 1/6  (YT factor = 1/6)
+  [PASS] YT 1/sqrt(2 N_c) = 1/sqrt(6) is IRRATIONAL (6 not perfect square)  (radicand 2 N_c = 6; sqrt(6) is irrational)
+  [PASS] Lepton block U(1) charge factor = Y_EW(L_L) Y_EW(e_R) = 1/2  (factor = 1/2)
+  [PASS] Lepton-block factor 1/2 corresponds to 1/sqrt(4); 4 IS perfect square  (radicand 4 is a perfect square)
+  [PASS] Lepton-block Fierz-analog factor is RATIONAL (not sqrt-irrational)  (U(1) charge product is structurally distinct from non-abelian Fierz)
+  [PASS] Non-square sqrt-rational shape is not present in the U(1) charge product  (1/2 is rational; it equals 1/sqrt(4) with a perfect-square radicand)
+
+==============================================================================
+PART 7: COMPARISON TABLE — YT D16 (Q_L) vs D16-PRIME (L_L)
+==============================================================================
+  YT D16 (Q_L block):
+    mediator       : single-gluon (SU(3)_c)
+    coupling       : g_s
+    Fierz factor   : 1/(2 N_c) = 1/6
+    sqrt form      : 1/sqrt(6)  (irrational)
+
+  D16-prime (L_L block, this theorem):
+    mediator       : single-B (U(1)_Y)
+    coupling       : g_1
+    Fierz-analog   : Y(L_L) Y(e_R) = 1/2
+    sqrt form      : 1/sqrt(4) = 1/2  (RATIONAL, perfect-square radicand)
+
+  [PASS] Mediators are different: gluon (Q_L) vs B (L_L)  (Q_L: SU(3) gluon; L_L: U(1)_Y B)
+  [PASS] Couplings are different: g_s (Q_L) vs g_1 (L_L)  (Q_L: strong; L_L: hypercharge)
+  [PASS] Squared/factor forms differ: color channel 1/6 vs lepton charge product 1/2  (YT: 1/6, lep: 1/2)
+  [PASS] Sqrt form is structurally distinct: irrational vs rational  (Q_L: 1/sqrt(6) irrational; L_L: 1/2 rational)
+
+==============================================================================
+SUMMARY CLASS-A ASSERTIONS
+==============================================================================
+  [PASS] M_gluon = 0 on lepton block (sympy.Eq verified)
+  [PASS] M_W = 0 on lepton block (sympy.Eq verified)
+  [PASS] M_B = g_1^2/(2 q^2) on lepton block (sympy.simplify verified)
+  [PASS] Y_EW(L_L) * Y_EW(e_R) = 1/2 (Fraction algebraic verified)
+  [PASS] sqrt(6) is irrational (math.isclose-style verification)
+  [PASS] 1/2 = 1/sqrt(4) (math.isclose verified)
+
+==============================================================================
+D16-PRIME VERIFICATION: PASS=34 FAIL=0
+==============================================================================
+
+----- stderr -----
+
