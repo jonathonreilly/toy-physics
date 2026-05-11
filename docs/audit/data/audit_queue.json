@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 683,
     "high": 27,
-    "leaf": 249,
+    "leaf": 248,
     "medium": 157
   },
   "cycle_break_target_count": 265,
@@ -30626,27 +30626,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37269,6 +37248,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 22,
-  "total_pending": 1116
+  "ready_count": 21,
+  "total_pending": 1115
 }

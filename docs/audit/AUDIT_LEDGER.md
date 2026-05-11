@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 75 |
+| **retained** | 76 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 1 |
 | open_gate | 13 |
-| unaudited | 1110 |
+| unaudited | 1109 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 414 |
+| `audited_clean` | 415 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 12 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1208 |
+| `unaudited` | 1207 |
 
 | claim_type | count |
 |---|---:|
@@ -145,6 +145,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | A | - |
@@ -1879,6 +1880,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Because the charged-lepton monomial is colorless, its direct gauge-index normalization options are 1 or 2, neither the top Ward Q_L value 6; adding generation averaging would be a new primitive.  _(class `A`)_
 - **chain closes:** False — The internal arithmetic establishes a conditional algebraic obstruction: the stated charges select bar L_L H e_R, reject bar L_L tilde H e_R, leave generation entries gauge-blind, and give lepton normalization dimensions 1 or 2 rather than 6. The full retained no-go chain does not close from this restricted packet because the note and runner rely on named one-Higgs and top-Ward authorities that are not supplied as one-hop dependencies.
 - **rationale:** Issue: the no-go imports the retained one-Higgs gauge-selection theorem and top-Ward Q_L normalization while the restricted packet lists no one-hop authorities. Why this blocks: the algebraic mismatch is plausible, but retained-grade closure cannot rest on unlisted notes or runner string checks of unprovided files. Repair target: add direct dependency edges for the one-Higgs gauge-selection note and top-Ward identity note, with retained-grade status, or rewrite this note as a fully self-contained lemma over explicit assumptions. Claim boundary until fixed: conditional algebraic no-go for the direct lift, not a retained no-go.
+- **auditor confidence:** high
+
+### `charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The audited claim is only the algebraic equivalence Q(v)=2/3 iff a_0^2=2|z|^2 for any positive real 3-vector under the unitary C_3 character decomposition, plus its immediate closed-form/geometric corollaries.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b4-ccce-7423-bdd2-dff100fb2aeb`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Using Plancherel and v_1+v_2+v_3=sqrt(3)a_0, Q(v)=(a_0^2+2|z|^2)/(3a_0^2), hence Q(v)=2/3 iff a_0^2=2|z|^2.  _(class `A`)_
+- **chain closes:** True — The packet supplies the definitions of a_0, z, and Q(v), and the equivalence follows by unitary Fourier Parseval plus one substitution. No physical charged-lepton bridge, observed mass input, or retained-framework dependency is within the scoped claim.
+- **rationale:** The narrow theorem closes as a pure algebraic identity on the stated positive-vector domain. The runner checks the load-bearing Parseval identity, denominator relation, closed form for Q, both implications of P1, and the geometric corollary symbolically, with no external comparator or hidden physical import needed for the scoped statement.
 - **auditor confidence:** high
 
 ### `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`
