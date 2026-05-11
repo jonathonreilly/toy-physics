@@ -1,0 +1,159 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_v_bae_s3_2026_05_08_probeV_bae_s3.py
+runner_sha256: 6a6232d478e394e06a8230dd3c02771b6588ca39166a2c6504941c5d75bd0824
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+======================================================================
+Probe V-BAE-S3-Reflection
+Does S_3 = C_3 \rtimes Z_2 representation theory force BAE?
+======================================================================
+
+Section 1 -- Named input algebra sanity (C, P_{23})
+  [PASS] C is unitary | ||C C^dag - I|| = 0.00e+00
+  [PASS] C has order 3 | ||C^3 - I|| = 0.00e+00
+  [PASS] P_{23} is unitary | err = 0.00e+00
+  [PASS] P_{23} is involutive (P^2 = I) | err = 0.00e+00
+  [PASS] P_{23} is real (entries in R) | Im(P) = 0
+  [PASS] eigenvalues(C) = {1, omega, omega_bar} | evals = [np.complex128(-0.5+0.866j), np.complex128(-0.5-0.866j), np.complex128(1+0j)]
+    -> C is the named cyclic-shift input (KOIDE_CIRCULANT_CHARACTER + STAGGERED_DIRAC_BZ_CORNER).
+    -> P_{23} is the named reflection input (CIRCULANT_PARITY_CP_TENSOR).
+
+Section 2 -- S_3 = C_3 \rtimes Z_2 semidirect structure
+  [PASS] P_{23} C P_{23} = C^{-1} = C^2 (Z_2 inverts C_3, hence semidirect) | ||P C P - C^{-1}|| = 0.00e+00
+  [PASS] Z_2 does NOT commute with C_3 (PCP != C, direct product fails) | ||P C P - C|| = 2.4495 (direct product would be 0)
+  [PASS] <C, P_{23}> = S_3 has 6 elements | |<C, P>| = 6 (expected 6 = |S_3|)
+    -> S_3 = C_3 \rtimes Z_2 is the natural symmetry of Z^3 x C_3 substrate.
+    -> P_{23} C P_{23} = C^{-1} is the defining semidirect relation.
+    -> Replicates Probe 7 Barrier 1 (legacy KOIDE_A1_PROBE_Z2_C3_PAIRING_NOTE_2026-05-08_probe7 file).
+
+Section 3 -- C_3 acts TRIVIALLY on Herm_circ(3) (the structural decouple)
+  [PASS] C * B_0 = I * C^(-1) = B_0 = I (C_3-trivial on Herm_circ basis) | err = 0.00e+00
+  [PASS] C * B_1 = C + C^2 * C^(-1) = B_1 = C + C^2 (C_3-trivial on Herm_circ basis) | err = 0.00e+00
+  [PASS] C * B_2 = i(C - C^2) * C^(-1) = B_2 = i(C - C^2) (C_3-trivial on Herm_circ basis) | err = 0.00e+00
+  [PASS] random H_{0}: C H C^{-1} = H (commutes since circulants) | err = 0.00e+00
+  [PASS] random H_{1}: C H C^{-1} = H (commutes since circulants) | err = 0.00e+00
+  [PASS] random H_{2}: C H C^{-1} = H (commutes since circulants) | err = 0.00e+00
+  [PASS] random H_{3}: C H C^{-1} = H (commutes since circulants) | err = 0.00e+00
+  [PASS] random H_{4}: C H C^{-1} = H (commutes since circulants) | err = 0.00e+00
+    -> C_3 acts trivially on Herm_circ(3): [C, X] = 0 for X in span{I, C, C^2}.
+    -> Therefore the C_3 part of S_3 contributes NOTHING to the rep on Herm_circ(3).
+    -> The S_3 rep on Herm_circ(3) factors through Z_2 = S_3 / C_3.
+
+Section 4 -- P_{23} action on Herm_circ(3) basis (cited CIRCULANT_PARITY T2 surface)
+  [PASS] P_{23} B_0 P_{23} = B_0 (I is P-fixed) | err = 0.00e+00
+  [PASS] P_{23} B_1 P_{23} = B_1 (C + C^2 is P-fixed = P-trivial) | err = 0.00e+00
+  [PASS] P_{23} B_2 P_{23} = -B_2 (i(C - C^2) is P-anti = P-sign) | err = 0.00e+00
+  [PASS] P_{23} action on H_{0} sends (a, u, v) -> (a, u, -v) | err = 0.00e+00
+  [PASS] P_{23} action on H_{1} sends (a, u, v) -> (a, u, -v) | err = 0.00e+00
+  [PASS] P_{23} action on H_{2} sends (a, u, v) -> (a, u, -v) | err = 0.00e+00
+    -> Confirmed: P_{23} acts as (d, c_even, c_odd) -> (d, c_even, -c_odd).
+    -> Same algebraic action as the cited CIRCULANT_PARITY_CP_TENSOR T2 surface.
+
+Section 5 -- S_3 isotype decomposition of Herm_circ(3)
+    (CRITICAL: standard 2d irrep of S_3 does NOT appear)
+    chi(e) on Herm_circ(3) = 3.000000
+    chi(C) on Herm_circ(3) = 3.000000
+    chi(C^2) on Herm_circ(3) = 3.000000
+    chi(P_{23}) on Herm_circ(3) = 1.000000
+    chi(C P_{23}) on Herm_circ(3) = 1.000000
+    chi(C^2 P_{23}) on Herm_circ(3) = 1.000000
+  [PASS] <chi, chi_trivial>_S3 = 2 (multiplicity of S_3-trivial in Herm_circ) | inner = 2.000000 (target 2)
+  [PASS] <chi, chi_sign>_S3 = 1 (multiplicity of S_3-sign in Herm_circ) | inner = 1.000000 (target 1)
+  [PASS] <chi, chi_standard>_S3 = 0 (standard 2d irrep DOES NOT appear) | inner = 0.000000 (target 0)
+  [PASS] Total dim = 2*1 + 1*1 + 0*2 = 3 = dim(Herm_circ(3)) | 2 trivial + 1 sign = 3 = dim(Herm_circ)
+    -> Herm_circ(3) = 2*(S_3-trivial) + 1*(S_3-sign) under natural action.
+    -> The standard 2d irrep of S_3 is ABSENT.
+    -> This refutes the user-prompt hope that the standard 2d irrep
+       could mix b and b_bar via reflection.
+
+Section 6 -- (1,1) S_3 isotype weighting extremization
+  [PASS] (1,1) S_3 extremum at (a=1, u=0, v=1/sqrt(2)): E_triv = E_sign | E_triv = 3.000000, E_sign = 3.000000
+  [PASS] At this point |b|^2 / a^2 = 1/2 (BAE coincidentally satisfied) | |b|^2/a^2 = 0.500000
+  [PASS] (1,1) S_3 extremum at (a=1, u=0.5, v=sqrt(0.75)): E_triv = E_sign | E_triv = 4.500000, E_sign = 4.500000
+  [PASS] At this point |b|^2 / a^2 = 1.0 != 1/2 (BAE FAILS) | |b|^2/a^2 = 1.000000 (BAE would require 0.5)
+  [PASS] (1,1) S_3 extremum at (a=1, u=sqrt(0.5), v=1): E_triv = E_sign | E_triv = 6.000000, E_sign = 6.000000
+  [PASS] At this point |b|^2 / a^2 = 1.5 != 1/2 (BAE FAILS) | |b|^2/a^2 = 1.500000 (BAE would require 0.5)
+    -> The (1,1) S_3-isotype weighting gives a HYPERSURFACE
+       3 a^2 + 6 (Re b)^2 = 6 (Im b)^2 in (a, Re b, Im b) space.
+    -> This hypersurface intersects BAE = (|b|^2 = a^2 / 2) only on
+       a curve, NOT a forced point.
+    -> S_3 (1,1) weighting does NOT structurally force BAE.
+
+Section 7 -- Real-Plancherel rep-dim^2/|G| weighting on S_3
+  [PASS] Trivial-S3 effective weight = 2 * (1/6) = 1/3 | = 1/3
+  [PASS] Sign-S3 effective weight = 1 * (1/6) = 1/6 | = 1/6
+  [PASS] Standard-S3 effective weight = 0 (irrep absent) | = 0
+  [PASS] Effective S_3 weight ratio trivial:sign = 2:1 (NOT 1:1) | ratio = 2 (target 2)
+    -> Extremum E_triv = 2N/3, E_sign = N/3.
+    -> 3a^2 + 6 (Re b)^2 = 2N/3  and  6 (Im b)^2 = N/3.
+    -> This is structurally identical to F3 (rank-weighted (1,2))
+       on the (E_+, E_perp) decomposition; gives kappa = 1, NOT BAE.
+    -> S_3 real-Plancherel matches the C_3 Plancherel-uniform result.
+
+Section 8 -- S_3-invariant subspace = {b in R}
+  [PASS] S_3-invariant H(a=1.0, b=0.05): P H P = H | |b|^2/a^2 = 0.002500
+  [PASS] S_3-invariant H(a=1.0, b=0.5): P H P = H | |b|^2/a^2 = 0.250000
+  [PASS] S_3-invariant H(a=1.0, b=0.7071067811865475): P H P = H | |b|^2/a^2 = 0.500000
+  [PASS] S_3-invariant H(a=1.0, b=2.0): P H P = H | |b|^2/a^2 = 4.000000
+  [PASS] S_3-invariant H(a=1.0, b=5.0): P H P = H | |b|^2/a^2 = 25.000000
+  [PASS] BAE = 0.5 is one point among many on S_3-invariant subspace | ratios sampled: [0.0025, 0.25, 0.5, 4.0, 25.0]
+  [PASS] Multiple S_3-invariant ratios distinct from BAE (continuous family) | non-BAE count = 4/5
+    -> S_3-invariant subspace is 2-real-parameter (a, b in R).
+    -> BAE = 0.5 is codim-1 within this 2D plane, NOT a forced point.
+    -> Replicates Probe 7 Barrier 1 (KOIDE_A1_PROBE_Z2_C3_PAIRING_NOTE_2026-05-08_probe7).
+
+Section 9 -- F1 vs F3 under S_3 weightings
+  [PASS] E_+ + E_perp = E_trivial_S3 + E_sign_S3 (both partitions give same total) | all 5/5 trials confirm
+    -> S_3 real-Plancherel: (E_triv_S3, E_sign_S3) ratio = (2/3, 1/3).
+    -> C_3 real-Plancherel (= F3): (E_+, E_perp) ratio = (1/3, 2/3).
+    -> Different decompositions, structurally same (1,2) imbalance.
+    -> F1 (multiplicity-uniform, (1,1)) NOT supplied by either.
+  [PASS] S_3 real-Plancherel sample extremum at (a=1, u=0): kappa = 4 (NOT BAE=2) | kappa = 4.0 (target 4)
+    -> kappa under S_3 real-Plancherel = 4 in (a=1, u=0)-corner;
+       kappa varies over (a, u, v); NOT constant 2 = BAE.
+
+Section 10 -- Cross-check with Probe 13 K-orbit results
+  [PASS] Probe 13 K-orbit-uniform extremum at a/b = -2: kappa = 4 | kappa = 4.000000 (target 4)
+  [PASS] Lagrangian condition (a + 2b)(a - b) = 0 at extremum | (a + 2b)(a - b) = -0.0
+    -> Probe 13 K-orbit-uniform: kappa = 4 (NOT 2).
+    -> Probe V S_3 analysis (this probe): adds C_3 (trivial on Herm_circ)
+       to K -> no new closure.
+    -> S_3 result REPLICATES Probe 13 K-only result.
+    -> Structural rejection extended from C_3 to S_3 (3 -> 4 levels).
+
+Section 11 -- Dependency disclosure (no retained-status assertion)
+  [PASS] Dependency named: KOIDE_CIRCULANT_CHARACTER + STAGGERED_DIRAC_BZ_CORNER for C_3 | status left to audit ledger
+  [PASS] Dependency named: CIRCULANT_PARITY_CP_TENSOR T1, T2 for P_{23} | status left to audit ledger
+  [PASS] Dependency named: CPT_EXACT_NOTE T = K for the conjugation reflection | status left to audit ledger
+  [PASS] Dependency named: Probe 7 and Probe 13 for prior BAE Z_2 route checks | status left to audit ledger
+  [PASS] S_3 = C_3 \rtimes Z_2 uses only named C_3 and P_{23} inputs | No new axiom; no retained-grade assertion.
+    -> Dependencies are disclosed by source path.
+    -> Retained-grade status is audit-owned and not asserted by this runner.
+    -> Review verdict: no new axiom is introduced by this route check.
+
+Section 12 -- Verdict synthesis
+  [PASS] C_3 acts trivially on Herm_circ(3): circulants commute with C.
+  [PASS] S_3 rep on Herm_circ(3) factors through Z_2 = S_3 / C_3.
+  [PASS] Standard 2d irrep of S_3 ABSENT from Herm_circ(3).
+  [PASS] S_3 decomp: 2*(trivial) + 1*(sign), no standard 2d.
+  [PASS] (1,1) S_3 multiplicity weighting -> hypersurface NOT BAE.
+  [PASS] Real-Plancherel S_3 weighting -> (2,1) ratio = F3-class -> kappa=1.
+  [PASS] S_3-invariant restriction (b in R) -> 2D plane, BAE not forced.
+  [PASS] Probe 13 K-orbit kappa=4 result UNCHANGED under full S_3.
+  [PASS] Z_2 reflection dependencies disclosed (no new axiom).
+  [PASS] Verdict: NEGATIVE -- structural rejection extends 3 -> 4 levels.
+
+======================================================================
+VERDICT: Probe V-BAE-S3-Reflection -- NEGATIVE.
+S_3 representation theory does NOT structurally force BAE.
+The structural rejection (rooted in C_3 trivial action on Herm_circ(3))
+extends from C_3 alone to the full S_3 = C_3 \rtimes Z_2.
+======================================================================
+
+=== TOTAL: PASS=63, FAIL=0 ===
+
+----- stderr -----
+

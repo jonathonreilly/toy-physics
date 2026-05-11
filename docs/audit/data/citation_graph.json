@@ -14117,6 +14117,90 @@
       "to": "qcd_low_energy_running_bridge_note_2026-05-01"
     },
     {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "cpt_squared_is_identity_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_a1_probe_z2_c3_pairing_bounded_obstruction_note_2026-05-08_probe7"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_mru_weight_class_obstruction_theorem_note_2026-04-19"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
+      "from": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
       "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -50956,6 +51040,39 @@
       "runner_path": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py",
       "title": "Probe U-L1-Resurgence \u2014 QCD Trans-Series and Stokes Structure for \u03b2_2, \u03b2_3: Bounded-Tier Source Note"
     },
+    "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3": {
+      "claim_id": "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (negative route check -- structural rejection extends 3 -> 4 levels; no positive closure; no new admission)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
+        "cpt_exact_note",
+        "cpt_squared_is_identity_theorem_note_2026-05-02",
+        "koide_a1_probe_z2_c3_pairing_bounded_obstruction_note_2026-05-08_probe7",
+        "koide_a1_probe_real_structure_bounded_obstruction_note_2026-05-09_probe13",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19",
+        "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "koide_bae_probe_hw_sector_identification_bounded_obstruction_note_2026-05-09_probe27",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "54568a207147e9d3bb84304932932c07b1d1f33a42db17128d4a51fb0f9073ce",
+      "path": "docs/KOIDE_V_BAE_S3_REFLECTION_NOTE_2026-05-08_probeV_bae_s3.md",
+      "runner_path": "scripts/cl3_koide_v_bae_s3_2026_05_08_probeV_bae_s3.py",
+      "title": "Probe V-BAE-S3-Reflection -- S_3 = C_3 \u22ca Z_2 Representation Theory Does NOT Force BAE: No-Go Source Note"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "claim_id": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "claim_type_author_hint": "bounded_theorem",
@@ -69087,7 +69204,7 @@
       "bounded_theorem": 285,
       "decoration": 1,
       "meta": 63,
-      "no_go": 40,
+      "no_go": 41,
       "none": 1621,
       "open_gate": 34,
       "positive_theorem": 134
@@ -69096,15 +69213,15 @@
       "bounded_theorem": 764,
       "decoration": 1,
       "meta": 63,
-      "no_go": 147,
+      "no_go": 148,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 631
     },
-    "edge_count": 8588,
+    "edge_count": 8609,
     "leaf_count": 616,
-    "node_count": 2178,
+    "node_count": 2179,
     "root_count": 821,
-    "runners_with_path": 1791
+    "runners_with_path": 1792
   }
 }

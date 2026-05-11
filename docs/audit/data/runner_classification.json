@@ -11484,6 +11484,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_u_L1_resurgence_2026_05_08_probeU_L1_resurgence.py"
     },
+    "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_v_bae_s3_2026_05_08_probeV_bae_s3.py"
+    },
     "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic": {
       "assert_count": 2,
       "counts": {
@@ -24566,6 +24578,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_v_bae_s3_2026_05_08_probeV_bae_s3.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_v_bae_s3_reflection_note_2026-05-08_probev_bae_s3"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_v_quark_dynamical_2026_05_08_probeV_quark_dynamical.py": {
@@ -46953,12 +46980,12 @@
     "dominant_class_distribution": {
       "A": 145,
       "B": 172,
-      "C": 678,
+      "C": 679,
       "D": 262,
       "none": 421
     },
-    "runners_classified": 1678,
-    "runners_with_C": 857,
-    "runners_with_D": 474
+    "runners_classified": 1679,
+    "runners_with_C": 858,
+    "runners_with_D": 475
   }
 }
