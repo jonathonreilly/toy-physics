@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 97 |
-| **retained_no_go** | 132 |
+| **retained_no_go** | 133 |
 | **retained_bounded** | 280 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1197 |
+| unaudited | 1196 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 472 |
+| `audited_clean` | 473 |
 | `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1310 |
+| `unaudited` | 1309 |
 
 | claim_type | count |
 |---|---:|
@@ -404,6 +404,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_self_focusing_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `mirror_2d_operator_cauchy_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_boundary_fit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -7196,6 +7197,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `scripts/mirror_born_audit.py`
   - `logs/runner-cache/mirror_born_audit.txt`
+- **auditor confidence:** high
+
+### `mirror_2d_operator_cauchy_note_2026-05-10`
+
+- **Note:** [`MIRROR_2D_OPERATOR_CAUCHY_NOTE_2026-05-10.md`](../../docs/MIRROR_2D_OPERATOR_CAUCHY_NOTE_2026-05-10.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded numerical no-go for the current gen_2d_mirror layer-count refinement axis with npl_half=12, yr=10.0, cr=2.5, eight deterministic seeds, k in {3,5,7}, and N in {25,40,60,80,100,150,200}: the joint five-observable operator-Cauchy gate fails, no component passes its Cauchy gate, and MI/decoh/dTV/gravity are non-monotone. This does not rule out a redesigned fixed-domain spacing-refinement mirror harness.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For the current gen_2d_mirror harness and N in {25,40,60,80,100,150,200}, the seed-mean five-observable vector fails the joint operator-Cauchy gate, zero of five components pass the component gate, and four of five components are non-monotone in N.  _(class `C`)_
+- **chain closes:** True — The runner computes the stated harness sweep directly, verifies the Born floor and seed coverage guards, fits the joint and per-component Cauchy decay rates, and exits successfully only when the bounded no-go conditions hold. The imported generator confirms that varying N adds layers at fixed spacing/density rather than refining a fixed physical domain.
+- **rationale:** The claim is narrowly bounded to the current mirror harness and the listed layer-count grid, and the live runner reproduces the cached null result. The no-go does not depend on a timeout, a stale log, or an unsupported universal mirror claim; it is an executable failure of the specified operator-Cauchy gate. Residual risk is only extrapolating beyond this harness or grid, which the note explicitly excludes.
 - **auditor confidence:** high
 
 ### `mirror_2d_validation_note`
