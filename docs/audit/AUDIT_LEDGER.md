@@ -20,15 +20,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 258 |
+| **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1279 |
+| unaudited | 1282 |
 | audit_in_progress | 15 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 153 |
+| ~~audited_conditional~~ | 152 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,14 +41,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 22 |
-| `audited_clean` | 430 |
-| `audited_conditional` | 153 |
+| `audit_in_progress` | 23 |
+| `audited_clean` | 427 |
+| `audited_conditional` | 152 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1392 |
+| `unaudited` | 1395 |
 
 | claim_type | count |
 |---|---:|
@@ -61,20 +61,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | criticality | count |
 |---|---:|
-| `critical` | 1048 |
+| `critical` | 1051 |
 | `high` | 56 |
-| `medium` | 252 |
-| `leaf` | 745 |
+| `medium` | 251 |
+| `leaf` | 743 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 253
+- **Citation cycles detected:** 256
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1709
+- runners classified: 1710
 - runners with (C) first-principles compute hits: 877
 - runners with (D) external comparator hits: 497
-- decoration candidates (no C, no D): 201
+- decoration candidates (no C, no D): 202
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -132,6 +132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `source_resolved_exact_green_self_consistent_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wave_static_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_static_matrixfree_fixed_beam_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
@@ -361,7 +362,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_self_focusing_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `memory_mu2_geometry_sweep_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
-| `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_boundary_fit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -446,8 +446,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `source_driven_field_recovery_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
-| `source_driven_field_recovery_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
-| `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_bridge_failure_audit` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_discriminator_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -702,7 +700,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -6257,19 +6254,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The scoped bounded claim closes as a finite-compute result: the runner constructs the stated 2D harness and derives the reported sweep values rather than importing a target threshold or external comparator. The clean verdict is limited to the implemented parameter set, support list, and stability rule. Residual risk is implementation-model dependence on the helper lattice generator and chosen thresholds, not a closure gap for the finite no-collapse claim.
 - **auditor confidence:** high
 
-### `minimal_source_driven_field_probe_note`
-
-- **Note:** [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](../../docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** A bounded numerical local-field probe on the exact 3D lattice for one damped telegraph-style static-source rule, establishing preserved attraction sign and exact zero-source reduction while failing linear mass scaling at the stronger calibration, read together with the retained recovery sweep as calibration sensitivity.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e16c6-c202-7163-b1da-11436c1c7098`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** At TARGET_FIELD_MAX = 0.08, the source-driven rows remain TOWARD with zero-source dynamic shift +0.000000e+00, but the source-driven F~M exponent is 0.64 rather than near-linear.  _(class `C`)_
-- **chain closes:** True — The runner source constructs the lattice, instantaneous comparator, source-driven field evolution, fixed calibration, centroid readout, and exponent fit inline, and the stdout matches the note's frozen numbers. The cited recovery sweep is marked retained_bounded and supports the note's narrower calibration-hierarchy framing.
-- **rationale:** Within its stated bounded scope, the note does not claim a full physical bridge or external gravitational prediction; it reports a local numerical probe and a negative stronger-calibration result. The load-bearing computation is not hard-coded to the disputed exponent: the runner evolves the field, propagates amplitudes, computes centroid shifts, and fits the mass exponent from generated rows. No D-class external comparator is present, but none is required for this bounded local dynamics/no-recovery claim.
-- **auditor confidence:** high
-
 ### `mirror_chokepoint_boundary_fit_note`
 
 - **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
@@ -7997,45 +7981,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The refinement step preserves exact zero-source reduction, the dynamic pocket keeps all rows TOWARD, and the dynamic mass exponent stays essentially linear.  _(class `C`)_
 - **chain closes:** True — For the declared exact lattice, source-driven field rule, calibration target, and source strengths, the runner recomputes the frozen zero-source check, table, and fitted exponents exactly. There are no cited dependencies or external comparator claims to import.
 - **rationale:** The source note makes a narrow bounded numerical claim, not a retained physical bridge: refinement to h=0.25 preserves zero-source reduction, positive deflection sign, and near-linear dynamic mass scaling under the declared parameters. The runner output matches the frozen table and exposes the same amplitude limitation, with mean dynamic/instantaneous ratio 0.055. Residual risk is that this remains calibration- and architecture-specific, but that limitation is explicitly inside the claim boundary.
-- **auditor confidence:** high
-
-### `source_driven_field_recovery_sweep_note`
-
-- **Note:** [`SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md`](../../docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited only the self-contained numerical theorem for the exact stated 3D lattice, source strengths, telegraph-style field rule, centroid-z readout, calibration targets, and PASS/FAIL thresholds printed by the supplied runner.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e16c5-0ea8-74f0-a706-39ddc11dfdb5`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The minimal source-driven field architecture has a real weak-field recovery pocket: in that pocket, TOWARD survives and the dynamic mass exponent stays near linear while larger generated fields drift away from linear scaling.  _(class `C`)_
-- **chain closes:** True — Within that bounded scope, the runner source constructs the lattice, field evolution, scaling, propagation, centroid readout, power-law fit, and threshold gates directly, and the supplied stdout matches the note's frozen tables. No external physical bridge or experimental comparator is claimed inside the safe read.
-- **rationale:** The scoped claim is a bounded numerical recovery statement, not a full physical validation of self-consistent field dynamics. The provided runner computes the load-bearing observables from explicit model rules rather than importing or hard-coding the reported shifts/exponents, and the note accurately limits the conclusion to calibration sensitivity and a weak-field pocket.
-- **auditor confidence:** high
-
-### `source_resolved_exact_green_pocket_note`
-
-- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** For the specified H=0.5, W=3, L=20 lattice, boundary-clipped four-node source cluster, chosen Green kernel, and calibrated gain, the runner reports zero-source reduction, TOWARD sign on four source strengths, and approximately linear mass scaling.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e125a-6068-7481-bfcf-9169805e172f`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The Green-kernel field keeps the weak-field TOWARD sign on all four retained source strengths, has F~M exponent 1.00, and has zero-source dynamic shift +0.000000e+00 in the frozen small exact lattice pocket.  _(class `C`)_
-- **chain closes:** False — The runner delegates the exact-lattice construction, propagation rule, centroid readout, K, source constants, and instantaneous comparator to scripts.minimal_source_driven_field_probe, whose source is not included and is not a cited authority. With no one-hop authorities supplied, those load-bearing definitions are outside the restricted packet.
-- **rationale:** Issue: the numerical pocket depends on an unprovided imported runner module for the exact lattice dynamics and readout, and the amplitude comparison also uses a calibrated gain/field target. Why this blocks: the audit cannot verify from the restricted packet that the zero-source reduction, TOWARD sign, or F~M exponent are computed from the claimed exact-lattice rules rather than inherited from hidden code choices. Repair target: include the imported module or a reduced self-contained runner and state the gain normalization as an explicit bounded assumption. Claim boundary until fixed: this is a reported calibrated toy-run stdout, not an audited retained bounded theorem.
-- **auditor confidence:** high
-
-### `source_resolved_exact_green_self_consistent_note`
-
-- **Note:** [`SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md`](../../docs/SOURCE_RESOLVED_EXACT_GREEN_SELF_CONSISTENT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Fixed compact exact lattice h=0.25, W=3, L=6; fixed clipped source cluster, source strengths, Green-like kernel, admitted calibrated gain input, one self-consistency update, zero-source reduction, TOWARD sign, near-linear response, and frozen table reproduction only.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-fresh-source-green-self-consistent-2026-05-06`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** On the fixed h=0.25, W=3, L=6 lattice with boundary-clipped 4-node source cluster, kernel exp(-0.08 r)/(r+0.5), calibrated gain 1.7578903308081324, and one source-amplitude reweighting update, the runner computes zero_delta=0, TOWARD green deflections in all 4 source rows, near-unit source-strength exponents, and reproduces the frozen table.  _(class `B`)_
-- **chain closes:** True — The note states the calibration as an input and does not promote the amplitude ratio to an independent physical observable; the cached runner exits 0 and its six assertions cover the bounded finite computation and residual exclusions.
-- **rationale:** Clean within the stated finite computational boundary: the runner constructs the fixed source-resolved Green field, performs one source-cluster reweighting update, checks exact zero-source reduction, confirms TOWARD sign and near-linear source response, and reproduces the frozen numerical table. Residual risk is explicitly outside scope: no uncalibrated amplitude theorem, no fully converged self-consistent field theory, and no continuum or large-lattice claim.
 - **auditor confidence:** high
 
 ### `source_resolved_generated_architecture_bridge_note`

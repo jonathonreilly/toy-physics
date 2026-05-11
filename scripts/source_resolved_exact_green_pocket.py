@@ -150,6 +150,59 @@ def main() -> None:
     print(f"  mean |green/inst| ratio: {mean_ratio:.3f}")
     print("  this is a feasibility pocket, not yet a full-size exact-lattice theory")
 
+    # Hard-bar assertions on the load-bearing observables.
+    # Per docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md "Hard-bar runner assertions" table.
+    print()
+    print("HARD-BAR ASSERTIONS")
+    n_pass = 0
+    n_fail = 0
+
+    # Bar 1: zero-source reduction at machine precision.
+    if abs(zero_delta) <= 1e-12:
+        print(f"  PASS: zero-source reduction |zero_delta|={abs(zero_delta):.3e} <= 1e-12")
+        n_pass += 1
+    else:
+        print(f"  FAIL: zero-source reduction |zero_delta|={abs(zero_delta):.3e} > 1e-12")
+        n_fail += 1
+
+    # Bar 2: TOWARD sign 4/4.
+    expected_rows = len(green_vals)
+    if toward == expected_rows:
+        print(f"  PASS: TOWARD sign {toward}/{expected_rows}")
+        n_pass += 1
+    else:
+        print(f"  FAIL: TOWARD sign {toward}/{expected_rows}")
+        n_fail += 1
+
+    # Bar 3: green F~M exponent in [0.95, 1.05].
+    if green_alpha is not None and 0.95 <= green_alpha <= 1.05:
+        print(f"  PASS: green F~M exponent {green_alpha:.3f} in [0.95, 1.05]")
+        n_pass += 1
+    else:
+        ga = f"{green_alpha:.3f}" if green_alpha is not None else "None"
+        print(f"  FAIL: green F~M exponent {ga} not in [0.95, 1.05]")
+        n_fail += 1
+
+    # Bar 4: mean |green/inst| ratio in [1.10, 1.40].
+    if 1.10 <= mean_ratio <= 1.40:
+        print(f"  PASS: mean |green/inst| ratio {mean_ratio:.3f} in [1.10, 1.40]")
+        n_pass += 1
+    else:
+        print(f"  FAIL: mean |green/inst| ratio {mean_ratio:.3f} not in [1.10, 1.40]")
+        n_fail += 1
+
+    # Bar 5: calibration gain finiteness.
+    if 0.0 < gain < 100.0:
+        print(f"  PASS: calibration gain {gain:.6e} in (0, 100)")
+        n_pass += 1
+    else:
+        print(f"  FAIL: calibration gain {gain:.6e} not in (0, 100)")
+        n_fail += 1
+
+    print(f"  === TOTAL: PASS={n_pass}, FAIL={n_fail} ===")
+    if n_fail > 0:
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,44 @@
 # Source-Driven Field Recovery Sweep
 
-**Date:** 2026-04-05  
-**Status:** bounded weak-field recovery companion for the minimal source-driven field branch
+**Date:** 2026-04-05 (audit-narrowing refresh: 2026-05-10)
+**Type:** bounded_theorem
+**Status:** bounded weak-field recovery companion for the minimal
+source-driven field branch.
+**Status authority:** independent audit lane only.
+**Claim scope:** on the declared exact 3D lattice family (`h = 0.5`,
+`W = 6`, `L = 30`, source strengths `s in {0.001, 0.002, 0.004,
+0.008}`), the self-contained runner verifies the broad sweep and the
+conservative pocket replay with explicit threshold gates. The
+telegraph-style field rule, its parameters, and the calibration target
+ladder are runner-selected modeling inputs, not derived from the repo
+baseline.
+
+## Audit boundary (2026-05-10)
+
+Earlier audit review flagged two issues: the old runner delegated
+load-bearing lattice/propagation primitives to an imported helper, and
+stdout printed values without explicit PASS/FAIL thresholds. Current
+`main` already resolves the runner-artifact side more strongly than
+the PR branch: `scripts/source_driven_field_recovery_sweep.py` is now
+self-contained, defining the exact 3D lattice, damped telegraph-style
+field rule, propagation, centroid-z readout, broad sweep, conservative
+pocket replay, and threshold checks inline.
+
+This note therefore keeps the self-contained runner path and records
+the honest claim boundary: the bounded computation verifies the
+declared runner family, while deriving the telegraph rule, parameters,
+and calibration ladder from retained framework dynamics remains future
+theorem work.
+
+## Hand-selected modeling inputs
+
+- Damped telegraph-style local field rule with `c_field = 0.45`,
+  `damp = 0.35` for the broad sweep.
+- Conservative pocket replay with `c_field = 0.40`, `damp = 0.35`,
+  `target_max = 0.010`.
+- Calibration target ladder
+  `target max |f_dyn| in {0.001, 0.002, 0.005, 0.010, 0.020, 0.040,
+  0.080}`.
 
 ## Artifact chain
 

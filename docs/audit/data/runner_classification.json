@@ -17821,7 +17821,7 @@
       "runner": "scripts/source_resolved_exact_green_h025_pocket.py"
     },
     "source_resolved_exact_green_pocket_note": {
-      "assert_count": 0,
+      "assert_count": 1,
       "counts": {
         "A": 0,
         "B": 0,
@@ -21071,6 +21071,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_wilson_two_body_open.py"
+    },
+    "wilson_two_body_open_refined_note_2026-04-11": {
+      "assert_count": 6,
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_wilson_two_body_open_refined.py"
     },
     "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08": {
       "assert_count": 1,
@@ -41951,6 +41963,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_wilson_two_body_open_refined.py": {
+      "assert_count": 6,
+      "claims": [
+        "wilson_two_body_open_refined_note_2026-04-11"
+      ],
+      "counts": {
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py": {
       "assert_count": 1,
       "claims": [
@@ -46630,7 +46657,7 @@
       "exists": true
     },
     "scripts/source_resolved_exact_green_pocket.py": {
-      "assert_count": 0,
+      "assert_count": 1,
       "claims": [
         "source_resolved_exact_green_pocket_note"
       ],
@@ -47864,15 +47891,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 201,
+    "decoration_candidates": 202,
     "dominant_class_distribution": {
-      "A": 153,
+      "A": 154,
       "B": 175,
       "C": 688,
       "D": 276,
       "none": 417
     },
-    "runners_classified": 1709,
+    "runners_classified": 1710,
     "runners_with_C": 877,
     "runners_with_D": 497
   }

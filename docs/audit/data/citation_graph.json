@@ -20525,6 +20525,26 @@
       "to": "source_resolved_exact_green_scaling_note"
     },
     {
+      "from": "source_resolved_exact_green_pocket_note",
+      "to": "minimal_source_driven_field_probe_note"
+    },
+    {
+      "from": "source_resolved_exact_green_pocket_note",
+      "to": "source_resolved_exact_green_h025_pocket_note"
+    },
+    {
+      "from": "source_resolved_exact_green_pocket_note",
+      "to": "source_resolved_exact_green_scaling_note"
+    },
+    {
+      "from": "source_resolved_exact_green_pocket_note",
+      "to": "source_resolved_exact_green_self_consistent_note"
+    },
+    {
+      "from": "source_resolved_exact_green_pocket_note",
+      "to": "source_resolved_propagating_green_pocket_note"
+    },
+    {
       "from": "source_resolved_exact_green_scaling_note",
       "to": "source_resolved_exact_green_pocket_note"
     },
@@ -63446,11 +63466,11 @@
     },
     "source_driven_field_recovery_sweep_note": {
       "claim_id": "source_driven_field_recovery_sweep_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "0ddd435048f012f5265695d2ff4b85007af431e5988f1e3394678ea3341cb80d",
+      "note_hash": "19edfe65d316385748ac6ef4da50b13c0093cd9b562b1cc1f492e836910868ce",
       "path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md",
       "runner_path": "scripts/source_driven_field_recovery_sweep.py",
       "title": "Source-Driven Field Recovery Sweep"
@@ -63471,11 +63491,17 @@
     },
     "source_resolved_exact_green_pocket_note": {
       "claim_id": "source_resolved_exact_green_pocket_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "79f350e5212243aad3f78cc58efb49d249528ee0cc5686d309e76cbc5d9b7e3c",
+      "deps": [
+        "minimal_source_driven_field_probe_note",
+        "source_resolved_exact_green_h025_pocket_note",
+        "source_resolved_exact_green_scaling_note",
+        "source_resolved_exact_green_self_consistent_note",
+        "source_resolved_propagating_green_pocket_note"
+      ],
+      "note_hash": "0f1a16e6c6ba8821b2fe2cde900c9c8ee7274c950341cda1bd3653a35449a029",
       "path": "docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md",
       "runner_path": "scripts/source_resolved_exact_green_pocket.py",
       "title": "Source-Resolved Exact Green Pocket"
@@ -67955,9 +67981,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c4f874d3b94a8cff535547ed70c98eb945ef96c0d9b6708e448f83fd9a9645fd",
+      "note_hash": "a678196e220a18f3243f1c45e8745b54c8c251c419b6ec4bd745c2d106fad384",
       "path": "docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_wilson_two_body_open_refined.py",
       "title": "Wilson Two-Body Open-Lattice Refinement Note"
     },
     "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08": {
@@ -70505,7 +70531,6 @@
     "sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10",
     "source_driven_field_recovery_h025_pocket_note",
     "source_driven_field_recovery_sweep_note",
-    "source_resolved_exact_green_pocket_note",
     "source_resolved_exact_green_self_consistent_note",
     "source_resolved_generated_architecture_bridge_note",
     "source_resolved_generated_discriminator_probe_note",
@@ -70673,10 +70698,10 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 355,
+      "bounded_theorem": 357,
       "meta": 74,
       "no_go": 45,
-      "none": 1554,
+      "none": 1552,
       "open_gate": 37,
       "positive_theorem": 145
     },
@@ -70688,10 +70713,10 @@
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8829,
-    "leaf_count": 628,
+    "edge_count": 8834,
+    "leaf_count": 626,
     "node_count": 2210,
-    "root_count": 796,
-    "runners_with_path": 1828
+    "root_count": 795,
+    "runners_with_path": 1829
   }
 }

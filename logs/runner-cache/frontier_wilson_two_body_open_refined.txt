@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wilson_two_body_open_refined.py
+runner_sha256: a45afd6c0d8c73d09a787f6ad46036d50750e8d294fbddc1ff6931a159b1fc87
+timeout_sec: 600
+exit_code: 0
+elapsed_sec: 101.85
+status: ok
+----- stdout -----
+========================================================================================
+OPEN-BOUNDARY WILSON TWO-BODY — REFINED SWEEP
+Sides: (11, 13, 15, 17, 19)   G=5.0   mu^2=0.22
+========================================================================================
+side=11 d=3: a_mut=-0.566674 (SNR=9.69) [ATTRACT] [CLEAN] (0.8s)
+side=11 d=4: a_mut=-0.247554 (SNR=8.47) [ATTRACT] [CLEAN] (0.8s)
+side=11 d=5: a_mut=-0.113243 (SNR=8.72) [ATTRACT] [CLEAN] (0.8s)
+side=13 d=3: a_mut=-0.567354 (SNR=9.74) [ATTRACT] [CLEAN] (1.5s)
+side=13 d=4: a_mut=-0.246222 (SNR=8.46) [ATTRACT] [CLEAN] (1.5s)
+side=13 d=5: a_mut=-0.114091 (SNR=8.16) [ATTRACT] [CLEAN] (1.5s)
+side=13 d=6: a_mut=-0.056692 (SNR=8.15) [ATTRACT] [CLEAN] (1.7s)
+side=15 d=3: a_mut=-0.567478 (SNR=9.78) [ATTRACT] [CLEAN] (2.6s)
+side=15 d=4: a_mut=-0.245780 (SNR=8.48) [ATTRACT] [CLEAN] (2.5s)
+side=15 d=5: a_mut=-0.113977 (SNR=8.16) [ATTRACT] [CLEAN] (2.5s)
+side=15 d=6: a_mut=-0.056342 (SNR=8.12) [ATTRACT] [CLEAN] (2.5s)
+side=15 d=7: a_mut=-0.028987 (SNR=8.11) [ATTRACT] [CLEAN] (2.5s)
+side=17 d=3: a_mut=-0.567522 (SNR=9.79) [ATTRACT] [CLEAN] (4.4s)
+side=17 d=4: a_mut=-0.245646 (SNR=8.48) [ATTRACT] [CLEAN] (4.1s)
+side=17 d=5: a_mut=-0.113910 (SNR=8.17) [ATTRACT] [CLEAN] (4.1s)
+side=17 d=6: a_mut=-0.056208 (SNR=8.12) [ATTRACT] [CLEAN] (4.3s)
+side=17 d=7: a_mut=-0.028950 (SNR=8.09) [ATTRACT] [CLEAN] (4.3s)
+side=17 d=8: a_mut=-0.015413 (SNR=8.08) [ATTRACT] [CLEAN] (4.3s)
+side=19 d=3: a_mut=-0.567539 (SNR=9.79) [ATTRACT] [CLEAN] (7.8s)
+side=19 d=4: a_mut=-0.245605 (SNR=8.48) [ATTRACT] [CLEAN] (7.9s)
+side=19 d=5: a_mut=-0.113887 (SNR=8.18) [ATTRACT] [CLEAN] (7.8s)
+side=19 d=6: a_mut=-0.056162 (SNR=8.12) [ATTRACT] [CLEAN] (7.8s)
+side=19 d=7: a_mut=-0.028926 (SNR=8.10) [ATTRACT] [CLEAN] (7.8s)
+side=19 d=8: a_mut=-0.015378 (SNR=8.09) [ATTRACT] [CLEAN] (7.8s)
+side=19 d=9: a_mut=-0.008356 (SNR=8.06) [ATTRACT] [CLEAN] (7.8s)
+
+Total compute: 101.5s (25 configs)
+
+========================================================================================
+AGGREGATE COUNTS
+========================================================================================
+  total runs:         25
+  ATTRACT:            25/25
+  CLEAN (SNR>2):      25/25
+  ATTRACT and CLEAN:  25/25
+
+========================================================================================
+POWER-LAW FITS ON CLEAN ATTRACTIVE SUBSET
+========================================================================================
+  side=11: |a_mut| ~ d^-3.139   (R^2 = 0.9968, n=3)
+  side=13: |a_mut| ~ d^-3.313   (R^2 = 0.9960, n=4)
+  side=15: |a_mut| ~ d^-3.500   (R^2 = 0.9939, n=5)
+  side=17: |a_mut| ~ d^-3.671   (R^2 = 0.9920, n=6)
+  side=19: |a_mut| ~ d^-3.837   (R^2 = 0.9899, n=7)
+  GLOBAL: |a_mut| ~ d^-3.669   (R^2 = 0.9896, n=25)
+
+========================================================================================
+VERIFICATION ASSERTIONS
+========================================================================================
+  PASS: 25/25 ATTRACT + CLEAN (matches note's 25/25 claim)
+  PASS: global exponent -3.669 matches note's -3.669 within tol 0.005
+  PASS: global R^2 0.9896 matches note's 0.9896 within tol 0.0005
+  PASS: side=11 exponent -3.139 matches note's -3.139 within tol 0.005
+  PASS: side=13 exponent -3.313 matches note's -3.313 within tol 0.005
+  PASS: side=15 exponent -3.500 matches note's -3.500 within tol 0.005
+  PASS: side=17 exponent -3.671 matches note's -3.671 within tol 0.005
+  PASS: side=19 exponent -3.837 matches note's -3.837 within tol 0.005
+  PASS: global exponent -3.669 is steeper than Newton's -2 (note's headline non-Newtonian claim)
+
+========================================================================================
+REFINED SWEEP: PASS
+========================================================================================
+
+----- stderr -----
+

@@ -1,5 +1,7 @@
 # Wilson Two-Body Open-Lattice Refinement Note
 
+**Primary runner:** [`scripts/frontier_wilson_two_body_open_refined.py`](../scripts/frontier_wilson_two_body_open_refined.py)
+**Cached output:** [`logs/runner-cache/frontier_wilson_two_body_open_refined.txt`](../logs/runner-cache/frontier_wilson_two_body_open_refined.txt)
 **Date:** 2026-04-11  
 **Status:** bounded companion refinement note
 **Claim type:** bounded_theorem
@@ -7,30 +9,24 @@
 - `frontier_wilson_two_body_open_refined.py`
 
 **Audit-conditional perimeter (2026-05-08):**
-The current generated audit ledger records this row `audited_conditional` with
-`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
-bounded_theorem`. The audit chain-closure explanation is exact: "The
-restricted packet contains no cited retained authority, no runner
-stdout, and no runner source for the reported sweep and fits. The
-missing step is an auditable computation or certificate showing the
-25 run outputs and regression exponents from the stated Wilson
-setup." This rigorization edit only sharpens the boundary of the
-conditional perimeter; nothing here promotes audit status. The
-supported content of this note is the structural framing: the open-
-lattice Wilson refinement protocol, the post-selected-only fit
-methodology (already declared in §"Fits"), and the qualitative
-conclusion that the law remains non-Newtonian under refinement. The
-numerical rows (25 run table, side-by-side fits at side ∈ {11..19},
-representative `a_mut` values, side-binned exponents -3.139..-3.837,
-the §"Screening Addendum" `mu^2`-controlled crossover) are not
-independently reproduced from a registered runner stdout in the
-audit packet; they are bounded retained values cited from the
-companion runner `scripts/frontier_wilson_two_body_open_refined.py`
-which is referenced in the source-note header but is not in the
-restricted packet's load-bearing one-hop set. A future runner-cache
-deposit producing the 25-run table and the per-side regression
-exponents would close the missing-stdout gap; that is the prescribed
-repair path.
+The archived independent audit for the prior hash recorded this row as
+`audited_conditional` with `auditor_confidence = high`, `chain_closes =
+false`, and `claim_type = bounded_theorem`. The audit chain-closure
+explanation was exact: "The restricted packet contains no cited retained
+authority, no runner stdout, and no runner source for the reported sweep
+and fits. The missing step is an auditable computation or certificate
+showing the 25 run outputs and regression exponents from the stated
+Wilson setup."
+
+The 2026-05-11 review-loop landing supplies that missing artifact:
+`scripts/frontier_wilson_two_body_open_refined.py` recomputes the 25-run
+fixed-surface sweep and `logs/runner-cache/frontier_wilson_two_body_open_refined.txt`
+records the SHA-pinned stdout. This repair does not promote audit status;
+the current note should remain queued for independent re-audit. The
+supported content is bounded to the open-lattice Wilson refinement
+protocol, the post-selected-only fit methodology (already declared in
+the "Fits" section), and the fixed `G = 5`, `mu^2 = 0.22` numerical
+surface reproduced by the runner.
 
 ## Question
 
@@ -112,7 +108,7 @@ Best current statement:
 > Open-boundary Wilson two-orbital Hartree dynamics supports a robust
 > mutual-attraction channel whose distance law remains non-Newtonian under
 > refinement, with a clean power-law falloff near `|a_mut| ~ d^-3.7` on the
-> audited larger open surfaces.
+> registered larger open surfaces.
 
 ## Caveats
 

@@ -3,7 +3,7 @@ runner: scripts/source_driven_field_recovery_sweep.py
 runner_sha256: fb89e12f339058995362a70113f0097cfa959524d6d01be33760cde2eafefd72
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 62.96
+elapsed_sec: 63.05
 status: ok
 ----- stdout -----
 ====================================================================================

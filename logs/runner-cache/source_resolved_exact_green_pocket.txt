@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/source_resolved_exact_green_pocket.py
-runner_sha256: 748ecf0285e44a28e453a2ce7ec7ac699a6a5e23589d44fd613ce9f370077766
+runner_sha256: 3afc4521ebb70cab469844e14478555bcd2c13ce3f2787eb0040284cb1fbec70
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 4.29
+elapsed_sec: 2.20
 status: ok
 ----- stdout -----
 ====================================================================================
@@ -33,6 +33,14 @@ SAFE READ
   TOWARD rows: 4/4
   mean |green/inst| ratio: 1.235
   this is a feasibility pocket, not yet a full-size exact-lattice theory
+
+HARD-BAR ASSERTIONS
+  PASS: zero-source reduction |zero_delta|=0.000e+00 <= 1e-12
+  PASS: TOWARD sign 4/4
+  PASS: green F~M exponent 1.000 in [0.95, 1.05]
+  PASS: mean |green/inst| ratio 1.235 in [1.10, 1.40]
+  PASS: calibration gain 2.131774e+00 in (0, 100)
+  === TOTAL: PASS=5, FAIL=0 ===
 
 ----- stderr -----
 
