@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 281 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1194 |
+| unaudited | 1193 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 189 |
+| ~~audited_conditional~~ | 190 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 474 |
-| `audited_conditional` | 189 |
+| `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1307 |
+| `unaudited` | 1306 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 898 |
+| `bounded_theorem` | 899 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 736 |
+| `positive_theorem` | 735 |
 
 | criticality | count |
 |---|---:|
@@ -754,6 +754,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_vs_central_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -7306,6 +7307,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the single parameter card npl_half=60, connect_radius=5.0, k=5.0, layer2_prob=0.0, 16 seeds, mirror MI exceeds matched random MI at N=40,60,80 and falls below matched random at N=100.  _(class `C`)_
 - **chain closes:** False — The live runner reproduces the finite table, but the cited upstream mirror_chokepoint_note is retained only for the strict NPL_HALF=25, connect_radius=4.0, N=15/25 pocket and explicitly excludes this dense card. The dense-card family support is therefore not wired as a direct retained dependency, and the runner has no assertion gates for the retained sentence.
 - **rationale:** Issue: the finite MI table is live-reproducible, but the clean claim chain cites the strict-card mirror parent rather than a retained authority for the dense NPL_HALF=60/connect_radius=5.0 card, and the runner prints measurements without pass/fail assertions for the claimed N=40/60/80 advantage and N=100 reversal. Why this blocks: a retained_bounded audit would otherwise let the row inherit closure from a parent whose audited scope excludes the parameter card actually used here. Repair target: add the correct dense-card retained dependency or make the row explicitly self-contained, then add a certificate/cache with hard assertions for the card parameters, seed count, N=40/60/80 mirror>random checks, and N=100 reversal. Claim boundary until fixed: the printed finite MI table may be cited as a reproducible diagnostic from this runner, but not as a clean retained mirror-family theorem or whole-window/asymptotic advantage.
+- **auditor confidence:** high
+
+### `mirror_vs_central_head_to_head_note`
+
+- **Note:** [`MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md`](../../docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Cross-lane structural ranking claim comparing a hard-coded dense central-band row against a hard-coded mirror chokepoint row, with the intended conclusion that dense central-band remains the best joint coexistence lane while mirror is a bounded challenger. The audit packet only wires mirror_chokepoint_note as a dependency and does not wire the dense central-band authority or a direct frozen-output reader for both rows.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Reading the registered runner cache directly, dense central-band + layer norm ranks above mirror chokepoint / Z2-protected transfer as the best joint coexistence lane.  _(class `B`)_
+- **chain closes:** False — The runner prints hard-coded row summaries rather than reading registered artifacts, and the ledger dependency set does not include the dense central-band note/cache needed to verify the winning side of the ranking. The mirror dependency currently retained in mirror_chokepoint_note also does not certify the N=40, NPL_HALF=50 row as that note's retained scope.
+- **rationale:** Issue: the comparison depends on hard-coded cross-lane row values, but the audit graph only supplies mirror_chokepoint_note and does not supply the dense central-band authority or the mirror boundary-card authority for the cited N=40/NPL_HALF=50 row. Why this blocks: a ranking between lanes cannot be retained from a script that prints constants when one side's registered source and part of the other side's cited surface are absent from the one-hop packet. Repair target: add explicit one-hop dependencies for the dense central-band row and the correct mirror boundary-card row, or replace the runner with one that reads and verifies both frozen outputs directly. Claim boundary until fixed: the note is an intended structural comparison, not an audited ranking.
+- **open / conditional deps cited:**
+  - `MIRROR_CHOKEPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `monopole_derived_note`
