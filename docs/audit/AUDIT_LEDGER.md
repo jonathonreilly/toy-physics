@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 252 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1241 |
+| unaudited | 1240 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 190 |
+| ~~audited_conditional~~ | 191 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 428 |
-| `audited_conditional` | 190 |
+| `audited_conditional` | 191 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1351 |
+| `unaudited` | 1350 |
 
 | claim_type | count |
 |---|---:|
@@ -722,6 +722,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
+| `universal_gr_isotropic_glue_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -10081,6 +10082,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
 - **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
+- **auditor confidence:** high
+
+### `universal_gr_isotropic_glue_operator_note`
+
+- **Note:** [`UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional tensor-product assembly of the admitted local Hessian, Route-2 slice generator, canonical 3+1 block projectors, and invariant-background Schur irreducibility on D = diag(a,b,b,b), excluding uniqueness over arbitrary covariant quadratic operators.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e16c0-05ad-7620-bc4d-07eb5d6113a6`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Conditional on (BA-1)-(BA-4), the unique covariant quadratic combination of the imported ingredients that uses each ingredient exactly once and respects the imported block decomposition is K_GR^iso(D) = M_D ⊗ Lambda_R.  _(class `A`)_
+- **chain closes:** False — The tensor-product assembly is algebraically immediate if BA-1 through BA-4 are granted. The packet provides no cited authorities or dependency edges for those admissions, so the bounded theorem cannot be certified as closed from retained-grade inputs.
+- **rationale:** Issue: The proof imports BA-1 through BA-4 but the ledger packet lists no direct dependencies or retained-grade authorities. Why this blocks: the uniqueness and no-freedom language within the imported block decomposition depends on the exact Hessian, projectors, Lambda_R, and Schur irreducibility being independently established. Repair target: add dependency edges to retained-grade authorities for each bounded admission and verify they are non-circular. Claim boundary until fixed: formal bookkeeping definition of K_GR^iso(D) = M_D ⊗ Lambda_R conditional on the four named admissions.
+- **open / conditional deps cited:**
+  - `missing:BA-1_local_universal_hessian_authority`
+  - `missing:BA-2_route_2_slice_generator_authority`
+  - `missing:BA-3_canonical_3_plus_1_block_projector_authority`
+  - `missing:BA-4_invariant_background_schur_irreducibility_authority`
 - **auditor confidence:** high
 
 ### `universal_gr_isotropic_schur_localization_note`
