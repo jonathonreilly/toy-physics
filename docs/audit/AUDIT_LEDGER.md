@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1266 |
+| unaudited | 1265 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 165 |
+| ~~audited_conditional~~ | 166 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 165 |
+| `audited_conditional` | 166 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1379 |
+| `unaudited` | 1378 |
 
 | claim_type | count |
 |---|---:|
@@ -698,6 +698,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
+| `pmns_c3_character_mode_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
@@ -7099,6 +7100,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the displayed third-order Picard-Fuchs equation holds and its analytic Frobenius solution gives the physical integral.  _(class `A`)_
 - **chain closes:** False — The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
 - **rationale:** The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
+- **auditor confidence:** high
+
+### `pmns_c3_character_mode_reduction_note`
+
+- **Note:** [`PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md`](../../docs/PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact C3 character-mode reduction of the graph-first PMNS reduced-cycle family, conditional on the imported holonomy-closure, current-route boundary, source-transfer, scalar-route, and staggered-Dirac realization inputs.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the graph-first reduced forward-cycle channel A_fwd(u,v,w), the C3-character holonomy modes are z0=w, z1=u-i v, and z2=u+i v, so the remaining value problem is one real trivial mode plus one complex nontrivial character amplitude chi.  _(class `A`)_
+- **chain closes:** False — The Fourier character reduction is local algebra, but the note states it assumes the native C3-character holonomy family, graph-first reduced channel, current sole-axiom routes, retained hw=1 response family, and staggered-Dirac realization context. Those inputs are not wired as retained direct dependencies; several runner imports resolve to unaudited PMNS notes.
+- **rationale:** Issue: the displayed character-mode reduction is algebraically correct for the supplied reduced-channel family, but the claim imports the PMNS holonomy-closure/current-bank/source-transfer route stack and the staggered-Dirac realization target without retained dependency closure. Why this blocks: the audit packet cannot establish that the reduced channel and the zero-chi route statements are already closed sole-axiom inputs rather than definitions from unaudited helper modules. Repair target: add direct dependency edges to the imported PMNS boundary/closure notes and close them, plus wire or split off the staggered-Dirac realization gate. Claim boundary until fixed: algebraic Fourier decomposition of a stipulated three-parameter graph-first reduced family only.
+- **open / conditional deps cited:**
+  - `PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md`
+  - `PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md`
+  - `PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `pmns_commutant_eigenoperator_selector_note`

@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 435 |
-| critical | `audited_conditional` | 67 |
+| critical | `unaudited` | 434 |
+| critical | `audited_conditional` | 68 |
 | critical | `audit_in_progress` | 9 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 5 |
@@ -380,7 +380,7 @@ publication tables phrase it.
 | critical | `pmns_active_four_real_source_from_transport_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_branch_conditioned_quadratic_sheet_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_c3_character_holonomy_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `pmns_c3_character_mode_reduction_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `pmns_c3_character_mode_reduction_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_c3_nontrivial_current_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_chart_constants_retention_stretch_attempt_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_commutant_eigenoperator_selector_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
