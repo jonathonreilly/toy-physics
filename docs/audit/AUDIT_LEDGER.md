@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| **retained_no_go** | 128 |
+| **retained_no_go** | 129 |
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1260 |
+| unaudited | 1259 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,20 +41,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 428 |
+| `audited_clean` | 429 |
 | `audited_conditional` | 170 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1373 |
+| `unaudited` | 1372 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 895 |
+| `bounded_theorem` | 894 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 223 |
+| `no_go` | 224 |
 | `open_gate` | 112 |
 | `positive_theorem` | 742 |
 
@@ -298,6 +298,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `growing_graph_static_control_audit_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
+| `h0125_wider_replay_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -4928,6 +4929,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retained width-4 comparator stays pinned at alpha = 0.499, while the shorter-scale scout only reaches alpha = 0.501, 0.501, 0.502.  _(class `B`)_
 - **chain closes:** True — The cited scout log matches the note's Born, k, gravity, and alpha values, and the cited comparator log reports alpha = 0.499 for phys_l=6, phys_w=4. The closure is bounded to those observed full-window rows and does not exclude untested geometries.
 - **rationale:** The note's load-bearing comparison is a direct read from the two cited logs, and the numeric values match. Under the stated bounded scope, the conclusion does not require an additional physical bridge, tuned comparator, or algebraic decoration. Residual risk is limited to lack of a provided runner rerun; this audit ratifies only the recorded observed rows.
+- **auditor confidence:** medium
+
+### `h0125_wider_replay_note`
+
+- **Note:** [`H0125_WIDER_REPLAY_NOTE.md`](../../docs/H0125_WIDER_REPLAY_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the completed h=0.125 phys_l=6 full-window replay rows, including the genuinely wider phys_w=4 z=3.0 row, do not rescue the weak-field mass-law exponent from the alpha approximately 0.5 class.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The completed replay cache shows the genuinely wider phys_w=4, phys_l=6, h=0.125, z=3.0 full-window row has alpha=0.499, while the phys_w=3 control has alpha=0.500, so widening does not move the observed full-window weak-field exponent toward 1.0.  _(class `C`)_
+- **chain closes:** True — The dependency scout is retained_no_go and the current SHA-pinned runner cache for the replay exits 0 with the load-bearing width-4 full-window z=3.0 row at alpha=0.499. The claim is scoped only to the observed replay rows, not to all possible wider families.
+- **rationale:** The long runner now has a completed cache at the declared 1800 s budget, so this audit is not relying on timeout/noncompletion. Within the narrow observed-row scope, the width-4 full-window replay remains pinned at alpha=0.499 and the width-3 control at alpha=0.500, while the retained scout dependency also found no scalable rescue. Residual risk is scope only: this does not rule out every future wider configuration, just the cited completed h=0.125 replay rows.
 - **auditor confidence:** medium
 
 ### `h0125_wider_w4_probe_note`
