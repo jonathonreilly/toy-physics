@@ -1441,6 +1441,26 @@
       "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
     },
     {
+      "from": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "boundary_law_robustness_note_2026-04-11",
       "to": "holographic_probe_note_2026-04-11"
     },
@@ -36200,6 +36220,23 @@
       "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py",
       "title": "Bougerol-Lacroix Staggered-Blocking Lyapunov-Bridge \u2014 No-Go Narrow Theorem"
     },
+    "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10": {
+      "claim_id": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "plaquette_self_consistency_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
+        "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "5105d73ef4be0929ab8007d14a979fbcb4422170a23e24c881518527864e969c",
+      "path": "docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_SUBMULT_TAUTOLOGICAL_BOUND_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_submult_tautological_bound.py",
+      "title": "Bougerol-Lacroix Staggered Blocking Submultiplicativity Tautological Bound"
+    },
     "bound_state_selection_note": {
       "claim_id": "bound_state_selection_note",
       "claim_type_author_hint": null,
@@ -67131,7 +67168,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 259,
+      "bounded_theorem": 260,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67140,7 +67177,7 @@
       "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 741,
+      "bounded_theorem": 742,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67148,10 +67185,10 @@
       "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8351,
-    "leaf_count": 567,
-    "node_count": 2114,
+    "edge_count": 8356,
+    "leaf_count": 568,
+    "node_count": 2115,
     "root_count": 794,
-    "runners_with_path": 1727
+    "runners_with_path": 1728
   }
 }
