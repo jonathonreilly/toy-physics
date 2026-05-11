@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 291 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1171 |
+| unaudited | 1170 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 198 |
+| ~~audited_conditional~~ | 199 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 488 |
-| `audited_conditional` | 198 |
+| `audited_conditional` | 199 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1284 |
+| `unaudited` | 1283 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 904 |
+| `bounded_theorem` | 905 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 228 |
 | `open_gate` | 111 |
-| `positive_theorem` | 729 |
+| `positive_theorem` | 728 |
 
 | criticality | count |
 |---|---:|
@@ -819,6 +819,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `universality_classifier_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `vector_sector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wilson_test_mass_continuum_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -11216,6 +11217,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the widened h = 0.25, W = 12 replay for the 3D valley-linear branch, the far-tail fit on the tested z >= 5 window is b^(-1.17) with high R^2.  _(class `C`)_
 - **chain closes:** True — The note explicitly limits the claim to the tested finite-lattice replay and does not assert a universal continuum theorem. The completed runner output matches the frozen replay numbers stated in the note.
 - **rationale:** The bounded claim closes because the completed replay log reports the same barrier sanity checks, 9/9 TOWARD rows, and tail-fit exponents/R^2 values quoted by the note. The note preserves the correct claim boundary by saying this is a finite-lattice replay rather than a universal theorem.
+- **auditor confidence:** high
+
+### `vector_sector_note`
+
+- **Note:** [`VECTOR_SECTOR_NOTE.md`](../../docs/VECTOR_SECTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite circular-orbit lock-in handedness protocol reproduced by the registered runner/log: exact nulls, dz sign flip over tested frequencies, near-zero phase-averaged DC, first-harmonic amplitude 0.018419, f-oddness, time-order control, and 3-family portability; not an unqualified retained vector-sector observable or matched scalar-exposure theorem.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The vector sector is a phase-locked first-harmonic handedness signal: the DC readout is zero, but the first harmonic at the drive frequency is nonzero and tracks the orbit direction.  _(class `C`)_
+- **chain closes:** False — The completed runner/log closes the bounded lock-in harmonic protocol, but the note's broader vector-sector observable framing requires a retained bridge from this selected phase-referenced readout to the claimed observable, and the runner output does not independently report the matched scalar-exposure table.
+- **rationale:** Issue: the registered log supports the phase-locked harmonic/nulled protocol, but the note promotes that selected lock-in readout toward a retained vector-sector observable and reports a matched scalar-exposure table that the current runner output does not independently label. Why this blocks: a nonzero first harmonic under a chosen phase reference is not by itself an unqualified vector-sector observable, and the scalar-exposure control is load-bearing for ruling out a distance-exposure explanation. Repair target: add a retained bridge theorem for the lock-in readout and a runner/log column computing the matched scalar exposure for CCW and CW under the audited protocol. Claim boundary until fixed: cite only the finite circular-orbit lock-in handedness protocol and its reproduced harmonic/null/f-oddness controls.
 - **auditor confidence:** high
 
 ### `wave_3plus1d_promotions_note`
