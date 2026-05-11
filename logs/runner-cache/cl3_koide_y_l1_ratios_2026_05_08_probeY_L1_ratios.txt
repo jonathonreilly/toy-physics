@@ -1,0 +1,38 @@
+
+================================================================================
+note boundary checks
+================================================================================
+[PASS] note contains 'Claim type:** bounded_theorem'
+[PASS] note contains 'source-note proposal only'
+[PASS] note contains 'observational comparators, not derivation inputs'
+[PASS] note contains 'does not derive quark masses'
+[PASS] note contains 'does not rule out other heavy-quark mechanisms'
+[PASS] note contains 'does not depend on or land any sibling absolute-mass p'
+[PASS] note contains 'assert retained or audited status'
+
+================================================================================
+integer and q<=6 rational fits
+================================================================================
+[PASS] t: Delta n finite (Delta n=-1.9065)
+[PASS] t: integer fit fails 5% gate (best=-2, err=25.16%)
+[PASS] t: q<=6 rational fit fails 5% gate (best=-11/6, err=16.11%)
+[PASS] b: Delta n finite (Delta n=-0.3564)
+[PASS] b: integer fit fails 5% gate (best=0, err=57.49%)
+[PASS] b: q<=6 rational fit fails 5% gate (best=-1/3, err=5.38%)
+[PASS] c: Delta n finite (Delta n=0.1399)
+[PASS] c: integer fit fails 5% gate (best=0, err=39.91%)
+[PASS] c: q<=6 rational fit fails 5% gate (best=1/6, err=6.22%)
+
+================================================================================
+near-half-power observation is comparator-only
+================================================================================
+[PASS] m_b/m_c exponent is near -1/2 (Delta=-0.4963)
+[PASS] m_b/m_c half-power error is below 2% (err=0.90%)
+[PASS] note says this near relation is not derived
+
+================================================================================
+runner import boundary
+================================================================================
+[PASS] imports limited to stdlib (modules=['__future__', 'dataclasses', 'math', 'pathlib', 're', 'sys'])
+
+TOTAL: PASS=20 FAIL=0

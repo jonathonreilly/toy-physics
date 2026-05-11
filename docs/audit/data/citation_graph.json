@@ -51540,6 +51540,17 @@
       "runner_path": "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py",
       "title": "Koide BAE Probe Y: Topological Decoupling on the C3 hw=1 Triplet"
     },
+    "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios": {
+      "claim_id": "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "5006431902952bc31b2adbcc3eed3ed9a317808ad49517f2c94b19c4940a8a69",
+      "path": "docs/KOIDE_Y_L1_RATIOS_WILSON_INTEGER_DIFF_NOTE_2026-05-08_probeY_L1_ratios.md",
+      "runner_path": "scripts/cl3_koide_y_l1_ratios_2026_05_08_probeY_L1_ratios.py",
+      "title": "Probe Y-L1-Ratios: Wilson-Chain Heavy-Quark Ratio Comparator"
+    },
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
       "claim_id": "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
       "claim_type_author_hint": "meta",
@@ -69312,6 +69323,7 @@
     "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
     "koide_theta_hierarchy_open_scalar_note_2026-04-19",
     "koide_transport_gap_constant_no_go_note_2026-04-20",
+    "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios",
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
     "koide_y_substrate_anomaly_forcing_note_2026-05-08_probey_substrate_anomaly",
     "koide_z3_joint_projector_identity_note_2026-04-19",
@@ -69682,7 +69694,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 329,
+      "bounded_theorem": 330,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69690,7 +69702,7 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 788,
+      "bounded_theorem": 789,
       "meta": 70,
       "no_go": 149,
       "none": 446,
@@ -69698,9 +69710,9 @@
       "positive_theorem": 618
     },
     "edge_count": 8686,
-    "leaf_count": 620,
-    "node_count": 2187,
-    "root_count": 815,
-    "runners_with_path": 1799
+    "leaf_count": 621,
+    "node_count": 2188,
+    "root_count": 816,
+    "runners_with_path": 1800
   }
 }

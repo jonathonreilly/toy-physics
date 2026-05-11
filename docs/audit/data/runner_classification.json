@@ -11604,6 +11604,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py"
     },
+    "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/cl3_koide_y_l1_ratios_2026_05_08_probeY_L1_ratios.py"
+    },
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
       "assert_count": 0,
       "counts": {
@@ -24767,6 +24779,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_y_l1_ratios_2026_05_08_probeY_L1_ratios.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/cl3_koide_y_substrate_anomaly_2026_05_08_probeY_substrate_anomaly.py": {
@@ -47182,13 +47209,13 @@
     "decoration_candidates": 199,
     "dominant_class_distribution": {
       "A": 150,
-      "B": 173,
+      "B": 174,
       "C": 682,
       "D": 266,
       "none": 416
     },
-    "runners_classified": 1687,
+    "runners_classified": 1688,
     "runners_with_C": 863,
-    "runners_with_D": 482
+    "runners_with_D": 483
   }
 }
