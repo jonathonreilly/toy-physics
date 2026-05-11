@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1280 |
-| audit_in_progress | 17 |
+| unaudited | 1279 |
+| audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
@@ -41,23 +41,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 25 |
+| `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
 | `audited_conditional` | 152 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1393 |
+| `unaudited` | 1392 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 890 |
+| `bounded_theorem` | 891 |
 | `decoration` | 14 |
 | `meta` | 116 |
 | `no_go` | 220 |
 | `open_gate` | 110 |
-| `positive_theorem` | 751 |
+| `positive_theorem` | 750 |
 
 | criticality | count |
 |---|---:|
@@ -128,6 +128,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_circulant_wilson_target_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | audit_in_progress | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `kubo_continuum_limit_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |

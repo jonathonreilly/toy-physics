@@ -17,10 +17,10 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 444 |
+| critical | `unaudited` | 443 |
 | critical | `audited_conditional` | 59 |
+| critical | `audit_in_progress` | 8 |
 | critical | `audited_numerical_match` | 8 |
-| critical | `audit_in_progress` | 7 |
 | critical | `audited_renaming` | 5 |
 | medium | `unaudited` | 3 |
 | critical | `audited_failed` | 1 |
@@ -309,7 +309,7 @@ publication tables phrase it.
 | critical | `koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_weighted_character_source_axis_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_z3_scalar_potential_support_note_2026-04-19` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, RESULTS_INDEX.md |
-| critical | `kubo_continuum_limit_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `kubo_continuum_limit_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `left_handed_charge_matching_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md |
 | critical | `lensing_adjoint_kernel_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `lepton_charge_universality_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
