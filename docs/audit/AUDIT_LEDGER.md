@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1282 |
+| unaudited | 1281 |
 | audit_in_progress | 15 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
-| ~~audited_renaming~~ | 13 |
+| ~~audited_renaming~~ | 14 |
 | ~~audited_conditional~~ | 152 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
@@ -47,8 +47,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
-| `audited_renaming` | 13 |
-| `unaudited` | 1395 |
+| `audited_renaming` | 14 |
+| `unaudited` | 1394 |
 
 | claim_type | count |
 |---|---:|
@@ -812,6 +812,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `field_equation_derivation_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow_note_2026-05-10` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `graviton_mass_derived_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_mru_weight_class_obstruction_theorem_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_theta_hierarchy_open_scalar_note_2026-04-19` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `pmns_corner_transport_active_block_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -4663,6 +4664,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "The framework goes beyond Newtonian gravity in three specific ways: causal information propagation, retardation effects, and post-Newtonian action."  _(class `F`)_
 - **chain closes:** False — The runner computes internal toy-lattice differences, but the note relabels those differences as post-Newtonian or gravitational-wave-adjacent physics without a cited bridge theorem deriving the retarded potential, c_lattice, PN observable, or GR coefficient from retained inputs. The supplied packet has no one-hop authorities to close that physical identification.
 - **rationale:** Issue: the numerical runner distinguishes several internally defined variants, but the load-bearing claim that these are genuine beyond-Newtonian or 1PN effects is an uncited physical-observable bridge. Why this blocks: hand-defining a retarded source position and adding S=L(1-f-f^2/2) shows sensitivity to those choices, not that the framework derives GR retardation or PN corrections. Repair target: add a bridge theorem deriving the dynamical carrier, retarded source law, c_lattice normalization, and PN coefficient from retained primitives, with a runner that constructs those rather than imposing them. Claim boundary until fixed: retain only the bounded toy-model sensitivity results and the honest negative for Poisson-field gravitational waves.
+- **auditor confidence:** high
+
+### `graviton_mass_derived_note`
+
+- **Note:** [`GRAVITON_MASS_DERIVED_NOTE.md`](../../docs/GRAVITON_MASS_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional spectral-arithmetic companion only: given the imported S^3 TT Lichnerowicz spectrum, the imported Hubble-radius identification R=c/H0, and the asserted bridge m_g^2 c^2/hbar^2=lambda_2^TT, the runner verifies lambda_2^TT=6/R^2, m_g≈3.52e-33 eV/c^2, Higuchi-bound arithmetic, Compton-wavelength arithmetic, and observational-bound comparisons. This excludes a retained derivation of the TT-eigenvalue-to-graviton-mass bridge, vDVZ avoidance, S^3 topology, or R=c/H0 from the framework.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-graviton-mass`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The physical mass identification `m_g^2 c^2 / hbar^2 = lambda_2^TT = 6/R^2` is asserted after importing the continuum S^3 spectrum and Hubble-radius scale.  _(class `F`)_
+- **chain closes:** False — The arithmetic closes after the bridge is assumed, and the live runner reports PASS=15 FAIL=0. The restricted packet does not derive the identification of the compact-spatial TT Lichnerowicz eigenvalue with a Lorentzian graviton mass term, nor the R=c/H0 cosmology scale input.
+- **rationale:** Issue: the load-bearing step identifies the lowest S^3 TT Lichnerowicz eigenvalue with a graviton mass term and imports R=c/H0, then the runner checks downstream arithmetic and bounds. Why this blocks: a numerical value for m_g is not derived from the framework unless the physical mass bridge and cosmological radius identification are themselves derived or retained. Repair target: supply a retained restricted-packet theorem deriving the TT-eigenvalue-to-Lorentzian-mass bridge and the radius identification, with the runner constructing those objects instead of assuming them. Claim boundary until fixed: the row is a conditional spectral-arithmetic companion, not a retained prediction of graviton mass.
 - **auditor confidence:** high
 
 ### `gravity_full_self_consistency_note`
