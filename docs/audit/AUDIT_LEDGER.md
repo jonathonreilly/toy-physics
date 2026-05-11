@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 132 |
-| **retained_bounded** | 279 |
+| **retained_bounded** | 280 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1198 |
+| unaudited | 1197 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 471 |
+| `audited_clean` | 472 |
 | `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1311 |
+| `unaudited` | 1310 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 897 |
+| `bounded_theorem` | 898 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 737 |
+| `positive_theorem` | 736 |
 
 | criticality | count |
 |---|---:|
@@ -394,6 +394,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `linear_response_derivation_note` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
+| `link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `local_zsym_predictor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `lorentz_violation_derived_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
@@ -6988,6 +6989,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** B_j = Σ_{i→j} [B_i exp(i k L_ij) + A_i (-i k L_ij / r_edge_ij) exp(i k L_ij)] w_ij h²/L_ij², followed by d(cz)/ds = (1/T) Σ_j (z_j - cz_free) 2 Re[A_j* B_j].  _(class `A`)_
 - **chain closes:** True — The B recurrence follows by direct Leibniz/chain-rule differentiation of each edge factor in the finite path product, and the centroid formula follows by differentiating the quotient N/T. Closure is bounded to the specified propagator, regularized 1/r_edge field, finite DAG-style propagation, detector readout, and s = 0 linear-response regime.
 - **rationale:** The bounded analytic claim closes: the note's load-bearing recurrence is not a fitted definition or renaming, but the exact first derivative of the stated path-sum propagator, and the d(cz)/ds expression is the standard quotient derivative written in centered form. The cached runner completed successfully and independently recomputes the stated 44-family correlation/sign evidence, but that evidence is supportive rather than needed for the algebraic closure. This clean verdict does not promote broader claims about nonlinear response, F~M scaling, PASS/FAIL thresholds, physical gravity strength, or a compact-principle theorem beyond the specified first-order propagator/field/readout.
+- **auditor confidence:** high
+
+### `link_local_first_variation_selector_bridge_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`LINK_LOCAL_FIRST_VARIATION_SELECTOR_BRIDGE_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/LINK_LOCAL_FIRST_VARIATION_SELECTOR_BRIDGE_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional algebra theorem in H_cell=Lambda^*span(t,x,y,z): under the stipulated one-link source-map hypothesis and active-response/support bridge hypothesis, the support projector of dS_link is the Hamming-weight-one projector P_1, P_A=P_1 by definition of the bridge, and P_3 is orthogonal to that support. No derivation of the source map, bridge hypothesis, or physical selector from Cl(3)/Z^3 is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** If the one-link source-map hypothesis and active-response/support bridge hypothesis hold, then the active primitive response projector is the support projector of dS_link, hence P_A = P_1 and P_3 is excluded for that source map.  _(class `A`)_
+- **chain closes:** True — Given the two explicit hypotheses, the proof is a direct support-projector calculation in the 16-state subset basis. The runner constructs the Hamming-weight projectors and one-axis source images, verifies the support projector equals P_1, and checks P_3 P_1=0 while preserving the note's boundary language.
+- **rationale:** The theorem is clean as a bounded conditional algebra implication: all load-bearing hypotheses are explicit, and the calculation does not import a hidden physical selector. I am not retaining it as an unrestricted positive framework theorem because the source map and active-response/support bridge are stipulated rather than derived. Residual risk is only future misuse of the result as a physical P_A derivation; that is outside the audited scope and is excluded in the claim_scope.
 - **auditor confidence:** high
 
 ### `literature_backmatch_live_scan_note`
