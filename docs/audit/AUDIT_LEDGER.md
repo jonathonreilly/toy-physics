@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 75 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 242 |
+| **retained_bounded** | 243 |
 | open_gate | 13 |
-| unaudited | 1112 |
+| unaudited | 1111 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 413 |
+| `audited_clean` | 414 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1210 |
+| `unaudited` | 1209 |
 
 | claim_type | count |
 |---|---:|
@@ -324,6 +324,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_adjoint_kernel_reduced_model_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `lensing_deflection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `lensing_k_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `lorentz_violation_derived_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
@@ -7046,6 +7047,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The bounded table reports a total slope range of about 2.02, from +0.58 to -1.43, across the enumerated kH sweep, so the fitted internal slope is strongly k-dependent on this setup.  _(class `C`)_
 - **chain closes:** True — The current cache is SHA-pinned to the runner, completed with exit_code=0, and its stdout reproduces the source slope table and kH=5.0 fit failures. The runner computes the finite DAG propagation/Kubo values and log-log fits over the enumerated grid rather than importing the reported slopes; closure is only for that bounded internal numerical sweep.
 - **rationale:** The finite numerical artifact closes: the source table matches the completed cache, and the runner source constructs the Fam1 DAGs, sweeps kH/seeds/b, computes Kubo responses, and fits slopes without hard-coding the table values. I count the runner as a C-style bounded computation rather than the mechanical D label because the scoped claim is internal runner output, not an external comparator match. Clean status is granted only under the narrowed scope; the source's mechanism, periodicity, eikonal, and physical gravitational-response language remains outside the audited claim.
+- **auditor confidence:** high
+
+### `lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`LH_TRACELESS_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/LH_TRACELESS_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded algebraic implication from the assumed LH trace equation and the explicit b = -1 and Q = T_3 + Y/2 conventions to the eigenvalue ratio, charge formulas, and reduced-denominator parity rule for positive integer n_color.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b2-558a-71a1-808e-06cffc013e54`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** From the trace equation 2 n_color * a + 2 * b = 0, one gets b = -n_color * a, hence a : b = 1 : (-n_color); with b = -1 this gives a = 1/n_color and the stated Q(u_L), Q(d_L) denominators by gcd parity reduction.  _(class `A`)_
+- **chain closes:** True — The scoped claim closes as elementary algebra and integer gcd reduction under the assumptions stated in the note. No physical bridge to SM hypercharge, no derivation of n_color = 3, and no derivation of the LH state count is needed because those are explicitly excluded from this narrow theorem.
+- **rationale:** The theorem is narrow but correctly bounded: it assumes the trace equation, positive integer n_color, and the named conventions before deriving only algebraic consequences. The proof and runner agree, and the parity denominator rule follows from gcd(n_color + 1, 2 n_color) = gcd(n_color + 1, 2), with the same result for Q(d_L). This is not an audit of the broader physical identification or of why n_color = 3; those are outside the stated claim boundary.
 - **auditor confidence:** high
 
 ### `linear_response_derivation_note`
