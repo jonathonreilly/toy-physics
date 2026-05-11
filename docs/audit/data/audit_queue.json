@@ -5652,23 +5652,23 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "axiom_first_lattice_noether_theorem_note_2026-04-29",
-      "claim_scope": null,
+      "claim_scope": "Bounded lattice Noether identity on the explicitly admitted staggered/Grassmann carrier only: U(1) fermion-number current and (2Z)^3 sublattice momentum current for the pure staggered action, with the translation case handled by a discrete Ward identity and direct divergence check. This does not audit a derivation of the staggered-Dirac carrier from A1+A2, a positive theorem after gate closure, anomaly cancellation, one-site taste-shift currents, full energy-momentum tensor conservation, or any g_bare-dependent quantitative gauge result.",
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "deps": [
         "minimal_axioms_2026-05-03"
       ],
       "direct_in_degree": 15,
-      "effective_status": "unaudited",
+      "effective_status": "audit_in_progress",
       "load_bearing_score": 17.062,
       "note_path": "docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
+      "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/axiom_first_lattice_noether_check.py",
       "transitive_descendants": 755
