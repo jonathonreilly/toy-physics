@@ -51,13 +51,13 @@ The 2026-05-02 cluster obstruction note proved each of (a)-(d) fails analyticall
 | physical `Cl(3)` local algebra | baseline local algebra | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
 | `Z^3` spatial substrate | baseline spatial substrate | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
 | RP | A11 RP + OS reconstruction → `H_phys` with unique vacuum `Ω` | upstream authority: [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md) |
-| TREE | `m_H_tree = v / (2 u_0) = 140.3 GeV` (tree-level mean-field bounded source surface) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
+| TREE | `m_H_tree = v / (2 u_0) = 140.3 GeV` (tree-level mean-field bounded source surface; per Gap #3 lite 2026-05-10 the parent note labels this quantity `m_curv_tree` — a per-channel symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole. This matching-obstruction note continues to use the older `m_H_tree` symbol internally; the imported quantity should be read as `m_curv_tree` for first-principles-honest scope.) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
 | Plaq-MC | `<P>_iso(β=6, isotropic) = 0.5934` (registered MC datum on the cited source stack) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
 | Plaq-Ham | `<P_σ>(g²=1, Hamilton-limit, anisotropic) = 0.4410 ± 0.0006_stat-vol ± 0.013_C-iso(ξ=4)` | [`EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness.md`](EXACT_TIER_EWITNESS_BOUNDED_NOTE_2026-05-07_ewitness.md) |
 | Cisos-NLO | `rel_shift_SU(3)(s_t) = (7/12)·s_t + O(s_t²)` (SU(3) NLO closed form C-iso) | [`C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo.md`](C_ISO_SU3_NLO_CLOSURE_BOUNDED_NOTE_2026-05-08_su3nlo.md) |
 | GS-Bridge | gauge-scalar implicit-flow theorem: `<P>_full = R_O(β_eff)` exists uniquely on each finite Wilson surface | [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md) |
 | GS-NoGo | gauge-scalar companion no-go: `<P>_full(β=6)` and `β_eff(6)` are NOT analytically derivable from current primitives | [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md) |
-| Hier | `v = M_Pl · (7/8)^{1/4} · α_LM¹⁶ = 246.28 GeV` (hierarchy theorem, retained) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
+| Hier | `v = M_Pl · (7/8)^{1/4} · α_LM¹⁶ = 246.28 GeV` (bounded hierarchy-formula numerical match; closure open) | [`HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md`](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md) |
 | StagDirac | staggered-Dirac realization gate (open: `MINIMAL_AXIOMS_2026-05-03.md` lists this as open derivation target) | [`STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md`](STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md) |
 | g_bare | `g_bare = 1` derivation gate (open) | [`G_BARE_DERIVATION_NOTE.md`](G_BARE_DERIVATION_NOTE.md) |
 
@@ -197,7 +197,7 @@ admitted_context_inputs:
   - staggered_dirac_realization_gate
 
 load_bearing_step_class: bounded_theorem  # per-step accounting; no new derivation
-proposal_allowed: true
+source_proposal_submitted_for_audit: true
 audit_required_before_effective_status_change: true
 ```
 

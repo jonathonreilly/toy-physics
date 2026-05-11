@@ -152,15 +152,21 @@ leading-order (3) at `r ∈ {0.1, 0.235, 0.5, 0.8}`.
   shifts `2 r k`.
 - [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md)
   for the parent tree-level setup, the uniform-`N_taste = 16` channel
-  identification (eqs. `[4]–[6]`), and the headline `m_H_tree =
-  140.3 GeV`.
+  identification (eqs. `[4]–[6]`), and the headline `v / (2 u_0) =
+  140.3 GeV`. (Per Gap #3 lite 2026-05-10 the parent note now labels
+  this quantity `m_curv_tree` — a per-channel symmetric-point curvature
+  scale of V_taste, NOT a Higgs-mass pole; this Wilson-correction note
+  continues to use the older `m_H_tree` symbol internally for its
+  bounded source-surface calculation, but the imported quantity should
+  be read as `m_curv_tree` for first-principles-honest scope.)
 - [`HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md`](HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md)
   for the boundary statement that the uniform-`N_taste = 16` choice is
   itself a non-derived admission.
 - [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
   for the staggered-Dirac realization gate context.
 - [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
-  for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`).
+  for the framework baseline (physical Cl(3) local algebra plus Z^3
+  spatial substrate).
 
 These are imported authorities for a bounded theorem. The row remains
 unaudited until the independent audit lane reviews this note, its

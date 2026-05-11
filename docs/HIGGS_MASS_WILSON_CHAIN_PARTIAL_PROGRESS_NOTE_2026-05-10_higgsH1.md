@@ -145,7 +145,7 @@ admitted by this probe; all are pre-existing cited source-stack content.
 | `M_Pl` | 1.221 × 10^19 GeV | Framework UV cutoff |
 | `(7/8)^{1/4}` | ≈ 0.96717 | APBC eigenvalue ratio (cited hierarchy-theorem source) |
 | `v_EW` | `M_Pl × (7/8)^{1/4} × α_LM^{16}` ≈ 246.30 GeV | Hierarchy-theorem source value |
-| `m_H_tree` | `v / (2 u_0)` ≈ 140.31 GeV | Tree-level mean-field (`HIGGS_MASS_FROM_AXIOM_NOTE`, bounded source surface pending independent audit) |
+| `m_H_tree` | `v / (2 u_0)` ≈ 140.31 GeV | Tree-level mean-field (`HIGGS_MASS_FROM_AXIOM_NOTE`, bounded source surface pending independent audit). Per Gap #3 lite 2026-05-10 the parent note labels this quantity `m_curv_tree` — a per-channel symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole. This Wilson-chain note continues to use the older `m_H_tree` symbol internally for backward compatibility with the bounded source surface; the imported quantity should be read as `m_curv_tree` for first-principles-honest scope. |
 
 ### Retained explicit prohibitions
 

@@ -106,7 +106,8 @@ arithmetic.
 - [`STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
   for the staggered Dirac realization context.
 - [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md)
-  for the framework axioms `A1` (`Cl(3)`) and `A2` (`Z^3`) and the
+  for the framework baseline (physical Cl(3) local algebra plus Z^3
+  spatial substrate) and the
   recategorized open derivation targets used by this note's setup.
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
   for the existing `1 + 1 + 3 + 3` BZ-corner-on-`Z^3` Hamming-weight
@@ -118,7 +119,12 @@ arithmetic.
 `HIGGS_MASS_FROM_AXIOM_NOTE.md` is the parent gap-chain surface this
 note is meant to support, not a load-bearing dependency of the
 combinatorial identity. The parent points here for the staircase-only
-authority; the quantitative effect on `m_H_tree` remains open.
+authority; the quantitative effect on `m_H_tree` remains open. (Per
+Gap #3 lite 2026-05-10 the parent note's `v/(2 u_0)` quantity is
+labeled `m_curv_tree` — a per-channel symmetric-point curvature scale
+of V_taste, NOT a Higgs-mass pole; this combinatorial-identity note
+continues to use the older `m_H_tree` symbol for backward
+compatibility.)
 
 These are imported authorities for a bounded theorem. The row remains
 unaudited until the independent audit lane reviews this note, its

@@ -10230,6 +10230,10 @@
     },
     {
       "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+      "to": "hierarchy_formula_honest_status_note_2026-05-10"
+    },
+    {
+      "from": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
       "to": "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08"
     },
     {
@@ -14255,6 +14259,10 @@
     {
       "from": "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match",
       "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match",
+      "to": "hierarchy_formula_honest_status_note_2026-05-10"
     },
     {
       "from": "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match",
@@ -37130,7 +37138,7 @@
         "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
         "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
       ],
-      "note_hash": "7b5a74cb4e63798502c959bb0a77ef246e4f9c0d7b09a1665d91c13af14c1341",
+      "note_hash": "1989c0648bcce59388838a619f065fea218348abf38d57e2e39da96ae29f763f",
       "path": "docs/BRIDGE_LANES_PROMOTION_PROPOSAL_NOTE_2026-05-10_lanes.md",
       "runner_path": "scripts/frontier_bridge_lanes_promotion_2026_05_10_lanes.py",
       "title": "Bridge-Dependent Lanes \u2014 Retained_Bounded Promotion Evaluation"
@@ -47316,7 +47324,7 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "8a808e68387f3f4c910226ae3d3df16618ce70af8fe1f2f92a4a267e6d59a6e1",
+      "note_hash": "554aeec783088755c3f2f5ab932e89f610841cff3cd40cc752d710a9bde61ab1",
       "path": "docs/HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md",
       "runner_path": "scripts/frontier_higgs_channel_effective_ntaste_boundary.py",
       "title": "Higgs-Channel Effective N_taste Boundary Bounded Note"
@@ -47387,6 +47395,7 @@
         "higgs_mass_from_axiom_note",
         "minimal_axioms_2026-05-03",
         "complete_prediction_chain_2026_04_15",
+        "hierarchy_formula_honest_status_note_2026-05-10",
         "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
         "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1",
         "higgs_from_lattice_note",
@@ -47401,7 +47410,7 @@
         "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
         "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
       ],
-      "note_hash": "9520de1989b1e5650b1cbe5f055ff78f8b40781e1935eecbc36c43db5b3540ff",
+      "note_hash": "3fb5b1028c39b98b0929a624c52da3c81f3b6dee9c573a91e68267c559313bbb",
       "path": "docs/HIGGS_MASS_12PCT_GAP_DECOMPOSITION_BOUNDED_NOTE_2026-05-10_higgsS7.md",
       "runner_path": "scripts/cl3_higgs_mass_12pct_gap_decomposition_2026_05_10_higgsS7.py",
       "title": "Higgs Mass \u2014 12% Gap Decomposition (S7 Sub-step Probe)"
@@ -47429,7 +47438,7 @@
         "gauge_vacuum_plaquette_connected_hierarchy_theorem_note",
         "assumption_derivation_ledger"
       ],
-      "note_hash": "010012913656cf4f815c05a5e43cf0ec4bbaaf9424552925ab091259876ecbec",
+      "note_hash": "cc85bafca5c3d4c856a6c321f58495da5095e0eb7f295e81fe6d2472af5a6c8c",
       "path": "docs/HIGGS_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_higgs_mass_full_3loop.py",
       "title": "Higgs Mass: Canonical Authority Boundary"
@@ -47444,10 +47453,10 @@
         "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
         "yt_ew_color_projection_theorem"
       ],
-      "note_hash": "2fd89ab558a445cfe6e5f4a46ea577396f1c078db24a163e1ec088c15429ac3e",
+      "note_hash": "04a09ce87eeb96cc88a770a6101d0b6f1a57033164f9bd352090b2e67e83fd1e",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
-      "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
+      "title": "Symmetric-Point Per-Channel Curvature Scale `m_curv_tree` from V_taste \u2014 Complete Derivation with N_c Tracking"
     },
     "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02": {
       "claim_id": "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02",
@@ -47514,7 +47523,7 @@
         "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
         "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02"
       ],
-      "note_hash": "de6440126864402641e1dcd727d29897b946cf916f89c243b1c64c531cc32a70",
+      "note_hash": "df5a066457eace9b0738ee204ca4d05412b4e933bb37be2b6c2d766549860cf0",
       "path": "docs/HIGGS_MASS_WILSON_CHAIN_PARTIAL_PROGRESS_NOTE_2026-05-10_higgsH1.md",
       "runner_path": "scripts/cl3_higgs_mass_wilson_chain_2026_05_10_higgsH1.py",
       "title": "Higgs Mass \u2014 Wilson Chain Extension (Partial Progress)"
@@ -51469,6 +51478,7 @@
         "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
         "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
         "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "hierarchy_formula_honest_status_note_2026-05-10",
         "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
         "g_bare_derivation_note",
         "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02",
@@ -51480,7 +51490,7 @@
         "c_iso_derived_theorem_note_2026-05-07_w3",
         "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08"
       ],
-      "note_hash": "ad235bba4cc3e82760c98561b424be0a9acd19b0c58d60bc22bcd3d3d57cf36b",
+      "note_hash": "0b3a728fdde433278eb3b9272941c7af209e93aa8a73089ff0e02bda23992ea0",
       "path": "docs/LATTICE_PHYSICAL_MATCHING_THEOREM_BOUNDED_OBSTRUCTION_NOTE_2026-05-10_match.md",
       "runner_path": "scripts/cl3_lattice_physical_matching_2026_05_10_match.py",
       "title": "Lattice-Curvature \u2192 Physical (m_H/v)\u00b2 Matching Theorem \u2014 Bounded Per-Step Obstruction Note"
@@ -65756,7 +65766,7 @@
         "minimal_axioms_2026-05-03",
         "three_generation_structure_note"
       ],
-      "note_hash": "bd753fb104738568823baf9c9a87d6012c46aa316900de101e3e69a2c5abae44",
+      "note_hash": "1618a1265c6d75db0d6193366e7a9aea587a9915d4a3539bba5e1dfffb8184c8",
       "path": "docs/WILSON_BZ_CORNER_HAMMING_STAIRCASE_BOUNDED_NOTE_2026-05-08.md",
       "runner_path": "scripts/frontier_wilson_bz_corner_hamming_staircase.py",
       "title": "Wilson Term BZ-Corner Hamming-Weight Staircase Bounded Note"
@@ -65829,7 +65839,7 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "d74ec25d0b7a1bd320769e28968247fdaf5aaa7dff7d21eb24065f6e2590467d",
+      "note_hash": "e9a51f3d3087a83a7ace9e14b63339984c5cc16841bd51ade67d8e7c4fb93125",
       "path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_ALL_ORDERS_BOUNDED_NOTE_2026-05-08.md",
       "runner_path": "scripts/frontier_wilson_m_h_tree_at_extremum_all_orders.py",
       "title": "Wilson-Corrected m_H_tree at Extremum, All Orders in r \u2014 Bounded Note"
@@ -65848,7 +65858,7 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "452c9d9e18bc5b498aa8f7d201cb63a85a5ef4d82215603ddaae7b38bc865e28",
+      "note_hash": "a05008a6befd84842725c861683cf51115d2657467731f939b302c317d1e4c33",
       "path": "docs/WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md",
       "runner_path": "scripts/frontier_wilson_m_h_tree_at_extremum_leading_order_in_r.py",
       "title": "Wilson-Corrected m_H_tree at Extremum, Leading Order in r \u2014 Bounded Note"
@@ -68620,7 +68630,7 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8511,
+    "edge_count": 8513,
     "leaf_count": 610,
     "node_count": 2170,
     "root_count": 822,

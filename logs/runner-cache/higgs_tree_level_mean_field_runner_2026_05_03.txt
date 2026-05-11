@@ -1,6 +1,6 @@
 ===== runner cache v1 =====
 runner: scripts/higgs_tree_level_mean_field_runner_2026_05_03.py
-runner_sha256: 9b578ac157acc088a69981e5138818e5e9d4f8c83ae86b7dc4175abb43700694
+runner_sha256: ce17387687559acbe606da027fed2d9c2592ade7a0c83333dbd0ede44f462bdc
 timeout_sec: 120
 exit_code: 0
 elapsed_sec: 0.05
@@ -9,8 +9,9 @@ status: ok
 ================================================================================
  higgs_tree_level_mean_field_runner_2026_05_03.py
  Review-loop repair runner for HIGGS_MASS_FROM_AXIOM_NOTE.md
- Reproduces the note's tree-level mean-field formula m_H_tree = v/(2 u_0).
- 2026-05-07 update adds T6/T7 structural checks.
+ Reproduces the note's tree-level mean-field formula m_curv_tree = v/(2 u_0).
+ 2026-05-07 update added T6/T7 structural checks.
+ 2026-05-10 update adds T8 (Gap #3 lite m_H_tree -> m_curv_tree demotion).
 ================================================================================
 
 --- T1: V_taste curvature at m=0 (Step 3) ---
@@ -23,20 +24,20 @@ status: ok
   Expected 1/(4 u_0^2) (note's [4]) = 0.3246
   [PASS] Step 4 per-channel curvature reproduced  (err = 0.00e+00)
 
---- T3: m_H_tree = v/(2 u_0) at canonical surface ---
-  m_H_tree = v/(2 u_0) = 246.22 / 1.7552 = 140.28 GeV
+--- T3: m_curv_tree = v/(2 u_0) at canonical surface ---
+  m_curv_tree = v/(2 u_0) = 246.22 / 1.7552 = 140.28 GeV
   Note's headline value: 140.30 GeV
-  Observed physical m_H = 125.10 GeV  (deviation = +12.1%)
-  [PASS] m_H_tree = 140.3 GeV reproduced from v/(2 u_0)  (computed = 140.28, headline = 140.3, err = 0.020)
+  Observed physical m_H = 125.10 GeV  (comparator only; deviation = +12.1%)
+  [PASS] m_curv_tree = 140.3 GeV reproduced from v/(2 u_0)  (computed = 140.28, headline = 140.3, err = 0.020)
 
---- T4: N_c-independence of m_H_tree (load-bearing claim of Step 2) ---
-  N_c = 2: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
-  N_c = 3: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
-  N_c = 4: m_H_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
-  [PASS] m_H_tree is N_c-independent (Step 2 N_c cancellation)  (formula m_H_tree = v/(2 u_0) has no N_c dependence)
+--- T4: N_c-independence of m_curv_tree (load-bearing claim of Step 2) ---
+  N_c = 2: m_curv_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  N_c = 3: m_curv_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  N_c = 4: m_curv_tree = 140.2803 GeV  (delta from N_c=3: 0.00e+00)
+  [PASS] m_curv_tree is N_c-independent (Step 2 N_c cancellation)  (formula m_curv_tree = v/(2 u_0) has no N_c dependence)
 
 --- T5: Distinguish from corrected-y_t / Buttazzo runners ---
-  This runner computes: m_H_tree = v/(2 u_0) = 140.28 GeV (tree-level mean-field)
+  This runner computes: m_curv_tree = v/(2 u_0) = 140.28 GeV (tree-level mean-field)
   frontier_higgs_mass_corrected_yt.py computes: 119.93 GeV
     -> different observable: corrected-y_t RGE route at 3L+NNLO
   frontier_higgs_buttazzo_calibration.py computes: ~125.1 GeV (current)
@@ -66,8 +67,18 @@ status: ok
   [PASS] Step 7 scope guard: this note does not change sibling status
   [PASS] Step 7 reaffirms tree-level scope and delegates the gap closure
 
+--- T8: Gap #3 lite demotion m_H_tree -> m_curv_tree (2026-05-10) ---
+  [PASS] parent note introduces m_curv_tree symbol  (first-principles-honest label for v/(2 u_0) = 140.3 GeV)
+  [PASS] parent note contains an explicit demotion narrative
+  [PASS] parent note records the Morse/convexity context (no interior minimum)  (explicit reason V_taste alone has no Higgs pole)
+  [PASS] parent note has 'Honest scope' section/framing
+  [PASS] downstream bounded Higgs route is tracked via HIGGS_MASS_DERIVED
+  [PASS] parent note references the κ_curv mirror pattern (PR #951 v3)
+  [PASS] numerical headline 140.3 GeV is preserved (math unchanged)
+  [PASS] +12% gap framed as genuine higher-order separation (broken-phase pole vs symmetric-point curvature)
+
 ================================================================================
- SUMMARY: PASS=21, FAIL=0
+ SUMMARY: PASS=29, FAIL=0
 ================================================================================
 
 ----- stderr -----

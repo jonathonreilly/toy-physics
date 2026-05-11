@@ -58,7 +58,8 @@ audit retention.
 
 Under
 [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md), the
-framework's public axiom set is exactly two: A1 (Cl(3)) + A2 (Z³).
+framework baseline is the physical Cl(3) local algebra plus Z^3 spatial
+substrate. This note does not introduce any new repo-wide axiom.
 Two named open gates:
 
 - **Staggered-Dirac realization** (open derivation target).
@@ -98,7 +99,8 @@ Each of the three lanes is evaluated against four criteria for
 promotion to `retained_bounded`:
 
 1. **Structural retained content** — what algebraic / structural
-   identity does the lane retain unconditionally on A1 + A2?
+   identity does the lane retain unconditionally on the physical Cl(3)
+   local algebra plus Z^3 spatial substrate baseline?
 2. **Residual admissions** — exactly which admissions remain after
    W2 + SU(3)-NLO?
 3. **Engineering bound** — is the residual a named, finite, computable
@@ -115,7 +117,7 @@ theorem** with named external imports.
 PASS=18 FAIL=0 (verified 2026-05-02).
 
 **Structural retained content (point 1).** The lane carries the
-following A1+A2-derived structural content:
+following baseline-derived structural content:
 
 - The Cl(3)/Z³ graph-first SU(3) Wilson surface is retained
   ([`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)).
@@ -186,8 +188,14 @@ member of the **lattice → continuum / physical matching cluster**.
 formula
 
 ```
-m_H_tree = v · sqrt(4 / (u_0² · N_taste)) = v / (2 u_0) = 140.3 GeV
+m_curv_tree = v · sqrt(4 / (u_0² · N_taste)) = v / (2 u_0) = 140.3 GeV
 ```
+
+(per Gap #3 lite 2026-05-10: the parent note now labels this quantity
+`m_curv_tree` — a per-channel symmetric-point curvature scale of
+V_taste, NOT a Higgs-mass pole; previously labeled `m_H_tree` in earlier
+drafts and in some sister bounded-source notes that have not yet been
+relabeled)
 
 with N_c cancellation tracked at every step (per Step 6 of the parent
 note) is a closed-form algebraic chain on the Cl(3)/Z³ surface, modulo
@@ -440,7 +448,7 @@ declared_one_hop_deps:
 
 admitted_context_inputs: []  # this note imports nothing not already in the cited dependencies
 load_bearing_step_class: meta  # cross-lane evaluation; no new derivation
-proposal_allowed: true
+source_proposal_submitted_for_audit: true
 audit_required_before_effective_status_change: true
 ```
 

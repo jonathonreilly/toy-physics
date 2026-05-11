@@ -53,9 +53,9 @@ where each `δ_i` is evaluated from cited source-stack inputs with one named adm
 |---|---|---|
 | physical `Cl(3)` local algebra | baseline local algebra | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
 | `Z^3` spatial substrate | baseline spatial substrate | framework baseline; [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) |
-| TREE | `m_H_tree = v / (2 u_0) = 140.31 GeV` (tree-level mean-field bounded source surface) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
+| TREE | `m_H_tree = v / (2 u_0) = 140.31 GeV` (tree-level mean-field bounded source surface; per Gap #3 lite 2026-05-10 the parent note labels this quantity `m_curv_tree` — a per-channel symmetric-point curvature scale of V_taste, NOT a Higgs-mass pole. This decomposition note continues to use the older `m_H_tree` symbol internally for the bounded sub-step accounting; the imported quantity should be read as `m_curv_tree` for first-principles-honest scope.) | [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](HIGGS_MASS_FROM_AXIOM_NOTE.md) |
 | Plaq-MC | `<P>_iso(β=6, isotropic) = 0.5934` (registered MC datum on cited source stack) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
-| Hier | `v_EW = M_Pl · (7/8)^{1/4} · α_LM¹⁶ = 246.30 GeV` (hierarchy theorem, retained) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) |
+| Hier | `v_EW = M_Pl · (7/8)^{1/4} · α_LM¹⁶ = 246.30 GeV` (bounded hierarchy-formula numerical match; closure open) | [`HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md`](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md) |
 | CMT | `α_s(v) = α_bare / u_0² = 0.1033` (Coupling Map Theorem) | [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md) §3.1 |
 | Wilson-LO | `(m_H_tree^W / v)² = (1/(4 u_0²)) · (1 - 3 r²/u_0²) + O(r⁴)` (Wilson taste-breaking LO) | [`WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md`](WILSON_M_H_TREE_AT_EXTREMUM_LEADING_ORDER_IN_R_BOUNDED_NOTE_2026-05-08.md) |
 | H1 | Wilson-chain candidate: `m_H = (v/(2 u_0)) · sqrt(1 - 2 α_s(v)) = 124.98 GeV` (-0.21% vs PDG) | [`HIGGS_MASS_WILSON_CHAIN_PARTIAL_PROGRESS_NOTE_2026-05-10_higgsH1.md`](HIGGS_MASS_WILSON_CHAIN_PARTIAL_PROGRESS_NOTE_2026-05-10_higgsH1.md) |
@@ -204,7 +204,7 @@ admitted_context_inputs:
   - staggered_dirac_realization_gate
 
 load_bearing_step_class: bounded_theorem  # per-sub-step accounting; no new derivation
-proposal_allowed: true
+source_proposal_submitted_for_audit: true
 audit_required_before_effective_status_change: true
 ```
 

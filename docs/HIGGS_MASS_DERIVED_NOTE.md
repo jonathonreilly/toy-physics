@@ -173,13 +173,15 @@ the reader does not mistakenly treat them as competing predictions.
 |---|---|---|---|
 | **This note's named primary runner** | [`scripts/frontier_higgs_mass_full_3loop.py`](../scripts/frontier_higgs_mass_full_3loop.py) | `m_H ~= 125.1 GeV` | Full 3-loop SM RGE from `lambda(M_Pl) = 0` boundary down to `mu = v`, with the framework-derived input set `(g_1 = 0.464, g_2 = 0.648, alpha_s(v) = 0.1033, y_t(v) = 0.9176, v = 246.28 GeV)`. This is the canonical headline of `HIGGS_MASS_DERIVED_NOTE.md`. |
 | Corrected-y_t support route | [`scripts/frontier_higgs_mass_corrected_yt.py`](../scripts/frontier_higgs_mass_corrected_yt.py) | `m_H = 119.93 GeV` (3L+NNLO partial) | A separate corrected-y_t RGE route at 3L+NNLO. The companion `vacuum_critical_stability_note` (file pointer: `docs/VACUUM_CRITICAL_STABILITY_NOTE.md`; not a markdown link to avoid citation back-edge) calls this the "2-loop support route." It is a different observable along a different chain and is NOT a verifier for the named primary runner. |
-| Tree-level mean-field axiom note | [`scripts/higgs_tree_level_mean_field_runner_2026_05_03.py`](../scripts/higgs_tree_level_mean_field_runner_2026_05_03.py) | `m_H_tree = v / (2 u_0) = 140.3 GeV` | Tree-level mean-field formula with a `+12%` gap to observed; lives in `higgs_mass_from_axiom_note` (file pointer: `docs/HIGGS_MASS_FROM_AXIOM_NOTE.md`; not a markdown link to avoid citation back-edge). It is NOT the headline of this note; the gap-closure load is delegated explicitly to sister authorities (corrected-y_t RGE, lattice-spacing convergence, Wilson-term taste breaking). |
+| Tree-level mean-field axiom note | [`scripts/higgs_tree_level_mean_field_runner_2026_05_03.py`](../scripts/higgs_tree_level_mean_field_runner_2026_05_03.py) | `m_curv_tree = v / (2 u_0) = 140.3 GeV` (per Gap #3 lite 2026-05-10 demotion; previously labeled `m_H_tree`) | Tree-level mean-field per-channel symmetric-point curvature scale with a `+12%` gap to observed; lives in `higgs_mass_from_axiom_note` (file pointer: `docs/HIGGS_MASS_FROM_AXIOM_NOTE.md`; not a markdown link to avoid citation back-edge). It is **not** a Higgs-mass prediction (the symmetric-point curvature is structurally distinct from a broken-phase pole; V_taste alone has no interior minimum, per Morse/convexity Gap #3 probe); it is NOT the headline of this note; and the gap-closure load is delegated explicitly to sister authorities (corrected-y_t RGE, lattice-spacing convergence, Wilson-term taste breaking). |
 
 The headline of `HIGGS_MASS_DERIVED_NOTE.md` is and remains `m_H ~= 125.1 GeV`
 on the full 3-loop framework-side route, with the inherited Higgs band
 `121.1-129.2 GeV` on the older bridge-path cross-check budget. The `119.93 GeV`
-support readout and the `140.3 GeV` tree-level mean-field readout are both
-auxiliary; neither competes with this note's headline.
+support readout and the `140.3 GeV` tree-level mean-field
+**symmetric-point per-channel curvature scale** (`m_curv_tree`, demoted from
+`m_H_tree` in 2026-05-10 Gap #3 lite) are both auxiliary; neither competes
+with this note's headline.
 
 ## Paper-safe framing
 

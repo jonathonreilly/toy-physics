@@ -40,7 +40,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 431 |
+| `audit_in_progress` | 2 |
+| `audited_clean` | 429 |
 | `audited_conditional` | 259 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
@@ -111,6 +112,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
+| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -242,7 +245,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_poisson_self_gravity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `gate_b_v6_nearfield_comparator_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_scalar_temporal_completion_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
-| `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_scalar_temporal_observable_bridge_stretch_note_2026-05-02` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_temporal_gauge_mixed_kernel_spatial_link_factorization_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -282,7 +284,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `higgs_from_lattice_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
-| `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `higher_symmetry_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `holographic_probe_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `hubble_lane5_c1_a1_grassmann_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
@@ -4931,19 +4932,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The audited claim is clean only as a bounded exact algebraic theorem on the explicitly accepted Wilson nearest-neighbor source class. The runner checks the load-bearing bridge from uniform six-orientation plaquette weights to equal directional coefficients, the APBC minimal-cube reduction, normalization cancellation, the endpoint ratio, and negative tests showing anisotropy or forbidden site terms leave the theorem's scope and change the ratio. Residual risk is scope creep: the note's plaquette-bridge language must not be read as closing the full interacting gauge-vacuum plaquette observable, which the source note itself identifies as still open.
 - **auditor confidence:** high
 
-### `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03`
-
-- **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_IMPLICIT_FLOW_THEOREM_NOTE_2026-05-03.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Finite-volume Wilson plaquette implicit inverse-response coordinate and susceptibility-flow identity for beta >= 0, with the thermodynamic-limit statement only under the stated existence and P < 1 hypotheses; no beta=6 plaquette or beta_eff evaluation is audited.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e12db-e8e0-7451-9dc5-5a961902a9c2`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Since R_O is bijective onto [0,1) and P_Lambda(beta) lies in [0,1), beta_eff,Lambda(beta) = R_O^(-1)(P_Lambda(beta)) exists and is unique, and substituting the definition gives P_Lambda(beta) = R_O(beta_eff,Lambda(beta)).  _(class `A`)_
-- **chain closes:** True — Within the bounded scope, the conclusion follows from the strict monotonicity/range of the compact SU(3) local response and the finite Wilson plaquette range, after which the coordinate identity and flow law are inverse-function consequences. The note explicitly does not claim an independent evaluated beta_eff(6), plaquette value, or closure of the parent observable bridge.
-- **rationale:** Clean only for the bounded implicit-coordinate theorem: given the defined Wilson plaquette expectation and local response map, existence/uniqueness of beta_eff and P = R_O(beta_eff) are algebraic inverse-map consequences. The runner performs consistency and firewall checks and does not import external plaquette, PDG, Monte Carlo, or perturbative-running values. The result remains a reparameterization of the exact Wilson expectation, not an evaluated physical bridge.
-- **auditor confidence:** medium
-
 ### `gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03`
 
 - **Note:** [`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`](../../docs/GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md)
@@ -6019,19 +6007,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current Higgs runner shows that the framework has nontrivial quantitative Higgs behavior once the lattice Coleman-Weinberg mechanism is active.  _(class `C`)_
 - **chain closes:** True — For this bounded scope, the note does not claim an exact Higgs-mass derivation; it claims only that the runner exhibits nontrivial CW Higgs behavior and supports bounded studies. The completed runner computes CW potential/SSB scans and ballpark mass-ratio behavior, while its failed exact-coupling/crossing checks are consistent with the note's explicit boundary.
 - **rationale:** The source note is narrowly scoped: it is a support note for bounded Higgs quantitative behavior and explicitly excludes standalone exact m_H authority. The runner is not clean for exact Higgs closure, but that is not the claim under audit; the two completed failures show missing exact coupling/crossing closure and reinforce the boundary. Within the bounded scope, the source note and completed runner evidence close without promoting an exact Higgs-mass derivation.
-- **auditor confidence:** high
-
-### `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02`
-
-- **Note:** [`HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/HIGGS_LATTICE_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Given retained graph-first SU(3), retained/admitted Wilson g_bare=1 convention, admitted Cl(3) identity D_taste²=d·I with d=4, admitted mean-field factorization, and N_taste=16, the lattice-side mean-field curvature ratio is R_lattice=1/(4u_0²), with no physical Higgs-mass matching claim.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e14a9-5cc6-7671-a2d1-f85a85463ba5`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** At mean field, W(J)=(N_tot/2)log(J²+4u_0²) gives W''(0)/N_tot=1/(4u_0²), and with N_taste=16 the defined ratio R_lattice=4/(u_0² N_taste)=1/(4u_0²).  _(class `A`)_
-- **chain closes:** True — Inside the stated bounded scope, the result is arithmetic plus differentiation of the declared generating functional. The two declared dependency rows are provided as retained_bounded, and the excluded physical bridge R_lattice=(m_H/v)² is not used.
-- **rationale:** The audited claim is narrow enough to close: it proves only the lattice-side mean-field identity under explicitly admitted inputs. The runner hard-codes the admitted constants, but for this bounded theorem those constants are the scope rather than a hidden derivation target. No external physical comparator or Higgs-mass bridge is being claimed.
 - **auditor confidence:** high
 
 ### `higgs_mechanism_note`
