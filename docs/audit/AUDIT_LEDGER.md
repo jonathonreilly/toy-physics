@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1265 |
+| unaudited | 1264 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 166 |
+| ~~audited_conditional~~ | 167 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 166 |
+| `audited_conditional` | 167 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1378 |
+| `unaudited` | 1377 |
 
 | claim_type | count |
 |---|---:|
@@ -684,6 +684,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `koide_taste_cube_cyclic_source_descent_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5850,6 +5851,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Even granting Z^3->T^3, CS-on-T^3, Wilson loops, and the level shift, there is no derived map from a knot-polynomial value to a beta_n channel-weight rational plus zeta term.  _(class `B`)_
 - **chain closes:** False — The note's negative conclusion depends on standard CS/knot facts, TVZ/VVL beta-function comparators, SU(3) data, and the O13 obstruction, but the restricted packet lists no one-hop cited authorities. The runner mostly hard-codes or arithmetically checks those imported premises; it does not prove the no-go from retained inputs.
 - **rationale:** Issue: the source note names load-bearing external and repo authorities, but the audit ledger provides none as one-hop dependencies. Why this blocks: the CS formulas, beta-channel comparators, and O13 obstruction cannot be assumed under the restricted audit packet, and the runner does not replace them with a retained derivation. Repair target: wire and audit the direct dependency edges, then re-audit whether the O13/dimensional/underspecification arguments establish a bounded no-go rather than merely showing no map was supplied. Claim boundary until fixed: clean only as an admission that this note and runner do not derive beta_2 or beta_3 channel weights.
+- **auditor confidence:** high
+
+### `koide_taste_cube_cyclic_source_descent_note_2026-04-18`
+
+- **Note:** [`KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md`](../../docs/KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exact finite C8-to-T1 C3 averaging/compression identity and Schur-compatible cyclic response factorization, bounded to the stipulated taste-cube carrier and reduction class and excluding physical charged-lepton closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Because T_1 is invariant under the full C_3[111] cycle, P_1 A_8(X) P_1 equals A_3(P_1 X P_1), so full-cube averaging and compression descend exactly to the same T_1 cyclic response bundle span_R{B0,B1,B2}.  _(class `A`)_
+- **chain closes:** False — The finite averaging and Schur algebra closes locally, and the runner reports PASS=15 FAIL=0. The source note's physical taste-cube and charged-lepton interpretation explicitly depends on the staggered-Dirac realization open gate, which is not wired as a retained direct dependency.
+- **rationale:** Issue: the exact C8 averaging/compression identity is proved, but the note frames the result as a physical-lattice Koide charged-lepton source descent while explicitly importing the staggered-Dirac realization target. Why this blocks: without that gate, the audit packet only establishes algebra on a stipulated C8 carrier and Schur reduction, not that this is the retained physical charged-lepton source bank. Repair target: wire and close the staggered-Dirac realization dependency, or split a pure finite C8 representation theorem from the physical application note. Claim boundary until fixed: exact C3 averaging/compression and response factorization for a stipulated C8 taste-cube model only.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `koide_theta_hierarchy_open_scalar_note_2026-04-19`
