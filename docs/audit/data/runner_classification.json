@@ -15096,6 +15096,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_c3_character_mode_reduction.py"
     },
+    "pmns_c3_nontrivial_current_boundary_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py"
+    },
     "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -15383,6 +15395,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_selector_sign_to_branch_reduction.py"
+    },
+    "pmns_selector_three_identity_support_note_2026-04-21": {
+      "assert_count": 0,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 6,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py"
     },
     "pmns_selector_three_identity_support_proposal_readme_2026-04-21": {
       "assert_count": 0,
@@ -37326,6 +37350,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_pmns_c3_nontrivial_current_boundary.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_c3_nontrivial_current_boundary_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_pmns_chart_constants_retention.py": {
       "assert_count": 1,
       "claims": [
@@ -37690,6 +37729,7 @@
     "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py": {
       "assert_count": 0,
       "claims": [
+        "pmns_selector_three_identity_support_note_2026-04-21",
         "pmns_selector_three_identity_support_proposal_readme_2026-04-21"
       ],
       "counts": {
@@ -47385,12 +47425,12 @@
     "dominant_class_distribution": {
       "A": 151,
       "B": 174,
-      "C": 684,
+      "C": 685,
       "D": 269,
       "none": 416
     },
-    "runners_classified": 1694,
-    "runners_with_C": 867,
+    "runners_classified": 1695,
+    "runners_with_C": 868,
     "runners_with_D": 487
   }
 }

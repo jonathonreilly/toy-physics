@@ -18189,6 +18189,26 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "pmns_c3_nontrivial_current_boundary_note",
+      "to": "pmns_c3_character_holonomy_closure_note"
+    },
+    {
+      "from": "pmns_c3_nontrivial_current_boundary_note",
+      "to": "pmns_c3_character_mode_reduction_note"
+    },
+    {
+      "from": "pmns_c3_nontrivial_current_boundary_note",
+      "to": "pmns_hw1_source_transfer_boundary_note"
+    },
+    {
+      "from": "pmns_c3_nontrivial_current_boundary_note",
+      "to": "pmns_selector_current_stack_zero_law_note"
+    },
+    {
+      "from": "pmns_c3_nontrivial_current_boundary_note",
+      "to": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+    },
+    {
       "from": "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03",
       "to": "epsilon1_from_cp_chain_stretch_attempt_note_2026-05-03"
     },
@@ -18479,6 +18499,18 @@
     {
       "from": "pmns_selector_sign_to_branch_reduction_note",
       "to": "charged_lepton_two_higgs_canonical_reduction_note"
+    },
+    {
+      "from": "pmns_selector_three_identity_support_note_2026-04-21",
+      "to": "pmns_selector_three_identity_support_proposal_readme_2026-04-21"
+    },
+    {
+      "from": "pmns_selector_three_identity_support_note_2026-04-21",
+      "to": "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29"
+    },
+    {
+      "from": "pmns_selector_three_identity_support_note_2026-04-21",
+      "to": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
     },
     {
       "from": "pmns_selector_three_identity_support_proposal_readme_2026-04-21",
@@ -19635,6 +19667,34 @@
     {
       "from": "scalar_selector_proof_chains_2026-04-19",
       "to": "dm_sigma_hier_closure_packet_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "koide_brannen_phase_reduction_theorem_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "scalar_selector_reviewer_package_2026-04-20"
+    },
+    {
+      "from": "scalar_selector_remaining_open_imports_2026-04-20",
+      "to": "scalar_selector_cycle13_meta_closure_status_note_2026-04-19"
     },
     {
       "from": "scalar_selector_synthesis_note_2026-04-19",
@@ -57122,10 +57182,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "000e7bfbca4e9e91bbb2e7fffd27436565bcfda0572a29ae36ed8b7f47013ac9",
+      "deps": [
+        "pmns_c3_character_holonomy_closure_note",
+        "pmns_c3_character_mode_reduction_note",
+        "pmns_hw1_source_transfer_boundary_note",
+        "pmns_selector_current_stack_zero_law_note",
+        "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
+      ],
+      "note_hash": "bca4a2b21e32b3e8515ee2239164e679a6d9984086257bc53459ab85b2b3426c",
       "path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py",
       "title": "PMNS `C3` Nontrivial-Character Current Boundary"
     },
     "pmns_chart_constants_retention_stretch_attempt_note_2026-05-03": {
@@ -57500,10 +57566,14 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "8b75a900f7e1e7408230c8ae7ad8cbab72e734669b8f0032864149697d3b757b",
+      "deps": [
+        "pmns_selector_three_identity_support_proposal_readme_2026-04-21",
+        "pmns_three_identity_q_koide_from_v8_support_lift_theorem_note_2026-04-29",
+        "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
+      ],
+      "note_hash": "5b3982d4c2c4b598baa8a5efda74af4fb9447b4b60b7293269a3ce294daeacb9",
       "path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py",
       "title": "PMNS Selector Three-Identity Support Note"
     },
     "pmns_selector_three_identity_support_proposal_readme_2026-04-21": {
@@ -61908,8 +61978,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "fb481da4e33fc83121615f93c0cfa09fa81f28b67d6ed91d658f801a21e55e61",
+      "deps": [
+        "koide_brannen_phase_reduction_theorem_note_2026-04-20",
+        "koide_q_delta_linking_relation_theorem_note_2026-04-20",
+        "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
+        "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24",
+        "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
+        "scalar_selector_reviewer_package_2026-04-20",
+        "scalar_selector_cycle13_meta_closure_status_note_2026-04-19"
+      ],
+      "note_hash": "79b0b903b40c68a2b5511b92ab4a3956d8166af9c65602ff78e70e5a8cc12cf0",
       "path": "docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md",
       "runner_path": null,
       "title": "Scalar-Selector Cycle 1 \u2014 Remaining Open Imports"
@@ -69943,14 +70021,12 @@
     "plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10",
     "plaquette_v1_picard_fuchs_ode_note_2026-05-05",
     "pmns_active_four_real_source_from_transport_note",
-    "pmns_c3_nontrivial_current_boundary_note",
     "pmns_commutant_eigenoperator_selector_note",
     "pmns_corner_transport_active_block_note",
     "pmns_graph_first_cycle_frame_support_note",
     "pmns_hw1_source_transfer_boundary_note",
     "pmns_lower_level_end_to_end_closure_note",
     "pmns_oriented_cycle_channel_value_law_note",
-    "pmns_selector_three_identity_support_note_2026-04-21",
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
@@ -69996,7 +70072,6 @@
     "scalar_kg_rerun_note_2026-04-10",
     "scalar_selector_cycle13_meta_closure_status_note_2026-04-19",
     "scalar_selector_full_stack_recovery_note_2026-04-19",
-    "scalar_selector_remaining_open_imports_2026-04-20",
     "scalar_selector_reviewer_package_2026-04-20",
     "scalar_trace_tensor_no_go_note",
     "scaling_failure_mechanisms",
@@ -70216,10 +70291,10 @@
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8773,
-    "leaf_count": 624,
+    "edge_count": 8788,
+    "leaf_count": 620,
     "node_count": 2194,
-    "root_count": 801,
-    "runners_with_path": 1807
+    "root_count": 798,
+    "runners_with_path": 1809
   }
 }

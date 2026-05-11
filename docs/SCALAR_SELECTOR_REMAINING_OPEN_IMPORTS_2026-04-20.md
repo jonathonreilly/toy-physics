@@ -378,3 +378,136 @@ the primary closure runner and its verification counts are:
 No single runner has hardcoded `check("...", True, ...)` PASSes after the
 cleanup pass. Every PASS is a numeric or symbolic verification of the stated
 claim.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authority
+candidates that the load-bearing open-import register cites, in
+response to the 2026-05-05 audit verdict's `missing_bridge_theorem`
+repair target (audit row:
+`scalar_selector_remaining_open_imports_2026-04-20`). It does not
+promote this note or change the audited claim scope, which remains
+the bounded register of remaining open imports stating that the
+Koide `Q = 2/3` extremal-principle bridge, the physical Brannen-phase
+`δ = 2/9` bridge, and the downstream selected-line witness remain
+open imports preventing retained-derivation status. This note is a
+register, not a derivation; no dedicated runner is registered, and
+the per-lane runners in the §3 reproduction table are the
+authoritative executable artifacts.
+
+One-hop authority candidates cited (load-bearing for the open-import
+register itself, not promoted by it):
+
+- [`KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`](KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+  — currently `unaudited` (audit row:
+  `koide_brannen_phase_reduction_theorem_note_2026-04-20`). Sibling
+  bounded-theorem note proving the candidate route `δ = Q/d`
+  reducing the Brannen phase to the Koide relation. Cited in §1
+  Priority 2 as one of the two complementary results behind the
+  Brannen-phase reduction.
+- [`KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`](KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md)
+  — currently `unaudited` (audit row:
+  `koide_q_delta_linking_relation_theorem_note_2026-04-20`).
+  Sibling bounded-theorem note sharpening the load-bearing residual
+  statement to `Q_structural = 2/d`, `δ_structural = 2/d²`,
+  `δ/Q = 1/d`, and isolating the physical-base postulate `P` named
+  in the present register.
+- [`KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`](KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
+  — currently `unaudited` (audit row:
+  `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20`).
+  Adjacent positive-theorem note named in §1 Priority 1 candidate
+  closing route 3 ("Missing-axis Higgs-dressed resolvent root law").
+  Currently sits at `audited_conditional` upstream pin chain and is
+  the load-bearing observational pin to which row 1 of the present
+  cluster (the PMNS three-identity support note) feeds via the
+  `M_STAR` provenance triage in commit `06b30907a`.
+- [`KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md`](KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md)
+  — currently `retained_no_go` (audit row:
+  `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`).
+  Retained no-go authority closing one branch of the Q/δ readout-
+  retention split. Cited as graph-bookkeeping support for the
+  register's caveats on which Brannen-side closure attempts have
+  been ruled out.
+- [`KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`](KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+  — currently `retained_no_go` (audit row:
+  `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20`).
+  Retained no-go authority proving that no intrinsic local
+  selected-line law built from the tautological Berry geometry plus
+  `ρ_δ` can select the physical point `δ = 2/d²`, sharpening the
+  remaining open postulate `P` to a one-clock ambient `3+1`
+  continuation/endpoint/transport law as cited in §1 Priority 2.
+- [`SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`](SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md)
+  — currently `audited_conditional` (audit row:
+  `scalar_selector_reviewer_package_2026-04-20`). Sibling
+  reviewer-package open-gate note synthesizing the same scalar-
+  selector cycle perimeter and Quark-side carrier provenance now
+  surfaced inline in the present register's §0a closeout list.
+  Because this sibling is itself `audited_conditional`, it does not
+  by itself promote the present note's effective status under the
+  cite-chain rule.
+- [`SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`](SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md)
+  — currently `audited_conditional` (audit row:
+  `scalar_selector_cycle13_meta_closure_status_note_2026-04-19`).
+  Sibling cycle-status synthesis note. Cited as graph-bookkeeping
+  for the broader scalar-selector cycle perimeter that the present
+  register summarizes.
+
+Open class D registration targets named by the 2026-05-05 audit
+verdict as `missing_bridge_theorem`:
+
+- The Koide `Q = 2/3` physical/source-law extremal-principle bridge
+  is named as an open import in §1 Priority 1 and §0 summary table.
+  Closing it requires a retained-grade derivation explaining why the
+  physical charged-lepton packet must extremize the block-total
+  Frobenius functional, or an equivalent accepted source law that
+  forces the same point. The 2026-05-05 audit verdict's
+  `notes_for_re_audit_if_any` field names this as
+  `missing_bridge_theorem: provide a retained-grade first-principles
+  theorem deriving the Koide extremal-principle bridge`.
+- The physical Brannen-phase `δ = 2/9` ambient transport / Wilson
+  bridge is named as an open import in §1 Priority 2. Closing it
+  requires a retained-grade ambient one-clock `3+1` transport /
+  endpoint / Wilson law whose selected-line pullback is the physical
+  Brannen phase, or an equivalent retained-grade Wilson/lattice phase
+  datum on the same ambient.
+- The selected-line witness ratio `w/v ≈ 4.101` is conditional on
+  the second bridge and registered as the third open import. It
+  closes immediately by the exact selected-line scalar-phase bridge
+  once the Brannen-phase bridge is fixed.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with
+load-bearing-step class B and `chain_closes=False`, observing that
+the note does not attempt to close the bridges; it explicitly names
+the missing closure steps. The audit explicitly identified the two
+missing closure steps as the physical/source-law extremal principle
+for `Q = 2/3` and the physical ambient transport/Wilson identification
+for `δ = 2/9`. This note is a register/inventory of remaining open
+imports and explicitly states the load-bearing bridges remain open;
+it is not a derivation note and no dedicated runner is registered.
+The per-lane runners in the §3 reproduction table are the authoritative
+executable artifacts and remain unchanged by this addendum. The cite
+chain above wires the adjacent Koide Q/δ reduction-and-linking
+authorities, the two retained no-go authorities sharpening the
+remaining `P` postulate, and the two sibling scalar-selector cycle
+status notes; it explicitly registers the three open class D bridge
+targets named by the verdict. Because this source note is being
+edited, the audit lane must re-ratify it from the regenerated ledger;
+this addendum does not apply an `audit_status` or promote effective
+status.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) plus class D
+(open-target registration). It does not change any inventory content,
+priority ordering, §0a closeout list, §3 reproduction table, or
+load-bearing step classification. It records the upstream authority
+candidates the audit verdict expected and the missing-bridge-theorem
+targets named by the verdict's `notes_for_re_audit_if_any` field. No
+dedicated runner is registered for the present note because it is a
+register/inventory, not a derivation. It mirrors the live cite-chain
+pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` cluster
+(commit `8e84f0c23`) and the PMNS active-source cluster (commit
+`be5a06dbf`).
