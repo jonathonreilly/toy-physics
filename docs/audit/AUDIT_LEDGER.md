@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1264 |
+| unaudited | 1263 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 167 |
+| ~~audited_conditional~~ | 168 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 167 |
+| `audited_conditional` | 168 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1377 |
+| `unaudited` | 1376 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 897 |
+| `bounded_theorem` | 896 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 221 |
+| `no_go` | 222 |
 | `open_gate` | 112 |
 | `positive_theorem` | 742 |
 
@@ -706,6 +706,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_selection_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_twisted_flux_transfer_holonomy_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7341,6 +7342,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** It does not promote a quasi-normal mode result; it only freezes the control program that would be required before any QNM-style escape-spectrum claim could be reviewed safely.  _(class `A`)_
 - **chain closes:** True — The note's claim is a scope restriction and control checklist, not a positive spectral theorem. It explicitly denies a QNM/escape-spectrum result and therefore closes as a bounded control-program note without needing a numerical runner.
 - **rationale:** The source note is audit-clean only for its narrow boundary: QNM remains a hardening target and no quasi-normal-mode or escape-spectrum result is asserted. It does not attempt to derive or validate any spectral observable, and its listed five controls are stated as future prerequisites rather than achieved results. Residual risk is that this clean verdict must not be reused as evidence for a positive QNM lane; it ratifies only the bounded control-program framing.
+- **auditor confidence:** high
+
+### `quark_bicac_endpoint_obstruction_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go/obstruction statement that the stipulated quark ray/support packet leaves the bridge parameter kappa unfixed and therefore does not derive the BICAC endpoint, conditional on the packet constants and quark-lane realization inputs.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The retained ray/support identities are kappa-independent and remain true at kappa=sqrt(6/7), kappa=48/49, and kappa=1, with sqrt(6/7)<48/49<1, so the packet does not force the BICAC endpoint kappa=1.  _(class `A`)_
+- **chain closes:** False — The interval and endpoint algebra closes, and the runner reports PASS=12 FAIL=0. The source note does not wire retained authorities for the ray/support packet constants and explicitly imports the staggered-Dirac realization gate for the quark observable lane, so the retained scientific packet is not closed in the audit graph.
+- **rationale:** Issue: the algebra proves non-uniqueness of kappa for the stated constants, but the note's input packet is asserted as retained without direct retained dependency edges, and the quark-lane realization is tied to the open staggered-Dirac gate. Why this blocks: without those authorities, the result is an internal calculation over stipulated numbers, not a retained no-go about the actual quark packet. Repair target: wire and audit the source notes for p, r, supp, delta_A1, the target bridge factor, and the stated staggered-Dirac realization gate. Claim boundary until fixed: if those constants are stipulated, they leave a positive-width kappa interval and do not force kappa=1.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `quark_bimodule_norm_existence_theorem_note_2026-04-19`

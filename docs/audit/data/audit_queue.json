@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 753,
+    "critical": 752,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6576,27 +6576,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_koide_selected_line_local_radian_bridge_no_go_2026_04_20.py",
-      "transitive_descendants": 423
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "quark_bicac_endpoint_obstruction_theorem_note_2026-04-19",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.228,
-      "note_path": "docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py",
       "transitive_descendants": 423
     },
     {
@@ -40494,6 +40473,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 119,
-  "total_pending": 1295
+  "ready_count": 118,
+  "total_pending": 1294
 }
