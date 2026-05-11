@@ -11640,6 +11640,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py"
     },
+    "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/cl3_koide_z_substrate_color_geometric_2026_05_08_probeZ_substrate_color_geometric.py"
+    },
     "kubo_continuum_limit_families_note": {
       "assert_count": 0,
       "counts": {
@@ -24710,6 +24722,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_z_substrate_color_geometric_2026_05_08_probeZ_substrate_color_geometric.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/cl3_ks_full_spinnet_ed_2026_05_07_w1exact.py": {
@@ -47023,9 +47050,9 @@
       "B": 172,
       "C": 680,
       "D": 264,
-      "none": 415
+      "none": 416
     },
-    "runners_classified": 1681,
+    "runners_classified": 1682,
     "runners_with_C": 860,
     "runners_with_D": 480
   }

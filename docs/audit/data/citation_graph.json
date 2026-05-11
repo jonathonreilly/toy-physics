@@ -14485,6 +14485,34 @@
       "to": "vacuum_critical_stability_note"
     },
     {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "gellmann_completeness_theorem_note_2026-05-02"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "cl3_color_automorphism_theorem"
+    },
+    {
+      "from": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "to": "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03"
+    },
+    {
       "from": "kubo_continuum_limit_families_note",
       "to": "kubo_continuum_limit_note"
     },
@@ -51514,6 +51542,25 @@
       "runner_path": "scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py",
       "title": "Probe Z-S4b-RGE Import-Tier Review"
     },
+    "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric": {
+      "claim_id": "koide_z_substrate_color_geometric_note_2026-05-08_probez_substrate_color_geometric",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (positive on the dim-counting forcing; bounded on the bridge identifying the Cl(3) graded basis with the SU(N_c) gauge adjoint)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "cl3_sm_embedding_theorem",
+        "graph_first_su3_integration_note",
+        "gellmann_completeness_theorem_note_2026-05-02",
+        "cl3_color_automorphism_theorem",
+        "axiom_first_sm_anomaly_cancellation_complete_theorem_note_2026-05-03"
+      ],
+      "note_hash": "de6611dbf314f64a1a99716ddc9068c32fa274ac0ca46dd4d804c7e064b28d3c",
+      "path": "docs/KOIDE_Z_SUBSTRATE_COLOR_GEOMETRIC_NOTE_2026-05-08_probeZ_substrate_color_geometric.md",
+      "runner_path": "scripts/cl3_koide_z_substrate_color_geometric_2026_05_08_probeZ_substrate_color_geometric.py",
+      "title": "Probe Z-Substrate-Color-Geometric \u2014 Cl(3) graded basis 1+3+3+1=8 forces N_c=3 (probeZ_substrate_color_geometric)"
+    },
     "kubo_continuum_limit_families_note": {
       "claim_id": "kubo_continuum_limit_families_note",
       "claim_type_author_hint": null,
@@ -69495,7 +69542,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 323,
+      "bounded_theorem": 324,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69503,17 +69550,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 782,
+      "bounded_theorem": 783,
       "meta": 70,
       "no_go": 149,
       "none": 446,
       "open_gate": 116,
       "positive_theorem": 618
     },
-    "edge_count": 8663,
-    "leaf_count": 615,
-    "node_count": 2181,
+    "edge_count": 8670,
+    "leaf_count": 616,
+    "node_count": 2182,
     "root_count": 813,
-    "runners_with_path": 1793
+    "runners_with_path": 1794
   }
 }

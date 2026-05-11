@@ -1,0 +1,248 @@
+==============================================================================
+Probe Z-Substrate-Color-Geometric — Cl(3) graded basis 1+3+3+1=8
+forces N_c=3
+Loop: probe-z-substrate-color-geometric-20260508-probeZ_substrate_color_geometric
+Date: 2026-05-08 (compute date 2026-05-10)
+==============================================================================
+
+==============================================================================
+K1: Cl(3) graded basis decomposition 1 + 3 + 3 + 1 = 8 elements
+==============================================================================
+
+  Cl(3,0) graded basis enumeration:
+    grade 0 (scalar): {1}  →  1 element(s)
+    grade 1 (vector): {γ_1, γ_2, γ_3}  →  3 element(s)
+    grade 2 (bivector): {γ_1γ_2, γ_1γ_3, γ_2γ_3}  →  3 element(s)
+    grade 3 (pseudoscalar ω): {γ_1γ_2γ_3}  →  1 element(s)
+  --------------------------------------------------------
+    Total dim_R Cl(3,0): 8
+    Standard formula:    dim_R Cl(p,q) = 2^(p+q) = 2^3 = 8
+
+  Z₂-grading by parity:
+    even subalgebra Cl⁺(3) (≅ H, quaternions): grade 0 + grade 2 = 4
+    odd part:                                  grade 1 + grade 3 = 4
+    even + odd = 8
+  [PASS] k1-cl3-graded-basis-8: dim_R Cl(3,0) = 1+3+3+1 = 8; even = 4, odd = 4
+
+==============================================================================
+K2: SU(N_c) adjoint dimension formula dim adjoint = N_c² − 1
+==============================================================================
+
+  SU(N_c) Lie algebra dim count (textbook):
+    M_{N_c}(C) real-dim:        2 N_c²
+    Hermiticity (halve):           N_c² real parameters
+    Tracelessness (subtract 1):    N_c² − 1 = dim_R su(N_c)
+
+  Tabulated for N_c = 1..6:
+   N_c   N_c²   N_c² − 1                  group meaning
+  ---- ------ ---------- ------------------------------
+     1      1          0        trivial (no non-abelian)
+     2      4          3    SU(2) = 3 generators (Pauli)
+     3      9          8  SU(3) = 8 generators (Gell-Mann)
+     4     16         15         SU(4) (e.g. Pati-Salam)
+     5     25         24                     higher rank
+     6     36         35                     higher rank
+
+  Reference: GELLMANN_COMPLETENESS_THEOREM_NOTE_2026-05-02.md
+  confirms 8 Gell-Mann generators are the complete R-basis for su(3),
+  with no possible 9th independent generator.
+  [PASS] k2-adjoint-dim-formula: dim adjoint SU(N_c) = N_c² − 1 verified for N_c ∈ {1..6}
+
+==============================================================================
+K3: Forcing equation N_c² − 1 = 8
+==============================================================================
+
+  Match dim adjoint SU(N_c) = dim_R Cl(3,0):
+     N_c² − 1 = 8
+     N_c²     = 9
+     N_c      = ±√9 = ±3
+
+  Real solutions: N_c ∈ {−3, +3}
+  Positive integer solutions: N_c ∈ {3}
+  (N_c = -3 excluded: non-abelian gauge group dim positive by definition;
+   N_c = 1 is abelian, not relevant; N_c = 0 trivial)
+
+  Verification:
+    target N_c² = 9
+    sqrt = 3
+    is perfect square? True
+    positive integer N_c = 3 (unique)
+  [PASS] k3-forcing-equation: N_c² − 1 = 8 ⇒ N_c² = 9 ⇒ unique positive int N_c = 3
+
+==============================================================================
+K4: Exhaustive enumeration — no competing N_c
+==============================================================================
+
+  SU(N_c) check: enumerate N_c ∈ {2..100}, find all with N_c² − 1 = 8
+    SU solutions: [3]
+    Unique SU solution N_c = 3? True
+
+  Small-N_c match table:
+   N_c   N_c²-1   match 8?                                     note
+  ---- -------- ---------- ----------------------------------------
+     2        3         no matches only 3-vector OR bivector sector
+     3        8 YES (unique) EXACT match with full Cl(3) basis 1+3+3+1
+     4       15         no                      overshoots (15 > 8)
+     5       24         no                 overshoots monotonically
+     6       35         no                 overshoots monotonically
+     7       48         no                 overshoots monotonically
+
+  SO(N) side check: dim adjoint SO(N) = N(N-1)/2; find all with = 8
+    SO solutions: []
+    No SO(N) solution? True
+
+  Sp(N) side check: dim adjoint Sp(N) = N(2N+1); find all with = 8
+    Sp solutions: []
+    No Sp(N) solution? True
+
+  Conclusion: only SU(3) has dim adjoint = 8.
+  Among compact simple Lie groups in the relevant range, the dim-counting
+  matching against Cl(3) graded basis (8 elements) selects SU(3) uniquely.
+  [PASS] k4-no-competing-n-c: N_c=3 unique among SU(2..100); no SO(N) or Sp(N) match at dim 8
+
+==============================================================================
+K5: Distinction from anomaly cancellation
+==============================================================================
+
+  Argument 1: anomaly cancellation Tr[SU(N_c)^3] = 0
+    Trace identity on SM matter content (Q_L, u_R^c, d_R^c).
+    Cancels for any N_c ≥ 2 in the comparison class.
+    The SM cubic anomaly indices A(3) = +1, A(3bar) = -1 give
+    structure that scales linearly with N_c, with no inherent
+    constraint singling out N_c = 3.
+
+    Verify: SU(N_c)^3 cancellation on Q_L − u_R^c − d_R^c content:
+    Tr[T^a T^b T^c]_{sym} per LH-conjugate field, weighted by chirality.
+    Q_L: +2 N_c (LH quark doublet, A(N_c) cubic index)
+    u_R^c: -N_c (RH quark, conjugated)
+    d_R^c: -N_c
+    Sum: 2 N_c + (−N_c) + (−N_c) = 0  ← cancels for ALL N_c
+      N_c = 2: Σ = 2·2 − 2 − 2 = 0
+      N_c = 3: Σ = 2·3 − 3 − 3 = 0
+      N_c = 4: Σ = 2·4 − 4 − 4 = 0
+      N_c = 5: Σ = 2·5 − 5 − 5 = 0
+      N_c = 6: Σ = 2·6 − 6 − 6 = 0
+      N_c = 7: Σ = 2·7 − 7 − 7 = 0
+    Anomaly cancellation admits any N_c ≥ 2: True
+
+  Argument 2: Cl(3) dim-counting N_c² − 1 = 8
+    Algebra-dimension identity on the carrier algebra.
+    Depends on the physical Cl(3) local algebra.
+    Does NOT depend on matter content or chirality assignments.
+    Admits unique positive integer N_c = 3.
+
+  Structural distinction:
+  ┌─────────────────────────────────┬──────────────────────┬─────────────────┐
+  │ Constraint                      │ Type                 │ N_c admitted    │
+  ├─────────────────────────────────┼──────────────────────┼─────────────────┤
+  │ Anomaly cancellation            │ trace identity on    │ any N_c ≥ 2     │
+  │ (SU(N_c)^3 = 0)                 │ matter content       │                 │
+  ├─────────────────────────────────┼──────────────────────┼─────────────────┤
+  │ Cl(3) dim-counting              │ algebra-dim identity │ exactly N_c = 3 │
+  │ (N_c² − 1 = 8)                  │ on carrier algebra   │                 │
+  ├─────────────────────────────────┼──────────────────────┼─────────────────┤
+  │ Joint (intersection)            │ both                 │ exactly N_c = 3 │
+  └─────────────────────────────────┴──────────────────────┴─────────────────┘
+
+  Joint constraint solution:
+    Joint N_c admitted: [3]
+  [PASS] k5-distinction-from-anomaly: Anomaly admits N_c≥2; Cl(3) dim-count forces N_c=3; joint = {3}
+
+==============================================================================
+K6: Adjoint-carrier bridge — two named support routes
+==============================================================================
+
+  Route A: graph-first SU(3) commutant on taste cube
+           (GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+  ----------------------------------------------------------------
+    Each physical Cl(3) local algebra site induces a 2-dim spinor Hilbert.
+    The taste cube V = (C²)^{⊗3} is the staggered Hilbert.
+    Graph-first axis selector picks one of three axes:
+      → fiber: 2-point graph along selected axis
+      → base:  4-point graph on remaining 2 coordinates
+    Selected-axis pair (X_μ, Z_μ, Y_μ) generates su(2)_weak.
+    Residual swap τ of complementary axes: 4-pt base splits 3 ⊕ 1.
+    Joint commutant Comm(su(2)_weak, τ) = gl(3) ⊕ gl(1).
+    Compact semisimple part: su(3), dim 8.
+    All three axis selections give the same 8-dim su(3) (script-verified
+    in scripts/frontier_graph_first_su3_integration.py).
+
+    Route A delivers su(3) of dim 8.
+
+  Route B: Gell-Mann completeness on framework's color algebra
+           (GELLMANN_COMPLETENESS_THEOREM_NOTE_2026-05-02.md)
+  ----------------------------------------------------------------
+    {T^a = λ^a / 2 : a = 1..8} are framework's Gell-Mann generators.
+    Hermiticity: (T^a)† = T^a
+    Tracelessness: Tr[T^a] = 0
+    Trace orthonormality: Tr[T^a T^b] = (1/2) δ^{ab}
+    R-linear independence: Gram matrix non-singular (det = 1).
+    R-span = traceless Hermitian (8-dim by N²-1 count).
+    Closure under commutator with structure constants f^{abc}.
+    No 9th independent generator: any T^9 ∈ R-span{T^1..T^8}.
+
+    Route B delivers su(3) of dim 8.
+
+  Both routes deliver dim su(3) = 8.
+  Combined with K3 (forcing N_c² − 1 = 8 ⇒ N_c = 3),
+  the bridge + dim-counting jointly force N_c = 3.
+  [PASS] k6-bridge-routes: Route A (graph-first SU(3)) and Route B (Gell-Mann completeness): both dim 8
+
+==============================================================================
+K7: Substrate-anomaly comparison sharpening
+==============================================================================
+
+  Anomaly-only comparison:
+    Statement: 'N_c = 3 is not forced by anomaly cancellation alone.'
+    Reason: SU(N_c)^3 cubic anomaly cancels for any N_c ≥ 2 on the
+            current SM left-handed content.
+    Status: anomaly cancellation alone supplies no unique N_c.
+
+  Probe Z dim-counting forcing (this note):
+    Claim: N_c² − 1 = 8 = dim_R Cl(3,0) ⇒ N_c = 3 (unique positive int).
+    Bridge: Cl(3) graded basis carries SU(N_c) gauge adjoint
+            (named graph-first SU(3) + Gell-Mann bridge support).
+
+  Joint constraint:
+    anomaly admits N_c ∈ {n : n ≥ 2} = [2, 3, 4, 5, 6, 7, 8, 9, 10] (truncated at 10)
+    Cl(3) dim-counting admits N_c ∈ [3]
+    intersection: [3]
+
+  After this note:
+    Statement: N_c = 3 is supplied by the separate bounded Cl(3)
+               adjoint-carrier bridge constraint, not by anomaly
+               cancellation alone.
+    Bridge admission: named support from GRAPH_FIRST_SU3_INTEGRATION_NOTE
+                      and GELLMANN_COMPLETENESS_THEOREM_NOTE.
+    Other hidden-character questions remain separate: generation count,
+    left-handed content choice, absolute hypercharge scale, and the
+    Koide Frobenius-equipartition condition.
+  [PASS] k7-anomaly-comparison-sharpening: Anomaly admits N_c>=2; adding Cl(3)-adjoint constraint gives joint = [3]
+
+==============================================================================
+K8: Tier verdict per probe brief
+==============================================================================
+
+  Forcing rigidity (K3+K4):                True
+  Bridge admission named (K6):             True
+  Bridge support named upstream:           True
+  Multiple N_c admitted by dim-counting:   False
+
+  Verdict: BOUNDED
+  Cl(3) dim-counting (N_c² − 1 = 8) forces N_c = 3 uniquely (positive on rigidity). Bridge 'Cl(3) graded basis carries gauge adjoint' is the named structural assumption (bounded). Bridge support is named via graph-first SU(3) commutant + Gell-Mann completeness. Tier: BOUNDED THEOREM. Any stronger classification is audit-owned.
+  [PASS] k8-tier-verdict: Tier: BOUNDED (rigid forcing N_c² = 9 ⇒ N_c = 3; bridge named)
+
+==============================================================================
+Summary
+==============================================================================
+
+  PASS:    8
+  FAIL:    0
+
+  Total K-statements: 8
+  Tier: BOUNDED
+
+  Cl(3) graded basis count: 8 (1+3+3+1)
+  Forcing N_c: 3
+
+  All K-statements PASS. Probe Z source-note proposal ready for audit.
