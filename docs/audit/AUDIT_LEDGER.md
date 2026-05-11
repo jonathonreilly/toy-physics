@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 134 |
 | **retained_bounded** | 293 |
 | _retained_pending_chain_ | 3 |
-| open_gate | 14 |
-| unaudited | 1165 |
+| open_gate | 15 |
+| unaudited | 1164 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 491 |
+| `audited_clean` | 492 |
 | `audited_conditional` | 201 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1278 |
+| `unaudited` | 1277 |
 
 | claim_type | count |
 |---|---:|
@@ -628,6 +628,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `yt_ssb_matching_gap_analysis_note_2026-04-18` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | A | - |
 | `z2_hw1_mass_matrix_parametrization_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `z3_conjugate_support_trichotomy_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `accessible_prediction_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -11648,6 +11649,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given H_unit = I_(N_iso*N_c)/sqrt(N_iso*N_c), the diagonal basis component overlap equals 1/sqrt(N_iso*N_c), hence 1/sqrt(6) at (2,3).  _(class `A`)_
 - **chain closes:** True — The scoped identity follows directly from the stated orthonormal basis, matrix-unit definition, and H_unit normalization. The note explicitly excludes the physical SSB/Yukawa matching bridge, so that unproved bridge is outside the audited claim boundary.
 - **rationale:** The supplied proof and runner close the finite-dimensional arithmetic claim without importing gauge coupling, VEV, LSZ, chirality, HS/source normalization, or physical Yukawa readout assumptions. The alias equality is only clean within the explicitly bounded component-overlap definition and is not used to assert physical operator matching. The runner completed with 13 passes and 0 failures against the current scoped claim.
+- **auditor confidence:** high
+
+### `yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`YT_WARD_STEP3_SAME_1PI_CONSTRUCTION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/YT_WARD_STEP3_SAME_1PI_CONSTRUCTION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate coefficient-bookkeeping diagnostic for YT_WARD Step 3: retained inputs reduce the proposed same-1PI equality to C_A=C_B iff c_S*g_bare^2=2/N_iso, with canonical residual (g_bare^2-1)/6 at Q_L=(2,3), while the same-amputated-1PI Green's-function bridge remains unproved.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The OGE-projected coefficient C_A(g_bare)=c_S*g_bare^2/(2 N_c) and H_unit-projected coefficient C_B=1/(N_c N_iso) are not identical as symbolic functions; equating them gives the remaining gate c_S*g_bare^2=2/N_iso, which is g_bare^2=1 at Q_L=(2,3), c_S=+1.  _(class `A`)_
+- **chain closes:** True — The runner verifies the source-scope text, symbolic coefficient residual, canonical gate, off-surface counterexample, D12 Fierz input, and H_unit normalization checks. The note correctly stops at the open gate and does not claim to derive g_bare=1 or prove same-1PI equivalence.
+- **rationale:** The open-gate claim closes because the live runner returns 23 PASS and 0 FAIL for the algebra, scope guards, retained coefficient inputs, and H_unit normalization. The result is not a positive same-1PI theorem: it proves only that the two projected coefficients are unequal until the gate equation is imposed, so a Wick-level same-1PI bridge remains required. This is exactly the source boundary, so the appropriate retained status is open_gate.
+- **open / conditional deps cited:**
+  - `same-1PI bridge between OGE contraction and H_unit decomposition remains unproved`
 - **auditor confidence:** high
 
 ### `yt_zero_import_chain_note`
