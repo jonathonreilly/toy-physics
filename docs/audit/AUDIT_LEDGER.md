@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1187 |
+| unaudited | 1186 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 191 |
+| ~~audited_conditional~~ | 192 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 479 |
-| `audited_conditional` | 191 |
+| `audited_conditional` | 192 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1300 |
+| `unaudited` | 1299 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 899 |
+| `bounded_theorem` | 898 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 227 |
+| `no_go` | 228 |
 | `open_gate` | 111 |
 | `positive_theorem` | 735 |
 
@@ -779,6 +779,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_bimodule_norm_naturality_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_c3_oriented_ward_splitter_support_note_2026-04-28` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
@@ -8412,6 +8413,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the live endpoint data, gamma_T(center)/gamma_T(shell), gamma_T(shell)/gamma_E(shell), and gamma_T(center)/gamma_E(center) are nearest to the small rational candidates 5/6, -2, and -8/9.  _(class `G`)_
 - **chain closes:** False — The algebraic multiplication from {5/6, -2, -8/9} to 15/8 closes, but the ratio candidates themselves are selected by numerical proximity to imported live endpoint data. The restricted packet does not derive those endpoint ratios from the Route-2 tensor observable or first principles.
 - **rationale:** The runner verifies an exact algebraic identity and then scans a bounded small-rational class against endpoint ratios obtained from imported functions. The contested step is not a first-principles computation from the stated axiom; it is a numerical match to live endpoint data with proximity thresholds. The downstream 15/8, r_E = 21/4, and D_E = 21/8 consequences follow only after accepting the selected rational candidates.
+- **auditor confidence:** high
+
+### `quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Conditional no-go for S3-equivariant quark-generation Ward stratification: given the hw=1 generation triplet as A1+E with the retained S3 action, S3-equivariant Hermitian Ward laws cannot produce three distinct generation eigenvalues and diagonal S3-equivariant readouts are scalar; physical triplet/S3 authority and runner packet closure are not retained by this row.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For the hw=1 triplet modeled as the S3 three-point permutation representation A1+E, every S3-equivariant Hermitian Ward endomorphism lies in the two-dimensional commutant aI+bJ, giving one singlet eigenvalue and one doubly-degenerate E eigenvalue; a generation-basis diagonal S3-equivariant readout is scalar.  _(class `B`)_
+- **chain closes:** False — The finite S3 commutant and eigenvalue-degeneracy algebra passes in the runner, but the current runner exits nonzero with PASS=43 FAIL=1 on an authority-surface check, not the expected PASS=44 FAIL=0. The source also admits the staggered-Dirac realization gate and retained generation/S3 surfaces while the ledger row has no dependency edges, and the canonical gate is open.
+- **rationale:** Issue: the core representation-theory no-go is supported by the live runner, but the proof packet does not close: the runner currently fails one authority-surface check and the source imports the hw=1 generation carrier/S3 decomposition plus an explicit open staggered-Dirac gate without ledger dependency edges. Why this blocks: a retained no-go about physical quark Ward channels cannot be granted while its physical carrier authorities are unaudited/open and its validation command no longer produces the advertised PASS=44 FAIL=0. Repair target: update or split the runner so the authority-surface check matches the current generation note, add explicit dependency edges to the staggered-Dirac gate and generation/S3 authority notes, and re-audit after those dependencies are retained or the claim is narrowed to an abstract S3 commutant lemma. Claim boundary until fixed: the abstract A1+E/S3 commutant algebra shows only a singlet plus doubly-degenerate E spectrum, but the physical Lane 3 quark-generation no-go remains conditional.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
+  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
+  - `QUARK_GENERATION_STRATIFIED_WARD_FREE_MATRIX_NO_GO_NOTE_2026-04-28.md`
 - **auditor confidence:** high
 
 ### `quark_generation_stratified_ward_free_matrix_no_go_note_2026-04-28`
