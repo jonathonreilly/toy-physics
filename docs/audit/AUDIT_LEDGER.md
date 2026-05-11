@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 256 |
+| **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1245 |
+| unaudited | 1244 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
@@ -42,13 +42,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 12 |
-| `audited_clean` | 431 |
+| `audited_clean` | 432 |
 | `audited_conditional` | 177 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1355 |
+| `unaudited` | 1354 |
 
 | claim_type | count |
 |---|---:|
@@ -354,6 +354,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_threshold_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `minimal_source_driven_field_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_boundary_fit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `mirror_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `moving_source_cross_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -6576,6 +6577,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The certificate replays the fixed dense-boundary command, verifies the pre-fit gates for mirror rows N=40,60,80,100, excludes N=120 as a zero-gravity wall, and only then fits log(1 - pur_cl) versus log(N) on the four retained rows.  _(class `C`)_
 - **chain closes:** True — The chain closes within the stated bounded scope: the certificate runs the companion generator, parses the replayed finite rows, checks the gates, and recomputes the fit from the selected rows. It imports no one-hop dependencies and makes no external comparator, mirror-family, or asymptotic-law claim.
 - **rationale:** The clean result covers only the deterministic finite-window certificate under the named command and runner definitions. I count the finite replay gate checks as C because the companion runner generates the mirror DAGs and computes Born, k=0, gravity, purity, and wall metrics rather than reading them from another note; the header, post-retention fit arithmetic, extrapolation arithmetic, and selector-firewall sequencing checks are A. Residual risk is limited to implementation fidelity and the deliberate named-card choice; the note explicitly excludes physical-comparator, family, and asymptotic claims.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Strict default mirror chokepoint card only: NPL_HALF=25, connect_radius=4.0, layer2_prob=0.0, k=5.0, 16 seeds, mirror p2=0 rows at N=15 and N=25. The audited result is the retained N=15/N=25 table with Born-clean, k=0-clean, positive-gravity, decoherence-side advantage metrics, plus the same-card FAIL markers at N=40,60,80,100. This excludes a single-surface family theorem, asymptotic law, strict-card large-N retention, sparse layer-2 rescue, scaling probes, and the dense NPL_HALF=60 boundary-card result except as the separate retained dependency.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260511-mirror-chokepoint-note`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The strict default runner/cache and assertion certificate verify only the N=15 and N=25 mirror p2=0 retained rows, while the same card records FAIL for N=40,60,80,100.  _(class `C`)_
+- **chain closes:** True — The live strict default runner reproduces the retained N=15/N=25 metrics and same-card FAIL markers, and the certificate runner verifies the note table against the registered cache. The note now excludes stitched large-N and asymptotic claims, and the dense-card result is covered only by the separate retained boundary-fit dependency.
+- **rationale:** The note's current scope is narrow enough to close: live strict-card output and the certificate cache agree on the retained N=15/N=25 rows and the N=40/60/80/100 failures. The prior stitched-table problem is repaired by excluding dense-card and other exploratory surfaces from this row. The boundary-fit dependency remains retained_bounded for its own named dense card and is not imported as part of this note's retained table.
 - **auditor confidence:** high
 
 ### `mirror_mutual_information_canonical_families_note`

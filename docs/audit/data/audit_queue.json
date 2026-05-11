@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 725,
-    "high": 35,
+    "high": 34,
     "leaf": 334,
     "medium": 169
   },
@@ -24859,29 +24859,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "mirror_chokepoint_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_boundary_fit_note"
-      ],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.248,
-      "note_path": "docs/MIRROR_CHOKEPOINT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 18
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dimensional_gravity_table",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -24898,6 +24875,29 @@
       "ready": true,
       "runner_path": "scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py",
       "transitive_descendants": 16
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "mirror_mutual_information_chokepoint_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.807,
+      "note_path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
+      "transitive_descendants": 13
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -25494,29 +25494,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 16
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "mirror_mutual_information_chokepoint_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.807,
-      "note_path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
-      "transitive_descendants": 13
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -26205,6 +26182,29 @@
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 13
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "higher_symmetry_joint_validation_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.7,
+      "note_path": "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 12
     },
     {
       "audit_independence_required": "any_non_self",
@@ -28525,29 +28525,6 @@
       "effective_status": "unaudited",
       "load_bearing_score": 5.7,
       "note_path": "docs/CONTINUUM_CONVERGENCE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 12
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "higher_symmetry_joint_validation_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.7,
-      "note_path": "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
@@ -31471,6 +31448,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "mirror_gravity_probe_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "mirror_grown_combined_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -31486,6 +31486,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/mirror_grown_combined.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "mirror_vs_central_head_to_head_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/mirror_vs_central_head_to_head.py",
       "transitive_descendants": 0
     },
     {
@@ -37104,29 +37127,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "mirror_gravity_probe_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_mutual_information_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37145,29 +37145,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/mirror_mutual_information_chokepoint.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "mirror_vs_central_head_to_head_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_chokepoint_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/mirror_vs_central_head_to_head.py",
       "transitive_descendants": 0
     },
     {
@@ -39346,6 +39323,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 96,
-  "total_pending": 1263
+  "ready_count": 99,
+  "total_pending": 1262
 }
