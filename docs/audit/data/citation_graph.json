@@ -63395,6 +63395,17 @@
       "runner_path": "scripts/frontier_three_generation_observable_theorem.py",
       "title": "Three-Generation Observable Theorem \u2014 Dep-Chain Audit"
     },
+    "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10": {
+      "claim_id": "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "0b1a859566e0ba81d66413f22db06cc9207cdaf1dee99e410cfc565cad264f34",
+      "path": "docs/THREE_GENERATION_OBSERVABLE_M3C_BURNSIDE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_three_generation_observable_m3c_burnside_narrow.py",
+      "title": "Three-Generation Observable M_3(C) Burnside Narrow Theorem"
+    },
     "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
       "claim_id": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -68014,6 +68025,7 @@
     "third_grown_family_boundary_note",
     "three_generation_local_algebra_narrow_theorem_note_2026-05-10",
     "three_generation_observable_count_corollary_note_2026-05-03",
+    "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10",
     "triple_stack_collapse_scaling_note",
     "two_field_retarded_family_closure_note_2026-04-10",
     "two_field_retarded_probe_note_2026-04-10",
@@ -68107,7 +68119,7 @@
       "no_go": 31,
       "none": 1627,
       "open_gate": 34,
-      "positive_theorem": 128
+      "positive_theorem": 129
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
@@ -68116,12 +68128,12 @@
       "no_go": 138,
       "none": 451,
       "open_gate": 122,
-      "positive_theorem": 627
+      "positive_theorem": 628
     },
     "edge_count": 8449,
-    "leaf_count": 599,
-    "node_count": 2154,
-    "root_count": 816,
-    "runners_with_path": 1767
+    "leaf_count": 600,
+    "node_count": 2155,
+    "root_count": 817,
+    "runners_with_path": 1768
   }
 }

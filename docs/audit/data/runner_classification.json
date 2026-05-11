@@ -19248,6 +19248,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_three_generation_observable_theorem.py"
     },
+    "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_three_generation_observable_m3c_burnside_narrow.py"
+    },
     "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -39845,6 +39857,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_three_generation_observable_m3c_burnside_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_three_generation_observable_theorem.py": {
       "assert_count": 0,
       "claims": [
@@ -46301,15 +46328,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 188,
+    "decoration_candidates": 189,
     "dominant_class_distribution": {
-      "A": 136,
+      "A": 137,
       "B": 171,
       "C": 669,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1654,
+    "runners_classified": 1655,
     "runners_with_C": 841,
     "runners_with_D": 462
   }
