@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 93 |
+| **retained** | 94 |
 | **retained_no_go** | 132 |
 | **retained_bounded** | 277 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1206 |
+| unaudited | 1205 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 464 |
+| `audited_clean` | 465 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1319 |
+| `unaudited` | 1318 |
 
 | claim_type | count |
 |---|---:|
@@ -328,6 +328,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `hierarchy_matsubara_decomposition_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_spatial_bc_and_u0_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -5552,6 +5553,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** (eta(s)/zeta(s))^(1/s) = (7/8)^(1/4) among integer s >= 2 iff s = 4.  _(class `A`)_
 - **chain closes:** True — The eta-zeta quotient follows by odd/even sum splitting, the integer monotonicity proof follows from a valid log/Taylor termwise comparison, and uniqueness at s=4 follows immediately from strict monotonicity plus the exact value. The dimensional-analysis clause is scoped only as mass-dimension bookkeeping and does not assert a framework observable bridge.
 - **rationale:** Within the stated narrow scope, the proof closes self-containedly and the runner reports PASS=15, FAIL=0 on the relevant algebraic and monotonicity checks. The note explicitly excludes hierarchy-formula closure, alpha_LM^16 closure, M_Pl import, lattice-realization derivation, and identification of f with a framework free-energy density, so those absent physical bridges are not required for this audit. Ancillary runner checks about sister identities are not load-bearing for the verdict.
+- **auditor confidence:** high
+
+### `hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`HIERARCHY_LT4_KLEIN_FOUR_SIN_SQUARED_UNIFORMITY_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/HIERARCHY_LT4_KLEIN_FOUR_SIN_SQUARED_UNIFORMITY_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Zero-dependency finite trigonometric/orbit theorem: for M(L_t)={(2n+1)pi/L_t : n=0..L_t-1} and w(omega)=sin^2(omega), uniformity on even L_t in {2,4,6,8,10,12,14,16} holds exactly at L_t in {2,4}; at L_t=4, M(4) is a single V_4 orbit with constant value 1/2, while L_t=6 splits into two V_4 orbits with distinct weights.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The finite-set identity is that {sin^2(omega) : omega in M(4)} = {1/2} while {sin^2(omega) : omega in M(L_t)} has at least two distinct values for L_t in {6, 8, 10, 12, 14, 16}; at L_t=2 it is uniformly 1.  _(class `A`)_
+- **chain closes:** True — The result is finite exact trigonometric arithmetic plus elementary Klein-four orbit enumeration over the explicitly declared mode sets. It has no framework dependencies, no physical L_t selection, no hierarchy formula, and no observed comparator.
+- **rationale:** The source note and runner agree on a strictly finite algebraic scope: exact sin^2 values on the scanned even L_t set and explicit V_4 orbit closure at L_t=4, with the trivial L_t=2 uniform case included. The live runner verifies T1-T10 at exact SymPy/rational precision with PASS=10 and FAIL=0. Residual risk is only downstream overuse: this does not derive physical L_t=4 selection, the hierarchy formula, the 7/8 factor, or any statement beyond the scanned L_t range.
 - **auditor confidence:** high
 
 ### `hierarchy_matsubara_decomposition_note`
