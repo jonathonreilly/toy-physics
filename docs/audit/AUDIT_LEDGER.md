@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1268 |
-| audit_in_progress | 18 |
+| unaudited | 1267 |
+| audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
@@ -40,23 +40,23 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 26 |
+| `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
 | `audited_conditional` | 164 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1381 |
+| `unaudited` | 1380 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 896 |
+| `bounded_theorem` | 897 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 221 |
 | `open_gate` | 112 |
-| `positive_theorem` | 743 |
+| `positive_theorem` | 742 |
 
 | criticality | count |
 |---|---:|
@@ -123,6 +123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | audit_in_progress | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `gravitomagnetic_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
+| `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_circulant_wilson_target_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
