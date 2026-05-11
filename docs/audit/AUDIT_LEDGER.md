@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 279 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1199 |
+| unaudited | 1198 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 187 |
+| ~~audited_conditional~~ | 188 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 471 |
-| `audited_conditional` | 187 |
+| `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | claim_type | count |
 |---|---:|
@@ -743,6 +743,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `lattice_family_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `linear_response_second_order_kubo_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -6962,6 +6963,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — As an open gate, the row closes because it accurately preserves the heuristic metrics and their boundary: detector reweighting is not the literal <z*deltaH>_0 term and remains a derivation-adjacent lane. The current live runner did not finish within the practical audit budget, but the source packet includes a completed frozen log; timeout is not used as a non-clean verdict.
 - **rationale:** The safe claim is not a retained positive theorem; it is an open-gate heuristic record with explicit non-closure language and a named true-Kubo closure lane. The completed frozen log supports the reported correlation and sign-agreement numbers, while the source note itself excludes the tuned threshold number from no-fit evidence and states that path-phase terms are missing from the heuristic. Residual risk is operational reproducibility of the slow runner; that does not change the open-gate boundary because the row is not being promoted to a theorem.
 - **auditor confidence:** medium
+
+### `linear_response_second_order_kubo_note`
+
+- **Note:** [`LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md`](../../docs/LINEAR_RESPONSE_SECOND_ORDER_KUBO_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Claimed boundary theorem for the Kubo-Taylor route: the runner-supported finite computation shows that adding the second-order term to the first-order Kubo prediction leaves the strict linearity-regime subset at 15/44 and slightly worsens aggregate residuals, while the source further claims this demonstrates a broader Taylor-expansion boundary for the failing families. The audit does not ratify the broader all-orders/no-Taylor extrapolation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Adding more Taylor terms at s = 0 would not work either, because the failing families' nonlinearities are not analytic perturbations of the linear regime.  _(class `C`)_
+- **chain closes:** False — The completed frozen log supports the finite second-order null result, but the source extrapolates from that finite second-order replay to a higher-order Taylor/no-go boundary without a remainder bound, convergence analysis, third-or-higher-order computation, or non-analyticity theorem. The current live runner/cache timeout is not used as evidence for the non-clean verdict.
+- **rationale:** Issue: the finite runner evidence establishes only a second-order null result on the 44-family battery, while the source claims a broader boundary for higher Taylor orders and Taylor expansion at s=0. Why this blocks: a second-order failure does not prove that third and higher orders, a resummed series, a different expansion point, or an analytic remainder cannot change the failing-family behavior. Repair target: either narrow the note to the computed second-order null result or add a theorem/computation bounding the Taylor remainder or demonstrating non-convergence/non-analyticity for the named failing families. Claim boundary until fixed: it is safe to cite the finite second-order replay numbers, not the all-orders Taylor no-go.
+- **auditor confidence:** high
 
 ### `linear_response_true_kubo_note`
 
