@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1279 |
+| unaudited | 1278 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 152 |
+| ~~audited_conditional~~ | 153 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 152 |
+| `audited_conditional` | 153 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1392 |
+| `unaudited` | 1391 |
 
 | claim_type | count |
 |---|---:|
@@ -597,6 +597,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_decoherence_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -2371,6 +2372,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The equation of state follows by identifying the physical cosmological constant with the fixed S^3 spectral gap `Lambda=lambda_1(S^3)=3/R^2`; with R fixed, constant Lambda gives `rho_Lambda=const` and hence `w=-1`.  _(class `F`)_
 - **chain closes:** False — The constant-Lambda algebra closes after the spectral-gap and fixed-R identifications are assumed. The restricted packet does not derive the physical bridge `Lambda=lambda_1(L_S3)` or the fixed-R boundary condition from framework operators.
 - **rationale:** Issue: the load-bearing step identifies physical dark energy/Lambda with a fixed S^3 graph spectral gap, then derives w=-1 from the definition of a constant cosmological constant. Why this blocks: the runner prints downstream algebra and forecasts, but it does not construct the physical Lambda bridge or fixed-R boundary condition from retained inputs. Repair target: provide a retained restricted-packet derivation that the fixed S^3 spectral gap sources the physical cosmological constant with the required normalization and boundary condition. Claim boundary until fixed: this is a conditional algebra companion under an imported bridge, not a retained framework prediction of the dark-energy equation of state.
+- **auditor confidence:** high
+
+### `decoherence_action_independence_note`
+
+- **Note:** [`DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md`](../../docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional bounded zero-field action-independence replay: the completed log for the 3D 1/L^2 lattice at h=1.0,0.5,0.25 shows spent-delay and valley-linear produce identical d_TV, MI, pur_cl/decoh, and S_norm values with max delta 0 across actions. This excludes retained definitions of the imported lattice/action harness, gravity/decoherence trade-off claims beyond the frozen replay, and the stale numerical table values currently printed in the note.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-decoherence-action-independence`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** At zero field, the completed replay reports zero difference between spent-delay and valley-linear for all listed decoherence observables at h=1.0, 0.5, and 0.25, but this uses imported lattice/action definitions from `valley_linear_same_harness_compare.py`.  _(class `B`)_
+- **chain closes:** False — The equality pattern in the completed log is reproducible as an artifact, but the packet does not retain the imported action-law and propagation-harness definitions as one-hop authorities. The note's displayed numeric table is also stale relative to the cited log, although the exact equality across actions remains true in the log.
+- **rationale:** Issue: the row's safe result depends on imported lattice/action harness definitions, and the note's numeric table does not match the completed log values even though action-independence itself holds. Why this blocks: a retained bounded theorem needs both registered authority for the action/harness definitions and a source table synchronized with the load-bearing artifact. Repair target: wire retained authority for the imported valley/spent-delay harness or inline the definitions, then update the note's table to the current log values. Claim boundary until fixed: the completed artifact conditionally supports exact equality of the decoherence observables across the two actions on the frozen zero-field replay, not the stale numeric table or broader trade-off interpretation.
+- **open / conditional deps cited:**
+  - `scripts/valley_linear_same_harness_compare.py`
 - **auditor confidence:** high
 
 ### `dense_prune_guard_seed_note`
