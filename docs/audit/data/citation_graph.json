@@ -4337,6 +4337,38 @@
       "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
     },
     {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "cpt_exact_note"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "primitive_p_lh_content_proposal_note_2026-05-10_pplh"
+    },
+    {
+      "from": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "to": "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
+    },
+    {
       "from": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
       "to": "g_newton_skeleton_selection_bounded_note_2026-05-10_gnewtong1"
     },
@@ -38615,6 +38647,26 @@
       "runner_path": "scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py",
       "title": "Staggered Dirac Gate: C8 Assembly Candidate and Order-One Open Gate"
     },
+    "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96": {
+      "claim_id": "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered",
+        "cl3_sm_embedding_theorem",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02",
+        "cpt_exact_note",
+        "p_lh_order_one_staggered_dirac_open_gate_note_2026-05-10_pplh_order_one",
+        "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
+        "primitive_p_lh_ncg_native_note_2026-05-10_pplh_ncg_native"
+      ],
+      "note_hash": "76603b999c6ab5f3adad98226566b531b255f63871610babf6cd855885c1a15a",
+      "path": "docs/CLOSURE_T1_HF_96_CONNES_CONSTRUCTION_NOTE_2026-05-10_t1hf96.md",
+      "runner_path": "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py",
+      "title": "T1.4 - 96-Dim Connes-Chamseddine H_F Construction Candidate on the Cl(3)/Z^3 Substrate"
+    },
     "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton": {
       "claim_id": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton",
       "claim_type_author_hint": "open_gate",
@@ -67292,7 +67344,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 263,
+      "bounded_theorem": 264,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67301,7 +67353,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 745,
+      "bounded_theorem": 746,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67309,10 +67361,10 @@
       "open_gate": 118,
       "positive_theorem": 614
     },
-    "edge_count": 8364,
+    "edge_count": 8372,
     "leaf_count": 574,
-    "node_count": 2122,
+    "node_count": 2123,
     "root_count": 798,
-    "runners_with_path": 1735
+    "runners_with_path": 1736
   }
 }

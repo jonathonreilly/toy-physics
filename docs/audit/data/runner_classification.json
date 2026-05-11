@@ -2748,6 +2748,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_closure_c_staggered_2026_05_10_cStaggered.py"
     },
+    "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py"
+    },
     "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton": {
       "assert_count": 2,
       "counts": {
@@ -23044,6 +23056,21 @@
       "assert_count": 1,
       "claims": [
         "closure_c_staggered_dirac_gate_note_2026-05-10_cstaggered"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_closure_t1_hf_96_2026_05_10_t1hf96.py": {
+      "assert_count": 1,
+      "claims": [
+        "closure_t1_hf_96_connes_construction_note_2026-05-10_t1hf96"
       ],
       "counts": {
         "A": 0,
@@ -45455,12 +45482,12 @@
     "dominant_class_distribution": {
       "A": 124,
       "B": 169,
-      "C": 658,
+      "C": 659,
       "D": 252,
       "none": 420
     },
-    "runners_classified": 1623,
-    "runners_with_C": 826,
+    "runners_classified": 1624,
+    "runners_with_C": 827,
     "runners_with_D": 451
   }
 }
