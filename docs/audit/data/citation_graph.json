@@ -46230,6 +46230,17 @@
       "runner_path": "scripts/frontier_hierarchy_heat_kernel_d4_compression.py",
       "title": "Hierarchy Heat-Kernel D=4 Compression \u2014 Bounded Theorem Note"
     },
+    "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10": {
+      "claim_id": "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "21245ae46dc13e2e71bc371c0c627451de44d9348c9ab805115fca24d864eb3a",
+      "path": "docs/HIERARCHY_JOINT_RIEMANN_DIRICHLET_DIMENSIONAL_FOURTH_ROOT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py",
+      "title": "Hierarchy Joint Riemann-Dirichlet / Dimensional Fourth-Root \u2014 Narrow Theorem"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "claim_id": "hierarchy_matsubara_decomposition_note",
       "claim_type_author_hint": null,
@@ -66627,6 +66638,7 @@
     "hard_geometry_local_note",
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
+    "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10",
     "hierarchy_matsubara_decomposition_note",
     "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10",
     "hierarchy_spatial_bc_and_u0_scaling_note",
@@ -67053,7 +67065,7 @@
       "no_go": 26,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 105
+      "positive_theorem": 106
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 736,
@@ -67062,12 +67074,12 @@
       "no_go": 133,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 605
+      "positive_theorem": 606
     },
     "edge_count": 8363,
-    "leaf_count": 554,
-    "node_count": 2102,
-    "root_count": 787,
-    "runners_with_path": 1715
+    "leaf_count": 555,
+    "node_count": 2103,
+    "root_count": 788,
+    "runners_with_path": 1716
   }
 }

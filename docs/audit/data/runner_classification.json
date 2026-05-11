@@ -8880,6 +8880,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_heat_kernel_d4_compression.py"
     },
+    "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py"
+    },
     "hierarchy_matsubara_decomposition_note": {
       "assert_count": 0,
       "counts": {
@@ -31539,6 +31551,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py": {
+      "assert_count": 0,
+      "claims": [
+        "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_hierarchy_matsubara_decomposition.py": {
       "assert_count": 0,
       "claims": [
@@ -44917,9 +44944,9 @@
       "B": 166,
       "C": 655,
       "D": 250,
-      "none": 412
+      "none": 413
     },
-    "runners_classified": 1603,
+    "runners_classified": 1604,
     "runners_with_C": 822,
     "runners_with_D": 447
   }
