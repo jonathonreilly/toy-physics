@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 100 |
+| **retained** | 101 |
 | **retained_no_go** | 134 |
 | **retained_bounded** | 293 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1166 |
+| unaudited | 1165 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 490 |
+| `audited_clean` | 491 |
 | `audited_conditional` | 201 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1279 |
+| `unaudited` | 1278 |
 
 | claim_type | count |
 |---|---:|
@@ -622,6 +622,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -11525,6 +11526,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the clean attractive subset of the fixed G=5, mu^2=0.22 open-boundary Wilson two-orbital sweep, all 25 configurations are ATTRACT and CLEAN and the global fit is |a_mut| ~ d^-3.669 with R^2=0.9896.  _(class `C`)_
 - **chain closes:** True — The runner recomputes all 25 configurations and asserts the aggregate counts, global exponent/R^2, per-side exponents, and steeper-than-Newton fixed-surface check against the note's quoted values. The note's screening addendum correctly prevents reading this as a screening-independent universality class.
 - **rationale:** The bounded claim closes because the live runner and SHA-pinned cache reproduce the 25-run fixed-surface sweep and assert every quoted fit used by the note. The note explicitly labels the fit as post-selected on clean attractive rows and narrows interpretation with the later screening addendum, so no hidden universal Newton-law or screening-independent claim is being retained. Residual risk is limited to future misuse outside fixed G=5, mu^2=0.22 or outside the declared post-selected methodology.
+- **auditor confidence:** high
+
+### `wolfenstein_lambda_a_product_cancellation_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`WOLFENSTEIN_LAMBDA_A_PRODUCT_CANCELLATION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/WOLFENSTEIN_LAMBDA_A_PRODUCT_CANCELLATION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure symbolic algebra theorem under supplied positive-symbol definitions lambda^2=alpha/n_pair and A^2=n_pair/n_color, including the formal squared corollary with n_quark=n_pair*n_color; excludes derivation of the supplied identities, CKM/Wolfenstein physics, external numerical values, and retained-grade physical closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given lambda^2 = alpha/n_pair and A^2 = n_pair/n_color, the product A^2 lambda^2 simplifies exactly to alpha/n_color, and multiplying by lambda^2 gives A^2 lambda^4 = alpha^2/(n_pair*n_color).  _(class `A`)_
+- **chain closes:** True — The note assumes the two parametric identities explicitly, and SymPy verifies the exact cancellations symbolically, on rational instances, and under perturbed-hypothesis failure checks. No physical or numerical Wolfenstein input is imported.
+- **rationale:** The scoped algebraic claim closes because the product cancellation is an exact simplification from the supplied definitions, and the live runner/cache report 15 PASS and 0 FAIL. The boundary is explicit: this does not derive the input identities, import external Wolfenstein parameters, or claim physical CKM closure. Residual risk is only misuse of the algebraic lemma as a physical derivation elsewhere.
 - **auditor confidence:** high
 
 ### `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10`
