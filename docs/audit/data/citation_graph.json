@@ -16045,6 +16045,10 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10",
+      "to": "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "oh_static_constraint_lift_note",
       "to": "restricted_strong_field_closure_note"
     },
@@ -53401,6 +53405,19 @@
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
       "title": "Observable Principle From Axiom Note"
     },
+    "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10": {
+      "claim_id": "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "02c4a58f8599b359ffdee2ce03fcd4e8a91fd11ef5c0756a16105ec53b2c7a84",
+      "path": "docs/OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py",
+      "title": "Observable Principle \u2014 Real-D-Block Generator Uniqueness Narrow Theorem"
+    },
     "oh_schur_boundary_action_note": {
       "claim_id": "oh_schur_boundary_action_note",
       "claim_type_author_hint": null,
@@ -67430,7 +67447,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 266,
+      "bounded_theorem": 267,
       "decoration": 1,
       "meta": 59,
       "no_go": 28,
@@ -67439,7 +67456,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 748,
+      "bounded_theorem": 749,
       "decoration": 1,
       "meta": 59,
       "no_go": 135,
@@ -67447,10 +67464,10 @@
       "open_gate": 118,
       "positive_theorem": 614
     },
-    "edge_count": 8382,
-    "leaf_count": 577,
-    "node_count": 2126,
+    "edge_count": 8383,
+    "leaf_count": 578,
+    "node_count": 2127,
     "root_count": 799,
-    "runners_with_path": 1739
+    "runners_with_path": 1740
   }
 }

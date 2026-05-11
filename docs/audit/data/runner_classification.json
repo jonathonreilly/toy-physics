@@ -13572,6 +13572,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_observable_principle_from_axiom.py"
     },
+    "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 58,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py"
+    },
     "oh_schur_boundary_action_note": {
       "assert_count": 1,
       "counts": {
@@ -22005,6 +22017,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 58,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py": {
@@ -45559,15 +45586,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 179,
+    "decoration_candidates": 180,
     "dominant_class_distribution": {
-      "A": 125,
+      "A": 126,
       "B": 169,
       "C": 659,
       "D": 254,
       "none": 420
     },
-    "runners_classified": 1627,
+    "runners_classified": 1628,
     "runners_with_C": 828,
     "runners_with_D": 453
   }
