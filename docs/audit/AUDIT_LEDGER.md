@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1241 |
+| unaudited | 1240 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 187 |
+| ~~audited_conditional~~ | 188 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 187 |
+| `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1351 |
+| `unaudited` | 1350 |
 
 | claim_type | count |
 |---|---:|
@@ -712,6 +712,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `scalar_selector_remaining_open_imports_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `source_resolved_exact_green_pocket_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -8361,6 +8362,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Across all 5 enumerated F3 routes, the table of independent-cross-bound? answers is (No, No, Yes-but-tension, No, No); the only positive route (F3-gamma) gives Sigma m_nu approx 0.056 eV, ~0.003 eV below the NO oscillation floor 0.0586 eV; and the framework current-bank Omega_DM excess by ~0.003 over Planck-derived ~0.265 is the structural-tension source.  _(class `C`)_
 - **chain closes:** True — The no-go is structural and arithmetic: each of the 5 routes is shown not to supply an independent cross-bound producing positive Sigma m_nu within the NO oscillation floor under the framework's no-fitted-parameter posture. The runner check breakdown (A=3, B=10, C=4, D=3) verifies the route-by-route enumeration and the ~0.003 eV magnitude of the residual tension.
 - **rationale:** Within the stuck-fan-out scope, the chain closes as a clean no-go for single-cycle Sigma m_nu retention. The structural-tension residue (framework Omega_DM vs. observation) is sharp and identified, and the three pivots forward (Omega_DM tightening, alt-admission bypass, Lane 5 C1 closure) are flagged as research-level moves beyond the cycle. This is a ratified negative result, not an active failure.
+- **auditor confidence:** high
+
+### `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09`
+
+- **Note:** [`SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](../../docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Within the second no-restore grown-family source/propagation/readout maps, G1-G2 are finite-strength cancellation identities and G3-G4 are weak-field sign/slope identities, with a conditional cross-family corollary for families sharing those maps.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e16ce-daa5-77e1-92e5-a8055f1082bb`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** From R(double)=2 eps dz_+ + O(eps^2) and R(plus)=eps dz_+ + O(eps^2), the note concludes R(double)/R(plus)=2+O(eps) and log_2(R(double)/R(plus))=1+O(eps).  _(class `A`)_
+- **chain closes:** False — G1 and G2 close, and G3 closes as a leading-order smoothness consequence where the centroid readout is regular. G4 does not close from the stated structural inputs because the ratio/log step requires a nonzero first-order plus response and a nonzero detector-intensity denominator, neither of which is proved or stated as an assumption.
+- **rationale:** Issue: The G4 unit-slope derivation divides by R(plus) and expands the logarithm without proving that dz_+ is nonzero or bounded away from zero, and the centroid quotient also needs a detector-intensity lower bound. Why this blocks: Linearity and Taylor expansion imply the displayed numerator forms only under regular readout; they do not force a unit response slope if the first-order response vanishes. Repair target: Add a retained row-wise theorem or certified computation giving lower bounds for the detector denominator and plus-source linear response on the second grown-family slice, then rerun G4 against those bounds. Claim boundary until fixed: G1/G2 exact cancellation and G3 leading antisymmetry remain supported, while G4 and the cross-family unit-slope corollary are conditional on nonzero linear response.
+- **open / conditional deps cited:**
+  - `SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`
+  - `scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py`
+  - `scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py`
 - **auditor confidence:** high
 
 ### `signed_gravity_response_lane_status_note_2026-04-26`
