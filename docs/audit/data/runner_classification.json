@@ -3300,6 +3300,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py"
     },
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py"
+    },
     "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10": {
       "assert_count": 2,
       "counts": {
@@ -27495,6 +27507,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_cubic_orbit_reynolds_projector_narrow.py": {
       "assert_count": 2,
       "claims": [
@@ -46251,12 +46278,12 @@
     "dominant_class_distribution": {
       "A": 136,
       "B": 171,
-      "C": 667,
+      "C": 668,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1652,
-    "runners_with_C": 839,
+    "runners_classified": 1653,
+    "runners_with_C": 840,
     "runners_with_D": 462
   }
 }

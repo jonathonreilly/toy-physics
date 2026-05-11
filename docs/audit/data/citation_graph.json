@@ -39680,6 +39680,17 @@
       "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py",
       "title": "Cross-Sector A^2-Q_l-|V_cb| Bridge Support Note"
     },
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "4b1da6283f1564d501a01d3e0e5342eb4894bf35050d86f18f618d9913083f41",
+      "path": "docs/CUBIC_COXETER_REGGE_DEFICIT_VANISHING_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_cubic_coxeter_regge_deficit_vanishing_narrow.py",
+      "title": "Cubic-Coxeter Regge Deficit Vanishing Narrow Theorem"
+    },
     "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10": {
       "claim_id": "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "positive_theorem",
@@ -67423,6 +67434,7 @@
     "coupled_field_generated_family_probe_note",
     "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10",
     "cross_family_universality_note",
+    "cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10",
     "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
@@ -68068,7 +68080,7 @@
       "no_go": 31,
       "none": 1627,
       "open_gate": 34,
-      "positive_theorem": 127
+      "positive_theorem": 128
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 754,
@@ -68077,12 +68089,12 @@
       "no_go": 138,
       "none": 451,
       "open_gate": 122,
-      "positive_theorem": 626
+      "positive_theorem": 627
     },
     "edge_count": 8446,
-    "leaf_count": 597,
-    "node_count": 2152,
-    "root_count": 815,
-    "runners_with_path": 1765
+    "leaf_count": 598,
+    "node_count": 2153,
+    "root_count": 816,
+    "runners_with_path": 1766
   }
 }
