@@ -4145,6 +4145,10 @@
       "to": "cl3_complexification_split_narrow_theorem_note_2026-05-10"
     },
     {
+      "from": "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10",
+      "to": "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -38297,6 +38301,19 @@
       "runner_path": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py",
       "title": "Cl(3) Faithful Irrep Complex Dimension Two Narrow Theorem"
     },
+    "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "0f9cb59abdcbbabb80c726e34ffb0a33a6b19b2c1c9e0c2ce32d1ae4660fa9fb",
+      "path": "docs/CL3_GAMMA_INVOLUTION_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_cl3_gamma_involution_determinant_narrow.py",
+      "title": "Cl(3) \u03b3-Involution Determinant Identity \u2014 Narrow Theorem"
+    },
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
       "claim_id": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -67088,7 +67105,7 @@
       "no_go": 27,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 109
+      "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 741,
@@ -67097,12 +67114,12 @@
       "no_go": 134,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 609
+      "positive_theorem": 610
     },
-    "edge_count": 8346,
-    "leaf_count": 565,
-    "node_count": 2112,
+    "edge_count": 8347,
+    "leaf_count": 566,
+    "node_count": 2113,
     "root_count": 794,
-    "runners_with_path": 1725
+    "runners_with_path": 1726
   }
 }

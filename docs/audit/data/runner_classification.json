@@ -2556,6 +2556,18 @@
       "dominant_class": "A",
       "runner": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py"
     },
+    "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 41,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_cl3_gamma_involution_determinant_narrow.py"
+    },
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -26411,6 +26423,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_cl3_gamma_involution_determinant_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 41,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_cl4c_carrier_axiom_consequence_map.py": {
       "assert_count": 1,
       "claims": [
@@ -45183,14 +45210,14 @@
   "stats": {
     "decoration_candidates": 173,
     "dominant_class_distribution": {
-      "A": 120,
+      "A": 121,
       "B": 166,
       "C": 657,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1613,
-    "runners_with_C": 824,
+    "runners_classified": 1614,
+    "runners_with_C": 825,
     "runners_with_D": 448
   }
 }

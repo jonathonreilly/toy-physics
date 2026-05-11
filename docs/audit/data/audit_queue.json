@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 683,
     "high": 27,
-    "leaf": 247,
+    "leaf": 248,
     "medium": 157
   },
   "cycle_break_target_count": 265,
@@ -30647,6 +30647,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CL3_GAMMA_INVOLUTION_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_cl3_gamma_involution_determinant_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37227,6 +37250,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 20,
-  "total_pending": 1114
+  "ready_count": 21,
+  "total_pending": 1115
 }
