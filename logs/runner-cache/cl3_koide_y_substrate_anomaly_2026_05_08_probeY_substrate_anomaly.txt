@@ -1,0 +1,69 @@
+
+================================================================================
+note boundary checks
+================================================================================
+[PASS] note contains 'Claim type:** bounded_theorem'
+[PASS] note contains 'source-note proposal only'
+[PASS] note contains 'does not by itself select the full Standard Model carr'
+[PASS] note contains 'odd `N_c >= 3`'
+[PASS] note contains 'still does not select `N_c=3`'
+[PASS] note contains 'does not uniquely force `N_c=3`'
+[PASS] note contains 'does not strengthen their status'
+[PASS] note contains 'assert retained or audited status'
+
+================================================================================
+perturbative anomaly traces for multiple color ranks
+================================================================================
+[PASS] N_c=2: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] N_c=3: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] N_c=4: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] N_c=5: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] N_c=7: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] N_c=9: perturbative traces vanish ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+
+================================================================================
+Witten parity correction
+================================================================================
+[PASS] N_c=2: Witten parity fails for one generation (doublets=3)
+[PASS] N_c=4: Witten parity fails for one generation (doublets=5)
+[PASS] N_c=6: Witten parity fails for one generation (doublets=7)
+[PASS] N_c=8: Witten parity fails for one generation (doublets=9)
+[PASS] N_c=3: Witten parity passes for one generation (doublets=4)
+[PASS] N_c=5: Witten parity passes for one generation (doublets=6)
+[PASS] N_c=7: Witten parity passes for one generation (doublets=8)
+[PASS] N_c=9: Witten parity passes for one generation (doublets=10)
+[PASS] N_c=3 is not unique among odd allowed ranks
+
+================================================================================
+generation additivity
+================================================================================
+[PASS] n_gen=1: traces remain zero at N_c=3
+[PASS] n_gen=1: Witten parity remains even at N_c=3
+[PASS] n_gen=2: traces remain zero at N_c=3
+[PASS] n_gen=2: Witten parity remains even at N_c=3
+[PASS] n_gen=3: traces remain zero at N_c=3
+[PASS] n_gen=3: Witten parity remains even at N_c=3
+[PASS] n_gen=4: traces remain zero at N_c=3
+[PASS] n_gen=4: Witten parity remains even at N_c=3
+[PASS] n_gen=5: traces remain zero at N_c=3
+[PASS] n_gen=5: Witten parity remains even at N_c=3
+
+================================================================================
+hypercharge scale homogeneity
+================================================================================
+[PASS] scale=2: zero traces preserved ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] scale=-3: zero traces preserved ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+[PASS] scale=5/7: zero traces preserved ({'SU2^2Y': Fraction(0, 1), 'SUNc^2Y': Fraction(0, 1), 'gravY': Fraction(0, 1), 'Y^3': Fraction(0, 1)})
+
+================================================================================
+vectorlike and category-boundary checks
+================================================================================
+[PASS] vectorlike cubic pair cancels
+[PASS] anomaly labels are disjoint from operator coefficients
+
+================================================================================
+runner import boundary
+================================================================================
+[PASS] imports limited to stdlib (modules=['__future__', 'fractions', 'pathlib', 're', 'sys'])
+
+TOTAL: PASS=39 FAIL=0
