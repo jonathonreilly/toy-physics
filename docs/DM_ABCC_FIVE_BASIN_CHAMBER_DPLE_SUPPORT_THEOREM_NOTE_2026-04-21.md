@@ -213,3 +213,79 @@ The runner:
 
 See
 `scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by prior 2026-05-05 audit feedback for
+`dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`.
+The prior feedback accepted the finite algebraic / numerical check on
+the provided basin coordinates and runner definitions, but identified
+an upstream-source gap: the broader support theorem imports the
+five-basin source chart and selector structure without deriving them in
+this packet. This addendum does not promote the row or change the claim
+scope, which remains the corrected five-basin
+`chamber ∩ F_4 = {Basin 1}` finite verification on the explicitly
+tabulated basin coordinates. Independent audit owns any current verdict
+or effective status after this source change.
+
+One-hop authorities cited:
+
+- [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+  — audit row: `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`.
+  Upstream source authority for the DPLE / `F_4` cubic-discriminant
+  selector that this note's Section 3 evaluates pointwise on each
+  basin.
+- [`DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`](DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
+  — audit row: `dm_abcc_chamber_bound_derivation_note_2026-04-20`.
+  Upstream authority candidate for the structural inequality
+  `q_+ + delta >= sqrt(8/3)` that defines the chamber filter applied in
+  Section 2.
+- [`DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`](DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md)
+  — audit row:
+  `dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19`.
+  Upstream authority candidate for the four-basin chamber+DPLE route
+  that this note corrects to the five-basin chart by adding Basin 2.
+- [`DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md`](DM_ABCC_BASIN_FINITE_SEARCH_SUPPORT_NOTE_2026-04-30.md)
+  — audit row: `dm_abcc_basin_finite_search_support_note_2026-04-30`.
+  Upstream authority candidate for the five-basin chart enumeration
+  completeness whose missing in-chamber Basin 2 motivated this support
+  theorem.
+
+Open upstream gaps registered for independent audit:
+
+- the chamber-bound source-cubic authority;
+- the four-basin chamber+DPLE route authority;
+- the five-basin enumeration-completeness authority.
+
+The runner-checked content of this note (corrected chamber survivors
+on the five-basin chart; closed-form, Newton, and sampled `F_4`
+agreement on each basin; `Basin 2` discriminant negativity; corrected
+composition `chamber ∩ F_4 = {Basin 1}`) is exact finite-dimensional
+arithmetic on the explicitly tabulated basin coordinates and is
+independent of the cited upstream authorities. The cite chain is what
+supplies the upstream source chart and selector structure that this
+note imports rather than derives.
+
+## Honest auditor read
+
+Prior audit feedback observed that the finite algebraic check closes on
+the provided basin coordinates and runner definitions, but the broader
+theorem imports the five-basin source chart and selector structure
+without a cited source authority or first-principles derivation in the
+restricted packet. The cite-chain repair above wires the DPLE / `F_4`
+selector authority and registers the chamber-bound, four-basin closure,
+and finite-search candidates on the source-chart side. Closing those
+upstream rows is the path to a stronger chain; local rewriting of this
+note does not by itself close that gap.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the prior feedback requested and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).

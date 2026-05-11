@@ -200,3 +200,88 @@ The runner also rechecks the direct basin-level endpoint facts:
 
 See
 `scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py`.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by prior 2026-05-05 audit feedback for
+`dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`.
+The prior feedback identified the dependency chain as the load-bearing
+boundary: the conclusion depends on upstream theorems and dependency
+runners named in the prose, while the local runner mostly executes
+external scripts and checks their stdout plus hard-coded basin
+coordinates. This addendum does not promote the row or change the claim
+scope, which remains the integration-style closure of A-BCC on the
+retained measurement framework already carried in the April 21 package.
+Independent audit owns any current verdict or effective status after
+this source change.
+
+One-hop authorities cited:
+
+- [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
+  — audit row: `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`.
+  Upstream source authority for the PMNS Non-Singularity reduction
+  theorem and the P3 Sylvester linear-path implication used in Step 3
+  and Step 4 of the proof.
+- [`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`](DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md)
+  — audit row: `dm_abcc_signature_forcing_theorem_note_2026-04-19`.
+  Upstream authority candidate for the Sylvester signature-forcing
+  theorem that upgrades PMNS Non-Singularity to the all-path
+  topological statement used in Step 4 of the proof.
+- [`DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`](DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+  — audit row:
+  `dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20`.
+  Upstream authority for the exact upper-octant / source-cubic selector
+  that fixes `sigma_hier = (2,1,0)` in Step 2 of the proof.
+- `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  — audit row: `dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20`.
+  Upstream authority candidate for the sigma-hier upper-octant selector
+  layer used by Step 2.
+- [`DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`](DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md)
+  — audit row:
+  `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`.
+  Sibling upstream authority for the corrected chamber+DPLE route on
+  the five-basin chart that motivates Step 1 active-chamber
+  completeness.
+- `DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md`
+  — audit row: `dm_abcc_assumptions_audit_note_2026-04-19`.
+  Boundary reference for the statement that the
+  stricter axiom-native A-BCC target remains outside the current
+  closure grade.
+
+Open upstream gaps registered for independent audit:
+
+- the Sylvester signature-forcing authority;
+- the upper-octant / source-cubic selector authority;
+- the sigma-hier upper-octant selector authority;
+- the sibling chamber+DPLE authority.
+
+The runner-checked content of this note (the integration runner
+re-executes the chamber completeness, upper-octant / source-cubic
+selector, sigma-hier upper-octant selector, retained P3 Sylvester,
+PMNS Non-Singularity, Sylvester signature-forcing, and sigma-chain
+attack-cascade runners; it also rechecks basin-level endpoint facts) is
+verified composition over the cited authorities and is independent of
+local rewriting of those authorities. The cite chain is what supplies
+the upstream theorem chain that independent audit must evaluate.
+
+## Honest auditor read
+
+Prior audit feedback observed that the conclusion depends on upstream
+theorems and dependency runners that were named but not cited as
+authorities inside the restricted packet. The cite-chain repair above
+wires the PMNS nonsingularity and assumptions-boundary anchors and
+explicitly registers the remaining upstream authorities as open class D
+upstream gaps. Closing those upstream rows is the path to a stronger
+chain; local rewriting of this note does not by itself close that gap.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the prior feedback requested and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).

@@ -5445,6 +5445,38 @@
       "to": "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20"
     },
     {
+      "from": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
+      "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
+      "to": "dm_abcc_chamber_bound_derivation_note_2026-04-20"
+    },
+    {
+      "from": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
+      "to": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19"
+    },
+    {
+      "from": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
+      "to": "dm_abcc_basin_finite_search_support_note_2026-04-30"
+    },
+    {
+      "from": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
+      "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
+      "to": "dm_abcc_signature_forcing_theorem_note_2026-04-19"
+    },
+    {
+      "from": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
+      "to": "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
+      "to": "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21"
+    },
+    {
       "from": "dm_abcc_signature_forcing_theorem_note_2026-04-19",
       "to": "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19"
     },
@@ -5699,6 +5731,22 @@
     {
       "from": "dm_flagship_closure_review_note_2026-04-17",
       "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+    },
+    {
+      "from": "dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16",
+      "to": "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17",
+      "to": "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16"
+    },
+    {
+      "from": "dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17",
+      "to": "dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17"
+    },
+    {
+      "from": "dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17",
+      "to": "dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17"
     },
     {
       "from": "dm_leptogenesis_exact_kernel_closure_note_2026-04-15",
@@ -41448,8 +41496,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "b10412abdd02e77fc7c2aa0f0ef9cb0e0dbd72f87b7a1d135b00a0eeeb3f0c1a",
+      "deps": [
+        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
+        "dm_abcc_chamber_bound_derivation_note_2026-04-20",
+        "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
+        "dm_abcc_basin_finite_search_support_note_2026-04-30"
+      ],
+      "note_hash": "7bd16c2916f904a94040e8aa44b0bca46dd9362a88e483328db679e40b1c46cd",
       "path": "docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py",
       "title": "DM A-BCC Corrected Five-Basin Chamber-DPLE Support Theorem"
@@ -41470,8 +41523,13 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "70b86566aecdb91e7d4779fcf754c53c995eb9b47f9718f819f73f56316e8632",
+      "deps": [
+        "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
+        "dm_abcc_signature_forcing_theorem_note_2026-04-19",
+        "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20",
+        "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21"
+      ],
+      "note_hash": "51abd5d259c9afa0dd1b9d888c832ed9e2a9325ed8f3786a1acdc071e772d4c5",
       "path": "docs/DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py",
       "title": "DM A-BCC Retained Measurement Closure Theorem"
@@ -41733,8 +41791,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "191c30eacf88689f8adcbd13e3f89d00d6aa997e880edbaf09236ffd15ea8a02",
+      "deps": [
+        "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16"
+      ],
+      "note_hash": "0fe161081c772c5030d929484906c1cfa569994d7f8d575bbd1798e187ca4e67",
       "path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_full_closure_same_surface_numerator_selector_boundary.py",
       "title": "DM Full Closure Same-Surface Numerator Selector Boundary"
@@ -41744,8 +41804,12 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "2fb069c3cd6fd43819422829ed4443a6c97e436439340e9ff8796edda39f349e",
+      "deps": [
+        "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16",
+        "dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17",
+        "dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17"
+      ],
+      "note_hash": "3a13e7b7c6651cdf856946a3818d4fd0ad4b958b493962d8e9f907f20a0ddbd3",
       "path": "docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_dm_full_closure_same_surface_thermal_bounding_theorem.py",
       "title": "DM Full Closure Same-Surface Thermal Bounding Theorem"
@@ -69244,15 +69308,11 @@
     "distracted_napier_reconciliation_note",
     "dm_abcc_assumptions_audit_note_2026-04-19",
     "dm_abcc_basin_finite_search_support_note_2026-04-30",
-    "dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21",
     "dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19",
-    "dm_abcc_retained_measurement_closure_theorem_note_2026-04-21",
     "dm_chamber_signature_structure_note_2026-04-19",
     "dm_current_bank_quantitative_mapping_note_2026-04-21",
     "dm_dple_abcc_no_go_note_2026-04-19",
     "dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16",
-    "dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16",
-    "dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17",
     "dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16",
     "dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17",
     "dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16",
@@ -69861,10 +69921,10 @@
       "open_gate": 116,
       "positive_theorem": 617
     },
-    "edge_count": 8714,
-    "leaf_count": 621,
+    "edge_count": 8726,
+    "leaf_count": 620,
     "node_count": 2189,
-    "root_count": 809,
+    "root_count": 805,
     "runners_with_path": 1801
   }
 }

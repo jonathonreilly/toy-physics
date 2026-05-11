@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1237 |
+| unaudited | 1241 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 191 |
+| ~~audited_conditional~~ | 187 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,28 +42,28 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 191 |
+| `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1347 |
+| `unaudited` | 1351 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 870 |
+| `bounded_theorem` | 871 |
 | `decoration` | 13 |
 | `meta` | 115 |
-| `no_go` | 221 |
+| `no_go` | 220 |
 | `open_gate` | 113 |
 | `positive_theorem` | 748 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 1017 |
+| `critical` | 1020 |
 | `high` | 58 |
 | `medium` | 268 |
-| `leaf` | 737 |
+| `leaf` | 734 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 224
@@ -81,31 +81,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 924 | 90.35 | `unaudited` | meta |
-| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 889 | 45.30 | `audited_clean` | open_gate |
-| 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 445 | 43.80 | `unaudited` | unaudited |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 591 | 41.21 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 880 | 39.78 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 777 | 38.10 | `unaudited` | meta |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 583 | 36.19 | `unaudited` | unaudited |
-| 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 398 | 36.14 | `unaudited` | unaudited |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 467 | 33.37 | `unaudited` | unaudited |
-| 10 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 398 | 33.14 | `unaudited` | unaudited |
-| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 864 | 32.26 | `audited_clean` | **retained_bounded** |
-| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 523 | 31.53 | `audited_clean` | **retained_bounded** |
-| 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 482 | 31.42 | `unaudited` | unaudited |
-| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 701 | 30.45 | `unaudited` | unaudited |
-| 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 480 | 30.41 | `unaudited` | unaudited |
-| 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 398 | 29.14 | `unaudited` | unaudited |
-| 17 | `three_generation_structure_note` | bounded_theorem | critical | 574 | 28.17 | `unaudited` | unaudited |
-| 18 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 404 | 28.16 | `unaudited` | unaudited |
-| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 627 | 27.80 | `unaudited` | unaudited |
-| 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 398 | 27.14 | `unaudited` | unaudited |
-| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 470 | 26.88 | `unaudited` | unaudited |
-| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 634 | 26.81 | `unaudited` | unaudited |
-| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 514 | 26.51 | `unaudited` | unaudited |
-| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 516 | 26.01 | `unaudited` | unaudited |
-| 25 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 656 | 25.86 | `audited_clean` | **retained_bounded** |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 926 | 90.36 | `unaudited` | meta |
+| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 891 | 45.30 | `audited_clean` | open_gate |
+| 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 447 | 43.81 | `unaudited` | unaudited |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 593 | 41.21 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 882 | 39.79 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 779 | 38.11 | `unaudited` | meta |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 585 | 36.20 | `unaudited` | unaudited |
+| 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 400 | 36.15 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 469 | 33.38 | `unaudited` | unaudited |
+| 10 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 400 | 33.15 | `unaudited` | unaudited |
+| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 866 | 32.26 | `audited_clean` | **retained_bounded** |
+| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 525 | 31.54 | `audited_clean` | **retained_bounded** |
+| 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 484 | 31.42 | `unaudited` | unaudited |
+| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 703 | 30.46 | `unaudited` | unaudited |
+| 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 482 | 30.42 | `unaudited` | unaudited |
+| 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 400 | 29.15 | `unaudited` | unaudited |
+| 17 | `three_generation_structure_note` | bounded_theorem | critical | 576 | 28.17 | `unaudited` | unaudited |
+| 18 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 406 | 28.17 | `unaudited` | unaudited |
+| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 629 | 27.80 | `unaudited` | unaudited |
+| 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 400 | 27.15 | `unaudited` | unaudited |
+| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 472 | 26.89 | `unaudited` | unaudited |
+| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 636 | 26.82 | `unaudited` | unaudited |
+| 23 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 516 | 26.51 | `unaudited` | unaudited |
+| 24 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 518 | 26.02 | `unaudited` | unaudited |
+| 25 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 658 | 25.86 | `audited_clean` | **retained_bounded** |
 
 
 ## Applied audits
@@ -598,12 +598,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dispersion_high_p_tiebreaker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dispersion_relation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_abcc_signature_forcing_theorem_note_2026-04-19` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dm_chamber_signature_structure_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
-| `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_full_closure_same_surface_thermal_monotonicity_theorem_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_full_closure_same_surface_thermal_series_tail_support_note_2026-04-17` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -2861,19 +2857,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the note's load-bearing finite-search record depends on an archived wrapper/log outside the supplied dependency set, while the supplied runner did not complete. Why this blocks: with no cited authority and no completed stdout, the audit cannot verify the claimed PASS stamps, basin recovery, or chamber bookkeeping from the allowed inputs. Repair target: add the archived wrapper or a completed cached/sliced runner certificate as a direct dependency and re-audit the bounded finite-search observations. Claim boundary until fixed: conditional provenance for a finite scan only, not an audited bounded theorem or exhaustion result.
 - **auditor confidence:** high
 
-### `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21`
-
-- **Note:** [`DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited only the finite chamber-plus-F_4 selection computation on the explicitly provided five-basin chart, not derivation of that chart or selector from Cl(3)/Z^3.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_abcc_five_basin_chamb-205`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the corrected retained five-basin chart, chamber survivors are {Basin 1, Basin 2, Basin X}, with F_4 true only for Basin 1, so chamber ∩ F_4 selects Basin 1 uniquely.  _(class `A`)_
-- **chain closes:** False — The finite algebraic/numerical check closes on the provided basin coordinates and runner definitions. The broader theorem still imports the retained five-basin source chart and selector structure without any cited retained authority or first-principles derivation in the restricted packet.
-- **rationale:** The runner does perform nontrivial finite computation of chamber membership, cubic coefficients, discriminants, Newton/sampling checks, and the final intersection; it is not merely printing constants. However, those computations are over hard-coded basin coordinates, H_base/J_B matrices, and an asserted selector framework, and the note explicitly says the five-basin source chart is not derived from Cl(3)/Z^3. The audited result is therefore a conditional algebraic support theorem on imported retained-chart inputs, not a clean first-principles closure.
-- **auditor confidence:** high
-
 ### `dm_abcc_pmns_nonsingularity_theorem_note_2026-04-19`
 
 - **Note:** [`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`](../../docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md)
@@ -2885,21 +2868,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Under PMNS Non-Singularity, f(t) = det(H_base + t J_phys) is nowhere zero on [0,1], so IVT sign preservation from det(H_base) > 0 gives det(H_base + J_phys) > 0.  _(class `A`)_
 - **chain closes:** True — For the scoped conditional implication, PNS is an explicit antecedent, det(H_base)>0 is computed from the stated matrix, and continuity of the determinant gives endpoint positivity. The physical truth of PNS and global basin exhaustiveness are outside this audited scope.
 - **rationale:** The scoped theorem is a direct algebraic/topological closure: a continuous nonzero determinant path starting at positive determinant cannot end at negative determinant. The runner source computes determinants, sampled path crossings, eigenvalue behavior, and unitary-diagonalizer checks from the hard-coded matrices and basin coordinates; these are class A consistency checks, not hidden external comparators. This clean verdict does not certify the note's observational-grounding rhetoric for PNS, any claim that PNS is equivalent or weaker than A-BCC, or exhaustive chi^2=0 basin enumeration.
-- **auditor confidence:** high
-
-### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
-
-- **Note:** [`DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`](../../docs/DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited only the restricted packet's claim that A-BCC closes on the retained measurement framework by integrating previously retained chamber, selector, P3 Sylvester, PNS, and signature-forcing results.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_abcc_retained_measure-125`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The retained sigma-chain fixes the physical source as J_phys = J_{Basin 1}, after which the retained P3 Sylvester/PNS/signature-forcing chain puts the endpoint in C_base.  _(class `B`)_
-- **chain closes:** False — The conclusion depends on upstream retained theorems and dependency runners that are named but not provided as cited authorities. The included runner mostly executes external scripts and checks their stdout plus hard-coded basin coordinates, so the restricted packet does not independently derive the load-bearing sigma-chain/PNS/signature-forcing bridge.
-- **rationale:** The note is explicitly an integration theorem over a retained measurement stack, not an axiom-native derivation. However, the restricted packet provides no cited authorities and no dependency runner source for the stack it imports, so retained status and the bridge from sigma-chain to A-BCC cannot be verified within the packet. The included runner performs some direct algebraic endpoint checks, but its load-bearing closure checks are cross-runner/stdout dependency checks rather than first-principles computation.
-- **open / conditional deps cited:**
-  - `DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_signature_forcing_theorem_note_2026-04-19`
@@ -2981,41 +2949,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the corrected high-precision continuum thermal evaluator on the admitted same-surface one-scalar DM family gives a unique interior closure crossing at sigma_conv = 0.145077095756643 and Omega_DM = 0.268.  _(class `D`)_
 - **chain closes:** True — The note states a bounded admitted-family convergence claim, and the runner recomputes the interior crossing, matches the quoted Omega_DM comparator, and verifies material drift away from the coarse and 9/62 values.
 - **rationale:** The bounded support claim closes on its own terms: the runner recomputes the converged same-surface selector, verifies the observed Omega_DM comparator on the admitted one-scalar family, and checks that the coarse grid and 9/62 clue are not stable. The source note explicitly keeps current-bank selector closure open, so this clean audit is limited to the convergence/sanity-check surface and does not ratify a theorem-grade DM selector law. Residual risk is downstream misuse of the admitted-family crossing as a first-principles current-bank closure.
-- **auditor confidence:** high
-
-### `dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16`
-
-- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_NUMERATOR_SELECTOR_BOUNDARY_NOTE_2026-04-16.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Audited the restricted-packet claim that the current exact DM bank supplies two same-surface endpoints with distinct DM outputs but no theorem-grade selector choosing among them.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_full_closure_same_sur-168`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** What it does not have is any further exact scale-selection law on that DM lane, so there is no theorem-grade current-bank selector closure.  _(class `E`)_
-- **chain closes:** False — The negative selector conclusion depends on an unproved completeness/absence premise: that the current DM bank has no further exact scale-selection datum. The runner asserts that premise with literal True checks and imports endpoint/map machinery from modules not provided in the restricted packet.
-- **rationale:** The numeric distinctness checks are conditional on imported constants and imported certified-bound functions whose implementations and authority chain are not included. The decisive no-selector step is not derived from Cl(3) on Z^3 or from cited retained inputs; it is asserted as an absence/completeness statement. Because the restricted packet has no cited authorities and no bank-completeness theorem, the current-bank no-go does not close as theorem-grade from the supplied materials.
-- **open / conditional deps cited:**
-  - `canonical_plaquette_surface.py`
-  - `dm_leptogenesis_exact_common.py`
-  - `dm_full_closure_minimal_reduced_cycle_extension_map_common.py`
-  - `dm_full_closure_same_surface_thermal_support_common.py`
-- **auditor confidence:** high
-
-### `dm_full_closure_same_surface_thermal_bounding_theorem_note_2026-04-17`
-
-- **Note:** [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md`](../../docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited whether the supplied note and runner packet close the same-surface DM thermal bounding claim, including endpoint enclosures, current-bank no-go, and one-scalar root interval.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-dm_full_closure_same_sur-148`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The thermal layer is closed at theorem-grade evaluation/bounding strength by combining the exact continuum integral representation, exact monotonicity in alpha, and exact positive-series/tail enclosures.  _(class `B`)_
-- **chain closes:** False — The restricted packet does not include the load-bearing derivations or source for the imported certification routines that allegedly implement the continuum integral, monotonicity theorem, and positive-series/tail enclosures. The visible runner delegates those steps to external common modules and then performs algebraic/bracketing checks on their returned values.
-- **rationale:** The runner output is successful, but the visible runner source is not itself a first-principles computation from Cl(3) on Z^3. Its load-bearing numerical certificates are imported from modules not provided in the restricted packet, including the same-surface ratio bounds, sigma interval, endpoint constants, observed DM target, and eta-derived baryon density. Therefore the claim may be a valid bounded theorem if those imported certificate routines are retained and independently audited, but it does not close from the provided packet alone.
-- **open / conditional deps cited:**
-  - `dm_full_closure_same_surface_thermal_support_common.py`
-  - `dm_full_closure_minimal_reduced_cycle_extension_map_common.py`
-  - `dm_leptogenesis_exact_common.py`
 - **auditor confidence:** high
 
 ### `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16`

@@ -60,3 +60,80 @@ The current-bank DM selector question is now settled:
 ```bash
 python3 scripts/frontier_dm_full_closure_same_surface_numerator_selector_boundary.py
 ```
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit upstream authority
+citations named by prior 2026-05-05 audit feedback for
+`dm_full_closure_same_surface_numerator_selector_boundary_note_2026-04-16`.
+The prior feedback identified the completeness / absence premise as the
+load-bearing boundary: the negative selector conclusion depends on the
+claim that the current DM bank has no further exact scale-selection
+datum, while the runner asserts that premise with literal `True`
+checks. This addendum does not promote the row or change the claim
+scope, which remains the restricted-packet claim that the current exact
+DM bank supplies two same-surface endpoints with distinct DM outputs
+but no theorem-grade selector choosing among them. Independent audit
+owns any current verdict or effective status after this source change.
+
+One-hop authorities cited:
+
+- [`DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md`](DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_INTEGRAL_REPRESENTATION_THEOREM_NOTE_2026-04-16.md)
+  — audit row:
+  `dm_full_closure_same_surface_thermal_integral_representation_theorem_note_2026-04-16`.
+  Upstream authority for the certified same-surface thermal
+  evaluation / bounding result that maps the two exact endpoint
+  observables to distinct certified `R(alpha)` and `Omega_DM(alpha)`
+  intervals quoted in the "Answer" and "Why This Closes The
+  Current-Bank Question" sections.
+- `DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_SELECTOR_SENSITIVITY_BOUNDARY_NOTE_2026-04-16.md`
+  — audit row:
+  `dm_full_closure_same_surface_thermal_selector_sensitivity_boundary_note_2026-04-16`.
+  Boundary reference for the thermal-layer sensitivity result that
+  provides compatible framing of "no selector closure on the
+  current bank" complementing this no_go.
+- `DM_FULL_CLOSURE_SAME_SURFACE_CONVERGED_THERMAL_SELECTOR_SUPPORT_NOTE_2026-04-16.md`
+  — audit row:
+  `dm_full_closure_same_surface_converged_thermal_selector_support_note_2026-04-16`.
+  Boundary reference for the converged thermal selector support
+  route whose admitted-extension status is consistent with the no_go
+  recorded here.
+
+Open upstream gap registered for independent audit:
+
+- the completeness / absence premise that the live DM bank carries no
+  further exact scale-selection datum.
+
+The runner-checked content of this note (the two exact same-surface
+endpoint values, the certified `R(alpha)` and `Omega_DM(alpha)`
+intervals at those endpoints, and the absence-of-selector check) is
+exact arithmetic on values supplied by the cited thermal-evaluation
+authority and is independent of the cited upstream authorities at the
+arithmetic layer. The cite chain is what supplies the
+completeness / absence premise — the DM bank has no further exact
+scale-selection datum — that turns the runner's `True` check into a
+no_go conclusion, exactly as the prior feedback observed.
+
+## Honest auditor read
+
+Prior audit feedback observed that the negative selector conclusion
+depends on the unproved completeness premise that the current DM bank
+has no further exact scale-selection datum, and that the runner asserts
+that premise with literal `True` checks while importing endpoint / map
+machinery from modules not provided in the restricted packet. The
+cite-chain repair above wires the certified endpoints, sensitivity
+boundary, and converged-selector support side, while registering the
+completeness / absence premise itself as the open class D upstream gap.
+Closing that gap is the path to a stronger chain; local rewriting of
+this note does not by itself close that gap.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) with an
+explicit class D upstream gap registration. It does not change any
+algebraic content, runner output, or load-bearing step classification.
+It records the upstream authorities the prior feedback requested and
+matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
+trio (commit `7bb12badd`, PR #926).
