@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 76 |
+| **retained** | 77 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 243 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1109 |
+| unaudited | 1108 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 415 |
+| `audited_clean` | 416 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1207 |
+| `unaudited` | 1206 |
 
 | claim_type | count |
 |---|---:|
@@ -155,6 +155,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_3plus1d_coupled_coin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `chiral_3plus1d_mixing_period_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_complexification_split_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2240,6 +2241,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
   - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
+- **auditor confidence:** high
+
+### `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure conditional algebraic substitution from the stated projector-weight, radius, positive-branch, and Wolfenstein lambda/A hypotheses to the closed-form CP-plane, phase, and Jarlskog expressions, with no physical CKM or PDG comparator audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b5-ecdc-7123-a2d1-e1e81446be22`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Substituting w_A1=1/n_quark, w_perp=(n_quark-1)/n_quark, r^2=1/n_quark, lambda^2=alpha_s/n_pair, and A^2=n_pair/n_color forces rho=1/n_quark, eta=sqrt(n_quark-1)/n_quark, the stated phase identities, and J_0=alpha_s^3 sqrt(n_quark-1)/(n_pair^2 n_color n_quark).  _(class `A`)_
+- **chain closes:** True — Within the note's explicitly bounded scope, every claimed expression follows by direct substitution and simplification from the listed hypotheses. No excluded physical bridge, numerical alpha_s value, or external comparator is needed for this scoped theorem.
+- **rationale:** The audited claim is deliberately narrow: it asserts only algebraic consequences of stated symbolic hypotheses. The runner checks the same algebra at exact symbolic precision and reports 26 class-A passes with no failures. Because the note explicitly excludes derivation of the projector weights, CP radius, Wolfenstein inputs, physical CKM identification, and PDG comparison, those missing bridges do not block the scoped claim.
 - **auditor confidence:** high
 
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`
