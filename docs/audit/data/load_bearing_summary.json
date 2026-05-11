@@ -113,6 +113,12 @@
       "transitive_descendants": 428
     },
     {
+      "claim_id": "cl3_color_automorphism_theorem",
+      "criticality": "critical",
+      "load_bearing_score": 29.039,
+      "transitive_descendants": 743
+    },
+    {
       "claim_id": "three_generation_structure_note",
       "criticality": "critical",
       "load_bearing_score": 28.736,
@@ -159,12 +165,6 @@
       "criticality": "critical",
       "load_bearing_score": 26.345,
       "transitive_descendants": 459
-    },
-    {
-      "claim_id": "cl3_color_automorphism_theorem",
-      "criticality": "critical",
-      "load_bearing_score": 26.039,
-      "transitive_descendants": 743
     }
   ]
 }
