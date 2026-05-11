@@ -7068,6 +7068,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_g_bare_canonical_convention_narrow.py"
     },
+    "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_g_bare_constraint_vs_convention_restatement_abstract_identity_narrow.py"
+    },
     "g_bare_constraint_vs_convention_restatement_note_2026-05-07": {
       "assert_count": 0,
       "counts": {
@@ -31051,6 +31063,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_g_bare_constraint_vs_convention_restatement_abstract_identity_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_g_bare_critical_feature_scan.py": {
       "assert_count": 1,
       "claims": [
@@ -45926,13 +45953,13 @@
     "decoration_candidates": 181,
     "dominant_class_distribution": {
       "A": 129,
-      "B": 169,
+      "B": 170,
       "C": 665,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1640,
-    "runners_with_C": 835,
-    "runners_with_D": 459
+    "runners_classified": 1641,
+    "runners_with_C": 836,
+    "runners_with_D": 460
   }
 }

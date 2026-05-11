@@ -44249,6 +44249,17 @@
       "runner_path": "scripts/frontier_g_bare_canonical_convention_narrow.py",
       "title": "g_bare Canonical Wilson Normalization (Convention) \u2014 Narrow Theorem"
     },
+    "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10": {
+      "claim_id": "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "98961a1ab771e6c2065e452f397877835d90727581614355ea458a51f59a99f1",
+      "path": "docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_ABSTRACT_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_g_bare_constraint_vs_convention_restatement_abstract_identity_narrow.py",
+      "title": "g_bare Constraint-vs-Convention Restatement Abstract Identity Narrow Theorem"
+    },
     "g_bare_constraint_vs_convention_restatement_note_2026-05-07": {
       "claim_id": "g_bare_constraint_vs_convention_restatement_note_2026-05-07",
       "claim_type_author_hint": "positive_theorem",
@@ -67341,6 +67352,7 @@
     "fourth_family_complex_boundary_note",
     "fourth_family_quadrant_note",
     "framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30",
+    "g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10",
     "gap_physics_note",
     "gate_b_connectivity_tolerance_note",
     "gate_b_farfield_note",
@@ -67854,7 +67866,7 @@
       "no_go": 30,
       "none": 1628,
       "open_gate": 33,
-      "positive_theorem": 120
+      "positive_theorem": 121
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 750,
@@ -67863,12 +67875,12 @@
       "no_go": 137,
       "none": 451,
       "open_gate": 121,
-      "positive_theorem": 620
+      "positive_theorem": 621
     },
     "edge_count": 8432,
-    "leaf_count": 585,
-    "node_count": 2140,
-    "root_count": 806,
-    "runners_with_path": 1753
+    "leaf_count": 586,
+    "node_count": 2141,
+    "root_count": 807,
+    "runners_with_path": 1754
   }
 }
