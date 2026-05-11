@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1185 |
+| unaudited | 1184 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 193 |
+| ~~audited_conditional~~ | 194 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 479 |
-| `audited_conditional` | 193 |
+| `audited_conditional` | 194 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1298 |
+| `unaudited` | 1297 |
 
 | claim_type | count |
 |---|---:|
@@ -789,6 +789,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `s3_time_tensor_build_memo` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
+| `same_family_3d_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `scalar_selector_reviewer_package_2026-04-20` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
 | `scalar_trace_tensor_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -8770,6 +8771,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `Route-2 exact carrier/readout/time theorem notes`
   - `readout triple equivalence checker`
+
+### `same_family_3d_closure_note`
+
+- **Note:** [`SAME_FAMILY_3D_CLOSURE_NOTE.md`](../../docs/SAME_FAMILY_3D_CLOSURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Print-aggregation wrapper for the frozen valley-linear same-family 3D closure card at h=0.25, including replayed core L=12 rows, replayed L=8/L=10 same-h rows, and W=10/W=12 tail companion text; no live recomputation of the closure observables is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The script prints a frozen 10-row same-family 3D closure card whose rows 1-7, 8-9, and 10 are replayed from retained logs rather than recomputed live by the wrapper.  _(class `B`)_
+- **chain closes:** False — The wrapper runs and prints the frozen card, and the named cache/log files are present, but the source note itself states that the wrapper does not recompute the load-bearing closure checks. With deps=[] and no ledgered per-L/per-W log authority chain, the closure card cannot be retained as an independently audited theorem.
+- **rationale:** Issue: the runner is a replay/print wrapper around frozen rows rather than a live derivation of the Born, d_TV, gravity, decoherence, MI, multi-L, and width-tail observables. Why this blocks: the audit row has no dependencies to the per-L and per-W source runs or retained cache certificates, so the printed card alone cannot establish the load-bearing closure values. Repair target: create explicit ledger entries or dependency edges for the core L=12, L=8, L=10, W=10, and W=12 runs/logs, or replace the wrapper with a sliced deterministic recomputation harness. Claim boundary until fixed: the wrapper and cache prove the frozen table is printed as stated, not that the underlying same-family 3D closure checks are independently retained by this row.
+- **open / conditional deps cited:**
+  - `logs/2026-04-04-same-family-3d-closure.txt`
+  - `logs/runner-cache/same_family_3d_closure.txt`
+- **auditor confidence:** high
 
 ### `scalar_3plus1_temporal_ratio_note`
 
