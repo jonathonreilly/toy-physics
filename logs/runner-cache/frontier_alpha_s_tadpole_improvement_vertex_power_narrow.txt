@@ -1,0 +1,201 @@
+===== runner cache v1 =====
+runner: scripts/frontier_alpha_s_tadpole_improvement_vertex_power_narrow.py
+runner_sha256: 9fa7e1c391b08978600551e01127f0a56d7f01d9606ffc097c7ccf7bbf13d6ad
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 0.24
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: tadpole-improvement vertex-power algebraic identities
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1 (T1): vertex-power identities
+----------------------------------------------------------------------------------------
+  [PASS (A)] alpha_s(v) * u_0^2 = alpha_bare symbolically (vertex-power identity)  (diff = 0)
+  [PASS (A)] alpha_LM * u_0 = alpha_bare symbolically (link-power identity)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2 (T2): geometric-mean identity
+----------------------------------------------------------------------------------------
+  [PASS (A)] alpha_LM^2 = alpha_bare * alpha_s(v) symbolically  (diff = 0)
+  [PASS (A)] log alpha_LM = (log alpha_bare + log alpha_s(v)) / 2 symbolically  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 3 (T3): constant-ratio chain
+----------------------------------------------------------------------------------------
+  [PASS (A)] alpha_LM / alpha_bare = 1/u_0 symbolically  (diff = 0)
+  [PASS (A)] alpha_s(v) / alpha_LM = 1/u_0 symbolically  (diff = 0)
+  [PASS (A)] adjacent ratios coincide (geometric progression)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4 (T4): boundary at no-improvement u_0 = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] alpha_LM(u_0=1) = alpha_bare (no improvement reduces to bare)  (diff = 0)
+  [PASS (A)] alpha_s(v)(u_0=1) = alpha_bare (no improvement reduces to bare)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 5 (T5): inverse map u_0 = sqrt(alpha_bare/alpha_s(v))
+----------------------------------------------------------------------------------------
+  [PASS (A)] solving asv = ab/x^2 yields a unique positive solution in x  (sols = [sqrt(ab_sym)/sqrt(asv_sym)])
+  [PASS (A)] the solution equals sqrt(ab/asv) (matches T5 inverse-map formula)  (sol = sqrt(ab_sym)/sqrt(asv_sym), target = sqrt(ab_sym)/sqrt(asv_sym), diff = 0)
+  [PASS (A)] substituting u_0 = sqrt(ab/asv) into ab/u_0^2 returns asv (inverse-map closure)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 6 (T6): plaquette-fourth-root substitution u_0 = P^(1/4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] alpha_s(v) = alpha_bare / sqrt(P) symbolically when u_0 = P^(1/4)  (diff = 0)
+  [PASS (A)] geometric-mean identity holds under u_0 = P^(1/4) substitution  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: parametric numerical scan over (alpha_bare, u_0)
+----------------------------------------------------------------------------------------
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 0.85)  (asv*u0^2-ab=1.388e-17, alm^2-ab*asv=-1.735e-18, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 0.877681)  (asv*u0^2-ab=1.388e-17, alm^2-ab*asv=-1.735e-18, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 0.95)  (asv*u0^2-ab=-1.388e-17, alm^2-ab*asv=1.735e-18, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 1.1)  (asv*u0^2-ab=-1.388e-17, alm^2-ab*asv=8.674e-19, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.0795775, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=-2.118e-22, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 0.877681)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=2.118e-22, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 0.95)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=-2.118e-22, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 1.1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=1.059e-22, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=-5.294e-23, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.001, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 0.75)  (asv*u0^2-ab=-1.735e-18, alm^2-ab*asv=2.711e-20, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=-2.711e-20, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 0.877681)  (asv*u0^2-ab=1.735e-18, alm^2-ab*asv=-2.711e-20, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 0.95)  (asv*u0^2-ab=-1.735e-18, alm^2-ab*asv=2.711e-20, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 1.1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 1.5)  (asv*u0^2-ab=-1.735e-18, alm^2-ab*asv=6.776e-21, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.01, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 0.877681)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 0.95)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 1.1)  (asv*u0^2-ab=-1.388e-17, alm^2-ab*asv=1.735e-18, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.1, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 0.877681)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 0.95)  (asv*u0^2-ab=-5.551e-17, alm^2-ab*asv=-5.551e-17, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 1.1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (0.5, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 0.877681)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 0.95)  (asv*u0^2-ab=-1.110e-16, alm^2-ab*asv=-2.220e-16, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 1.1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (1, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 0.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 0.75)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=7.105e-15, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 0.85)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=7.105e-15, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 0.877681)  (asv*u0^2-ab=-8.882e-16, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 0.95)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=3.553e-15, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 1.1)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=-3.553e-15, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 1.5)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=1.776e-15, u0_inv-u0=0.000e+00)
+  [PASS (A)] parametric (alpha_bare, u_0) = (5, 2)  (asv*u0^2-ab=0.000e+00, alm^2-ab*asv=0.000e+00, u0_inv-u0=0.000e+00)
+
+----------------------------------------------------------------------------------------
+Part 8: T6 numerical scan over P (plaquette-fourth-root substitution)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.1)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.3)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.5)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.5934)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.59353)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.7)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 0.9)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 1)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.0795775, 1.5)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.1)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.3)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.5)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.5934)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.59353)  (asv-ab/sqrt(P)=1.388e-17)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.7)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 0.9)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 1)  (asv-ab/sqrt(P)=0.000e+00)
+  [PASS (A)] T6 numerical (alpha_bare, P) = (0.05, 1.5)  (asv-ab/sqrt(P)=1.388e-17)
+
+----------------------------------------------------------------------------------------
+Part 9: boundary checks (perturbations break the identity)
+----------------------------------------------------------------------------------------
+  [PASS (A)] perturbing alpha_LM by 1e-6 breaks the geometric-mean identity  (confirms (T2) is a non-vacuous algebraic equality)
+  [PASS (A)] perturbing u_0 by 1e-6 breaks the vertex-power identity (T1)  (confirms (T1) requires the same u_0 on both sides)
+
+----------------------------------------------------------------------------------------
+Part 10: scope guards (boundaries against parent bounded chain)
+----------------------------------------------------------------------------------------
+  [PASS (A)] runner does not consume canonical plaquette value <P> = 0.5934  (alpha_bare and u_0 enter as abstract symbols; numerical scan covers a wide range of u_0 unrelated to any specific <P>)
+  [PASS (A)] runner does not consume bare normalization 1/(4 pi)  (ab values include 1/(4 pi) as one entry but alongside several other abstract positive values; the identity holds for all)
+  [PASS (A)] runner does not consume the SM running bridge to M_Z  (theorem is purely algebraic in (alpha_bare, u_0); no v -> M_Z transfer, no quark-mass thresholds, no external numerical targets)
+  [PASS (A)] runner does not consume the staggered-Dirac realization gate  (theorem treats (alpha_bare, u_0) as abstract real positives; no fermion content, no gauge group, no specific lattice)
+  [PASS (A)] runner does not consume the g_bare = 1 derivation gate  (theorem holds for arbitrary alpha_bare > 0; no g_bare = 1 is asserted by the algebraic statement)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (alpha_bare, u_0) be any abstract pair of positive reals, and define
+        alpha_LM    :=  alpha_bare / u_0,
+        alpha_s(v)  :=  alpha_bare / u_0^2.
+
+  CONCLUSION:
+    (T1) alpha_s(v) * u_0^2 = alpha_bare,
+         alpha_LM   * u_0   = alpha_bare.
+    (T2) alpha_LM^2 = alpha_bare * alpha_s(v),
+         log alpha_LM = (log alpha_bare + log alpha_s(v)) / 2.
+    (T3) alpha_LM   / alpha_bare = 1/u_0,
+         alpha_s(v) / alpha_LM   = 1/u_0
+         (so the three couplings sit on a geometric progression).
+    (T4) alpha_LM(u_0=1) = alpha_s(v)(u_0=1) = alpha_bare
+         (boundary at no-improvement reduces to bare coupling).
+    (T5) u_0 = sqrt(alpha_bare / alpha_s(v))
+         (unique positive inverse map).
+    (T6) Substituting u_0 = P^(1/4) for any positive P:
+         alpha_s(v) = alpha_bare / sqrt(P).
+
+  Audit-lane class:
+    (A) — pure elementary algebra over R^+ x R^+. No Wilson-action
+    numerics, no plaquette value <P>, no specific gauge group, no
+    beta = 6 normalization, no external numerical target, no running bridge to
+    M_Z, and no choice of tadpole-improvement convention beyond
+    'one power of 1/u_0 per gauge link' is consumed.
+
+  This narrow theorem isolates the abstract algebraic content of the
+  tadpole-improvement vertex-power identity from the bounded plaquette-
+  value chain, the bounded standard-SM running bridge to M_Z, and the
+  open g_bare = 1 derivation gate that together ride in the parent
+  ALPHA_S_DERIVED_NOTE.md bounded same-surface lane.
+
+
+========================================================================================
+  TOTAL: PASS=102, FAIL=0
+========================================================================================
+
+----- stderr -----
+

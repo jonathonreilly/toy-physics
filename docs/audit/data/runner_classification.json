@@ -372,6 +372,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_alpha_s_direct_wilson_loop.py"
     },
+    "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_alpha_s_tadpole_improvement_vertex_power_narrow.py"
+    },
     "alt_connectivity_family_basin_note": {
       "assert_count": 0,
       "counts": {
@@ -25501,6 +25513,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_alpha_s_tadpole_improvement_vertex_power_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_anderson_phase_unscreened_periodic.py": {
       "assert_count": 0,
       "claims": [
@@ -46438,14 +46465,14 @@
   "stats": {
     "decoration_candidates": 191,
     "dominant_class_distribution": {
-      "A": 138,
+      "A": 139,
       "B": 172,
       "C": 672,
       "D": 256,
       "none": 421
     },
-    "runners_classified": 1659,
-    "runners_with_C": 844,
+    "runners_classified": 1660,
+    "runners_with_C": 845,
     "runners_with_D": 463
   }
 }

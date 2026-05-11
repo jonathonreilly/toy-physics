@@ -35447,6 +35447,17 @@
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "\u03b1_s Direct Wilson-Loop Honest-Status Audit"
     },
+    "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10": {
+      "claim_id": "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "bca3b2f9130253323abd5dd5844e15f9133f44eb37e9b604457637d1a92a4b2c",
+      "path": "docs/ALPHA_S_TADPOLE_IMPROVEMENT_VERTEX_POWER_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_alpha_s_tadpole_improvement_vertex_power_narrow.py",
+      "title": "Tadpole-Improvement Vertex-Power Narrow Theorem"
+    },
     "alt_connectivity_family_basin_note": {
       "claim_id": "alt_connectivity_family_basin_note",
       "claim_type_author_hint": null,
@@ -67414,6 +67425,7 @@
     "ai_methodology.skills.review-loop.skill",
     "ai_methodology.skills.reviewer-backpressure-integrator.skill",
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+    "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10",
     "alt_connectivity_family_sign_note",
     "alternative_coupled_field_probe_note",
     "anderson_phase_mu2_0001_note_2026-04-11",
@@ -68157,7 +68169,7 @@
       "no_go": 31,
       "none": 1626,
       "open_gate": 34,
-      "positive_theorem": 133
+      "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
@@ -68166,12 +68178,12 @@
       "no_go": 138,
       "none": 450,
       "open_gate": 122,
-      "positive_theorem": 632
+      "positive_theorem": 633
     },
     "edge_count": 8447,
-    "leaf_count": 604,
-    "node_count": 2159,
-    "root_count": 821,
-    "runners_with_path": 1772
+    "leaf_count": 605,
+    "node_count": 2160,
+    "root_count": 822,
+    "runners_with_path": 1773
   }
 }
