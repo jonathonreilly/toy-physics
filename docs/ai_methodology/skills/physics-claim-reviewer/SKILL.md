@@ -23,18 +23,23 @@ it is artifact-chain or semantic drift.
    one surface. Correct algebra can still compare the wrong physical objects.
 5. **Check status language.** Decide whether the evidence supports retained,
    bounded, support, open, no-go, reject, or historical language.
-6. **Check science naming.** Reject new bare shorthand labels that can be
+6. **Scrutinize no-go claims with the same rigor as positive theorems.**
+   A wrongly-scoped no-go is just as bad as a wrongly-scoped positive theorem
+   — arguably worse because it forecloses investigation paths permanently.
+   For any `claim_type: no_go` candidate, run the no-go battery in the
+   dedicated section below before recommending disposition.
+7. **Check science naming.** Reject new bare shorthand labels that can be
    confused with axioms, assumptions, Lie types, lane stages, route codes, or
    branch blocks. Require explicit scientific names from the controlled
    vocabulary, with shorthand only as a parenthetical alias when needed.
-7. **Classify findings.** Use the local disposition buckets:
+8. **Classify findings.** Use the local disposition buckets:
    `fix on main`, `support-only demotion`, `science-needed`, `reject`,
    `historical only`.
-8. **Recommend the narrowest honest fix.** Prefer wording fixes for wording
+9. **Recommend the narrowest honest fix.** Prefer wording fixes for wording
    problems; demotion for overclaimed support; new science only when a real
    theorem step is missing.
-9. **Write review output.** Lead with findings and file/line references when
-   possible, then summarize the safe status.
+10. **Write review output.** Lead with findings and file/line references when
+    possible, then summarize the safe status.
 
 ## Review Questions
 
@@ -50,6 +55,45 @@ it is artifact-chain or semantic drift.
   code like `A1`, `A2`, `G1`, `R3`, `Route F`, or `Block 2`?
 - Should this be live, demoted, archived, or rejected?
 
+## No-Go Scrutiny Battery
+
+A wrongly-scoped no-go forecloses investigation paths permanently and can
+poison-pill future work that would otherwise close positively. Apply the
+same review battery to no-gos as to positive theorems. For any candidate
+with `claim_type: no_go` or "bounded obstruction" / "structural foreclosure"
+framing in prose:
+
+1. **Scope precision.** State the no-go formally with explicit premises and
+   forbidden conclusion class. Could a reader reasonably read it as a wider
+   no-go than intended? If yes, narrow the language. (Example failure:
+   `first_order_coframe_unconditionality_no_go` is correctly scoped to
+   "substrate symmetries alone cannot break Hodge degeneracy" but gets
+   misread by downstream notes as "Wald-Noether BP §5 impossible.")
+2. **Reframe-as-positive check.** Is there a positive theorem of the SAME
+   algebraic content with a different framing? (Canonical example: AC_φλ
+   shipped as Schur foreclosure in PR #1084, then reframed as a retained
+   positive theorem of three-eigenvalue structure + mass-ordering labeling
+   convention in PR #1102.) If yes, the right delivery is BOTH the no-go
+   AND the positive reframe, not foreclosure alone.
+3. **Labeling vs physics check.** Is the no-go on a LABELING / CONVENTION
+   question (dissolvable by convention parallel to u/c/t naming) or on a
+   PHYSICS question (genuinely foreclosing)? If labeling, the right outcome
+   is a `meta` convention note, not a `no_go` theorem note.
+4. **Premise-retention check.** No-go theorems depend on premise lists
+   just like positive theorems. Verify each premise via live ledger
+   `effective_status`. An "unaudited no-go" with an unaudited premise can
+   be just as wrong as an "unaudited positive."
+5. **Literature bypass check.** Has the published literature gotten around
+   this obstruction class via a different route? Causal-set BH entropy
+   bypasses Wald-Noether entirely; Connes NCG bypasses gauge-coupling
+   lattice derivation. A no-go of "X requires Y" may be a no-go FOR THE
+   PARTICULAR ROUTE Y, not for X itself.
+
+When a no-go passes the five-check battery, ship it confidently — that's
+exactly what audit_no_go / retained_no_go status is for. When it fails any
+check, recommend either narrowing scope, shipping a parallel positive
+reframe, or demoting to bounded.
+
 ## Guardrails
 
 - Do not reward novelty over correctness.
@@ -57,6 +101,10 @@ it is artifact-chain or semantic drift.
 - Do not invent fixes that would require missing science.
 - Do not approve arithmetic-only closure when the semantic bridge is open.
 - Do not bury useful no-go results; preserve them as route-pruning evidence.
+- Do not approve over-claimed no-gos. A wrongly-scoped no-go is at least
+  as harmful as a wrongly-scoped positive theorem; apply the No-Go
+  Scrutiny Battery before recommending `audited_clean` or `retained_no_go`
+  disposition on any `claim_type: no_go` candidate.
 - Do not approve new science names that are only ambiguous shorthand. Use
   explicit names such as `physical Cl(3) local algebra`, `Z^3 spatial
   substrate`, `Koide Frobenius-equipartition condition`, or `Lie type A_1`.
