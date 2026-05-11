@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 280 |
+| **retained_bounded** | 281 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1196 |
+| unaudited | 1195 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 473 |
+| `audited_clean` | 474 |
 | `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1309 |
+| `unaudited` | 1308 |
 
 | claim_type | count |
 |---|---:|
@@ -407,6 +407,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_2d_operator_cauchy_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_boundary_fit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `mirror_chokepoint_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_gravity_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_canonical_families_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `moving_source_cross_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `moving_source_retarded_portability_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -7252,6 +7253,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The strict default runner/cache and assertion certificate verify only the N=15 and N=25 mirror p2=0 retained rows, while the same card records FAIL for N=40,60,80,100.  _(class `C`)_
 - **chain closes:** True — The live strict default runner reproduces the retained N=15/N=25 metrics and same-card FAIL markers, and the certificate runner verifies the note table against the registered cache. The note now excludes stitched large-N and asymptotic claims, and the dense-card result is covered only by the separate retained boundary-fit dependency.
 - **rationale:** The note's current scope is narrow enough to close: live strict-card output and the certificate cache agree on the retained N=15/N=25 rows and the N=40/60/80/100 failures. The prior stitched-table problem is repaired by excluding dense-card and other exploratory surfaces from this row. The boundary-fit dependency remains retained_bounded for its own named dense card and is not imported as part of this note's retained table.
+- **auditor confidence:** high
+
+### `mirror_gravity_probe_note`
+
+- **Note:** [`MIRROR_GRAVITY_PROBE_NOTE.md`](../../docs/MIRROR_GRAVITY_PROBE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded fixed-anchor cache result for scripts/mirror_gravity_fixed_anchor.py with NPL_HALF=50, connect_radius=4.0, layer2_prob=0.0, anchor_b=5.0, 16 seeds, N in {25,40,60}, M in {1,2,3,5,8,12,16}, and fit window {2,3,5,8}: the mass-window responses are mostly positive but the fitted power-law quality is weak (R^2=0.420, 0.050, 0.116), so no clean mirror mass law is supported on these searched windows. Distance-tail and cross-lane ranking claims are not audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The registered fixed-anchor mass-window cache shows positive but weakly fit responses at N=25,40,60, with R^2=0.420/0.050/0.116, so no clean mirror mass law is supported on the searched fixed-anchor windows.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces the registered cache and the note has narrowed the load-bearing scope to those fixed-anchor fits. The mirror_chokepoint dependency provides general bounded mirror context, but this audit does not rely on it to certify the NPL_HALF=50/N=40,60 surface as a retained mirror pocket.
+- **rationale:** The current source boundary is narrow enough: the load-bearing result is the registered fixed-anchor runner cache, and the live runner matches its weak-fit numbers. The note explicitly demotes the distance-tail fit and cross-lane ranking to historical/out-of-scope context, avoiding the earlier unregistered-evidence problem. Residual risk is misuse of the phrase retained mirror pocket; the audited scope is the fixed-anchor cache result itself, not a certification of the NPL_HALF=50 surface by the parent mirror-chokepoint note.
 - **auditor confidence:** high
 
 ### `mirror_mutual_information_canonical_families_note`
