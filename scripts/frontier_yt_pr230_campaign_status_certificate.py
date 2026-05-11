@@ -764,6 +764,9 @@ def main() -> int:
         "pr230_fresh_artifact_intake_checkpoint": load(
             "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
         ),
+        "pr230_block23_remote_candidate_intake": load(
+            "outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3718,6 +3721,44 @@ def main() -> int:
         ),
         statuses["pr230_fresh_artifact_intake_checkpoint"],
     )
+    block23_remote_candidate_intake = certificates[
+        "pr230_block23_remote_candidate_intake"
+    ]
+    report(
+        "pr230-block23-remote-candidate-intake-no-admissible-packet",
+        "block23 remote-candidate intake checkpoint"
+        in str(statuses["pr230_block23_remote_candidate_intake"])
+        and block23_remote_candidate_intake.get("proposal_allowed") is False
+        and block23_remote_candidate_intake.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block23_remote_candidate_intake.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-source-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-wz-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-neutral-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-admissible-remote-required-paths-found"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True,
+        statuses["pr230_block23_remote_candidate_intake"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6313,6 +6354,37 @@ def main() -> int:
         )
         is False
     )
+    result["block23_remote_candidate_intake_no_admissible_packet"] = (
+        block23_remote_candidate_intake.get("proposal_allowed") is False
+        and block23_remote_candidate_intake.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block23_remote_candidate_intake.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-source-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-wz-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-candidate-ref-has-strict-neutral-packet"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "no-admissible-remote-required-paths-found"
+        )
+        is True
+        and block23_remote_candidate_intake.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -6347,6 +6419,7 @@ def main() -> int:
         "does not treat chunk completion alone as positive retained closure",
         "does not treat process-only gates as proof inputs",
         "does not treat remote branch drift as same-surface physics evidence",
+        "does not treat fetched Higgs/EW remote branches as PR230 same-surface artifacts without parseable required-path certificates",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

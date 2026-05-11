@@ -157,5 +157,11 @@ Prior block certificate summary:
   only.  It is not canonical `O_H`, not canonical `C_sH/C_HH`, not strict
   scalar-LSZ/FV/IR authority, not W/Z response evidence, and not physical
   top-Yukawa closure.
-- Block01 through Block22 all have `proposal_allowed=false`; their boundaries
+- Block23 actual status: open / remote-candidate intake checkpoint; current PR
+  head `0c266edf4` and fetched candidate refs contain no admissible canonical
+  `O_H`/source-Higgs packet, no strict W/Z accepted-action physical-response
+  packet, and no neutral H3/H4 physical-transfer packet.  Nearby Higgs/EW
+  branches are not PR230 same-surface artifacts without the required parseable
+  certificates.
+- Block01 through Block23 all have `proposal_allowed=false`; their boundaries
   remain active.

@@ -429,3 +429,20 @@ same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with
 Gram/FV/IR authority, a strict W/Z physical-response packet with matched
 covariance and strict non-observed `g2`, or a neutral primitive H3/H4
 physical-transfer certificate.
+
+Block23 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Remote-candidate intake runner | `scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py` | Created; PASS=26 FAIL=0 |
+| Remote-candidate intake certificate | `outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json` | Created; current PR head and fetched candidate refs contain no admissible source-Higgs, W/Z, or neutral H3/H4 packet |
+| Remote-candidate intake note | `docs/YT_PR230_BLOCK23_REMOTE_CANDIDATE_INTAKE_CHECKPOINT_NOTE_2026-05-11.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block23; PASS=357 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block23 checkpoint |
+
+Follow-on artifact target after block23 is not another current-surface absence
+gate.  Reopen this lane only when the target branch contains parseable
+production/certificate inputs: accepted same-surface canonical `O_H` plus
+strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict W/Z
+physical-response packet with matched covariance, strict non-observed `g2`,
+and `delta_perp`, or a neutral primitive H3/H4 physical-transfer certificate.

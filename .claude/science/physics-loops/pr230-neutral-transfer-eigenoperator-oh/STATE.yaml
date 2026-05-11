@@ -1,21 +1,21 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-08T06:11:56-04:00"
+checkpoint_time: "2026-05-11T18:43:50-04:00"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 22
-active_science_block: block22_current_head_chunks051_062_intake
-active_route: "Current-head intake after draft PR #230 packaged chunks051-062; completed prefix refreshed to 62/63 while chunk063 remains absent as completed checkpoint evidence"
+cycle_count: 23
+active_science_block: block23_remote_candidate_intake_checkpoint
+active_route: "Remote-candidate and current PR-head intake after block22; current PR head 0c266edf4 and fetched candidate refs contain no admissible canonical O_H/source-Higgs pole-row packet, strict W/Z accepted-action response packet, or neutral H3/H4 physical-transfer packet"
 target_status: best-honest-status
-actual_current_surface_status: "bounded-support / two-source taste-radial chunks001-062 packaged; finite C_ss/C_sx/C_xx rows remain non-closure staging evidence"
-conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
+actual_current_surface_status: "open / block23 remote-candidate intake checkpoint; current PR head and fetched candidate refs contain no admissible canonical O_H/source-Higgs packet, strict W/Z accepted-action response packet, or neutral H3/H4 physical-transfer packet"
+conditional_surface_status: support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and strict C_ss/C_sH/C_HH pole rows exist, or if a strict W/Z matched physical-response packet or neutral H3/H4 physical-transfer authority is supplied
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block22 refreshes the neutral-transfer loop against current draft PR #230 head 376e3e2f1 after chunks051-062 were committed. The row package is 62/63 with combined_rows_written=false and chunk063 absent as completed checkpoint evidence. The rows are finite C_ss/C_sx/C_xx diagnostics only; canonical O_H, strict C_ss/C_sH/C_HH pole rows, complete 63/63 packet, scalar-LSZ/FV/IR authority, Gram flatness, accepted W/Z action/response rows, matched covariance, delta_perp authority, and strict g2 remain absent."
+proposal_allowed_reason: "Block23 reads committed certificates and fetched refs only. The current PR head is 0c266edf474e303e85defbd48a13913c910a08ba, the row package remains 62/63 with combined_rows_written=false and chunk063 absent as completed checkpoint evidence, and no fetched admissible ref contains the required source-Higgs, W/Z, or neutral H3/H4 packet. Canonical O_H, strict C_ss/C_sH/C_HH pole rows, scalar-LSZ/FV/IR authority, Gram flatness, accepted W/Z action/response rows, matched covariance, delta_perp authority, strict g2, and neutral H3/H4 physical-transfer authority remain absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block20 makes the kappa_sH residue readout exact once rows exist, but proves the current source-only response remains underdetermined by an orthogonal neutral coupling family."
@@ -43,6 +43,7 @@ minimal_allowed_premises:
   - "block20 FMS source-overlap readout gate as exact support only; it supplies kappa_sH residue formula and source-only counterfamily, but accepted action, canonical O_H, strict pole rows, and Gram/FV/IR authority remain required"
   - "block21 chunks047-050 intake as bounded support/exact boundary over the completed 50/63 prefix; active chunks051-052 are not counted as evidence"
   - "block22 current-head chunks051-062 intake as bounded support/exact boundary over the completed 62/63 prefix; chunk063 remains absent as completed checkpoint evidence"
+  - "block23 remote-candidate intake as open routing/checkpoint status only; fetched Higgs/EW branches are not PR230 same-surface artifacts without parseable required-path certificates"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -64,6 +65,9 @@ files_touched:
   - outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py
+  - docs/YT_PR230_BLOCK23_REMOTE_CANDIDATE_INTAKE_CHECKPOINT_NOTE_2026-05-11.md
+  - outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json
   - docs/YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING_NOTE_2026-05-07.md
   - scripts/frontier_yt_pr230_assumption_import_stress.py
   - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
@@ -117,6 +121,7 @@ files_touched:
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK23.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK09.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK10.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK11.md
@@ -287,10 +292,18 @@ commands_run:
   - "2026-05-08 block22: rg status/firewall review # no retained/proposed_retained promotion; forbidden hits are exclusion statements only"
   - "2026-05-08 block22: git diff --check # OK"
   - "2026-05-08 block22: gh pr edit 230 --body-file .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK22.md # OK"
-review_disposition: pass_bounded_support_chunks051_062_current_head_intake_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block22 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Do not treat chunk063 completion as closure by itself. Continue only with accepted same-surface canonical O_H plus strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority, a strict W/Z matched physical-response packet with covariance/delta_perp/strict g2, or neutral primitive H3/H4 physical-transfer authority."
-stop_condition: "Yield after coherent block22 checkpoint push if runtime remains; chunks001-062 are bounded support only, not campaign completion, and no retained/proposed_retained closure is authorized."
+  - "2026-05-11 block23: sed -n read of physics-loop SKILL.md, STATE.yaml, and HANDOFF.md before other work; git fetch origin; verified PR #230 head 0c266edf4"
+  - "2026-05-11 block23: remote candidate scan over fetched Higgs/EW/PR230 refs; no admissible required-path source-Higgs, W/Z, or neutral H3/H4 packet found"
+  - "2026-05-11 block23: python3 -m py_compile scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py # OK"
+  - "2026-05-11 block23: python3 scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py # PASS=26 FAIL=0"
+  - "2026-05-11 block23: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=357 FAIL=0"
+  - "2026-05-11 block23: bash docs/audit/scripts/run_pipeline.sh # OK; final rerun newly seeded=0, re-audit required=0, 5 known warnings"
+  - "2026-05-11 block23: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "2026-05-11 block23: git diff --check # OK"
+review_disposition: pass_open_block23_remote_candidate_intake_no_admissible_packet
+pr_status: "direct integration into open draft PR #230 landing path; standalone block23 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Yield this PR230 lane as waiting on explicit production/certificate inputs. Reopen only with accepted same-surface canonical O_H plus strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority, a strict W/Z matched physical-response packet with covariance/delta_perp/strict non-observed g2, or neutral primitive H3/H4 physical-transfer authority. Do not treat chunk063 completion alone as closure."
+stop_condition: "Yield after coherent block23 checkpoint push if runtime remains; no admissible committed/fetched packet exists, chunks001-062 are bounded support only, and no retained/proposed_retained closure is authorized."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -373,5 +386,22 @@ block22_current_head_chunks051_062_intake:
   canonical_oh_certified: false
   source_higgs_pole_rows_present: false
   strict_wz_packet_present: false
+  closure_authorized: false
+  proposal_allowed: false
+block23_remote_candidate_intake_checkpoint:
+  runner: scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py
+  note: docs/YT_PR230_BLOCK23_REMOTE_CANDIDATE_INTAKE_CHECKPOINT_NOTE_2026-05-11.md
+  output: outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json
+  pr_head: 0c266edf474e303e85defbd48a13913c910a08ba
+  verification: "block23 intake PASS=26 FAIL=0; campaign status PASS=357 FAIL=0; final audit pipeline rerun newly seeded=0 with 5 known warnings; strict audit lint OK with 5 known warnings; git diff --check OK"
+  consumed_committed_pr_head_only: true
+  fetched_refs_scanned: true
+  admissible_remote_required_paths_found: false
+  strict_source_higgs_packet_present: false
+  strict_wz_packet_present: false
+  strict_neutral_h3h4_packet_present: false
+  completed_prefix: "001-062"
+  missing_completed_checkpoint_evidence: "063"
+  live_worker_touched: false
   closure_authorized: false
   proposal_allowed: false

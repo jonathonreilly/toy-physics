@@ -109,6 +109,14 @@ The draft PR #230 body was updated from
 `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK22.md`
 after block22 delivery.
 
+Block23 follows the same direct PR #230 landing path.  It adds the
+remote-candidate intake checkpoint at PR head `0c266edf4` and records that the
+current PR head plus fetched Higgs/EW/PR230 candidate refs contain no
+admissible canonical `O_H`/source-Higgs packet, strict W/Z accepted-action
+physical-response packet, or neutral H3/H4 physical-transfer packet.  No
+standalone block23 review PR should be opened unless PR #230 integration
+fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

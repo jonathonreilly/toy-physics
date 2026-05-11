@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-08 06:11 EDT
+Checkpoint: 2026-05-11 18:43 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -835,3 +835,71 @@ Continue only with accepted same-surface canonical `O_H` plus strict
 `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict W/Z matched
 physical-response packet with covariance, `delta_perp`, and strict
 non-observed `g2`, or neutral primitive H3/H4 physical-transfer authority.
+
+## Block23 Remote-Candidate Intake Checkpoint
+
+Resumed on 2026-05-11 after fetching `origin`.  The draft PR #230 head remains:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 0c266edf474e303e85defbd48a13913c910a08ba
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+Block23 scanned the current PR head and fetched remote candidate refs for the
+explicit production/certificate inputs named by block22.  It consumed only
+committed certificates and git refs; it did not inspect active chunk-worker
+output, pending checkpoints, or live logs.
+
+Result:
+
+- no accepted same-surface canonical `O_H` plus production
+  `C_ss/C_sH/C_HH` pole-row packet is present;
+- no strict W/Z accepted-action physical-response packet is present;
+- no neutral H3/H4 physical-transfer packet is present;
+- fetched nearby Higgs/EW branches do not contain the required PR230
+  same-surface certificate paths;
+- the committed row prefix remains `62/63` with `combined_rows_written=false`;
+- chunk063 remains absent as completed checkpoint evidence and would not be
+  closure by itself.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py`
+- `docs/YT_PR230_BLOCK23_REMOTE_CANDIDATE_INTAKE_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact plan,
+  review history, PR backlog, and block23 PR body
+
+Honest status: open / remote-candidate intake checkpoint.  The current surface
+and fetched refs still lack certified canonical `O_H`, production
+`C_ss/C_sH/C_HH` pole rows, source-Higgs Gram/FV/IR authority, accepted W/Z
+action, production W/Z rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, final W-response authority, and neutral H3/H4
+physical-transfer authority.  `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py
+# SUMMARY: PASS=26 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=357 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
+Next exact action: yield this PR230 lane as waiting on explicit
+production/certificate inputs.  Reopen only with accepted same-surface
+canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR
+authority, a strict W/Z matched physical-response packet with
+covariance/`delta_perp`/strict non-observed `g2`, or neutral primitive H3/H4
+physical-transfer authority.  Do not run more current-surface shortcut gates
+from this lane.

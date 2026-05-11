@@ -1,6 +1,7 @@
 {
   "action_first_route_completion_blocks": true,
   "actual_current_surface_status": "open / active campaign continuing after current shortcut blocks",
+  "block23_remote_candidate_intake_no_admissible_packet": true,
   "canonical_oh_accepted_action_stretch_blocks_current_stack": true,
   "canonical_oh_wz_common_action_cut_open": true,
   "certificate_statuses": {
@@ -262,6 +263,7 @@
     "pr230_action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
     "pr230_additive_source_radial_spurion_incompatibility": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
     "pr230_additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+    "pr230_block23_remote_candidate_intake": "open / block23 remote-candidate intake checkpoint; current PR head and fetched remote candidate refs contain no admissible canonical O_H/source-Higgs packet, strict W/Z accepted-action response packet, or neutral H3/H4 physical-transfer packet",
     "pr230_canonical_oh_accepted_action_stretch_attempt": "exact negative boundary / canonical O_H accepted-action root not derivable from the current PR230 support stack",
     "pr230_canonical_oh_hard_residual_equivalence_gate": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
     "pr230_canonical_oh_wz_common_action_cut": "exact support/boundary / canonical O_H and WZ accepted-action common-cut certificate; current surface remains open",
@@ -489,7 +491,7 @@
   "origin_main_ew_m_residual_intake_not_closure": true,
   "orthogonal_top_coupling_exclusion_candidate_rejected": true,
   "os_transfer_kernel_artifact_absent": true,
-  "pass_count": 356,
+  "pass_count": 357,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
@@ -587,6 +589,7 @@
     "does not treat chunk completion alone as positive retained closure",
     "does not treat process-only gates as proof inputs",
     "does not treat remote branch drift as same-surface physics evidence",
+    "does not treat fetched Higgs/EW remote branches as PR230 same-surface artifacts without parseable required-path certificates",
     "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
     "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
     "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

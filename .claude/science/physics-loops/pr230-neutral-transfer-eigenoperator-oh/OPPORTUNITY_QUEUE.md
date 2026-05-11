@@ -1,11 +1,11 @@
 # Opportunity Queue
 
-Campaign mode queue after block22 current-head chunks051-062 package/intake.
+Campaign mode queue after block23 remote-candidate and current PR-head intake.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
-| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh accepted/derived `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14/block21/block22 aperture checkpoints, block16 open-surface intake, block18 fresh-artifact intake, and block19 FMS candidate/action packet | Medium | Medium | Direct source-Higgs closure root | Proceed only after block19 is upgraded into accepted same-surface `O_H` authority and production `C_ss/C_sH/C_HH` pole rows. Existing 62/63 `C_sx/C_xx` chunks are bounded staging support only. |
-| 2 | Strict W/Z physical-response packet with accepted action | Medium-low if real row/action/covariance artifacts appear; blocked by block11/block15/block18 on current branch | 5-7 | Block05 subtraction contract, block08 W/Z checkpoint, block11 packet intake, block15 additive aggregate wiring, block17 additive-top coarse rows, and block18 fresh-artifact intake | High | Medium | W/Z repair | Requires accepted action, canonical `O_H`/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict non-observed `g2`, `delta_perp` authority, and final W-response rows. Existing scout/smoke rows and coarse additive-top rows are non-closure. |
+| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh accepted/derived `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current/fetched stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14/block21/block22 aperture checkpoints, block16 open-surface intake, block18 fresh-artifact intake, block19 FMS candidate/action packet, and block23 remote-candidate intake | Medium | Medium | Direct source-Higgs closure root | Proceed only after block19 is upgraded into accepted same-surface `O_H` authority and production `C_ss/C_sH/C_HH` pole rows. Existing 62/63 `C_sx/C_xx` chunks and fetched Higgs/EW branches are bounded staging/support only. |
+| 2 | Strict W/Z physical-response packet with accepted action | Medium-low if real row/action/covariance artifacts appear; blocked by block11/block15/block18 and block23 on current/fetched stack | 5-7 | Block05 subtraction contract, block08 W/Z checkpoint, block11 packet intake, block15 additive aggregate wiring, block17 additive-top coarse rows, block18 fresh-artifact intake, and block23 remote-candidate intake | High | Medium | W/Z repair | Requires accepted action, canonical `O_H`/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict non-observed `g2`, `delta_perp` authority, and final W-response rows. Existing scout/smoke rows, coarse additive-top rows, and fetched non-PR230 Higgs/EW branches are non-closure. |
 | 3 | Same-surface neutral primitive/rank-one theorem | Medium-low only with a fresh H3/H4 certificate | 2 | Block07 hard-residual gate, neutral primitive gates, and block10 H3/H4 aperture checkpoint | Medium | Medium | Independent of W/Z covariance and source-Higgs rows | H1/H2 support is loaded, but current finite `C_sx/C_xx` rows do not supply physical transfer. Reopen only with same-surface H3 physical transfer/off-diagonal generator plus H4 source/canonical-Higgs coupling authority. |
 | 4 | Complete/replace source-Higgs production row packet | Medium-low | 3 | Block22 now audits 62/63 current rows | Medium | Medium | Production continuation | Complete the 63/63 packet or replace it with real canonical `C_sH/C_HH` rows only after `O_H` is certified; do not touch active workers from this lane. |
 | 5 | Replacement radial-spurion action certificate | Medium-low | 2 | Block04 plus block08 W/Z checkpoint | High | Medium | Direct W/Z action repair | Build only if a real same-surface clean radial action artifact exists. |
@@ -46,6 +46,14 @@ covariance, strict `g2`, `delta_perp` authority, and final W-response rows.  If
 neither artifact is present on resume, yield this lane as waiting on those
 explicit production/certificate inputs and let the outer supervisor allocate
 independent positive work.
+
+Block23 resumed after fetching `origin` and verified PR #230 at
+`0c266edf474e303e85defbd48a13913c910a08ba`.  The remote-candidate runner
+scanned current PR-head certificates and fetched Higgs/EW/PR230 candidate refs.
+No admissible ref contains the required canonical `O_H`/source-Higgs packet,
+strict W/Z packet, or neutral H3/H4 physical-transfer packet.  The queue
+therefore remains waiting on explicit production/certificate inputs; do not
+spend the next block on another current-surface absence gate.
 
 Block15 wired the additive-source radial-spurion incompatibility and
 additive-top subtraction row contract into assumption, assembly, retained-route,
