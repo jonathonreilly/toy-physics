@@ -37569,6 +37569,17 @@
       "runner_path": "scripts/frontier_ckm_atlas_axiom_closure.py",
       "title": "CKM Atlas/Axiom Closure Note"
     },
+    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "4e07690acaa3ddf2904c158a51c1c763fd818859da441730527ad9e11bbdde83",
+      "path": "docs/CKM_ATLAS_CLOSURE_FORMULA_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_ckm_atlas_closure_formula_algebra_exact_2026_05_10.py",
+      "title": "CKM Atlas Closure-Formula Algebra Narrow Theorem"
+    },
     "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24": {
       "claim_id": "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -37820,6 +37831,17 @@
       "path": "docs/CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_consecutive_primes_s3_koide_bridge.py",
       "title": "Consecutive Primes and S3 Representation Structure from CKM Counts: Koide-Bridge Support"
+    },
+    "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "3ea21cb3d3c5a6c2360977e8c8ee7cca84ce8c7ac001fe58285561358684db67",
+      "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_ckm_cp_phase_structural_identity_exact_2026_05_10.py",
+      "title": "CKM CP-Phase Structural-Identity Narrow Theorem"
     },
     "ckm_cp_phase_structural_identity_theorem_note_2026-04-24": {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -64305,6 +64327,17 @@
       "runner_path": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py",
       "title": "Wilson-Shifted V_taste Extremum at Leading Order in r \u2014 Bounded Note"
     },
+    "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10": {
+      "claim_id": "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "bff2148b2cff4a5ad1847efe1fe2437a07720fdb60bd708299e136547c2374fc",
+      "path": "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_wolfenstein_lambda_a_exact_2026_05_10.py",
+      "title": "Wolfenstein Lambda/A Structural-Identities Narrow Theorem"
+    },
     "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24": {
       "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "claim_type_author_hint": null,
@@ -66273,6 +66306,8 @@
     "chiral_split_mass_gravity_note",
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
+    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10",
+    "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
@@ -66864,6 +66899,7 @@
     "wilson_normalization_reconciliation_note_2026-04-11",
     "wilson_two_body_open_note_2026-04-11",
     "wilson_two_body_open_refined_note_2026-04-11",
+    "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10",
     "work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18",
     "work_history.atomic.lane2_atomic_autoresearch_parking_note_2026-05-01",
     "work_history.ckm.ckm_mass_basis_nni_note",
@@ -66908,7 +66944,7 @@
       "no_go": 23,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 99
+      "positive_theorem": 102
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 735,
@@ -66917,12 +66953,12 @@
       "no_go": 130,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 599
+      "positive_theorem": 602
     },
     "edge_count": 8358,
-    "leaf_count": 549,
-    "node_count": 2092,
-    "root_count": 780,
-    "runners_with_path": 1705
+    "leaf_count": 552,
+    "node_count": 2095,
+    "root_count": 783,
+    "runners_with_path": 1708
   }
 }

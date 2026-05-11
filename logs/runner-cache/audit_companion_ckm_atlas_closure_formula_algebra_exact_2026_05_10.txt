@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_ckm_atlas_closure_formula_algebra_exact_2026_05_10.py
+runner_sha256: d6255e5b1dea99b601283276ac266bf108479273737699aa0bf78a91d4b136f0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.44
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for CKM atlas closure-formula algebra
+legacy parent: ckm_atlas_axiom_closure_note
+Goal: sympy-symbolic verification of blocks (U), (IS), (BM)
+over abstract integer counts (p, c, q = p c) and framework counts (2, 3, 6)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic alpha_s = alpha_s, counts p, c, q = symbolic positive integers
+  Imported (M1)-(M5) at q = p c:
+    |V_us|^2 = alpha_s/p
+    |V_cb|^2 = alpha_s**2/(c*p)
+    |V_ts|^2 = alpha_s**2/(c*p)
+    |V_ub|^2 = alpha_s**3/(c**2*p**3)
+    |V_td|^2 = alpha_s**3*(q - 1)/(c**2*p**3)
+
+----------------------------------------------------------------------------------------
+Part 1: Block (U) unitarity-row completion identities
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U1) |V_ud|^2 == 1 - alpha_s/p - alpha_s^3/(p^3 c^2)  (parametric in p, c)  (diff = 0)
+  [PASS (A)] (U2) |V_cs|^2 == 1 - alpha_s/p - alpha_s^2/(p c)  (parametric in p, c)  (diff = 0)
+  [PASS (A)] (U3) |V_tb|^2 == 1 - (q-1) alpha_s^3/(p^3 c^2) - alpha_s^2/(p c)  (parametric)  (diff = 0)
+  [PASS (A)] row-U sum: |V_ud|^2 + |V_us|^2 + |V_ub|^2 == 1  (parametric)  (atlas-leading first row unitarity)
+  [PASS (A)] row-C sum: |V_cd|^2 + |V_cs|^2 + |V_cb|^2 == 1  (parametric)  (atlas-leading second row unitarity)
+  [PASS (A)] row-T sum: |V_td|^2 + |V_ts|^2 + |V_tb|^2 == 1  (parametric)  (atlas-leading third row unitarity)
+
+----------------------------------------------------------------------------------------
+Part 2: Block (IS) inverse-square structural reading
+----------------------------------------------------------------------------------------
+  [PASS (A)] (IS2) rho A^2 under q = p c: == 1 / c^2  (parametric in p, c)  (reduced = c**(-2))
+  [PASS (A)] (IS1) at (p,c,q)=(2,3,6): eta^2 == 1/p^2 - 1/c^2 == 5/36  (eta^2=5/36, 1/p^2 - 1/c^2 = 5/36)
+  [PASS (A)] (IS3) at (p,c,q)=(2,3,6): eta^2 + rho A^2 == 1/p^2 == 1/4  (got 1/4)
+  [PASS (A)] (IS4) at (p,c,q)=(2,3,6): eta^2 + 2 rho A^2 == 1/p^2 + 1/c^2 == 13/36  (got 13/36)
+
+----------------------------------------------------------------------------------------
+Part 3: Block (BM) Bernoulli moment/variance identities
+----------------------------------------------------------------------------------------
+  [PASS (A)] (BM1) V(N) == M(N)/N  (parametric in N)  (diff = 0)
+  [PASS (A)] (BM2) M(N) + 1/N == 1  (parametric in N)  (diff = 0)
+  [PASS (A)] framework: M(N_pair=2) == 1/2  (got 1/2)
+  [PASS (A)] framework: M(N_color=3) == A^2 == 2/3 (requires n_pair = n_color - 1)  (M(3)=2/3, A^2=2/3)
+  [PASS (A)] framework: M(N_quark=6) == 1 - rho == 5/6  (got 5/6)
+  [PASS (A)] framework: V(N_pair=2) == 1/4  (got 1/4)
+  [PASS (A)] framework: V(N_color=3) == 2/9  (got 2/9)
+  [PASS (A)] framework: V(N_quark=6) == eta^2 == 5/36  (got 5/36)
+  [PASS (A)] framework: rho == V(N_pair) M(N_color) == 1/6  (got 1/6)
+  [PASS (A)] framework: A^2 rho == V(N_color) M(N_pair) == 1/9  (got 1/9)
+
+----------------------------------------------------------------------------------------
+Part 4: framework numerical specialisations of (U1)-(U3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U1) at (2,3,6): |V_ud|^2 == 1 - alpha_s/2 - alpha_s^3/72  (got -alpha_s**3/72 - alpha_s/2 + 1)
+  [PASS (A)] (U2) at (2,3,6): |V_cs|^2 == 1 - alpha_s/2 - alpha_s^2/6  (got -alpha_s**2/6 - alpha_s/2 + 1)
+  [PASS (A)] (U3) at (2,3,6): |V_tb|^2 == 1 - 5 alpha_s^3/72 - alpha_s^2/6  (got -5*alpha_s**3/72 - alpha_s**2/6 + 1)
+
+----------------------------------------------------------------------------------------
+Part 5: counterfactual probe for (IS1) at non-framework counts
+----------------------------------------------------------------------------------------
+  [PASS (A)] (IS1) counterfactual: at (3,4,12), eta^2 != 1/p^2 - 1/c^2  (eta^2=11/144, 1/p^2 - 1/c^2 = 7/144 (different))
+  [PASS (A)] Bernoulli counterfactual: at (p, c) = (2, 4) where p != c - 1, M(N_color) != A^2  (M(4)=3/4, A^2(p=2,c=4)=1/2)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Block (U): (U1)-(U3) row-completion identities parametric in p, c, q
+    Row sums |V_ij|^2 = 1 for all three rows parametric in p, c, q
+    Block (IS): (IS2) parametric in p, c under q = p c
+    Block (IS): (IS1), (IS3), (IS4) at framework counts (2, 3, 6)
+    Block (BM): (BM1), (BM2) parametric in N
+    Framework Bernoulli table: 1/2, 2/3, 5/6, 1/4, 2/9, 5/36
+    rho = V(N_pair) M(N_color) and A^2 rho = V(N_color) M(N_pair) at framework
+    All (U1)-(U3) specialise correctly at (p, c, q) = (2, 3, 6)
+    Counterfactuals: (IS1) and (BM-A^2) require specific count tuples
+
+========================================================================================
+TOTAL: PASS=25, FAIL=0
+========================================================================================
+
+----- stderr -----
+

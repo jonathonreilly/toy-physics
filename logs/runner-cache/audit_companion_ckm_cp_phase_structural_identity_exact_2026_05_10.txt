@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_ckm_cp_phase_structural_identity_exact_2026_05_10.py
+runner_sha256: 61acb8ffcfdc79254775d8bd4b105f38dd20c41eaf95c833ee1bb4ca9e30f68c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.43
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for narrow theorem on parent
+ckm_cp_phase_structural_identity_theorem_note_2026-04-24
+Goal: sympy-symbolic verification of (C1)-(C7), (J), (Jq)
+over abstract integer counts (p, c, q = p c) and framework counts (2, 3, 6)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic alpha_s   = alpha_s
+  symbolic counts:    p (n_pair), c (n_color), q (n_quark)
+  w_A1               = 1/q
+  w_perp             = (q - 1)/q
+  r^2                = 1/q
+  lambda^2           = alpha_s/p
+  A^2                = p/c
+
+----------------------------------------------------------------------------------------
+Part 1: PSUM tautology w_A1 + w_perp == 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] PSUM: w_A1 + w_perp == 1 (parametric in q)  (diff simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (C1) rho = 1/n_quark and (C2) eta = sqrt(q-1)/q
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) rho^2 == 1/q^2  (parametric in q)  (diff = 0)
+  [PASS (A)] (C1) rho == 1/q  (positive branch)  (sqrt(1/q^2) - 1/q simplifies to 0)
+  [PASS (A)] (C2) eta^2 == (q-1)/q^2  (parametric in q)  (diff = 0)
+  [PASS (A)] (C2) eta == sqrt(q-1)/q  (positive branch)  (sqrt((q-1)/q^2) - sqrt(q-1)/q simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (C3) rho^2 + eta^2 = 1/q
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C3) rho^2 + eta^2 == 1/q  (parametric in q)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (C4),(C5) cos^2/sin^2 of delta_CKM
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C4) cos^2(delta_CKM) == 1/q  (parametric in q)  (diff = 0)
+  [PASS (A)] (C5) sin^2(delta_CKM) == (q-1)/q  (parametric in q)  (diff = 0)
+  [PASS (A)] cos^2 + sin^2 == 1  (parametric in q)  (trigonometric identity preservation)
+
+----------------------------------------------------------------------------------------
+Part 5: (C6) tan(delta_CKM) = sqrt(q - 1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C6) tan^2(delta_CKM) == q - 1  (parametric in q)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: (J) Jarlskog factor J_0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (J) J_0 == alpha_s^3 sqrt(q-1) / (p^2 c q)  (parametric in p, c, q)  (diff = 0)
+  [PASS (A)] (Jq) J_0 under q=p*c == alpha_s^3 sqrt(p c - 1) / (p^3 c^2)  (reduced form = alpha_s**3*sqrt(c*p - 1)/(c**2*p**3))
+
+----------------------------------------------------------------------------------------
+Part 7: framework counts (p, c, q) = (2, 3, 6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) at (2,3,6): rho == 1/6  (got 1/6)
+  [PASS (A)] (C2) at (2,3,6): eta == sqrt(5)/6  (got sqrt(5)/6)
+  [PASS (A)] (C3) at (2,3,6): rho^2 + eta^2 == 1/6  (got 1/6)
+  [PASS (A)] (C4) at (2,3,6): cos^2(delta_CKM) == 1/6  (got 1/6)
+  [PASS (A)] (C5) at (2,3,6): sin^2(delta_CKM) == 5/6  (got 5/6)
+  [PASS (A)] (C6) at (2,3,6): tan^2(delta_CKM) == 5  (tan = sqrt(5))  (got 5)
+  [PASS (A)] (J) at (2,3,6): J_0 == alpha_s^3 sqrt(5)/72  (got sqrt(5)*alpha_s**3/72)
+
+----------------------------------------------------------------------------------------
+Part 8: non-framework instance (p, c, q) = (3, 4, 12)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) at (3,4,12): rho == 1/12  (got 1/12)
+  [PASS (A)] (C2) at (3,4,12): eta == sqrt(11)/12  (got sqrt(11)/12)
+  [PASS (A)] (C4) at (3,4,12): cos^2(delta_CKM) == 1/12  (got 1/12)
+  [PASS (A)] (J) at (3,4,12): J_0 == alpha_s^3 sqrt(11)/432  (got sqrt(11)*alpha_s**3/432)
+
+----------------------------------------------------------------------------------------
+Part 9: derivable corollaries
+----------------------------------------------------------------------------------------
+  [PASS (A)] corollary: tan^2(delta) * eta^2 / rho^2 == (q - 1)^2  (parametric)  (got (q - 1)**2)
+  [PASS (A)] corollary: cos^2(delta) * q == 1  (parametric)  (diff = 0)
+  [PASS (A)] corollary: J_0 / alpha_s^3 == sqrt(pc-1) / (p^3 c^2)  (under q=pc)  (got sqrt(c*p - 1)/(c**2*p**3))
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    PSUM tautology w_A1 + w_perp = 1
+    (C1) rho parametric in q
+    (C2) eta parametric in q
+    (C3) rho^2 + eta^2 = 1/q parametric in q
+    (C4),(C5) cos^2 and sin^2 of delta_CKM parametric in q
+    cos^2 + sin^2 = 1 trigonometric identity preserved
+    (C6) tan^2(delta) = q - 1 parametric in q
+    (J) J_0 parametric in (p, c, q); (Jq) under q = p c
+    All identities specialise correctly at (p, c, q) = (2, 3, 6)
+    Non-framework (3, 4, 12) reproduces the corresponding closed forms
+    Three derivable corollary identities hold parametrically
+
+========================================================================================
+TOTAL: PASS=26, FAIL=0
+========================================================================================
+
+----- stderr -----
+

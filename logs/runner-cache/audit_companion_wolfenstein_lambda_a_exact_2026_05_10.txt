@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_wolfenstein_lambda_a_exact_2026_05_10.py
+runner_sha256: 4b2f72e077d01a3b3ef303d3d709efd27ee649ecda35d4d0fbe8c1f398659c97
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for narrow theorem on parent
+wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24
+Goal: sympy-symbolic verification of (W1)-(W3), (CV1)-(CV2-q)
+over abstract integer counts (p, c, q = p c) and framework counts (2, 3, 6)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic alpha_s     = alpha_s
+  symbolic counts:      p (n_pair), c (n_color), q (n_quark)
+  abstract rho^2+eta^2 = rho_eta_sq
+  lambda^2             = alpha_s/p
+  A^2                  = p/c
+
+----------------------------------------------------------------------------------------
+Part 1: (W1), (W2) tautologies
+----------------------------------------------------------------------------------------
+  [PASS (A)] (W1) tautology: lambda^2 == alpha_s / p  (diff = 0)
+  [PASS (A)] (W2) tautology: A^2 == p / c  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (W3) n_pair cancellation
+----------------------------------------------------------------------------------------
+  [PASS (A)] (W3) A^2 lambda^2 == alpha_s / c  (n_pair cancellation, parametric in p, c)  (diff = 0)
+  [PASS (A)] (W3) simplified form is independent of p (free-symbol check)  (free_symbols of W3 simplified = {c, alpha_s})
+
+----------------------------------------------------------------------------------------
+Part 3: (CV1) |V_cb|^2 = alpha_s^2 / (p c)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (CV1) parametric: A^2 lambda^4 == alpha_s^2 / (p c)  (diff = 0)
+  [PASS (A)] (CV1-q) under q = p c: |V_cb|^2 == alpha_s^2 / q  (verified by p c -> q substitution path)
+
+----------------------------------------------------------------------------------------
+Part 4: (CV2) |V_ub|_0^2 = alpha_s^3 (rho^2+eta^2) / (p^2 c)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (CV2) parametric: A^2 lambda^6 (rho^2+eta^2) == alpha_s^3 (rho^2+eta^2)/(p^2 c)  (diff = 0)
+  [PASS (A)] (CV2) at rho^2+eta^2 = 1/q: == alpha_s^3 / (p^2 c q)  (diff = 0)
+  [PASS (A)] (CV2-q) under q=p c and rho^2+eta^2=1/q: == alpha_s^3 / (p^3 c^2)  (reduced form = alpha_s**3/(c**2*p**3))
+
+----------------------------------------------------------------------------------------
+Part 5: framework counts (p, c, q) = (2, 3, 6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (W1) at (2,3,6): lambda^2 == alpha_s / 2  (got alpha_s/2)
+  [PASS (A)] (W2) at (2,3,6): A^2 == 2/3  (got 2/3)
+  [PASS (A)] (W3) at (2,3,6): A^2 lambda^2 == alpha_s / 3  (got alpha_s/3)
+  [PASS (A)] (CV1) at (2,3,6): |V_cb|^2 == alpha_s^2 / 6  (got alpha_s**2/6)
+  [PASS (A)] (CV2-q) at (2,3,6): |V_ub|_0^2 == alpha_s^3 / 72  (got alpha_s**3/72)
+
+----------------------------------------------------------------------------------------
+Part 6: non-framework instance (p, c, q) = (3, 4, 12)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (W1) at (3,4,12): lambda^2 == alpha_s / 3  (got alpha_s/3)
+  [PASS (A)] (W2) at (3,4,12): A^2 == 3/4  (got 3/4)
+  [PASS (A)] (W3) at (3,4,12): A^2 lambda^2 == alpha_s / 4  (got alpha_s/4)
+  [PASS (A)] (CV1) at (3,4,12): |V_cb|^2 == alpha_s^2 / 12  (got alpha_s**2/12)
+  [PASS (A)] (CV2-q) at (3,4,12): |V_ub|_0^2 == alpha_s^3 / 432  (got alpha_s**3/432)
+
+----------------------------------------------------------------------------------------
+Part 7: derivable corollaries
+----------------------------------------------------------------------------------------
+  [PASS (A)] corollary: (A^2 lambda^2) / lambda^2 == A^2  (parametric)  (diff = 0)
+  [PASS (A)] corollary: |V_cb|^2 / lambda^2 == alpha_s / c  (parametric)  (diff = 0)
+  [PASS (A)] corollary: |V_us|_0^2 / |V_cb|^2 == c / alpha_s  (parametric)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (W1), (W2) tautological identities
+    (W3) n_pair cancellation parametric in p, c
+    (W3) simplified form independent of p (free-symbol check)
+    (CV1) parametric in p, c
+    (CV1-q) under q = p c
+    (CV2) parametric in p, c, q with abstract rho^2+eta^2
+    (CV2-q) at rho^2+eta^2 = 1/q and q = p c reduces to alpha_s^3/(p^3 c^2)
+    All identities specialise correctly at (p, c, q) = (2, 3, 6)
+    Non-framework (3, 4, 12) reproduces the corresponding closed forms
+    Three derivable corollary identities hold parametrically
+
+========================================================================================
+TOTAL: PASS=22, FAIL=0
+========================================================================================
+
+----- stderr -----
+

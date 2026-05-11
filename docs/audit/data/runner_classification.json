@@ -1968,6 +1968,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_ckm_atlas_axiom_closure.py"
     },
+    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_ckm_atlas_closure_formula_algebra_exact_2026_05_10.py"
+    },
     "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24": {
       "assert_count": 3,
       "counts": {
@@ -2147,6 +2159,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_ckm_consecutive_primes_s3_koide_bridge.py"
+    },
+    "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_ckm_cp_phase_structural_identity_exact_2026_05_10.py"
     },
     "ckm_cp_phase_structural_identity_theorem_note_2026-04-24": {
       "assert_count": 1,
@@ -19656,6 +19680,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_wilson_vtaste_extremum_leading_order_in_r.py"
     },
+    "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_wolfenstein_lambda_a_exact_2026_05_10.py"
+    },
     "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24": {
       "assert_count": 1,
       "counts": {
@@ -21449,6 +21485,36 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/audit_companion_ckm_atlas_closure_formula_algebra_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_ckm_cp_phase_structural_identity_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py": {
       "assert_count": 1,
       "claims": [
@@ -21537,6 +21603,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/audit_companion_wolfenstein_lambda_a_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/axiom_first_bekenstein_bound_check.py": {
@@ -44647,9 +44728,9 @@
       "B": 166,
       "C": 652,
       "D": 250,
-      "none": 408
+      "none": 411
     },
-    "runners_classified": 1593,
+    "runners_classified": 1596,
     "runners_with_C": 818,
     "runners_with_D": 445
   }
