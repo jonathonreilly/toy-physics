@@ -22,7 +22,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 239 |
 | open_gate | 13 |
-| unaudited | 1109 |
+| unaudited | 1110 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -45,14 +45,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1207 |
+| `unaudited` | 1208 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 828 |
 | `decoration` | 13 |
 | `meta` | 106 |
-| `no_go` | 205 |
+| `no_go` | 206 |
 | `open_gate` | 112 |
 | `positive_theorem` | 728 |
 
@@ -61,15 +61,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `critical` | 1027 |
 | `high` | 51 |
 | `medium` | 251 |
-| `leaf` | 663 |
+| `leaf` | 664 |
 
 - **Retained pending chain closure:** 0
 - **Citation cycles detected:** 304
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1602
-- runners with (C) first-principles compute hits: 821
+- runners classified: 1603
+- runners with (C) first-principles compute hits: 822
 - runners with (D) external comparator hits: 447
 - decoration candidates (no C, no D): 173
 
@@ -81,7 +81,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `minimal_axioms_2026-05-03` | meta | critical | 904 | 78.32 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 661 | 41.87 | `unaudited` | unaudited |
-| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 878 | 41.28 | `audited_clean` | open_gate |
+| 3 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 879 | 41.78 | `audited_clean` | open_gate |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 734 | 38.52 | `audited_conditional` | ~~audited_conditional~~ |
 | 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 868 | 38.26 | `audited_clean` | **retained_bounded** |
 | 6 | `minimal_axioms_2026-04-11` | meta | critical | 769 | 37.09 | `unaudited` | meta |

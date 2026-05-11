@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go.py
+runner_sha256: b7f767ac3f33fb337b6fcc19d4c19d99dd0de0fefcd35516969d992b5a463305
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.40
+status: ok
+----- stdout -----
+# Hierarchy alpha_LM exponent / species-count bridge no-go runner
+# Source note: docs/HIERARCHY_ALPHA_LM_EXPONENT_SPECIES_COUNT_BRIDGE_REGULATOR_DEPENDENCE_NO_GO_NOTE_2026-05-10.md
+
+==============================================================================
+T1: regulator-by-regulator species counts at d=4
+==============================================================================
+  [PASS] at least three distinct species counts across standard regulators
+         distinct=4, counts={'naive': 16, 'wilson': 1, 'twisted_mass': 2, 'staggered_pre_rooting': 4, 'domain_wall': 1, 'overlap': 1}
+  [PASS] naive lattice count equals 2^4 = 16 (landed parent theorem)
+         naive=16
+  [PASS] Wilson lattice count equals 1 (single physical species)
+         wilson=1
+  [PASS] overlap and domain-wall counts equal 1 (Ginsparg-Wilson chiral)
+         overlap=1, domain_wall=1
+
+==============================================================================
+T2: would the bridge predict different v for different regulators?
+==============================================================================
+  [PASS] for every non-naive regulator, predicted ln(v/M_Pl) differs from naive
+         non-trivial offsets for: ['wilson', 'twisted_mass', 'staggered_pre_rooting', 'domain_wall', 'overlap']
+  [PASS] Wilson-vs-naive predicted v ratio spans ~15 decades (15 factors of alpha_LM)
+         |naive predicted v / Wilson predicted v| = 10^(-15.64)
+
+==============================================================================
+T3: continuum-limit uniqueness across regulators
+==============================================================================
+  [PASS] all six standard regulators target a SINGLE continuum limit (SM)
+         all map to: 'SM' (regulator-specific reductions differ; see note §4)
+
+==============================================================================
+T4: at d=4, naive count 16 = hierarchy exponent 16 (numeric match)
+==============================================================================
+  [PASS] naive species count = hierarchy exponent numerically at d=4
+         naive 2^4=16, hierarchy exponent=16
+
+==============================================================================
+T5: predicted hierarchy exponent at d != 4
+==============================================================================
+  [PASS] 2^d table covers d=2..6 with expected naive counts
+         table={2: 4, 3: 8, 4: 16, 5: 32, 6: 64}
+  [PASS] framework's d=4 regulator calculation is substrate/gate fixed
+         alternate d would change the framework regulator calculation itself, not just the bridge
+
+==============================================================================
+T6: regulator-independence formal check
+==============================================================================
+  [PASS] three logically-exhaustive routes around the no-go all require substrate gate input
+         (O1) require regulator-specific alpha_LM cancellation: substrate-imposed; (O2) re-define v/M_Pl as regulator-specific lattice ratio: substrate-imposed; (O3) admit the bridge is regulator-DEPENDENT (this no-go): honest reading
+
+==============================================================================
+T7: source-note boundary
+==============================================================================
+  [PASS] source note has required keywords and no promotion leakage
+         missing=[], leakage=[]
+
+=== TOTAL: PASS=12, FAIL=0 ===
+
+----- stderr -----
+
