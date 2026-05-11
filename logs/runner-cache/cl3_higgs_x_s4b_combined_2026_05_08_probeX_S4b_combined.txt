@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_higgs_x_s4b_combined_2026_05_08_probeX_S4b_combined.py
+runner_sha256: de1f8325c25d22d3ac2f7f40928bbf6ab4c665f43f6b19b69ac3930d7cbeefd9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 ========================================================================
 Lane 2 Probe X-S4b-Combined
 Combined Higgs Structural + EWSB + G2 Born-as-Source
@@ -149,3 +157,6 @@ Summary
          potential FORM remains admitted SM convention.
 
   ALL CHECKS PASS. Source-note bounded-support claim holds.
+
+----- stderr -----
+

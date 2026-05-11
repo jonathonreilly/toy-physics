@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_s3_time_tensor_primitive_prototype.py
+runner_sha256: 322db0d1eeafeb623b89b76e3dc21fcf074aaf73d3bf18032465cec7dd29c3a4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 71.27
+status: ok
+----- stdout -----
+Route 2 tensor primitive prototype
+==============================================================================
+Prototype endpoint values:
+  Theta_R^(0)(e0)         = (-3.772329168017e-04, +3.359952396063e-04)
+  Theta_R^(0)(s/sqrt(6))  = (-2.010571874025e-04, +4.031967723697e-04)
+
+Affine support law in delta_A1:
+  gamma_E(delta) = -2.010571874025e-04 + (-1.057054376395e-03) delta
+  gamma_T(delta) = +4.031967723697e-04 + (-4.032091965809e-04) delta
+canonical r=0.25: delta=1.033673504811e-01, gamma_E err=4.507e-09, gamma_T err=1.000e-08
+canonical r=0.50: delta=7.491495713053e-02, gamma_E err=4.762e-09, gamma_T err=1.067e-08
+canonical r=0.75: delta=5.874507418157e-02, gamma_E err=4.386e-09, gamma_T err=9.798e-09
+canonical r=1.00: delta=4.831632475944e-02, gamma_E err=3.972e-09, gamma_T err=8.787e-09
+canonical r=1.50: delta=3.565646152233e-02, gamma_E err=3.265e-09, gamma_T err=7.134e-09
+canonical r=2.00: delta=2.825347453309e-02, gamma_E err=2.664e-09, gamma_T err=6.029e-09
+exact local O_h: delta=6.242611227355e-02, gamma_E err=4.382e-07, gamma_T err=1.171e-07
+finite-rank: delta=3.307783365857e-02, gamma_E err=3.380e-06, gamma_T err=4.190e-06
+[BOUNDED] PASS: the first missing Route-2 primitive has a clean bounded prototype on A1 x {E_x, T1x}
+    Theta_R^(0)(q) := (gamma_E(q), gamma_T(q))
+[BOUNDED] PASS: the prototype endpoint coefficients are well defined at e0 and s/sqrt(6)
+    center=(-0.00037723291680174647, 0.0003359952396062656), shell=(-0.00020105718740250195, 0.0004031967723697443)
+[BOUNDED] PASS: the affine delta_A1 law reproduces the canonical A1 family
+    max canonical errors: gamma_E=4.762e-09, gamma_T=1.067e-08
+[BOUNDED] PASS: the same bounded prototype tracks the audited exact-local and finite-rank A1 baselines
+    max audited-family errors: gamma_E=3.380e-06, gamma_T=4.190e-06
+
+Summary:
+  First missing primitive: tensor-valued support observable
+  Current bounded prototype: Theta_R^(0)(q) = (gamma_E(q), gamma_T(q))
+  Endpoint theorem: not exact yet, but endpoint data are now explicit
+PASS=4 FAIL=0
+
+----- stderr -----
+

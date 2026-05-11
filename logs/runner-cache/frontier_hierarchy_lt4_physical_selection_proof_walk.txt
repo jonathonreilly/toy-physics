@@ -1,0 +1,87 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_lt4_physical_selection_proof_walk.py
+runner_sha256: 49dc4b853998686bed1483cc7635513748217cfb0f1d27ef0e311b3e3e23b9b6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+Hierarchy L_t = 4 physical-selection proof-walk
+==============================================================================
+Bounded conditional proof-walk: the algebraic L_t = 4 Klein-four orbit
+result is bridged to the physical EWSB temporal
+block via three disclosed admissions: the staggered-Dirac realization
+gate, scalar-additivity P1, and CPT-even phase blindness. This
+runner verifies the algebraic content and reads the live audit ledger
+to confirm each admission wall is tied to an existing audit row at
+the stated effective status.
+
+==============================================================================
+PART 1: Klein-four orbit decomposition on APBC phases
+==============================================================================
+  L_t = 4 partition = [[(-0.707106781187, -0.707106781187), (-0.707106781187, 0.707106781187), (0.707106781187, -0.707106781187), (0.707106781187, 0.707106781187)]]
+  [PASS] T1: L_t = 4 has one Klein-four orbit of size 4 (unique resolved orbit)
+         len(parts)=1, size=[4]
+
+==============================================================================
+PART 2: L_t = 2 carries only the unresolved sign pair {+i, -i}
+==============================================================================
+  L_t = 2 partition = [[(-0.0, -1.0), (0.0, 1.0)]]
+  [PASS] T2: L_t = 2 has one Klein-four orbit of size 2 (the unresolved sign pair)
+         len(parts)=1, size=[2]
+
+==============================================================================
+PART 3: checked next even cases split into multiple sectors
+==============================================================================
+  L_t = 6 partition = [[(-0.866025403784, -0.5), (-0.866025403784, 0.5), (0.866025403784, -0.5), (0.866025403784, 0.5)], [(-0.0, -1.0), (0.0, 1.0)]]
+  L_t = 8 partition = [[(-0.923879532511, -0.382683432365), (-0.923879532511, 0.382683432365), (0.923879532511, -0.382683432365), (0.923879532511, 0.382683432365)], [(-0.382683432365, -0.923879532511), (-0.382683432365, 0.923879532511), (0.382683432365, -0.923879532511), (0.382683432365, 0.923879532511)]]
+  [PASS] T3: L_t ∈ {6, 8} both split into multiple Klein-four orbits
+         L_t=6: 2 orbits, sizes=[4, 2]; L_t=8: 2 orbits, sizes=[4, 4]
+
+==============================================================================
+PART 4: sin^2((2n+1)pi/4) = 1/2 uniformly at L_t = 4
+==============================================================================
+  sin^2 values at L_t = 4 = [0.4999999999999999, 0.5000000000000001, 0.4999999999999996, 0.5000000000000002]
+  [PASS] T4: sin^2 is uniform 1/2 at L_t = 4
+         max deviation from 1/2 = 3.89e-16
+
+==============================================================================
+PART 5: sin^2 is non-uniform at L_t = 6
+==============================================================================
+  sin^2 values at L_t = 6 = [0.24999999999999994, 1.0, 0.24999999999999994, 0.24999999999999956, 1.0, 0.25000000000000044]
+  distinct values         = [0.25, 1.0]
+  [PASS] T5: sin^2 takes more than one distinct value at L_t = 6
+         distinct count = 2
+
+==============================================================================
+PART 6: Admission-wall catalogue (live ledger check)
+==============================================================================
+  [OK] staggered-Dirac realization gate
+      row_id=staggered_dirac_realization_gate_note_2026-05-03
+      expected=open_gate actual=open_gate
+  [OK] scalar-additivity P1 admission
+      row_id=observable_principle_from_axiom_note
+      expected=audited_conditional actual=audited_conditional
+  [OK] CPT-even phase blindness
+      row_id=cpt_exact_note
+      expected=unaudited actual=unaudited
+  [PASS] T6: all three admission walls match the live-ledger effective_status
+         If any mismatch is reported, update the proof-walk note or the runner so the conditional shape matches the live ledger.
+
+==============================================================================
+PART 7: Forbidden-imports self-check
+==============================================================================
+  [PASS] T7: forbidden numerical imports are absent from this runner
+         forbidden_import_leaks=[]; unexpected_imports=[]; allowed_imports=['from __future__ import annotations', 'import cmath', 'import json', 'import math', 'import pathlib', 'import sys']
+
+==============================================================================
+TOTAL: PASS=7 FAIL=0
+==============================================================================
+VERDICT: bounded conditional proof-walk passes; the algebraic
+L_t = 4 Klein-four orbit content is verified from primitives, and
+the three disclosed admissions are tied to live
+audit-ledger rows. The conditional shape is the load-bearing
+content.
+
+----- stderr -----
+

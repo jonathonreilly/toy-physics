@@ -1,0 +1,102 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_kappa_curv_narrow.py
+runner_sha256: be3674e72a456cad1c108005749eb4d1d70063cb9b3c62cb8653668143a55475
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.35
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and first-principles-honest naming
+----------------------------------------------------------------------------------------
+  [PASS] note contains: 'Symmetric-Point Curvature Ratio κ_curv'
+  [PASS] note contains: 'claim_type: bounded_theorem'
+  [PASS] note contains: '1 / (8 u_0²)'
+  [PASS] note contains: 'κ_curv  =  1 / (8 u_0²)'
+  [PASS] note contains: 'Counterfactual Pass'
+  [PASS] note contains: 'Elon first-principles'
+  [PASS] note contains: 'load_bearing_step_class: A'
+  [PASS] note contains: 'definitional_step_class: E'
+  [PASS] note contains: 'forbidden_imports_used: false'
+  [PASS] note contains: 'named_open_bridge'
+  [PASS] note contains: 'kappa_curv_to_sm_lambda'
+  [PASS] note contains: 'lattice-normalized curvature ratio'
+  [PASS] note does NOT use over-claim 'λ_curv  =  1'
+  [PASS] note does NOT use over-claim 'λ_curv = 1/(8'
+  [PASS] note does NOT use over-claim 'Higgs Quartic UV Anchor'
+  [PASS] note does NOT use over-claim 'Higgs Lattice-Curvature Coupling λ_curv'
+  [PASS] scope disclaimer present: 'explicitly does NOT'
+  [PASS] scope disclaimer present: 'audit verdict and downstream status are '
+  [PASS] scope disclaimer present: 'EXPLICITLY DISTINCT'
+  [PASS] scope disclaimer present: 'structurally a lattice-normalized curvat'
+  [PASS] scope disclaimer present: 'NOT a |φ|⁴ coefficient'
+  [PASS] scope disclaimer present: 'not a quartic coupling'
+
+----------------------------------------------------------------------------------------
+Part 2: V_taste curvature at symmetric point (class A)
+----------------------------------------------------------------------------------------
+  [PASS] ∂²V_taste/∂m²|_{m=0} = -4/u_0² (tachyonic)  (computed = -4/u_0**2)
+  [PASS] Curvature is NEGATIVE at m=0 (tachyonic instability)  (curvature(u_0=1) = -4.0)
+
+----------------------------------------------------------------------------------------
+Part 3: κ_curv definition and Clifford-fixed identity
+----------------------------------------------------------------------------------------
+  [PASS] κ_curv = 1/(8 u_0²) (load-bearing Clifford-fixed identity)  (computed = 1/(8*u_0**2))
+  [PASS] κ_curv depends only on u_0  (free_symbols = {u_0})
+
+----------------------------------------------------------------------------------------
+Part 4: numerical value at u_0 = 0.8776
+----------------------------------------------------------------------------------------
+  [PASS] κ_curv(u_0=0.8776) ≈ 0.1623  (κ_curv ≈ 0.162299)
+
+----------------------------------------------------------------------------------------
+Part 5: first-principles fermion-loop quartic (DISTINCT from κ_curv)
+----------------------------------------------------------------------------------------
+  [PASS] First-principles |φ|⁴ coefficient = y_t⁴/(4 u_0⁴) per channel  (computed = y_t**4/(4*u_0**4))
+  [PASS] First-principles fermion-loop quartic at u_0=0.8776, y_t=0.4: ~0.011  (y_t⁴/(4u_0⁴) ≈ 0.0108)
+  [PASS] Fermion-loop quartic ≠ κ_curv (structurally different objects)  (|fermion-loop-quartic - κ_curv| = 0.1515)
+
+----------------------------------------------------------------------------------------
+Part 6: comparison with SM λ_obs(v) — audit comparator only
+----------------------------------------------------------------------------------------
+
+  [INFO] AUDIT COMPARATORS (NOT derivation inputs):
+         κ_curv (this theorem; lattice curvature ratio) ≈ 0.1623
+         y_t⁴/(4u_0⁴) (fermion-loop quartic, y_t=0.4) ≈ 0.0108
+         SM λ_obs(v) (PDG-extracted)                  ≈ 0.1291
+
+         Three structurally different objects. The first is a curvature-derived
+         ratio at the symmetric point (this theorem); the second is the |φ|⁴
+         coefficient of V_taste at the lattice scale (the first-principles
+         analogue of SM λ); the third is the post-EWSB SM λ at scale v.
+         The κ_curv ↔ SM λ bridge is the framework's NAMED OPEN theorem.
+  [PASS] All three objects (κ_curv, fermion-loop quartic, SM λ_obs) are distinct  (structural distinctions verified numerically)
+
+----------------------------------------------------------------------------------------
+Part 7: structural assertions
+----------------------------------------------------------------------------------------
+  [PASS] κ_curv > 0 (magnitude convention; positive dimensionless ratio)
+  [PASS] κ_curv is dimensionless  (1/(8 u_0²) is dim-0 since u_0 is dim-0)
+  [PASS] κ_curv is Clifford-fixed (depends only on u_0 from gauge sector)
+
+----------------------------------------------------------------------------------------
+Part 8: scope-narrowing audit checks
+----------------------------------------------------------------------------------------
+  [PASS] first-principles-honest assertion: 'Stripping all framework conventions'
+  [PASS] first-principles-honest assertion: 'fermion-loop-induced quartic at the latt'
+  [PASS] first-principles-honest assertion: 'y_t⁴/(4u_0⁴)'
+  [PASS] first-principles-honest assertion: 'structurally a lattice-normalized curvat'
+  [PASS] first-principles-honest assertion: 'Bardeen, Hill, Lindner (1990)'
+  [PASS] §10 honest scope: 'κ_curv ↔ SM λ` bridge'
+  [PASS] §10 honest scope: 'Gate #6 (lambda-UV anchor) in full'
+  [PASS] §10 honest scope: 'first-principles fermion-loop quartic'
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+TOTAL : PASS = 42, FAIL = 0
+
+----- stderr -----
+

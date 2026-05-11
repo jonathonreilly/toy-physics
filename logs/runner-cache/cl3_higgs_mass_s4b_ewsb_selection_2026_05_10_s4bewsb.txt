@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_higgs_mass_s4b_ewsb_selection_2026_05_10_s4bewsb.py
+runner_sha256: 93cfe25cfbfad160bb6b50dc5d57dbe729048951373df6edde12033b05beddf0
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 
 ========================================================================
 Lane 2 S4b — EWSB-Selection Probe Runner (s4bewsb)
@@ -267,3 +275,6 @@ Verdict
     Open block is NARROWER than parent S4b ∧ S7.
 
   All structural and numerical checks PASSED.
+
+----- stderr -----
+

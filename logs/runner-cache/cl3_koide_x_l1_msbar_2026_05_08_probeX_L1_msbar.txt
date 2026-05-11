@@ -1,0 +1,152 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py
+runner_sha256: 474a0feed618f15dabf7b93f01bb08d4a17156596f83f71ebbe8099353edcdd1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+========================================================================
+Probe X-L1-MSbar — Beta-function coefficients in lattice/<P> scheme
+Date: 2026-05-10
+Source-note authority:
+  docs/KOIDE_X_L1_MSBAR_NATIVE_SCHEME_NOTE_2026-05-08_probeX_L1_msbar.md
+========================================================================
+
+Section 1 — POSITIVE SOURCE CHECK: beta_0 (1-loop) = 7 universal
+  [PASS] beta_0 = (11 N_color − 2 N_quark)/3 from S1 | = (33-12)/3 = 7 (target 7)
+  [PASS] beta_0 = (11/3) C_A − (4/3) T_F N_f from Casimir | = 11/3*3 − 4/3*1/2*6 = 11 − 4 = 7 (target 7)
+  [PASS] S1 form ≡ Casimir form for beta_0 | both = 7
+    → beta_0 is source-supported on framework via S1+Casimir.
+    → SCHEME-INDEPENDENT: same value in MSbar, MOM, lattice, <P>.
+
+Section 2 — POSITIVE SOURCE CHECK: beta_1 (2-loop) = 26 universal
+  [PASS] beta_1 gauge term = (34/3) C_A^2 = 102 | (34/3)·9 = 102
+  [PASS] beta_1 mixed term = -(20/3) C_A T_F N_f = -60 | -(20/3)·3·(1/2)·6 = -60
+  [PASS] beta_1 quark term = -4 C_F T_F N_f = -16 | -4·(4/3)·(1/2)·6 = -16
+  [PASS] beta_1 total = 102 - 60 - 16 = 26 | = 26 (target 26)
+    → beta_1 is source-supported on framework via Casimir algebra.
+    → SCHEME-INDEPENDENT: universal at 2-loop in MSbar, MOM, lattice, <P>.
+
+Section 3 — POSITIVE STRUCTURAL: 3-loop Casimir-tensor skeleton source-supported
+  [PASS] 3-loop channel 'C_F^3' Casimir value at SU(3), N_f=6 | = 64/27 (target 64/27)
+  [PASS] 3-loop channel 'C_F^2 C_A' Casimir value at SU(3), N_f=6 | = 16/3 (target 16/3)
+  [PASS] 3-loop channel 'C_F C_A^2' Casimir value at SU(3), N_f=6 | = 12 (target 12)
+  [PASS] 3-loop channel 'C_A^3' Casimir value at SU(3), N_f=6 | = 27 (target 27)
+  [PASS] 3-loop channel 'C_F^2 T_F N_f' Casimir value at SU(3), N_f=6 | = 16/3 (target 16/3)
+  [PASS] 3-loop channel 'C_F C_A T_F N_f' Casimir value at SU(3), N_f=6 | = 12 (target 12)
+  [PASS] 3-loop channel 'C_A^2 T_F N_f' Casimir value at SU(3), N_f=6 | = 27 (target 27)
+  [PASS] 3-loop channel 'C_F (T_F N_f)^2' Casimir value at SU(3), N_f=6 | = 12 (target 12)
+  [PASS] 3-loop channel 'C_A (T_F N_f)^2' Casimir value at SU(3), N_f=6 | = 27 (target 27)
+    → All 9 Casimir channels at 3-loop are framework source-supported.
+    → The channel WEIGHTS (scalars c_FFF, ..., c_Ann) are NOT.
+    → This matches the K_2/K_3 pattern: skeleton source-supported,
+      integral primitives cited from QCD literature.
+
+Section 4 — POSITIVE STRUCTURAL: 4-loop quartic-Casimir basis source-supported
+  [PASS] Quartic invariant d_F^abcd d_F^abcd / N_F = 5/12 (SU(3) fundamental) | = 5/12
+  [PASS] Quartic invariant d_F^abcd d_A^abcd / N_F = 5/2 (SU(3)) | = 5/2
+  [PASS] Quartic invariant d_A^abcd d_A^abcd / N_A = 135/8 (SU(3) adjoint) | = 135/8
+    → 4-loop quartic Casimir basis is framework source-supported (group theory only).
+    → Channel weights at 4-loop NOT framework-derived.
+
+Section 5 — POSITIVE STRUCTURAL: <P>-scheme is framework-native
+  [PASS] <P>_HK_SU(3)(s_t=1/2) = 1 - exp(-2/3) ≈ 0.4866 | = 0.486583 (expected 0.486583)
+  [PASS] <P>_HK Taylor expansion at small s_t agrees with closed form | closed = 0.01324484, Taylor = 0.01324484
+    → <P>_HK_SU(3) closed form is framework-native (Casimir-derived).
+    → Defines the <P>-scheme renormalization point distinct from MSbar.
+
+Section 6 — POSITIVE STRUCTURAL: <P> vs MSbar scheme distinction is REAL
+  [PASS] At beta=6: alpha_<P> ≠ alpha_bare ≠ alpha_MSbar (3 distinct couplings) | alpha_bare = 0.07958, alpha_<P> = 0.75672, <P>_HK_canonical = 0.10516
+    → Scheme distinction is structurally real, NOT just relabeling.
+    → beta_2 in <P>-scheme genuinely differs from beta_2^MSbar.
+    → Framework's <P>-scheme is structurally privileged because
+      <P> IS framework-derivable while Z_MSbar is foreign.
+
+Section 7 — BOUNDED ADMISSION: beta_2 in any scheme NOT derivable
+  [ADMITTED] 3-loop channel scalar 'c_FFF (C_F^3)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_FFA (C_F^2 C_A)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_FAA (C_F C_A^2)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_AAA (C_A^3)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_FFn (C_F^2 T_F N_f)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_FAn (C_F C_A T_F N_f)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_AAn (C_A^2 T_F N_f)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_Fnn (C_F (T_F N_f)^2)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+  [ADMITTED] 3-loop channel scalar 'c_Ann (C_A (T_F N_f)^2)' | scalar requires 3-loop integral primitive (dim-reg or lattice PT) outside current Cl(3)/Z^3 source content
+    → 9 scalar 3-loop channel weights are NOT framework-derived.
+    → Both MSbar and <P>-scheme require non-framework integral primitives.
+    → Bounded admission: framework has skeleton but not full beta_2.
+
+Section 8 — BOUNDED ADMISSION: beta_3 in any scheme NOT derivable;
+              <P>-scheme even blind in literature at 4-loop
+  [ADMITTED] 4-loop channel scalar 'c_F^4 (C_F^4)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F^3 A (C_F^3 C_A)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F^2 A^2 (C_F^2 C_A^2)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F A^3 (C_F C_A^3)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_A^4 (C_A^4)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_dF dF (d_F^abcd d_F^abcd / N_F)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_dF dA (d_F^abcd d_A^abcd / N_F)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F^3 n (C_F^3 T_F N_f)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F^2 A n (C_F^2 C_A T_F N_f)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F A^2 n (C_F C_A^2 T_F N_f)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_A^3 n (C_A^3 T_F N_f)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_dF dF n (d_F^abcd d_F^abcd N_f / N_F)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F^2 n^2 (C_F^2 (T_F N_f)^2)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F A n^2 (C_F C_A (T_F N_f)^2)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_A^2 n^2 (C_A^2 (T_F N_f)^2)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_F n^3 (C_F (T_F N_f)^3)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+  [ADMITTED] 4-loop channel scalar 'c_A n^3 (C_A (T_F N_f)^3)' | scalar requires 4-loop integral primitive; for <P>-scheme, no published lattice computation at N_f=6 exists
+    → 17+ channel scalars at 4-loop NOT framework-derived.
+    → For <P>-scheme at 4-loop, even literature value unavailable.
+
+Section 9 — NUMERICAL COMPARATOR: MSbar literature values at N_f=6
+  [PASS] MSbar beta_2(N_f=6) = 2857/2 − (5033/18)·6 + (325/54)·36 = -65/2 | = -65/2 (target -65/2 = -32.5000)
+  [PASS] abs(beta_2^MSbar(N_f=6)) = 65/2 = 32.5 matches user-quoted value | |beta_2| = 65/2 = 32.5
+  [PASS] MSbar beta_3(N_f=6) numerical value from VVL formula reproduced | = 2472.2837 (VVL 1997 formula evaluation; convention beta = -beta_0 g^3 ...)
+  [PASS] beta_3^MSbar(N_f=6) is BOUNDED ADMISSION across normalization conventions | literature comparator; bounded admission stands regardless of convention
+    → MSbar values reproduced from published formulas at N_f=6.
+    → These are literature comparators, NOT framework derivations.
+
+Section 10 — LATTICE SCHEME COMPARATOR: lattice → MSbar matching cited
+  [PASS] Lüscher-Weisz 1995: lattice tadpole Sigma_W ≈ 0.07959 (Wilson plaq, 1-loop) | literature comparator only; full Brillouin-zone integral not in current source content
+  [PASS] Lüscher-Weisz 1995: d_2 (Wilson plaq, N_f=0) ~0.3-ish (literature) | no framework-native derivation; cited from lattice perturbation theory
+  [ADMITTED] 4-loop lattice/<P>-scheme beta_3 at N_f=6 | no published literature value for any standard lattice action
+    → Lattice → MSbar matching at 2-loop is cited literature.
+    → 4-loop lattice scheme at N_f=6 has NO published value.
+    → Framework's <P>-scheme is genuinely beyond literature at 4-loop.
+
+========================================================================
+PROBE X-L1-MSbar VERDICT
+========================================================================
+
+Claim type: open_gate (bounded diagnostic, mostly negative on full derivation,
+            with positive source support at 1-loop, 2-loop, and
+            color-tensor skeletons at 3-loop and 4-loop)
+
+POSITIVE source checks:
+  ✓ beta_0 = (11 N_color − 2 N_quark)/3 = 7 (universal)
+  ✓ beta_1 = (34/3) C_A^2 − (20/3) C_A T_F N_f − 4 C_F T_F N_f = 26
+    (universal at 2-loop)
+  ✓ 9-channel 3-loop Casimir-tensor skeleton
+  ✓ Extended quartic-Casimir 4-loop skeleton
+  ✓ <P>_HK_SU(3)(s_t) = 1 - exp(-(4/3) s_t) framework-native
+  ✓ Scheme distinction <P> vs MSbar is structurally real
+
+BOUNDED admissions:
+  ⚠ beta_2 scalar channel weights: NOT derivable in any scheme
+  ⚠ beta_3 scalar channel weights: NOT derivable in any scheme
+  ⚠ 4-loop lattice scheme at N_f=6: not even published literature
+
+Net contribution to Lane 1:
+  - Confirms that beta_0=7, beta_1=26 are upstream-supported
+  - Adds structural source support for 3-loop, 4-loop color skeletons
+  - Identifies <P>-scheme as structurally privileged but not
+    sufficient by itself to derive beta_2, beta_3
+  - Does NOT change current Lane 1 admission status (2-loop MSbar
+    bridge remains the same)
+
+
+SUMMARY: PASS=28 FAIL=0 ADMITTED=27
+
+----- stderr -----
+

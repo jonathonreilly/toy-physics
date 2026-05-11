@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py
+runner_sha256: 1880d9287aa8215b8527298c7ad3cb241496cbd18b5eed3f071b77d4bf130afb
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
 
 ================================================================================
 note boundary checks
@@ -57,3 +65,6 @@ runner import boundary
 [PASS] imports limited to numpy plus stdlib (modules=['__future__', 'math', 'numpy', 'pathlib', 're', 'sys'])
 
 TOTAL: PASS=33 FAIL=0
+
+----- stderr -----
+

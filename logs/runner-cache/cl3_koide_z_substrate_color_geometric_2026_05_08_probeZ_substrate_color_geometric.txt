@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_z_substrate_color_geometric_2026_05_08_probeZ_substrate_color_geometric.py
+runner_sha256: f2d42175cb03f3bb4db4b99956685fc80471d0eec50df4969eff00f7b3042d07
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 ==============================================================================
 Probe Z-Substrate-Color-Geometric — Cl(3) graded basis 1+3+3+1=8
 forces N_c=3
@@ -246,3 +254,6 @@ Summary
   Forcing N_c: 3
 
   All K-statements PASS. Probe Z source-note proposal ready for audit.
+
+----- stderr -----
+

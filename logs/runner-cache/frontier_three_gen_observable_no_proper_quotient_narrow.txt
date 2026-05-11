@@ -1,17 +1,17 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py
-runner_sha256: b8170df13ae89c591c00ae1ec033dc5aeaaa581518b0f591a185ca6fd4a42e79
+runner_sha256: b04450992f30070aabeccfcf06ff1f03e21c8db2b87fdd064d459122dfa76625
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.25
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.30
+status: ok
 ----- stdout -----
 
 ----------------------------------------------------------------------------------------
 Part 1: note structure and scope discipline
 ----------------------------------------------------------------------------------------
   [PASS (A)] contains: 'Three-Generation Observable: No-Proper-Quotient Narrow Theorem'  ()
-  [FAIL (A)] contains: 'Type:** positive_theorem'  ()
+  [PASS (A)] contains: 'Type:** bounded_theorem'  ()
   [PASS (A)] contains: 'M_3(ℂ)'  ()
   [PASS (A)] contains: 'C₃[111]'  ()
   [PASS (A)] contains: 'no proper quotient'  ()
@@ -22,7 +22,7 @@ Part 1: note structure and scope discipline
   [PASS (A)] contains: 'physical-species interpretation'  ()
   [PASS (A)] contains: 'out of scope'  ()
   [PASS (A)] contains: 'class (A)'  ()
-  [FAIL (A)] contains: 'target_claim_type: positive_theorem'  ()
+  [PASS (A)] contains: 'target_claim_type: bounded_theorem'  ()
   [PASS (A)] narrow scope avoids forbidden claim: 'load-bears on generation_axiom_boundary'  ()
   [PASS (A)] narrow scope avoids forbidden claim: 'physical-species claim is hereby retained'  ()
   [PASS (A)] narrow scope avoids forbidden claim: 'substrate physicality is established'  ()
@@ -52,16 +52,16 @@ Part 4: no proper subspace is D_3- and C_3-invariant
 Part 5: declared authorities are graph-visible
 ----------------------------------------------------------------------------------------
   [PASS (A)] site_phase_cube_shift_intertwiner_note exists in audit ledger  (SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md; effective_status='retained')
-  [PASS (A)] s3_taste_cube_decomposition_note exists in audit ledger  (S3_TASTE_CUBE_DECOMPOSITION_NOTE.md; effective_status='unaudited')
+  [PASS (A)] s3_taste_cube_decomposition_note exists in audit ledger  (S3_TASTE_CUBE_DECOMPOSITION_NOTE.md; effective_status='audit_in_progress')
   [PASS (A)] s3_mass_matrix_no_go_note exists in audit ledger  (S3_MASS_MATRIX_NO_GO_NOTE.md; effective_status='retained_no_go')
   [PASS (A)] z2_hw1_mass_matrix_parametrization_note exists in audit ledger  (Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md; effective_status='retained')
   [PASS (A)] three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02 seeded by audit pipeline  (run docs/audit/scripts/run_pipeline.sh after editing the note)
-  [PASS (A)] three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02 records all four declared dependencies  (deps=['minimal_axioms_2026-05-03', 's3_mass_matrix_no_go_note', 's3_taste_cube_decomposition_note', 'site_phase_cube_shift_intertwiner_note', 'staggered_dirac_realization_gate_note_2026-05-03', 'z2_hw1_mass_matrix_parametrization_note'])
+  [PASS (A)] three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02 records all four declared dependencies  (deps=['s3_mass_matrix_no_go_note', 's3_taste_cube_decomposition_note', 'site_phase_cube_shift_intertwiner_note', 'z2_hw1_mass_matrix_parametrization_note'])
   [PASS (A)] three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02 remains effective-unaudited before independent audit  (effective_status='unaudited')
   [PASS (A)] generation_axiom_boundary_note NOT cited as declared dependency (correctly excluded)  ()
 
 ========================================================================================
-  TOTAL: PASS=31, FAIL=2
+  TOTAL: PASS=33, FAIL=0
 ========================================================================================
 
 ----- stderr -----

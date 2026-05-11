@@ -1,12 +1,95 @@
 ===== runner cache v1 =====
 runner: scripts/lensing_fine_h_batch.py
-runner_sha256: e2611be70284f36ab62b4462fb13da1d8e95553007101ad53eeb88fb3058de52
-timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.03
-status: nonzero_exit
+runner_sha256: 8e71751f384b17a3084288438aa6618b0bb14bdd26eb3cc2b80b3173d3115bfb
+timeout_sec: 3600
+exit_code: 0
+elapsed_sec: 988.77
+status: ok
 ----- stdout -----
-Usage: python3 lensing_fine_h_batch.py <family> <seed>
+FINE_H_FAMILY_UNIVERSALITY_REPLAY
+H=0.25 T_phys=15.0 K_PER_H=2.5 beta=0.8
+families=['Fam1', 'Fam2', 'Fam3'] seeds=[0, 1, 2, 3, 4] b_values=[3.0, 4.0, 5.0, 6.0] workers=4
+COMPLETED Fam1 seed=3
+COMPLETED Fam1 seed=0
+COMPLETED Fam1 seed=1
+COMPLETED Fam1 seed=2
+COMPLETED Fam2 seed=0
+COMPLETED Fam1 seed=4
+COMPLETED Fam2 seed=1
+COMPLETED Fam2 seed=2
+COMPLETED Fam2 seed=3
+COMPLETED Fam2 seed=4
+COMPLETED Fam3 seed=0
+COMPLETED Fam3 seed=1
+COMPLETED Fam3 seed=2
+COMPLETED Fam3 seed=3
+COMPLETED Fam3 seed=4
+
+FAMILY Fam1
+SEED 0 nodes=144061 hw=24 grow_sec=12.6 b=3.0:+5.971799 b=4.0:+3.809059 b=5.0:+2.830042 b=6.0:+2.219637
+SEED 1 nodes=144061 hw=24 grow_sec=12.7 b=3.0:+4.772637 b=4.0:+3.089734 b=5.0:+2.318802 b=6.0:+1.800114
+SEED 2 nodes=144061 hw=24 grow_sec=12.9 b=3.0:+6.361439 b=4.0:+4.141129 b=5.0:+3.150240 b=6.0:+2.466774
+SEED 3 nodes=144061 hw=24 grow_sec=12.7 b=3.0:+6.037047 b=4.0:+3.785345 b=5.0:+2.814438 b=6.0:+2.185982
+SEED 4 nodes=144061 hw=24 grow_sec=12.7 b=3.0:+7.194381 b=4.0:+4.691435 b=5.0:+3.569961 b=6.0:+2.791834
+B_MEANS
+b=3.0 mean=+6.067461 sample_sigma=0.872212
+b=4.0 mean=+3.903340 sample_sigma=0.583610
+b=5.0 mean=+2.936697 sample_sigma=0.462261
+b=6.0 mean=+2.292868 sample_sigma=0.367016
+SEED_MEAN_FIT slope=-1.396467 prefactor=27.740763 r2=0.998242
+SEED_FIT seed=0 slope=-1.424412 prefactor=28.122646 r2=0.998126
+SEED_FIT seed=1 slope=-1.398796 prefactor=21.940528 r2=0.998813
+SEED_FIT seed=2 slope=-1.357618 prefactor=27.887365 r2=0.998205
+SEED_FIT seed=3 slope=-1.458661 prefactor=29.456859 r2=0.997642
+SEED_FIT seed=4 slope=-1.356235 prefactor=31.510083 r2=0.998315
+FAMILY_SLOPE_SUMMARY mean=-1.399144 sample_sigma=0.044007 n=5
+
+FAMILY Fam2
+SEED 0 nodes=144061 hw=24 grow_sec=12.6 b=3.0:+7.079472 b=4.0:+4.534446 b=5.0:+3.365339 b=6.0:+2.623565
+SEED 1 nodes=144061 hw=24 grow_sec=12.7 b=3.0:+5.109577 b=4.0:+3.217656 b=5.0:+2.427939 b=6.0:+1.874575
+SEED 2 nodes=144061 hw=24 grow_sec=12.8 b=3.0:+6.844158 b=4.0:+4.439440 b=5.0:+3.304922 b=6.0:+2.579347
+SEED 3 nodes=144061 hw=24 grow_sec=12.2 b=3.0:+6.719456 b=4.0:+4.210592 b=5.0:+3.088956 b=6.0:+2.416356
+SEED 4 nodes=144061 hw=24 grow_sec=12.3 b=3.0:+8.637269 b=4.0:+5.501669 b=5.0:+4.145931 b=6.0:+3.240468
+B_MEANS
+b=3.0 mean=+6.877986 sample_sigma=1.253916
+b=4.0 mean=+4.380761 sample_sigma=0.816283
+b=5.0 mean=+3.266617 sample_sigma=0.616310
+b=6.0 mean=+2.546862 sample_sigma=0.489139
+SEED_MEAN_FIT slope=-1.427323 prefactor=32.504675 r2=0.998183
+SEED_FIT seed=0 slope=-1.427689 prefactor=33.536091 r2=0.998640
+SEED_FIT seed=1 slope=-1.434534 prefactor=24.282435 r2=0.997342
+SEED_FIT seed=2 slope=-1.403541 prefactor=31.644548 r2=0.999030
+SEED_FIT seed=3 slope=-1.473924 prefactor=33.351188 r2=0.997788
+SEED_FIT seed=4 slope=-1.406228 prefactor=39.807189 r2=0.997572
+FAMILY_SLOPE_SUMMARY mean=-1.429183 sample_sigma=0.028359 n=5
+
+FAMILY Fam3
+SEED 0 nodes=144061 hw=24 grow_sec=12.2 b=3.0:+5.958344 b=4.0:+3.812132 b=5.0:+2.869315 b=6.0:+2.252619
+SEED 1 nodes=144061 hw=24 grow_sec=12.3 b=3.0:+5.236297 b=4.0:+3.367832 b=5.0:+2.549948 b=6.0:+1.989012
+SEED 2 nodes=144061 hw=24 grow_sec=12.7 b=3.0:+6.407247 b=4.0:+4.164716 b=5.0:+3.176625 b=6.0:+2.491020
+SEED 3 nodes=144061 hw=24 grow_sec=12.8 b=3.0:+5.972233 b=4.0:+3.758260 b=5.0:+2.830916 b=6.0:+2.203777
+SEED 4 nodes=144061 hw=24 grow_sec=12.5 b=3.0:+6.625800 b=4.0:+4.312556 b=5.0:+3.281886 b=6.0:+2.569079
+B_MEANS
+b=3.0 mean=+6.039984 sample_sigma=0.532736
+b=4.0 mean=+3.883099 sample_sigma=0.370764
+b=5.0 mean=+2.941738 sample_sigma=0.292361
+b=6.0 mean=+2.301101 sample_sigma=0.232972
+SEED_MEAN_FIT slope=-1.383327 prefactor=27.179363 r2=0.997789
+SEED_FIT seed=0 slope=-1.396802 prefactor=27.186421 r2=0.997680
+SEED_FIT seed=1 slope=-1.387076 prefactor=23.677311 r2=0.997950
+SEED_FIT seed=2 slope=-1.353427 prefactor=27.931369 r2=0.997935
+SEED_FIT seed=3 slope=-1.428654 prefactor=28.156111 r2=0.997050
+SEED_FIT seed=4 slope=-1.357550 prefactor=29.043278 r2=0.998187
+FAMILY_SLOPE_SUMMARY mean=-1.384702 sample_sigma=0.030819 n=5
+
+CROSS_FAMILY_SUMMARY
+grand_mean=-1.404343 population_sigma=0.036434 sample_sigma=0.037713 n=15
+family=Fam1 mean_slope=-1.399144 sample_sigma=0.044007
+family=Fam2 mean_slope=-1.429183 sample_sigma=0.028359
+family=Fam3 mean_slope=-1.384702 sample_sigma=0.030819
+PAIRWISE Fam1_vs_Fam2 delta=0.030039 se=0.023413 t=1.283
+PAIRWISE Fam1_vs_Fam3 delta=0.014442 se=0.024027 t=0.601
+PAIRWISE Fam2_vs_Fam3 delta=0.044481 se=0.018730 t=2.375
 
 ----- stderr -----
 

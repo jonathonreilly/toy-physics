@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_dirac_hw1_three_eigenvalue_positive.py
+runner_sha256: ec04f2e9c48d6a67d7859a38b4f77794df1eed5906a3508c609685c83da285c9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+PASS: C^3 is identity
+PASS: omega is a primitive cube root
+PASS: circulant H is Hermitian
+PASS: circulant H commutes with C
+PASS: Hermitian commutant has one three-real-parameter circulant family
+PASS: commutant diagonal entries are equal ([h33, h33, h33])
+PASS: commutant upper cyclic entries are equal ([I*h23i + h23r, I*h23i + h23r, I*h23i + h23r])
+PASS: commutant lower cyclic entries are conjugate cyclic entries ([-I*h23i + h23r, -I*h23i + h23r, -I*h23i + h23r])
+PASS: Fourier vector v_0 has expected eigenvalue
+PASS: Fourier vector v_1 has expected eigenvalue
+PASS: Fourier vector v_2 has expected eigenvalue
+PASS: closed eigenvalue forms in x,y match Fourier formula
+PASS: sum of eigenvalues is 3a
+PASS: sample noncoincident spectrum has three distinct values ([2.00000000000000, -1.57735026918963, -0.422649730810374])
+PASS: sample coincidence boundary has repeated values ([2.00000000000000, -1.00000000000000, -1.00000000000000])
+PASS: note exists
+PASS: note declares positive_theorem claim type
+PASS: note preserves independent audit authority
+PASS: note uses explicit physical Cl(3) language
+PASS: note uses explicit Z^3 substrate language
+PASS: note rejects species derivation overclaim
+PASS: note has no bare A1/A2/R1/R2 premise labels
+PASS: note has no cached-log authority
+PASS: note has no PDG charged-lepton mass numerals
+PASS=24 FAIL=0
+
+----- stderr -----
+

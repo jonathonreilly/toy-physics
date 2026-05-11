@@ -1,0 +1,29 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bougerol_lacroix_staggered_blocking_submult_tautological_bound.py
+runner_sha256: e7b762fa7ded122e9e56a5fd50cea6e82c0b2ca58071e355de607087887d7aef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+============================================================================
+1D SUBMULTIPLICATIVITY TAUTOLOGICAL-BOUND RUNNER
+============================================================================
+[PASS] alpha_LM matches the canonical same-surface value (alpha_LM=0.0906678360172863086)
+[PASS] alpha_LM is a contraction input
+[PASS] each 1D operator has norm alpha_LM
+[PASS] direct product norm equals alpha_LM^16 (alpha_LM^16=2.085701e-17)
+[PASS] submultiplicativity is saturated in the 1D scalar model
+[PASS] rung ratios are alpha_LM by construction
+[PASS] mu_16 / mu_0 equals the same product norm
+[PASS] the identity does not select alpha_LM (counterexample alpha=0.5 also satisfies the identity)
+[PASS] the identity does not select the step count 16 (N=8 also satisfies the same formula)
+[PASS] singleton-product Lyapunov exponent is log(alpha_LM)
+[PASS] note keeps the review boundary free of promotion language
+============================================================================
+TOTAL: PASS=11 FAIL=0
+============================================================================
+VERDICT: bounded support only; no hierarchy closure
+
+----- stderr -----
+

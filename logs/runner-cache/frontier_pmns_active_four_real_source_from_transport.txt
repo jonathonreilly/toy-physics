@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_active_four_real_source_from_transport.py
+runner_sha256: da4f121c83aab178147364709a38fa04a518fab63579f672518299f0d2a0cac9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.12
+status: ok
+----- stdout -----
+========================================================================================
+PMNS ACTIVE FOUR-REAL SOURCE FROM TRANSPORT
+========================================================================================
+
+Question:
+  Once the active transport/response profile is derived at lower level,
+  does the remaining 4-real active orbit-breaking source still need a
+  separate theorem object?
+
+========================================================================================
+PART 1: NON-AVERAGED TRANSPORT CLOSES THE ACTIVE 4-REAL SOURCE
+========================================================================================
+  [PASS] The active block is first recovered exactly from lower-level active transport/response data  (error=7.07e-16)
+  [PASS] The already native means xbar and sigma are read from the non-averaged transport profile  (xbar=0.973333, sigma=(0.3754449514961873+0.10604605642960852j))
+  [PASS] The remaining active 4-real source is read exactly from the non-averaged transport profile  (source=[ 0.176667 -0.153333  0.034555 -0.095445])
+  [PASS] The active block rebuilds exactly from xbar, sigma, and the 4-real source  (error=8.04e-16)
+
+========================================================================================
+PART 2: NON-AVERAGED TRANSPORT SEPARATES DISTINCT 4-REAL SOURCES
+========================================================================================
+  [PASS] The two active blocks share the same derived native means  ((xbar,sigma)=(0.973333,(0.37544495149618734+0.10604605642960852j)))
+  [PASS] Their 4-real active sources are distinct  (|Δsource|=0.076485)
+  [INFO] Non-averaged transport closes what orbit-averaged transport left open
+
+========================================================================================
+PART 3: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The lower-level active derivation function takes no PMNS-side target values as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact lower-level active completion:
+    - non-averaged active transport/response data recover the active block
+    - xbar and sigma are the derived native means
+    - the residual active 4-real source is read exactly from that profile
+
+  So the 4-real source is no longer an extra unresolved object on the
+  lower-level active transport chain. The remaining sole-axiom gap is
+  the derivation of that transport profile from Cl(3) on Z^3 alone.
+
+PASS=7 FAIL=0
+
+----- stderr -----
+

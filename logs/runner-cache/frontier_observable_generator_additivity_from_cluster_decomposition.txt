@@ -1,0 +1,25 @@
+===== runner cache v1 =====
+runner: scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py
+runner_sha256: ca66adcb43810eb3642412d56fc5d9eb345c2b3cf24f1723469d27ee97c50c52
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.40
+status: ok
+----- stdout -----
+============================================================================
+OBSERVABLE GENERATOR ADDITIVITY FINITE-BLOCK RUNNER
+============================================================================
+[PASS] block determinant factorizes
+[PASS] normalized determinant factorization gives log-generator additivity
+[PASS] mixed cumulant across a no-cut block split vanishes
+[PASS] same-site second source derivative is nonzero in the test block
+[PASS] counterfactual cut bond breaks determinant factorization
+[PASS] counterfactual cut bond creates a mixed derivative
+[PASS] companion note keeps bounded status and avoids A-label theorem names
+============================================================================
+TOTAL: PASS=7 FAIL=0
+============================================================================
+VERDICT: bounded finite-block additivity only
+
+----- stderr -----
+

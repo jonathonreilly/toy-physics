@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_higgs_mass_s4_born_extension_2026_05_10_higgsS4.py
+runner_sha256: 907061e654586350b80a9ec1e90894cfe227762c933ef03983f8b6dd07715e2e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.25
+status: ok
+----- stdout -----
 ==============================================================================
 Lane 2 S4 Born-Trace Mass-Readout Extension Probe (higgsS4) -- verification
 ==============================================================================
@@ -37,7 +45,7 @@ Section 3: M1.3 state-selection gap (symmetric-point vs post-EWSB vacuum)
 ==============================================================================
 Section 4: M1.4 layer separation (Born rule is measurement, S4 is dynamics)
 ==============================================================================
-[PASS] S4.1 BORN_RULE_ANALYSIS_2026-04-11.md exists (cited layer separation) -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/BORN_RULE_ANALYSIS_2026-04-11.md
+[PASS] S4.1 BORN_RULE_ANALYSIS_2026-04-11.md exists (cited layer separation) -- path = /Users/jonreilly/.codex/worktrees/2ba4/CL3Z3 new work/docs/BORN_RULE_ANALYSIS_2026-04-11.md
 [PASS] S4.2 cited Born rule analysis contains 'measurement postulate' framing -- Born rule = measurement layer per cited content
 [PASS] S4.3 cited Born rule analysis contains 'dynamics' layer framing -- Dynamics layer is distinct from measurement layer per cited content
 [PASS] S4.4 cited Born rule analysis contains layer-separation framing -- different levels of the theoretical stack
@@ -49,14 +57,14 @@ Section 5: M1.5 tree-level shortcut framing (+12% gap as approximation error)
 [PASS] S5.1 absolute gap m_H_tree - PDG_anchor (falsifiability anchor) -- abs_gap = 15.05 GeV (~+15.05 GeV)
 [PASS] S5.2 relative gap |m_H_tree - PDG_anchor| / PDG_anchor (falsifiability anchor) -- rel_gap = 12.02% (~+12%)
 [PASS] S5.3 +12% gap interpreted as state-and-operator approximation error -- (Omega_lat(0), O_{V''}) ~ (Omega_v, O_{m_H^2}) approximation; gap = error
-[PASS] S5.4 parent HIGGS_MASS_FROM_AXIOM_NOTE.md exists -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
+[PASS] S5.4 parent HIGGS_MASS_FROM_AXIOM_NOTE.md exists -- path = /Users/jonreilly/.codex/worktrees/2ba4/CL3Z3 new work/docs/HIGGS_MASS_FROM_AXIOM_NOTE.md
 [PASS] S5.5 parent note explicitly states tree-level / mean-field scope -- mean-field shortcut is honest about its scope
 [PASS] S5.6 parent note explicitly states +12% gap to PDG-anchor -- +12% gap is the explicit approximation-error magnitude
 
 ==============================================================================
 Section 6: M1.6 sharpened S4 decomposition (S4a supported, S4b ∧ S7 open)
 ==============================================================================
-[PASS] S6.1 G2 unified Born map note exists (template source) -- path = /private/tmp/cl3-review-loop-ZrI8A6/docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
+[PASS] S6.1 G2 unified Born map note exists (template source) -- path = /Users/jonreilly/.codex/worktrees/2ba4/CL3Z3 new work/docs/G_NEWTON_BORN_AS_SOURCE_POSITIVE_THEOREM_NOTE_2026-05-10_gnewtonG2.md
 [PASS] S6.2 LATTICE_PHYSICAL_MATCHING parent exists (on disk or in git history) -- on-disk = True, in-git-history = True
 [PASS] S6.3 S4a (operational form) follows from G2's trace template (bounded support) -- m_H^2 = Tr(rho_phys * O_{m_H^2}) shares G2 template, different observable
 [PASS] S6.4 S4b (state-and-operator selection) NOT closed by Born trace alone -- (rho_phys, O_{m_H^2}) selection requires content beyond Born-trace template
@@ -75,3 +83,6 @@ Section 7: Honest scope and synthesis
 ==============================================================================
 === TOTAL: PASS=42, FAIL=0 ===
 ==============================================================================
+
+----- stderr -----
+

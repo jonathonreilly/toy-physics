@@ -1,0 +1,36 @@
+===== runner cache v1 =====
+runner: scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py
+runner_sha256: cb0094804621a83d7319565b1b875f8affdbf05fdbe6ababfd47868cd7a7e61f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+========================================================================================
+NEUTRINO MAJORANA LOWER-LEVEL PAIRING NO-GO
+========================================================================================
+
+Question:
+  Does the lower-level charge-preserving transport/Green/source-response
+  layer induce a genuine antisymmetric pairing kernel on the unique ΔL=2
+  Majorana channel?
+  [PASS] One-generation lower-level Nambu response has zero anomalous block for a generic charge-preserving normal kernel  (|pair|=0.00e+00)
+  [PASS] So the one-generation induced Majorana amplitude is zero
+  [PASS] Three-generation lower-level Nambu response has zero anomalous block for a generic charge-preserving normal kernel  (|pair|=0.00e+00)
+  [PASS] So the modeled lower-level three-generation Majorana matrix remains zero
+  [PASS] The anomalous block vanishes identically for generic charge-preserving normal kernels of any size  (|pair|=0.00e+00)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact lower-level Majorana no-go:
+    - generic charge-preserving lower-level dynamics induce no anomalous Nambu block
+    - therefore the induced Majorana pairing kernel is identically zero
+    - this is bounded support for the charge-preserving response-kernel class
+    - deriving that the framework response layer is restricted to this class
+      remains a separate bridge theorem
+
+PASS=5 FAIL=0
+
+----- stderr -----
+

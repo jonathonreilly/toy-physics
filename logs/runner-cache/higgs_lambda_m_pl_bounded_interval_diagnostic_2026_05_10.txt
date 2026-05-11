@@ -1,0 +1,26 @@
+===== runner cache v1 =====
+runner: scripts/higgs_lambda_m_pl_bounded_interval_diagnostic_2026_05_10.py
+runner_sha256: 71dae814d76d3cd297d05119e1b316006c302d8b1767ad7e8fb804217d61b2f8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+Higgs lambda(M_Pl) matching-sign open-gate diagnostic
+
+[PASS] SU(2) one-loop size is O(10^-4)  (g2^4/(16pi^2) = 4.184e-04)
+[PASS] all-gauge one-loop envelope is O(10^-3)  (sum g_i^4/(16pi^2) = 1.079e-03)
+[PASS] top-Yukawa one-loop envelope is subleading at M_Pl  (yt^4/(16pi^2) = 1.348e-04)
+[PASS] positive finite part fits the magnitude envelope  (delta_lambda = +4.0e-04)
+[PASS] negative finite part also fits the same magnitude envelope  (delta_lambda = -4.0e-04)
+[PASS] magnitude envelope alone does not imply lambda_eff >= 0  (sign remains an independent matching calculation)
+[PASS] |lambda| <= 1e-3 gives Delta m_H <= 0.312 GeV  (Delta m_H cap = 0.312 GeV)
+[PASS] central 4e-4 shift is about 0.125 GeV  (Delta m_H central = 0.125 GeV)
+[PASS] 1e-3 boundary uncertainty is below inherited Higgs-chain systematic  (0.312 GeV < 3.17 GeV)
+[PASS] positive-side framework band would be disjoint from literature 1-sigma band if sign were derived  (0 - (-0.006) = +0.006)
+[PASS] but current diagnostic classifies that sign discriminator as open  (negative matching counterexample remains allowed by size bound)
+
+TOTAL: PASS=11 FAIL=0
+
+----- stderr -----
+

@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_quark_bae_analog_2026_05_10_quarkBAE.py
+runner_sha256: 09ad0dd97f51aac9d189fd62129ca62b3847dcaed46ae4fe649ccb4c9e3e7e7f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
 
 ======================================================================
   Cl(3)/Z^3 Quark-Sector BAE Analog Probe — Header
@@ -347,3 +355,6 @@ The 'sector extension' route to BAE closure is structurally barred.
 The bounded admission count for the framework's BAE/A1 line is
 UNCHANGED — this probe extends the bounded obstruction to the quark
 analog without introducing a new admission.
+
+----- stderr -----
+

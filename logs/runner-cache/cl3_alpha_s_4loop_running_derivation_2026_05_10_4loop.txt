@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_alpha_s_4loop_running_derivation_2026_05_10_4loop.py
+runner_sha256: d588b7d8bf686d8c37eecb54d56b05755495643a1f537c5e466e91b7f9c91f6c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
 
 ----------------------------------------------------------------------------------------
 Part 1: source note structural shape
@@ -146,3 +154,6 @@ Part 11: COMPLETE_PREDICTION_CHAIN comparator (NOT load-bearing)
 ========================================================================================
   TOTAL: PASS=100, FAIL=0
 ========================================================================================
+
+----- stderr -----
+

@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_z_substrate_generation_z3_2026_05_08_probeZ_substrate_generation_z3.py
+runner_sha256: cb3790a1981a5d5041d8be8daa36f4e66fc15c10fadb468018eb00857d5612a9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 ========================================================================
 Probe Z-Substrate-Generation-Z3 — Z^3 x C_3 substrate three-orbit bound
 Date: 2026-05-10
@@ -88,3 +96,6 @@ VERDICT: Z^3 x C_3 substrate support gives exactly 3 elements at the lightest
   The number 3 is forced by the Z^3 substrate dimension d=3.
   Counterfactual Z^N substrate would produce |hw=1| = N orbits.
 ========================================================================
+
+----- stderr -----
+

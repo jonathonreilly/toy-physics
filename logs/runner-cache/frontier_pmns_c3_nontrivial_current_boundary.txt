@@ -1,0 +1,71 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_c3_nontrivial_current_boundary.py
+runner_sha256: c99b06838c5895163c35dbfcb74ed710d0f1d6324ecf307c0b5b1f0515f27fda
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+========================================================================================
+PMNS C3 NONTRIVIAL-CHARACTER CURRENT BOUNDARY
+========================================================================================
+
+Question:
+  What exact smallest native source object remains missing on the
+  retained sole-axiom PMNS lane?
+
+========================================================================================
+PART 1: THE EXACT MISSING OBJECT IS ONE NATIVE NONTRIVIAL-CHARACTER CURRENT
+========================================================================================
+  [PASS] The exact native character phases are 0, 2pi/3, 4pi/3
+  [PASS] The native nontrivial current is the omega^2 Fourier mode of the exact character holonomy triple
+  [PASS] The discrete Fourier matrix on the three native holonomies is invertible  (det=0.000000+5.196152j)
+  [PASS] So the nontrivial current is a single exact native scalar observable
+
+========================================================================================
+PART 2: ON THE REDUCED FAMILY THE NATIVE CURRENT IS EXACTLY chi
+========================================================================================
+  [PASS] The native nontrivial-character current equals the reduced-mode amplitude chi  (J_chi=0.410000+0.320000j, chi=0.410000+0.320000j)
+  [PASS] Its real and imaginary parts recover u and v exactly  (u=0.410000, v=0.320000)
+  [PASS] So the reduced PMNS value problem is exactly production of one complex current  (w=0.280000, chi=0.410000+0.320000j)
+
+========================================================================================
+PART 3: CURRENT SOLE-AXIOM RETAINED ROUTES ANNIHILATE THE CURRENT EXACTLY
+========================================================================================
+  [PASS] The free sole-axiom route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The sole-axiom hw=1 source/transfer route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] The retained scalar route has J_chi = 0  (J_chi=0.000000+0.000000j)
+  [PASS] So every current sole-axiom retained route annihilates the native nontrivial-character current
+
+========================================================================================
+PART 4: NONZERO J_chi IS EXACTLY THE MISSING POSITIVE SOURCE
+========================================================================================
+  [PASS] Distinct reduced-channel realizations have distinct J_chi currents  (J_a=0.410000+0.320000j, J_b=0.290000-0.170000j)
+  [PASS] Once J_chi is known, the nontrivial reduced PMNS data are fixed exactly  (J_a=0.410000+0.320000j, J_b=0.290000-0.170000j)
+  [PASS] Therefore the exact missing PMNS source is a sole-axiom law producing nonzero J_chi on the retained hw=1 response family
+
+========================================================================================
+PART 5: CIRCULARITY GUARD
+========================================================================================
+  [PASS] The native C3 character phase family takes no PMNS-side target values as inputs  (bad=[])
+  [PASS] The native nontrivial-character current takes no PMNS-side target values as inputs  (bad=[])
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact PMNS reduction/boundary theorem:
+    - the remaining PMNS blocker is one native complex current
+          J_chi(A) = (h_0 + omega h_1 + omega^2 h_2) / 3
+    - on the reduced graph-first cycle family, J_chi is exactly the
+      nontrivial C3-character amplitude chi = u + i v
+    - the free route, sole-axiom hw=1 source/transfer route, and
+      retained scalar route all annihilate J_chi exactly
+
+  So the strongest next positive target is now completely explicit:
+  derive a sole-axiom law producing nonzero J_chi on the retained hw=1
+  response family.
+
+PASS=16 FAIL=0
+
+----- stderr -----
+

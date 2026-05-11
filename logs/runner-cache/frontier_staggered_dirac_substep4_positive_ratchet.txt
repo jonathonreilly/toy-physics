@@ -1,0 +1,33 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_dirac_substep4_positive_ratchet.py
+runner_sha256: 8737edc046fde9312d5afad5cd9854b799df43bcbb3975588ef74dbcb30e0546
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+========================================================================
+SUBSTEP-4 POSITIVE RATCHET OPEN-GATE RUNNER
+========================================================================
+
+(A) M_3(C) center check
+  identity central: True
+  off-diagonal noncentral witness: True
+  commutator-map rank: 8 / 9
+  computed center dimension: 1
+  [PASS] identity commutes with every matrix unit
+  [PASS] off-diagonal matrix unit is not central
+  [PASS] Z(M_3(C)) = C * I_3
+
+(B) Recorded route/probe bookkeeping
+  premise count: 12
+  rows without context: []
+  [PASS] no blank coverage rows
+
+========================================================================
+TOTAL: PASS=4 FAIL=0
+========================================================================
+VERDICT: supports open_gate boundary only; no theorem promotion
+
+----- stderr -----
+
