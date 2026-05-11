@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1287 |
+| unaudited | 1286 |
 | audit_in_progress | 14 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 12 |
-| ~~audited_conditional~~ | 149 |
+| ~~audited_conditional~~ | 150 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 21 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 149 |
+| `audited_conditional` | 150 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 12 |
-| `unaudited` | 1400 |
+| `unaudited` | 1399 |
 
 | claim_type | count |
 |---|---:|
@@ -690,6 +690,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -7231,6 +7232,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** rho_E = 0 and rho_E = 21/4 produce the same exact shell coupling but different exact center couplings on the same slice backbone, so the unresolved readout map blocks a unique Theta_R -> Lambda_R time-coupling theorem.  _(class `A`)_
 - **chain closes:** True — The bounded claim closes: the source note does not claim a unique time-coupling law, only a conditional family plus an obstruction. The one-hop readout note supplies the reduced P(rho_E) family, and the runner verifies that two admissible choices agree on shell coupling but differ on center coupling while the slice factor is exact and nonzero.
 - **rationale:** The load-bearing step is an algebraic obstruction over the supplied readout family and computed slice backbone, not a tuned comparator or a renaming of the target quantity. The runner does not establish the missing unique readout theorem; instead it checks the bounded statement the note actually makes: conditional exactness once P_R is supplied and non-uniqueness when the readout entry remains unresolved. Because the audited scope is explicitly bounded away from a unique Theta_R -> Lambda_R theorem, the hostile review objection becomes the note's stated obstruction rather than a closure failure.
+- **auditor confidence:** high
+
+### `quark_route2_source_domain_bridge_no_go_note_2026-04-28`
+
+- **Note:** [`QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md`](../../docs/QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Configured current-bank Route-2/SU(3) bridge no-go only: using the runner's hard-coded CURRENT_TYPED_EDGES and admitted T-side candidates, no typed path exists from R_conn=8/9 to gamma_T(center)/gamma_E(center)=-R_conn; adding exactly that bridge would force rho_E=21/4. This excludes a retained derivation of the typed-edge inventory, a retained Route-2 up-type scalar law, and any m_u or m_c claim.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-quark-route2-source-domain-no-go`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner's hard-coded CURRENT_TYPED_EDGES contain no path from su3_R_conn_8_9 to route2_rho_E_21_4, while adding the explicit missing bridge creates the algebraic path and forces rho_E=21/4.  _(class `B`)_
+- **chain closes:** False — The live runner verifies the configured typed-bank no-path result, but the completeness and authority of CURRENT_TYPED_EDGES are not derived from retained one-hop Route-2/R_conn authorities in the restricted packet. A clean no-go for the current support bank requires that inventory to be retained or generated from retained inputs, not hard-coded.
+- **rationale:** Issue: the no-go is reproducible over the configured typed-edge bank, but the runner hard-codes CURRENT_TYPED_EDGES and reads named Route-2/R_conn authority surfaces without a retained one-hop inventory derivation. Why this blocks: absence of a path in an unratified hard-coded graph is not a theorem that the actual current support bank lacks the bridge. Repair target: add a retained inventory-derivation authority that produces CURRENT_TYPED_EDGES from the Route-2/readout/R_conn inputs, or bundle retained one-hop authorities sufficient for the restricted packet to verify graph completeness. Claim boundary until fixed: the current configured-bank diagnostic blocks overreading R_conn as the Route-2 center ratio, but the retained source-domain bridge no-go remains conditional.
 - **auditor confidence:** high
 
 ### `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28`
