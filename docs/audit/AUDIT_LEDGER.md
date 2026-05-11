@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 132 |
-| **retained_bounded** | 277 |
+| **retained_bounded** | 278 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1202 |
+| unaudited | 1201 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 468 |
+| `audited_clean` | 469 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1315 |
+| `unaudited` | 1314 |
 
 | claim_type | count |
 |---|---:|
@@ -367,6 +367,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | D | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
@@ -6496,6 +6497,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The transport-gap comparison is a relation between two branch-level constants, with no dependence on the selected-line coordinate m, so it cannot isolate the physical point m_*.  _(class `A`)_
 - **chain closes:** True — Given the restricted packet's stated branch-level constants, the conclusion follows algebraically: an m-independent equality or near-equality cannot select a unique m value. The runner verifies this by computing the numerical gap and by sampling m values that do not enter either side.
 - **rationale:** The audited claim is a no-go, not a derivation of the transport constant or Koide geometry constant. Its load-bearing step is the algebraic/logical observation that a constant-vs-constant comparison carries no selected-line m dependence and therefore cannot be an m-selection law. The runner source does hard-code the transport ratio, so it does not establish the upstream origin of that constant, but the no-go conclusion only requires the constant character of the comparison within the stated scope.
+- **auditor confidence:** high
+
+### `koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios`
+
+- **Note:** [`KOIDE_Y_L1_RATIOS_WILSON_INTEGER_DIFF_NOTE_2026-05-08_probeY_L1_ratios.md`](../../docs/KOIDE_Y_L1_RATIOS_WILSON_INTEGER_DIFF_NOTE_2026-05-08_probeY_L1_ratios.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite comparator result: with alpha_LM=0.090668 and runner-fixed tau, t, b, c masses, the three heavy-quark ratios m_q/m_tau fail the 5% gate for integer Wilson-chain exponents and for simple rational exponents p/q with q<=6. No quark-mass derivation or exclusion of other mechanisms is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Using the fixed comparator masses in the runner, none of t, b, or c passes the 5% mass-error gate for integer Delta n or simple rational p/q with q <= 6.  _(class `D`)_
+- **chain closes:** True — The note states a finite external-comparator protocol and the runner exhausts exactly the listed integer and q<=6 rational candidates against the stated masses and gate. The near b/c half-power relation is explicitly kept as a non-derived observation outside the audited negative claim.
+- **rationale:** The audited claim is narrowly bounded to a finite comparator protocol rather than a framework mass theorem. The runner recomputes Delta n and the best integer and q<=6 rational fits for t, b, and c using the stated comparator masses, and every best fit exceeds the 5% gate. Residual risk is limited to the diagnostic value of the chosen alpha_LM context and mass inputs; those are presented as comparator settings, not promoted to derived physics.
 - **auditor confidence:** high
 
 ### `koide_z3_joint_projector_identity_note_2026-04-19`
