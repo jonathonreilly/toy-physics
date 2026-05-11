@@ -11796,6 +11796,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py"
     },
+    "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -13463,6 +13475,18 @@
       "decoration_candidate": true,
       "dominant_class": "A",
       "runner": "scripts/frontier_omega_lambda_matter_bridge.py"
+    },
+    "one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py"
     },
     "one_generation_matter_closure_note": {
       "assert_count": 0,
@@ -15659,6 +15683,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_rh_sector_anomaly_cancellation_identities.py"
+    },
+    "s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_s1_rep_dimension_readoff_exact_2026_05_10.py"
     },
     "s3_boundary_link_theorem_note": {
       "assert_count": 1,
@@ -18695,6 +18731,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/audit_companion_three_generation_hw1_distinct_characters_exact.py"
+    },
+    "three_generation_local_algebra_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_three_generation_local_algebra_exact_2026_05_10.py"
     },
     "three_generation_observable_count_corollary_note_2026-05-03": {
       "assert_count": 0,
@@ -21749,10 +21797,40 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/audit_companion_lieb_robinson_equal_time_tensor_locality_exact_2026_05_10.py": {
       "assert_count": 1,
       "claims": [
         "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10"
       ],
       "counts": {
         "A": 0,
@@ -21777,6 +21855,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/audit_companion_s1_rep_dimension_readoff_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py": {
@@ -21852,6 +21945,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/audit_companion_three_generation_local_algebra_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "three_generation_local_algebra_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/audit_companion_wolfenstein_lambda_a_exact_2026_05_10.py": {
@@ -45052,9 +45160,9 @@
       "B": 166,
       "C": 656,
       "D": 250,
-      "none": 416
+      "none": 420
     },
-    "runners_classified": 1608,
+    "runners_classified": 1612,
     "runners_with_C": 823,
     "runners_with_D": 447
   }

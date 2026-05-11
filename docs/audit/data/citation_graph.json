@@ -15973,6 +15973,10 @@
       "to": "cosmology_scale_identification_and_reduction_note"
     },
     {
+      "from": "one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10",
+      "to": "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "one_generation_matter_closure_note",
       "to": "left_handed_charge_matching_note"
     },
@@ -50666,6 +50670,17 @@
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
       "title": "LH-Doublet Traceless Abelian Eigenvalue Ratio (Narrow Theorem)"
     },
+    "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10": {
+      "claim_id": "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "6091a79c683d4b6f6efc96d7eb760e287b2ab892fb1c8e6bdf16a36b43814fbc",
+      "path": "docs/LH_TRACELESS_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py",
+      "title": "Left-Handed Traceless U(1) Eigenvalue Ratio and Reduced-Denominator Narrow Theorem"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -53173,6 +53188,19 @@
       "path": "docs/OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md",
       "runner_path": "scripts/frontier_omega_lambda_matter_bridge.py",
       "title": "\u03a9_\u039b Matter-Bridge Theorem: `\u03a9_\u039b = (H_inf / H_0)\u00b2` under the Retained Spectral-Gap Identity"
+    },
+    "one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10": {
+      "claim_id": "one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "7a2a142015b91b1641eb58479d4635c0a93a0cd4326c34e1a9934b8928ee247f",
+      "path": "docs/ONE_GENERATION_ANOMALY_SINGLET_COMPLETION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py",
+      "title": "One-Generation Anomaly Singlet Completion Narrow Theorem"
     },
     "one_generation_matter_closure_note": {
       "claim_id": "one_generation_matter_closure_note",
@@ -58649,6 +58677,17 @@
       "runner_path": "scripts/frontier_rh_sector_anomaly_cancellation_identities.py",
       "title": "RH-Sector Anomaly Cancellation Identities: SU(3)\u00b2\u00d7Y, Y\u00b3, and Gravitational\u00b2\u00d7Y"
     },
+    "s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10": {
+      "claim_id": "s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "3b60b52b75933df9bcef80479acfabcea41fef4b24e0e82332384c864bc19748",
+      "path": "docs/S1_REP_DIMENSION_READOFF_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_s1_rep_dimension_readoff_exact_2026_05_10.py",
+      "title": "Representation-Literal Dimension Read-off and A^2 = p/c Narrow Theorem"
+    },
     "s3_anomaly_spacetime_lift_note": {
       "claim_id": "s3_anomaly_spacetime_lift_note",
       "claim_type_author_hint": "open_gate",
@@ -62393,6 +62432,17 @@
       "path": "docs/THREE_GENERATION_HW1_DISTINCT_TRANSLATION_CHARACTERS_NARROW_THEOREM_NOTE_2026-05-10.md",
       "runner_path": "scripts/audit_companion_three_generation_hw1_distinct_characters_exact.py",
       "title": "Three-Generation `hw=1` Distinct Translation Characters Narrow Theorem"
+    },
+    "three_generation_local_algebra_narrow_theorem_note_2026-05-10": {
+      "claim_id": "three_generation_local_algebra_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "a09a98139f24660119c856d8113b6dae23aa5adb4e7d6192371da4a3735a9e38",
+      "path": "docs/THREE_GENERATION_LOCAL_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_three_generation_local_algebra_exact_2026_05_10.py",
+      "title": "Three-Generation Local Binomial Count Narrow Theorem"
     },
     "three_generation_observable_count_corollary_note_2026-05-03": {
       "claim_id": "three_generation_observable_count_corollary_note_2026-05-03",
@@ -66716,6 +66766,7 @@
     "lensing_adjoint_kernel_reduced_model_note",
     "lensing_deflection_note",
     "lensing_k_sweep_note",
+    "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10",
     "linear_response_derivation_note",
     "linear_response_second_order_kubo_note",
     "linear_response_true_kubo_note",
@@ -66842,6 +66893,7 @@
     "restricted_strong_field_closure_note",
     "retardation_discriminator_note",
     "retarded_field_compact_refinement_note",
+    "s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10",
     "s3_boundary_link_theorem_note",
     "s3_cap_uniqueness_note",
     "s3_mass_matrix_no_go_note",
@@ -66970,6 +67022,7 @@
     "tensor_support_center_excess_law_note",
     "thales_right_angle_narrow_theorem_note_2026-05-02",
     "third_grown_family_boundary_note",
+    "three_generation_local_algebra_narrow_theorem_note_2026-05-10",
     "three_generation_observable_count_corollary_note_2026-05-03",
     "triple_stack_collapse_scaling_note",
     "two_field_retarded_family_closure_note_2026-04-10",
@@ -67057,7 +67110,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 254,
+      "bounded_theorem": 258,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67066,7 +67119,7 @@
       "positive_theorem": 109
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 736,
+      "bounded_theorem": 740,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67074,10 +67127,10 @@
       "open_gate": 117,
       "positive_theorem": 609
     },
-    "edge_count": 8353,
-    "leaf_count": 562,
-    "node_count": 2107,
-    "root_count": 791,
-    "runners_with_path": 1720
+    "edge_count": 8354,
+    "leaf_count": 565,
+    "node_count": 2111,
+    "root_count": 794,
+    "runners_with_path": 1724
   }
 }
