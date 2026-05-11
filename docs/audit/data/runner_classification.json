@@ -2880,6 +2880,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py"
     },
+    "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py"
+    },
     "continuum_identification_note": {
       "assert_count": 1,
       "counts": {
@@ -26269,6 +26281,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py": {
+      "assert_count": 0,
+      "claims": [
+        "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 3,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_continuum_identification_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -44859,14 +44886,14 @@
   "stats": {
     "decoration_candidates": 173,
     "dominant_class_distribution": {
-      "A": 119,
+      "A": 120,
       "B": 166,
       "C": 654,
       "D": 250,
       "none": 412
     },
-    "runners_classified": 1601,
-    "runners_with_C": 820,
-    "runners_with_D": 446
+    "runners_classified": 1602,
+    "runners_with_C": 821,
+    "runners_with_D": 447
   }
 }

@@ -4513,6 +4513,18 @@
       "to": "sign_portability_invariant_note"
     },
     {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
       "from": "continuum_convergence_note",
       "to": "lattice_3d_l2_tail_stats_note"
     },
@@ -38790,6 +38802,21 @@
       "runner_path": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py",
       "title": "Connes-Kreimer Birkhoff Factorization \u2014 External Narrow Theorem"
     },
+    "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10": {
+      "claim_id": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "a79057241bc0f43aabd01129489e836e951ac6d87a47cc2bb42dab8e4bacf801",
+      "path": "docs/CONNES_KREIMER_BRIDGE_16FOLD_BLOCKING_NO_GO_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py",
+      "title": "Connes-Kreimer Bridge for the 16-Fold Blocking Composition \u2014 No-Go Theorem"
+    },
     "continuum_bridge_note": {
       "claim_id": "continuum_bridge_note",
       "claim_type_author_hint": "meta",
@@ -67031,7 +67058,7 @@
       "bounded_theorem": 254,
       "decoration": 1,
       "meta": 59,
-      "no_go": 24,
+      "no_go": 25,
       "none": 1628,
       "open_gate": 29,
       "positive_theorem": 105
@@ -67040,15 +67067,15 @@
       "bounded_theorem": 736,
       "decoration": 1,
       "meta": 59,
-      "no_go": 131,
+      "no_go": 132,
       "none": 451,
       "open_gate": 117,
       "positive_theorem": 605
     },
-    "edge_count": 8364,
+    "edge_count": 8367,
     "leaf_count": 554,
-    "node_count": 2100,
+    "node_count": 2101,
     "root_count": 785,
-    "runners_with_path": 1713
+    "runners_with_path": 1714
   }
 }

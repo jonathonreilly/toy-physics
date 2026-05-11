@@ -1,0 +1,102 @@
+===== runner cache v1 =====
+runner: scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py
+runner_sha256: 30b2bb2c7e3ea850297b462a5b2441c2979332bdf12221b961100eea31080675
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.36
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Setup: canonical constants from PLAQUETTE_SELF_CONSISTENCY_NOTE.md
+----------------------------------------------------------------------------------------
+  <P> = 0.5934
+  u_0 = <P>^(1/4) = 0.87768
+  alpha_LM = (1/(4 pi)) / u_0 = 0.09067
+  g_s(M_Pl)_lat = sqrt(4 pi alpha_LM) = 1.0674
+  [PASS (A)] alpha_LM matches canonical 0.09067 within 1e-4  (alpha_LM = 0.09067)
+  [PASS (A)] g_s(M_Pl)_lat matches canonical 1.067 within 1e-3  (g_s(M_Pl) = 1.0674)
+
+----------------------------------------------------------------------------------------
+Obstruction O1: blocking is non-perturbative (P2 beta-breakdown source)
+----------------------------------------------------------------------------------------
+  [PASS (A)] sum_{k=0..15} b_3^{(k)} = 256/3 (exact, closed form match)  (sum = 256/3 = 85.3333)
+  |Delta_t| = -ln(alpha_LM) = 2.4006
+  sum b_3^(k) * |Delta_t| / (8 pi^2) = 2.5944
+  1 / g_s^2(M_Pl) = 0.8777
+  [PASS (A)] Cumulative 1-loop parameter ~ 2.594 (P2 beta-breakdown eq. (7.1))  (cumulative = 2.5944, target = 2.594)
+  [PASS (A)] Cumulative exceeds 1/g_s^2(M_Pl) = 0.878 (perturbation breaks down)  (2.5944 > 0.8777)
+  [PASS (A)] b_3(n_taste=16) = 1/3 (AF marginal at UV rung)  (b_3(16) = 1/3)
+  [PASS (A)] b_3(n_taste=17) = -1/3 < 0 (one step beyond canonical staircase AF is lost)  (b_3(17) = -1/3)
+  [O1 conclusion] Cumulative perturbative parameter 2.594 > 0.878 forces
+                 perturbative expansion breakdown inside the 16-step
+                 staircase. No Feynman-rule character phi: H_R -> A
+                 can be constructed from a non-perturbative blocking.
+
+----------------------------------------------------------------------------------------
+Obstruction O2: no Rota-Baxter projector on canonical lattice surface
+----------------------------------------------------------------------------------------
+  [PASS (A)] Rota-Baxter identity holds for pole-part projector on dim-reg Laurent series at epsilon=0  (canonical Connes-Kreimer example)
+  [PASS (A)] Canonical lattice surface has fixed a = 1 (no continuous regulator)  (no epsilon to expand in)
+  [PASS (A)] Canonical lattice surface has fixed g_bare^2 = 1 (no scan variable)  (g_bare^2 = 1 from canonical convention)
+  [PASS (A)] Canonical lattice surface has fixed beta = 6 (no continuous regulator)  (beta = 2 N_c / g_bare^2 = 6)
+  [O2 conclusion] No continuous regulator on the canonical surface.
+                 The blocked effective action is finite by construction.
+                 Therefore no Rota-Baxter projector exists, and the
+                 Bogoliubov R-operation has no input.
+
+----------------------------------------------------------------------------------------
+Obstruction O3: linear ladder L_n has trivial branching
+----------------------------------------------------------------------------------------
+  [PASS (A)] Delta(L_1) = L_1 (x) 1 + 1 (x) L_1 (no inner cuts)  (got [(1, 0), (0, 1)])
+  [PASS (A)] Delta(L_2) = L_2 (x) 1 + 1 (x) L_2 + L_1 (x) L_1  (got [(2, 0), (0, 2), (1, 1)])
+  [PASS (A)] Delta(L_3) = L_3 (x) 1 + 1 (x) L_3 + L_2 (x) L_1 + L_1 (x) L_2  (got [(3, 0), (0, 3), (2, 1), (1, 2)])
+  [PASS (A)] Delta(L_4) = L_4 (x) 1 + 1 (x) L_4 + L_3 (x) L_1 + L_2 (x) L_2 + L_1 (x) L_3  (got [(4, 0), (0, 4), (3, 1), (2, 2), (1, 3)])
+  [PASS (A)] |Delta(L_n)| = n + 1 for n = 1, 2, 3, 4 (linear branching)  (no branching content beyond linear convolution)
+  [PASS (A)] With T = 0, phi_+(L_n) = c_n is a tautological linear readout  (no genuine tree-branching content exercised)
+  [O3 conclusion] Sequential blocking has only the ladder L_n structure.
+                 The ladder coproduct is linear (n+1 terms), and the
+                 Bogoliubov recursion reduces to scalar convolution.
+                 No genuine tree-branching content is exercised.
+
+----------------------------------------------------------------------------------------
+Obstruction O4: Birkhoff readout phi_+(L_16) = alpha_LM^16 tautological
+----------------------------------------------------------------------------------------
+  [PASS (A)] phi_+(L_n) = phi_FW(L_n) tautologically (T = 0 branch, n = 1..16)  (not a derivation, just a readout)
+  [PASS (A)] phi_+(L_16) = alpha^16 tautological (no Birkhoff derivation)  (readout = input character at depth 16)
+  [PASS (A)] Birkhoff readout phi_+(L_3) is projector-dependent (T = 0 vs T = id)  (T=id -> 0; T=0 -> alpha^3; differ by alpha^3)
+  [O4 conclusion] Hypothetical Birkhoff readout phi_+(L_16) = alpha^16
+                 under T = 0 is a TAUTOLOGY (= input character). With
+                 any nonzero T imported externally, phi_+(L_16)
+                 depends on T and is not framework-native.
+
+----------------------------------------------------------------------------------------
+Auxiliary structural identities (consistency cross-check)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counit epsilon(L_1) = 0, epsilon(L_2) = 0, epsilon(L_3) = 0  (counit vanishes on non-empty forests)
+  [PASS (A)] counit epsilon(1) = 1 (unit of H_R)  (canonical counit normalization)
+  [PASS (A)] Antipode S(L_2) = -L_2 + L_1^2  (S(L_2) = L_1**2 - L_2)
+  [PASS (A)] Antipode S(L_3) = -L_3 + 2 L_1 L_2 - L_1^3  (S(L_3) = -L_1**3 + 2*L_1*L_2 - L_3)
+
+----------------------------------------------------------------------------------------
+Cross-check vs landed external narrow theorem note
+----------------------------------------------------------------------------------------
+  [PASS (A)] Ladder depths L_1 through L_16 covered (matches framework 16-fold)  (n_max = 16, exponent of alpha_LM in hierarchy)
+  [PASS (A)] |Delta(L_16)| = 17 (15 inner cuts + 2 trivial terms)  (len(Delta(L_16)) = 17)
+
+----------------------------------------------------------------------------------------
+Summary and outcome
+----------------------------------------------------------------------------------------
+
+  PASS = 26
+  FAIL = 0
+
+  Outcome: NO-GO on the proposed Connes-Kreimer bridge.
+  Obstructions O1 (non-perturbative blocking, P2 beta source),
+                 O2 (no Rota-Baxter projector),
+                 O3 (linear ladder collapse),
+                 O4 (tautological / projector-dependent readout)
+  each individually block the bridge identification.
+
+----- stderr -----
+
