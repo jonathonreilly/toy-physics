@@ -2904,6 +2904,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_connes_kreimer_bridge_16fold_blocking_no_go.py"
     },
+    "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10": {
+      "assert_count": 3,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_connes_kreimer_partial_sum_rb_b4_external_bounded.py"
+    },
     "continuum_identification_note": {
       "assert_count": 1,
       "counts": {
@@ -26560,6 +26572,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_connes_kreimer_partial_sum_rb_b4_external_bounded.py": {
+      "assert_count": 3,
+      "claims": [
+        "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_continuum_identification_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -45208,15 +45235,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 173,
+    "decoration_candidates": 174,
     "dominant_class_distribution": {
       "A": 121,
-      "B": 166,
+      "B": 167,
       "C": 657,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1614,
+    "runners_classified": 1615,
     "runners_with_C": 825,
     "runners_with_D": 448
   }

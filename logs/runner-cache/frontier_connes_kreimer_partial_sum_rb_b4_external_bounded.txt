@@ -1,0 +1,70 @@
+
+----------------------------------------------------------------------------------------
+T1: P_strict is a Rota-Baxter operator of weight +1 on A_seq (N=8)
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_strict satisfies Rota-Baxter identity of weight +1 on N=8 symbolic sequences  (lhs[2]=a1*b1 + a1*b2 + a2*b1 + a2*b2, rhs[2]=a1*b1 + a1*b2 + a2*b1 + a2*b2)
+  [PASS (A)] Sanity: P_strict does NOT satisfy weight -1 (sign convention check)
+
+----------------------------------------------------------------------------------------
+T2: P_strict is NOT idempotent (so Manchon non-uniqueness applies)
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_strict(P_strict(a)) != P_strict(a) for generic a (verified componentwise)  (P_P_a[3]-P_a[3]=a1 - a3)
+
+----------------------------------------------------------------------------------------
+T3: Construct B_4 complete binary tree, verify node / leaf / edge counts
+----------------------------------------------------------------------------------------
+  [PASS (A)] B_4 has 16 = 2^4 leaves  (counted=16)
+  [PASS (A)] B_4 has 31 nodes (2^5 - 1)  (counted=31)
+  [PASS (A)] B_4 has 30 internal edges  (counted=30)
+
+----------------------------------------------------------------------------------------
+T4: CK coproduct admissible cuts on B_1, B_2, B_3
+----------------------------------------------------------------------------------------
+  [PASS (A)] B_1 admissible cut count = 4  (got 4)
+  [PASS (A)] B_2 admissible cut count = 25  (got 25)
+  [PASS (A)] B_3 admissible cut count = 676  (got 676)
+  [PASS (A)] B_4 admissible cut count = 458329  (got 458329)
+  B_4 has 458329 admissible cuts: genuinely non-trivial tree structure (not linear ladder)
+
+----------------------------------------------------------------------------------------
+T5: Birkhoff recursion on B_1 with constant-leaf character (N=4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] On primitive leaf: phi(leaf) = phi_+(leaf) - phi_-(leaf) componentwise  (phi_+=(alpha, 0, -alpha, -2*alpha), phi_-=(0, -alpha, -2*alpha, -3*alpha))
+  phi(leaf) at N=4: (alpha, alpha, alpha, alpha)
+  phi_-(leaf): (0, -alpha, -2*alpha, -3*alpha)
+  phi_+(leaf): (alpha, 0, -alpha, -2*alpha)
+
+----------------------------------------------------------------------------------------
+T6: phi_+(B_1)_1 readout — tautological because P_strict(a)_1 = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] phi(B_1) = (alpha^2,...,alpha^2)
+  [PASS (A)] phi_+(B_1)_1 = alpha^2 in slot 1 (A4 tautological readout, P_strict(_)_1=0)
+
+----------------------------------------------------------------------------------------
+T7: Other slots: phi_+(B_2)_n for n>=2 are non-trivial mixtures, not alpha^4
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_strict(alpha,alpha,alpha,alpha) = (0, alpha, 2*alpha, 3*alpha)
+  [PASS (A)] Slot 2 of prepared(B_1) with two leaf cuts is alpha^2 - 2*alpha^2 = -alpha^2 (not simply alpha^2)  (prepared_B1_slot2 (partial) = -alpha**2)
+  [PASS (A)] Slot 2 of phi_+(B_1) is NOT simply alpha^2 (depends on Birkhoff cut sum)
+
+----------------------------------------------------------------------------------------
+T8: Manchon non-uniqueness — alternative T=0 Rota-Baxter gives phi_+ = phi (trivial)
+----------------------------------------------------------------------------------------
+  [PASS (A)] Under T=0 Rota-Baxter, phi_+(B_4)_1 = alpha^16 trivially (input echo)
+  [PASS (A)] Manchon non-uniqueness: T_zero and P_strict give different Birkhoff splittings
+
+----------------------------------------------------------------------------------------
+T9: Cross-check vs retained external theorem — Laurent-pole Rota-Baxter
+----------------------------------------------------------------------------------------
+  [PASS (A)] Retained theorem reproduction: phi_+(t1) = alpha with Laurent pole projector
+  [PASS (A)] Different Rota-Baxter (P_strict vs Laurent pole) gives different Birkhoff outputs  (different target algebras imply Birkhoff readout is target-dependent)
+
+----------------------------------------------------------------------------------------
+T10: Note boundary check — bounded_theorem with A1-A4 admissions recorded
+----------------------------------------------------------------------------------------
+  [PASS (A)] Note declares bounded_theorem and records A1-A4 admissions explicitly  (all required phrases found)
+  [PASS (A)] Note does NOT overclaim positive_theorem or framework-native bridge closure  (no forbidden phrases)
+
+========================================================================================
+  PASS=22  FAIL=0
+========================================================================================

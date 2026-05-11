@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 683,
     "high": 27,
-    "leaf": 247,
+    "leaf": 248,
     "medium": 157
   },
   "cycle_break_target_count": 265,
@@ -30691,6 +30691,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CONNES_KREIMER_PARTIAL_SUM_RB_B4_EXTERNAL_BOUNDED_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_connes_kreimer_partial_sum_rb_b4_external_bounded.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37229,6 +37252,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 20,
-  "total_pending": 1114
+  "ready_count": 21,
+  "total_pending": 1115
 }
