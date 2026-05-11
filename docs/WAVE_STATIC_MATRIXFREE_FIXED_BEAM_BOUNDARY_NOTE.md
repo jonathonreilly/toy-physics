@@ -1,7 +1,8 @@
 # Wave Static Matrix-Free Fixed-Beam Boundary Probe
 
 **Date:** 2026-04-08
-**Status:** proposed_retained side probe
+**Status:** bounded computational side probe
+**Claim type:** bounded_theorem
 
 This probe is the next narrow rescue attempt for the exact discrete
 static comparator lane.
@@ -34,7 +35,7 @@ box-dependent in a physically meaningful way.
 
 ## Result
 
-The current retained run uses shared `H = 0.35`, fixed beam
+The current bounded run uses shared `H = 0.35`, fixed beam
 `PW_phys = 6.0`, frozen source `z_phys = 3.0`, and compares
 `field PW_phys = 6.0` vs `9.0`.
 

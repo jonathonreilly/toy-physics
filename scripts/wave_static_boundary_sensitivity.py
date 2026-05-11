@@ -125,7 +125,7 @@ def rel_move(a: float, b: float) -> float:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--h", type=float, default=0.35, help="Shared H. Default: 0.35")
+    parser.add_argument("--h", type=float, default=0.5, help="Shared H. Default: 0.5")
     parser.add_argument("--source-z-phys", type=float, default=3.0, help="Frozen source z position. Default: 3.0")
     parser.add_argument("--pw-phys", type=float, nargs="*", default=[6.0, 9.0], help="Field box widths in physical units. Default: 6.0 9.0")
     args = parser.parse_args()

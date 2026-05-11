@@ -1,11 +1,39 @@
 ===== runner cache v1 =====
 runner: scripts/wave_static_boundary_sensitivity.py
-runner_sha256: 0b9e471cc900d3385354f786dfcc99f96de7c74d370e8090604e5747bb03f1ce
+runner_sha256: 9fa3e9706c59ea278698d477631c74c2260b30262a7b64ec2c85590dacc07126
 timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+exit_code: 0
+elapsed_sec: 13.77
+status: ok
 ----- stdout -----
+============================================================================================================
+WAVE STATIC BOUNDARY-SENSITIVITY PROBE
+============================================================================================================
+Shared H = 0.500
+Frozen source z_phys = 3.000
+PW values = 6.000, 9.000
+
+[run 1] PW_phys=6.000 -> PW=6.000
+  NL=30  src_layer=10  source_z_real=3.000
+  dM      = +0.009857
+  dS      = +0.009507
+  rel_MS  = 3.56%
+  residual = 1.998e-10
+
+[run 2] PW_phys=9.000 -> PW=9.000
+  NL=30  src_layer=10  source_z_real=3.000
+  dM      = +0.007991
+  dS      = +0.011529
+  rel_MS  = 30.69%
+  residual = 1.996e-10
+
+------------------------------------------------------------------------------------------------------------
+BOUNDARY MOVE
+------------------------------------------------------------------------------------------------------------
+  dS move      = 17.54%
+  rel_MS move  = 88.41%
+  dM move      = 18.93%
+  Verdict: boundary sensitivity is still material at this H.
 
 ----- stderr -----
 

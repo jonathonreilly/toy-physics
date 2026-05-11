@@ -66411,11 +66411,11 @@
     },
     "wave_static_boundary_sensitivity_note": {
       "claim_id": "wave_static_boundary_sensitivity_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "844f2e716d8cb5a1a0c43a5edde8c14a4ac1a4b8b3614f58645dcda49f9b23ae",
+      "note_hash": "d2c5b91ee8e460deec13afff60434c3984f56aecfc395de5a35411a6568395c1",
       "path": "docs/WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE.md",
       "runner_path": "scripts/wave_static_boundary_sensitivity.py",
       "title": "Wave Static Boundary Sensitivity"
@@ -66444,11 +66444,11 @@
     },
     "wave_static_matrixfree_fixed_beam_boundary_note": {
       "claim_id": "wave_static_matrixfree_fixed_beam_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b47a3a4861a1acd2d89b5fa5c54b6bb5f81e21f351ea0feb66923fbc55129949",
+      "note_hash": "593d639614db7be71aa1b175c49509008de8b57d04b35dbf695ae9876ac3d9bf",
       "path": "docs/WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/wave_static_matrixfree_fixed_beam_boundary.py",
       "title": "Wave Static Matrix-Free Fixed-Beam Boundary Probe"
@@ -69428,20 +69428,20 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 318,
+      "bounded_theorem": 320,
       "meta": 70,
       "no_go": 44,
-      "none": 1569,
+      "none": 1567,
       "open_gate": 36,
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 776,
+      "bounded_theorem": 778,
       "meta": 70,
       "no_go": 149,
       "none": 447,
       "open_gate": 116,
-      "positive_theorem": 622
+      "positive_theorem": 620
     },
     "edge_count": 8652,
     "leaf_count": 614,

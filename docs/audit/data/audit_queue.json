@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 685,
+    "critical": 687,
     "high": 36,
     "leaf": 324,
     "medium": 172
@@ -7237,6 +7237,48 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_koide_frobenius_isotype_split_uniqueness.py",
+      "transitive_descendants": 395
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_static_boundary_sensitivity_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.129,
+      "note_path": "docs/WAVE_STATIC_BOUNDARY_SENSITIVITY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/wave_static_boundary_sensitivity.py",
+      "transitive_descendants": 395
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_static_matrixfree_fixed_beam_boundary_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.129,
+      "note_path": "docs/WAVE_STATIC_MATRIXFREE_FIXED_BEAM_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/wave_static_matrixfree_fixed_beam_boundary.py",
       "transitive_descendants": 395
     },
     {
@@ -39558,6 +39600,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 85,
-  "total_pending": 1217
+  "ready_count": 87,
+  "total_pending": 1219
 }

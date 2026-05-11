@@ -1,7 +1,8 @@
 # Wave Static Boundary Sensitivity
 
 **Date:** 2026-04-08
-**Status:** proposed_retained boundary probe
+**Status:** bounded computational boundary probe
+**Claim type:** bounded_theorem
 
 This probe asks a narrow question:
 
@@ -9,7 +10,7 @@ This probe asks a narrow question:
 > static comparator `dS` and the retarded/static mismatch `rel_MS`
 > stay within 5% of their smaller-box values?
 
-The retained result here is the off-center frozen-source case at
+The bounded result here is the off-center frozen-source case at
 shared `H = 0.5` and frozen source `z_phys = 3.0`.
 
 ## Results

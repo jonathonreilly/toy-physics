@@ -21,6 +21,11 @@ comparator lane is very unlikely to be rescued by box refinement alone.
 
 from __future__ import annotations
 
+# Heavy compute / lattice-sweep runner: default cache runs have shown
+# enough machine-to-machine variance to need a bounded override above
+# the 120s audit-cache default.
+AUDIT_TIMEOUT_SEC = 180
+
 import argparse
 import math
 from pathlib import Path
@@ -154,7 +159,7 @@ def rel_move(a: float, b: float) -> float:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--h", type=float, default=0.25, help="Shared H. Default: 0.25")
+    parser.add_argument("--h", type=float, default=0.35, help="Shared H. Default: 0.35")
     parser.add_argument("--source-z-phys", type=float, default=3.0, help="Frozen source z position. Default: 3.0")
     parser.add_argument("--beam-pw-phys", type=float, default=6.0, help="Fixed beam PW. Default: 6.0")
     parser.add_argument("--field-pw-phys", type=float, nargs="*", default=[6.0, 9.0], help="Field PW values. Default: 6.0 9.0")
