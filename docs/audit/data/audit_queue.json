@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 164
+    "medium": 163
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27097,27 +27097,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "h0125_wider_w4_note",
-      "claim_scope": null,
-      "claim_type": "open_gate",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.892,
-      "note_path": "docs/H0125_WIDER_W4_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4.py",
-      "transitive_descendants": 20
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_q_minimal_scale_free_selector_note_2026-04-22",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -40387,6 +40366,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 114,
-  "total_pending": 1290
+  "ready_count": 113,
+  "total_pending": 1289
 }

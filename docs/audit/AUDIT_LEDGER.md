@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 82 |
-| **retained_no_go** | 129 |
+| **retained_no_go** | 130 |
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1259 |
+| unaudited | 1258 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,21 +41,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 429 |
+| `audited_clean` | 430 |
 | `audited_conditional` | 170 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1372 |
+| `unaudited` | 1371 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 894 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 224 |
-| `open_gate` | 112 |
+| `no_go` | 225 |
+| `open_gate` | 111 |
 | `positive_theorem` | 742 |
 
 | criticality | count |
@@ -299,6 +299,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `grown_wavefield_companion_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `h0125_scalable_scout_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
 | `h0125_wider_replay_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
+| `h0125_wider_w4_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | D | - |
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -4943,6 +4944,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The dependency scout is retained_no_go and the current SHA-pinned runner cache for the replay exits 0 with the load-bearing width-4 full-window z=3.0 row at alpha=0.499. The claim is scoped only to the observed replay rows, not to all possible wider families.
 - **rationale:** The long runner now has a completed cache at the declared 1800 s budget, so this audit is not relying on timeout/noncompletion. Within the narrow observed-row scope, the width-4 full-window replay remains pinned at alpha=0.499 and the width-3 control at alpha=0.500, while the retained scout dependency also found no scalable rescue. Residual risk is scope only: this does not rule out every future wider configuration, just the cited completed h=0.125 replay rows.
 - **auditor confidence:** medium
+
+### `h0125_wider_w4_note`
+
+- **Note:** [`H0125_WIDER_W4_NOTE.md`](../../docs/H0125_WIDER_W4_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the completed single-width phys_w=4, phys_l=6, h=0.125 replay rows, especially the full-window z=3.0 row, do not rescue the weak-field exponent from the alpha approximately 0.5 class.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The completed W4 runner cache shows the phys_l=6, phys_w=4, h=0.125 full-window z=3.0 row has Born=8.01e-15, clean k=0, TOWARD gravity +0.010955, and alpha=0.499, so the genuinely wider row does not move toward alpha=1.0.  _(class `C`)_
+- **chain closes:** True — The current SHA-pinned W4 runner cache exits 0 under the declared 1800 s budget and reports the load-bearing full-window z=3.0 row at alpha=0.499. The scope is limited to the completed W4 replay rows, not every possible wider lattice family.
+- **rationale:** The row is no longer an open compute gate: the runner cache is complete at the declared long-run budget and reproduces the W4 diagnostics. Within the observed-row scope, the full-window z=3.0 exponent remains alpha=0.499 with clean null and TOWARD sign, so the W4 widening does not rescue the mass-law bridge. Residual risk is limited to future untested windows or lattice families outside this note's row set.
+- **auditor confidence:** high
 
 ### `h0125_wider_w4_probe_note`
 

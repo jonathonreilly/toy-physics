@@ -3,8 +3,8 @@
     "bounded_theorem": 894,
     "decoration": 13,
     "meta": 116,
-    "no_go": 224,
-    "open_gate": 112,
+    "no_go": 225,
+    "open_gate": 111,
     "positive_theorem": 742
   },
   "cycle_examples": [
@@ -68,9 +68,9 @@
     "open_gate": 13,
     "retained": 82,
     "retained_bounded": 257,
-    "retained_no_go": 129,
+    "retained_no_go": 130,
     "retained_pending_chain": 2,
-    "unaudited": 1259
+    "unaudited": 1258
   },
   "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
