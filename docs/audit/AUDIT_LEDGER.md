@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1262 |
+| unaudited | 1261 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 169 |
+| ~~audited_conditional~~ | 170 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 169 |
+| `audited_conditional` | 170 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1375 |
+| `unaudited` | 1374 |
 
 | claim_type | count |
 |---|---:|
@@ -690,6 +690,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6402,6 +6403,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The cheapest already-bounded family that still plausibly has room for a more localized source object to matter is the retained 3D ordered-lattice family at h = 0.25.  _(class `B`)_
 - **chain closes:** False — The note's conclusion relies on several frozen-evidence notes, but the restricted packet lists no cited authorities. The runner also reads those unlisted notes, so the ranking is cross-note input verification whose inputs are not available as retained-grade one-hop dependencies.
 - **rationale:** Issue: the load-bearing recommendation imports the h=0.5 frontier closure, 2D threshold closure, h=0.25 same-family closure, h=0.25 asymptotic bridge, and readiness status without any listed dependency authority. Why this blocks: with no one-hop authorities supplied, a hostile audit cannot verify that the frozen-evidence premises are retained-grade or even stated as summarized. Repair target: add explicit dependency edges for the named frozen-evidence notes and re-audit with those one-hop authorities included. Claim boundary until fixed: this is only an unaudited scout recommendation conditioned on those frozen-evidence notes being valid and retained-grade.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_localization_sweep_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical sweep table for topN, square-window, and Gaussian localization families on the stated mesoscopic surrogate setup, excluding a retained dominance theorem for the least-bad source choice.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The sweep table shows point-like square radius 0 and Gaussian sigma 0.5 rows achieve score near 1 with low capture, while broader topN rows have slightly lower score but much higher capture, so topN is interpreted as the least-bad mesoscopic control.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the table and exits 0, but it has no assertion-level PASS/FAIL checks. The stronger least-bad mesoscopic-source conclusion requires a retained dominance criterion over score, capture, support, and width ratio plus retained authority for the imported 3D source-control setup.
+- **rationale:** Issue: the note turns a numerical sweep table into a least-bad source-control conclusion without a formal dominance criterion, and the runner imports the 3D setup from an unaudited relaunch-probe authority. Why this blocks: a reviewer can accept the printed rows while rejecting the claimed ordering because score, capture, support, and width ratio are traded off by judgment rather than theorem. Repair target: define and audit a dominance functional/acceptance region, assert it in the runner, and wire retained authority for the mesoscopic 3D source-control setup. Claim boundary until fixed: the exact sweep rows and the observation that point-like high-score rows have low capture while broad topN rows have high capture.
+- **open / conditional deps cited:**
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `mesoscopic_surrogate_threshold_2d_note`
