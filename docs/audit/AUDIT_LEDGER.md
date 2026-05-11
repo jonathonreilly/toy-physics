@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1280 |
+| unaudited | 1279 |
 | audit_in_progress | 15 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 152 |
+| ~~audited_conditional~~ | 153 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 22 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 152 |
+| `audited_conditional` | 153 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1393 |
+| `unaudited` | 1392 |
 
 | claim_type | count |
 |---|---:|
@@ -684,6 +684,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -6622,6 +6623,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Substituting (Y_uR,Y_dR,Y_eR,Y_nuR)=(a+1,a-1,b-1,b+1) into the cubic anomaly gives -6(n_color a + b), which vanishes by the imported LH trace relation b=-n_color a.  _(class `A`)_
 - **chain closes:** True — The dependency supplies b=-n_color a and b=-1 as retained-bounded inputs, and the source note explicitly treats SHIFT and NEUTRAL_BRANCH as hypotheses/conventions rather than derived physics. Within that narrowed scope, the anomaly cancellations are exact algebraic identities.
 - **rationale:** The theorem is narrow enough to avoid claiming a derivation of the branch, n_color=3, chirality, or SM identification. The runner hard-codes the SHIFT completion, but that is not a defect for this scoped claim because the note states it is checking a fixed algebraic completion under imposed SHIFT/branch assumptions. No external comparator or first-principles physics bridge is needed for the bounded theorem as written.
+- **auditor confidence:** high
+
+### `one_parameter_reduced_shell_law_note`
+
+- **Note:** [`ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md`](../../docs/ONE_PARAMETER_REDUCED_SHELL_LAW_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional reduced-shell law on the constructed cutoff-R=4 reduced shell surface: given the imported exterior projector, shell-mean operator, source-family constructors, coarse-grained exterior law, sewing-shell projection, and radial DtN shell kernel, the runner verifies that seven point-Green columns share the same normalized radial profile, anisotropic orbit mode, shell-mean response, and c_aniso=0.081435402995901, and that the exact local O_h and finite-rank families obey the same one-parameter law. This excludes a retained authority for the imported helper modules and excludes full shell-stress/junction, nonlinear 4D, or final Einstein/Regge closure.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-one-parameter-shell-law`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** By linearity of the exterior projector, lattice Laplacian/Green solve, and sewing-shell construction, identical normalized point-Green columns fix the reduced shell law entirely by total charge Q.  _(class `B`)_
+- **chain closes:** False — The live runner reports PASS=7 FAIL=0 for the constructed reduced-shell witness. The restricted packet does not provide retained one-hop authority notes for the imported helper modules that define the projector, source families, sewing-shell projection, radial kernel, and coarse-grained exterior law.
+- **rationale:** Issue: the exact reduced one-parameter arithmetic is computed on objects supplied by five imported frontier modules that are not retained dependencies of this row. Why this blocks: the theorem needs authority for the operators and source-family constructors before the audit can treat the linearity result as a retained bounded theorem, even though the numerical witness itself is reproducible. Repair target: add retained-grade cited notes/dependency edges for `frontier_star_shell_projector.py`, `frontier_same_source_metric_ansatz_scan.py`, `frontier_coarse_grained_exterior_law.py`, `frontier_sewing_shell_source.py`, and `frontier_radial_shell_matching_law.py`, or inline their constructions into a self-contained runner. Claim boundary until fixed: the one-parameter reduced-shell law is a conditional bounded witness on the imported reduced shell surface, not retained gravity closure.
+- **open / conditional deps cited:**
+  - `scripts/frontier_star_shell_projector.py`
+  - `scripts/frontier_same_source_metric_ansatz_scan.py`
+  - `scripts/frontier_coarse_grained_exterior_law.py`
+  - `scripts/frontier_sewing_shell_source.py`
+  - `scripts/frontier_radial_shell_matching_law.py`
 - **auditor confidence:** high
 
 ### `ordered_lattice_quasi_persistent_relaunch_2d_note`
