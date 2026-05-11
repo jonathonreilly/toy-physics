@@ -12,11 +12,18 @@ underdetermination no-go cited under "Beta-derivation status".
 **Runner:** [`scripts/architecture_directional_measure_table_runner_2026_05_03.py`](../scripts/architecture_directional_measure_table_runner_2026_05_03.py) (PASS=6/6)
 **Beta-derivation status:** **TUNED SUPPORT — NOT DERIVED.**
 [`docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
-proves `β` cannot be derived from the current A1+A2 primitive core plus
-the named directional-measure constraints alone; `β = 0.8` is
+proves `β` cannot be derived from the repo baseline physical `Cl(3)`
+local algebra plus `Z^3` spatial substrate together with the named
+directional-measure constraints alone; `β = 0.8` is
 **observable-matched** against the eikonal-slope criterion of
-[`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md)
-(closure route 3 of the no-go). Per the 2026-05-03 REPAIR_TARGETS
+`BORN_SCATTERING_COMPARISON_NOTE.md` (see-also; route 3 informational
+example, converted from markdown link to backticked form 2026-05-10 to
+break citation cycle-0005 — the load-bearing authority for "β is not
+derived" is the angular-kernel underdetermination no-go cited above,
+not Born; Born's role here is to document one route-3 observable that
+the empirical β = 0.8 was matched against, which the PATH B
+disposition below now records as tuned-not-derived). Per the
+2026-05-03 REPAIR_TARGETS
 row #1 outcome, this note explicitly carries `β = 0.8` as a **tuned
 parameter**, not a derived constant; first-principles derivation of `β`
 is deferred to future work, conditional on closing one of the no-go's
@@ -90,9 +97,10 @@ recomputes the table from the stated propagator on FIXED DAG fixtures
 **Beta handling (b)**:
 [`docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md`](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
 proves a bounded no-go: the angular kernel `w(θ)` of the directional
-path-measure walk is NOT uniquely determined by the current A1+A2
-primitive core plus the named directional-measure constraints ((1)
-Cl(3) trace structure, (2) action extremization on Z³, (3) causal-cone
+path-measure walk is NOT uniquely determined by the repo baseline
+physical `Cl(3)` local algebra plus `Z^3` spatial substrate together
+with the named directional-measure constraints ((1) Cl(3) trace
+structure, (2) action extremization on Z³, (3) causal-cone
 kinematics, (4) leading-order continuum-limit SO(3) isotropy). Seven
 distinct kernels — `{uniform, cos, cos², exp(-0.4 θ²),
 exp(-0.8 θ²), exp(-1.6 θ²), linear_falloff}` — all pass the four
@@ -113,7 +121,12 @@ or closure routes:
 
 The current β = 0.8 is **route 3**: pinned against the gravitational
 deflection eikonal slope per
-[`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md).
+`BORN_SCATTERING_COMPARISON_NOTE.md` (see-also; converted from markdown
+link to backticked form 2026-05-10 to break citation cycle-0005 — Born
+is the procedural reference where the empirical match was performed,
+not a load-bearing derivation authority on this note; the no-go cited
+above is the load-bearing authority for β being a tuned, not derived,
+input).
 The eikonal predicts slope -1.28 on b ∈ {3..6}; the lattice with
 β = 0.8 gives -1.43. The β-sweep (β ∈ [0.1, 20]) shows slope varies
 monotonically from -0.79 (β = 0.1, wide beam) to -1.93 (β = 20, narrow
@@ -185,8 +198,9 @@ The role of this note is now sharper after the topology pivot:
   REPAIR_TARGETS row #1; see "Repair-pass disposition (2026-05-10)"
   above). Per the
   [no-go theorem on angular kernel underdetermination](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
-  the kernel `w(θ)` is not determined by the current A1+A2 primitive
-  core plus the named directional-measure constraints; closing this
+  the kernel `w(θ)` is not determined by the repo baseline physical
+  `Cl(3)` local algebra plus `Z^3` spatial substrate together with the
+  named directional-measure constraints; closing this
   requires one of three additional premises or closure routes
   (higher-order isotropy, action-Lagrangian principle, or direct
   observable matching). β = 0.8 is observable-matched (route 3)

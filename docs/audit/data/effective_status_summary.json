@@ -9,50 +9,34 @@
   },
   "cycle_examples": [
     [
-      "3d_correction_master_note",
-      "dispersion_relation_note"
+      "g_bare_derivation_note",
+      "g_bare_constraint_vs_convention_theorem_note_2026-05-03",
+      "g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19",
+      "yt_ward_identity_derivation_theorem",
+      "yt_vertex_power_derivation",
+      "alpha_s_derived_note",
+      "plaquette_self_consistency_note",
+      "gauge_vacuum_plaquette_susceptibility_flow_theorem_note"
     ],
     [
-      "lorentz_boost_covariance_3plus1d_theorem_note",
-      "planck_scale_lane_status_note_2026-04-23",
-      "planck_scale_conditional_completion_note_2026-04-24",
-      "planck_boundary_density_extension_theorem_note_2026-04-24",
-      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
-      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
-      "area_law_native_car_semantics_tightening_note_2026-04-25",
-      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
-      "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-      "lorentz_kernel_positive_closure_note"
+      "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "c3_symmetry_preserved_interpretation_note_2026-05-08"
     ],
     [
-      "angular_kernel_underdetermination_no_go_note",
-      "lorentz_boost_covariance_3plus1d_theorem_note",
-      "planck_scale_lane_status_note_2026-04-23",
-      "planck_scale_conditional_completion_note_2026-04-24",
-      "planck_boundary_density_extension_theorem_note_2026-04-24",
-      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
-      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
-      "area_law_native_car_semantics_tightening_note_2026-04-25",
-      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
-      "anomaly_forces_time_theorem",
-      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
-      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
-      "lorentz_kernel_positive_closure_note"
+      "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+      "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+      "c3_symmetry_preserved_interpretation_note_2026-05-08"
     ],
     [
-      "architecture_note_directional_measure",
-      "angular_kernel_underdetermination_no_go_note"
+      "s3_time_bilinear_tensor_primitive_note",
+      "s3_time_bilinear_tensor_action_note"
     ],
     [
-      "born_scattering_comparison_note",
-      "architecture_note_directional_measure"
+      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
     ]
   ],
-  "cycles_detected": 284,
+  "cycles_detected": 279,
   "effective_status_counts": {
     "audited_conditional": 256,
     "audited_failed": 26,

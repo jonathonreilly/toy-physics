@@ -6,7 +6,7 @@
 **Inputs:** [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
 [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
-**Companion no-go:** [ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
+**Companion no-go:** `ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md` (see-also; converted from markdown link to backticked form 2026-05-10 to break citation cycle-0015 — the companion no-go is a Phase-4 routing clarification on the separate directional-measure kernel question; the theorem below operates on the fixed `H_lat` surface and does not load-bearingly import any conclusion of the no-go)
 
 ## Scope
 

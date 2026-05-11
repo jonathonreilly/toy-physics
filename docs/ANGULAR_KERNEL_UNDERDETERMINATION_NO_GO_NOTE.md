@@ -7,8 +7,8 @@ retained routing clarification/support note for the boost-covariance program
 (PASS=64, FAIL=0)
 **Companions:**
 [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md),
-[LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md),
-[ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md](ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md),
+`LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md` (see-also; companion theorem on the boost-covariance lane — converted from markdown link to backticked form 2026-05-10 to break citation cycle-0015; the Phase 4 decoupling result below explicitly demotes this note's dependence on the 3+1D boost-covariance theorem to a routing clarification rather than a load-bearing import),
+`ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md` (see-also; the architecture note where the directional path-measure walk is defined — converted from markdown link to backticked form 2026-05-10 to break citation cycle-0004; the no-go below quantifies kernel underdetermination over an explicit seven-kernel family and is not load-bearing on the architecture note's tuned β = 0.8 selection),
 [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 
 ## Purpose

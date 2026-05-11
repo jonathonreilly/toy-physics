@@ -698,14 +698,6 @@
     },
     {
       "from": "angular_kernel_underdetermination_no_go_note",
-      "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-    },
-    {
-      "from": "angular_kernel_underdetermination_no_go_note",
-      "to": "architecture_note_directional_measure"
-    },
-    {
-      "from": "angular_kernel_underdetermination_no_go_note",
       "to": "emergent_lorentz_invariance_note"
     },
     {
@@ -799,10 +791,6 @@
     {
       "from": "architecture_note_directional_measure",
       "to": "angular_kernel_underdetermination_no_go_note"
-    },
-    {
-      "from": "architecture_note_directional_measure",
-      "to": "born_scattering_comparison_note"
     },
     {
       "from": "area_law_coefficient_gap_note",
@@ -5095,10 +5083,6 @@
     {
       "from": "discrete_einstein_regge_lift_note",
       "to": "universal_gr_invariant_nonlinear_completion_note"
-    },
-    {
-      "from": "dispersion_relation_note",
-      "to": "3d_correction_master_note"
     },
     {
       "from": "distance_law_breakpoint_note",
@@ -14201,10 +14185,6 @@
       "to": "light_cone_framing_note"
     },
     {
-      "from": "lorentz_boost_covariance_3plus1d_theorem_note",
-      "to": "planck_scale_lane_status_note_2026-04-23"
-    },
-    {
       "from": "lorentz_kernel_positive_closure_note",
       "to": "emergent_lorentz_invariance_note"
     },
@@ -14215,10 +14195,6 @@
     {
       "from": "lorentz_kernel_positive_closure_note",
       "to": "lorentz_boost_covariance_3plus1d_theorem_note"
-    },
-    {
-      "from": "lorentz_kernel_positive_closure_note",
-      "to": "angular_kernel_underdetermination_no_go_note"
     },
     {
       "from": "mass_mixing_subspace_disjointness_theorem_note",
@@ -35162,11 +35138,9 @@
       "claim_type_seed_hint": "no_go",
       "deps": [
         "lorentz_boost_covariance_2d_theorem_note",
-        "lorentz_boost_covariance_3plus1d_theorem_note",
-        "architecture_note_directional_measure",
         "emergent_lorentz_invariance_note"
       ],
-      "note_hash": "12745be990afbeaa7b0b551e999fb779d5cc7073fbf571648140af7cb97fe4a2",
+      "note_hash": "7e98a706dcbc184cd1ac620ba41e71388d630dcee5ed51ab5f7556b884894c5e",
       "path": "docs/ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_angular_kernel_underdetermination_nogo.py",
       "title": "Angular Kernel Underdetermination No-Go (with Phase 4 decoupling)"
@@ -35235,10 +35209,9 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "angular_kernel_underdetermination_no_go_note",
-        "born_scattering_comparison_note"
+        "angular_kernel_underdetermination_no_go_note"
       ],
-      "note_hash": "9947a4658c32879a2e57201e5c5f1ded3d437faf60ee6cf39e44f6e6c565ad75",
+      "note_hash": "2d1845e7d86a774b132bbd4eda9fb70bc44aa1c93645458d4cd939ffe4c704ba",
       "path": "docs/ARCHITECTURE_NOTE_DIRECTIONAL_MEASURE.md",
       "runner_path": "scripts/architecture_directional_measure_table_runner_2026_05_03.py",
       "title": "Architecture Note: Directional Path Measure"
@@ -39553,10 +39526,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "3d_correction_master_note"
-      ],
-      "note_hash": "3bc4156f2989306dcb2e6f3b4fddfb7330942fc76a4ec5ca88ad63d32b49c0fa",
+      "deps": [],
+      "note_hash": "73f2e1451839f4629b15b8605551bc4a1b6ef680c0c52c5748e7d14dcada4403",
       "path": "docs/DISPERSION_RELATION_NOTE.md",
       "runner_path": "scripts/lattice_dispersion_relation.py",
       "title": "Dispersion Relation: Geometry-Dependent, Not Decisively Relativistic or Non-Relativistic"
@@ -50837,10 +50808,9 @@
       "deps": [
         "lorentz_boost_covariance_2d_theorem_note",
         "emergent_lorentz_invariance_note",
-        "light_cone_framing_note",
-        "planck_scale_lane_status_note_2026-04-23"
+        "light_cone_framing_note"
       ],
-      "note_hash": "96a3edd6632b2a1a79e502c2f74cc04ae6817f4ffc463f11cfb91f8b8d4ac30c",
+      "note_hash": "3679de6b6ede3d873c1e8464ea049d3b29aa46ba5423b1ca1fcdf00a91343122",
       "path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_boost_3plus1d.py",
       "title": "3+1D SO(3,1) Boost Covariance of the Path-Sum 2-Point Function"
@@ -50853,10 +50823,9 @@
       "deps": [
         "emergent_lorentz_invariance_note",
         "lorentz_boost_covariance_2d_theorem_note",
-        "lorentz_boost_covariance_3plus1d_theorem_note",
-        "angular_kernel_underdetermination_no_go_note"
+        "lorentz_boost_covariance_3plus1d_theorem_note"
       ],
-      "note_hash": "e8757d8e74e35f3e6207564fc321f85e472a064de7b0135f32e823fb16c36da6",
+      "note_hash": "bec03ab7a8ed51b7fc2d190f6136dabb31982389da7f273b5f682f9166d9753c",
       "path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
       "runner_path": "scripts/frontier_lorentz_kernel_positive_closure.py",
       "title": "Lorentz Kernel Positive Closure Note"
@@ -66417,6 +66386,7 @@
     "dirac_weak_coupling_note",
     "directional_b_density_stencil_note",
     "dispersion_high_p_tiebreaker_note",
+    "dispersion_relation_note",
     "distance_law_3d_64_closure_note_2026-04-11",
     "distance_law_definitive_note",
     "distance_law_portability_note",
@@ -67031,10 +67001,10 @@
       "open_gate": 117,
       "positive_theorem": 606
     },
-    "edge_count": 8354,
-    "leaf_count": 557,
+    "edge_count": 8348,
+    "leaf_count": 558,
     "node_count": 2103,
-    "root_count": 788,
+    "root_count": 789,
     "runners_with_path": 1716
   }
 }

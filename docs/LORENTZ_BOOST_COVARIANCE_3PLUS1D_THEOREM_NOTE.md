@@ -14,9 +14,9 @@ at finite `a`
 
 The 2026-05-05 audit verdict (`audited_conditional`, chain_closes=false)
 ratified the narrow free-scalar continuum-limit covariance core but
-flagged that the full retained claim imports dim-6 LV inheritance,
+flagged that claims beyond that core invoke dim-6 LV inheritance,
 CPT/P protection, and Planck-scale suppression from cited authorities
-that are themselves not retained-grade. Specifically:
+that were not yet independently closed. Specifically:
 
 - [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
   is `audited_conditional` (now narrowed to bounded conditional
@@ -26,17 +26,22 @@ that are themselves not retained-grade. Specifically:
   diagnostic now bounded via the PR #816 Crank-Nicolson companion).
 - [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
   is `audited_conditional` (blocked on the same emergent-Lorentz cite).
-- [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
-  is `audited_conditional` (current package pin, not yet a theorem).
+- `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` (see-also; converted
+  from markdown link to backticked form 2026-05-10 to break citation
+  cycle-0014, the 13-node anomaly_forces_time ring, and cycle-0015,
+  the 14-node ring that adds the angular-kernel companion — the Planck
+  pin status note is a status-tracking external lane reference, not a
+  load-bearing input to Steps 1–8 of the proof below; the theorem
+  itself operates on the free-scalar Hamiltonian-lattice continuum
+  limit and does not import Planck-scale claims) is
+  `audited_conditional` (current package pin, not yet a theorem).
 
-Blocked-on: this 3+1D boost-covariance result therefore stays
-audited-conditional until each of the four cited authorities advances
-to retained-grade. The free-scalar Hamiltonian-lattice continuum core
+Audit boundary: the free-scalar Hamiltonian-lattice continuum core
 (Steps 1–6 below, plus Step 8 combined SO(3,1) statement at the
-free-scalar level) is unaffected by this status note; the change is
-purely upstream propagation accounting on the dim-6 LV inheritance
-(Step 7), CPT/P protection citations, and the Planck-suppression
-phenomenological table.
+free-scalar level) is unaffected by this status note. Edge-bearing
+dependencies remain for the proof-side inheritance and protection
+claims; the Planck-scale lane status is a physical-unit conversion
+caveat, not a load-bearing premise of the free-scalar covariance proof.
 
 ## Theorem
 
@@ -340,8 +345,12 @@ Steps 1-7 together prove the Phase 4 theorem:
   exponentially small tail. Only the continuum limit recovers a strict
   cone, via the on-shell maximal velocity `v_max = 1` of the relativistic
   dispersion.
-- **Promotion of Planck-pin to a theorem.** The retained
-  [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+- **Promotion of Planck-pin to a theorem.** The current
+  `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` (see-also; converted
+  from markdown link to backticked form 2026-05-10 to break citation
+  cycle-0014 / cycle-0015 — this is a caveat / future-work reference
+  about the Planck pin status, not a load-bearing premise of the Phase
+  4 theorem)
   posture is that `a^(-1) = M_Pl` is a current package pin, not yet a
   theorem. Phase 4 inherits this caveat for any phenomenological
   conversion to physical units.
