@@ -14473,6 +14473,22 @@
       "to": "alpha_s_derived_note"
     },
     {
+      "from": "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit",
+      "to": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+    },
+    {
+      "from": "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit",
+      "to": "higgs_mass_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit",
+      "to": "vacuum_critical_stability_note"
+    },
+    {
       "from": "kubo_continuum_limit_families_note",
       "to": "kubo_continuum_limit_note"
     },
@@ -51487,6 +51503,22 @@
       "runner_path": "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py",
       "title": "Probe Z-Quark-QCD-Chain \u2014 Heavy-Quark Mass via \u039b_QCD-Anchored \u03b1_s Chain: Bounded-Tier Source Note (NEGATIVE)"
     },
+    "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit": {
+      "claim_id": "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+        "higgs_mass_retention_analysis_note_2026-04-18",
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "vacuum_critical_stability_note"
+      ],
+      "note_hash": "cab7aeb1e955c95e02684c94d4c4d83e19a711b7063e028420fb77e97affe250",
+      "path": "docs/KOIDE_Z_S4B_RGE_IMPORT_TIER_REVIEW_NOTE_2026-05-08_probeZ_S4b_audit.md",
+      "runner_path": "scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py",
+      "title": "Probe Z-S4b-RGE Import-Tier Review"
+    },
     "kubo_continuum_limit_families_note": {
       "claim_id": "kubo_continuum_limit_families_note",
       "claim_type_author_hint": null,
@@ -69468,7 +69500,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 322,
+      "bounded_theorem": 323,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69476,17 +69508,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 781,
+      "bounded_theorem": 782,
       "meta": 70,
       "no_go": 149,
       "none": 446,
       "open_gate": 116,
       "positive_theorem": 618
     },
-    "edge_count": 8660,
-    "leaf_count": 614,
-    "node_count": 2180,
+    "edge_count": 8664,
+    "leaf_count": 615,
+    "node_count": 2181,
     "root_count": 813,
-    "runners_with_path": 1792
+    "runners_with_path": 1793
   }
 }

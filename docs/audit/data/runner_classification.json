@@ -11628,6 +11628,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py"
     },
+    "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py"
+    },
     "kubo_continuum_limit_families_note": {
       "assert_count": 0,
       "counts": {
@@ -24680,6 +24692,21 @@
         "B": 0,
         "C": 0,
         "D": 20
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_z_s4b_rge_import_tier_review_note_2026-05-08_probez_s4b_audit"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 10
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -46995,11 +47022,11 @@
       "A": 150,
       "B": 172,
       "C": 680,
-      "D": 263,
+      "D": 264,
       "none": 415
     },
-    "runners_classified": 1680,
-    "runners_with_C": 859,
-    "runners_with_D": 479
+    "runners_classified": 1681,
+    "runners_with_C": 860,
+    "runners_with_D": 480
   }
 }

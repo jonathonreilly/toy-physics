@@ -1,0 +1,341 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_z_s4b_audit_2026_05_08_probeZ_S4b_audit.py
+runner_sha256: aad698f2110f743bd6a1d679cc76e7f5778e1c27b0e4496084b2e0279cc08109
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.54
+status: ok
+----- stdout -----
+==============================================================================
+Probe Z-S4b-RGE — Import-Tier Review of Lambda Running
+Loop: probe-z-s4b-rge-import-tier-review-20260508-probeZ_S4b_audit
+Date: 2026-05-08 (compute date 2026-05-10)
+==============================================================================
+
+  Reviewed sister-probe proposal:
+    Y-S4b-RGE proposal packet (not landed by this runner)
+    Claim: positive_theorem; m_H(3L) = 125.14 GeV (-0.09% PDG)
+
+  Import-class precedent:
+    docs/KOIDE_X_L1_MSBAR_NATIVE_SCHEME_NOTE_2026-05-08_probeX_L1_msbar.md
+    Claim: bounded_theorem; QCD beta_2, beta_3 scalars NOT framework-derivable
+
+  Review rule:
+    Stress-test the action-level identification of symbols, not just algebra.
+
+==============================================================================
+K1: 1-loop beta_lambda coefficient retention
+==============================================================================
+
+  Machacek-Vaughn 1983 coefficients of beta_lam^(1):
+    24 lam^2                 (pure scalar; comb. factor 4!/1)
+    +12 lam yt^2             (top-loop with lam insertion; N_c=3 retained)
+    -6 yt^4                  (top-loop closure trace; group-theoretic, retained)
+    -3 lam (3 g2^2 + g'^2)   (gauge-boson polarization; retained Casimirs)
+    +(3/8) [2 g2^4 + (g2^2 + g'^2)^2]  (gauge tadpole; b_0^(1) retained per X-L1)
+
+  Origin of each coefficient on retained content:
+    24 = 4! / (1 self-symmetry)               [combinatorial, retained]
+    12 = N_c (=3) * (Wick factor 4)           [color algebra, retained]
+     6 = 2 N_c (=2*3) (top loop trace closure) [color algebra, retained]
+    -3 = SU(2) coupling coefficient            [retained 1-loop b_2 universal]
+    3/8 = standard 1-loop gauge boson tadpole [retained]
+
+  Scheme-universality at 1-loop:
+    All 1-loop beta-coefficients are scheme-independent
+    (MSbar = MOM = lattice = <P>-scheme at 1-loop).
+    -> Probe X-L1-MSbar Section 1 confirms b_0 = 7 universal at 1-loop.
+    -> By same logic, beta_lambda^(1) coefficients are universal.
+
+  Numerical sanity check at (g1,g2,g3,yt,lam) = (0.464,0.648,1.139,0.918,0.13):
+    Runner beta_lam^(1) = -2.837221
+    Manual MV83 form    = -2.837221
+    diff                = 1.33e-15
+  [PASS] k1-1loop-betalambda-retained: 1-loop beta_lambda^(1) MV83 coefficients reproduced (diff=1.33e-15); RETAINED
+
+  Verdict K1: 1-loop beta_lambda coefficients are RETAINED
+  (modulo the SM Higgs potential FORM admission, EWSB-PotForm).
+
+==============================================================================
+K2: 2-loop beta_lambda scalar weights are IMPORTS
+==============================================================================
+
+  2-loop beta_lambda scalar coefficients (FJJ92 + erratum, LWX03):
+    -312 lam^3                     [2-loop pure-scalar sunset]
+    -144 lam^2 yt^2                [2-loop scalar-Yukawa]
+    -3 lam yt^4                    [mixed]
+    +30 yt^6                       [2-loop pure-Yukawa, 3 top loops]
+    +80 lam yt^2 g3^2              [scalar-gauge-Yukawa]
+    +45/2 lam yt^2 g2^2            [mixed]
+    +85/6 lam yt^2 g'^2            [mixed]
+    -32 yt^4 g3^2                  [Yukawa-QCD]
+    +36 lam^2 (3 g2^2 + g'^2)      [scalar-gauge]
+    -73/8 lam g2^4                 [mixed]
+    +39/4 lam g2^2 g'^2            [mixed]
+    +629/24 lam g'^4               [mixed]
+    +305/16 g2^6                   [pure 2-loop gauge]
+    -289/48 g2^4 g'^2              [mixed gauge]
+    -559/48 g2^2 g'^4              [mixed gauge]
+    -379/48 g'^6                   [pure 2-loop gauge]
+    -8/5 g'^2 yt^4                 [FJJ92 erratum]
+
+  Each scalar weight requires a 2-loop dim-reg MSbar integral:
+    I_sunset(p; m1,m2,m3) = int d^Dk1 d^Dk2 / [(k1^2+m1^2)(k2^2+m2^2)((p-k1-k2)^2+m3^2)]
+                         ~ (1/(16 pi^2))^2 * [pole/eps^2 + pole/eps + finite]
+    The finite parts after MSbar subtraction fix the rational coefficients.
+
+  Probe X-L1-MSbar precedent (Section 7):
+    'beta_2 in any scheme requires 3-loop integral primitives.'
+    'On retained Cl(3)/Z^3 content, the framework has NEITHER the
+     dimensional-regularization machinery NOR the lattice-PT machinery'
+     for these scalar coefficients.
+
+  By symmetric reasoning:
+  beta_lambda^(2) scalar coefficients require 2-loop dim-reg integral
+  primitives on Higgs/top/gauge topologies. These are NOT in retained
+  Cl(3)/Z^3 content. Source: FJJ92, LWX03 dim-reg MSbar literature.
+  [ADMITTED] k2-2loop-betalambda-imports: 2-loop beta_lambda scalar weights (FJJ92 + erratum, LWX03 dim-reg MSbar): IMPORTS, not derivable on retained content (Probe X-L1-MSbar import class)
+
+  Verdict K2: 2-loop beta_lambda scalar coefficients are IMPORTS.
+
+==============================================================================
+K3: 3-loop beta_lambda IMPORTS — zeta(3) fingerprint
+==============================================================================
+
+  3-loop beta_lambda coefficients with explicit zeta(3) factors:
+    +(792 + 288 zeta_3) lam^2 yt^4
+    +(-396 - 528 zeta_3) lam yt^6
+    +(-171 + 960 zeta_3) yt^8
+    +(640 - 1152 zeta_3) g3^4 yt^4               [LARGEST 3-loop term]
+    +(-576 + 768 zeta_3) g3^2 yt^6
+    +(-640 + 384 zeta_3) g3^4 lam yt^2
+    +(288 - 384 zeta_3) g3^2 lam yt^4
+    +(7168/3 zeta_3 - 1024) g3^6 yt^2
+    +(-1599/16 + 291/2 zeta_3) g2^6
+    +(1341/40 - 51/2 zeta_3) g2^4 g'^2
+    +(-2403/200 + 57/10 zeta_3) g2^2 g'^4
+    +(-16931/1000 + 237/50 zeta_3) g'^6
+    +(243/8 - 45/2 zeta_3) g2^4 yt^4
+    +(4293/200 - 51/10 zeta_3) g'^4 yt^4
+    +(-171/2 + 72 zeta_3) g2^2 yt^6
+    +(-951/50 + 48/5 zeta_3) g'^2 yt^6
+    +(63 - 36 zeta_3) g2^2 lam yt^4
+    +(177/25 + 72/5 zeta_3) g'^2 lam yt^4
+    +(-57/2 + 18 zeta_3) g2^2 g'^2 lam
+
+  zeta(3) numerical value: 1.2020569032
+
+  Why zeta(3) is a dim-reg fingerprint:
+    - In D = 4 - 2 epsilon, multi-loop massless propagator integrals
+      have Laurent expansion: I_n ~ pole/eps^n + ... + zeta(2) eps + ...
+      For 2-loop: zeta(2) appears at finite order.
+      For 3-loop: zeta(3) appears at finite order (Broadhurst 1986,
+      Gorishnii-Larin 1986).
+    - Lattice perturbation theory: discrete momentum sums on a finite
+      lattice produce O(1) rational coefficients + log(am) terms
+      and tadpole-improvement <P>-factors -- NOT zeta(3).
+    - Conclusion: explicit zeta(3) factors in beta_lambda^(3) are
+      direct evidence of dim-reg MSbar origin.
+
+  Probe X-L1-MSbar precedent (Section 8):
+    '17+ channel scalars at 4-loop NOT framework-retained.'
+    'For <P>-scheme at 4-loop, even literature value unavailable.'
+    Same import class for beta_lambda^(3): MSbar dim-reg scalars,
+    NOT framework-derivable in lattice / <P>-scheme.
+
+  Numerical sanity: g3^4 yt^4 coefficient = (640 - 1152 zeta_3)
+    = (640 - 1152 * 1.2021)
+    = -744.7696
+    Times g3^4 yt^4 at sample point: -8.9020e+02
+    The transcendental zeta_3 contributes a non-zero portion that
+    cannot be reproduced in lattice perturbation theory.
+  [ADMITTED] k3-3loop-betalambda-imports-zeta3: 3-loop beta_lambda contains ~30 coefficients with explicit zeta(3)=1.202057; this is a direct dim-reg MSbar fingerprint, IMPORTED from CZ12/BPV13
+
+  Verdict K3: 3-loop beta_lambda scalar coefficients are IMPORTS,
+  with the zeta(3) fingerprint as unambiguous evidence of dim-reg origin.
+
+==============================================================================
+K4: lambda(M_Pl) = 0 BC is POSTULATED, not derived
+==============================================================================
+
+  Y-S4b-RGE Section 10 honest scope (residual_structural_admissions):
+    - lambda_m_pl_classicality_boundary_condition
+      # admitted boundary condition, not derived from physical Cl(3) + Z^3
+
+  VACUUM_CRITICAL_STABILITY_NOTE.md:
+    'the framework-native composite-Higgs / no-elementary-scalar
+     boundary structure that gives the natural high-scale condition
+     lambda(M_Pl) = 0'
+    -> A LABEL, not a derivation.
+    -> 'Composite-Higgs / no-elementary-scalar' is itself an
+       admitted structural claim conditional on the unresolved
+       SM Higgs potential FORM admission (EWSB-PotForm).
+
+  HIGGS_MASS_RETENTION_ANALYSIS_NOTE Gap 2:
+    The 1-loop quantum correction to the BC is bounded:
+      |delta lambda(M_Pl)|^{1-loop} ~ g^4 / (16 pi^2) ~ 4 x 10^-4
+    With dm_H/dlambda(M_Pl) ~ +311 GeV, this gives ~+/- 0.12 GeV on m_H.
+    Small but non-zero, and admits the BC is NOT exact.
+
+  Hostile review position:
+    A UV boundary condition that the framework cannot DERIVE from
+    physical Cl(3) + Z^3 plus retained content is an ADMISSION (a chosen input that
+    constrains the model but is not output by the framework). It
+    functions like a free parameter that has been set to 0.
+    Setting it to a different value would yield a different m_H.
+  [ADMITTED] k4-classicality-bc-postulate: lambda(M_Pl) = 0 is a POSTULATE in the reviewed Y-S4b-RGE packet; VACUUM_CRITICAL_STABILITY_NOTE labels but does not derive; 1-loop quantum correction admits non-exactness
+
+  Verdict K4: lambda(M_Pl) = 0 BC is POSTULATED, not derived from physical Cl(3) + Z^3.
+
+==============================================================================
+K5: v -> M_Pl uplift IMPORT-CONTAMINATED at 2-loop/3-loop
+==============================================================================
+
+  Y-S4b-RGE K3 procedure (from runner step 1):
+    Step 1: Run gauge+Yukawa from v_EW to M_Pl (loop_order=nloop)
+    Step 2: At M_Pl, fix lambda = 0
+    Step 3: Run full 5-coupling system DOWN with NNLO matching
+
+  At loop_order=2 or 3, step 1 uses:
+    bg3_2 (line 229-234 of frontier_higgs_mass_full_3loop.py)
+      = g3^3 * [199/50 g1^2 + 27/10 g2^2 + 44/5 g3^2 - 17/10 yt^2]
+    bg3_3 (line 307-311)
+      = g3^7 * [-2857/2 + 5033/18 nf - 325/54 nf^2]
+    bg2_3, bg1_3 (line 315-328): similar structure
+    byt_2, byt_3: 2-loop and 3-loop Yukawa beta with zeta(3)
+
+  Probe X-L1-MSbar import classification applies directly to bg3_2, bg3_3:
+    'beta_2 scalar channel weights: NOT derivable in any scheme'
+    'beta_3 scalar channel weights: NOT derivable in any scheme'
+  -> g_3(M_Pl), and via byt running also y_t(M_Pl), are IMPORT-
+     CONTAMINATED quantities at 2-loop and 3-loop boundary.
+  -> The downward beta_lambda integration uses these contaminated
+     couplings as inputs.
+
+  At 1-loop only, the uplift uses:
+    b_3 = 7 (retained: (11 N_c - 2 N_q)/3 from S1 + Casimir)
+    b_2 = -19/6 (retained: 1-loop SU(2) universal)
+    b_1 = 41/10 (retained: 1-loop U(1) universal)
+    beta_yt^(1) = yt * [9/2 yt^2 - 17/20 g1^2 - 9/4 g2^2 - 8 g3^2]
+      All scheme-universal at 1-loop, retained Casimirs.
+  -> g_3(M_Pl), y_t(M_Pl) at 1-loop boundary ARE retained.
+  [ADMITTED] k5-uplift-import-contamination: v->M_Pl uplift at 2-loop/3-loop uses bg3_2, bg3_3, bg2_3, bg1_3, byt_2, byt_3 imports per Probe X-L1-MSbar; CONTAMINATED at 2L+
+
+  Verdict K5: Uplift is RETAINED at 1-loop, IMPORT-CONTAMINATED at 2-loop+.
+
+==============================================================================
+K6: 1-loop-only retained closure m_H(1-loop) = 130.60 GeV (+4.27%)
+==============================================================================
+
+  Y-S4b-RGE K3 table (reproduced):
+   loop    lambda(v)    m_H (GeV)  gap_PDG (%)
+  ----- ------------ ------------ ------------
+      1     0.140609       130.60        +4.27%
+      2     0.128882       125.04        -0.17%
+      3     0.129087       125.14        -0.09%
+
+  1-loop-only result (retained content only):
+    m_H(1L) = 130.6 GeV
+    gap_PDG = +4.27% (compared to PDG 125.25 GeV)
+    Inside ~5% positive threshold? True
+    Margin: 0.73 percentage points
+
+  Adding 2-loop and 3-loop IMPORTS:
+    m_H(2L) = 125.04 GeV (gap -0.17%)
+    m_H(3L) = 125.14 GeV (gap -0.09%)
+  -> Sub-percent precision is ACHIEVED ONLY BY IMPORTING.
+
+  Closure decomposition:
+    Probe X sym-point baseline gap: +12.04%
+    1-loop retained closure:        +12.04% -> +4.27%
+      (closes 7.77 pct points = 64.5% of gap)
+    3-loop with imports:            +12.04% -> -0.09%
+      (closes 11.95 pct points = 99.3% of gap)
+    Imports contribute: 34.7% of total closure
+  [PASS] k6-1loop-only-retained-closure: 1-loop retained m_H=130.6 GeV at +4.27%; inside 5% threshold (margin 0.73pp)
+
+  Verdict K6: 1-loop-only retained closure stands at +4.27%, barely
+  inside the 5% threshold. The strongest from-framework claim.
+
+==============================================================================
+K7: Probe X-L1-MSbar consistency check
+==============================================================================
+
+  Probe X-L1-MSbar bounded-tier import classification (on main):
+    'beta_2 scalar channel weights: NOT derivable in any scheme'
+    'beta_3 scalar channel weights: NOT derivable in any scheme'
+    'On retained Cl(3)/Z^3 content, the framework has NEITHER
+     dim-reg machinery NOR lattice-PT machinery'
+
+  Properties shared between QCD beta_n>=2 and beta_lambda^(n>=2):
+  ┌──────────────────────────────┬──────────────┬──────────────┐
+  │ Property                     │ QCD beta     │ beta_lambda  │
+  ├──────────────────────────────┼──────────────┼──────────────┤
+  │ Source: dim-reg MSbar        │     YES      │     YES      │
+  │ Multi-loop topology          │     YES      │     YES      │
+  │ zeta(3) at 3-loop            │     YES      │     YES      │
+  │ Uses sunset/ladder integrals │     YES      │     YES      │
+  │ Derivable on retained Cl(3)/Z^3 │   NO       │     NO       │
+  │ Computable in <P>-scheme     │     NO       │     NO       │
+  └──────────────────────────────┴──────────────┴──────────────┘
+
+  By symmetric reasoning with Probe X-L1-MSbar:
+    beta_lambda^(2), beta_lambda^(3) scalar coefficients are
+    IMPORTS in the same class as beta_3^(2), beta_3^(3) of QCD.
+  [PASS] k7-probe-xl1-msbar-consistency: beta_lambda^(n>=2) imports in same class as Probe X-L1-MSbar's QCD beta_2, beta_3; symmetric reasoning preserved
+
+  Verdict K7: CONSISTENT with Probe X-L1-MSbar import class.
+
+==============================================================================
+K8: Tier conclusion for bounded review
+==============================================================================
+
+  Brief tier mapping (from probe brief):
+    All 5 ingredients retained         -> POSITIVE THEOREM (Y-S4b-RGE)
+    1-2 ingredients imports            -> BOUNDED (named imports)
+    >=3 ingredients imports            -> ARITHMETIC RATIO
+
+  Review ingredient classification:
+    [ RET] I1 1-loop beta_lambda coefficient           RETAINED
+    [ IMP] I2 2-loop beta_lambda scalar weights        IMPORTED
+    [ IMP] I3 3-loop beta_lambda (zeta(3))             IMPORTED
+    [POST] I4 lambda(M_Pl) = 0 BC                      POSTULATED
+    [ MIX] I5 v->M_Pl uplift                           RETAINED@1L; IMPORT-CONTAMINATED@2L+
+
+  Count: 3 imports/postulates + 1 contaminated = boundary
+    Strict count: >=3 imports forces 'arithmetic ratio' interpretation.
+    Conservative count: retaining I1 (1-loop) + I5@1L gives 'bounded'.
+
+  1-loop-only retained closure stands at:
+    m_H(1L) = 130.6 GeV at +4.27% from PDG 125.25 GeV
+    INSIDE 5% positive threshold by 0.73pp.
+
+  3-loop sub-percent result (Y-S4b-RGE):
+    m_H(3L) = 125.14 GeV at -0.09% from PDG
+    Inside 5% by 4.91pp -- BUT requires I2, I3, I4 imports/postulate.
+  [PASS] k8-tier-conclusion: BOUNDED THEOREM: 3 imports + 1 contaminated; 1-loop retained closure +4.27% inside 5% by 0.73pp
+
+  Tier: BOUNDED
+  BOUNDED THEOREM (review narrowing of Y-S4b-RGE from positive_theorem). Three imports/postulates identified (3: I2 beta_lambda^(2), I3 beta_lambda^(3) with zeta(3) fingerprint, I4 lambda(M_Pl)=0 BC postulate) plus one import-contaminated auxiliary (I5 v->M_Pl uplift at 2L+). The 1-loop-only retained closure stands at m_H(1L) = 130.6 GeV (+4.27% from PDG), inside the brief's ~5% positive threshold but barely. Sister probe Y-S4b-RGE narrows to bounded_theorem with named imports; the strongest from-framework claim is the 1-loop +4.27% result.
+
+==============================================================================
+Summary
+==============================================================================
+  PASS = 4, FAIL = 0, ADMITTED = 4
+  Tier: BOUNDED
+
+  Y-S4b-RGE arithmetic stands:
+    Loop 1: m_H = 130.60 GeV (+4.27% PDG)
+    Loop 2: m_H = 125.04 GeV (-0.17% PDG)
+    Loop 3: m_H = 125.14 GeV (-0.09% PDG)
+
+  Review conclusion:
+    Y-S4b-RGE narrows from positive_theorem to bounded_theorem.
+    Strongest from-framework claim: 1-loop only m_H = 130.6 GeV (+4.27%).
+    Sub-percent (3-loop) precision rests on imports {I2, I3} and postulate {I4}.
+
+  ALL CHECKS PASSED (4/4). 4 import/postulate admissions.
+  Probe Z-S4b-RGE import-tier review: BOUNDED THEOREM.
+
+----- stderr -----
+
