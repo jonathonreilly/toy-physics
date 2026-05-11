@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 78 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 244 |
+| **retained_bounded** | 245 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1106 |
+| unaudited | 1105 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 418 |
+| `audited_clean` | 419 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1204 |
+| `unaudited` | 1203 |
 
 | claim_type | count |
 |---|---:|
@@ -163,6 +163,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cl3_gamma_involution_determinant_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
@@ -2538,6 +2539,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The provided runner source computes the lattice propagation, detector probabilities, centroids, Born I3 ratio, and gamma sweep from the specified lattice/action setup rather than printing hard-coded expected values. The exact Born ratios in the note are stale relative to the runner output, but the load-bearing qualitative claim of machine-clean Born behavior and the crossover interval is preserved.
 - **rationale:** The runner performs an actual bounded numerical computation for the specified exact-lattice setup and produces the gamma=0 reduction, near-machine-zero Born ratios, and TOWARD-to-AWAY crossover. No cited upstream authority is required in the restricted packet, and the note explicitly avoids broader geometry-generic or continuum claims. The only caveat is that the note's Born-test numeric entries do not exactly match the current cached runner stdout, so those specific frozen values should be refreshed even though the audited narrow conclusion still follows.
 - **auditor confidence:** medium
+
+### `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CLIFFORD_VOLUME_CHIRALITY_EVEN_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CLIFFORD_VOLUME_CHIRALITY_EVEN_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Pure finite-rank complexified Clifford-algebra theorem: chirality as an involutive algebra element anticommuting with every generator exists exactly for even total dimension n, implying d_t odd when d_s = 3.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14ba-6968-7ca2-b609-148b1311bb41`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** An element gamma_5 in Cl_C(p,q) satisfying gamma_5^2 = +I and {gamma_5, gamma_mu} = 0 for all mu exists if and only if n = p + q is even.  _(class `A`)_
+- **chain closes:** True — The even case closes by the volume element, whose parity commutation rule gives anticommutation with all generators and whose square is a nonzero scalar removable by complex rescaling. The odd case closes because the monomial parity rule leaves no nonzero simultaneous anticommuting component, so no algebra element can satisfy C2.
+- **rationale:** The scoped claim is a self-contained algebraic identity, not a physical bridge or comparator claim. The proof supplies the general Clifford parity argument, and the runner provides exact-symbolic spot checks for CAR, the volume-element rule, even-n construction, odd-n obstruction, and the d_s = 3 parity consequence. The note explicitly excludes the parent anomaly and d_t = 1 claims, so those open parent items do not block this narrow theorem.
+- **auditor confidence:** high
 
 ### `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09`
 
