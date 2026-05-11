@@ -1,0 +1,124 @@
+===== runner cache v1 =====
+runner: scripts/frontier_v_eff_total_njl_style.py
+runner_sha256: cc170ab9d3e5d043ffaca3845ad3eebf291aae9429ba18e8cf4c2460605ccc6f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.41
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and bounded-theorem scope discipline
+----------------------------------------------------------------------------------------
+  [PASS] contains: 'V_eff Total (NJL-Style)'
+  [PASS] contains: 'claim_type: bounded_theorem'
+  [PASS] contains: 'σ²/(2 G_eff)'
+  [PASS] contains: 'V_total(σ)'
+  [PASS] contains: 'σ² / (2 G_eff)'
+  [PASS] contains: 'G_critical'
+  [PASS] contains: 'u_0² / 4'
+  [PASS] contains: 'Gap equation'
+  [PASS] contains: 'Hubbard'
+  [PASS] contains: 'Kawamoto'
+  [PASS] contains: 'Counterfactual Pass'
+  [PASS] contains: 'Elon first-principles'
+  [PASS] contains: '1/(2 N_c)'
+  [PASS] contains: '0.866'
+  [PASS] contains: 'SYMMETRIC'
+  [PASS] contains: 'Class (A)'
+  [PASS] contains: 'Hatsuda'
+  [PASS] contains: 'Bardeen'
+  [PASS] contains: 'bounded_admissions'
+  [PASS] contains: 'named_open_bridge'
+  [PASS] narrow scope avoids: 'this theorem closes Gap #3'
+  [PASS] narrow scope avoids: 'this theorem closes Gate #3'
+  [PASS] narrow scope avoids: 'EWSB is hereby derived'
+  [PASS] narrow scope avoids: 'm_H_pole is established'
+  [PASS] narrow scope avoids: 'Higgs pole mass = 125'
+  [PASS] narrow scope avoids: 'lambda_curv'
+
+----------------------------------------------------------------------------------------
+Part 2: V_total form and gap equation derivation (symbolic)
+----------------------------------------------------------------------------------------
+  [PASS] dV_total/dσ = σ · [1/G - 16/(σ² + 4u_0²)]  (dV = sigma*(-16*G + sigma**2 + 4*u_0**2)/(G*(sigma**2 + 4*u_0**2)))
+  [PASS] Nontrivial root σ_min = 2·sqrt(4G - u_0²) (sympy solve)  (solns = [2*sqrt(4*G - u_0**2)])
+  [PASS] σ_min² = 16 G - 4 u_0² (theorem (3))  (σ_min² - (16G - 4u_0²) = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: critical coupling G_critical = u_0²/4
+----------------------------------------------------------------------------------------
+  [PASS] G_critical = u_0²/4 makes σ_min² = 0 (boundary)  (σ_min²(G=u_0²/4) = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: second-derivative formulas (theorem (5))
+----------------------------------------------------------------------------------------
+  [PASS] d²V/dσ²|_{σ=0} = 1/G - 4/u_0²  (d²V|0 = -4/u_0**2 + 1/G)
+  [PASS] d²V|0 positive when G < G_critical (sym-phase stable)  (d²V|0(G=1/8, u_0=7/8) = 136/49 > 0)
+  [PASS] d²V|0 negative when G > G_critical (sym-phase unstable)  (d²V|0(G=1/4, u_0=7/8) = -60/49 < 0)
+  [PASS] d²V/dσ²|_{σ_min} = (4G - u_0²)/(2 G²)  (theorem (5))  (d²V|min - expected = 0)
+  [PASS] d²V/dσ²|_{σ_min} = σ_min²/(8 G²)  (alternate form)
+  [PASS] d²V|min > 0 in broken phase (saddle stable)  (d²V|min(G=1/4, u_0=7/8) = 15/8)
+
+----------------------------------------------------------------------------------------
+Part 5: numerical evaluation at framework values (LO)
+----------------------------------------------------------------------------------------
+  [PASS] N_c = 3 (canonical SU(3))
+  [PASS] β = 6 (canonical Wilson coupling)
+  [PASS] g² = 2 N_c / β = 1
+  [PASS] u_0 = 0.8776 (canonical mean-field link, SU(3) β=6)
+  [PASS] G_critical = u_0²/4 ≈ 0.19255 (lattice units)  (G_critical = 0.192545)
+  [PASS] G_eff_LO = 1/(2 N_c) = 1/6 ≈ 0.16667 (Kawamoto-Smit LO)  (G_eff_LO = 0.166667)
+  [PASS] G_eff_LO / G_critical ≈ 0.866 (near-critical, symmetric side)  (ratio = 0.865597)
+  [PASS] Phase: SYMMETRIC at leading-order Kawamoto-Smit G_eff  (G_eff_LO = 0.1667 < G_crit = 0.1925)
+  [PASS] σ_min² < 0 at leading-order (no broken-phase saddle)  (σ_min²(LO) = -0.414060)
+
+----------------------------------------------------------------------------------------
+Part 6: sensitivity sweep over G_eff forms (§6.2)
+----------------------------------------------------------------------------------------
+  [PASS] sensitivity: Kawamoto-Smit LO: 1/(2 N_c) → SYM (expected SYM)  (G_eff = 0.1667, ratio = 0.866)
+  [PASS] sensitivity: strong-coupling alt: 1/(g² N_c) → BROKEN (expected BROKEN)  (G_eff = 0.3333, ratio = 1.731)
+  [PASS] sensitivity: Casimir variant: 1/(g² (N_c²-1)) → SYM (expected SYM)  (G_eff = 0.1250, ratio = 0.649)
+  [PASS] sensitivity: color-trace: (N_c²-1)/(2 N_c² g²) → BROKEN (expected BROKEN)  (G_eff = 0.4444, ratio = 2.308)
+  [PASS] sensitivity: u_0²-dressed: u_0²/(2 N_c) → SYM (expected SYM)  (G_eff = 0.1284, ratio = 0.667)
+  [PASS] sensitivity: u_0⁴-dressed: u_0⁴/(2 N_c) → SYM (expected SYM)  (G_eff = 0.0989, ratio = 0.513)
+  [PASS] Four of six plausible forms put framework in SYMMETRIC phase  (sym = 4, broken = 2)
+
+----------------------------------------------------------------------------------------
+Part 7: structural relation to continuum NJL (sanity check)
+----------------------------------------------------------------------------------------
+  [PASS] Continuum NJL critical: G·Λ² = 2π²/N_c ≈ 6.58 (sanity)  (continuum G_crit·Λ² = 6.5797)
+  [PASS] Lattice analog: G_crit·u_0²·π² ≈ 1.90 (different normalization, same parametric family)  (lattice G_crit·u_0²·π² = 1.9003)
+
+----------------------------------------------------------------------------------------
+Part 8: declared dependencies graph-visible
+----------------------------------------------------------------------------------------
+  [PASS] declared dep visible in audit ledger: higgs_mass_from_axiom_note  (effective_status = 'unaudited')
+  [PASS] declared dep visible in audit ledger: staggered_dirac_realization_gate_note_2026-05-03  (effective_status = 'open_gate')
+  [PASS] declared dep visible in audit ledger: minimal_axioms_2026-05-03  (effective_status = 'meta')
+  [PASS] declared dep visible in audit ledger: c_iso_su3_nnlo_closure_bounded_note_2026-05-10_su3nnlo  (effective_status = 'unaudited')
+  [PASS] v_eff_total_njl_style_bounded_theorem_note_2026-05-10 seeded by audit pipeline  (effective_status = 'unaudited')
+  [PASS] v_eff_total_njl_style_bounded_theorem_note_2026-05-10 effective status is 'unaudited' pre-audit  (effective_status = 'unaudited')
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+========================================================================================
+  TOTAL: PASS=60, FAIL=0
+========================================================================================
+
+  Key results:
+    G_critical = u_0²/4 ≈ 0.1925    (lattice units)
+    G_eff_LO   = 1/(2N_c) ≈ 0.1667    (Kawamoto-Smit leading-order)
+    Ratio      = 0.8656        (G_eff/G_critical)
+    Phase      = SYMMETRIC          (lattice gauge sector below threshold)
+
+  Conclusion: Gap #3 LOCATED in NJL phase diagram (near-critical, symmetric
+  side). Gap #3 NOT closed: framework's lattice gauge sector at leading-
+  order Kawamoto-Smit G_eff is below the chiral-SSB threshold; EWSB would
+  require additional structure (EW gauge bosons + top Yukawa + Wilson
+  taste-breaking).
+
+
+----- stderr -----
+

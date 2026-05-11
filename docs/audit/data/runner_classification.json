@@ -19776,6 +19776,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
     },
+    "v_eff_total_njl_style_bounded_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 14,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_v_eff_total_njl_style.py"
+    },
     "v_even_theorem_retention_stretch_attempt_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -40511,6 +40523,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_v_eff_total_njl_style.py": {
+      "assert_count": 1,
+      "claims": [
+        "v_eff_total_njl_style_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 14,
+        "B": 2,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_v_even_theorem_retention.py": {
       "assert_count": 1,
       "claims": [
@@ -46681,14 +46708,14 @@
   "stats": {
     "decoration_candidates": 195,
     "dominant_class_distribution": {
-      "A": 144,
+      "A": 145,
       "B": 172,
       "C": 674,
       "D": 257,
       "none": 421
     },
-    "runners_classified": 1668,
-    "runners_with_C": 849,
-    "runners_with_D": 466
+    "runners_classified": 1669,
+    "runners_with_C": 850,
+    "runners_with_D": 467
   }
 }
