@@ -302,10 +302,62 @@ does not promote any cross-sector bridge.
   Mersenne prime / perfect number — that would require deeper CL3 algebraic
   derivation.
 
+## Exact-symbolic verification
+
+The classical number-theory identities (`P1`)-(`P4`), (`T1`), (`L1`),
+(`M1`), (`M2`), and the five three-constraint uniqueness routes
+(`U1.c`)-(`U1.g`) are certified at exact-symbolic precision via `sympy`
+in `scripts/audit_companion_ckm_classical_number_theory_integer_characterization_exact.py`.
+The companion runner imports the retained CKM structural integers
+`(N_pair, N_color, N_quark) = (2, 3, 6)` verbatim as exact
+`sympy.Rational` values, treats the uniqueness-route count `c` as a
+positive-integer symbol, and checks each identity by computing
+`sympy.simplify(lhs - rhs)` and asserting the residual equals `0`
+exactly. The cited count authority itself
+(`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`) is
+imported and not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| (`P1`) | `N_quark == 1 + N_pair + N_color` | `sympy.simplify` residual `= 0` |
+| (`P1`) | proper divisors of 6 are `{1, N_pair, N_color}` | exact integer check |
+| (`P2`) | `sigma(N_quark) == 2 N_quark` | `sympy.divisor_sigma(6) == 12` |
+| (`P3`) | `1 + N_pair + N_color == 1 * N_pair * N_color` | `sympy.simplify` residual `= 0` |
+| (`P4`) | `N_pair, N_color` deficient; `N_quark` perfect | `sympy.divisor_sigma` checks |
+| (`T1`) | `N_color == T_{N_pair}`, `N_quark == T_{N_color}` | parametric `n(n+1)/2` substitution |
+| (`L1`) | `N_color == N_pair^2 - 1` | `sympy.simplify` residual `= 0` |
+| (`M1`) | `N_color == 2^{N_pair} - 1` | `sympy.simplify` residual `= 0` |
+| (`M2`) | `N_quark == 2^{N_pair-1}(2^{N_pair} - 1)` | `sympy.simplify` residual `= 0` |
+| (`U1.c`) | `(c-1)c - (1 + (c-1) + c)` factors as `c(c - 3)` | `sympy.factor` reduction |
+| (`U1.d`) | `(c-1)c - c(c+1)/2` proportional to `c(c - 3)` | `sympy.factor` reduction |
+| (`U1.e`) | `1/(c-1) + 1/c + 1/((c-1)c) - 1` cleared denominator equals `-c(c - 3)` | `sympy.simplify` |
+| (`U1.f`) | `c - ((c-1)^2 - 1)` reduces to `-c(c - 3)` | `sympy.factor` |
+| (`U1.g`) | `f(c) = 2^{c-1} - c - 1` has unique positive-integer zero `c = 3` | exact integer monotonicity |
+
+For routes (`U1.c`)-(`U1.f`) the runner additionally calls
+`sympy.solve` on each three-constraint system and verifies the
+positive-integer solution set is exactly `[3]`. For route (`U1.g`)
+the runner verifies `f(1) = -1`, `f(2) = -1`, `f(3) = 0`, and `f`
+strictly increases for `c >= 3` over the audited range, ensuring no
+other positive-integer root exists.
+
+Counterfactual probes confirm the retained ordering is load-bearing:
+
+- substituting `N_pair = 3` under scaffold `(a) + (b)` forces
+  `N_color = 4` and `N_quark = 12`, which fails (`P2`) since
+  `sigma(12) = 28 != 24`;
+- substituting `N_pair = 4` under `(M1)` gives `N_color = 15`, not
+  the retained `3`.
+
+The structural relations are therefore exact-symbolic over the imported
+retained counts and the parametric `c`-symbol. The companion runner
+adds no new physical input and does not modify any retained authority.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_classical_number_theory_integer_characterization.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_classical_number_theory_integer_characterization_exact.py
 ```
 
 Expected result:

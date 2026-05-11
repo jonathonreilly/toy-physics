@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 252 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1235 |
+| unaudited | 1238 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 196 |
+| ~~audited_conditional~~ | 193 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 428 |
-| `audited_conditional` | 196 |
+| `audited_conditional` | 193 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1345 |
+| `unaudited` | 1348 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 870 |
-| `decoration` | 14 |
+| `decoration` | 13 |
 | `meta` | 115 |
 | `no_go` | 221 |
 | `open_gate` | 113 |
-| `positive_theorem` | 747 |
+| `positive_theorem` | 748 |
 
 | criticality | count |
 |---|---:|
@@ -578,12 +578,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25` | decoration | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -2139,22 +2136,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
 - **auditor confidence:** high
 
-### `ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `decoration`
-- **claim_scope:** Audited the claimed classical arithmetic characterizations and five uniqueness routes for the already-supplied integer triple (N_pair, N_color, N_quark) = (2, 3, 6).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_classical_number_the-088`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Substituting the retained CKM counts N_pair = 2, N_color = 3, and N_quark = 6 into standard number-theory identities gives the perfect-number, triangular, Lie-dimensional, Mersenne, and uniqueness-route statements.  _(class `A`)_
-- **chain closes:** False — The arithmetic identities close over the supplied triple, but the restricted packet does not provide a retained-grade independent closure of the triple itself because the primary count authority is audited_conditional and another cited authority is unaudited.
-- **rationale:** The runner performs exact integer and Fraction arithmetic and verifies only class-A consequences of the supplied integers. On its own terms, the number-theory packaging is correct and contains no external comparator check. However, the conclusion depends on cited upstream authorities that are not retained-grade in the restricted packet, so the audit cannot promote the result to clean despite the arithmetic closing over the assumed triple.
-- **open / conditional deps cited:**
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
 ### `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10`
 
 - **Note:** [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md)
@@ -2222,23 +2203,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
-### `ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the atlas-leading algebraic CKM decomposition of the epsilon_K imaginary CKM bracket into a common J_0 factor using the provided Wolfenstein expansion and cited atlas parameter values.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_kaon_epsilon_k_jarls-086`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Substituting the retained Wolfenstein values into Im[(V_cs^*V_cd)^2], Im[V_cs^*V_cd V_ts^*V_td], and Im[(V_ts^*V_td)^2] gives +2 J_0, -J_0, and -2 A^2 lambda^4(1-rho) J_0 = -(5 alpha_s^2/18)J_0.  _(class `A`)_
-- **chain closes:** True — Given the cited Wolfenstein expansion and the imported values A^2=2/3, lambda^2=alpha_s(v)/2, rho=1/6, eta=sqrt(5)/6, the three CKM imaginary-part identities and the Im(L) factorization follow algebraically. Retained-grade closure is conditional because the upstream authorities supplying those values are not retained-grade in the restricted packet.
-- **rationale:** The presented derivation is an algebraic closure over imported CKM atlas inputs, not an independent first-principles computation. The algebra for K1-K3 and the epsilon_K bracket factorization is internally consistent at the stated leading Wolfenstein order. However, key cited authorities are marked unaudited, and the alpha_s authority is bounded/unaudited with explicit open-scope language, so the claim cannot receive audited_clean under the rubric.
-- **open / conditional deps cited:**
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `ALPHA_S_DERIVED_NOTE.md`
-- **auditor confidence:** high
-
 ### `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02`
 
 - **Note:** [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_NARROW_THEOREM_NOTE_2026-05-02.md)
@@ -2270,26 +2234,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
   - `CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
   - `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-- **auditor confidence:** high
-
-### `ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25`
-
-- **Note:** [`CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`](../../docs/CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Audited the local NLO algebra deriving sin(2 beta_bar)/sin(2 beta_0)=1-alpha_s(v)/(N_quark-1)+O(alpha_s^2) from the provided one-hop CKM atlas, barred-triangle, and N_quark inputs.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-225305-c0ea7096-ckm_sin_2_beta_bar_nlo_n-089`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** Using retained N7, beta_bar = beta_0 - (sqrt(5)/20) alpha_s + O(alpha_s^2), so expanding sin(2 beta_bar) and dividing by sin(2 beta_0)=sqrt(5)/3 gives 1 - alpha_s/5 + O(alpha_s^2).  _(class `A`)_
-- **chain closes:** True — The local algebra closes from the supplied inputs: the N7 beta shift, retained sin/cos doubled-angle values, and N_quark=6 imply the stated 1/5 coefficient. Clean retained-grade closure is blocked because several cited authorities in the restricted packet are unaudited or audited_conditional rather than retained-grade.
-- **rationale:** The load-bearing step is a straightforward algebraic expansion over cited inputs, not a first-principles compute. However, the packet marks ALPHA_S_DERIVED_NOTE, WOLFENSTEIN, and CP-phase as unaudited, and the right-angle, protected-gamma, and structural-counts authorities as audited_conditional. Under the rubric, non-retained-grade dependencies force audited_conditional even though the local NLO ratio algebra is internally consistent.
-- **open / conditional deps cited:**
-  - `ALPHA_S_DERIVED_NOTE.md`
-  - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
-  - `CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`
-  - `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25`

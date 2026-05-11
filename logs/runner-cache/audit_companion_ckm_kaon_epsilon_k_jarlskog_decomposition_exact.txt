@@ -1,0 +1,89 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (K1), (K2), (K3) closed-form
+J_0 factorization at atlas-LO Wolfenstein order, parametric in alpha_s.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported atlas inputs
+----------------------------------------------------------------------------------------
+  [PASS (B)] J_0 = A^2 lambda^6 eta == alpha_s^3 sqrt(5)/72 (parametric in alpha_s)  (residual = 0)
+  symbolic alpha_s   = alpha_s
+  lambda^2           = alpha_s/2
+  A^2                = 2/3
+  rho                = 1/6
+  eta                = sqrt(5)/6
+  J_0 atlas          = sqrt(5)*alpha_s**3/72
+
+----------------------------------------------------------------------------------------
+Part 1: atlas-LO Wolfenstein V matrix elements (kaon-relevant)
+----------------------------------------------------------------------------------------
+  V_cs = 1 - lam^2/2
+  V_cd = -lam + (A^2 lam^5/2)(1 - 2 rho - 2 i eta)
+  V_ts = -A lam^2
+  V_td = A lam^3 (1 - rho - i eta)
+
+----------------------------------------------------------------------------------------
+Part 2: (K1) Im[(V_cs^* V_cd)^2] = 2 J_0 at atlas-LO
+----------------------------------------------------------------------------------------
+  [PASS (B)] (K1) Im[(V_cs^* V_cd)^2] coefficient at lam^6 == 2 A^2 eta = sqrt(5)/9  (residual = 0)
+  [PASS (B)] (K1) leading 2 A^2 lam^6 eta == 2 J_0 = alpha_s^3 sqrt(5)/36 (parametric)  (residual = 0)
+  [PASS (B)] (K1) coefficient on J_0 is the rational +2  (ratio = 2)
+
+----------------------------------------------------------------------------------------
+Part 3: (K2) Im[V_cs^* V_cd V_ts^* V_td] = -J_0 at atlas-LO
+----------------------------------------------------------------------------------------
+  [PASS (B)] (K2) Im[V_cs^* V_cd V_ts^* V_td] coefficient at lam^6 == -A^2 eta = -sqrt(5)/18  (residual = 0)
+  [PASS (B)] (K2) leading == -J_0 = -alpha_s^3 sqrt(5)/72 (parametric)  (residual = 0)
+  [PASS (B)] (K2) coefficient on J_0 is the rational -1  (ratio = -1)
+
+----------------------------------------------------------------------------------------
+Part 4: (K3) Im[(V_ts^* V_td)^2] = -(5 alpha_s^2/18) J_0 at atlas-LO
+----------------------------------------------------------------------------------------
+  [PASS (B)] (K3) Im[(V_ts^* V_td)^2] coefficient at lam^10 == -2 A^4 (1-rho) eta  (residual = 0)
+  [PASS (B)] (K3) closed-form coefficient: -2 A^2 lam^4 (1-rho) == -(5 alpha_s^2/18)  (residual = 0)
+  [PASS (B)] (K3) -2 A^2 lam^4 (1-rho) J_0 == -(5 alpha_s^2/18) J_0  (residual = 0)
+  [PASS (B)] (K3) leading == -(5 alpha_s^2/18) J_0 (parametric in alpha_s)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: epsilon_K Im(L) bracket factorization through J_0
+----------------------------------------------------------------------------------------
+  [PASS (B)] Im(L) factorizes through J_0 with rational + alpha_s^2-suppressed coefficients  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at A^2 = 1, (K3) coefficient = -(5 alpha_s^2/12) != -(5 alpha_s^2/18)  (alternate coefficient = -5*alpha_s**2/12)
+  [PASS (B)] counterfactual: at rho = 0, (K3) coefficient = -alpha_s^2/3 != -(5 alpha_s^2/18)  (alternate coefficient = -alpha_s**2/3)
+  [PASS (B)] counterfactual: at lambda^2 = alpha_s, (K3) coefficient = -(10 alpha_s^2/9) != -(5 alpha_s^2/18)  (alternate coefficient = -10*alpha_s**2/9)
+  [PASS (B)] counterfactual: at eta = 0, J_0 = 0 and (K1)-(K3) all vanish  (J_0 at eta=0: 0)
+
+----------------------------------------------------------------------------------------
+Part 7: rational-coefficient sanity
+----------------------------------------------------------------------------------------
+  [PASS (B)] (K1) coefficient on J_0 is rational +2  (coeff = 2)
+  [PASS (B)] (K2) coefficient on J_0 is rational -1  (coeff = -1)
+  [PASS (B)] (K3) coefficient on J_0 is alpha_s^2-suppressed -(5 alpha_s^2/18)  (coeff = -5*alpha_s**2/18)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision parametric in alpha_s:
+    J_0 = A^2 lambda^6 eta == alpha_s^3 sqrt(5)/72 (cited)
+    (K1) Im[(V_cs^* V_cd)^2] leading lam^6 coefficient = 2 A^2 eta
+         -> +2 J_0 under lambda^2 = alpha_s/2
+    (K2) Im[V_cs^* V_cd V_ts^* V_td] leading lam^6 coefficient = -A^2 eta
+         -> -J_0 under lambda^2 = alpha_s/2
+    (K3) Im[(V_ts^* V_td)^2] leading lam^10 coefficient = -2 A^4 (1-rho) eta
+         -> -(5 alpha_s^2/18) J_0 under lambda^2 = alpha_s/2 with A^2=2/3, rho=1/6
+    (K3) closed-form coefficient: -2 A^2 lam^4 (1-rho) == -(5 alpha_s^2/18)
+    Im(L) factorizes through J_0 with coefficients (+2 eta_cc, -2 eta_ct,
+        -(5 alpha_s^2/18) eta_tt) on the Inami-Lim functions.
+    Counterfactuals confirm A^2 = 2/3, rho = 1/6, lambda^2 = alpha_s/2,
+    eta != 0 are individually load-bearing for the closed-form (K3)
+    coefficient and for non-vanishing of (K1)-(K3).
+
+========================================================================================
+TOTAL: PASS=19, FAIL=0
+========================================================================================

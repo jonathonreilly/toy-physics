@@ -305,10 +305,59 @@ single combined comparator.
 - It does not promote the standard `epsilon_K` formula itself; that remains
   textbook short-distance K-Kbar mixing.
 
+## Exact-symbolic verification
+
+The closed-form Jarlskog-decomposition identities `(K1)`, `(K2)`, `(K3)`
+and the resulting `J_0`-factorization of the `epsilon_K` imaginary
+bracket are certified at exact-symbolic precision via `sympy` in
+`scripts/audit_companion_ckm_kaon_epsilon_k_jarlskog_decomposition_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real
+symbol and `lambda` as the Wolfenstein expansion parameter, imports
+the upstream atlas inputs verbatim as exact `sympy.Rational` /
+`sympy.sqrt` values, and checks each identity by computing
+`sympy.simplify(lhs - rhs)` (or comparing series-coefficient extracts)
+and asserting the residual equals `0` exactly. The cited inputs
+themselves (`lambda^2 = alpha_s/2`, `A^2 = 2/3`, `rho = 1/6`,
+`eta = sqrt(5)/6`, `J_0 = alpha_s^3 sqrt(5)/72`) are imported from
+upstream authority notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| `J_0` cited | `A^2 lambda^6 eta == alpha_s^3 sqrt(5)/72` | `sympy.simplify` residual `= 0` |
+| `(K1)` leading | `Im[(V_cs^* V_cd)^2]` lam^6 coefficient `== 2 A^2 eta = sqrt(5)/9` | series-coefficient match |
+| `(K1)` reduction | leading `== 2 J_0` parametric in `alpha_s` | `sympy.simplify` residual `= 0` |
+| `(K1)` rational | coefficient on `J_0` is the rational `+2` | exact rational |
+| `(K2)` leading | `Im[V_cs^* V_cd V_ts^* V_td]` lam^6 coefficient `== -A^2 eta = -sqrt(5)/18` | series-coefficient match |
+| `(K2)` reduction | leading `== -J_0` parametric in `alpha_s` | `sympy.simplify` residual `= 0` |
+| `(K2)` rational | coefficient on `J_0` is the rational `-1` | exact rational |
+| `(K3)` leading | `Im[(V_ts^* V_td)^2]` lam^10 coefficient `== -2 A^4 (1-rho) eta` | series-coefficient match |
+| `(K3)` closed-form | `-2 A^2 lambda^4 (1 - rho) == -(5 alpha_s^2 / 18)` | `sympy.simplify` residual `= 0` |
+| `(K3)` reduction | leading `== -(5 alpha_s^2/18) J_0` parametric in `alpha_s` | `sympy.simplify` residual `= 0` |
+| `Im(L)` | factorizes through `J_0` with `(+2 eta_cc, -2 eta_ct, -(5 alpha_s^2/18) eta_tt)` | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm the imported atlas inputs are each
+individually load-bearing for the closed-form `(K3)` coefficient:
+
+- substituting `A^2 = 1` collapses the `(K3)` coefficient to
+  `-(5 alpha_s^2 / 12)`, not `-(5 alpha_s^2 / 18)`;
+- substituting `rho = 0` collapses the `(K3)` coefficient to
+  `-alpha_s^2 / 3`, not `-(5 alpha_s^2 / 18)`;
+- substituting `lambda^2 = alpha_s` (i.e. `n_pair = 1`) collapses the
+  `(K3)` coefficient to `-(10 alpha_s^2 / 9)`, not `-(5 alpha_s^2 / 18)`;
+- substituting `eta = 0` collapses `J_0` to `0` and all of `(K1)`,
+  `(K2)`, `(K3)` vanish.
+
+The structural relations are therefore exact-symbolic over the
+imported atlas inputs and do not depend on the floating-point pin of
+`alpha_s(v)`. The numerical pin enters only the parent runner's
+trailing comparator section, which is not load-bearing for the
+algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_kaon_epsilon_k_jarlskog_decomposition.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_kaon_epsilon_k_jarlskog_decomposition_exact.py
 ```
 
 Expected result:

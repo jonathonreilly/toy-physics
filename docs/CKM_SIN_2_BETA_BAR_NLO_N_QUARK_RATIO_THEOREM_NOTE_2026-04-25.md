@@ -374,10 +374,63 @@ counting integer, via a pure flavor-physics observable.
   or `sin(2 beta_bar)` separately; both are framework predictions
   matched against PDG `sin(2 beta) = 0.706 ± 0.011` from B → ψK_S.
 
+## Exact-symbolic verification
+
+The NLO-ratio identity `(B1)` and the supporting closed-form
+identities `(B2)`, `(B3)`, `(B4)` are certified at exact-symbolic
+precision via `sympy` in
+`scripts/audit_companion_ckm_sin_2_beta_bar_nlo_n_quark_ratio_exact.py`.
+The companion runner treats `alpha_s(v)` as a free positive real
+symbol, imports the upstream retained inputs verbatim as exact
+`sympy.Rational` / `sympy.sqrt` values, and checks each identity by
+computing `sympy.simplify(lhs - rhs)` and asserting the residual
+equals `0` exactly. The cited inputs themselves (retained
+`sin(2 beta_0) = sqrt(5)/3`, `cos(2 beta_0) = 2/3`, `N7 slope =
+sqrt(5)/20`, retained `N9` closed form for `tan(beta_bar)`,
+`N_quark = 6` from CKM magnitudes structural-counts theorem) are
+imported from upstream authority notes and are not re-derived here.
+
+| Identity | Symbolic form | Verification |
+| --- | --- | --- |
+| linearization | `sin(2 beta_bar) - sin(2 beta_0) == -(sqrt(5)/15) alpha_s` | `sympy.simplify` residual `= 0` |
+| `(B1)` ratio | `sin(2 beta_bar)/sin(2 beta_0) == 1 - alpha_s/(N_quark - 1)` | `sympy.simplify` residual `= 0` |
+| `sqrt(5)` cancel | `(-sqrt(5)/15)/(sqrt(5)/3) == -1/5` | `sympy.simplify` residual `= 0` |
+| `(B2)` framework | at `N_quark = 6`, coefficient `1/(N_quark - 1) == 1/5` | exact rational |
+| `(B3)` `gamma`-protect | `sin(2 gamma_bar)/sin(2 gamma_0) == 1` (NLO via retained `N8`) | exact rational |
+| `(B4)` right-angle | `sin(2 alpha_0) = sin(pi) == 0` | exact zero |
+| `(B4)` pure-NLO | leading `sin(2 alpha_bar) == -(sqrt(5)/10) alpha_s` | series-coefficient match |
+| `alpha_s`-indep | linear coefficient on `alpha_s` is the pure rational `-1/(N_quark - 1)` | `sympy.Poly` extraction |
+| `(N9)` Taylor | `tan(beta_bar) = sqrt(5)(4 - alpha_s)/(20 + alpha_s)` ⇒ ratio first-order `1 - alpha_s/5` | `sympy.series` match |
+| `1+5` connection | `1/(N_quark - 1)` is the inverse of the orthogonal-channel weight numerator | exact rational |
+| Pythagorean | `sin^2(2 beta_0) + cos^2(2 beta_0) == 1` (`5/9 + 4/9 = 1`) | `sympy.simplify` residual `= 0` |
+
+Counterfactual probes confirm each retained input is individually
+load-bearing for the closed-form `1/5` coefficient:
+
+- substituting `N_quark = 5` collapses the coefficient to `1/4`, not
+  `1/5`;
+- substituting `sin(2 beta_0) = 1` (replacing the retained
+  `sqrt(5)/3`) makes the coefficient `sqrt(5)/15`, irrational and
+  not `1/5`, breaking the `sqrt(5)` cancellation;
+- substituting `cos(2 beta_0) = 1` (replacing the retained `2/3`)
+  collapses the coefficient to `3/10`, not `1/5`;
+- substituting the `N7` slope `1/20` (replacing the retained
+  `sqrt(5)/20`) makes the coefficient `sqrt(5)/25`, irrational and
+  not `1/5`, again breaking the `sqrt(5)` cancellation.
+
+The structural relations are therefore exact-symbolic over the
+imported retained inputs and do not depend on the floating-point pin
+of `alpha_s(v)`. The `alpha_s`-independence of the `1/(N_quark - 1)`
+coefficient is verified directly by extracting the linear coefficient
+of the `sympy.Poly` decomposition; the canonical numerical
+`alpha_s(v)` enters only the parent runner's PDG-comparator section,
+which is not load-bearing for the algebra.
+
 ## Reproduction
 
 ```bash
 python3 scripts/frontier_ckm_sin_2_beta_bar_nlo_n_quark_ratio.py
+PYTHONPATH=scripts python3 scripts/audit_companion_ckm_sin_2_beta_bar_nlo_n_quark_ratio_exact.py
 ```
 
 Expected result:

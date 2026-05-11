@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 694,
+    "critical": 697,
     "high": 38,
     "leaf": 334,
     "medium": 177
@@ -15463,6 +15463,33 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "ckm_kaon_epsilon_k_jarlskog_decomposition_theorem_note_2026-04-25",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25",
+        "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25",
+        "alpha_s_derived_note"
+      ],
+      "direct_in_degree": 11,
+      "effective_status": "unaudited",
+      "load_bearing_score": 14.144,
+      "note_path": "docs/CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_ckm_kaon_epsilon_k_jarlskog_decomposition.py",
+      "transitive_descendants": 399
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15735,6 +15762,30 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "ckm_classical_number_theory_integer_characterization_theorem_note_2026-04-25",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
+        "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.144,
+      "note_path": "docs/CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_ckm_classical_number_theory_integer_characterization.py",
+      "transitive_descendants": 399
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "ckm_compound_magnitudes_circumradius_bridge_theorem_note_2026-04-25",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15782,6 +15833,34 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_ckm_multi_channel_alpha_s_extraction_consistency.py",
+      "transitive_descendants": 399
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "alpha_s_derived_note",
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "ckm_atlas_triangle_right_angle_theorem_note_2026-04-24",
+        "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.144,
+      "note_path": "docs/CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_ckm_sin_2_beta_bar_nlo_n_quark_ratio.py",
       "transitive_descendants": 399
     },
     {
@@ -38663,5 +38742,5 @@
     }
   ],
   "ready_count": 98,
-  "total_pending": 1243
+  "total_pending": 1246
 }

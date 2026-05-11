@@ -1,0 +1,107 @@
+========================================================================================
+Audit companion (exact-symbolic) for
+ckm_sin_2_beta_bar_nlo_n_quark_ratio_theorem_note_2026-04-25
+Goal: sympy-symbolic verification of (B1) NLO ratio,
+(B2) framework value, (B3) gamma-protection, (B4) right-angle,
+alpha_s-independence of 1/(N_quark - 1), and N9 first-order
+consistency, parametric in alpha_s.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup and imported retained inputs
+----------------------------------------------------------------------------------------
+  symbolic alpha_s        = alpha_s
+  retained N_quark         = 6
+  retained N_quark - 1     = 5
+  retained sin(2 beta_0)   = sqrt(5)/3
+  retained cos(2 beta_0)   = 2/3
+  retained N7 slope        = sqrt(5)/20
+  [PASS (B)] N_quark == N_pair * N_color (cited authority)  (residual = 0)
+  [PASS (B)] sin^2(2 beta_0) + cos^2(2 beta_0) == 1 (Pythagorean check)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 1: (B1) linearization sin(2 beta_bar) - sin(2 beta_0) at first order
+----------------------------------------------------------------------------------------
+  [PASS (B)] sin(2 beta_bar) - sin(2 beta_0) == -(sqrt(5)/15) alpha_s (linearization)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (B1) closed-form ratio == 1 - alpha_s/(N_quark - 1)
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B1) sin(2 beta_bar) / sin(2 beta_0) == 1 - alpha_s/(N_quark - 1)  (residual = 0)
+  [PASS (B)] (B1) sqrt(5) cancellation: delta/sin(2 beta_0) == -alpha_s/5  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (B2) framework value N_quark = 6 -> coefficient 1/5
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B2) at N_quark = 6, coefficient = 1/(N_quark - 1) = 1/5  (coefficient = 1/5)
+  [PASS (B)] (B2) at framework, ratio == 1 - alpha_s/5  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (B3) gamma-bar protection sin(2 gamma_bar)/sin(2 gamma_0) == 1
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B3) sin(2 gamma_bar)/sin(2 gamma_0) == 1 (PROTECTED at NLO, retained N8)  (ratio = 1)
+
+----------------------------------------------------------------------------------------
+Part 5: (B4) atlas right-angle sin(2 alpha_0) == 0
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B4) sin(2 alpha_0) = sin(pi) = 0 (atlas right-angle)  (sin(pi) = 0)
+  [PASS (B)] (B4) leading sin(2 alpha_bar) == -2 (sqrt(5)/20) alpha_s = -(sqrt(5)/10) alpha_s  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: alpha_s-INDEPENDENCE of the 1/(N_quark - 1) coefficient
+----------------------------------------------------------------------------------------
+  [PASS (B)] (B1) constant coefficient (alpha_s -> 0) == 1  (constant = 1)
+  [PASS (B)] (B1) linear coefficient on alpha_s == -1/(N_quark - 1) = -1/5  (linear coeff = -1/5)
+  [PASS (B)] (B1) extracted coefficient (1 - ratio)/alpha_s == 1/(N_quark - 1) (alpha_s-independent)  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 7: retained N9 closed form first-order consistency
+----------------------------------------------------------------------------------------
+  [PASS (B)] (N9) sin(2 beta_bar) Taylor = sqrt(5)/3 - (sqrt(5)/15) alpha_s + O(alpha_s^2)  (series LO+NLO = -sqrt(5)*alpha_s/15 + sqrt(5)/3)
+  [PASS (B)] (N9) constant term at alpha_s = 0 is sin(2 beta_0) = sqrt(5)/3  (constant = sqrt(5)/3)
+  [PASS (B)] (N9) linear term is -sqrt(5)/15 (matches linearization)  (linear = -sqrt(5)/15)
+  [PASS (B)] (N9) ratio series at first order == 1 - alpha_s/5 (matches (B1))  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: derivation chain for 1/(N_quark - 1) from retained inputs
+----------------------------------------------------------------------------------------
+  [PASS (B)] derivation: 2 cos(2 beta_0) (beta_0 - beta_bar) == (sqrt(5)/15) alpha_s  (residual = 0)
+  [PASS (B)] derivation: coefficient = (sqrt(5)/15)/(sqrt(5)/3) = 1/5 = 1/(N_quark - 1)  (coeff = 1/5)
+
+----------------------------------------------------------------------------------------
+Part 9: connection to retained 1+5 quark-block decomposition
+----------------------------------------------------------------------------------------
+  [PASS (B)] retained CP-phase: w_A1 == 1/6, w_perp == 5/6 (1+5 decomposition)  (w_A1 = 1/6, w_perp = 5/6)
+  [PASS (B)] eta^2 = w_A1 * w_perp == (N_quark - 1)/N_quark^2 = 5/36  (eta^2 = 5/36)
+  [PASS (B)] (B1) coefficient 1/(N_quark - 1) == inverse of orthogonal-channel weight numerator  (1/(N_quark - 1) = 1/5)
+
+----------------------------------------------------------------------------------------
+Part 10: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (B)] counterfactual: at N_quark = 5, coefficient = 1/4 != 1/5  (coefficient at N_quark=5 = 1/4)
+  [PASS (B)] counterfactual: at sin(2 beta_0) = 1, coefficient = sqrt(5)/15 (irrational, != 1/5)  (coefficient at cf sin = sqrt(5)/15)
+  [PASS (B)] counterfactual: at cos(2 beta_0) = 1, coefficient = 3/10 != 1/5  (coefficient at cf cos = 3/10)
+  [PASS (B)] counterfactual: at N7 slope = 1/20 (no sqrt(5)), coefficient is irrational, != 1/5  (coefficient at cf slope = sqrt(5)/25)
+  [PASS (B)] structural check: 5/9 + 4/9 == 1 (Pythagorean for (sin(2 beta_0), cos(2 beta_0)))  (residual = 0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision parametric in alpha_s:
+    Linearization: sin(2 beta_bar) - sin(2 beta_0) == -(sqrt(5)/15) alpha_s
+    (B1) sin(2 beta_bar)/sin(2 beta_0) == 1 - alpha_s/(N_quark - 1)
+    sqrt(5) cancellation: delta_sin / sin(2 beta_0) == -alpha_s/5
+    (B2) at framework N_quark = 6, coefficient = 1/5
+    (B3) sin(2 gamma_bar)/sin(2 gamma_0) == 1 (NLO-protected via N8)
+    (B4) sin(2 alpha_0) == 0 (atlas right-angle)
+    alpha_s-INDEPENDENCE: linear coefficient is exactly -1/(N_quark - 1)
+        as a pure rational, independent of any numerical alpha_s value
+    (N9) Taylor expansion in alpha_s matches the linearization at first order
+    1+5 connection: 1/(N_quark - 1) is the inverse of the orthogonal-channel
+        weight numerator from the retained CP-phase theorem
+    Counterfactuals confirm sin(2 beta_0), cos(2 beta_0), N7 slope, and
+    N_quark are individually load-bearing for the closed-form 1/5 coefficient.
+
+========================================================================================
+TOTAL: PASS=27, FAIL=0
+========================================================================================

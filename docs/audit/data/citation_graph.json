@@ -39315,7 +39315,7 @@
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
         "ckm_multi_projection_bernoulli_family_theorem_note_2026-04-25"
       ],
-      "note_hash": "ed9f98e626586877b1736eafa7a508ceda3f333f93d7eeeb17a65cf106d35778",
+      "note_hash": "c428f07cb66c3a5d44c7bd63a8d81e8abff89b57fb4a3041b0405595eff9493f",
       "path": "docs/CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_classical_number_theory_integer_characterization.py",
       "title": "Classical Number-Theory Characterization of the Retained CKM Structural Integers `(N_pair, N_color, N_quark) = (2, 3, 6)`"
@@ -39562,7 +39562,7 @@
         "ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25",
         "alpha_s_derived_note"
       ],
-      "note_hash": "d97c544ac374824bff3cc8d4cd045adb1b5d53209a030b0bffeb49a23aaa6a7b",
+      "note_hash": "3a7c0323575a6dbb5dd58d474a6581144cbf7367d4c573f1e16b70d3dbe0b9e9",
       "path": "docs/CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_kaon_epsilon_k_jarlskog_decomposition.py",
       "title": "Kaon epsilon_K Jarlskog Decomposition Theorem"
@@ -39754,7 +39754,7 @@
         "ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25",
         "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
       ],
-      "note_hash": "92a0f12496948a3ba50911230c2859a6ffb2541f16954deb8a025a4cd0fc2e6f",
+      "note_hash": "6107862e1488a9d84d31b93ca0204f781a1091af178ca41a81acfae19cd96122",
       "path": "docs/CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_ckm_sin_2_beta_bar_nlo_n_quark_ratio.py",
       "title": "sin(2\u03b2\u0304) NLO Ratio with Atlas N_quark Structural Fingerprint Theorem"
