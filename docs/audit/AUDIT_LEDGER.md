@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 267 |
+| **retained_bounded** | 268 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1234 |
+| unaudited | 1233 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 441 |
+| `audited_clean` | 442 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1347 |
+| `unaudited` | 1346 |
 
 | claim_type | count |
 |---|---:|
@@ -437,6 +437,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `restricted_strong_field_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -8017,6 +8018,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the restricted packet, the runner constructs generated DAG instances, computes instantaneous and retarded imposed fields, propagates amplitudes, and reports a nonzero finite-c delta with exact c = inf reduction. The conclusion is limited to this field-scheduling proxy and does not claim a self-consistent wave theory.
 - **rationale:** The note's bounded conclusion matches the runner's computed rows: finite c changes the centroid-shift observable, and c = inf reproduces the instantaneous baseline. The runner does not merely print constants or compare to an external fitted value; it builds the compact family, applies the retarded scheduling rule, and computes the observable. The claim is narrow and explicitly preserves the limitation that this is an imposed field-scheduling proxy rather than a full dynamical gravitational wave theory.
 - **auditor confidence:** medium
+
+### `retarded_field_compact_refinement_note`
+
+- **Note:** [`RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md`](../../docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Two-family compact/refined retarded-field smoke probe showing the retarded and instantaneous detector-centroid rows remain different on both families, with nonzero mean split but row-sign-dependent behavior rather than uniform suppression.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The compact and refined families have mean inst-ret splits of -1.669200e-02 and -4.352319e-02, with retarded below instantaneous on 0/5 and 3/5 b-rows respectively, so the split survives but is not uniformly directional.  _(class `C`)_
+- **chain closes:** True — The registered runner cache is complete and matches the source note's two-family table and safe-read boundary. The audited result is only the finite smoke-probe noncollapse/partial-survival statement, not a universal retarded-gravity law or refinement-stability theorem.
+- **rationale:** The current cache supports the note's bounded table exactly: the retarded field differs from the instantaneous field on both compact and refined families, but the sign/direction is row-dependent. The source already confines the claim to a causality/scheduling smoke probe and disclaims a full wave theory or universal law. Residual risk is limited to the small two-family sample and lack of assertion gates, which does not block the audited finite readout.
+- **auditor confidence:** high
 
 ### `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10`
 
