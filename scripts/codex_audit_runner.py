@@ -429,6 +429,26 @@ def load_ledger_rows() -> dict[str, dict]:
     return json.loads(LEDGER_PATH.read_text(encoding="utf-8"))["rows"]
 
 
+def only_awaiting_cross_confirmation(rows: list[dict],
+                                     ledger_rows: dict[str, dict]) -> list[dict]:
+    """Keep rows that are ready for an independent second audit only."""
+    out: list[dict] = []
+    for row in rows:
+        cid = row.get("claim_id")
+        if not cid:
+            continue
+        led_row = ledger_rows.get(cid, {})
+        cc = led_row.get("cross_confirmation") or {}
+        if (
+            led_row.get("audit_status") == "audit_in_progress"
+            and led_row.get("blocker") == "awaiting_cross_confirmation"
+            and isinstance(cc, dict)
+            and cc.get("status") == "awaiting_second"
+        ):
+            out.append(row)
+    return out
+
+
 def read_note_body(note_path: str) -> str | None:
     p = REPO_ROOT / note_path
     if not p.exists():
@@ -885,6 +905,11 @@ def main() -> int:
                    help="With --from-reaudit-candidates, skip the "
                         "runner_drift_candidates stream (only re-audit on "
                         "dependency-strengthening). Default includes both.")
+    p.add_argument("--only-awaiting-cross-confirmation", action="store_true",
+                   help="Restrict audit_queue.json selection to rows already "
+                        "holding a first clean audit and waiting for an "
+                        "independent second audit. This excludes ordinary "
+                        "unaudited rows.")
     p.add_argument("--allow-low-model", action="store_true",
                    help="Permit running with an audit model below the "
                         "MIN_AUDIT_MODEL_RANK floor (currently gpt-5.5). "
@@ -995,6 +1020,11 @@ def main() -> int:
         )
     else:
         queue = load_queue(args.criticality, ready_only=not args.allow_blocked)
+    if args.only_awaiting_cross_confirmation:
+        if args.from_reaudit_candidates:
+            print("REFUSING: --only-awaiting-cross-confirmation applies to audit_queue.json, not re-audit candidates.")
+            return 2
+        queue = only_awaiting_cross_confirmation(queue, ledger_rows)
     targets = queue[: args.n]
     if not targets:
         if args.from_reaudit_candidates:
