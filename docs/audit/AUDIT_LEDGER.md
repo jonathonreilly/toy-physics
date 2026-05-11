@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 100 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 292 |
+| **retained_bounded** | 293 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1167 |
+| unaudited | 1166 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 489 |
+| `audited_clean` | 490 |
 | `audited_conditional` | 201 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1280 |
+| `unaudited` | 1279 |
 
 | claim_type | count |
 |---|---:|
@@ -621,6 +621,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_retention_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `wilson_two_body_open_refined_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -11511,6 +11512,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The registered open-boundary runner cache gives 8/8 ATTRACT and 8/8 CLEAN rows on side=11,13, G=5, mu^2=0.22, d=3..6, and the laws cache characterizes the post-selected clean-attract surface with |a_mut|~d^-3.406 and |a_mut|~mB^0.483.  _(class `C`)_
 - **chain closes:** False — The open-boundary 8/8 attractive-clean surface and the post-selected distance/partner-source fits close against the two registered caches. The source note also states screening-mass sweep and both-masses audit claims whose runner artifacts are absent or explicitly no longer present, so the full note scope is not closed.
 - **rationale:** Issue: two registered caches support the narrow open-boundary attraction and post-selected law-characterization surface, but the note still contains unsupported screening-mass and both-masses sections. Why this blocks: a reviewer can accept the 8/8 attractive-clean rows and mu^2=0.22 post-selected fits while rejecting claims about screening softening or action-reaction failure without the named runner outputs. Repair target: either remove/split the unsupported sections from this claim surface or register the screening-mass and both-masses runner artifacts with caches. Claim boundary until fixed: open-boundary attraction plus post-selected distance and partner-source characterization only.
+- **auditor confidence:** high
+
+### `wilson_two_body_open_refined_note_2026-04-11`
+
+- **Note:** [`WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md`](../../docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Registered open-boundary Wilson two-body refined sweep for sides 11,13,15,17,19 at fixed G=5 and mu^2=0.22, using the declared clean-attractive subset fit: 25/25 ATTRACT+CLEAN, global exponent -3.669 with R^2=0.9896, per-side exponents -3.139,-3.313,-3.500,-3.671,-3.837; excludes universal law claims, unscreened/Newtonian crossover claims, and blind-law estimation over rejected rows.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the clean attractive subset of the fixed G=5, mu^2=0.22 open-boundary Wilson two-orbital sweep, all 25 configurations are ATTRACT and CLEAN and the global fit is |a_mut| ~ d^-3.669 with R^2=0.9896.  _(class `C`)_
+- **chain closes:** True — The runner recomputes all 25 configurations and asserts the aggregate counts, global exponent/R^2, per-side exponents, and steeper-than-Newton fixed-surface check against the note's quoted values. The note's screening addendum correctly prevents reading this as a screening-independent universality class.
+- **rationale:** The bounded claim closes because the live runner and SHA-pinned cache reproduce the 25-run fixed-surface sweep and assert every quoted fit used by the note. The note explicitly labels the fit as post-selected on clean attractive rows and narrows interpretation with the later screening addendum, so no hidden universal Newton-law or screening-independent claim is being retained. Residual risk is limited to future misuse outside fixed G=5, mu^2=0.22 or outside the declared post-selected methodology.
 - **auditor confidence:** high
 
 ### `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10`
