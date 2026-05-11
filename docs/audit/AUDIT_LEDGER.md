@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1274 |
+| unaudited | 1273 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 158 |
+| ~~audited_conditional~~ | 159 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 158 |
+| `audited_conditional` | 159 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1387 |
+| `unaudited` | 1386 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 893 |
+| `bounded_theorem` | 894 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 221 |
 | `open_gate` | 112 |
-| `positive_theorem` | 746 |
+| `positive_theorem` | 745 |
 
 | criticality | count |
 |---|---:|
@@ -675,6 +675,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_q_reduced_observable_restriction_theorem_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5720,6 +5721,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact single-slot images are diag(1,0,0), diag(0,1,0), diag(0,0,1), and 0, so L(u,v,w,z)=diag(u,v,w).  _(class `A`)_
 - **chain closes:** True — For the scoped bounded claim, the runner constructs the stated projectors/Gamma_1 action and verifies the four slot images; the rank, kernel, fibers, and quotient then follow by finite-dimensional linear algebra. The broader admissibility-implies-constancy/factorization language is explicitly outside the note's theorem and is not used for closure.
 - **rationale:** The scoped claim is a pure algebraic theorem about the explicitly displayed linear map L=[I_3 0]. With no cited dependencies, the source note and runner close rank 3, kernel span(e_z), full diagonal image, and the quotient/fiber statement directly. The runner's C.3/final selector-factorization language overstates beyond the bounded theorem, but the source note quarantines that as conditional, so it is not load-bearing for this audit.
+- **auditor confidence:** high
+
+### `koide_q_reduced_observable_restriction_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded algebraic restriction of the observable principle to the admitted normalized two-generator second-order block carrier.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the admitted reduced two-generator block algebra with D_red = I_2 and K = diag(k_+, k_perp), the observable-principle restriction is exactly W_red(K) = log det(I_2 + K) = log(1+k_+) + log(1+k_perp), with Legendre dual K_* = Y^(-1) - I and S_eff(Y) = Tr(Y) - log det(Y) - 2.  _(class `A`)_
+- **chain closes:** False — The runner verifies the reduced-carrier algebra with PASS=10/FAIL=0. The physical chain does not close because the reduced two-generator carrier, the D_red = I_2 baseline, and the choice of this carrier over the unreduced vector-slot readout are admitted rather than derived from retained upstream charged-lepton inputs.
+- **rationale:** Issue: the exact W_red and dual-action algebra is performed after assuming the normalized two-generator reduced carrier and D_red = I_2 baseline. Why this blocks: a retained physical Q bridge needs a retained theorem identifying this reduced block algebra as the physical charged-lepton observable carrier, rather than the unreduced 1⊕2 vector-slot carrier or another readout. Repair target: derive the reduced two-generator carrier and D_red = I_2 normalization from retained upstream framework/charged-lepton inputs. Claim boundary until fixed: the row is a bounded algebraic support theorem for the admitted reduced carrier, not a retained physical-identification theorem.
 - **auditor confidence:** high
 
 ### `koide_q_second_order_support_batch_note_2026-04-22`
