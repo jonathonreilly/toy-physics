@@ -20069,6 +20069,18 @@
       "to": "gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note"
     },
     {
+      "from": "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
+      "to": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
+      "to": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
+      "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+    },
+    {
       "from": "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
       "to": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03"
     },
@@ -62728,6 +62740,21 @@
       "runner_path": "scripts/frontier_su3_fusion_engine.py",
       "title": "SU(3) Tensor-Network Engine Roadmap (5-PR Plan)"
     },
+    "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10": {
+      "claim_id": "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
+      ],
+      "note_hash": "b806cc899f29081ee5f8f9d6b38ac588f678c75a5f1f34ae7c658060bf9c5baf",
+      "path": "docs/SU3_WIGNER_BLOCK4_STAGING_BLOCK5_ORIENTATION_DIAGNOSTICS_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_su3_wigner_block4_block5_narrow_split.py",
+      "title": "SU(3) Wigner Engine Block 4 Staging + Block 5 Orientation Diagnostics Narrow Theorem"
+    },
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03": {
       "claim_id": "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
       "claim_type_author_hint": "positive_theorem",
@@ -68576,7 +68603,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 279,
+      "bounded_theorem": 280,
       "decoration": 1,
       "meta": 61,
       "no_go": 34,
@@ -68585,7 +68612,7 @@
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 761,
+      "bounded_theorem": 762,
       "decoration": 1,
       "meta": 61,
       "no_go": 141,
@@ -68593,10 +68620,10 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8508,
-    "leaf_count": 609,
-    "node_count": 2169,
+    "edge_count": 8511,
+    "leaf_count": 610,
+    "node_count": 2170,
     "root_count": 822,
-    "runners_with_path": 1782
+    "runners_with_path": 1783
   }
 }

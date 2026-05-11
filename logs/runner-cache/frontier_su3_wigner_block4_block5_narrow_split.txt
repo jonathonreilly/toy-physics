@@ -1,0 +1,89 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_wigner_block4_block5_narrow_split.py
+runner_sha256: 98176b6ffdf66b374ec20f02868eb74be354bb6b23e6ecb4e52f3e39fd91b253
+timeout_sec: 180
+exit_code: 0
+elapsed_sec: 73.39
+status: ok
+----- stdout -----
+SU(3) Wigner Block 4/5 narrow split primary runner
+========================================================================
+[PASS] Block 4 staging runner exists (scripts/frontier_su3_wigner_l3_cube_partition.py)
+[PASS] Block 4 staging avoids open-gate runner imports
+
+--- Block 4 staging stdout tail ---
+  - (1,1) sector character coefficient c_(1,1)(6) computed.
+  - Singlet basis of V^4 (rank 8, Block 2 import) loaded.
+  - Per-plaquette tensor structure encoded.
+  - Small sub-network contraction demo passes.
+
+  The FULL 81-plaquette x 81-link contraction is deferred to
+  Block 5, where:
+  - Either: implement contraction-order optimization (greedy by
+    smallest intermediate, or use opt_einsum/ncon library if
+    available)
+  - Or: use HONEST Path A — report the computational scope and
+    note that L=3 cube contraction in the (1,1) sector is a
+    multi-day engineering job (graph-partitioning + memory-
+    aware contraction-order optimization) without industrial-
+    scale tensor-network library support.
+
+  Either way, Block 5 will:
+  - Compute / estimate Z_(1,1)(L=3 cube, beta=6)
+  - Compute / estimate rho_(1,1)(6) = (d_(1,1) c_(1,1)/c_(0,0))^81
+                                       * T_(1,1)(cube) / T_(0,0)(cube)
+  - Plug into source-sector factorization for P_cube(L=3, beta=6)
+  - Compare to epsilon_witness ~ 3e-4 and report verdict
+
+==============================================================================
+SUMMARY: THEOREM PASS=5 FAIL=0
+==============================================================================
+
+Headline:
+  Block 4 partition function STAGED:
+    Z_(0,0)(L=3 cube, beta=6) = c_(0,0)(6)^81 = 2.9920e+43 (EXACT)
+    c_(1,1)(beta=6) = 4.467259, d_(1,1) = 8
+    Singlet basis of V^4: rank 8 (Block 2 verified)
+    Per-plaquette tensor: (8,8,8,8) cyclical-trace structure
+  FULL 81-link contraction deferred to Block 5 (honest scope:
+  multi-day engineering OR optimized-library-assisted execution).
+[PASS] Block 4 staging exits 0 (returncode=0)
+[PASS] Block 4 staging expected summary present (SUMMARY: THEOREM PASS=5 FAIL=0)
+[PASS] Block 5 orientation diagnostics runner exists (scripts/frontier_su3_wigner_block5_orientation_diagnostics_narrow.py)
+[PASS] Block 5 orientation diagnostics avoids open-gate runner imports
+
+--- Block 5 orientation diagnostics stdout tail ---
+==============================================================================
+SU(3) Wigner Block 5 Orientation Diagnostics — narrow runner
+(geometry-only; no open-gate numerics imported)
+==============================================================================
+
+------------------------------------------------------------------------------
+Claim (6): all-forward +d1+d2+d1+d2 plaquette enumeration
+------------------------------------------------------------------------------
+  [PASS] 12 unique unordered plaquettes  (got 12)
+  [PASS] 24 unique directed links  (got 24)
+  [PASS] each directed link in exactly 2 plaquettes  (observed multiplicities = [2])
+  [PASS] index graph: 48 nodes  (got 48)
+  [PASS] index graph: 48 edges  (got 48)
+  [PASS] index graph: 8 connected components  (got 8)
+
+------------------------------------------------------------------------------
+Claim (7): standard Wilson +d1+d2-d1-d2 plaquette traversal
+------------------------------------------------------------------------------
+  [PASS] 12 unique unordered plaquettes  (got 12)
+  [PASS] 20 unique directed links (NOT 24)  (got 20)
+  [PASS] link multiplicities = {1: 4, 2: 8, 3: 4, 4: 4}  (got {1: 4, 2: 8, 3: 4, 4: 4})
+  [PASS] 24 forward leg occurrences  (got 24)
+  [PASS] 24 backward leg occurrences  (got 24)
+
+==============================================================================
+SUMMARY: PASS=11 FAIL=0
+==============================================================================
+[PASS] Block 5 orientation diagnostics exits 0 (returncode=0)
+[PASS] Block 5 orientation diagnostics expected summary present (SUMMARY: PASS=11 FAIL=0)
+========================================================================
+SUMMARY: PASS=8 FAIL=0
+
+----- stderr -----
+

@@ -18444,6 +18444,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_su3_fusion_engine.py"
     },
+    "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10": {
+      "assert_count": 3,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_wigner_block4_block5_narrow_split.py"
+    },
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03": {
       "assert_count": 1,
       "counts": {
@@ -39289,6 +39301,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_su3_wigner_block4_block5_narrow_split.py": {
+      "assert_count": 3,
+      "claims": [
+        "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_wigner_intertwiner_engine.py": {
       "assert_count": 1,
       "claims": [
@@ -46710,12 +46737,12 @@
     "dominant_class_distribution": {
       "A": 145,
       "B": 172,
-      "C": 674,
+      "C": 675,
       "D": 257,
       "none": 421
     },
-    "runners_classified": 1669,
-    "runners_with_C": 850,
+    "runners_classified": 1670,
+    "runners_with_C": 851,
     "runners_with_D": 467
   }
 }
