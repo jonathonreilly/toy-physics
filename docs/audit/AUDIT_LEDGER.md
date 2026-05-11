@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 282 |
+| **retained_bounded** | 283 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1192 |
+| unaudited | 1191 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 475 |
+| `audited_clean` | 476 |
 | `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1305 |
+| `unaudited` | 1304 |
 
 | claim_type | count |
 |---|---:|
@@ -443,6 +443,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_record_matched_compare_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_record_overlap_kernel_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `persistent_record_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `persistent_record_sidebit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `physical_lattice_necessity_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_boundary_orientation_incidence_no_go_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -7896,6 +7897,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The corrected persistent-record refinement stack improves the residual-connection soft lane modestly, with side+packet+entry at N=18 and gamma=1.0 reaching purity 0.7213, but it still does not beat the node-label baseline at 0.7121.  _(class `C`)_
 - **chain closes:** True — Fresh runner executions reproduced both load-bearing checks: the corrected matched N=8,12,18 table for node, side+packet, and side+packet+entry variants, and the targeted N=18 gamma sweep showing gamma=1.0 beats exact trace while gamma=1.5 and 2.0 worsen.
 - **rationale:** Clean within the note's bounded refinement scope. The note does not claim a new raw decoherence winner; it claims the corrected first-hit side/packet/entry marker stack is a modest real improvement in the residual-connection architecture while still trailing node-label on the tested N=18 row. Current runner output reproduces the matched table and the targeted gamma sweep exactly, including node=0.7121 versus side+packet+entry gamma=1.0 at 0.7213 and worse results at gamma=1.5 and 2.0. Residual risk is the declared bounded two-seed matched slice and the lack of asymptotic or broader-geometry closure.
+- **auditor confidence:** high
+
+### `persistent_record_sidebit_note`
+
+- **Note:** [`PERSISTENT_RECORD_SIDEBIT_NOTE.md`](../../docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded generated-DAG matched comparison on N=8,12,18 with 2 seeds and gamma=1.0: adding one persistent packet-side bit modestly improves the soft-overlap persistent-record lane on the N=12 and N=18 rows, does not uniformly improve exact-trace purity, and does not beat node-label raw purity.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The matched N={8,12,18}, seeds=2, gamma=1.0 table shows the side-bit persistent record modestly improves the soft-overlap lane at N=12 and N=18 while not beating node-label on raw purity.  _(class `C`)_
+- **chain closes:** True — The current matched-comparison runner constructs the same generated DAGs, seeds, k band, persistent-record baseline, and side-bit variants directly and reproduces the table within the source note's stated third-decimal drift. The cited parent notes are retained bounded inputs for the baseline matched comparison and overlap-kernel model; no asymptotic or raw-winner claim is included in this scope.
+- **rationale:** The bounded claim closes because the runner computes the node, persistent trace/soft, and side-bit trace/soft rows over the declared finite slice rather than hard-coding the side-bit conclusion. The live output matches the quoted N=8 row exactly and the N=12/N=18 rows within the documented third-decimal drift, preserving the narrow conclusion: side-bit helps the soft-overlap lane at N=12 and N=18, does not uniformly help trace purity, and remains behind node-label raw purity. Residual risk is limited to bounded-slice and stochastic-drift scope, which the audited claim already states.
 - **auditor confidence:** high
 
 ### `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30`
