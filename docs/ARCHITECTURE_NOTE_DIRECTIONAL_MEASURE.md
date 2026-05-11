@@ -15,8 +15,14 @@ underdetermination no-go cited under "Beta-derivation status".
 proves `β` cannot be derived from the current A1+A2 primitive core plus
 the named directional-measure constraints alone; `β = 0.8` is
 **observable-matched** against the eikonal-slope criterion of
-[`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md)
-(closure route 3 of the no-go). Per the 2026-05-03 REPAIR_TARGETS
+`BORN_SCATTERING_COMPARISON_NOTE.md` (see-also; route 3 informational
+example, converted from markdown link to backticked form 2026-05-10 to
+break citation cycle-0005 — the load-bearing authority for "β is not
+derived" is the angular-kernel underdetermination no-go cited above,
+not Born; Born's role here is to document one route-3 observable that
+the empirical β = 0.8 was matched against, which the PATH B
+disposition below now records as tuned-not-derived). Per the
+2026-05-03 REPAIR_TARGETS
 row #1 outcome, this note explicitly carries `β = 0.8` as a **tuned
 parameter**, not a derived constant; first-principles derivation of `β`
 is deferred to future work, conditional on closing one of the no-go's
@@ -113,7 +119,12 @@ or closure routes:
 
 The current β = 0.8 is **route 3**: pinned against the gravitational
 deflection eikonal slope per
-[`BORN_SCATTERING_COMPARISON_NOTE.md`](BORN_SCATTERING_COMPARISON_NOTE.md).
+`BORN_SCATTERING_COMPARISON_NOTE.md` (see-also; converted from markdown
+link to backticked form 2026-05-10 to break citation cycle-0005 — Born
+is the procedural reference where the empirical match was performed,
+not a load-bearing derivation authority on this note; the no-go cited
+above is the load-bearing authority for β being a tuned, not derived,
+input).
 The eikonal predicts slope -1.28 on b ∈ {3..6}; the lattice with
 β = 0.8 gives -1.43. The β-sweep (β ∈ [0.1, 20]) shows slope varies
 monotonically from -0.79 (β = 0.1, wide beam) to -1.93 (β = 20, narrow

@@ -26,8 +26,15 @@ that are themselves not retained-grade. Specifically:
   diagnostic now bounded via the PR #816 Crank-Nicolson companion).
 - [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
   is `audited_conditional` (blocked on the same emergent-Lorentz cite).
-- [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
-  is `audited_conditional` (current package pin, not yet a theorem).
+- `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` (see-also; converted
+  from markdown link to backticked form 2026-05-10 to break citation
+  cycle-0014, the 13-node anomaly_forces_time ring, and cycle-0015,
+  the 14-node ring that adds the angular-kernel companion — the Planck
+  pin status note is a status-tracking external lane reference, not a
+  load-bearing input to Steps 1–8 of the proof below; the theorem
+  itself operates on the free-scalar Hamiltonian-lattice continuum
+  limit and does not import Planck-scale claims) is
+  `audited_conditional` (current package pin, not yet a theorem).
 
 Blocked-on: this 3+1D boost-covariance result therefore stays
 audited-conditional until each of the four cited authorities advances
@@ -341,7 +348,11 @@ Steps 1-7 together prove the Phase 4 theorem:
   cone, via the on-shell maximal velocity `v_max = 1` of the relativistic
   dispersion.
 - **Promotion of Planck-pin to a theorem.** The retained
-  [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+  `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` (see-also; converted
+  from markdown link to backticked form 2026-05-10 to break citation
+  cycle-0014 / cycle-0015 — this is a caveat / future-work reference
+  about the Planck pin status, not a load-bearing premise of the Phase
+  4 theorem)
   posture is that `a^(-1) = M_Pl` is a current package pin, not yet a
   theorem. Phase 4 inherits this caveat for any phenomenological
   conversion to physical units.
