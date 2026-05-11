@@ -1,0 +1,136 @@
+===== runner cache v1 =====
+runner: scripts/frontier_beta_gbare_rescaling_abstract_identity_narrow.py
+runner_sha256: a8539bff008192e0e8bef6cebcd11d7c910203fbbaf1cf9ce7324cb2dd91f03a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: beta(g/c, N) = c^2 * beta(g, N) (abstract)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: symbolic algebraic identity (T1) via sympy
+----------------------------------------------------------------------------------------
+
+  beta(g, N) = 2*N/g**2
+  beta(g/c, N) = 2*N*c**2/g**2
+  residual T1 (beta(g/c, N) - c^2 * beta(g, N)) = 0
+  [PASS (A)] T1 symbolic: beta(g/c, N) - c^2 * beta(g, N) is identically zero  (sympy.simplify gives 0)
+  [PASS (A)] T1 via expand+together: residual is 0 as polynomial fraction  (expand(together(...)) = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: joint-rescaling invariance (T2) via sympy
+----------------------------------------------------------------------------------------
+
+  beta * g^2 = 2*N
+  (c^2 * beta) * (g/c)^2 = 2*N
+  [PASS (A)] T2 symbolic: (c^2 * beta) * (g/c)^2 - beta * g^2 is identically zero  (simplify gives 0)
+  [PASS (A)] T2 symbolic: rescaled product equals 2 N  (residual to 2 N = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: concrete rational instances of (T1) at exact precision
+----------------------------------------------------------------------------------------
+  [PASS (A)] T1 concrete (g=1, N=3, c=2): beta(g/c, N) = c^2 * beta(g, N)  (lhs=24, rhs=24)
+  [PASS (A)] T1 concrete (g=2, N=3, c=3): beta(g/c, N) = c^2 * beta(g, N)  (lhs=27/2, rhs=27/2)
+  [PASS (A)] T1 concrete (g=1, N=5, c=1/2): beta(g/c, N) = c^2 * beta(g, N)  (lhs=5/2, rhs=5/2)
+  [PASS (A)] T1 concrete (g=3, N=7, c=7/11): beta(g/c, N) = c^2 * beta(g, N)  (lhs=686/1089, rhs=686/1089)
+  [PASS (A)] T1 concrete (g=1, N=1, c=1 (trivial rescaling)): beta(g/c, N) = c^2 * beta(g, N)  (lhs=2, rhs=2)
+  [PASS (A)] T1 concrete (g=5/7, N=11/13, c=2/9): beta(g/c, N) = c^2 * beta(g, N)  (lhs=4312/26325, rhs=4312/26325)
+
+----------------------------------------------------------------------------------------
+Part 4: non-trivial rescaling strictly changes beta when N != 0 (T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T3 non-trivial (g=1, N=3, c=2): beta strictly changes  (beta_orig=6, beta_rescaled=24)
+  [PASS (A)] T3 non-trivial (g=2, N=3, c=3): beta strictly changes  (beta_orig=3/2, beta_rescaled=27/2)
+  [PASS (A)] T3 non-trivial (g=1, N=5, c=1/2): beta strictly changes  (beta_orig=10, beta_rescaled=5/2)
+  [PASS (A)] T3 non-trivial (g=3, N=7, c=7/11): beta strictly changes  (beta_orig=14/9, beta_rescaled=686/1089)
+  [PASS (A)] T3 non-trivial (g=5/7, N=11/13, c=2/9): beta strictly changes  (beta_orig=1078/325, beta_rescaled=4312/26325)
+
+----------------------------------------------------------------------------------------
+Part 5: orbit exhaustion of g under sigma_c (T3 surjectivity)
+----------------------------------------------------------------------------------------
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 7 sends g0=1 -> g'=1/7  (g0/c = 1/7)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 5/2 sends g0=1 -> g'=2/5  (g0/c = 2/5)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 4/3 sends g0=1 -> g'=3/4  (g0/c = 3/4)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 1 sends g0=1 -> g'=1  (g0/c = 1)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 4/7 sends g0=1 -> g'=7/4  (g0/c = 7/4)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 11/13 sends g0=1 -> g'=13/11  (g0/c = 13/11)
+  [PASS (A)] T3 orbit-exhaustion: c = g0/g' = 100/99 sends g0=1 -> g'=99/100  (g0/c = 99/100)
+
+----------------------------------------------------------------------------------------
+Part 6: invariance of the product beta * g^2 at exact rational
+----------------------------------------------------------------------------------------
+  [PASS (A)] T2 concrete (g=1, N=3, c=2): rescaled product equals 2 N = 6  (prod_orig=6, prod_new=6, 2N=6)
+  [PASS (A)] T2 concrete (g=2, N=3, c=3): rescaled product equals 2 N = 6  (prod_orig=6, prod_new=6, 2N=6)
+  [PASS (A)] T2 concrete (g=1, N=5, c=1/2): rescaled product equals 2 N = 10  (prod_orig=10, prod_new=10, 2N=10)
+  [PASS (A)] T2 concrete (g=3, N=7, c=7/11): rescaled product equals 2 N = 14  (prod_orig=14, prod_new=14, 2N=14)
+  [PASS (A)] T2 concrete (g=1, N=1, c=1 (trivial rescaling)): rescaled product equals 2 N = 2  (prod_orig=2, prod_new=2, 2N=2)
+  [PASS (A)] T2 concrete (g=5/7, N=11/13, c=2/9): rescaled product equals 2 N = 22/13  (prod_orig=22/13, prod_new=22/13, 2N=22/13)
+
+----------------------------------------------------------------------------------------
+Part 7: independence from any lattice / Cl(3) / SU(N_c) input
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-physical instance N=0 still satisfies identity (trivially)  (both sides = 0 when N=0)
+  [PASS (A)] identity holds at fully symbolic (g, N, c) with no numerical values  (residual at fully symbolic = 0)
+
+----------------------------------------------------------------------------------------
+Part 8: note structure and narrow-scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'β–g_bare Rescaling Abstract Identity Narrow Theorem'  ()
+  [PASS (A)] note contains: 'Claim type:** positive_theorem'  ()
+  [PASS (A)] note contains: 'polynomial-algebra identity'  ()
+  [PASS (A)] note contains: 'no lattice gauge theory'  ()
+  [PASS (A)] note contains: 'no Wilson plaquette action'  ()
+  [PASS (A)] note contains: 'Cl(3) framework input'  ()
+  [PASS (A)] note contains: 'Cited dependencies\n\nNone'  ()
+  [PASS (A)] note contains: 'Forbidden imports check'  ()
+  [PASS (A)] note contains: 'β(g, N)  :=  2 N / g²'  ()
+  [PASS (A)] note contains: 'β(g / c, N)  =  c² · β(g, N)'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'g_bare = 1 is uniquely forced'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'Wilson plaquette action is uniquely forced'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'g_bare = 1 follows from Cl(3)'  ()
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (g, c, N) be abstract symbolic variables with g > 0, c > 0, and
+    N arbitrary in any field of characteristic zero. Define
+
+        beta(g, N)  :=  2 N / g^2.
+
+  CONCLUSION:
+    Under the multiplicative rescaling g -> g / c,
+
+        beta(g/c, N)  =  c^2 * beta(g, N).                          (T1)
+
+    Equivalently, the product beta(g, N) * g^2 = 2 N is invariant under
+    the joint rescaling (g, beta) -> (g/c, c^2 * beta).              (T2)
+
+    The orbit of any positive g under sigma_c is the entire positive
+    ray, and the beta-fiber over each value is a single point in g.   (T3)
+
+  Audit-lane class:
+    (A) -- pure polynomial algebra over Q. No external numerical,
+    lattice, Cl(3), or SU(N_c) input. Proof is one-line direct
+    substitution.
+
+  This narrow theorem is independent of the sibling g_bare canonical-
+  convention narrow theorem's physical Wilson-action / SU(N_c=3)
+  framing. The Wilson lattice instance (g, N, c) = (g_bare, N_c, ...) is
+  just one application; the rescaling identity holds for any abstract
+  (g, c, N) by the same algebraic substitution.
+
+
+========================================================================================
+  TOTAL: PASS=43, FAIL=0
+========================================================================================
+
+----- stderr -----
+
