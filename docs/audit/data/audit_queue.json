@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 159
+    "medium": 158
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27095,31 +27095,6 @@
     },
     {
       "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wilson_test_mass_continuum_note_2026-04-11",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wilson_normalization_reconciliation_note_2026-04-11",
-        "staggered_newton_reproduction_note_2026-04-11",
-        "staggered_newton_blocking_sensitivity_note_2026-04-11"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.085,
-      "note_path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 11
-    },
-    {
-      "audit_independence_required": "any_non_self",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
       "claim_id": "gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03",
@@ -40280,6 +40255,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 109,
-  "total_pending": 1285
+  "ready_count": 108,
+  "total_pending": 1284
 }
