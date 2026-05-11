@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 88 |
+| **retained** | 89 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1220 |
+| unaudited | 1219 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 454 |
+| `audited_clean` | 455 |
 | `audited_conditional` | 184 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1333 |
+| `unaudited` | 1332 |
 
 | claim_type | count |
 |---|---:|
@@ -207,6 +207,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2568,6 +2569,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the axis-edge class the proof asserts that each of the four cubes sharing an axis edge contains exactly two tetrahedra with dihedral pi/4, giving 4*2*(pi/4)=2*pi.  _(class `A`)_
 - **chain closes:** False — The body-diagonal, face-diagonal, volume, and canonical tetrahedron table checks close, but the source proof's axis-edge incidence count is false as written. Exact local enumeration of the representative axis edge gives six incident tetrahedra with mixed pi/4 and pi/2 contributions, not eight pi/4 contributions, so the universal zero-deficit proof needs an explicit corrected edge-star enumeration before this exact positive theorem can be retained.
 - **rationale:** Issue: the load-bearing axis-edge proof uses the wrong incidence pattern for the four cubes around a representative axis edge. Why this blocks: T2 and T3 require an exact all-interior-edge deficit proof; a proof step that counts eight pi/4 contributions cannot certify the actual six-tetrahedron edge star, even though the corrected sum still appears to be 2*pi. Repair target: replace the axis-edge section with a symbolic finite edge-star enumeration for all local axis/face/body edge orbits, and have the runner print the exact contributing angles for the representative interior stars rather than relying on the incorrect prose count plus a numerical block sample. Claim boundary until fixed: the T1 dihedral table, T4 volume partition, body-diagonal and face-diagonal sums, and numerically corroborated flat-block zero-deficit checks remain useful bounded evidence, but the exact universal Regge-action theorem is not yet audited clean.
+- **auditor confidence:** high
+
+### `cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CUBIC_ORBIT_REYNOLDS_PROJECTOR_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CUBIC_ORBIT_REYNOLDS_PROJECTOR_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone finite-group Reynolds-operator theorem for the D_4 action on real functions on the forward-cone single-step neighbour set R(d_max): orbit averaging is idempotent, has image V_sym, is D_4-equivariant, linear, mass-preserving, positivity-preserving, has orbit-class basis dimension (d_max+1)(d_max+2)/2, equals (1/|D_4|) sum_g g, and is the unique D_4-equivariant projection onto V_sym. No directional path measure, physical kernel selector, boost-covariance route, continuum Lagrangian, Wilson action, PDG/literature comparator, or upstream framework dependency is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** P equals the finite-group Reynolds operator (1/|D_4|) sum_g g, and any D_4-equivariant projection Q onto V_sym satisfies Q(Pk)=Pk and Q(Pk)=Qk, hence Qk=Pk for all k.  _(class `A`)_
+- **chain closes:** True — The conclusions follow from standard finite-orbit averaging over the D_4 action on a finite set. The orbit-count formula is the count of unordered pairs of absolute transverse offsets, and uniqueness follows because any equivariant projection onto the invariant subspace must agree with the Reynolds average.
+- **rationale:** The proof is finite-dimensional representation theory and orbit counting; it does not import a physical measure or comparator. The runner exercises D_4 invariance, idempotence, image characterization, equivariance, linearity, mass and positivity preservation, orbit-basis rank, matrix-level Reynolds formula, spectral projector structure, and exact d_max=1 symbolic checks. Residual risk is only interpretation creep: this certifies the canonical projection onto V_sym, not any canonical choice of a point inside V_sym.
 - **auditor confidence:** high
 
 ### `cycle_battery_note_2026-04-10`
