@@ -19213,6 +19213,22 @@
       "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
     },
     {
+      "from": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10",
+      "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+    },
+    {
+      "from": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
       "from": "staggered_fermion_card_2026-04-11",
       "to": "minimal_axioms_2026-04-11"
     },
@@ -60738,6 +60754,22 @@
       "runner_path": "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py",
       "title": "Staggered-Dirac Substep 4 \u2014 AC Narrowing (Atomic Decomposition, Bounded)"
     },
+    "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10": {
+      "claim_id": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "53cfd27d39369f22a6ba81a15de074fdfaf8b0a74c448bbfd1f06bab923a0b5c",
+      "path": "docs/STAGGERED_DIRAC_SUBSTEP4_POSITIVE_RATCHET_STRETCH_ATTEMPT_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_staggered_dirac_substep4_positive_ratchet.py",
+      "title": "Staggered-Dirac Substep-4 Positive Ratchet Open Gate Note"
+    },
     "staggered_fermion_card_2026-04-10": {
       "claim_id": "staggered_fermion_card_2026-04-10",
       "claim_type_author_hint": null,
@@ -67104,7 +67136,7 @@
       "meta": 59,
       "no_go": 27,
       "none": 1628,
-      "open_gate": 29,
+      "open_gate": 30,
       "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
@@ -67113,13 +67145,13 @@
       "meta": 59,
       "no_go": 134,
       "none": 451,
-      "open_gate": 117,
+      "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8347,
-    "leaf_count": 566,
-    "node_count": 2113,
+    "edge_count": 8351,
+    "leaf_count": 567,
+    "node_count": 2114,
     "root_count": 794,
-    "runners_with_path": 1726
+    "runners_with_path": 1727
   }
 }

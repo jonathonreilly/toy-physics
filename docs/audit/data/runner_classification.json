@@ -17340,6 +17340,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py"
     },
+    "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_staggered_dirac_substep4_positive_ratchet.py"
+    },
     "staggered_fermion_card_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -37367,6 +37379,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_staggered_dirac_substep4_positive_ratchet.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_substep4_positive_ratchet_stretch_attempt_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_staggered_geometry_superposition_retained.py": {
       "assert_count": 0,
       "claims": [
@@ -45212,12 +45239,12 @@
     "dominant_class_distribution": {
       "A": 121,
       "B": 166,
-      "C": 657,
+      "C": 658,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1614,
-    "runners_with_C": 825,
+    "runners_classified": 1615,
+    "runners_with_C": 826,
     "runners_with_D": 448
   }
 }
