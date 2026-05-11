@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 264 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1239 |
+| unaudited | 1238 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 181 |
+| ~~audited_conditional~~ | 182 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 438 |
-| `audited_conditional` | 181 |
+| `audited_conditional` | 182 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1352 |
+| `unaudited` | 1351 |
 
 | claim_type | count |
 |---|---:|
@@ -600,6 +600,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `central_band_dense_joint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `central_band_layernorm_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `chiral_3plus1d_boundary_phase_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_layer_oscillation_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_walk_synthesis_2026-04-10_addendum` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -1886,6 +1887,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A selector from scalar quotient data to one generation label would have to pick a C3-fixed label, but the C3 action 0 -> 1 -> 2 -> 0 on generation labels is free, so no fixed singleton label exists; only based maps exist and those require extra basepoint/source/generation data.  _(class `A`)_
 - **chain closes:** True — The negative result closes as an exact group-action obstruction from the supplied premises: scalar Q/delta/z data are invariant under cyclic relabeling, while the target generation labels form a free C3 orbit. Therefore invariant scalar data cannot canonically select one physical generation label without additional based data. The runner directly checks the scalar invariance, carrier relabeling behavior, free action, absence of invariant singleton, and existence of only based maps.
 - **rationale:** The claim is a narrow no-go, not a positive charged-lepton mass closure. Its load-bearing step is exact algebra over the supplied C3 action and scalar-readout premise, and the runner checks the obstruction directly. No PDG masses, observed hierarchy label, or hidden physical generation identification are used as derivation input.
+- **auditor confidence:** high
+
+### `charged_lepton_y_tau_ward_combined_no_go_note_2026-05-10`
+
+- **Note:** [`CHARGED_LEPTON_Y_TAU_WARD_COMBINED_NO_GO_NOTE_2026-05-10.md`](../../docs/CHARGED_LEPTON_Y_TAU_WARD_COMBINED_NO_GO_NOTE_2026-05-10.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Combined single-cycle y_tau Ward-identity no-go over the note's enumerated six mechanisms on the claimed current framework surface.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The six mechanisms are asserted to exhaust the single-cycle attemptable surface, so no retained G times sqrt-rational structural constant y_tau Ward identity is constructible on the current framework surface.  _(class `B`)_
+- **chain closes:** False — The runner supports several local algebraic obstructions and current absence checks, but the framework-surface no-go imports named authorities and retained-status claims that are not declared as dependency edges. Several named authorities are currently unaudited or conditional, so the retained-surface exhaustion does not close from this row alone.
+- **rationale:** Issue: the note's no-go is over a claimed retained framework surface, but the audit row has deps=[] while the source cites YT Ward, direct charged-lepton no-go, EW A^4, generation-color closure, Koide/V8 retreat, D17-prime, and other status-dependent authorities; current ledger metadata shows some of these are unaudited or conditional. Why this blocks: an absence/exhaustion theorem can become false or unsupported when its surface authorities change, and with no dependency edges the audit pipeline cannot propagate that status or invalidate the no-go. Repair target: add the load-bearing framework-surface authorities and live candidate gates as direct dependency edges, or split the note into local obstruction lemmas whose dependencies are explicit. Claim boundary until fixed: the runner verifies local algebraic obstructions and present absence checks, not a retained no-go over the full framework surface.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md`
+  - `CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md`
+  - `CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`
+  - `KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md`
+  - `LEPTON_BLOCK_SCALAR_SINGLET_COMPOSITE_UNIQUENESS_D17_PRIME_THEOREM_NOTE_2026-05-10.md`
 - **auditor confidence:** high
 
 ### `chiral_3plus1d_boundary_phase_note`
