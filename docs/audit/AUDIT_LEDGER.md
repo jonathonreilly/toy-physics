@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 266 |
+| **retained_bounded** | 267 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1236 |
+| unaudited | 1235 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 440 |
+| `audited_clean` | 441 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1349 |
+| `unaudited` | 1348 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 894 |
+| `bounded_theorem` | 895 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 740 |
+| `positive_theorem` | 739 |
 
 | criticality | count |
 |---|---:|
@@ -370,6 +370,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
+| `local_zsym_predictor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `lorentz_violation_derived_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `main_open_cubic_validation_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
@@ -6561,6 +6562,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The cited paper's abstract-level record supports the note's narrow factual predicates: widefield NV magnetometry, lock-in PL detection over multiple pixels, in-phase/quadrature image formation, and sub-second dynamic magnetic imaging. The note explicitly limits the conclusion to analog-platform resemblance and denies validation of the framework's target observables.
 - **rationale:** The external source check closes the bounded backmatch claim: the paper is in the same diamond NV lock-in/quadrature/dynamic-imaging measurement family described by the note. The note does not overclaim this as evidence for the retained gravitational or causal-field observables, and it correctly preserves the distinction between resemblance and validation. Residual risk is only that this is a single retrospective analog candidate, not a prediction test.
 - **auditor confidence:** high
+
+### `local_zsym_predictor_note`
+
+- **Note:** [`LOCAL_ZSYM_PREDICTOR_NOTE.md`](../../docs/LOCAL_ZSYM_PREDICTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded archived finite search result: adding local_z_asym to the fixed 3-property AND classifier search on the 26 swept families is rejected, and no-refit cross-generator accuracy remains 6/9, matching the old two-property rule.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The completed archived runner log shows the best 3-property rule omits local_z_asym as an informative predictor and achieves the same 6/9 cross-generator accuracy as the old two-property rule.  _(class `C`)_
+- **chain closes:** True — The current runner cache timed out with no stdout, which is not a scientific verdict, but the archived completed log supplies the finite search result. The clean scope excludes the broader simple-classifier exhaustion theorem and all node-level metric no-go claims.
+- **rationale:** The archived log exactly supports the note's narrowed finite perimeter: local_z_asym does not improve the fixed 3-property classifier search, and cross-generator accuracy stays at 6/9. The original positive-theorem/exhaustion language is too broad, so the audited claim is retyped to bounded_theorem and limited to the registered finite search. Residual risk is the lack of a current completed cache and the absence of runner assertions; the completed archived artifact is sufficient for the narrow historical finite result only.
+- **auditor confidence:** medium
 
 ### `lorentz_violation_derived_note`
 
