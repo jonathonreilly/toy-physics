@@ -36488,6 +36488,17 @@
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem"
     },
+    "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10": {
+      "claim_id": "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "45ddd079d5e122d43380b3a7aa3c6e2e8af6e1dd30529f637328b7656604b64f",
+      "path": "docs/BH_QUARTER_WALD_NEWTON_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_bh_quarter_wald_newton_coefficient_narrow.py",
+      "title": "BH Quarter Wald-Newton Coefficient Narrow Theorem"
+    },
     "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29": {
       "claim_id": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
       "claim_type_author_hint": null,
@@ -67407,6 +67418,7 @@
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
     "bh_entropy_rt_ratio_widom_no_go_note",
+    "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10",
     "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
     "bmv_bounded_negative_note",
     "bmv_entanglement_note_2026-04-11",
@@ -68119,7 +68131,7 @@
       "no_go": 31,
       "none": 1627,
       "open_gate": 34,
-      "positive_theorem": 129
+      "positive_theorem": 130
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
@@ -68128,12 +68140,12 @@
       "no_go": 138,
       "none": 451,
       "open_gate": 122,
-      "positive_theorem": 628
+      "positive_theorem": 629
     },
     "edge_count": 8449,
-    "leaf_count": 600,
-    "node_count": 2155,
-    "root_count": 817,
-    "runners_with_path": 1768
+    "leaf_count": 601,
+    "node_count": 2156,
+    "root_count": 818,
+    "runners_with_path": 1769
   }
 }

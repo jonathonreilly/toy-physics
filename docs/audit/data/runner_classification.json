@@ -1152,6 +1152,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_bh_entropy_rt_ratio_widom.py"
     },
+    "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_bh_quarter_wald_newton_coefficient_narrow.py"
+    },
     "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29": {
       "assert_count": 0,
       "counts": {
@@ -25918,6 +25930,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_bh_quarter_wald_newton_coefficient_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "bh_quarter_wald_newton_coefficient_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 11,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_bh_quarter_wald_noether_framework_carrier.py": {
       "assert_count": 0,
       "claims": [
@@ -46328,15 +46355,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 189,
+    "decoration_candidates": 190,
     "dominant_class_distribution": {
-      "A": 137,
+      "A": 138,
       "B": 171,
       "C": 669,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1655,
+    "runners_classified": 1656,
     "runners_with_C": 841,
     "runners_with_D": 462
   }
