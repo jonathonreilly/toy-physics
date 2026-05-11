@@ -6,12 +6,16 @@
 
 ## Inputs (cited authorities)
 
-The load-bearing spectral bridge `a_0^2 = 2 |z|^2` used in §"Theorem 3"
-is imported verbatim from:
+The load-bearing spectral bridge identity
+`a_0^2 - 2 |z|^2 = 3 a^2 - 6 |b|^2` used in §"Theorem 3" is imported
+verbatim from:
 
-- [`KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md`](KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md)
-  — the exact circulant character bridge `a_0^2 = 2 |z|^2 iff
-  3 a^2 = 6 |b|^2` on the `C_3[111]` charged-lepton triplet.
+- [`KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md`](KOIDE_CIRCULANT_CHARACTER_BRIDGE_NARROW_THEOREM_NOTE_2026-05-09.md)
+  — the standalone polynomial-algebra identities `a_0 = sqrt(3) a`,
+  `z = sqrt(3) b`, and `a_0^2 - 2 |z|^2 = 3 a^2 - 6 |b|^2` on a
+  `C_3[111]`-circulant Hermitian. Self-contained (zero one-hop deps),
+  so it provides the algebraic identity without importing any further
+  upstream authority.
 
 Companion structural inputs already in the one-hop deps:
 
@@ -22,11 +26,11 @@ Companion structural inputs already in the one-hop deps:
   — exact charged Hermitian source law compresses canonically to those
   three cyclic channels.
 
-This note does not derive the spectral bridge; it imports it from the
-character-bridge note above and pulls back the target-size reduction to
-the `C_3`-covariant Hermitian subfamily. The selector mechanism and
-charged-lepton readout primitive are explicitly out of scope (see
-"What this does not yet close").
+This note does not derive the spectral bridge; it imports the algebraic
+identity from the narrow theorem above and pulls back the target-size
+reduction to the `C_3`-covariant Hermitian subfamily. The selector
+mechanism and charged-lepton readout primitive are explicitly out of
+scope (see "What this does not yet close").
 
 ## Question
 

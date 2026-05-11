@@ -13310,7 +13310,7 @@
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
-      "to": "koide_circulant_character_bridge_note_2026-04-18"
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
@@ -13319,10 +13319,6 @@
     {
       "from": "koide_circulant_wilson_target_note_2026-04-18",
       "to": "koide_dweh_cyclic_compression_note_2026-04-18"
-    },
-    {
-      "from": "koide_circulant_wilson_target_note_2026-04-18",
-      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
     },
     {
       "from": "koide_cl3_selector_gap_note_2026-04-19",
@@ -50091,12 +50087,11 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "koide_circulant_character_bridge_note_2026-04-18",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
         "koide_cyclic_wilson_descendant_law_note_2026-04-18",
-        "koide_dweh_cyclic_compression_note_2026-04-18",
-        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+        "koide_dweh_cyclic_compression_note_2026-04-18"
       ],
-      "note_hash": "8acf7098a21cea0b0c85caba5a8487aebf61e50e98df362eee20bfc0240ba549",
+      "note_hash": "88a65e1e319e50815ebd58d62fca46d31650d67c8a177a28bcaf1cd94bb51aa7",
       "path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
       "title": "Koide Circulant Wilson-Target Note"
@@ -69515,7 +69510,7 @@
       "open_gate": 116,
       "positive_theorem": 618
     },
-    "edge_count": 8664,
+    "edge_count": 8663,
     "leaf_count": 615,
     "node_count": 2181,
     "root_count": 813,

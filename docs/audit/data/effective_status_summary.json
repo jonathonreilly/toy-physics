@@ -105,7 +105,7 @@
       "dm_neutrino_source_surface_intrinsic_slot_theorem_note_2026-04-16"
     ]
   ],
-  "cycles_detected": 251,
+  "cycles_detected": 219,
   "effective_status_counts": {
     "audited_conditional": 203,
     "audited_failed": 19,
