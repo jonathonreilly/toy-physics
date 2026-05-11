@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 268 |
+| **retained_bounded** | 269 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1233 |
+| unaudited | 1232 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 442 |
+| `audited_clean` | 443 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1346 |
+| `unaudited` | 1345 |
 
 | claim_type | count |
 |---|---:|
@@ -469,6 +469,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_new_family_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_new_family_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `source_resolved_generated_support_mass_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `source_resolved_generated_support_recovery_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_wavefield_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_generated_wavefield_transfer_v2_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -8690,6 +8691,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The runner reproduces all six aggregate rows and the law comparison in the source note. The note explicitly frames the result as a bounded partial improvement rather than a closure theorem.
 - **rationale:** The current runner output matches the frozen table: bridge modes give 7/16, 6/16, and 5/16 TOWARD with F~M values 0.058, 0.098, and 0.230; split-shell modes give 8/16 for all three with F~M values 0.424, 0.381, and 0.500. The LAW COMPARISON also matches and supports the note's bounded read that fixed weights help the law but do not recover a near-linear class. Residual risk is limited to the chosen split-shell family and mode definitions.
 - **auditor confidence:** high
+
+### `source_resolved_generated_support_mass_scaling_note`
+
+- **Note:** [`SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`](../../docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite compact generated-family support/mass-scaling readout: baseline is 0/4 TOWARD with mean N_eff 2.66 and exponent -0.299, while the kNN-floor tweak is 2/4 TOWARD with mean N_eff 5.25 and exponent -0.152; no mass-scaling closure is claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current runner prints the baseline and kNN-floor detector tables, showing support broadening and partial sign recovery but non-linear/non-Newtonian centroid-shift exponents.  _(class `C`)_
+- **chain closes:** True — The registered runner cache is complete and matches the source note's finite tables. The audited scope is the numerical readout and explicit non-closure boundary, not a thresholded classifier or retained mass-scaling theorem.
+- **rationale:** The finite runner output supports the note's bounded conclusion: the kNN-floor tweak broadens detector support and gives two TOWARD rows, but the fitted exponents remain far from the linear mass-scaling closure being sought. The source explicitly disclaims full generated-family transfer and weak-field mass-law recovery. Residual risk is that the runner has no hard assertions, so any future drift should be rechecked against the registered table.
+- **auditor confidence:** medium
 
 ### `source_resolved_generated_support_recovery_note`
 
