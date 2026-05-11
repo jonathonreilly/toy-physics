@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1288 |
+| unaudited | 1287 |
 | audit_in_progress | 14 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 12 |
-| ~~audited_conditional~~ | 148 |
+| ~~audited_conditional~~ | 149 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 21 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 148 |
+| `audited_conditional` | 149 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 12 |
-| `unaudited` | 1401 |
+| `unaudited` | 1400 |
 
 | claim_type | count |
 |---|---:|
@@ -712,6 +712,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alpha_s_derived_narrow_theorem_note_2026-05-10` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | `alpha_s_derived_note` |
 | `ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | `ckm_atlas_axiom_closure_note` |
 | `cl3_baryon_qqq_color_singlet_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
@@ -9890,6 +9891,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given H_unit = I_(N_iso*N_c)/sqrt(N_iso*N_c), the diagonal basis component overlap equals 1/sqrt(N_iso*N_c), hence 1/sqrt(6) at (2,3).  _(class `A`)_
 - **chain closes:** True — The scoped identity follows directly from the stated orthonormal basis, matrix-unit definition, and H_unit normalization. The note explicitly excludes the physical SSB/Yukawa matching bridge, so that unproved bridge is outside the audited claim boundary.
 - **rationale:** The supplied proof and runner close the finite-dimensional arithmetic claim without importing gauge coupling, VEV, LSZ, chirality, HS/source normalization, or physical Yukawa readout assumptions. The alias equality is only clean within the explicitly bounded component-overlap definition and is not used to assert physical operator matching. The runner completed with 13 passes and 0 failures against the current scoped claim.
+- **auditor confidence:** high
+
+### `yt_zero_import_chain_note`
+
+- **Note:** [`YT_ZERO_IMPORT_CHAIN_NOTE.md`](../../docs/YT_ZERO_IMPORT_CHAIN_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Zero-SM-observable y_t/EW prediction chain as currently implemented: Ward-boundary y_t running, QFP bookkeeping, hierarchy/EW running, and comparison outputs are reproducible, but the chain is conditional on imported canonical plaquette quantities (<P>, u0, alpha_LM, alpha_s(v)), hard-coded R_conn=8/9/F_adj authority, and the kappa_EW=0 connected-trace selector. This excludes a clean Cl(3)-on-Z^3 zero-import positive theorem until those upstream bridges are retained or inlined.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-yt-zero-import-chain`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner imports canonical_plaquette_surface constants and hard-codes R_conn plus the kappa_EW=0 color/EW selector, then uses those inputs to generate the y_t, v, alpha_s, and electroweak prediction chain.  _(class `B`)_
+- **chain closes:** False — The live runner reproduces the stated numerical checks, but the restricted packet does not derive the canonical plaquette surface or the kappa_EW=0 connected-trace selector from retained primitives. Those imported anchors are load-bearing for the claimed zero-import positive theorem.
+- **rationale:** Issue: the current runner's numerical chain passes, but the claimed zero-import positive theorem still imports <P>=0.5934, u0, alpha_LM, alpha_s(v), R_conn/F_adj, and kappa_EW=0 rather than deriving all load-bearing anchors inside the restricted packet. Why this blocks: the output predictions may be reproducible, but a hostile reviewer can reject the claim that they follow from Cl(3) on Z^3 alone because the plaquette surface and EW connected-trace selector are upstream assumptions. Repair target: land retained-grade bridge notes for canonical_plaquette_surface and kappa_EW=0/F_adj, or inline those derivations in the runner, then re-audit the chain. Claim boundary until fixed: cite the Ward/RGE/QFP bookkeeping and numerical reproducibility only as conditional on those imported anchors, not as a clean zero-import theorem.
 - **auditor confidence:** high
 
 ### `yukawa_color_projection_theorem`
