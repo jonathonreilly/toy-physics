@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 78 |
+| **retained** | 79 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 245 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1105 |
+| unaudited | 1104 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 419 |
+| `audited_clean` | 420 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1203 |
+| `unaudited` | 1202 |
 
 | claim_type | count |
 |---|---:|
@@ -216,6 +216,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_current_fierz_channel_decomposition_note_2026-05-01` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `ew_current_matching_rule_open_gate_note_2026-05-03` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
+| `fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `fifth_family_complex_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `fifth_family_radial_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
 | `first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -4361,6 +4362,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "retained narrow comparison positive: shared weak-field linearity, with control-surface mismatch isolated rather than averaged away"  _(class `B`)_
 - **chain closes:** False — The comparison imports F~M/control facts from other family notes, but the restricted one-hop packet omits the retained grown-transfer authority and the FM-transfer authorities needed for the quoted 1.000 and 0.999994 values. The runner does not recompute controls or F~M values; it prints hard-coded rows.
 - **rationale:** Issue: the shared-law comparison rests on static copied values, with at least the grown-transfer source and FM-transfer value sources absent from the one-hop authority packet. Why this blocks: a hostile referee cannot verify the cross-family shared weak-field law from the supplied authorities, and the runner only renders constants rather than recomputing the observables. Repair target: add the missing dependency edges or a consolidated retained authority, then replace the comparison runner with one that recomputes the controls and F~M values on the stated observables. Claim boundary until fixed: the note can serve only as a support comparison card, not as a retained shared-law theorem.
+- **auditor confidence:** high
+
+### `fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`FERMION_PARITY_PAULI_TENSOR_INVOLUTION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/FERMION_PARITY_PAULI_TENSOR_INVOLUTION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** The finite positive-N Pauli tensor-product identity that F=⊗_x σ_3^{(x)} is Hermitian unitary, involutive, has ±1 parity eigenspaces of dimension 2^{N-1}, anticommutes with one-site ladder operators, and commutes with number operators and σ_+^{(x)}σ_-^{(y)} bilinears.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14bd-0dee-7c13-99cd-81a89a4afce1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given n̂_x=(I-σ_3^{(x)})/2 on H=⊗_{x=1}^N C², the tensor product F=⊗_x σ_3^{(x)} acts on each occupation basis state as (-1)^{∑_x ν_x}=exp(iπQ̂_total).  _(class `A`)_
+- **chain closes:** True — The stated results follow directly from per-site Pauli algebra, tensor-product factorization, and the elementary even/odd binary-string count. No Hamiltonian, Noether conservation, physical fermion realization, or external comparator is imported inside the audited scope.
+- **rationale:** The scoped theorem is a closed finite-dimensional Pauli-algebra identity. The runner checks the load-bearing identities exactly in the N=3 representative case and includes finite-N combinatorial spot checks; the general proof supplies the symbolic tensor-factor argument. Minor wording around deriving [F,n̂_x]=0 from the bilinear clause is harmless because the same Z_2-even conjugation applies directly to σ_-^{(x)}σ_+^{(x)}.
 - **auditor confidence:** high
 
 ### `field_equation_derivation_note`
