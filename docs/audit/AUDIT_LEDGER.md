@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1250 |
+| unaudited | 1249 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 177 |
+| ~~audited_conditional~~ | 178 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,19 +42,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 177 |
+| `audited_conditional` | 178 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1363 |
+| `unaudited` | 1362 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 895 |
+| `bounded_theorem` | 894 |
 | `decoration` | 13 |
 | `meta` | 116 |
-| `no_go` | 225 |
+| `no_go` | 226 |
 | `open_gate` | 111 |
 | `positive_theorem` | 741 |
 
@@ -699,6 +699,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_2d_gravity_law_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -6548,6 +6549,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Every scanned `topN` value stayed stable.  _(class `C`)_
 - **chain closes:** True — The note confines the claim to a fixed finite support sweep with explicit stability thresholds. The runner recomputes the lattice rows, two-stage sourced-response ratios, support carry, and stable set, and live/cached output match the reported max_rel_err=0.0066069 and min_carry=1.
 - **rationale:** The scoped bounded claim closes as a finite-compute result: the runner constructs the stated 2D harness and derives the reported sweep values rather than importing a target threshold or external comparator. The clean verdict is limited to the implemented parameter set, support list, and stability rule. Residual risk is implementation-model dependence on the helper lattice generator and chosen thresholds, not a closure gap for the finite no-collapse claim.
+- **auditor confidence:** high
+
+### `mirror_2d_gravity_law_note`
+
+- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Primary-runner bounded null result for the exact 2D mirror gravity-law lane: searched mass-window and distance-tail fits in mirror_2d_validation.py do not support a clean promoted 2D mirror mass law or distance law; no conclusion from the diagnostic cleanup runner or broader beyond-window no-go is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** These primary-runner fit qualities are themselves the load-bearing evidence that no clean promoted 2D mirror mass law or distance law is supported on the searched windows.  _(class `C`)_
+- **chain closes:** False — The current primary runner cache supports the weak mass-window and distance-tail null result, but the note's quoted cross-N gravity scaling row is stale relative to the same cache and the imported generator/linear-propagator authority is not represented in the ledger dependencies.
+- **rationale:** Issue: the note says the primary runner gives gravity = 6.48 * N^-0.210 with R^2 = 0.168, but the current SHA-pinned primary cache reports gravity = 2.19 * N^+0.049 with R^2 = 0.015; the note also relies on mirror_born_audit.py for the exact 2D mirror linear-propagator premise without a ledger dependency edge. Why this blocks: the qualitative null result remains supported, but a clean no-go must be current with its load-bearing runner artifact and machine-tracked imported authority. Repair target: refresh or explicitly pin the primary-runner scaling numbers, and make the imported authority/cache machine-tracked for this claim. Claim boundary until fixed: the current primary cache supports no promoted mass law or distance law on the searched windows, but the source note is not yet clean-retainable as written.
+- **open / conditional deps cited:**
+  - `scripts/mirror_born_audit.py`
+  - `logs/runner-cache/mirror_born_audit.txt`
 - **auditor confidence:** high
 
 ### `mirror_2d_validation_note`
