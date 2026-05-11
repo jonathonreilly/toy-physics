@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 725,
-    "high": 36,
+    "high": 35,
     "leaf": 334,
     "medium": 169
   },
@@ -24859,29 +24859,6 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ordered_lattice_quasi_persistent_relaunch_2d_note"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.209,
-      "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
-      "transitive_descendants": 36
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mirror_chokepoint_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -39369,6 +39346,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 97,
-  "total_pending": 1264
+  "ready_count": 96,
+  "total_pending": 1263
 }

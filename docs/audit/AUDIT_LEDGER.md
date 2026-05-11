@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 255 |
+| **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1246 |
+| unaudited | 1245 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
@@ -42,13 +42,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 12 |
-| `audited_clean` | 430 |
+| `audited_clean` | 431 |
 | `audited_conditional` | 177 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1356 |
+| `unaudited` | 1355 |
 
 | claim_type | count |
 |---|---:|
@@ -372,6 +372,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `ordered_lattice_quasi_persistent_relaunch_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `packet_memory_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_adaptive_readout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -6917,6 +6918,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The runner pins the fixed harness's six capture/carry/shift/relaunch/width rows and asserts every displayed value within +/-1e-3 of the narrowed note table.  _(class `C`)_
 - **chain closes:** True — The live runner computes the fixed ordered-lattice relaunch harness and reproduces the note's six-row table, with explicit assertions guarding drift. The source note expressly limits the result to numerical replay and disclaims persistent-mass, packet-class, and family-generic conclusions.
 - **rationale:** The live output matches the frozen table and the runner asserts capture, carry, shift, relaunch shift, and width for all six rows within tolerance. The source has narrowed the claim to that replay table only, so the hardcoded expected values are audit guards for numerical drift rather than a physical theorem. No broader persistent-object or family-generic claim is retained.
+- **auditor confidence:** high
+
+### `ordered_lattice_quasi_persistent_relaunch_note`
+
+- **Note:** [`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`](../../docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical replay on the fixed 3D ordered-lattice harness h=0.5, W=8, L=12, z_mass=3.0, strength=5e-5, top-5 reidentification, and the two seed packets point and compact5. The audited result is the frozen metric table: free spread, 90% support bins, top-5 capture, stage-1 carry, field-induced shift, relaunch carry, and relaunch field shift for both seeds. This excludes self-maintaining persistent objects, independently measurable inertial mass, and closed inertial-response theorems.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260511-ordered-lattice-quasi-persistent-relaunch-3d`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the fixed h=0.5, W=8, L=12 ordered-lattice family, the point and compact5 packets reproduce the listed top-5 capture, carry, centroid-shift, relaunch-carry, and relaunch-shift metrics.  _(class `C`)_
+- **chain closes:** True — The live runner computes the two fixed packet relaunch cases and reproduces the source note's metric table. The one-hop 2D replay dependency is retained_bounded but not needed to promote the 3D table beyond the stated bounded numerical-control scope.
+- **rationale:** The runner computes, rather than merely prints, the point and compact5 relaunch metrics, and the live output matches the note. The note's safe read is appropriately bounded: recognizable relaunch surrogate behavior in this fixed harness only. It does not claim persistent mass, a self-maintaining object, or a closed inertial-response theorem.
 - **auditor confidence:** high
 
 ### `packet_memory_note`
