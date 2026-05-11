@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 263 |
+| **retained_bounded** | 264 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1240 |
+| unaudited | 1239 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 437 |
+| `audited_clean` | 438 |
 | `audited_conditional` | 181 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1353 |
+| `unaudited` | 1352 |
 
 | claim_type | count |
 |---|---:|
@@ -171,6 +171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | B | - |
 | `boundary_law_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `branch_entanglement_robustness_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `broken_graph_action_power_robustness_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `carrier_orbit_invariance_stretch_attempt_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `causal_escape_window_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -1581,6 +1582,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The robustness runner recomputes the fixed-adjacency two-branch staggered-lattice protocol and reports 2-body delta_S > 0 in 60/60 audited configurations plus 3-body tau_3 = 0 with W/W-asym classification in 25/25 configurations.  _(class `C`)_
 - **chain closes:** True — The one-hop dependencies are now retained-grade and support the bounded 2-body branch-entanglement interpretation and corrected 3-body W-type interpretation. The current source note and runner output close the scoped robustness claim without relying on full BMV witness status or an external comparator.
 - **rationale:** The clean verdict applies only to the bounded numerical protocol theorem stated in the note. The load-bearing runner output gives positive 2-body delta_S across all audited sweeps and confirms the corrected 3-body W-type, non-GHZ interpretation with tau_3 = 0 and positive bipartite entropies. The prior dependency block is resolved because both cited one-hop dependencies now have retained-grade status. Plot generation failed due to missing matplotlib, but that does not affect the load-bearing numerical checks.
+- **auditor confidence:** medium
+
+### `broken_graph_action_power_robustness_note`
+
+- **Note:** [`BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`](../../docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded current-cache graph-damage replay on the retained 3D ordered-lattice family comparing p=0.5, p=1.0, and p=2.0, where p=1 is not uniquely most robust: p=1 has smallest F~M-p drift when retained, while p=2 keeps TOWARD on more damaged cases.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The robustness summary shows p=0.5 and p=1.0 TOWARD on 3/6 damaged cases, p=2.0 TOWARD on 5/6, with mean |F~M-p| of 0.004, 0.000, and 0.057 respectively.  _(class `C`)_
+- **chain closes:** True — The declared one-hop dependencies are retained-bounded, and the completed registered runner cache prints the damage ladder and summary supporting the bounded negative conclusion. The audited scope is the current-cache finite replay, not a universal graph theorem or standalone action uniqueness proof.
+- **rationale:** The completed cache supports the note's key comparison: the bounded damage ladder weakens the claim that p=1 is structurally most robust, because p=2 retains the TOWARD sign on more damaged cases while p=1 is cleaner only on the exponent side when it survives. The retained-bounded dependencies now supply the fixed-family context, and no broader graph-universality conclusion is audited. Residual risk is limited to the runner's finite damage ladder and current cache; the original missing frozen log and any standalone theorem framing remain outside the clean scope.
 - **auditor confidence:** medium
 
 ### `carrier_orbit_invariance_stretch_attempt_note_2026-05-03`
