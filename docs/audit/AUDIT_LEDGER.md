@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 262 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1242 |
+| unaudited | 1241 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 180 |
+| ~~audited_conditional~~ | 181 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 436 |
-| `audited_conditional` | 180 |
+| `audited_conditional` | 181 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1355 |
+| `unaudited` | 1354 |
 
 | claim_type | count |
 |---|---:|
@@ -742,6 +742,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
@@ -9364,6 +9365,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Mirror symmetry can produce a genuine near-rank-2 signature, but only in the strict chokepoint pocket and only at small N; outside that pocket, the rank story is heuristic rather than a retained large-N mechanism.  _(class `C`)_
 - **chain closes:** True — Running the registered script with the note's stated N=15,25 and 16-seed setup reproduces the table: original mirror has lower s2/s1 than random-2layer at both sizes, while mirror-chokepoint has high s2/s1, effective rank near 2, and Born zero at machine precision in the small-N pocket.
 - **rationale:** The current runner reproduces the note's diagnostic table under the stated setup, and the note's conclusion stays bounded: support exists for a strict small-N mirror-chokepoint rank signature, not for a scalable large-N rank-protected architecture. The default runner window tests larger N and is not the note's quoted table, but it reinforces the same non-scalability boundary rather than contradicting the bounded claim.
+- **auditor confidence:** high
+
+### `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02`
+
+- **Note:** [`TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md`](../../docs/TASTE_SCALAR_FERMION_CW_ISOTROPY_NARROW_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Pure algebraic C^8 binary-product identity for the fermion Coleman-Weinberg Hessian at phi=(v,0,0), with physical taste/staggered-Dirac realization and downstream Higgs-sector consequences out of scope.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Binary orthogonality gives sum_s (-1)^{s_i}(-1)^{s_j} = 8 delta_ij, so the Hessian is delta_ij times C(v) at phi=(v,0,0).  _(class `A`)_
+- **chain closes:** False — The abstract algebraic identity closes, but the note also admits the staggered-Dirac realization gate as a context input while the ledger row has no dependency edge to that open gate. The registered runner also exits nonzero because it still asserts stale positive_theorem retag strings.
+- **rationale:** Issue: the source note's physical taste/fermion-CW framing names STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03 as the canonical open gate, but this audit row has no dependency edge to that gate; the current primary runner additionally fails two stale pre-retag scope assertions. Why this blocks: a retained-bounded clean row with deps=[] would let downstream claims cite a physical fermion/taste realization that the note itself says is still gated, and the registered verifier is not current with the bounded_theorem retag. Repair target: either split this into a purely abstract algebra note with an updated passing runner, or add the staggered-Dirac gate dependency and leave retained propagation blocked until that gate is closed. Claim boundary until fixed: the C^8 binary orthogonality/Hessian isotropy identity is valid as an abstract algebra statement only.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
+  - `MINIMAL_AXIOMS_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `taste_scalar_isotropy_theorem_note`
