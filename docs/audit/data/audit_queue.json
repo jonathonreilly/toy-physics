@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 309,
+    "leaf": 308,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31102,30 +31102,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gluon_tree_level_masslessness_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "native_gauge_closure_note",
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/gluon_tree_level_massless_check.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -39283,6 +39259,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 73,
-  "total_pending": 1239
+  "ready_count": 72,
+  "total_pending": 1238
 }
