@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block25_post_block24_landed_checkpoint`.
+Current block: `block26_post_block25_landed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block25 post-block24 landed checkpoint; PR head contains only the block24 checkpoint after the previous queue-pivot input head, and ranked source-Higgs, W/Z, and neutral H3/H4 opportunities all remain waiting on explicit production/certificate inputs
+actual_current_surface_status: open / block26 post-block25 landed checkpoint; PR head contains only the block25 checkpoint after the previous landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral H3/H4 opportunities all remain waiting on explicit production/certificate inputs
 conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block25 is a landed-checkpoint, not a new closure artifact. The current PR head is a864e5fe55391ace59047afde57cbc0c47928854 and the only commit since the previous queue-pivot input head 82a01735f6118dcea381c23c0bc2ff4230cc4e33 is the block24 checkpoint. The row package remains 62/63 with combined_rows_written=false and chunk063 absent as completed checkpoint evidence. No required source-Higgs, W/Z, or neutral H3/H4 certificate paths are present, and no forbidden import or live-worker output is used."
+proposal_allowed_reason: "Block26 is a landed-checkpoint, not a new closure artifact. The current PR head is 8b0d95db83c6f8458b0547c1da32e690941e36a3 and the only commit since the previous landed-checkpoint input head a864e5fe55391ace59047afde57cbc0c47928854 is the block25 checkpoint. The row package remains 62/63 with combined_rows_written=false and chunk063 absent as completed checkpoint evidence. No required source-Higgs, W/Z, or neutral H3/H4 certificate paths are present, and no forbidden import or live-worker output is used."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -79,6 +79,9 @@ Reason:
     opportunity is admitted without explicit production/certificate inputs.
 15. Block25 records that after block24 landed, PR #230 moved only by the
     block24 checkpoint commit; no ranked source-Higgs, W/Z, or neutral H3/H4
+    opportunity is admitted without explicit production/certificate inputs.
+16. Block26 records that after block25 landed, PR #230 moved only by the
+    block25 checkpoint commit; no ranked source-Higgs, W/Z, or neutral H3/H4
     opportunity is admitted without explicit production/certificate inputs.
 
 Prior block certificate summary:
@@ -180,5 +183,10 @@ Prior block certificate summary:
   queue-pivot input head, and ranked source-Higgs, W/Z, and neutral H3/H4
   opportunities are not admitted without explicit production/certificate
   inputs.
-- Block01 through Block25 all have `proposal_allowed=false`; their boundaries
+- Block26 actual status: open / post-block25 landed checkpoint; current PR
+  head `8b0d95db` contains only the block25 checkpoint after the previous
+  landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral
+  H3/H4 opportunities are not admitted without explicit production/certificate
+  inputs.
+- Block01 through Block26 all have `proposal_allowed=false`; their boundaries
   remain active.

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 717,
+    "leaf": 718,
     "medium": 323
   },
-  "generated_at": "2026-05-11T23:19:38.224014+00:00",
+  "generated_at": "2026-05-11T23:29:48.125717+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -20856,6 +20856,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_block26_post_block25_landed_checkpoint_note_2026-05-11",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "open",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_BLOCK26_POST_BLOCK25_LANDED_CHECKPOINT_NOTE_2026-05-11.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_block26_post_block25_landed_checkpoint.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26195,6 +26212,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 880,
-  "total_pending": 1277
+  "ready_count": 881,
+  "total_pending": 1278
 }

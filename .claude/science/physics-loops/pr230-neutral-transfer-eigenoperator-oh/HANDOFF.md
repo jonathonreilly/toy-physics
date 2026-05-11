@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-11 19:11 EDT
+Checkpoint: 2026-05-11 19:26 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -383,12 +383,17 @@ new physics evidence, does not admit source-Higgs, W/Z, or neutral H3/H4 routes
 without explicit production/certificate inputs, does not relabel `C_sx/C_xx`
 as `C_sH/C_HH`, and does not touch the live chunk worker.
 
+Block26 is routing-only.  It does not treat the block25 checkpoint commit as
+new physics evidence, does not admit source-Higgs, W/Z, or neutral H3/H4 routes
+without explicit production/certificate inputs, does not relabel `C_sx/C_xx`
+as `C_sH/C_HH`, and does not touch the live chunk worker.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block25 should follow the same direct PR #230 landing path unless
+Block09 through block26 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -440,6 +445,12 @@ language denied.  No independent audit verdict was applied.
 Local review disposition for block25: pass open post-block24 landed checkpoint
 / no route admitted.  The checkpoint consumes committed PR-head state only,
 records that PR #230 head `a864e5fe` moved only by the block24 checkpoint
+commit, and leaves proposal language denied.  No independent audit verdict was
+applied.
+
+Local review disposition for block26: pass open post-block25 landed checkpoint
+/ no route admitted.  The checkpoint consumes committed PR-head state only,
+records that PR #230 head `8b0d95db` moved only by the block25 checkpoint
 commit, and leaves proposal language denied.  No independent audit verdict was
 applied.
 
@@ -1038,6 +1049,76 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=359 FAIL=0
 bash docs/audit/scripts/run_pipeline.sh
 # OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
+Next exact action: yield this PR230 lane for supervisor continuation unless a
+real production/certificate input is supplied.  Reopen in priority order with
+accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows
+with Gram/FV/IR authority, a strict W/Z matched physical-response packet with
+covariance/`delta_perp`/strict non-observed `g2`, or neutral H3/H4
+physical-transfer authority.  Do not run more current-surface shortcut gates
+from this lane, and do not treat chunk063 completion alone as closure.
+
+## Block26 Post-Block25 Landed Checkpoint
+
+Resumed on 2026-05-11 after block25 landed on the draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 8b0d95db83c6f8458b0547c1da32e690941e36a3
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The only commit after the previous landed-checkpoint input head
+`a864e5fe55391ace59047afde57cbc0c47928854` is the block25 checkpoint commit.
+Block26 does not rerun another absence gate; it verifies that the landed PR
+head still admits no ranked route without a real production/certificate input.
+
+Result:
+
+- source-Higgs route is not admitted: accepted same-surface canonical `O_H`,
+  production `C_ss/C_sH/C_HH` pole rows, source-Higgs production certificate,
+  combined row packet, Gram/FV/IR authority, and scalar-LSZ authority remain
+  absent;
+- W/Z route is not admitted: accepted action, canonical `O_H`/sector-overlap
+  authority, production W/Z rows, same-source top rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response rows remain
+  absent;
+- neutral H3/H4 route is not admitted: physical neutral transfer/off-diagonal
+  generator and source/canonical-Higgs coupling authority remain absent;
+- the row stream remains a `62/63` committed prefix with
+  `combined_rows_written=false`;
+- chunk063 is not committed as completed checkpoint evidence and would not be
+  closure by itself.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block26_post_block25_landed_checkpoint.py`
+- `docs/YT_PR230_BLOCK26_POST_BLOCK25_LANDED_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block26_post_block25_landed_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, PR backlog, and block26 PR body
+
+Honest status: open / post-block25 landed checkpoint.  `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block26_post_block25_landed_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block26_post_block25_landed_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=360 FAIL=0
+python3 link check for block26 note/handoff/PR body
+# missing_links=[]
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=1, re-audit required=0, 5 known warnings
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 git diff --check
