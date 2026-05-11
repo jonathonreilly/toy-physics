@@ -4341,6 +4341,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "clifford_chirality_dimension_narrow_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
       "from": "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb",
       "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
     },
@@ -38954,6 +38958,19 @@
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target"
     },
+    "clifford_chirality_dimension_narrow_theorem_note_2026-05-10": {
+      "claim_id": "clifford_chirality_dimension_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "note_hash": "d44fa9ed3ead54c6a343544125f313c9e4ebf7dda1272a8b10fedd33338bccfe",
+      "path": "docs/CLIFFORD_CHIRALITY_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_clifford_chirality_dimension_narrow.py",
+      "title": "Clifford Chirality-Dimension Narrow Theorem"
+    },
     "clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10": {
       "claim_id": "clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -68131,7 +68148,7 @@
       "no_go": 31,
       "none": 1627,
       "open_gate": 34,
-      "positive_theorem": 130
+      "positive_theorem": 131
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 755,
@@ -68140,12 +68157,12 @@
       "no_go": 138,
       "none": 451,
       "open_gate": 122,
-      "positive_theorem": 629
+      "positive_theorem": 630
     },
-    "edge_count": 8449,
-    "leaf_count": 601,
-    "node_count": 2156,
+    "edge_count": 8450,
+    "leaf_count": 602,
+    "node_count": 2157,
     "root_count": 818,
-    "runners_with_path": 1769
+    "runners_with_path": 1770
   }
 }

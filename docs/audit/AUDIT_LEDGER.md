@@ -23,7 +23,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1135 |
+| unaudited | 1136 |
 | meta | 99 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -46,7 +46,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1234 |
+| `unaudited` | 1235 |
 
 | claim_type | count |
 |---|---:|
@@ -55,22 +55,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `meta` | 107 |
 | `no_go` | 211 |
 | `open_gate` | 117 |
-| `positive_theorem` | 750 |
+| `positive_theorem` | 751 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 1012 |
 | `high` | 52 |
 | `medium` | 269 |
-| `leaf` | 714 |
+| `leaf` | 715 |
 
 - **Retained pending chain closure:** 2
 - **Citation cycles detected:** 252
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1656
-- runners with (C) first-principles compute hits: 841
+- runners classified: 1657
+- runners with (C) first-principles compute hits: 842
 - runners with (D) external comparator hits: 462
 - decoration candidates (no C, no D): 190
 
@@ -80,7 +80,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 888 | 80.30 | `unaudited` | meta |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 889 | 80.80 | `unaudited` | meta |
 | 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 859 | 43.25 | `audited_clean` | open_gate |
 | 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 425 | 42.23 | `unaudited` | unaudited |
 | 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 567 | 40.15 | `audited_conditional` | ~~audited_conditional~~ |

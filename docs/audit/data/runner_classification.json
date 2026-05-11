@@ -2748,6 +2748,18 @@
       "dominant_class": "B",
       "runner": "scripts/frontier_claude_complex_action_grown_companion_terminal_synthesis.py"
     },
+    "clifford_chirality_dimension_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_clifford_chirality_dimension_narrow.py"
+    },
     "clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -27225,6 +27237,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_clifford_chirality_dimension_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "clifford_chirality_dimension_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_color_projection_mc.py": {
       "assert_count": 0,
       "claims": [
@@ -46359,12 +46386,12 @@
     "dominant_class_distribution": {
       "A": 138,
       "B": 171,
-      "C": 669,
+      "C": 670,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1656,
-    "runners_with_C": 841,
+    "runners_classified": 1657,
+    "runners_with_C": 842,
     "runners_with_D": 462
   }
 }

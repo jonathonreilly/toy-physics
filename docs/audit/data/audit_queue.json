@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 679,
     "high": 27,
-    "leaf": 273,
+    "leaf": 274,
     "medium": 162
   },
   "cycle_break_target_count": 253,
@@ -30540,6 +30540,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "clifford_chirality_dimension_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_axioms_2026-05-03"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CLIFFORD_CHIRALITY_DIMENSION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_clifford_chirality_dimension_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37728,6 +37751,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 34,
-  "total_pending": 1141
+  "ready_count": 35,
+  "total_pending": 1142
 }
