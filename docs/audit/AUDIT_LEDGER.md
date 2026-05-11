@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 290 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1176 |
+| unaudited | 1175 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 195 |
+| ~~audited_conditional~~ | 196 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 486 |
-| `audited_conditional` | 195 |
+| `audited_conditional` | 196 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1289 |
+| `unaudited` | 1288 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 901 |
+| `bounded_theorem` | 902 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 228 |
 | `open_gate` | 111 |
-| `positive_theorem` | 732 |
+| `positive_theorem` | 731 |
 
 | criticality | count |
 |---|---:|
@@ -808,6 +808,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `tensor_network_connection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
 | `universal_gr_isotropic_glue_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -10664,6 +10665,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The ideal three-register protocol is the two-dimensional teleportation identity conjugated by the three encoding isometries V_A, V_R, and V_B, with A/R Bell projectors, identity R/B logical resource, and Bob corrections all expressed in the ordered logical bases.  _(class `A`)_
 - **chain closes:** True — The scoped claim is an ideal logical-support theorem, not a physical implementation claim. Given the supplied definitions, conjugating the standard two-qubit teleportation identity by V_A, V_R, and V_B proves the intended map for any valid ordered encoding triple, and the completed runner output is consistent with that algebraic boundary.
 - **rationale:** The load-bearing derivation is an algebraic identity on explicitly defined two-dimensional logical supports, and the runner output reports exact projector resolution/idempotence/orthogonality, all Bell outcomes, corrected-state fidelity, no-message Bob input independence, and the negative-control boundaries within tolerance. The 1609-triple default cap limits the telemetry counts, but the note does not use the capped survey as the theorem boundary; the theorem boundary is the conjugated teleportation identity for runner-valid encodings on the stated surface. No physical resource-preparation, measurement-apparatus, noise, Hamiltonian, or matter-transport bridge is being imported into the scoped claim.
+- **auditor confidence:** high
+
+### `tensor_network_connection_note`
+
+- **Note:** [`TENSOR_NETWORK_CONNECTION_NOTE.md`](../../docs/TENSOR_NETWORK_CONNECTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite computational tensor-network support readouts only: on the runner's small 1D/2D lattice tests, the transfer-matrix propagator has an MPO-style layer product with bond dimension bounded by Ny, the sampled free-fermion entanglement data show open-boundary log scaling with inferred c≈1.0855 and 2D area-law fit R^2≈0.9996, the strong-gravity transfer-matrix singular spectrum shows an effective center bond-dimension drop from 8 to 7 at f=20 with a large condition-number increase, and entanglement entropy decreases monotonically over the tested gravitational-coupling sweep. This does not ratify the AdS/CFT, Ryu-Takayanagi, holographic-principle, MERA, continuum, or physical-gravity bridge language as derived science.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Live reproduction of the runner's four finite computational gates and inspection of whether those gates actually derive the note's broader holographic/RT interpretation.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the finite numerical gates, but it does not derive the note's broader bridge to AdS/CFT, Ryu-Takayanagi, or the holographic principle. In particular, the runner reports the S vs 1/g RT fit as R^2=0.6465 while the linear S vs g fit has R^2=0.9745, so the RT-labeled gate is only monotone entropy decrease, not an RT formula derivation.
+- **rationale:** The computational readouts are reproducible and bounded, but the source note's interpretive framing goes beyond them. The result can be retained only as conditional support: finite MPO/entropy/singular-spectrum diagnostics on small toy lattices, not a theorem connecting this framework to AdS/CFT, RT surfaces, MERA, or holographic gravity.
+- **open / conditional deps cited:**
+  - `missing bridge from finite transfer-matrix diagnostics to AdS/CFT/RT/holographic-principle interpretation`
+  - `missing derivation of an RT S=Area/(4G) or S~1/g law; runner favors a linear S~g fit on the tested sweep`
 - **auditor confidence:** high
 
 ### `tensor_support_center_excess_law_note`
