@@ -1,0 +1,78 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded.py
+runner_sha256: 5f965849bd653452ff36ec08cdbe6f95e5e41a796d00458f149d97b617b2a938
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Bounded scaffold-availability theorem (Round 2): BGM + Dimock for BBS-style staggered taste-blocking bridge
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: scaffold piece (S1) BGM finite-range decomposition  (T1)
+----------------------------------------------------------------------------------------
+  [PASS] T1 (S1): BGM finite-range decomposition exists for 4d massless lattice Gaussian covariance (J. Stat. Phys. 115 (2004), 415-449)  (d=4, leading kernel 1/|x|^2; BGM Theorem 2.1 supplies G = sum_j G_j with G_j supported on |x-y| <= L^j a, L >= 2 integer)
+  [PASS] T1 (S1.i): 4d Coulombic prototype c_4/|x|^2 positive at x = 1  (leading behaviour of 4d massless lattice Green's function)
+
+----------------------------------------------------------------------------------------
+Part 2: scaffold piece (S2) Dimock Banach contraction  (T2)
+----------------------------------------------------------------------------------------
+  [PASS] T2 (S2): Dimock 2013 Banach-contraction formulation of Balaban small-field 4d lattice gauge RG exists (Rev. Math. Phys. 25 (2013), 1330010)  (U(1) and SU(N) pure 4d lattice gauge, small-field polymer activities, per-step contraction on Banach space of activities)
+  [PASS] T2 (S2.i): abstract Banach contraction inequality ||T^N x_0|| <= kappa^N ||x_0|| for kappa = 1/2, N = 16  (computed 1/65536 == expected 1/65536)
+
+----------------------------------------------------------------------------------------
+Part 3: (O4) refutation on scalar domain via (S1)  (T3)
+----------------------------------------------------------------------------------------
+  [PASS] T3 (O4 partial refutation): scalar 4d Coulombic kernel admits BGM finite-range decomposition; Round-1 (O4) is incorrect on the scalar covariance domain  ((S1) supplies G = sum_j G_j with G_j supported on |x-y| <= L^j a; extension to coupled gauge+fermion covariance is the open (A1))
+
+----------------------------------------------------------------------------------------
+Part 4: (O1) refutation on pure-gauge domain via (S2)  (T4)
+----------------------------------------------------------------------------------------
+  [PASS] T4 (O1 partial refutation): pure-gauge 4d lattice has a Banach-contraction formulation via Dimock 2013; Round-1 (O1) is incorrect on the pure-gauge domain  ((S2) supplies per-step contraction on small-field polymer activities for U(1) and SU(N) pure 4d lattice gauge; extension to fermion content is the open (A2))
+
+----------------------------------------------------------------------------------------
+Part 5: open admission (A1) scalar -> coupled gauge+fermion  (T5)
+----------------------------------------------------------------------------------------
+  [PASS] T5 (A1 open): (S1) BGM scaffold is for scalar Gaussian covariances; coupled gauge+fermion covariance is NOT in (S1)  (extension is an open problem in constructive QFT at the published-theorem level)
+
+----------------------------------------------------------------------------------------
+Part 6: open admission (A2) pure-gauge -> with fermions  (T6)
+----------------------------------------------------------------------------------------
+  [PASS] T6 (A2 open): (S2) Dimock scaffold is for pure 4d lattice gauge; fermion content (staggered taste blocking) is NOT in (S2)  (extension is open at the published-theorem level; Kroschinsky-Marchetti-Salmhofer 2024 active research direction)
+
+----------------------------------------------------------------------------------------
+Part 7: open admission (A3) operational identification kappa = alpha_LM  (T7)
+----------------------------------------------------------------------------------------
+  [PASS] T7 (A3 transparency): kappa^16 = alpha_LM^16 holds as an arithmetic identity at exact Fraction precision when kappa = alpha_LM = 907/10000  (kappa^16 = alpha_LM^16 = 209757062771157611368443476975539787615276548801/10000000000000000000000000000000000000000000000000000000000000000)
+  [PASS] T7 (A3 transparency.ii): alpha_LM^16 ~ 2.09e-17 at Decimal precision (in [1e-17, 3e-17] window)  (alpha_LM^16 = 2.097571e-17)
+
+----------------------------------------------------------------------------------------
+Part 8: scope statement on Round-1 (O2) and (O3)  (T8)
+----------------------------------------------------------------------------------------
+  [PASS] T8 (scope): Round-1 (O2) (1-loop perturbative non-uniformity) is scope-orthogonal; this bounded theorem is at the non-perturbative-scaffold level. Round-1 (O3) is restated as the strengthened (A3).  ((O2) is perturbative; the bounded scaffold is non-perturbative; (O3) is the categorical contrast inside (A3))
+
+----------------------------------------------------------------------------------------
+Part 9: joint sufficiency of the three open admissions  (T9)
+----------------------------------------------------------------------------------------
+  [PASS] T9 (joint sufficiency): each of (A1), (A2), (A3) is independently sufficient; their conjunction is the bounded admission set  ((A1) AND (A2) AND (A3) all open at the published-theorem level)
+
+----------------------------------------------------------------------------------------
+Part 10: numerical transparency for alpha_LM^16 vs framework quoted ~2.09e-17  (T10)
+----------------------------------------------------------------------------------------
+  [PASS] T10 (transparency): alpha_LM^16 at Fraction(907,10000) agrees with the framework's Decimal(0.0907) computation to within 1e-3 relative  (Fraction value 2.097571e-17 vs Decimal value 2.097571e-17; rel diff 0.000e+3)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+PASS: 13
+FAIL: 0
+Outcome: bounded_theorem with three named open admissions (A1), (A2), (A3).
+  (S1) BGM finite-range decomposition: published; (S2) Dimock Banach contraction for pure-gauge 4d small-field RG: published.
+  Round-1 (O1) and (O4) partially refuted on their narrow scalar / pure-gauge domains.
+  Bridge identification remains bounded in (A1) [scalar -> coupled gauge+fermion], (A2) [pure-gauge -> with fermions], and (A3) [operator-norm vs coupling-ratio canonical embedding].
+
+----- stderr -----
+
