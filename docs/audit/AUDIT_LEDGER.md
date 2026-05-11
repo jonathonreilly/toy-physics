@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 251 |
+| **retained_bounded** | 252 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1099 |
+| unaudited | 1098 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 428 |
+| `audited_clean` | 429 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1197 |
+| `unaudited` | 1196 |
 
 | claim_type | count |
 |---|---:|
@@ -504,6 +504,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `three_generation_local_algebra_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -11017,6 +11018,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given T_x = diag(-1,+1,+1), T_y = diag(+1,-1,+1), and T_z = diag(+1,+1,-1), the joint sign projectors P(s)=((I+s_x T_x)/2)((I+s_y T_y)/2)((I+s_z T_z)/2) are e_i e_i^T for the three listed characters and zero for the remaining five sign triples.  _(class `A`)_
 - **chain closes:** True — Inside the stated scope, the proof is ordinary exact matrix algebra and the runner verifies all projector, orthogonality, completeness, and decomposition identities at exact symbolic precision. The note explicitly excludes the physical-species bridge, C_3 cycle, algebra-generation, and no-proper-quotient claims.
 - **rationale:** The scoped bounded theorem closes from the assumed C^3 carrier and the three diagonal translation matrices. The retained dependency is used only to justify that this operator surface is an allowed input, while the audited claim itself is the downstream algebraic consequence; no forbidden physical bridge or external comparator is needed for this narrow statement.
+- **auditor confidence:** high
+
+### `three_generation_local_algebra_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`THREE_GENERATION_LOCAL_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/THREE_GENERATION_LOCAL_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Elementary binomial counts for the abstract discrete hypercube {0,1}^d and the d=3 specialization 8 = 1 + 3 + 3 + 1, with no physical Brillouin-zone, Wilson-mass, rooting, M_3(C), or PDG bridge audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c9-b7fc-7102-9048-29c1a97f6e23`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** A weight-w corner of {0,1}^d is determined exactly by choosing which w of the d coordinates are set to 1, giving binomial(d,w), and summing over w gives 2^d.  _(class `A`)_
+- **chain closes:** True — The scoped theorem is pure finite combinatorics and closes from the definition of {0,1}^d plus the binomial coefficient. The note explicitly excludes the physical and framework-selection bridges, so those open gates do not block this bounded claim.
+- **rationale:** Within its stated boundary, the proof is complete: total cube vertices are counted by the product rule, weight-w vertices by choosing w coordinates, and the d=3 row gives 1,3,3,1. The runner independently checks the same algebraic surface by exact enumeration and binomial identities with PASS=55, FAIL=0. No hidden physical import is needed because the note expressly does not derive d=3 as a substrate fact or identify the cube with Brillouin-zone corners.
 - **auditor confidence:** high
 
 ### `three_generation_observable_count_corollary_note_2026-05-03`
