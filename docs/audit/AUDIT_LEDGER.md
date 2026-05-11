@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 91 |
-| **retained_no_go** | 131 |
+| **retained_no_go** | 132 |
 | **retained_bounded** | 275 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1212 |
+| unaudited | 1211 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 459 |
+| `audited_clean` | 460 |
 | `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1325 |
+| `unaudited` | 1324 |
 
 | claim_type | count |
 |---|---:|
@@ -290,6 +290,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_connected_hierarchy_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_constant_lift_obstruction_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
+| `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
 | `gauge_vacuum_plaquette_framework_point_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_vacuum_plaquette_mixed_cumulant_audit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gauge_vacuum_plaquette_perron_jacobi_underdetermination_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -4652,6 +4653,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the explicit NMAX=4, MODE_MAX=80, beta=6 matrix tensor_word = diag_c*(N_f+N_fbar)*diag_c*(N_f+N_fbar)^T*diag_c, the runner verifies nonnegative entries, conjugation-swap symmetry, and nonnegative boundary amplitude from the (0,0) unit-vector readout.  _(class `A`)_
 - **chain closes:** True — The one load-bearing dependency is retained_bounded for the finite rho_(p,q)(6) coefficients, and the runner directly constructs the finite fusion matrices, diagonal coefficient matrix, tensor_word, swap matrix, and boundary vector on the stated box. The measured P1-P3 inequalities/symmetry bounds all pass at double precision, while the note explicitly excludes the parent untruncated and physical-readout claims.
 - **rationale:** The scoped finite-packet claim closes because the constructed matrix is exactly the object being audited, the rho coefficient dependency is retained_bounded on the same truncation box, and the runner reports PASS=76, FAIL=0 including P1 min(tensor_word)>=0, P2 ||S*tensor_word - tensor_word*S||_inf < 1e-12, and P3 min(tensor_word*boundary0)>=0. The SU(3) fusion recurrences are used only to define the finite packet's matrices on the box, and the note does not claim the parent spatial-environment matrix-element identity or any untruncated transfer theorem. Residual risk is scope drift into the parent theorem or convergence/Perron claims, which are outside this audit.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_COMPLETED_TRIPLE_CURRENT_TRANSFER_FAMILY_BOUNDARY_NOTE_2026-04-19.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Sampled-grid no-go only: for the explicit beta=6 spatial_pair witness family, explicit listed Z^min triple, optimal scalar fit routine, and 6x6x5x8 grid over tau_transfer, tau_boundary, asym_decay, and linear_decay, every sampled point has strictly positive gap and the sampled argmin is at the stated boundary corner. No continuous-parameter no-go, interval/global lower bound, symbolic monotonicity theorem, or exact framework-point realization claim is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the explicit 1440-point dense grid in the stated parameter box for the beta=6 spatial_pair witness, the minimum sampled scaled-fit gap to the listed completed triple Z^min is 7.791551e-03, so no sampled grid point realizes Z^min exactly.  _(class `C`)_
+- **chain closes:** True — The primary runner exhaustively evaluates the stated finite grid, reports the sampled minimum gap 7.791551e-03, confirms the sampled argmin lies at the stated boundary corner, and explicitly disclaims a continuous/global certificate. The scoped claim is only absence of exact realization on the sampled finite grid, so it closes from the runner output and the listed Z^min target.
+- **rationale:** The no-go is retained only at finite-grid scope: the dense certificate evaluates all 1440 specified grid points and finds a strictly positive minimum gap with zero fraction below the stated corner gap. The source note no longer claims that this proves the full continuous parameter box, and it names interval arithmetic, a global lower-bound optimizer, or an analytic monotonicity theorem as future work for that stronger no-go. Residual risk is only if downstream prose cites this as a continuous-family obstruction rather than a sampled-grid obstruction.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_note_2026-04-19`
