@@ -19740,6 +19740,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_universal_gr_a1_invariant_section.py"
     },
+    "universal_gr_bd_congruence_invariance_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_universal_gr_bd_congruence_invariance.py"
+    },
     "universal_gr_casimir_block_localization_note": {
       "assert_count": 1,
       "counts": {
@@ -40763,6 +40775,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_universal_gr_bd_congruence_invariance.py": {
+      "assert_count": 1,
+      "claims": [
+        "universal_gr_bd_congruence_invariance_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_universal_gr_casimir_block_localization.py": {
       "assert_count": 1,
       "claims": [
@@ -47102,12 +47129,12 @@
     "dominant_class_distribution": {
       "A": 150,
       "B": 172,
-      "C": 680,
+      "C": 681,
       "D": 266,
       "none": 416
     },
-    "runners_classified": 1684,
-    "runners_with_C": 861,
+    "runners_classified": 1685,
+    "runners_with_C": 862,
     "runners_with_D": 482
   }
 }

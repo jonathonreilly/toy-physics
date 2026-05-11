@@ -65141,6 +65141,17 @@
       "runner_path": null,
       "title": "Universal GR: Axiom-First Route Survey"
     },
+    "universal_gr_bd_congruence_invariance_bounded_note_2026-05-10": {
+      "claim_id": "universal_gr_bd_congruence_invariance_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "230b58911d6ed4e737b4ef0528eaacdffcd6dee0a03b3c69f2565a3394f8249c",
+      "path": "docs/UNIVERSAL_GR_BD_CONGRUENCE_INVARIANCE_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_universal_gr_bd_congruence_invariance.py",
+      "title": "Universal-GR `B_D` Congruence-Invariance Trace Identity \u2014 Bounded Note"
+    },
     "universal_gr_block_constraint_interpretation_note": {
       "claim_id": "universal_gr_block_constraint_interpretation_note",
       "claim_type_author_hint": null,
@@ -69546,6 +69557,7 @@
     "two_sign_comparison_note_2026-04-10",
     "unified_basin_signed_source_control_support_note_2026-04-30",
     "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+    "universal_gr_bd_congruence_invariance_bounded_note_2026-05-10",
     "universal_gr_block_constraint_interpretation_note",
     "universal_gr_block_normalization_note",
     "universal_gr_canonical_projector_connection_note",
@@ -69626,7 +69638,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 326,
+      "bounded_theorem": 327,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69634,7 +69646,7 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 785,
+      "bounded_theorem": 786,
       "meta": 70,
       "no_go": 149,
       "none": 446,
@@ -69642,9 +69654,9 @@
       "positive_theorem": 618
     },
     "edge_count": 8682,
-    "leaf_count": 618,
-    "node_count": 2184,
-    "root_count": 813,
-    "runners_with_path": 1796
+    "leaf_count": 619,
+    "node_count": 2185,
+    "root_count": 814,
+    "runners_with_path": 1797
   }
 }

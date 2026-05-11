@@ -1,0 +1,150 @@
+
+========================================================================================
+ frontier_universal_gr_bd_congruence_invariance.py
+========================================================================================
+ Bounded source note: B_{D'}(h',k') = B_D(h,k) under congruence
+ D' = S^T D S, h' = S^T h S, k' = S^T k S, where
+ B_D(h,k) := -Tr(D^{-1} h D^{-1} k). Pure linear-algebra identity
+ over R; class-A; closes from (BA-1) finite-dim real matrix algebra
+ (cyclic Tr + inverse-of-product). Implements 2026-05-10 verdict's
+ repair-target option (b) 'split the pure trace identity into a
+ separate clean algebraic row' for parent
+ UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: B_D Congruence-Invariance Trace Identity  (marker = 'B_D` Congruence-Invariance Trace Identity')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: status authority phrase  (marker = 'source-note proposal only')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Bounded admissions section header  (marker = '## Bounded admissions')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Provenance / non-dependencies section header  (marker = '## Provenance and Non-Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: eq. (1) B_D definition stated  (marker = 'B_D ( h, k )   :=   - Tr ( D^{-1} · h · D^{-1} · k )')
+  [PASS] contains: eq. (2) congruence transformation stated  (marker = 'S^T · D · S')
+  [PASS] contains: eq. (3) invariance identity stated  (marker = "B_{D'} ( h', k' )   =   B_D ( h, k )")
+  [PASS] contains: BA-1 finite-dim real matrix algebra stated  (marker = '(BA-1) **Finite-dimensional real matrix algebra over `R`.**')
+  [PASS] contains: parent note cited  (marker = 'UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md')
+  [PASS] contains: split-note framing per 2026-05-10 verdict  (marker = 'split note for the pure trace identity')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: explicit not-claimed: parent's bookkeeping consequence  (marker = "claim the parent note's bookkeeping consequence")
+  [PASS] contains: explicit not-claimed: parent's four admitted hypotheses  (marker = "import or otherwise depend on the parent's four admitted-context")
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner docstring)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in note (rejected vocabulary): 'Bounded statement.'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Bounded statement.'
+  [PASS] absent in note (rejected vocabulary): 'post-2026-05-10 narrowing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'post-2026-05-10 narrowing'
+  [PASS] absent in note (rejected vocabulary): 'explicitly out of the bounded scope'
+  [PASS] absent in runner docstring (rejected vocabulary): 'explicitly out of the bounded scope'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams (all on origin/main)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: B_{D'}(h',k') = B_D(h,k) at n=4 (parent's 3+1), 100 random trials
+----------------------------------------------------------------------------------------
+  n = 4, trials = 100 (orthogonal S, well-conditioned D)
+  Sample (first 5):
+    trial 0: B_D = -2.674763e+00, B_D' = -2.674763e+00, |diff| = 8.88e-15
+    trial 1: B_D = +9.343729e-01, B_D' = +9.343729e-01, |diff| = 3.33e-16
+    trial 2: B_D = -6.174178e-02, B_D' = -6.174178e-02, |diff| = 1.11e-15
+    trial 3: B_D = -2.659769e+01, B_D' = -2.659769e+01, |diff| = 1.07e-14
+    trial 4: B_D = +6.157397e+00, B_D' = +6.157397e+00, |diff| = 1.78e-15
+  Max residual over 100 trials: 2.27e-12
+  [PASS] max residual < 10^{-10} for n=4, orthogonal S, 100 trials (machine precision)  (max = 2.27e-12)
+  General invertible S (well-conditioned): max residual = 1.22e-09
+  [PASS] max residual < 10^{-6} for n=4, general invertible (well-conditioned) S  (max = 1.22e-09)
+
+----------------------------------------------------------------------------------------
+ Part 5: invariance across n ∈ {2, 3, 5, 8} (dimension independence)
+----------------------------------------------------------------------------------------
+  [PASS] n=2: max residual < 10^{-10} over 50 trials (orthogonal S)  (max = 4.26e-14)
+  [PASS] n=3: max residual < 10^{-10} over 50 trials (orthogonal S)  (max = 2.84e-14)
+  [PASS] n=5: max residual < 10^{-10} over 50 trials (orthogonal S)  (max = 2.27e-12)
+  [PASS] n=8: max residual < 10^{-10} over 50 trials (orthogonal S)  (max = 2.36e-11)
+
+----------------------------------------------------------------------------------------
+ Part 6: B_D(h,k) = B_D(k,h) for symmetric D, h, k (sanity)
+----------------------------------------------------------------------------------------
+  [PASS] B_D(h, k) = B_D(k, h) for symmetric D, h, k (cyclic Tr + symmetry)  (max |B_D(h,k) - B_D(k,h)| = 2.84e-14)
+
+----------------------------------------------------------------------------------------
+ Part 7: invariance for symmetric h, k (parent's 3+1 symmetric coefficients)
+----------------------------------------------------------------------------------------
+  [PASS] symmetric h, k: B_{D'}(h',k') = B_D(h,k) with D, h, k symmetric  (max residual = 9.09e-13)
+
+----------------------------------------------------------------------------------------
+ Part 8: failure under partial transformation (D only); identity needs full congruence
+----------------------------------------------------------------------------------------
+  Similarity (NOT congruence): |B_orig - B_sim| = 8.881784e-16
+  (NOTE: similarity DOES preserve trace, so this can still equal — but it's
+   a different transformation; the load-bearing claim is congruence-specific.)
+  Partial: D' = S^T D S but h, k UNTRANSFORMED:
+    |B_D(h,k) - B_{D'}(h,k)| = 9.094707e+00
+  [PASS] partial transformation (D only, not h/k) breaks the identity  (|diff| = 9.094707e+00 (large; identity needs full congruence))
+
+----------------------------------------------------------------------------------------
+ Part 9: imports limited to numpy + stdlib
+----------------------------------------------------------------------------------------
+  [PASS] imports limited to numpy + stdlib  (modules = ['__future__', 'numpy', 'pathlib', 're', 'sys'])
+
+----------------------------------------------------------------------------------------
+ Part 10: boundary check (what is NOT claimed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not: claim the parent note's bookkeeping consequence
+  [PASS] note explicitly does not: import or otherwise depend on the parent's four ad
+  [PASS] note explicitly does not: derive (BA-1) from the physical Cl(3) local algebr
+  [PASS] note explicitly does not: close the unconditional global stationary closure 
+  [PASS] note explicitly does not: promote any sister authority's effective status
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] split-note framing referenced (per 2026-05-10 verdict)
+  [PASS] (BA-1) admitted as bounded textbook input
+
+========================================================================================
+ TOTAL: PASS=70, FAIL=0
+========================================================================================
+
+ VERDICT: the trace identity B_{D'}(h',k') = B_D(h,k) under congruence
+ D' = S^T D S, h' = S^T h S, k' = S^T k S verified at numpy
+ double-precision tolerance over multiple matrix dimensions
+ (n = 2, 3, 4, 5, 8) and 100 random trials per dimension. The
+ identity is a class-A algebraic identity over (BA-1) finite-
+ dimensional real matrix algebra (cyclic Tr + inverse-of-product);
+ no hypotheses beyond (BA-1) are imported. The parent's bookkeeping
+ consequence about global stationary sections is NOT claimed here;
+ this is a split-note algebraic row only.
