@@ -13,10 +13,6 @@
       "dispersion_relation_note"
     ],
     [
-      "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-    ],
-    [
       "lorentz_boost_covariance_3plus1d_theorem_note",
       "planck_scale_lane_status_note_2026-04-23",
       "planck_scale_conditional_completion_note_2026-04-24",
@@ -48,11 +44,15 @@
       "lorentz_kernel_positive_closure_note"
     ],
     [
-      "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
-      "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+      "architecture_note_directional_measure",
+      "angular_kernel_underdetermination_no_go_note"
+    ],
+    [
+      "born_scattering_comparison_note",
+      "architecture_note_directional_measure"
     ]
   ],
-  "cycles_detected": 304,
+  "cycles_detected": 294,
   "effective_status_counts": {
     "audited_conditional": 259,
     "audited_failed": 26,

@@ -166,7 +166,10 @@ The current direct universal route is:
 - exact at the Lorentzian signature-class local closure level
 - exact at the Lorentzian finite-atlas global closure level
 - exact at the discrete global closure level recorded in
-  [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+  `UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md` (downstream consumer; backticked
+  to avoid length-5 cycle — this blocker note is historical/superseded and references
+  the closure as a status pointer "this has been discharged", not as a load-bearing
+  input; citation graph direction is *downstream closure → this blocker note*)
 - still open only beyond that, at a stricter interpretation theorem beyond the
   exact discrete global closure
 

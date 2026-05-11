@@ -149,4 +149,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - [s3_anomaly_spacetime_lift_note](S3_ANOMALY_SPACETIME_LIFT_NOTE.md)
 - [universal_gr_isotropic_glue_operator_note](UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
-- [discrete_einstein_regge_lift_note](DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md)
+- `DISCRETE_EINSTEIN_REGGE_LIFT_NOTE.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*; the restricted strong-field discrete lift is a downstream specialisation, not an input to the invariant nonlinear completion family)

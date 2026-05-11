@@ -365,7 +365,9 @@ What this is and is not:
   bookkeeping; it does not move the lane forward or backward, only
   rescales numbers in lock-step.
 - The downstream Wald-Noether composition cited in
-  [`BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM`](BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md)
+  `BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md`
+  (downstream consumer; backticked to avoid length-2 cycle — citation
+  graph direction is *downstream → upstream*)
   uses this canonical normalization to match `c_cell = 1/4` to
   `1/(4G_Newton,lat)`, forcing `G_Newton,lat = 1` in framework lattice
   units. Any rescaling of (N) by a factor `c` would absorb into a

@@ -1173,10 +1173,6 @@
       "to": "minimal_axioms_2026-04-11"
     },
     {
-      "from": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "to": "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-    },
-    {
       "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
       "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
     },
@@ -1395,10 +1391,6 @@
     {
       "from": "bh_entropy_derived_note",
       "to": "bh_entropy_rt_ratio_widom_no_go_note"
-    },
-    {
-      "from": "bh_entropy_rt_ratio_widom_no_go_note",
-      "to": "bh_entropy_derived_note"
     },
     {
       "from": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
@@ -16409,10 +16401,6 @@
       "to": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
     },
     {
-      "from": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
-      "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
-    },
-    {
       "from": "planck_scale_conditional_completion_note_2026-04-24",
       "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
     },
@@ -16515,10 +16503,6 @@
     {
       "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
       "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
-    },
-    {
-      "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
-      "to": "area_law_coefficient_gap_note"
     },
     {
       "from": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
@@ -20525,10 +20509,6 @@
       "to": "universal_gr_isotropic_glue_operator_note"
     },
     {
-      "from": "universal_gr_curvature_localization_blocker_note",
-      "to": "universal_gr_discrete_global_closure_note"
-    },
-    {
       "from": "universal_gr_discrete_global_closure_note",
       "to": "s3_anomaly_spacetime_lift_note"
     },
@@ -20555,10 +20535,6 @@
     {
       "from": "universal_gr_invariant_nonlinear_completion_note",
       "to": "universal_gr_isotropic_glue_operator_note"
-    },
-    {
-      "from": "universal_gr_invariant_nonlinear_completion_note",
-      "to": "discrete_einstein_regge_lift_note"
     },
     {
       "from": "universal_gr_lorentzian_signature_extension_note",
@@ -35875,10 +35851,8 @@
       "claim_type_author_hint": "positive_theorem",
       "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [
-        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-      ],
-      "note_hash": "e89d47ffc09b246ef57de44ec2950e4f508b9cec288a633848037807c272a18f",
+      "deps": [],
+      "note_hash": "2261e4a514d81a71e9a00cfaa3e490ba38e07399c001c7d69b22177e1ecdb080",
       "path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
       "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
       "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action"
@@ -36131,10 +36105,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
-      "deps": [
-        "bh_entropy_derived_note"
-      ],
-      "note_hash": "ad201acfc0bf81c164dbc9f26b4073115596722f6a9c89a6f5b7bbbffb6b1be3",
+      "deps": [],
+      "note_hash": "119cfb38bb6d7ace56538c6844c924de4667dfd24d8a7459fbe51d925646e6f0",
       "path": "docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md",
       "runner_path": "scripts/frontier_bh_entropy_rt_ratio_widom.py",
       "title": "BH Entropy RT-Ratio Widom No-Go Theorem"
@@ -53927,10 +53899,9 @@
         "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
         "minimal_axioms_2026-05-03",
         "axiom_first_lattice_noether_theorem_note_2026-04-29",
-        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
-        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
       ],
-      "note_hash": "53cc7167ad52e079d27a6d1ea76630b2f4c92cc7e8044c2a70bad2d99b26988f",
+      "note_hash": "186e959652460ba15cefcb4465835981cf5bcd2d43836b8216bd674b4d02441f",
       "path": "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_primitive_coframe_boundary_carrier.py",
       "title": "Planck Primitive Coframe Boundary-Carrier Theorem"
@@ -53990,10 +53961,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
-        "area_law_coefficient_gap_note"
+        "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
       ],
-      "note_hash": "cc136d107f49a3318bc5dc318b5d42360b14778e77e76ff895af06ea1de6e720",
+      "note_hash": "0650d379d413a90ad86ec3dfb3e7ad5255b1779a0ae14bf88105c2e9eddb6544",
       "path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_planck_source_unit_normalization_support_theorem.py",
       "title": "Planck Source-Unit Normalization Support Theorem"
@@ -62822,10 +62792,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "universal_gr_isotropic_glue_operator_note",
-        "universal_gr_discrete_global_closure_note"
+        "universal_gr_isotropic_glue_operator_note"
       ],
-      "note_hash": "e6b5e195abfbeac6c36aeb5b391a251e96e100dab04b6c209c73f12dc644415c",
+      "note_hash": "6f592b08912adbe11612d8c826c0968c4cc595ff129f0c648529c0fdcef4c261",
       "path": "docs/UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Curvature Localization Blocker Note"
@@ -62865,10 +62834,9 @@
       "deps": [
         "observable_principle_from_axiom_note",
         "s3_anomaly_spacetime_lift_note",
-        "universal_gr_isotropic_glue_operator_note",
-        "discrete_einstein_regge_lift_note"
+        "universal_gr_isotropic_glue_operator_note"
       ],
-      "note_hash": "ed38374d0abb90220f20f4b149c10310060c352e0be092ab9c36c9ac7fce33c0",
+      "note_hash": "6631fea5f4c25d897e1fc1ba4577970f4d8f5c9c617784e2f8560a2980dc8f5a",
       "path": "docs/UNIVERSAL_GR_INVARIANT_NONLINEAR_COMPLETION_NOTE.md",
       "runner_path": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py",
       "title": "Universal GR Invariant Nonlinear Completion on `PL S^3 x R`"
@@ -66396,11 +66364,13 @@
     "audit_lhf_leverage_map_for_retained_promotion_note_2026-05-01",
     "axiom_change_proposal_2026-04-10",
     "axiom_first_cpt_theorem_stretch_note_2026-04-29",
+    "axiom_first_reflection_positivity_theorem_note_2026-04-29",
     "axiom_reduction_note",
     "background_independence_note",
     "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10",
     "bell_inequality_derived_note",
     "beyond_lattice_qcd_note",
+    "bh_entropy_rt_ratio_widom_no_go_note",
     "block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02",
     "bmv_bounded_negative_note",
     "bmv_entanglement_note_2026-04-11",
@@ -67094,10 +67064,10 @@
       "open_gate": 117,
       "positive_theorem": 605
     },
-    "edge_count": 8369,
+    "edge_count": 8363,
     "leaf_count": 554,
     "node_count": 2102,
-    "root_count": 785,
+    "root_count": 787,
     "runners_with_path": 1715
   }
 }

@@ -5,7 +5,8 @@
 **Runner:** `scripts/frontier_bh_entropy_rt_ratio_widom.py`
 **Authority role:** canonical closure of the "is RT ratio = 1/4 exact?" question
 on the self-contained carrier defined intrinsically below. The existing
-BH entropy companion ([BH_ENTROPY_DERIVED_NOTE.md](./BH_ENTROPY_DERIVED_NOTE.md))
+BH entropy companion (`BH_ENTROPY_DERIVED_NOTE.md`, downstream consumer;
+backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*)
 is a downstream citation, not an upstream dependency.
 
 ## Audit-driven scope narrowing (2026-05-10)
@@ -451,7 +452,7 @@ companion is now explicit and one-directional, **upstream-to-downstream**:
   evaluations) is fully contained inside this packet. It does not
   depend on `BH_ENTROPY_DERIVED_NOTE.md` for any load-bearing input.
 - the bounded companion authority
-  [BH_ENTROPY_DERIVED_NOTE.md](./BH_ENTROPY_DERIVED_NOTE.md) is
+  `BH_ENTROPY_DERIVED_NOTE.md` is
   downstream: its carrier coincides with (C-1)-(C-8), so the no-go's
   conclusion `lim_L r(L) = c_Widom != 1/4` *applies to it*. The
   bounded lane therefore stays bounded because of this no-go.
