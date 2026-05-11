@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 240 |
 | open_gate | 13 |
-| unaudited | 1118 |
+| unaudited | 1117 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 259 |
+| ~~audited_conditional~~ | 260 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,21 +40,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 408 |
-| `audited_conditional` | 259 |
+| `audited_conditional` | 260 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1216 |
+| `unaudited` | 1215 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 832 |
+| `bounded_theorem` | 833 |
 | `decoration` | 13 |
 | `meta` | 106 |
 | `no_go` | 207 |
 | `open_gate` | 112 |
-| `positive_theorem` | 732 |
+| `positive_theorem` | 731 |
 
 | criticality | count |
 |---|---:|
@@ -578,6 +578,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dispersion_high_p_tiebreaker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `dispersion_relation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | unsupported_numerical_sweep_and_readout_bridge | - |
 | `dm_abcc_basin_finite_search_support_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dm_abcc_five_basin_chamber_dple_support_theorem_note_2026-04-21` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -2840,6 +2841,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Klein-Gordon is eliminated from the candidate pool (R2=0.78, 0/8 seeds); the propagator is not relativistic in the standard sense.  _(class `C`)_
 - **chain closes:** False — The runner reproduces the reported numerical table, but the key KG-elimination inference is not closed because the reported linearized KG R2 is computed in omega-squared space while Schrodinger and Linear R2 are computed in omega space. The note also extends the fit result to lensing and eikonal claims without any cited authority for the p-to-b mapping or baseline.
 - **rationale:** Issue: the load-bearing model comparison uses non-uniform fit objectives and then treats the resulting R2 values as directly comparable. Why this blocks: the conclusion that KG is eliminated, and therefore that no relativistic correction is needed, does not follow from the supplied runner even though the runner completed. Repair target: rerun the comparison with a common residual metric and explicit candidate-family/threshold definition, then cite or split the lensing implications. Claim boundary until fixed: only the raw finite-run dispersion table and this runner's ad hoc fit rankings are supported.
+- **auditor confidence:** high
+
+### `dispersion_relation_note`
+
+- **Note:** [`DISPERSION_RELATION_NOTE.md`](../../docs/DISPERSION_RELATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the narrowed dispersion claim that the supplied free-propagator measurements show 2D regular-lattice quadratic dispersion while 3D/grown-DAG geometry does not support a decisive relativistic versus non-relativistic conclusion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e14a1-354e-73c1-8632-da822b978dcc`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** On the 2D regular lattice Schrödinger wins decisively, but on the actual Fam1 grown DAG Schrödinger R²=0.994 vs Klein-Gordon R²=0.992, too close to distinguish, so the propagator's dispersion type is undetermined on the grown DAG.  _(class `C`)_
+- **chain closes:** False — The supplied primary runner and fresh stdout close only the 2D h=0.5 regular-lattice fit numbers in the table. The load-bearing 3D regular-lattice and Fam1 grown-DAG conclusions are asserted from omitted runners/logs and therefore do not close from this restricted packet.
+- **rationale:** Issue: the current packet provides executable evidence only for the 2D regular-lattice h=0.5 result, not for the 2D h=0.25 refinement, 3D band-structure result, or grown-DAG Schrödinger/KG near tie. Why this blocks: the narrowed claim is explicitly about non-transfer from 2D to 3D/grown-DAG geometry, so the missing geometry-specific runner outputs are load-bearing rather than ancillary. Repair target: include fresh stdout and source for the 3D and grown-DAG runners, or split the clean 2D h=0.5 result from the unsupported 3D/grown-DAG conclusion. Claim boundary until fixed: the packet supports only that the primary 2D h=0.5 lattice run fits omega=a p^2+b much better than the KG or linear forms under the runner's own fitting method.
 - **auditor confidence:** high
 
 ### `distance_law_3d_64_closure_note_2026-04-11`
