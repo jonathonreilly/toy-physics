@@ -1,6 +1,31 @@
 # Staggered Graph Observables Note
 
-**Status:** proposed_retained observables probe
+**Status:** meta working-rule observables probe
+**Claim type:** meta
+
+**Audit-renaming perimeter (2026-05-08):**
+The current generated audit ledger records this row `audited_renaming` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+meta`. The audit chain-closure explanation is exact: "The runner and
+retained cited notes support the listed diagnostic values, but the
+retained/secondary observable split is stipulated as a working rule.
+The packet lacks a theorem deriving that scoring rule from the
+transport law and graph topology." This rigorization edit only
+sharpens the boundary of the renaming perimeter; nothing here
+promotes audit status. The supported content of this note is the
+methodological **working-rule** scoring on the three listed non-
+cubic graph families: Born/linearity, norm preservation, force sign,
+F∝M, achromatic force, equivalence, robustness, and gauge/current-
+when-cycles are recorded as the **stipulated** retained-row split,
+and centroid/shell/depth as **stipulated** secondary diagnostics.
+This is a meta-level bookkeeping rule, not a derived theorem. The
+supported perimeter is exactly the bookkeeping rule plus the
+diagnostic-value table at n ∈ {36, 48, 36}; the rule itself is not
+derived from the transport law and graph topology — that derivation
+would be a separate theorem note and is the prescribed promotion
+path. The audit-renaming verdict precisely reflects this status: the
+note is correctly retagged from a positive-theorem framing to a meta
+working-rule framing.
 
 This note freezes the graph-native observable split for the staggered /
 Kahler-Dirac lane.

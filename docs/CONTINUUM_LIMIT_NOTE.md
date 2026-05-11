@@ -2,6 +2,27 @@
 
 **Date:** 2026-04-05
 **Status:** proposed_retained positive — weak-field deflection converges (3% change h=0.25 to h=0.125), F~M brackets 1.000
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-05-09):**
+The current generated audit ledger records this row `audited_numerical_match` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+packet shows a finite-resolution numerical trend, but it does not
+provide a completed convergence proof, error model, asymptotic bound,
+or completed runner output establishing the h -> 0 limit. The
+missing step is a retained convergence theorem or completed sliced
+computation with controlled extrapolation beyond h=0.125." This
+rigorization edit only sharpens the boundary of the numerical-match
+perimeter; nothing here promotes audit status. The supported
+content of this note is the displayed finite-h trend table (h ∈ {1.0,
+0.5, 0.25, 0.125}) reproduced from the registered logs, with the 2.7%
+weak-field deflection change between h=0.25 and h=0.125 read as a
+finite-resolution observation. The §"What this means" continuum-limit
+language is bounded interpretation of that finite trend, not a closed
+h → 0 convergence theorem. A future analytic convergence theorem or
+an explicit h ≤ 0.06 sliced extrapolation would be needed to promote
+beyond `audited_numerical_match`; that step is deferred.
 
 ## Artifact chain
 

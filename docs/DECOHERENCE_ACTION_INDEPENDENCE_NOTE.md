@@ -2,6 +2,27 @@
 
 **Date:** 2026-04-04
 **Status:** Confirmed on the frozen 3D `1/L^2` replay — exact numerical identity across actions
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-05-10):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+packet does not provide retained definitions of the two action laws
+or the imported propagation harness needed to verify the zero-field
+reduction. The runner also has no completed stdout, but the timeout
+is not used as the terminal reason." This rigorization edit only
+sharpens the boundary of the conditional perimeter; nothing here
+promotes audit status. The supported content of this note is the
+exact-identity table at h ∈ {1.0, 0.5, 0.25} reproduced verbatim from
+the frozen 2026-04-04 log; the broader interpretation in §"Why" and
+§"Implications" depends on the imported valley-linear and spent-delay
+action definitions plus the propagation harness, which are not in the
+restricted packet. The frozen log
+[`logs/2026-04-04-decoherence-action-independence.txt`](../logs/2026-04-04-decoherence-action-independence.txt)
+is the load-bearing artifact for the table; the runner
+[`scripts/decoherence_action_independence.py`](../scripts/decoherence_action_independence.py)
+is the registered re-derivation harness.
 
 ## Finding
 

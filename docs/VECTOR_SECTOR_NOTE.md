@@ -2,6 +2,34 @@
 
 **Date:** 2026-04-06
 **Status:** proposed_retained positive — phase-locked handedness (1H amplitude 0.018), not universal DC
+**Claim type:** positive_theorem
+
+**Audit-conditional perimeter (2026-04-27):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+live runner reproduces the phase-locked harmonic/nulled protocol, but
+the note does not close the bridge from that selected lock-in
+readout to an unqualified retained vector-sector observable; the
+current runner output also does not independently report the claimed
+matched scalar exposure table." This rigorization edit only sharpens
+the boundary of the conditional perimeter; nothing here promotes
+audit status. The supported content of this note is the lock-in
+harmonic / nulled protocol itself: the §"Decisive tests" results
+(phase-averaged DC = +0.000012, 1H amplitude = 0.018, 1529:1 ratio,
+f-oddness clean, time-order non-trivial) reproduced live by the
+registered runner
+[`scripts/vector_sector_circular_orbit.py`](../scripts/vector_sector_circular_orbit.py).
+The matched-scalar-exposure table at f=0.02 in §"Result" is reported
+in the note but is not independently reproduced by the current runner
+output as a labeled column; the §"What this means" framing as a
+"phase-locked first-harmonic handedness signal" is bounded
+interpretation that does not promote to an unqualified retained
+vector-sector observable. The supported perimeter is the lock-in
+harmonic protocol and its outputs; bridge-to-retained-vector-sector
+language remains conditional. A future runner-cache deposit
+explicitly logging the matched-exposure column under audit-lane
+runner timeout would close that gap.
 
 ## Artifact chain
 

@@ -1,11 +1,31 @@
 # Mesoscopic Surrogate Localization Sweep
 
 **Status:** bounded - bounded or caveated result note
+**Claim type:** bounded_theorem
 
 **Primary runner:** [`scripts/mesoscopic_surrogate_localization_family_sweep.py`](../scripts/mesoscopic_surrogate_localization_family_sweep.py)
 
 **Runner cache:** [`logs/runner-cache/mesoscopic_surrogate_localization_family_sweep.txt`](../logs/runner-cache/mesoscopic_surrogate_localization_family_sweep.txt)
 (SHA-pinned; runner exits 0; ~6s on the audit-lane host.)
+
+**Audit-conditional perimeter (2026-05-10):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+runner table supports the narrow table-level observation that
+point-like cases have low capture and topN rows have much higher
+capture. The stronger least-bad mesoscopic-source conclusion requires
+an explicit dominance criterion for score, width ratio, support, and
+capture, plus retained authority for the imported 3D source-control
+setup, neither of which is present in the restricted packet." This
+rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The narrow supported
+content of this note is the sweep table itself (the exact rows in
+"Retained result" are reproduced byte-for-byte by the SHA-pinned
+runner cache); the broader "least-bad mesoscopic source" interpretive
+phrasing in §"Safe read" is bounded interpretation outside the
+restricted packet's authority and is not a load-bearing claim of the
+audited row.
 
 This note records an alternative localization-family sweep on the retained 3D ordered-lattice mesoscopic source control. The question was whether an explicitly local source shape can preserve the same two-stage sourced-response stability as the broad top-N control, and possibly improve on it.
 

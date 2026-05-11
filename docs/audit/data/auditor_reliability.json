@@ -24,10 +24,10 @@
     "codex-gpt-5": {
       "audits_with_runner_class": {
         "A": 75,
-        "B": 44,
-        "C": 192,
+        "B": 40,
+        "C": 182,
         "D": 12,
-        "F": 4,
+        "F": 3,
         "unsupported_numerical_sweep_and_readout_bridge": 1
       },
       "bias_direction_breakdown": {
@@ -38,7 +38,7 @@
       "criticality_counts": {
         "critical": 56,
         "high": 5,
-        "leaf": 228,
+        "leaf": 213,
         "medium": 39
       },
       "cross_confirmation_agreement_rate": 0.82,
@@ -56,23 +56,23 @@
       "third_pass_decisions_n": 16,
       "third_pass_overturn_rate": 0.5,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 328,
-      "verdict_changed_after_re_audit": 311,
+      "total_audits": 313,
+      "verdict_changed_after_re_audit": 301,
       "verdict_counts": {
         "audited_clean": 238,
-        "audited_conditional": 47,
+        "audited_conditional": 32,
         "audited_failed": 43
       }
     },
     "codex-gpt-5.5": {
       "audits_with_runner_class": {
-        "A": 200,
-        "B": 61,
-        "C": 135,
+        "A": 199,
+        "B": 59,
+        "C": 133,
         "D": 6,
-        "E": 26,
+        "E": 25,
         "F": 16,
-        "G": 26,
+        "G": 23,
         "configured_numerical_proxy_to_surrogate_theorem_bridge": 1
       },
       "bias_direction_breakdown": {
@@ -82,9 +82,9 @@
       },
       "criticality_counts": {
         "critical": 263,
-        "high": 11,
-        "leaf": 143,
-        "medium": 54
+        "high": 10,
+        "leaf": 138,
+        "medium": 51
       },
       "cross_confirmation_agreement_rate": 0.846,
       "cross_confirmation_outcomes": {
@@ -101,15 +101,15 @@
       "third_pass_decisions_n": 32,
       "third_pass_overturn_rate": 0.5,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 471,
-      "verdict_changed_after_re_audit": 60,
+      "total_audits": 462,
+      "verdict_changed_after_re_audit": 58,
       "verdict_counts": {
         "audited_clean": 186,
-        "audited_conditional": 210,
+        "audited_conditional": 205,
         "audited_decoration": 13,
-        "audited_failed": 24,
-        "audited_numerical_match": 19,
-        "audited_renaming": 19
+        "audited_failed": 23,
+        "audited_numerical_match": 17,
+        "audited_renaming": 18
       }
     }
   },
@@ -140,7 +140,7 @@
   "totals": {
     "auditor_families_observed": 3,
     "overall_agreement_rate": 0.839,
-    "total_audits_recorded": 804,
+    "total_audits_recorded": 780,
     "total_cross_confirmation_family_participations": 184,
     "total_cross_confirmation_pairs": 149,
     "total_third_pass_decisions": 48

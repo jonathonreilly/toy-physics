@@ -2,7 +2,28 @@
 
 **Date:** 2026-04-05  
 **Status:** bounded partial recovery on the compact generated DAG family, but
+**Claim type:** bounded_theorem
 not a mass-scaling closure
+
+**Audit-conditional perimeter (2026-05-03):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+runner output supports the stated finite numerical readout, but the
+runner has no explicit PASS/FAIL assertions and the claim relies on
+interpreting 'far from linear' and 'mass-scaling class' without a
+closed threshold or independent comparator in the provided material."
+This rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The supported content
+of this note is the displayed numerical readout itself: per-`s`
+detector tables, the four-strength fitted centroid-shift exponents
+(`-0.299` baseline, `-0.152` kNN-floor), and the two-row aggregate
+table — all reproduced byte-for-byte by the registered runner output.
+The §"Safe read" qualitative phrasing ("far from the retained linear
+class", "non-Newtonian regime") is bounded interpretation that depends
+on a comparator threshold not in the restricted packet; the
+supported perimeter is just the finite numerical readout, not the
+classifier-level interpretation.
 
 ## Artifact chain
 

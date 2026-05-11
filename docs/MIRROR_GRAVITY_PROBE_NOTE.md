@@ -2,6 +2,35 @@
 
 **Date:** 2026-04-03  
 **Status:** bounded - bounded or caveated result note
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-05-01):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = medium`, `chain_closes = false`, and `claim_type
+= bounded_theorem`. The audit chain-closure explanation is exact:
+"The fixed-anchor runner reproduces the mass-window fits, and the
+current distance sweep supports the peak/plateau interpretation, but
+the note's N=60 tail-fit claim depends on a missing tail log or
+unregistered runner parameters. The comparison to other hard-geometry
+lanes is also not registered as a one-hop authority here." This
+rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The supported
+content of this note is the fixed-anchor mass-window fits at N=25,
+40, 60 (registered against
+[`scripts/mirror_gravity_fixed_anchor.py`](../scripts/mirror_gravity_fixed_anchor.py))
+and the peak/plateau distance interpretation at N=25, 40, 60
+(registered against
+[`scripts/mirror_gravity_distance_sweep.py`](../scripts/mirror_gravity_distance_sweep.py)).
+The N=60 tail-fit (`delta ~ C * b^0.000`) cited under §"Fixed-Mass
+Distance Sweep / N=60" is governed by the additional tail log
+[`logs/2026-04-03-mirror-gravity-distance-sweep-tail.txt`](../logs/2026-04-03-mirror-gravity-distance-sweep-tail.txt)
+which is not in the audit packet's load-bearing one-hop set. The
+§"Retained Conclusion" comparison to "other hard-geometry lanes" is
+bounded interpretation that depends on cross-lane comparisons not
+registered in this note's one-hop authority chain. The supported
+perimeter is just the fixed-anchor mass-window fits and the peak/
+plateau qualitative read; the N=60 tail-fit and cross-lane comparison
+are out-of-perimeter bounded narration.
 
 This note freezes the narrow mirror-only gravity probe requested after the
 retained mirror chokepoint pocket was established.

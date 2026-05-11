@@ -2,6 +2,31 @@
 
 **Date:** 2026-04-09 (revised same day after review)
 **Status:** proposed_retained POSITIVE (bounded) — all three DAG families produce lensing slopes in the −1.38 to −1.43 band at H=0.25, closing the earlier Fam1-only gap. However, a proper family-mean significance test shows Fam2 vs Fam3 at t=2.37 (~p≈0.05), so a small residual family offset cannot be ruled out. The claim is **three-family portability**, not universality or kernel-independence.
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-04-26):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = medium`, `chain_closes = false`, and `claim_type
+= bounded_theorem`. The audit chain-closure explanation is exact:
+"The source note gives a detailed finite-sweep table, but the cited
+raw log is missing from the worktree and the only listed runner is a
+slow per-family/seed batch tool rather than an aggregate replay of
+the 15-seed statistics. A live audit run did not complete even the
+first family/seed within the audit window, so the current packet
+does not provide reproducible runner output for the table or the
+t-tests." This rigorization edit only sharpens the boundary of the
+conditional perimeter; nothing here promotes audit status. The
+supported content of this note is exactly the structural framing —
+the per-seed slope table, the cross-family statistics, and the
+significance-test framework — read against the registered runner
+[`scripts/lensing_fine_h_batch.py`](../scripts/lensing_fine_h_batch.py)
+(per-family/seed batch tool, slow under the audit-lane window). The
+log file referenced in §"Artifact chain"
+([`logs/2026-04-09-lensing-fine-h-families.txt`](../logs/2026-04-09-lensing-fine-h-families.txt))
+is the historical raw-output archive; future runner-source rigorization
+deferred to a follow-up that adds an aggregate 15-seed replay
+runner with `AUDIT_TIMEOUT_SEC` set high enough for in-budget audit
+completion (cache-refresh required, runner SHA would change).
 
 ## Data
 

@@ -3,6 +3,27 @@
 **Date:** 2026-04-11  
 **Script:** `frontier_geometry_superposition.py`  
 **Status:** bounded exploratory path-sum result on a DAG ensemble; not on the staggered release surface
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-05-01):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+live runner reproduces the bounded DAG path-sum signal and the
+corrected added-edge construction. The runner output is not formatted
+as classified PASS lines, so the audit lane cannot treat the
+computation as a closed classified check surface." This rigorization
+edit only sharpens the boundary of the conditional perimeter; nothing
+here promotes audit status. The supported content of this note is
+the bounded path-sum signal itself: 3.93% raw / phase-only contrast,
+0.0574 centroid shift, 0.0211 width change, pairwise phase
+differences up to 0.323 rad — all reproduced live by the registered
+runner. The conditional gap is purely a runner-output formatting
+issue (no classified PASS lines), not a numerical or scientific
+discrepancy. A future runner-source rigorization adding explicit
+PASS/FAIL assertions on the four numerical rows would close the
+conditional perimeter; that change requires a runner SHA refresh and
+is deferred.
 
 ## Question
 

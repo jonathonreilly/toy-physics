@@ -40140,11 +40140,11 @@
     },
     "continuum_limit_note": {
       "claim_id": "continuum_limit_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "43b7ce256649ea31742fbf069d7f6401b3091434da8aad83082939df51bbf4e5",
+      "note_hash": "61323d65c991faf0da2a68a91d06fdc6de7bc1212cd259f7047caeef188e3681",
       "path": "docs/CONTINUUM_LIMIT_NOTE.md",
       "runner_path": "scripts/lattice_h2_T_numpy_continuum.py",
       "title": "Continuum Limit via h^2 Measure"
@@ -40574,11 +40574,11 @@
     },
     "decoherence_action_independence_note": {
       "claim_id": "decoherence_action_independence_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "73a6a45f19438d619ae5abed4d960c570c1c5437c4695c50846e1864ee5ad313",
+      "note_hash": "ac290c48713fd4ac74a1a42f93eeb7bebae1bb84844c772469ec4e22b63182f9",
       "path": "docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md",
       "runner_path": "scripts/decoherence_action_independence.py",
       "title": "Decoherence is Action-Independent"
@@ -40726,11 +40726,11 @@
     },
     "dimensional_gravity_table": {
       "claim_id": "dimensional_gravity_table",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d5dedc6ec17334ff7212f0920a65346c9a2aa90f99eaef74c0251db3bdd38383",
+      "note_hash": "9964c9aa3fdfb359ce48fe4aced30015d0fd4e800853ea9cd26a603c9f29ba37",
       "path": "docs/DIMENSIONAL_GRAVITY_TABLE.md",
       "runner_path": "scripts/dimensional_gravity_table_certificate_runner_2026_05_03.py",
       "title": "Dimensional Gravity Table"
@@ -40770,13 +40770,13 @@
     },
     "dirac_observable_panel_note": {
       "claim_id": "dirac_observable_panel_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "dirac_core_card_note"
       ],
-      "note_hash": "5773be2a069e00556ff2419206a62d794c3bc62016ea8116a5902dc3f907c8ca",
+      "note_hash": "a58ac6a5b2b98d27c911d8003ab2a5c4fe8ad60a6f625c29302a9cde72220058",
       "path": "docs/DIRAC_OBSERVABLE_PANEL_NOTE.md",
       "runner_path": "scripts/frontier_dirac_walk_3plus1d_v3.py",
       "title": "Dirac Observable Panel Note"
@@ -40947,11 +40947,11 @@
     },
     "distance_law_definitive_note": {
       "claim_id": "distance_law_definitive_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "1bc84d750b33402153fa42b6aa0e7e887cd4d373689da82622fa4ec7a5afced2",
+      "note_hash": "8271d6015675cd075607496e97f9ef4dfe4a13792d73e9acab177a68fe5e3afc",
       "path": "docs/DISTANCE_LAW_DEFINITIVE_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
       "title": "Definitive Distance Law Closure"
@@ -44868,11 +44868,11 @@
     },
     "fine_h_family_universality_note": {
       "claim_id": "fine_h_family_universality_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "04e70121e41bfc0900dcea49a1e2c1c6cde352a903df3671b927a04275012832",
+      "note_hash": "17bcf549ed54b3c6970940c13fc3d6b89435e9209af119934e519ff721133f16",
       "path": "docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md",
       "runner_path": "scripts/lensing_fine_h_batch.py",
       "title": "Fine-H (H=0.25) Lensing: Three-Family Portability"
@@ -46733,25 +46733,25 @@
     },
     "geometry_superposition_dag_ensemble_note_2026-04-11": {
       "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "d64cbe6b74afe4e7efb3a4c661c93f3dd1b0f90488334a7c1e65277e044be8ad",
+      "note_hash": "a52280f7864766146912699e10d8fb41bc815e699ad7a09387322fcea3ebf52f",
       "path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_geometry_superposition.py",
       "title": "Geometry Superposition on a DAG Ensemble"
     },
     "global_coherence_held_out2_note": {
       "claim_id": "global_coherence_held_out2_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "global_coherence_off_scaffold_note",
         "global_coherence_predictor_note"
       ],
-      "note_hash": "e2ae2182c4243a19b9e3bae745984e7e730e06a8be4650906b8a2b879fb4d9ab",
+      "note_hash": "e0b4a5c29736dc99aae2cfb1bed9caaa983b8d4ebd3cf0f3d7df4d7b60b14e6a",
       "path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
       "runner_path": "scripts/global_coherence_held_out2.py",
       "title": "Global Coherence \u2014 Larger Held-Out Batch (12 NEW Generators)"
@@ -46789,7 +46789,7 @@
         "native_gauge_closure_note",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "1c43bd220fb99e1fdaf9c1cf8b02cb7607214b5fc782e736155d1393ff1ac0ea",
+      "note_hash": "db117aee38f03d7703dab0e2798365a6d75519d287597a22dcca8de87c4f30a7",
       "path": "docs/GLUON_TREE_LEVEL_MASSLESSNESS_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/gluon_tree_level_massless_check.py",
       "title": "Tree-Level Gluon Masslessness from Retained SU(3) Gauge Invariance"
@@ -52699,11 +52699,11 @@
     },
     "local_zsym_predictor_note": {
       "claim_id": "local_zsym_predictor_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "2508e7b4f66d7d4cc1db01e6d44c5dfbcaf7503c3382fe9e9c3e6986e388ef2b",
+      "note_hash": "4a639fc16467e219dec0a60cb1932480ccd55779e4296be926dde4e173f6e24e",
       "path": "docs/LOCAL_ZSYM_PREDICTOR_NOTE.md",
       "runner_path": "scripts/local_zsym_predictor.py",
       "title": "Local Z-Asymmetry 3rd Predictor \u2014 NEGATIVE (Hypothesis Rejected)"
@@ -53005,11 +53005,11 @@
     },
     "mesoscopic_surrogate_localization_sweep_note": {
       "claim_id": "mesoscopic_surrogate_localization_sweep_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "f5c1aad540c4a484180044361730c682ad42b3ca9dd7919bcdcd3d0d6d478153",
+      "note_hash": "064b7471500d30db3aa9d1f6506368ae9b50bdb0dbe29e7f3ed23b77bd16f97f",
       "path": "docs/MESOSCOPIC_SURROGATE_LOCALIZATION_SWEEP_NOTE.md",
       "runner_path": "scripts/mesoscopic_surrogate_localization_family_sweep.py",
       "title": "Mesoscopic Surrogate Localization Sweep"
@@ -53217,11 +53217,11 @@
     },
     "mirror_gravity_probe_note": {
       "claim_id": "mirror_gravity_probe_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2cf7873f03b8e1733fbb0a70ba507909570c0c0f1415e86d04ef72d3f80e53c3",
+      "note_hash": "ec20ba2fcc1313125e87bbc898db9845476f7cb3d9eb092c637c616a2fe93d7f",
       "path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
       "runner_path": "scripts/mirror_gravity_fixed_anchor.py",
       "title": "Mirror Gravity Probe Note"
@@ -55555,14 +55555,14 @@
     },
     "persistent_record_sidebit_note": {
       "claim_id": "persistent_record_sidebit_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "persistent_record_matched_compare_note",
         "persistent_record_overlap_kernel_note"
       ],
-      "note_hash": "cc6a964bc6e5f4189afcbe0826ef666e509b01aa9cf6f92fa0cee2bf207a3d12",
+      "note_hash": "e606d5225e03186d70738cd15f7c20c6a90c8bb67219a555c469f30a44b91e6b",
       "path": "docs/PERSISTENT_RECORD_SIDEBIT_NOTE.md",
       "runner_path": null,
       "title": "Persistent Record Side-Bit Note"
@@ -60905,11 +60905,11 @@
     },
     "same_family_3d_closure_note": {
       "claim_id": "same_family_3d_closure_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "546943b6139d859fe35226c632b579e04e0b4d22527cfb3c769c4d6111c6f70d",
+      "note_hash": "f0a2e49a82583a624ed57e52a3f1d1699f9dfa65a58e4519fb63cb8a703e0543",
       "path": "docs/SAME_FAMILY_3D_CLOSURE_NOTE.md",
       "runner_path": "scripts/same_family_3d_closure.py",
       "title": "Same-Family 3D Closure: Valley-Linear"
@@ -62237,11 +62237,11 @@
     },
     "source_resolved_generated_support_mass_scaling_note": {
       "claim_id": "source_resolved_generated_support_mass_scaling_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "9c3343243be2d9d1699103f1c936d7ce9f151ffc382622f56efd44f01c12706c",
+      "note_hash": "235accaf3b4fd6a2c4ef41296f0ab361cb5cdda213d5f1385e27a0c158b395e2",
       "path": "docs/SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md",
       "runner_path": "scripts/source_resolved_generated_support_mass_scaling.py",
       "title": "Source-Resolved Generated Support + Mass Scaling"
@@ -62458,11 +62458,11 @@
     },
     "spectral_trajectory_theorem_2026-04-11": {
       "claim_id": "spectral_trajectory_theorem_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4c8ae59eb7d24db5aeb8ed8f68198c525e4a804a19f2b8f3b39960e5068682c6",
+      "note_hash": "a1f3f09e8d8f4c806ca7f3576870b1a5fac57a07db5aeb0455fc1495f3b7df98",
       "path": "docs/SPECTRAL_TRAJECTORY_THEOREM_2026-04-11.md",
       "runner_path": null,
       "title": "The Spectral--Trajectory Dichotomy in Discrete Self-Gravitating Quantum Mechanics"
@@ -62552,22 +62552,22 @@
     },
     "staggered_backreaction_note": {
       "claim_id": "staggered_backreaction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "155fd8e0abb6127300c3fc44f150716622f934be3a8463344c31f4a4e668d8d5",
+      "note_hash": "2b60c3707b1bf884e16175370133bcfbb6edacc7c33bf935193c375a7868d130",
       "path": "docs/STAGGERED_BACKREACTION_NOTE.md",
-      "runner_path": "scripts/frontier_staggered_backreaction_prototype.py",
+      "runner_path": null,
       "title": "Staggered Backreaction Prototype"
     },
     "staggered_backreaction_shell_spectral_note": {
       "claim_id": "staggered_backreaction_shell_spectral_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "ab82ead460aefc453a7826d197d102a7eb7cfe1331aa8203417eeb75636cf073",
+      "note_hash": "9755102caffa106b06b48b5052acb642ac34f7df9534b7212b581c43a7f4b060",
       "path": "docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md",
       "runner_path": "scripts/frontier_staggered_backreaction_shell_spectral.py",
       "title": "Staggered Backreaction Shell / Spectral Note"
@@ -62821,14 +62821,14 @@
     },
     "staggered_graph_observables_note": {
       "claim_id": "staggered_graph_observables_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [
         "staggered_graph_portability_note",
         "staggered_graph_gauge_closure_results_2026-04-10"
       ],
-      "note_hash": "50c539dbda33009dd73ea430fa62d594e33569793c640d55c861eadc0aebba51",
+      "note_hash": "70473d0db5f9ca9f6fb317fa9d2c9d1c2cfbf1b6db4a8570144d591c4c89c46a",
       "path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
       "runner_path": "scripts/frontier_staggered_graph_observables.py",
       "title": "Staggered Graph Observables Note"
@@ -63369,7 +63369,7 @@
       "deps": [
         "cl3_color_automorphism_theorem"
       ],
-      "note_hash": "116a5b78ed33a9833dddc0fd37799cb65792054e95e641b95a23e15f2f3d635e",
+      "note_hash": "a5e59e56254563cda3187daa11cf8896b7ac1a7afc53380a1948cf666ed6da8b",
       "path": "docs/SU3_DABC_SYMMETRIC_THEOREM_NOTE_2026-05-02.md",
       "runner_path": "scripts/su3_dabc_symmetric_check.py",
       "title": "SU(3) Symmetric Structure Constants d^{abc} from Anticommutator"
@@ -64281,11 +64281,11 @@
     },
     "tensor_network_connection_note": {
       "claim_id": "tensor_network_connection_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "1e05ea5508883409583983e5d4de451447519b97a5d91e73cd9182d1ab83d105",
+      "note_hash": "ff2452a4595d820192db0253558611b2a60e6987c5c7cc8f5ecdb878bbc712d0",
       "path": "docs/TENSOR_NETWORK_CONNECTION_NOTE.md",
       "runner_path": "scripts/frontier_tensor_network_connection.py",
       "title": "Tensor Network Connection Note"
@@ -64694,11 +64694,11 @@
     },
     "unified_basin_signed_source_control_support_note_2026-04-30": {
       "claim_id": "unified_basin_signed_source_control_support_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "3660d5709c77e310a24f243bd197ec86fd7eccc7df3ffdf14a95cb33ac97ff4f",
+      "note_hash": "981f0a75b03e4376ed5bca62d30b690637253a7d7b0eaa5517f75330721c0911",
       "path": "docs/UNIFIED_BASIN_SIGNED_SOURCE_CONTROL_SUPPORT_NOTE_2026-04-30.md",
       "runner_path": null,
       "title": "Unified Basin Signed-Source Control Support Note"
@@ -65737,11 +65737,11 @@
     },
     "vector_sector_note": {
       "claim_id": "vector_sector_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "8b2735f8e6ee7d76fa629176d39f5616ba28b292b364acc99378251a429524a2",
+      "note_hash": "7aed9a439bdb4ce6a3fd0f5e10ca8ad4e4adbb66f5ebafd9bbfbe5c4b1f42894",
       "path": "docs/VECTOR_SECTOR_NOTE.md",
       "runner_path": "scripts/vector_sector_circular_orbit.py",
       "title": "Vector Sector: Circular Orbit Handedness"
@@ -66569,22 +66569,22 @@
     },
     "wilson_two_body_open_note_2026-04-11": {
       "claim_id": "wilson_two_body_open_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "00c0fb5ddcf255758ea0d7b21aab510ca12b7eac2e4e368686ae7cfa5253f121",
+      "note_hash": "f2ba55c593f55401b91e2f8c023d7f4adba9d8e249a162e129c0eb3710785600",
       "path": "docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md",
       "runner_path": "scripts/frontier_wilson_two_body_open.py",
       "title": "Wilson Two-Body Open-Lattice Note"
     },
     "wilson_two_body_open_refined_note_2026-04-11": {
       "claim_id": "wilson_two_body_open_refined_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "3d706af53e342f578d31d4fb313ac95480472685b8c21c4399e45d82a0112b05",
+      "note_hash": "c4f874d3b94a8cff535547ed70c98eb945ef96c0d9b6708e448f83fd9a9645fd",
       "path": "docs/WILSON_TWO_BODY_OPEN_REFINED_NOTE_2026-04-11.md",
       "runner_path": null,
       "title": "Wilson Two-Body Open-Lattice Refinement Note"
@@ -69293,27 +69293,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 285,
+      "bounded_theorem": 301,
       "decoration": 1,
-      "meta": 63,
+      "meta": 64,
       "no_go": 42,
-      "none": 1621,
+      "none": 1598,
       "open_gate": 34,
-      "positive_theorem": 134
+      "positive_theorem": 140
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 764,
+      "bounded_theorem": 766,
       "decoration": 1,
-      "meta": 63,
+      "meta": 64,
       "no_go": 149,
-      "none": 450,
+      "none": 449,
       "open_gate": 122,
-      "positive_theorem": 631
+      "positive_theorem": 629
     },
     "edge_count": 8625,
     "leaf_count": 617,
     "node_count": 2180,
     "root_count": 821,
-    "runners_with_path": 1793
+    "runners_with_path": 1792
   }
 }

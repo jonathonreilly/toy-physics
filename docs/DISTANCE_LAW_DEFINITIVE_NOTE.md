@@ -3,8 +3,31 @@
 **Date:** 2026-04-12
 **Script:** `scripts/frontier_distance_law_definitive.py`
 **Status:** bounded review candidate -- high-precision ordered-cubic distance-law closure
+**Claim type:** bounded_theorem
 
 **Audit-lane runner update (2026-05-09):** The primary runner `scripts/frontier_distance_law_definitive.py` previously timed out under the audit-lane 120s default budget; AUDIT_TIMEOUT_SEC=1800 added; runs in 234s under the new budget. The runner's pass/fail semantics are unchanged; this update only ensures the audit-lane sees a complete cache instead of a TIMEOUT row.
+
+**Audit-conditional perimeter (2026-05-09):**
+The current generated audit ledger records this row `audited_numerical_match` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+runner genuinely computes Poisson fields and path-sum fits, but the
+0.1% conclusion depends on choosing the scaled-fit N>=56 weighted
+mean while multiple finite-size extrapolations in the same output
+miss -1 by about 3% to 14%. The missing step is an independent
+theorem or pre-registered rule selecting that estimator as the
+continuum/bounded-law estimator." This rigorization edit only
+sharpens the boundary of the numerical-match perimeter; nothing here
+promotes audit status. The supported content of this note is the
+finite per-N table of `alpha_scaled` values and the post-selected
+weighted-mean estimator at N >= 56; the §"Conclusion" 0.1%-precision
+phrasing is bounded interpretation conditional on that estimator
+choice, and the alternative 1/N-extrapolation estimators discussed in
+§"Finite-Size Systematics" are explicitly noted as giving alpha_inf
+in [-0.94, -0.86], 6%-14% off -1.0. A future independent estimator-
+selection theorem (or a pre-registered protocol) would close the
+estimator-choice gap; that step is deferred and is the prescribed
+repair path.
 
 ## Method
 

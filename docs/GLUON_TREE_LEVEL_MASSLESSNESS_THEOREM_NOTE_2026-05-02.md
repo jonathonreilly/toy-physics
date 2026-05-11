@@ -4,11 +4,37 @@
 **Type:** positive_theorem (proposed; audit-lane to ratify)
 **Claim scope:** at the tree level on the framework's retained SU(3) gauge action surface, no Lorentz-invariant Hermitian gauge-singlet quadratic-in-A_μ^a operator exists that is also SU(3) gauge-invariant; therefore the only quadratic-in-A operator allowed by retained SU(3) gauge invariance is the kinetic term -(1/4) F^a_μν F^{aμν}, and the gluon propagator pole is at p² = 0 (massless).
 **Status:** awaiting independent audit. Under scope-aware classification (audit-lane proposal #291), `effective_status` is computed by the audit pipeline.
+**Claim type:** positive_theorem
 **Loop:** `positive-only-retained-20260502`
 **Cycle:** 1 (Block 1)
 **Branch:** `physics-loop/positive-only-block01-gluon-massless-20260502`
 **Runner:** `scripts/gluon_tree_level_massless_check.py`
 **Log:** `outputs/gluon_tree_level_massless_check_2026-05-02.txt`
+
+**Audit-conditional perimeter (2026-05-02):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+cited dependencies retain bounded structural su(3) closure on graph-
+first/cubic surfaces, but they do not themselves construct a local
+Lorentz-covariant Yang-Mills connection, gauge action, or propagator
+for framework gluons. The runner verifies the standard Yang-Mills
+algebra after assuming that bridge, not the bridge from the retained
+framework structure." This rigorization edit only sharpens the
+boundary of the conditional perimeter; nothing here promotes audit
+status. The supported content of this note is the standard Yang-
+Mills algebra theorem (G1)–(G3): given a local Lorentz-covariant
+SU(3) gauge connection `A_μ^a` with the standard non-abelian
+transformation law, no quadratic-in-A gauge-invariant mass term
+exists, so the tree-level gluon propagator pole is at p² = 0. The
+conditional gap is the bridge from the framework's retained graph-
+first / cubic structural SU(3) closure (cited authorities) to a local
+Lorentz-covariant Yang-Mills connection on the framework surface;
+this note's "Admitted-context inputs" already lists this bridge as
+admitted-context. A future bridge-theorem note would close the
+conditional perimeter; this note remains a tree-level theorem on the
+admitted Yang-Mills surface, not a bridge from the retained graph-
+first structure.
 
 ## Cited authorities (one hop)
 

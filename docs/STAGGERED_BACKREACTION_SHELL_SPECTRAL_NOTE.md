@@ -2,6 +2,27 @@
 
 **Date:** 2026-04-10  
 **Status:** proposed_retained structural diagnostic
+**Claim type:** positive_theorem
+
+**Audit-conditional perimeter (2026-04-26):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+live runner reproduces the shell/spectral over-smoothing diagnosis,
+including shell span ratios 0.123 and 0.229 and solved/external low-
+mode fractions 0.958/0.453 and 0.809/0.355, but the note's exact
+force readouts are stale against current output." This rigorization
+edit only sharpens the boundary of the conditional perimeter; nothing
+here promotes audit status. The supported content of this note is
+the structural shell/spectral over-smoothing diagnosis itself: the
+shell span ratios (0.123 cycle-bearing, 0.229 layered) and the low-
+mode fractions (0.958/0.453 and 0.809/0.355) match the live runner
+output exactly. The numerical force readouts (`F_ext`, `F_solve`,
+`force gap`) are stale against current output and are bounded
+finite-snapshot values rather than load-bearing structural conclusions
+of this note. A future runner-source rerun would refresh those force
+columns; the structural diagnosis (over-smoothing direction, low-mode
+concentration) is unchanged.
 
 ## Question
 

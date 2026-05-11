@@ -1,8 +1,29 @@
 # Dirac Observable Panel Note
 
 **Status:** bounded - bounded or caveated result note
+**Claim type:** bounded_theorem
 **Date:** 2026-04-10  
 **Scope:** one Dirac 3+1D harness, many gravity readouts.
+
+**Audit-conditional perimeter (2026-05-03):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+dependency now closes for retained bounded core results, including
+multi-observable gravity under primary readouts, but the supplied
+runner output does not report the observable-panel-specific readouts
+listed in this note. The missing step is a panel run or retained
+summary tying centroid, peak, first-arrival, early accumulation,
+current, and shell imbalance to the stated default sweep and sign-
+alignment questions." This rigorization edit only sharpens the
+boundary of the conditional perimeter; nothing here promotes audit
+status. The supported content of this note is the bounded
+methodological framing: the panel of readouts, the interpretation
+rules, and the default sweep are all auditable framings, not
+numerical claims. A future panel-runner deposit producing the six
+listed readouts on the default `n=21, layers=10..20, mass=0.3,
+strength=5e-4` sweep would close the conditional perimeter; this note
+remains a methodological card until that runner output is registered.
 
 The current Dirac work has reached the point where the main question is not
 just whether a sign is `TOWARD` or `AWAY`, but whether the sign survives under

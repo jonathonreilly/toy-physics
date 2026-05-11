@@ -2,8 +2,35 @@
 
 **Date:** 2026-04-11  
 **Status:** bounded companion refinement note
+**Claim type:** bounded_theorem
 **Scripts:**  
 - `frontier_wilson_two_body_open_refined.py`
+
+**Audit-conditional perimeter (2026-05-08):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+restricted packet contains no cited retained authority, no runner
+stdout, and no runner source for the reported sweep and fits. The
+missing step is an auditable computation or certificate showing the
+25 run outputs and regression exponents from the stated Wilson
+setup." This rigorization edit only sharpens the boundary of the
+conditional perimeter; nothing here promotes audit status. The
+supported content of this note is the structural framing: the open-
+lattice Wilson refinement protocol, the post-selected-only fit
+methodology (already declared in §"Fits"), and the qualitative
+conclusion that the law remains non-Newtonian under refinement. The
+numerical rows (25 run table, side-by-side fits at side ∈ {11..19},
+representative `a_mut` values, side-binned exponents -3.139..-3.837,
+the §"Screening Addendum" `mu^2`-controlled crossover) are not
+independently reproduced from a registered runner stdout in the
+audit packet; they are bounded retained values cited from the
+companion runner `scripts/frontier_wilson_two_body_open_refined.py`
+which is referenced in the source-note header but is not in the
+restricted packet's load-bearing one-hop set. A future runner-cache
+deposit producing the 25-run table and the per-side regression
+exponents would close the missing-stdout gap; that is the prescribed
+repair path.
 
 ## Question
 

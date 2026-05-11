@@ -1,6 +1,32 @@
 # Tensor Network Connection Note
 
 **Status:** support - structural or confirmatory support note
+**Claim type:** positive_theorem
+
+**Audit-conditional perimeter (2026-05-02):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+registered runner reproduces the four computational gates, but the
+note's broader bridge to AdS/CFT, Ryu-Takayanagi, and holographic-
+principle language is interpretive and not derived by the runner."
+This rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The supported content
+of this note is the four computational gates reproduced live by the
+registered runner
+[`scripts/frontier_tensor_network_connection.py`](../scripts/frontier_tensor_network_connection.py):
+Test 1 (propagator-as-MPO bond dimension equals Ny on tested 2D
+lattices), Test 2 (CFT scaling `S = (c/6) ln(L), c=1.09, R^2=0.9997`;
+2D area law `S = 0.82 * boundary - 0.47, R^2=0.9996`; mutual
+information `~d^{-0.86}`), Test 3 (gravitational bond dimension drop
+8 → 7 at f=20), and Test 4 (entropy decreases monotonically with
+gravitational coupling, approximately linear `S ~ -0.36 g + 5.77,
+R^2=0.975`). The §"Interpretation" bridge to AdS/CFT, Swingle 2012,
+Pastawski et al. 2015, Ryu-Takayanagi, and holographic-principle
+language is **interpretive** and is not derived by the runner; the
+supported perimeter is just the four computational gates, not the
+holographic narrative around them.
+
 ## Result
 
 The path-sum propagator on a layered graph is formally a Matrix Product

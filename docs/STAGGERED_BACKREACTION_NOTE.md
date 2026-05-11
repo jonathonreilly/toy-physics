@@ -2,6 +2,32 @@
 
 **Date:** 2026-04-10  
 **Status:** bounded - bounded or caveated result note
+**Claim type:** bounded_theorem
+
+**Audit-conditional perimeter (2026-05-03):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+runner output supports the fixed three-family numerical readout, but
+the broader required stability under modest lattice-size changes is
+not demonstrated and the runner has no explicit assertion wrapper."
+This rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The supported
+content of this note is the fixed three-family numerical readout in
+§"First Retained Run": exact zero-source reduction, source-response
+linearity (`R^2 ≥ 0.98`), two-body additivity to machine precision,
+TOWARD force on every tested family, and norm stability — all
+reproduced byte-for-byte by the registered runner output for the
+three listed families (bipartite random geometric n=36, bipartite
+growing n=48, layered bipartite DAG-compatible n=36). The §"Required
+Controls" mention of "stability under modest lattice-size or graph-
+family changes" is documented as a control requirement but is not
+itself demonstrated by this note's three-family table; the audit-
+clean perimeter is just the three-family numerical readout, not the
+broader lattice-size stability sweep. A future runner-source
+rigorization would add explicit assertion wrappers and a multi-size
+stability sweep; both changes require runner SHA refresh and are
+deferred.
 
 ## Objective
 

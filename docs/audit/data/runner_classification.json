@@ -17868,18 +17868,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_staggered_backreaction_nonlocal_closure.py"
     },
-    "staggered_backreaction_note": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 5,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": "C",
-      "runner": "scripts/frontier_staggered_backreaction_prototype.py"
-    },
     "staggered_backreaction_results_2026-04-10": {
       "assert_count": 0,
       "counts": {
@@ -38864,7 +38852,6 @@
     "scripts/frontier_staggered_backreaction_prototype.py": {
       "assert_count": 0,
       "claims": [
-        "staggered_backreaction_note",
         "staggered_backreaction_results_2026-04-10"
       ],
       "counts": {

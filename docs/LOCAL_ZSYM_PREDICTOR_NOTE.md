@@ -2,6 +2,28 @@
 
 **Date:** 2026-04-07
 **Status:** proposed_retained negative — local per-node Z2 asymmetry is NOT the missing predictor. The 3-property classifier search rejected `local_z_asym` and reproduced the original 2-property rule. Cross-generator accuracy stays at 6/9 = 66.7%. Combined with the previous independent-generators lane, this closes the simple-classifier line of attack on this generator family.
+**Claim type:** positive_theorem
+
+**Audit-conditional perimeter (2026-04-26):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+positive_theorem`. The audit chain-closure explanation is exact: "The
+live runner reproduces the finite local_z_asym negative exactly, but
+it tests one added node-level metric inside a fixed 3-property AND
+search; that does not prove the broader exhaustion of simple
+classifiers or all node-level metrics." This rigorization edit only
+sharpens the boundary of the conditional perimeter; nothing here
+promotes audit status. The supported content of this note is
+exactly the finite-sweep result on the registered runner: that
+adding `local_z_asym` to the 3-property AND search reproduces the
+2-property rule and stays at 6/9 cross-generator accuracy. The
+broader §"Combined verdict" wording about "the simple-classifier
+line of attack on this generator family is exhausted" is bounded
+interpretation: the supported perimeter is the single-metric, fixed-
+three-property AND-search result, not a full exhaustion of
+node-level classifiers. A future supported exhaustion theorem
+would need to enumerate node-level statistics or close a no-go on
+that family.
 
 ## Artifact chain
 

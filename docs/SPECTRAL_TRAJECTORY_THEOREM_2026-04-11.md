@@ -2,7 +2,31 @@
 
 **Date:** 2026-04-11  
 **Status:** bounded - bounded or caveated result note
+**Claim type:** bounded_theorem
 **Branch:** `frontier/spot-checks`
+
+**Audit-conditional perimeter (2026-05-02):**
+The current generated audit ledger records this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and `claim_type =
+bounded_theorem`. The audit chain-closure explanation is exact: "The
+note has no attached runner and no ledger dependencies, yet it
+synthesizes many numerical and theoretical inputs into a structural
+theorem about spectral gravity and many-body trajectory emergence."
+This rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status. The supported
+content of this note is the **structural framing** — the spectral /
+trajectory dichotomy as an interpretive synthesis of separately
+audited results elsewhere in the repo. The note has no own runner
+and no live deps=[], by design: each numerical row cited in §3
+(sign selectivity 300/300; boundary-law shift; CDT spectral flow) and
+§4 (Wilson two-body distance law; partner-source scaling; Penrose,
+DP, BH) is a downstream pointer to a separately registered note. The
+supported perimeter is the dichotomy framing as a synthesis of
+already-audited downstream rows, not a load-bearing structural
+theorem. A future repair would enumerate the cited downstream notes
+explicitly as one-hop dependencies in the audit chain and let the
+synthesis status track the chain-rule under those statuses; that step
+is deferred and is the prescribed repair path.
 
 ---
 
