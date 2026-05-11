@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_matsubara_quartic_coefficient_ratio_narrow.py
+runner_sha256: 9065e7cee34802eff4e4c2d72982e92ce698d7933116ea88c9147113c8b45b84
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS] note contains: 'Hierarchy Matsubara Quartic Coefficient Ratio'
+  [PASS] note contains: '**Claim type:** bounded_theorem'
+  [PASS] note contains: 'B(L_t)'
+  [PASS] note contains: '(8/7)²'
+  [PASS] note contains: 'Composite-Higgs slogan retired'
+  [PASS] note contains: 'This is a bounded_theorem source row.'
+  [PASS] note contains: 'does not close a Higgs EFT'
+
+----------------------------------------------------------------------------------------
+Part 2: exact rational B(L_t) via explicit formula (Fraction)
+----------------------------------------------------------------------------------------
+  [PASS] A_2 · u_0² = 1/8 (parent cross-check)  (A_2 = 1/8)
+  [PASS] A_4 · u_0² = 1/7 (parent cross-check)  (A_4 = 1/7)
+  [PASS] |B_2| · u_0⁴ = 1/64 (new identity)  (|B_2| = 1/64)
+  [PASS] |B_4| · u_0⁴ = 1/49 (new identity)  (|B_4| = 1/49)
+  [PASS] |B_4|/|B_2| = 64/49 = (8/7)² (the new structural identity)  (ratio = 64/49)
+  [PASS] |B_4|/|B_2| = (A_4/A_2)² (squared inverse m² coef ratio)  ((A_4/A_2)² = 64/49)
+  [PASS] (8/7)² = 64/49 numerical sanity
+
+----------------------------------------------------------------------------------------
+Part 3: symbolic differentiation cross-check (SymPy)
+----------------------------------------------------------------------------------------
+  [PASS] L_t=2: A symbolic matches explicit formula  (sym = 1/(8*u0**2), expected = 1/(8*u0**2))
+  [PASS] L_t=2: B symbolic matches explicit formula  (sym = -1/(64*u0**4), expected = -1/(64*u0**4))
+  [PASS] L_t=4: A symbolic matches explicit formula  (sym = 1/(7*u0**2), expected = 1/(7*u0**2))
+  [PASS] L_t=4: B symbolic matches explicit formula  (sym = -1/(49*u0**4), expected = -1/(49*u0**4))
+
+----------------------------------------------------------------------------------------
+Part 4: sign assertion (B(L_t) < 0 — opposite from V_taste)
+----------------------------------------------------------------------------------------
+  [PASS] B(L_t=2) is negative  (B_2 = -1/64)
+  [PASS] B(L_t=4) is negative  (B_4 = -1/49)
+
+----------------------------------------------------------------------------------------
+Part 5: standard Higgs minimum readout vs framework's per-mode
+----------------------------------------------------------------------------------------
+  [PASS] Standard Higgs minimum v²(L_t=4)/v²(L_t=2) = 7/8  (ratio = 7/8)
+  [PASS] Standard Higgs compression = (7/8)^(1/2) ≈ 0.9354  (computed = 0.9354143467)
+  [PASS] Framework per-mode compression = (7/8)^(1/4) ≈ 0.9672 (DIFFERENT)  (per-mode = 0.9671682101, difference = 0.0318)
+  [PASS] (7/8)^(1/2) ≠ (7/8)^(1/4) — standard Higgs and per-mode readouts disagree  (differ by 3.18%)
+
+----------------------------------------------------------------------------------------
+Part 6: composite-Higgs slogan retirement (named obstruction)
+----------------------------------------------------------------------------------------
+  [PASS] B(L_t=2) ≠ 0 (induced quartic is finite on L_t=2)  (|B_2| = 1/64)
+  [PASS] B(L_t=4) ≠ 0 (induced quartic is finite on L_t=4)  (|B_4| = 1/49)
+
+  [INFO] composite-Higgs ⟹ λ(M_Pl)=0 slogan is structurally retired:
+         the induced quartic from integrating out staggered fermions
+         is finite and nonzero on both endpoints. NJL-type counterexample
+         (Bardeen-Hill-Lindner 1990) confirmed on framework's own surface.
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+TOTAL : PASS = 26, FAIL = 0
+
+----- stderr -----
+

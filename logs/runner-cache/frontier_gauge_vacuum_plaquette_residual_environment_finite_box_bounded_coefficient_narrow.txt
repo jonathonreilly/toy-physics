@@ -1,0 +1,81 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_residual_environment_finite_box_bounded_coefficient_narrow.py
+runner_sha256: 6a438ec910b2c88575d721d9fe02472e77806a7117f6e5ff7724197e4d4f6f1e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.88
+status: ok
+----- stdout -----
+==============================================================================
+GAUGE-VACUUM PLAQUETTE RESIDUAL-ENVIRONMENT FINITE-BOX BOUNDED
+COEFFICIENT NARROW
+==============================================================================
+
+NMAX = 4, finite box size = 25
+
+Bounded-companion rho(6) consumed (selected values)
+  rho_(0, 0) = 1.000000000000e+00
+  rho_(1, 0) = 4.225317396500e-01
+  rho_(1, 1) = 1.622597994799e-01
+  rho_(2, 0) = 1.359617273634e-01
+  rho_(2, 1) = 4.828805556745e-02
+  rho_(3, 0) = 3.505738045167e-02
+  rho_(2, 2) = 1.350507888830e-02
+
+Structural-class checks on R[rho(6)]
+  diagonal-only error                = 0.000e+00
+  symmetry error                     = 0.000e+00
+  min eigenvalue (positivity)        = 2.275225e-05
+  swap commutator error (conj sym)   = 2.776e-17
+  diagonal multiplier commutator     = 0.000e+00
+
+Peter-Weyl convolution-on-characters finite-box check
+  max algebraic identity error       = 0.000e+00
+
+Finite-box diagonal-action and stripping checks
+  eigen-action error                 = 0.000e+00
+  K_src stripping intermediate err   = 7.779e-16
+  stripped off-diagonal residual     = 7.779e-16
+
+Witness cross-check
+  max |rho(6) - prior char witness | = 4.565e-01
+  max |rho(6) - prior resid witness| = 4.205e-01
+
+Sympy symbolic conjugation-symmetry constraint check
+  swap-commutator generates exactly rho(p,q)=rho(q,p): True
+
+  [PASS] [THEOREM] N1(a) R[rho(6)] is exactly diagonal in the character basis on the finite box
+         zero off-diagonal entries by construction in the character basis
+  [PASS] [THEOREM] N1(b) R[rho(6)] is self-adjoint on the finite box
+         max symmetry residual = 0.000e+00
+  [PASS] [THEOREM] N1(c) R[rho(6)] is positive definite on the finite box (every rho_(p,q)(6) > 0)
+         min eigenvalue = 2.275225e-05
+  [PASS] [THEOREM] N1(d) R[rho(6)] commutes with arbitrary diagonal coefficient multipliers on the finite box
+         diagonal-diagonal commutator vanishes exactly
+  [PASS] [THEOREM] N1(e) [S, R[rho(6)]] = 0 (conjugation symmetry rho_(p,q)(6) = rho_(q,p)(6))
+         max swap-commutator residual = 2.776e-17
+  [PASS] [THEOREM] N2 finite-box Peter-Weyl convolution-on-characters identity chi_a * chi_b = (delta_(a,b)/d_a) chi_a holds for every (a, b) in B x B
+         max algebraic error = 0.000e+00
+  [PASS] [THEOREM] N3(a) rho(6) values are consumed via direct call to the bounded-companion's wilson_character_coefficient_bessel routine (not a witness re-derivation)
+         rho_pq imported from frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.rho_pq
+  [PASS] [THEOREM] N3(b) R[rho(6)] chi_(p,q) = rho_(p,q)(6) chi_(p,q) on every finite-box weight
+         max eigen-action error = 0.000e+00
+  [PASS] [THEOREM] N3(c) stripping exp(3 J) from K_6^src yields D_6^loc R_6^env exactly on the finite box
+         max stripping residual = 7.779e-16
+  [PASS] [THEOREM] N3(c) the stripped operator has no off-diagonal residual on the finite-box character basis (forces a diagonal residual)
+         off-diagonal residual = 7.779e-16
+  [PASS] [THEOREM] N3(c) the forward identity K_6^src = exp(3 J) D_6^loc R[rho(6)] exp(3 J) holds at machine precision on the finite box (definitional coincidence with R_6^env in the source-sector stripping decomposition)
+         forward identity verified to 7.779e-16; reverse division by D_loc omitted as numerically meaningless when min D_loc entry ~ 2.680e-19
+  [PASS] [THEOREM] N3(d) rho(6) differs from the prior character-measure witness sequence by a definite tabulated amount (not a relabeling)
+         max difference = 4.565e-01
+  [PASS] [THEOREM] N3(d) rho(6) differs from the prior residual-identification witness sequence by a definite tabulated amount (not a relabeling)
+         max difference = 4.205e-01
+  [PASS] [THEOREM] N4 sympy symbolic check: the swap-commutator constraint generates exactly the conjugation-symmetry constraint rho_(p,q) = rho_(q,p) on the finite box (no extra constraint required)
+         on NMAX_SYM=2 subspace, constraint sets coincide
+
+==============================================================================
+SUMMARY: THEOREM PASS=14 FAIL=0
+==============================================================================
+
+----- stderr -----
+

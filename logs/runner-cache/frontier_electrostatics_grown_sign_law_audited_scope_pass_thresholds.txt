@@ -1,0 +1,45 @@
+===== runner cache v1 =====
+runner: scripts/frontier_electrostatics_grown_sign_law_audited_scope_pass_thresholds.py
+runner_sha256: df64b1622b5a93bc39aad14c3cd5bb743d8c257104a11d9d0fc579271f70a96a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 46.40
+status: ok
+----- stdout -----
+================================================================================================
+ELECTROSTATICS GROWN SIGN-LAW: audited-scope PASS-threshold runner
+  retained grown row only: drift=0.2, restore=0.7, seeds=[0, 1]
+  fixed-field sign-law transfer with explicit PASS gates on the audited within-scope content
+================================================================================================
+
+thresholds: min_delta=1e-05, neutral_tol=1e-12, antisym_rel=0.001, linearity_tol=0.005
+
+PROPAGATING CASES (seeds=[0, 1])
+
+  case            single +1: mean delta_z = -1.882286e-04
+  case            single -1: mean delta_z = +1.882349e-04
+  case        neutral +1/-1: mean delta_z = +0.000000e+00
+  case           like +1/+1: mean delta_z = -2.556525e-04
+  case         dipole +1/-1: mean delta_z = +3.137392e-05
+  case            double +2: mean delta_z = -3.764509e-04
+
+AUDITED-SCOPE PASS GATES
+  [PASS] 1.1 single +1 source produces AWAY motion (delta_z < -threshold)  (delta_z(+1) = -1.882286e-04; threshold = -1e-05)
+  [PASS] 1.2 single -1 source produces TOWARD motion (delta_z > +threshold)  (delta_z(-1) = +1.882349e-04; threshold = +1e-05)
+  [PASS] 2.1 sign antisymmetry: |delta(+1) + delta(-1)| / |delta(+1)| within tolerance  (antisym_rel = 3.309319e-05; threshold = 0.001)
+  [PASS] 3.1 neutral same-point +/- pair cancels to machine precision  (|delta_z| = 0.000000e+00; threshold = 1e-12)
+  [PASS] 4.1 like-charge pair (+1, +1) produces AWAY motion  (delta_z = -2.556525e-04)
+  [PASS] 4.2 dipole (+1, -1) produces TOWARD partial cancellation (delta_z > 0)  (delta_z = +3.137392e-05)
+  [PASS] 5.1 double +2 source produces AWAY motion  (delta_z = -3.764509e-04)
+  [PASS] 5.2 charge linearity: delta(+2)/delta(+1) within tolerance of 2.0  (ratio = 1.999966; |ratio - 2| = 3.409376e-05; threshold = 0.005)
+  [PASS] 6.1 audited scope: single grown row only; not a geometry-generic theorem  (drift=0.2, restore=0.7, fixed-field, single-layer source, single-layer detector centroid)
+
+================================================================================================
+TOTAL: PASS=9, FAIL=0
+================================================================================================
+VERDICT: bounded grown sign-law audited-scope checks pass with explicit PASS thresholds
+         on the single grown row drift=0.2, restore=0.7. This is bounded support, not
+         a geometry-generic electrostatics theorem and not full EM.
+
+----- stderr -----
+

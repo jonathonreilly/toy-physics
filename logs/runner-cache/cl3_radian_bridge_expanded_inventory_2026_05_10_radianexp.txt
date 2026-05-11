@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_radian_bridge_expanded_inventory_2026_05_10_radianexp.py
+runner_sha256: 19388f1bceb5f318f6a8ee475f4a69017731b19b85bd4e66ddf01f335159b5ac
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 4.46
+status: ok
+----- stdout -----
 
 ========================================================================
 SECTION 1: EXPANDED RETAINED DIMENSIONLESS INVENTORY
@@ -402,3 +410,6 @@ No new admission, no new axiom, no PDG-input violation.
 ========================================================================
 === TOTAL: PASS=31, FAIL=0 ===
 ========================================================================
+
+----- stderr -----
+

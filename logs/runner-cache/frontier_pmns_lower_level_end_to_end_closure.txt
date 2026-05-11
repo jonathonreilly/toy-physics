@@ -1,0 +1,56 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_lower_level_end_to_end_closure.py
+runner_sha256: b02c46d593c30a3a667ac3c0467dba8893c5809d462fc7bb26853ba595d0c21e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.19
+status: ok
+----- stdout -----
+========================================================================================
+PMNS LOWER-LEVEL END-TO-END CLOSURE
+========================================================================================
+
+Question:
+  Starting from observable packs canonically derived from microscopic
+  sector operators, can we reconstruct the PMNS-relevant microscopic
+  pair and all downstream closure data?
+  [PASS] aligned-seed: circularity guard passes
+  [PASS] aligned-seed: derived pair matches the reference pair
+  [PASS] aligned-seed: branch matches  (neutrino-active)
+  [PASS] aligned-seed: passive offset/coefficient data match  (q=2, a=[0.07+0.j 0.11+0.j 0.23+0.j])
+  [PASS] aligned-seed: H_nu matches
+  [PASS] aligned-seed: H_e matches
+  [PASS] aligned-seed: masses match
+  [INFO] aligned-seed: PMNS is degenerate on the aligned seed patch, so H-level closure is the invariant target
+  [PASS] aligned-seed: sheet matches  (sheet=1)
+  [PASS] neutrino-active-off-seed: circularity guard passes
+  [PASS] neutrino-active-off-seed: derived pair matches the reference pair
+  [PASS] neutrino-active-off-seed: branch matches  (neutrino-active)
+  [PASS] neutrino-active-off-seed: passive offset/coefficient data match  (q=2, a=[0.07+0.j 0.11+0.j 0.23+0.j])
+  [PASS] neutrino-active-off-seed: H_nu matches
+  [PASS] neutrino-active-off-seed: H_e matches
+  [PASS] neutrino-active-off-seed: masses match
+  [PASS] neutrino-active-off-seed: PMNS matches
+  [PASS] neutrino-active-off-seed: sheet matches  (sheet=1)
+  [PASS] charged-lepton-active-off-seed: circularity guard passes
+  [PASS] charged-lepton-active-off-seed: derived pair matches the reference pair
+  [PASS] charged-lepton-active-off-seed: branch matches  (charged-lepton-active)
+  [PASS] charged-lepton-active-off-seed: passive offset/coefficient data match  (q=1, a=[0.17+0.j 0.09+0.j 0.04+0.j])
+  [PASS] charged-lepton-active-off-seed: H_nu matches
+  [PASS] charged-lepton-active-off-seed: H_e matches
+  [PASS] charged-lepton-active-off-seed: masses match
+  [PASS] charged-lepton-active-off-seed: PMNS matches
+  [PASS] charged-lepton-active-off-seed: sheet matches  (sheet=1)
+
+========================================================================================
+RESULT
+========================================================================================
+  Exact lower-level end-to-end closure:
+    - no PMNS-side value inputs
+    - pair reconstructed from microscopic-sector-derived observable packs
+    - branch, sheet, H_nu, H_e, masses, and PMNS recovered downstream
+
+PASS=26 FAIL=0
+
+----- stderr -----
+

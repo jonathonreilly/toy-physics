@@ -1,0 +1,80 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_lieb_robinson_equal_time_tensor_locality_exact_2026_05_10.py
+runner_sha256: b9587af40f12a4f7b7fd8cd684fd0f53541b8429b0a9e5fb4e860d59d0bbe700
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.00
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10
+Goal: sympy-symbolic verification of [O_x, O_y] = 0 at distinct sites
+on `ℂ² ⊗ ℂ² ⊗ ...` tensor-product Hilbert space
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: per-site Pauli operators and identity
+----------------------------------------------------------------------------------------
+  [PASS (A)] Pauli σ_3² = I
+  [PASS (A)] σ_+ σ_- + σ_- σ_+ = I (canonical anticommutator)
+  [PASS (A)] {σ_3, σ_+} = 0 per-site
+  [PASS (A)] {σ_3, σ_-} = 0 per-site
+
+----------------------------------------------------------------------------------------
+Part 1: (L1) ungraded equal-time locality on 2-site space — symbolic
+----------------------------------------------------------------------------------------
+  [PASS (A)] [O_x, O_y] = 0 symbolically over 8 free 2x2 matrix entries (L1)  (commutator simplifies to Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]))
+  [PASS (A)] O_x · O_y = a ⊗ b (tensor-factorization corollary L3 ungraded)  (confirms tensor-product structure)
+
+----------------------------------------------------------------------------------------
+Part 2: (L4) Pauli instance — distinct-site commutators
+----------------------------------------------------------------------------------------
+  [PASS (A)] [σ_3^{(1)}, σ_3^{(2)}] = 0 exact at distinct sites
+  [PASS (A)] [σ_+^{(1)}, σ_-^{(2)}] = 0 exact at distinct sites
+  [PASS (A)] [σ_+^{(1)}, σ_3^{(2)}] = 0 exact at distinct sites
+  [PASS (A)] [σ_-^{(1)}, σ_3^{(2)}] = 0 exact at distinct sites
+
+----------------------------------------------------------------------------------------
+Part 3: (L2) raw tensor-product locality for Pauli ladders
+----------------------------------------------------------------------------------------
+  [PASS (A)] [σ_+^{(1)}, σ_+^{(2)}] = 0 exact (raw tensor-product L2)
+  [PASS (A)] σ_+^{(1)} σ_+^{(2)} = σ_+^{(2)} σ_+^{(1)} (tensor-factor symmetry)  (confirms the tensor-product representation gives commuting operators)
+
+----------------------------------------------------------------------------------------
+Part 4: 3-site extension
+----------------------------------------------------------------------------------------
+  [PASS (A)] [σ_3^{(1)}, σ_3^{(3)}] = 0 exact through identity at site 2 (3-site)
+  [PASS (A)] [σ_+^{(1)}, σ_-^{(3)}] = 0 exact on 3-site (skip-1 distinct)
+
+----------------------------------------------------------------------------------------
+Part 5: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: [σ_+^{(1)}, σ_3^{(1)}] ≠ 0 (same site, locality fails)  (confirms the conclusion is non-trivial)
+  [PASS (A)] counterfactual: [σ_+^{(1)}, σ_-^{(1)}] = σ_3^{(1)} ≠ 0 (same site)  (σ_+ σ_- - σ_- σ_+ = σ_3 per-site Pauli identity)
+
+----------------------------------------------------------------------------------------
+Part 6: cited dependency ledger row visibility
+----------------------------------------------------------------------------------------
+  [PASS (A)] cited dep `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` is graph-visible in audit ledger  (effective_status: unaudited)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (L1) ungraded [O_x, O_y] = 0 over 8 free 2x2 entries at 2 sites
+    (L3) tensor-factorization O_x · O_y = a ⊗ b
+    (L4) Pauli instance: [σ_3^{(1)}, σ_3^{(2)}] = 0, [σ_+, σ_-] = 0,
+         [σ_+, σ_3] = 0, [σ_-, σ_3] = 0 at distinct sites
+    (L2) Pauli ladders on distinct raw tensor factors commute
+    3-site extension: [O_1, O_3] = 0 with identity at site 2
+    Counterfactual: same-site [σ_+, σ_3] ≠ 0 confirms non-trivial scope
+    Cited dep `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+    is graph-visible in audit_ledger.json
+
+========================================================================================
+TOTAL: PASS=17, FAIL=0
+========================================================================================
+
+----- stderr -----
+

@@ -1,0 +1,100 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_circulant_q_two_thirds_algebraic_narrow.py
+runner_sha256: 647d52eaa0d55d5acccd067202621ebab8e17b5f5f141c0cbbabbfb81d30cfa8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.33
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: Brannen/Rivero Q = 2/3 algebraic identity
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: root-of-unity sanity 1 + omega + omega^2 = 0 (omega = e^{2 pi i / 3})
+----------------------------------------------------------------------------------------
+  [PASS (A)] 1 + omega + omega^2 = 0 (primitive cube root of unity)  (1 + omega + omega^2 = 0)
+  [PASS (A)] 1 + omega^2 + omega^4 = 0 (re-indexed)  (1 + omega^2 + omega^4 = 0)
+
+----------------------------------------------------------------------------------------
+Part 2 (T1): sum_k cos(delta + 2 pi k / 3) = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] sum_k cos(delta + 2 pi k / 3) = 0 symbolically  (sum_k cos(theta_k) = 0)
+
+----------------------------------------------------------------------------------------
+Part 3 (T2): sum_k cos^2(delta + 2 pi k / 3) = 3/2
+----------------------------------------------------------------------------------------
+  [PASS (A)] sum_k cos^2(delta + 2 pi k / 3) = 3/2 symbolically  (sum_k cos^2(theta_k) - 3/2 = 0)
+
+----------------------------------------------------------------------------------------
+Part 4 (T3): (sum_k x_k^2) / (sum_k x_k)^2 = 2/3
+----------------------------------------------------------------------------------------
+  [PASS (A)] sum_k x_k = 3 v_0 symbolically (uses T1)  (sum_k x_k - 3 v_0 = 0)
+  [PASS (A)] sum_k x_k^2 = 6 v_0^2 symbolically (uses T1 + T2)  (sum_k x_k^2 - 6 v_0^2 = 0)
+  [PASS (A)] (sum_k x_k^2) / (sum_k x_k)^2 = 2/3 symbolically  (ratio - 2/3 = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: independence of ratio from delta at 5 sample angles and 3 v_0 values
+----------------------------------------------------------------------------------------
+  [PASS (A)] sample #1: delta=0, v_0=1 gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #2: delta=0, v_0=pi gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #3: delta=0, v_0=E gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #4: delta=pi/12, v_0=1 gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #5: delta=pi/12, v_0=pi gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #6: delta=pi/12, v_0=E gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #7: delta=2/9, v_0=1 gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #8: delta=2/9, v_0=pi gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #9: delta=2/9, v_0=E gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #10: delta=pi/3, v_0=1 gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #11: delta=pi/3, v_0=pi gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #12: delta=pi/3, v_0=E gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #13: delta=pi/2, v_0=1 gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #14: delta=pi/2, v_0=pi gives ratio = 2/3  (ratio - 2/3 = 0)
+  [PASS (A)] sample #15: delta=pi/2, v_0=E gives ratio = 2/3  (ratio - 2/3 = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: corollary - with m_k := x_k^2, (sum_k m_k) / (sum_k sqrt(m_k))^2 = 2/3
+----------------------------------------------------------------------------------------
+
+  Corollary statement: with m_k := x_k^2 and assuming x_k > 0,
+  (sum_k m_k) / (sum_k sqrt(m_k))^2 = (sum_k x_k^2) / (sum_k x_k)^2 = 2/3.
+  The algebraic identity is identical to (T3); no new check required.
+  [PASS (A)] corollary algebraic identity reduces to (T3) (no new content beyond (T3))  (corollary statement = (T3) under x_k > 0)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESES:
+    Let v_0 > 0 and delta in R be abstract real symbols. Define
+        x_k := v_0 (1 + sqrt(2) cos(delta + 2 pi k / 3)),  k = 0, 1, 2.
+
+  CONCLUSIONS:
+    (T1)  sum_k cos(delta + 2 pi k / 3) = 0   symbolic identity in delta.
+    (T2)  sum_k cos^2(delta + 2 pi k / 3) = 3/2   symbolic identity in delta.
+    (T3)  (sum_k x_k^2) / (sum_k x_k)^2 = 2/3   independent of (v_0, delta).
+
+  Audit-lane class:
+    (A) - pure trigonometric / algebraic identities on abstract real
+    symbols. No PDG observed values, no literature numerical
+    comparator, no fitted selectors, no admitted unit conventions,
+    no sqrt(m) readout law, no equipartition selection principle.
+
+  This narrow theorem isolates the algebraic Koide identity Q = 2/3
+  of the parent KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18
+  from its companion (i) sqrt(m) identification, (ii) sqrt(2)
+  equipartition selection, and (iii) v_0/delta charged-lepton-scale
+  identifications. The Open derivation gaps on those three
+  identifications are preserved.
+
+
+========================================================================================
+  TOTAL: PASS=23, FAIL=0
+========================================================================================
+PASS=23 FAIL=0
+
+----- stderr -----
+

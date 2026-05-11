@@ -1,0 +1,113 @@
+===== runner cache v1 =====
+runner: scripts/frontier_wald_noether_bp5_bounded.py
+runner_sha256: 0e825ccf73cb55499cdc40108e6e4732d7958a8ab248790ddee1f132a8f0c152
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+frontier_wald_noether_bp5_bounded.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: Status authority:** independent audit lane only
+  [PASS] contains marker: Type:** bounded_theorem
+  [PASS] contains marker: Explicit admissions
+  [PASS] contains marker: (X1) Staggered-Dirac realization gate
+  [PASS] contains marker: (X2) Link-local first-variation route
+  [PASS] contains marker: Constraints respected
+  [PASS] contains marker: Hodge-dual degeneracy under substrate symmetries
+  [PASS] contains marker: Free-fermion RT-ratio asymptotes to 1/6, not 1/4
+  [PASS] contains marker: Open derivation gap
+  [PASS] contains marker: Staggered-Dirac realization gate closure
+  [PASS] contains marker: Link-local first-variation theorem audit gate
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: does not close
+  [PASS] contains marker: repo baseline remains physical `Cl(3)` on `Z^3`
+  [PASS] contains marker: conditional on (X1) + (X2)
+  [PASS] contains marker: are NOT new content of this note
+  [PASS] contains marker: open_gate
+
+----------------------------------------------------------------------------------------
+no new repo vocabulary (per feedback_no_new_repo_vocabulary)
+----------------------------------------------------------------------------------------
+  [PASS] forbidden vocabulary absent: algebraic universality
+  [PASS] forbidden vocabulary absent: two-class framing
+  [PASS] forbidden vocabulary absent: lattice-realization-invariant by definition
+  [PASS] forbidden vocabulary absent: carrier from A_min alone
+  [PASS] forbidden vocabulary absent: Dou-Sorkin
+  [PASS] forbidden vocabulary absent: horizon molecule
+  [PASS] forbidden vocabulary absent: causal set
+
+----------------------------------------------------------------------------------------
+explicit live ledger status reporting on admissions
+----------------------------------------------------------------------------------------
+  [PASS] X1 ledger status string present (open_gate)
+  [PASS] X2 ledger status string present (unaudited)
+  [PASS] retained_no_go status string present (retained_no_go)
+  [PASS] X1 live verification stamp present (verified 2026-05-10)
+
+----------------------------------------------------------------------------------------
+cited authorities exist and are in markdown-link form
+----------------------------------------------------------------------------------------
+  [PASS] cited authority exists in docs/: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md
+  [PASS] cited authority appears in markdown-link form: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md
+  [PASS] cited authority appears in markdown-link form: PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md
+  [PASS] cited authority appears in markdown-link form: FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO_THEOREM_NOTE_2026-04-30.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md
+  [PASS] cited authority appears in markdown-link form: BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md
+  [PASS] cited authority appears in markdown-link form: PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md
+  [PASS] cited authority appears in markdown-link form: PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md
+  [PASS] cited authority appears in markdown-link form: BH_QUARTER_WALD_NOETHER_FRAMEWORK_CARRIER_THEOREM_NOTE_2026-04-29.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md
+  [PASS] cited authority appears in markdown-link form: PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: MINIMAL_AXIOMS_2026-05-03.md
+  [PASS] cited authority appears in markdown-link form: MINIMAL_AXIOMS_2026-05-03.md ((found 10 md links))
+  [PASS] cited authority exists in docs/: BH_ENTROPY_DERIVED_NOTE.md
+  [PASS] cited authority appears in markdown-link form: BH_ENTROPY_DERIVED_NOTE.md ((found 10 md links))
+
+----------------------------------------------------------------------------------------
+primitive event cell algebra (Tr(P_A)=4, Tr(rho_cell P_A)=1/4)
+----------------------------------------------------------------------------------------
+  [PASS] Boolean event cell has 16 basis states
+  [PASS] P_1 is rank 4 (4 one-axis subsets)
+  [PASS] Tr(P_A) = 4 (4)
+  [PASS] rank(P_A) = 4
+  [PASS] Tr(rho_cell P_A) = 1/4 (1/4)
+  [PASS] rank(P_3) = 4 (Hodge-dual carrier flagged by retained no-go)
+  [PASS] Tr(rho_cell P_3) = 1/4 (Hodge-dual coincidence on Hamming traces)
+  [PASS] P_1 ≠ P_3 as projectors
+
+----------------------------------------------------------------------------------------
+Wald-Einstein-Hilbert evaluation S_Wald = A / (4 G_N)
+----------------------------------------------------------------------------------------
+  [PASS] Wald-EH coefficient = 1/4 (0.25)
+  [PASS] c_cell = 1/(4 G_Newton,lat) with c_cell = 1/4 forces G_Newton,lat = 1 (1)
+
+----------------------------------------------------------------------------------------
+no observational comparator enters the proof input
+----------------------------------------------------------------------------------------
+  [PASS] forbidden observational input not present: S_BH_obs
+  [PASS] forbidden observational input not present: M_Pl_obs
+  [PASS] forbidden observational input not present: G_Newton_obs
+  [PASS] forbidden observational input not present: PDG
+  [PASS] forbidden observational input not present: Monte Carlo measurement
+  [PASS] forbidden observational input not present: fitted observational value
+
+----------------------------------------------------------------------------------------
+runner self-reference is consistent
+----------------------------------------------------------------------------------------
+  [PASS] note cites this runner by relative path (scripts/frontier_wald_noether_bp5_bounded.py)
+
+TOTAL: PASS=66 FAIL=0
+VERDICT: bounded theorem composed on explicit admissions (X1) and (X2); the two retained no-gos are respected and the open derivation gap is named.
+
+----- stderr -----
+

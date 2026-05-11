@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_sommer_scale_from_wilson_chain_2026_05_10_sommer.py
+runner_sha256: 627b42ca4340b20c518c763d44ab5e268a3c161de40e8806304eb1ace98a92ba
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 
 ========================================================================
 SECTION 1: RETAINED WILSON CHAIN INPUTS
@@ -188,3 +196,6 @@ RESULTS
 ========================================================================
 === TOTAL: PASS=16, FAIL=0 ===
 ========================================================================
+
+----- stderr -----
+

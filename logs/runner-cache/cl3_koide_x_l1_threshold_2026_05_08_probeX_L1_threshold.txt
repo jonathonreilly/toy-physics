@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_x_l1_threshold_2026_05_08_probeX_L1_threshold.py
+runner_sha256: a500602ff6482c8970a2c00dd17d787dec6b9b6ec053dbded579f325e847c342
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 
 ========================================================================
 SECTION 1: CITED WILSON CHAIN CONSTANTS (Probe 19 reference)
@@ -165,3 +173,6 @@ SECTION 7: HONEST NEGATIVE RESULT
 ========================================================================
 === TOTAL: PASS=20, FAIL=0 ===
 ========================================================================
+
+----- stderr -----
+

@@ -1,21 +1,21 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_single_axiom_information.py
-runner_sha256: ec10590752ea5d0de2b8b66d61ea2dde26d7303e6e548bfeb85d1f0f2e10d327
+runner_sha256: e396c9206ce21e4dea6160d9db272e4c889d0c0ce932bf60e6b11ab821d62c33
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.03
+elapsed_sec: 1.00
 status: ok
 ----- stdout -----
 ========================================================================
-SINGLE AXIOM: Conserved Information Flow Unifies Graph + Unitarity
+OPERATIONAL REDUCTION: Sparse Hermitian H + readout conventions
 ========================================================================
 
-CLAIM: 'There exist distinguishable things, and information flows
-between them without being created or destroyed.'
-This single statement entails BOTH a graph AND unitary dynamics.
+CLAIM BOUNDARY: given sparse Hermitian H plus support-as-edges
+and Hermitian-exponentiation readout, four numerical consequences
+follow. This runner does not derive those inputs from a verbal axiom.
 
 ========================================================================
-TEST 1: Conserved flow derives graph + unitarity
+TEST 1: Numerical consequences of admitted sparse Hermitian H
 ========================================================================
 
   N = 8:
@@ -36,7 +36,7 @@ TEST 1: Conserved flow derives graph + unitarity
     Graph edges / sparsity:        64  (0.129)
     Unitarity |UU^dag - I|:        5.55e-16
     Norm preservation:             0.00e+00
-    Current conservation error:    4.77e-18
+    Current conservation error:    6.94e-18
     Locality (on/off graph):       54.38x
 
   N = 64:
@@ -51,11 +51,11 @@ TEST 1: Conserved flow derives graph + unitarity
     Local current conservation:    PASS  (max err = 5.55e-17)
     Locality inherited by U:       PASS  (min ratio = 10.7x)
 
-    One Hermitian H defines graph + current + unitary simultaneously.
-    Conserved flow -> graph + unitarity.  [CONFIRMED]
+    One admitted Hermitian H defines graph + current + unitary readouts.
+    H plus readout conventions -> graph + unitarity.  [PASS]
 
 ========================================================================
-TEST 2: Locality is forced — dense graphs break physics
+TEST 2: Locality comparator — dense/non-geometric graphs break distance law
 ========================================================================
 
   Case A: Sparse 3D cubic lattice (6 neighbors / site)
@@ -80,10 +80,10 @@ TEST 2: Locality is forced — dense graphs break physics
     Local lattice produces 1/r Poisson field: True
     Dense graph has no distance law:           True
     Random graph has noisy / wrong exponent:   True
-    Locality is forced by self-consistency.    [CONFIRMED]
+    Locality is supported within these chosen probes. [PASS]
 
 ========================================================================
-TEST 3: Unitarity is forced — dissipation breaks physics
+TEST 3: Dissipation comparator — imposed loss breaks the unitary baseline
 ========================================================================
 
   Baseline: Poisson field M_eff(r) = phi(r) * r
@@ -119,10 +119,10 @@ TEST 3: Unitarity is forced — dissipation breaks physics
     Dissipative: M_eff CV up to 0.7701 (mass depends on distance)
     Dissipation adds exponential decay to phi(r), breaking 1/r.
     Effective alpha steepens: unitary = -1.819, severe = -3.005
-    Unitarity is forced by 'physics must work'.  [CONFIRMED]
+    Unitary baseline is required within this comparison. [PASS]
 
 ========================================================================
-TEST 4: (G, U) is irreducible — one object, not two
+TEST 4: Graph-Hamiltonian pair is non-factorable in tested models
 ========================================================================
 
   Part A: Different topologies produce different spectra
@@ -156,51 +156,54 @@ TEST 4: (G, U) is irreducible — one object, not two
     (If separable, fidelity = 1; actual << 1)
 
   VERDICT:
-    Different G -> different spectra -> different U:     CONFIRMED
+    Different G -> different spectra -> different U:     PASS
     Small G perturbation changes physics:               delta_P_return = 0.007654
     U from wrong graph gives wrong physics:             fidelity = 0.110573
-    (G, U) is IRREDUCIBLE — one object.  [CONFIRMED]
+    The tested graph-Hamiltonian pairs are non-factorable. [PASS]
 
 ========================================================================
-SUMMARY: Single Axiom Unification
+SUMMARY: Operational Reduction
 ========================================================================
 
-  TEST 1 (Conserved flow -> graph + unitarity):
+  TEST 1 (admitted sparse Hermitian H -> graph + unitarity readouts):
     A sparse Hermitian H simultaneously defines:
     - The graph (nonzero H_ij = edges)
     - A unitary U = exp(iHt) (Hermitian => unitary)
     - Locally conserved probability current J_ij
-    Graph, current, and unitarity are inseparable aspects of one object.
+    Graph, current, and unitarity are linked after H and the readout
+    conventions are supplied.
 
-  TEST 2 (Locality is forced):
+  TEST 2 (locality comparator):
     Cubic lattice: 1/r Poisson field with correct power law.
     Complete graph: flat field, no distance dependence at all.
     Random sparse: noisy, no clean 1/r law.
-    Only geometrically-local graphs produce Newtonian physics.
+    In these chosen probes, the geometrically-local lattice is the one
+    that produces the usable distance law.
 
-  TEST 3 (Unitarity is forced):
+  TEST 3 (dissipation comparator):
     Unitary evolution preserves norm -> mass is distance-independent.
     Dissipative evolution loses norm exponentially -> effective mass
     decays with distance, breaking the mass law (beta != 1).
 
-  TEST 4 ((G, U) is irreducible):
+  TEST 4 ((G, U) is non-factorable in the tested models):
     Different graphs produce different spectra and different physics.
     Adding one edge to G measurably changes U and observables.
     U from one topology gives wrong physics on another (fidelity << 1).
 
   CONCLUSION:
-    The two axioms (graph + unitarity) are not independent.
-    They are inseparable aspects of a single axiom:
-
-      "Conserved information flow on a network."
+    Given sparse Hermitian H, the support-as-edges convention, and the
+    Hermitian-exponentiation readout, the graph/current/unitary package
+    is mechanically coherent. This is bounded operational support for a
+    definitional renaming, not a derivation of the admitted inputs from
+    a single verbal axiom.
 
     - Hermitian H -> unitary exp(iHt) + conserved current J_ij
     - Nonzero H_ij -> graph edges
-    - Self-consistent physics requires locality (sparse graph)
-    - Self-consistent physics requires unitarity (norm preservation)
-    - The irreducible object is the GRAPH-UNITARY: (G, U)
+    - Locality is supported by the chosen sparse-vs-dense comparators
+    - The unitary baseline is supported by the imposed-dissipation comparator
+    - The tested graph-Hamiltonian package is non-factorable: (G, U)
 
-  Total runtime: 0.8 s
+  Total runtime: 0.6 s
 
 ----- stderr -----
 

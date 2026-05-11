@@ -1,0 +1,131 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_three_generation_local_algebra_exact_2026_05_10.py
+runner_sha256: ba9d746f87292327c440bcc550abb72b4c37263689a036b258b1e44ea1142312
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+THREE_GENERATION_LOCAL_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10
+Goal: combinatorial verification of (N1)-(N3) and (R1)-(R6)
+by direct enumeration plus sympy binomial-identity check
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: (N1) total corner count |{0,1}^d| = 2^d (direct enumeration)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N1) at d = 1: |{0,1}^d| = 2^d = 2  (enumerated count = 2)
+  [PASS (A)] (N1) at d = 2: |{0,1}^d| = 2^d = 4  (enumerated count = 4)
+  [PASS (A)] (N1) at d = 3: |{0,1}^d| = 2^d = 8  (enumerated count = 8)
+  [PASS (A)] (N1) at d = 4: |{0,1}^d| = 2^d = 16  (enumerated count = 16)
+  [PASS (A)] (N1) at d = 5: |{0,1}^d| = 2^d = 32  (enumerated count = 32)
+  [PASS (A)] (N1) at d = 6: |{0,1}^d| = 2^d = 64  (enumerated count = 64)
+
+----------------------------------------------------------------------------------------
+Part 2: (N2) corner count at Hamming weight w = binomial(d, w)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N2) at d = 1, w = 0: count = binomial(1, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 1, w = 1: count = binomial(1, 1) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 2, w = 0: count = binomial(2, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 2, w = 1: count = binomial(2, 1) = 2  (enumerated count = 2)
+  [PASS (A)] (N2) at d = 2, w = 2: count = binomial(2, 2) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 3, w = 0: count = binomial(3, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 3, w = 1: count = binomial(3, 1) = 3  (enumerated count = 3)
+  [PASS (A)] (N2) at d = 3, w = 2: count = binomial(3, 2) = 3  (enumerated count = 3)
+  [PASS (A)] (N2) at d = 3, w = 3: count = binomial(3, 3) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 4, w = 0: count = binomial(4, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 4, w = 1: count = binomial(4, 1) = 4  (enumerated count = 4)
+  [PASS (A)] (N2) at d = 4, w = 2: count = binomial(4, 2) = 6  (enumerated count = 6)
+  [PASS (A)] (N2) at d = 4, w = 3: count = binomial(4, 3) = 4  (enumerated count = 4)
+  [PASS (A)] (N2) at d = 4, w = 4: count = binomial(4, 4) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 5, w = 0: count = binomial(5, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 5, w = 1: count = binomial(5, 1) = 5  (enumerated count = 5)
+  [PASS (A)] (N2) at d = 5, w = 2: count = binomial(5, 2) = 10  (enumerated count = 10)
+  [PASS (A)] (N2) at d = 5, w = 3: count = binomial(5, 3) = 10  (enumerated count = 10)
+  [PASS (A)] (N2) at d = 5, w = 4: count = binomial(5, 4) = 5  (enumerated count = 5)
+  [PASS (A)] (N2) at d = 5, w = 5: count = binomial(5, 5) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 6, w = 0: count = binomial(6, 0) = 1  (enumerated count = 1)
+  [PASS (A)] (N2) at d = 6, w = 1: count = binomial(6, 1) = 6  (enumerated count = 6)
+  [PASS (A)] (N2) at d = 6, w = 2: count = binomial(6, 2) = 15  (enumerated count = 15)
+  [PASS (A)] (N2) at d = 6, w = 3: count = binomial(6, 3) = 20  (enumerated count = 20)
+  [PASS (A)] (N2) at d = 6, w = 4: count = binomial(6, 4) = 15  (enumerated count = 15)
+  [PASS (A)] (N2) at d = 6, w = 5: count = binomial(6, 5) = 6  (enumerated count = 6)
+  [PASS (A)] (N2) at d = 6, w = 6: count = binomial(6, 6) = 1  (enumerated count = 1)
+
+----------------------------------------------------------------------------------------
+Part 3: (N3) binomial sum identity sum_w binomial(d, w) = 2^d
+----------------------------------------------------------------------------------------
+  [PASS (A)] (N3) at d = 1: sum_w binomial(1, w) = 2^d = 2  (sum = 2)
+  [PASS (A)] (N3) at d = 2: sum_w binomial(2, w) = 2^d = 4  (sum = 4)
+  [PASS (A)] (N3) at d = 3: sum_w binomial(3, w) = 2^d = 8  (sum = 8)
+  [PASS (A)] (N3) at d = 4: sum_w binomial(4, w) = 2^d = 16  (sum = 16)
+  [PASS (A)] (N3) at d = 5: sum_w binomial(5, w) = 2^d = 32  (sum = 32)
+  [PASS (A)] (N3) at d = 6: sum_w binomial(6, w) = 2^d = 64  (sum = 64)
+  [PASS (A)] (N3) sympy summation at d=3: sum_{w=0}^{3} binomial(3, w) = 8  (sympy summation = 8)
+  [PASS (A)] (N3) sympy summation at d=4: sum_{w=0}^{4} binomial(4, w) = 16  (sympy summation = 16)
+
+----------------------------------------------------------------------------------------
+Part 4: (R1)-(R6) framework specialization d = 3
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R1) total corner count at d=3 = 2^3 = 8  (got 8)
+  [PASS (A)] (R2) weight-0 count at d=3 = binomial(3, 0) = 1  (got 1)
+  [PASS (A)] (R3) weight-1 count at d=3 = binomial(3, 1) = 3  (got 3)
+  [PASS (A)] (R4) weight-2 count at d=3 = binomial(3, 2) = 3  (got 3)
+  [PASS (A)] (R5) weight-3 count at d=3 = binomial(3, 3) = 1  (got 1)
+  [PASS (A)] (R6) partition: 8 = 1 + 3 + 3 + 1  (partition = [1, 3, 3, 1])
+
+----------------------------------------------------------------------------------------
+Part 5: (C1) binomial symmetry binomial(3, 1) = binomial(3, 2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) binomial(3, 1) == binomial(3, 2) == 3  (binomial symmetry k <-> d-k specializes at d=3)
+
+----------------------------------------------------------------------------------------
+Part 6: (C2) extremal singletons binomial(3, 0) + binomial(3, 3) = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2) binomial(3, 0) + binomial(3, 3) = 1 + 1 = 2  (extremal singletons add to 2)
+
+----------------------------------------------------------------------------------------
+Part 7: (C3) corner-count factorization 8 = 2 * (1 + 3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C3) 8 == 2 * (1 + 3) == 2 * 4  (lhs = 8, rhs = 8)
+
+----------------------------------------------------------------------------------------
+Part 8: counterfactual at d = 4 (16 = 1 + 4 + 6 + 4 + 1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual at d=4: 16 = 1 + 4 + 6 + 4 + 1 (NOT 8 = 1 + 3 + 3 + 1)  (d=4 partition = [1, 4, 6, 4, 1])
+
+----------------------------------------------------------------------------------------
+Part 9: counterfactual at d = 2 (4 = 1 + 2 + 1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual at d=2: 4 = 1 + 2 + 1 (NOT 8 = 1 + 3 + 3 + 1)  (d=2 partition = [1, 2, 1])
+
+----------------------------------------------------------------------------------------
+Part 10: parametric sympy binomial identity
+----------------------------------------------------------------------------------------
+  [PASS (A)] Pascal: binomial(4, 1) = binomial(3, 0) + binomial(3, 1)  (lhs = 4, rhs = 4)
+  [PASS (A)] Pascal: binomial(4, 2) = binomial(3, 1) + binomial(3, 2)  (lhs = 6, rhs = 6)
+  [PASS (A)] Pascal: binomial(4, 3) = binomial(3, 2) + binomial(3, 3)  (lhs = 4, rhs = 4)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact precision:
+    (N1) total corner count = 2^d for d in {1, 2, 3, 4, 5, 6}
+    (N2) per-weight count = binomial(d, w) by enumeration
+    (N3) binomial sum = 2^d both numerically and via sympy summation
+    (R1)-(R6) framework specialization at d=3: 8 = 1 + 3 + 3 + 1
+    (C1) binomial symmetry at d=3: binomial(3, 1) = binomial(3, 2) = 3
+    (C2) extremal singletons add to 2
+    (C3) factorization 8 = 2 * (1 + 3)
+    Counterfactual at d=4: 16 = 1 + 4 + 6 + 4 + 1
+    Counterfactual at d=2: 4 = 1 + 2 + 1
+    Pascal identity at d = 3
+
+========================================================================================
+TOTAL: PASS=55, FAIL=0
+========================================================================================
+
+----- stderr -----
+

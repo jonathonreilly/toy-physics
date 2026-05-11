@@ -1,0 +1,130 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer_one_word_packet_narrow.py
+runner_sha256: bd98bb6f6e92d7c0e6c82bf61a05a8c81a15576045e7ea4132c8bffece61b06e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.41
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: one-finite-tensor-word packet (finite linear algebra)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: abstract algebraic identities for S (conjugation-swap involution)
+----------------------------------------------------------------------------------------
+  [PASS (A)] S = S^T (swap is symmetric as a permutation matrix)  (|B_N| = 25; box dim = 4)
+  [PASS (A)] S^2 = I (swap is an involution)  (S permutes (p,q) <-> (q,p))
+  [PASS (A)] S e_(0,0) = e_(0,0) (the trivial weight is self-conjugate)  ((0,0) -> (0,0) under (p,q) -> (q,p))
+
+----------------------------------------------------------------------------------------
+Part 2: swap relation N_fbar = S N_f S for the SU(3) Pieri instance
+----------------------------------------------------------------------------------------
+  [PASS (A)] S N_f S = N_fbar exactly (integer equality)  (Pieri rules under (p,q) <-> (q,p) exchange fund. <-> antifund.)
+  [PASS (A)] S N_fbar S = N_f exactly (integer equality)  (follows from S^2 = I)
+  [PASS (A)] N_f entries in {0, 1} (SU(3) Pieri multiplicities are 0 or 1)  (distinct entries in N_f: [0, 1])
+  [PASS (A)] N_fbar entries in {0, 1} (SU(3) Pieri multiplicities are 0 or 1)  (distinct entries in N_fbar: [0, 1])
+
+----------------------------------------------------------------------------------------
+Part 3: reference-instance diagonal D from Wilson character coefficients at beta=6
+----------------------------------------------------------------------------------------
+
+  Wilson character coefficients (beta = 6.0, MODE_MAX = 80):
+    c(0, 0)   =  1.000000000000   dim = 1
+    c(1, 0)   =  0.422531739650   dim = 3
+    c(0, 1)   =  0.422531739650   dim = 3
+    c(1, 1)   =  0.162259799480   dim = 8
+    c(2, 0)   =  0.135961727363   dim = 6
+    c(0, 2)   =  0.135961727363   dim = 6
+    c(2, 1)   =  0.048288055567   dim = 15
+    c(1, 2)   =  0.048288055567   dim = 15
+  [PASS (A)] reference-instance c_(p,q) is strictly positive on B_N  (min c = 2.275225e-05)
+  [PASS (A)] reference-instance c_(p,q) = c_(q,p) (conjugation symmetry)  (max |c_(p,q) - c_(q,p)| = 2.776e-17)
+
+----------------------------------------------------------------------------------------
+Part 4: (T1) entry-wise nonnegativity of T = D M D M^T D
+----------------------------------------------------------------------------------------
+  [PASS (A)] T is entry-wise nonnegative on the reference (Wilson) instance  (min T_{a,b} = 0.000000e+00)
+  [PASS (A)] T is entry-wise nonnegative on an arbitrary positive symmetric diagonal (abstract instance)  (min T_{a,b} = 0.000000e+00; confirms (T1) is a pure-algebra fact)
+
+----------------------------------------------------------------------------------------
+Part 5: (T2) conjugation-swap symmetry S T = T S
+----------------------------------------------------------------------------------------
+  [PASS (A)] S T = T S on the reference (Wilson) instance  (max |S T - T S| = 1.388e-17)
+  [PASS (A)] S T = T S on the abstract positive symmetric instance  (max |S T - T S| = 8.882e-16; confirms (T2) holds whenever S D = D S)
+
+----------------------------------------------------------------------------------------
+Part 6: (T3) nonnegative trivial readout, strictly positive trivial-channel amplitude
+----------------------------------------------------------------------------------------
+  [PASS (A)] r = T e_(0,0) is entry-wise nonnegative (reference instance)  (min r_a = 0.000000e+00)
+  [PASS (A)] r_(0,0) = c_(0,0)^2 * sum_x M_{(0,0),x}^2 * c_x (closed-form trivial-channel formula)  (predicted = 0.845063479300, actual = 0.845063479300)
+  [PASS (A)] r_(0,0) > 0 strictly (some M_{(0,0), x} > 0 on the reference instance)  (r_(0,0) = c_(0,0)^2 * (c_(1,0) + c_(0,1)) = 0.845063479300)
+  [PASS (A)] S r = r (the trivial-channel readout is conjugation-swap invariant)  (max |S r - r| = 1.388e-17)
+  [PASS (A)] (T3) holds on the abstract positive symmetric instance  (min r = 0.000000e+00, r_(0,0) = 3.855015e+00)
+
+----------------------------------------------------------------------------------------
+Part 7: necessity of conjugation symmetry on D (negative control)
+----------------------------------------------------------------------------------------
+  [PASS (A)] when c_(1,0) != c_(0,1), (T2) S T = T S FAILS (confirms conjugation-symmetry hypothesis is load-bearing)  (max |S T - T S| with broken symmetry = 5.697080e-02; non-trivial deviation confirms load-bearing role)
+
+----------------------------------------------------------------------------------------
+Part 8: scope discipline — narrow theorem does NOT claim spatial-environment identification
+----------------------------------------------------------------------------------------
+
+  Scope discipline (diagnostic):
+  - This narrow theorem proves a finite-linear-algebra implication
+    (T1) + (T2) + (T3) on abstract (D, N_f, N_fbar) ingredients.
+  - It does NOT claim that the assembled matrix T equals the
+    physical unmarked spatial-environment Wilson slice transfer.
+  - It does NOT evaluate z_(p,q)^env(beta) or any Perron state.
+  - The reference-instance Wilson coefficients are used only to
+    confirm one explicit (D, N_f, N_fbar) satisfies the abstract
+    hypotheses; the abstract test in Parts 4, 5, 6 confirms the
+    conclusions do not depend on this specific instance.
+  - The parent bounded-theorem note continues to carry the
+    structural Wilson identification claim and its open
+    positive-theorem target (explicit beta=6 Perron solve,
+    multi-tensor-word generalization, full untruncated construction).
+
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let N be a nonnegative integer and B_N = {(p,q) : 0 <= p,q <= N}.
+    Let S be the permutation matrix S_{(q,p), (p,q)} = 1.
+    Let D = diag(c_(p,q)) be a strictly positive diagonal with
+        c_(p,q) = c_(q,p)   for all (p,q) in B_N.
+    Let (N_f, N_fbar) be nonnegative integer |B_N| x |B_N| matrices with
+        N_fbar = S N_f S.
+    Set M = N_f + N_fbar  and  T = D M D M^T D.
+
+  CONCLUSION:
+    (T1) entry-wise:  T_{a,b} >= 0  for all a, b in B_N.
+    (T2) symmetry:    S T = T S.
+    (T3) readout:     r := T e_(0,0) satisfies r_a >= 0 for all a, with
+                      r_(0,0) = c_(0,0)^2 * sum_x M_{(0,0),x}^2 c_x  >  0
+                      whenever some M_{(0,0), x} > 0;  and  S r = r.
+
+  Runner evidence class:
+    (A) — pure finite linear algebra on abstract positive symmetric
+    diagonals and abstract nonnegative integer matrices on a finite
+    index set. No Wilson environment slicing, no beta=6 boundary
+    character identity, no Perron readout, no physical spatial-
+    environment claim.
+
+  This narrow theorem isolates the one-finite-tensor-word packet that
+  the parent bounded-theorem runner actually checks, from the
+  parent's structural Wilson spatial-environment identification.
+
+
+========================================================================================
+  TOTAL: PASS=19, FAIL=0
+========================================================================================
+
+----- stderr -----
+

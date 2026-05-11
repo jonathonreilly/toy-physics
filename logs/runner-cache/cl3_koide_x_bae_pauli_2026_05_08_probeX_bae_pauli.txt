@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_x_bae_pauli_2026_05_08_probeX_bae_pauli.py
+runner_sha256: 9b65fc41edbe015cd7b3f5f8a71a078de411b1e16c8bf5301abee6591653e697
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
 
 ======================================================================
 Section 0 — Setup sanity: C_3 cycle on hw=1, circulant H
@@ -142,4 +150,7 @@ Section 11 — Does-not-do disclaimers
 ======================================================================
 === TOTAL: PASS=53, FAIL=0 ===
 ======================================================================
+
+
+----- stderr -----
 

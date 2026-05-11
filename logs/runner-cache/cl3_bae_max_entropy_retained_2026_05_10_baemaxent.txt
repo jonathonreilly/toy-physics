@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_bae_max_entropy_retained_2026_05_10_baemaxent.py
+runner_sha256: f90d76a4de476fe17cf1bf710d2a8520bcdbacaef1a03978e489b7ba74ff1433
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 57.14
+status: ok
+----- stdout -----
 
 ========================================================================================
 BAE Max-Entropy Retained Probe — verdict
@@ -261,3 +269,6 @@ VERDICT: SHARPENED bounded obstruction.
   - Outcome class: STRUCTURAL OBSTRUCTION (Outcome 2 of the three honest
     outcomes), with a NEW positive content: Born-rule operationalism is
     NOT a candidate path to BAE closure (consistent with Probes 25, 28, 29).
+
+----- stderr -----
+

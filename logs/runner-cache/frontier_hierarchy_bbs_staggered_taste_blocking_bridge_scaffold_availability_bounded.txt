@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded.py
+runner_sha256: 7396eaa3890c98e97d556588a3fe395aededec15c9eeecc01330d5c25c4f5efa
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+============================================================================
+BBS SCAFFOLD-AVAILABILITY BOUNDED RUNNER
+============================================================================
+[PASS] two scaffold domains are recorded
+[PASS] each scaffold has a named available domain
+[PASS] each scaffold has a named missing bridge
+[PASS] three independent admissions are recorded
+[PASS] alpha_LM transparency value matches the canonical surface (alpha_LM=0.0906678360172863086)
+[PASS] Banach contraction arithmetic does not select alpha_LM (kappa=0.5 is also a valid abstract contraction constant)
+[PASS] companion note contains required boundary phrases
+[PASS] companion note avoids promotion and closed-PR authority language
+[PASS] companion note uses explicit admissions, not bare A-labels
+============================================================================
+TOTAL: PASS=9 FAIL=0
+============================================================================
+VERDICT: bounded scaffold availability only; bridge still open
+
+----- stderr -----
+

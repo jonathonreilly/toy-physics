@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_kappa_block_total_frobenius_algebraic_narrow.py
+runner_sha256: 3c623146ff46d184649baddd01f34418e8d2b425958fc363ef2e2d561f64ba3e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.57
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: block-total Frobenius algebraic identities on Herm_circ(3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] C^3 = I (cyclic permutation cubes to identity)  (explicit matrix product)
+  [PASS (A)] tr(C) = 0  (tr(C) = 0)
+  [PASS (A)] tr(C^2) = 0  (tr(C^2) = 0)
+
+----------------------------------------------------------------------------------------
+Part 1 (T1): orthogonal-projector decomposition and image dimensions
+----------------------------------------------------------------------------------------
+  [PASS (A)] tr(H) = 3 a on Herm_circ(3)  (tr(H) = 3*a)
+  [PASS (A)] pi_+(H) = a I on Herm_circ(3) instance  (pi_+(H) - a I = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] pi_perp(H) = b C + bbar C^2 on Herm_circ(3) instance  (pi_perp(H) - (b C + bbar C^2) = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] pi_+(pi_+(H)) = pi_+(H) (idempotent)  (idempotency)
+  [PASS (A)] pi_+(pi_perp(H)) = 0 (orthogonal projectors)  (pi_+(pi_perp(H)) = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] pi_+(H) is Hermitian  ((a I)^H = a I since a is real)
+  [PASS (A)] pi_perp(H) is Hermitian  ((b C + bbar C^2)^H = b C + bbar C^2 since C^H = C^2)
+  [PASS (A)] Frobenius orthogonality: <pi_+(H), pi_perp(H)>_F = 0  (<pi_+(H), pi_perp(H)>_F = 0)
+  [PASS (A)] pi_+(H) + pi_perp(H) = H (decomposition completeness)  (completeness on the 3-parameter (a, b) family)
+  [PASS (A)] B_1 := C + C^2 is Hermitian (real symmetric)  (all-real-entry symmetric matrix)
+  [PASS (A)] B_2 := i(C - C^2) is Hermitian (pure-imaginary off-diagonals)  (B_2^H = -i (C^2 - C) = i (C - C^2) = B_2)
+  [PASS (A)] pi_perp(H) = (Re b) B_1 + (Im b) B_2 (Hermitian-basis expansion)  (Hermitian-basis expansion with (Re b, Im b) real coordinates)
+  [PASS (A)] rank of image(pi_+) generators = 1 (single trivial-isotype slot, real dim 1)  (image(pi_+) = R * I)
+  [PASS (A)] rank of image(pi_perp) generators = 2 (doublet isotype, real dim 2)  (image(pi_perp) = R B_1 + R B_2)
+  [PASS (A)] {I, B_1, B_2} linearly independent over R (image(pi_+) + image(pi_perp) = real dim 3)  (orthogonal direct sum is real dim 1 + 2 = 3)
+
+----------------------------------------------------------------------------------------
+Part 2 (T2): block-total Frobenius identities E_+ = 3 a^2, E_perp = 6 |b|^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] E_+(H) = tr((a I)^H (a I)) = 3 a^2 (exact symbolic)  (E_+(H) = 3*a**2)
+  [PASS (A)] E_perp(H) = 6 |b|^2 (exact symbolic, in (x, y) coords)  (E_perp(H) = 6*x**2 + 6*y**2)
+  [PASS (A)] |b|^2 = x^2 + y^2 (real / imag decomposition consistency)  (|b|^2 = x**2 + y**2)
+
+----------------------------------------------------------------------------------------
+Part 3 (T3): equal-weight Lagrange extremum -> kappa = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] Lagrange critical point: E_+ = E_perp = E_tot / 2 (unique on positive orthant)  (sol = [{Ep: E_tot/2, Epp: E_tot/2, mu: 2/E_tot}])
+  [PASS (A)] E_+ = E_perp  <=>  a^2 = 2 |b|^2  (algebraic equivalence)  (E_+ - E_perp = 3 (a^2 - 2 |b|^2) = 3*a**2 - 6*x**2 - 6*y**2)
+  [PASS (A)] d^2 S / dE_+^2 at critical point = -4 / E_tot^2 < 0  (d^2 S / dE_+^2 = -4/E_tot**2)
+  [PASS (A)] d^2 S / dE_perp^2 at critical point = -4 / E_tot^2 < 0  (d^2 S / dE_perp^2 = -4/E_tot**2)
+  [PASS (A)] cross-partial d^2 S / dE_+ dE_perp = 0  (cross-partial = 0)
+
+----------------------------------------------------------------------------------------
+Part 4 (T4): d = 3 uniqueness of the (1, (1,), 0) multiplicity pattern
+----------------------------------------------------------------------------------------
+  [PASS (A)] Herm_circ(d=2) multiplicity pattern = (1, (), 1)  (got (1, (), 1))
+  [PASS (A)] Herm_circ(d=3) multiplicity pattern = (1, (1,), 0)  (got (1, (1,), 0))
+  [PASS (A)] Herm_circ(d=4) multiplicity pattern = (1, (1,), 1)  (got (1, (1,), 1))
+  [PASS (A)] Herm_circ(d=5) multiplicity pattern = (1, (1, 1), 0)  (got (1, (1, 1), 0))
+  [PASS (A)] Herm_circ(d=6) multiplicity pattern = (1, (1, 1), 1)  (got (1, (1, 1), 1))
+  [PASS (A)] d = 3 is the unique d in {2, 3, 4, 5, 6} with pattern (1, (1,), 0)  (d's with pattern (1, (1,), 0): [3])
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESES:
+    Let (a, b) in R x C be abstract symbols. Let C be the 3 x 3 cyclic
+    permutation matrix. Define H = a I + b C + bbar C^2, and the canonical
+    real-isotype projectors
+        pi_+(H)    = (tr H / 3) I,
+        pi_perp(H) = H - pi_+(H).
+    Define block totals E_+(H) := || pi_+(H) ||_F^2 and
+    E_perp(H) := || pi_perp(H) ||_F^2.
+
+  CONCLUSIONS:
+    (T1)  pi_+, pi_perp are orthogonal Hermitian projectors; image(pi_+)
+          and image(pi_perp) have real dimensions 1 and 2 respectively.
+    (T2)  E_+(H) = 3 a^2; E_perp(H) = 6 |b|^2.
+    (T3)  S = log E_+ + log E_perp at fixed E_+ + E_perp = E_tot is
+          extremized uniquely at E_+ = E_perp = E_tot / 2, i.e. a^2 = 2 |b|^2
+          (kappa = 2); Hessian is strictly negative-definite there.
+    (T4)  The real-irrep multiplicity pattern (trivial, doublets, sign)
+          = (1, (1,), 0) on Herm_circ(d) is uniquely realized at d = 3
+          among d in {2, 3, 4, 5, 6}.
+
+  Audit-lane class:
+    (A) - pure linear algebra and elementary cyclic-group representation
+    theory. No PDG observed values, no literature numerical comparator,
+    no fitted selectors, no admitted unit conventions, no F1-vs-F3
+    selection-principle authority.
+
+  This narrow theorem isolates the algebraic identities of the parent
+  KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19 from
+  its companion (i) selection claim that the multiplicity weighting
+  (1, 1) is the canonical extremal principle, and (ii) two-route closure
+  positioning. The F1-vs-F3 weighting question is recorded as an Open
+  derivation gap, with the 30-probe BAE campaign as the live
+  characterization.
+
+
+========================================================================================
+  TOTAL: PASS=32, FAIL=0
+========================================================================================
+PASS=32 FAIL=0
+
+----- stderr -----
+

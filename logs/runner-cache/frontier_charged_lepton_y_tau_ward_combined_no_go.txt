@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_charged_lepton_y_tau_ward_combined_no_go.py
+runner_sha256: 9a84068c48639f906368cfb87cdce9d02af4c5fa54f172363f39c7c9ba4d3169
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
 ==============================================================================
 CHARGED-LEPTON y_tau WARD IDENTITY COMBINED NO-GO
 Verification of Cycles 2 + 3 + 4 + 5 combined obstruction
@@ -66,3 +74,6 @@ PART SURVEY: RESEARCH-LEVEL PREREQUISITES ABSENT FROM RETAINED
 ==============================================================================
 COMBINED NO-GO VERIFICATION: PASS=32 FAIL=0
 ==============================================================================
+
+----- stderr -----
+

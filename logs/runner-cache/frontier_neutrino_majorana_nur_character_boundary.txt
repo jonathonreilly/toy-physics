@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_neutrino_majorana_nur_character_boundary.py
-runner_sha256: d5887c148bcee7946e0bde0a4301542c3f6ce964ab617f7c98d5312b79816ade
+runner_sha256: 5dbe03a3ec64f1befbb3c01f0b8ab5968d9e6135d2cb159207229851c077ff38
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.08
+elapsed_sec: 0.14
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -11,12 +11,11 @@ NEUTRINO MAJORANA nu_R TRANSFER-CHARACTER BOUNDARY
 ========================================================================================
 
 Question:
-  Can the sole-axiom transport / transfer / response data on the unique
-  anomaly-fixed nu_R lane generate or force a nonzero charge-2 Majorana
-  pairing law by themselves?
-  [PASS (A)] The retained nu_R support is a rank-1 line
+  In the modeled rank-1 nu_R line, can transfer / response data
+  generate or force a nonzero charge-2 Majorana pairing law by themselves?
+  [PASS (A)] The modeled nu_R support projector is rank 1
   [PASS (A)] Every projected microscopic operator on the nu_R support is exactly scalar  (max residual=0.00e+00)
-  [PASS (A)] The canonical sole-axiom transfer family on the nu_R line is a U(1) character family  (holonomies=[np.complex128(1+0j), np.complex128(0.7648421872844885+0.644217687237691j), np.complex128(0.3623577544766736-0.9320390859672263j)])
+  [PASS (A)] The modeled transfer family on the nu_R line is a U(1) character family  (holonomies=[np.complex128(1+0j), np.complex128(0.7648421872844885+0.644217687237691j), np.complex128(0.3623577544766736-0.9320390859672263j)])
   [PASS (A)] Scalar transfer/response data induce only diagonal Nambu lifts on the nu_R line  (max anomalous norm=0.00e+00)
   [PASS (A)] The canonical charge-2 Majorana primitive is not contained in the scalar Nambu-lift span  (distance=1.414214)
   [PASS (A)] So the exact missing Majorana object is a genuinely new off-diagonal Nambu primitive on the nu_R line  (scalar character data do not generate J2)
@@ -24,13 +23,13 @@ Question:
 ========================================================================================
 RESULT
 ========================================================================================
-  Exact stronger boundary on the current sole-axiom bank:
-    - the retained nu_R support is one-dimensional
+  Bounded transfer-character boundary on the modeled nu_R line:
+    - the input nu_R support projector is one-dimensional
     - every projected transport / transfer / response observable on that
       line is scalar
     - the induced Nambu lift is therefore diagonal and has zero anomalous block
-    - the nonzero Majorana law would require a genuinely new off-diagonal
-      charge-2 primitive on the Nambu-doubled nu_R line
+    - within this model, a nonzero Majorana law would require
+      a genuinely new off-diagonal charge-2 primitive on the Nambu-doubled nu_R line
 
 PASS=6 FAIL=0
 
