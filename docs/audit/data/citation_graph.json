@@ -19529,6 +19529,26 @@
       "to": "structured_chokepoint_bridge_note"
     },
     {
+      "from": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "native_gauge_closure_note"
+    },
+    {
+      "from": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "three_generation_observable_count_corollary_note_2026-05-03"
+    },
+    {
+      "from": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "to": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26"
+    },
+    {
       "from": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
       "to": "left_handed_charge_matching_note"
     },
@@ -61443,6 +61463,23 @@
       "runner_path": "scripts/structureless_dag_gravity_harness.py",
       "title": "Gravity on Structureless Causal DAGs"
     },
+    "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10": {
+      "claim_id": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "native_gauge_closure_note",
+        "graph_first_su3_integration_note",
+        "lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10",
+        "three_generation_observable_count_corollary_note_2026-05-03",
+        "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26"
+      ],
+      "note_hash": "5da36d7e77bfaddf8a3f65f33483decdf3a4e886b10bc6e3b21414e89ee73001",
+      "path": "docs/SU2_WEAK_BETA_COEFFICIENT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_su2_weak_beta_coefficient_narrow_exact_2026_05_10.py",
+      "title": "SU(2)_L 1-Loop \u03b2-Function Coefficient Narrow Theorem"
+    },
     "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26": {
       "claim_id": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
       "claim_type_author_hint": null,
@@ -67393,7 +67430,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 265,
+      "bounded_theorem": 266,
       "decoration": 1,
       "meta": 59,
       "no_go": 28,
@@ -67402,7 +67439,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 747,
+      "bounded_theorem": 748,
       "decoration": 1,
       "meta": 59,
       "no_go": 135,
@@ -67410,10 +67447,10 @@
       "open_gate": 118,
       "positive_theorem": 614
     },
-    "edge_count": 8377,
-    "leaf_count": 576,
-    "node_count": 2125,
+    "edge_count": 8382,
+    "leaf_count": 577,
+    "node_count": 2126,
     "root_count": 799,
-    "runners_with_path": 1738
+    "runners_with_path": 1739
   }
 }

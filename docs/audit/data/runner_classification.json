@@ -17832,6 +17832,18 @@
       "dominant_class": null,
       "runner": "scripts/structureless_dag_gravity_harness.py"
     },
+    "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_su2_weak_beta_coefficient_narrow_exact_2026_05_10.py"
+    },
     "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26": {
       "assert_count": 1,
       "counts": {
@@ -22098,6 +22110,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_su2_weak_beta_coefficient_narrow_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/audit_companion_three_generation_hw1_distinct_characters_exact.py": {
@@ -45532,15 +45559,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 178,
+    "decoration_candidates": 179,
     "dominant_class_distribution": {
-      "A": 124,
+      "A": 125,
       "B": 169,
       "C": 659,
       "D": 254,
       "none": 420
     },
-    "runners_classified": 1626,
+    "runners_classified": 1627,
     "runners_with_C": 828,
     "runners_with_D": 453
   }
