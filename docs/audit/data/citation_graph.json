@@ -557,6 +557,102 @@
       "to": "action_power_scaling_sweep_note"
     },
     {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "axiom_first_cluster_decomposition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "three_generation_observable_theorem_note"
+    },
+    {
+      "from": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "to": "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+    },
+    {
       "from": "ai_methodology_note_2026-04-25",
       "to": "publication.ci3_z3.readme"
     },
@@ -33888,6 +33984,42 @@
       "path": "docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_abcc_cp_phase_no_go_theorem.py",
       "title": "A-BCC CP-Phase No-Go Theorem"
+    },
+    "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10": {
+      "claim_id": "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded structural foreclosure synthesis)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "c3_symmetry_preserved_interpretation_note_2026-05-08",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "a3_route1_higgs_yukawa_c3_breaking_bounded_obstruction_note_2026-05-08_r1",
+        "a3_route2_single_clock_c3_obstruction_note_2026-05-08_r2",
+        "a3_route3_anomaly_inflow_bounded_obstruction_note_2026-05-08_r3",
+        "a3_route4_spin6_chain_bounded_obstruction_note_2026-05-08_r4",
+        "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5",
+        "a3_r1_hostile_review_confirms_obstruction_note_2026-05-08_r1hr",
+        "a3_r2_hostile_review_confirms_exhaustion_note_2026-05-08_r2hr",
+        "a3_r3_hostile_review_confirms_obstruction_note_2026-05-08_r3hr",
+        "a3_r4_hostile_review_confirmed_note_2026-05-08_r4hr",
+        "a3_r5_hostile_review_confirms_obstruction_note_2026-05-08_r5hr",
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "minimal_axioms_2026-05-03",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_cluster_decomposition_theorem_note_2026-04-29",
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "a3_option_c_brannen_rivero_physical_lattice_bounded_obstruction_note_2026-05-08_optc",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "three_generation_observable_theorem_note",
+        "three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02"
+      ],
+      "note_hash": "40068f0f4fb57564553911f7a5e7d7556a9fdb049bed0b31d5b06f2c5209bc36",
+      "path": "docs/AC_PHI_LAMBDA_PRESERVED_C3_STRUCTURAL_FORECLOSURE_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/ac_phi_lambda_c3_equivariance_schur_diagnostic_2026_05_10.py",
+      "title": "AC_\u03c6\u03bb Preserved-C_3 Structural Foreclosure \u2014 10-Probe A3 Campaign Synthesis (Bounded No-Go Source Note)"
     },
     "accessible_prediction_note": {
       "claim_id": "accessible_prediction_note",
@@ -67593,7 +67725,7 @@
       "bounded_theorem": 269,
       "decoration": 1,
       "meta": 59,
-      "no_go": 28,
+      "no_go": 29,
       "none": 1628,
       "open_gate": 31,
       "positive_theorem": 115
@@ -67602,15 +67734,15 @@
       "bounded_theorem": 751,
       "decoration": 1,
       "meta": 59,
-      "no_go": 135,
+      "no_go": 136,
       "none": 451,
       "open_gate": 119,
       "positive_theorem": 615
     },
-    "edge_count": 8402,
-    "leaf_count": 580,
-    "node_count": 2131,
+    "edge_count": 8426,
+    "leaf_count": 578,
+    "node_count": 2132,
     "root_count": 800,
-    "runners_with_path": 1744
+    "runners_with_path": 1745
   }
 }

@@ -156,6 +156,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_abcc_cp_phase_no_go_theorem.py"
     },
+    "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 17,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/ac_phi_lambda_c3_equivariance_schur_diagnostic_2026_05_10.py"
+    },
     "accessible_prediction_note": {
       "assert_count": 0,
       "counts": {
@@ -21644,6 +21656,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/ac_phi_lambda_c3_equivariance_schur_diagnostic_2026_05_10.py": {
+      "assert_count": 0,
+      "claims": [
+        "ac_phi_lambda_preserved_c3_structural_foreclosure_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 17,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/action_geometry_bridge_probe.py": {
@@ -45696,14 +45723,14 @@
   "stats": {
     "decoration_candidates": 180,
     "dominant_class_distribution": {
-      "A": 126,
+      "A": 127,
       "B": 169,
       "C": 662,
       "D": 255,
       "none": 420
     },
-    "runners_classified": 1632,
+    "runners_classified": 1633,
     "runners_with_C": 831,
-    "runners_with_D": 457
+    "runners_with_D": 458
   }
 }
