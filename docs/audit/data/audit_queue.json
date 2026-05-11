@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 678,
     "high": 27,
-    "leaf": 256,
+    "leaf": 257,
     "medium": 162
   },
   "cycle_break_target_count": 253,
@@ -30645,6 +30645,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "no_go",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/PRIMITIVE_P_BAE_M1_TRACE_DEGENERACY_CORRECTION_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/cl3_t1_corrections_v2_2026_05_10.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37327,6 +37348,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 20,
-  "total_pending": 1123
+  "ready_count": 21,
+  "total_pending": 1124
 }

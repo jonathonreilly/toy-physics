@@ -50070,6 +50070,17 @@
       "runner_path": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py",
       "title": "Probe X-L1-MSbar \u2014 Beta-Function Coefficients in a Lattice/`<P>` Scheme: Bounded-Tier Source Note"
     },
+    "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
+      "claim_id": "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
+      "deps": [],
+      "note_hash": "835c0874787a8c2b9062ccb2e7fed508452df733aaa83c8eeec34abdff8b8b91",
+      "path": "docs/KOIDE_Y_S4B_RGE_TIER_DOWNGRADE_CORRECTION_NOTE_2026-05-10.md",
+      "runner_path": "scripts/cl3_t1_corrections_v2_2026_05_10.py",
+      "title": "Probe Y-S4b-RGE \u2014 Positive\u2192Bounded Tier Downgrade Correction Note"
+    },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "claim_id": "koide_z3_joint_projector_identity_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -55561,6 +55572,17 @@
       "path": "docs/PORTABLE_PACKAGE_HIERARCHY_CLASSIFIER_NOTE.md",
       "runner_path": "scripts/portable_package_hierarchy_classifier.py",
       "title": "Portable Package Hierarchy Classifier"
+    },
+    "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10": {
+      "claim_id": "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "019c67e0dab76efac3faa75af40fa990fc82b5fa71ed03504879e2cf1b253f82",
+      "path": "docs/PRIMITIVE_P_BAE_M1_TRACE_DEGENERACY_CORRECTION_NOTE_2026-05-10.md",
+      "runner_path": "scripts/cl3_t1_corrections_v2_2026_05_10.py",
+      "title": "Primitive P-BAE \u2014 M1 Trace State Degeneracy Correction Note"
     },
     "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure": {
       "claim_id": "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure",
@@ -66781,7 +66803,7 @@
         "yt_boundary_theorem",
         "yt_zero_import_authority_note"
       ],
-      "note_hash": "0339aab4875d7ee73493563c84c191d558ed7914662a42cd8b1f2f0db92f848b",
+      "note_hash": "f0631bde44b7ed818d943fe14ff20c67d2cc3e88426a0dc96ca01025397b523b",
       "path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_yt_qfp_insensitivity.py",
       "title": "y_t Quasi-Fixed-Point Insensitivity Support Note"
@@ -67456,6 +67478,7 @@
     "koide_selected_line_local_radian_bridge_no_go_note_2026-04-20",
     "koide_theta_hierarchy_open_scalar_note_2026-04-19",
     "koide_transport_gap_constant_no_go_note_2026-04-20",
+    "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
     "koide_z3_joint_projector_identity_note_2026-04-19",
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
     "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
@@ -67578,6 +67601,7 @@
     "pmns_uniform_scalar_deformation_boundary_note",
     "poisson_self_gravity_born_audit_note",
     "poisson_self_gravity_loop_v3_note",
+    "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
     "primitive_p_lh_content_proposal_note_2026-05-10_pplh",
     "primordial_spectrum_note",
     "publication.ci3_z3.arxiv_draft",
@@ -67826,8 +67850,8 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 268,
       "decoration": 1,
-      "meta": 59,
-      "no_go": 29,
+      "meta": 60,
+      "no_go": 30,
       "none": 1628,
       "open_gate": 33,
       "positive_theorem": 120
@@ -67835,16 +67859,16 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 750,
       "decoration": 1,
-      "meta": 59,
-      "no_go": 136,
+      "meta": 60,
+      "no_go": 137,
       "none": 451,
       "open_gate": 121,
       "positive_theorem": 620
     },
     "edge_count": 8432,
-    "leaf_count": 583,
-    "node_count": 2138,
-    "root_count": 804,
-    "runners_with_path": 1751
+    "leaf_count": 585,
+    "node_count": 2140,
+    "root_count": 806,
+    "runners_with_path": 1753
   }
 }

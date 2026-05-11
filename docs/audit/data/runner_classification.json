@@ -11280,6 +11280,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py"
     },
+    "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/cl3_t1_corrections_v2_2026_05_10.py"
+    },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -15071,6 +15083,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/portable_package_hierarchy_classifier.py"
+    },
+    "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/cl3_t1_corrections_v2_2026_05_10.py"
     },
     "primitive_p_heavyq_casimir_closure_note_2026-05-10_ppheavyq_closure": {
       "assert_count": 0,
@@ -24386,6 +24410,22 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_t1_corrections_v2_2026_05_10.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
+        "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/cl3_t2_df_physical_consequences_2026_05_10_t2df.py": {
@@ -45889,9 +45929,9 @@
       "B": 169,
       "C": 665,
       "D": 255,
-      "none": 421
+      "none": 422
     },
-    "runners_classified": 1639,
+    "runners_classified": 1640,
     "runners_with_C": 835,
     "runners_with_D": 459
   }
