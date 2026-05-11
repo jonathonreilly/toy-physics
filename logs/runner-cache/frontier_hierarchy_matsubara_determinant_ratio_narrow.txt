@@ -1,0 +1,73 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_matsubara_determinant_ratio_narrow.py
+runner_sha256: e6439868436eb535a87bc554563a4e5b2f54667d68a735a9288f635d27eaeec5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: note structure and scope discipline
+----------------------------------------------------------------------------------------
+  [PASS] note contains: 'Hierarchy Matsubara Determinant Ratio'
+  [PASS] note contains: 'claim_type: bounded_theorem'
+  [PASS] note contains: '(7/8)^16'
+  [PASS] note contains: 'dim-4 effective-potential-density'
+  [PASS] note contains: 'A(L_t)^(-1/4)'
+  [PASS] note contains: 'Stefan-Boltzmann'
+  [PASS] note contains: 'load_bearing_step_class: A'
+  [PASS] note contains: 'forbidden_imports_used: false'
+  [PASS] scope disclaimer present: 'audit verdict and downstream status are ...'
+  [PASS] scope disclaimer present: 'explicitly does NOT...'
+  [ADMITTED] dim-4 effective-potential-density readout remains a named admission  (runner checks the conditional arithmetic, not independent derivation of R)
+
+----------------------------------------------------------------------------------------
+Part 2: exact rational identity (Fraction arithmetic)
+----------------------------------------------------------------------------------------
+  [PASS] det(L_t=2) factor: u_0^16 * 4^8  (u0_pow=16, pure=65536)
+  [PASS] det(L_t=4) factor: u_0^32 * (7/2)^16  (u0_pow=32, pure=33232930569601/65536)
+  [PASS] u_0 dependence cancels in ratio  (u_0^0)
+  [PASS] ratio = (7/8)^16 exactly  (pure_ratio=33232930569601/281474976710656, expected=33232930569601/281474976710656)
+  [PASS] (7/8)^16 numerical value  (value=0.1180670870212488)
+
+----------------------------------------------------------------------------------------
+Part 3: direct numerical staggered Dirac determinant cross-check
+----------------------------------------------------------------------------------------
+  [PASS] numerical ratio @ u_0 = 0.5  (ratio=1.1806708702e-01, target=1.1806708702e-01, rel_err=1.88e-15)
+  [PASS] numerical ratio @ u_0 = 0.7  (ratio=1.1806708702e-01, target=1.1806708702e-01, rel_err=3.76e-15)
+  [PASS] numerical ratio @ u_0 = 0.877  (ratio=1.1806708702e-01, target=1.1806708702e-01, rel_err=5.41e-15)
+  [PASS] numerical ratio @ u_0 = 1.0  (ratio=1.1806708702e-01, target=1.1806708702e-01, rel_err=1.88e-15)
+  [PASS] numerical ratio @ u_0 = 1.3  (ratio=1.1806708702e-01, target=1.1806708702e-01, rel_err=1.62e-14)
+
+----------------------------------------------------------------------------------------
+Part 4: dim-4 V_eff'' readout corollary — (1/4) compression power
+----------------------------------------------------------------------------------------
+  [PASS] A_2 = 1/(8 u_0^2)  [exact Fraction from (3 + sin^2 ω) sum]  (A_2 * u_0^2 = 1/8)
+  [PASS] A_4 = 1/(7 u_0^2)  [exact Fraction from (3 + sin^2 ω) sum]  (A_4 * u_0^2 = 1/7)
+  [PASS] A_2 / A_4 = 7/8  (Klein-four orbit selection unifies with (7/8)^16)  (A_2 / A_4 = 7/8)
+  [PASS] Class A unification: det ratio = (A_2/A_4)^16 = (7/8)^16  (det_ratio = (7/8)^16 = (A_2/A_4)^16 [confirmed])
+  [PASS] (A_2/A_4)^(1/4) = (7/8)^(1/4) numerically  (derived=0.967168210134, direct=0.967168210134)
+  [PASS] (1/4) power inside readout R = mass_dim(v) / mass_dim(V_eff)  (mass_dim(v)/mass_dim(V_eff) = 1/4)
+
+----------------------------------------------------------------------------------------
+Part 5: sign and placement assertions
+----------------------------------------------------------------------------------------
+  [PASS] compression sign: C < 1 (downward compression)  (C = 0.967168)
+  [PASS] compression magnitude: ~ 3.3% downward  (C = 0.967168, fractional reduction = 3.283%)
+  [PASS] multiplicative placement: inherited v_pred * (7/8)^(1/4)  (v_phys_predicted = 246.282818 GeV)
+
+  [INFO] audit comparator (NOT a derivation input):
+         v_phys_predicted = 246.2828 GeV
+         v_obs (PDG)      = 246.2200 GeV
+         residual         = +0.0255%
+         (consistent with plaquette/u_0 input uncertainty per gate #7)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+TOTAL : PASS = 29, FAIL = 0, ADMITTED = 1
+
+----- stderr -----
+
