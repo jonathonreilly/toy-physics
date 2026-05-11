@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 92 |
 | **retained_no_go** | 132 |
-| **retained_bounded** | 276 |
+| **retained_bounded** | 277 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1209 |
+| unaudited | 1208 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 462 |
+| `audited_clean` | 463 |
 | `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1322 |
+| `unaudited` | 1321 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 896 |
+| `bounded_theorem` | 897 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 738 |
+| `positive_theorem` | 737 |
 
 | criticality | count |
 |---|---:|
@@ -301,6 +301,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `global_coherence_held_out2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `global_coherence_predictor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `graph_first_selector_derivation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
@@ -5019,6 +5020,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The registered toy-DAG ensemble runner reports normalized coherent-vs-incoherent contrast 0.0393, centroid shift 0.057445, width change 0.021137, and peak-bin pairwise phase differences up to about 0.3225 rad, so coherent summation over the specified DAG geometries is distinguishable from the incoherent mixture in this bounded ensemble.  _(class `C`)_
 - **chain closes:** True — The live runner deterministically constructs the five specified DAG variants, including the repaired added-edge variant, propagates the toy path-sum amplitudes, normalizes each geometry's detector wavefunction, and reproduces the note's bounded contrast, centroid, width, and phase-difference values. The source note explicitly confines the claim to this older DAG-ensemble probe and excludes staggered/headline claims.
 - **rationale:** The bounded computation closes because the current runner output matches the scoped numerical rows and the note has narrowed away the prior inflated normalization headline and any staggered-fermion interpretation. The runner does not emit classified PASS lines, but its deterministic output directly provides the audited observables and its branch would stop claiming confirmation if normalized contrast fell below the stated 1% threshold. Residual risk is citation drift: this result is only a toy_event_physics DAG-ensemble lead, not a retained staggered or gravity-entanglement claim.
+- **auditor confidence:** high
+
+### `global_coherence_held_out2_note`
+
+- **Note:** [`GLOBAL_COHERENCE_HELD_OUT2_NOTE.md`](../../docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded scaffolded held-out finite replay: the registered runner's 12 predeclared grid-scaffolded generators give 10/12 frozen free_coh-threshold accuracy versus 6/12 for the old node-level rule, and with the retained first-batch scaffolded dependency give the descriptive 17/21 versus 12/21 scaffolded statistic. The retained off-scaffold dependency limits this to scaffolded historical evidence; no generator-agnostic predictor, law-level theorem, or classifier-exhaustion closure is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The frozen rule `free_coh >= 7.96e-04` applied without refit to the 12 new scaffolded generators gives 10/12 accuracy versus 6/12 for the old node-level rule, and combined with the first scaffolded batch gives 17/21 versus 12/21.  _(class `C`)_
+- **chain closes:** True — The current runner reproduces the 12-family table and 10/12 versus 6/12 finite comparison, while the retained first-batch dependency supplies the 7/9 versus 6/9 scaffolded component. The off-scaffold retained-bounded dependency explicitly blocks broad generator-agnostic or law-level promotion, so the chain closes only for the bounded scaffolded replay scope.
+- **rationale:** The finite replay is computed from the scripted generator definitions and frozen threshold, and a live rerun matches the archived 12-family results: 10/12 for free_coh and 6/12 for the old node-level rule. The source note's own header and honest-read section, together with the retained off-scaffold dependency, prevent interpreting this as a universal predictor or classifier-closure theorem. Residual risk is scope drift: downstream uses must preserve that this is scaffolded empirical finite evidence, not an off-scaffold law.
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`
