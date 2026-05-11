@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 96 |
+| **retained** | 97 |
 | **retained_no_go** | 132 |
 | **retained_bounded** | 277 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1203 |
+| unaudited | 1202 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 467 |
+| `audited_clean` | 468 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1316 |
+| `unaudited` | 1315 |
 
 | claim_type | count |
 |---|---:|
@@ -365,6 +365,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -6413,6 +6414,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
   - `KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md`
   - `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
+- **auditor confidence:** high
+
+### `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10`
+
+- **Note:** [`KOIDE_Q_TWO_THIRDS_Z3_CHARACTER_NORM_SPLIT_RECASTING_THEOREM_NOTE_2026-05-10.md`](../../docs/KOIDE_Q_TWO_THIRDS_Z3_CHARACTER_NORM_SPLIT_RECASTING_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Zero-dependency algebraic recasting theorem: for any positive real 3-vector v and unit-normalized Z_3 Fourier components c_k, the scalar condition Q(v)=(sum v_i^2)/(sum v_i)^2=2/3 holds iff |c_0|^2=|c_1|^2+|c_2|^2, equivalently the standard 45-degree form. No framework derivation of Koide, lepton mass operator, or norm-split mechanism is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Using the unit-normalized Z_3 Fourier transform, Plancherel gives sum |c_k|^2 = sum v_i^2 and |c_0|^2 = (sum v_i)^2/3, so Q(v)=2/3 is equivalent to |c_0|^2 = |c_1|^2 + |c_2|^2.  _(class `A`)_
+- **chain closes:** True — The equivalence follows directly from the unitary DFT/Plancherel identity and the trivial-character norm formula. The note explicitly limits itself to a change of basis and excludes any physical Koide closure or operator-level derivation.
+- **rationale:** The theorem is a self-contained algebraic equivalence over a positive real 3-vector. The live runner verifies Plancherel, the c_0 norm, proportionality of the Koide and NSC residuals, the Foot angle form, and symbolic sufficiency examples with PASS=8 and FAIL=0. Residual risk is downstream scope drift: this audit does not derive Q=2/3 from Cl(3)/Z^3, construct a lepton mass operator, or prove NSC for physics.
 - **auditor confidence:** high
 
 ### `koide_reviewer_stress_test_note_2026-04-21`
