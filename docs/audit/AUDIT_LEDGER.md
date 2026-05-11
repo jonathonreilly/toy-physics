@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 89 |
+| **retained** | 90 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 274 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1215 |
+| unaudited | 1214 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 456 |
+| `audited_clean` | 457 |
 | `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1328 |
+| `unaudited` | 1327 |
 
 | claim_type | count |
 |---|---:|
@@ -266,6 +266,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fourth_family_quadrant_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `framework_bare_alpha_ratio_assumed_input_identity_support_note_2026-04-30` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `g_bare_canonical_convention_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gate_b_connectivity_tolerance_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `gate_b_grown_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -4241,6 +4242,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The scoped result is only algebraic substitution into formulas explicitly admitted in the note, with graph_first_su3 supplying the SU(3)/N_c = 3 surface. No derivation or uniqueness of g_bare = 1 is claimed.
 - **rationale:** The note cleanly frames g_bare = 1 as an admitted convention rather than a derived constraint, and the retained graph-first dependency supplies the SU(3) setting needed for N_c = 3. The β = 6 conclusion and the absence of a multiplicative curvature rescaling at g_bare = 1 are class-A consequences under that scoped convention. Runner checks include non-load-bearing supersession and upgrade checks, but those are not needed for this narrow claim and do not alter the closure.
 - **auditor confidence:** medium
+
+### `g_bare_constraint_vs_convention_restatement_abstract_identity_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_ABSTRACT_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/G_BARE_CONSTRAINT_VS_CONVENTION_RESTATEMENT_ABSTRACT_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra theorem over positive real abstract variables (g, beta, K) satisfying beta*g^2 = K: the zero-, one-, and two-axis admission cases have respectively two, one, and zero free parameters, so constraint-vs-convention status depends on admission rank. No physical bare-coupling, Wilson-action, Cl(3), SU(N_c), Gell-Mann normalization, comparator, or framework-specific admission-rank claim is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The constraint-vs-convention status of g or beta is a function of the admission rank r: with r = 1 the remaining variables lie on a one-parameter convention curve, while with r = 2 the remaining variable is uniquely forced by beta*g^2 = K.  _(class `A`)_
+- **chain closes:** True — The proof is elementary algebra over R_{>0}: solve beta*g^2=K under each admission specialization and count the resulting free parameters. The runner verifies the symbolic identities and exact rational witnesses with PASS=52, FAIL=0, and the note has no load-bearing dependencies.
+- **rationale:** The scoped theorem closes because every claimed case follows directly from the single relation beta*g^2=K over positive reals: K alone leaves a one-parameter curve, fixed K and beta or fixed K and g gives a unique positive solution for the third variable, and no admissions leave a two-parameter surface. The runner checks the symbolic substitutions, exact rational samples, dimension count, round trips, and negative examples without importing any physical interpretation. Residual risk is scope drift only: this audit does not ratify any physical claim that g_bare=1 is forced in the lattice gauge setting.
+- **auditor confidence:** high
 
 ### `g_bare_constraint_vs_convention_theorem_note_2026-05-03`
 
