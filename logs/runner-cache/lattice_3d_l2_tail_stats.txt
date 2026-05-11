@@ -1,0 +1,17 @@
+===== runner cache v1 =====
+runner: scripts/lattice_3d_l2_tail_stats.py
+runner_sha256: 74dccbdc37adf72dd1c739019b868cf40046d291202241febd4ac1de3336a292
+timeout_sec: 120
+exit_code: -9
+elapsed_sec: 120.06
+status: timeout
+----- stdout -----
+================================================================================================
+3D INVERSE-SQUARE TAIL STATISTICS
+  Review-safe tail probe for the exploratory 1/L^2 branch.
+  Same family, same barrier geometry, same action, h=0.25.
+================================================================================================
+
+
+----- stderr -----
+

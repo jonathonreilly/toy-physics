@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 685,
-    "high": 34,
+    "high": 36,
     "leaf": 324,
-    "medium": 169
+    "medium": 172
   },
-  "cycle_break_target_count": 254,
+  "cycle_break_target_count": 252,
   "cycle_break_targets": [
     {
       "all_cycle_nodes": [
@@ -6717,27 +6717,13 @@
     },
     {
       "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+        "wave_direct_dm_h025_fam2_seed0_boundary_note"
       ],
       "cycle_id": "cycle-0233",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
-      "primary_break_target": "wave_direct_dm_h025_fam2_seed1_control_note",
-      "primary_break_target_audit_status": "unaudited",
-      "primary_break_target_criticality": "high",
-      "repair_class": "cycle_break_required"
-    },
-    {
-      "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note"
-      ],
-      "cycle_id": "cycle-0234",
-      "cycle_length": 2,
-      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 22,
       "primary_break_target": "wave_direct_dm_h025_fam2_seed0_boundary_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "medium",
@@ -6748,10 +6734,10 @@
         "wave_direct_dm_h025_fam2_two_point_synthesis_note",
         "wave_direct_dm_h025_fam2_seed1_followup_note"
       ],
-      "cycle_id": "cycle-0235",
+      "cycle_id": "cycle-0234",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 22,
       "primary_break_target": "wave_direct_dm_h025_fam2_seed1_followup_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "medium",
@@ -6759,45 +6745,15 @@
     },
     {
       "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-      ],
-      "cycle_id": "cycle-0236",
-      "cycle_length": 3,
-      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
-      "primary_break_target": "wave_direct_dm_h025_fam2_seed0_control_note",
-      "primary_break_target_audit_status": "unaudited",
-      "primary_break_target_criticality": "high",
-      "repair_class": "cycle_break_required"
-    },
-    {
-      "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam2_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note"
-      ],
-      "cycle_id": "cycle-0237",
-      "cycle_length": 3,
-      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_followup_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
-      "primary_break_target": "wave_direct_dm_h025_fam2_seed1_control_note",
-      "primary_break_target_audit_status": "unaudited",
-      "primary_break_target_criticality": "high",
-      "repair_class": "cycle_break_required"
-    },
-    {
-      "all_cycle_nodes": [
+        "wave_direct_dm_h025_fam2_seed0_boundary_note",
         "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note"
+        "wave_direct_dm_h025_fam2_seed1_control_note"
       ],
-      "cycle_id": "cycle-0238",
+      "cycle_id": "cycle-0235",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed0_control_note', 'wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 22,
       "primary_break_target": "wave_direct_dm_h025_fam2_seed0_boundary_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "medium",
@@ -6805,18 +6761,47 @@
     },
     {
       "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note"
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_seed0_crossfamily_note"
       ],
-      "cycle_id": "cycle-0239",
-      "cycle_length": 4,
-      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam2_seed1_control_note', 'wave_direct_dm_h025_fam2_seed1_followup_note', 'wave_direct_dm_h025_fam2_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
+      "cycle_id": "cycle-0236",
+      "cycle_length": 2,
+      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_seed0_crossfamily_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 17,
-      "primary_break_target": "wave_direct_dm_h025_fam2_seed0_control_note",
+      "primary_break_target": "wave_direct_dm_h025_fam1_seed0_control_note",
+      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_criticality": "medium",
+      "repair_class": "cycle_break_required"
+    },
+    {
+      "all_cycle_nodes": [
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "cycle_id": "cycle-0237",
+      "cycle_length": 2,
+      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
+      "max_transitive_descendants": 17,
+      "primary_break_target": "wave_direct_dm_h025_fam1_seed1_control_note",
       "primary_break_target_audit_status": "unaudited",
       "primary_break_target_criticality": "high",
+      "repair_class": "cycle_break_required"
+    },
+    {
+      "all_cycle_nodes": [
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_high_band_boundary_note",
+        "wave_direct_dm_h025_low_band_retention_note",
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "cycle_id": "cycle-0238",
+      "cycle_length": 5,
+      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_fam1_seed1_control_note', 'wave_direct_dm_h025_high_band_boundary_note', 'wave_direct_dm_h025_low_band_retention_note', 'wave_direct_dm_h025_two_point_synthesis_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
+      "max_transitive_descendants": 17,
+      "primary_break_target": "wave_direct_dm_h025_fam1_seed0_control_note",
+      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_criticality": "medium",
       "repair_class": "cycle_break_required"
     },
     {
@@ -6826,7 +6811,7 @@
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_nonlocal_boundary_chi_target_note"
       ],
-      "cycle_id": "cycle-0240",
+      "cycle_id": "cycle-0239",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_nonlocal_boundary_chi_target_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6842,7 +6827,7 @@
         "signed_gravity_non_claim_gate_note",
         "signed_gravity_mechanism_separation_note"
       ],
-      "cycle_id": "cycle-0241",
+      "cycle_id": "cycle-0240",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_mechanism_separation_note', 'signed_gravity_non_claim_gate_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6858,7 +6843,7 @@
         "signed_gravity_retained_boundary_source_principle_no_go_note",
         "signed_gravity_aps_action_origin_superselection_stability_note"
       ],
-      "cycle_id": "cycle-0242",
+      "cycle_id": "cycle-0241",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_retained_boundary_source_principle_no_go_note', 'signed_gravity_source_line_origin_tensor_lift_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6875,7 +6860,7 @@
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_nonlocal_boundary_chi_target_note"
       ],
-      "cycle_id": "cycle-0243",
+      "cycle_id": "cycle-0242",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_boundary_coframe_chi_probe_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_nonlocal_boundary_chi_target_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6892,7 +6877,7 @@
         "signed_gravity_boundary_coframe_chi_probe_note",
         "signed_gravity_source_action_escape_hatch_note"
       ],
-      "cycle_id": "cycle-0244",
+      "cycle_id": "cycle-0243",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_boundary_coframe_chi_probe_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25', 'signed_gravity_source_action_escape_hatch_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6909,7 +6894,7 @@
         "signed_gravity_non_claim_gate_note",
         "signed_gravity_mechanism_separation_note"
       ],
-      "cycle_id": "cycle-0245",
+      "cycle_id": "cycle-0244",
       "cycle_length": 5,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_mechanism_separation_note', 'signed_gravity_non_claim_gate_note', 'signed_gravity_response_backlog_2026-04-25'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6928,7 +6913,7 @@
         "signed_gravity_aps_locked_source_action_proposal_note",
         "signed_gravity_aps_wald_gauss_bridge_audit_note"
       ],
-      "cycle_id": "cycle-0246",
+      "cycle_id": "cycle-0245",
       "cycle_length": 7,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_aps_locked_source_action_proposal_note', 'signed_gravity_aps_wald_gauss_bridge_audit_note', 'signed_gravity_response_backlog_2026-04-25', 'signed_gravity_retained_boundary_source_principle_no_go_note', 'signed_gravity_source_line_origin_tensor_lift_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6949,7 +6934,7 @@
         "signed_gravity_aps_wald_gauss_bridge_audit_note",
         "signed_gravity_aps_boundary_index_chi_probe_note"
       ],
-      "cycle_id": "cycle-0247",
+      "cycle_id": "cycle-0246",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_boundary_index_chi_probe_note', 'signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_aps_locked_source_action_proposal_note', 'signed_gravity_aps_wald_gauss_bridge_audit_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25', 'signed_gravity_retained_boundary_source_principle_no_go_note', 'signed_gravity_source_line_origin_tensor_lift_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6971,7 +6956,7 @@
         "signed_gravity_aps_wald_gauss_bridge_audit_note",
         "signed_gravity_aps_boundary_index_chi_probe_note"
       ],
-      "cycle_id": "cycle-0248",
+      "cycle_id": "cycle-0247",
       "cycle_length": 10,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['signed_gravity_aps_action_origin_superselection_stability_note', 'signed_gravity_aps_boundary_index_chi_probe_note', 'signed_gravity_aps_locked_axiom_extension_note', 'signed_gravity_aps_locked_source_action_proposal_note', 'signed_gravity_aps_wald_gauss_bridge_audit_note', 'signed_gravity_chi_selector_theorem_or_nogo_note', 'signed_gravity_response_backlog_2026-04-25', 'signed_gravity_retained_boundary_source_principle_no_go_note', 'signed_gravity_source_line_origin_tensor_lift_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 16,
@@ -6987,7 +6972,7 @@
         "gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17",
         "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0249",
+      "cycle_id": "cycle-0248",
       "cycle_length": 4,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17', 'gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17', 'gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 11,
@@ -7008,7 +6993,7 @@
         "gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17",
         "gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17"
       ],
-      "cycle_id": "cycle-0250",
+      "cycle_id": "cycle-0249",
       "cycle_length": 9,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['gauge_vacuum_plaquette_beta6_scalar_value_insufficiency_note_2026-04-17', 'gauge_vacuum_plaquette_compressed_rim_functional_uniqueness_note_2026-04-17', 'gauge_vacuum_plaquette_conjugation_symmetric_retained_sampling_reduction_note_2026-04-17', 'gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17', 'gauge_vacuum_plaquette_first_symmetric_three_sample_reconstruction_note_2026-04-17', 'gauge_vacuum_plaquette_first_three_sample_local_wilson_partial_evaluation_note_2026-04-17', 'gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17', 'gauge_vacuum_plaquette_retained_class_sampling_inversion_note_2026-04-17'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 11,
@@ -7019,24 +7004,10 @@
     },
     {
       "all_cycle_nodes": [
-        "wave_direct_dm_h025_fam1_seed0_control_note",
-        "wave_direct_dm_h025_seed0_crossfamily_note"
-      ],
-      "cycle_id": "cycle-0251",
-      "cycle_length": 2,
-      "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['wave_direct_dm_h025_seed0_crossfamily_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
-      "max_transitive_descendants": 8,
-      "primary_break_target": "wave_direct_dm_h025_fam1_seed0_control_note",
-      "primary_break_target_audit_status": "unaudited",
-      "primary_break_target_criticality": "medium",
-      "repair_class": "cycle_break_required"
-    },
-    {
-      "all_cycle_nodes": [
         "teleportation_poisson_resource_sweep_note",
         "teleportation_resource_from_poisson_note"
       ],
-      "cycle_id": "cycle-0252",
+      "cycle_id": "cycle-0250",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['teleportation_resource_from_poisson_note'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 2,
@@ -7050,7 +7021,7 @@
         "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20",
         "science_3plus1_line_law_known_limits_note_2026-04-20"
       ],
-      "cycle_id": "cycle-0253",
+      "cycle_id": "cycle-0251",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['science_3plus1_line_law_known_limits_note_2026-04-20'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 1,
@@ -7064,7 +7035,7 @@
         "repo.active_review_queue",
         "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
       ],
-      "cycle_id": "cycle-0254",
+      "cycle_id": "cycle-0252",
       "cycle_length": 2,
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 0,
@@ -25578,6 +25549,29 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.024,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
+      "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_a1_probe_retained_u1_hunt_bounded_obstruction_note_2026-05-09_probe14",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -25604,6 +25598,55 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/cl3_koide_a1_probe_retained_u1_hunt_2026_05_09_probe14.py",
+      "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam2_seed1_control_note"
+      ],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.524,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
+      "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam2_seed0_boundary_note",
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_seed1_followup_note",
+        "wave_direct_dm_h025_fam2_seed1_control_note"
+      ],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 8.524,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 22
     },
     {
@@ -25667,30 +25710,32 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+      "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
       "deps": [
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_fam1_seed1_control_note",
         "wave_direct_dm_h025_fam2_two_point_synthesis_note"
       ],
       "direct_in_degree": 9,
       "effective_status": "unaudited",
       "load_bearing_score": 8.67,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+      "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "transitive_descendants": 17
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+      "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "migration_hint",
@@ -25698,41 +25743,15 @@
       "criticality_rank": 2,
       "cross_confirmation_status": null,
       "deps": [
-        "wave_direct_dm_h025_fam2_seed1_control_note"
+        "wave_direct_dm_h025_two_point_synthesis_note"
       ],
-      "direct_in_degree": 8,
+      "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.17,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+      "load_bearing_score": 6.67,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
-      "transitive_descendants": 17
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_fam2_seed0_boundary_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed1_followup_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note"
-      ],
-      "direct_in_degree": 7,
-      "effective_status": "unaudited",
-      "load_bearing_score": 7.67,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
       "transitive_descendants": 17
     },
     {
@@ -26520,6 +26539,71 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "h0125_wider_replay_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "h0125_scalable_scout_note"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.892,
+      "note_path": "docs/H0125_WIDER_REPLAY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_replay.py",
+      "transitive_descendants": 20
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "h0125_wider_w4_note",
+      "claim_scope": null,
+      "claim_type": "open_gate",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.892,
+      "note_path": "docs/H0125_WIDER_W4_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4.py",
+      "transitive_descendants": 20
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "lattice_3d_l2_tail_stats_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.807,
+      "note_path": "docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 13
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "wilson_two_body_open_note_2026-04-11",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -26536,6 +26620,52 @@
       "ready": true,
       "runner_path": "scripts/frontier_wilson_two_body_open.py",
       "transitive_descendants": 12
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wilson_test_mass_continuum_note_2026-04-11",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wilson_normalization_reconciliation_note_2026-04-11",
+        "staggered_newton_reproduction_note_2026-04-11",
+        "staggered_newton_blocking_sensitivity_note_2026-04-11"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.085,
+      "note_path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 11
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "lattice_distance_law_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 4.959,
+      "note_path": "docs/LATTICE_DISTANCE_LAW_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 10
     },
     {
       "audit_independence_required": "any_non_self",
@@ -27254,6 +27384,30 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.024,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
+      "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gate_b_nonlabel_connectivity_v2_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -27323,6 +27477,31 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/inverse_problem_graph_requirements.py",
+      "transitive_descendants": 22
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam2_seed1_control_note",
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.524,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "transitive_descendants": 22
     },
     {
@@ -27892,6 +28071,54 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_high_band_boundary_note",
+        "wave_direct_dm_h025_seed0_crossfamily_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.17,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
+      "transitive_descendants": 17
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_low_band_retention_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 6.17,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
+      "transitive_descendants": 17
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_q_op_locality_c3_fixed_source_support_note_2026-04-27",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -27978,24 +28205,52 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+      "claim_id": "wave_direct_dm_h025_low_band_retention_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
+      "claim_type_provenance": "migration_hint",
       "criticality": "medium",
       "criticality_rank": 1,
       "cross_confirmation_status": null,
       "deps": [
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_two_point_synthesis_note"
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
       "load_bearing_score": 5.67,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+      "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
+      "transitive_descendants": 17
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "medium",
+      "criticality_rank": 1,
+      "cross_confirmation_status": null,
+      "deps": [
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_fam2_seed0_control_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+        "wave_direct_dm_h025_fam2_seed1_control_note",
+        "wave_direct_dm_h025_high_band_boundary_note",
+        "wave_direct_dm_h025_fam2_seed0_boundary_note"
+      ],
+      "direct_in_degree": 3,
+      "effective_status": "unaudited",
+      "load_bearing_score": 5.67,
+      "note_path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py",
       "transitive_descendants": 17
     },
     {
@@ -28072,31 +28327,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 17
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.17,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "transitive_descendants": 17
     },
     {
@@ -28227,29 +28457,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 16
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 6.087,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
       "transitive_descendants": 16
     },
     {
@@ -28605,54 +28812,6 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 15
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_low_band_retention_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_fam1_seed1_control_note",
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.407,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
-      "transitive_descendants": 14
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_low_band_retention_note",
-        "wave_direct_dm_h025_two_point_synthesis_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.807,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
-      "transitive_descendants": 13
     },
     {
       "audit_independence_required": "any_non_self",
@@ -29107,31 +29266,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wilson_test_mass_continuum_note_2026-04-11",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wilson_normalization_reconciliation_note_2026-04-11",
-        "staggered_newton_reproduction_note_2026-04-11",
-        "staggered_newton_blocking_sensitivity_note_2026-04-11"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.085,
-      "note_path": "docs/WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": null,
-      "transitive_descendants": 11
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -29398,58 +29532,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
-      "transitive_descendants": 8
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_high_band_boundary_note",
-        "wave_direct_dm_h025_seed0_crossfamily_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.67,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_control_batch.py",
-      "transitive_descendants": 8
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_direct_dm_h025_fam1_seed0_control_note",
-        "wave_direct_dm_h025_fam2_seed0_control_note",
-        "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-        "wave_direct_dm_h025_fam2_seed1_control_note",
-        "wave_direct_dm_h025_high_band_boundary_note",
-        "wave_direct_dm_h025_fam2_seed0_boundary_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.67,
-      "note_path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/wave_direct_dm_h025_seed0_crossfamily_assertions.py",
       "transitive_descendants": 8
     },
     {
@@ -39476,6 +39558,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 80,
-  "total_pending": 1212
+  "ready_count": 85,
+  "total_pending": 1217
 }

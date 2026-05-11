@@ -1,0 +1,70 @@
+===== runner cache v1 =====
+runner: scripts/frontier_newton_systematic.py
+runner_sha256: 42ac930c1ec1cae14f16b0cf205a8d8fa432479d5e8d20c32dbcca721118e19f
+timeout_sec: 120
+exit_code: -9
+elapsed_sec: 120.02
+status: timeout
+----- stdout -----
+================================================================================================
+SYSTEMATIC NEWTON EXPONENT STUDY
+================================================================================================
+MASS=0.3, WILSON_R=1.0, DT=0.08, mu2=0.001, SIGMA=1.0
+Lattice sides: [15, 20, 25]
+G values:      [2.0, 5.0, 10.0]
+Separations:   [3, 5, 7, 9, 11, 13]
+Open BC, complex Wilson hopping, Poisson with 4*pi*G
+
+Building L=15 lattice (3375 sites)... 0.0s
+Building L=20 lattice (8000 sites)... 0.0s
+Building L=25 lattice (15625 sites)... 0.0s
+
+--- L=15, G=  2.0 ---
+  d= 3: a_mut=-0.356739 SNR=66.58 [ATTRACT] [CLEAN   ] (1.5s)
+  d= 5: a_mut=-0.136116 SNR=57.41 [ATTRACT] [CLEAN   ] (1.5s)
+  d= 7: a_mut=-0.071556 SNR=71.93 [ATTRACT] [CLEAN   ] (1.9s)
+  d= 9: a_mut=-0.042963 SNR=182.10 [ATTRACT] [CLEAN   ] (1.5s)
+  d=11: a_mut=-0.026756 SNR=35.85 [ATTRACT] [CLEAN   ] (1.5s)
+  d=13: SKIP (too close to boundary)
+  FIT: alpha=-1.974 +/- 0.043  R^2=0.9986  (N_clean=5/5)
+  (7.8s total)
+
+--- L=15, G=  5.0 ---
+  d= 3: a_mut=-0.855371 SNR=8.58 [ATTRACT] [CLEAN   ] (1.5s)
+  d= 5: a_mut=-0.327099 SNR=5.63 [ATTRACT] [CLEAN   ] (1.5s)
+  d= 7: a_mut=-0.171894 SNR=5.48 [ATTRACT] [CLEAN   ] (1.5s)
+  d= 9: a_mut=-0.101116 SNR=6.07 [ATTRACT] [CLEAN   ] (1.5s)
+  d=11: a_mut=-0.063081 SNR=4.63 [ATTRACT] [CLEAN   ] (1.6s)
+  d=13: SKIP (too close to boundary)
+  FIT: alpha=-1.990 +/- 0.048  R^2=0.9983  (N_clean=5/5)
+  (7.6s total)
+
+--- L=15, G= 10.0 ---
+  d= 3: a_mut=-0.577474 SNR=1.18 [ATTRACT] [MARGINAL] (1.7s)
+  d= 5: a_mut=-0.050702 SNR=0.11 [ATTRACT] [NOISY   ] (1.5s)
+  d= 7: a_mut=-0.017484 SNR=0.07 [ATTRACT] [NOISY   ] (1.9s)
+  d= 9: a_mut=-0.022832 SNR=0.17 [ATTRACT] [NOISY   ] (1.9s)
+  d=11: a_mut=-0.026929 SNR=0.59 [ATTRACT] [NOISY   ] (1.5s)
+  d=13: SKIP (too close to boundary)
+  FIT: insufficient clean attractive points (0/5)
+  (8.5s total)
+
+--- L=20, G=  2.0 ---
+  d= 3: a_mut=-0.354374 SNR=57.39 [ATTRACT] [CLEAN   ] (8.7s)
+  d= 5: a_mut=-0.131939 SNR=50.44 [ATTRACT] [CLEAN   ] (8.4s)
+  d= 7: a_mut=-0.068005 SNR=58.62 [ATTRACT] [CLEAN   ] (8.3s)
+  d= 9: a_mut=-0.041989 SNR=60.63 [ATTRACT] [CLEAN   ] (8.7s)
+  d=11: a_mut=-0.028244 SNR=65.08 [ATTRACT] [CLEAN   ] (8.3s)
+  d=13: a_mut=-0.019350 SNR=127.57 [ATTRACT] [CLEAN   ] (8.4s)
+  FIT: alpha=-1.969 +/- 0.018  R^2=0.9997  (N_clean=6/6)
+  (50.8s total)
+
+--- L=20, G=  5.0 ---
+  d= 3: a_mut=-0.847058 SNR=8.95 [ATTRACT] [CLEAN   ] (9.3s)
+  d= 5: a_mut=-0.316238 SNR=5.75 [ATTRACT] [CLEAN   ] (8.4s)
+  d= 7: a_mut=-0.163403 SNR=5.50 [ATTRACT] [CLEAN   ] (9.1s)
+  d= 9: a_mut=-0.100986 SNR=5.43 [ATTRACT] [CLEAN   ] (8.8s)
+  d=11: a_mut=-0.067832 SNR=5.43 [ATTRACT] [CLEAN   ] (9.2s)
+
+----- stderr -----
+

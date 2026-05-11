@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/lattice_no_barrier_distance.py
+runner_sha256: e861699f236a43b67682030f2aab1e38a63dbcf40068286246b1d8861dad0ef6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+==============================================================================
+NO-BARRIER LATTICE DISTANCE LAW
+  ordered 2D lattice, source at y=0, no barrier, mass row at y=b
+  N=40, half_width=20, k=5.0
+==============================================================================
+
+   b       delta     |delta|
+------------------------------
+   3     -3.5350      3.5350
+   5     -3.3798      3.3798
+   7     -2.8797      2.8797
+  10     -2.1879      2.1879
+  13     -1.6612      1.6612
+  16     -1.2787      1.2787
+  19     -1.0045      1.0045
+
+k=0 control: +0.000000e+00
+
+Far-field |delta| fit on b >= 7:
+  |delta| ~= 23.5071 * b^(-1.052)
+  R^2 = 0.9850
+
+----- stderr -----
+

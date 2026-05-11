@@ -1,0 +1,151 @@
+===== runner cache v1 =====
+runner: scripts/frontier_perturbative_mass_law.py
+runner_sha256: 045bece3e138018dc4f455ba929c3ca8e36167149af5e55df8ffc473e5827be7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 32.58
+status: ok
+----- stdout -----
+================================================================================================
+PERTURBATIVE MASS LAW: First-Order Extraction of Newton's F ~ M_B / d^2
+Wilson 3D open-BC lattice
+================================================================================================
+MASS=0.3, WILSON_R=1.0, G=5.0, mu2=0.001, SIDE=20
+SIGMA=1.0, REG=0.001
+Mass weights (M_B): [0.25, 0.5, 1.0, 2.0, 3.0, 4.0]
+Separations: [3, 4, 5, 6, 7, 8, 9, 10, 12]
+
+KEY INSIGHT: At first order in G, the mutual acceleration
+  a(A<-B) = -<psi_A| d/dx [G * K * |psi_B|^2] |psi_A>
+is LINEAR in |psi_B|^2 (hence linear in M_B), with NO self-field mixing.
+
+Building 20^3 = 8000 site lattice... done (0.0s)
+
+================================================================================================
+PHASE 1: Mass dependence (fixed d=6, G=5.0)
+================================================================================================
+  Varying M_B (partner amplitude^2), measuring a_mutual(A<-B)
+
+  M_B= 0.25: a_pert=-3.81185974e-02  V_partner(A)=+1.010002e+00  (0.14s)
+  M_B= 0.50: a_pert=-7.62371948e-02  V_partner(A)=+2.020005e+00  (0.13s)
+  M_B= 1.00: a_pert=-1.52474390e-01  V_partner(A)=+4.040010e+00  (0.13s)
+  M_B= 2.00: a_pert=-3.04948779e-01  V_partner(A)=+8.080019e+00  (0.13s)
+  M_B= 3.00: a_pert=-4.57423169e-01  V_partner(A)=+1.212003e+01  (0.13s)
+  M_B= 4.00: a_pert=-6.09897558e-01  V_partner(A)=+1.616004e+01  (0.14s)
+
+  MASS EXPONENT: |a_pert| ~ M_B^1.0000
+    Standard error: 0.0000
+    R^2: 1.000000
+    Expected (Newton): 1.000
+    Deviation: 0.0000
+
+  LINEARITY CHECK (a_pert / M_B should be constant):
+    M_B= 0.25: a/M_B = -1.52474390e-01
+    M_B= 0.50: a/M_B = -1.52474390e-01
+    M_B= 1.00: a/M_B = -1.52474390e-01
+    M_B= 2.00: a/M_B = -1.52474390e-01
+    M_B= 3.00: a/M_B = -1.52474390e-01
+    M_B= 4.00: a/M_B = -1.52474390e-01
+    Mean: -1.52474390e-01, Std: 1.58e-16, CV: 0.000000
+    Perfect linearity would give CV = 0
+
+================================================================================================
+PHASE 2: Distance dependence (fixed M_B=1.0, G=5.0)
+================================================================================================
+  d= 3: a_pert=-5.93525892e-01  [ATTRACT]  (0.14s)
+  d= 4: a_pert=-3.42975858e-01  [ATTRACT]  (0.13s)
+  d= 5: a_pert=-2.22659718e-01  [ATTRACT]  (0.13s)
+  d= 6: a_pert=-1.52474390e-01  [ATTRACT]  (0.13s)
+  d= 7: a_pert=-1.17319192e-01  [ATTRACT]  (0.13s)
+  d= 8: a_pert=-8.83025869e-02  [ATTRACT]  (0.13s)
+  d= 9: a_pert=-7.50359683e-02  [ATTRACT]  (0.13s)
+  d=10: a_pert=-5.85880776e-02  [ATTRACT]  (0.13s)
+  d=12: a_pert=-4.13671327e-02  [ATTRACT]  (0.13s)
+
+  DISTANCE EXPONENT: |a_pert| ~ d^-1.9159
+    Standard error: 0.0163
+    R^2: 0.999493
+    Expected (Newton 3D): -2.000
+    Deviation: 0.0841
+
+================================================================================================
+PHASE 3: Coupling linearity (d=6, M_B=1.0)
+================================================================================================
+  At first order, a_pert should be LINEAR in G
+
+  G=  1.0: a_pert=-3.04948779e-02  (0.14s)
+  G=  2.0: a_pert=-6.09897558e-02  (0.13s)
+  G=  5.0: a_pert=-1.52474390e-01  (0.13s)
+  G= 10.0: a_pert=-3.04948779e-01  (0.13s)
+
+  G EXPONENT: |a_pert| ~ G^1.0000
+    R^2: 1.000000
+    Expected (first order): 1.000
+    Deviation: 0.0000
+
+================================================================================================
+PHASE 4: Full M_B x d grid (checking F ~ M_B / d^2)
+================================================================================================
+
+     M_B             d=4             d=6             d=8            d=10
+  ----------------------------------------------------------------------
+    0.50   -1.714879e-01   -7.623719e-02   -4.415129e-02   -2.929404e-02
+    1.00   -3.429759e-01   -1.524744e-01   -8.830259e-02   -5.858808e-02
+    2.00   -6.859517e-01   -3.049488e-01   -1.766052e-01   -1.171762e-01
+    4.00   -1.371903e+00   -6.098976e-01   -3.532103e-01   -2.343523e-01
+
+  NEWTON PRODUCT CHECK: a_pert * d^2 / M_B should be constant
+    M_B= 0.5, d= 4: a*d^2/M_B = -5.487614e+00
+    M_B= 0.5, d= 6: a*d^2/M_B = -5.489078e+00
+    M_B= 0.5, d= 8: a*d^2/M_B = -5.651366e+00
+    M_B= 0.5, d=10: a*d^2/M_B = -5.858808e+00
+    M_B= 1.0, d= 4: a*d^2/M_B = -5.487614e+00
+    M_B= 1.0, d= 6: a*d^2/M_B = -5.489078e+00
+    M_B= 1.0, d= 8: a*d^2/M_B = -5.651366e+00
+    M_B= 1.0, d=10: a*d^2/M_B = -5.858808e+00
+    M_B= 2.0, d= 4: a*d^2/M_B = -5.487614e+00
+    M_B= 2.0, d= 6: a*d^2/M_B = -5.489078e+00
+    M_B= 2.0, d= 8: a*d^2/M_B = -5.651366e+00
+    M_B= 2.0, d=10: a*d^2/M_B = -5.858808e+00
+    M_B= 4.0, d= 4: a*d^2/M_B = -5.487614e+00
+    M_B= 4.0, d= 6: a*d^2/M_B = -5.489078e+00
+    M_B= 4.0, d= 8: a*d^2/M_B = -5.651366e+00
+    M_B= 4.0, d=10: a*d^2/M_B = -5.858808e+00
+    Mean: -5.621716e+00, Std: 1.52e-01, CV: 0.027075
+
+================================================================================================
+PHASE 5: Perturbative vs Hartree comparison
+================================================================================================
+  Running full Hartree evolution at selected (M_B, d) points...
+
+  M_B= 1.0, d= 4: a_pert=-3.429759e-01  a_hartree=-4.951419e-01  ratio=0.6927  (6.1s)
+  M_B= 1.0, d= 6: a_pert=-1.524744e-01  a_hartree=-2.211923e-01  ratio=0.6893  (6.6s)
+  M_B= 1.0, d= 8: a_pert=-8.830259e-02  a_hartree=-1.269487e-01  ratio=0.6956  (7.1s)
+  M_B= 2.0, d= 6: a_pert=-3.049488e-01  a_hartree=-2.211923e-01  ratio=1.3787  (6.5s)
+
+================================================================================================
+FINAL SUMMARY: Perturbative Mass Law Results
+================================================================================================
+
+  MASS EXPONENT:     +1.0000 (expect +1.000)
+    R^2 = 1.000000
+    PASS: a_mutual ~ M_B^1.0000
+  DISTANCE EXPONENT: -1.9159 (expect -2.000)
+    R^2 = 0.999493
+    PASS: a_mutual ~ d^-1.9159
+  G EXPONENT:        +1.0000 (expect +1.000)
+    R^2 = 1.000000
+    PASS: a_mutual ~ G^1.0000
+
+  >>> MASS LAW CONFIRMED: F ~ M_B at first order in G <<<
+  The perturbative calculation cleanly separates mutual from self-field.
+  The Hartree self-field contamination is a HIGHER-ORDER effect.
+
+  >>> FULL NEWTON: F ~ G * M_B / d^2 CONFIRMED at first order <<<
+
+  Newton product a*d^2/M_B coefficient of variation: 0.027075
+
+  Total runtime: 32s
+
+----- stderr -----
+

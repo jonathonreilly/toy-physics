@@ -1,5 +1,5 @@
 {
-  "cycle_count": 254,
+  "cycle_count": 252,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -53570,26 +53570,17 @@
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 22,
       "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
         {
           "audit_status": "unaudited",
           "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
@@ -53597,7 +53588,16 @@
           "effective_status": "unaudited",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
         }
       ],
       "requires_lemma_extraction": false
@@ -53608,15 +53608,15 @@
       "edges": [
         {
           "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
           "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 17,
+      "max_transitive_descendants": 22,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -53625,16 +53625,16 @@
           "effective_status": "unaudited",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 22
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
-          "transitive_descendants": 17
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "transitive_descendants": 22
         }
       ],
       "requires_lemma_extraction": false
@@ -53645,15 +53645,23 @@
       "edges": [
         {
           "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
+          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
           "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
         }
       ],
-      "length": 2,
-      "max_transitive_descendants": 17,
+      "length": 4,
+      "max_transitive_descendants": 22,
       "nodes": [
         {
           "audit_status": "unaudited",
@@ -53662,16 +53670,34 @@
           "effective_status": "unaudited",
           "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
           "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
+          "transitive_descendants": 22
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "transitive_descendants": 22
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "transitive_descendants": 22
         }
       ],
       "requires_lemma_extraction": false
@@ -53681,46 +53707,33 @@
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
+          "to": "wave_direct_dm_h025_seed0_crossfamily_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+          "from": "wave_direct_dm_h025_seed0_crossfamily_note",
+          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
         }
       ],
-      "length": 3,
+      "length": 2,
       "max_transitive_descendants": 17,
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
+          "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note",
           "transitive_descendants": 17
         }
       ],
@@ -53731,46 +53744,33 @@
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
         }
       ],
-      "length": 3,
+      "length": 2,
       "max_transitive_descendants": 17,
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
           "transitive_descendants": 17
         }
       ],
@@ -53781,59 +53781,72 @@
       "decision": null,
       "edges": [
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
+          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
+          "to": "wave_direct_dm_h025_high_band_boundary_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+          "from": "wave_direct_dm_h025_high_band_boundary_note",
+          "to": "wave_direct_dm_h025_low_band_retention_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_boundary_note"
+          "from": "wave_direct_dm_h025_low_band_retention_note",
+          "to": "wave_direct_dm_h025_fam1_seed1_control_note"
         },
         {
-          "from": "wave_direct_dm_h025_fam2_seed0_boundary_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
+          "from": "wave_direct_dm_h025_fam1_seed1_control_note",
+          "to": "wave_direct_dm_h025_two_point_synthesis_note"
+        },
+        {
+          "from": "wave_direct_dm_h025_two_point_synthesis_note",
+          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
         }
       ],
-      "length": 4,
+      "length": 5,
       "max_transitive_descendants": 17,
       "nodes": [
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
+          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
+          "claim_id": "wave_direct_dm_h025_high_band_boundary_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_HIGH_BAND_BOUNDARY_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 High-Band Boundary Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
+          "claim_id": "wave_direct_dm_h025_low_band_retention_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_LOW_BAND_RETENTION_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Low-Band Retention Note",
           "transitive_descendants": 17
         },
         {
           "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_boundary_note",
+          "claim_id": "wave_direct_dm_h025_fam1_seed1_control_note",
           "claim_type": "positive_theorem",
           "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_BOUNDARY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Boundary Note",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED1_CONTROL_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Fam1 Seed1 Control Note",
+          "transitive_descendants": 17
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
+          "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note",
           "transitive_descendants": 17
         }
       ],
@@ -53841,69 +53854,6 @@
     },
     {
       "cycle_id": "cycle-0239",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_control_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "to": "wave_direct_dm_h025_fam2_seed1_followup_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "to": "wave_direct_dm_h025_fam2_seed0_control_note"
-        }
-      ],
-      "length": 4,
-      "max_transitive_descendants": 17,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed0 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Control Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_two_point_synthesis_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_TWO_POINT_SYNTHESIS_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Two-Point Synthesis Note",
-          "transitive_descendants": 17
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam2_seed1_followup_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM2_SEED1_FOLLOWUP_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam2 Seed1 Follow-Up Note",
-          "transitive_descendants": 17
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0240",
       "decision": null,
       "edges": [
         {
@@ -53966,7 +53916,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0241",
+      "cycle_id": "cycle-0240",
       "decision": null,
       "edges": [
         {
@@ -54029,7 +53979,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0242",
+      "cycle_id": "cycle-0241",
       "decision": null,
       "edges": [
         {
@@ -54092,7 +54042,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0243",
+      "cycle_id": "cycle-0242",
       "decision": null,
       "edges": [
         {
@@ -54168,7 +54118,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0244",
+      "cycle_id": "cycle-0243",
       "decision": null,
       "edges": [
         {
@@ -54244,7 +54194,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0245",
+      "cycle_id": "cycle-0244",
       "decision": null,
       "edges": [
         {
@@ -54320,7 +54270,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0246",
+      "cycle_id": "cycle-0245",
       "decision": null,
       "edges": [
         {
@@ -54422,7 +54372,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0247",
+      "cycle_id": "cycle-0246",
       "decision": null,
       "edges": [
         {
@@ -54550,7 +54500,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0248",
+      "cycle_id": "cycle-0247",
       "decision": null,
       "edges": [
         {
@@ -54691,7 +54641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0249",
+      "cycle_id": "cycle-0248",
       "decision": null,
       "edges": [
         {
@@ -54754,7 +54704,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0250",
+      "cycle_id": "cycle-0249",
       "decision": null,
       "edges": [
         {
@@ -54882,44 +54832,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0251",
-      "decision": null,
-      "edges": [
-        {
-          "from": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "to": "wave_direct_dm_h025_seed0_crossfamily_note"
-        },
-        {
-          "from": "wave_direct_dm_h025_seed0_crossfamily_note",
-          "to": "wave_direct_dm_h025_fam1_seed0_control_note"
-        }
-      ],
-      "length": 2,
-      "max_transitive_descendants": 8,
-      "nodes": [
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_fam1_seed0_control_note",
-          "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_FAM1_SEED0_CONTROL_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Fam1 Seed0 Control Note",
-          "transitive_descendants": 8
-        },
-        {
-          "audit_status": "unaudited",
-          "claim_id": "wave_direct_dm_h025_seed0_crossfamily_note",
-          "claim_type": "bounded_theorem",
-          "effective_status": "unaudited",
-          "note_path": "docs/WAVE_DIRECT_DM_H025_SEED0_CROSSFAMILY_NOTE.md",
-          "title": "Wave Direct-dM H=0.25 Seed0 Cross-Family Compression Note",
-          "transitive_descendants": 8
-        }
-      ],
-      "requires_lemma_extraction": false
-    },
-    {
-      "cycle_id": "cycle-0252",
+      "cycle_id": "cycle-0250",
       "decision": null,
       "edges": [
         {
@@ -54956,7 +54869,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0253",
+      "cycle_id": "cycle-0251",
       "decision": null,
       "edges": [
         {
@@ -54993,7 +54906,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0254",
+      "cycle_id": "cycle-0252",
       "decision": null,
       "edges": [
         {
@@ -55052,14 +54965,14 @@
     "27": 4,
     "28": 11,
     "29": 6,
-    "3": 12,
+    "3": 10,
     "31": 10,
     "32": 10,
     "33": 13,
     "34": 8,
     "35": 2,
-    "4": 14,
-    "5": 19,
+    "4": 13,
+    "5": 20,
     "6": 13,
     "7": 16,
     "8": 8,

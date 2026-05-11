@@ -22477,6 +22477,18 @@
       "to": "wave_direct_dm_h025_fam3_seed1_control_note"
     },
     {
+      "from": "wave_direct_dm_h025_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam1_seed0_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam1_seed1_control_note"
+    },
+    {
+      "from": "wave_direct_dm_h025_two_point_synthesis_note",
+      "to": "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+    },
+    {
       "from": "wave_direct_dm_matched_history_note",
       "to": "wave_direct_dm_family_scout_note"
     },
@@ -47405,24 +47417,24 @@
     },
     "h0125_wider_replay_note": {
       "claim_id": "h0125_wider_replay_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "h0125_scalable_scout_note"
       ],
-      "note_hash": "ff952f464072b40b041c3b95251292b7dfecfda03a1c4ec5d52bd2854dea5d9f",
+      "note_hash": "f1f8659dd853ca6a03492079cfe222f5ccab42087a985a79223288a833550c27",
       "path": "docs/H0125_WIDER_REPLAY_NOTE.md",
       "runner_path": "scripts/lattice_3d_l2_wide_h0125_replay.py",
       "title": "Wider `h = 0.125` Replay Note"
     },
     "h0125_wider_w4_note": {
       "claim_id": "h0125_wider_w4_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [],
-      "note_hash": "de21d670577841774de89f01748b7611a1c9be4443d35fef944ec69ac58c9b51",
+      "note_hash": "c21c0fca43d46edb21b272a120de9d464743121422782839941a71667f9f53c4",
       "path": "docs/H0125_WIDER_W4_NOTE.md",
       "runner_path": "scripts/lattice_3d_l2_wide_h0125_w4.py",
       "title": "Wider `h = 0.125` Family (`phys_w = 4`) Note"
@@ -51946,11 +51958,11 @@
     },
     "lattice_3d_l2_tail_stats_note": {
       "claim_id": "lattice_3d_l2_tail_stats_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a7bb1fe68a48ef796483439803a6582f4e3d2af8d7f691057ae3e58bfba85d04",
+      "note_hash": "455cc0e676f0eb5cbbb623b165a71fab26a5a09d0704ce60347d04c2221ef062",
       "path": "docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md",
       "runner_path": null,
       "title": "3D 1/L^2 Tail Statistics Note"
@@ -51993,11 +52005,11 @@
     },
     "lattice_distance_law_note": {
       "claim_id": "lattice_distance_law_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "839494cf59aa08eb5d2930066fe8a4c258b37bd577181543dadf7951300b3235",
+      "note_hash": "af0730b8bf455927f474a4a9a21ef089e88d76e92810930435a0fd5962691899",
       "path": "docs/LATTICE_DISTANCE_LAW_NOTE.md",
       "runner_path": null,
       "title": "Lattice Distance-Law Note"
@@ -66210,11 +66222,15 @@
     },
     "wave_direct_dm_h025_two_point_synthesis_note": {
       "claim_id": "wave_direct_dm_h025_two_point_synthesis_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "6b03c214184b0785deb33f36b90bcf3f5c6097dec0c0dfe4284ff3393d445863",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "wave_direct_dm_h025_fam1_seed0_control_note",
+        "wave_direct_dm_h025_fam1_seed1_control_note",
+        "wave_direct_dm_h025_fam2_two_point_synthesis_note"
+      ],
+      "note_hash": "fbdabcc1347bd5ab2d21f894050fcf5c04cea80e5bb5fe375bf18850aa051d9c",
       "path": "docs/WAVE_DIRECT_DM_H025_TWO_POINT_SYNTHESIS_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_h025_point_runner.py",
       "title": "Wave Direct-dM H=0.25 Two-Point Synthesis Note"
@@ -66668,11 +66684,11 @@
     },
     "wilson_normalization_reconciliation_note_2026-04-11": {
       "claim_id": "wilson_normalization_reconciliation_note_2026-04-11",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "meta",
+      "claim_type_author_hint_raw": "meta",
+      "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "9ed48adfd4c83a134da948bb3f02d620d8a43e3528b36ce91bc48ac9d5ceef41",
+      "note_hash": "394f53fff5bc0a731d59f52b83e40a05c7700b7703e4ed9f38fe8218a9004ab2",
       "path": "docs/WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md",
       "runner_path": null,
       "title": "Wilson Normalization / Comparison Reconciliation"
@@ -69356,7 +69372,6 @@
     "wave_3plus1d_promotions_note",
     "wave_amplification_near_horizon_note",
     "wave_direct_dm_family_scout_note",
-    "wave_direct_dm_h025_two_point_synthesis_note",
     "wave_equation_gravity_note",
     "wave_equation_self_field_note",
     "wave_radiation_note",
@@ -69413,25 +69428,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 314,
-      "meta": 69,
+      "bounded_theorem": 318,
+      "meta": 70,
       "no_go": 44,
-      "none": 1575,
-      "open_gate": 35,
+      "none": 1569,
+      "open_gate": 36,
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 774,
-      "meta": 69,
+      "bounded_theorem": 776,
+      "meta": 70,
       "no_go": 149,
       "none": 447,
       "open_gate": 116,
-      "positive_theorem": 625
+      "positive_theorem": 622
     },
-    "edge_count": 8649,
+    "edge_count": 8652,
     "leaf_count": 614,
     "node_count": 2180,
-    "root_count": 816,
+    "root_count": 815,
     "runners_with_path": 1791
   }
 }
