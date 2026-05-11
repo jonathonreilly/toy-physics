@@ -19,14 +19,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 90.356,
-      "transitive_descendants": 926
+      "load_bearing_score": 90.364,
+      "transitive_descendants": 931
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 45.301,
-      "transitive_descendants": 891
+      "load_bearing_score": 45.309,
+      "transitive_descendants": 896
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -37,20 +37,20 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 41.214,
-      "transitive_descendants": 593
+      "load_bearing_score": 41.226,
+      "transitive_descendants": 598
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 39.786,
-      "transitive_descendants": 882
+      "load_bearing_score": 39.794,
+      "transitive_descendants": 887
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 38.107,
-      "transitive_descendants": 779
+      "load_bearing_score": 38.117,
+      "transitive_descendants": 784
     },
     {
       "claim_id": "alpha_s_derived_note",
@@ -79,8 +79,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 32.26,
-      "transitive_descendants": 866
+      "load_bearing_score": 32.268,
+      "transitive_descendants": 871
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
@@ -97,8 +97,8 @@
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 30.459,
-      "transitive_descendants": 703
+      "load_bearing_score": 30.47,
+      "transitive_descendants": 708
     },
     {
       "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
@@ -127,8 +127,8 @@
     {
       "claim_id": "left_handed_charge_matching_note",
       "criticality": "critical",
-      "load_bearing_score": 27.799,
-      "transitive_descendants": 629
+      "load_bearing_score": 27.811,
+      "transitive_descendants": 634
     },
     {
       "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",

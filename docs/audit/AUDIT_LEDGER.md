@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1239 |
+| unaudited | 1242 |
 | audit_in_progress | 1 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 188 |
+| ~~audited_conditional~~ | 185 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,19 +43,19 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 185 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1349 |
+| `unaudited` | 1352 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 871 |
+| `bounded_theorem` | 872 |
 | `decoration` | 13 |
 | `meta` | 115 |
-| `no_go` | 220 |
+| `no_go` | 219 |
 | `open_gate` | 113 |
 | `positive_theorem` | 748 |
 
@@ -71,8 +71,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1688
-- runners with (C) first-principles compute hits: 863
+- runners classified: 1689
+- runners with (C) first-principles compute hits: 864
 - runners with (D) external comparator hits: 484
 - decoration candidates (no C, no D): 199
 
@@ -82,25 +82,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
-| 1 | `minimal_axioms_2026-05-03` | meta | critical | 926 | 90.36 | `unaudited` | meta |
-| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 891 | 45.30 | `audited_clean` | open_gate |
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 931 | 90.36 | `unaudited` | meta |
+| 2 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | critical | 896 | 45.31 | `audited_clean` | open_gate |
 | 3 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 447 | 43.81 | `unaudited` | unaudited |
-| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 593 | 41.21 | `audited_conditional` | ~~audited_conditional~~ |
-| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 882 | 39.79 | `audited_clean` | **retained_bounded** |
-| 6 | `minimal_axioms_2026-04-11` | meta | critical | 779 | 38.11 | `unaudited` | meta |
+| 4 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 598 | 41.23 | `audited_conditional` | ~~audited_conditional~~ |
+| 5 | `graph_first_su3_integration_note` | bounded_theorem | critical | 887 | 39.79 | `audited_clean` | **retained_bounded** |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 784 | 38.12 | `unaudited` | meta |
 | 7 | `alpha_s_derived_note` | bounded_theorem | critical | 585 | 36.20 | `unaudited` | unaudited |
 | 8 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 400 | 36.15 | `unaudited` | unaudited |
 | 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 469 | 33.38 | `unaudited` | unaudited |
 | 10 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 400 | 33.15 | `unaudited` | unaudited |
-| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 866 | 32.26 | `audited_clean` | **retained_bounded** |
+| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 871 | 32.27 | `audited_clean` | **retained_bounded** |
 | 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 525 | 31.54 | `audited_clean` | **retained_bounded** |
 | 13 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 484 | 31.42 | `unaudited` | unaudited |
-| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 703 | 30.46 | `unaudited` | unaudited |
+| 14 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 708 | 30.47 | `unaudited` | unaudited |
 | 15 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 482 | 30.42 | `unaudited` | unaudited |
 | 16 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 400 | 29.15 | `unaudited` | unaudited |
 | 17 | `three_generation_structure_note` | bounded_theorem | critical | 576 | 28.17 | `unaudited` | unaudited |
 | 18 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 406 | 28.17 | `unaudited` | unaudited |
-| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 629 | 27.80 | `unaudited` | unaudited |
+| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 634 | 27.81 | `unaudited` | unaudited |
 | 20 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 400 | 27.15 | `unaudited` | unaudited |
 | 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 472 | 26.89 | `unaudited` | unaudited |
 | 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 636 | 26.82 | `unaudited` | unaudited |
@@ -683,9 +683,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `neutrino_majorana_lower_level_pairing_nogo_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
-| `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -6853,45 +6850,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The scalar two-point expressions have no mu input, so the same scalar two-point signature is compatible with both mu = 0 and mu != 0 while the Pfaffian sector differs.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the same-current-data witness: scalar two-point and normal source-response signatures are mu-blind, Pfaffian signatures vary with mu, and charge-sector checks show normal sources are charge zero while the pairing seed carries charge -2. That directly blocks the implication that scalar two-point closure alone forces mu = 0.
 - **rationale:** The note claims a negative boundary, not a Dirac-global or numerical neutrino result: SR-2 cannot close C2-X from free-scalar two-point data alone. The runner checks the relevant current surface by verifying the cited authority text and constructing nonzero-mu witnesses with identical scalar and normal signatures but distinct Pfaffian sectors. Residual risk is limited to future typed scalar-to-Pfaffian coupling theorems, which the note explicitly leaves open.
-- **auditor confidence:** high
-
-### `neutrino_majorana_lower_level_pairing_nogo_note`
-
-- **Note:** [`NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md`](../../docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md)
-- **claim_type:** `no_go`
-- **claim_scope:** Audited only the note's asserted lower-level no-go that charge-preserving transport/Green/source-response dynamics force the induced Nambu anomalous block to vanish on the ΔL=2 Majorana channel.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-neutrino_majorana_lower_-056`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the retained charge-preserving lower-level transport / Green / source-response layer, the induced Nambu response has zero anomalous block on the unique ΔL=2 Majorana channel.  _(class `C`)_
-- **chain closes:** False — The restricted packet gives no axiom, transport operator, Green/source-response construction, Nambu block calculation, or proof of uniqueness of the ΔL=2 channel. The claimed zero anomalous block is asserted rather than derived.
-- **rationale:** No cited retained authority or runner is available, and the note itself is only a short support note. The load-bearing no-go would need a first-principles derivation from the axiom or an explicit algebraic closure of the lower-level response map, but the packet contains neither. Because the result imports an unclosed lower-level dynamical bridge and channel identification, the chain does not close from the restricted inputs.
-- **auditor confidence:** high
-
-### `neutrino_majorana_nur_character_boundary_note`
-
-- **Note:** [`NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md`](../../docs/NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the bounded claim that scalar transfer/response data on a rank-1 retained nu_R line cannot generate a nonzero off-diagonal charge-2 Majorana primitive.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-neutrino_majorana_nur_ch-022`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** The retained nu_R support is a one-dimensional line, so every projected microscopic operator on that support is scalar and its Nambu lift has no anomalous off-diagonal block.  _(class `A`)_
-- **chain closes:** False — The rank-1-line-to-scalar-response-to-diagonal-Nambu conclusion is a valid algebraic closure once the nu_R line projector is granted. The restricted packet does not derive the anomaly-fixed retained nu_R support or its rank-1 projector from the sole axiom; the runner hard-codes that projector.
-- **rationale:** The runner does perform the advertised rank-1 algebra: projected operators on a one-dimensional support are scalar, scalar responses lift diagonally, and the off-diagonal Majorana primitive is outside that span. However, the load-bearing physical premise that the anomaly-fixed retained nu_R support is the particular rank-1 line is not derived from the axiom in the restricted packet. With no cited authority supplied, the theorem is conditional on that imported projector/support premise.
-- **auditor confidence:** high
-
-### `neutrino_majorana_nur_charge2_primitive_reduction_note`
-
-- **Note:** [`NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md`](../../docs/NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Audited the 2x2 doubled-line algebra showing the charge +2 eigenspace is span(E12), its antisymmetric completion is one complex m J2 block, and rephasing reduces it to mu J2 with mu >= 0.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-cli-gpt-5.5-20260505-040942-beec6e04-neutrino_majorana_nur_ch-023`  (codex-gpt-5.5; independence=cross_family)
-- **load-bearing step:** On the doubled nu_R line, the charge-(+2) adjoint eigenspace is exactly the one-dimensional slot E12, whose antisymmetric/Nambu completion is m J2 and whose phase is removed by local rephasing.  _(class `A`)_
-- **chain closes:** False — The local 2x2 algebra closes, but the claim that the current scalar transfer / response bank still misses exactly that slot imports the premise that the bank spans only diagonal Nambu lifts. No cited authority or runner data derives the actual bank span from the restricted packet.
-- **rationale:** The runner performs genuine elementary algebra checks for the doubled-line charge eigenspace, antisymmetric completion, and rephasing normal form. However, the final bank-missing conclusion is not derived from provided bank data; the code hard-codes the diagonal span as the relevant bank subspace and checks that J2 is not diagonal. Because the source note explicitly relies on prior branch facts about retained nu_R support and scalar/Nambu lifts that are not included as cited authorities, the full chain does not close within the restricted packet.
 - **auditor confidence:** high
 
 ### `neutrino_mass_reduction_to_dirac_note`

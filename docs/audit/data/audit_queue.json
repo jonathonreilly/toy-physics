@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 701,
+    "critical": 704,
     "high": 38,
     "leaf": 332,
     "medium": 177
@@ -5831,12 +5831,12 @@
       ],
       "direct_in_degree": 27,
       "effective_status": "unaudited",
-      "load_bearing_score": 23.035,
+      "load_bearing_score": 23.045,
       "note_path": "docs/CPT_EXACT_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_cpt_exact.py",
-      "transitive_descendants": 741
+      "transitive_descendants": 746
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5856,12 +5856,12 @@
       ],
       "direct_in_degree": 18,
       "effective_status": "unaudited",
-      "load_bearing_score": 18.535,
+      "load_bearing_score": 18.545,
       "note_path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
-      "transitive_descendants": 741
+      "transitive_descendants": 746
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5879,12 +5879,12 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.02,
+      "load_bearing_score": 10.029,
       "note_path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
-      "transitive_descendants": 733
+      "transitive_descendants": 738
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5904,12 +5904,12 @@
       ],
       "direct_in_degree": 18,
       "effective_status": "unaudited",
-      "load_bearing_score": 18.518,
+      "load_bearing_score": 18.527,
       "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
-      "transitive_descendants": 732
+      "transitive_descendants": 737
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5927,12 +5927,12 @@
       ],
       "direct_in_degree": 12,
       "effective_status": "unaudited",
-      "load_bearing_score": 15.514,
+      "load_bearing_score": 15.524,
       "note_path": "docs/LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lorentz_boost_2d.py",
-      "transitive_descendants": 730
+      "transitive_descendants": 735
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5950,12 +5950,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.0,
+      "load_bearing_score": 11.01,
       "note_path": "docs/HOPPING_BILINEAR_HERMITICITY_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/hopping_bilinear_hermiticity_check.py",
-      "transitive_descendants": 723
+      "transitive_descendants": 728
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -5974,12 +5974,12 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.5,
+      "load_bearing_score": 10.51,
       "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py",
-      "transitive_descendants": 723
+      "transitive_descendants": 728
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6000,12 +6000,12 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.498,
+      "load_bearing_score": 11.508,
       "note_path": "docs/MICROCAUSALITY_FINITE_RANGE_H_AND_VLR_BRIDGE_THEOREM_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/microcausality_finite_range_h_bridge_2026_05_09.py",
-      "transitive_descendants": 722
+      "transitive_descendants": 727
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6023,12 +6023,12 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 9.996,
+      "load_bearing_score": 10.006,
       "note_path": "docs/LIGHT_CONE_CRANK_NICOLSON_LIEB_ROBINSON_BRIDGE_NOTE_2026-05-09.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/light_cone_crank_nicolson_lr_2026_05_09.py",
-      "transitive_descendants": 721
+      "transitive_descendants": 726
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6047,12 +6047,12 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.994,
+      "load_bearing_score": 11.004,
       "note_path": "docs/LIGHT_CONE_FRAMING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/light_cone_staggered_dispersion.py",
-      "transitive_descendants": 720
+      "transitive_descendants": 725
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6071,12 +6071,12 @@
       ],
       "direct_in_degree": 10,
       "effective_status": "unaudited",
-      "load_bearing_score": 14.492,
+      "load_bearing_score": 14.502,
       "note_path": "docs/AXIOM_FIRST_SPECTRUM_CONDITION_THEOREM_NOTE_2026-04-29.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_spectrum_condition_check.py",
-      "transitive_descendants": 719
+      "transitive_descendants": 724
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6096,12 +6096,12 @@
       ],
       "direct_in_degree": 10,
       "effective_status": "unaudited",
-      "load_bearing_score": 14.492,
+      "load_bearing_score": 14.502,
       "note_path": "docs/LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lorentz_boost_3plus1d.py",
-      "transitive_descendants": 719
+      "transitive_descendants": 724
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6121,12 +6121,12 @@
       ],
       "direct_in_degree": 12,
       "effective_status": "unaudited",
-      "load_bearing_score": 15.49,
+      "load_bearing_score": 15.5,
       "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lorentz_kernel_positive_closure.py",
-      "transitive_descendants": 718
+      "transitive_descendants": 723
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6150,12 +6150,12 @@
       ],
       "direct_in_degree": 19,
       "effective_status": "unaudited",
-      "load_bearing_score": 18.988,
+      "load_bearing_score": 18.998,
       "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_microcausality_check.py",
-      "transitive_descendants": 717
+      "transitive_descendants": 722
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6180,12 +6180,12 @@
       ],
       "direct_in_degree": 14,
       "effective_status": "unaudited",
-      "load_bearing_score": 16.484,
+      "load_bearing_score": 16.494,
       "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/axiom_first_single_clock_codimension1_evolution_check.py",
-      "transitive_descendants": 715
+      "transitive_descendants": 720
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6205,12 +6205,12 @@
       ],
       "direct_in_degree": 42,
       "effective_status": "unaudited",
-      "load_bearing_score": 30.459,
+      "load_bearing_score": 30.47,
       "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_anomaly_forces_time.py",
-      "transitive_descendants": 703
+      "transitive_descendants": 708
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6477,12 +6477,12 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.304,
+      "load_bearing_score": 11.315,
       "note_path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
-      "transitive_descendants": 631
+      "transitive_descendants": 636
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6502,12 +6502,12 @@
       ],
       "direct_in_degree": 37,
       "effective_status": "unaudited",
-      "load_bearing_score": 27.799,
+      "load_bearing_score": 27.811,
       "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 629
+      "transitive_descendants": 634
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -6727,12 +6727,12 @@
       ],
       "direct_in_degree": 31,
       "effective_status": "unaudited",
-      "load_bearing_score": 24.616,
+      "load_bearing_score": 24.629,
       "note_path": "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_right_handed_sector.py",
-      "transitive_descendants": 554
+      "transitive_descendants": 559
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7837,6 +7837,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_operator_axiom_first_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "anomaly_forces_time_theorem"
+      ],
+      "direct_in_degree": 16,
+      "effective_status": "unaudited",
+      "load_bearing_score": 16.87,
+      "note_path": "docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_operator.py",
+      "transitive_descendants": 467
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "universal_qg_pl_field_interface_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -7941,6 +7964,29 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_native_gaussian_no_go_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note"
+      ],
+      "direct_in_degree": 7,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.364,
+      "note_path": "docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_native_gaussian_nogo.py",
+      "transitive_descendants": 465
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_zero_import_authority_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -8021,29 +8067,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "neutrino_majorana_operator_axiom_first_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "anomaly_forces_time_theorem"
-      ],
-      "direct_in_degree": 13,
-      "effective_status": "unaudited",
-      "load_bearing_score": 15.355,
-      "note_path": "docs/NEUTRINO_MAJORANA_OPERATOR_AXIOM_FIRST_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_operator.py",
-      "transitive_descendants": 462
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "universal_qg_smooth_gravitational_local_identification_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -8066,6 +8089,30 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 462
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_majorana_finite_normal_grammar_no_go_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_native_gaussian_no_go_note"
+      ],
+      "direct_in_degree": 9,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.355,
+      "note_path": "docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py",
       "transitive_descendants": 462
     },
     {
@@ -8123,6 +8170,31 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_pfaffian_extension_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_native_gaussian_no_go_note",
+        "neutrino_majorana_finite_normal_grammar_no_go_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.852,
+      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_extension.py",
+      "transitive_descendants": 461
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "universal_qg_smooth_gravitational_global_solution_class_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -8153,23 +8225,25 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "neutrino_majorana_native_gaussian_no_go_note",
+      "claim_id": "neutrino_majorana_pfaffian_axiom_boundary_note",
       "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
+      "claim_type": "no_go",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "neutrino_majorana_operator_axiom_first_note"
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_native_gaussian_no_go_note",
+        "neutrino_majorana_pfaffian_extension_note"
       ],
-      "direct_in_degree": 7,
+      "direct_in_degree": 1,
       "effective_status": "unaudited",
-      "load_bearing_score": 12.349,
-      "note_path": "docs/NEUTRINO_MAJORANA_NATIVE_GAUSSIAN_NO_GO_NOTE.md",
+      "load_bearing_score": 9.349,
+      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_native_gaussian_nogo.py",
+      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py",
       "transitive_descendants": 460
     },
     {
@@ -8229,7 +8303,56 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "neutrino_majorana_finite_normal_grammar_no_go_note",
+      "claim_id": "neutrino_majorana_pfaffian_no_forcing_theorem_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_native_gaussian_no_go_note",
+        "neutrino_majorana_pfaffian_extension_note",
+        "neutrino_majorana_pfaffian_axiom_boundary_note"
+      ],
+      "direct_in_degree": 8,
+      "effective_status": "unaudited",
+      "load_bearing_score": 12.845,
+      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py",
+      "transitive_descendants": 459
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_majorana_current_atlas_nonrealization_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "observable_principle_from_axiom_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.845,
+      "note_path": "docs/NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py",
+      "transitive_descendants": 459
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_majorana_charge_two_primitive_reduction_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "default_positive_theorem",
@@ -8238,15 +8361,45 @@
       "cross_confirmation_status": null,
       "deps": [
         "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note"
+        "neutrino_majorana_native_gaussian_no_go_note",
+        "neutrino_majorana_finite_normal_grammar_no_go_note",
+        "neutrino_majorana_pfaffian_no_forcing_theorem_note",
+        "neutrino_majorana_pfaffian_extension_note",
+        "neutrino_majorana_current_atlas_nonrealization_note"
       ],
-      "direct_in_degree": 9,
+      "direct_in_degree": 5,
       "effective_status": "unaudited",
-      "load_bearing_score": 13.339,
-      "note_path": "docs/NEUTRINO_MAJORANA_FINITE_NORMAL_GRAMMAR_NO_GO_NOTE.md",
+      "load_bearing_score": 11.342,
+      "note_path": "docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py",
+      "runner_path": "scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py",
+      "transitive_descendants": 458
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_majorana_unique_source_slot_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "default_positive_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_finite_normal_grammar_no_go_note",
+        "neutrino_majorana_charge_two_primitive_reduction_note",
+        "neutrino_majorana_current_atlas_nonrealization_note"
+      ],
+      "direct_in_degree": 10,
+      "effective_status": "unaudited",
+      "load_bearing_score": 13.839,
+      "note_path": "docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_unique_source_slot.py",
       "transitive_descendants": 457
     },
     {
@@ -8334,7 +8487,7 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "neutrino_majorana_pfaffian_extension_note",
+      "claim_id": "neutrino_majorana_phase_removal_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "default_positive_theorem",
@@ -8342,92 +8495,19 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
+        "one_generation_matter_closure_note",
         "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note"
+        "neutrino_majorana_unique_source_slot_note",
+        "neutrino_majorana_pfaffian_extension_note"
       ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
       "load_bearing_score": 11.836,
-      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_EXTENSION_NOTE.md",
+      "note_path": "docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_extension.py",
+      "runner_path": "scripts/frontier_neutrino_majorana_phase_removal.py",
       "transitive_descendants": 456
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_pfaffian_axiom_boundary_note",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_pfaffian_extension_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.333,
-      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_AXIOM_BOUNDARY_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_axiom_boundary.py",
-      "transitive_descendants": 455
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_pfaffian_no_forcing_theorem_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_pfaffian_axiom_boundary_note"
-      ],
-      "direct_in_degree": 8,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.83,
-      "note_path": "docs/NEUTRINO_MAJORANA_PFAFFIAN_NO_FORCING_THEOREM_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_pfaffian_no_forcing_theorem.py",
-      "transitive_descendants": 454
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_current_atlas_nonrealization_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "observable_principle_from_axiom_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.83,
-      "note_path": "docs/NEUTRINO_MAJORANA_CURRENT_ATLAS_NONREALIZATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py",
-      "transitive_descendants": 454
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8457,7 +8537,7 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "neutrino_majorana_charge_two_primitive_reduction_note",
+      "claim_id": "neutrino_majorana_canonical_local_block_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
       "claim_type_provenance": "default_positive_theorem",
@@ -8465,73 +8545,19 @@
       "criticality_rank": 3,
       "cross_confirmation_status": null,
       "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_native_gaussian_no_go_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_pfaffian_no_forcing_theorem_note",
-        "neutrino_majorana_pfaffian_extension_note",
-        "neutrino_majorana_current_atlas_nonrealization_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.827,
-      "note_path": "docs/NEUTRINO_MAJORANA_CHARGE_TWO_PRIMITIVE_REDUCTION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py",
-      "transitive_descendants": 453
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_unique_source_slot_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_charge_two_primitive_reduction_note",
-        "neutrino_majorana_current_atlas_nonrealization_note"
-      ],
-      "direct_in_degree": 9,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.323,
-      "note_path": "docs/NEUTRINO_MAJORANA_UNIQUE_SOURCE_SLOT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_unique_source_slot.py",
-      "transitive_descendants": 452
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_phase_removal_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "one_generation_matter_closure_note",
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_unique_source_slot_note",
+        "neutrino_majorana_phase_removal_note",
         "neutrino_majorana_pfaffian_extension_note"
       ],
-      "direct_in_degree": 5,
+      "direct_in_degree": 8,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.32,
-      "note_path": "docs/NEUTRINO_MAJORANA_PHASE_REMOVAL_NOTE.md",
+      "load_bearing_score": 12.823,
+      "note_path": "docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_phase_removal.py",
-      "transitive_descendants": 451
+      "runner_path": "scripts/frontier_neutrino_majorana_canonical_local_block.py",
+      "transitive_descendants": 452
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8612,32 +8638,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_neutrino_majorana_z3_nonactivation_theorem.py",
-      "transitive_descendants": 447
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_canonical_local_block_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "neutrino_majorana_operator_axiom_first_note",
-        "neutrino_majorana_unique_source_slot_note",
-        "neutrino_majorana_phase_removal_note",
-        "neutrino_majorana_pfaffian_extension_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.307,
-      "note_path": "docs/NEUTRINO_MAJORANA_CANONICAL_LOCAL_BLOCK_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_canonical_local_block.py",
       "transitive_descendants": 447
     },
     {
@@ -13709,6 +13709,32 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_current_stack_zero_law_note",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_canonical_local_block_note",
+        "neutrino_majorana_finite_normal_grammar_no_go_note",
+        "neutrino_majorana_current_atlas_nonrealization_note",
+        "neutrino_majorana_pfaffian_no_forcing_theorem_note"
+      ],
+      "direct_in_degree": 11,
+      "effective_status": "unaudited",
+      "load_bearing_score": 14.158,
+      "note_path": "docs/NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
+      "transitive_descendants": 403
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "area_law_multipocket_selector_no_go_note_2026-04-25",
       "claim_scope": null,
       "claim_type": "no_go",
@@ -14708,6 +14734,31 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_lower_level_pairing_nogo_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_current_stack_zero_law_note",
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.655,
+      "note_path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
+      "transitive_descendants": 402
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dm_neutrino_breaking_triplet_cp_theorem_note_2026-04-15",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -15159,6 +15210,57 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "neutrino_majorana_nur_character_boundary_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.655,
+      "note_path": "docs/NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_nur_character_boundary.py",
+      "transitive_descendants": 402
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note",
+        "neutrino_majorana_phase_removal_note",
+        "neutrino_majorana_unique_source_slot_note",
+        "neutrino_majorana_charge_two_primitive_reduction_note"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "unaudited",
+      "load_bearing_score": 9.655,
+      "note_path": "docs/NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_neutrino_majorana_nur_charge2_primitive_reduction.py",
+      "transitive_descendants": 402
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "no_per_site_chirality_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "no_go",
@@ -15554,32 +15656,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_ew_lattice_cos_sq_theta_w_complement_bridge.py",
-      "transitive_descendants": 401
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_majorana_current_stack_zero_law_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "neutrino_majorana_canonical_local_block_note",
-        "neutrino_majorana_finite_normal_grammar_no_go_note",
-        "neutrino_majorana_current_atlas_nonrealization_note",
-        "neutrino_majorana_pfaffian_no_forcing_theorem_note"
-      ],
-      "direct_in_degree": 10,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.651,
-      "note_path": "docs/NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_neutrino_majorana_current_stack_zero_law.py",
       "transitive_descendants": 401
     },
     {
@@ -38801,5 +38877,5 @@
     }
   ],
   "ready_count": 98,
-  "total_pending": 1248
+  "total_pending": 1251
 }

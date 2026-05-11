@@ -13500,6 +13500,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_majorana_local_pfaffian_uniqueness.py"
     },
+    "neutrino_majorana_lower_level_pairing_nogo_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py"
+    },
     "neutrino_majorana_nambu_quadratic_comparator_note": {
       "assert_count": 1,
       "counts": {
@@ -36174,6 +36186,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py": {
+      "assert_count": 1,
+      "claims": [
+        "neutrino_majorana_lower_level_pairing_nogo_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_neutrino_majorana_nambu_quadratic_comparator.py": {
       "assert_count": 1,
       "claims": [
@@ -47223,12 +47250,12 @@
     "dominant_class_distribution": {
       "A": 150,
       "B": 174,
-      "C": 681,
+      "C": 682,
       "D": 267,
       "none": 416
     },
-    "runners_classified": 1688,
-    "runners_with_C": 863,
+    "runners_classified": 1689,
+    "runners_with_C": 864,
     "runners_with_D": 484
   }
 }

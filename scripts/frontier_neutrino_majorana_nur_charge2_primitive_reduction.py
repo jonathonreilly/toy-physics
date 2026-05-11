@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reduction of any retained nu_R Majorana reopening to one real amplitude."""
+"""Bounded reduction of a local nu_R Majorana reopening to one real amplitude."""
 
 from __future__ import annotations
 
@@ -83,9 +83,9 @@ def main() -> int:
     print("=" * 88)
     print()
     print("Question:")
-    print("  On the retained one-line nu_R lane, if a sole-axiom Majorana reopening")
-    print("  ever exists, what is the exact missing object? Is it still a matrix")
-    print("  family, or has it already reduced to a single primitive source slot?")
+    print("  On the local one-line nu_R model, if a Majorana reopening ever exists,")
+    print("  what is the exact missing object? Is it still a matrix family,")
+    print("  or has it already reduced to a single primitive source slot?")
 
     print("\n" + "=" * 88)
     print("PART 1: THE CHARGE-2 OPERATOR SLOT ON THE DOUBLED nu_R LINE")
@@ -107,7 +107,7 @@ def main() -> int:
     anti = antisymmetric_projection(np.array([[0.0, generic], [-generic, 0.0]], dtype=complex))
     check("The canonical antisymmetric completion of the charge-2 slot is m J2", np.linalg.norm(completed - anti) < 1e-12)
     check("Every local antisymmetric completion is supported only on the pairing plane", np.linalg.norm(np.diag(completed)) < 1e-12)
-    check("So any retained nu_R Majorana reopening is already one complex coefficient", np.linalg.norm(completed - generic * J2) < 1e-12)
+    check("So any local nu_R Majorana reopening in this model is one complex coefficient", np.linalg.norm(completed - generic * J2) < 1e-12)
 
     print("\n" + "=" * 88)
     print("PART 3: LOCAL rephasing removes the phase, leaving one real amplitude")
@@ -127,17 +127,17 @@ def main() -> int:
     print("=" * 88)
 
     distance = diagonal_span_distance(J2)
-    check("Scalar transfer / response Nambu lifts span only the diagonal subspace", distance > 1e-6, f"distance(J2,diag span)={distance:.6f}")
-    check("So the current bank misses exactly one rephasing-reduced Majorana source amplitude", True, "no larger matrix freedom remains")
+    check("The charge-2 primitive J2 is outside the diagonal Nambu-lift span", distance > 1e-6, f"distance(J2,diag span)={distance:.6f}")
+    check("Conditional on a diagonal-only scalar bank, the missing source is one rephasing-reduced amplitude", True, "no larger matrix freedom in the local model")
 
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Strongest next Majorana theorem on the retained nu_R lane:")
+    print("  Bounded local Majorana primitive reduction on the nu_R line:")
     print("    - charge +2 on the doubled nu_R line is one exact slot E12")
     print("    - antisymmetry/Nambu completion turns that slot into one complex block m J2")
     print("    - local nu_R rephasing removes the phase, leaving the unique normal form mu J2")
-    print("    - the current exact bank still does not generate that slot from scalar data")
+    print("    - the current-bank reading additionally requires a diagonal-only scalar-bank premise")
     print()
     print("  So the remaining Majorana object is not a matrix family. It is exactly")
     print("  one new off-diagonal charge-2 source amplitude mu on the doubled nu_R line.")

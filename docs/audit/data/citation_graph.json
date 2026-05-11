@@ -16157,6 +16157,18 @@
       "to": "observable_principle_from_axiom_note"
     },
     {
+      "from": "neutrino_majorana_lower_level_pairing_nogo_note",
+      "to": "neutrino_majorana_current_stack_zero_law_note"
+    },
+    {
+      "from": "neutrino_majorana_lower_level_pairing_nogo_note",
+      "to": "neutrino_majorana_operator_axiom_first_note"
+    },
+    {
+      "from": "neutrino_majorana_lower_level_pairing_nogo_note",
+      "to": "neutrino_majorana_canonical_local_block_note"
+    },
+    {
       "from": "neutrino_majorana_nambu_quadratic_comparator_note",
       "to": "neutrino_majorana_nambu_source_principle_note"
     },
@@ -16219,6 +16231,34 @@
     {
       "from": "neutrino_majorana_no_stationary_scale_theorem_note",
       "to": "hierarchy_spatial_bc_and_u0_scaling_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_character_boundary_note",
+      "to": "neutrino_majorana_operator_axiom_first_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_character_boundary_note",
+      "to": "neutrino_majorana_canonical_local_block_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "to": "neutrino_majorana_operator_axiom_first_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "to": "neutrino_majorana_canonical_local_block_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "to": "neutrino_majorana_phase_removal_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "to": "neutrino_majorana_unique_source_slot_note"
+    },
+    {
+      "from": "neutrino_majorana_nur_charge2_primitive_reduction_note",
+      "to": "neutrino_majorana_charge_two_primitive_reduction_note"
     },
     {
       "from": "neutrino_majorana_observable_principle_obstruction_note",
@@ -54691,13 +54731,17 @@
     },
     "neutrino_majorana_lower_level_pairing_nogo_note": {
       "claim_id": "neutrino_majorana_lower_level_pairing_nogo_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "20116e4c0db6b864b3573327b9a4cfb360fcde194d143520c3626c74dbe098f0",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "neutrino_majorana_current_stack_zero_law_note",
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note"
+      ],
+      "note_hash": "8fda9469294e6201e9c90d7358bf21fd00857b79492a7aec069cb71cd951e7c9",
       "path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "title": "Neutrino Majorana Lower-Level Pairing No-Go"
     },
     "neutrino_majorana_nambu_quadratic_comparator_note": {
@@ -54778,22 +54822,31 @@
     },
     "neutrino_majorana_nur_character_boundary_note": {
       "claim_id": "neutrino_majorana_nur_character_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "7311bade678a58adf0fa0c32e7ed63afc85004d93c8527813b38173d194ca14b",
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note"
+      ],
+      "note_hash": "2c4087562ef2deaeb12506086a0eb1f9d8472ee5a877e032f1be458166b2a6fb",
       "path": "docs/NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_nur_character_boundary.py",
       "title": "Neutrino Majorana `nu_R` Transfer-Character Boundary"
     },
     "neutrino_majorana_nur_charge2_primitive_reduction_note": {
       "claim_id": "neutrino_majorana_nur_charge2_primitive_reduction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "b2b866f2d89c17bf4771dba94cdfd9c3b3cae10bdb5dccf1a3a2e1258eb280e6",
+      "deps": [
+        "neutrino_majorana_operator_axiom_first_note",
+        "neutrino_majorana_canonical_local_block_note",
+        "neutrino_majorana_phase_removal_note",
+        "neutrino_majorana_unique_source_slot_note",
+        "neutrino_majorana_charge_two_primitive_reduction_note"
+      ],
+      "note_hash": "1b81799d4d8616682d0f7154214c8237919eaa06651afdfdba133a52e19b84a4",
       "path": "docs/NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_nur_charge2_primitive_reduction.py",
       "title": "Neutrino Majorana `nu_R` Charge-2 Primitive Reduction"
@@ -69607,9 +69660,6 @@
     "neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29",
     "neutrino_lane4_theorem_plan_note_2026-04-28",
     "neutrino_lane4_workstream_closeout_note_2026-04-28",
-    "neutrino_majorana_lower_level_pairing_nogo_note",
-    "neutrino_majorana_nur_character_boundary_note",
-    "neutrino_majorana_nur_charge2_primitive_reduction_note",
     "newton_persistent_pattern_control_note_2026-04-11",
     "next_chunk_recommendation",
     "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
@@ -69906,25 +69956,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 331,
+      "bounded_theorem": 334,
       "meta": 71,
       "no_go": 44,
-      "none": 1564,
+      "none": 1561,
       "open_gate": 36,
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 791,
+      "bounded_theorem": 792,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
-      "positive_theorem": 617
+      "positive_theorem": 616
     },
-    "edge_count": 8726,
+    "edge_count": 8736,
     "leaf_count": 620,
     "node_count": 2189,
-    "root_count": 805,
-    "runners_with_path": 1801
+    "root_count": 802,
+    "runners_with_path": 1802
   }
 }

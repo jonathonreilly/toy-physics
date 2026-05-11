@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lower-level Majorana pairing no-go on the retained charge-preserving lane."""
+"""Bounded lower-level Majorana pairing no-go for charge-preserving kernels."""
 
 from __future__ import annotations
 
@@ -85,7 +85,7 @@ def main() -> int:
     pair3 = induced_pairing_block(kernel3, 3)
     check("Three-generation lower-level Nambu response has zero anomalous block for a generic charge-preserving normal kernel", np.linalg.norm(pair3) < 1e-12,
           f"|pair|={np.linalg.norm(pair3):.2e}")
-    check("So the retained lower-level three-generation Majorana matrix remains zero", np.linalg.norm(pair3 - three_gen_pairing_operator(0.0)) < 1e-12)
+    check("So the modeled lower-level three-generation Majorana matrix remains zero", np.linalg.norm(pair3 - three_gen_pairing_operator(0.0)) < 1e-12)
 
     n5 = random_invertible_hermitian(5, 2105)
     kernel5 = nambu_response_kernel(n5)
@@ -99,8 +99,9 @@ def main() -> int:
     print("  Exact lower-level Majorana no-go:")
     print("    - generic charge-preserving lower-level dynamics induce no anomalous Nambu block")
     print("    - therefore the induced Majorana pairing kernel is identically zero")
-    print("    - this strengthens the Majorana-zero result from retained grammar")
-    print("      to the lower-level charge-preserving response layer")
+    print("    - this is bounded support for the charge-preserving response-kernel class")
+    print("    - deriving that the framework response layer is restricted to this class")
+    print("      remains a separate bridge theorem")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0

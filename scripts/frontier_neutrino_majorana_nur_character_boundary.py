@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sole-axiom nu_R transfer-character boundary for the Majorana lane."""
+"""Bounded nu_R transfer-character boundary for the Majorana lane."""
 
 from __future__ import annotations
 
@@ -66,12 +66,11 @@ def main() -> int:
     print("=" * 88)
     print()
     print("Question:")
-    print("  Can the sole-axiom transport / transfer / response data on the unique")
-    print("  anomaly-fixed nu_R lane generate or force a nonzero charge-2 Majorana")
-    print("  pairing law by themselves?")
+    print("  In the modeled rank-1 nu_R line, can transfer / response data")
+    print("  generate or force a nonzero charge-2 Majorana pairing law by themselves?")
 
     proj = nu_r_projector()
-    check("The retained nu_R support is a rank-1 line", np.linalg.matrix_rank(proj) == 1)
+    check("The modeled nu_R support projector is rank 1", np.linalg.matrix_rank(proj) == 1)
 
     rng = np.random.default_rng(1604)
     samples = []
@@ -92,7 +91,7 @@ def main() -> int:
     thetas = [0.0, 0.7, -1.2]
     holonomies = [character_holonomy(theta) for theta in thetas]
     check(
-        "The canonical sole-axiom transfer family on the nu_R line is a U(1) character family",
+        "The modeled transfer family on the nu_R line is a U(1) character family",
         max(abs(abs(lam) - 1.0) for lam in holonomies) < 1e-12,
         f"holonomies={holonomies}",
     )
@@ -130,13 +129,13 @@ def main() -> int:
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Exact stronger boundary on the current sole-axiom bank:")
-    print("    - the retained nu_R support is one-dimensional")
+    print("  Bounded transfer-character boundary on the modeled nu_R line:")
+    print("    - the input nu_R support projector is one-dimensional")
     print("    - every projected transport / transfer / response observable on that")
     print("      line is scalar")
     print("    - the induced Nambu lift is therefore diagonal and has zero anomalous block")
-    print("    - the nonzero Majorana law would require a genuinely new off-diagonal")
-    print("      charge-2 primitive on the Nambu-doubled nu_R line")
+    print("    - within this model, a nonzero Majorana law would require")
+    print("      a genuinely new off-diagonal charge-2 primitive on the Nambu-doubled nu_R line")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0
