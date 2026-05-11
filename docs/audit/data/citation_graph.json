@@ -52028,6 +52028,17 @@
       "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
     },
+    "mirror_2d_operator_cauchy_note_2026-05-10": {
+      "claim_id": "mirror_2d_operator_cauchy_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded numerical no-go for the current",
+      "claim_type_seed_hint": "no_go",
+      "deps": [],
+      "note_hash": "016f0238b7a03536967ae7fa5b094e76ef30868ae7850d0c12a90e9199c1dc69",
+      "path": "docs/MIRROR_2D_OPERATOR_CAUCHY_NOTE_2026-05-10.md",
+      "runner_path": "scripts/mirror_2d_operator_cauchy.py",
+      "title": "2D Mirror Operator-Cauchy Layer-Count No-Go"
+    },
     "mirror_2d_validation_note": {
       "claim_id": "mirror_2d_validation_note",
       "claim_type_author_hint": null,
@@ -67652,6 +67663,7 @@
     "minimal_axioms_2026-04-11",
     "minimal_axioms_2026-05-03",
     "mirror_2d_gravity_law_note",
+    "mirror_2d_operator_cauchy_note_2026-05-10",
     "mirror_2d_validation_note",
     "mirror_chokepoint_boundary_fit_note",
     "mirror_gravity_probe_note",
@@ -67985,7 +67997,7 @@
       "bounded_theorem": 270,
       "decoration": 1,
       "meta": 60,
-      "no_go": 30,
+      "no_go": 31,
       "none": 1627,
       "open_gate": 33,
       "positive_theorem": 126
@@ -67994,15 +68006,15 @@
       "bounded_theorem": 752,
       "decoration": 1,
       "meta": 60,
-      "no_go": 137,
+      "no_go": 138,
       "none": 451,
       "open_gate": 121,
       "positive_theorem": 625
     },
     "edge_count": 8442,
-    "leaf_count": 592,
-    "node_count": 2147,
-    "root_count": 812,
-    "runners_with_path": 1760
+    "leaf_count": 593,
+    "node_count": 2148,
+    "root_count": 813,
+    "runners_with_path": 1761
   }
 }
