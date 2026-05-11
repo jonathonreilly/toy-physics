@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 281 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1195 |
+| unaudited | 1194 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 188 |
+| ~~audited_conditional~~ | 189 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 474 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 189 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1308 |
+| `unaudited` | 1307 |
 
 | claim_type | count |
 |---|---:|
@@ -752,6 +752,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_localization_sweep_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_2d_gravity_law_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `mirror_mutual_information_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7266,6 +7267,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The registered fixed-anchor mass-window cache shows positive but weakly fit responses at N=25,40,60, with R^2=0.420/0.050/0.116, so no clean mirror mass law is supported on the searched fixed-anchor windows.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces the registered cache and the note has narrowed the load-bearing scope to those fixed-anchor fits. The mirror_chokepoint dependency provides general bounded mirror context, but this audit does not rely on it to certify the NPL_HALF=50/N=40,60 surface as a retained mirror pocket.
 - **rationale:** The current source boundary is narrow enough: the load-bearing result is the registered fixed-anchor runner cache, and the live runner matches its weak-fit numbers. The note explicitly demotes the distance-tail fit and cross-lane ranking to historical/out-of-scope context, avoiding the earlier unregistered-evidence problem. Residual risk is misuse of the phrase retained mirror pocket; the audited scope is the fixed-anchor cache result itself, not a certification of the NPL_HALF=50 surface by the parent mirror-chokepoint note.
+- **auditor confidence:** high
+
+### `mirror_grown_combined_note`
+
+- **Note:** [`MIRROR_GROWN_COMBINED_NOTE.md`](../../docs/MIRROR_GROWN_COMBINED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded grown-mirror scout negative-control row for d_growth in {2,3}, n_layers in {18,25,30,40}, npl=30, 16 seeds, and the registered mirror_grown_combined cache. The audited issue is whether the finite table and weak-performance conclusion close as a reproducible standalone result; no cross-lane mirror or Z2xZ2 comparison is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The grown mirror scout produces a finite reproducible table on the registered runner cache, with small 1-pur_min and weak gravity, and is a useful negative control on this scaffold.  _(class `C`)_
+- **chain closes:** False — The registered cache contains the source table and both cache and live rerun support the qualitative weak negative-control read, but a live rerun of the same current script hash produced different row values for multiple rows under the same nominal seed set. That prevents the exact source table from closing as a reproducible finite computation without a deterministic runner or a cache-only claim boundary.
+- **rationale:** Issue: the source claims a finite reproducible table, but the current runner with the same SHA as the registered cache does not reproduce the cache/source row values exactly. Why this blocks: the negative-control conclusion may be qualitatively robust, but an exact table cannot be retained as reproducible when process-level nondeterminism changes the reported numbers. Repair target: make the runner deterministic (for example by removing set/dict-order dependence or pinning a reproducible ordering) and refresh the cache, or explicitly narrow the claim to a frozen cache-only historical readout with no live reproducibility claim. Claim boundary until fixed: it is safe to say the registered cache and live rerun both show weak grown-mirror scout performance, not that the exact table is live-reproducible.
 - **auditor confidence:** high
 
 ### `mirror_mutual_information_canonical_families_note`
