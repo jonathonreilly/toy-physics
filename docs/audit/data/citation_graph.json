@@ -61887,6 +61887,17 @@
       "runner_path": "scripts/su3_casimir_fundamental_check.py",
       "title": "SU(3) Quadratic Casimir on Color Fundamental Equals 4/3"
     },
+    "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10": {
+      "claim_id": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "73d5a02ac2f3a3e39588e736d490241c7323c56902b0ab06fbeffe0534e9d28a",
+      "path": "docs/SU3_CHARACTER_DIAGONAL_CONVOLUTION_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py",
+      "title": "SU(3) Character Diagonal Convolution Equivalence Narrow Theorem"
+    },
     "su3_cube_full_rho_perron_2026-05-04": {
       "claim_id": "su3_cube_full_rho_perron_2026-05-04",
       "claim_type_author_hint": "bounded_theorem",
@@ -67592,6 +67603,7 @@
     "structured_mirror_reconciliation_note",
     "structureless_dag_gravity_harness_note",
     "structureless_dag_gravity_note",
+    "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
     "su3_fusion_engine_pr1_theorem_note_2026-05-03",
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
     "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
@@ -67728,7 +67740,7 @@
       "no_go": 29,
       "none": 1628,
       "open_gate": 31,
-      "positive_theorem": 115
+      "positive_theorem": 116
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 751,
@@ -67737,12 +67749,12 @@
       "no_go": 136,
       "none": 451,
       "open_gate": 119,
-      "positive_theorem": 615
+      "positive_theorem": 616
     },
     "edge_count": 8426,
-    "leaf_count": 578,
-    "node_count": 2132,
-    "root_count": 800,
-    "runners_with_path": 1745
+    "leaf_count": 579,
+    "node_count": 2133,
+    "root_count": 801,
+    "runners_with_path": 1746
   }
 }

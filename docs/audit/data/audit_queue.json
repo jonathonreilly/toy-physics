@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 678,
     "high": 27,
-    "leaf": 250,
+    "leaf": 251,
     "medium": 162
   },
   "cycle_break_target_count": 253,
@@ -30609,6 +30609,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/SU3_CHARACTER_DIAGONAL_CONVOLUTION_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "reproduction_audit_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37193,6 +37214,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 14,
-  "total_pending": 1117
+  "ready_count": 15,
+  "total_pending": 1118
 }

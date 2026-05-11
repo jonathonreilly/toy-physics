@@ -17988,6 +17988,18 @@
       "dominant_class": "C",
       "runner": "scripts/su3_casimir_fundamental_check.py"
     },
+    "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py"
+    },
     "su3_cube_full_rho_perron_2026-05-04": {
       "assert_count": 1,
       "counts": {
@@ -38242,6 +38254,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 7,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_su3_cube_full_rho_perron_2026_05_04.py": {
       "assert_count": 1,
       "claims": [
@@ -45725,12 +45752,12 @@
     "dominant_class_distribution": {
       "A": 127,
       "B": 169,
-      "C": 662,
+      "C": 663,
       "D": 255,
       "none": 420
     },
-    "runners_classified": 1633,
-    "runners_with_C": 831,
+    "runners_classified": 1634,
+    "runners_with_C": 832,
     "runners_with_D": 458
   }
 }
