@@ -229,8 +229,9 @@ dep remains `unaudited`. This row therefore stays at `audited_conditional`
 until the second dep is audited; the local class-(A) algebra and the proof
 in §§1–5 are unchanged.
 
-Downstream cross-reference: the Ward-route upgrade theorem
-[`G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md`](G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md)
+Downstream cross-reference (informational only, not a load-bearing
+dependency of this pinning theorem): the Ward-route upgrade theorem
+`G_BARE_FORCED_BY_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-05-09.md`
 explicitly cites this row as one of its two one-hop deps and acknowledges
 its current `audited_conditional` status. The conditional upgrade landed
 there closes immediately under both retained-grade authorities; until this
