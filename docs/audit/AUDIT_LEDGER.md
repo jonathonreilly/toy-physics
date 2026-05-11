@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1243 |
+| unaudited | 1242 |
 | audit_in_progress | 2 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 187 |
+| ~~audited_conditional~~ | 188 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 4 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 187 |
+| `audited_conditional` | 188 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1353 |
+| `unaudited` | 1352 |
 
 | claim_type | count |
 |---|---:|
@@ -686,6 +686,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -6881,6 +6882,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the theorem imports the electroweak Higgs-doublet lane as an admitted input. Why this blocks: without a retained-grade Higgs/Yukawa scalar authority, the conclusion is only a conditional reduction, not a retained-stack theorem. Repair target: retain or directly cite a retained Higgs-doublet/one-Higgs Yukawa gauge-selection theorem adequate to supply the scalar carrier. Claim boundary until fixed: with M_R,current=0 and admitted H, the remaining mass object is Y_nu; no Y_nu texture, masses, or PMNS data are derived.
 - **open / conditional deps cited:**
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
+- **auditor confidence:** high
+
+### `newton_law_derived_note`
+
+- **Note:** [`NEWTON_LAW_DERIVED_NOTE.md`](../../docs/NEWTON_LAW_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded derivation of the inverse-square force law from admitted BA-1 lattice Poisson equation plus admitted BA-2 Z^3 lattice Green's-function asymptotic, with finite-lattice distance-law runner support.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-newton-law-derived`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given BA-1 and BA-2, a point source gives phi(r)=M G(r) -> M/(4 pi r), and F=-M_test grad(phi)=M M_test/(4 pi r^2).  _(class `A`)_
+- **chain closes:** False — The algebra from BA-1 and BA-2 to the inverse-square product law closes, but BA-1 is admitted rather than derived; the direct dependency only gives a conditional implication under the stipulated L^{-1}=G_0 closure identity. BA-2 is also admitted as an external textbook asymptotic rather than retained inside this audit packet.
+- **rationale:** Issue: the Newton-law derivation rests on two bounded admissions, especially BA-1, the lattice Poisson equation as the equation of motion. Why this blocks: the cited gravity self-consistency dependency is retained only as a conditional algebraic implication under a stipulated closure identity, so it does not derive BA-1 from the framework axiom. Repair target: provide a retained bridge theorem deriving BA-1 from Cl(3) on Z^3, and pin the BA-2 lattice Green's-function asymptotic as an accepted/retained mathematical input. Claim boundary until fixed: given BA-1 and BA-2, the class-A inverse-square/product-law derivation and finite-lattice runner support may be cited, but not an unconditional Newton-law derivation from the framework baseline.
+- **open / conditional deps cited:**
+  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
 - **auditor confidence:** high
 
 ### `newton_persistent_pattern_control_note_2026-04-11`
