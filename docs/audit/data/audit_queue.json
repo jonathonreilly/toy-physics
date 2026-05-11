@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 766,
+    "critical": 765,
     "high": 33,
     "leaf": 343,
     "medium": 168
@@ -6210,30 +6210,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 463
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "single_axiom_hilbert_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-04-11",
-        "minimal_axioms_2026-05-03"
-      ],
-      "direct_in_degree": 10,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.811,
-      "note_path": "docs/SINGLE_AXIOM_HILBERT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_single_axiom_hilbert.py",
-      "transitive_descendants": 448
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -40767,6 +40743,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 137,
-  "total_pending": 1310
+  "ready_count": 136,
+  "total_pending": 1309
 }
