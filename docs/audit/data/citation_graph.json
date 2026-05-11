@@ -46813,6 +46813,17 @@
       "runner_path": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py",
       "title": "Hierarchy Joint Riemann-Dirichlet / Dimensional Fourth-Root \u2014 Narrow Theorem"
     },
+    "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10": {
+      "claim_id": "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "d72241d027cdb8ca3c57da4d573f345ec0a4e4d4c3563cb19b175f85bab8fc78",
+      "path": "docs/HIERARCHY_LT4_KLEIN_FOUR_SIN_SQUARED_UNIFORMITY_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py",
+      "title": "Hierarchy L_t=4 Klein-Four sin^2 Uniformity \u2014 Narrow Theorem"
+    },
     "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10": {
       "claim_id": "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -67525,6 +67536,7 @@
     "hierarchy_dimensional_compression_note",
     "hierarchy_effective_potential_endpoint_note",
     "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10",
+    "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10",
     "hierarchy_matsubara_decomposition_note",
     "hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10",
     "hierarchy_spatial_bc_and_u0_scaling_note",
@@ -67964,7 +67976,7 @@
       "no_go": 30,
       "none": 1627,
       "open_gate": 33,
-      "positive_theorem": 124
+      "positive_theorem": 125
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 752,
@@ -67973,12 +67985,12 @@
       "no_go": 137,
       "none": 451,
       "open_gate": 121,
-      "positive_theorem": 623
+      "positive_theorem": 624
     },
     "edge_count": 8442,
-    "leaf_count": 590,
-    "node_count": 2145,
-    "root_count": 810,
-    "runners_with_path": 1758
+    "leaf_count": 591,
+    "node_count": 2146,
+    "root_count": 811,
+    "runners_with_path": 1759
   }
 }

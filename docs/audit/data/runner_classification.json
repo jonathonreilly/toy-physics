@@ -9108,6 +9108,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow.py"
     },
+    "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py"
+    },
     "hierarchy_lt4_physical_selection_proof_walk_bounded_note_2026-05-10": {
       "assert_count": 2,
       "counts": {
@@ -32491,6 +32503,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_hierarchy_lt4_klein_four_sin_squared_uniformity_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_lt4_physical_selection_proof_walk.py": {
       "assert_count": 2,
       "claims": [
@@ -46058,15 +46085,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 182,
+    "decoration_candidates": 183,
     "dominant_class_distribution": {
-      "A": 130,
+      "A": 131,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1645,
+    "runners_classified": 1646,
     "runners_with_C": 839,
     "runners_with_D": 462
   }
