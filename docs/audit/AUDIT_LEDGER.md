@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 81 |
+| **retained** | 82 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1097 |
+| unaudited | 1096 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 430 |
+| `audited_clean` | 431 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1195 |
+| `unaudited` | 1194 |
 
 | claim_type | count |
 |---|---:|
@@ -535,6 +535,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `weak_coupling_retention_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `weak_coupling_sign_sensitivity_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `wide_lattice_h2t_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `work_history.yt.yt_unbounded_program_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | B | - |
 | `yt_ew_color_projection_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `yt_ew_m_residual_stretch_attempt_note_2026-05-02` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
@@ -11727,6 +11728,19 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** The note asserts that the clean attractive subset fits give a steep power law, including global |a_mut| ~ d^-3.669 and larger-side behavior near d^-3.7, so the open-boundary law does not soften toward d^-2 at fixed G=5, mu^2=0.22.  _(class `G`)_
 - **chain closes:** False — The restricted packet contains no cited retained authority, no runner stdout, and no runner source for the reported sweep and fits. The missing step is an auditable computation or certificate showing the 25 run outputs and regression exponents from the stated Wilson setup.
 - **rationale:** The source note is explicitly a bounded, post-selected characterization at fixed G=5 and mu^2=0.22, not a blind universal law derivation. Its load-bearing numerical exponents are asserted without runner output or source in the restricted packet, so the audit cannot verify that the reported acceleration rows and fits are produced from the stated dynamics. Because the claim depends on a chosen parameter surface and post-selected clean attractive rows, the result is conditional on the missing computational artifact rather than clean first-principles closure.
+- **auditor confidence:** high
+
+### `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure algebraic substitution consequences of the stated input identities I1 and I2, with optional count and CP-radius hypotheses for CV1-q and CV2-q; no physical CKM bridge, alpha_s value, PDG comparison, or upstream derivation of I1/I2 was audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14cb-bd87-75a0-9224-30b4654076c3`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given lambda^2 = alpha_s/n_pair and A^2 = n_pair/n_color, substitution forces A^2 lambda^2 = alpha_s/n_color, |V_cb|^2 = alpha_s^2/(n_pair n_color), and |V_ub|_0^2 = alpha_s^3(rho^2+eta^2)/(n_pair^2 n_color).  _(class `A`)_
+- **chain closes:** True — Inside the stated scope, every asserted identity follows by direct symbolic substitution from the hypotheses. The runner checks only class-A algebra and reports PASS=22, FAIL=0, matching the note's deliberately narrow claim boundary.
+- **rationale:** The scoped theorem is not claiming the input identities, a physical observable bridge, or numerical agreement; it only claims algebraic consequences conditional on explicit hypotheses. Those consequences close exactly by substitution, including the n_pair cancellation and the count-substituted forms. No hidden dependency is needed for this narrow claim because the upstream CKM/CP claims are excluded rather than consumed as authority.
 - **auditor confidence:** high
 
 ### `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18`
