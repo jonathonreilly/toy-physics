@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 86 |
+| **retained** | 87 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1225 |
+| unaudited | 1224 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 450 |
+| `audited_clean` | 451 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1338 |
+| `unaudited` | 1337 |
 
 | claim_type | count |
 |---|---:|
@@ -189,6 +189,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_3plus1d_mixing_period_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `chiral_3plus1d_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2157,6 +2158,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`
   - `CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`
   - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
+- **auditor confidence:** high
+
+### `ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CKM_CP_PHASE_RHO_ETA_TO_DELTA_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CKM_CP_PHASE_RHO_ETA_TO_DELTA_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra identities for abstract positive w_axis, w_perp, r^2, alpha, n_pair, n_color, and k: rho/eta radius closure, cos^2/sin^2/tan^2 readouts, k-specialisation including k=6 angle, J_0 substitution alpha^3*sqrt(r^2*w_perp)/(n_pair^2*n_color), and the diagnostic Wolfenstein-truncated matrix witness; no CKM atlas projector split, r^2=1/6 authority, Wolfenstein structural identities, alpha_s value, CKM unitarity theorem, Jarlskog invariant theorem, PDG comparator, or quark-mass identification is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Under the abstract partition w_axis+w_perp=1 and definitions rho^2=r^2 w_axis, eta^2=r^2 w_perp, the angle definitions give cos^2(delta)=w_axis, sin^2(delta)=w_perp, tan^2(delta)=w_perp/w_axis, with the k and J_0 forms obtained by substitution.  _(class `A`)_
+- **chain closes:** True — The identities follow by direct substitution into the abstract partition, angle, and J_0 definitions. The live runner verifies the symbolic reductions, k-specialisations, k=6 numerical angle, J_0 factorisation, diagnostic matrix witness, and off-cone sanity checks with PASS=30 and FAIL=0.
+- **rationale:** The restricted packet is explicit that all CKM-specific selectors are outside scope: the partition weights, r^2 value, Wolfenstein structural identities, alpha_s value, CKM unitarity, Jarlskog invariant status, and PDG comparators are not consumed. Within the stated abstract hypotheses, the coordinate, angle, k-specialisation, and J_0 formulae are direct algebraic substitutions, and the runner completed with PASS=30 and FAIL=0. Residual risk is downstream citation as a physical CKM phase derivation rather than the isolated algebraic core.
 - **auditor confidence:** high
 
 ### `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10`
