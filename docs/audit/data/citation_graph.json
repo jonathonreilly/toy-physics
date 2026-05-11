@@ -10777,6 +10777,42 @@
       "to": "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
     },
     {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "higgs_mass_hierarchy_correction_note"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "to": "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1"
+    },
+    {
       "from": "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02",
       "to": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
     },
@@ -48605,6 +48641,27 @@
       "runner_path": "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py",
       "title": "Higgs Mass + Vacuum Stability \u2014 New-Physics Discrimination Tests"
     },
+    "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined": {
+      "claim_id": "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (combined-content stress test of S4b-op closure hypothesis)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "higgs_mass_from_axiom_note",
+        "complete_prediction_chain_2026_04_15",
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2",
+        "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+        "ewsb_pattern_from_higgs_y_note_2026-05-02",
+        "minimal_axioms_2026-05-03",
+        "higgs_mass_hierarchy_correction_note",
+        "physical_lattice_foundational_interpretation_note_2026-05-08",
+        "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1"
+      ],
+      "note_hash": "534ee243847c8af9974fd6e389423adb0b1832b1845ff15614cb4bcea79f037e",
+      "path": "docs/HIGGS_X_S4B_COMBINED_HIGGS_EWSB_G2_NOTE_2026-05-08_probeX_S4b_combined.md",
+      "runner_path": "scripts/cl3_higgs_x_s4b_combined_2026_05_08_probeX_S4b_combined.py",
+      "title": "Lane 2 Probe X-S4b-Combined \u2014 Combined Higgs Structural + EWSB + G2 Born-as-Source (probeX_S4b_combined)"
+    },
     "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02": {
       "claim_id": "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -69956,7 +70013,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 334,
+      "bounded_theorem": 335,
       "meta": 71,
       "no_go": 44,
       "none": 1561,
@@ -69964,17 +70021,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 792,
+      "bounded_theorem": 793,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8736,
-    "leaf_count": 620,
-    "node_count": 2189,
+    "edge_count": 8745,
+    "leaf_count": 621,
+    "node_count": 2190,
     "root_count": 802,
-    "runners_with_path": 1802
+    "runners_with_path": 1803
   }
 }

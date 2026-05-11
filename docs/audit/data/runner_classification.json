@@ -9540,6 +9540,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_vacuum_stability_new_physics_discrimination.py"
     },
+    "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 26
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_higgs_x_s4b_combined_2026_05_08_probeX_S4b_combined.py"
+    },
     "higgs_y_from_lhcm_and_yukawa_structure_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -24142,6 +24154,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_higgs_x_s4b_combined_2026_05_08_probeX_S4b_combined.py": {
+      "assert_count": 0,
+      "claims": [
+        "higgs_x_s4b_combined_higgs_ewsb_g2_note_2026-05-08_probex_s4b_combined"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 26
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_koide_a1_probe_continuum_limit_2026_05_09_probe15.py": {
@@ -47251,11 +47278,11 @@
       "A": 150,
       "B": 174,
       "C": 682,
-      "D": 267,
+      "D": 268,
       "none": 416
     },
-    "runners_classified": 1689,
-    "runners_with_C": 864,
-    "runners_with_D": 484
+    "runners_classified": 1690,
+    "runners_with_C": 865,
+    "runners_with_D": 485
   }
 }
