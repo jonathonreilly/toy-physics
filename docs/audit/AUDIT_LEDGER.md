@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1240 |
+| unaudited | 1241 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 188 |
+| ~~audited_conditional~~ | 187 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1350 |
+| `unaudited` | 1351 |
 
 | claim_type | count |
 |---|---:|
@@ -700,7 +700,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_selection_structure_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | G | - |
 | `poisson_self_gravity_born_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `propagator_family_unification_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7546,21 +7545,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full iterated loop does not stay machine-clean end-to-end on the tested nonzero coupling, so Born is preserved only at the per-step / frozen-snapshot level.  _(class `C`)_
 - **chain closes:** False — The nonzero-coupling row does not establish the stated converged-loop claim because both stepConv and endConv are False at max_iters=6. In the unconverged branch, the runner returns a relaxed field while detector probabilities use amplitudes propagated before the last relaxation, so the reported drift is a capped-iteration diagnostic rather than a converged full-loop result.
 - **rationale:** Issue: the note's full-loop Born-drift conclusion rests on the only nonzero row, where the runner reports nonconvergence for both the frozen snapshot and the end-to-end subset loops. Why this blocks: the note defines the target observable using converged loop outputs, but the supplied runner provides a six-iteration capped diagnostic with no PASS assertion and stale final amplitudes in the unconverged return path. Repair target: run or slice the loop until every slit subset converges and recompute final detector probabilities on the returned field, or explicitly re-scope the note to finite six-iteration outputs. Claim boundary until fixed: the zero-coupling reduction and printed frozen-step versus capped-loop numbers may be cited only as diagnostics, not as a converged full nonlinear-loop theorem.
-- **auditor confidence:** high
-
-### `poisson_self_gravity_loop_note`
-
-- **Note:** [`POISSON_SELF_GRAVITY_LOOP_NOTE.md`](../../docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** A calibrated small exact-lattice Poisson-like self-gravity loop at h=0.25 preserves the stated bounded controls on the terminal frozen-field snapshot under the runner's hard-bar bands.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e16cb-41cd-7152-929e-ed6c6c2b6f3e`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** All five hard-bar assertions must PASS: exact epsilon=0 reduction, frozen-field Sorkin I3 floor, weak-field TOWARD sign, bounded loop/inst ratio, and near-linear loop mass-law exponent.  _(class `C`)_
-- **chain closes:** False — The cited dependency is supplied as retained_bounded and the runner source contains relevant hard-bar assertions, but the provided runner stdout is only COMPUTE_TIMEOUT after 180s. The packet therefore lacks an executed PASS trace for the numerical hard bars required to certify the bounded theorem.
-- **rationale:** Issue: the live runner output timed out, so none of the five hard-bar assertions is shown to have executed in this audit packet. Why this blocks: the bounded theorem depends on computed terminal-field quantities, including Born I3, sign, loop/inst ratio, and fitted mass-law exponent, which cannot be certified from code intent or the note table alone. Repair target: provide completed stdout from scripts/poisson_self_gravity_loop.py --quick or a completed full sweep showing all hard bars PASS. Claim boundary until fixed: conditional calibrated small-lattice control, not audited-clean closure.
-- **open / conditional deps cited:**
-  - `scripts/poisson_self_gravity_loop.py`
 - **auditor confidence:** high
 
 ### `poisson_self_gravity_loop_v3_note`
