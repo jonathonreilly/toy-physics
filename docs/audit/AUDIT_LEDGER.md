@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 250 |
+| **retained_bounded** | 251 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1099 |
+| unaudited | 1098 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 427 |
+| `audited_clean` | 428 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1197 |
+| `unaudited` | 1196 |
 
 | claim_type | count |
 |---|---:|
@@ -503,6 +503,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_complex_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `third_grown_family_complex_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `third_grown_family_sign_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -11003,6 +11004,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Three independent grown families produce quantitatively identical physics on all 9 measurable properties to within 5%.  _(class `B`)_
 - **chain closes:** False — The source table itself leaves Family 3 Distance alpha as '(not yet)', and no runner is provided to recompute the 9-property comparison, so the headline 9/9 three-family match does not close.
 - **rationale:** Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence.
+- **auditor confidence:** high
+
+### `three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`THREE_GENERATION_HW1_DISTINCT_TRANSLATION_CHARACTERS_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/THREE_GENERATION_HW1_DISTINCT_TRANSLATION_CHARACTERS_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded linear-algebra implication on the abstract C^3 carrier with the three diagonal involutions assumed as retained inputs: distinct joint characters and the resulting rank-1 sector-projector decomposition.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c9-27d4-7c23-b173-d39c0ed28a84`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given T_x = diag(-1,+1,+1), T_y = diag(+1,-1,+1), and T_z = diag(+1,+1,-1), the joint sign projectors P(s)=((I+s_x T_x)/2)((I+s_y T_y)/2)((I+s_z T_z)/2) are e_i e_i^T for the three listed characters and zero for the remaining five sign triples.  _(class `A`)_
+- **chain closes:** True — Inside the stated scope, the proof is ordinary exact matrix algebra and the runner verifies all projector, orthogonality, completeness, and decomposition identities at exact symbolic precision. The note explicitly excludes the physical-species bridge, C_3 cycle, algebra-generation, and no-proper-quotient claims.
+- **rationale:** The scoped bounded theorem closes from the assumed C^3 carrier and the three diagonal translation matrices. The retained dependency is used only to justify that this operator surface is an allowed input, while the audited claim itself is the downstream algebraic consequence; no forbidden physical bridge or external comparator is needed for this narrow statement.
 - **auditor confidence:** high
 
 ### `three_generation_observable_count_corollary_note_2026-05-03`
