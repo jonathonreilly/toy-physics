@@ -15,6 +15,7 @@ Writes docs/audit/data/audit_ledger.json.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import datetime, timezone
 from fnmatch import fnmatchcase
@@ -146,6 +147,16 @@ def should_preserve_archived_failed_row(row: dict) -> bool:
     if not note_path.startswith("archive_unlanded/"):
         return False
     return (REPO_ROOT / note_path).exists()
+
+
+def hash_existing_note_path(note_path: str | None) -> str | None:
+    if not note_path:
+        return None
+    path = REPO_ROOT / note_path
+    if not path.exists():
+        return None
+    body = path.read_text(encoding="utf-8", errors="replace")
+    return hashlib.sha256(body.encode("utf-8")).hexdigest()
 
 
 def default_claim_type_for(node: dict) -> tuple[str, str]:
@@ -317,6 +328,9 @@ def seed() -> dict:
     for cid, row in archived_failed_rows.items():
         row.pop("current_status", None)
         row.pop("current_status_raw", None)
+        current_hash = hash_existing_note_path(row.get("note_path"))
+        if current_hash is not None:
+            row["note_hash"] = current_hash
         if row.get("claim_type") not in CLAIM_TYPES:
             row["claim_type"] = "no_go"
             row["claim_type_provenance"] = "backfilled_from_archived_failed"

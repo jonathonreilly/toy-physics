@@ -4613,6 +4613,38 @@
       "to": "higgs_mass_from_axiom_note"
     },
     {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "hierarchy_formula_honest_status_note_2026-05-10"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "hierarchy_dimensional_compression_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "hierarchy_effective_potential_endpoint_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+    },
+    {
+      "from": "complete_prediction_chain_2026_04_15",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
       "from": "complex_selectivity_compare_note",
       "to": "second_grown_family_complex_note"
     },
@@ -10003,6 +10035,58 @@
     {
       "from": "hierarchy_bosonic_bilinear_selector_note",
       "to": "higgs_mass_hierarchy_correction_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_bosonic_bilinear_selector_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_dimensional_compression_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_matsubara_decomposition_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_spatial_bc_and_u0_scaling_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_effective_potential_endpoint_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_transport_note_2026-04-17"
+    },
+    {
+      "from": "hierarchy_formula_honest_status_note_2026-05-10",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
     },
     {
       "from": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
@@ -39296,9 +39380,17 @@
         "yt_ew_color_projection_theorem",
         "yt_color_projection_correction_note",
         "yt_qfp_insensitivity_support_note",
-        "higgs_mass_from_axiom_note"
+        "higgs_mass_from_axiom_note",
+        "hierarchy_formula_honest_status_note_2026-05-10",
+        "hierarchy_bosonic_bilinear_selector_note",
+        "hierarchy_dimensional_compression_note",
+        "hierarchy_matsubara_decomposition_note",
+        "hierarchy_effective_potential_endpoint_note",
+        "observable_principle_from_axiom_note",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
       ],
-      "note_hash": "e9016baa85e4959aee445dbe7a75147419879b56cd613659e33ecfc3a5d089bc",
+      "note_hash": "4ebd2be5f1d19ae04c10f43f05b888eef669caa0f97feb2d87c67871e6e28c16",
       "path": "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md",
       "runner_path": "scripts/frontier_complete_prediction_chain.py",
       "title": "Complete Prediction Chain: Cl(3) on Z^3"
@@ -46986,6 +47078,31 @@
       "path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
       "title": "Hierarchy Effective-Potential Endpoint Note"
+    },
+    "hierarchy_formula_honest_status_note_2026-05-10": {
+      "claim_id": "hierarchy_formula_honest_status_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (status-correction packet for the canonical",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_bosonic_bilinear_selector_note",
+        "hierarchy_dimensional_compression_note",
+        "hierarchy_matsubara_decomposition_note",
+        "hierarchy_spatial_bc_and_u0_scaling_note",
+        "hierarchy_effective_potential_endpoint_note",
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "observable_principle_from_axiom_note",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+        "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02",
+        "minimal_axioms_2026-05-03",
+        "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
+        "yt_p2_taste_staircase_transport_note_2026-04-17",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+      ],
+      "note_hash": "eed3ea58a970321504516885f67b4d042f34dea7f08a37831f34dc18c1993a7e",
+      "path": "docs/HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_hierarchy_formula_honest_status.py",
+      "title": "Hierarchy Formula (`v = M_Pl \u00d7 (7/8)^{1/4} \u00d7 \u03b1_LM^{16}`) \u2014 Honest Status Note"
     },
     "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10": {
       "claim_id": "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10",
@@ -68335,7 +68452,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 276,
+      "bounded_theorem": 277,
       "decoration": 1,
       "meta": 61,
       "no_go": 34,
@@ -68344,7 +68461,7 @@
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 758,
+      "bounded_theorem": 759,
       "decoration": 1,
       "meta": 61,
       "no_go": 141,
@@ -68352,10 +68469,10 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8467,
+    "edge_count": 8488,
     "leaf_count": 610,
-    "node_count": 2166,
+    "node_count": 2167,
     "root_count": 822,
-    "runners_with_path": 1779
+    "runners_with_path": 1780
   }
 }

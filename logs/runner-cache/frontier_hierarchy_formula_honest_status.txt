@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_formula_honest_status.py
+runner_sha256: 66d58f6bd618df0da9e2c7818b7bf00b46d4d5728c4c5ee9eb8aa8ee48fd6a97
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.02
+status: ok
+----- stdout -----
+======================================================================
+Check 1: v = M_Pl * (7/8)^(1/4) * alpha_LM^16 reproducibility
+======================================================================
+  M_Pl       = 1.2209e+19 GeV
+  APBC       = (7/8)^(1/4) = 0.9671682101
+  alpha_LM   = 0.0906678360
+  alpha_LM^16 = 2.085701e-17
+  v_pred     = 246.2828182901 GeV
+  v_chain    = 246.2828182901 GeV (canonical chain note)
+  v_obs      = 246.2200 GeV
+  rel error  = 0.0255 %
+[PASS] v_pred matches canonical chain published value
+
+======================================================================
+Check 2: power-N sensitivity scan (N = 13..20)
+======================================================================
+  N=13: v = 3.304261e+05 GeV (ratio to v_obs: 1.3420e+03)
+  N=14: v = 2.995902e+04 GeV (ratio to v_obs: 1.2168e+02)
+  N=15: v = 2.716320e+03 GeV (ratio to v_obs: 1.1032e+01)
+  N=16: v = 2.462828e+02 GeV (ratio to v_obs: 1.0003e+00)
+  N=17: v = 2.232993e+01 GeV (ratio to v_obs: 9.0691e-02)
+  N=18: v = 2.024606e+00 GeV (ratio to v_obs: 8.2228e-03)
+  N=19: v = 1.835667e-01 GeV (ratio to v_obs: 7.4554e-04)
+  N=20: v = 1.664359e-02 GeV (ratio to v_obs: 6.7596e-05)
+[PASS] N = 16 within 1 % of v_obs
+[PASS] N = 15 and N = 17 each off by > factor 5
+
+======================================================================
+Check 3: alpha_LM^16 = alpha_bare^16 * u_0^(-16) (substitution P3)
+======================================================================
+  alpha_LM^16             = 2.0857008000e-17
+  alpha_bare^16 * u_0^-16 = 2.0857008000e-17
+[PASS] algebraic identity (S) verified
+
+======================================================================
+Check 4: u_0^16 (determinant power) != alpha_LM^16 (formula power)
+======================================================================
+  u_0^16    = 1.239910e-01  (Matsubara determinant power on L_s=2/L_t=4)
+  alpha_LM^16 = 2.085701e-17  (formula power in canonical chain)
+  ratio u_0^16 / alpha_LM^16 = 5.9448e+15
+[PASS] u_0^16 vastly larger than alpha_LM^16 (substitution gap > 10^15)
+
+======================================================================
+Check 5: 3D-spatial-only counterfactual (P2 load-bearing role)
+======================================================================
+  v_alt (N=8 spatial doublers on Z^3) = 5.3927e+10 GeV
+  ratio to v_obs                       = 2.1902e+08
+  off by ~8 orders of magnitude
+[PASS] N=8 spatial-only off by > 10^7 (P2 load-bearing)
+
+======================================================================
+Check 6: coupling-choice counterfactual (P3 wrong-coupling sensitivity)
+======================================================================
+  using alpha_bare^16  -> v = 3.0537e+01 GeV (off by 87.60%)
+  using alpha_s(v)^16  -> v = 1.9863e+03 GeV (off by 706.72%)
+  using alpha_LM^16    -> v = 2.4628e+02 GeV (off by 0.0255%)
+[PASS] only alpha_LM^16 matches; alpha_bare/alpha_s(v) miss by > 50 %
+
+======================================================================
+TOTAL: PASS=7 FAIL=0
+======================================================================
+
+VERDICT: hierarchy formula honest-status structural checks verified.
+The formula is a bounded numerical match on the same-surface
+plaquette/coupling chain at +0.0255 % from PDG v_obs. Four named
+load-bearing primitives P1-P4 (M_Pl import; Wick rotation for 4D
+taste counting; u_0^16 -> alpha_LM^16 algebraic substitution; EWSB
+observable identification) carry the match; closure to a retained
+hierarchy theorem requires deriving at least one of P1-P4 from
+primitives. See docs/HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md
+for the full status correction.
+
+----- stderr -----
+

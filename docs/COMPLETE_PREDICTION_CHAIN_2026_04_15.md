@@ -18,6 +18,17 @@ including
 and retained-grade reuse are pipeline-derived from those dependencies, not
 from this inventory prose.
 
+**Hierarchy formula honest-status note (2026-05-10):** The package-level
+"DERIVED" rhetoric on the `v` row in §3.2, §5.2, §8.3, §9, §11, and
+§12 has been corrected to "BOUNDED NUMERICAL MATCH (closure path open)"
+to match the per-route hierarchy notes (which already use bounded
+vocabulary correctly) and the YT UV-to-IR transport master obstruction
+theorem (which already names the non-perturbative `α_LM^{16}` factor
+as outside retention scope by design). See
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md)
+for the four open primitives P1-P4 and the branch-local route search
+record.
+
 ---
 
 ## 1. Framework Statement
@@ -68,11 +79,29 @@ alpha_LM^2 = alpha_bare alpha_s(v).
 | g_Y^2(bare) | 1/(d+2) = 1/5 | Chirality sector | DERIVED |
 | N_taste | 16 | 2^4 BZ corners in 4D (staggered) | DERIVED |
 | beta coefficients | b_1 = 41/10, b_2 = -19/6, b_3 = -7 | Group theory of derived gauge + matter content | DERIVED |
-| v | M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.28 GeV | Hierarchy theorem (taste determinant) | DERIVED |
+| v | M_Pl * (7/8)^{1/4} * alpha_LM^16 = 246.28 GeV | Hierarchy formula (taste-determinant route) | BOUNDED NUMERICAL MATCH |
 
-The hierarchy theorem: the EW scale is exponentially suppressed by the taste
-determinant. The exponent 16 counts the staggered taste doublers in 4D.
-The factor (7/8)^{1/4} is the anti-periodic boundary condition correction.
+The hierarchy formula carries the same-surface plaquette/coupling-chain
+match between `M_Pl × (7/8)^{1/4} × α_LM^{16}` and PDG `v_obs = 246.22 GeV`
+at relative deviation `+0.0255 %`. The match is real and robust on the
+canonical surface, but the underlying formula carries four named
+load-bearing primitives (M_Pl import; Wick rotation Z³ → Z⁴ for the 4D
+taste count `2^4 = 16`; the algebraic substitution `u_0^{16} → α_LM^{16}`;
+EWSB observable identification) that have not been derived from the
+physical Cl(3) local algebra plus Z^3 spatial substrate.
+Per-route hierarchy notes
+([HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md](HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md),
+[HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md](HIERARCHY_DIMENSIONAL_COMPRESSION_NOTE.md),
+[HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md](HIERARCHY_MATSUBARA_DECOMPOSITION_NOTE.md),
+[HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md](HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md),
+[OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md))
+are bounded; the YT UV-to-IR transport master theorem
+([YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+§3.2) already names the non-perturbative `α_LM^{16}` factor as outside
+the current retention scope by design. The package-level rhetoric
+demotion is documented in
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md);
+closure path open.
 
 ---
 
@@ -149,7 +178,7 @@ factor is the connected-trace specialization `kappa_EW=0`.
 
 | Observable | Derivation | Predicted | Observed | Deviation |
 |-----------|-----------|-----------|----------|-----------|
-| v | Hierarchy theorem: M_Pl * (7/8)^{1/4} * alpha_LM^16 | 246.28 GeV | 246.22 GeV | +0.03% |
+| v | Hierarchy formula (BOUNDED NUMERICAL MATCH; per-route notes bounded; see HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10): M_Pl * (7/8)^{1/4} * alpha_LM^16 | 246.28 GeV | 246.22 GeV | +0.03% |
 | alpha_s(M_Z) | same-surface plaquette chain + one-decade running bridge from `v` | 0.1181 | 0.1179 | +0.14% |
 | sin^2(theta_W)(M_Z) | bare geometry + taste staircase + exact Fierz fraction + conditional `kappa_EW` matching + running bridge | 0.2306 at `kappa_EW=0` | 0.2312 | -0.26% |
 | 1/alpha_EM(M_Z) | conditional `g_1, g_2` package after color projection + running bridge | 127.67 at `kappa_EW=0` | 127.95 | -0.22% |
@@ -348,7 +377,7 @@ derived from the 1/N_c expansion (not a second MC input).
 | alpha_LM | 0.09066 | alpha_bare / u_0 |
 | alpha_s(v) | 0.1033 | CMT: alpha_bare / u_0^2 |
 | alpha_LM^2 | 0.00822066 | alpha_bare alpha_s(v) |
-| v | 246.28 GeV | Hierarchy theorem |
+| v | 246.28 GeV | Hierarchy formula (BOUNDED NUMERICAL MATCH; HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10) |
 | R_conn | 8/9 | 1/N_c expansion (RCONN_DERIVED_NOTE) |
 | SU(3) x SU(2) x U(1) | -- | Cl(3) algebra |
 | 3 generations | -- | BZ orbit decomposition |
@@ -388,10 +417,23 @@ conventional running between v and M_Z.
 
 ### 8.5 Status summary
 
-**NO row says IMPORTED.** Every v-scale quantity is fully DERIVED from
-the axiom plus the single computed plaquette. The INFRASTRUCTURE items
-affect only the cross-check running from v to M_Z, not the core
-predictions.
+Every v-scale quantity is computed from the axiom plus the single
+computed plaquette. The INFRASTRUCTURE items affect only the cross-check
+running from v to M_Z, not the core predictions.
+
+**Honest qualifier on `v` itself.** The hierarchy formula
+`v = M_Pl × (7/8)^{1/4} × α_LM^{16} = 246.28 GeV` is a **bounded
+numerical match** on the canonical surface (per
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md);
+see §11.6 below). It rides on `M_Pl` from the Planck lane (admitted UV
+import; the framework anchors `M_Pl` via Wald-Noether matching, itself
+`audited_conditional`), on a Wick rotation `Z^3 → Z^4` for the 4D
+taste count `2^4 = 16` not derived from the Z^3 spatial substrate, on
+the algebraic substitution `u_0^{16} → α_LM^{16}` not derived as a
+determinant identity, and on the lattice → SM-Higgs-VEV observable
+identification. Within those qualifiers, the +0.0255 % match is real and
+robust on the canonical surface; outside them, this package does not
+supply a framework derivation of `v = Λ × α^N` for integer `N`.
 
 ---
 
@@ -401,9 +443,29 @@ predictions.
 coupling at scale v through mean-field factors: alpha_s(v) = alpha_bare / u_0^{n_link}.
 With n_link = 2, this gives alpha_s(v) = 0.1033.
 
-**Hierarchy Theorem.** v = M_Pl * (7/8)^{1/4} * alpha_LM^16. The EW scale
-is exponentially suppressed by the taste determinant. The exponent 16
-counts the doublers; (7/8)^{1/4} is the APBC correction.
+**Hierarchy Formula (bounded numerical match; closure path open).**
+`v = M_Pl × (7/8)^{1/4} × α_LM^{16} = 246.28 GeV` matches PDG
+`v_obs = 246.22 GeV` to `+0.0255 %` on the same-surface plaquette /
+coupling chain. The match is real and robust on the canonical surface
+but rides on four named load-bearing primitives that have not been
+derived from the physical Cl(3) local algebra plus Z^3 spatial substrate:
+(P1) `M_Pl` import via the Planck lane's
+Wald-Noether matching; (P2) Wick rotation `Z^3 → Z^4` to obtain the
+4D taste count `2^4 = 16` (textbook lattice fermion-doubling result;
+the framework's spatial substrate is `Z^3`); (P3) the algebraic
+substitution `u_0^{16} → α_LM^{16}` between the determinant power
+(per HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM) and the formula
+power; (P4) identification of the formula's dimension-1 output with the
+SM Higgs VEV. The framework's own
+[YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+§3.2 already records the non-perturbative `α_LM^{16}` factor as
+"outside the current retention scope by design"; this honest-status
+correction propagates that admission to the package-level rhetoric.
+Most defensible closure route: per-step Wilsonian transport on the
+16-step taste staircase (C3 in
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md)
+§5), still non-perturbative at canonical coupling per
+[YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md](YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md).
 
 **Boundary Selection Theorem.** The lattice Ward identity fixes
 y_t/g_s = 1/sqrt(6) at M_Pl. This selects the Yukawa coupling from the
@@ -505,6 +567,42 @@ bounds the error from higher-order corrections at ~3%, dominated by the
 terms from Chetyrkin-Zoller 2012) would refine the central values but
 is not expected to change any prediction by more than 1%.
 
+### 11.6 Hierarchy formula primitives (P1-P4)
+
+The hierarchy formula `v = M_Pl × (7/8)^{1/4} × α_LM^{16} = 246.28 GeV`
+matches PDG `v_obs = 246.22 GeV` to `+0.0255 %` on the same-surface
+plaquette / coupling chain, but rides on four named load-bearing
+primitives that have not been derived from the physical Cl(3) local
+algebra plus Z^3 spatial substrate:
+
+- **P1.** `M_Pl` import as the UV scale (Planck lane authority,
+  itself `audited_conditional`).
+- **P2.** Wick rotation `Z³ → Z⁴` to obtain the 4D taste count
+  `2^4 = 16`. The framework's spatial substrate is `Z^3`, where the
+  taste count is `2^3 = 8`. The 4D extension is borrowed from
+  textbook 4D Wick-rotated lattice fermion-doubling literature.
+- **P3.** The algebraic substitution `u_0^{16} → α_LM^{16}` between
+  the determinant power (proven on the L_s=2/L_t=4 minimal block in
+  HIERARCHY_MATSUBARA_DETERMINANT_NARROW_THEOREM) and the formula
+  power. Identity `α_LM^{16} = α_bare^{16} × u_0^{-16}` shows the
+  formula's dominant suppression is `α_bare^{16} ≈ (4π)^{-16}`, not
+  the determinant power `u_0^{16} ≈ 0.124`.
+- **P4.** Identification of the formula's dimension-1 output with
+  the SM Higgs VEV (lattice → physical observable identification).
+
+This package does not supply a framework derivation of
+`v = Λ × α^N` for integer `N` from the baseline. Closure path: derive at
+least one of P1-P4 from primitives. Most defensible route is per-step
+Wilsonian transport on the 16-step taste staircase (C3 in
+HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10), which the framework's
+YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE records as non-perturbative at
+canonical coupling. Status:
+**bounded numerical match; closure open.** See
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md)
+for the full assumption-by-assumption counterfactual record, the
+branch-local route search, and the cross-disciplinary mathematical
+search context.
+
 ---
 
 ## 12. Summary Table
@@ -514,7 +612,7 @@ computed number (<P> = 0.5934):
 
 | Observable | Predicted | Observed | Deviation | Status |
 |-----------|-----------|----------|-----------|--------|
-| v [GeV] | 246.28 | 246.22 | +0.03% | DERIVED |
+| v [GeV] | 246.28 | 246.22 | +0.03% | BOUNDED [^v-status] |
 | alpha_s(M_Z) | 0.1181 | 0.1179 | +0.14% | DERIVED |
 | sin^2(theta_W)(M_Z) | 0.2306 | 0.2312 | -0.26% | DERIVED |
 | 1/alpha_EM(M_Z) | 127.67 | 127.95 | -0.22% | DERIVED |
@@ -524,6 +622,14 @@ computed number (<P> = 0.5934):
 | m_H (2-loop) [GeV] | 119.8 | 125.25 | -4.4% | DERIVED |
 | m_H (full 3-loop) [GeV] | 125.10 | 125.25 | -0.12% | DERIVED |
 | Vacuum stability | Absolutely stable | (metastable in SM) | PREDICTION | DERIVED |
+
+[^v-status]: Bounded numerical match on the same-surface
+plaquette/coupling chain at `+0.0255 %`. The hierarchy formula
+`v = M_Pl × (7/8)^{1/4} × α_LM^{16}` rides on four open primitives
+P1-P4 (M_Pl import; Wick rotation `Z^3 → Z^4` for 4D taste count;
+`u_0^{16} → α_LM^{16}` algebraic substitution; EWSB observable
+identification); see §11.6 above and
+[HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md](HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md).
 
 Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM,
 y_t, m_t, m_H) plus one qualitative prediction (vacuum stability)

@@ -289,6 +289,43 @@ class SeedLedgerTest(unittest.TestCase):
         self.assertIsNone(row["claim_scope"])
         self.assertEqual(row["previous_audits"], [{"verdict": "old"}])
 
+    def test_archived_failed_row_refreshes_note_hash(self):
+        m = _import("seed_audit_ledger")
+        _patch_repo_root(m, self.tmp_root)
+        body = "# archived failed note\n\nRETRACTED.\n"
+        note_path = "archive_unlanded/stale/NOTE.md"
+        self.fx.write_note(note_path, body)
+        import hashlib
+        current_hash = hashlib.sha256(body.encode("utf-8")).hexdigest()
+        self.fx.write_graph({"nodes": {}})
+        self.fx.write_ledger(
+            {
+                "schema_version": 1,
+                "rows": {
+                    "archived_failed": {
+                        "claim_id": "archived_failed",
+                        "note_path": note_path,
+                        "title": "archived failed note",
+                        "runner_path": None,
+                        "deps": [],
+                        "note_hash": "stalehash",
+                        "previous_audits": [],
+                        "audit_status": "audited_failed",
+                        "claim_type": "no_go",
+                        "claim_type_provenance": "audited",
+                        "claim_scope": "archived failed scope",
+                    }
+                },
+            }
+        )
+
+        seeded = m.seed()
+        row = seeded["rows"]["archived_failed"]
+
+        self.assertEqual(row["audit_status"], "audited_failed")
+        self.assertEqual(row["note_hash"], current_hash)
+        self.assertEqual(seeded["stats"]["preserved_archived_failed"], 1)
+
 
 class ComputeEffectiveStatusTest(unittest.TestCase):
     def setUp(self):

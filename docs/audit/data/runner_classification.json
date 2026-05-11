@@ -9192,6 +9192,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_effective_potential_endpoint.py"
     },
+    "hierarchy_formula_honest_status_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hierarchy_formula_honest_status.py"
+    },
     "hierarchy_heat_kernel_d4_compression_bounded_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -32878,6 +32890,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_formula_honest_status.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_formula_honest_status_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 3,
+        "D": 6
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_heat_kernel_d4_compression.py": {
       "assert_count": 1,
       "claims": [
@@ -46630,11 +46657,11 @@
       "A": 143,
       "B": 172,
       "C": 674,
-      "D": 256,
+      "D": 257,
       "none": 421
     },
-    "runners_classified": 1666,
-    "runners_with_C": 847,
-    "runners_with_D": 464
+    "runners_classified": 1667,
+    "runners_with_C": 848,
+    "runners_with_D": 465
   }
 }
