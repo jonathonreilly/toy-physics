@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 680,
     "high": 28,
-    "leaf": 282,
+    "leaf": 283,
     "medium": 160
   },
   "cycle_break_target_count": 253,
@@ -35686,6 +35686,29 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LEPTON_BLOCK_SCALAR_SINGLET_COMPOSITE_UNIQUENESS_D17_PRIME_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_lepton_block_scalar_singlet_composite_uniqueness.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lepton_block_tree_level_exchange_d16_prime_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -37940,5 +37963,5 @@
     }
   ],
   "ready_count": 39,
-  "total_pending": 1150
+  "total_pending": 1151
 }
