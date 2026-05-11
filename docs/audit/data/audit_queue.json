@@ -1,7 +1,7 @@
 {
   "by_criticality": {
     "critical": 725,
-    "high": 37,
+    "high": 36,
     "leaf": 334,
     "medium": 169
   },
@@ -24859,22 +24859,24 @@
       "audit_independence_required": "fresh_context_or_stronger",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "ordered_lattice_quasi_persistent_relaunch_2d_note",
+      "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
       "claim_type_provenance": "migration_hint",
       "criticality": "high",
       "criticality_rank": 2,
       "cross_confirmation_status": null,
-      "deps": [],
+      "deps": [
+        "ordered_lattice_quasi_persistent_relaunch_2d_note"
+      ],
       "direct_in_degree": 6,
       "effective_status": "unaudited",
-      "load_bearing_score": 8.248,
-      "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
+      "load_bearing_score": 8.209,
+      "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
       "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py",
-      "transitive_descendants": 37
+      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
+      "transitive_descendants": 36
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -24940,29 +24942,6 @@
       "ready": true,
       "runner_path": "scripts/valley_linear_same_harness_compare.py",
       "transitive_descendants": 13
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "ordered_lattice_quasi_persistent_relaunch_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "deps": [
-        "ordered_lattice_quasi_persistent_relaunch_2d_note"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 8.209,
-      "note_path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch.py",
-      "transitive_descendants": 36
     },
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -39391,5 +39370,5 @@
     }
   ],
   "ready_count": 97,
-  "total_pending": 1265
+  "total_pending": 1264
 }

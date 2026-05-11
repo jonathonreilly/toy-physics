@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 83 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 254 |
+| **retained_bounded** | 255 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1247 |
+| unaudited | 1246 |
 | audit_in_progress | 8 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
@@ -42,13 +42,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 12 |
-| `audited_clean` | 429 |
+| `audited_clean` | 430 |
 | `audited_conditional` | 177 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1357 |
+| `unaudited` | 1356 |
 
 | claim_type | count |
 |---|---:|
@@ -371,6 +371,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `oh_schur_boundary_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `ordered_lattice_quasi_persistent_relaunch_2d_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `packet_memory_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | weak | claude-opus | C | - |
 | `persistent_inertial_object_probe_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `persistent_object_adaptive_readout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -6903,6 +6904,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** By linearity of the exterior projector, the lattice Laplacian, and the Green solve, the identical reduced data from the seven unit point-Green columns imply sigma_red(Q) = Q * (k_rad + c_aniso * m_orb) on the star-supported source class.  _(class `A`)_
 - **chain closes:** False — The linearity inference from identical normalized columns to a one-parameter law closes algebraically, but the restricted packet does not include the imported frontier modules that define and compute the point-Green columns, projector, Laplacian, Green solve, and source families from the axiom. The missing step is an in-packet first-principles derivation or retained authority for those operators and source constructors.
 - **rationale:** The runner performs nontrivial numerical checks of equality and linear scaling, and its reported tolerances support the reduced one-parameter relation for the data it constructs. However, the source imports the load-bearing operator and source definitions from unprovided modules via load_frontier rather than deriving them within the restricted packet. With no cited authorities supplied, the claim depends on unclosed framework inputs, so it cannot be audited clean from the packet alone.
+- **auditor confidence:** high
+
+### `ordered_lattice_quasi_persistent_relaunch_2d_note`
+
+- **Note:** [`ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`](../../docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded numerical replay on the fixed 2D ordered-lattice harness h=0.5, W=12, L=20, max_d=10, source_y=5.0, top-k relaunch recipe, actions valley_linear and spent_delay, and strengths 2e-5, 5e-5, 1e-4. The audited result is only the deterministic six-row capture/carry/shift/relaunch/width table within the runner's +/-1e-3 assertions; it excludes persistent-mass, packet-class, invariance, or family-generic claims.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-20260511-ordered-lattice-quasi-persistent-relaunch-2d`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The runner pins the fixed harness's six capture/carry/shift/relaunch/width rows and asserts every displayed value within +/-1e-3 of the narrowed note table.  _(class `C`)_
+- **chain closes:** True — The live runner computes the fixed ordered-lattice relaunch harness and reproduces the note's six-row table, with explicit assertions guarding drift. The source note expressly limits the result to numerical replay and disclaims persistent-mass, packet-class, and family-generic conclusions.
+- **rationale:** The live output matches the frozen table and the runner asserts capture, carry, shift, relaunch shift, and width for all six rows within tolerance. The source has narrowed the claim to that replay table only, so the hardcoded expected values are audit guards for numerical drift rather than a physical theorem. No broader persistent-object or family-generic claim is retained.
 - **auditor confidence:** high
 
 ### `packet_memory_note`
