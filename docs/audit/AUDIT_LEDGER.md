@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 80 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 249 |
+| **retained_bounded** | 250 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1101 |
+| unaudited | 1100 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 425 |
+| `audited_clean` | 426 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1199 |
+| `unaudited` | 1198 |
 
 | claim_type | count |
 |---|---:|
@@ -439,6 +439,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_support_localization_split_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_wavefield_v2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `spectral_closure_2026-04-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
@@ -9739,6 +9740,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The split is not gradual. It is a sharp algebraic distinction: spectral observables are traces over the one-body operator, while trajectory observables are expectations in a many-body state.  _(class `B`)_
 - **chain closes:** False — The note has no attached runner and no ledger dependencies, yet it synthesizes many numerical and theoretical inputs into a structural theorem about spectral gravity and many-body trajectory emergence.
 - **rationale:** Issue: The spectral-trajectory dichotomy is presented as a structural theorem, but the row provides no runner and no audited dependency chain for the cited sign-selectivity, boundary-law shift, CDT-like flow, Hartree failures, Penrose/DP/BH failures, or BMV ordering claims. Why this blocks: the conclusion may be a coherent synthesis, but it does not follow from the note alone and imports multiple unratified numerical and physical bridges. Repair target: split the theorem into explicit dependencies on audited spectral-success notes, audited trajectory-failure notes, and a separate derivation of the one-body-trace versus many-body-expectation bridge, with runner or proof artifacts for each load-bearing step. Claim boundary until fixed: it is safe to treat this as a bounded interpretive synthesis and research program, not as an audit-clean theorem that gravity is fundamentally spectral or that trajectory GR emerges from spectral flow plus many-body coarse-graining.
+- **auditor confidence:** high
+
+### `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`SPIN_STATISTICS_BEREZIN_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/SPIN_STATISTICS_BEREZIN_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-dimensional abstract Grassmann algebra: Berezin determinant identity for a quadratic chi-bar M chi action and odd-odd exchange antisymmetry, conditional only on the stated anticommutation and Berezin integration rules.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c5-b293-7092-b369-673214af743f`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given finite Grassmann generators satisfying (G1)-(G3) and Berezin rules (B1)-(B2), the quadratic Berezin partition Z_F = int prod_x dchi-bar_x dchi_x exp(-sum_{x,y} chi-bar_x M_xy chi_y) equals det(M), and odd-graded insertions anticommute under exchange.  _(class `A`)_
+- **chain closes:** True — The scoped inputs are exactly the Grassmann relations and Berezin rules stated in the note, and the determinant identity plus odd-odd sign follow by finite exterior-algebra/Berezin coefficient extraction. No physical Hilbert-space bridge, bosonic no-go theorem, lattice-operator property, or external comparator is needed for this bounded claim.
+- **rationale:** Within the narrow algebraic scope, the claim closes as a standard finite Berezin-calculus identity. The runner evidence is entirely class-A algebraic checking and is consistent with the proof; the note explicitly excludes the physical spin-statistics bridge and downstream positivity surfaces from the audited load.
 - **auditor confidence:** high
 
 ### `staggered_3d_self_gravity_sign_note_2026-04-11`
