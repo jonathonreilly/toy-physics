@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 260 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1246 |
+| unaudited | 1245 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 178 |
+| ~~audited_conditional~~ | 179 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 434 |
-| `audited_conditional` | 178 |
+| `audited_conditional` | 179 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1359 |
+| `unaudited` | 1358 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 893 |
+| `bounded_theorem` | 894 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 741 |
+| `positive_theorem` | 740 |
 
 | criticality | count |
 |---|---:|
@@ -598,6 +598,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `chiral_3plus1d_boundary_phase_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `chiral_layer_oscillation_2026-04-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `chiral_walk_synthesis_2026-04-10_addendum` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `ckm_barred_weitzenbock_brocard_polynomial_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -1944,6 +1945,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** If the split model flattens the theta_m sweep while preserving KG and F ∝ M, then overloading theta_m is a genuine bottleneck.  _(class `G`)_
 - **chain closes:** False — The runner shows only a modest theta_m sensitivity reduction, not a flattened sweep: split exponent is still 2.803 and split CV is still 0.9013. The same output also shows severe k chromaticity with identical baseline and split CV_k = 2.6580, while the source note names k-achromaticity as an early-warning test.
 - **rationale:** Issue: the claimed bottleneck conclusion is inferred from a tuned toy runner threshold rather than demonstrated flattening of theta_m response. Why this blocks: the completed stdout contradicts the note's own closure condition because split response remains strongly theta-dependent and equally chromatic in k. Repair target: define quantitative pass thresholds in the note, require the runner verdict to include k-achromaticity and observable-consistency checks, and show actual theta flattening rather than a small CV improvement. Claim boundary until fixed: this is at most an exploratory diagnostic suggesting g gives an independent linear control at fixed theta_m.
+- **auditor confidence:** high
+
+### `chiral_walk_synthesis_2026-04-10_addendum`
+
+- **Note:** [`CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md`](../../docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Chiral-walk synthesis addendum combining retained 3+1D recurrence/mixing diagnostics with claimed overnight 1+1D, 2+1D, and specific 3+1D operating-point results; audits only whether the current direct dependencies support the stated 3+1D periodic narrowing, not the broader overnight retained claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** 3+1D currently shows a TOWARD basin with genuine periodic sign windows, not an everywhere-attractive universal regime, while the 1+1D and 2+1D overnight results and the specific 3+1D operating point still stand.  _(class `B`)_
+- **chain closes:** False — The direct dependencies close the newer 3+1D periodic sign-window narrowing, but the addendum's affirmative 1+1D, 2+1D, 3+1D operating-point, boundary-scan, coupled-coin, and 4-component Dirac claims are not supplied as one-hop retained authorities in this row.
+- **rationale:** Issue: the source note uses the two retained 3+1D recurrence/mixing diagnostics to narrow the periodic 3+1D sign claim, but it also preserves broad overnight 1+1D/2+1D/3+1D operating-point and later architecture claims without wiring those authorities as direct dependencies. Why this blocks: a clean synthesis would let unsupported retained-language claims propagate through a row whose supplied packet only closes the finite periodic-narrowing part. Repair target: either split this into a narrow clean 3+1D-periodic-framing note, or add/audit the named overnight and later architecture authorities as direct dependencies. Claim boundary until fixed: the 3+1D periodic universal-sign claim is narrowed by the retained recurrence/mixing notes; the broader chiral-walk synthesis remains conditional.
 - **auditor confidence:** high
 
 ### `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02`

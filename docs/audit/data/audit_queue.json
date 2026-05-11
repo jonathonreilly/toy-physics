@@ -3,7 +3,7 @@
     "critical": 751,
     "high": 33,
     "leaf": 342,
-    "medium": 151
+    "medium": 150
   },
   "cycle_break_target_count": 257,
   "cycle_break_targets": [
@@ -27142,30 +27142,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "chiral_walk_synthesis_2026-04-10_addendum",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "chiral_3plus1d_recurrence_note",
-        "chiral_3plus1d_mixing_period_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.322,
-      "note_path": "docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "continuum_limit_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -40105,6 +40081,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 103,
-  "total_pending": 1277
+  "ready_count": 102,
+  "total_pending": 1276
 }
