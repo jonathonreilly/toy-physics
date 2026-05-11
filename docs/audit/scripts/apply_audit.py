@@ -217,7 +217,7 @@ def audit_summary_from_blob(audit: dict) -> dict:
 
 
 def judicial_summary_from_blob(judgment: dict) -> dict:
-    return {
+    summary = {
         "auditor": judgment.get("third_auditor"),
         "auditor_family": judgment.get("auditor_family"),
         "auditor_model": judgment.get("auditor_model"),
@@ -233,6 +233,9 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
         "first_auditor_error": judgment.get("first_auditor_error"),
         "second_auditor_error": judgment.get("second_auditor_error"),
     }
+    if "runner_check_breakdown" in judgment:
+        summary["runner_check_breakdown"] = judgment["runner_check_breakdown"]
+    return summary
 
 
 def snapshot_audit_state(row: dict, rows: dict[str, dict]) -> dict:
@@ -509,6 +512,12 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     row["chain_closes"] = ratified_verdict == "audited_clean"
     row["chain_closure_explanation"] = judgment.get("judgment_rationale")
     row["verdict_rationale"] = judgment.get("judgment_rationale")
+    if "notes_for_re_audit_if_any" in judgment:
+        row["notes_for_re_audit_if_any"] = judgment.get("notes_for_re_audit_if_any")
+    if "runner_check_breakdown" in judgment:
+        row["runner_check_breakdown"] = judgment["runner_check_breakdown"]
+    if "open_dependency_paths" in judgment:
+        row["open_dependency_paths"] = judgment.get("open_dependency_paths") or []
     if ratified_verdict == "audited_clean":
         row["open_dependency_paths"] = []
         row["decoration_parent_claim_id"] = None
