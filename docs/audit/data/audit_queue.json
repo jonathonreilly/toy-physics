@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 766,
+    "critical": 765,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6404,29 +6404,6 @@
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "star_supported_bridge_class_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "oh_schur_boundary_action_note"
-      ],
-      "direct_in_degree": 5,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.245,
-      "note_path": "docs/STAR_SUPPORTED_BRIDGE_CLASS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_star_supported_bridge_class.py",
-      "transitive_descendants": 428
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "audit_in_progress",
       "blocker": "awaiting_cross_confirmation",
       "claim_id": "valley_linear_asymptotic_bridge_note",
@@ -6669,7 +6646,7 @@
       "claim_id": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint_after_invalidation",
+      "claim_type_provenance": "author_hint",
       "criticality": "critical",
       "criticality_rank": 3,
       "cross_confirmation_status": null,
@@ -40775,6 +40752,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 132,
-  "total_pending": 1308
+  "ready_count": 131,
+  "total_pending": 1307
 }
