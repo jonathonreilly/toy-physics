@@ -1,0 +1,143 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_u_bae_qdeformation_2026_05_08_probeU_bae_qdeformation.py
+runner_sha256: 8bba9d7acfa03e6ae58f4f3c5f97d15ed876fead8d697fac456d3ce137232fb6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
+
+======================================================================
+Section 0 -- Classical C_3 representation theory baseline
+======================================================================
+  PASS  0.1 sum of C_3 characters at trivial element + 1 + 1 + 1 = 3 (verify dims)
+  PASS  0.2 all 3 C_3 ℂ-characters are 1-dimensional (|chi| = 1)
+  PASS  0.3 ℝ-irreducible decomposition Herm_circ(3) = 3 trivial + 6 doublet real-dims
+  PASS  0.4 real-dim ratio trivial/doublet = 1/2 (matches |b|^2/a^2 = 1/2 numerically)
+  ADMITTED  0.5 current source package selects F3 (1,2) -> kappa=1; F1 (1,1) -> BAE absent
+
+======================================================================
+Section 1 -- Barrier G1: no canonical q-deformation of an abelian group
+======================================================================
+  PASS  1.1 Δ(g) = g⊗g for all g ∈ C_3 (group-like elements)
+  PASS  1.2 antipode S(g) = g^{-1} closes in C_3
+  PASS  1.3 counit ε(g) = 1 trivially for group-like Hopf algebras
+  PASS  1.4 C_3 is abelian; no Lie-algebra structure to deform
+  PASS  1.5 q-dim of every C_3 1-dim irrep = 1 at every q (trivial deformation)
+  ADMITTED  1.6 standard Hopf-algebra fact: 2-cocycle twists of ℂ[C_3] preserve irrep dimensions
+  ADMITTED  1.7 Barrier G1: q-deformation of abelian C_3 gives q-dims (1, 1, 1)
+
+======================================================================
+Section 2 -- U_q(sl_2) q-dimension arithmetic at q = e^{i pi/3}
+======================================================================
+  PASS  2.1 [1]_q at q=e^(iπ/3) = 1 (computed 1.000000)
+  PASS  2.2 [2]_q at q=e^(iπ/3) = 1 = 2cos(π/3) (computed 1.000000)
+  PASS  2.3 [3]_q at q=e^(iπ/3) = 0 (truncation; |[3]_q|=4.32e-16)
+  PASS  2.4 truncation pattern (1,1,0,-1,-1,0) verified at q=e^(iπ/3)
+  PASS  2.5 sl_2 spin-1/2 q-dim = [2]_q = 1 at q=e^(iπ/3) (the hypothesized BAE-friendly weight)
+  PASS  2.6 classical limit [2]_{q=1} = 2 (recovers real-dim of sl_2 doublet)
+  ADMITTED  2.7 q-dim interpolation 2 -> 1 holds only on sl_2 host, not on C_3 directly
+
+======================================================================
+Section 3 -- Barrier G2: silent SU(2) substitution requires un-retained intertwiner
+======================================================================
+  PASS  3.1 SU(2) doublet trace at C_3 generator (2π/3 rot) = 2cos(π/3) = 1
+  PASS  3.2 SO(3) triplet trace at C_3 generator (cyclic shift) = 1+2cos(2π/3) = 0
+  PASS  3.3 SU(2) doublet ≠ SO(3) triplet representation of C_3 (distinct embeddings)
+  PASS  3.4 hw=1 ≅ ℂ³ is SU(2) spin-1 (triplet), NOT a doublet-pair structure
+  PASS  3.5 SU(2) spin-1 character at 2π/3 = 0 (matches cyclic shift; spin-1, not spin-1/2)
+  PASS  3.6 BAE 'doublet' is the ℝ-form of χ_1 ⊕ χ_2 (abelian C_3), NOT SU(2) spin-1/2
+  ADMITTED  3.7 Barrier G2: silent SU(2) substitution requires unretained intertwiner
+
+======================================================================
+Section 4 -- Barrier G3(i): quantum Plancherel reduces to Probe 12 residue
+======================================================================
+  PASS  4.1 classical Plancherel on C_3: all weights = 1 (degenerate, no BAE selection)
+  PASS  4.2 real-form Plancherel weights (1, 4) -> ratio 1/4, NOT BAE 1/2
+  PASS  4.3 U_q(sl_2) Plancherel at q=e^(iπ/3): weights (1, 1) -> ratio 1/1, would give BAE
+  PASS  4.4 quantum-Plancherel-on-sl_2 = Probe 12's residue under SU(2) substitution (relabeling)
+  ADMITTED  4.5 Barrier G3(i): quantum Plancherel route is a relabeling of Probe 12
+
+======================================================================
+Section 5 -- Barrier G3(ii): pivotal-category trace requires un-retained structure
+======================================================================
+  PASS  5.1 Hermitian-circulant as pivotal category is NOT in current source content
+  PASS  5.2 pivotal-category primitives (tensor product, associators, ev/coev) un-retained
+  ADMITTED  5.3 pivotal-trace on Rep_q(sl_2) reduces to Section 4 case (same SU(2) substitution)
+
+======================================================================
+Section 6 -- Barrier G3(iii): ad-hoc q-dim equipartition imports the answer
+======================================================================
+  PASS  6.1 q-dim^1 vs q-dim^2 weighting choice unjustified from any retained principle
+  PASS  6.2 with w_trivial = w_doublet, BAE point satisfies the constraint
+  PASS  6.3 with w_trivial = 1, w_doublet = 2 (real-dim), constraint gives |b|^2/a^2 = 1/4
+  ADMITTED  6.4 Barrier G3(iii): weighting choice is the F1 vs F3 selection (re-labeling)
+
+======================================================================
+Section 7 -- Universal barrier preservation: R-matrix is linear on (a, b)
+======================================================================
+  PASS  7.1 R-matrix action b -> q^m b is linear in b
+  PASS  7.2 linear involutive symmetry defines a cone (Probe 7 universal barrier)
+  PASS  7.3 phase-rotation R-matrix is U(1)_b, ruled out by Probe 14
+  ADMITTED  7.4 Probe 7 universal 'linearity + scale-invariance' barrier preserved by R-matrix
+
+======================================================================
+Section 8 -- Classical limit consistency check (q -> 1 recovers F3)
+======================================================================
+  PASS  8.1 [2]_q -> 2 as q -> 1 (recovers real dim; computed 2.000000)
+  PASS  8.2 q -> 1 limit: real-dim weighting (1, 2) recovers F3 / Probe 28 result
+  PASS  8.3 no retained primitive selects q = e^(iπ/3) over q = 1 (or vice versa)
+  PASS  8.4 'period 6 = C_3 × Z_2' framing ruled out by Probe 7
+
+======================================================================
+Section 9 -- PDG anchor (NON-load-bearing, anchor-only per substep-4 rule)
+======================================================================
+  PASS  9.1 charged-lepton Koide Q = sum(m)/(sum sqrt(m))^2 = 0.666661 (target 2/3, BAE-consistent)
+  ADMITTED  9.2 PDG anchor is comparator-only and does not derive BAE
+
+======================================================================
+Section 10 -- Bounded-obstruction theorem statement
+======================================================================
+
+Theorem (Probe U-BAE bounded no-go).
+Under the physical Cl(3) local algebra + Z^3 spatial substrate baseline,
+CL3_SM_EMBEDDING + KOIDE_CIRCULANT_CHARACTER + F3finding (Probe 28)
++ Z_2-C_3 universal barrier (Probe 7), augmented by the imported
+quantum-group toolkit, with the
+substep-4 rule preventing PDG imports:
+
+  The proposed route U_q(C_3) at q = e^{i pi/3} via "quantum-dimension
+  equipartition" does NOT canonically force F1 over F3 on Herm_circ(3).
+
+Three independent structural barriers each block closure:
+  G1.  q-deformation of an abelian group preserves all q-dims at 1.
+  G2.  The [2]_q = 2cos(π/3) = 1 arithmetic is U_q(sl_2) input requiring
+       a retained C_3 -> SU(2) homomorphism that is not in this source packet.
+  G3.  Quantum-dim equipartition is not a derivation -- it is one of:
+         (i)  classical Plancherel relabeled (Probe 12 residue);
+         (ii) un-retained pivotal-category structure;
+         (iii) ad-hoc weighting that imports the answer.
+
+Plus universal barrier preservation:
+  UNIV.  R-matrix at q = e^{i pi/3} acts linearly on (a, b); Probe 7's
+         universal "linearity + scale-invariance" cone barrier is preserved.
+
+Conclusion: the BAE admission count is UNCHANGED. The 5-level structural
+rejection from Probes 25 + 27 + 28 extends into the imported quantum-group
+toolkit class for the specific route proposed.
+
+  ADMITTED  10.1 bounded no-go statement recorded
+
+======================================================================
+SUMMARY
+======================================================================
+Total PASS:  38
+Total FAIL:  0
+ADMITTED:    11
+
+OVERALL: bounded no-go supported across the checked structural barriers.
+The proposed quantum-deformation route is structurally barred.
+BAE admission count UNCHANGED.
+
+----- stderr -----
+

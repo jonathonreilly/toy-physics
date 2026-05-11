@@ -13973,6 +13973,62 @@
       "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
     },
     {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_a1_probe_z2_c3_pairing_bounded_obstruction_note_2026-05-08_probe7"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25"
+    },
+    {
+      "from": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
+    },
+    {
       "from": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
       "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
     },
@@ -14003,6 +14059,26 @@
     {
       "from": "koide_v_l1_quartic_casimir_beta2_note_2026-05-08_probev_l1_quartic",
       "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "to": "yt_zero_import_chain_note"
+    },
+    {
+      "from": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "to": "yt_bottom_yukawa_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "to": "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27"
+    },
+    {
+      "from": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
       "from": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
@@ -50663,6 +50739,32 @@
       "runner_path": "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py",
       "title": "Koide BAE Probe U \u2014 Connes-Chamseddine NCG Spectral Triple Attack on the C_3[111] Triplet"
     },
+    "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation": {
+      "claim_id": "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (negative closure for the quantum-deformation",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_bae_probe_native_lattice_flow_bounded_obstruction_note_2026-05-09_probe21",
+        "minimal_axioms_2026-05-03",
+        "cl3_sm_embedding_theorem",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "koide_a1_probe_z2_c3_pairing_bounded_obstruction_note_2026-05-08_probe7",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "koide_a1_probe_plancherel_peter_weyl_bounded_obstruction_note_2026-05-09_probe12",
+        "koide_a1_probe_lattice_non_conjugation_bounded_obstruction_note_2026-05-09_probe17",
+        "koide_bae_probe_physical_extremization_bounded_obstruction_note_2026-05-09_probe25",
+        "c3_symmetry_preserved_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "0c665fa04f4eb66f71f5fe584d25eaa2b979cf4aaa488f0ba79aafb934acb182",
+      "path": "docs/KOIDE_U_BAE_QUANTUM_DEFORMATION_NOTE_2026-05-08_probeU_bae_qdeformation.md",
+      "runner_path": "scripts/cl3_koide_u_bae_qdeformation_2026_05_08_probeU_bae_qdeformation.py",
+      "title": "Koide U-BAE Quantum-Deformation U_q(C_3) at q = e^{i\u03c0/3} \u2014 Bounded Obstruction"
+    },
     "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
       "claim_id": "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular",
       "claim_type_author_hint": "no_go",
@@ -50694,6 +50796,23 @@
       "path": "docs/KOIDE_V_L1_QUARTIC_CASIMIR_BETA2_NOTE_2026-05-08_probeV_L1_quartic.md",
       "runner_path": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py",
       "title": "Probe V-L1-Quartic \u2014 Quartic Casimirs and the QCD \u03b2_2/\u03b2_3 Channel-Weight Obstruction"
+    },
+    "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical": {
+      "claim_id": "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (negative for the heavy-quark closure",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "yt_zero_import_chain_note",
+        "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
+        "hadron_lane1_chiral_condensate_banks_casher_scoping_support_note_2026-04-27",
+        "yt_ward_identity_derivation_theorem",
+        "down_type_mass_ratio_ckm_dual_note"
+      ],
+      "note_hash": "991da9b3b576d26c40f73657c5808673c777eb367c2339136dad7a40c7b05532",
+      "path": "docs/KOIDE_V_QUARK_DYNAMICAL_SSB_NOTE_2026-05-08_probeV_quark_dynamical.md",
+      "runner_path": "scripts/cl3_koide_v_quark_dynamical_2026_05_08_probeV_quark_dynamical.py",
+      "title": "Probe V-Quark-Dynamical \u2014 Heavy-Quark Masses via Dynamical Chiral SSB + Retained Yukawa Flow: Bounded-Tier Source Note (NEGATIVE)"
     },
     "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality": {
       "claim_id": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
@@ -68767,7 +68886,7 @@
       "bounded_theorem": 281,
       "decoration": 1,
       "meta": 61,
-      "no_go": 36,
+      "no_go": 38,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68776,15 +68895,15 @@
       "bounded_theorem": 763,
       "decoration": 1,
       "meta": 61,
-      "no_go": 143,
+      "no_go": 145,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8536,
-    "leaf_count": 613,
-    "node_count": 2173,
+    "edge_count": 8555,
+    "leaf_count": 614,
+    "node_count": 2175,
     "root_count": 822,
-    "runners_with_path": 1786
+    "runners_with_path": 1788
   }
 }

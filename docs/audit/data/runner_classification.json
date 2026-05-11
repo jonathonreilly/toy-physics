@@ -11436,6 +11436,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_u_bae_ncg_2026_05_08_probeU_bae_ncg.py"
     },
+    "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_u_bae_qdeformation_2026_05_08_probeU_bae_qdeformation.py"
+    },
     "koide_u_heavy_modular_sl2z_note_2026-05-08_probeu_heavy_modular": {
       "assert_count": 1,
       "counts": {
@@ -11459,6 +11471,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py"
+    },
+    "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 48
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_v_quark_dynamical_2026_05_08_probeV_quark_dynamical.py"
     },
     "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality": {
       "assert_count": 1,
@@ -24448,6 +24472,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/cl3_koide_u_bae_qdeformation_2026_05_08_probeU_bae_qdeformation.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_u_bae_quantum_deformation_note_2026-05-08_probeu_bae_qdeformation"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 9
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/cl3_koide_u_heavy_modular_2026_05_08_probeU_heavy_modular.py": {
       "assert_count": 1,
       "claims": [
@@ -24473,6 +24512,21 @@
         "B": 0,
         "C": 0,
         "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_v_quark_dynamical_2026_05_08_probeV_quark_dynamical.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_v_quark_dynamical_ssb_note_2026-05-08_probev_quark_dynamical"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 4,
+        "D": 48
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -46819,11 +46873,11 @@
       "A": 145,
       "B": 172,
       "C": 676,
-      "D": 259,
+      "D": 261,
       "none": 421
     },
-    "runners_classified": 1673,
-    "runners_with_C": 853,
-    "runners_with_D": 470
+    "runners_classified": 1675,
+    "runners_with_C": 854,
+    "runners_with_D": 472
   }
 }

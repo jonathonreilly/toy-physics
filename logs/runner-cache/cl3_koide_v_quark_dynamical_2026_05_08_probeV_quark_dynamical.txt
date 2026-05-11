@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_v_quark_dynamical_2026_05_08_probeV_quark_dynamical.py
+runner_sha256: 831af471dfc36449f0cccc3bc182bcc67316f0628d8b1b1686a827216d4e93dd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================
+Probe V-Quark-Dynamical: heavy-quark masses via dynamical chiral SSB + retained Yukawa flow
+Source note: docs/KOIDE_V_QUARK_DYNAMICAL_SSB_NOTE_2026-05-08_probeV_quark_dynamical.md
+========================================================================
+
+Section 1 — Retained anchor sanity
+  [PASS] alpha_bare = 1/(4 pi) | = 0.0795774715
+  [PASS] u_0 = <P>^{1/4} ~ 0.87768 | = 0.87768
+  [PASS] alpha_LM = alpha_bare/u_0 ~ 0.0907 | = 0.09067
+  [PASS] alpha_s(v) = alpha_bare/u_0^2 ~ 0.1033 | = 0.10330
+  [PASS] g_lattice = sqrt(4 pi alpha_LM) ~ 1.0676 | = 1.06741
+  [PASS] Ward BC y_t(M_Pl) = g_lattice/sqrt(6) ~ 0.4358 | = 0.43577
+  [PASS] Casimirs C_F=4/3, C_A=3, T_F=1/2 | C_F=4/3, C_A=3, T_F=1/2
+    -> RETAINED (S1 + Casimir + plaquette-self-consistency)
+
+Section 2 — Hostile-review tier classification
+  [ADMITTED] I1 1L SM Yukawa beta: RETAINED (universal Casimir) | scheme-independent gauge piece -8 g_3^2 + 6 y_t^2 etc., structural per S1 + Casimir algebra
+  [ADMITTED] I2 2L+ SM Yukawa beta: IMPORTED | FJJ92, LWX03, Machacek-Vaughn dim-reg MSbar; same import class as Z-S4b-Audit I3 (3L beta_lambda) and X-L1-MSbar (beta_2/beta_3)
+  [PASS] I3 y_t(M_Pl) = g_lattice/sqrt(6): RETAINED | YT_WARD_IDENTITY_DERIVATION_THEOREM (species-privileged)
+  [ADMITTED] I4 y_b(M_Pl), y_c(M_Pl) species-diff BC: NOT RETAINED | Koide circulant rho_down=1.536, rho_up=1.754 candidate; Koide equipartition + Brannen sqrt(m)-identification are admitted non-retained primitives per YT_BOTTOM §5.2
+  [ADMITTED] I5 Chiral SSB Sigma ~ Lambda_QCD^3: IMPORTED scope | HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING audit verdict; Sigma = pi rho_Dirac(0) requires L>=12-16 lattice run NOT on retained surface, or new structural identity
+    -> 1 RETAINED (I1+I3 are structural), 4 ADMITTED (I2, I4, I5 + contaminations); pattern matches Z-S4b-Audit verdict.
+
+Section 3 — Species-uniform Ward BC + 1L SM RGE forecast
+    g_3(v) = 1.1394, g_3(M_Pl) = 0.4892
+    1L coupled (y_t,y_b)(v) = (0.7549, 0.7549); g_3(v)=1.1392
+    m_t pred = 131.4 GeV; PDG 172.69 GeV
+    m_b(v) pred = 131.4 GeV
+    m_b(m_b) pred = 190.5 GeV; PDG 4.18 GeV
+  [PASS] Species-uniform Ward BC + 1L RGE: m_b overshoots PDG by >=20x | overshoot = 45.6x (5% gate would need ~1.05x)
+  [PASS] Species-uniform Ward BC + 1L RGE: m_t undershoots PDG by >=1.2x | undershoot = 1.31x (RGE quasi-fixed-point pulls both to common value ~0.75)
+    -> Species-uniform Ward BC empirically FALSIFIED for both m_t and m_b under 1L RGE.
+       Same direction as YT_BOTTOM 2L result (m_b(m_b) ~ 140 GeV), more severe at 1L due to coupled fixed-point.
+
+Section 4 — Species-privileged top-only chain (retained reference)
+    YT_ZERO_IMPORT: y_t(v) = 0.9734
+    m_t = y_t(v) * v/sqrt(2) = 169.47 GeV (PDG 172.69, dev -1.86%)
+  [PASS] Retained m_t reproduces PDG within 5% | |dev| = 1.86% < 5%
+  [ADMITTED] y_b(v), y_c(v) infrastructure inputs in YT_ZERO_IMPORT | INFRASTRUCTURE only; chain does not derive absolute m_b, m_c. DOWN_TYPE_MASS_RATIO_CKM_DUAL §6 explicitly disclaims absolute bottom scale closure.
+
+Section 5 — Chiral SSB structural decomposition
+    Light-quark constituent recovery (current + Sigma):
+  [PASS] m_u constituent (current + Sigma) within 15% of bench | current=2.2 MeV + Sigma=330 MeV = 332 MeV vs ~336 MeV (err -1.1%)
+  [PASS] m_d constituent (current + Sigma) within 15% of bench | current=4.7 MeV + Sigma=330 MeV = 335 MeV vs ~340 MeV (err -1.6%)
+  [PASS] m_s constituent (current + Sigma) within 15% of bench | current=93.4 MeV + Sigma=330 MeV = 423 MeV vs ~486 MeV (err -12.9%)
+  [ADMITTED] Light-quark m_q^current absolute scale: NOT RETAINED | Same species-differentiation primitive obstruction; PDG m_u, m_d, m_s are imports, not derived. Chiral SSB only closes a mass-RATIO problem if both pieces are admitted.
+
+    Heavy-quark Sigma fraction (chiral SSB cannot close gap):
+  [PASS] Sigma/m_c >= 5% (chiral SSB enters m_c at order-of-magnitude level) | Sigma=330 MeV / m_c=1.27 GeV = 25.98%; still cannot bridge a 100% Yukawa gap additively
+  [PASS] Sigma/m_b < 10% (heavy-quark chiral SSB sub-dominant) | Sigma=330 MeV / m_b=4.18 GeV = 7.89%
+  [PASS] Sigma/m_t < 5% (heavy-quark chiral SSB negligible) | Sigma=330 MeV / m_t=172.69 GeV = 0.19%
+  [PASS] Chiral SSB bridges <1% of species-uniform Yukawa overshoot for m_b | Sigma=0.330 GeV / gap=186.3 GeV = 0.177%
+    -> Chiral SSB is STRUCTURALLY a light-quark constituent-mass mechanism, not a heavy-quark Yukawa-hierarchy mechanism.
+
+Section 6 — Retained CKM-dual ratio cross-check
+    m_s/m_b = (alpha_s(v)/sqrt(6))^(6/5) = 0.02239
+    threshold-local self-scale m_s(2GeV)/m_b(m_b) = 0.02234
+    deviation: +0.20%
+  [PASS] Retained ratio m_s/m_b within 5% (threshold-local self-scale) | |err| = 0.20%
+  [ADMITTED] Retained CKM-dual: ABSOLUTE m_b scale NOT closed | DOWN_TYPE_MASS_RATIO_CKM_DUAL §6 explicit disclaimer; only ratio retained.
+
+Section 7 — Cross-mechanism gate (m_b, m_c closure to 5%)
+    Closure attempts for m_b:
+      [Species-uniform Ward + 1L RGE (no chiral)] pred=190.60 GeV, PDG=4.18 GeV, err=4459.8%, within 5%? False
+      [Species-uniform Ward + 1L RGE + chiral SSB] pred=190.93 GeV, PDG=4.18 GeV, err=4467.7%, within 5%? False
+      [Chiral SSB alone (m_b = Sigma)] pred=0.33 GeV, PDG=4.18 GeV, err=92.1%, within 5%? False
+  [PASS] NO V-mechanism attempt closes m_b at 5% (mechanism fails) | all three retained-or-IMPORTED combinations fail by >100x or >=92x except chiral-only which is 92% off
+    Closure attempts for m_c:
+      [Species-uniform Ward + 1L RGE (no chiral)] pred=190.60 GeV, PDG=1.27 GeV, err=14907.9%, within 5%? False
+      [Chiral SSB alone (m_c = Sigma)] pred=0.33 GeV, PDG=1.27 GeV, err=74.0%, within 5%? False
+  [PASS] NO V-mechanism attempt closes m_c at 5% (mechanism fails) | species-uniform RGE forecast same as m_b (~190 GeV); chiral SSB alone is 74% off
+
+    -> Bridging the heavy-quark Yukawa gap requires a species-differentiation primitive on y_q(M_Pl).
+       Chiral SSB is structurally NOT that primitive.
+
+Section 8 — Structural verdict (probe V-Quark-Dynamical)
+    Probe X-L1-Threshold (#933): EW Wilson chain absolute heavy-quark masses FORECLOSED.
+    Probe Y-L1-Ratios (#946): EW Wilson chain heavy-quark ratio integer-difference FORECLOSED.
+    Probe Z-Quark-QCD-Chain (#958): parallel QCD-anchored chain heavy-quark masses FORECLOSED.
+    Probe V-Quark-Dynamical (this): dynamical chiral SSB + retained Yukawa flow does NOT bridge the heavy-quark Yukawa gap.
+
+    Combined verdict: the structural option for 'heavy-quark masses from any of {single coupling chain (X,Y,Z), Yukawa+SSB (V)}' is now CLOSED at the 5% gate.
+
+    What remains open: species-differentiation primitive on y_q(M_Pl) -- candidates are Koide equipartition + Brannen sqrt(m) in the Koide circulant Fourier-basis spectrum (NOT retained) per YT_BOTTOM §5.2.
+  [ADMITTED] Probe V verdict: NO-GO (negative for heavy-quark gate) | Chiral SSB structurally light-quark; Yukawa-BC species-differentiation primitive remains the open gap.
+
+Section 9 — Constraints respected
+  [ADMITTED] No new axioms introduced | All inputs from physical Cl(3) local algebra + Z^3 spatial substrate (S1+Casimir+plaquette) + retained-bounded chiral SSB scale + IMPORTED 2L+ beta
+  [ADMITTED] No PDG masses used as derivation input | PDG values appear ONLY as comparators after computation
+  [ADMITTED] Hostile-review tier classification applied (per Z-S4b-Audit) | 5 ingredients tiered: 2 RETAINED (I1, I3), 3 ADMITTED (I2, I4, I5)
+  [ADMITTED] Source-only PR pattern (per feedback_review_loop_source_only_policy) | 1 source-note + 1 runner + 1 cache; no support docs, no audit-ledger edits, no synthesis notes
+
+SUMMARY: PASS=21 FAIL=0 ADMITTED=12
+
+VERDICT
+-------
+NO-GO (negative for heavy-quark closure gate). Dynamical chiral SSB + retained Yukawa flow does NOT bridge the heavy-quark Yukawa-BC gap. Chiral SSB is structurally a light-quark constituent-mass mechanism (Sigma ~ 330 MeV); for heavy quarks (c, b, t) it adds <26%, <8%, <0.2% of the PDG mass respectively, and bridges <1% of the species-uniform Ward-BC Yukawa overshoot.
+
+STRATEGIC CLOSURE: combined with X (#933), Y (#946), Z (#958), the structural option for 'heavy-quark masses from {single chain, Yukawa+SSB}' is exhausted. The species-differentiation primitive on y_q(M_Pl) -- candidates Koide equipartition + Brannen sqrt(m)-identification in the Koide circulant Fourier-basis spectrum -- is the remaining open gap.
+
+----- stderr -----
+
