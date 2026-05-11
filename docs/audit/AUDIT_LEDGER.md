@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 260 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1245 |
+| unaudited | 1244 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 179 |
+| ~~audited_conditional~~ | 180 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 434 |
-| `audited_conditional` | 179 |
+| `audited_conditional` | 180 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1358 |
+| `unaudited` | 1357 |
 
 | claim_type | count |
 |---|---:|
@@ -604,6 +604,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_thales_cross_system_cp_ratio_theorem_note_2026-04-25` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -2305,6 +2306,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The strict prefix-sum operator satisfies the Rota-Baxter identity of weight +1: P(a)P(b)=P(P(a)b+aP(b)+ab).  _(class `A`)_
 - **chain closes:** True — Within the stated bounded scope, the packet verifies the Rota-Baxter identity, non-idempotence, B4 combinatorics, and the tautological first-slot readout. The note explicitly excludes framework-native characters, staggered taste-blocking bridges, and derivation of alpha_LM^16, so those missing bridges do not block this scoped claim.
 - **rationale:** The scoped theorem is external algebra plus an explicit boundary statement, and the dependency is provided as retained. The runner's alpha_LM^16 check is hard-coded, but the note labels that as an imported character value and not a derivation, so it supports the boundary rather than inflating the claim.
+- **auditor confidence:** high
+
+### `continuum_limit_note`
+
+- **Note:** [`CONTINUUM_LIMIT_NOTE.md`](../../docs/CONTINUUM_LIMIT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite h^2+T-normalized dense-lattice numerical trend for h in {1.0,0.5,0.25,0.125}, including transfer norms, gravity direction, weak-field F~M exponents, Born checks where computed, and weak-field deflection changes; no analytic h->0 convergence theorem or controlled extrapolation below h=0.125 is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-2026-05-11`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The weak-field deflection converges: only 2.7% change between h=0.25 and h=0.125, approaching a limit of approximately +0.014; therefore the model has a well-defined continuum limit in the weak-field regime.  _(class `C`)_
+- **chain closes:** False — The frozen completed log supports the finite-h table and 2.7% last-step weak-field change, but the source note does not supply a convergence theorem, error model, or registered completed cache/extrapolation that establishes the h->0 limit.
+- **rationale:** Issue: the finite log reaches h=0.125 and shows a plausible settling trend, but the note promotes this to a continuum-limit statement without an asymptotic error model, proof, or completed registered cache/extrapolation beyond h=0.125. Why this blocks: a 2.7% change between the last two sampled resolutions is evidence for a bounded finite-resolution trend, not a closed h->0 theorem. Repair target: split the finite-h numerical observation from the continuum-limit claim, or add a retained convergence theorem / sliced h<=0.06 computation with controlled extrapolation and a completed SHA-pinned runner-cache artifact. Claim boundary until fixed: the h^2+T kernel has a supported finite-resolution weak-field trend and approximate F~M scaling on the displayed grid, but the continuum-limit theorem remains conditional.
 - **auditor confidence:** high
 
 ### `coupled_field_generated_family_probe_note`
