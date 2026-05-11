@@ -1,0 +1,59 @@
+{
+  "date": "2026-05-10",
+  "loop": "physics-loop / v-scale-substep4-ratchet-20260510",
+  "name": "staggered_dirac_substep4_positive_ratchet_stretch_attempt_certificate",
+  "companion_note": "docs/STAGGERED_DIRAC_SUBSTEP4_POSITIVE_RATCHET_STRETCH_ATTEMPT_NOTE_2026-05-10.md",
+  "verdict": "stretch_attempt with named wall; no ratchet to positive_theorem",
+  "pass_count": 3,
+  "fail_count": 0,
+  "checks": {
+    "A_attack_surface_coverage": {
+      "claim": "Every substep-4 premise was load-bearing in at least one A3 route or BAE probe",
+      "substep4_premise_count": 12,
+      "covered_count": 12,
+      "uncovered": [],
+      "attack_surface_exhausted": true
+    },
+    "B_trivial_center_witness": {
+      "claim": "Z(M_3(C)) = C * I_3 (trivial center)",
+      "I3_central": true,
+      "generic_off_diagonal_not_central": true,
+      "M_3_C_dim_complex": 9,
+      "commutator_map_rank": 8,
+      "computed_center_dim_complex": 1,
+      "trivial_center_confirmed": true,
+      "interpretation": "Trivial center => no nontrivial central projections in M_3(C) => no internal classical labels for species identification. A_min + retained primitives cannot supply the additional content needed to identify the three hw=1 corner orbit points as SM e/mu/tau."
+    },
+    "C_recommendation_paths": {
+      "claim": "All four recommendation paths require audit-lane / governance / new-content decision outside this cycle",
+      "path_count": 4,
+      "all_require_external_decision": true,
+      "paths": [
+        {
+          "id": 1,
+          "name": "new retained-primitive C_3-breaking theorem",
+          "required_decision": "high-bar science work; would bypass A3 routes 1-5 and BAE probes 14, 17, 25, 27, 28",
+          "blocked_by_user_memory": "feedback_no_new_axioms.md (2026-05-04) + BAE 30-probe terminal synthesis (2026-05-09) jointly suggest this path is structurally closed"
+        },
+        {
+          "id": 2,
+          "name": "explicit user approval for AC_phi_lambda as new framework axiom",
+          "required_decision": "governance decision; outside agent scope",
+          "blocked_by_user_memory": "feedback_no_new_axioms.md (2026-05-04): A_min is fixed"
+        },
+        {
+          "id": 3,
+          "name": "partial-falsification acceptance per Probe 29",
+          "required_decision": "audit-lane decision on whether kappa=1 vs kappa=2 finding is retained",
+          "blocked_by_user_memory": "n/a \u2014 would not require new axiom; would require honest documentation"
+        },
+        {
+          "id": 4,
+          "name": "continued narrowing (AC_lambda separate closure, AC_phi reframing)",
+          "required_decision": "audit-lane decision on already-shipped sub-PRs",
+          "blocked_by_user_memory": "n/a \u2014 already documented in companion notes"
+        }
+      ]
+    }
+  }
+}
