@@ -21617,6 +21617,58 @@
       "to": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15"
     },
     {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "higgs_mass_from_axiom_note"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "hierarchy_formula_honest_status_note_2026-05-10"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "g_bare_derivation_note"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "lattice_physical_matching_cluster_obstruction_note_2026-05-02"
+    },
+    {
+      "from": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "to": "audit_backlog_campaign_progress_synthesis_2026-05-02"
+    },
+    {
       "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -64775,6 +64827,31 @@
       "runner_path": "scripts/frontier_v_even_theorem_retention.py",
       "title": "v_even Theorem Retention \u2014 Stretch Attempt with Partial Closing-Derivation"
     },
+    "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10": {
+      "claim_id": "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (1-loop scalar CW around Hubbard-Stratonovich saddle of V_taste)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "higgs_mass_from_axiom_note",
+        "complete_prediction_chain_2026_04_15",
+        "hierarchy_formula_honest_status_note_2026-05-10",
+        "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
+        "g_bare_derivation_note",
+        "lattice_physical_matching_theorem_bounded_obstruction_note_2026-05-10_match",
+        "higgs_mass_12pct_gap_decomposition_bounded_note_2026-05-10_higgss7",
+        "higgs_mass_wilson_chain_partial_progress_note_2026-05-10_higgsh1",
+        "dm_eta_g1_coleman_weinberg_bounded_theorem_note_2026-05-06",
+        "taste_scalar_fermion_cw_isotropy_narrow_theorem_note_2026-05-02",
+        "lattice_physical_matching_cluster_obstruction_note_2026-05-02",
+        "audit_backlog_campaign_progress_synthesis_2026-05-02"
+      ],
+      "note_hash": "9d9704e14eff95078d83023acdcd514cb368443dd2a746e38edc534ecbb4bb3b",
+      "path": "docs/V_TASTE_ONE_LOOP_CW_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/cl3_v_taste_one_loop_cw_2026_05_10.py",
+      "title": "V_taste 1-loop scalar Coleman-Weinberg correction (bounded support)"
+    },
     "vacuum_critical_stability_note": {
       "claim_id": "vacuum_critical_stability_note",
       "claim_type_author_hint": "bounded_theorem",
@@ -68452,7 +68529,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 277,
+      "bounded_theorem": 278,
       "decoration": 1,
       "meta": 61,
       "no_go": 34,
@@ -68461,7 +68538,7 @@
       "positive_theorem": 134
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 759,
+      "bounded_theorem": 760,
       "decoration": 1,
       "meta": 61,
       "no_go": 141,
@@ -68469,10 +68546,10 @@
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8488,
-    "leaf_count": 610,
-    "node_count": 2167,
+    "edge_count": 8501,
+    "leaf_count": 609,
+    "node_count": 2168,
     "root_count": 822,
-    "runners_with_path": 1780
+    "runners_with_path": 1781
   }
 }

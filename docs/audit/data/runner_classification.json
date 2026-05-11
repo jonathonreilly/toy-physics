@@ -19788,6 +19788,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_v_even_theorem_retention.py"
     },
+    "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 20,
+        "B": 1,
+        "C": 6,
+        "D": 16
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/cl3_v_taste_one_loop_cw_2026_05_10.py"
+    },
     "vacuum_critical_stability_note": {
       "assert_count": 0,
       "counts": {
@@ -24840,6 +24852,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_v_taste_one_loop_cw_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "v_taste_one_loop_cw_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 20,
+        "B": 1,
+        "C": 6,
+        "D": 16
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/cluster_decomposition_mass_gap_bridge_check.py": {
@@ -46654,14 +46681,14 @@
   "stats": {
     "decoration_candidates": 195,
     "dominant_class_distribution": {
-      "A": 143,
+      "A": 144,
       "B": 172,
       "C": 674,
       "D": 257,
       "none": 421
     },
-    "runners_classified": 1667,
-    "runners_with_C": 848,
-    "runners_with_D": 465
+    "runners_classified": 1668,
+    "runners_with_C": 849,
+    "runners_with_D": 466
   }
 }
