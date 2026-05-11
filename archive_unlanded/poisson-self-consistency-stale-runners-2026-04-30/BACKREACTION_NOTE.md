@@ -1,7 +1,17 @@
 # Self-Consistent Back-Reaction: Horizons from Geometry
 
 **Date:** 2026-04-05
-**Status:** proposed_retained positive — Poisson self-gravity produces absorption threshold
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/poisson-self-consistency-stale-runners-2026-04-30/` (the directory name encodes the failure reason: stale Poisson self-consistency runners)
+- **Audit verdict_rationale (verbatim from [audit_ledger.json](../../docs/audit/data/audit_ledger.json) under claim_id `backreaction_note`):**
+
+> Issue: the source note's quantitative absorption-threshold claim is stale against the live Poisson/self-consistency runners; the current Poisson output gives escape 1.0498 at G=0.005, 1.0502 at G=0.010, 0.9631 at G=0.050, and 0.7547 at G=0.100, not the note's 1.025, 1.002, 0.751, and 0.486 trend with G_crit ~ 0.011. Why this blocks: a hostile physicist cannot retain a claimed horizon-like threshold at G_crit ~ 0.011 or a smooth table-driven collapse transition when the current computation places the first listed sub-unity escape much later and shows unstable/away behavior at larger G. Repair target: restore the exact runner/version and sweep grid that generated the note, or update the note with a live asserted sweep including G=0.011, 0.012, 0.020, the field-strength-dependence rows, convergence gates, escape monotonicity checks, and Born checks on the same converged field. Claim boundary until fixed: it is safe to claim only that the current Poisson runner shows TOWARD deflection for G <= 0.1, escape below one by G=0.050 at s_ext=0.004, and a linear fixed-field Born check of 2.45e-16 in the separate self-consistency script; it is not safe to retain the note's G_crit ~ 0.011 gravitational-collapse threshold or its exact table.
+
+- **Do NOT cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a 'closed no-go'.
 
 ## Artifact chain
 

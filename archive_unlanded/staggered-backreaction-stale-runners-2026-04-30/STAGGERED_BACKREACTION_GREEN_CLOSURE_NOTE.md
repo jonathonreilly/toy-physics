@@ -1,7 +1,17 @@
 # Staggered Backreaction Green-Closure Note
 
 **Date:** 2026-04-10  
-**Status:** proposed_retained narrow positive
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- **Date archived:** 2026-04-30
+- **Archive directory:** `archive_unlanded/staggered-backreaction-stale-runners-2026-04-30/` (the directory name encodes the failure reason: stale staggered-backreaction runners)
+- **Audit verdict_rationale (verbatim from [audit_ledger.json](../../docs/audit/data/audit_ledger.json) under claim_id `staggered_backreaction_green_closure_note`):**
+
+> Issue: the archived source note is stale relative to the live Green-closure runner, and the stale fields are exactly the claimed force-scale closure and holdout-transfer numbers. Why this blocks: a hostile physicist can no longer claim nearly order-of-magnitude cycle closure or clean calibrated holdout transfer, because the current runner gives only a 2.81x raw cycle improvement over screened_poisson and the calibrated layered holdout gap blows up to 5.371e-01 rather than 3.714e-03. Repair target: either restore the old runner/environment that generated the note's table, or update the note to the current runner output and rerun the comparison with hard assertions for the intended acceptance gates, including raw/calibrated cycle gaps, raw/calibrated holdout gaps, gain, retained checks, and self-gap. Claim boundary until fixed: it is safe to claim only that the current resistance_yukawa runner is the best of the three frozen maps by its balance score, preserves source-linearity/additivity/TOWARD/norm checks, improves the raw cycle gap from 9.618e-01 to 3.425e-01, and has a small raw holdout gap of 1.534e-02; it is not safe to retain the note's stronger Green-closure or clean calibrated-holdout claim.
+
+- **Do NOT cite warning:** Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a 'closed no-go'.
 
 ## Question
 
