@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1273 |
+| unaudited | 1272 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 159 |
+| ~~audited_conditional~~ | 160 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 159 |
+| `audited_conditional` | 160 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1386 |
+| `unaudited` | 1385 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 894 |
+| `bounded_theorem` | 895 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 221 |
 | `open_gate` | 112 |
-| `positive_theorem` | 745 |
+| `positive_theorem` | 744 |
 
 | criticality | count |
 |---|---:|
@@ -696,6 +696,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | A | - |
+| `pmns_oriented_cycle_selection_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_lane3_bounded_companion_retention_firewall_note_2026-04-27` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -7090,6 +7091,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Therefore any canonical active block has the exact native oriented-cycle decomposition A_fwd = c_1 E_12 + c_2 E_23 + c_3 E_31 with coefficient law (c_1, c_2, c_3) = diag(A C^dagger).  _(class `A`)_
 - **chain closes:** True — Within the audited scope, the projected projectors give P_i C = E12,E23,E31, so multiplying A by C^dagger extracts exactly A12,A23,A31 on the diagonal. The note explicitly excludes deriving or selecting those values from the sole axiom, so the scoped algebraic theorem closes without dependencies.
 - **rationale:** The load-bearing step is a class-A matrix identity over the projected forward-cycle basis, not a numerical fit or definition-as-derivation. The cached runner for SHA 531e8147f7aa2e6e9c13b9f5ddf6b03ae7862a18e968627d815d5f748b7f79ec exits 0 with PASS=10 FAIL=0 and checks the projected cycle, projected scalar projectors, edge basis, coefficient extraction, reconstruction, mean identity, and response-profile round trip. Residual risk is only scope creep: this audit does not certify sole-axiom selection of the canonical active block or of the coefficient values.
+- **auditor confidence:** high
+
+### `pmns_oriented_cycle_selection_structure_note`
+
+- **Note:** [`PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md`](../../docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded finite-dimensional selection-structure algebra for the PMNS oriented forward-cycle channel, given the retained channel-value law and the imported free-point and residual-antiunitary premises.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Exact C3 covariance collapses the oriented forward-cycle channel to A_fwd = sigma C; at the sole-axiom free point sigma = 0; and on the graph-first selected-axis route the residual antiunitary condition A_fwd = P23 A_fwd^dagger P23 fixes c1 = conjugate(c3), c2 real.  _(class `A`)_
+- **chain closes:** False — The retained channel-value-law dependency supplies the oriented-cycle observable law, and the runner verifies the C3/fixed-locus algebra with PASS=8/FAIL=0. The chain does not close because the graph-first residual antiunitary condition and the sole-axiom free-point identity block are imported premises rather than retained one-hop bridge theorems.
+- **rationale:** Issue: the C3 and residual fixed-locus algebra is exact, but the graph-first residual antiunitary condition and the free-point active block I_3 are asserted as premises in this restricted packet. Why this blocks: retained selection-structure status would require retained bridge theorems deriving those premises from the sole axiom/graph-first route, not just finite-dimensional checks after they are assumed. Repair target: add retained source notes proving the graph-first residual antiunitary reduction on the oriented forward-cycle channel and the sole-axiom free-point identity-block result. Claim boundary until fixed: the row is a bounded conditional algebraic reduction of the oriented-cycle channel, not a retained value-selection theorem.
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`

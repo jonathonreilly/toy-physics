@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 761,
+    "critical": 760,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6422,29 +6422,6 @@
       "ready": true,
       "runner_path": "scripts/valley_linear_asymptotic_bridge.py",
       "transitive_descendants": 428
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "pmns_oriented_cycle_selection_structure_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "pmns_oriented_cycle_channel_value_law_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.241,
-      "note_path": "docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_pmns_oriented_cycle_selection_structure.py",
-      "transitive_descendants": 427
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -40668,6 +40645,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 127,
-  "total_pending": 1303
+  "ready_count": 126,
+  "total_pending": 1302
 }
