@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1255 |
+| unaudited | 1254 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 173 |
+| ~~audited_conditional~~ | 174 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 173 |
+| `audited_conditional` | 174 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1368 |
+| `unaudited` | 1367 |
 
 | claim_type | count |
 |---|---:|
@@ -740,6 +740,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
+| `wilson_two_body_open_note_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alpha_s_derived_narrow_theorem_note_2026-05-10` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | `alpha_s_derived_note` |
@@ -10213,6 +10214,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The note's parent target is already retained-bounded, and the completed replay log supports the stated finite-lattice caution. The note adds no independent observable, runner evidence, or new physical theorem beyond the parent result's scoped interpretation.
 - **rationale:** Issue: this note is a skeptic/scope wrapper around the already retained-bounded wide_lattice_h2t_distance_law_note and uses the same replay/log rather than adding an independent theorem or comparator. Why this blocks separate retained status: giving it another retained-bounded row would double-count the same finite-lattice evidence as an additional claim. Repair target: keep the cautionary wording boxed under the parent distance-law note or add genuinely independent controls such as width/refinement/window/source-placement replays. Claim boundary until fixed: it is safe as a scope-management corollary saying the parent replay is finite-lattice evidence only, not a universal distance law.
 - **decoration parent:** `wide_lattice_h2t_distance_law_note`
+- **auditor confidence:** high
+
+### `wilson_two_body_open_note_2026-04-11`
+
+- **Note:** [`WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`](../../docs/WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded Wilson open-boundary two-body mutual-attraction and post-selected distance/partner-source characterization on the registered G=5, mu^2=0.22 caches, excluding screening-mass and both-masses closure claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The registered open-boundary runner cache gives 8/8 ATTRACT and 8/8 CLEAN rows on side=11,13, G=5, mu^2=0.22, d=3..6, and the laws cache characterizes the post-selected clean-attract surface with |a_mut|~d^-3.406 and |a_mut|~mB^0.483.  _(class `C`)_
+- **chain closes:** False — The open-boundary 8/8 attractive-clean surface and the post-selected distance/partner-source fits close against the two registered caches. The source note also states screening-mass sweep and both-masses audit claims whose runner artifacts are absent or explicitly no longer present, so the full note scope is not closed.
+- **rationale:** Issue: two registered caches support the narrow open-boundary attraction and post-selected law-characterization surface, but the note still contains unsupported screening-mass and both-masses sections. Why this blocks: a reviewer can accept the 8/8 attractive-clean rows and mu^2=0.22 post-selected fits while rejecting claims about screening softening or action-reaction failure without the named runner outputs. Repair target: either remove/split the unsupported sections from this claim surface or register the screening-mass and both-masses runner artifacts with caches. Claim boundary until fixed: open-boundary attraction plus post-selected distance and partner-source characterization only.
 - **auditor confidence:** high
 
 ### `wolfenstein_lambda_a_structural_identities_narrow_theorem_note_2026-05-10`
