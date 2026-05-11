@@ -5381,6 +5381,22 @@
       "to": "wide_lattice_h2t_distance_law_note"
     },
     {
+      "from": "distance_law_portability_note",
+      "to": "gate_b_no_restore_farfield_note"
+    },
+    {
+      "from": "distance_law_portability_note",
+      "to": "alt_connectivity_family_sign_note"
+    },
+    {
+      "from": "distance_law_portability_note",
+      "to": "third_grown_family_sign_note"
+    },
+    {
+      "from": "distance_law_portability_note",
+      "to": "fourth_family_quadrant_note"
+    },
+    {
       "from": "distance_law_preserving_third_family_note",
       "to": "distance_law_portability_note"
     },
@@ -20659,6 +20675,22 @@
     {
       "from": "su3_wigner_l3_treewidth_infeasible_2026-05-04",
       "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+      "to": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+      "to": "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03"
+    },
+    {
+      "from": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+      "to": "gauge_vacuum_plaquette_bridge_support_note"
+    },
+    {
+      "from": "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
+      "to": "plaquette_self_consistency_note"
     },
     {
       "from": "su3_z3_apbc_variant_probe_2026-05-04",
@@ -38690,11 +38722,11 @@
     },
     "chiral_3plus1d_mixing_period_note": {
       "claim_id": "chiral_3plus1d_mixing_period_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e8c1f79c487a2a2bdf3ec0ee61a8e3ba8457159c527ac3a7613178f125803594",
+      "note_hash": "d54c9a47aaa330c79abf0f06e4874cdc969e3a50e2e63adf26b95b2154505ebe",
       "path": "docs/CHIRAL_3PLUS1D_MIXING_PERIOD_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Chiral Mixing Period Note"
@@ -38705,7 +38737,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "49148e41ca22cd00b5c8b9e6c4f3b38b02b158ed2522acaf198d491550c11fad",
+      "note_hash": "3639d74a39b0539640ae4cb30ebbda5a533c9791243c10a4ca070c05cdecc852",
       "path": "docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md",
       "runner_path": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py",
       "title": "3+1D Periodic Chiral Sign Windows: Wrap and Recurrence Scale"
@@ -41091,11 +41123,16 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "3e5e5017cc9c7e3a43858e1bcda6762bccaefd59a7e2e33fae28b2dd70634d7e",
+      "deps": [
+        "gate_b_no_restore_farfield_note",
+        "alt_connectivity_family_sign_note",
+        "third_grown_family_sign_note",
+        "fourth_family_quadrant_note"
+      ],
+      "note_hash": "3f24d0157daf3ca87c7d2890c120fd7ccb1edf2659a32529a2dcb42acea85134",
       "path": "docs/DISTANCE_LAW_PORTABILITY_NOTE.md",
-      "runner_path": null,
-      "title": "Distance Law Portability Across Retained Structured Families"
+      "runner_path": "scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py",
+      "title": "Distance Law Portability Across Structured Families"
     },
     "distance_law_preserving_third_family_note": {
       "claim_id": "distance_law_preserving_third_family_note",
@@ -46895,7 +46932,7 @@
       "deps": [
         "global_coherence_off_scaffold_note"
       ],
-      "note_hash": "2f240a64449669d4761bdbe4619d820372a17e16ed9c03724599c2dd37c6061e",
+      "note_hash": "18feae857e1c48d96b3c19556b1626a8fedcc49d60b0a7368f01ac7072571717",
       "path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "runner_path": "scripts/global_coherence_predictor.py",
       "title": "Global Free-Beam Coherence Predictor \u2014 Modest Revival"
@@ -48795,11 +48832,11 @@
     },
     "inverse_problem_note": {
       "claim_id": "inverse_problem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "b2a579427d14557abe92724f62c97a9a5f02014f71862b7f665f7452380dc361",
+      "note_hash": "ae15ba95775f534405e297edc5024652799dfb70c99f617de53f2bb867bb18a8",
       "path": "docs/INVERSE_PROBLEM_NOTE.md",
       "runner_path": "scripts/inverse_problem_graph_requirements.py",
       "title": "Inverse Problem: What Does Newton+Born Require of the Network?"
@@ -52951,9 +52988,9 @@
       "claim_id": "matched_2d_4d_decoherence_note",
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "32bd997090ed7e15575b1cba6af027c6e0d37b348f8e15cc1101691301e45093",
+      "note_hash": "7308275c6b2a25056bb0f910ea23f10d0e2c937e326b2c352f5a76a4f2ed2050",
       "path": "docs/MATCHED_2D_4D_DECOHERENCE_NOTE.md",
       "runner_path": "scripts/matched_2d_4d_decoherence.py",
       "title": "Matched 2D vs 4D Decoherence Note"
@@ -55276,7 +55313,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "fd46bd4c89855208c98674f91aa5673188b1714423829b171585adaced690733",
+      "note_hash": "34ee3540f26f3302b33b8ba01b25db485150751b4683cafc3a10a916b39d61bf",
       "path": "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
       "runner_path": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py",
       "title": "Ordered-Lattice Quasi-Persistent Relaunch 2D Note"
@@ -63654,8 +63691,13 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "e5fc0ff1ad3e58c555d7b8e8c42eb111495829bc6e4115dbb13385fab882f49a",
+      "deps": [
+        "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
+        "gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03",
+        "gauge_vacuum_plaquette_bridge_support_note",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "78d3ba3ca652657e0210d33f3568113c9e340e7845dc278fa9d318c94775491e",
       "path": "docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md",
       "runner_path": "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py",
       "title": "SU(3) Wilson Plaquette Closed-Form Fan-Out at \u03b2 = 6"
@@ -68817,7 +68859,6 @@
     "dispersion_relation_note",
     "distance_law_3d_64_closure_note_2026-04-11",
     "distance_law_definitive_note",
-    "distance_law_portability_note",
     "distracted_napier_reconciliation_note",
     "dm_abcc_assumptions_audit_note_2026-04-19",
     "dm_abcc_basin_finite_search_support_note_2026-04-30",
@@ -69299,7 +69340,6 @@
     "su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10",
     "su3_fusion_engine_pr1_theorem_note_2026-05-03",
     "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
-    "su3_wilson_closed_form_fanout_theorem_note_2026-05-04",
     "substrate_to_p_a_forcing_theorem_note_2026-04-30",
     "symmetry_generated_paired_chokepoint_note",
     "symmetry_spectrum_mirror_compare_note",
@@ -69428,25 +69468,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 320,
+      "bounded_theorem": 322,
       "meta": 70,
       "no_go": 44,
-      "none": 1567,
+      "none": 1565,
       "open_gate": 36,
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 778,
+      "bounded_theorem": 781,
       "meta": 70,
       "no_go": 149,
-      "none": 447,
+      "none": 446,
       "open_gate": 116,
-      "positive_theorem": 620
+      "positive_theorem": 618
     },
-    "edge_count": 8652,
+    "edge_count": 8660,
     "leaf_count": 614,
     "node_count": 2180,
-    "root_count": 815,
-    "runners_with_path": 1791
+    "root_count": 813,
+    "runners_with_path": 1792
   }
 }

@@ -1,0 +1,32 @@
+===== runner cache v1 =====
+runner: scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py
+runner_sha256: 18eb8e1741f63d45df1c30652cbc3bacc9bd17853f27c87c4f00bda7e4eff918
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 36.79
+status: ok
+----- stdout -----
+======================================================================================================
+DISTANCE LAW PORTABILITY COMPARE
+  gravity-style distance tail across retained structured families
+======================================================================================================
+source_b=[5, 6, 7, 8, 10], field_strength=0.004, k=5.0, beta=0.8
+
+            family        row    alpha     R^2   TOWARD   all+
+----------------------------------------------------------------
+  alt-connectivity  (0.20, 0)   -0.952   0.912  0/5         no
+      third-family  (0.20, 2)   -2.161   0.961  0/5         no
+     fourth-family  (0.00, 0)   -1.190   0.898  0/5         no
+      fifth-family  (0.05, 0)   -0.313   0.876  5/5        YES
+
+SAFE READ
+  family count: 4
+  mean alpha among retained rows: -1.154
+  alpha span across tested families: 1.847
+  boundary families with AWAY rows: ['alt-connectivity', 'third-family', 'fourth-family']
+  retained family rows: ['fifth-family']
+  distance-tail portability is only partial on this sweep
+PASS: bounded distance-law portability table matches the note (alpha and R^2 within 0.01; TOWARD counts and boundary family list pinned).
+
+----- stderr -----
+

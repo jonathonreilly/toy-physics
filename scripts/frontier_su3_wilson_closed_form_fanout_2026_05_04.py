@@ -3,9 +3,9 @@
 Per physics-loop guidance (deep-work / stuck-fan-out): before treating
 the L_s>=3 Wigner-Racah engine path as the next exact-cube route, run a fan-out of
 3-5 orthogonal closed-form estimates of <P>(beta=6) on standard SU(3)
-Wilson primitives. The point is to strengthen the Block 5 verdict
-by explicitly ruling out simpler
-closed-form alternatives, not to actually close the bridge.
+Wilson primitives. The point is to strengthen the SU(3) Wigner L_s=2
+PBC orientation verdict (legacy Block 5) by explicitly ruling out
+simpler closed-form alternatives, not to actually close the bridge.
 
 Methods evaluated:
 
@@ -327,9 +327,9 @@ def driver() -> int:
         print("  CANNOT reproduce <P>(beta=6) = 0.5934 within epsilon_witness.")
         print()
         print("  The L_s>=3 Wigner-Racah engine path remains the next")
-        print("  exact-cube route among the tested methods. The Block 5")
-        print("  verdict is strengthened by this explicit ruling-out of orthogonal")
-        print("  closed-form attack frames.")
+        print("  exact-cube route among the tested methods. The SU(3) Wigner")
+        print("  L_s=2 PBC orientation verdict (legacy Block 5) is strengthened")
+        print("  by this explicit ruling-out of orthogonal closed-form attack frames.")
     print()
 
     print("  Method-by-method commentary:")
@@ -349,12 +349,29 @@ def driver() -> int:
     print( "                            asymptotic.")
     print()
     print("  beta = 6 is the SU(3) crossover regime where the correlation")
-    print("  length exceeds 2 lattice spacings (so L_s=2 fails, per Block 5)")
+    print("  length exceeds 2 lattice spacings (so L_s=2 fails per the")
+    print("  SU(3) Wigner L_s=2 PBC orientation verdict, legacy Block 5)")
     print("  AND no single-plaquette / leading-perturbative method captures")
     print("  the connected multi-plaquette structure that drives <P> to")
     print("  ~ 0.59. Exact closure would need a full lattice tensor-network")
     print("  contraction route, a different audited derivation, or numerical MC.")
     print()
+
+    # Comparator-independent assertions (pinned to docs/SU3_WILSON_CLOSED_FORM_FANOUT_THEOREM_NOTE_2026-05-04.md).
+    # The MC value 0.5934 and epsilon_witness 3.03e-4 are EXTERNAL comparator inputs;
+    # these assertions only check the four framework-internal closed-form values.
+    assert abs(p1 - 0.4225) <= 5e-4, f"M1 drift: {p1:.6f} vs 0.4225 (note table)"
+    assert abs(p2 - 0.3333) <= 5e-4, f"M2 drift: {p2:.6f} vs 0.3333 (note table)"
+    assert abs(p4 - 0.8740) <= 5e-4, f"M4 drift: {p4:.6f} vs 0.8740 (note table)"
+    assert abs(p5 - 0.9259) <= 5e-4, f"M5 drift: {p5:.6f} vs 0.9259 (note table)"
+    assert abs(p3 - p1) <= 1e-9, f"M3 != M1 (closed form should match exactly)"
+    print("PASS: comparator-independent (M1, M2, M4, M5) closed-form table "
+          "matches the bounded internal record in the note.")
+    print()
+    print("NOTE (provenance): the MC reference value 0.5934 and the "
+          "epsilon_witness target 3.03e-4 are external comparator-only "
+          "inputs. The 'ruling-out at epsilon_witness' reading inherits "
+          "their provenance and is not promoted as a standalone theorem.")
 
     print("=" * 78)
     print(f"SUMMARY: THEOREM PASS={pass_count} SUPPORT={support_count} "

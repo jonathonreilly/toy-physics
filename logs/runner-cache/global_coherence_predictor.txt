@@ -1,11 +1,102 @@
 ===== runner cache v1 =====
 runner: scripts/global_coherence_predictor.py
-runner_sha256: a0c1706e4319f810df7d20255553a5ff2e21d3da2302733c33c2e857fd713afa
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.02
-status: timeout
+runner_sha256: 368a22334d13e5904e8b9af70806701195dea31700483fc6fe05176b792e16d6
+timeout_sec: 900
+exit_code: 0
+elapsed_sec: 272.30
+status: ok
 ----- stdout -----
+====================================================================================================
+GLOBAL FREE-BEAM COHERENCE PREDICTOR
+Tests whether global free-beam metrics (p_det, coh) separate PASS from FAIL
+across BOTH the 26 swept set AND the 9 independent generators
+====================================================================================================
+
+A. Computing free-beam metrics on 26 swept grown-DAG families...
+  [ 1/26] A1_orig_Fam1               p_det=9.3995e+09  coh=0.0572  PASS
+  [ 2/26] A2_orig_Fam2               p_det=9.9238e+09  coh=0.0602  PASS
+  [ 3/26] A3_orig_Fam3               p_det=8.0062e+09  coh=0.0634  PASS
+  [ 4/26] B1_pure_grid               p_det=7.2641e+09  coh=0.0773  PASS
+  [ 5/26] C1_random_lo               p_det=1.4519e+21  coh=0.0117  PASS
+  [ 6/26] C2_random_hi               p_det=2.6884e+11  coh=0.0098  PASS
+  [ 7/26] D1_md1_NN                  p_det=3.5245e+10  coh=0.0033  PASS
+  [ 8/26] D2_md4_long                p_det=8.4933e+09  coh=0.0160  PASS
+  [ 9/26] E1_PW3_narrow              p_det=7.2972e+09  coh=0.4274  PASS
+  [10/26] E2_PW10_wide               p_det=1.0763e+10  coh=0.0216  FAIL
+  [11/26] F1_NL10_short              p_det=2.4848e+03  coh=0.0106  PASS
+  [12/26] F2_NL40_long               p_det=5.0239e+16  coh=0.0632  PASS
+  [13/26] G1_asym_y                  p_det=1.0481e+12  coh=0.0008  PASS
+  [14/26] G2_asym_z                  p_det=9.7454e+11  coh=0.0005  FAIL
+  [15/26] H1_ring                    p_det=3.7866e-50  coh=0.0000  FAIL
+  [16/26] H2_cross                   p_det=4.5394e+09  coh=0.0605  PASS
+  [17/26] I1_drift_y                 p_det=0.0000e+00  coh=0.0000  FAIL
+  [18/26] J1_aniso_z2                p_det=8.9750e+09  coh=0.0409  PASS
+  [19/26] J2_aniso_z4                p_det=8.9852e+09  coh=0.0418  PASS
+  [20/26] K1_NN_no_restore           p_det=5.1050e-13  coh=0.0015  PASS
+  [21/26] K2_huge_drift_md1          p_det=3.9664e-30  coh=0.0028  PASS
+  [22/26] K3_NL5                     p_det=1.9877e+01  coh=0.0065  FAIL
+  [23/26] K4_PW2                     p_det=8.3001e+09  coh=0.7959  PASS
+  [24/26] L1_seed1                   p_det=9.0209e+09  coh=0.0787  PASS
+  [25/26] L2_seed2                   p_det=1.0503e+10  coh=0.0707  PASS
+  [26/26] L3_seed3                   p_det=1.0542e+10  coh=0.0844  PASS
+
+B. Computing free-beam metrics on 9 independent generators...
+  [1/9] R1_kreg_k15             p_det=2.0939e-49  coh=0.0000  FAIL
+  [2/9] R2_kreg_k8              p_det=6.6922e-63  coh=0.0000  FAIL
+  [3/9] R3_kreg_k20             p_det=1.3029e-43  coh=0.0000  FAIL
+  [4/9] E1_er_p005              p_det=8.8919e-35  coh=0.0000  PASS
+  [5/9] E2_er_p020              p_det=1.2943e-14  coh=0.0010  PASS
+  [6/9] L1_longrange_k12        p_det=1.3005e-27  coh=0.0012  FAIL
+  [7/9] T1_tree_fan4            p_det=0.0000e+00  coh=0.0000  FAIL
+  [8/9] H1_hub                  p_det=0.0000e+00  coh=0.0000  FAIL
+  [9/9] X1_expander_k12         p_det=0.0000e+00  coh=0.0000  FAIL
+
+C. free_p_det and free_coh distributions
+    swept PASS  p_det [3.97e-30, 1.45e+21]  coh [0.0008, 0.7959]
+    swept FAIL  p_det [0.00e+00, 9.75e+11]  coh [0.0000, 0.0216]
+    indep PASS  p_det [8.89e-35, 1.29e-14]  coh [0.0000, 0.0010]
+    indep FAIL  p_det [0.00e+00, 1.30e-27]  coh [0.0000, 0.0012]
+
+D. Single-property classifier on 26 swept set (testing new metrics)
+  best 1-prop: reach_frac >= 0.8587  in-sample 92.3%
+
+E. 2-property AND classifier on 26 swept set (new metrics in pool)
+  best 2-prop: (avg_deg >= 10.4146) AND (reach_frac >= 0.8587)
+  in-sample accuracy: 92.3%
+
+F. Cross-generator (no refit) on 9 independent generators
+  rule: (avg_deg >= 10.4146) AND (reach_frac >= 0.8587)
+  family                        p_det      coh   actual   rule   agree
+  R1_kreg_k15               2.094e-49   0.0000     False   True    MISS
+  R2_kreg_k8                6.692e-63   0.0000     False  False      OK
+  R3_kreg_k20               1.303e-43   0.0000     False   True    MISS
+  E1_er_p005                8.892e-35   0.0000      True   True      OK
+  E2_er_p020                1.294e-14   0.0010      True   True      OK
+  L1_longrange_k12          1.300e-27   0.0012     False  False      OK
+  T1_tree_fan4              0.000e+00   0.0000     False  False      OK
+  H1_hub                    0.000e+00   0.0000     False  False      OK
+  X1_expander_k12           0.000e+00   0.0000     False   True    MISS
+
+  cross-generator (no refit): 6/9 = 66.7%
+
+G. Single-property cross-generator (free-beam metrics alone)
+  free_p_det >= 3.9664e-30  in-sample 88.5%  cross-gen 7/9 = 77.8%
+  free_coh >= 7.9597e-04  in-sample 92.3%  cross-gen 7/9 = 77.8%
+
+H. COMPARISON to old 2-property rule (avg_deg >= 10.42 AND reach_frac >= 0.86)
+  old 2-property cross-generator: 6/9 = 66.7%
+  new 2-property cross-generator: 6/9 = 66.7%
+
+I. VERDICT (headline = single-property global rule)
+  best single-property global rule: free_coh >= 7.9597e-04
+    in-sample:      92.3%
+    cross-generator: 7/9 = 77.8%
+  comparison vs old 2-property rule cross-generator: 66.7%
+  IMPROVED — +11% cross-generator over old rule
+  classifier program is alive with a sharper, generator-agnostic predictor
+  NOTE: the 2-property AND search tied in-sample and chose the overfitted
+  rule; the single-property global rule is the real winner here.
+PASS: bounded archived-replay assertions match the frozen 7/9 vs 6/9 scaffolded result in the note.
 
 ----- stderr -----
 

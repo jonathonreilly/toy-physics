@@ -26,9 +26,8 @@
         "A": 75,
         "B": 34,
         "C": 169,
-        "D": 10,
-        "F": 3,
-        "unsupported_numerical_sweep_and_readout_bridge": 1
+        "D": 9,
+        "F": 3
       },
       "bias_direction_breakdown": {
         "more_strict": 2,
@@ -36,8 +35,8 @@
       },
       "criticality_counts": {
         "critical": 56,
-        "high": 4,
-        "leaf": 197,
+        "high": 3,
+        "leaf": 196,
         "medium": 35
       },
       "cross_confirmation_agreement_rate": 0.833,
@@ -55,11 +54,11 @@
       "third_pass_decisions_n": 14,
       "third_pass_overturn_rate": 0.5,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 292,
-      "verdict_changed_after_re_audit": 290,
+      "total_audits": 290,
+      "verdict_changed_after_re_audit": 285,
       "verdict_counts": {
         "audited_clean": 238,
-        "audited_conditional": 11,
+        "audited_conditional": 9,
         "audited_failed": 43
       }
     },
@@ -67,12 +66,11 @@
       "audits_with_runner_class": {
         "A": 198,
         "B": 56,
-        "C": 128,
-        "D": 6,
+        "C": 124,
+        "D": 5,
         "E": 25,
         "F": 16,
-        "G": 22,
-        "configured_numerical_proxy_to_surrogate_theorem_bridge": 1
+        "G": 22
       },
       "bias_direction_breakdown": {
         "more_lenient": 6,
@@ -81,9 +79,9 @@
       },
       "criticality_counts": {
         "critical": 261,
-        "high": 9,
-        "leaf": 137,
-        "medium": 45
+        "high": 8,
+        "leaf": 135,
+        "medium": 42
       },
       "cross_confirmation_agreement_rate": 0.846,
       "cross_confirmation_outcomes": {
@@ -100,13 +98,13 @@
       "third_pass_decisions_n": 32,
       "third_pass_overturn_rate": 0.5,
       "third_pass_overturn_rate_caveat": "Selection-biased: third auditor only runs on disputed cases. Expected value for a competent auditor is ~0.5. See script docstring.",
-      "total_audits": 452,
+      "total_audits": 446,
       "verdict_changed_after_re_audit": 57,
       "verdict_counts": {
-        "audited_clean": 186,
-        "audited_conditional": 197,
+        "audited_clean": 185,
+        "audited_conditional": 194,
         "audited_decoration": 13,
-        "audited_failed": 22,
+        "audited_failed": 20,
         "audited_numerical_match": 16,
         "audited_renaming": 18
       }
@@ -139,7 +137,7 @@
   "totals": {
     "auditor_families_observed": 3,
     "overall_agreement_rate": 0.845,
-    "total_audits_recorded": 749,
+    "total_audits_recorded": 741,
     "total_cross_confirmation_family_participations": 183,
     "total_cross_confirmation_pairs": 148,
     "total_third_pass_decisions": 46

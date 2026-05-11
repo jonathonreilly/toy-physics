@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py
-runner_sha256: 773caac6b95f7ae12db813aa7b5d71c447df9ad49ef8e30a6c5b068583b86a40
+runner_sha256: 6986648ea59c2e81a79fc9486adf917a358711996c4df75a35d6ff06226d666e
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.56
+elapsed_sec: 0.48
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -66,9 +66,9 @@ committing multi-day engineering on the L_s>=3 Wigner-Racah engine.
   CANNOT reproduce <P>(beta=6) = 0.5934 within epsilon_witness.
 
   The L_s>=3 Wigner-Racah engine path remains the next
-  exact-cube route among the tested methods. The Block 5
-  verdict is strengthened by this explicit ruling-out of orthogonal
-  closed-form attack frames.
+  exact-cube route among the tested methods. The SU(3) Wigner
+  L_s=2 PBC orientation verdict (legacy Block 5) is strengthened
+  by this explicit ruling-out of orthogonal closed-form attack frames.
 
   Method-by-method commentary:
     M1 (single-plaq char): 0.4225 — captures one plaquette
@@ -87,12 +87,16 @@ committing multi-day engineering on the L_s>=3 Wigner-Racah engine.
                             asymptotic.
 
   beta = 6 is the SU(3) crossover regime where the correlation
-  length exceeds 2 lattice spacings (so L_s=2 fails, per Block 5)
+  length exceeds 2 lattice spacings (so L_s=2 fails per the
+  SU(3) Wigner L_s=2 PBC orientation verdict, legacy Block 5)
   AND no single-plaquette / leading-perturbative method captures
   the connected multi-plaquette structure that drives <P> to
   ~ 0.59. Exact closure would need a full lattice tensor-network
   contraction route, a different audited derivation, or numerical MC.
 
+PASS: comparator-independent (M1, M2, M4, M5) closed-form table matches the bounded internal record in the note.
+
+NOTE (provenance): the MC reference value 0.5934 and the epsilon_witness target 3.03e-4 are external comparator-only inputs. The 'ruling-out at epsilon_witness' reading inherits their provenance and is not promoted as a standalone theorem.
 ==============================================================================
 SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
 ==============================================================================

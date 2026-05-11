@@ -2,6 +2,7 @@
 
 **Date:** 2026-04-09  
 **Status:** Diagnosed, not universal
+**Claim type:** bounded_theorem
 
 ## Summary
 
@@ -18,7 +19,7 @@ The bad windows move with lattice size `n`, and the same windows survive in the 
   - `n=23`: `L=12,28`
   - `n=25`: `L=14,28`
   - `n=31`: `L=16,20`
-- Classical and phase-kill columns were identical, and both retained AWAY windows. Decoherence does not remove the sign windows on this periodic architecture.
+- Classical and phase-kill columns were identical, and both kept AWAY windows. Decoherence does not remove the sign windows on this periodic architecture.
 - The flat mixing period is `pi/theta0 = 10.4719755` layers.
 - The field-shifted local angle is only slightly smaller:
   - source site: `theta_eff = 0.29995161`, period `10.473665`

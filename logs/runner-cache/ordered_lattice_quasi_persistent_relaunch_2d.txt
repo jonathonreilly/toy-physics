@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/ordered_lattice_quasi_persistent_relaunch_2d.py
-runner_sha256: 66cf672a657c365983f73cdd5a6e02d8a6b8c00d2c37cb3210920c54e842df95
+runner_sha256: 265c9d6ec5510dad1dd3f9aca61952b4d052d019ec1705581b63e858f00a9419
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.52
+elapsed_sec: 0.73
 status: ok
 ----- stdout -----
 ============================================================================================
@@ -28,14 +28,13 @@ ACTION: spent_delay
      5e-05    0.344    0.911  +0.174422  +0.115193    0.993
      1e-04    0.344    0.911  +0.242946  +0.161549    0.990
 
+PASS: bounded numerical-replay table matches the narrowed note (six rows; capture/carry/shift/relaunch/width within +/-1e-3).
 SAFE READ
-  - If capture and carry stay high and width stays near 1, the packet surrogate
-    is family-generic enough to justify a bounded quasi-persistent control.
-  - If capture or carry collapses here, the relaunch idea is fragile and probably
-    should remain a 3D-only bounded surrogate.
-  - This is still a control, not a persistent-mass theorem.
+  - This is a bounded numerical replay only. It is not a persistent-mass theorem.
+  - It is not a family-generic claim; only the one fixed harness is tested.
+  - The displayed values are pinned by the assertions above.
 
-Total runtime: 1.4s
+Total runtime: 0.6s
 
 ----- stderr -----
 

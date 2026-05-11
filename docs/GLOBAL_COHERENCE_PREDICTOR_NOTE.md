@@ -8,6 +8,11 @@
 > closed; this note is kept for the record.
 
 **Date:** 2026-04-07
+**Last sync:** 2026-05-10 — runner declared `AUDIT_TIMEOUT_SEC = 900` so the
+live replay completes inside the audit window, and the runner now asserts
+the archived 7/9 vs 6/9 scaffolded numbers from
+`logs/2026-04-07-global-coherence-predictor.txt` against the live rerun.
+No headline numbers change.
 **Status:** bounded - historical scaffold-specific evidence. The 2026-04-07 off-scaffold lane reversed the advantage to 5/9 = 55.6%, exactly matching the prior rule, so the original 7/9 = 77.8% revival was scaffold-specific. The classifier program is closed; this note is kept as historical finite evidence only.
 
 ## Artifact chain

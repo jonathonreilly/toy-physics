@@ -219,6 +219,50 @@ def main() -> None:
         "periodic architecture."
     )
 
+    # Explicit AWAY-window assertions tied to docs/CHIRAL_3PLUS1D_RECURRENCE_NOTE.md.
+    # These are the bounded-table values for theta0=0.3, strength=5e-4, offset=3,
+    # n in {15,21,23,25,31}, L in {12,14,16,18,20,28}. Any change in the sweep
+    # that perturbs these sets will trip an assert and force the note table to
+    # be re-synced.
+    expected_coherent_away = {
+        (15, 16), (15, 18), (15, 20),
+        (21, 12), (21, 28),
+        (23, 12), (23, 28),
+        (25, 14), (25, 28),
+        (31, 16), (31, 20),
+    }
+    expected_classical_away = {
+        (15, 14), (15, 16), (15, 18),
+        (21, 12), (21, 18), (21, 20),
+        (23, 12), (23, 18), (23, 20), (23, 28),
+        (25, 20), (25, 28),
+        (31, 28),
+    }
+    coherent_set = set(coherent_away)
+    classical_set = set(classical_away)
+    phase_kill_set = set(phase_kill_away)
+
+    assert coherent_set == expected_coherent_away, (
+        "coherent AWAY windows drifted from the bounded note table:\n"
+        f"  unexpected: {sorted(coherent_set - expected_coherent_away)}\n"
+        f"  missing:    {sorted(expected_coherent_away - coherent_set)}"
+    )
+    assert classical_set == expected_classical_away, (
+        "classical AWAY windows drifted from the bounded note table:\n"
+        f"  unexpected: {sorted(classical_set - expected_classical_away)}\n"
+        f"  missing:    {sorted(expected_classical_away - classical_set)}"
+    )
+    assert phase_kill_set == expected_classical_away, (
+        "phase-kill AWAY windows drifted from the bounded note table "
+        "(expected to match classical column):\n"
+        f"  unexpected: {sorted(phase_kill_set - expected_classical_away)}\n"
+        f"  missing:    {sorted(expected_classical_away - phase_kill_set)}"
+    )
+    print(
+        "PASS: coherent, classical, and phase-kill AWAY-window sets match the "
+        "bounded note table."
+    )
+
 
 if __name__ == "__main__":
     main()

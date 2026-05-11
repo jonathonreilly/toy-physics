@@ -1921,7 +1921,7 @@
       "runner": "scripts/frontier_chiral_3plus1d_coupled_coin_scan.py"
     },
     "chiral_3plus1d_mixing_period_note": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
         "A": 0,
         "B": 0,
@@ -1933,7 +1933,7 @@
       "runner": "scripts/frontier_chiral_3plus1d_decoherence_sweep.py"
     },
     "chiral_3plus1d_recurrence_note": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
         "A": 0,
         "B": 0,
@@ -1981,7 +1981,7 @@
       "runner": "scripts/frontier_chiral_split_mass_gravity.py"
     },
     "chiral_walk_synthesis_2026-04-10_addendum": {
-      "assert_count": 0,
+      "assert_count": 3,
       "counts": {
         "A": 0,
         "B": 0,
@@ -3791,6 +3791,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/distance_law_wide_continuum.py"
+    },
+    "distance_law_portability_note": {
+      "assert_count": 6,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py"
     },
     "distance_law_preserving_third_family_note": {
       "assert_count": 0,
@@ -8557,15 +8569,15 @@
       "runner": "scripts/global_coherence_off_scaffold.py"
     },
     "global_coherence_predictor_note": {
-      "assert_count": 0,
+      "assert_count": 6,
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "runner": "scripts/global_coherence_predictor.py"
     },
     "gluon_tree_level_masslessness_theorem_note_2026-05-02": {
@@ -9889,27 +9901,27 @@
       "runner": "scripts/frontier_industrial_sdp_bootstrap_block02.py"
     },
     "inverse_problem_graph_requirements_note": {
-      "assert_count": 0,
+      "assert_count": 4,
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/inverse_problem_graph_requirements.py"
     },
     "inverse_problem_note": {
-      "assert_count": 0,
+      "assert_count": 4,
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/inverse_problem_graph_requirements.py"
     },
     "irregular_directional_observable_note_2026-04-11": {
@@ -12601,15 +12613,15 @@
       "runner": "scripts/frontier_mass_mixing_disjointness_theorem.py"
     },
     "matched_2d_4d_decoherence_note": {
-      "assert_count": 0,
+      "assert_count": 9,
       "counts": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "runner": "scripts/matched_2d_4d_decoherence.py"
     },
     "matter_inertial_closure_note": {
@@ -14137,15 +14149,15 @@
       "runner": "scripts/ordered_lattice_packet_reidentification.py"
     },
     "ordered_lattice_quasi_persistent_relaunch_2d_note": {
-      "assert_count": 0,
+      "assert_count": 5,
       "counts": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "runner": "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py"
     },
     "ordered_lattice_quasi_persistent_relaunch_note": {
@@ -18613,12 +18625,12 @@
       "runner": "scripts/frontier_su3_wigner_l3_treewidth_2026_05_04.py"
     },
     "su3_wilson_closed_form_fanout_theorem_note_2026-05-04": {
-      "assert_count": 1,
+      "assert_count": 6,
       "counts": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 39,
-        "D": 1
+        "D": 5
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -21783,6 +21795,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/DISTANCE_LAW_PORTABILITY_COMPARE.py": {
+      "assert_count": 6,
+      "claims": [
+        "distance_law_portability_note"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/DISTANCE_LAW_PRESERVING_THIRD_FAMILY.py": {
@@ -26811,7 +26838,7 @@
       "exists": true
     },
     "scripts/frontier_chiral_3plus1d_decoherence_sweep.py": {
-      "assert_count": 0,
+      "assert_count": 3,
       "claims": [
         "chiral_3plus1d_mixing_period_note",
         "chiral_3plus1d_recurrence_note",
@@ -39622,15 +39649,15 @@
       "exists": true
     },
     "scripts/frontier_su3_wilson_closed_form_fanout_2026_05_04.py": {
-      "assert_count": 1,
+      "assert_count": 6,
       "claims": [
         "su3_wilson_closed_form_fanout_theorem_note_2026-05-04"
       ],
       "counts": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 39,
-        "D": 1
+        "D": 5
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -42710,18 +42737,18 @@
       "exists": true
     },
     "scripts/global_coherence_predictor.py": {
-      "assert_count": 0,
+      "assert_count": 6,
       "claims": [
         "global_coherence_predictor_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 1
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/gluon_tree_level_massless_check.py": {
@@ -43027,19 +43054,19 @@
       "exists": false
     },
     "scripts/inverse_problem_graph_requirements.py": {
-      "assert_count": 0,
+      "assert_count": 4,
       "claims": [
         "inverse_problem_graph_requirements_note",
         "inverse_problem_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 1,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/kubo_continuum_limit.py": {
@@ -43977,18 +44004,18 @@
       "exists": true
     },
     "scripts/matched_2d_4d_decoherence.py": {
-      "assert_count": 0,
+      "assert_count": 9,
       "claims": [
         "matched_2d_4d_decoherence_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 8,
         "B": 0,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/matter_inertial_closure.py": {
@@ -44551,18 +44578,18 @@
       "exists": true
     },
     "scripts/ordered_lattice_quasi_persistent_relaunch_2d.py": {
-      "assert_count": 0,
+      "assert_count": 5,
       "claims": [
         "ordered_lattice_quasi_persistent_relaunch_2d_note"
       ],
       "counts": {
-        "A": 0,
+        "A": 5,
         "B": 0,
         "C": 0,
-        "D": 0
+        "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": null,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/packet_memory.py": {
@@ -46963,16 +46990,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 195,
+    "decoration_candidates": 198,
     "dominant_class_distribution": {
-      "A": 145,
+      "A": 150,
       "B": 172,
       "C": 680,
       "D": 263,
-      "none": 419
+      "none": 415
     },
-    "runners_classified": 1679,
+    "runners_classified": 1680,
     "runners_with_C": 859,
-    "runners_with_D": 477
+    "runners_with_D": 479
   }
 }

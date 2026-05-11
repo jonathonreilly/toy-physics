@@ -326,6 +326,42 @@ def main() -> None:
         print("  no family produced a stable power-law fit")
         print("  the distance-tail portability claim is not retained on this sweep")
 
+    # Bounded-table assertions tied to docs/DISTANCE_LAW_PORTABILITY_NOTE.md.
+    # Tolerance: 0.01 absolute on alpha and R^2 (display precision).
+    by_label = {r["label"]: r for r in rows}
+    expected = {
+        # label              alpha    R^2     toward
+        "alt-connectivity":  (-0.952, 0.912, 0),
+        "third-family":      (-2.161, 0.961, 0),
+        "fourth-family":     (-1.190, 0.898, 0),
+        "fifth-family":      (-0.313, 0.876, 5),
+    }
+    tol = 0.01
+    for label, (alpha_e, r2_e, toward_e) in expected.items():
+        r = by_label[label]
+        assert abs(r["alpha"] - alpha_e) <= tol, (
+            f"{label} alpha drift: got {r['alpha']:.3f}, expected {alpha_e}"
+        )
+        assert abs(r["r2"] - r2_e) <= tol, (
+            f"{label} R^2 drift: got {r['r2']:.3f}, expected {r2_e}"
+        )
+        assert int(r["toward"]) == toward_e, (
+            f"{label} TOWARD-count drift: got {r['toward']}, expected {toward_e}"
+        )
+        assert int(r["total"]) == 5, f"{label} sample count != 5"
+    boundary = sorted(r["label"] for r in valid if not r["all_toward"])
+    assert boundary == ["alt-connectivity", "fourth-family", "third-family"], (
+        f"boundary-family set drift: got {boundary}"
+    )
+    all_toward_labels = [r["label"] for r in valid if r["all_toward"]]
+    assert all_toward_labels == ["fifth-family"], (
+        f"all-TOWARD family set drift: got {all_toward_labels}"
+    )
+    print(
+        "PASS: bounded distance-law portability table matches the note "
+        "(alpha and R^2 within 0.01; TOWARD counts and boundary family list pinned)."
+    )
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

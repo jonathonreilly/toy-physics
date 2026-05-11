@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/inverse_problem_graph_requirements.py
-runner_sha256: 4d21ca9830414a82eae49cc2ef11d11688071b446fd35676fd56f455e06fe000
+runner_sha256: 19e6c762b08527cff0814901e3bccbccd4bc647f9573b772f72be06bca740f3c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 19.57
+elapsed_sec: 6.97
 status: ok
 ----- stdout -----
 ==================================================================================================
@@ -32,8 +32,9 @@ SAFE READ
   - Born range: 3.90e-16 to 2.35e-15
   - k=0 range: +0.000000e+00 to +0.000000e+00
   - no-field range: +0.000000e+00 to +0.000000e+00
+PASS: bounded inverse-problem table matches the narrowed note (Born clean on all five variants; TOWARD on baseline/asym/jitter/sparse; AWAY on heavy_delete_70; controls exactly zero).
 
-Total time: 19s
+Total time: 7s
 
 ----- stderr -----
 
