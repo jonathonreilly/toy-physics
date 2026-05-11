@@ -65,12 +65,12 @@
     "decoration_under_moving_source_retarded_portability_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 113,
-    "open_gate": 13,
+    "open_gate": 14,
     "retained": 97,
     "retained_bounded": 279,
     "retained_no_go": 132,
     "retained_pending_chain": 3,
-    "unaudited": 1200
+    "unaudited": 1199
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

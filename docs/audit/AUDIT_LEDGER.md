@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 132 |
 | **retained_bounded** | 279 |
 | _retained_pending_chain_ | 3 |
-| open_gate | 13 |
-| unaudited | 1200 |
+| open_gate | 14 |
+| unaudited | 1199 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 470 |
+| `audited_clean` | 471 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1313 |
+| `unaudited` | 1312 |
 
 | claim_type | count |
 |---|---:|
@@ -392,6 +392,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_deflection_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `lensing_k_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lh_traceless_eigenvalue_ratio_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `linear_response_derivation_note` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | C | - |
 | `linear_response_true_kubo_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `literature_backmatch_live_scan_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
 | `local_zsym_predictor_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
@@ -6948,6 +6949,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The scoped claim closes as elementary algebra and integer gcd reduction under the assumptions stated in the note. No physical bridge to SM hypercharge, no derivation of n_color = 3, and no derivation of the LH state count is needed because those are explicitly excluded from this narrow theorem.
 - **rationale:** The theorem is narrow but correctly bounded: it assumes the trace equation, positive integer n_color, and the named conventions before deriving only algebraic consequences. The proof and runner agree, and the parity denominator rule follows from gcd(n_color + 1, 2 n_color) = gcd(n_color + 1, 2), with the same result for Q(d_L). This is not an audit of the broader physical identification or of why n_color = 3; those are outside the stated claim boundary.
 - **auditor confidence:** high
+
+### `linear_response_derivation_note`
+
+- **Note:** [`LINEAR_RESPONSE_DERIVATION_NOTE.md`](../../docs/LINEAR_RESPONSE_DERIVATION_NOTE.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open-gate record for the detector-only first-moment linear-response heuristic: the frozen completed log supports the reported 44-family heuristic metrics (r=0.5605 overall, r=0.7248 off-scaffold, 36/44 sign agreement), but the note does not audit this heuristic as the literal first-order Kubo theorem or as a closed compact-principle derivation. The retained-bounded true-Kubo sibling is a separate dependency and closure path.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The heuristic is directionally correct and generalizes off-scaffold, but the literal first-order Kubo calculation is the subject of a separate lane.  _(class `C`)_
+- **chain closes:** True — As an open gate, the row closes because it accurately preserves the heuristic metrics and their boundary: detector reweighting is not the literal <z*deltaH>_0 term and remains a derivation-adjacent lane. The current live runner did not finish within the practical audit budget, but the source packet includes a completed frozen log; timeout is not used as a non-clean verdict.
+- **rationale:** The safe claim is not a retained positive theorem; it is an open-gate heuristic record with explicit non-closure language and a named true-Kubo closure lane. The completed frozen log supports the reported correlation and sign-agreement numbers, while the source note itself excludes the tuned threshold number from no-fit evidence and states that path-phase terms are missing from the heuristic. Residual risk is operational reproducibility of the slow runner; that does not change the open-gate boundary because the row is not being promoted to a theorem.
+- **auditor confidence:** medium
 
 ### `linear_response_true_kubo_note`
 
