@@ -22,11 +22,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 127 |
 | **retained_bounded** | 240 |
 | open_gate | 13 |
-| unaudited | 1115 |
+| unaudited | 1114 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 258 |
+| ~~audited_conditional~~ | 259 |
 | ~~audited_failed~~ | 26 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -40,12 +40,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 408 |
-| `audited_conditional` | 258 |
+| `audited_conditional` | 259 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1213 |
+| `unaudited` | 1212 |
 
 | claim_type | count |
 |---|---:|
@@ -535,6 +535,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_reduction_note` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `beyond_lattice_qcd_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `bh_entropy_rt_ratio_widom_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `born_lane_comparison_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `bound_state_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `causal_field_portability_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -1511,6 +1512,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The linearity of the graph path-sum is asserted to force I_3 = 0 as a mathematical identity, making the Born rule a theorem rather than a postulate, while the same graph structure is asserted to supply gravity through S = L(1-f).  _(class `A`)_
 - **chain closes:** False — The runner verifies finite algebraic/numerical behavior of the chosen model, but it computes detector probabilities as np.abs(psi)**2 and therefore assumes the Born readout it claims to derive. No one-hop authority or theorem closes the graph-to-gravity physical bridge or the claim that lattice QCD lacks any analogous construction.
 - **rationale:** Issue: the note promotes a finite toy-model computation and an I_3 identity into a Born-rule derivation and a lattice-QCD no-analog claim. Why this blocks: the Sorkin test uses P = |psi|^2 in the runner, and the graph-gravity and lattice-QCD comparison bridges are not derived or supported by any cited authority. Repair target: provide a retained bridge theorem deriving the probability/readout rule without imposing |psi|^2, plus a retained authority or theorem for the lattice-QCD comparison. Claim boundary until fixed: the runner supports only that the specified numerical model changes its propagated profile when the Poisson field is included and that its Born-probability three-slit calculation has negligible I_3.
+- **auditor confidence:** high
+
+### `bh_entropy_rt_ratio_widom_no_go_note`
+
+- **Note:** [`BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](../../docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go for the intrinsic OBC half-filled nearest-neighbor square-lattice free-fermion carrier with straight cut and the C-7 thresholded transfer-rank readout, asserting the 2D RT ratio asymptote is 1/6 rather than 1/4.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-019e149d-4b40-70d3-a32b-9c0ad5ebfad1`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Combining Widom-Gioev-Klich with the diamond Fermi-surface integral and the asserted chi_eff(L)=L readout gives r(L)=S_ent(L)/(L ln chi_eff(L))->c_Widom(2D)=1/6, not 1/4.  _(class `C`)_
+- **chain closes:** False — The Widom entropy coefficient and the 2D diamond integral close from the packet. The denominator bridge does not: B-3 asserts the thresholded cross-layer singular-value count chi_eff(L)=L+o(L) from area-law intuition and finite-L numerics, but no theorem in the packet proves this C-7 readout asymptotic.
+- **rationale:** Issue: the non-standard C-7 transfer-rank readout is load-bearing and is not proven asymptotically. Why this blocks: the claimed limit of r(L) depends on ln chi_eff(L); a different polynomial exponent in chi_eff would change the coefficient and the runner only verifies finite sizes through L=64. Repair target: add an analytic derivation or cited theorem for chi_eff(L)=L(1+o(1)) under the stated 10^-6 relative singular-value threshold on the OBC carrier. Claim boundary until fixed: the packet supports the Widom entropy coefficient 1/6 and finite-L evidence against 1/4, but not retained-grade closure of the exact C-7 RT-ratio no-go.
 - **auditor confidence:** high
 
 ### `block_gaussian_schur_marginalization_narrow_theorem_note_2026-05-02`
