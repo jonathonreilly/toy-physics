@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 731,
+    "critical": 730,
     "high": 33,
     "leaf": 265,
     "medium": 144
@@ -6222,27 +6222,6 @@
       "ready": true,
       "runner_path": "scripts/complex_action_harness.py",
       "transitive_descendants": 448
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "judicial_review_irresolvable",
-      "claim_id": "gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17",
-      "claim_scope": "Audited the restricted claim that the stated structural conditions alone do not force a unique beta=6 spatial-environment transfer/boundary pair or unique induced three-sample PF data.",
-      "claim_type": "no_go",
-      "claim_type_provenance": "audited_pending_cross_confirmation_after_criticality_bump",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "disagreement_irresolvable",
-      "deps": [],
-      "direct_in_degree": 2,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.781,
-      "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_UNDERDETERMINATION_NOTE_2026-04-17.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_three_sample_environment_evaluator_route_2026_04_17.py",
-      "transitive_descendants": 439
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -37837,6 +37816,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 19,
-  "total_pending": 1173
+  "ready_count": 18,
+  "total_pending": 1172
 }
