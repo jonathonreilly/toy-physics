@@ -2784,6 +2784,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_closure_t2_gnewton_reaudit_2026_05_10_t2gnewton.py"
     },
+    "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_closure_t2_m1m2_distinguisher_2026_05_10_t2m1m2.py"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "assert_count": 1,
       "counts": {
@@ -23107,6 +23119,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_closure_t2_m1m2_distinguisher_2026_05_10_t2m1m2.py": {
+      "assert_count": 1,
+      "claims": [
+        "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 12
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_exact_tier_ewitness_2026_05_07_ewitness.py": {
@@ -45510,11 +45537,11 @@
       "A": 124,
       "B": 169,
       "C": 659,
-      "D": 253,
+      "D": 254,
       "none": 420
     },
-    "runners_classified": 1625,
+    "runners_classified": 1626,
     "runners_with_C": 828,
-    "runners_with_D": 452
+    "runners_with_D": 453
   }
 }

@@ -38730,6 +38730,17 @@
       "runner_path": "scripts/cl3_closure_t2_gnewton_reaudit_2026_05_10_t2gnewton.py",
       "title": "T2 G_Newton Re-Audit \u2014 Skeleton-Selection + Born-as-Source Hostile Review"
     },
+    "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2": {
+      "claim_id": "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "77d658bd9c91f3d841eccf05a834102e37884eb1967857377fdd888123082439",
+      "path": "docs/CLOSURE_T2_M1_M2_DISTINGUISHER_NOTE_2026-05-10_t2m1m2.md",
+      "runner_path": "scripts/cl3_closure_t2_m1m2_distinguisher_2026_05_10_t2m1m2.py",
+      "title": "M1/M2 BAE Measure Distinguishing Observable Bounded Theorem"
+    },
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09": {
       "claim_id": "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
       "claim_type_author_hint": null,
@@ -66747,6 +66758,7 @@
     "claude_complex_action_grown_companion_note",
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
     "clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10",
+    "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2",
     "cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09",
     "complex_action_note",
     "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
@@ -67381,7 +67393,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 264,
+      "bounded_theorem": 265,
       "decoration": 1,
       "meta": 59,
       "no_go": 28,
@@ -67390,7 +67402,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 746,
+      "bounded_theorem": 747,
       "decoration": 1,
       "meta": 59,
       "no_go": 135,
@@ -67399,9 +67411,9 @@
       "positive_theorem": 614
     },
     "edge_count": 8377,
-    "leaf_count": 575,
-    "node_count": 2124,
-    "root_count": 798,
-    "runners_with_path": 1737
+    "leaf_count": 576,
+    "node_count": 2125,
+    "root_count": 799,
+    "runners_with_path": 1738
   }
 }

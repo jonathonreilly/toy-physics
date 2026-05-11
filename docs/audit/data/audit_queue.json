@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 678,
     "high": 27,
-    "leaf": 244,
+    "leaf": 245,
     "medium": 160
   },
   "cycle_break_target_count": 253,
@@ -30395,6 +30395,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/CLOSURE_T2_M1_M2_DISTINGUISHER_NOTE_2026-05-10_t2m1m2.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/cl3_closure_t2_m1m2_distinguisher_2026_05_10_t2m1m2.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -36970,6 +36991,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 10,
-  "total_pending": 1109
+  "ready_count": 11,
+  "total_pending": 1110
 }
