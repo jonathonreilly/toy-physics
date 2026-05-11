@@ -20,9 +20,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 75 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 241 |
+| **retained_bounded** | 242 |
 | open_gate | 13 |
-| unaudited | 1113 |
+| unaudited | 1112 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 412 |
+| `audited_clean` | 413 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1211 |
+| `unaudited` | 1210 |
 
 | claim_type | count |
 |---|---:|
@@ -161,6 +161,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
+| `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_battery_scaled_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `cycle_break_frontier_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2576,6 +2577,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within that finite scoped sweep, the runner source computes the instantaneous and source-driven fields, zero-source reduction, sign counts, mean shifts, and log-log exponents, and the stdout matches the source note. The result does not establish any broader no-go for other coupled-field architectures, families, gain rules, or source laws.
 - **rationale:** The note is clean only as a bounded computational no-go. The runner does not hard-code the reported table; it constructs the fields over the generated families and computes the reduction check, sign survival, and fitted exponents, with no cited upstream dependency needed for the stated finite result. The source note accurately reports the runner output and keeps the safe conclusion to exact zero-source reduction, sign survival on sampled rows, and failure of clean linear scaling for this minimal architecture. Residual risk is scope control: it must not be cited as excluding unsampled architectures, parameters, DAG families, or a separately derived physical mass observable.
 - **auditor confidence:** medium
+
+### `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited claim is the conditional algebraic implication that abstract real anti-Hermitian D with C, P, T satisfying the stated premise identities has Theta D Theta^{-1} = D, the stated Hermitian-lift commutator, and scalar Theta^2 under the stated C/P commutation cases.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14b1-c11b-71a3-9c8c-849e6d13f820`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given C D C = -D, P D P = -D, and T D T = D, Theta D Theta^{-1} = C P (T D T) P C = C P D P C = C(-D)C = D.  _(class `A`)_
+- **chain closes:** True — Inside the explicit bounded scope, the result follows by direct algebra from the three premise identities and the real involutory/operator-type assumptions. The note explicitly excludes deriving the staggered-framework premises, physical Hamiltonian bridge, SME extraction, and continuum CPT claims.
+- **rationale:** The scoped theorem is a conditional algebraic identity, not a physical comparator or bridge claim. The proof closes from the stated assumptions, and the runner checks exact symbolic instances plus the substitution chain without importing external dependencies. The framework-specific premise derivations remain outside this claim boundary, so they are not required for clean status of the bounded theorem.
+- **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
 
