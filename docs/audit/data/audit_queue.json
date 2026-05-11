@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 684,
     "high": 27,
-    "leaf": 255,
+    "leaf": 254,
     "medium": 157
   },
   "cycle_break_target_count": 270,
@@ -30738,27 +30738,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "cl3_complexification_split_narrow_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 2.085,
-      "note_path": "docs/CL3_COMPLEXIFICATION_SPLIT_NARROW_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/audit_companion_cl3_complexification_split_exact_2026_05_10.py",
-      "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -30798,6 +30777,29 @@
       "queue_reason": "unaudited",
       "ready": true,
       "runner_path": "scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py",
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "positive_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "direct_in_degree": 1,
+      "effective_status": "unaudited",
+      "load_bearing_score": 1.5,
+      "note_path": "docs/CL3_FAITHFUL_IRREP_DIM_TWO_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py",
       "transitive_descendants": 1
     },
     {
@@ -31857,29 +31859,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/causal_distance_tail_probe.py",
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 1.5,
-      "note_path": "docs/CL3_FAITHFUL_IRREP_DIM_TWO_NARROW_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py",
       "transitive_descendants": 1
     },
     {
@@ -37506,5 +37485,5 @@
     }
   ],
   "ready_count": 26,
-  "total_pending": 1123
+  "total_pending": 1122
 }

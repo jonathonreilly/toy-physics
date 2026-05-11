@@ -18,11 +18,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 72 |
+| **retained** | 73 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 240 |
 | open_gate | 13 |
-| unaudited | 1117 |
+| unaudited | 1116 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -39,13 +39,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 408 |
+| `audited_clean` | 409 |
 | `audited_conditional` | 260 |
 | `audited_decoration` | 11 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1215 |
+| `unaudited` | 1214 |
 
 | claim_type | count |
 |---|---:|
@@ -154,6 +154,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `cl3_complexification_split_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2364,6 +2365,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** SU(3) is embedded as Gell-Mann generators on the 3D symmetric base subspace, giving the Fierz channel-count fraction R_conn = (N_c^2 - 1) / N_c^2 = 8/9 for N_c = 3.  _(class `A`)_
 - **chain closes:** True — Within the narrowed algebraic scope, the construction closes: a chosen 3D carrier supports the standard SU(3) generators and the Fierz identity gives the adjoint fraction 8/9. The physical identification of this carrier with SM color remains outside the audited claim.
 - **rationale:** The source note has narrowed the claim to an algebraic embedding/channel-count theorem and explicitly removes the physical SM color bridge from the load-bearing scope. The runner source constructs the symmetric/antisymmetric base split, embeds standard Gell-Mann generators, checks commutators, trace normalization, and the Fierz identity rather than merely printing constants. The remaining assertions about physical color and EW correction are stated as conditional/deferred, so they do not block the bounded algebraic theorem.
+- **auditor confidence:** high
+
+### `cl3_complexification_split_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CL3_COMPLEXIFICATION_SPLIT_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CL3_COMPLEXIFICATION_SPLIT_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Pure algebraic audit of Cl(3,0): omega^2 = -1 and centrality, real-algebra isomorphism Cl(3,0) ~= M_2(C), complexified split into two M_2(C) summands, and two-dimensional complex irreducible readout, with no physical lattice or Hilbert-space bridge claimed.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14a6-39f9-7350-93b2-eea65ad3d445`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** In Cl(3,0) tensor_R C, e_+ = (1 - i omega)/2 and e_- = (1 + i omega)/2 are complete central orthogonal idempotents, giving Cl(3,0) tensor_R C isomorphic to M_2(C) direct-sum M_2(C).  _(class `A`)_
+- **chain closes:** True — The chain closes from the Clifford relations plus admitted finite-dimensional real and complex representation theory. The Pauli realization and central-idempotent split establish the algebra decomposition, and Artin-Wedderburn/Schur gives the two-dimensional irreducible modules.
+- **rationale:** The note remains inside abstract Clifford algebra and standard finite-dimensional representation theory. K1-K4 are algebraic consequences of the defining relations, the Pauli realisation, the central idempotent split, and the standard module theory of M_2(C). The runner provides exact symbolic A-class checks and does not import a physical bridge, comparator, tuned scale, or sector chosen to match an observation.
 - **auditor confidence:** high
 
 ### `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02`
