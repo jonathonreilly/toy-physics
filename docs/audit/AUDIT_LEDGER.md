@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 271 |
+| **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1230 |
+| unaudited | 1229 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 445 |
+| `audited_clean` | 446 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1343 |
+| `unaudited` | 1342 |
 
 | claim_type | count |
 |---|---:|
@@ -567,6 +567,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wave_amplification_near_horizon_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `wave_direct_dm_family_scout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wave_equation_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_equation_self_field_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `wave_radiation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5 | C | - |
@@ -10383,6 +10384,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the retained exact-lattice harness, the oscillating-source/static-source ratio stays close to 1x, with largest ratio 1.012 at alpha = 0.50.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces every frozen alpha row and the best-ratio summary. The source note limits the conclusion to this exact-lattice absorber sweep and explicitly rejects the broader near-horizon amplification headline.
 - **rationale:** The claim is not a broad physical amplification theorem; it is a bounded negative result on one exact-lattice replay. The runner computes the static and oscillating retarded-source deflections for the five stated absorber strengths and reproduces the frozen table, including the largest ratio of 1.012 at alpha = 0.50. Because the note keeps the conclusion within that harness and reports the raw denominator, the chain closes on its own terms.
+- **auditor confidence:** high
+
+### `wave_direct_dm_family_scout_note`
+
+- **Note:** [`WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md`](../../docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Exploratory one-seed, one-strength direct-dM family scout: for Fam1/Fam2/Fam3 at H=0.5 and H=0.35 with seed=0 and s=0.004, R_hist is negative in all six rows with values -43.59%, -42.36%, -42.33%, -37.73%, -44.29%, and -41.82%; no portability, multi-seed, null-stack, weak-sweep, or continuum-stability claim is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Holding seed=0, strength=0.004, H=0.5/0.35, and the matched direct-dM schedule fixed, all Fam1/Fam2/Fam3 rows keep the same negative R_hist sign and material magnitude.  _(class `C`)_
+- **chain closes:** True — The exact scoped runner invocation constructs the three retained families, two H values, and matched early/late schedules, then reproduces the six quoted R_hist and delta_hist rows. The chain closes only for the explicitly one-seed, one-strength scout boundary.
+- **rationale:** The exact all-family scout command reproduces the frozen result table: every family/H row has negative R_hist and a material magnitude in the stated -37.73% to -44.29% band. The note explicitly rejects portability, multi-seed, full control-stack, and continuum-stability interpretations, so the retained claim is only the bounded scout table. Residual risk is limited to future runner drift or downstream citations treating this scout as the full portability batch.
 - **auditor confidence:** high
 
 ### `wave_equation_gravity_note`
