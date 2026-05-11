@@ -2748,6 +2748,18 @@
       "dominant_class": "B",
       "runner": "scripts/audit_companion_clifford_volume_chirality_even_dimension_exact.py"
     },
+    "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb": {
+      "assert_count": 2,
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/cl3_closure_c_bb_2026_05_10_cBB.py"
+    },
     "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction": {
       "assert_count": 1,
       "counts": {
@@ -23365,6 +23377,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_closure_c_bb_2026_05_10_cBB.py": {
+      "assert_count": 2,
+      "claims": [
+        "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb"
+      ],
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py": {
@@ -46139,15 +46166,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 184,
+    "decoration_candidates": 185,
     "dominant_class_distribution": {
-      "A": 132,
+      "A": 133,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1648,
+    "runners_classified": 1649,
     "runners_with_C": 839,
     "runners_with_D": 462
   }

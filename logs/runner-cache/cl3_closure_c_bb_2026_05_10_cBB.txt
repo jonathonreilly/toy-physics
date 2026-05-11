@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/cl3_closure_c_bb_2026_05_10_cBB.py
+runner_sha256: 4520bf1794ec56fc2a149b96fe0b97292eb51dd78a04a2ce3bb36cee44b536d2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Canonical mass term is affine in the scalar mass parameter
+----------------------------------------------------------------------------------------
+  [PASS (A)] d/dm of the canonical mass term is the density operator  (d(m*n)/dm=n)
+  [PASS (A)] all higher m-derivatives vanish for the canonical mass term  (d2(m*n)/dm2=0)
+  [PASS (A)] local source equals m*rho_grav at each site  (rho_mass=[5/14, 5/21, 5/42])
+  [PASS (A)] integrated source equals m for a normalized one-particle density  (sum=5/7)
+  [PASS (A)] homogeneity: rho_mass(alpha*m) = alpha*rho_mass(m)  (alpha=11/5)
+
+----------------------------------------------------------------------------------------
+Independent species add linearly
+----------------------------------------------------------------------------------------
+  [PASS (A)] distinct species source is sum_i m_i*rho_i(x)  (combined=[1/5, 68/165, 14/33])
+  [PASS (A)] same-profile species reduce to M*rho with M=sum_i m_i  (M=57/55)
+  [PASS (A)] different profiles are not collapsed to one common density by this lemma  (linear superposition is the scoped statement)
+
+----------------------------------------------------------------------------------------
+Nonlinear replacements fail the canonical linear-source gate
+----------------------------------------------------------------------------------------
+  [PASS (A)] standard nonlinear replacements fail homogeneity at the test point  (m^2, sqrt(m), exp(m), 1/m)
+  [PASS (A)] the homogeneous additive scalar family is q*m  (q is a convention/normalization coefficient)
+
+========================================================================================
+  TOTAL: PASS=10, FAIL=0
+========================================================================================
+
+----- stderr -----
+

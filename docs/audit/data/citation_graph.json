@@ -4341,6 +4341,14 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb",
+      "to": "axiom_first_lattice_noether_theorem_note_2026-04-29"
+    },
+    {
+      "from": "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb",
+      "to": "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+    },
+    {
       "from": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
       "to": "closure_t2_gnewton_reaudit_note_2026-05-10_t2gnewton"
     },
@@ -38926,6 +38934,20 @@
       "runner_path": "scripts/audit_companion_clifford_volume_chirality_even_dimension_exact.py",
       "title": "Clifford Volume-Element Chirality Forces Even Total Dimension Narrow Theorem"
     },
+    "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb": {
+      "claim_id": "closure_c_bb_canonical_mass_coupling_note_2026-05-10_cbb",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "axiom_first_lattice_noether_theorem_note_2026-04-29",
+        "g_newton_born_as_source_positive_theorem_note_2026-05-10_gnewtong2"
+      ],
+      "note_hash": "86a2682a2a105e0e4d4ec6c93eb0fb2c3e5c35c7702cd58300b0eab23e3e014d",
+      "path": "docs/CLOSURE_C_BB_CANONICAL_MASS_COUPLING_NOTE_2026-05-10_cBB.md",
+      "runner_path": "scripts/cl3_closure_c_bb_2026_05_10_cBB.py",
+      "title": "Canonical Mass Coupling Linearity - Bounded Support"
+    },
     "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction": {
       "claim_id": "closure_c_bb_f2_1_correction_note_2026-05-10_cbb_correction",
       "claim_type_author_hint": "open_gate",
@@ -67994,7 +68016,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 270,
+      "bounded_theorem": 271,
       "decoration": 1,
       "meta": 60,
       "no_go": 31,
@@ -68003,7 +68025,7 @@
       "positive_theorem": 126
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 752,
+      "bounded_theorem": 753,
       "decoration": 1,
       "meta": 60,
       "no_go": 138,
@@ -68011,10 +68033,10 @@
       "open_gate": 121,
       "positive_theorem": 625
     },
-    "edge_count": 8442,
-    "leaf_count": 593,
-    "node_count": 2148,
+    "edge_count": 8444,
+    "leaf_count": 594,
+    "node_count": 2149,
     "root_count": 813,
-    "runners_with_path": 1761
+    "runners_with_path": 1762
   }
 }
