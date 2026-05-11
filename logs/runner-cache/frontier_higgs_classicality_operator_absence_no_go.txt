@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_higgs_classicality_operator_absence_no_go.py
+runner_sha256: 3a956944605d3463090332009a0d97b4633168dbc83f6e5126d56690e81097f5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+Higgs classicality operator-absence no-go
+
+========================================================================================
+Dependency packet exists
+========================================================================================
+[PASS (A)] dependency source present: docs/MINIMAL_AXIOMS_2026-05-03.md
+[PASS (A)] dependency source present: docs/G_BARE_DERIVATION_NOTE.md
+[PASS (A)] dependency source present: docs/HIGGS_MASS_DERIVED_NOTE.md
+[PASS (A)] dependency source present: docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
+
+========================================================================================
+Operator absence is only a lattice-bare statement
+========================================================================================
+[PASS (A)] stipulated action packet has no fundamental scalar
+[PASS (A)] stipulated action packet has no fundamental lambda phi^4 term
+[PASS (A)] coefficient of absent fundamental quartic can be represented as lambda_bare=0
+
+========================================================================================
+Matching algebra
+========================================================================================
+[PASS (A)] if delta_lambda=0, lambda_MSbar=0 follows (lambda_MSbar=0)
+[PASS (A)] countermodel: lambda_bare=0 with delta_lambda!=0 gives lambda_MSbar!=0 (lambda_MSbar=1/1000)
+[PASS (A)] operator absence alone does not force delta_lambda=0 (matching term is independent of the absent operator coefficient)
+
+========================================================================================
+No-go conclusion
+========================================================================================
+[PASS (A)] no-go: lambda_bare phi^4 absence alone does not imply lambda_MSbar(M_Pl)=0 (a separate matching theorem is required)
+[PASS (A)] repair target is explicit matching, not a new axiom (prove or bound delta_lambda in the chosen continuum convention)
+
+========================================================================================
+TOTAL: PASS=12, FAIL=0
+========================================================================================
+
+----- stderr -----
+

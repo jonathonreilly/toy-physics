@@ -10093,6 +10093,22 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10",
+      "to": "g_bare_derivation_note"
+    },
+    {
+      "from": "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10",
+      "to": "higgs_mass_derived_note"
+    },
+    {
+      "from": "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
       "from": "higgs_lambda_m_pl_bounded_interval_theorem_note_2026-05-10",
       "to": "higgs_mass_retention_analysis_note_2026-04-18"
     },
@@ -47064,6 +47080,22 @@
       "runner_path": "scripts/frontier_higgs_channel_effective_ntaste_boundary.py",
       "title": "Higgs-Channel Effective N_taste Boundary Bounded Note"
     },
+    "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10": {
+      "claim_id": "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "g_bare_derivation_note",
+        "higgs_mass_derived_note",
+        "yt_ward_identity_derivation_theorem"
+      ],
+      "note_hash": "7b33e381f3dbee069740b9d90f67c3ae8b0d0efb9b665b0e7acacdb475df332e",
+      "path": "docs/HIGGS_CLASSICALITY_BOUNDARY_OPERATOR_ABSENCE_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_higgs_classicality_operator_absence_no_go.py",
+      "title": "Higgs Classicality Boundary Operator-Absence No-Go"
+    },
     "higgs_from_lattice_note": {
       "claim_id": "higgs_from_lattice_note",
       "claim_type_author_hint": null,
@@ -68230,7 +68262,7 @@
       "bounded_theorem": 275,
       "decoration": 1,
       "meta": 61,
-      "no_go": 31,
+      "no_go": 32,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68239,15 +68271,15 @@
       "bounded_theorem": 757,
       "decoration": 1,
       "meta": 61,
-      "no_go": 138,
+      "no_go": 139,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8455,
-    "leaf_count": 606,
-    "node_count": 2162,
+    "edge_count": 8459,
+    "leaf_count": 607,
+    "node_count": 2163,
     "root_count": 822,
-    "runners_with_path": 1775
+    "runners_with_path": 1776
   }
 }

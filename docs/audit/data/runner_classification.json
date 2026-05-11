@@ -9300,6 +9300,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_higgs_channel_effective_ntaste_boundary.py"
     },
+    "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_higgs_classicality_operator_absence_no_go.py"
+    },
     "higgs_from_lattice_note": {
       "assert_count": 0,
       "counts": {
@@ -32965,6 +32977,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_higgs_classicality_operator_absence_no_go.py": {
+      "assert_count": 2,
+      "claims": [
+        "higgs_classicality_boundary_operator_absence_no_go_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_higgs_dressed_propagator_v1.py": {
       "assert_count": 0,
       "claims": [
@@ -46517,15 +46544,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 193,
+    "decoration_candidates": 194,
     "dominant_class_distribution": {
-      "A": 141,
+      "A": 142,
       "B": 172,
       "C": 672,
       "D": 256,
       "none": 421
     },
-    "runners_classified": 1662,
+    "runners_classified": 1663,
     "runners_with_C": 845,
     "runners_with_D": 463
   }
