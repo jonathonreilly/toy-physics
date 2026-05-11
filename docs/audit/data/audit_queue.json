@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 703,
+    "critical": 702,
     "high": 38,
     "leaf": 335,
     "medium": 178
@@ -5572,27 +5572,6 @@
       "ready": true,
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "transitive_descendants": 439
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "hierarchy_effective_potential_endpoint_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 10,
-      "effective_status": "unaudited",
-      "load_bearing_score": 13.676,
-      "note_path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
-      "transitive_descendants": 408
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38972,6 +38951,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 98,
-  "total_pending": 1254
+  "ready_count": 97,
+  "total_pending": 1253
 }

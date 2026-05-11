@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 254 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1244 |
+| unaudited | 1243 |
 | audit_in_progress | 2 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 186 |
+| ~~audited_conditional~~ | 187 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 4 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 186 |
+| `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1354 |
+| `unaudited` | 1353 |
 
 | claim_type | count |
 |---|---:|
@@ -662,6 +662,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
+| `hierarchy_effective_potential_endpoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `k_dependence_review_safe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -5357,6 +5358,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the same residual ratio R, the dimension-4 effective-potential-like inverse fourth root R^(-1/4) ~= 0.96468 is in the right few-percent range, while the inverse sixteenth root R^(-1/16) ~= 0.99105 is too small.  _(class `G`)_
 - **chain closes:** False — The arithmetic in the runner matches the note, but the physical bridge identifying the Lt residual as entering a dimension-4 effective potential density with the stated sign and placement is explicitly left open. The comparison also depends on selected numerical inputs rather than a closed derivation from the restricted packet.
 - **rationale:** The runner genuinely computes the condensate-density ratio from its finite lattice Dirac operator and then performs the advertised root comparisons. However, the load-bearing conclusion is a numerical closeness claim at chosen parameters and against the imported observed prefactor C_obs, not a first-principles closure of the physical determinant-to-VEV map. The note itself caveats that the sign, placement, order parameter derivation, and full determinant-to-VEV theorem remain open.
+- **auditor confidence:** high
+
+### `hierarchy_effective_potential_endpoint_note`
+
+- **Note:** [`HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md`](../../docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Class-A endpoint algebra from the imported Matsubara free-energy density formula: small-m coefficient, A_2, A_4, A_inf, A_inf/A_2, and the dimension-4 endpoint-band comparator calculation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-hierarchy-effective-potential-endpoint`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given the imported Matsubara free-energy density formula, the runner extracts A_2, A_4, A_inf, A_inf/A_2, and C_inf^(4D) as endpoint algebraic identities and checks the observed prefactor lies in the endpoint band.  _(class `A`)_
+- **chain closes:** False — The runner verifies the endpoint algebra and comparator arithmetic from the encoded Matsubara formula, but the restricted packet does not derive that formula from retained primitives or derive the physical dimension-4 insertion into the electroweak scale map.
+- **rationale:** Issue: the load-bearing endpoint algebra starts from an imported Matsubara free-energy density formula, and the endpoint-band comparison also relies on an unproved dimension-4 insertion into the physical electroweak scale map. Why this blocks: the runner's 7/0 checks show the algebra and arithmetic are internally correct, but they do not derive either bridge from retained inputs. Repair target: provide a retained derivation of the Matsubara free-energy density formula and a separate retained dimension-4 insertion theorem for the det -> v map. Claim boundary until fixed: this row may safely report the conditional class-A endpoint algebra and endpoint-band comparator arithmetic, not a closed hierarchy theorem.
 - **auditor confidence:** high
 
 ### `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10`
