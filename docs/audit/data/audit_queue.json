@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 698,
+    "critical": 697,
     "high": 38,
     "leaf": 334,
     "medium": 177
@@ -5531,29 +5531,6 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "minimal_source_driven_field_probe_note",
-      "claim_scope": "A bounded local numerical probe of the exact 3D lattice with a static source, damped telegraph-style source-driven field evolution, fixed stronger calibration target max |f_dyn| = 0.08, and comparison to the instantaneous 1/r field on the same retained replay.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "source_driven_field_recovery_sweep_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 10.833,
-      "note_path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/minimal_source_driven_field_probe.py",
-      "transitive_descendants": 455
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
@@ -5593,6 +5570,29 @@
       "ready": true,
       "runner_path": "scripts/complex_action_grown_companion.py",
       "transitive_descendants": 444
+    },
+    {
+      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "poisson_self_gravity_loop_note",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "migration_hint",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "deps": [
+        "minimal_source_driven_field_probe_note"
+      ],
+      "direct_in_degree": 6,
+      "effective_status": "unaudited",
+      "load_bearing_score": 11.765,
+      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/poisson_self_gravity_loop.py",
+      "transitive_descendants": 434
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -9477,29 +9477,6 @@
       "ready": false,
       "runner_path": "scripts/diamond_sensor_protocol_probe.py",
       "transitive_descendants": 435
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "poisson_self_gravity_loop_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_source_driven_field_probe_note"
-      ],
-      "direct_in_degree": 6,
-      "effective_status": "unaudited",
-      "load_bearing_score": 11.765,
-      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/poisson_self_gravity_loop.py",
-      "transitive_descendants": 434
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -38768,5 +38745,5 @@
     }
   ],
   "ready_count": 100,
-  "total_pending": 1247
+  "total_pending": 1246
 }
