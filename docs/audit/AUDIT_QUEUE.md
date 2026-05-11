@@ -23,7 +23,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 6 | `s3_taste_cube_decomposition_note` | bounded_theorem | audit_in_progress | critical | 640 | 15.82 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
 | 7 | `claude_complex_action_grown_companion_note` | bounded_theorem | audit_in_progress | critical | 469 | 13.88 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 8 | `poisson_self_gravity_loop_note` | bounded_theorem | audit_in_progress | critical | 463 | 12.36 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/poisson_self_gravity_loop.py` |
-| 9 | `gravitomagnetic_note` | bounded_theorem | unaudited | critical | 448 | 9.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gravitomagnetic_portable.py` |
+| 9 | `gravitomagnetic_note` | bounded_theorem | audit_in_progress | critical | 448 | 9.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/gravitomagnetic_portable.py` |
 | 10 | `scalar_trace_tensor_no_go_note` | bounded_theorem | unaudited | critical | 441 | 10.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_scalar_trace_tensor_nogo.py` |
 | 11 | `graviton_mass_derived_note` | bounded_theorem | unaudited | critical | 440 | 12.79 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graviton_mass_derived.py` |
 | 12 | `dark_energy_eos_note` | bounded_theorem | unaudited | critical | 440 | 10.29 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dark_energy_eos.py` |
