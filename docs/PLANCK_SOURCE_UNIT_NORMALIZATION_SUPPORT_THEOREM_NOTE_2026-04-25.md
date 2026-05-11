@@ -16,9 +16,13 @@ conditional Planck packet's primitive-cell theorem chain:
 - [`AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md`](AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
   — minimal local-CAR assumptions under which the primitive parity-gate
   carrier is forced by the primitive boundary block itself.
-- [`AREA_LAW_COEFFICIENT_GAP_NOTE.md`](AREA_LAW_COEFFICIENT_GAP_NOTE.md)
-  — context recording `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4` as the
-  exact primitive-cell coefficient on the conditional Planck packet.
+- `AREA_LAW_COEFFICIENT_GAP_NOTE.md` (context recording only, backticked
+  to avoid length-3 cycle — this note imports `c_cell = 1/4` from the
+  primitive-coframe carrier theorem and its boundary-density extension,
+  not from the coefficient-gap synthesis note; citation graph direction
+  is *downstream synthesis → this support theorem*) — synthesises
+  `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4` across the conditional Planck
+  packet authority chain.
 
 The carrier-side identification `c_cell = 1/(4 G_lambda)` is the
 Wald-Noether area-law reading on the same conditional Planck packet; it
