@@ -1,0 +1,90 @@
+========================================================================
+Probe Z-Substrate-Generation-Z3 — Z^3 x C_3 substrate three-orbit bound
+Date: 2026-05-10
+Source-note authority:
+  docs/KOIDE_Z_SUBSTRATE_GENERATION_Z3_NOTE_2026-05-08_probeZ_substrate_generation_z3.md
+========================================================================
+
+Section 1 — CHECK: |C_3| = 3 by group order (universal)
+  [PASS] |Z/3Z| = 3 by group order | |Z/3Z| = 3 (target 3)
+  [PASS] C_3 closed under addition mod 3
+  [PASS] C_3 has identity element 0
+  [PASS] C_3 has inverses (a + (-a) = 0 mod 3)
+    -> |C_3| = 3 is forced by definition; this is the orbit-count primitive.
+    -> Counterfactual: |C_N| = N for any N. The number 3 enters from the Z^3 substrate's lattice dimension, NOT from C_N choice.
+
+Section 2 — CHECK: C_3[111] has exactly 3 distinct eigenvalues {1, omega, omega^2}
+  [PASS] C_3[111]^3 = I_3 (order 3)
+  [PASS] C_3[111] * Y_0 = omega^0 * Y_0 | |residual| = 0.00e+00
+  [PASS] C_3[111] * Y_1 = omega^1 * Y_1 | |residual| = 4.62e-16
+  [PASS] C_3[111] * Y_2 = omega^2 * Y_2 | |residual| = 8.64e-16
+  [PASS] Three eigenvalues are pairwise distinct | eigs = [(-0.5, -0.866), (-0.5, 0.866), (1.0, 0.0)]
+  [PASS] Eigenvalue count = 3 | count = 3
+  [PASS] Sum of cube roots of unity = 0 | |sum| = 4.00e-16
+    -> C_3[111] eigenvalue count = 3 is forced by spectral theorem on order-3 unitary.
+    -> The eigenvalues partition C^3 into 3 isotypic 1-dim subspaces V_0, V_1, V_2 (per F7).
+
+Section 3 — CHECK: BZ-corner orbit-counting on Z^3 substrate forces |hw=1| = 3
+  [PASS] Z^3 BZ has 2^3 = 8 corners | |BZ corners| = 8
+  [PASS] BZ-corner Hamming-weight partition = 1 + 3 + 3 + 1 | partition = [1, 3, 3, 1]
+  [PASS] |hw=1| = 3 (the lightest non-trivial doubler class) | hw=1 = [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+  [PASS] hw=1 is C_3[111]-invariant as a set | image = [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+  [PASS] C_3[111] is order-3 on hw=1 (a 3-cycle) | orbit = [(0, 0, 1), (1, 0, 0), (0, 1, 0), (0, 0, 1)]
+  [PASS] Orbit count of C_3[111] on hw=1 is 1 (single orbit of size 3) | |orbits| = 1, orbit_sizes = [3]
+  [PASS] Orbit size = |C_3| = 3 (regular orbit) | |orbit| = 3
+    -> The 3 corners in hw=1 form a single regular C_3-orbit of size 3.
+    -> Combined with Z^3 substrate dimension d=3, this forces |hw=1| = 3 from substrate alone.
+
+Section 4 — CHECK: No proper quotient of hw=1 preserves {P_X1, P_X2, P_X3, C_3[111]}
+  [PASS] P_X1, P_X2, P_X3 are mutually orthogonal
+  [PASS] P_X1 + P_X2 + P_X3 = I_3
+  [PASS] No 1-dim D_3-eigenspace is C_3-invariant | results: [False, False, False]
+  [PASS] No 2-dim D_3-eigenspace sum is C_3-invariant | results: [False, False, False]
+  [PASS] Only D_3 + C_3 invariant subspaces are {0} and C^3 (irreducibility)
+    -> M_3(C) = <D_3, C_3[111]> acts irreducibly on C^3.
+    -> No quotient can reduce |hw=1| below 3 while preserving the cited generation algebra.
+
+Section 5 — SPECIFICITY: Z^N x C_N substrate would give |hw=1| = N
+  [PASS] Z^1 substrate: |hw=1| = 1, |C_1| = 1 | hw=1 corners = 1, |C_1| = 1
+  [PASS] Z^2 substrate: |hw=1| = 2, |C_2| = 2 | hw=1 corners = 2, |C_2| = 2
+  [PASS] Z^3 substrate: |hw=1| = 3, |C_3| = 3 | hw=1 corners = 3, |C_3| = 3
+  [PASS] Z^4 substrate: |hw=1| = 4, |C_4| = 4 | hw=1 corners = 4, |C_4| = 4
+  [PASS] Z^5 substrate: |hw=1| = 5, |C_5| = 5 | hw=1 corners = 5, |C_5| = 5
+
+    -> The three-orbit result is NOT a generic claim about cyclic groups.
+    -> It is forced by the framework's Z^3 substrate (d = 3),
+       which carries C(d, 1) = d = 3 hw=1 corners and
+       the matching natural C_d = C_3 action on those corners.
+    -> Counterfactual Z^4 substrate => |hw=1| = 4, |C_4| = 4.
+
+Section 6 — CROSS-CHECK: substrate cardinality 3 matches observed SM generation count
+  [PASS] substrate_cardinality = n_gen_SM_observed = 3 | substrate = 3, SM observed = 3
+
+    -> Cardinality match: substrate count and SM exhibit
+       exactly 3 generations of charged leptons, up-quarks,
+       down-quarks, and (light) neutrinos.
+    -> This is at the cardinality level only. The species map
+       (which orbit element <-> e/mu/tau, u/c/t, d/s/b, nu_1/2/3)
+       remains labeling convention per C3_SYMMETRY_PRESERVED note.
+
+Section 7 — BOUNDED ADMISSIONS (not derived here)
+  [ADMITTED] species-map: which orbit element <-> {electron, muon, tau} | labeling convention per C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE
+  [ADMITTED] species-map: which orbit element <-> {u, c, t} | delegated to flavor-sector identification (out of scope)
+  [ADMITTED] species-map: which orbit element <-> {d, s, b} | delegated to flavor-sector identification (out of scope)
+  [ADMITTED] carrying n_gen=3 to neutrino sector | separate sector argument; this probe addresses substrate count only
+  [ADMITTED] physical-lattice premise (Z^3 as physical substrate, not abstract) | delegated to PHYSICAL_LATTICE_NECESSITY_NOTE.md
+  [ADMITTED] anomaly cancellation specificity (linear in n_gen, admits any n) | anomaly cancellation alone does not force n_gen=3
+
+SUMMARY: PASS=29 FAIL=0 ADMITTED=6
+
+========================================================================
+VERDICT: Z^3 x C_3 substrate support gives exactly 3 elements at the lightest
+  hw=1 mass class via combined orbit-counting + no-proper-quotient.
+  This is structurally distinct from anomaly cancellation (linear).
+
+  Tier: bounded theorem (substrate-cardinality level),
+        with bounded admissions on species map and sector
+        propagation (charged leptons / quarks / neutrinos).
+  The number 3 is forced by the Z^3 substrate dimension d=3.
+  Counterfactual Z^N substrate would produce |hw=1| = N orbits.
+========================================================================
