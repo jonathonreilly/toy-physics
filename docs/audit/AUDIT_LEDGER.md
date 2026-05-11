@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 81 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 252 |
+| **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1098 |
+| unaudited | 1097 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 429 |
+| `audited_clean` | 430 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1196 |
+| `unaudited` | 1195 |
 
 | claim_type | count |
 |---|---:|
@@ -166,6 +166,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `coupled_field_generated_family_probe_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cycle_battery_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -2627,6 +2628,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For every non-empty tree t, prepared_phi(t) = phi(t) + sum_c phi_-(P^c(t)) phi(R^c(t)), phi_-(t) = -T(prepared_phi(t)), and phi_+(t) = (id - T)(prepared_phi(t)), giving unique characters with phi = phi_-^{*-1} * phi_+.  _(class `A`)_
 - **chain closes:** True — The cited Connes-Kreimer authority excerpt contains the same recursive counterterm formula C(X) = -T(U(X) + sum C(X')U(X'')), the Rota-Baxter identity used to prove multiplicativity, and the convolution relation R = C * U giving the Birkhoff decomposition. The note's boundary explicitly confines the claim to this external Hopf-algebra theorem and excludes project-framework and physics uses.
 - **rationale:** The source note cleanly states the external theorem and does not import or assert any CL3 operator, perturbation expansion, hierarchy closure, numerical prediction, or physics bridge. The runner is not a proof of the theorem, but it appropriately spot-checks the coproduct, convolution, Rota-Baxter identity, low-depth recursion, unit identities, and no-framework boundary. Given the narrow theorem scope and cited external theorem, the chain closes without requiring a new framework bridge.
+- **auditor confidence:** high
+
+### `connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10`
+
+- **Note:** [`CONNES_KREIMER_PARTIAL_SUM_RB_B4_EXTERNAL_BOUNDED_NOTE_2026-05-10.md`](../../docs/CONNES_KREIMER_PARTIAL_SUM_RB_B4_EXTERNAL_BOUNDED_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the external bounded algebraic statement that strict prefix sums on componentwise sequence algebra form a non-idempotent weight +1 Rota-Baxter target, with B4 as an external rooted-tree test object and any alpha_LM^16 readout explicitly imported rather than derived.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14cb-2e30-7772-87ab-8a9dc2d10a0b`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The strict prefix-sum operator satisfies the Rota-Baxter identity of weight +1: P(a)P(b)=P(P(a)b+aP(b)+ab).  _(class `A`)_
+- **chain closes:** True — Within the stated bounded scope, the packet verifies the Rota-Baxter identity, non-idempotence, B4 combinatorics, and the tautological first-slot readout. The note explicitly excludes framework-native characters, staggered taste-blocking bridges, and derivation of alpha_LM^16, so those missing bridges do not block this scoped claim.
+- **rationale:** The scoped theorem is external algebra plus an explicit boundary statement, and the dependency is provided as retained. The runner's alpha_LM^16 check is hard-coded, but the note labels that as an imported character value and not a derivation, so it supports the boundary rather than inflating the claim.
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
