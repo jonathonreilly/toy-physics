@@ -22,9 +22,10 @@ publication tables phrase it.
 | critical | `audit_in_progress` | 9 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 5 |
-| medium | `unaudited` | 3 |
+| medium | `unaudited` | 2 |
 | critical | `audited_failed` | 1 |
 | critical | `open_gate` | 1 |
+| medium | `audited_conditional` | 1 |
 
 **Total non-retained-grade rows in publication tables:** 529
 
@@ -559,5 +560,5 @@ publication tables phrase it.
 | critical | `yt_ward_identity_derivation_theorem` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `yt_zero_import_authority_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21` | `unaudited` | `unaudited` | FULL_CLAIM_LEDGER.md |
-| medium | `koide_q_minimal_scale_free_selector_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
+| medium | `koide_q_minimal_scale_free_selector_note_2026-04-22` | `audited_conditional` | `audited_conditional` | RESULTS_INDEX.md |
 | medium | `koide_q_second_order_reviewer_stress_test_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
