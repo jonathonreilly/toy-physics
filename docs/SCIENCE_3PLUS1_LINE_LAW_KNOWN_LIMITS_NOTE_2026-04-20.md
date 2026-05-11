@@ -13,7 +13,7 @@ notes referenced from the `## Audit scope` block below.
 **Status:** support / known-limits record only — does not propagate retained-grade
 **Claim type:** meta
 **Claim scope:** support / known-limits record only — does not propagate retained-grade
-**Audit authority:** independent audit ledger only; this source does not set an audit verdict.
+**Audit authority:** independent audit ledger only; this source does not set an audit outcome.
 **Propagates retained-grade:** no
 **Proposes new claims:** no
 
@@ -54,6 +54,23 @@ audit the corresponding dedicated note and its runner as a separate
 scoped claim — not this known-limits overview.
 
 ---
+
+**Review repair perimeter (2026-05-01 generated-audit context):**
+Generated-audit context before this source was narrowed to `meta`
+identified this chain-closure blocker: "The scope caveats are explicit,
+but the note has no primary runner or parsed audited dependencies for
+the Wilson/Perron branch, retained slice selector, Givens solve,
+reduced-packet closure, full-packet no-go, or live-target
+reproduction." The repair target being addressed is
+`missing_dependency_edge`: "add explicit audited dependency edges
+or a primary runner/proof bundle for each step of the closure chain
+and no-go." This rigorization edit only sharpens the boundary of the
+repair perimeter and registers the named upstream theorem notes
+explicitly under "Cited authority chain (2026-05-10)" below; nothing
+here promotes audit status. This is a meta synthesis note that
+records strongest-attainable-closure scope and explicit-limits scope;
+it is not a primary-runner result and never claimed to be one. The
+bounded scope statement is unaffected.
 
 ## Purpose
 
@@ -171,3 +188,42 @@ The branch is no longer vulnerable to the original review-note objections.
 What remains are higher-bar objections about physical nativity, symbolic
 classification, carrier choice, or equivalence to the manuscript-facing
 microscopic selector law, not the original internal-consistency failures.
+
+## Cited authority chain (2026-05-10)
+
+This note is a meta synthesis that summarises strongest-attainable
+exact closure on the retained `3+1` ambient. It does not run a
+primary runner; each numbered closure step in "What Is Closed
+Exactly" must be supported by a separate upstream theorem note. The
+source-note list below records the intended authority chain; the
+independent audit ledger remains the authority for upstream verdicts
+and effective status.
+
+1. Wilson/Perron canonical branch fix —
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md)
+   (claim type hint: `positive_theorem`).
+2. Retained `3d+1` complement-line two-point exact solve —
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_EXACT_SOLVE_DOUBLET_THEOREM_NOTE_2026-04-20.md)
+   (claim type hint: `bounded_theorem`).
+3. `rho1` least-distortion canonical retained slice selector —
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_LEAST_DISTORTION_SELECTOR_THEOREM_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_LEAST_DISTORTION_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+   (claim type hint: `bounded_theorem`)
+   together with
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_ORIENTATION_THEOREM_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_RHO1_ORIENTATION_THEOREM_NOTE_2026-04-20.md)
+   (claim type hint: `bounded_theorem`).
+4. Complex-Givens grammar `G12 . G13 . G23` exact reduced-packet
+   solve / least-Frobenius internal dressing selector —
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+   (claim type hint: `positive_theorem`).
+5. Full sparse-face `9`-channel structural no-go (cited at "What Is
+   Not Claimed" above) —
+   [`docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_FULL_PACKET_NO_GO_THEOREM_NOTE_2026-04-20.md`](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_FULL_PACKET_NO_GO_THEOREM_NOTE_2026-04-20.md)
+   (claim type hint: `no_go`).
+
+Any unresolved upstream repair perimeter propagates into this
+synthesis: the strongest-attainable-closure statement here is exactly
+as strong as the conjunction of those upstream theorem notes and is
+not stronger. The `missing_dependency_edge` repair target is what
+this Cited authority chain section is intended to address at the
+source-note level; the audit ledger's `deps` field for this row
+remains under audit-lane control.

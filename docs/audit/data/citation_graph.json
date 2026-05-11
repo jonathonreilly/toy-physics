@@ -19225,6 +19225,30 @@
       "to": "site_phase_cube_shift_intertwiner_note"
     },
     {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20"
+    },
+    {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20"
+    },
+    {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20"
+    },
+    {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
+    },
+    {
+      "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+      "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+    },
+    {
       "from": "second_grown_family_complex_boundary_note",
       "to": "second_grown_family_complex_note"
     },
@@ -60660,11 +60684,11 @@
     },
     "retardation_discriminator_note": {
       "claim_id": "retardation_discriminator_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "ea17deefdc4e13f3687a48a2bbea14c81614f7007c39670e4c8ffa0c2f917ba7",
+      "note_hash": "ed5ad3ef1568c3ae38821196c5da1a90db10086e7eba5768b9aeac7b927b4650",
       "path": "docs/RETARDATION_DISCRIMINATOR_NOTE.md",
       "runner_path": "scripts/retardation_discriminator.py",
       "title": "Retardation Discriminator: Oscillating Source"
@@ -60685,11 +60709,11 @@
     },
     "retarded_field_compact_refinement_note": {
       "claim_id": "retarded_field_compact_refinement_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "c554d888440a03d725e3863af5d8121de22fedfb9f89e4a0383365122c67b0d3",
+      "note_hash": "cead3fd039ed9a16b2493d584b4e54af04a25bdac091635e2342ac98951b69ac",
       "path": "docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md",
       "runner_path": "scripts/retarded_field_compact_refinement_probe.py",
       "title": "Retarded Field Compact Refinement Probe"
@@ -61207,8 +61231,15 @@
       "claim_type_author_hint": "meta",
       "claim_type_author_hint_raw": "meta",
       "claim_type_seed_hint": "meta",
-      "deps": [],
-      "note_hash": "fbaec4d23b10ee148d630f76f562bb44a7e92131a7eca28f51b9eaba849f2814",
+      "deps": [
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
+        "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20"
+      ],
+      "note_hash": "560d0ae0e7804250a08321785f497bbe50aa012a7983dda24d4b67bb152a42d1",
       "path": "docs/SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md",
       "runner_path": null,
       "title": "Science 3+1 Line Law: Known Limits Note"
@@ -65894,11 +65925,11 @@
     },
     "wave_3plus1d_promotions_note": {
       "claim_id": "wave_3plus1d_promotions_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "31d316d6e29fc7f4ea19b06190f852bb4af4c60b94eefe6cb8c477e8817791d9",
+      "note_hash": "76270898d12838a29dca58328a40b3e2c39992775ebf6ff8439d70d332fa9f78",
       "path": "docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md",
       "runner_path": "scripts/wave_3plus1d_promotions.py",
       "title": "(3+1)D Promotions of Lane 5 (Lightcone) and Lane 6 (Retarded vs Instantaneous)"
@@ -65929,11 +65960,11 @@
     },
     "wave_direct_dm_family_scout_note": {
       "claim_id": "wave_direct_dm_family_scout_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "2b7057bd2def5a0f0646ad38db3b24666fd31c05900bbe89bbee8908ca5307ba",
+      "note_hash": "55053d7a1c1830f34305ee509f2cdbf47c1b2df708fd588cdbce1e230b007799",
       "path": "docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md",
       "runner_path": "scripts/wave_direct_dm_matched_history_probe.py",
       "title": "Wave Direct-dM Family Scout"
@@ -66419,11 +66450,11 @@
     },
     "wave_static_matrixfree_shared_geometry_compare_note": {
       "claim_id": "wave_static_matrixfree_shared_geometry_compare_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "883c74229b5f5fd65410a80696edd3d0c7de650db8e0cb8556d41437082badeb",
+      "note_hash": "420bc693f168bf4aeba1091fd1b20e432735d0f3c392ca521e023753a72ef18a",
       "path": "docs/WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md",
       "runner_path": "scripts/wave_static_matrixfree_shared_geometry_compare.py",
       "title": "Wave Static Matrix-Free Shared Geometry Compare"
@@ -69180,7 +69211,6 @@
     "scalar_trace_tensor_no_go_note",
     "scaling_failure_mechanisms",
     "scaling_targets",
-    "science_3plus1_line_law_known_limits_note_2026-04-20",
     "second_grown_family_sign_note",
     "self_consistency_forces_poisson_note",
     "self_consistency_structured_null_note_2026-04-11",
@@ -69383,27 +69413,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 308,
+      "bounded_theorem": 313,
       "decoration": 1,
       "meta": 64,
       "no_go": 44,
-      "none": 1586,
+      "none": 1581,
       "open_gate": 35,
       "positive_theorem": 142
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 769,
+      "bounded_theorem": 773,
       "decoration": 1,
       "meta": 64,
       "no_go": 149,
-      "none": 448,
+      "none": 447,
       "open_gate": 122,
-      "positive_theorem": 627
+      "positive_theorem": 624
     },
-    "edge_count": 8643,
-    "leaf_count": 615,
+    "edge_count": 8649,
+    "leaf_count": 614,
     "node_count": 2180,
-    "root_count": 817,
+    "root_count": 816,
     "runners_with_path": 1791
   }
 }

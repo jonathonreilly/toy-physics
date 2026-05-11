@@ -1,12 +1,33 @@
 # Retarded Field Compact Refinement Probe
 
 **Date:** 2026-04-05  
-**Status:** bounded retarded-vs-instantaneous smoke probe on two proposed_retained DAG families
+**Status:** bounded retarded-vs-instantaneous smoke probe on two candidate DAG families
+**Claim type:** bounded_theorem
+
+**Review repair perimeter (2026-04-27 generated-audit context):**
+Generated-audit context before this narrowing identified this chain-closure
+blocker: "The runner reproduces a
+bounded two-family smoke-probe readout, but the candidate
+retained-grade surface is stronger than the evidence because the
+result is partial, row-sign-dependent, and not attached as an
+assertion runner in the ledger." The repair target being addressed is
+`other`: "change the source status to bounded/support, or
+add a ledger-attached assertion runner plus a refinement
+theorem/statistical criterion showing noncollapse over a specified
+family class with tolerances." This rigorization edit only sharpens
+the boundary of the repair perimeter and registers the
+two-family smoke-probe scope explicitly under "Cited authority
+chain (2026-05-10)" below; nothing here promotes audit status. The
+"Branch verdict" already reads "partially surviving" and the "Safe
+read" already states the row-sign-dependent caveat; the bounded
+status header at the top is exactly the bounded/support tier the
+generated repair target offers as the smaller of the two
+acceptable repair paths, and that scope is unaffected.
 
 ## Artifact chain
 
-- [`scripts/retarded_field_compact_refinement_probe.py`](/Users/jonreilly/Projects/Physics/scripts/retarded_field_compact_refinement_probe.py)
-- [`logs/2026-04-05-retarded-field-compact-refinement-probe.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-05-retarded-field-compact-refinement-probe.txt)
+- [`scripts/retarded_field_compact_refinement_probe.py`](../scripts/retarded_field_compact_refinement_probe.py)
+- [`logs/2026-04-05-retarded-field-compact-refinement-probe.txt`](../logs/2026-04-05-retarded-field-compact-refinement-probe.txt)
 
 ## Question
 
@@ -68,3 +89,33 @@ This branch is **partially surviving**:
 - no, it is not yet a uniformly stable suppression effect across all tested rows
 
 Treat it as a real but bounded retarded-field signal, not as a closed universal law.
+
+## Cited authority chain (2026-05-10)
+
+The active runner is
+[`scripts/retarded_field_compact_refinement_probe.py`](../scripts/retarded_field_compact_refinement_probe.py)
+(audit-lane runner cache: `status: ok`, elapsed ~0.65 s, exit 0,
+unmodified runner SHA pinned by the cache). The frozen output is
+[`logs/2026-04-05-retarded-field-compact-refinement-probe.txt`](../logs/2026-04-05-retarded-field-compact-refinement-probe.txt).
+(The "Artifact chain" links above retained an earlier
+machine-specific absolute-path form; the runner SHA pinned by the
+audit cache is the canonical authority.)
+
+The runner reproduces both rows of the frozen result table verbatim:
+the compact family at `layers=16, nodes/layer=20` returns
+`mean split = -1.669200e-02` with `0/5 b-rows` retarded-below-
+instantaneous, and the refined family at `layers=16, nodes/layer=28`
+returns `mean split = -4.352319e-02` with `3/5 b-rows`. The
+two-row, two-family scope of this smoke-probe is therefore exactly
+the review repair perimeter: a bounded
+two-family smoke-probe readout that survives one compact refinement
+but is row-sign-dependent on each family.
+
+The generated repair target offers two acceptable paths: the
+smaller is to keep this row at the bounded/support tier (which is
+already the status header at the top of this note); the larger is
+to add a ledger-attached assertion runner plus a refinement theorem
+or statistical criterion showing noncollapse with tolerances over a
+specified family class. This rigorization edit takes the smaller
+path; the assertion-runner-and-theorem follow-up is the named
+larger workload and is out of scope here.

@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1198 |
+| unaudited | 1203 |
 | meta | 103 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 225 |
+| ~~audited_conditional~~ | 220 |
 | ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,21 +42,21 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 429 |
-| `audited_conditional` | 225 |
+| `audited_conditional` | 220 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1301 |
+| `unaudited` | 1306 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 856 |
+| `bounded_theorem` | 860 |
 | `decoration` | 15 |
 | `meta` | 110 |
 | `no_go` | 221 |
 | `open_gate` | 117 |
-| `positive_theorem` | 752 |
+| `positive_theorem` | 748 |
 
 | criticality | count |
 |---|---:|
@@ -66,7 +66,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `leaf` | 732 |
 
 - **Retained pending chain closure:** 2
-- **Citation cycles detected:** 252
+- **Citation cycles detected:** 253
 
 ### Runner classification (static heuristic)
 
@@ -727,8 +727,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `quark_route2_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `rconn_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
-| `retardation_discriminator_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `s3_boundary_link_theorem_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_cap_uniqueness_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `s3_time_primitive_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | B | - |
@@ -755,13 +753,10 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
-| `wave_3plus1d_promotions_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `wave_direct_dm_family_scout_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | C | - |
 | `wave_direct_dm_h025_two_point_synthesis_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5 | B | - |
 | `wave_static_direct_probe_fine_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_fixed_beam_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `wave_static_matrixfree_shared_geometry_compare_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
 | `wilson_normalization_reconciliation_note_2026-04-11` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `work_history.atomic.hydrogen_helium_atomic_companion_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `yt_bridge_operator_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -8307,19 +8302,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The current packet runner completed with PASS=41 FAIL=0 TOTAL=41, and the component code computes algebraic finite-box identities rather than checking an external comparator or tuning a target value. The source object is treated as the fixed bounded input class, not as a derived universal gravity source, and the audited conclusion is scoped accordingly. Minor roundoff-level differences between note snippets and current runner output do not affect the closure. No unclosed full-GR, Regge, no-horizon, echo, or astrophysical strong-field consequence is used by the bounded claim.
 - **auditor confidence:** high
 
-### `retardation_discriminator_note`
-
-- **Note:** [`RETARDATION_DISCRIMINATOR_NOTE.md`](../../docs/RETARDATION_DISCRIMINATOR_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The retardation discriminator is a retained, portable observable that distinguishes finite-propagation-speed field response from instantaneous response to the same oscillating source.  _(class `C`)_
-- **chain closes:** False — The artifact chain computes a nonzero delayed-vs-instantaneous phase difference for the implemented toy harness, but the retained/general discriminator claim is not backed by a fast assertion runner or a theorem excluding all instantaneous emulator models.
-- **rationale:** Issue: The source and frozen log show a delayed-source toy harness with nonzero frequency- and delay-dependent phase differences, but the canonical script has no PASS/FAIL assertion contract and the live audit run did not complete the full global-delay/family/seed sections before interruption after more than ten minutes. Why this blocks: a finite parameter sweep in one implemented propagation model does not by itself prove a retained, portable observable or rule out all instantaneous responses with memory, phase offsets, or fitted transfer functions. Repair target: add a fast deterministic runner with explicit assertions for the nulls, delay law, family/seed robustness, and global-delay fit residual, and add a theorem specifying the model class in which no instantaneous/static response can reproduce the first-harmonic delayed-response observable. Claim boundary until fixed: it is safe to claim that the frozen harness output and partial live run show a delayed-vs-instantaneous phase difference for the stated oscillating-source model and parameters; it is not safe to claim a retained general finite-propagation discriminator across physical response models.
-- **auditor confidence:** medium
-
 ### `retarded_field_causality_probe_note`
 
 - **Note:** [`RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md`](../../docs/RETARDED_FIELD_CAUSALITY_PROBE_NOTE.md)
@@ -8332,19 +8314,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the restricted packet, the runner constructs generated DAG instances, computes instantaneous and retarded imposed fields, propagates amplitudes, and reports a nonzero finite-c delta with exact c = inf reduction. The conclusion is limited to this field-scheduling proxy and does not claim a self-consistent wave theory.
 - **rationale:** The note's bounded conclusion matches the runner's computed rows: finite c changes the centroid-shift observable, and c = inf reproduces the instantaneous baseline. The runner does not merely print constants or compare to an external fitted value; it builds the compact family, applies the retarded scheduling rule, and computes the observable. The claim is narrow and explicitly preserves the limitation that this is an imposed field-scheduling proxy rather than a full dynamical gravitational wave theory.
 - **auditor confidence:** medium
-
-### `retarded_field_compact_refinement_note`
-
-- **Note:** [`RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md`](../../docs/RETARDED_FIELD_COMPACT_REFINEMENT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The retarded field does not collapse to the instantaneous row on refinement, but the split is not uniformly one-directional across the compact and refined rows.  _(class `C`)_
-- **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the candidate retained-grade surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
-- **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as candidate retained-grade. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
-- **auditor confidence:** high
 
 ### `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10`
 
@@ -10750,23 +10719,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The bounded claim closes because the completed replay log reports the same barrier sanity checks, 9/9 TOWARD rows, and tail-fit exponents/R^2 values quoted by the note. The note preserves the correct claim boundary by saying this is a finite-lattice replay rather than a universal theorem.
 - **auditor confidence:** high
 
-### `wave_3plus1d_promotions_note`
-
-- **Note:** [`WAVE_3PLUS1D_PROMOTIONS_NOTE.md`](../../docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The note identifies the M branch as standard retarded (3+1)D wave evolution and the I branch as an instantaneous, c=infinity comparator stitched layer-by-layer from cached late-time static solves, then claims a 26-31% retarded-vs-instantaneous gap across three grown families.  _(class `C`)_
-- **chain closes:** False — The live runner reproduces the finite lightcone and M-vs-I tables, but the literal instantaneous/c=infinity interpretation does not close: the I branch is a stitched finite-time frozen c=1 wave-solve comparator, not a derived elliptic Poisson or c->infinity solution.
-- **rationale:** Issue: the runner supports the displayed finite computation, but the source labels the stitched frozen-source branch as an instantaneous c=infinity comparator without proving that this NL=30 late-time finite-c wave slice equals the instantaneous field. Why this blocks: a hostile physicist can accept first_dt=r for r=2..8 and a 26-31% difference between retarded moving-source evolution and the frozen-slice comparator, but cannot infer the literal retarded-vs-instantaneous wave claim or the all-three scalar-wave closure from this runner alone. Repair target: replace the I branch with an actual layerwise elliptic/Poisson instantaneous solve, or prove and numerically bound convergence of the frozen-wave late-time slice to the c->infinity comparator; then add hard assertions for the lightcone and gap gates and audit the Lane 8 radiation lane separately for the combined three-signature statement. Claim boundary until fixed: it is safe to claim a strict finite (3+1)D lattice lightcone to r=8 and a reproducible 26-31% gap between retarded moving-source wave evolution and this specific stitched frozen-source c=1 static-slice comparator on three grown families at v/c=0.23.
-- **open / conditional deps cited:**
-  - `instantaneous_c_infinity_comparator_not_derived_from_Poisson_or_c_limit`
-  - `WAVE_3PLUS1D_RADIATION_NOTE.md_combined_three_signature_closure_not_audited_in_this_claim`
-  - `runner_prints_thresholds_without_hard_assertions`
-- **auditor confidence:** high
-
 ### `wave_amplification_near_horizon_note`
 
 - **Note:** [`WAVE_AMPLIFICATION_NEAR_HORIZON_NOTE.md`](../../docs/WAVE_AMPLIFICATION_NEAR_HORIZON_NOTE.md)
@@ -10778,26 +10730,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the retained exact-lattice harness, the oscillating-source/static-source ratio stays close to 1x, with largest ratio 1.012 at alpha = 0.50.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces every frozen alpha row and the best-ratio summary. The source note limits the conclusion to this exact-lattice absorber sweep and explicitly rejects the broader near-horizon amplification headline.
 - **rationale:** The claim is not a broad physical amplification theorem; it is a bounded negative result on one exact-lattice replay. The runner computes the static and oscillating retarded-source deflections for the five stated absorber strengths and reproduces the frozen table, including the largest ratio of 1.012 at alpha = 0.50. Because the note keeps the conclusion within that harness and reports the raw denominator, the chain closes on its own terms.
-- **auditor confidence:** high
-
-### `wave_direct_dm_family_scout_note`
-
-- **Note:** [`WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md`](../../docs/WAVE_DIRECT_DM_FAMILY_SCOUT_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop:fresh-2026-04-28-wave_direct_dm_family_scout_note`  (codex-gpt-5; independence=fresh_context)
-- **load-bearing step:** All three canonical families keep the same negative sign and material normalized effect at one seed and one strength, but a portability claim still requires the full null/linearity stack and multiple seeds per family.  _(class `C`)_
-- **chain closes:** False — The source note supports only an exploratory one-seed, one-strength scout across Fam1/Fam2/Fam3. The ledger has no runner_path for live verification, and the note explicitly says it is not a portability, multi-seed, control-stack, or continuum-stability claim.
-- **rationale:** Issue: the note reports a directionally consistent one-seed, one-strength family scout, but explicitly disclaims portability, multi-seed coverage, full controls, and continuum stability.
-Why this blocks: downstream wave direct-dM candidate retained-grade/promoted rows cannot use this as cross-family validation; it is only a scout that justifies a larger batch.
-Repair target: run and audit a full Fam1/Fam2/Fam3 portability batch with multiple seeds, S=0 nulls, weak-strength sweeps, and both retained H values.
-Claim boundary until fixed: safe to claim the reference-strength effect is not obviously Fam1-local in this scout, not a portability or matched-history validation theorem.
-- **open / conditional deps cited:**
-  - `no_ledger_runner_for_live_wave_direct_dm_family_scout`
-  - `multi_seed_family_portability_batch_missing`
-  - `null_linearity_and_continuum_control_stack_missing`
 - **auditor confidence:** high
 
 ### `wave_direct_dm_h025_two_point_synthesis_note`
@@ -10941,19 +10873,6 @@ Claim boundary until fixed: safe to claim the reference-strength effect is not o
 - **load-bearing step:** At H = 0.35 with fixed beam geometry, the moving-source exact static comparator remains field-box sensitive, but the 9.0 -> 12.0 large-box branch shows low rel_MS and smaller dS movement without meeting the strict stability bar.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces both source-note comparisons: field PW 6.0 -> 9.0 and 9.0 -> 12.0. The note keeps the conclusion mixed and bounded, explicitly withholding continuum-quality promotion.
 - **rationale:** The note accurately preserves both sides of the runner output. The 6.0 -> 9.0 comparison is still materially box-dependent, with dS move 20.84% and rel_MS move 86.21%, while dM is stable; the 9.0 -> 12.0 comparison improves to dS move 5.52% and rel_MS 3.18% -> 2.42% but still does not pass a strict stability criterion. This closes only the stated mixed diagnostic: no boundary-stable moving-source comparator is retained yet, but the medium-H large-box branch remains a plausible stabilization candidate.
-- **auditor confidence:** high
-
-### `wave_static_matrixfree_shared_geometry_compare_note`
-
-- **Note:** [`WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md`](../../docs/WAVE_STATIC_MATRIXFREE_SHARED_GEOMETRY_COMPARE_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** At H = 0.35 and H = 0.25, the direct and matrix-free static solvers agree extremely closely, so matrix-free is a strong drop-in replacement on the shared geometries tested.  _(class `C`)_
-- **chain closes:** False — The live runner reproduces the two numerical comparison tables, but it does not define or pass a drop-in-replacement acceptance criterion; its own printed verdict says the matrix-free result is close but not yet proven identical.
-- **rationale:** Issue: the note promotes the matrix-free solver as a strong drop-in replacement, but the runner only demonstrates small finite mismatches at two geometries and explicitly reports that identity is not proven. Why this blocks: without a stated tolerance or convergence/equivalence theorem, the audit can certify numerical closeness but cannot certify replacement status as a retained engine equivalence. Repair target: add an audited acceptance criterion for drop-in replacement, such as field and propagated-response tolerances tied to solver residuals, or prove both algorithms converge to the same finite-grid Poisson solution with a runner pass/fail threshold. Claim boundary until fixed: safe to claim that at H = 0.35 and H = 0.25 the direct and matrix-free fields agree to roughly 1e-5 relative field mismatch and propagated dS agrees to roughly 1e-6; not safe to claim unconditional retained drop-in replacement beyond those numerical tests.
 - **auditor confidence:** high
 
 ### `wave_static_single_source_compare_note`

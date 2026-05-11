@@ -1,5 +1,5 @@
 {
-  "cycle_count": 253,
+  "cycle_count": 254,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -54960,6 +54960,43 @@
       "decision": null,
       "edges": [
         {
+          "from": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20",
+          "to": "science_3plus1_line_law_known_limits_note_2026-04-20"
+        },
+        {
+          "from": "science_3plus1_line_law_known_limits_note_2026-04-20",
+          "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 1,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_closure_endpoint_note_2026-04-20",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_LINE_CLOSURE_ENDPOINT_NOTE_2026-04-20.md",
+          "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Line Closure Endpoint",
+          "transitive_descendants": 1
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "science_3plus1_line_law_known_limits_note_2026-04-20",
+          "claim_type": "meta",
+          "effective_status": "meta",
+          "note_path": "docs/SCIENCE_3PLUS1_LINE_LAW_KNOWN_LIMITS_NOTE_2026-04-20.md",
+          "title": "Science 3+1 Line Law: Known Limits Note",
+          "transitive_descendants": 1
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0254",
+      "decision": null,
+      "edges": [
+        {
           "from": "repo.active_review_queue",
           "to": "work_history.repo.review_feedback.pr484_kz_external_lift_review_2026-05-03"
         },
@@ -55004,7 +55041,7 @@
     "17": 5,
     "18": 2,
     "19": 4,
-    "2": 16,
+    "2": 17,
     "20": 2,
     "21": 4,
     "22": 2,
