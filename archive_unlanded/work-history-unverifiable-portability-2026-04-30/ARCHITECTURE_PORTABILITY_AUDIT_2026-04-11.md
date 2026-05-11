@@ -1,7 +1,19 @@
 # Architecture Portability Audit
 
 **Date:** 2026-04-11  
-**Status:** proposed_retained bounded companion
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/work-history-unverifiable-portability-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/work-history-unverifiable-portability-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the positive architecture-portability claim is asserted without any checkable source-note computation, runner output, table, or registered dependency. Why this blocks: a hostile auditor cannot verify source-mass scaling, attraction sign, Born-rule exclusions, or architecture-specific boundaries across the ordered, staggered, Wilson, and random-geometric rows from this packet. Repair target: provide or register the underlying architecture-portability note, scripts/logs, per-architecture measurements, and explicit wording-boundary checks. Claim boundary until fixed: this file can be used only as an editorial wording caution that should not overclaim Newton closure, distance-law closure, both-masses closure, or Wilson Born measurements; it cannot itself be retained as evidence for architecture portability."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 ## Verdict
 

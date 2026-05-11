@@ -1,7 +1,19 @@
 # Triage No-Promotion Note
 
 **Date:** 2026-04-06  
-**Status:** no additional science result clears the proposed_retained bar from the current dirty stack
+**Status:** RETRACTED 2026-04-30 — retracted aggregate triage summary; audit failed; this note is archived under `archive_unlanded/process-triage-unreproducible-state-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. Future readers should consult the live audit ledger and live notes, not this aggregate. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/process-triage-unreproducible-state-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `triage_no_promotion_note`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: The note's central claim is a process judgment over a 'current dirty / untracked stack' that is not preserved as a repo manifest, runner, or reproducible input set, and the cited retained baseline now includes GROWN_TRANSFER_BASIN_NOTE as audited_failed and EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS as audited_conditional. Why this blocks: an audit cannot verify that no dirty draft cleared the bar, nor can it rely on a baseline whose own retained status is not clean. Repair target: replace the note with a reproducible triage manifest listing every draft artifact, its runner/log, and the exact promotion criterion, or demote it to a historical process memo outside retained science. Claim boundary until fixed: safe to say this was a dated editorial no-promotion snapshot; not safe to cite it as an audited retained conclusion about the current stack or about science promotion status."
+
+This file is a retracted aggregate triage/process summary. Future readers should consult the live audit ledger ([audit_ledger.json](../../docs/audit/data/audit_ledger.json)) and live notes in `docs/`, not this aggregate. Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 ## Scope
 

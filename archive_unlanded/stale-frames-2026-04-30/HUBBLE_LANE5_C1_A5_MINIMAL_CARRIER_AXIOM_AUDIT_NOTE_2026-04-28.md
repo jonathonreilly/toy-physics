@@ -1,15 +1,23 @@
 # Lane 5 `(C1)` Gate — A5 Minimal-Carrier-Axiom Audit
 
 **Date:** 2026-04-28
-**Status:** open branch-local **minimal-carrier-axiom audit** note on
-`frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 5 of the
-(C1) gate loop. Audit-grade. Identifies the minimal carrier-axiom
-class that would close `(G1)` after Cycles 2-4 closed `A1`, `A2`,
-`A4` negatively.
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/stale-frames-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Lane:** 5 — Hubble constant `H_0` derivation
 **Loop:** `hubble-c1-absolute-scale-gate-20260428`
 **Runner:** `scripts/frontier_hubble_c1_a5_minimal_carrier_axiom_audit.py`
 **Log:** `outputs/frontier_hubble_c1_a5_minimal_carrier_axiom_audit_2026-04-28.txt`
+
+---
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/stale-frames-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `hubble_lane5_c1_a5_minimal_carrier_axiom_audit_note_2026-04-28`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the note's load-bearing role is to support the stale Axiom* minimal-carrier narrative that the later audit failed, not merely to record a neutral open option. Why this blocks: keeping it active would preserve a failed wrapper frame as if it were still live support for (G1)/(C1) closure. Repair target: rebuild any future carrier-axiom analysis from a fresh proof surface that does not depend on the failed exhaustion/minimality frame. Claim boundary until fixed: the source note is retained only in archive recovery history, not as an active docs claim."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ---
 

@@ -1,7 +1,19 @@
 # Testable Predictions Map
 
 **Date:** 2026-04-05  
-**Status:** ranked catalog of the current proposed_retained testables on `main`
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/testable-ranking-stale-wrappers-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `testable_predictions_map_note`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: The map claims to rank current candidate retained-grade testables and to record what is already retained, but its cited authorities include bounded or conditional notes such as the diamond protocol/prediction lane, the wavefield escalation note, the growing-graph expansion card, and the generated-family bridge; the note also lists seven ranked entries but the later current ranking drops the grown-trapping and growing-expansion entries and reorders the list. Why this blocks: a retained catalog cannot assert current retained status or a stable ranking when the one-hop sources and the note's own ranking sections disagree. Repair target: regenerate the map from the audit ledger, separating audited-clean/retained, conditional, bounded, and unaudited items, and make the numbered ranking, top-3, and bottom-line sections mechanically consistent. Claim boundary until fixed: safe to treat this as a stale editorial snapshot of candidate testable lanes; not safe to cite it as a retained current map of audit-clean testable predictions."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 ## Purpose
 

@@ -1,6 +1,18 @@
 # Session Summary: Topology Pivot
 **Date:** 2026-04-01
-**Status:** architecture result proposed_retained; metrics wording tightened; soft-pruning emergence lane closed asymptotically.
+**Status:** RETRACTED 2026-04-30 — retracted aggregate session summary; audit failed; this note is archived under `archive_unlanded/session-summary-stale-aggregates-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. Future readers should consult the live audit ledger and live notes, not this aggregate. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/session-summary-stale-aggregates-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `session_summary_2026-04-01_topology`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: The candidate retained-grade architecture result is a session summary aggregating many gravity, decoherence, topology, pruning, and emergence claims without a single retained theorem, runner, frozen assertion surface, or audit-clean dependency chain. Why this blocks: a synthesis note that even flags optimistic standard-error wording and provisional follow-ups cannot itself establish the broad claim that gravity and decoherence work on the same graph family or that emergence lanes are closed. Repair target: split the summary into auditable claim notes, each with its own runner/log and explicit dependencies, then retain only the scoped results that survive audit; leave this file as session history. Claim boundary until fixed: it is safe to use this note as a dated roadmap and index of scripts/logs from the topology-pivot session; it is not safe to cite it as retained evidence for the architecture claims."
+
+This file is a retracted aggregate session summary. Future readers should consult the live audit ledger ([audit_ledger.json](../../docs/audit/data/audit_ledger.json)) and live notes in `docs/`, not this aggregate. Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 This is the topology-pivot session note. Later higher-dimensional results are
 tracked separately in

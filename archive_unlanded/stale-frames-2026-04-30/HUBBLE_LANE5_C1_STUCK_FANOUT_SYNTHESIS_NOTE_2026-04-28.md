@@ -1,14 +1,23 @@
 # Lane 5 `(C1)` Gate — Stuck Fan-Out Synthesis
 
 **Date:** 2026-04-28
-**Status:** open branch-local **stuck-fan-out synthesis** note on
-`frontier/hubble-c1-absolute-scale-gate-20260428`. Cycle 6 of the
-(C1) gate loop. Audit-grade. Per Deep Work Rules: 3-5 orthogonal
-premises beyond the audit's `A1`–`A6` direct-derivation frames.
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/stale-frames-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
 **Lane:** 5 — Hubble constant `H_0` derivation
 **Loop:** `hubble-c1-absolute-scale-gate-20260428`
 **Runner:** `scripts/frontier_hubble_c1_stuck_fanout_synthesis.py`
 **Log:** `outputs/frontier_hubble_c1_stuck_fanout_synthesis_2026-04-28.txt`
+
+---
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/stale-frames-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `hubble_lane5_c1_stuck_fanout_synthesis_note_2026-04-28`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the wrapper's overall exhaustion claim overstates what the five checks establish. Why this blocks: Thread 1 preserved the route-local alpha S_4, beta cobordism, gamma Holevo, delta Stinespring, and epsilon Reeh-Schlieder observations, but rejected the wrapper as an active global no-hidden-route proof. Repair target: keep the five narrow no-gos in one support-tier salvage note and archive the failed wrapper. Claim boundary until fixed: safe to cite docs/HUBBLE_LANE5_C1_NARROW_ROUTE_NOGO_CLUSTER_2026-04-30.md for route-local boundaries only; do not cite this wrapper as exhaustion or Axiom* minimality support."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
 
 ---
 

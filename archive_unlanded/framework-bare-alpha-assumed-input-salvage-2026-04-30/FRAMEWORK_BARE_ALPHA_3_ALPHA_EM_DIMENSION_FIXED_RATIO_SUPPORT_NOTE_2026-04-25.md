@@ -2,9 +2,19 @@
 
 Date: 2026-04-25
 
-Status: exact algebraic support corollary on the proposed_retained EW-normalization
-surface. This note does not promote the reviewed `Cl(3) -> SM` algebraic
-support packet into the accepted minimal-input stack.
+**Status:** RETRACTED 2026-04-30 — audit failed; this note is archived under `archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/`. Claims below are NOT supported by current runners or current audit lane. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/framework-bare-alpha-assumed-input-salvage-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "The claim fails as a candidate retained-grade support corollary because its own primary verifier rejects the authority boundary. The algebraic identity is trivial and correct once the inputs g3^2=1, g2^2=1/(d+1), gY^2=1/(d+2), and d=3 are assumed: the bare electromagnetic inverse sum is 2d+3=9 and therefore alpha_3/alpha_em=9. But the note's load-bearing scientific claim is stronger than arithmetic; it asserts this identity is a support corollary on the retained EW-normalization surface while not promoting the Cl(3)->SM support packet. The verifier's failed `EW normalization retained lane exists` check means that required package authority was not established under the note's own audit gate. To repair the claim, either update/register the retained EW-normalization authority so the verifier can find the intended status and bare-coupling bookkeeping, or narrow the note to a pure conditional algebra lemma with explicit assumptions and no candidate retained-grade package-surface authority. Also register the primary verifier in the audit queue and add one-hop dependencies for the EW normalization lane and Cl(3)->SM support packet. What can still be safely claimed is: if the bare bookkeeping inputs are assumed, then alpha_3(bare)/alpha_em(bare)=2d+3 and equals 9 at d=3, and the bare sin^2(theta_W)=4/9 differs from SU(5)'s 3/8 by 5/72. The audit does not support retained package authority, direct low-energy alpha_3/alpha_em phenomenology, or minimal-stack promotion."
+
+Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this note have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
 
 Primary verifier:
 

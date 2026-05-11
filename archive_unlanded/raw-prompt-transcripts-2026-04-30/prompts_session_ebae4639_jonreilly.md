@@ -1,5 +1,19 @@
 # Claude Session — ebae4639-23f6-4620-a97e-4d374e8beaa6
 
+**Status:** RETRACTED 2026-04-30 — audit failed; this file is archived under `archive_unlanded/raw-prompt-transcripts-2026-04-30/`. This file is a raw prompt transcript artifact, NOT a derivation. Treat no content here as framework claims. See `## Retraction` section.
+
+## Retraction
+
+- Date archived: 2026-04-30
+- Archive directory: `archive_unlanded/raw-prompt-transcripts-2026-04-30/`
+- Audit verdict (`verdict_rationale` from [audit_ledger.json](../../docs/audit/data/audit_ledger.json), claim_id `ai_methodology.raw.prompts_session_ebae4639_jonreilly`, `audit_status: audited_failed`, `effective_status: retained_no_go`):
+
+> "Issue: the audited source artifact is a raw prompt transcript that quotes multiple inconsistent states of the ISSR1/BICAC/JTS work, including stale PASS=41/JTS-residue language and later task text asking for JTS proof work, whereas the live runner now reports PASS=13 for a separate current theorem packet. Why this blocks: a hostile physicist cannot ratify a stable candidate retained-grade theorem from a raw conversation transcript whose embedded status disagrees with the current runner and whose real theorem content lives in canonical QUARK_* notes outside this queue row. Repair target: remove or demote raw prompt transcripts from the candidate retained-grade audit queue, then register and audit docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md with its JTS and shell-normalization dependencies as the canonical claim. Claim boundary until fixed: it is safe to say the live ISSR1 runner verifies its finite affine-carrier/JTS/BICAC algebra with PASS=13 FAIL=0; it is not safe to retain this raw transcript as a scientific theorem."
+
+This file is an artifact of session prompts (verbatim raw extraction of user-typed prompts from a Claude Code jsonl), not a derivation, theorem note, or claim. Future readers should NOT treat any content here as framework claims; in particular the embedded status quotes (e.g. PASS=41 / JTS-residue language) are stale relative to the current runner state. Do NOT cite the numerical results, tables, or threshold values in the original content below as live framework claims. The runners referenced in this transcript have been superseded or are no longer reproducible at the time of audit. If a future investigation revisits this physics, treat it as starting from scratch rather than as continuation of a "closed no-go".
+
+---
+
 **Source:** `/Users/jonreilly/.claude/projects/-Users-jonreilly-Projects-Physics--claude-worktrees-charming-stonebraker-7078d0/ebae4639-23f6-4620-a97e-4d374e8beaa6.jsonl`
 
 **Machine:** /Users/jonreilly/  (Claude Code, model claude-opus-4-X / sonnet-4-X)
