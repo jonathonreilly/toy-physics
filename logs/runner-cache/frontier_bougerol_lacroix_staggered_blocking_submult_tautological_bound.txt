@@ -1,0 +1,101 @@
+
+----------------------------------------------------------------------------------------
+BL/Oseledets staggered-blocking submult tautological-bound bounded theorem
+----------------------------------------------------------------------------------------
+Note: docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_SUBMULT_TAUTOLOGICAL_BOUND_BOUNDED_THEOREM_NOTE_2026-05-10.md
+Canonical-surface anchor: alpha_LM = alpha_bare / u_0 from PLAQUETTE_SELF_CONSISTENCY_NOTE.md
+
+----------------------------------------------------------------------------------------
+T1. Construction of the 1D scale-operator family A_k(x) = alpha_LM * x
+----------------------------------------------------------------------------------------
+  [PASS (B)] T1.a: A_k linear on V=R (additivity + homogeneity)  (verified for sample inputs)
+  [PASS (B)] T1.b: A_k bounded with sup |A_k(x)/x| = alpha_LM  (alpha_LM ~ 0.0906678360172863086)
+  [PASS (B)] T1.c: A_k invertible (1x1 nonzero scalar)
+
+----------------------------------------------------------------------------------------
+T2. Single-step operator norm ||A_k||_op = alpha_LM
+----------------------------------------------------------------------------------------
+  [PASS (B)] T2.a: ||A_k||_op = alpha_LM (numerical sup on |x|<=1 sample)  (sample sup = 0.0906678360172863086, alpha_LM = 0.0906678360172863086)
+  [PASS (B)] T2.b: ||A_k||_op = alpha_LM (sympy exact identity)
+
+----------------------------------------------------------------------------------------
+T3. Canonical numerical value of alpha_LM from canonical surface
+----------------------------------------------------------------------------------------
+  [PASS (B)] T3.a: alpha_LM = 0.0906678... from canonical-surface anchors  (alpha_LM = 0.0906678360172863086, ref = 0.09066783601728631)
+  [PASS (B)] T3.b: alpha_LM = alpha_bare / u_0 identity
+
+----------------------------------------------------------------------------------------
+T4. Two-step sub-multiplicativity holds with equality in 1D
+----------------------------------------------------------------------------------------
+  [PASS (B)] T4.a: ||A_1 A_0||_op = alpha_LM^2 (direct)
+  [PASS (B)] T4.b: ||A_1 A_0||_op = ||A_1||_op * ||A_0||_op (equality in 1D)
+
+----------------------------------------------------------------------------------------
+T5. 16-step product identity ||Pi_16||_op = alpha_LM^16
+----------------------------------------------------------------------------------------
+  [PASS (B)] T5.a: ||Pi_16||_op = alpha_LM^16 (direct product)
+  [PASS (B)] T5.b: ||Pi_16||_op = product of norms (16-step sub-mult equality)
+  [PASS (B)] T5.c: alpha_LM^16 ~ 2.09e-17 (canonical hierarchy compression)  (alpha_LM^16 = 2.085701e-17)
+
+----------------------------------------------------------------------------------------
+T6. Tautological-with-rung verification (mu_{k+1}/mu_k = alpha_LM)
+----------------------------------------------------------------------------------------
+  [PASS (B)] T6.a: Per-step rung ratio mu_{k+1}/mu_k = alpha_LM (all 16 steps)
+  [PASS (B)] T6.b: Total compression mu_16/mu_0 = alpha_LM^16  (mu_16/mu_0 = 2.085701e-17)
+  [PASS (B)] T6.c: ||Pi_16||_op = mu_16/mu_0 (one-line rewriting of rung spec)
+
+----------------------------------------------------------------------------------------
+T7. Bougerol-Lacroix/Oseledets MET hypothesis on 1D singleton model
+----------------------------------------------------------------------------------------
+  [PASS (B)] T7.a: E log^+ ||A_0||_op < inf (singleton i.i.d.)  (log^+ ||A|| = max(log(0.0907), 0) = 0)
+  [PASS (B)] T7.b: E log^+ ||A_0^-1||_op < inf (singleton i.i.d.)  (log^+ ||A^-1|| = -log(0.0907) ~ 2.4006)
+  [PASS (B)] T7.c: lambda_1 = log alpha_LM on 1D singleton (MET output)  (lambda_1 = -2.400553)
+
+----------------------------------------------------------------------------------------
+T8. Gouezel-Karlsson cocycle structure on 1D periodic extension
+----------------------------------------------------------------------------------------
+  [PASS (B)] T8.a: (1/N) log ||Pi_N|| = log alpha_LM for all N (periodic extension)  (lambda(N=16, 32, 64, 128, 1024) all equal -2.400553)
+  [PASS (B)] T8.b: Subadditive cocycle holds with equality on 1D singleton  (trivially: phi(m+n) = (m+n) log alpha_LM)
+  [PASS (B)] T8.c: Gouezel-Karlsson lambda_1 on 1D model is tautological with sub-mult (T5)  (no independent derivational content beyond T5)
+
+----------------------------------------------------------------------------------------
+T9. Categorical distinction: marginal Wilson-Kadanoff blocking eigenvalue is O(1)
+----------------------------------------------------------------------------------------
+  [PASS (B)] T9.a: Marginal Wilson-Kadanoff eigenvalue is O(1), not alpha_LM  (marginal eigenvalue ~ 0.9300, alpha_LM = 0.0907)
+  [PASS (B)] T9.b: |marginal eigenvalue - alpha_LM| > 0.5 (clear categorical separation)  (gap = 0.8394)
+
+----------------------------------------------------------------------------------------
+T10. Categorical distinction: staggered Dirac taste eigenvalue spectrum
+----------------------------------------------------------------------------------------
+  [PASS (B)] T10.a: Free staggered Dirac has 16 zero modes (BZ corners on Z^4)  (parent narrow theorem; 16 = 2^4)
+  [PASS (B)] T10.b: Interacting taste splittings O(alpha_LM * (a*Lambda)^2) per Lee-Sharpe 1999  (taste split ~ 0.0907)
+  [PASS (B)] T10.c: Taste eigenvalue spectrum and per-step blocking operator are different objects  (D_stag(p) acts on fermion momentum p; A_k acts on scale coordinate; categorical separation)
+
+----------------------------------------------------------------------------------------
+T11. Tautology accounting: alpha_LM and 16 are inputs, not outputs of (star)
+----------------------------------------------------------------------------------------
+  [PASS (B)] T11.a: Identity holds for any 0 < alpha_LM_cf < 1 (tautological w.r.t. alpha_LM value)  (alpha_LM_cf = 0.5 -> norm_cf = 1.525879e-05)
+  [PASS (B)] T11.b: Identity holds for any finite N (tautological w.r.t. exponent value)  (N_cf = 8 -> norm_cf = 4.566947e-09)
+  [PASS (B)] T11.c: (star) does NOT independently derive alpha_LM or N=16  (alpha_LM from PLAQUETTE_SELF_CONSISTENCY_NOTE.md; 16 from species-count narrow theorem)
+
+----------------------------------------------------------------------------------------
+T12. Forbidden-imports / boundary keyword check on the note body
+----------------------------------------------------------------------------------------
+  [PASS (B)] T12.a: Required keywords present in note body  (all canonical vocabulary present, no new repo vocabulary)
+  [PASS (B)] T12.b: Forbidden strings absent (no closed-PR load-bearing, no over-claims)
+  [PASS (B)] T12.c: Source-note proposal disclaimer present
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+PASS = 32, FAIL = 0
+Target: PASS = 12, FAIL = 0
+
+Class-B bounded-support theorem verified.
+  - (star) ||Pi_16||_op = alpha_LM^16 holds with equality on the 1D scale-operator family
+  - (star) is tautological with the staircase rung specification mu_k = M_Pl * alpha_LM^k
+  - Categorical separations confirmed: 1D scale operator is NOT identified with
+    Wilson-Kadanoff blocking eigenvalues, staggered Dirac taste eigenvalues, or
+    Luescher transfer-matrix spectrum (sec 4 of the note).
+  - Does NOT close the hierarchy formula v = M_Pl * alpha_LM^16 * (7/8)^(1/4).

@@ -1260,6 +1260,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go.py"
     },
+    "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10": {
+      "assert_count": 0,
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_bougerol_lacroix_staggered_blocking_submult_tautological_bound.py"
+    },
     "bound_state_selection_note": {
       "assert_count": 0,
       "counts": {
@@ -25341,6 +25353,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_bougerol_lacroix_staggered_blocking_submult_tautological_bound.py": {
+      "assert_count": 0,
+      "claims": [
+        "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 9,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_bound_state_selection.py": {
       "assert_count": 0,
       "claims": [
@@ -45185,12 +45212,12 @@
     "dominant_class_distribution": {
       "A": 120,
       "B": 166,
-      "C": 657,
+      "C": 658,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1613,
-    "runners_with_C": 824,
+    "runners_classified": 1614,
+    "runners_with_C": 825,
     "runners_with_D": 448
   }
 }
