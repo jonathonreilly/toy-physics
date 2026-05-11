@@ -14062,6 +14062,10 @@
     },
     {
       "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
+      "to": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological"
+    },
+    {
+      "from": "koide_u_bae_ncg_spectral_triple_note_2026-05-08_probeu_bae_ncg",
       "to": "three_generation_observable_theorem_note"
     },
     {
@@ -14431,6 +14435,18 @@
     {
       "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
       "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
+      "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
     },
     {
       "from": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
@@ -51289,6 +51305,7 @@
         "charged_lepton_koide_cone_algebraic_equivalence_note",
         "koide_a1_probe_spectral_action_bounded_obstruction_note_2026-05-08_probe4",
         "koide_bae_probe_interacting_dynamics_bounded_obstruction_note_2026-05-09_probe28",
+        "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
         "three_generation_observable_theorem_note",
         "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
         "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
@@ -51507,6 +51524,21 @@
       "path": "docs/KOIDE_X_L1_MSBAR_NATIVE_SCHEME_NOTE_2026-05-08_probeX_L1_msbar.md",
       "runner_path": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py",
       "title": "Probe X-L1-MSbar \u2014 Beta-Function Coefficients in a Lattice/`<P>` Scheme: Bounded-Tier Source Note"
+    },
+    "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological": {
+      "claim_id": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "charged_lepton_koide_cone_algebraic_equivalence_note"
+      ],
+      "note_hash": "5424c71e63340a7a968d897f2e5b7d9e35bcd79aa1ac0b58172c811e9d089969",
+      "path": "docs/KOIDE_Y_BAE_TOPOLOGICAL_INDEX_KTHEORY_NOTE_2026-05-10_probeY_bae_topological.md",
+      "runner_path": "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py",
+      "title": "Koide BAE Probe Y: Topological Decoupling on the C3 hw=1 Triplet"
     },
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
       "claim_id": "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
@@ -69638,7 +69670,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 327,
+      "bounded_theorem": 328,
       "meta": 70,
       "no_go": 44,
       "none": 1565,
@@ -69646,17 +69678,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 786,
+      "bounded_theorem": 787,
       "meta": 70,
       "no_go": 149,
       "none": 446,
       "open_gate": 116,
       "positive_theorem": 618
     },
-    "edge_count": 8682,
+    "edge_count": 8686,
     "leaf_count": 619,
-    "node_count": 2185,
+    "node_count": 2186,
     "root_count": 814,
-    "runners_with_path": 1797
+    "runners_with_path": 1798
   }
 }

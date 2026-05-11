@@ -1,0 +1,59 @@
+
+================================================================================
+note boundary checks
+================================================================================
+[PASS] note contains 'Claim type:** bounded_theorem'
+[PASS] note contains 'source-note proposal only'
+[PASS] note contains 'without an additional amplitude bridge'
+[PASS] note contains 'does not supply that bridge'
+[PASS] note contains 'not a new interpretation of the physical Cl(3) local'
+[PASS] note contains 'This note does not:'
+[PASS] note contains 'assert retained or audited status'
+
+================================================================================
+C3 representation and K-theory class
+================================================================================
+[PASS] C has order 3
+[PASS] C is unitary
+[PASS] regular representation character is (3,0,0) (chars=[np.complex128(3+0j), np.complex128(0j), np.complex128(0j)])
+[PASS] character orthogonality gives multiplicities (1,1,1) (multiplicities=[np.complex128(1+0j), np.complex128(1+0j), np.complex128(1+0j)])
+[PASS] K_C3(pt)=R(C3) class is integer triple
+
+================================================================================
+circulant amplitude does not alter representation class
+================================================================================
+[PASS] sample 0: H(a,b) is Hermitian
+[PASS] sample 0: H(a,b) commutes with C
+[PASS] sample 0: representation character unchanged
+[PASS] sample 1: H(a,b) is Hermitian
+[PASS] sample 1: H(a,b) commutes with C
+[PASS] sample 1: representation character unchanged
+[PASS] sample 2: H(a,b) is Hermitian
+[PASS] sample 2: H(a,b) commutes with C
+[PASS] sample 2: representation character unchanged
+[PASS] sample 3: H(a,b) is Hermitian
+[PASS] sample 3: H(a,b) commutes with C
+[PASS] sample 3: representation character unchanged
+
+================================================================================
+topological data are discrete while BAE is a continuous ratio
+================================================================================
+[PASS] sampled eta signature is integer-valued (eta=[3, 3, 3, 3, -1])
+[PASS] eta signature does not single out the BAE neighborhood in this route (ratios=[0.6771067811865474, 0.7071067811865475, 0.7371067811865475], eta=[3, 3, 3])
+[PASS] BAE ratio is non-integer continuous data
+
+================================================================================
+point character, anomaly-trace, and cohomology bookkeeping
+================================================================================
+[PASS] point Chern character reduces to rank 3
+[PASS] non-identity C3 character traces vanish
+[PASS] point cohomology has H0=Z
+[PASS] point cohomology has Hq=0 for q>0
+[PASS] finite C3 cohomology torsion data are finite integers
+
+================================================================================
+runner import boundary
+================================================================================
+[PASS] imports limited to numpy plus stdlib (modules=['__future__', 'math', 'numpy', 'pathlib', 're', 'sys'])
+
+TOTAL: PASS=33 FAIL=0

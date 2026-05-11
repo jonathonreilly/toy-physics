@@ -11592,6 +11592,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py"
     },
+    "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py"
+    },
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10": {
       "assert_count": 0,
       "counts": {
@@ -24725,6 +24737,21 @@
         "B": 0,
         "C": 10,
         "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3,
+        "D": 0
       },
       "decoration_candidate": false,
       "dominant_class": "C",
@@ -47129,12 +47156,12 @@
     "dominant_class_distribution": {
       "A": 150,
       "B": 172,
-      "C": 681,
+      "C": 682,
       "D": 266,
       "none": 416
     },
-    "runners_classified": 1685,
-    "runners_with_C": 862,
+    "runners_classified": 1686,
+    "runners_with_C": 863,
     "runners_with_D": 482
   }
 }
