@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 269 |
+| **retained_bounded** | 270 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1232 |
+| unaudited | 1231 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 443 |
+| `audited_clean` | 444 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1345 |
+| `unaudited` | 1344 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 895 |
+| `bounded_theorem` | 896 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 227 |
 | `open_gate` | 111 |
-| `positive_theorem` | 739 |
+| `positive_theorem` | 738 |
 
 | criticality | count |
 |---|---:|
@@ -483,6 +483,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `staggered_backreaction_shell_spectral_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -9007,6 +9008,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
   - `STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`
   - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_shell_spectral_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite n=36 shell/spectral diagnostic for the bipartite_random_geometric and layered_bipartite_dag families: phi_solved is flatter than phi_ext with shell span ratios 0.123 and 0.229 and solved/external low-mode fractions 0.958/0.453 and 0.809/0.355; stale force columns are not part of the retained scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The force-scale gap is a structural over-smoothing of the source-to-field map: rho is localized, phi_solved is smoother and more low-mode dominated, phi_ext stays steeper in depth, and force remains positive but too weak.  _(class `C`)_
+- **chain closes:** True — The runner constructs the two graph families, source density, screened graph-Poisson solve, external-kernel field, shell profiles, and Laplacian spectra directly, and its live output reproduces the audited shell-span and low-mode diagnostics. The chain closes only as a finite diagnostic of these two fixed families, not as a general endogenous-gravity closure theorem.
+- **rationale:** The load-bearing structural diagnosis is computed rather than defined: the live runner reproduces the shell span ratios 0.123 and 0.229 and the solved/external low-mode fractions 0.958/0.453 and 0.809/0.355 from the stated graph families. The source note's force readouts are stale against live output, but the note explicitly quarantines those columns as non-load-bearing finite-snapshot values, and the qualitative positive-but-too-weak force direction remains. Residual risk is limited to future runner drift or treating this bounded diagnostic as a universal source-to-field theorem.
 - **auditor confidence:** high
 
 ### `staggered_dag_note_2026-04-10`
