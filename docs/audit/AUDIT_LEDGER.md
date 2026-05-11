@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 82 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 260 |
+| **retained_bounded** | 261 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1244 |
+| unaudited | 1243 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 434 |
+| `audited_clean` | 435 |
 | `audited_conditional` | 180 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1357 |
+| `unaudited` | 1356 |
 
 | claim_type | count |
 |---|---:|
@@ -345,6 +345,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_3d_dense_window_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `lattice_3d_l2_numpy_h0125_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `lattice_3d_tapered_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `lattice_complementarity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `lattice_distance_law_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
@@ -6142,6 +6143,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The reduced 3D 1/L^2 + h^2 numpy lane completes numerically through h = 0.125, preserves Born, and does not preserve the retained weak-field gravity class on this audit family.  _(class `C`)_
 - **chain closes:** False — The note's numerical table matches the supplied stdout, and the wrapper fixes the h ladder and family parameters. The load-bearing physics computation is delegated to scripts.lattice_3d_l2_numpy.run_card, whose source is not supplied, so the restricted packet cannot verify the claimed kernel, measure, observables, or sign readout.
 - **rationale:** Issue: the wrapper imports the opaque run_card implementation for the actual dense-lattice computation, while only the wrapper source and stdout are supplied. Why this blocks: stdout alone is not authoritative under the audit rubric, so the chain cannot establish that the reported Born and gravity rows come from the claimed 3D 1/L^2 + h^2 construction. Repair target: provide and audit the full scripts/lattice_3d_l2_numpy.py run_card implementation or an equivalent deterministic computation certificate. Claim boundary until fixed: the supplied log reports numerical completion and weak-field gravity failure for the named wrapper, but the bounded theorem is not closed from the restricted packet.
+- **auditor confidence:** high
+
+### `lattice_3d_l2_numpy_h0125_bridge_note`
+
+- **Note:** [`LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md`](../../docs/LATTICE_3D_L2_NUMPY_H0125_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite fixed-family 3D dense 1/L^2+h^2 bridge evidence at phys_l=6, phys_w=3 through h=0.125, with Born/k=0 clean, TOWARD bridge sign in the completed cache, and F~M near 0.50 rather than Newtonian closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The current fixed-family artifact chain supports a completed h=0.125 row, machine-clean Born/k=0 behavior, TOWARD bridge sign, and F~M remaining about 0.50 rather than 1.00.  _(class `C`)_
+- **chain closes:** True — The primary bridge cache completes the four-row fixed-family replay through h=0.125 and the focused single-row log independently supports the decisive h=0.125 row. The audited scope is only the bounded finite evidence and explicit non-Newtonian limitation, not a continuum-limit or Newtonian bridge theorem.
+- **rationale:** The runner instantiates the dense 3D fixed-family lattice replay rather than printing the target conclusion, and the completed cache supports the source note's safe read: Born/k=0 remain clean, the retained-family sign is TOWARD at h=0.5, h=0.25, and h=0.125, and F~M stays about 0.50. The small difference between the focused single-row Born residue and the current bridge-cache residue is immaterial to the scoped claim because both are machine-clean and the exact residue is not used as a physical prediction. Residual risk is limited to the stated bounded finite family; no continuum or Newtonian closure is audited here.
 - **auditor confidence:** high
 
 ### `lattice_3d_l2_tail_stats_note`
