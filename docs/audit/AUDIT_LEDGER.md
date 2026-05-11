@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 83 |
+| **retained** | 84 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1228 |
+| unaudited | 1227 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 447 |
+| `audited_clean` | 448 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1341 |
+| `unaudited` | 1340 |
 
 | claim_type | count |
 |---|---:|
@@ -159,6 +159,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `angular_kernel_orbit_class_underdetermination_narrow_no_go_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `architecture_portability_sweep_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `area_law_algebraic_spectrum_entropy_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
+| `area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `atomic_lane2_alpha0_running_bridge_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `atomic_lane2_physical_unit_limit_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -1204,6 +1205,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Apply Baker's theorem to S(lambda)=-sum_i lambda_i log(lambda_i) with algebraic coefficients lambda_i and positive algebraic log arguments lambda_i, then use S(lambda)>0 for every non-product finite probability spectrum.  _(class `A`)_
 - **chain closes:** True — The chain closes as exact algebra over the stated finite algebraic-spectrum premise plus Baker's theorem; no dependency note, tuned numerical value, or hidden physical carrier identification is needed for the bounded no-go.
 - **rationale:** The audited claim is a bounded mathematical no-go, not a general physical exclusion of every finite or gapped carrier. Under the explicit premise that the finite Schmidt spectrum has algebraic nonzero entries, the von Neumann entropy is a linear form in logarithms of algebraic numbers with algebraic coefficients. Baker's theorem gives that any nonzero such form is transcendental. A non-product finite probability spectrum has strictly positive entropy, while the product spectrum has entropy 0. Since 1/4 is algebraic and nonzero, exact equality S=1/4 is excluded. The runner summary checks the target rationality, representative rational/algebraic spectra, primitive m/16 binary cases, flat ranks, direct-sum log-linear forms, and the p_star transcendental-selector consequence without reporting failures. Residual risk is only scope control: the clean result covers algebraic finite Schmidt spectra and algebraic finite-matrix cases yielding algebraic reduced spectra; it does not prove that all physically possible finite or gapped edge carriers must have algebraic Schmidt spectra.
+- **auditor confidence:** high
+
+### `area_law_majorana_car_fock_equivalence_narrow_theorem_note_2026-05-09`
+
+- **Note:** [`AREA_LAW_MAJORANA_CAR_FOCK_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-09.md`](../../docs/AREA_LAW_MAJORANA_CAR_FOCK_EQUIVALENCE_NARROW_THEOREM_NOTE_2026-05-09.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Finite-dimensional algebra theorem on an abstract four-dimensional complex Hilbert space: Cl_4 Majorana relations imply the two-mode CAR identities, irreducible full-M_4(C) representations are unitarily equivalent to F(C^2) up to phase, and dimension four alone does not force CAR; no horizon, substrate-to-P_A, Cl(3)/Z^3, Wald-Noether, coframe-response, or BH-quarter physical identification is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** From four Hermitian Cl_4 Majoranas on K=C^4, c_a=(gamma_{2a-1}+i gamma_{2a})/2 satisfies the two-mode CAR, and irreducible Cl_4(C) representations on C^4 are unitarily equivalent to standard two-mode CAR Fock space while rank four alone is underdetermined.  _(class `A`)_
+- **chain closes:** True — The source proves T1 by anticommutator expansion, T2 by finite-dimensional Clifford irreducibility/Schur uniqueness, and T3 by an explicit commuting-Pauli counterexample. The runner verifies the symbolic reductions, canonical and conjugated matrix representations, full M_4(C) generation, intertwiner uniqueness, inverse map, and counterexample with PASS=24 and FAIL=0.
+- **rationale:** The theorem is confined to finite-dimensional complex Clifford/CAR algebra and representation theory, and the restricted packet supplies the needed hypotheses explicitly: Cl_4 relations, K=C^4, and full End(K) generation for the Fock-equivalence part. The live runner reproduces all symbolic, matrix, intertwiner, inverse-map, and rank-alone counterexample checks with PASS=24 and FAIL=0. Residual risk is downstream misuse: this clean audit does not identify K with a horizon block or close any area-law/BH-quarter physical bridge.
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`
