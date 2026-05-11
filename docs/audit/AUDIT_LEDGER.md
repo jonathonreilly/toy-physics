@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 98 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 283 |
+| **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1190 |
+| unaudited | 1189 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 477 |
+| `audited_clean` | 478 |
 | `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1303 |
+| `unaudited` | 1302 |
 
 | claim_type | count |
 |---|---:|
@@ -452,6 +452,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `primitive_p_lh_content_proposal_note_2026-05-10_pplh` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
@@ -8214,6 +8215,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
   - `COMPLEX_SELECTIVITY_COMPARE_NOTE.md`
+- **auditor confidence:** high
+
+### `primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality`
+
+- **Note:** [`PRIMITIVE_P_BAE_M1_M2_DUALITY_NOTE_2026-05-10_pPbae_duality.md`](../../docs/PRIMITIVE_P_BAE_M1_M2_DUALITY_NOTE_2026-05-10_pPbae_duality.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite algebra on the Hermitian C3-circulant H=aI+bC+conj(b)C^2: trace-state degeneracy, equal block-log saddle at E_plus=E_perp, translation to |b|^2/a^2=1/2, and half-scaled curvature distinction; no primitive election, empirical claim, or framework-level BAE closure is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** In the finite C3-circulant model, tau_M(H)=Tr(pi_plus(H))+Tr(pi_perp(H)) degenerates to Tr(H)=3a, while the equal block-log saddle under E_plus+E_perp=N occurs uniquely at E_plus=E_perp and translates to |b|^2/a^2=1/2.  _(class `A`)_
+- **chain closes:** True — The identities follow directly from the displayed Frobenius block energies and elementary one-variable log-saddle calculus. The runner computes the block energies, trace degeneracy, saddle point, BAE ratio translation, and half-curvature distinction with PASS=27 FAIL=0, and the source note explicitly excludes primitive election or retained-grade physical closure.
+- **rationale:** The audited content is a bounded finite-algebra guardrail, not a claim that BAE is selected by the framework. The runner verifies the exact trace degeneracy, equal-block log stationary point and maximum behavior, translation of E_plus=E_perp to |b|^2/a^2=1/2, and the half-scaled Hessian distinction without importing empirical inputs or electing a primitive. The note's boundary language keeps the bare reduced-coordinate measure and full BAE closure out of scope, so the finite claim closes.
 - **auditor confidence:** high
 
 ### `primitive_p_lh_content_proposal_note_2026-05-10_pplh`
