@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1219 |
+| unaudited | 1218 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 184 |
+| ~~audited_conditional~~ | 185 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 455 |
-| `audited_conditional` | 184 |
+| `audited_conditional` | 185 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1332 |
+| `unaudited` | 1331 |
 
 | claim_type | count |
 |---|---:|
@@ -635,6 +635,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dirac_decoherence_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dirac_field_smoothing_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `dirac_observable_panel_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `directional_b_density_stencil_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `dispersion_high_p_tiebreaker_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `dispersion_relation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -2754,6 +2755,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "Broadening the source field helps the offset-distance law, and the Gaussian control is clearly better than the current localized profile on that metric. It does not fix the N-monotonicity failure..."  _(class `C`)_
 - **chain closes:** False — The m0=0.10 tables are consistent with the supplied runner stdout and source. The broader conclusion also relies on unprovided m0=0.08 and m0=0.12 spot-check outputs and on an unclosed TOWARD-bias/offset-law readout as the relevant gravity metric.
 - **rationale:** Issue: the completed runner evidence only covers the m0=0.10 scan, while the note also claims nearby-mass robustness and interprets the selected TOWARD-bias/offset-law metrics as gravity failures or improvements. Why this blocks: those robustness and physical-readout steps are not closed by any one-hop authority or supplied runner output. Repair target: provide completed m0=0.08 and m0=0.12 run artifacts and a retained bridge theorem for the chosen readout, or split the note to the finite m0=0.10 script-output claim. Claim boundary until fixed: the runner reports the listed finite m0=0.10 biases for the specified code path.
+- **auditor confidence:** high
+
+### `dirac_observable_panel_note`
+
+- **Note:** [`DIRAC_OBSERVABLE_PANEL_NOTE.md`](../../docs/DIRAC_OBSERVABLE_PANEL_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded methodological Dirac 3+1D observable-panel card defining six readouts (centroid, peak, first-arrival, early accumulation, projected current, shell imbalance), interpretation rules, and a default sweep; no panel-specific numerical sign-alignment result, gravity promotion, or paper-level claim is audited without a registered panel runner output tying those readouts to the default sweep.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** A future panel-runner deposit producing the six listed readouts on the default n=21, layers=10..20, mass=0.3, strength=5e-4 sweep would close the conditional perimeter; this note remains a methodological card until that runner output is registered.  _(class `C`)_
+- **chain closes:** False — The retained-bounded core card dependency supports the general Dirac core framing, but the restricted packet does not include the panel-specific run for the six readouts listed in this note. The supplied v3 runner reports broader KG/convergence/AB/closure-card outputs, not the stated panel default sweep and sign-alignment table.
+- **rationale:** Issue: the note's load-bearing panel closure requires a runner or retained summary for centroid, peak, first-arrival, early accumulation, current, and shell imbalance on the default n=21/layers=10..20/mass=0.3/strength=5e-4 sweep, but that artifact is absent from the restricted packet. Why this blocks: without those outputs, the audit cannot verify the stated sign-alignment and readout-disagreement questions as a bounded result; the current v3 runner computes adjacent Dirac diagnostics rather than this panel. Repair target: add a panel runner/log or retained summary that prints the six readouts on the default sweep and ties them to the interpretation rules. Claim boundary until fixed: the panel design, readout list, interpretation rules, and default-sweep proposal are usable methodology, but no numerical observable-panel conclusion is retained.
 - **auditor confidence:** high
 
 ### `dirac_source_smoothing_note`
