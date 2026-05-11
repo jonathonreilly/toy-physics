@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 98 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 285 |
+| **retained_bounded** | 286 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1182 |
+| unaudited | 1181 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 480 |
+| `audited_clean` | 481 |
 | `audited_conditional` | 195 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1295 |
+| `unaudited` | 1294 |
 
 | claim_type | count |
 |---|---:|
@@ -517,6 +517,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `staggered_3d_self_gravity_sign_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `staggered_backreaction_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_backreaction_shell_spectral_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
@@ -9673,6 +9674,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
   - `STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`
   - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_NOTE.md`](../../docs/STAGGERED_BACKREACTION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite three-family staggered backreaction prototype readout only: bipartite random geometric n=36, bipartite growing n=48, and layered bipartite DAG-compatible n=36 under the named runner parameters; verifies exact zero-source reduction, source-response table, two-body additivity, TOWARD force signs, one-step endogenous TOWARD response, and norm stability, excluding lattice-size stability sweep and self-gravity closure.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the three listed retained graph families, the source-generated screened-Poisson Phi run has exact zero-source reduction, R^2 >= 0.983 source response, machine-precision two-body additivity, TOWARD force on all families, one-step endogenous TOWARD response, and norm drift at machine precision.  _(class `C`)_
+- **chain closes:** True — The named prototype runner recomputes the same three-family table shown in the source note and cache. The audited scope is narrowed to that finite numerical readout and explicitly excludes the broader required-control language about modest lattice-size stability and any claim that backreaction/self-gravity is solved.
+- **rationale:** The bounded numerical readout closes because the live runner reproduces the fixed table: zero-source reduction is exact for 3/3 families, source-response R^2 is at least 0.983, two-body residuals are machine precision, force and one-step self-force are TOWARD in every family, and norm drift is machine-scale. The note's broader controls are not silently promoted: no modest lattice-size sweep, full self-gravity closure, cosmology, Hawking, or replacement of the retained staggered card is included in the audited scope. Residual risk is therefore only the narrow finite-prototype scope and the absence of an assertion wrapper, not a missing computation for the scoped table.
 - **auditor confidence:** high
 
 ### `staggered_backreaction_results_2026-04-10`
