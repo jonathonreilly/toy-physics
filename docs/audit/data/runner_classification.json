@@ -7944,6 +7944,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py"
     },
+    "gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 16,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py"
+    },
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -32367,6 +32379,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py": {
+      "assert_count": 1,
+      "claims": [
+        "gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 16,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_gauge_vacuum_plaquette_first_sector_first_hankel_to_dm_boundary_2026_04_19.py": {
       "assert_count": 2,
       "claims": [
@@ -47331,12 +47358,12 @@
     "dominant_class_distribution": {
       "A": 151,
       "B": 174,
-      "C": 683,
+      "C": 684,
       "D": 268,
       "none": 416
     },
-    "runners_classified": 1692,
-    "runners_with_C": 866,
+    "runners_classified": 1693,
+    "runners_with_C": 867,
     "runners_with_D": 486
   }
 }

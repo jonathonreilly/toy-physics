@@ -1,0 +1,149 @@
+
+========================================================================================
+ frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py
+========================================================================================
+ Bounded source note: one explicit positive matrix tensor_word,
+ constructed at NMAX = 4, MODE_MAX = 80, beta = 6 from canonical
+ truncated Wilson coefficients and SU(3) fusion multiplicities.
+ Verifies three load-bearing structural properties (P1)-(P3) at
+ double precision, plus the (P3-corollary) consistency check that
+ S·amp = amp follows from (P2) since S·boundary0 = boundary0.
+ Follows prior audit feedback's split-note finite-packet path
+ on parent gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note.
+
+----------------------------------------------------------------------------------------
+ Part 1: note structure
+----------------------------------------------------------------------------------------
+  [PASS] contains: title token: Finite Tensor-Word Packet  (marker = 'Finite Tensor-Word Packet')
+  [PASS] contains: claim_type: bounded_theorem  (marker = 'Claim type:** bounded_theorem')
+  [PASS] contains: bounded status phrase  (marker = 'finite truncated tensor-word packet only')
+  [PASS] contains: Claim section header  (marker = '## Claim')
+  [PASS] contains: Bounded admissions section header  (marker = '## Bounded admissions')
+  [PASS] contains: Proof-Walk section header  (marker = '## Proof-Walk')
+  [PASS] contains: Dependencies section header  (marker = '## Dependencies')
+  [PASS] contains: Boundaries section header  (marker = '## Boundaries')
+  [PASS] contains: Verification section header  (marker = '## Verification')
+  [PASS] contains: (P1) nonnegativity stated  (marker = '(P1) **Nonnegativity')
+  [PASS] contains: (P2) conjugation-swap stated  (marker = '(P2) **Conjugation-swap')
+  [PASS] contains: (P3) boundary nonneg stated  (marker = '(P3) **Nonnegative boundary amplitude')
+  [PASS] contains: (P3-corollary) S·boundary0=boundary0 derived from (P2)  (marker = 'Derived corollary of (P2)')
+  [PASS] contains: BA-1 truncated Wilson coefficients stated  (marker = '(BA-1) **Canonical truncated local Wilson coefficients.**')
+  [PASS] contains: BA-2 fusion multiplicities stated  (marker = '(BA-2) **`SU(3)` fundamental and anti-fundamental fusion')
+  [PASS] contains: parent-note cite: GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER  (marker = 'GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md')
+  [PASS] contains: Wilson-environment companion cited (rho_pq6)  (marker = 'GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09')
+  [PASS] contains: MINIMAL_AXIOMS upstream cited  (marker = 'MINIMAL_AXIOMS_2026-05-03')
+  [PASS] contains: explicit not-claimed: parent's matrix-element identity  (marker = "claim the parent note's structural matrix-element identity")
+  [PASS] contains: explicit not-claimed: full untruncated case  (marker = 'close the full untruncated tensor-transfer construction')
+  [PASS] contains: split-note finite-packet framing  (marker = 'split note for one finite tensor-word packet')
+
+----------------------------------------------------------------------------------------
+ Part 2: forbidden meta-framing vocabulary absent (note + runner docstring)
+----------------------------------------------------------------------------------------
+  [PASS] absent in note (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'algebraic universality'
+  [PASS] absent in note (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in runner docstring (rejected vocabulary): 'lattice-realization-invariant'
+  [PASS] absent in note (rejected vocabulary): 'two-class framing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-class framing'
+  [PASS] absent in note (rejected vocabulary): '(CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(CKN)'
+  [PASS] absent in note (rejected vocabulary): '(LCL)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(LCL)'
+  [PASS] absent in note (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in runner docstring (rejected vocabulary): '(SU5-CKN)'
+  [PASS] absent in note (rejected vocabulary): 'imports problem'
+  [PASS] absent in runner docstring (rejected vocabulary): 'imports problem'
+  [PASS] absent in note (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Every prediction listed'
+  [PASS] absent in note (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in runner docstring (rejected vocabulary): 'two-axiom claim'
+  [PASS] absent in note (rejected vocabulary): 'retires admission'
+  [PASS] absent in runner docstring (rejected vocabulary): 'retires admission'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (i)'
+  [PASS] absent in note (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in runner docstring (rejected vocabulary): 'sub-class (ii)'
+  [PASS] absent in note (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Wilson asymptotic universality'
+  [PASS] absent in note (rejected vocabulary): 'Bounded statement.'
+  [PASS] absent in runner docstring (rejected vocabulary): 'Bounded statement.'
+  [PASS] absent in note (rejected vocabulary): 'post-2026-05-10 narrowing'
+  [PASS] absent in runner docstring (rejected vocabulary): 'post-2026-05-10 narrowing'
+  [PASS] absent in note (rejected vocabulary): 'explicitly out of the bounded scope'
+  [PASS] absent in runner docstring (rejected vocabulary): 'explicitly out of the bounded scope'
+
+----------------------------------------------------------------------------------------
+ Part 3: cited upstreams (all on origin/main)
+----------------------------------------------------------------------------------------
+  [PASS] upstream exists: docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md
+  [PASS] upstream exists: docs/GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md
+  [PASS] upstream exists: docs/MINIMAL_AXIOMS_2026-05-03.md
+
+----------------------------------------------------------------------------------------
+ Part 4: construct tensor_word; verify (P1), (P2), (P3.a), (P3.b)
+----------------------------------------------------------------------------------------
+  truncation: NMAX = 4 (weight box [0..4]^2 = 25 states)
+             MODE_MAX = 80 (Wilson Bessel mode sum)
+             beta = 6.0, beta/3 = 2.0
+
+  [PASS] (BA-2) N_f entries in {0, 1}
+  [PASS] (BA-2) N_fbar entries in {0, 1}
+  [PASS] (BA-2) S · N_f = N_fbar · S (fundamental ↔ anti-fundamental conjugation)  (max |S·N_f - N_fbar·S| = 0)
+  [PASS] (BA-2) S · N_fbar = N_f · S (conjugation symmetry)  (max |S·N_fbar - N_f·S| = 0)
+  [PASS] (BA-1) c_(0,0)(6) > 0  (c_(0,0)(6) = 3.441440)
+  [PASS] (BA-1) normalized[(0,0)] = 1 (definition)  (normalized[(0,0)] = 1.000000000000000)
+  [PASS] (BA-1) c_(p,q)(6) = c_(q,p)(6) up to normalization (conjugation symmetry)  (max |normalized - swap·normalized| = 2.78e-17)
+
+  tensor_word: 25 x 25 real matrix
+               built from diag_c · (N_f+N_fbar) · diag_c · (N_f+N_fbar)^T · diag_c
+
+  [PASS] (P1) min(tensor_word) ≥ 0 (nonnegativity of all matrix entries)  (min = 0.000000e+00, max = 8.450635e-01)
+  [PASS] (P2) ‖S · tensor_word − tensor_word · S‖_∞ < 10⁻¹² (conjugation-swap symmetry)  (max diff = 1.39e-17)
+  [PASS] (P3) min(amp) ≥ 0 (nonneg boundary amplitude)  (min = 0.000000e+00, max = 8.450635e-01)
+  [PASS] (P3-corollary, EXACT) S · boundary0 = boundary0 (since (0,0) is S-fixed)  (max |S·boundary0 - boundary0| = 0)
+  [PASS] (P3-corollary, consistency) ‖S · amp − amp‖_∞ < 10⁻¹² (follows from (P2) + S·b0 = b0; consistency check, not separate load-bearing)  (max diff = 1.39e-17)
+
+  Sample tensor_word entries (boundary-projection diagonals):
+    tensor_word[   (0, 0), (0,0)] = 8.450635e-01
+    tensor_word[   (1, 0), (0,0)] = 1.785331e-01
+    tensor_word[   (0, 1), (0,0)] = 1.785331e-01
+    tensor_word[   (1, 1), (0,0)] = 1.371198e-01
+    tensor_word[   (2, 0), (0,0)] = 5.744815e-02
+  amp = tensor_word · e_{(0,0)}
+    amp[   (0, 0)] = 8.450635e-01
+    amp[   (1, 0)] = 1.785331e-01
+    amp[   (1, 1)] = 1.371198e-01
+    amp[   (2, 0)] = 5.744815e-02
+    amp[   (2, 2)] = 0.000000e+00
+
+----------------------------------------------------------------------------------------
+ Part 5: imports limited to family convention (numpy + scipy)
+----------------------------------------------------------------------------------------
+  [PASS] imports limited to numpy + scipy + stdlib (family convention)  (ok)
+
+----------------------------------------------------------------------------------------
+ Part 6: boundary check (what is NOT claimed)
+----------------------------------------------------------------------------------------
+  [PASS] note explicitly does not claim: claim the parent note's structural matrix-element ident
+  [PASS] note explicitly does not claim: close the full untruncated tensor-transfer construction
+  [PASS] note explicitly does not claim: close `analytic P(6)`
+  [PASS] note explicitly does not claim: change any parent or companion source row
+  [PASS] claim_type: bounded_theorem stated
+  [PASS] split-note finite-packet framing referenced
+  [PASS] (BA-1) and (BA-2) admitted as bounded textbook inputs
+
+========================================================================================
+ TOTAL: PASS=76, FAIL=0
+========================================================================================
+
+ RESULT: one explicit positive matrix tensor_word constructed from
+ canonical truncated local Wilson coefficients (NMAX=4, MODE_MAX=80,
+ beta=6) and SU(3) fusion multiplicities verifies three load-bearing
+ structural properties at double precision: (P1) nonnegativity of
+ matrix entries, (P2) conjugation-swap symmetry, (P3) nonnegative
+ boundary amplitude under (0,0)-component unit-vector readout. The
+ boundary-amplitude conjugation symmetry follows immediately from
+ (P2) since (0,0) is fixed by the conjugation swap (consistency
+ check, not a separate load-bearing property). The parent's broader
+ matrix-element identity z_(p,q)^env = <chi, T^L eta> is NOT claimed
+ here; this is a split-note bounded packet only.

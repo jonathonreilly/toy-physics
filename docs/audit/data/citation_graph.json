@@ -8997,6 +8997,10 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10",
+      "to": "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+    },
+    {
       "from": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20",
       "to": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20"
     },
@@ -46695,6 +46699,19 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py",
       "title": "Gauge-Vacuum Plaquette Distinct-Shell Theorem"
     },
+    "gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10": {
+      "claim_id": "gauge_vacuum_plaquette_finite_tensor_word_packet_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
+      ],
+      "note_hash": "0eb0cc70bee8f87567688c3b2c83277c5c195c6bc9a5e8b3aff64e8f5dcad618",
+      "path": "docs/GAUGE_VACUUM_PLAQUETTE_FINITE_TENSOR_WORD_PACKET_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py",
+      "title": "Gauge-Vacuum Plaquette Finite Tensor-Word Packet \u2014 Bounded Note"
+    },
     "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19": {
       "claim_id": "gauge_vacuum_plaquette_first_sector_completed_triple_current_transfer_family_boundary_note_2026-04-19",
       "claim_type_author_hint": "no_go",
@@ -70132,7 +70149,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 337,
+      "bounded_theorem": 338,
       "meta": 71,
       "no_go": 44,
       "none": 1561,
@@ -70140,17 +70157,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 795,
+      "bounded_theorem": 796,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8764,
-    "leaf_count": 622,
-    "node_count": 2192,
+    "edge_count": 8765,
+    "leaf_count": 623,
+    "node_count": 2193,
     "root_count": 802,
-    "runners_with_path": 1805
+    "runners_with_path": 1806
   }
 }
