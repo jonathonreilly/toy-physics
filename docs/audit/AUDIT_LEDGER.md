@@ -23,10 +23,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1218 |
+| unaudited | 1217 |
 | audit_in_progress | 19 |
 | meta | 113 |
-| ~~audited_numerical_match~~ | 13 |
+| ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 185 |
 | ~~audited_failed~~ | 18 |
@@ -45,9 +45,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 185 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
-| `audited_numerical_match` | 13 |
+| `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1331 |
+| `unaudited` | 1330 |
 
 | claim_type | count |
 |---|---:|
@@ -856,6 +856,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `bell_inequality_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `distance_law_definitive_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_full_microscopic_reduction_note_2026-04-16` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_ne_charged_source_response_reduction_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `dm_leptogenesis_transport_integral_theorem_note_2026-04-16` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
@@ -2859,6 +2860,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retained signal is the 31^3 through 64^3 grid sweep with largest-grid far-field exponent alpha = -1.023 +/- 0.012, finite-size extrapolation alpha_inf = -0.976 +/- 0.019, and largest-grid mass-linearity spread below 0.1%.  _(class `C`)_
 - **chain closes:** True — The named runner directly recomputes the Poisson field, path-sum deflections, far-field fits, finite-size extrapolation, and largest-grid mass scaling, and its live output reproduces the note's bounded numerical values.
 - **rationale:** The clean verdict is narrow. The live runner reproduces alpha(64^3) = -1.0233 +/- 0.0115, alpha_inf = -0.9762 +/- 0.0193, and delta/M spread 0.0010 on the specified Dirichlet 3D path-sum setup. The note explicitly limits the claim to a bounded numerical continuation and states that it is not full Newton closure, not architecture portability, and not a two-body M1 M2 theorem. Residual risk is therefore scope-bound: the result should only be cited for this finite path-sum surface and its stated convergence trend.
+- **auditor confidence:** high
+
+### `distance_law_definitive_note`
+
+- **Note:** [`DISTANCE_LAW_DEFINITIVE_NOTE.md`](../../docs/DISTANCE_LAW_DEFINITIVE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded ordered-cubic Dirichlet-lattice numerical distance-law study: sparse Poisson fields and valley-linear ray/path-sum deflection fits for N=31..96, finite per-N alpha_scaled table, mass-independence check at N=64, and the selected weighted-mean scaled estimator for N>=56; no architecture-independent Newton law, continuum theorem, or estimator-selection theorem is audited.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Best estimate (weighted mean scaled N>=56): alpha = -1.00104 +/- 0.00416, giving a 0.104% deviation from -1.0 and the claimed inverse-square force exponent.  _(class `G`)_
+- **chain closes:** False — The completed runner genuinely computes the finite lattice data, but the sub-percent conclusion is obtained by choosing the weighted mean of scaled-fit N>=56 values while multiple extrapolation estimators in the same output land several percent away from -1. Without an independent rule selecting that estimator, the structural inverse-square claim does not close.
+- **rationale:** Issue: the headline 0.1% inverse-square closure depends on the post-selected weighted mean of scaled-fit values for N>=56. Why this blocks: the same completed runner reports full/core/scaled extrapolations with alpha_inf values off -1 by about 3% to 14%, so the estimator choice is load-bearing and not independently justified by the restricted packet. Repair target: provide a retained theorem or pre-registered protocol selecting the scaled-fit N>=56 weighted mean as the continuum/bounded-law estimator, or narrow the claim to the finite table plus that diagnostic estimator. Claim boundary until fixed: the finite per-N Poisson/path-sum data, the alpha_scaled table, mass-independence check, and the selected weighted-mean numerical match are valid bounded evidence, but not a retained inverse-square law closure.
 - **auditor confidence:** high
 
 ### `distance_law_note`
