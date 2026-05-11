@@ -12144,6 +12144,18 @@
       "dominant_class": null,
       "runner": "scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py"
     },
+    "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 5,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -34776,6 +34788,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py": {
+      "assert_count": 1,
+      "claims": [
+        "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 5,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_lhcm_repair_atlas_consolidation.py": {
       "assert_count": 1,
       "claims": [
@@ -46278,12 +46305,12 @@
     "dominant_class_distribution": {
       "A": 136,
       "B": 171,
-      "C": 668,
+      "C": 669,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1653,
-    "runners_with_C": 840,
+    "runners_classified": 1654,
+    "runners_with_C": 841,
     "runners_with_D": 462
   }
 }

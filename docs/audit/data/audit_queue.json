@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 679,
     "high": 27,
-    "leaf": 270,
+    "leaf": 271,
     "medium": 162
   },
   "cycle_break_target_count": 253,
@@ -7853,12 +7853,12 @@
       ],
       "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 11.236,
+      "load_bearing_score": 11.238,
       "note_path": "docs/LH_DOUBLET_TRACELESS_ABELIAN_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lh_doublet_traceless_abelian_ratio.py",
-      "transitive_descendants": 602
+      "transitive_descendants": 603
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -7878,12 +7878,12 @@
       ],
       "direct_in_degree": 36,
       "effective_status": "unaudited",
-      "load_bearing_score": 27.231,
+      "load_bearing_score": 27.234,
       "note_path": "docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 600
+      "transitive_descendants": 601
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8126,14 +8126,14 @@
         "graph_first_su3_integration_note",
         "left_handed_charge_matching_note"
       ],
-      "direct_in_degree": 3,
+      "direct_in_degree": 4,
       "effective_status": "unaudited",
-      "load_bearing_score": 10.497,
+      "load_bearing_score": 11.0,
       "note_path": "docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md",
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/frontier_lhcm_matter_assignment.py",
-      "transitive_descendants": 510
+      "transitive_descendants": 511
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -35510,6 +35510,31 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "bounded_theorem",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "graph_first_su3_integration_note",
+        "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+        "graph_first_selector_derivation_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/LHCM_MATTER_ASSIGNMENT_BLOCK_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": false,
+      "runner_path": "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "lieb_robinson_equal_time_tensor_locality_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37662,5 +37687,5 @@
     }
   ],
   "ready_count": 32,
-  "total_pending": 1138
+  "total_pending": 1139
 }

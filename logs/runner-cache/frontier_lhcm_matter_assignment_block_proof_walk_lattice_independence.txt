@@ -1,0 +1,135 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py
+runner_sha256: 68e8bf469dbdb613748b0b721b0d67388ba642ffe9ed26af2944dbb6c9fbf66a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.32
+status: ok
+----- stdout -----
+frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py
+
+----------------------------------------------------------------------------------------
+note structure and scope
+----------------------------------------------------------------------------------------
+  [PASS] contains marker: Claim type:** bounded_theorem
+  [PASS] contains marker: source-note proposal only
+  [PASS] contains marker: does not add a new axiom
+  [PASS] contains marker: does not use staggered-Dirac realization machinery
+  [PASS] contains marker: Proof-Walk
+  [PASS] contains marker: Exact Block-Dimension Check
+  [PASS] contains marker: Boundaries
+  [PASS] contains marker: LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-
+  [PASS] contains marker: GRAPH_FIRST_SU3_INTEGRATION_NOTE
+  [PASS] contains marker: GRAPH_FIRST_SELECTOR_DERIVATION_NOTE
+  [PASS] contains marker: Sym²(C²)
+  [PASS] contains marker: Anti²(C²)
+  [PASS] contains marker: (2,3) ⊕ (2,1)
+  [PASS] broad framing stripped: broad framing phrase 1
+  [PASS] broad framing stripped: broad framing phrase 2
+  [PASS] broad framing stripped: broad framing phrase 3
+  [PASS] broad framing stripped: broad framing phrase 4
+  [PASS] broad framing stripped: broad framing phrase 5
+
+----------------------------------------------------------------------------------------
+dependency files
+----------------------------------------------------------------------------------------
+  [PASS] dependency exists: docs/LHCM_MATTER_ASSIGNMENT_FROM_SU3_REPRESENTATION_NOTE_2026-05-02.md
+  [PASS] dependency exists: docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md
+  [PASS] dependency exists: docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md
+
+----------------------------------------------------------------------------------------
+tau eigendecomposition on 4-point base (sympy verification)
+----------------------------------------------------------------------------------------
+  [PASS] tau eigenvalue +1 has multiplicity 3 (Sym² block dim) (sym_dim = 3)
+  [PASS] tau eigenvalue -1 has multiplicity 1 (Anti² block dim) (anti_dim = 1)
+  [PASS] Sym² + Anti² covers 4-point base (3+1 = 4)
+  [PASS] explicit Sym² basis has 3 vectors (basis count = 3)
+  [PASS] explicit Anti² basis has 1 vector (basis count = 1)
+  [PASS] Sym² eigenvector 0: tau v = +v (eigenvalue +1) (tau v - v = Matrix([[0, 0, 0, 0]]))
+  [PASS] Sym² eigenvector 1: tau v = +v (eigenvalue +1) (tau v - v = Matrix([[0, 0, 0, 0]]))
+  [PASS] Sym² eigenvector 2: tau v = +v (eigenvalue +1) (tau v - v = Matrix([[0, 0, 0, 0]]))
+  [PASS] Anti² eigenvector 0: tau v = -v (eigenvalue -1) (tau v + v = Matrix([[0, 0, 0, 0]]))
+
+----------------------------------------------------------------------------------------
+LH-doublet sector tensor decomposition
+----------------------------------------------------------------------------------------
+  [PASS] (2,3) block dim = 6 (LH quark Q_L: 3 color × 2 isospin) (2*3 = 6)
+  [PASS] (2,1) block dim = 2 (LH lepton L_L: 1 singlet × 2 isospin) (2*1 = 2)
+  [PASS] LH-doublet sector total dim = 8 (6+2 = 8)
+  [PASS] partition matches 6 + 2 = 8 ((6, 2))
+
+----------------------------------------------------------------------------------------
+SU(3) representation theory facts on Sym²/Anti² blocks
+----------------------------------------------------------------------------------------
+  [PASS] Gell-Mann T_1 is traceless on 3-dim Sym² block (trace(T_1) = 0)
+  [PASS] Gell-Mann T_2 is traceless on 3-dim Sym² block (trace(T_2) = 0)
+  [PASS] Gell-Mann T_3 is traceless on 3-dim Sym² block (trace(T_3) = 0)
+  [PASS] Gell-Mann T_4 is traceless on 3-dim Sym² block (trace(T_4) = 0)
+  [PASS] Gell-Mann T_5 is traceless on 3-dim Sym² block (trace(T_5) = 0)
+  [PASS] Gell-Mann T_6 is traceless on 3-dim Sym² block (trace(T_6) = 0)
+  [PASS] Gell-Mann T_7 is traceless on 3-dim Sym² block (trace(T_7) = 0)
+  [PASS] Gell-Mann T_8 is traceless on 3-dim Sym² block (trace(T_8) = 0)
+  [PASS] Gell-Mann T_1 is Hermitian on 3-dim block (T_1 - T_1^H = 0)
+  [PASS] Gell-Mann T_2 is Hermitian on 3-dim block (T_2 - T_2^H = 0)
+  [PASS] Gell-Mann T_3 is Hermitian on 3-dim block (T_3 - T_3^H = 0)
+  [PASS] Gell-Mann T_4 is Hermitian on 3-dim block (T_4 - T_4^H = 0)
+  [PASS] Gell-Mann T_5 is Hermitian on 3-dim block (T_5 - T_5^H = 0)
+  [PASS] Gell-Mann T_6 is Hermitian on 3-dim block (T_6 - T_6^H = 0)
+  [PASS] Gell-Mann T_7 is Hermitian on 3-dim block (T_7 - T_7^H = 0)
+  [PASS] Gell-Mann T_8 is Hermitian on 3-dim block (T_8 - T_8^H = 0)
+  [PASS] su(3) bracket [T_1, T_2] = i T_3 holds on 3-dim block ([T_1, T_2] - i T_3 = 0)
+  [PASS] any 1-dim su(3) rep maps every generator to 0 (traceless) (1x1 traceless = 0; SU(3) on Anti² is trivial)
+  [PASS] 3-dim Sym² rep is non-trivial (some generator is nonzero) (non-trivial fundamental rep)
+
+----------------------------------------------------------------------------------------
+load-bearing input boundary
+----------------------------------------------------------------------------------------
+  [PASS] forbidden input named only as excluded: Wilson plaquette action
+  [PASS] forbidden input named only as excluded: staggered phases
+  [PASS] forbidden input named only as excluded: Brillouin-zone labels
+  [PASS] forbidden input named only as excluded: link unitaries
+  [PASS] forbidden input named only as excluded: lattice scale
+  [PASS] forbidden input named only as excluded: u_0
+  [PASS] forbidden input named only as excluded: Monte Carlo measurement
+  [PASS] forbidden input named only as excluded: fitted observational value
+  [PASS] forbidden input named only as excluded: Kawamoto-Smit phase form
+  [PASS] forbidden input named only as excluded: BZ-corner doublers
+  [PASS] forbidden input named only as excluded: hw=1 corner triplet
+  [PASS] forbidden input named only as excluded: fermion-number operators
+  [PASS] forbidden input named only as excluded: fermion correlators
+  [PASS] forbidden input named only as excluded: fermion bilinears
+  [PASS] allowed input named: graph-first integration note
+  [PASS] allowed input named: tensor decomposition
+  [PASS] allowed input named: SU(3) representation theory
+  [PASS] allowed input named: commutator subgroup
+  [PASS] boundary names non-closed item: the staggered-Dirac realization gate
+  [PASS] boundary names non-closed item: any parent theorem/status promotion
+  [PASS] boundary names non-closed item: anomaly-cancellation
+  [PASS] boundary names non-closed item: Standard Model hypercharge
+  [PASS] boundary names non-closed item: labelling convention
+
+----------------------------------------------------------------------------------------
+proof-walk table coverage
+----------------------------------------------------------------------------------------
+  [PASS] proof-walk row present: τ eigendecomposition on 4-point base
+  [PASS] proof-walk row present: Sym² block dim = 3
+  [PASS] proof-walk row present: Anti² block dim = 1
+  [PASS] proof-walk row present: SU(3) on 3-dim non-trivial irrep is fundamental
+  [PASS] proof-walk row present: SU(3) on 1-dim irrep is trivial
+  [PASS] proof-walk row present: LH-doublet tensor decomp
+  [PASS] proof-walk table has 6 rows with both columns marked 'no' (found 6 rows)
+
+----------------------------------------------------------------------------------------
+cited authority effective_status
+----------------------------------------------------------------------------------------
+  [PASS] graph_first_su3_integration_note effective_status is retained-grade (actual = 'retained_bounded')
+  [PASS] graph_first_selector_derivation_note effective_status is retained-grade (actual = 'retained_bounded')
+  [PASS] parent matter-assignment note is in ledger (actual = 'unaudited')
+
+TOTAL: PASS=86 FAIL=0
+VERDICT: bounded proof-walk passes; LHCM matter-assignment
+Sym²↔Q_L, Anti²↔L_L block identification uses no lattice-action
+or staggered-Dirac realization quantity as a load-bearing input.
+
+----- stderr -----
+

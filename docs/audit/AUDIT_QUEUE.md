@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1138
+**Total pending:** 1139
 **Ready (all deps already at retained-grade or metadata tiers):** 32
 
 By criticality:
 - `critical`: 679
 - `high`: 27
 - `medium`: 162
-- `leaf`: 270
+- `leaf`: 271
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -46,8 +46,8 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 29 | `gauge_vacuum_plaquette_infinite_hierarchy_obstruction_note` | open_gate | unaudited | critical | 606 | 11.75 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py` |
 | 30 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | unaudited | critical | 606 | 11.75 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py` |
 | 31 | `plaquette_self_consistency_note` | bounded_theorem | unaudited | critical | 605 | 25.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 32 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 602 | 11.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
-| 33 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 600 | 27.23 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 32 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 603 | 11.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lh_doublet_traceless_abelian_ratio.py` |
+| 33 | `left_handed_charge_matching_note` | bounded_theorem | unaudited | critical | 601 | 27.23 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
 | 34 | `s3_taste_cube_decomposition_note` | bounded_theorem | unaudited | critical | 583 | 15.69 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_action_taste_cube_decomposition.py` |
 | 35 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 572 | 18.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
 | 36 | `s3_time_theta_to_slice_coupling_note` | open_gate | unaudited | critical | 569 | 10.15 |  | fresh_context_or_stronger_with_cross_confirmation | - |
@@ -57,7 +57,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 40 | `three_generation_observable_no_proper_quotient_narrow_theorem_note_2026-05-02` | bounded_theorem | unaudited | critical | 552 | 17.11 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_three_gen_observable_no_proper_quotient_narrow.py` |
 | 41 | `three_generation_structure_note` | bounded_theorem | unaudited | critical | 550 | 27.61 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |
 | 42 | `one_generation_matter_closure_note` | bounded_theorem | unaudited | critical | 528 | 24.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_right_handed_sector.py` |
-| 43 | `lhcm_matter_assignment_from_su3_representation_note_2026-05-02` | positive_theorem | unaudited | critical | 510 | 10.50 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lhcm_matter_assignment.py` |
+| 43 | `lhcm_matter_assignment_from_su3_representation_note_2026-05-02` | positive_theorem | unaudited | critical | 511 | 11.00 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lhcm_matter_assignment.py` |
 | 44 | `hypercharge_identification_note` | bounded_theorem | unaudited | critical | 509 | 17.99 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hypercharge_identification.py` |
 | 45 | `s3_time_transfer_matrix_bridge_note` | bounded_theorem | unaudited | critical | 500 | 10.97 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_transfer_matrix_bridge.py` |
 | 46 | `s3_time_bilinear_tensor_primitive_note` | open_gate | unaudited | critical | 498 | 12.96 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_bilinear_tensor_primitive.py` |

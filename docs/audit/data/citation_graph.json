@@ -14289,6 +14289,18 @@
       "to": "neutrino_dirac_z3_support_trichotomy_note"
     },
     {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "graph_first_su3_integration_note"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
+    },
+    {
+      "from": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
       "from": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "to": "graph_first_selector_derivation_note"
     },
@@ -51446,6 +51458,21 @@
       "runner_path": "scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py",
       "title": "Left-Handed Traceless U(1) Eigenvalue Ratio and Reduced-Denominator Narrow Theorem"
     },
+    "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10": {
+      "claim_id": "lhcm_matter_assignment_block_proof_walk_lattice_independence_bounded_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "graph_first_su3_integration_note",
+        "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
+        "graph_first_selector_derivation_note"
+      ],
+      "note_hash": "0f94eda1e148b0f9e815eda04475dd7ee86b62e3420b4acef6ee1678a4f96351",
+      "path": "docs/LHCM_MATTER_ASSIGNMENT_BLOCK_PROOF_WALK_LATTICE_INDEPENDENCE_BOUNDED_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lhcm_matter_assignment_block_proof_walk_lattice_independence.py",
+      "title": "LHCM Matter Assignment Block Proof-Walk Lattice-Independence Bounded Note"
+    },
     "lhcm_matter_assignment_from_su3_representation_note_2026-05-02": {
       "claim_id": "lhcm_matter_assignment_from_su3_representation_note_2026-05-02",
       "claim_type_author_hint": null,
@@ -68074,7 +68101,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 272,
+      "bounded_theorem": 273,
       "decoration": 1,
       "meta": 60,
       "no_go": 31,
@@ -68083,7 +68110,7 @@
       "positive_theorem": 128
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 754,
+      "bounded_theorem": 755,
       "decoration": 1,
       "meta": 60,
       "no_go": 138,
@@ -68091,10 +68118,10 @@
       "open_gate": 122,
       "positive_theorem": 627
     },
-    "edge_count": 8446,
-    "leaf_count": 598,
-    "node_count": 2153,
+    "edge_count": 8449,
+    "leaf_count": 599,
+    "node_count": 2154,
     "root_count": 816,
-    "runners_with_path": 1766
+    "runners_with_path": 1767
   }
 }
