@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 87 |
+| **retained** | 88 |
 | **retained_no_go** | 131 |
 | **retained_bounded** | 272 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1224 |
+| unaudited | 1223 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 451 |
+| `audited_clean` | 452 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1337 |
+| `unaudited` | 1336 |
 
 | claim_type | count |
 |---|---:|
@@ -191,6 +191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `circulant_response_master_identity_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `cl3_color_automorphism_theorem` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `cl3_complexification_split_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2202,6 +2203,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
   - `ALPHA_S_DERIVED_NOTE.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+- **auditor confidence:** high
+
+### `ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CKM_INVERSE_SQUARE_STRUCTURAL_SUM_RULE_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CKM_INVERSE_SQUARE_STRUCTURAL_SUM_RULE_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Standalone polynomial-algebra identities over abstract positive n_pair and n_color with rho, A^2, and eta^2 satisfying H1-H3: rho*A^2=1/n_color^2, eta^2+rho*A^2=1/n_pair^2, eta^2+2*rho*A^2=1/n_pair^2+1/n_color^2, the real-eta gate n_color>n_pair, and exact rational instances; no CKM atlas, Wolfenstein coordinate authority, alpha_s value, physical SU(2)/SU(3) count identification, PDG comparator, or upstream inverse-square derivation is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** By (H3) and (T1), eta^2 + rho * A^2 = (1/n_pair^2 - 1/n_color^2) + 1/n_color^2 = 1/n_pair^2, with the analogous substitution for eta^2 + 2*rho*A^2.  _(class `A`)_
+- **chain closes:** True — The proof is pure substitution from H1-H3 and elementary sign algebra on positive symbols. Because the parametric identities are hypotheses rather than derived inputs, the audited theorem closes exactly within its stated abstract scope.
+- **rationale:** The load-bearing identities follow directly from H1-H3 by polynomial/rational simplification, and the real-eta gate follows because the denominator and n_color+n_pair factor are positive. The runner independently verifies the symbolic identities, the sign representatives, the corollary, and the listed exact rational instances without importing CKM, alpha_s, PDG, or physical count assumptions. Residual risk is confined to the upstream status of H1-H3 as CKM authorities, which the note explicitly excludes from this narrow theorem scope.
 - **auditor confidence:** high
 
 ### `ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25`
