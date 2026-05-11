@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1275 |
+| unaudited | 1274 |
 | audit_in_progress | 18 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 157 |
+| ~~audited_conditional~~ | 158 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 26 |
 | `audited_clean` | 427 |
-| `audited_conditional` | 157 |
+| `audited_conditional` | 158 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1388 |
+| `unaudited` | 1387 |
 
 | claim_type | count |
 |---|---:|
@@ -55,8 +55,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 221 |
-| `open_gate` | 111 |
-| `positive_theorem` | 747 |
+| `open_gate` | 112 |
+| `positive_theorem` | 746 |
 
 | criticality | count |
 |---|---:|
@@ -674,6 +674,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_moment_ratio_uniformity_theorem_note_2026-04-19` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_no_hidden_source_audit_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_q_second_order_support_batch_note_2026-04-22` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `koide_reviewer_stress_test_note_2026-04-21` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_s_l1_topological_chern_simons_note_2026-05-08_probes_l1_topological` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5678,6 +5679,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md`
   - `KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md`
+- **auditor confidence:** high
+
+### `koide_q_normalized_second_order_effective_action_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Open charged-lepton Q value-law gate: symbolic normalized second-order effective-action algebra on the admitted carrier, conditional on a physical source-free law.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** On the admitted normalized first-live second-order carrier, the exact Legendre-dual effective action with zero source gives Y = I_2, hence E_+ = E_perp, kappa = 2, and Q = 2/3.  _(class `A`)_
+- **chain closes:** False — The runner verifies the internal symbolic algebra on the admitted normalized carrier with PASS=18/FAIL=0. The physical chain does not close because no retained input proves that charged-lepton physics selects this normalized second-order carrier with zero external source K = 0.
+- **rationale:** Issue: the algebra K = 0 -> Y = I_2 -> kappa = 2 -> Q = 2/3 is exact only after admitting the normalized second-order carrier, the reduced generator, and the physical zero-source law. Why this blocks: retained physical Q closure would require a theorem from retained charged-lepton physics that the physical selector lives on this carrier and is source-free there. Repair target: prove the normalized second-order physical selector and its K = 0 source-free law from retained upstream charged-lepton inputs, with the reduced-observable generator retained as a dependency. Claim boundary until fixed: the row is a clean internal algebra/open-gate scout for the admitted carrier, not a retained Koide-Q derivation.
+- **open / conditional deps cited:**
+  - `KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md`
 - **auditor confidence:** high
 
 ### `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25`
