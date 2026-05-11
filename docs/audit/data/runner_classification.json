@@ -19656,6 +19656,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_w_z_mass_ratio_from_ewsb.py"
     },
+    "wald_noether_bp5_bounded_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 5,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_wald_noether_bp5_bounded.py"
+    },
     "wave_3plus1d_promotions_note": {
       "assert_count": 0,
       "counts": {
@@ -39929,6 +39941,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_wald_noether_bp5_bounded.py": {
+      "assert_count": 1,
+      "claims": [
+        "wald_noether_bp5_bounded_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 5,
+        "C": 1,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_wave_equation_gravity.py": {
       "assert_count": 1,
       "claims": [
@@ -45980,13 +46007,13 @@
     "decoration_candidates": 181,
     "dominant_class_distribution": {
       "A": 129,
-      "B": 170,
+      "B": 171,
       "C": 666,
       "D": 255,
       "none": 422
     },
-    "runners_classified": 1642,
-    "runners_with_C": 837,
-    "runners_with_D": 460
+    "runners_classified": 1643,
+    "runners_with_C": 838,
+    "runners_with_D": 461
   }
 }

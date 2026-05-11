@@ -2,11 +2,11 @@
   "criticality_counts": {
     "critical": 1019,
     "high": 53,
-    "leaf": 768,
+    "leaf": 769,
     "medium": 302
   },
   "flagship_signal_used": false,
-  "node_count": 2142,
+  "node_count": 2143,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -19,14 +19,14 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 79.79,
-      "transitive_descendants": 884
+      "load_bearing_score": 80.291,
+      "transitive_descendants": 885
     },
     {
       "claim_id": "staggered_dirac_realization_gate_note_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 42.741,
-      "transitive_descendants": 855
+      "load_bearing_score": 43.243,
+      "transitive_descendants": 856
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -37,20 +37,20 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 40.145,
-      "transitive_descendants": 565
+      "load_bearing_score": 40.147,
+      "transitive_descendants": 566
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 38.723,
-      "transitive_descendants": 844
+      "load_bearing_score": 38.725,
+      "transitive_descendants": 845
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 37.047,
-      "transitive_descendants": 747
+      "load_bearing_score": 37.049,
+      "transitive_descendants": 748
     },
     {
       "claim_id": "alpha_s_derived_note",
@@ -67,8 +67,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 32.2,
-      "transitive_descendants": 831
+      "load_bearing_score": 32.202,
+      "transitive_descendants": 832
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -97,8 +97,8 @@
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 30.399,
-      "transitive_descendants": 674
+      "load_bearing_score": 30.401,
+      "transitive_descendants": 675
     },
     {
       "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",

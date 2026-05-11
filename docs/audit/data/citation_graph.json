@@ -21433,6 +21433,46 @@
       "to": "dm_neutrino_veven_bosonic_normalization_theorem_note_2026-04-15"
     },
     {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "bh_entropy_rt_ratio_widom_no_go_note"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "bh_entropy_derived_note"
+    },
+    {
+      "from": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+    },
+    {
       "from": "wave_3plus1d_radiation_note",
       "to": "wave_3plus1d_promotions_note"
     },
@@ -64417,6 +64457,28 @@
       "runner_path": "scripts/frontier_w_z_mass_ratio_from_ewsb.py",
       "title": "M_W\u00b2/M_Z\u00b2 = cos\u00b2\u03b8_W from EWSB Pattern + Admitted Higgs Kinetic Term"
     },
+    "wald_noether_bp5_bounded_theorem_note_2026-05-10": {
+      "claim_id": "wald_noether_bp5_bounded_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+        "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+        "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
+        "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
+        "minimal_axioms_2026-05-03",
+        "first_order_coframe_unconditionality_no_go_theorem_note_2026-04-30",
+        "bh_entropy_rt_ratio_widom_no_go_note",
+        "bh_entropy_derived_note",
+        "planck_boundary_density_extension_theorem_note_2026-04-24"
+      ],
+      "note_hash": "54ed881a5490fd14fb9e112c790c96a7353d00d535593df606910fc91e283145",
+      "path": "docs/WALD_NOETHER_BP5_BOUNDED_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_wald_noether_bp5_bounded.py",
+      "title": "Wald-Noether BP \u00a75 Bounded Theorem Note"
+    },
     "wave_3plus1d_promotions_note": {
       "claim_id": "wave_3plus1d_promotions_note",
       "claim_type_author_hint": null,
@@ -67872,7 +67934,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 268,
+      "bounded_theorem": 269,
       "decoration": 1,
       "meta": 60,
       "no_go": 30,
@@ -67881,7 +67943,7 @@
       "positive_theorem": 122
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 750,
+      "bounded_theorem": 751,
       "decoration": 1,
       "meta": 60,
       "no_go": 137,
@@ -67889,10 +67951,10 @@
       "open_gate": 121,
       "positive_theorem": 622
     },
-    "edge_count": 8432,
-    "leaf_count": 587,
-    "node_count": 2142,
+    "edge_count": 8442,
+    "leaf_count": 588,
+    "node_count": 2143,
     "root_count": 808,
-    "runners_with_path": 1755
+    "runners_with_path": 1756
   }
 }
