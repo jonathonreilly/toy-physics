@@ -9761,6 +9761,26 @@
       "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
     },
     {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "to": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "to": "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
       "from": "hierarchy_bosonic_bilinear_selector_note",
       "to": "hierarchy_spatial_bc_and_u0_scaling_note"
     },
@@ -46186,6 +46206,23 @@
       "runner_path": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_narrow.py",
       "title": "Hierarchy BBS Staggered Taste Blocking Bridge \u2014 Narrow No-Go"
     },
+    "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11": {
+      "claim_id": "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+        "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10",
+        "plaquette_self_consistency_note",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "observable_principle_from_axiom_note"
+      ],
+      "note_hash": "1e66310e77f73ee1b16adc1911fcb5cea46106359e514e501875e87835485029",
+      "path": "docs/HIERARCHY_BBS_STAGGERED_TASTE_BLOCKING_BRIDGE_SCAFFOLD_AVAILABILITY_BOUNDED_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded.py",
+      "title": "Hierarchy BBS Staggered Taste-Blocking Bridge Scaffold Availability"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "claim_id": "hierarchy_bosonic_bilinear_selector_note",
       "claim_type_author_hint": null,
@@ -67168,7 +67205,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 260,
+      "bounded_theorem": 261,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67177,7 +67214,7 @@
       "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 742,
+      "bounded_theorem": 743,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67185,10 +67222,10 @@
       "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8356,
-    "leaf_count": 568,
-    "node_count": 2115,
+    "edge_count": 8361,
+    "leaf_count": 567,
+    "node_count": 2116,
     "root_count": 794,
-    "runners_with_path": 1728
+    "runners_with_path": 1729
   }
 }

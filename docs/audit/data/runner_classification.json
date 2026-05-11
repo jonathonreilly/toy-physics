@@ -8880,6 +8880,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_narrow.py"
     },
+    "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded.py"
+    },
     "hierarchy_bosonic_bilinear_selector_note": {
       "assert_count": 0,
       "counts": {
@@ -31785,6 +31797,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded.py": {
+      "assert_count": 1,
+      "claims": [
+        "hierarchy_bbs_staggered_taste_blocking_bridge_scaffold_availability_bounded_note_2026-05-11"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_bosonic_bilinear_selector.py": {
       "assert_count": 0,
       "claims": [
@@ -45262,15 +45289,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 174,
+    "decoration_candidates": 175,
     "dominant_class_distribution": {
       "A": 121,
-      "B": 167,
+      "B": 168,
       "C": 658,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1616,
+    "runners_classified": 1617,
     "runners_with_C": 826,
     "runners_with_D": 448
   }
