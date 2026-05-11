@@ -2328,6 +2328,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_ckm_from_mass_hierarchy.py"
     },
+    "ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_ckm_inverse_square_structural_sum_rule_narrow.py"
+    },
     "ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -26542,6 +26554,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_ckm_inverse_square_structural_sum_rule_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_ckm_jarlskog_exact_nlo_closed_form.py": {
       "assert_count": 1,
       "claims": [
@@ -45752,12 +45779,12 @@
     "dominant_class_distribution": {
       "A": 127,
       "B": 169,
-      "C": 663,
+      "C": 664,
       "D": 255,
       "none": 420
     },
-    "runners_classified": 1634,
-    "runners_with_C": 832,
-    "runners_with_D": 458
+    "runners_classified": 1635,
+    "runners_with_C": 833,
+    "runners_with_D": 459
   }
 }

@@ -38334,6 +38334,17 @@
       "runner_path": "scripts/frontier_ckm_from_mass_hierarchy.py",
       "title": "CKM From Mass Hierarchy: V_CKM = U_u^dag U_d via Derived Mass Matrices"
     },
+    "ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "ff8b041e00f47abbbb6f8946807ca7f914a947f2637f13c16ca63326a7a03fcb",
+      "path": "docs/CKM_INVERSE_SQUARE_STRUCTURAL_SUM_RULE_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_ckm_inverse_square_structural_sum_rule_narrow.py",
+      "title": "CKM Inverse-Square Structural Sum-Rule Narrow Theorem"
+    },
     "ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25": {
       "claim_id": "ckm_jarlskog_exact_nlo_closed_form_theorem_note_2026-04-25",
       "claim_type_author_hint": null,
@@ -67090,6 +67101,7 @@
     "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10",
     "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
+    "ckm_inverse_square_structural_sum_rule_narrow_theorem_note_2026-05-10",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
     "cl3_complexification_split_narrow_theorem_note_2026-05-10",
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
@@ -67740,7 +67752,7 @@
       "no_go": 29,
       "none": 1628,
       "open_gate": 31,
-      "positive_theorem": 116
+      "positive_theorem": 117
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 751,
@@ -67749,12 +67761,12 @@
       "no_go": 136,
       "none": 451,
       "open_gate": 119,
-      "positive_theorem": 616
+      "positive_theorem": 617
     },
     "edge_count": 8426,
-    "leaf_count": 579,
-    "node_count": 2133,
-    "root_count": 801,
-    "runners_with_path": 1746
+    "leaf_count": 580,
+    "node_count": 2134,
+    "root_count": 802,
+    "runners_with_path": 1747
   }
 }
