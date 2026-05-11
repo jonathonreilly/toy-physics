@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 99 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 288 |
+| **retained_bounded** | 289 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1178 |
+| unaudited | 1177 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 484 |
+| `audited_clean` | 485 |
 | `audited_conditional` | 195 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1291 |
+| `unaudited` | 1290 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 900 |
+| `bounded_theorem` | 901 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 228 |
 | `open_gate` | 111 |
-| `positive_theorem` | 733 |
+| `positive_theorem` | 732 |
 
 | criticality | count |
 |---|---:|
@@ -546,6 +546,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `su2_weak_beta_coefficient_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_casimir_fundamental_algebraic_k1_k3_narrow_proof_walk_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_character_diagonal_convolution_equivalence_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `su3_dabc_symmetric_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_fusion_engine_pr1_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_wigner_intertwiner_block1_theorem_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | judicial_review | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block2_theorem_note_2026-05-03` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -10159,6 +10160,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Peter-Weyl/Schur character orthogonality plus finite-dimensional diagonal-operator algebra on the SU(3) character truncation, reducing convolution by Z to eigenvalue multiplication by rho_(p,q).  _(class `A`)_
 - **chain closes:** True — The source has zero ledger dependencies and is scoped to textbook compact-Lie-group character algebra on an abstract finite truncation. The live runner reproduced PASS=13, FAIL=0, including Schur orthogonality checks, algebraic reduction, uniqueness, positivity, self-adjointness, swap symmetry, and abstract numerical sanity cases.
 - **rationale:** The theorem's conclusions are exactly the standard finite-dimensional character-convolution consequences of Schur orthogonality and diagonal linear algebra. The note explicitly forbids importing Wilson action, beta=6 data, or the parent plaquette environment identification, and the runner treats companion Wilson coefficients only as abstract positive symmetric input data. Within that boundary, no gap remains.
+- **auditor confidence:** high
+
+### `su3_dabc_symmetric_theorem_note_2026-05-02`
+
+- **Note:** [`SU3_DABC_SYMMETRIC_THEOREM_NOTE_2026-05-02.md`](../../docs/SU3_DABC_SYMMETRIC_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Algebraic D1-D6 theorem only on the Gell-Mann SU(3) carrier supplied by cl3_color_automorphism_theorem: defining d^{abc}=2 Tr[{T^a,T^b}T^c], the anticommutator decomposition {T^a,T^b}=(1/3)delta_ab I_3+d^{abc}T^c holds, d^{abc} is real and totally symmetric, the listed standard nonzero components match the direct Gell-Mann computation, T^aT^b=(1/6)delta_ab I_3+(1/2)(d^{abc}+i f^{abc})T^c, and the d/f symmetric-antisymmetric split is verified. This excludes physical SM color-gauge identification, continuum gluon-sector claims, QCD amplitude/vertex-factor claims, cubic-Casimir numerical corollaries, and any downstream physical-color toolkit reading.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Direct finite-dimensional matrix algebra in the standard Gell-Mann basis with trace normalization supplied by the retained_bounded algebraic SU(3) carrier: anticommutator projection, d-symbol symmetry/reality, combined product identity, and d/f symmetric-antisymmetric decomposition.  _(class `C`)_
+- **chain closes:** True — The one-hop dependency is retained_bounded for the algebraic SU(3) embedding, and the audited scope is restricted to algebraic Gell-Mann identities on that carrier. The live runner reproduced OVERALL: PASS for all six checks, with deviations at machine precision.
+- **rationale:** Within D1-D6, the result follows from trace projection in the Gell-Mann basis and direct finite matrix algebra. The source note itself marks physical identification of the carrier with Standard Model color as outside scope; this audit preserves that boundary and does not ratify the later physical or cubic-Casimir corollaries. The reference-table check is supporting consistency, while the decomposition identities are directly computed from the matrices.
 - **auditor confidence:** high
 
 ### `su3_fusion_engine_pr1_theorem_note_2026-05-03`

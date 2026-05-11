@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 279,
+    "leaf": 278,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31102,29 +31102,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "su3_dabc_symmetric_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_color_automorphism_theorem"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SU3_DABC_SYMMETRIC_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/su3_dabc_symmetric_check.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "su3_wigner_block4_staging_block5_orientation_diagnostics_narrow_theorem_note_2026-05-10",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38623,6 +38600,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 43,
-  "total_pending": 1209
+  "ready_count": 42,
+  "total_pending": 1208
 }
