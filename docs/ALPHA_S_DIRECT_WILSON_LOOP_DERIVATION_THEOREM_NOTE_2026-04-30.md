@@ -18,6 +18,25 @@ framework, ratified status is computed by the audit pipeline from audit lane
 data and the dependency chain; no author-side tier is asserted in source.
 **Primary runner:** `scripts/frontier_alpha_s_direct_wilson_loop.py`
 
+**Audit-conditional perimeter (2026-05-05):**
+The audit lane has classified this row `audited_conditional` with
+`auditor_confidence = high`, `chain_closes = false`, and load-bearing
+step class `B`. The audit chain-closure explanation is exact: "the
+in-packet runner validates a JSON certificate and comparator gates
+rather than recomputing the production Wilson loops, static-potential
+fit, scheme conversion, and running bridge from raw retained inputs.
+The full alpha_s(M_Z) claim also explicitly depends on external
+Sommer scale setting, QCD running, threshold matching, and the
+sea-quark/full-QCD bridge." The audit-stated repair target is:
+"dependency_not_retained: replace the superseded minimal-axioms
+citation with the current canonical framework-baseline memo and
+provide a retained-grade bridge theorem or independently auditable
+certificate derivation for Sommer scale setting, QCD running,
+threshold matching, and the sea-quark/full-QCD bridge." This
+rigorization edit only sharpens the boundary of the conditional
+perimeter; nothing here promotes audit status, and the runner sha256
+remains `0bfcc76b4b64a087157b0644db297c2c1def1d2878c918c338d96b94d0affa0f`.
+
 ## Theorem Statement
 
 Candidate theorem under test:
@@ -48,9 +67,19 @@ potential route, not the existing coupling-definition chain.
 
 1. **Wilson action setup.**  Use the graph-first `SU(3)` gauge sector from
    [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
-   and the `g_bare = 1` canonical-normalization input from
-   [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md).  This fixes
-   the Wilson gauge action at `beta = 6`.  A production run must include at
+   and the `g_bare = 1` canonical-normalization input.  As of 2026-05-03 the
+   current canonical framework-baseline memo is
+   [MINIMAL_AXIOMS_2026-05-03.md](MINIMAL_AXIOMS_2026-05-03.md), which
+   explicitly supersedes the 2026-04-11 file (the 2026-04-15 rewrite that
+   added staggered-Dirac, physical-lattice, and `g_bare = 1 / u_0 / APBC`
+   as additional axioms has been backed out, and `g_bare = 1` is now an open
+   gate, not part of the physical `Cl(3)` local algebra / `Z^3` spatial
+   substrate baseline).  The earlier
+   [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) citation is
+   retained here only as the historical anchor consistent with the
+   2026-04-30 production certificate; the live framework-language anchor is
+   the 2026-05-03 successor.  This fixes the Wilson gauge action at `beta = 6`.
+   A production run must include at
    least three lattice volumes and enough scale-control information to separate
    finite-volume, finite-spacing, and scale-setting uncertainties.
 
@@ -443,6 +472,66 @@ That the theorem is ratified at the `alpha_s(M_Z)` level. Independent
 audit is required, and the four external/admitted-context items must be
 resolved or explicitly accepted by the audit lane before the repository
 can treat the full `alpha_s(M_Z)` bridge as closed.
+
+## Cited authority chain (audit-conditional perimeter register)
+
+The audit lane's `notes_for_re_audit_if_any` field names the conditional
+perimeter precisely. The table below registers each cited authority and its
+current ledger status, so the conditional perimeter is explicit.
+
+| Cited authority | Note | Effective status (2026-05-10) | Conditional on |
+|---|---|---|---|
+| Graph-first `SU(3)` gauge surface | [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `retained_bounded` | none in this row's perimeter |
+| Physical `Cl(3)` local algebra and `Z^3` spatial substrate baseline | [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md) | `meta` | canonical framework-baseline memo; this row does not turn the meta note into a retained-grade dependency |
+| Earlier (superseded) baseline memo | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) | `meta` (superseded by 2026-05-03) | not retained-grade authority; cited as historical anchor only |
+| Wilson action at `beta = 6` and `g_bare = 1` | inline in this note | conditional on the audit-flagged `g_bare` open-gate status (2026-05-03 minimal-axioms restoration moved `g_bare = 1` from axiom-like language to open gate) | `g_bare` open-gate closure |
+| Sommer scale `r_0 = 0.5 fm` | external (Sommer 1993, FLAG 2021) | external admitted-context | retained bridge theorem from the framework's lattice scale to physical units |
+| 4-loop QCD beta function for `N_f = 5` | external (PDG 2025 QCD review section 9.4) | external admitted-context | retained bridge theorem from short-distance lattice coupling to continuum scheme + running |
+| PDG-style threshold matching across `m_c`, `m_b` | external (PDG 2025) | external admitted-context | retained bridge theorem for `N_f = 4 -> 5` matching |
+| Sea-quark / full-QCD bridge | not in current packet | not yet packaged | retained bridge theorem from pure-gauge Wilson surface to dynamical-quark physical alpha_s at `M_Z` |
+| `<P>` analytic insertion at `beta = 6` (cross-check only) | [`PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) | `audited_conditional` | only enters as a cross-check, not as authority on this row |
+
+The audit-conditional perimeter of this row is therefore precisely the
+last four rows of the table plus the `g_bare` open-gate dependency: the
+in-runner certificate validation does not itself recompute Sommer scale
+setting, QCD running, threshold matching, or the sea-quark bridge, and
+each remains an external admitted-context item that the audit verdict
+flags as not yet retained-grade in-framework. The Wilson-loop /
+static-potential measurement at `beta = 6` and the local certificate
+checks (plateau pass/fail, Cornell fit, multi-volume residual,
+uncertainty budget) are not part of the conditional perimeter at the
+stated scope.
+
+## Audit-aware repair path
+
+Per `audit_ledger.json`, `notes_for_re_audit_if_any` for this row, the
+audit-stated repair path is two-pronged:
+
+1. **Replace the superseded minimal-axioms citation.** Update internal
+   references so the live canonical framework-baseline anchor is
+   [`MINIMAL_AXIOMS_2026-05-03.md`](MINIMAL_AXIOMS_2026-05-03.md). This
+   rigorization edit performs that update in the methodology section
+   while preserving the historical 2026-04-11 anchor as a cross-reference
+   for the 2026-04-30 certificate. The successor minimal-axioms note
+   continues to carry `claim_type: meta` and is the canonical
+   baseline-language memo.
+2. **Provide retained bridge theorems for the four external items.**
+   Land retained-grade audited bridge notes for:
+   - Sommer scale setting from the framework's lattice surface to the
+     physical `r_0` anchor;
+   - QCD running from the short-distance lattice coupling to `M_Z`;
+   - threshold matching across `m_c`, `m_b`;
+   - the sea-quark / full-QCD bridge from pure-gauge Wilson to
+     `N_f = 5` physical `alpha_s(M_Z)`.
+
+   Until each of those four bridges is retained-grade in-framework,
+   they continue to enter as admitted external authorities, and this
+   row's effective status caps at `audited_conditional` regardless of
+   the in-packet certificate's strict pass/fail state.
+
+Either repair narrows the conditional perimeter; this rigorization edit
+only sharpens the boundary register and refreshes the methodology's
+baseline-memo citation, without changing audit status.
 
 ## Out of scope (admitted-context to this note)
 

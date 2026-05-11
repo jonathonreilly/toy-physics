@@ -730,7 +730,15 @@
     },
     {
       "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
       "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "alpha_s_direct_wilson_loop_derivation_theorem_note_2026-04-30",
+      "to": "plaquette_self_consistency_note"
     },
     {
       "from": "alpha_s_direct_wilson_loop_honest_status_audit_note_2026-05-02",
@@ -9083,6 +9091,10 @@
     {
       "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_exact_radical_reconstruction_map_note_2026-04-17",
       "to": "gauge_vacuum_plaquette_beta6_evaluation_seam_reduction_science_only_note_2026-04-17"
+    },
+    {
+      "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
+      "to": "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
     },
     {
       "from": "gauge_vacuum_plaquette_first_symmetric_three_sample_positive_cone_order_witness_note_2026-04-17",
@@ -36717,9 +36729,11 @@
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "graph_first_su3_integration_note",
-        "minimal_axioms_2026-04-11"
+        "minimal_axioms_2026-05-03",
+        "minimal_axioms_2026-04-11",
+        "plaquette_self_consistency_note"
       ],
-      "note_hash": "29202ae82052a809b7d5a6e5ed48b82568184c70f52e1d91df16d572d3deafa0",
+      "note_hash": "586d77cd861461a359b2293310a58f33ee3d5b0215634e12ce07484337af6c40",
       "path": "docs/ALPHA_S_DIRECT_WILSON_LOOP_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_alpha_s_direct_wilson_loop.py",
       "title": "Direct Wilson-Loop `alpha_s(M_Z)` Derivation Gate"
@@ -46908,8 +46922,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "5f072bf36eb08f4f5a3d4fdae0cc250c0ad1313c511797fbb0b4a1804183eca0",
+      "deps": [
+        "gauge_vacuum_plaquette_first_three_sample_local_wilson_retained_positive_cone_obstruction_note_2026-04-17"
+      ],
+      "note_hash": "b447c3121b47c2482b8cfcfa9552ba565e83e9a724cc56f17080885cc0182dfe",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First Symmetric Three-Sample Minimal Positive Completion"
@@ -56314,7 +56330,7 @@
       "deps": [
         "persistent_object_top4_multistage_transfer_sweep_note_2026-04-16"
       ],
-      "note_hash": "ae694e4ae006f2803e38cb976d656ce36da70212eec2cc19cfbfe3b282ca9cea",
+      "note_hash": "26c709cb59aaaae8107f9840cdab4793352610e30888243f29140f55e89d1fa4",
       "path": "docs/PERSISTENT_OBJECT_INWARD_BOUNDARY_FLOOR_DIAGNOSIS_NOTE_2026-04-16.md",
       "runner_path": "scripts/persistent_object_top4_multistage_transfer_sweep.py",
       "title": "Persistent Object Inward Boundary Floor Diagnosis"
@@ -69713,7 +69729,6 @@
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_orientation_theorem_note_2026-04-20",
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
-    "gauge_vacuum_plaquette_first_symmetric_three_sample_minimal_positive_completion_note_2026-04-19",
     "gauge_vacuum_plaquette_framework_point_underdetermination_note",
     "gauge_vacuum_plaquette_full_slice_rim_lift_integral_boundary_science_only_note_2026-04-17",
     "gauge_vacuum_plaquette_mixed_cumulant_audit_note",
@@ -70201,10 +70216,10 @@
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8770,
+    "edge_count": 8773,
     "leaf_count": 624,
     "node_count": 2194,
-    "root_count": 802,
+    "root_count": 801,
     "runners_with_path": 1807
   }
 }

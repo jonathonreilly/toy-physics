@@ -1,0 +1,43 @@
+==========================================================================================================================================
+PERSISTENT OBJECT MULTISTAGE TRANSFER SWEEP
+  widened local-pocket transfer of the retained multistage compact-object floor
+==========================================================================================================================================
+top_keep=8, cases=source0p75,source1p00,source1p25,source1p50
+
+CASE: source0p75  (W=3, L=6, source_z=0.75)
+  stage_mean_overlap  = [0.980,1.000,1.000]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.02,1.02,1.02]
+  max_kappa_drift     = 0.000%
+  admissible          = False
+
+CASE: source1p00  (W=3, L=6, source_z=1.0)
+  stage_mean_overlap  = [0.970,1.000,1.000]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [0.76,0.76,0.76]
+  max_kappa_drift     = 0.004%
+  admissible          = False
+
+CASE: source1p25  (W=3, L=6, source_z=1.25)
+  stage_mean_overlap  = [0.966,1.000,1.000]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [0.99,0.99,0.99]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+CASE: source1p50  (W=3, L=6, source_z=1.5)
+  stage_mean_overlap  = [0.968,1.000,1.000]
+  carry_mean          = [1.000,1.000]
+  stage_alpha         = [1.02,1.02,1.02]
+  max_kappa_drift     = 0.000%
+  admissible          = True
+
+SUMMARY
+  top8 multistage-admissible on 2/4 listed widened-pocket cases
+
+SAFE READ
+  - If top8 stays open across most of this pocket, the exact-lattice route now has a real transferable multistage floor.
+  - If top8 collapses on the boundary rows, the floor is real but still pocket-limited.
+  - This is still a bounded exact-lattice transfer sweep, not matter closure.
+
+Total runtime: 183.0s
