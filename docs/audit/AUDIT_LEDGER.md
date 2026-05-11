@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 80 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 246 |
+| **retained_bounded** | 247 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1103 |
+| unaudited | 1102 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 422 |
+| `audited_clean` | 423 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1201 |
+| `unaudited` | 1200 |
 
 | claim_type | count |
 |---|---:|
@@ -393,6 +393,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `radial_scaling_protected_angle_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `replay_environment_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | B | - |
 | `restricted_strong_field_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -8726,6 +8727,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the load-bearing observable identification is an admitted open bridge, not derived from the supplied source and one-hop authorities. Why this blocks: the retained Fierz note proves only the adjoint Hilbert-space dimension fraction, not that the lattice connected color trace or its dynamics inherits that fraction with the stated O(1/N_c^4) correction. Repair target: prove matching rule (M) and the channel-population/correction estimate from retained lattice primitives, with a runner that does not set 8/9 as its target. Claim boundary until fixed: exact imported Fierz channel-count fraction plus conditional MC consistency framing only.
 - **open / conditional deps cited:**
   - `EW_CURRENT_FIERZ_CHANNEL_DECOMPOSITION_NOTE_2026-05-01.md`
+- **auditor confidence:** high
+
+### `reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`REFLECTION_POSITIVITY_GAUGE_HALF_CAUCHY_SCHWARZ_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/REFLECTION_POSITIVITY_GAUGE_HALF_CAUCHY_SCHWARZ_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional weighted-L2 norm-square and positive sesquilinear-form identity on a finite or compact measured space with measure-preserving involution, Θ-invariant real half-action, and reflection-Hermitian observable.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c0-c068-77f1-be6a-bca69388776a`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** By Θ-invariance of S_+ and reflection-Hermiticity of F, the reflected integrand becomes ψ²(x)ψ²(x) overline{F(x)}F(x)=|ψ²(x)F(x)|².  _(class `A`)_
+- **chain closes:** True — The scoped claim closes by pointwise substitution of the explicit symmetry hypotheses, reducing the reflected expectation to a non-negative L2 norm-square. No Wilson plaquette, fermion determinant, physical Hilbert-space bridge, or external dependency is used or needed for this bounded theorem.
+- **rationale:** The theorem is intentionally narrow and conditional, and its load-bearing identity is an elementary algebraic measure-theoretic reduction under the stated assumptions. The sesquilinear form and null quotient follow from the standard positive semidefinite Hermitian form G(F,F')=<ψ²F,ψ²F'>. The runner only supplies finite-model A-class confirmation, but the proof itself closes inside the packet.
 - **auditor confidence:** high
 
 ### `replay_environment_note`
