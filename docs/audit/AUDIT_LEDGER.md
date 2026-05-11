@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1217 |
+| unaudited | 1216 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 185 |
+| ~~audited_conditional~~ | 186 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 455 |
-| `audited_conditional` | 185 |
+| `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1330 |
+| `unaudited` | 1329 |
 
 | claim_type | count |
 |---|---:|
@@ -671,6 +671,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `exponent_derivation` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `family_companion_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `finite_rank_source_to_metric_theorem_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `g_bare_constraint_vs_convention_theorem_note_2026-05-03` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -3984,6 +3985,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** From |D_mu H_0|^2, the charged term is g^2 v^2/4 W_mu^+ W^{-mu} and the neutral mass matrix is v^2/4 [[g^2, -g g_Y], [-g g_Y, g_Y^2]], whose eigenvalues are 0 and (g^2+g_Y^2)v^2/4.  _(class `A`)_
 - **chain closes:** True — Within the note's explicit assumptions, the Pauli-matrix action on the neutral doublet vacuum gives the charged mass term and the neutral 2x2 mass matrix directly. The zero and massive eigenvectors also give the photon/Z rotation and the photon coupling to T3+Y without importing numerical electroweak data.
 - **rationale:** The scoped theorem is an exact class-A algebraic closure over explicitly stated SM Higgs-sector assumptions, not a numerical match, renaming, or decoration of a single upstream parent. No experimental M_W, M_Z, sin^2(theta_W), or alpha_EM value is used to obtain the mass matrix or charge normalization. The cached runner exits nonzero with one failed status-string surface check, but all load-bearing algebraic checks pass; that failure is a non-load-bearing runner/documentation artifact rather than a defect in the theorem chain.
+- **auditor confidence:** high
+
+### `exponent_derivation`
+
+- **Note:** [`EXPONENT_DERIVATION.md`](../../docs/EXPONENT_DERIVATION.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded heuristic note proposing an organizing dimensional-scaling story for decoherence ceiling exponents from effective path-count and mixing-zone arguments, with approximate comparison to earlier unmatched family-level alpha summaries and speculative 5D/6D predictions; no rigorous path-measure derivation, primary runner, dimension-only theorem, or retained mechanism is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The derivation asserts n_eff ~ M^((d_spatial-1)/d_spatial), f_mix ~ (r/L)^(d_spatial), and therefore an approximate alpha ~ 1/d_spatial dimensional scaling for the decoherence ceiling exponent.  _(class `A`)_
+- **chain closes:** False — The key effective-path-count and mixing-fraction scalings are asserted as heuristic, and the one retained-bounded dependency explicitly reports that the matched 2D-vs-4D replay does not support a clean dimension-only escape claim. Without a derivation from the actual DAG path measure or a matched multi-dimensional runner, the exponent law does not close.
+- **rationale:** Issue: the load-bearing n_eff and f_mix scaling steps are hand-waving assumptions rather than derived consequences of the retained graph/path measure. Why this blocks: the note's alpha~1/d trend and 5D/6D predictions cannot be retained as a bounded theorem when the matched 2D/4D dependency says dimension alone is not currently isolated and no primary runner is attached to this row. Repair target: supply a rigorous path-measure theorem or a pre-registered matched-dimensional sweep that controls topology/connectivity and reproduces the exponent trend. Claim boundary until fixed: the note is usable as an organizing heuristic and prediction sketch, but not as a retained dimensional exponent mechanism.
 - **auditor confidence:** high
 
 ### `family_companion_compare_note`
