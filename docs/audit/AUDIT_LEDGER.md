@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 92 |
+| **retained** | 93 |
 | **retained_no_go** | 132 |
 | **retained_bounded** | 277 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1207 |
+| unaudited | 1206 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 463 |
+| `audited_clean` | 464 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1320 |
+| `unaudited` | 1319 |
 
 | claim_type | count |
 |---|---:|
@@ -326,6 +326,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` | no_go | ~~audited_clean~~ | **retained_no_go** | judicial_review | codex-gpt-5 | B | - |
 | `half_plane_chart_equivalence_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `hard_geometry_local_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | D | - |
+| `hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_matsubara_decomposition_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -5512,6 +5513,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the same residual ratio R, the dimension-4 effective-potential-like inverse fourth root R^(-1/4) ~= 0.96468 is in the right few-percent range, while the inverse sixteenth root R^(-1/16) ~= 0.99105 is too small.  _(class `G`)_
 - **chain closes:** False — The arithmetic in the runner matches the note, but the physical bridge identifying the Lt residual as entering a dimension-4 effective potential density with the stated sign and placement is explicitly left open. The comparison also depends on selected numerical inputs rather than a closed derivation from the restricted packet.
 - **rationale:** The runner genuinely computes the condensate-density ratio from its finite lattice Dirac operator and then performs the advertised root comparisons. However, the load-bearing conclusion is a numerical closeness claim at chosen parameters and against the imported observed prefactor C_obs, not a first-principles closure of the physical determinant-to-VEV map. The note itself caveats that the sign, placement, order parameter derivation, and full determinant-to-VEV theorem remain open.
+- **auditor confidence:** high
+
+### `hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`HIERARCHY_DIMENSIONAL_FOURTH_ROOT_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/HIERARCHY_DIMENSIONAL_FOURTH_ROOT_COMPRESSION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Zero-dependency dimensional-algebra theorem: for an abstract positive quantity f of mass dimension d and dimensionless prefactor C_M, the simple-power extraction C_M f^alpha has mass dimension one iff alpha = 1/d; the d=4 exponent is exactly 1/4 and is unique among positive integer d.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** If f has mass dimension d and C_M is dimensionless, then C_M f^alpha has mass dimension d alpha, so requiring mass dimension one gives d alpha = 1 and alpha = 1/d; at d = 4 this is 1/4.  _(class `A`)_
+- **chain closes:** True — The theorem follows directly from the dimensional identity [C_M f^alpha] = d alpha and the linear equation d alpha = 1. No physical density, hierarchy formula, determinant readout, scale bridge, or empirical comparator is used.
+- **rationale:** The source note cleanly restricts itself to exact dimensional algebra and explicitly excludes the downstream hierarchy/free-energy/determinant applications. The runner verifies the dimension count, alpha = 1/d solution, d=4 quarter exponent, uniqueness among checked positive integers plus monotonicity, and symbolic round trips at exact rational/sympy precision with PASS=8 and FAIL=0. Residual risk is only downstream scope drift: this theorem does not derive any physical order parameter or hierarchy formula.
 - **auditor confidence:** high
 
 ### `hierarchy_effective_potential_endpoint_note`
