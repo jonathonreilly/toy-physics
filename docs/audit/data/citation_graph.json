@@ -39598,6 +39598,17 @@
       "runner_path": "scripts/frontier_cross_sector_a_squared_koide_vcb_bridge.py",
       "title": "Cross-Sector A^2-Q_l-|V_cb| Bridge Support Note"
     },
+    "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "a9c62b8768b0e6f2dcbb909d36257e991387a9f706bab44b731c77fd47253805",
+      "path": "docs/CUBIC_ORBIT_REYNOLDS_PROJECTOR_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_cubic_orbit_reynolds_projector_narrow.py",
+      "title": "Cubic-Orbit Reynolds Projector Narrow Positive Theorem"
+    },
     "cycle_battery_note_2026-04-10": {
       "claim_id": "cycle_battery_note_2026-04-10",
       "claim_type_author_hint": null,
@@ -67147,6 +67158,7 @@
     "coupled_field_generated_family_probe_note",
     "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10",
     "cross_family_universality_note",
+    "cubic_orbit_reynolds_projector_narrow_theorem_note_2026-05-10",
     "cycle_battery_note_2026-04-10",
     "cycle_break_slice_note_2026-04-10",
     "cyclic_projector_compression_narrow_theorem_note_2026-05-02",
@@ -67779,7 +67791,7 @@
       "no_go": 29,
       "none": 1628,
       "open_gate": 32,
-      "positive_theorem": 118
+      "positive_theorem": 119
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 750,
@@ -67788,12 +67800,12 @@
       "no_go": 136,
       "none": 451,
       "open_gate": 120,
-      "positive_theorem": 618
+      "positive_theorem": 619
     },
     "edge_count": 8429,
-    "leaf_count": 581,
-    "node_count": 2135,
-    "root_count": 802,
-    "runners_with_path": 1748
+    "leaf_count": 582,
+    "node_count": 2136,
+    "root_count": 803,
+    "runners_with_path": 1749
   }
 }
