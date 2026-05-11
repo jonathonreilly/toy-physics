@@ -13661,6 +13661,38 @@
       "to": "koide_cyclic_wilson_descendant_law_note_2026-04-18"
     },
     {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "qcd_low_energy_running_bridge_note_2026-05-01"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
       "from": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
       "to": "koide_q_delta_linking_relation_theorem_note_2026-04-20"
     },
@@ -49724,6 +49756,26 @@
       "runner_path": "scripts/frontier_koide_weighted_character_source_axis_theorem.py",
       "title": "Koide Weighted Character-Source Axis Theorem"
     },
+    "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar": {
+      "claim_id": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate (bounded diagnostic; mostly negative)",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "qcd_low_energy_running_bridge_note_2026-05-01",
+        "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "g_bare_hilbert_schmidt_rigidity_theorem_note_2026-05-07",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "yt_ew_color_projection_theorem",
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+      ],
+      "note_hash": "e373e2b025079868c6854f6dedc8a42559eb04bd137f54c205e1418614205ee9",
+      "path": "docs/KOIDE_X_L1_MSBAR_NATIVE_SCHEME_NOTE_2026-05-08_probeX_L1_msbar.md",
+      "runner_path": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py",
+      "title": "Probe X-L1-MSbar \u2014 Beta-Function Coefficients in a Lattice/`<P>` Scheme: Bounded-Tier Source Note"
+    },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "claim_id": "koide_z3_joint_projector_identity_note_2026-04-19",
       "claim_type_author_hint": null,
@@ -67452,7 +67504,7 @@
       "meta": 59,
       "no_go": 28,
       "none": 1628,
-      "open_gate": 30,
+      "open_gate": 31,
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
@@ -67461,13 +67513,13 @@
       "meta": 59,
       "no_go": 135,
       "none": 451,
-      "open_gate": 118,
+      "open_gate": 119,
       "positive_theorem": 614
     },
-    "edge_count": 8383,
-    "leaf_count": 578,
-    "node_count": 2127,
+    "edge_count": 8391,
+    "leaf_count": 579,
+    "node_count": 2128,
     "root_count": 799,
-    "runners_with_path": 1740
+    "runners_with_path": 1741
   }
 }

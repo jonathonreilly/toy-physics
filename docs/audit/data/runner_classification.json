@@ -11172,6 +11172,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_koide_weighted_character_source_axis_theorem.py"
     },
+    "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py"
+    },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -23834,6 +23846,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "D": 10
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_z_quark_qcd_chain_2026_05_08_probeZ_quark_qcd_chain.py": {
@@ -45590,12 +45617,12 @@
     "dominant_class_distribution": {
       "A": 126,
       "B": 169,
-      "C": 659,
+      "C": 660,
       "D": 254,
       "none": 420
     },
-    "runners_classified": 1628,
-    "runners_with_C": 828,
-    "runners_with_D": 453
+    "runners_classified": 1629,
+    "runners_with_C": 829,
+    "runners_with_D": 454
   }
 }
