@@ -24,11 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
 | unaudited | 1244 |
-| audit_in_progress | 1 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
-| ~~audited_conditional~~ | 185 |
+| ~~audited_conditional~~ | 186 |
 | ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,9 +40,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 3 |
+| `audit_in_progress` | 2 |
 | `audited_clean` | 431 |
-| `audited_conditional` | 185 |
+| `audited_conditional` | 186 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
@@ -115,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 |---|---|---|---|---|---|---|---|
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
-| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -690,6 +688,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
+| `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `pmns_active_four_real_source_from_transport_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_c3_nontrivial_current_boundary_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
@@ -7324,6 +7323,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current one-axiom Hilbert/information-flow surface fixes only phase classes exp(iS/kappa), while the same rank-four block supports CAR/Fock and non-CAR two-qubit or ququart semantics under the same Hilbert-flow axioms.  _(class `A`)_
 - **chain closes:** True — The no-go is scoped to the explicitly stated bare Hilbert-flow surface. Rescaling invariance blocks an absolute action scale, and explicit CAR and non-CAR realizations on the same C^4 active block demonstrate underdetermination of edge statistics.
 - **rationale:** The runner completed from cache with 27/27 PASS and checks the relevant algebraic invariances, finite-matrix obstruction, CAR construction, non-CAR alternatives, and identical unitary-flow compatibility. The proof does not derive a positive physical hbar or CAR bridge; it cleanly establishes the bounded negative result that those structures are not forced by the stated one-axiom surface. The final route through a separate Clifford/coframe principle is explicitly outside this no-go scope, so it does not weaken the scoped boundary claim.
+- **auditor confidence:** high
+
+### `plaquette_v1_picard_fuchs_ode_note_2026-05-05`
+
+- **Note:** [`PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md`](../../docs/PLAQUETTE_V1_PICARD_FUCHS_ODE_NOTE_2026-05-05.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The stated V=1 single-plaquette Picard-Fuchs ODE and beta=6 plaquette value for the physical SU(3) integral, excluding thermodynamic-limit or downstream plaquette-status claims.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-judicial-20260511-plaquette-v1-pf`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the displayed third-order Picard-Fuchs equation holds and its analytic Frobenius solution gives the physical integral.  _(class `A`)_
+- **chain closes:** False — The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
+- **rationale:** The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
 - **auditor confidence:** high
 
 ### `pmns_active_four_real_source_from_transport_note`
