@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 697,
+    "critical": 696,
     "high": 38,
     "leaf": 334,
     "medium": 177
@@ -5529,27 +5529,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
-      "claim_scope": "For abstract positive scalars \u03b1_bare and u_0 with \u03b1_LM = \u03b1_bare/u_0 and \u03b1_s(v) = \u03b1_bare/u_0\u00b2, the identities \u03b1_LM\u00b2 = \u03b1_bare\u00b7\u03b1_s(v), log \u03b1_LM = (log \u03b1_bare + log \u03b1_s(v))/2, and \u03b1_LM/\u03b1_bare = \u03b1_s(v)/\u03b1_LM = 1/u_0 hold.",
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 22,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 19.811,
-      "note_path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "queue_reason": "audit_in_progress",
-      "ready": true,
-      "runner_path": "scripts/frontier_alpha_lm_geometric_mean_identity.py",
-      "transitive_descendants": 448
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -38744,6 +38723,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 100,
-  "total_pending": 1246
+  "ready_count": 99,
+  "total_pending": 1245
 }
