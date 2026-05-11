@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1281 |
+| unaudited | 1280 |
 | audit_in_progress | 15 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
-| ~~audited_renaming~~ | 14 |
+| ~~audited_renaming~~ | 15 |
 | ~~audited_conditional~~ | 152 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
@@ -47,8 +47,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
-| `audited_renaming` | 14 |
-| `unaudited` | 1394 |
+| `audited_renaming` | 15 |
+| `unaudited` | 1393 |
 
 | claim_type | count |
 |---|---:|
@@ -806,6 +806,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `work_history.ckm.ckm_mass_basis_nni_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `dark_energy_eos_note` | bounded_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | F | - |
 | `dm_leptogenesis_pmns_minimum_information_source_law_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_pmns_observable_relative_action_law_note_2026-04-16` | open_gate | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
 | `dm_leptogenesis_transport_decomposition_theorem_note_2026-04-16` | positive_theorem | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-gpt-5.5 | E | - |
@@ -2356,6 +2357,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Exact cyclic-group averaging over the explicitly defined 3-cycle C is self-adjoint and idempotent under the Frobenius inner product, so it projects Herm(3) onto the C-fixed subspace; direct exact basis enumeration identifies that subspace as span_R{I, C+C^2, i(C-C^2)} and gives the stated coefficient formula.  _(class `A`)_
 - **chain closes:** True — The theorem closes from the explicit definition of C and P_cyc plus exact finite-dimensional algebra. The parent-row context line is not load-bearing: the row has no dependencies, defines C directly, and the asserted conclusions are independently checkable symbolic identities.
 - **rationale:** The source note is narrowly scoped and the exact runner output reports 26 algebraic checks with no failures, covering the group facts, Hermiticity, idempotence and fixed basis, basis action, and generic compression formula. The generated classifier's decoration-candidate signal arises from the parent-row context check rather than from the theorem's proof obligations, so it does not convert this independent helper theorem into decoration. Residual risk is downstream misuse: later rows must not treat B0/B1/B2 as physical response channels without a separate audited bridge.
+- **auditor confidence:** high
+
+### `dark_energy_eos_note`
+
+- **Note:** [`DARK_ENERGY_EOS_NOTE.md`](../../docs/DARK_ENERGY_EOS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional cosmology-algebra companion only: given the imported identification Lambda=lambda_1(S^3)=3/R^2 and a fixed graph radius R, the runner prints the constant-Lambda consequence w=-1, negligible Planck-scale lattice corrections, configured evolution-model comparisons, CPL values w0=-1 and wa=0, and topological-gap diagnostics. This excludes a retained derivation of the Lambda-to-spectral-gap bridge, the fixed-R boundary condition, S^3 topology, DESI forecast claims, or framework-level falsifiability.
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop-20260511-dark-energy-eos`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The equation of state follows by identifying the physical cosmological constant with the fixed S^3 spectral gap `Lambda=lambda_1(S^3)=3/R^2`; with R fixed, constant Lambda gives `rho_Lambda=const` and hence `w=-1`.  _(class `F`)_
+- **chain closes:** False — The constant-Lambda algebra closes after the spectral-gap and fixed-R identifications are assumed. The restricted packet does not derive the physical bridge `Lambda=lambda_1(L_S3)` or the fixed-R boundary condition from framework operators.
+- **rationale:** Issue: the load-bearing step identifies physical dark energy/Lambda with a fixed S^3 graph spectral gap, then derives w=-1 from the definition of a constant cosmological constant. Why this blocks: the runner prints downstream algebra and forecasts, but it does not construct the physical Lambda bridge or fixed-R boundary condition from retained inputs. Repair target: provide a retained restricted-packet derivation that the fixed S^3 spectral gap sources the physical cosmological constant with the required normalization and boundary condition. Claim boundary until fixed: this is a conditional algebra companion under an imported bridge, not a retained framework prediction of the dark-energy equation of state.
 - **auditor confidence:** high
 
 ### `dense_prune_guard_seed_note`

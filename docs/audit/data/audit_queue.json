@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 763,
+    "critical": 762,
     "high": 33,
     "leaf": 343,
     "medium": 168
@@ -6231,27 +6231,6 @@
       "ready": true,
       "runner_path": "scripts/gravitomagnetic_portable.py",
       "transitive_descendants": 448
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dark_energy_eos_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.285,
-      "note_path": "docs/DARK_ENERGY_EOS_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_dark_energy_eos.py",
-      "transitive_descendants": 440
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -40701,6 +40680,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 134,
-  "total_pending": 1307
+  "ready_count": 133,
+  "total_pending": 1306
 }
