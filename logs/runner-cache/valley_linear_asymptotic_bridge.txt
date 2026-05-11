@@ -1,11 +1,34 @@
 ===== runner cache v1 =====
 runner: scripts/valley_linear_asymptotic_bridge.py
-runner_sha256: c7e22170f50d1dfd0aeb3bf72bb8dbe62001f97143125199ab6d1b0b1c0a8c0e
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.00
-status: timeout
+runner_sha256: 64628e55dfbe1327c2f0b28813e18ae28417ab5a032741b5c24c748e16bc6364
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 247.61
+status: ok
 ----- stdout -----
+============================================================================================
+VALLEY-LINEAR ASYMPTOTIC BRIDGE
+  Bounded h/W comparison for the 3D ordered-lattice 1/L^2 family
+  Goal: decide whether the far-tail is stabilizing or still slice-dependent
+============================================================================================
+
+coarse anchor: h=0.5, W=8 done in 3.4s (Born=2.50e-15, TOWARD=7/9)
+core retained: h=0.25, W=10 done in 102.8s (Born=4.20e-15, TOWARD=9/9)
+wide replay: h=0.25, W=12 done in 141.3s (Born=4.82e-15, TOWARD=9/9)
+
+slice              h    W       Born        k=0      F~M        grav   TOWARD              peak-tail               far-tail
+------------------------------------------------------------------------------------------------------------------------------------
+coarse anchor   0.50    8   2.50e-15  +0.00e+00     1.00   +0.000144      7/9 z>=5: -1.47 (R²=0.996) z>=5: -1.47 (R²=0.996, n=4)
+core retained   0.25   10   4.20e-15  +0.00e+00     1.00   +0.000224      9/9 z>=4: -1.00 (R²=0.979) z>=5: -1.12 (R²=0.991, n=6)
+wide replay     0.25   12   4.82e-15  +0.00e+00     1.00   +0.000232      9/9 z>=4: -0.90 (R²=0.985) z>=5: -1.00 (R²=0.995, n=6)
+
+SAFE READ:
+  - The finite-lattice 3D valley-linear replay is still genuinely TOWARD.
+  - The far-tail exponent moves with h/W enough to stay slice-dependent.
+  - The best current read is near-Newtonian finite-lattice replay, not an exact universal -1.00 theorem.
+  - The wider replay improves tail resolution, but the asymptotic bridge is not fully stabilized yet.
+
+Total time: 247.5s
 
 ----- stderr -----
 

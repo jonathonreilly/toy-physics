@@ -48,6 +48,8 @@ from scripts.valley_linear_same_harness_compare import (  # noqa: E402
     setup_slits,
 )
 
+AUDIT_TIMEOUT_SEC = 1800
+
 
 @dataclass(frozen=True)
 class Checkpoint:

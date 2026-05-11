@@ -41,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 4 |
-| `audited_clean` | 507 |
+| `audit_in_progress` | 3 |
+| `audited_clean` | 508 |
 | `audited_conditional` | 206 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
@@ -116,7 +116,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `persistent_object_inward_boundary_floor_diagnosis_note_2026-04-16` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
-| `valley_linear_asymptotic_bridge_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -595,6 +594,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universal_gr_so3_isotypic_orbit_flat_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_supermetric_normal_form_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `valley_linear_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
+| `valley_linear_asymptotic_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `valley_linear_mirror_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_repro_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -11474,6 +11474,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The supplied runner source instantiates the lattice, propagation rule, two action laws, field, slit setup, and fitted diagnostics directly, and the cached runner output matches the note's table. The conclusion is limited to that fixed computational harness and does not require an unstated upstream note.
 - **rationale:** The load-bearing evidence is a completed first-principles compute inside the restricted packet, not a copied upstream value or a printed constant. The runner computes both actions under the same lattice and readout parameters and produces the reported Born, k=0, mass-law exponent, gravity sign/count, and tail slope diagnostics. The note's own language keeps the claim bounded and explicitly excludes convergence, derivation from axioms, and Newtonian-gravity promotion.
 - **auditor confidence:** high
+
+### `valley_linear_asymptotic_bridge_note`
+
+- **Note:** [`VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md`](../../docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded finite-lattice claim that the provided valley-linear 3D runner computes TOWARD sign persistence, near-linear mass scaling, and slice-dependent far-tail exponents for h=0.5,W=8; h=0.25,W=10; and h=0.25,W=12.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260511-235357-9cb095b6-valley_linear_asymptotic-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The replay table shows TOWARD persistence and F~M=1.00 across the tested h/W ladder while the far-tail exponent changes with h and W, so the result is a near-Newtonian finite-lattice bridge rather than a stabilized universal -1.00 theorem.  _(class `C`)_
+- **chain closes:** True — Within the restricted packet, the runner performs numerical lattice propagations over the stated checkpoint ladder and fits the resulting mass and distance laws rather than printing fixed constants. The conclusion is bounded to the tested finite slices and does not assert a continuum theorem.
+- **rationale:** The note's conclusion is conservative and matches the completed runner output: the tested slices remain TOWARD, preserve F~M near 1.00, and show far-tail slopes that vary across h/W choices. The runner source is not a trivial constant printer; it constructs lattice checkpoints, propagates fields, computes Born/k=0/gravity/mass-scaling/distance-law quantities, and fits power laws. No external comparator or imported calibrated measurement is used, and the claimed scope stays bounded to this finite replay.
+- **auditor confidence:** medium
 
 ### `valley_linear_mirror_transfer_note`
 
