@@ -13849,6 +13849,22 @@
       "to": "koide_cyclic_wilson_descendant_law_note_2026-04-18"
     },
     {
+      "from": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
+      "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
+    },
+    {
+      "from": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
+      "to": "cl3_sm_embedding_theorem"
+    },
+    {
+      "from": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
+      "to": "no_per_site_chirality_theorem_note_2026-05-02"
+    },
+    {
       "from": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar",
       "to": "qcd_low_energy_running_bridge_note_2026-05-01"
     },
@@ -50322,6 +50338,22 @@
       "runner_path": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py",
       "title": "Probe V-L1-Quartic \u2014 Quartic Casimirs and the QCD \u03b2_2/\u03b2_3 Channel-Weight Obstruction"
     },
+    "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality": {
+      "claim_id": "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (bounded algebraic obstruction)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "minimal_axioms_2026-05-03",
+        "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
+        "cl3_sm_embedding_theorem",
+        "no_per_site_chirality_theorem_note_2026-05-02"
+      ],
+      "note_hash": "ca5e2b3067dfe6546162aa413ec7fe9a53beb94af012dbe34b7a4aa8a8f690e3",
+      "path": "docs/KOIDE_W_SUBSTRATE_CHIRALITY_CL3_Z2_NOTE_2026-05-10_probeW_substrate_chirality.md",
+      "runner_path": "scripts/cl3_koide_w_substrate_chirality_2026_05_10_probeW_substrate_chirality.py",
+      "title": "Cl(3) Z_2 Grading One-Sided SU(2) Selection No-Go"
+    },
     "koide_weighted_character_source_axis_theorem_note_2026-04-20": {
       "claim_id": "koide_weighted_character_source_axis_theorem_note_2026-04-20",
       "claim_type_author_hint": null,
@@ -68289,7 +68321,7 @@
       "bounded_theorem": 275,
       "decoration": 1,
       "meta": 61,
-      "no_go": 33,
+      "no_go": 34,
       "none": 1626,
       "open_gate": 34,
       "positive_theorem": 134
@@ -68298,15 +68330,15 @@
       "bounded_theorem": 757,
       "decoration": 1,
       "meta": 61,
-      "no_go": 140,
+      "no_go": 141,
       "none": 450,
       "open_gate": 122,
       "positive_theorem": 633
     },
-    "edge_count": 8462,
-    "leaf_count": 608,
-    "node_count": 2164,
+    "edge_count": 8466,
+    "leaf_count": 609,
+    "node_count": 2165,
     "root_count": 822,
-    "runners_with_path": 1777
+    "runners_with_path": 1778
   }
 }

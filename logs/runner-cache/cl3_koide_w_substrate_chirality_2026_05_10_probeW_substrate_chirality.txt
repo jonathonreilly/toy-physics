@@ -1,0 +1,75 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_w_substrate_chirality_2026_05_10_probeW_substrate_chirality.py
+runner_sha256: 4df7b9fabfcf1d1c1d83162697234195474744d1024ce03341abbdf6cecda4b7
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.23
+status: ok
+----- stdout -----
+
+============================================================================
+Cl(3) Z_2 grading one-sided SU(2) selection no-go
+============================================================================
+
+============================================================================
+SECTION 1: two Pauli chirality summands
+============================================================================
+  [PASS (input)] rho_+ satisfies the Cl(3) anticommutators
+  [PASS (input)] rho_- satisfies the Cl(3) anticommutators
+  [PASS (input)] rho_+(omega) = +i I
+  [PASS (input)] rho_-(omega) = -i I
+  [PASS (input)] rho_+ and rho_- are distinct central-character summands
+
+============================================================================
+SECTION 2: grade involution fixes Cl^+(3)
+============================================================================
+  [PASS (no-go)] rho_+(e12) = rho_-(e12) -- the two minus signs cancel on even generators
+  [PASS (support)] e12^2 = -I -- quaternionic Cl^+(3) generator
+  [PASS (no-go)] rho_+(e13) = rho_-(e13) -- the two minus signs cancel on even generators
+  [PASS (support)] e13^2 = -I -- quaternionic Cl^+(3) generator
+  [PASS (no-go)] rho_+(e23) = rho_-(e23) -- the two minus signs cancel on even generators
+  [PASS (support)] e23^2 = -I -- quaternionic Cl^+(3) generator
+  [PASS (support)] Cl^+(3) quaternion product i*j = k
+  [PASS (support)] Cl^+(3) quaternion product j*k = i
+  [PASS (support)] Cl^+(3) quaternion product k*i = j
+  [PASS (no-go)] alpha restricts to the identity on Cl^+(3) -- alpha(gamma_i gamma_j)=(-gamma_i)(-gamma_j)
+
+============================================================================
+SECTION 3: SU(2) exists on either summand
+============================================================================
+  [PASS (support)] [J1, J2] = i J3 on rho_+
+  [PASS (support)] [J1, J2] = i J3 on rho_-
+  [PASS (no-go)] left SU(2) and right SU(2) commute on rho_+ oplus rho_-
+  [PASS (support)] one-sided SU(2) assignment closes algebraically
+  [PASS (support)] two-sided SU(2) assignment closes algebraically
+  [PASS (no-go)] grade involution does not select one-sided over two-sided SU(2) -- both assignments satisfy the same finite algebra constraints
+
+============================================================================
+SECTION 4: no per-site gamma_5 selector in M_2(C)
+============================================================================
+  [PASS (support)] omega = i I in the Pauli summand
+  [PASS (support)] [omega, sigma_1] = 0 -- omega is central in a single Pauli summand
+  [PASS (support)] [omega, sigma_2] = 0 -- omega is central in a single Pauli summand
+  [PASS (support)] [omega, sigma_3] = 0 -- omega is central in a single Pauli summand
+  [PASS (no-go)] only M=0 anticommutes with all three Pauli generators -- linear constraint rank=4, nullity=0
+  [PASS (no-go)] there is no per-site gamma_5 with gamma_5^2=I -- the only anticommuting candidate is zero
+
+============================================================================
+SECTION 5: claim boundary
+============================================================================
+  [PASS (scope)] proposed claim type is no_go -- bounded algebraic obstruction
+  [PASS (scope)] no empirical data or fitted coefficients are used
+  [PASS (scope)] no anomaly-cancellation or matter-packet theorem is claimed
+  [PASS (scope)] no new repo-wide axiom is introduced -- physical Cl(3) local algebra and Z^3 spatial substrate are baseline semantics
+
+============================================================================
+VERDICT SUMMARY
+============================================================================
+The Cl(3) grade involution fixes Cl^+(3) pointwise.
+The same Cl^+(3) SU(2) carrier is available on both chirality summands.
+Therefore the Z_2 grading alone does not force a one-sided SM SU(2)
+assignment; that choice is a separate gauge-content input.
+=== TOTAL: PASS=31, FAIL=0 ===
+
+----- stderr -----
+

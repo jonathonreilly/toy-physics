@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1149
+**Total pending:** 1150
 **Ready (all deps already at retained-grade or metadata tiers):** 39
 
 By criticality:
 - `critical`: 680
 - `high`: 28
 - `medium`: 160
-- `leaf`: 281
+- `leaf`: 282
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -23,7 +23,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 6 | `newton_law_derived_note` | bounded_theorem | unaudited | critical | 382 | 14.58 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |
 | 7 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | bounded_theorem | unaudited | critical | 382 | 9.58 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/persistent_object_blended_readout_boundary_probe.py` |
 | 8 | `cpt_exact_note` | positive_theorem | unaudited | critical | 716 | 22.49 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
-| 9 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 715 | 17.48 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
+| 9 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 716 | 17.99 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
 | 10 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 708 | 9.97 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
 | 11 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 707 | 18.47 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
 | 12 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 705 | 15.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
@@ -62,9 +62,9 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | 45 | `hypercharge_identification_note` | bounded_theorem | unaudited | critical | 512 | 18.00 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hypercharge_identification.py` |
 | 46 | `s3_time_transfer_matrix_bridge_note` | bounded_theorem | unaudited | critical | 502 | 10.97 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_transfer_matrix_bridge.py` |
 | 47 | `s3_time_bilinear_tensor_primitive_note` | open_gate | unaudited | critical | 500 | 12.97 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_bilinear_tensor_primitive.py` |
-| 48 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 496 | 17.46 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 49 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 496 | 15.96 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 50 | `yt_constructive_uv_bridge_note` | bounded_theorem | unaudited | critical | 496 | 13.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
+| 48 | `yt_constructive_uv_bridge_note` | bounded_theorem | unaudited | critical | 497 | 13.46 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
+| 49 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 496 | 17.46 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 50 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 496 | 15.96 |  | fresh_context_or_stronger_with_cross_confirmation | - |
 
 ## Citation cycle break targets
 

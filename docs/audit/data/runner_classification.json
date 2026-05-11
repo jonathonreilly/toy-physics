@@ -11424,6 +11424,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_v_L1_quartic_2026_05_08_probeV_L1_quartic.py"
     },
+    "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/cl3_koide_w_substrate_chirality_2026_05_10_probeW_substrate_chirality.py"
+    },
     "koide_weighted_character_source_axis_theorem_note_2026-04-20": {
       "assert_count": 1,
       "counts": {
@@ -24338,6 +24350,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_koide_w_substrate_chirality_2026_05_10_probeW_substrate_chirality.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_w_substrate_chirality_cl3_z2_note_2026-05-10_probew_substrate_chirality"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
       "exists": true
     },
     "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py": {
@@ -46575,12 +46602,12 @@
     "dominant_class_distribution": {
       "A": 142,
       "B": 172,
-      "C": 673,
+      "C": 674,
       "D": 256,
       "none": 421
     },
-    "runners_classified": 1664,
-    "runners_with_C": 846,
+    "runners_classified": 1665,
+    "runners_with_C": 847,
     "runners_with_D": 464
   }
 }
