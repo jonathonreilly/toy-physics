@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 756,
+    "critical": 755,
     "high": 33,
     "leaf": 342,
     "medium": 167
@@ -6467,29 +6467,6 @@
       "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_narrow.py",
-      "transitive_descendants": 424
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_full_lattice_schur_inheritance_note_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "site_phase_cube_shift_intertwiner_note"
-      ],
-      "direct_in_degree": 7,
-      "effective_status": "unaudited",
-      "load_bearing_score": 12.231,
-      "note_path": "docs/KOIDE_FULL_LATTICE_SCHUR_INHERITANCE_NOTE_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_full_lattice_schur_inheritance.py",
       "transitive_descendants": 424
     },
     {
@@ -40559,6 +40536,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 122,
-  "total_pending": 1298
+  "ready_count": 121,
+  "total_pending": 1297
 }
