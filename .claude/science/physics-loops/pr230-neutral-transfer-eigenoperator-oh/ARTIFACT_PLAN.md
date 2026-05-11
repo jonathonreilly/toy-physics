@@ -446,3 +446,21 @@ production/certificate inputs: accepted same-surface canonical `O_H` plus
 strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority, a strict W/Z
 physical-response packet with matched covariance, strict non-observed `g2`,
 and `delta_perp`, or a neutral primitive H3/H4 physical-transfer certificate.
+
+Block24 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Queue-pivot admission runner | `scripts/frontier_yt_pr230_block24_queue_pivot_admission_checkpoint.py` | Created; PASS=10 FAIL=0 |
+| Queue-pivot admission certificate | `outputs/yt_pr230_block24_queue_pivot_admission_checkpoint_2026-05-11.json` | Created; current PR head is only the block23 checkpoint after the last scanned physics head and no ranked route is admitted |
+| Queue-pivot admission note | `docs/YT_PR230_BLOCK24_QUEUE_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block24; PASS=358 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block24 checkpoint |
+
+Follow-on artifact target after block24 is the same explicit input set, in
+priority order: accepted same-surface canonical `O_H` plus strict
+`C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority; strict W/Z matched
+physical response with accepted action, same-source rows, covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response authority; or neutral
+H3/H4 physical-transfer authority.  The block23 checkpoint commit and chunk063
+completion alone are not closure artifacts.

@@ -767,6 +767,9 @@ def main() -> int:
         "pr230_block23_remote_candidate_intake": load(
             "outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json"
         ),
+        "pr230_block24_queue_pivot_admission": load(
+            "outputs/yt_pr230_block24_queue_pivot_admission_checkpoint_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3759,6 +3762,48 @@ def main() -> int:
         is True,
         statuses["pr230_block23_remote_candidate_intake"],
     )
+    block24_queue_pivot_admission = certificates[
+        "pr230_block24_queue_pivot_admission"
+    ]
+    report(
+        "pr230-block24-queue-pivot-admission-no-route-admitted",
+        "block24 queue-pivot admission checkpoint"
+        in str(statuses["pr230_block24_queue_pivot_admission"])
+        and block24_queue_pivot_admission.get("proposal_allowed") is False
+        and block24_queue_pivot_admission.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block24_queue_pivot_admission.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "only-block23-checkpoint-since-last-scanned-physics-head"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank1-source-higgs-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank2-wz-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank3-neutral-h3h4-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "chunk063-and-combined-rows-not-committed"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True,
+        statuses["pr230_block24_queue_pivot_admission"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6385,6 +6430,41 @@ def main() -> int:
         )
         is True
     )
+    result["block24_queue_pivot_admission_no_route_admitted"] = (
+        block24_queue_pivot_admission.get("proposal_allowed") is False
+        and block24_queue_pivot_admission.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block24_queue_pivot_admission.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "only-block23-checkpoint-since-last-scanned-physics-head"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank1-source-higgs-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank2-wz-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "queue-rank3-neutral-h3h4-not-admitted"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "chunk063-and-combined-rows-not-committed"
+        )
+        is True
+        and block24_queue_pivot_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -6420,6 +6500,7 @@ def main() -> int:
         "does not treat process-only gates as proof inputs",
         "does not treat remote branch drift as same-surface physics evidence",
         "does not treat fetched Higgs/EW remote branches as PR230 same-surface artifacts without parseable required-path certificates",
+        "does not treat the block23 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

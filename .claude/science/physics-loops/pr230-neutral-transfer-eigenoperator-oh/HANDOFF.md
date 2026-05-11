@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-11 18:43 EDT
+Checkpoint: 2026-05-11 18:59 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -903,3 +903,72 @@ authority, a strict W/Z matched physical-response packet with
 covariance/`delta_perp`/strict non-observed `g2`, or neutral primitive H3/H4
 physical-transfer authority.  Do not run more current-surface shortcut gates
 from this lane.
+
+## Block24 Queue-Pivot Admission Checkpoint
+
+Resumed on 2026-05-11 after block23 landed on the draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 82a01735f6118dcea381c23c0bc2ff4230cc4e33
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The only commit after the last scanned physics head
+`0c266edf474e303e85defbd48a13913c910a08ba` is the block23 checkpoint commit.
+Block24 therefore does not rerun another absence gate; it verifies queue
+admission and records that no ranked route can be consumed without a real
+production/certificate input.
+
+Result:
+
+- source-Higgs route is not admitted: accepted same-surface canonical `O_H`,
+  production `C_ss/C_sH/C_HH` pole rows, source-Higgs production certificate,
+  combined row packet, Gram/FV/IR authority, and scalar-LSZ authority remain
+  absent;
+- W/Z route is not admitted: accepted action, canonical `O_H`/sector-overlap
+  authority, production W/Z rows, same-source top rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response rows remain
+  absent;
+- neutral H3/H4 route is not admitted: physical neutral transfer/off-diagonal
+  generator and source/canonical-Higgs coupling authority remain absent;
+- the row stream remains a `62/63` committed prefix with
+  `combined_rows_written=false`;
+- chunk063 is not committed as completed checkpoint evidence and would not be
+  closure by itself.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block24_queue_pivot_admission_checkpoint.py`
+- `docs/YT_PR230_BLOCK24_QUEUE_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block24_queue_pivot_admission_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, PR backlog, and block24 PR body
+
+Honest status: open / queue-pivot admission checkpoint.  `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block24_queue_pivot_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block24_queue_pivot_admission_checkpoint.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=358 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
+Next exact action: yield this PR230 lane for supervisor continuation unless a
+real production/certificate input is supplied.  Reopen in priority order with
+accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows
+with Gram/FV/IR authority, a strict W/Z matched physical-response packet with
+covariance/`delta_perp`/strict non-observed `g2`, or neutral H3/H4
+physical-transfer authority.  Do not run more current-surface shortcut gates
+from this lane, and do not treat chunk063 completion alone as closure.

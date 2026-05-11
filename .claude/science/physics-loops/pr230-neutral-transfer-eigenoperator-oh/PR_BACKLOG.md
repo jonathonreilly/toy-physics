@@ -117,6 +117,13 @@ physical-response packet, or neutral H3/H4 physical-transfer packet.  No
 standalone block23 review PR should be opened unless PR #230 integration
 fails.
 
+Block24 follows the same direct PR #230 landing path.  It adds the queue-pivot
+admission checkpoint at PR head `82a01735f` and records that the only post
+block23 movement is the block23 checkpoint commit itself; no ranked
+source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
+production/certificate inputs.  No standalone block24 review PR should be
+opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

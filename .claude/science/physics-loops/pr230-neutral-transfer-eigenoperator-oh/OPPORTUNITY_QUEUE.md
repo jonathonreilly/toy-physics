@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block23 remote-candidate and current PR-head intake.
+Campaign mode queue after block24 queue-pivot admission checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -54,6 +54,17 @@ No admissible ref contains the required canonical `O_H`/source-Higgs packet,
 strict W/Z packet, or neutral H3/H4 physical-transfer packet.  The queue
 therefore remains waiting on explicit production/certificate inputs; do not
 spend the next block on another current-surface absence gate.
+
+Block24 resumed after block23 landed and verified PR #230 at
+`82a01735f6118dcea381c23c0bc2ff4230cc4e33`.  The only commit after the last
+scanned physics head `0c266edf474e303e85defbd48a13913c910a08ba` is the block23
+checkpoint commit.  That commit adds no new physics packet, and the ranked
+queue remains inadmissible without explicit production/certificate inputs.  In
+priority order, reopen with certified canonical `O_H` plus strict
+`C_ss/C_sH/C_HH` rows, then strict W/Z matched physical-response rows with
+accepted action/covariance/`delta_perp`/strict non-observed `g2`, then neutral
+H3/H4 physical-transfer authority.  Chunk063 completion alone remains
+support-only and is not a queue-admission condition.
 
 Block15 wired the additive-source radial-spurion incompatibility and
 additive-top subtraction row contract into assumption, assembly, retained-route,
