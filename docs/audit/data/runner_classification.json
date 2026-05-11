@@ -2532,6 +2532,30 @@
       "dominant_class": "C",
       "runner": "scripts/verify_cl3_sm_embedding.py"
     },
+    "cl3_complexification_split_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_cl3_complexification_split_exact_2026_05_10.py"
+    },
+    "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py"
+    },
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
       "assert_count": 1,
       "counts": {
@@ -15432,6 +15456,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_color_projection_mc.py"
     },
+    "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/audit_companion_reflection_positivity_gauge_half_cauchy_schwarz_exact_2026_05_10.py"
+    },
     "replay_environment_note": {
       "assert_count": 0,
       "counts": {
@@ -16919,6 +16955,18 @@
       "decoration_candidate": false,
       "dominant_class": "A",
       "runner": "scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py"
+    },
+    "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_spin_statistics_cardinality_pauli_exclusion_exact_2026_05_10.py"
     },
     "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
       "assert_count": 0,
@@ -21527,6 +21575,36 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/audit_companion_cl3_complexification_split_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/audit_companion_cl3_pauli_irrep_uniqueness_exact_2026_05_10.py": {
       "assert_count": 1,
       "claims": [
@@ -21572,6 +21650,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/audit_companion_reflection_positivity_gauge_half_cauchy_schwarz_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/audit_companion_sm_hypercharge_uniqueness_algebraic_solution_enumeration_exact.py": {
       "assert_count": 1,
       "claims": [
@@ -21600,6 +21693,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_spin_statistics_cardinality_pauli_exclusion_exact_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/audit_companion_three_generation_hw1_distinct_characters_exact.py": {
@@ -44749,16 +44857,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 171,
+    "decoration_candidates": 173,
     "dominant_class_distribution": {
-      "A": 117,
+      "A": 119,
       "B": 166,
-      "C": 653,
+      "C": 654,
       "D": 250,
-      "none": 411
+      "none": 412
     },
-    "runners_classified": 1597,
-    "runners_with_C": 819,
-    "runners_with_D": 445
+    "runners_classified": 1601,
+    "runners_with_C": 820,
+    "runners_with_D": 446
   }
 }

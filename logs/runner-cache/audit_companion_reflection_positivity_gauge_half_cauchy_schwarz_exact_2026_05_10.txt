@@ -1,0 +1,85 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_reflection_positivity_gauge_half_cauchy_schwarz_exact_2026_05_10.py
+runner_sha256: 0b2f9217217ac681845498728e184cdf8f834ecfbd971379b43d957204baeeb6
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.58
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10
+Goal: sympy verification of the bounded (G1)-(G3) norm-square identity
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: setup — Z/N with involution Θ(k) = -k mod N
+----------------------------------------------------------------------------------------
+  [PASS (A)] (Setup-a) Θ²(k) = k for all k ∈ Z/N
+  [PASS (A)] (Setup-b) Counting measure dμ is Θ-invariant (cardinality preserved)  (Θ is a bijection on Z/N (N = 8))
+
+----------------------------------------------------------------------------------------
+Part 1 (G1): exp(-S) = ψ² · ψ²(Θ) identity per group element
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G1a-k0) exp(-S(k=0)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k1) exp(-S(k=1)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k2) exp(-S(k=2)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k3) exp(-S(k=3)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k4) exp(-S(k=4)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k5) exp(-S(k=5)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k6) exp(-S(k=6)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+  [PASS (A)] (G1a-k7) exp(-S(k=7)) = ψ²(k) · ψ²(Θ(k)) at exact precision  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2 (G1): reflected expectation = norm-square (full identity)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G1-sym) S_+_sym is Θ-invariant (so S_- = S_+ and ψ²(Θ) = ψ²)
+  [PASS (A)] (G1-F-herm) F is Hermitian under Θ: F(Θ(k)) = overline{F(k)}
+  [PASS (A)] (G1a-Hermitian-F) ⟨Θ(F)·F⟩ = ‖ψ² F‖²_{L²} (exact symbolic)  (diff = 0)
+  [PASS (A)] (G2a) ‖ψ² F‖² is purely real  (Im(‖ψ² F‖²) = 0)
+  [PASS (A)] (G2b) ‖ψ² F‖² ≥ 0  (numerical value = 0.125011)
+
+----------------------------------------------------------------------------------------
+Part 3 (G2): non-negativity for several F's
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G2c-F = 1 (constant)) ⟨Θ(F)·F⟩ is real  (Im(⟨Θ(F)·F⟩) = 0, Hermitian: True)
+  [PASS (A)] (G2d-F = 1 (constant)) ⟨Θ(F)·F⟩ ≥ 0  (value = 0.125006)
+  [PASS (A)] (G2c-F = 1_{0,4} (indicator on fixed points)) ⟨Θ(F)·F⟩ is real  (Im(⟨Θ(F)·F⟩) = 0, Hermitian: True)
+  [PASS (A)] (G2d-F = 1_{0,4} (indicator on fixed points)) ⟨Θ(F)·F⟩ ≥ 0  (value = 0.125003)
+  [PASS (A)] (G2c-F_hermitian) ⟨Θ(F)·F⟩ is real  (Im(⟨Θ(F)·F⟩) = 0, Hermitian: True)
+  [PASS (A)] (G2d-F_hermitian) ⟨Θ(F)·F⟩ ≥ 0  (value = 0.125011)
+
+----------------------------------------------------------------------------------------
+Part 4 (G3): sesquilinear-form structure
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G3a) G(F, F') = overline{G(F', F)} (Hermitian sesquilinear)  (diff = 0)
+  [PASS (A)] (G3b) G(F, F1 + F2) = G(F, F1) + G(F, F2) (linearity in 2nd arg)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: Θ-invariance of Haar / counting measure on Z/N
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G3c) Counting measure on Z/N is Θ-invariant (sum 1)
+  [PASS (A)] (G3d) ∫ dμ f(Θ(k)) = ∫ dμ f(k) for test f(k) = k²  (sum f = 140, sum f(Θ) = 140)
+
+----------------------------------------------------------------------------------------
+Part 6: strict positivity counter-check
+----------------------------------------------------------------------------------------
+  [PASS (A)] (G3e) Strict positivity: ⟨Θ(F=1)·F⟩ > 0  (value = 0.125006)
+  [PASS (A)] (G3f) Kernel: ⟨Θ(F=0)·F⟩ = 0  (value = 0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision on (Z/N, counting measure, Θ(k)=-k):
+    (G1) ⟨Θ(F)·F⟩ = ‖ψ² F‖²_{L²} under explicit symmetry hypotheses
+    (G2) Real non-negativity for multiple F's
+    (G3) Hermitian sesquilinear form, linearity, kernel
+    Θ-invariance of counting measure verified
+    Strict positivity for F ≢ 0
+
+========================================================================================
+TOTAL: PASS=27, FAIL=0
+========================================================================================
+
+----- stderr -----
+

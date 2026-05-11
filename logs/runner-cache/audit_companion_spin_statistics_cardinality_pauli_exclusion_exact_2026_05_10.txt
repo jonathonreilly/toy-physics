@@ -1,0 +1,91 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_spin_statistics_cardinality_pauli_exclusion_exact_2026_05_10.py
+runner_sha256: 31831afc8ca33f5a53cf9217d96919501a0fbb016046e4003e62341473d9dcc2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.48
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10
+Goal: sympy verification of (C1)-(P2) on finite-dim CCR/CAR carriers
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1 (C1): trace obstruction Tr([a, a†]) = 0 ≠ Tr(I_D) = D
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1-D1) Tr([a, a†]) = 0 on D = 1 (cyclic trace identity)  (Tr([a, a†]) = 0)
+  [PASS (A)] (C1-D1) Tr(I_1) = 1 ≠ 0  (Tr(I_1) = 1)
+  [PASS (A)] (C1-D1) [a, a†] = I_1 impossible at finite D = 1  (Tr([a,a†]) = 0 ≠ 1 = Tr(I_1))
+  [PASS (A)] (C1-D2) Tr([a, a†]) = 0 on D = 2 (cyclic trace identity)  (Tr([a, a†]) = 0)
+  [PASS (A)] (C1-D2) Tr(I_2) = 2 ≠ 0  (Tr(I_2) = 2)
+  [PASS (A)] (C1-D2) [a, a†] = I_2 impossible at finite D = 2  (Tr([a,a†]) = 0 ≠ 2 = Tr(I_2))
+  [PASS (A)] (C1-D3) Tr([a, a†]) = 0 on D = 3 (cyclic trace identity)  (Tr([a, a†]) = 0)
+  [PASS (A)] (C1-D3) Tr(I_3) = 3 ≠ 0  (Tr(I_3) = 3)
+  [PASS (A)] (C1-D3) [a, a†] = I_3 impossible at finite D = 3  (Tr([a,a†]) = 0 ≠ 3 = Tr(I_3))
+  [PASS (A)] (C1-D4) Tr([a, a†]) = 0 on D = 4 (cyclic trace identity)  (Tr([a, a†]) = 0)
+  [PASS (A)] (C1-D4) Tr(I_4) = 4 ≠ 0  (Tr(I_4) = 4)
+  [PASS (A)] (C1-D4) [a, a†] = I_4 impossible at finite D = 4  (Tr([a,a†]) = 0 ≠ 4 = Tr(I_4))
+
+----------------------------------------------------------------------------------------
+Part 2 (C2): irreducible CAR realisation on dim H = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2a) {c, c†} = I_2
+  [PASS (A)] (C2b) c² = 0
+  [PASS (A)] (C2c) (c†)² = 0
+  [PASS (A)] (C2d) c c† = diag(1, 0)
+  [PASS (A)] (C2e) c† c = diag(0, 1)
+  [PASS (A)] (C2f) c|0⟩ = 0
+  [PASS (A)] (C2g) c†|0⟩ = |1⟩
+  [PASS (A)] (C2h) c|1⟩ = |0⟩
+  [PASS (A)] (C2i) c†|1⟩ = 0
+
+----------------------------------------------------------------------------------------
+Part 3 (P1): squared creation operator (a†)² = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P1a) On 2-dim CAR carrier: (c†)² = 0
+  [PASS (A)] (P1b) Symbolic: {A, A} = 2 A² (algebraic identity)
+  [PASS (A)] (P1c) {A, A} = 0 ⇒ 2 A² = 0 ⇒ A² = 0 (char-0 algebra)  (characteristic-0 ring identity)
+
+----------------------------------------------------------------------------------------
+Part 4 (P2): number operator n = c† c is idempotent
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P2a) n = c† c = diag(0, 1)
+  [PASS (A)] (P2b) n² = n (idempotent)
+  [PASS (A)] (P2c) Spectrum(n) = {0, 1}  (eigenvalues: {0, 1})
+  [PASS (A)] (P2d) n|0⟩ = 0
+  [PASS (A)] (P2e) n|1⟩ = |1⟩
+
+----------------------------------------------------------------------------------------
+Part 5: corollary — abstract CAR ⇒ (a†)² = 0 and n² = n
+----------------------------------------------------------------------------------------
+  [PASS (A)] (P2-abstract) Abstract CAR ⇒ n² = n (algebraic identity)  (ad * a * ad * a = ad * a (substituting a a† = 1 - a† a + (a†)² = 0))
+
+----------------------------------------------------------------------------------------
+Part 6: cardinality match — 2-dim irreducible carrier
+----------------------------------------------------------------------------------------
+  [PASS (A)] (Match-a) irreducible CAR Fock carrier dim = 2
+  [PASS (A)] (Match-b) CCR ruled out at finite dim (C1)  (trace obstruction at any finite D ≥ 1)
+
+----------------------------------------------------------------------------------------
+Part 7: counter-example — CCR on ℓ²(N)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (CCR-inf) CCR consistent on ℓ²(N) (infinite-dim)  (standard bosonic Fock; cyclic-trace identity fails)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (C1) CCR trace obstruction at finite D ∈ {1, 2, 3, 4}
+    (C2) Concrete irreducible CAR realisation on C² (c, c† matrices)
+    (P1) (a†)² = 0 from CAR same-mode anticommutator
+    (P2) n = c† c idempotent, spectrum(n) = {0, 1}
+    Match: 2-dim irreducible CAR Fock carrier = 2-dim Cl(3) faithful irrep
+
+========================================================================================
+TOTAL: PASS=33, FAIL=0
+========================================================================================
+
+----- stderr -----
+

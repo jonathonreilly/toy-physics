@@ -4165,6 +4165,10 @@
       "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
     },
     {
+      "from": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
+      "to": "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "cl3_per_site_hilbert_dim_two_theorem_note_2026-05-02",
       "to": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29"
     },
@@ -19055,6 +19059,10 @@
     {
       "from": "spinnetwork_full_ed_loop_basis_bounded_theorem_note_2026-05-07_w1exactv2",
       "to": "c_iso_derived_theorem_note_2026-05-07_w3"
+    },
+    {
+      "from": "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10",
+      "to": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10"
     },
     {
       "from": "staggered_chiral_symmetry_spectrum_theorem_note_2026-05-02",
@@ -38344,6 +38352,30 @@
       "path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
       "title": "Cl(3) Color Structure Theorem: SU(3)_c on the Symmetric Base + R_conn Derivation"
+    },
+    "cl3_complexification_split_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cl3_complexification_split_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "4680139373bd50a87fa48bea3a00e14feb38fd91d3d75e423c67f8b4b5b19a89",
+      "path": "docs/CL3_COMPLEXIFICATION_SPLIT_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_cl3_complexification_split_exact_2026_05_10.py",
+      "title": "Cl(3) Complexification Split Narrow Theorem"
+    },
+    "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10": {
+      "claim_id": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "a508dbde507ad1f4621df32e382ab6ba8308d48b2eaf3d4cc4cdca4379ed429e",
+      "path": "docs/CL3_FAITHFUL_IRREP_DIM_TWO_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py",
+      "title": "Cl(3) Faithful Irrep Complex Dimension Two Narrow Theorem"
     },
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10": {
       "claim_id": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
@@ -58313,6 +58345,17 @@
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn from the SU(N_c) Fierz Channel-Count Identity, with 1/N_c Dynamical-Correction Estimate"
     },
+    "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10": {
+      "claim_id": "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "1058c4d62262e28185d53b644475b618915776e51fa86781a6cd5df9c2b159e5",
+      "path": "docs/REFLECTION_POSITIVITY_GAUGE_HALF_CAUCHY_SCHWARZ_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_reflection_positivity_gauge_half_cauchy_schwarz_exact_2026_05_10.py",
+      "title": "Reflection Positivity Symmetric Involution Norm-Square Bounded Theorem"
+    },
     "reopened_lane_checklist": {
       "claim_id": "reopened_lane_checklist",
       "claim_type_author_hint": null,
@@ -60401,6 +60444,19 @@
       "path": "docs/SPIN_STATISTICS_BEREZIN_DETERMINANT_NARROW_THEOREM_NOTE_2026-05-10.md",
       "runner_path": "scripts/audit_companion_spin_statistics_berezin_determinant_exact_2026_05_10.py",
       "title": "Spin-Statistics \u2014 Berezin Determinant Narrow Theorem"
+    },
+    "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10": {
+      "claim_id": "spin_statistics_cardinality_pauli_exclusion_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "a4ca9fa7ab17a7ce950aa41726a768f686f236e78353bcafc5980c72c05ce430",
+      "path": "docs/SPIN_STATISTICS_CARDINALITY_PAULI_EXCLUSION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/audit_companion_spin_statistics_cardinality_pauli_exclusion_exact_2026_05_10.py",
+      "title": "Spin-Statistics Cardinality and Pauli Exclusion Narrow Theorem"
     },
     "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full": {
       "claim_id": "spinnetwork_full_ed_bounded_theorem_note_2026-05-07_w1full",
@@ -66342,6 +66398,7 @@
     "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
+    "cl3_complexification_split_narrow_theorem_note_2026-05-10",
     "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
     "claude_branch_retainability_note",
     "claude_complex_action_carryover_note",
@@ -66749,6 +66806,7 @@
     "quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28",
     "quark_rpsr_single_scalar_readout_underdetermination_note_2026-04-28",
     "radial_scaling_protected_angle_narrow_theorem_note_2026-05-02",
+    "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10",
     "reopened_lane_checklist",
     "replay_environment_note",
     "repo.python_venv_setup",
@@ -66970,27 +67028,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 253,
+      "bounded_theorem": 254,
       "decoration": 1,
       "meta": 59,
       "no_go": 24,
       "none": 1628,
       "open_gate": 29,
-      "positive_theorem": 102
+      "positive_theorem": 105
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 735,
+      "bounded_theorem": 736,
       "decoration": 1,
       "meta": 59,
       "no_go": 131,
       "none": 451,
       "open_gate": 117,
-      "positive_theorem": 602
+      "positive_theorem": 605
     },
-    "edge_count": 8362,
-    "leaf_count": 552,
-    "node_count": 2096,
-    "root_count": 783,
-    "runners_with_path": 1709
+    "edge_count": 8364,
+    "leaf_count": 554,
+    "node_count": 2100,
+    "root_count": 785,
+    "runners_with_path": 1713
   }
 }

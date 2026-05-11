@@ -1,0 +1,104 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_cl3_complexification_split_exact_2026_05_10.py
+runner_sha256: 16a4ceedf0a3e4ececd2b6a27e57bd00a3cc27b5a9f69a49e38bed5770cfb3f5
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+cl3_complexification_split_narrow_theorem_note_2026-05-10
+Goal: sympy verification of (K1)-(K4) on Cl(3,0) and Cl(3,0) ⊗_R C
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: Pauli realisation γ_i ↦ σ_i (positive-chirality)
+----------------------------------------------------------------------------------------
+  σ_1 = [[0, 1], [1, 0]]
+  σ_2 = [[0, -I], [I, 0]]
+  σ_3 = [[1, 0], [0, -1]]
+
+----------------------------------------------------------------------------------------
+Part 1: Cl(3,0) anticommutation {σ_i, σ_j} = 2 δ_{ij} I exact
+----------------------------------------------------------------------------------------
+  [PASS (A)] {σ_1, σ_1} = 2 I (exact)
+  [PASS (A)] {σ_1, σ_2} = 0 (exact)
+  [PASS (A)] {σ_1, σ_3} = 0 (exact)
+  [PASS (A)] {σ_2, σ_1} = 0 (exact)
+  [PASS (A)] {σ_2, σ_2} = 2 I (exact)
+  [PASS (A)] {σ_2, σ_3} = 0 (exact)
+  [PASS (A)] {σ_3, σ_1} = 0 (exact)
+  [PASS (A)] {σ_3, σ_2} = 0 (exact)
+  [PASS (A)] {σ_3, σ_3} = 2 I (exact)
+
+----------------------------------------------------------------------------------------
+Part 2 (K1): central pseudoscalar ω = σ_1 σ_2 σ_3
+----------------------------------------------------------------------------------------
+  ω = σ_1 σ_2 σ_3 = [[I, 0], [0, I]]
+  [PASS (A)] (K1a) ω = i·I (in the positive-chirality Pauli realisation)
+  [PASS (A)] (K1b) ω² = -I
+  [PASS (A)] (K1c-σ_1) [ω, σ_1] = 0
+  [PASS (A)] (K1c-σ_2) [ω, σ_2] = 0
+  [PASS (A)] (K1c-σ_3) [ω, σ_3] = 0
+
+----------------------------------------------------------------------------------------
+Part 3 (K2): real-algebra dimension count Cl(3,0) ≅ M_2(C)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (K2a) 8 Cl(3,0) basis elements are real-linearly independent  (det of 8×8 real-representation matrix = -16)
+  [PASS (A)] (K2b) M_2(C) real-dim = 8
+
+----------------------------------------------------------------------------------------
+Part 4 (K3): complexified idempotents e_± = (I ∓ i ω)/2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (K3a+) e_+ + e_- = I (in Pauli realisation)
+  [PASS (A)] (K3b+) e_+ · e_- = 0 (in Pauli realisation)
+  [PASS (A)] (K3c+) e_+² = e_+ (in Pauli realisation)
+  [PASS (A)] (K3d+) e_-² = e_- (in Pauli realisation)
+  [PASS (A)] (K3e+) Pauli realisation lives in e_+ summand: e_+ = I
+  [PASS (A)] (K3f+) Pauli realisation has e_- = 0
+  [PASS (A)] (K3g+) ω · e_+ = +i · e_+
+  [PASS (A)] (K1a-) ω = -i·I in the negative-chirality realisation
+  [PASS (A)] (K1b-) ω² = -I in negative-chirality realisation
+  [PASS (A)] (K3a-) e_+ + e_- = I (in negative-chirality realisation)
+  [PASS (A)] (K3b-) e_+ · e_- = 0 (in negative-chirality realisation)
+  [PASS (A)] (K3e-) Negative-chirality realisation lives in e_- summand: e_- = I
+  [PASS (A)] (K3f-) Negative-chirality realisation has e_+ = 0
+  [PASS (A)] (K3g-) ω · e_- = -i · e_- (in negative-chirality realisation)
+
+----------------------------------------------------------------------------------------
+Part 5 (K3-abstract): symbolic central element with ω² = -1
+----------------------------------------------------------------------------------------
+  [PASS (A)] (K3-abs-a) e_+ + e_- = 1 (abstract, in C[ω])
+  [PASS (A)] (K3-abs-b) e_+ · e_- = 0 (mod ω² + 1)  (product mod ω² = -1: 0)
+  [PASS (A)] (K3-abs-c) e_+² = e_+ (mod ω² + 1)  (diff: 0)
+  [PASS (A)] (K3-abs-d) e_-² = e_- (mod ω² + 1)  (diff: 0)
+
+----------------------------------------------------------------------------------------
+Part 6 (K4): two-dim irrep dimensional readout
+----------------------------------------------------------------------------------------
+  [PASS (A)] (K4a) Schur's lemma: only scalars commute with all three σ_i  (solution: [{a: d, b: 0, c: 0}])
+  [PASS (A)] (K4b) Casimir C_2 = σ_1² + σ_2² + σ_3² = 3 I (Schur scalar)
+  [PASS (A)] (K4c) dim_C V = 2 for the Pauli realisation
+
+----------------------------------------------------------------------------------------
+Part 7: counter-example — no faithful 1×1 complex Cl(3)-irrep
+----------------------------------------------------------------------------------------
+  [PASS (A)] (K4d) No faithful 1×1 complex Cl(3) irrep exists (anticommutation forces 0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Cl(3,0) anticommutation {σ_i, σ_j} = 2 δ_{ij} I
+    (K1) ω² = -1 and ω central
+    (K2) Cl(3,0) real-dim = 8 = real-dim of M_2(C)
+    (K3) e_± idempotent identities (both realisations and abstract)
+    (K4) Schur scalar property + dim_C V = 2 + 1×1 no-go
+
+========================================================================================
+TOTAL: PASS=38, FAIL=0
+========================================================================================
+
+----- stderr -----
+

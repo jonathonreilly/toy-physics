@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_cl3_faithful_irrep_dim_two_exact_2026_05_10.py
+runner_sha256: e29a875de781cdbbb2111c80ee211ed76eafda85ecd73eee01a4f43bc62d2b17
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10
+Goal: sympy verification of (D1)-(D2) dimensional readout on Cl(3,0)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: positive- and negative-chirality realisations
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1 (D1): both realisations are 2-dim faithful Cl(3) irreps
+----------------------------------------------------------------------------------------
+  [PASS (A)] (positive-chirality) {γ_1, γ_1} = 2 I
+  [PASS (A)] (positive-chirality) {γ_1, γ_2} = 0
+  [PASS (A)] (positive-chirality) {γ_1, γ_3} = 0
+  [PASS (A)] (positive-chirality) {γ_2, γ_1} = 0
+  [PASS (A)] (positive-chirality) {γ_2, γ_2} = 2 I
+  [PASS (A)] (positive-chirality) {γ_2, γ_3} = 0
+  [PASS (A)] (positive-chirality) {γ_3, γ_1} = 0
+  [PASS (A)] (positive-chirality) {γ_3, γ_2} = 0
+  [PASS (A)] (positive-chirality) {γ_3, γ_3} = 2 I
+  [PASS (A)] (positive-chirality) dim_C V = 2
+  [PASS (A)] (positive-chirality) γ_1 ≠ 0, γ_2 ≠ 0, γ_3 ≠ 0
+  [PASS (A)] (negative-chirality) {γ_1, γ_1} = 2 I
+  [PASS (A)] (negative-chirality) {γ_1, γ_2} = 0
+  [PASS (A)] (negative-chirality) {γ_1, γ_3} = 0
+  [PASS (A)] (negative-chirality) {γ_2, γ_1} = 0
+  [PASS (A)] (negative-chirality) {γ_2, γ_2} = 2 I
+  [PASS (A)] (negative-chirality) {γ_2, γ_3} = 0
+  [PASS (A)] (negative-chirality) {γ_3, γ_1} = 0
+  [PASS (A)] (negative-chirality) {γ_3, γ_2} = 0
+  [PASS (A)] (negative-chirality) {γ_3, γ_3} = 2 I
+  [PASS (A)] (negative-chirality) dim_C V = 2
+  [PASS (A)] (negative-chirality) γ_1 ≠ 0, γ_2 ≠ 0, γ_3 ≠ 0
+
+----------------------------------------------------------------------------------------
+Part 2 (D1): central pseudoscalar eigenvalues distinguish chiralities
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D1a) Positive chirality: ω = +i I
+  [PASS (A)] (D1b) Negative chirality: ω = -i I
+  [PASS (A)] (D1c) Positive and negative chiralities are NOT unitarily equivalent
+
+----------------------------------------------------------------------------------------
+Part 3: Schur's lemma — only scalars commute with all three σ_i
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D1d) Schur scalar: M commutes with σ_1, σ_2, σ_3 ⇒ M = a I  (solution: [{a: d, b: 0, c: 0}])
+  [PASS (A)] (D1e) (σ_1, σ_2, σ_3) acts irreducibly on C²
+
+----------------------------------------------------------------------------------------
+Part 4 (D1): Casimir confirms dim_C V = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D1f) C_2 = γ_1²+γ_2²+γ_3² = 3 I (positive chirality)
+  [PASS (A)] (D1g) C_2 = γ_1²+γ_2²+γ_3² = 3 I (negative chirality)
+
+----------------------------------------------------------------------------------------
+Part 5 (D2): direct-sum decomposition reproduces dim 2(n_+ + n_-)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D2a) ρ_+ ⊕ ρ_+ on C^4 has dim = 4 = 2 · 2
+  [PASS (A)] (D2b) ρ_+ ⊕ ρ_+ satisfies Cl(3) anticommutation {γ_1, γ_2} = 0
+  [PASS (A)] (D2c) ρ_+ ⊕ ρ_+ is reducible (two invariant 2-dim subspaces)  (block-diagonal structure)
+  [PASS (A)] (D2d) ρ_+ ⊕ ρ_- has ω = diag(+i I, -i I) on C^4
+  [PASS (A)] (D2e) ρ_+ ⊕ ρ_- decomposes as one ρ_+ + one ρ_- (n_+ = n_- = 1)  (block-diagonal split into the two chirality summands)
+
+----------------------------------------------------------------------------------------
+Part 6: no faithful odd-dim irrep counter-example
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D2f) n=1 faithful Cl(3) irrep impossible (anticommutator forces 0)
+  [PASS (A)] (D2g-counter) C^3 'σ_i ⊕ 0' fails γ_i² = I (third entry = 0 ≠ 1)  (confirms 3-dim faithful Cl(3) rep does not exist via this naive lift)
+  [PASS (A)] (D2h) No faithful 3-dim complex Cl(3) irrep
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    Both ±-chirality realisations are 2-dim faithful Cl(3) irreps
+    Central pseudoscalar ω distinguishes the two chiralities
+    Schur scalar property forces irrep dim = 2
+    Direct-sum decomposition reproduces dim 2(n_+ + n_-)
+    No faithful odd-dim Cl(3) irrep (n = 1 and n = 3 checks)
+
+========================================================================================
+TOTAL: PASS=37, FAIL=0
+========================================================================================
+
+----- stderr -----
+
