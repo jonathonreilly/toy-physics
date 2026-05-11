@@ -17,7 +17,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 446 | 13.30 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 2 | `poisson_self_gravity_loop_note` | bounded_theorem | unaudited | critical | 436 | 11.77 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/poisson_self_gravity_loop.py` |
-| 3 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | unaudited | critical | 413 | 12.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py` |
+| 3 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | audit_in_progress | critical | 413 | 12.19 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py` |
 | 4 | `hierarchy_effective_potential_endpoint_note` | bounded_theorem | unaudited | critical | 405 | 13.16 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_effective_potential_endpoint.py` |
 | 5 | `newton_law_derived_note` | bounded_theorem | unaudited | critical | 402 | 14.65 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_distance_law_definitive.py` |
 | 6 | `koide_cl3_selector_gap_note_2026-04-19` | bounded_theorem | unaudited | critical | 402 | 10.65 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
