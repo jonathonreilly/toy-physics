@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 751,
     "high": 33,
-    "leaf": 271,
+    "leaf": 270,
     "medium": 146
   },
   "cycle_break_target_count": 257,
@@ -31127,29 +31127,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_3plus1d_radiation_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "wave_3plus1d_promotions_note"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WAVE_3PLUS1D_RADIATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/wave_3plus1d_radiation.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wave_static_matrixfree_shared_geometry_compare_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38449,6 +38426,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 35,
-  "total_pending": 1201
+  "ready_count": 34,
+  "total_pending": 1200
 }

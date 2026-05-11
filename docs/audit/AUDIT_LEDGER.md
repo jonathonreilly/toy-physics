@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 100 |
 | **retained_no_go** | 134 |
-| **retained_bounded** | 291 |
+| **retained_bounded** | 292 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1170 |
+| unaudited | 1169 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,22 +41,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 488 |
+| `audited_clean` | 489 |
 | `audited_conditional` | 199 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1283 |
+| `unaudited` | 1282 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 905 |
+| `bounded_theorem` | 906 |
 | `decoration` | 13 |
 | `meta` | 116 |
 | `no_go` | 228 |
 | `open_gate` | 111 |
-| `positive_theorem` | 728 |
+| `positive_theorem` | 727 |
 
 | criticality | count |
 |---|---:|
@@ -608,6 +608,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `valley_linear_repro_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `valley_linear_wide_tail_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wave_3plus1d_promotions_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `wave_3plus1d_radiation_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wave_amplification_near_horizon_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `wave_direct_dm_family_scout_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `wave_equation_gravity_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -11243,6 +11244,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The strict (3+1)D lightcone has first_dt = r to r = 8, and the moving-source (3+1)D retarded wave history differs from the stitched late-time-frozen comparator by 26-31% across Fam1/Fam2/Fam3.  _(class `C`)_
 - **chain closes:** True — The runner directly evolves the stated (3+1)D wave stencil, measures first arrivals, builds the moving-source retarded history, builds the stitched frozen comparator, and recomputes the three family gaps. This closes the bounded finite-comparator claim only; it does not derive an elliptic Poisson or c->infinity instantaneous branch.
 - **rationale:** The live runner and frozen cache reproduce the source note's two bounded tables: strict lightcone arrival first_dt=r for r=2..8 and M-I gaps of 30.44%, 26.47%, and 30.72% across the three grown families. The note explicitly states that the I branch is a stitched late-time frozen c=1 wave-solve comparator rather than a derived c->infinity solution, so the audited scope excludes the literal instantaneous interpretation and the combined three-signature closure. Residual risk is the absence of hard assertions in the runner and future misuse of this row as a true instantaneous-comparator theorem.
+- **auditor confidence:** high
+
+### `wave_3plus1d_radiation_note`
+
+- **Note:** [`WAVE_3PLUS1D_RADIATION_NOTE.md`](../../docs/WAVE_3PLUS1D_RADIATION_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite (3+1)D wave-equation radiation falloff on the registered NL=30, 19^3 transverse grid: delta-pulse first_dt=r for r=2..8, sinusoidal-drive peak slope -1.139 at f=0.10, frequency sweep slopes {-1.260,-1.139,-0.790,-0.983}, drive-frequency DFT dominance, and exact f=0 null; excludes full scalar-wave closure, backreaction, beam-side observables, and true c->infinity instantaneous-comparator claims.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Promoting the spatial Laplacian from 2D to 3D gives a finite-run radiation amplitude falloff with log-log slope -1.139 at drive f=0.10, with drive-frequency dominance and exact zero-source nulls on the registered 19^3 transverse cube.  _(class `C`)_
+- **chain closes:** True — The runner source constructs the 7-point 3D wave stencil and directly reproduces the note's lightcone, falloff, frequency, DFT, and null tables. The direct dependency is retained_bounded only for its finite lightcone/stitched-comparator scope, so this audit does not promote the combined three-signature story beyond the radiation-falloff lane.
+- **rationale:** The bounded claim closes because the live runner and cached/log artifacts match the note's finite numerical tables: first_dt=r to r=8, radiation slope -1.139 at f=0.10, frequency-sweep slopes clustered around -1, drive-frequency DFT dominance, and zero-source nulls. The source's own claim boundary excludes the full scalar-wave story and routes the promotion lane separately; the retained dependency is also scoped to finite lightcone and stitched-comparator facts rather than a true c->infinity comparator. Residual risk is finite-domain and near-field interpretation, not a blocker for the stated bounded finite-run result.
 - **auditor confidence:** high
 
 ### `wave_amplification_near_horizon_note`
