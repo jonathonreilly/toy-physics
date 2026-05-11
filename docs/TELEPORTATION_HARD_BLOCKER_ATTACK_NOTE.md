@@ -1,8 +1,54 @@
 # Teleportation Hard Blocker Attack Note
 
+---
+
+**This is a planning / blocker-inventory note. It does not establish
+any retained claim.** The "Apparatus Selection Obstruction" and
+"Amplitude Field Obstruction" sections are obstruction findings under
+the audited candidate classes, the "Sparse 3D Scaling Control" section
+is a finite numerical control, and the "Calibrated Pulse Schedule" /
+"Material Spin-Bath Detector Model" sections are bounded ideal models.
+None of these are audited here as separate retained claims.
+
+---
+
 **Date:** 2026-04-26
-**Status:** planning / hard-blocker attack artifact
+**Status:** support / planning record / blocker-inventory only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record / blocker-inventory only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit outcome.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Runner:** `scripts/frontier_teleportation_hard_blocker_attack.py`
+
+## Review scope (relabel 2026-05-10)
+
+This file is a **planning blocker-inventory note** for the native
+taste-qubit teleportation lane, mixing two obstruction findings, one
+sparse-scaling finite control, and two bounded ideal apparatus
+proxies. It is **not** a single retained theorem, no-go, or
+bounded-finite-result row and **must not** be audited as one. The
+generated-audit context identified this repair target:
+
+> other: split into separate ledger rows for the apparatus no-go,
+> amplitude no-go, sparse side-6 scaling control, ideal pulse
+> schedule, and spin-bath detector model, each with its own scoped
+> claim_type.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a planning blocker-inventory record. Splitting into per-claim
+ledger rows for the apparatus no-go, the amplitude no-go, the sparse
+side-6 control, the ideal pulse schedule, and the spin-bath detector
+model remains the alternative path the auditor offered; that work
+belongs in dedicated review-loop passes. Until that split is done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The five sections below are **planning-level inventory**, citeable
+  only as a blocker inventory for ordinary state teleportation, with
+  no matter, energy, object, or FTL transport claim.
+- The retained-status surface for any teleportation-lane sub-claim is
+  the audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus dedicated
+  per-claim notes, **not** this attack inventory.
 
 ## Scope
 

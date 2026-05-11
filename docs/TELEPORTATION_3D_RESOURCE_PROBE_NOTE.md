@@ -1,8 +1,27 @@
 # Teleportation 3D Resource Probe
 
-**Date:** 2026-04-26
+**Date:** 2026-04-26 (numerics refreshed 2026-05-10 from current runner output)
 **Status:** planning / first artifact; not a promotion claim
+**Claim type:** bounded_theorem
 **Runner:** `scripts/frontier_teleportation_3d_resource_probe.py`
+
+## Review scope (numeric refresh 2026-05-10)
+
+Generated-audit context flagged the prior table as carrying stale
+numerical values relative to current runner output. The repair target:
+
+> other: refresh `docs/TELEPORTATION_3D_RESOURCE_PROBE_NOTE.md` from the
+> current runner output and rerun the compile/run commands, preserving
+> the explicit `Psi+` Bell-frame boundary.
+
+This pass refreshes the `G=500` row (`Bell*`, `Phi+` overlap, `F_phi`,
+`F_best`, `Slog`, `negativity`), the null/`G=100` no-signaling columns,
+and the `G=1000` sampled mean/min/max fidelity summary directly from
+`python3 scripts/frontier_teleportation_3d_resource_probe.py` on
+2026-05-10. Qualitative content, acceptance gates, scope, and the
+explicit `Psi+` Bell-frame boundary are unchanged. No promotion claim;
+the source claim type remains `bounded_theorem`, and the independent
+audit ledger owns any audit outcome or effective status.
 
 ## Scope
 
@@ -40,9 +59,9 @@ seed = 20260425
 
 | case | full CHSH | best Bell | label | `Phi+` overlap | fixed `Phi+` `F_avg` | best-frame `F_avg` | logical CHSH | negativity | Bob pairwise no-record distance | high |
 | --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `3d_side2_null` | `2.00000` | `0.500000` | `Psi+` | `0.500000` | `0.666667` | `0.666667` | `2.00000` | `0.000000` | `2.220e-16` | no |
+| `3d_side2_null` | `2.00000` | `0.500000` | `Psi+` | `0.500000` | `0.666667` | `0.666667` | `2.00000` | `0.000000` | `2.776e-16` | no |
 | `3d_side2_G100` | `2.16713` | `0.887978` | `Psi+` | `0.112022` | `0.408015` | `0.925319` | `2.53149` | `0.387978` | `2.220e-16` | no |
-| `3d_side2_G500` | `2.79173` | `0.991176` | `Psi+` | `0.008824` | `0.339216` | `0.994118` | `2.80359` | `0.491176` | `2.220e-16` | yes |
+| `3d_side2_G500` | `2.75551` | `0.991220` | `Psi+` | `0.008780` | `0.339187` | `0.994146` | `2.80370` | `0.491220` | `2.498e-16` | yes |
 | `3d_side2_G1000` | `2.80922` | `0.997724` | `Psi+` | `0.002276` | `0.334850` | `0.998483` | `2.82200` | `0.497724` | `2.220e-16` | yes |
 
 The `G=0` null remains non-resource. The non-null `G=500` and `G=1000`
@@ -51,7 +70,7 @@ They land in the `Psi+` frame, not the fixed `Phi+` frame. Therefore:
 
 - fixed `Phi+` teleportation is poor for these rows;
 - a known retained-axis Bob-side `X` frame maps the resource to `Phi+`;
-- the best-frame average fidelities are `0.994118` and `0.998483`.
+- the best-frame average fidelities are `0.994146` and `0.998483`.
 
 For the best default row, `3d_side2_G1000`:
 
@@ -60,7 +79,7 @@ ground energy = -114.870237352
 Bell* = 0.997724 (Psi+)
 fixed-Phi+ F_avg = 0.334850
 best-frame F_avg = 0.998483
-sampled mean/min/max fidelity = 0.998470 / 0.997724 / 0.999431
+sampled mean/min/max fidelity = 0.998523 / 0.997724 / 1.000000
 Bob no-record pairwise input distance = 2.220e-16
 Bob marginal bias from I/2 = 4.764e-02
 ```

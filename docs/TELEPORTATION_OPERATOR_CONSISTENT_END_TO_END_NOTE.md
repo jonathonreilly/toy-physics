@@ -1,8 +1,83 @@
 # Operator-Consistent End-To-End Teleportation Audit
 
+---
+
+**This is a conditional finite numerical / operator-consistency
+artifact. It does not establish any retained claim.** The end-to-end
+PASS table below is conditional on imported upstream premises (the
+Poisson resource construction / end-to-end teleportation machinery,
+and the retained-axis taste-readout operator-model factorization);
+those upstream premises are **not** rederived in this note or its
+runner.
+
+---
+
 **Date:** 2026-04-26
-**Status:** planning / first artifact; not a promotion claim
+**Status:** support / conditional finite numerical & operator-consistency artifact only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / conditional finite numerical & operator-consistency artifact only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit outcome.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Runner:** `scripts/frontier_teleportation_operator_consistent_end_to_end.py`
+
+## Review scope (relabel 2026-05-10)
+
+This file is a **conditional finite numerical / operator-consistency
+artifact** for the Poisson-backed taste-qubit teleportation lane. The
+PASS table is **not** an independent closed theorem from this note and
+runner alone; it sits on top of imported upstream premises.
+Generated-audit context identified this repair target:
+
+> other: Declare the exact upstream dependency claims for the Poisson
+> resource construction/end-to-end evaluator and retained-axis
+> operator factorization, or inline a self-contained
+> derivation/computation in this runner that removes those imports as
+> scientific premises.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a conditional finite numerical / operator-consistency artifact and
+to **declare** the exact upstream premises as scientific dependencies,
+rather than inlining a self-contained derivation. Inlining the
+upstream Poisson resource construction / end-to-end evaluator and the
+retained-axis operator-factorization derivation into this runner
+remains the alternative path the auditor offered; that work belongs in
+dedicated review-loop passes. Until that work is done:
+
+- This file makes **no** independent retained-claim assertions; the
+  PASS table is conditional on the upstream premises declared below.
+- The retained-status surface for any teleportation-lane sub-claim is
+  the audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus the dedicated
+  per-claim notes for those upstream premises, **not** this artifact.
+
+### Declared upstream premises (scientific dependencies)
+
+The end-to-end PASS table in this note is conditional on the following
+upstream premises, which are imported and **not** rederived here:
+
+1. **Poisson resource construction / end-to-end teleportation
+   evaluator.** The retained-axis Bell-frame resource construction and
+   end-to-end teleportation evaluator are imported from the prior
+   teleportation-lane Poisson-resource and end-to-end notes
+   (`docs/TELEPORTATION_RESOURCE_FROM_POISSON_NOTE.md`,
+   `docs/TELEPORTATION_END_TO_END_POISSON_NOTE.md`,
+   `docs/TELEPORTATION_POISSON_RESOURCE_SWEEP_NOTE.md` and their
+   runners). Their audit status is **not** propagated here.
+
+2. **Retained-axis taste-readout operator-model factorization.** The
+   retained-axis logical `Z`/`X` factorization
+   (`O_logical tensor I_env`) and the raw-`xi_5` rejection rule in
+   `dim > 1` are imported from the retained-taste readout
+   operator-model line
+   (`docs/TELEPORTATION_TASTE_READOUT_OPERATOR_MODEL_NOTE.md`,
+   `docs/TELEPORTATION_RETAINED_AXIS_OPERATOR_ALGEBRA_CLOSURE_NOTE.md`
+   and their runners). Their audit status is **not** propagated here.
+
+The narrow, citeable statement of this artifact is therefore: **if**
+those two upstream premises are retained, **then** the selected `1D`
+and `2D` non-null Poisson cases pass the stated ideal logical
+teleportation gates while raw `xi_5` controls are rejected in `2D`/`3D`
+on the audited surfaces.
 
 ## Scope
 

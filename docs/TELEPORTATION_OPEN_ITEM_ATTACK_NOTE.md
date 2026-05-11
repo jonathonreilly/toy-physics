@@ -1,8 +1,59 @@
 # Teleportation Open-Item Attack Note
 
+---
+
+**This is a planning / bridge-principle-and-finite-material attack
+note. It does not establish any retained claim.** The retained-action
+and no-dwell carrier rules below are introduced as bridge principles,
+the signed sparse branch evidence is a finite-size fit, and the
+correlated pulse / 3D Ising-domain detector content are bounded
+finite-material proxies, not derivations from retained framework premises.
+
+---
+
 **Date:** 2026-04-26
-**Status:** planning / bridge-principle and finite-material attack
+**Status:** support / planning record / bridge-principle attack only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record / bridge-principle attack only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit outcome.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Runner:** `scripts/frontier_teleportation_open_item_attack.py`
+
+## Review scope (relabel 2026-05-10)
+
+This file is a **planning attack note** that combines retained-action
+and no-dwell carrier rules (introduced as bridge principles) with
+finite/proxy sparse-resource, pulse, and detector models. It is **not**
+a retained theorem closure and **must not** be audited as one.
+Generated-audit context identified this repair target:
+
+> missing_bridge_theorem: Derive the bridge rules from the original
+> framework premise or promote them through independently retained theorems, add a
+> rigorous asymptotic preparation/cooling theorem, and replace the
+> pulse/detector proxies with specified hardware/material models or
+> bounded theorems.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a planning / bridge-principle attack record. The alternatives —
+deriving the retained-action and no-dwell rules from the original
+framework premise or via independently retained bridge theorems, adding a
+rigorous asymptotic preparation/cooling theorem, or replacing the
+pulse/detector proxies with hardware/material models — belong in
+dedicated review-loop or per-target audit passes. Until that work is
+done:
+
+- This file makes **no** retained-claim assertions of its own.
+- The "Bridge Principle 1: Retained Action," "Bridge Principle 2:
+  No-Dwell Carrier," "Signed Sparse 3D Scaling," "Correlated Pulse
+  Noise," and "3D Ising-Domain Detector Proxy" sections are
+  **conditional planning evidence** under the stated bridge-principle
+  assumptions, citeable only as a conditional open-gate / planning
+  attack for ordinary state teleportation, with no matter, energy,
+  object, or FTL transport claim.
+- The retained-status surface for any teleportation-lane sub-claim is
+  the audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus dedicated
+  per-claim notes, **not** this attack.
 
 ## Scope
 

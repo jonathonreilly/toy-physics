@@ -1,8 +1,62 @@
 # Teleportation Nature-Grade Push Note
 
+---
+
+**This is a planning / added-principle push note. It does not
+establish any retained claim.** The "minimal action," "least-dwell
+carrier," and "signed sparse 3D resource window" content below are
+introduced as added selection principles plus finite numerical
+evidence, not as derivations from retained framework premises; the noisy pulse
+decoder and finite-temperature detector content are bounded
+independent-error models, not hardware/material derivations.
+
+---
+
 **Date:** 2026-04-26
-**Status:** planning / added-principle nature-grade push
+**Status:** support / planning record / added-principle push only — does not propagate retained-grade
+**Claim type:** meta
+**Claim scope:** support / planning record / added-principle push only — does not propagate retained-grade
+**Audit authority:** independent audit ledger only; this source does not set an audit outcome.
+**Propagates retained-grade:** no
+**Proposes new claims:** no
 **Runner:** `scripts/frontier_teleportation_nature_grade_push.py`
+
+## Review scope (relabel 2026-05-10)
+
+This file is a **planning push note** that pushes the native
+taste-qubit teleportation lane toward nature-grade standards by
+**adding** explicit selection principles and noisy apparatus models. It
+is **not** a retained theorem closure and **must not** be audited as
+one. Generated-audit context identified this repair target:
+
+> other: Derive the selection principles from retained framework premises or
+> promote them explicitly as defended physical postulates, prove an
+> asymptotic/preparation theorem for the signed sparse branch, and
+> replace independent-error pulse/detector proxies with a fabricated
+> controller/material-medium model or a theorem bounding the omitted
+> correlations.
+
+The minimal-scope response in this PR is to **relabel** this document
+as a planning / added-principle push record. The alternatives —
+deriving the selection principles from retained framework premises, promoting them
+as defended physical postulates, proving an asymptotic preparation
+theorem, or replacing the proxies with hardware/material models —
+belong in dedicated review-loop or per-target audit passes. Until that
+work is done:
+
+This relabel does not promote any new physical postulate; that branch
+would require explicit user approval before review-loop could land it.
+
+- This file makes **no** retained-claim assertions of its own.
+- The "Added Principle 1: Minimal Action Apparatus," "Added Principle
+  2: Least-Dwell Carrier," and "Signed Sparse 3D Resource Window"
+  sections are **conditional planning evidence** under the stated added
+  assumptions, citeable only as a conditional open-gate planning
+  bundle for ordinary state teleportation, with no matter, energy,
+  object, or FTL transport claim.
+- The retained-status surface for any teleportation-lane sub-claim is
+  the audit ledger (`docs/audit/AUDIT_LEDGER.md`) plus dedicated
+  per-claim notes, **not** this push.
 
 ## Scope
 
