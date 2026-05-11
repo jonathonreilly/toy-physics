@@ -131,3 +131,48 @@ fully enumerated package-native systematic, then the same transport law will
 promote from bounded support to unbounded closure.
 
 Until then, the bridge is conditional but sharply controlled.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the supplied code performs nontrivial
+numerical RG/adjoint-kernel computations but hard-wires the accepted
+logistic bridge, UV cut, physical constants, and normalizations rather
+than deriving them from first principles in the restricted packet. The
+note itself explicitly conditions the transport law on prior locality,
+selector, rearrangement, higher-order, and nonlocal audits that are not
+provided as retained authorities. The honest read is that the bounded
+numerical statement is supported only conditional on those imported
+premises, not closed from the axiom alone.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+transport-law statement, the moment-form expression, or the explicit
+remainder budget.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the transport
+law and remainder budget reuse. It does not promote this note or change
+the audited claim scope.
+
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV window definition (`x_uv = 0.95`).
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the constructive UV-localized bridge family the transport kernel
+  is fitted on.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  for the rearrangement step that pushes the surplus toward the UV.
+- [YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md](YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md)
+  for the leading positive local quadratic selector that supplies
+  `K_loc(x) = a x + b`.
+- [YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md](YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md)
+  for the higher-order local ratio (`~7.1e-3`) used as the
+  `Delta_higher` budget.
+- [YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md](YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md)
+  for the nonlocal operator ratio (`~5.0e-3`) used as the
+  `Delta_nonlocal` budget.
+- [YT_BRIDGE_ACTION_INVARIANT_NOTE.md](YT_BRIDGE_ACTION_INVARIANT_NOTE.md)
+  for the dominant `I_2` invariant used in the moment form.
+- [YT_BRIDGE_MOMENT_CLOSURE_NOTE.md](YT_BRIDGE_MOMENT_CLOSURE_NOTE.md)
+  for the two-moment closure `(I_2, c_2)` used in the moment form.

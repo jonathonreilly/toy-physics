@@ -15048,6 +15048,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_su3_v1_picard_fuchs_ode_2026_05_05.py"
     },
+    "pmns_active_four_real_source_from_transport_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_active_four_real_source_from_transport.py"
+    },
     "pmns_branch_conditioned_quadratic_sheet_closure_note": {
       "assert_count": 1,
       "counts": {
@@ -15215,6 +15227,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_hw1_source_transfer_boundary.py"
+    },
+    "pmns_lower_level_end_to_end_closure_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_lower_level_end_to_end_closure.py"
     },
     "pmns_minimal_branch_nonselection_note": {
       "assert_count": 1,
@@ -37290,6 +37314,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_pmns_active_four_real_source_from_transport.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_active_four_real_source_from_transport_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py": {
       "assert_count": 1,
       "claims": [
@@ -37495,6 +37534,21 @@
         "A": 0,
         "B": 0,
         "C": 16,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_pmns_lower_level_end_to_end_closure.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_lower_level_end_to_end_closure_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
         "D": 0
       },
       "decoration_candidate": false,
@@ -47425,12 +47479,12 @@
     "dominant_class_distribution": {
       "A": 151,
       "B": 174,
-      "C": 685,
+      "C": 687,
       "D": 269,
       "none": 416
     },
-    "runners_classified": 1695,
-    "runners_with_C": 868,
+    "runners_classified": 1697,
+    "runners_with_C": 870,
     "runners_with_D": 487
   }
 }

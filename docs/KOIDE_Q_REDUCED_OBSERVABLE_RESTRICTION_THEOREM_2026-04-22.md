@@ -13,6 +13,33 @@ on the two-slot second-order carrier is only a plausible additive transplant.
 
 **Primary runner:** `scripts/frontier_koide_q_reduced_observable_restriction_theorem.py`
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this row `audited_conditional`
+(claim_type `bounded_theorem`, audit_date 2026-05-05, auditor
+codex-cli-gpt-5.5, auditor_confidence high). The verdict accepts the
+runner's symbolic algebra — that on the assumed normalized
+two-generator block carrier with `D_red = I_2` and reduced source
+`K = diag(k_+, k_perp)`, the observable-principle restriction is
+exactly `W_red(K) = log det(I_2 + K) = log(1 + k_+) + log(1 + k_perp)`,
+its Legendre dual is `K_* = Y^(-1) - I` with effective action
+`S_eff(Y) = Tr(Y) - log det(Y) - 2`, and the unreduced `1 ⊕ 2`
+vector-slot determinant is a different object (the `(1, 2)` law).
+The verdict flags that the theorem **imports** the normalized
+second-order two-generator block carrier and `D_red = I_2` as admitted
+structure, and the note explicitly states (Section 5) that the
+physical identification of this reduced carrier remains open.
+Therefore retained-grade status cannot propagate to the physical
+`Q` closure. Audit verdict and effective status are set by the
+independent audit lane only; nothing in this rigorization edit
+promotes status.
+
+The audit-stated cheapest re-audit path (verbatim from the ledger
+`notes_for_re_audit_if_any`):
+
+> missing_bridge_theorem: provide a retained theorem deriving the
+> physical charged-lepton observable carrier/readout and
+> `D_red = I_2` normalization from the upstream framework.
+
 ---
 
 ## 1. Exact reduced carrier
@@ -135,3 +162,73 @@ The strongest exact statement is:
 That is a genuine support theorem for the second-order `Q` route. The
 remaining open step is still the physical identification of this reduced
 carrier and source law.
+
+## 7. Audit-conditional perimeter
+
+The internal algebra of this note (Sections 1–4) is what the audit
+verdict accepts as internally consistent on the admitted reduced
+carrier:
+
+| Internal algebra step | Audit-accepted as internal consistency |
+|---|---|
+| Split-preserving source family `K = diag(k_+, k_perp)` (Section 1) | yes |
+| `W_red(K) = log det(I_2 + K)` from `W[J] = log\|det(D + J)\| - log\|det D\|` (Section 2) | yes |
+| Pure-block restriction fixes coefficients uniquely (Section 2) | yes |
+| Legendre dual `K_* = Y^(-1) - I`, `S_eff(Y) = Tr(Y) - log det(Y) - 2` (Section 3) | yes |
+| Contrast with unreduced `(1, 2)` vector-slot determinant (Section 4) | yes |
+
+The audit-conditional perimeter (i.e. what stays open) is the
+**physical identification** of the reduced carrier and baseline
+already named in Section 5:
+
+1. derive that the physical charged-lepton observable principle must
+   live on the **reduced two-generator block algebra** (rather than
+   on the unreduced vector-slot carrier or another readout) from
+   retained upstream inputs;
+2. derive the reduced baseline `D_red = I_2` from retained upstream
+   inputs;
+3. derive the source family `K = diag(k_+, k_perp)` from retained
+   upstream inputs (it is admitted here as the most general
+   split-preserving source on the assumed reduced algebra).
+
+Until at least (1) and (2) are supplied, this row remains a bounded
+algebraic restriction theorem on the admitted reduced carrier rather
+than a physical-identification result. The runner's verdict line in
+`logs/runner-cache/` already states this scope explicitly:
+
+> `W_red = log det(I+K)` is not a post-hoc transplant. It is the
+> exact restriction of the observable principle to the normalized
+> two-generator second-order block algebra. This is support for the
+> admitted second-order route. It does not by itself prove that this
+> reduced carrier is the physical charged-lepton observable carrier.
+
+## 8. Path A future work (audit-stated repair target)
+
+To move this row's `audit_status` from `audited_conditional` toward
+retained-grade, the audit verdict's repair list requires:
+
+1. a retained upstream theorem that the physical charged-lepton
+   observable carrier on the second-order surface is the reduced
+   two-generator block algebra (not the unreduced `1 ⊕ 2` vector-slot
+   carrier);
+2. a retained upstream theorem that the reduced baseline is
+   `D_red = I_2` (rather than another normalization);
+3. either provided independently or as a corollary of (1) and (2).
+
+This same upstream gap also blocks promotion of the companion notes
+`KOIDE_Q_NO_HIDDEN_SOURCE_AUDIT_2026-04-22.md` and
+`KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md`,
+which use the same admitted reduced carrier.
+
+## 9. Boundaries
+
+This note does **not**:
+
+- modify the parent row's audit-ledger entry;
+- promote the parent's `audit_status` from `audited_conditional`;
+- derive the reduced two-generator block algebra from retained upstream
+  inputs;
+- derive the reduced baseline `D_red = I_2` from retained upstream
+  inputs;
+- close the physical `Q = 2/3` bridge;
+- touch the separate `delta = 2/9` Brannen-phase bridge.

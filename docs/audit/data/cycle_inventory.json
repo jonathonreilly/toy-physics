@@ -1,8 +1,1736 @@
 {
-  "cycle_count": 232,
+  "cycle_count": 253,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_bridge_action_invariant_note"
+        },
+        {
+          "from": "yt_bridge_action_invariant_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_action_invariant_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_ACTION_INVARIANT_NOTE.md",
+          "title": "`y_t` Bridge Action Invariant Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0002",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0003",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_bridge_operator_closure_note"
+        },
+        {
+          "from": "yt_bridge_operator_closure_note",
+          "to": "yt_ew_coupling_bridge_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_operator_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md",
+          "title": "y_t Bridge Operator Closure Proxy Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0004",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0005",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_hessian_selector_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        },
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_hessian_selector_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_hessian_selector_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
+          "title": "`y_t` Bridge Hessian Selector Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0006",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_moment_closure_note"
+        },
+        {
+          "from": "yt_bridge_moment_closure_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_moment_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_MOMENT_CLOSURE_NOTE.md",
+          "title": "`y_t` Bridge Moment Closure Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0007",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_bridge_operator_closure_note"
+        },
+        {
+          "from": "yt_bridge_operator_closure_note",
+          "to": "yt_interacting_bridge_locality_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_operator_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md",
+          "title": "y_t Bridge Operator Closure Proxy Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0008",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_hessian_selector_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        },
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_higher_order_corrections_note"
+        },
+        {
+          "from": "yt_bridge_higher_order_corrections_note",
+          "to": "yt_bridge_hessian_selector_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_hessian_selector_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
+          "title": "`y_t` Bridge Hessian Selector Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_higher_order_corrections_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HIGHER_ORDER_CORRECTIONS_NOTE.md",
+          "title": "`y_t` Bridge Higher-Order Corrections Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0009",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_bridge_hessian_selector_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        },
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_nonlocal_corrections_note"
+        },
+        {
+          "from": "yt_bridge_nonlocal_corrections_note",
+          "to": "yt_bridge_hessian_selector_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_hessian_selector_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
+          "title": "`y_t` Bridge Hessian Selector Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_nonlocal_corrections_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md",
+          "title": "`y_t` Bridge Nonlocal Corrections Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0010",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_bridge_operator_closure_note"
+        },
+        {
+          "from": "yt_bridge_operator_closure_note",
+          "to": "yt_constructive_uv_bridge_note"
+        }
+      ],
+      "length": 4,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_operator_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md",
+          "title": "y_t Bridge Operator Closure Proxy Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0011",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 8,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0012",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_bridge_hessian_selector_note"
+        },
+        {
+          "from": "yt_bridge_hessian_selector_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        },
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_bridge_action_invariant_note"
+        },
+        {
+          "from": "yt_bridge_action_invariant_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 9,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_hessian_selector_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
+          "title": "`y_t` Bridge Hessian Selector Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_action_invariant_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_ACTION_INVARIANT_NOTE.md",
+          "title": "`y_t` Bridge Action Invariant Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0013",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 9,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0014",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_eft_bridge_theorem"
+        },
+        {
+          "from": "yt_eft_bridge_theorem",
+          "to": "yt_zero_import_authority_note"
+        }
+      ],
+      "length": 9,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_eft_bridge_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EFT_BRIDGE_THEOREM.md",
+          "title": "y_t EFT Bridge Theorem: Backward Ward Boundary Transfer at `v`",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0015",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_qfp_insensitivity_support_note"
+        },
+        {
+          "from": "yt_qfp_insensitivity_support_note",
+          "to": "yt_zero_import_authority_note"
+        }
+      ],
+      "length": 9,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_qfp_insensitivity_support_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+          "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0016",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_bridge_hessian_selector_note"
+        },
+        {
+          "from": "yt_bridge_hessian_selector_note",
+          "to": "yt_bridge_rearrangement_principle_note"
+        },
+        {
+          "from": "yt_bridge_rearrangement_principle_note",
+          "to": "yt_exact_interacting_bridge_transport_note"
+        },
+        {
+          "from": "yt_exact_interacting_bridge_transport_note",
+          "to": "yt_bridge_moment_closure_note"
+        },
+        {
+          "from": "yt_bridge_moment_closure_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 10,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_hessian_selector_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_HESSIAN_SELECTOR_NOTE.md",
+          "title": "`y_t` Bridge Hessian Selector Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_rearrangement_principle_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md",
+          "title": "`y_t` Bridge Rearrangement Principle Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_interacting_bridge_transport_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_INTERACTING_BRIDGE_TRANSPORT_NOTE.md",
+          "title": "Exact Interacting Bridge Transport Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_moment_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_MOMENT_CLOSURE_NOTE.md",
+          "title": "`y_t` Bridge Moment Closure Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0017",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_bridge_operator_closure_note"
+        },
+        {
+          "from": "yt_bridge_operator_closure_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 10,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_operator_closure_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_OPERATOR_CLOSURE_NOTE.md",
+          "title": "y_t Bridge Operator Closure Proxy Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0018",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_eft_bridge_theorem"
+        },
+        {
+          "from": "yt_eft_bridge_theorem",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 10,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_eft_bridge_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EFT_BRIDGE_THEOREM.md",
+          "title": "y_t EFT Bridge Theorem: Backward Ward Boundary Transfer at `v`",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0019",
+      "decision": null,
+      "edges": [
+        {
+          "from": "yt_boundary_theorem",
+          "to": "yt_zero_import_authority_note"
+        },
+        {
+          "from": "yt_zero_import_authority_note",
+          "to": "yt_explicit_systematic_budget_note"
+        },
+        {
+          "from": "yt_explicit_systematic_budget_note",
+          "to": "yt_exact_schur_normal_form_uniqueness_note"
+        },
+        {
+          "from": "yt_exact_schur_normal_form_uniqueness_note",
+          "to": "yt_exact_coarse_grained_bridge_operator_note"
+        },
+        {
+          "from": "yt_exact_coarse_grained_bridge_operator_note",
+          "to": "yt_bridge_uv_class_uniqueness_note"
+        },
+        {
+          "from": "yt_bridge_uv_class_uniqueness_note",
+          "to": "yt_constructive_uv_bridge_note"
+        },
+        {
+          "from": "yt_constructive_uv_bridge_note",
+          "to": "yt_interacting_bridge_locality_note"
+        },
+        {
+          "from": "yt_interacting_bridge_locality_note",
+          "to": "yt_ew_coupling_bridge_note"
+        },
+        {
+          "from": "yt_ew_coupling_bridge_note",
+          "to": "yt_qfp_insensitivity_support_note"
+        },
+        {
+          "from": "yt_qfp_insensitivity_support_note",
+          "to": "yt_boundary_theorem"
+        }
+      ],
+      "length": 10,
+      "max_transitive_descendants": 541,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_boundary_theorem",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BOUNDARY_THEOREM.md",
+          "title": "Boundary Selection Theorem: v is the Physical Crossover Endpoint",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_zero_import_authority_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md",
+          "title": "y_t Lane: Zero-Import Authority",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_explicit_systematic_budget_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
+          "title": "`y_t` Residual-Budget and Bridge Cross-Check Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_schur_normal_form_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+          "title": "Exact Schur Normal-Form Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_exact_coarse_grained_bridge_operator_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EXACT_COARSE_GRAINED_BRIDGE_OPERATOR_NOTE.md",
+          "title": "Exact Coarse-Grained Bridge Operator Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_bridge_uv_class_uniqueness_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_BRIDGE_UV_CLASS_UNIQUENESS_NOTE.md",
+          "title": "`y_t` Bridge UV Class Uniqueness Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_constructive_uv_bridge_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
+          "title": "Constructive UV-Localized Bridge Class for `y_t`",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_interacting_bridge_locality_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
+          "title": "y_t Interacting Bridge Locality Proxy Note",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_ew_coupling_bridge_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
+          "title": "y_t Bridge: EW Coupling Derivation and Sensitivity Analysis",
+          "transitive_descendants": 541
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "yt_qfp_insensitivity_support_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+          "title": "y_t Quasi-Fixed-Point Insensitivity Support Note",
+          "transitive_descendants": 541
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0020",
+      "decision": null,
+      "edges": [
+        {
+          "from": "cosmological_constant_spectral_gap_identity_theorem_note",
+          "to": "cosmological_constant_result_2026-04-12"
+        },
+        {
+          "from": "cosmological_constant_result_2026-04-12",
+          "to": "cosmology_scale_identification_and_reduction_note"
+        },
+        {
+          "from": "cosmology_scale_identification_and_reduction_note",
+          "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 430,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "cosmological_constant_spectral_gap_identity_theorem_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md",
+          "title": "Spectral-Gap Cosmological-Constant Identity Theorem",
+          "transitive_descendants": 430
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "cosmological_constant_result_2026-04-12",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md",
+          "title": "Cosmological Constant \u2014 Spectral-Gap Companion",
+          "transitive_descendants": 430
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "cosmology_scale_identification_and_reduction_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
+          "title": "Cosmology Scale Identification and Reduction",
+          "transitive_descendants": 430
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -130,7 +1858,44 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0002",
+      "cycle_id": "cycle-0022",
+      "decision": null,
+      "edges": [
+        {
+          "from": "pmns_active_four_real_source_from_transport_note",
+          "to": "pmns_lower_level_end_to_end_closure_note"
+        },
+        {
+          "from": "pmns_lower_level_end_to_end_closure_note",
+          "to": "pmns_active_four_real_source_from_transport_note"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 420,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "pmns_active_four_real_source_from_transport_note",
+          "claim_type": "open_gate",
+          "effective_status": "unaudited",
+          "note_path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
+          "title": "PMNS Active Four-Real Source From Transport",
+          "transitive_descendants": 420
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "pmns_lower_level_end_to_end_closure_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PMNS_LOWER_LEVEL_END_TO_END_CLOSURE_NOTE.md",
+          "title": "PMNS Lower-Level End-to-End Closure",
+          "transitive_descendants": 420
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -167,7 +1932,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -204,7 +1969,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -241,7 +2006,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -278,7 +2043,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -315,7 +2080,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -352,7 +2117,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -389,7 +2154,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -426,7 +2191,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -463,7 +2228,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -500,7 +2265,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -537,7 +2302,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -574,7 +2339,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -611,7 +2376,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -648,7 +2413,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -685,7 +2450,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -722,7 +2487,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -759,7 +2524,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -809,7 +2574,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -859,7 +2624,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -909,7 +2674,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -959,7 +2724,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -1009,7 +2774,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -1059,7 +2824,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -1109,7 +2874,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -1159,7 +2924,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -1209,7 +2974,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -1259,7 +3024,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -1309,7 +3074,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -1372,7 +3137,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -1435,7 +3200,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -1498,7 +3263,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -1561,7 +3326,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -1624,7 +3389,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -1687,7 +3452,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -1750,7 +3515,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -1813,7 +3578,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -1876,7 +3641,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -1939,7 +3704,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -2002,7 +3767,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -2065,7 +3830,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -2128,7 +3893,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -2204,7 +3969,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -2280,7 +4045,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -2356,7 +4121,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -2432,7 +4197,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -2508,7 +4273,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -2584,7 +4349,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -2660,7 +4425,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -2736,7 +4501,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -2812,7 +4577,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -2888,7 +4653,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -2964,7 +4729,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -3040,7 +4805,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -3116,7 +4881,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -3192,7 +4957,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -3268,7 +5033,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -3344,7 +5109,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -3420,7 +5185,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -3496,7 +5261,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -3585,7 +5350,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -3674,7 +5439,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -3763,7 +5528,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -3852,7 +5617,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -3941,7 +5706,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -4030,7 +5795,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -4119,7 +5884,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -4208,7 +5973,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -4297,7 +6062,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -4386,7 +6151,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -4475,7 +6240,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -4564,7 +6329,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -4653,7 +6418,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -4742,7 +6507,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -4831,7 +6596,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -4933,7 +6698,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -5035,7 +6800,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -5137,7 +6902,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -5239,7 +7004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -5341,7 +7106,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -5443,7 +7208,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -5545,7 +7310,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -5647,7 +7412,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -5749,7 +7514,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -5851,7 +7616,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -5953,7 +7718,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -6055,7 +7820,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -6157,7 +7922,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -6259,7 +8024,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -6361,7 +8126,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -6463,7 +8228,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -6578,7 +8343,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -6693,7 +8458,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -6808,7 +8573,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -6923,7 +8688,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -7038,7 +8803,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -7153,7 +8918,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -7268,7 +9033,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -7396,7 +9161,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -7524,7 +9289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -7652,7 +9417,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0123",
       "decision": null,
       "edges": [
         {
@@ -7780,7 +9545,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0124",
       "decision": null,
       "edges": [
         {
@@ -7908,7 +9673,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0125",
       "decision": null,
       "edges": [
         {
@@ -8049,7 +9814,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0126",
       "decision": null,
       "edges": [
         {
@@ -8190,7 +9955,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0127",
       "decision": null,
       "edges": [
         {
@@ -8331,7 +10096,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0128",
       "decision": null,
       "edges": [
         {
@@ -8472,7 +10237,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0129",
       "decision": null,
       "edges": [
         {
@@ -8613,7 +10378,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0130",
       "decision": null,
       "edges": [
         {
@@ -8754,7 +10519,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0131",
       "decision": null,
       "edges": [
         {
@@ -8895,7 +10660,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0132",
       "decision": null,
       "edges": [
         {
@@ -9049,7 +10814,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0133",
       "decision": null,
       "edges": [
         {
@@ -9203,7 +10968,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0134",
       "decision": null,
       "edges": [
         {
@@ -9357,7 +11122,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0135",
       "decision": null,
       "edges": [
         {
@@ -9511,7 +11276,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0136",
       "decision": null,
       "edges": [
         {
@@ -9665,7 +11430,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0137",
       "decision": null,
       "edges": [
         {
@@ -9819,7 +11584,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0138",
       "decision": null,
       "edges": [
         {
@@ -9973,7 +11738,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0139",
       "decision": null,
       "edges": [
         {
@@ -10127,7 +11892,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0140",
       "decision": null,
       "edges": [
         {
@@ -10294,7 +12059,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0141",
       "decision": null,
       "edges": [
         {
@@ -10461,7 +12226,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0142",
       "decision": null,
       "edges": [
         {
@@ -10628,7 +12393,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0143",
       "decision": null,
       "edges": [
         {
@@ -10795,7 +12560,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0144",
       "decision": null,
       "edges": [
         {
@@ -10962,7 +12727,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0145",
       "decision": null,
       "edges": [
         {
@@ -11129,7 +12894,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0146",
       "decision": null,
       "edges": [
         {
@@ -11309,7 +13074,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0147",
       "decision": null,
       "edges": [
         {
@@ -11489,7 +13254,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0148",
       "decision": null,
       "edges": [
         {
@@ -11669,7 +13434,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0149",
       "decision": null,
       "edges": [
         {
@@ -11862,7 +13627,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0150",
       "decision": null,
       "edges": [
         {
@@ -12055,7 +13820,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0151",
       "decision": null,
       "edges": [
         {
@@ -12248,7 +14013,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0152",
       "decision": null,
       "edges": [
         {
@@ -12441,7 +14206,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0153",
       "decision": null,
       "edges": [
         {
@@ -12634,7 +14399,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0154",
       "decision": null,
       "edges": [
         {
@@ -12827,7 +14592,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0155",
       "decision": null,
       "edges": [
         {
@@ -13020,7 +14785,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0156",
       "decision": null,
       "edges": [
         {
@@ -13213,7 +14978,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0157",
       "decision": null,
       "edges": [
         {
@@ -13419,7 +15184,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0158",
       "decision": null,
       "edges": [
         {
@@ -13625,7 +15390,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0159",
       "decision": null,
       "edges": [
         {
@@ -13831,7 +15596,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0160",
       "decision": null,
       "edges": [
         {
@@ -14037,7 +15802,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0161",
       "decision": null,
       "edges": [
         {
@@ -14243,7 +16008,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0162",
       "decision": null,
       "edges": [
         {
@@ -14462,7 +16227,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0163",
       "decision": null,
       "edges": [
         {
@@ -14681,7 +16446,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0164",
       "decision": null,
       "edges": [
         {
@@ -14900,7 +16665,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0165",
       "decision": null,
       "edges": [
         {
@@ -15132,7 +16897,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0166",
       "decision": null,
       "edges": [
         {
@@ -15364,7 +17129,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0167",
       "decision": null,
       "edges": [
         {
@@ -15596,7 +17361,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0168",
       "decision": null,
       "edges": [
         {
@@ -15828,7 +17593,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0169",
       "decision": null,
       "edges": [
         {
@@ -16073,7 +17838,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0170",
       "decision": null,
       "edges": [
         {
@@ -16318,7 +18083,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0171",
       "decision": null,
       "edges": [
         {
@@ -16563,7 +18328,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0172",
       "decision": null,
       "edges": [
         {
@@ -16821,7 +18586,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0173",
       "decision": null,
       "edges": [
         {
@@ -17079,7 +18844,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0174",
       "decision": null,
       "edges": [
         {
@@ -17337,7 +19102,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0175",
       "decision": null,
       "edges": [
         {
@@ -17608,7 +19373,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0176",
       "decision": null,
       "edges": [
         {
@@ -17892,7 +19657,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0177",
       "decision": null,
       "edges": [
         {
@@ -18176,7 +19941,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0178",
       "decision": null,
       "edges": [
         {
@@ -18460,7 +20225,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0179",
       "decision": null,
       "edges": [
         {
@@ -18770,7 +20535,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -19080,7 +20845,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -19390,7 +21155,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -19700,7 +21465,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0183",
       "decision": null,
       "edges": [
         {
@@ -20023,7 +21788,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0184",
       "decision": null,
       "edges": [
         {
@@ -20346,7 +22111,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0185",
       "decision": null,
       "edges": [
         {
@@ -20669,7 +22434,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0186",
       "decision": null,
       "edges": [
         {
@@ -21018,7 +22783,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0187",
       "decision": null,
       "edges": [
         {
@@ -21367,7 +23132,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0188",
       "decision": null,
       "edges": [
         {
@@ -21716,7 +23481,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0168",
+      "cycle_id": "cycle-0189",
       "decision": null,
       "edges": [
         {
@@ -22065,7 +23830,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0169",
+      "cycle_id": "cycle-0190",
       "decision": null,
       "edges": [
         {
@@ -22427,7 +24192,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0170",
+      "cycle_id": "cycle-0191",
       "decision": null,
       "edges": [
         {
@@ -22789,7 +24554,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0171",
+      "cycle_id": "cycle-0192",
       "decision": null,
       "edges": [
         {
@@ -23151,7 +24916,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0172",
+      "cycle_id": "cycle-0193",
       "decision": null,
       "edges": [
         {
@@ -23513,7 +25278,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0173",
+      "cycle_id": "cycle-0194",
       "decision": null,
       "edges": [
         {
@@ -23875,7 +25640,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0174",
+      "cycle_id": "cycle-0195",
       "decision": null,
       "edges": [
         {
@@ -24237,7 +26002,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0196",
       "decision": null,
       "edges": [
         {
@@ -24599,7 +26364,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0197",
       "decision": null,
       "edges": [
         {
@@ -24961,7 +26726,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0198",
       "decision": null,
       "edges": [
         {
@@ -25323,7 +27088,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0199",
       "decision": null,
       "edges": [
         {
@@ -25685,7 +27450,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0179",
+      "cycle_id": "cycle-0200",
       "decision": null,
       "edges": [
         {
@@ -26060,7 +27825,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0180",
+      "cycle_id": "cycle-0201",
       "decision": null,
       "edges": [
         {
@@ -26435,7 +28200,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0181",
+      "cycle_id": "cycle-0202",
       "decision": null,
       "edges": [
         {
@@ -26810,7 +28575,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0182",
+      "cycle_id": "cycle-0203",
       "decision": null,
       "edges": [
         {
@@ -27185,7 +28950,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0183",
+      "cycle_id": "cycle-0204",
       "decision": null,
       "edges": [
         {
@@ -27560,7 +29325,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0184",
+      "cycle_id": "cycle-0205",
       "decision": null,
       "edges": [
         {
@@ -27935,7 +29700,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0185",
+      "cycle_id": "cycle-0206",
       "decision": null,
       "edges": [
         {
@@ -28310,7 +30075,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0186",
+      "cycle_id": "cycle-0207",
       "decision": null,
       "edges": [
         {
@@ -28685,7 +30450,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0187",
+      "cycle_id": "cycle-0208",
       "decision": null,
       "edges": [
         {
@@ -29073,7 +30838,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0188",
+      "cycle_id": "cycle-0209",
       "decision": null,
       "edges": [
         {
@@ -29461,7 +31226,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0189",
+      "cycle_id": "cycle-0210",
       "decision": null,
       "edges": [
         {
@@ -29849,7 +31614,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0190",
+      "cycle_id": "cycle-0211",
       "decision": null,
       "edges": [
         {
@@ -30237,7 +32002,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0191",
+      "cycle_id": "cycle-0212",
       "decision": null,
       "edges": [
         {
@@ -30625,7 +32390,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0192",
+      "cycle_id": "cycle-0213",
       "decision": null,
       "edges": [
         {
@@ -31013,7 +32778,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0193",
+      "cycle_id": "cycle-0214",
       "decision": null,
       "edges": [
         {
@@ -31401,7 +33166,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0194",
+      "cycle_id": "cycle-0215",
       "decision": null,
       "edges": [
         {
@@ -31789,7 +33554,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0195",
+      "cycle_id": "cycle-0216",
       "decision": null,
       "edges": [
         {
@@ -32177,7 +33942,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0196",
+      "cycle_id": "cycle-0217",
       "decision": null,
       "edges": [
         {
@@ -32565,7 +34330,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0197",
+      "cycle_id": "cycle-0218",
       "decision": null,
       "edges": [
         {
@@ -32953,7 +34718,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0198",
+      "cycle_id": "cycle-0219",
       "decision": null,
       "edges": [
         {
@@ -33341,7 +35106,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0199",
+      "cycle_id": "cycle-0220",
       "decision": null,
       "edges": [
         {
@@ -33729,7 +35494,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0200",
+      "cycle_id": "cycle-0221",
       "decision": null,
       "edges": [
         {
@@ -34130,7 +35895,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0201",
+      "cycle_id": "cycle-0222",
       "decision": null,
       "edges": [
         {
@@ -34531,7 +36296,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0202",
+      "cycle_id": "cycle-0223",
       "decision": null,
       "edges": [
         {
@@ -34932,7 +36697,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0203",
+      "cycle_id": "cycle-0224",
       "decision": null,
       "edges": [
         {
@@ -35333,7 +37098,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0204",
+      "cycle_id": "cycle-0225",
       "decision": null,
       "edges": [
         {
@@ -35734,7 +37499,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0205",
+      "cycle_id": "cycle-0226",
       "decision": null,
       "edges": [
         {
@@ -36135,7 +37900,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0206",
+      "cycle_id": "cycle-0227",
       "decision": null,
       "edges": [
         {
@@ -36536,7 +38301,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0207",
+      "cycle_id": "cycle-0228",
       "decision": null,
       "edges": [
         {
@@ -36950,7 +38715,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0208",
+      "cycle_id": "cycle-0229",
       "decision": null,
       "edges": [
         {
@@ -37377,7 +39142,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0209",
+      "cycle_id": "cycle-0230",
       "decision": null,
       "edges": [
         {
@@ -37817,7 +39582,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0210",
+      "cycle_id": "cycle-0231",
       "decision": null,
       "edges": [
         {
@@ -38270,7 +40035,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0211",
+      "cycle_id": "cycle-0232",
       "decision": null,
       "edges": [
         {
@@ -38333,7 +40098,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0212",
+      "cycle_id": "cycle-0233",
       "decision": null,
       "edges": [
         {
@@ -38409,7 +40174,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0213",
+      "cycle_id": "cycle-0234",
       "decision": null,
       "edges": [
         {
@@ -38446,7 +40211,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0214",
+      "cycle_id": "cycle-0235",
       "decision": null,
       "edges": [
         {
@@ -38509,7 +40274,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0215",
+      "cycle_id": "cycle-0236",
       "decision": null,
       "edges": [
         {
@@ -38546,7 +40311,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0216",
+      "cycle_id": "cycle-0237",
       "decision": null,
       "edges": [
         {
@@ -38583,7 +40348,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0217",
+      "cycle_id": "cycle-0238",
       "decision": null,
       "edges": [
         {
@@ -38646,7 +40411,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0218",
+      "cycle_id": "cycle-0239",
       "decision": null,
       "edges": [
         {
@@ -38683,7 +40448,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0219",
+      "cycle_id": "cycle-0240",
       "decision": null,
       "edges": [
         {
@@ -38720,7 +40485,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0220",
+      "cycle_id": "cycle-0241",
       "decision": null,
       "edges": [
         {
@@ -38796,7 +40561,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0221",
+      "cycle_id": "cycle-0242",
       "decision": null,
       "edges": [
         {
@@ -38859,7 +40624,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0222",
+      "cycle_id": "cycle-0243",
       "decision": null,
       "edges": [
         {
@@ -38922,7 +40687,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0223",
+      "cycle_id": "cycle-0244",
       "decision": null,
       "edges": [
         {
@@ -38985,7 +40750,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0224",
+      "cycle_id": "cycle-0245",
       "decision": null,
       "edges": [
         {
@@ -39061,7 +40826,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0225",
+      "cycle_id": "cycle-0246",
       "decision": null,
       "edges": [
         {
@@ -39137,7 +40902,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0226",
+      "cycle_id": "cycle-0247",
       "decision": null,
       "edges": [
         {
@@ -39213,7 +40978,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0227",
+      "cycle_id": "cycle-0248",
       "decision": null,
       "edges": [
         {
@@ -39315,7 +41080,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0228",
+      "cycle_id": "cycle-0249",
       "decision": null,
       "edges": [
         {
@@ -39443,7 +41208,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0229",
+      "cycle_id": "cycle-0250",
       "decision": null,
       "edges": [
         {
@@ -39584,7 +41349,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0230",
+      "cycle_id": "cycle-0251",
       "decision": null,
       "edges": [
         {
@@ -39621,7 +41386,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0231",
+      "cycle_id": "cycle-0252",
       "decision": null,
       "edges": [
         {
@@ -39658,7 +41423,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0232",
+      "cycle_id": "cycle-0253",
       "decision": null,
       "edges": [
         {
@@ -39696,7 +41461,7 @@
     }
   ],
   "length_counts": {
-    "10": 8,
+    "10": 12,
     "11": 8,
     "12": 6,
     "13": 3,
@@ -39706,7 +41471,7 @@
     "17": 4,
     "18": 3,
     "19": 3,
-    "2": 25,
+    "2": 30,
     "20": 1,
     "21": 3,
     "23": 4,
@@ -39715,18 +41480,18 @@
     "27": 10,
     "28": 8,
     "29": 13,
-    "3": 11,
+    "3": 15,
     "30": 7,
     "31": 1,
     "32": 1,
     "33": 1,
     "34": 1,
-    "4": 19,
+    "4": 22,
     "5": 23,
     "6": 15,
     "7": 17,
-    "8": 7,
-    "9": 7
+    "8": 8,
+    "9": 11
   },
   "sort": [
     "max_transitive_descendants descending",

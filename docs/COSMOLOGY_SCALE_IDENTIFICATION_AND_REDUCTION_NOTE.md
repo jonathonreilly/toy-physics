@@ -130,3 +130,73 @@ matter fraction.
 - [frontier_cosmological_constant_spectral_gap.py](../scripts/frontier_cosmological_constant_spectral_gap.py)
 - [frontier_dark_energy_eos.py](../scripts/frontier_dark_energy_eos.py)
 - [frontier_omega_lambda_derivation.py](../scripts/frontier_omega_lambda_derivation.py)
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the explicit upstream authorities
+the load-bearing scale-identification step relies on, in response to the
+2026-05-05 audit verdict's `missing_bridge_theorem` repair target (audit
+row: `cosmology_scale_identification_and_reduction_note`). It does not
+promote this note or change the audited claim scope, which remains a
+bounded synthesis reducing `Lambda`, `w = -1`, and present-day
+`Omega_Lambda` to a fixed-gap de Sitter scale identification plus an
+explicitly-open matter-content bridge.
+
+One-hop authorities cited:
+
+- [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+  — currently `audited_conditional` (audit row:
+  `cosmological_constant_spectral_gap_identity_theorem_note`). This is
+  the upstream conditional authority for the fixed-gap-to-de-Sitter
+  scale matching `Lambda = 3/R_Lambda^2 = 3 H_inf^2 / c^2` used in §1
+  of this note.
+- [`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md) — currently
+  `audited_conditional` (audit row: `s3_cap_uniqueness_note`). This is
+  the upstream conditional authority for the topology side of the
+  retained `lambda_1(S^3_R) = 3/R^2` spectral-gap input cited in §1.
+- The `Omega_m` matter-content bridge required to promote present-day
+  `Omega_Lambda` is explicitly named as an open registration target in
+  §"Honest Remaining Gap" item 2. No retained one-hop authority for
+  the matter-content side is currently registered. The audit verdict's
+  `missing_bridge_theorem` flag for `Omega_m` corresponds to this
+  acknowledged open dependency rather than a missing citation.
+- The `H_inf` versus observed `H_0` first-principles matching (§"Honest
+  Remaining Gap" item 1) is also explicitly named as an open
+  registration target. It is not closed by the cited spectral-gap
+  authority; the cited authority closes the same-surface algebraic
+  identification but not the asymptotic-vs-present-day Hubble matching.
+
+Because both cited one-hop authorities are themselves
+`audited_conditional`, this note's effective status is capped at
+`audited_conditional` under the standard cite-chain rule, matching the
+live audit verdict. The two open registration targets above are real
+gaps and remain class D (gap) entries; they are flagged explicitly so
+later audit sweeps can wire them to retained authorities once those
+authorities exist.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the algebraic reduction is internally
+consistent — `Lambda = 3/R_Lambda^2`, `rho_Lambda` constant gives
+`w = -1`, and `Omega_Lambda = H_inf^2/H_0^2` follows under flatness —
+but the same-surface scale identification and the matter-content bridge
+are imported rather than derived from retained primitives within the
+restricted packet. The cite-chain repair above wires the two
+structurally available upstream conditional authorities
+(`cosmological_constant_spectral_gap_identity_theorem_note`,
+`s3_cap_uniqueness_note`) and explicitly registers the matter-content
+bridge and `H_inf`/`H_0` matching as open registration targets. Effective
+status remains `audited_conditional`. The note's audit_status is
+unchanged by this addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation) plus class D
+(gap registration). It does not change any algebraic content or the
+load-bearing step classification. It records the upstream authorities
+the audit verdict expected and explicitly registers the two open
+matter-content / asymptotic-Hubble bridges. Mirrors the live
+cite-chain pattern used by the
+`DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md` cluster
+(commit `02ad4fadd`).

@@ -13,6 +13,29 @@ route; not a closure theorem
 
 **Primary runner:** `scripts/frontier_koide_q_normalized_second_order_effective_action.py`
 
+**Status authority and audit hygiene (2026-05-10):**
+The audit lane has classified this row `audited_conditional`
+(claim_type `open_gate`, audit_date 2026-05-05, auditor
+codex-cli-gpt-5.5, auditor_confidence high). The verdict accepts the
+runner's symbolic algebra — that `K = 0 -> Y = I_2 -> Q = 2/3` closes
+on the admitted normalized second-order positive trace-2 carrier with
+the exact reduced observable generator `W_red(K) = log det(I + K)` and
+its Legendre dual `S_eff(Y) = Tr(Y) - log det(Y) - 2`. The verdict
+flags that the load-bearing **physical** premise is the source-free
+law `K = 0` on the normalized second-order charged-lepton carrier,
+and the note explicitly says (Section 8) this remains open. With no
+cited retained authority closing that bridge, retained-grade status
+cannot propagate to the physical `Q` closure. Audit verdict and
+effective status are set by the independent audit lane only; nothing
+in this rigorization edit promotes status.
+
+The audit-stated cheapest re-audit path (verbatim from the ledger
+`notes_for_re_audit_if_any`):
+
+> missing_bridge_theorem: prove from retained charged-lepton physics
+> that the normalized second-order physical selector has zero external
+> source `K = 0`.
+
 ---
 
 ## 1. What was still open
@@ -275,3 +298,78 @@ carrier,
 then the remaining open step is exactly why the physical charged-lepton lane is
 source-free there. This note narrows that primitive sharply; it does not by
 itself discharge it.
+
+## 10. Audit-conditional perimeter
+
+The internal algebra of this note (Sections 2–6) is what the audit
+verdict accepts as internally consistent on the admitted normalized
+second-order carrier:
+
+| Internal algebra step | Audit-accepted as internal consistency |
+|---|---|
+| Trace normalization `Tr(Y) = 2` (Section 2) | yes |
+| Reduced observable generator `W_red(K) = log det(I + K)` (Section 3) | yes |
+| Legendre dual `S_eff(Y) = Tr(Y) - log det(Y) - 2` (Section 4) | yes |
+| Dual relation `K = Y^(-1) - I` (Section 5) | yes |
+| `K = 0 -> Y = I_2 -> kappa = 2 -> Q = 2/3` (Sections 5–6) | yes (algebraic) |
+
+The audit-conditional perimeter (i.e. what stays open) is the single
+**physical** bridge already named in Section 8:
+
+> derive from retained charged-lepton physics that the physical
+> selector lives on the admitted normalized second-order reduced
+> carrier and is source-free there.
+
+The reduced observable restriction theorem
+(`KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md`) is
+the upstream supplier of `W_red` on the same admitted carrier; it is
+itself `audited_conditional` on the same physical-identification gap
+(see audit ledger row
+`koide_q_reduced_observable_restriction_theorem_2026-04-22`). So
+upstream support for `W_red` is also `audited_conditional`, not
+retained.
+
+Within this audit-conditional perimeter, the runner's reproduced
+verdict line is:
+
+> on the exact first-live second-order carrier, the source-free
+> normalized effective-action route lands at `Y = I_2`. That is
+> exactly `E_+ = E_perp`, hence `kappa = 2` and `Q = 2/3`. This
+> validates the internal algebra of the admitted second-order route.
+> It does not by itself prove the physical source-free law.
+
+That is exactly the `claim_type = open_gate` framing recorded in the
+audit ledger.
+
+## 11. Path A future work (audit-stated repair targets)
+
+To move this row's `audit_status` from `audited_conditional` toward
+retained-grade, the audit verdict's repair list requires **either**:
+
+1. a retained upstream theorem that the physical charged-lepton
+   selector lives on the normalized second-order positive trace-2
+   reduced carrier `Y` (the carrier-identification half), **and**
+2. a retained upstream theorem that the physical charged-lepton
+   source on that reduced carrier is `K = 0` (the source-free half);
+
+**or** an alternative carrier whose retained derivation directly
+forces `E_+ = E_perp` without invoking the
+admitted-carrier-plus-`K = 0` route used here.
+
+Until at least one such retained upstream chain is supplied, the row
+remains a bounded internal-algebra `open_gate` note on the admitted
+carrier rather than a `Q = 2/3` closure.
+
+## 12. Boundaries
+
+This note does **not**:
+
+- modify the parent row's audit-ledger entry;
+- promote the parent's `audit_status` from `audited_conditional`;
+- derive the normalized second-order reduced carrier from retained
+  upstream inputs;
+- derive the source-free law `K = 0` from retained charged-lepton
+  physics;
+- close the separate `delta = 2/9` Brannen-phase bridge;
+- claim a Nature-grade closure of `Q = 2/3` on the charged-lepton
+  lane.

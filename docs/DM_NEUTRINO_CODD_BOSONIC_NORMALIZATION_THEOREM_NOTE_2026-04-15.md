@@ -105,9 +105,77 @@ python3 scripts/frontier_dm_neutrino_codd_bosonic_normalization_theorem.py
 
 ## Audit dependency repair links
 
-This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope, which remains the algebraic isospectrality + identical bosonic-response claim on the `S_cls` / `T_gamma` minimal blocks plus the imported observable-principle premise.
 
-- [pmns_selector_unique_amplitude_slot_note](PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
-- [pmns_selector_sign_to_branch_reduction_note](PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
-- [dm_neutrino_triplet_character_source_theorem_note_2026-04-15](DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
-- [observable_principle_from_axiom_note](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+One-hop authorities cited:
+
+- [`PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md`](PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md)
+  — currently `unaudited` (audit row: `pmns_selector_unique_amplitude_slot_note`).
+  Upstream authority candidate for the single exact reduced amplitude slot
+  `a_sel` on `S_cls`.
+- [`PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md`](PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md)
+  — currently `unaudited` (audit row:
+  `pmns_selector_sign_to_branch_reduction_note`). Upstream authority
+  candidate for the source-oriented branch convention recording
+  `c_odd = +1` rather than only `|c_odd| = 1`.
+- [`DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
+  — currently `unaudited` (audit row:
+  `dm_neutrino_triplet_character_source_theorem_note_2026-04-15`).
+  Upstream authority candidate for the exact odd source `gamma` on the
+  triplet generator `T_gamma`.
+- [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+  — currently `audited_conditional` (audit row:
+  `observable_principle_from_axiom_note`). Upstream conditional
+  authority for the load-bearing premise that physical local scalar
+  observables are exact source derivatives of the unique additive
+  CPT-even scalar generator `W[J] = log|det(D+J)| - log|det D|`, given
+  premises P1 (scalar additivity), P2 (CPT-even phase blindness),
+  P3 (continuity / minimal regularity), and P4 (normalization choice).
+
+Because three of the four cited upstream authorities are `unaudited`
+and the fourth is `audited_conditional`, the canonical odd normalization
+selection here cannot lift past `audited_conditional` under the standard
+cite-chain rule once this row is itself audited. This matches the live
+audit row's current `unaudited` status and does not require any audit
+JSON edit.
+
+The runner-checked content of this note (Part 1 algebra: `S_cls` and
+`T_gamma` exact spectra, equal nonzero spectrum after subtracting null
+multiplicity; Part 2: `W[S_cls] = W[T_gamma] = log|1 - j^2/m^2|`,
+identical small-source curvature; Part 3: `|c_odd| = 1` from equal
+bosonic response, source-oriented `c_odd = +1`) is exact
+finite-dimensional matrix algebra on the minimal odd blocks and is
+independent of the cited upstream authorities. The cite chain is what
+supplies the physical selection rule that makes the equal-response
+identification an admissible normalization statement rather than only
+an algebraic comparator.
+
+## Honest auditor read
+
+A future audit pass on this row will see four upstream authority
+citations: `pmns_selector_unique_amplitude_slot_note` (unaudited),
+`pmns_selector_sign_to_branch_reduction_note` (unaudited),
+`dm_neutrino_triplet_character_source_theorem_note_2026-04-15`
+(unaudited), and `observable_principle_from_axiom_note`
+(audited_conditional). The runner closes A=12 algebraic checks once the
+observable-principle premise is accepted, but the canonical odd
+normalization `|c_odd| = 1` selection over the bare equal-spectrum
+comparator does not follow from the runner alone — it requires the
+upstream theorem that physical local scalar observables are exact `W[J]`
+source-response coefficients. The cite-chain repair above wires
+`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE` (`audited_conditional`) as that
+upstream authority and the three PMNS / triplet-character authorities as
+the source-side companions. Effective status will be capped at
+`audited_conditional` because the strongest upstream is itself
+conditional on the four admitted premises P1-P4. The note's
+`audit_status` is unchanged by this addendum.
+
+## Scope of this rigorization
+
+This rigorization is class B (graph-bookkeeping citation). It does not
+change any algebraic content, runner output, or load-bearing step
+classification. It records the upstream authorities the audit citation
+graph expects and matches the live cite-chain pattern used by the
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
+(commit `8e84f0c23`) and the `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
+cluster rigorize (commit `02ad4fadd`).

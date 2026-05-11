@@ -73,3 +73,36 @@ It does show something narrower and still useful:
 
 > the unresolved bridge is not plausibly being absorbed into wide EW-side
 > operator ambiguity.
+
+## Honest auditor read
+
+The 2026-05-05 audit recorded this row as `audited_conditional` with the
+substantive observation that the load-bearing comparison is an
+external-target numerical comparator using hard-coded physical and
+endpoint inputs (Ward boundary condition, accepted `y_t(v)` target, beta
+function model, profile family) rather than a first-principles closure
+from the axiom. The runner does compute the reported scan outcomes, but
+the conditional status comes from imported endpoint data and a chosen
+two-shape proxy family. The note already states above that this is a
+bounded operator-closure proxy, not a final theorem.
+
+This addendum is graph-bookkeeping only. It does not change the
+conditional status, does not promote the row, and does not modify the
+EW-window scan numerics or their bounded scope.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records the upstream notes the EW-window
+scan and Ward boundary condition rely on. It does not promote this note
+or change the audited claim scope.
+
+- [YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md](YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md)
+  for the forced UV-localized class premise the comparator uses.
+- [YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md)
+  for the UV-localized bridge family used as the comparator's viable side.
+- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
+  for the v boundary that anchors the accepted `y_t(v)` target.
+- [YT_EW_COUPLING_BRIDGE_NOTE.md](YT_EW_COUPLING_BRIDGE_NOTE.md)
+  for the EW-coupling bridge inputs and SM-RGE surrogate the scan reuses.
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+  for the QFP-stability bound on the EW-window dependence.
