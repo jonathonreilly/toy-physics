@@ -21048,6 +21048,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_ward_identity_derivation.py"
     },
+    "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 15,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py"
+    },
     "yt_zero_import_authority_note": {
       "assert_count": 0,
       "counts": {
@@ -45771,19 +45783,34 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "exists": true
+    },
+    "scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 15,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
     }
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 180,
+    "decoration_candidates": 181,
     "dominant_class_distribution": {
-      "A": 127,
+      "A": 128,
       "B": 169,
       "C": 664,
       "D": 255,
       "none": 420
     },
-    "runners_classified": 1635,
+    "runners_classified": 1636,
     "runners_with_C": 833,
     "runners_with_D": 459
   }

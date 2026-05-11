@@ -23265,6 +23265,22 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "to": "unit_singlet_overlap_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "to": "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19"
+    },
+    {
+      "from": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "to": "native_gauge_closure_note"
+    },
+    {
       "from": "yt_zero_import_authority_note",
       "to": "alpha_s_derived_note"
     },
@@ -66855,6 +66871,22 @@
       "runner_path": "scripts/frontier_yt_ward_identity_derivation.py",
       "title": "Top-Yukawa Structural Identification: y_t(M_Pl) = g_s(M_Pl) / sqrt(6)"
     },
+    "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10": {
+      "claim_id": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+        "yt_ew_color_projection_theorem",
+        "native_gauge_closure_note"
+      ],
+      "note_hash": "11698cd5f31242adf5ab65d7abe7ee88cb670d48d5c93e59757135f34dcdb6e7",
+      "path": "docs/YT_WARD_STEP3_SAME_1PI_CONSTRUCTION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py",
+      "title": "YT_WARD Step 3 Same-1PI Construction Gate Diagnostic"
+    },
     "yt_zero_import_authority_note": {
       "claim_id": "yt_zero_import_authority_note",
       "claim_type_author_hint": null,
@@ -67746,7 +67778,7 @@
       "meta": 59,
       "no_go": 29,
       "none": 1628,
-      "open_gate": 31,
+      "open_gate": 32,
       "positive_theorem": 118
     },
     "claim_type_seed_hint_counts": {
@@ -67755,13 +67787,13 @@
       "meta": 59,
       "no_go": 136,
       "none": 451,
-      "open_gate": 119,
+      "open_gate": 120,
       "positive_theorem": 618
     },
-    "edge_count": 8425,
-    "leaf_count": 580,
-    "node_count": 2134,
+    "edge_count": 8429,
+    "leaf_count": 581,
+    "node_count": 2135,
     "root_count": 802,
-    "runners_with_path": 1747
+    "runners_with_path": 1748
   }
 }

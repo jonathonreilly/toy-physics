@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 678,
     "high": 27,
-    "leaf": 252,
+    "leaf": 253,
     "medium": 162
   },
   "cycle_break_target_count": 253,
@@ -30674,6 +30674,32 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+      "claim_scope": null,
+      "claim_type": "open_gate",
+      "claim_type_provenance": "author_hint",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "deps": [
+        "unit_singlet_overlap_narrow_theorem_note_2026-05-02",
+        "g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19",
+        "yt_ew_color_projection_theorem",
+        "native_gauge_closure_note"
+      ],
+      "direct_in_degree": 0,
+      "effective_status": "unaudited",
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_WARD_STEP3_SAME_1PI_CONSTRUCTION_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "queue_reason": "unaudited",
+      "ready": true,
+      "runner_path": "scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "reproduction_audit_note",
       "claim_scope": null,
       "claim_type": "positive_theorem",
@@ -37234,6 +37260,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 17,
-  "total_pending": 1119
+  "ready_count": 18,
+  "total_pending": 1120
 }
