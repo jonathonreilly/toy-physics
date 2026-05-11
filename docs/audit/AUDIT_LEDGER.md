@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 88 |
 | **retained_no_go** | 131 |
-| **retained_bounded** | 272 |
+| **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1222 |
+| unaudited | 1221 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 453 |
+| `audited_clean` | 454 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1335 |
+| `unaudited` | 1334 |
 
 | claim_type | count |
 |---|---:|
@@ -201,6 +201,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `clifford_chirality_dimension_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `clifford_volume_chirality_even_dimension_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -2413,6 +2414,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** An element gamma_5 in Cl_C(p,q) satisfying gamma_5^2 = +I and {gamma_5, gamma_mu} = 0 for all mu exists if and only if n = p + q is even.  _(class `A`)_
 - **chain closes:** True — The even case closes by the volume element, whose parity commutation rule gives anticommutation with all generators and whose square is a nonzero scalar removable by complex rescaling. The odd case closes because the monomial parity rule leaves no nonzero simultaneous anticommuting component, so no algebra element can satisfy C2.
 - **rationale:** The scoped claim is a self-contained algebraic identity, not a physical bridge or comparator claim. The proof supplies the general Clifford parity argument, and the runner provides exact-symbolic spot checks for CAR, the volume-element rule, even-n construction, odd-n obstruction, and the d_s = 3 parity consequence. The note explicitly excludes the parent anomaly and d_t = 1 claims, so those open parent items do not block this narrow theorem.
+- **auditor confidence:** high
+
+### `closure_t2_m1_m2_distinguisher_note_2026-05-10_t2m1m2`
+
+- **Note:** [`CLOSURE_T2_M1_M2_DISTINGUISHER_NOTE_2026-05-10_t2m1m2.md`](../../docs/CLOSURE_T2_M1_M2_DISTINGUISHER_NOTE_2026-05-10_t2m1m2.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Self-contained bounded diagnostic for two reduced BAE measure candidates on x=E_+/(E_+ + E_perp): M1 proportional to x(1-x) and M2 proportional to sqrt(x(1-x)) share the saddle x=1/2; Gaussian differences are homogeneous rescalings; the induced full measures are Beta(2,2) and Beta(3/2,3/2) with exact moment/kurtosis/KL distinctions; no canonical primitive, BAE closure, future-observable no-go, or PDG-comparable discriminator is audited beyond the current single-realization reduced-model scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** M1 = Beta(2,2) and M2 = Beta(3/2,3/2), so the full-measure shapes have exact dimensionless differences, while saddle and Gaussian distinctions are identical or homogeneous scale choices and therefore do not yield a PDG-comparable discriminator in the current single-realization scope.  _(class `A`)_
+- **chain closes:** True — Within the explicitly defined reduced model, the saddle, Hessian ratio, Beta normalizations, exact moments, dimensionless discriminators, and KL positivity follow by elementary calculus and Beta-distribution formulas. The non-discriminator conclusion is bounded to the stated current scope: one realization and no independent fluctuation-scale calibration.
+- **rationale:** The note does not ask the audit lane to choose M1 or M2; it only records what can and cannot distinguish them inside the reduced measure model. The exact Beta-distribution calculations and the factor-two Gaussian rescaling close from the definitions, and the runner reproduces the saddle, Hessian, partition-function, moment, KL, and disclaimer checks without importing a load-bearing PDG comparator. Residual risk is scope creep: the result should remain a bounded diagnostic, not a theorem that no future observable could distinguish the measures or that BAE itself is closed.
 - **auditor confidence:** high
 
 ### `cluster_decomposition_mass_gap_bridge_theorem_note_2026-05-09`
