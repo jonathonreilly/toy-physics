@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 273 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1221 |
+| unaudited | 1220 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 183 |
+| ~~audited_conditional~~ | 184 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 454 |
-| `audited_conditional` | 183 |
+| `audited_conditional` | 184 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1334 |
+| `unaudited` | 1333 |
 
 | claim_type | count |
 |---|---:|
@@ -628,6 +628,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
+| `cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `decoherence_action_independence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dense_prune_guard_seed_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `dimension_selection_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -2554,6 +2555,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`
   - `CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`
   - `ALPHA_S_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CUBIC_COXETER_REGGE_DEFICIT_VANISHING_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CUBIC_COXETER_REGGE_DEFICIT_VANISHING_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Attempted standalone Euclidean/Regge theorem for the standard six-tetrahedra Coxeter triangulation of the flat unit-cube tiling: exact per-tetrahedron dihedral table, zero deficit around axis, face-diagonal, and body-diagonal interior edges, zero Regge action on flat triangulated Z^3, and six-tetrahedra volume partition; no Schur-DtN boundary functional, static-conformal bridge, source readout, external comparator, or fitted input is audited.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For the axis-edge class the proof asserts that each of the four cubes sharing an axis edge contains exactly two tetrahedra with dihedral pi/4, giving 4*2*(pi/4)=2*pi.  _(class `A`)_
+- **chain closes:** False — The body-diagonal, face-diagonal, volume, and canonical tetrahedron table checks close, but the source proof's axis-edge incidence count is false as written. Exact local enumeration of the representative axis edge gives six incident tetrahedra with mixed pi/4 and pi/2 contributions, not eight pi/4 contributions, so the universal zero-deficit proof needs an explicit corrected edge-star enumeration before this exact positive theorem can be retained.
+- **rationale:** Issue: the load-bearing axis-edge proof uses the wrong incidence pattern for the four cubes around a representative axis edge. Why this blocks: T2 and T3 require an exact all-interior-edge deficit proof; a proof step that counts eight pi/4 contributions cannot certify the actual six-tetrahedron edge star, even though the corrected sum still appears to be 2*pi. Repair target: replace the axis-edge section with a symbolic finite edge-star enumeration for all local axis/face/body edge orbits, and have the runner print the exact contributing angles for the representative interior stars rather than relying on the incorrect prose count plus a numerical block sample. Claim boundary until fixed: the T1 dihedral table, T4 volume partition, body-diagonal and face-diagonal sums, and numerically corroborated flat-block zero-deficit checks remain useful bounded evidence, but the exact universal Regge-action theorem is not yet audited clean.
 - **auditor confidence:** high
 
 ### `cycle_battery_note_2026-04-10`
