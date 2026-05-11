@@ -15989,6 +15989,14 @@
       "to": "minimal_axioms_2026-05-03"
     },
     {
+      "from": "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10",
+      "to": "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+    },
+    {
       "from": "observable_principle_audit_note_2026-05-02",
       "to": "observable_principle_from_axiom_note"
     },
@@ -53204,6 +53212,20 @@
       "runner_path": "scripts/frontier_nonlinear_born_gravity.py",
       "title": "Nonlinear Propagator Breaks Born Rule and Gravity Simultaneously"
     },
+    "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10": {
+      "claim_id": "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07"
+      ],
+      "note_hash": "a300d393e44eea639b7bf217ba6b0d2915810fb2e6a7f20fcdae13e9ce06278c",
+      "path": "docs/OBSERVABLE_GENERATOR_ADDITIVITY_FROM_CLUSTER_DECOMPOSITION_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py",
+      "title": "Observable-Generator Additivity From Cluster Decomposition Bounded Note"
+    },
     "observable_principle_audit_note_2026-05-02": {
       "claim_id": "observable_principle_audit_note_2026-05-02",
       "claim_type_author_hint": "meta",
@@ -67222,7 +67244,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 262,
+      "bounded_theorem": 263,
       "decoration": 1,
       "meta": 59,
       "no_go": 27,
@@ -67231,7 +67253,7 @@
       "positive_theorem": 110
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 744,
+      "bounded_theorem": 745,
       "decoration": 1,
       "meta": 59,
       "no_go": 134,
@@ -67239,10 +67261,10 @@
       "open_gate": 118,
       "positive_theorem": 610
     },
-    "edge_count": 8362,
-    "leaf_count": 568,
-    "node_count": 2117,
+    "edge_count": 8364,
+    "leaf_count": 569,
+    "node_count": 2118,
     "root_count": 794,
-    "runners_with_path": 1730
+    "runners_with_path": 1731
   }
 }

@@ -13464,6 +13464,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_nonlinear_born_gravity.py"
     },
+    "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 10,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py"
+    },
     "observable_principle_audit_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -34960,6 +34972,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py": {
+      "assert_count": 1,
+      "claims": [
+        "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 10,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_observable_principle_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -45316,15 +45343,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 176,
+    "decoration_candidates": 177,
     "dominant_class_distribution": {
-      "A": 122,
+      "A": 123,
       "B": 168,
       "C": 658,
       "D": 250,
       "none": 420
     },
-    "runners_classified": 1618,
+    "runners_classified": 1619,
     "runners_with_C": 826,
     "runners_with_D": 448
   }
