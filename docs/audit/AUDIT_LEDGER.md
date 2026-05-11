@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 98 |
-| **retained_no_go** | 133 |
+| **retained_no_go** | 134 |
 | **retained_bounded** | 284 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1189 |
+| unaudited | 1188 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 478 |
+| `audited_clean` | 479 |
 | `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1302 |
+| `unaudited` | 1301 |
 
 | claim_type | count |
 |---|---:|
@@ -453,6 +453,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
+| `primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `primitive_p_lh_content_proposal_note_2026-05-10_pplh` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `qnm_control_hardening_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `quark_c3_a1_source_domain_bridge_no_go_note_2026-04-28` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | B | - |
@@ -8228,6 +8229,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** In the finite C3-circulant model, tau_M(H)=Tr(pi_plus(H))+Tr(pi_perp(H)) degenerates to Tr(H)=3a, while the equal block-log saddle under E_plus+E_perp=N occurs uniquely at E_plus=E_perp and translates to |b|^2/a^2=1/2.  _(class `A`)_
 - **chain closes:** True — The identities follow directly from the displayed Frobenius block energies and elementary one-variable log-saddle calculus. The runner computes the block energies, trace degeneracy, saddle point, BAE ratio translation, and half-curvature distinction with PASS=27 FAIL=0, and the source note explicitly excludes primitive election or retained-grade physical closure.
 - **rationale:** The audited content is a bounded finite-algebra guardrail, not a claim that BAE is selected by the framework. The runner verifies the exact trace degeneracy, equal-block log stationary point and maximum behavior, translation of E_plus=E_perp to |b|^2/a^2=1/2, and the half-scaled Hessian distinction without importing empirical inputs or electing a primitive. The note's boundary language keeps the bare reduced-coordinate measure and full BAE closure out of scope, so the finite claim closes.
+- **auditor confidence:** high
+
+### `primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10`
+
+- **Note:** [`PRIMITIVE_P_BAE_M1_TRACE_DEGENERACY_CORRECTION_NOTE_2026-05-10.md`](../../docs/PRIMITIVE_P_BAE_M1_TRACE_DEGENERACY_CORRECTION_NOTE_2026-05-10.md)
+- **claim_type:** `no_go`
+- **claim_scope:** No-go for the literal linear M1 trace functional on Herm_circ(3): tau_M(H)=Tr(pi_plus(H))+Tr(pi_perp(H)) collapses to ordinary trace and cannot load-bear the BAE derivation; the non-linear block-Frobenius log functional is only recorded as the surviving candidate form, not audited as a framework primitive.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For H=aI+bC+conj(b)C^2, Tr(pi_plus(H))=3a and Tr(pi_perp(H))=b Tr(C)+conj(b) Tr(C^2)=0, so tau_M(H)=Tr(H)=3a and the literal linear trace form cannot distinguish doublet amplitude.  _(class `A`)_
+- **chain closes:** True — The degeneracy follows from elementary C3 circulant algebra: C and C^2 are traceless, so the doublet part contributes zero to the linear trace functional. The runner's M1 subcheck verifies zero tau-minus-trace delta, C/C^2 tracelessness, and the separate BAE saddle ratio for the log-functional candidate; broader P-BAE primitive closure is excluded.
+- **rationale:** The no-go is local and exact: the proposed linear trace functional is just ordinary trace on Hermitian C3 circulants, hence it is blind to doublet amplitude at fixed a and cannot supply the required block-weight distinction. The proof does not need the open target proposal or review PR as authority; it follows from Tr(C)=Tr(C^2)=0 and the displayed decomposition. The runner's relevant M1 subtest passes and the note explicitly withholds any retained claim for the broader P-BAE primitive program.
 - **auditor confidence:** high
 
 ### `primitive_p_lh_content_proposal_note_2026-05-10_pplh`
