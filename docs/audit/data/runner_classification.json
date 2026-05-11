@@ -10200,6 +10200,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_koide_circulant_character_bridge.py"
     },
+    "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_koide_circulant_q_two_thirds_algebraic_narrow.py"
+    },
     "koide_circulant_wilson_target_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -10487,6 +10499,18 @@
       "decoration_candidate": true,
       "dominant_class": "B",
       "runner": "scripts/frontier_koide_hostile_review_guard.py"
+    },
+    "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_koide_kappa_block_total_frobenius_algebraic_narrow.py"
     },
     "koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19": {
       "assert_count": 1,
@@ -32800,6 +32824,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_koide_circulant_q_two_thirds_algebraic_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_koide_circulant_wilson_target.py": {
       "assert_count": 1,
       "claims": [
@@ -33158,6 +33197,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_koide_kappa_block_total_frobenius_algebraic_narrow.py": {
+      "assert_count": 2,
+      "claims": [
+        "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_koide_kappa_block_total_frobenius_measure_theorem.py": {
@@ -45375,11 +45429,11 @@
       "A": 124,
       "B": 168,
       "C": 658,
-      "D": 250,
+      "D": 252,
       "none": 420
     },
-    "runners_classified": 1620,
+    "runners_classified": 1622,
     "runners_with_C": 826,
-    "runners_with_D": 449
+    "runners_with_D": 451
   }
 }
