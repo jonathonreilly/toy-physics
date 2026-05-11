@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 256 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1282 |
-| audit_in_progress | 15 |
+| unaudited | 1281 |
+| audit_in_progress | 16 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
@@ -41,14 +41,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 23 |
+| `audit_in_progress` | 24 |
 | `audited_clean` | 427 |
 | `audited_conditional` | 152 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1395 |
+| `unaudited` | 1394 |
 
 | claim_type | count |
 |---|---:|
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_gravity_loop_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
+| `valley_linear_action_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `valley_linear_asymptotic_bridge_note` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `wave_static_boundary_sensitivity_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `wave_static_matrixfree_fixed_beam_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
