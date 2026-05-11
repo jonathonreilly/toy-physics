@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 94 |
+| **retained** | 95 |
 | **retained_no_go** | 132 |
 | **retained_bounded** | 277 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1205 |
+| unaudited | 1204 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 465 |
+| `audited_clean` | 466 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1318 |
+| `unaudited` | 1317 |
 
 | claim_type | count |
 |---|---:|
@@ -346,6 +346,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `inverse_problem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_cone_completing_root_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cone_three_form_equivalence_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `koide_cyclic_projector_block_democracy_note_2026-04-18` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -5922,6 +5923,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the standard root-of-unity identity and the definitions of a_0 and z, the note derives a_0 = sqrt(3) a and z = sqrt(3) b, hence a_0^2 - 2|z|^2 = 3a^2 - 6|b|^2.  _(class `A`)_
 - **chain closes:** True — The conclusions follow directly from the stated definitions and the cube-root identities 1 + omega + omega^2 = 0 and omega^3 = 1. No cited dependency, physical readout, fitted value, or external comparator is needed.
 - **rationale:** The proof is a genuine class-A algebraic closure over explicitly stated symbols and root-of-unity identities. The runner source performs exact symbolic checks of the same Fourier identities and includes no hidden physical bridge, tuned comparator, or imported dependency. The audited boundary is only the polynomial-algebra bridge, not any Koide, Wilson, charged-lepton, or selection-principle claim.
+- **auditor confidence:** high
+
+### `koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`KOIDE_CIRCULANT_Q_TWO_THIRDS_ALGEBRAIC_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/KOIDE_CIRCULANT_Q_TWO_THIRDS_ALGEBRAIC_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Zero-dependency abstract algebra theorem: for v_0>0 and real delta, the symbols x_k=v_0(1+sqrt(2)cos(delta+2pi k/3)) satisfy sum cos=0, sum cos^2=3/2, and (sum x_k^2)/(sum x_k)^2=2/3 independent of v_0 and delta. The clean scope treats x_k as abstract signed real coordinates and does not identify them with charged-lepton sqrt(m), derive the sqrt(2) coefficient, or determine v_0 or delta.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For x_k = v_0(1 + sqrt(2) cos(delta + 2 pi k/3)), the root-of-unity identities give sum_k x_k = 3 v_0 and sum_k x_k^2 = 6 v_0^2, hence (sum_k x_k^2)/(sum_k x_k)^2 = 2/3.  _(class `A`)_
+- **chain closes:** True — The ratio follows from elementary root-of-unity trigonometric identities and algebra on the declared symbols. The note explicitly excludes the physical spectrum/readout/equipartition/scale/phase bridges, so those absent bridges are not part of the audited claim.
+- **rationale:** Within the stated abstract ansatz, the proof closes exactly: the root-of-unity sums force sum x_k = 3 v_0 and sum x_k^2 = 6 v_0^2, giving Q = 2/3. The live runner verifies the symbolic identities, sample exact substitutions, and the formal m_k=x_k^2 corollary with PASS=23 and FAIL=0. Residual risk is downstream scope drift: the audit does not ratify charged-lepton mass identification, the sqrt(2) equipartition selection, or any physical Koide derivation.
 - **auditor confidence:** high
 
 ### `koide_cl3_selector_gap_note_2026-04-19`
