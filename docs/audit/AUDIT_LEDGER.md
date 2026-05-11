@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 80 |
 | **retained_no_go** | 127 |
-| **retained_bounded** | 248 |
+| **retained_bounded** | 249 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1101 |
+| unaudited | 1100 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -40,13 +40,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 424 |
+| `audited_clean` | 425 |
 | `audited_conditional` | 261 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1199 |
+| `unaudited` | 1198 |
 
 | claim_type | count |
 |---|---:|
@@ -420,6 +420,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sixth_family_sheared_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `sixth_family_sheared_fm_transfer_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
 | `sixth_family_sheared_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | B | - |
+| `sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `source_driven_field_recovery_h025_pocket_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `source_resolved_generated_architecture_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -9403,6 +9404,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The parity-sheared shell sweep passes 12/21 sampled rows, with exact zero-source and neutral controls, sign orientation on the passing subset, drift coverage [0.0, 0.05, 0.1, 0.15, 0.2, 0.3], and mean exponent 0.999895, so the construction is a narrow sixth-family basin rather than a generic theorem.  _(class `B`)_
 - **chain closes:** True — SIXTH_FAMILY_SHEARED_SWEEP.py currently reproduces the note's pass count, drift coverage, exact zero/neutral controls, and mean weak-field exponent. The note's conclusion is bounded and selective, matching the data rather than claiming family-wide closure.
 - **rationale:** The sheared basin note closes at bounded tier: the runner verifies the exact pass/fail structure and the note states the correct narrow interpretation. It neither expands the result into a universal connectivity theorem nor hides the failed rows. Residual risk is only missing ledger runner attachment; the local sweep script is the direct evidence surface.
+- **auditor confidence:** high
+
+### `sm_hypercharge_uniqueness_algebraic_solution_enumeration_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`SM_HYPERCHARGE_UNIQUENESS_ALGEBRAIC_SOLUTION_ENUMERATION_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/SM_HYPERCHARGE_UNIQUENESS_ALGEBRAIC_SOLUTION_ENUMERATION_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the conditional rational-algebra enumeration of (A1)-(A3) with y_4 = 0 and y_1 > 0, plus the stated charge readout under Q = T_3 + Y/2 using the note's declared left-handed hypercharges.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop-019e14c4-aa3b-73e1-b9cc-5f44898234c9`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** With y_4 = 0 and y_1 + y_2 = 2/3, (A1) forces y_3 = -2, and (A3) reduces to the quadratic 9 t^2 - 6 t - 8 = 0 whose roots are 4/3 and -2/3.  _(class `A`)_
+- **chain closes:** True — The scoped theorem is explicitly conditional on the anomaly equations, neutral-singlet identification, and Q-labelling convention. From those retained hypotheses the algebraic enumeration, swap ambiguity, Q-selected singleton, and stated charge denominators close without any required external comparator or upstream physics derivation.
+- **rationale:** The load-bearing result is an exact algebraic consequence of the equations stated inside the note. The runner independently checks the reductions, quadratic discriminant, full rational solution set, Q-labelling selection, charge arithmetic, and no-N counterfactual at exact symbolic precision. The note also keeps the upstream derivation of the anomaly coefficients and y_4 = 0 outside the claim boundary, so those are not blockers for this bounded theorem.
 - **auditor confidence:** high
 
 ### `source_driven_field_recovery_h025_pocket_note`
