@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 281 |
+| **retained_bounded** | 282 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1193 |
+| unaudited | 1192 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 474 |
+| `audited_clean` | 475 |
 | `audited_conditional` | 190 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1306 |
+| `unaudited` | 1305 |
 
 | claim_type | count |
 |---|---:|
@@ -422,6 +422,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `nn_lattice_rescaled_kernel_identification_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `nonlabel_grown_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `nonlabel_grown_drift_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `oh_schur_boundary_action_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `ollivier_einstein_proxy_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `one_generation_anomaly_singlet_completion_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -7586,6 +7587,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given scalar additivity, CPT-even phase blindness, continuity/minimal regularity, and normalization, W must solve W(r1 r2)=W(r1)+W(r2), so W=log|det(D+J)| up to the stated convention.  _(class `A`)_
 - **chain closes:** False — The runner supports the finite algebra for the chosen candidate generator, but the physical selection of that generator still rests on an admitted scalar-additivity premise and an unproved normalization/source bridge. No one-hop authority is supplied to close those premises, and the claimed runner-local retirement of P2/P4 does not derive the physical phase-blind generator or multiplicative scale choice from retained inputs.
 - **rationale:** Issue: the exact log-det algebra is verified only after selecting the physical scalar generator by admitted additivity/CPT-even/regularity/normalization premises, with P1 still explicitly open and the multiplicative normalization c=1 conventional. Why this blocks: the restricted packet has no retained one-hop theorem deriving that physical observable bridge, and the runner mainly checks consistency of the chosen W rather than forcing the observable class from the axiom alone. Repair target: add a bridge theorem deriving scalar additivity and the normalization/source scale from retained primitives, or keep all downstream citations explicitly conditional on those premises. Claim boundary until fixed: the finite algebra for the selected log|det| generator on the runner block is supported; unconditional axiom-to-observable closure is not.
+- **auditor confidence:** high
+
+### `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded block-local algebra theorem: assuming an invertible real anti-Hermitian D block supplied by the retained-bounded CPT real-D theorem, the explicitly admitted scalar-generator admissibility class (X2), and the standard continuous multiplicative-to-additive Cauchy-Erdos closure, every admissible generator has the same local source-derivative content as c*(log|det(D+J)|-log|det D|). No derivation of X2, no zero-mode/non-real-D extension, and no physical Hamiltonian or QFT observable identification is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Under (X1), (X2), and (X3), any admissible scalar generator F equals c times W[J]=log|det(D+J)|-log|det D| on the real-D block, so its local source-derivative content matches W up to scale.  _(class `A`)_
+- **chain closes:** True — The cited real-D structural dependency is retained_bounded, and the remaining hypotheses are explicit parts of the bounded statement. The runner verifies the determinant reality, block determinant factorization, real/imaginary trace-log corollaries, source derivatives, and Cauchy-Erdos log closure at exact symbolic precision with a non-real-D counterfactual.
+- **rationale:** The proof closes as a conditional algebraic uniqueness result because every non-algebraic selection premise is inside the audited scope rather than hidden. The result does not promote the broad observable-principle parent, since admissibility class (X2), invertibility, and real-D locality remain explicit bounds. Residual risk is only future overcitation outside those bounds, which the note excludes.
 - **auditor confidence:** high
 
 ### `oh_schur_boundary_action_note`
