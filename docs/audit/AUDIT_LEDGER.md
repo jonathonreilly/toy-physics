@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1123 |
+| unaudited | 1124 |
 | meta | 99 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 261 |
+| ~~audited_conditional~~ | 260 |
 | ~~audited_failed~~ | 27 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -41,12 +41,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 431 |
-| `audited_conditional` | 261 |
+| `audited_conditional` | 260 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 71 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1222 |
+| `unaudited` | 1223 |
 
 | claim_type | count |
 |---|---:|
@@ -722,7 +722,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
-| `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7723,21 +7722,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the theorem imports the electroweak Higgs-doublet lane as an admitted input. Why this blocks: without a retained-grade Higgs/Yukawa scalar authority, the conclusion is only a conditional reduction, not a retained-stack theorem. Repair target: retain or directly cite a retained Higgs-doublet/one-Higgs Yukawa gauge-selection theorem adequate to supply the scalar carrier. Claim boundary until fixed: with M_R,current=0 and admitted H, the remaining mass object is Y_nu; no Y_nu texture, masses, or PMNS data are derived.
 - **open / conditional deps cited:**
   - `publication/ci3_z3/DERIVATION_ATLAS.md`
-- **auditor confidence:** high
-
-### `newton_law_derived_note`
-
-- **Note:** [`NEWTON_LAW_DERIVED_NOTE.md`](../../docs/NEWTON_LAW_DERIVED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Conditional derivation of a 1/r^2 force from a stipulated lattice Poisson equation on Z^3 plus the stated Green-function asymptotic.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e126b-c2c4-74c0-bae0-a58eb1472589`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The staggered scalar field obeys the lattice Poisson equation (-Delta_lat) phi = rho, so the Z^3 Green's function asymptotic gives phi ~ M/(4 pi r) and F ~ M M_test/(4 pi r^2).  _(class `A`)_
-- **chain closes:** False — The Poisson-to-inverse-square algebra closes once (-Delta_lat) phi = rho is assumed. The supplied one-hop authority explicitly says the identification making (-Delta_lat) the field operator rests on a stipulated closure identity L^{-1}=G_0, not a derivation from Cl(3) on Z^3.
-- **rationale:** Issue: the note claims Newton's law follows without additional assumptions, but its load-bearing Poisson equation is only supported by a cited authority that is conditional on a stipulated closure identity. Why this blocks: retained propagation cannot treat an open/stipulated operator identification as an unconditional theorem from Cl(3). Repair target: supply a retained bridge theorem deriving L^{-1}=G_0, or narrow this note to a bounded theorem conditional on the Poisson equation. Claim boundary until fixed: from stipulated Poisson on Z^3, Green asymptotics and linearity give the stated inverse-square/product form.
-- **open / conditional deps cited:**
-  - `GRAVITY_FULL_SELF_CONSISTENCY_NOTE.md`
 - **auditor confidence:** high
 
 ### `newton_persistent_pattern_control_note_2026-04-11`

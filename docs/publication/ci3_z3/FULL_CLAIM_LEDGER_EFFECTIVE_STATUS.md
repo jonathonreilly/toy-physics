@@ -82,7 +82,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](../../SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)&nbsp;[audit:retained_bounded], [POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md](../../POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)&nbsp;[audit:unaudited], [NEWTON_LAW_DERIVED_NOTE.md](../../NEWTON_LAW_DERIVED_NOTE.md)&nbsp;[audit:audited_conditional] |
+| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](../../SELF_CONSISTENCY_FORCES_POISSON_NOTE.md)&nbsp;[audit:retained_bounded], [POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md](../../POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)&nbsp;[audit:unaudited], [NEWTON_LAW_DERIVED_NOTE.md](../../NEWTON_LAW_DERIVED_NOTE.md)&nbsp;[audit:unaudited] |
 | weak-field WEP | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md)&nbsp;[audit:unaudited] |
 | weak-field time dilation | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md)&nbsp;[audit:unaudited] |
 | restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)&nbsp;[audit:retained_bounded] |

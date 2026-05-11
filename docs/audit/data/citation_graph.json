@@ -53529,16 +53529,16 @@
     },
     "newton_law_derived_note": {
       "claim_id": "newton_law_derived_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "gravity_full_self_consistency_note"
       ],
-      "note_hash": "03339005a461c1854ee4092120b36cdee03c579c2b5017e1465529670bfab918",
+      "note_hash": "5e0781d773a9b3d0472977bed4cfb71d6b5c30d5a7c60f68b13cef446c72b16e",
       "path": "docs/NEWTON_LAW_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_distance_law_definitive.py",
-      "title": "Newton's Law Derived from Cl(3) on Z^3"
+      "title": "Newton's Law Derived from the Physical Cl(3) Local Algebra on Z^3"
     },
     "newton_persistent_pattern_control_note_2026-04-11": {
       "claim_id": "newton_persistent_pattern_control_note_2026-04-11",
@@ -67958,22 +67958,22 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 269,
+      "bounded_theorem": 270,
       "decoration": 1,
       "meta": 60,
       "no_go": 30,
-      "none": 1628,
+      "none": 1627,
       "open_gate": 33,
       "positive_theorem": 124
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 751,
+      "bounded_theorem": 752,
       "decoration": 1,
       "meta": 60,
       "no_go": 137,
       "none": 451,
       "open_gate": 121,
-      "positive_theorem": 624
+      "positive_theorem": 623
     },
     "edge_count": 8442,
     "leaf_count": 590,
