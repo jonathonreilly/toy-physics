@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 257 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1257 |
+| unaudited | 1256 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 13 |
 | ~~audited_renaming~~ | 15 |
-| ~~audited_conditional~~ | 171 |
+| ~~audited_conditional~~ | 172 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 27 |
 | `audited_clean` | 430 |
-| `audited_conditional` | 171 |
+| `audited_conditional` | 172 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 13 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1370 |
+| `unaudited` | 1369 |
 
 | claim_type | count |
 |---|---:|
@@ -691,6 +691,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_taste_cube_cyclic_source_descent_note_2026-04-18` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `lanes.ordered-lattice.readme` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `lattice_3d_l2_numpy_h0125_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `lattice_3d_l2_tail_stats_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `lattice_nn_mass_response_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -6064,6 +6065,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The reduced 3D 1/L^2 + h^2 numpy lane completes numerically through h = 0.125, preserves Born, and does not preserve the retained weak-field gravity class on this audit family.  _(class `C`)_
 - **chain closes:** False — The note's numerical table matches the supplied stdout, and the wrapper fixes the h ladder and family parameters. The load-bearing physics computation is delegated to scripts.lattice_3d_l2_numpy.run_card, whose source is not supplied, so the restricted packet cannot verify the claimed kernel, measure, observables, or sign readout.
 - **rationale:** Issue: the wrapper imports the opaque run_card implementation for the actual dense-lattice computation, while only the wrapper source and stdout are supplied. Why this blocks: stdout alone is not authoritative under the audit rubric, so the chain cannot establish that the reported Born and gravity rows come from the claimed 3D 1/L^2 + h^2 construction. Repair target: provide and audit the full scripts/lattice_3d_l2_numpy.py run_card implementation or an equivalent deterministic computation certificate. Claim boundary until fixed: the supplied log reports numerical completion and weak-field gravity failure for the named wrapper, but the bounded theorem is not closed from the restricted packet.
+- **auditor confidence:** high
+
+### `lattice_3d_l2_tail_stats_note`
+
+- **Note:** [`LATTICE_3D_L2_TAIL_STATS_NOTE.md`](../../docs/LATTICE_3D_L2_TAIL_STATS_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded comparison claim that a width-8 h=0.25 3D inverse-square tail-statistics probe improves the post-peak tail fit relative to a width-6 baseline, excluding any asymptotic inverse-square law or branch promotion.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The note claims the width-8 h=0.25 probe improves the post-peak tail fit over the earlier width-6 readout, citing the frozen width-8 log with exponent b^(-0.70), R^2=0.955, and a width-6 retained-summary comparator b^(-0.53).  _(class `B`)_
+- **chain closes:** False — The frozen width-8 log supports the stated width-8 rows, but the restricted packet does not provide a retained width-6 comparator audit row or completed comparator output. The current runner cache also records timeout at 120 s, so the cache is freshness evidence rather than completed stdout.
+- **rationale:** Issue: the width-8 tail table is supported by a frozen log, but the improvement claim depends on a width-6 comparator that is described rather than supplied as retained one-hop evidence. Why this blocks: a reviewer can accept the width-8 b^(-0.70), R^2=0.955 row while rejecting the comparison to width-6 without the comparator artifact. Repair target: wire the exact width-6 comparator note/log or add a runner mode that computes both width-6 and width-8 in the same completed artifact. Claim boundary until fixed: width-8 frozen-log tail statistics only; no retained improvement claim.
 - **auditor confidence:** high
 
 ### `lattice_3d_tapered_refinement_note`
