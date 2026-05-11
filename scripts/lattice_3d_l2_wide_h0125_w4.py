@@ -9,6 +9,16 @@ mass-law exponent moves toward 1.0 or stays pinned near the fixed-family
 
 from __future__ import annotations
 
+# Heavy compute / wider-family lattice diagnostic — far exceeds the 120s
+# default audit timeout. Profiled wall-clock at 2026-05-10: ~1002s on
+# the canonical Python 3.12 machine (most time in numpy linear-algebra
+# work on the wider physical box); declaring 1800s here gives ~80%
+# margin while keeping the audit-cache budget bounded (same as poisson
+# and the sister h0125_wider_replay runner). Without this declaration
+# the audit lane caches an empty stdout under `status: timeout`,
+# blocking the audit verdict.
+AUDIT_TIMEOUT_SEC = 1800
+
 import math
 import os
 import sys
