@@ -38034,6 +38034,17 @@
       "runner_path": "scripts/frontier_ckm_consecutive_primes_s3_koide_bridge.py",
       "title": "Consecutive Primes and S3 Representation Structure from CKM Counts: Koide-Bridge Support"
     },
+    "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10": {
+      "claim_id": "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "508a4a28f5c99958e0b47f1dbdabb59bd08de996f6578d5e2eb6be9306f3d830",
+      "path": "docs/CKM_CP_PHASE_RHO_ETA_TO_DELTA_NARROW_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_ckm_cp_phase_rho_eta_to_delta_narrow.py",
+      "title": "CKM CP-Phase rho-eta to delta Narrow Theorem"
+    },
     "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10": {
       "claim_id": "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
       "claim_type_author_hint": "positive_theorem",
@@ -66933,6 +66944,7 @@
     "circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02",
     "circulant_response_master_identity_narrow_theorem_note_2026-05-02",
     "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10",
+    "ckm_cp_phase_rho_eta_to_delta_narrow_theorem_note_2026-05-10",
     "ckm_cp_phase_structural_identity_narrow_theorem_note_2026-05-10",
     "ckm_down_type_scale_convention_support_note_2026-04-22",
     "ckm_magnitudes_structural_counts_narrow_theorem_note_2026-05-02",
@@ -67584,7 +67596,7 @@
       "no_go": 28,
       "none": 1628,
       "open_gate": 31,
-      "positive_theorem": 114
+      "positive_theorem": 115
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 751,
@@ -67593,12 +67605,12 @@
       "no_go": 135,
       "none": 451,
       "open_gate": 119,
-      "positive_theorem": 614
+      "positive_theorem": 615
     },
     "edge_count": 8402,
-    "leaf_count": 579,
-    "node_count": 2130,
-    "root_count": 799,
-    "runners_with_path": 1743
+    "leaf_count": 580,
+    "node_count": 2131,
+    "root_count": 800,
+    "runners_with_path": 1744
   }
 }
