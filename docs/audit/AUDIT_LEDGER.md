@@ -18,12 +18,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | effective_status | count |
 |---|---:|
-| **retained** | 99 |
+| **retained** | 100 |
 | **retained_no_go** | 134 |
 | **retained_bounded** | 290 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 14 |
-| unaudited | 1175 |
+| unaudited | 1174 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 486 |
+| `audited_clean` | 487 |
 | `audited_conditional` | 196 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1288 |
+| `unaudited` | 1287 |
 
 | claim_type | count |
 |---|---:|
@@ -589,6 +589,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `three_generation_hw1_distinct_translation_characters_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `three_generation_local_algebra_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `three_generation_observable_count_corollary_note_2026-05-03` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
+| `three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `triple_stack_collapse_scaling_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `two_field_retarded_family_closure_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `two_field_retarded_probe_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
@@ -10833,6 +10834,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the restricted packet, the runner explicitly enumerates the eight BZ corners, constructs the retained 3x3 generators, builds matrix units spanning M_3(C), and applies the standard kernel-invariance quotient argument. The conclusion follows as an algebraic closure of those finite checks and stated nonzero-quotient condition.
 - **rationale:** The load-bearing quotient step is a genuine finite-dimensional algebraic closure: algebra preservation makes ker(Q) invariant, and the constructed M_3(C) action has no proper invariant subspaces. The runner does not merely print constants; it enumerates corners and constructs projectors and matrix units from explicit matrices. The upstream retained authorities are not provided in full despite being named in the note, but the supplied runner independently checks the finite claims needed for this narrow corollary.
 - **auditor confidence:** medium
+
+### `three_generation_observable_m3c_burnside_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`THREE_GENERATION_OBSERVABLE_M3C_BURNSIDE_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/THREE_GENERATION_OBSERVABLE_M3C_BURNSIDE_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Abstract finite-dimensional matrix-algebra theorem on C^3 only: for the cyclic permutation C and three diagonal involutions T_1,T_2,T_3 with distinct joint sign characters, the sign projectors P_i are rank-1 orthogonal projectors, E_ij=P_i C^{(i-j) mod 3} P_j gives all matrix units, the generated associative algebra equals M_3(C), no proper nonzero invariant subspace exists, and the Burnside rank-one/irreducibility hypotheses are exhibited. This excludes any identification with Cl(3), Z^3, BZ-corner hw=1 triplets, staggered-Dirac, taste-cube, generation physics, charged-lepton flavor, CKM, or PMNS content.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Exact symbolic construction of projectors and matrix units from C and T_i, rank/spanning verification of M_3(C), invariant-subspace checks, and Burnside rank-one witness.  _(class `A`)_
+- **chain closes:** True — The theorem is explicitly abstract matrix algebra with zero ledger dependencies, and the live exact SymPy runner reproduced the cached PASS=50, FAIL=0 result without importing framework/audit/lattice modules.
+- **rationale:** All claimed algebraic conclusions follow constructively: the P_i project onto the three coordinate lines, P_i C^k P_j produces every matrix unit, the nine units span M_3(C), and irreducibility/no-proper-quotient follows. The note explicitly strips away the physical generation interpretation, so no open staggered-Dirac or physical-lattice gate is load-bearing here.
+- **auditor confidence:** high
 
 ### `triage_no_promotion_note`
 
