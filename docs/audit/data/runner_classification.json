@@ -12012,6 +12012,18 @@
       "dominant_class": "D",
       "runner": "scripts/lensing_long_path_test.py"
     },
+    "lepton_block_d12_prime_matching_no_go_note_2026-05-10": {
+      "assert_count": 1,
+      "counts": {
+        "A": 6,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_lepton_block_d12_prime_matching.py"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "assert_count": 1,
       "counts": {
@@ -34574,6 +34586,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_lepton_block_d12_prime_matching.py": {
+      "assert_count": 1,
+      "claims": [
+        "lepton_block_d12_prime_matching_no_go_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 6,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_lepton_charge_universality.py": {
       "assert_count": 1,
       "claims": [
@@ -46193,15 +46220,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 186,
+    "decoration_candidates": 187,
     "dominant_class_distribution": {
-      "A": 134,
+      "A": 135,
       "B": 171,
       "C": 667,
       "D": 255,
       "none": 423
     },
-    "runners_classified": 1650,
+    "runners_classified": 1651,
     "runners_with_C": 839,
     "runners_with_D": 462
   }

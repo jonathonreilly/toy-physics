@@ -14237,6 +14237,14 @@
       "to": "lensing_finite_path_explanation_note"
     },
     {
+      "from": "lepton_block_d12_prime_matching_no_go_note_2026-05-10",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "lepton_block_d12_prime_matching_no_go_note_2026-05-10",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
       "from": "lepton_charge_universality_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -51275,6 +51283,20 @@
       "runner_path": "scripts/lensing_long_path_test.py",
       "title": "Lensing Long-Path Test \u2014 Falsifies the Finite-Path Explanation"
     },
+    "lepton_block_d12_prime_matching_no_go_note_2026-05-10": {
+      "claim_id": "lepton_block_d12_prime_matching_no_go_note_2026-05-10",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [
+        "yukawa_color_projection_theorem",
+        "yt_ward_identity_derivation_theorem"
+      ],
+      "note_hash": "f3f5ed27ab28cc1d74d552b98545c260336ee7c1fb708534ae32eea3e58719d2",
+      "path": "docs/LEPTON_BLOCK_D12_PRIME_MATCHING_NO_GO_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_lepton_block_d12_prime_matching.py",
+      "title": "Lepton Block D12-Prime Matching - Physical-Operator Open Gate"
+    },
     "lepton_charge_universality_note_2026-05-02": {
       "claim_id": "lepton_charge_universality_note_2026-05-02",
       "claim_type_author_hint": "bounded_theorem",
@@ -68033,7 +68055,7 @@
       "meta": 60,
       "no_go": 31,
       "none": 1627,
-      "open_gate": 33,
+      "open_gate": 34,
       "positive_theorem": 126
     },
     "claim_type_seed_hint_counts": {
@@ -68042,13 +68064,13 @@
       "meta": 60,
       "no_go": 138,
       "none": 451,
-      "open_gate": 121,
+      "open_gate": 122,
       "positive_theorem": 625
     },
-    "edge_count": 8444,
-    "leaf_count": 595,
-    "node_count": 2150,
+    "edge_count": 8446,
+    "leaf_count": 596,
+    "node_count": 2151,
     "root_count": 814,
-    "runners_with_path": 1763
+    "runners_with_path": 1764
   }
 }

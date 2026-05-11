@@ -1,0 +1,43 @@
+===== runner cache v1 =====
+runner: scripts/frontier_lepton_block_d12_prime_matching.py
+runner_sha256: d53f409dfc4e98669ce22b0469365f3850a7e6c08a8723928fbe3c42999db3c8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.31
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Quark YT matching algebra
+----------------------------------------------------------------------------------------
+  [PASS] quark matching solves y_t = g_s/sqrt(6)  (solution=sqrt(6)*g_s/6)
+  [PASS] numeric coefficient 1/sqrt(6) is stable  (coef=0.408248290463863)
+
+----------------------------------------------------------------------------------------
+Formal lepton analogy is conditional
+----------------------------------------------------------------------------------------
+  [PASS] formal hypercharge product is 1/2  (Y_L*Y_R absolute value=1/2)
+  [PASS] formal lepton equation solves y_tau = g_1/sqrt(2)  (conditional solution=sqrt(2)*g_1/2)
+  [PASS] formal solution is conditional on a supplied unit lepton scalar operator  (runner does not assert that operator is physically identified)
+
+----------------------------------------------------------------------------------------
+Current source-surface bridge check
+----------------------------------------------------------------------------------------
+  [PASS] YUKAWA_COLOR_PROJECTION_THEOREM.md exists  (/private/tmp/cl3-review-loop-ZrI8A6/docs/YUKAWA_COLOR_PROJECTION_THEOREM.md)
+  [PASS] YT_WARD_IDENTITY_DERIVATION_THEOREM.md exists  (/private/tmp/cl3-review-loop-ZrI8A6/docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+  [PASS] YUKAWA source defines the scalar with a color-indexed quark bilinear  (quark_bilinear=True, color_index=True, quark_context=True)
+  [PASS] current cited sources do not define a lepton-composite scalar bridge  (absence is a current-source open gate, not an impossibility theorem)
+
+----------------------------------------------------------------------------------------
+Claim boundary
+----------------------------------------------------------------------------------------
+  [PASS] no empirical lepton mass is used
+  [PASS] no lepton Yukawa prediction is made
+  [PASS] result is an open gate for a missing physical-operator bridge
+
+========================================================================================
+  TOTAL: PASS=12, FAIL=0
+========================================================================================
+
+----- stderr -----
+
