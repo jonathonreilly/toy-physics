@@ -23,8 +23,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 258 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1243 |
-| audit_in_progress | 9 |
+| unaudited | 1242 |
+| audit_in_progress | 10 |
 | meta | 110 |
 | ~~audited_numerical_match~~ | 16 |
 | ~~audited_renaming~~ | 17 |
@@ -41,14 +41,14 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 13 |
+| `audit_in_progress` | 14 |
 | `audited_clean` | 433 |
 | `audited_conditional` | 176 |
 | `audited_decoration` | 14 |
 | `audited_failed` | 63 |
 | `audited_numerical_match` | 16 |
 | `audited_renaming` | 17 |
-| `unaudited` | 1353 |
+| `unaudited` | 1352 |
 
 | claim_type | count |
 |---|---:|
@@ -117,6 +117,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `bound_state_selection_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `claude_complex_action_grown_companion_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `gauge_scalar_temporal_observable_bridge_implicit_flow_theorem_note_2026-05-03` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `gauge_vacuum_plaquette_reduction_existence_theorem_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `gauge_vacuum_plaquette_spatial_environment_transfer_underdetermination_note_2026-04-17` | no_go | audit_in_progress | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_circulant_wilson_target_note_2026-04-18` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
