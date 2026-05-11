@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1192 |
+| unaudited | 1198 |
 | meta | 103 |
 | ~~audited_numerical_match~~ | 17 |
 | ~~audited_renaming~~ | 18 |
-| ~~audited_conditional~~ | 231 |
+| ~~audited_conditional~~ | 225 |
 | ~~audited_failed~~ | 22 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 429 |
-| `audited_conditional` | 231 |
+| `audited_conditional` | 225 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 17 |
 | `audited_renaming` | 18 |
-| `unaudited` | 1295 |
+| `unaudited` | 1301 |
 
 | claim_type | count |
 |---|---:|
@@ -70,7 +70,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1680
+- runners classified: 1679
 - runners with (C) first-principles compute hits: 859
 - runners with (D) external comparator hits: 477
 - decoration candidates (no C, no D): 195
@@ -699,11 +699,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matched_2d_4d_decoherence_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `matter_radiation_equality_structural_identity_theorem_note_2026-04-24` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `mesoscopic_surrogate_alternate_family_scout_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `mirror_2d_gravity_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `mirror_2d_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
-| `mirror_chokepoint_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
-| `mirror_grown_combined_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | C | - |
-| `mirror_vs_central_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `neutrino_majorana_lower_level_pairing_nogo_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `neutrino_majorana_nur_character_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `neutrino_majorana_nur_charge2_primitive_reduction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -745,7 +740,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `star_supported_bridge_class_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
-| `structured_mirror_bornsafe_scan_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `su3_wilson_closed_form_fanout_theorem_note_2026-05-04` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
@@ -7066,32 +7060,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The scoped bounded claim closes as a finite-compute result: the runner constructs the stated 2D harness and derives the reported sweep values rather than importing a target threshold or external comparator. The clean verdict is limited to the implemented parameter set, support list, and stability rule. Residual risk is implementation-model dependence on the helper lattice generator and chosen thresholds, not a closure gap for the finite no-collapse claim.
 - **auditor confidence:** high
 
-### `mirror_2d_gravity_law_note`
-
-- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Primary-runner-backed bounded null result that the searched exact-2D-mirror mass-window and distance-tail fits are weak and do not justify a promoted mass or distance law.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12d1-19df-77b2-82f7-6edce8772398`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The bounded null-result holds from the primary runner's cached stdout alone: the fixed-anchor mass-window and distance-tail fits have low R^2 and therefore do not support a clean promoted 2D mirror mass or distance law on the searched windows.  _(class `C`)_
-- **chain closes:** False — The supplied stdout supports the weak-fit conclusion, and the N=25..100 gravity row is reproducible from the printed table. However the runner delegates the exact mirror generator and linear propagator to scripts/mirror_born_audit.py, which is not supplied as a one-hop authority or runner source, so the exact-family/linear-propagator premise is not closed from the restricted packet.
-- **rationale:** Issue: the primary runner imports gen_2d_mirror and propagate_LINEAR from an unsupplied helper, while the note's claim is explicitly about the exact 2D mirror linear propagator. Why this blocks: stdout can show weak fits for whatever code ran, but the restricted packet cannot verify that the load-bearing computation is the stated exact mirror family rather than an uninspected imported implementation. Repair target: include or cite the helper source as a direct audit dependency, or make the primary runner self-contained, then preserve the completed cache. Claim boundary until fixed: a weak-fit diagnostic of the supplied runner output, not a closed exact-2D-mirror bounded theorem.
-- **auditor confidence:** high
-
-### `mirror_2d_validation_note`
-
-- **Note:** [`MIRROR_2D_VALIDATION_NOTE.md`](../../docs/MIRROR_2D_VALIDATION_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded finite-runner claim that the specified exact 2D mirror family reports Born-clean MI/decoherence/gravity coexistence rows for the stated parameter sweep, without promoting a gravity law.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12cb-c08d-7f33-8d22-df8575aa4fc2`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** "The exact 2D mirror family is Born-clean and retains a strong bounded joint coexistence pocket. The strongest retained row is N = 60."  _(class `C`)_
-- **chain closes:** False — The note's table matches the supplied primary runner stdout, but the primary runner imports the load-bearing exact mirror generator and propagate_LINEAR implementation from scripts/mirror_born_audit.py, which is not supplied as a one-hop authority. Without that dependency, the restricted packet cannot verify the claimed exact generator or strict linear propagator.
-- **rationale:** Issue: the load-bearing computation delegates the exact 2D mirror generator and linear propagator to an unprovided companion script despite no ledger dependency being supplied. Why this blocks: the central Born-clean and coexistence claims depend on those imported implementations, so stdout alone cannot establish that the runner computes the stated exact linear family. Repair target: add the missing dependency edge and provide/audit scripts/mirror_born_audit.py plus its cached stdout, or inline a self-contained runner. Claim boundary until fixed: the supplied stdout is internally consistent with the note's table, but retained-grade closure is conditional on the missing generator/propagator authority.
-- **auditor confidence:** high
-
 ### `mirror_chokepoint_boundary_fit_note`
 
 - **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
@@ -7105,34 +7073,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The clean result covers only the deterministic finite-window certificate under the named command and runner definitions. I count the finite replay gate checks as C because the companion runner generates the mirror DAGs and computes Born, k=0, gravity, purity, and wall metrics rather than reading them from another note; the header, post-retention fit arithmetic, extrapolation arithmetic, and selector-firewall sequencing checks are A. Residual risk is limited to implementation fidelity and the deliberate named-card choice; the note explicitly excludes physical-comparator, family, and asymptotic claims.
 - **auditor confidence:** high
 
-### `mirror_chokepoint_note`
-
-- **Note:** [`MIRROR_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded strict-default mirror chokepoint pocket at N=15 and N=25 on NPL_HALF=25, connect_radius=4.0, layer2_prob=0.0, contingent on the named runner-cache and certificate artifacts.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12b9-158e-7c61-9b35-c01ec0b33a06`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The retained rows below are read directly from one runner-cache artifact: logs/runner-cache/mirror_chokepoint_joint.txt, and the certificate runner mechanically verifies these two rows against the cache.  _(class `B`)_
-- **chain closes:** False — The source note narrows the claim appropriately, but the restricted audit packet contains no runner stdout, no cache contents, and no runner source for the load-bearing verification. The note's statement that a cache and certificate exist is not itself a supplied authority proving the rows.
-- **rationale:** Issue: the retained bounded pocket depends on unsupplied runner-cache and certificate artifacts. Why this blocks: hostile review cannot verify that the N=15/N=25 table values, PASS accounting, Born cleanliness, k=0 control, or strict-card failures at larger N match the named artifacts from the restricted packet. Repair target: provide the strict runner cache plus assertion-gated certificate runner source/stdout as direct audit inputs or make them the listed primary runner. Claim boundary until fixed: the note is only a documented narrowed claim, not an independently closed bounded theorem in this packet.
-- **auditor confidence:** high
-
-### `mirror_grown_combined_note`
-
-- **Note:** [`MIRROR_GROWN_COMBINED_NOTE.md`](../../docs/MIRROR_GROWN_COMBINED_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** The grown mirror scaffold remains Born-safe where it runs, but it does not approximate the retained mirror/Z2xZ2 joint benefit and is only an exploratory negative control.  _(class `C`)_
-- **chain closes:** False — The runner reproduces the finite grown-scout table and weak joint performance. The comparison to retained mirror/Z2xZ2 benefits is imported without one-hop dependencies, and the runner has no classified PASS lines for the negative-control conclusion.
-- **rationale:** Issue: the finite grown-mirror table reproduces, but the row relies on uncited retained mirror/Z2xZ2 comparison targets and unclassified runner output. Why this blocks: a hostile reviewer can accept the scout's numbers while rejecting the stronger 'does not approximate retained benefit' comparison as not closed inside this row's allowed inputs. Repair target: add classified C PASS lines for the grown-scout metrics and cite/register the mirror and Z2xZ2 comparison rows, or narrow the note to a standalone finite negative control. Claim boundary until fixed: this is bounded exploratory evidence that this grown mirror scaffold is not a successor lane, not a theorem about all generated symmetry scaffolds.
-- **open / conditional deps cited:**
-  - `scripts/mirror_grown_combined.py`
-- **auditor confidence:** high
-
 ### `mirror_mutual_information_canonical_families_note`
 
 - **Note:** [`MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md`](../../docs/MIRROR_MUTUAL_INFORMATION_CANONICAL_FAMILIES_NOTE.md)
@@ -7144,19 +7084,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** S4 mirror is the strongest scalable MI lane in this extension, while the exact chokepoint MI chain remains the synthesis-grade retained result.  _(class `C`)_
 - **chain closes:** True — The registered runner exits 0 and reproduces the note's S4 mirror, S4 random, strict-mirror, and original-mirror MI tables, including the corrected N=80 S4 mirror value and the caveat that this extension is broader rather than more canonical.
 - **rationale:** The bounded MI extension closes against scripts/mirror_mutual_information_canonical_families.py. Current output matches the note's S4 mirror values N=25 0.7213±0.073, N=40 0.5956±0.067, N=60 0.5248±0.067, N=80 0.2559±0.047; matched S4 random is lower at each retained row; strict mirror reproduces N=15 0.9196±0.033 and N=25 0.6578±0.091 before failing at larger N. The note keeps the exact chokepoint chain as the synthesis-grade result and treats this as a bounded extension.
-- **auditor confidence:** high
-
-### `mirror_vs_central_head_to_head_note`
-
-- **Note:** [`MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md`](../../docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md)
-- **claim_type:** `positive_theorem`
-- **claim_scope:** Legacy audit row backfilled during scope-aware classification migration; re-audit may narrow this scope.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop`  (codex-gpt-5; independence=cross_family)
-- **load-bearing step:** Dense central-band + layer norm remains the best joint coexistence lane, while mirror chokepoint is a bounded challenger with stronger small-N gravity but weaker decoherence/range.  _(class `B`)_
-- **chain closes:** False — The script and note reproduce a fixed summary table, but they do not register the underlying dense central-band and mirror artifact rows as dependencies. The audit cannot verify the lane ranking from one-hop inputs alone.
-- **rationale:** Issue: the head-to-head ranking depends on hard-coded values imported from other lane notes without registered dependencies. Why this blocks: the runner prints the comparison but does not recompute or verify the central-band and mirror rows, retained ranges, or purity metric caveat from auditable inputs. Repair target: cite the source rows for the dense central-band and mirror chokepoint artifacts, or replace the script with one that reads those frozen outputs directly. Claim boundary until fixed: the note is useful comparison support, not an independently audited ranking theorem.
 - **auditor confidence:** high
 
 ### `monopole_derived_note`
@@ -9731,19 +9658,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For N=25,40,60, the structured chokepoint slice remains Born-clean, k=0 pinned, positive-gravity, and below the decoherence ceiling on the registered canonical readout.  _(class `D`)_
 - **chain closes:** True — The current runner reproduces the three-row diagnostic table with the stated Born, k=0, gravity, and pur_cl values. The closure is finite and readout-specific, with no asymptotic or architecture-level bridge theorem.
 - **rationale:** The bounded finite card closes from the source note and current runner output. It does not derive the graph parameters, enforce hard assertions in code, or establish readout-independent survival, but the current note explicitly narrows away from those stronger claims. Residual risk is scope drift if the word bridge is later treated as architecture-level closure.
-- **auditor confidence:** high
-
-### `structured_mirror_bornsafe_scan_note`
-
-- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded null result for the supplied structured-mirror linear-propagator evidence: the 32-config sliced runner is checked, but the full 540-config exhaustion is not closed by the restricted packet.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e12d3-b5b4-7640-b4d5-2e0d8717abd2`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** No scanned structured-mirror configuration reached the corrected Born threshold of machine precision.  _(class `C`)_
-- **chain closes:** False — The supplied runner recomputes a representative 32-config slice and stays above 1e-14, but the note's broader no-pocket claim over all 540 scanned configurations relies on a prior full-grid log that is not supplied as audit evidence. The slice cannot rule out an off-slice Born-safe pocket.
-- **rationale:** Issue: the primary registered runner verifies only a representative 32-config slice while the source note also claims no Born-safe pocket across the full 540-config scanned family. Why this blocks: a negative bounded scan needs completed evidence covering every configuration in the claimed finite family; the restricted packet supplies only slice evidence and note prose about the full log. Repair target: register and supply the full-grid cache/stdout with inspectable runner support, or split the claim so the retained bounded theorem is only the 32-config slice. Claim boundary until fixed: the supplied packet supports only that the audited slice stayed above the 1e-14 Born-safety threshold.
 - **auditor confidence:** high
 
 ### `structured_mirror_reconciliation_note`

@@ -1,9 +1,13 @@
 # Exact 2D Mirror Gravity-Law Cleanup Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; claim narrowed 2026-05-09 to primary-runner-backed evidence per audit `runner_artifact_issue` repair target)
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; claim narrowed 2026-05-09 to primary-runner-backed evidence per audit `runner_artifact_issue` repair target; imported-authority dependency lifted into the header 2026-05-10 per follow-up `runner_artifact_issue` repair target).
 **Status:** bounded null-result note — the exact 2D mirror primary-runner evidence shows weak gravity-side mass-window and distance-tail fits, so no clean 2D mirror mass law and no clean 2D mirror distance law are supported on the searched windows.
+**Claim type:** bounded_theorem
 **Primary runner (load-bearing):** [`scripts/mirror_2d_validation.py`](../scripts/mirror_2d_validation.py) (2D exact mirror linear propagator)
-**Primary runner cached log:** [`logs/2026-04-03-mirror-2d-validation.txt`](../logs/2026-04-03-mirror-2d-validation.txt) — completed stdout that backs every load-bearing weakness row in the "Retained result (primary runner)" section below.
+**Primary runner registered cache (load-bearing):** [`logs/runner-cache/mirror_2d_validation.txt`](../logs/runner-cache/mirror_2d_validation.txt) — registered cached stdout (`exit_code=0`, `status=ok`) that backs every load-bearing weakness row in the "Retained result (primary runner)" section below.
+**Imported authority (load-bearing dependency):** [`scripts/mirror_born_audit.py`](../scripts/mirror_born_audit.py) — provides `gen_2d_mirror` (exact 2D mirror generator) and `propagate_LINEAR` (strictly linear propagator) imported by the primary runner.
+**Imported authority registered cache (load-bearing dependency):** [`logs/runner-cache/mirror_born_audit.txt`](../logs/runner-cache/mirror_born_audit.txt) — registered cached stdout (`exit_code=0`, `status=ok`) verifying the imported generator and propagator on the strict mirror Born family, so the exact-2D-mirror linear-propagator premise is closed by a one-hop registered dependency.
+**Primary runner historical log (audit-trail context):** [`logs/2026-04-03-mirror-2d-validation.txt`](../logs/2026-04-03-mirror-2d-validation.txt) — original completed stdout retained for audit trail; the registered runner-cache above is load-bearing.
 **Companion cleanup runner (diagnostic-only, not load-bearing):** [`scripts/mirror_2d_gravity_law_cleanup.py`](../scripts/mirror_2d_gravity_law_cleanup.py) — slow gravity-law cleanup sweep over wider anchor / distance windows. The companion table below is recorded as diagnostic context only; it is not load-bearing for the bounded null-result claim.
 **Companion cleanup runner cached log (diagnostic-only):** [`logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt`](../logs/2026-04-03-mirror-2d-gravity-law-cleanup.txt).
 
@@ -150,18 +154,41 @@ Reinstating a promoted 2D mirror gravity law would require:
 3. A first-principles argument that the fitted exponent is the
    mass-coupling exponent, not just an empirical curve fit.
 
+## Audit boundary (2026-05-10 — imported-authority dependency lifted into the header)
+
+This revision addresses the generated-audit repair target:
+
+> runner_artifact_issue: supply scripts/mirror_born_audit.py or vendor its
+> generator/propagator into the primary runner, then re-audit the same
+> cached weak-fit rows.
+
+This revision takes the first branch of the repair target: it lifts
+`scripts/mirror_born_audit.py` and its registered cache
+`logs/runner-cache/mirror_born_audit.txt` into the note header as direct
+load-bearing dependencies (one-hop). The bounded null-result claim itself
+is unchanged; the supplied audit packet now includes the exact-2D-mirror
+generator and `propagate_LINEAR` authority alongside the primary-runner
+weak-fit cache.
+
 ## Registered runner artifacts
 
-The primary-runner source and completed cached stdout backing the three
-weak-fit rows are present in the worktree:
+The primary-runner source and registered cached stdout backing the three
+weak-fit rows, plus the imported-authority cache, are all present in the
+worktree as one-hop registered dependencies:
 
 - Primary runner: `scripts/mirror_2d_validation.py` (load-bearing source for
   every weak-fit row in the "Retained result (primary runner, load-bearing)"
   section above).
 - Primary runner cache: `logs/runner-cache/mirror_2d_validation.txt`
-  (registered cached stdout; exit_code=0).
+  (registered cached stdout; `exit_code=0`, `status=ok`).
+- Imported generator/propagator authority: `scripts/mirror_born_audit.py`
+  (provides `gen_2d_mirror` and `propagate_LINEAR`, imported by the primary
+  runner — load-bearing for the exact-2D mirror linear-propagator premise).
+- Imported authority cache: `logs/runner-cache/mirror_born_audit.txt`
+  (registered cached stdout; `exit_code=0`, `status=ok`).
 - Companion cleanup runner (diagnostic-only):
   `scripts/mirror_2d_gravity_law_cleanup.py`.
 
 The bounded null-result claim closes from the primary runner's cached stdout
-alone; the companion cleanup table is recorded as diagnostic context.
+plus the imported-authority cache (for the exact-mirror generator and linear
+propagator); the companion cleanup table remains diagnostic context.

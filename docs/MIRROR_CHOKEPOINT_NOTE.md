@@ -1,25 +1,18 @@
 # Mirror Chokepoint Note
 
-**Date:** 2026-04-03 (downgraded 2026-04-28 per audit-lane verdict; narrowed 2026-05-09 per audit_failed re-flag).
+**Date:** 2026-04-03 (downgraded 2026-04-28 per audit-lane verdict; narrowed 2026-05-09 per audit_failed re-flag; load-bearing artifacts re-cited at the top 2026-05-10 per audit `runner_artifact_issue` repair target).
 **Status:** bounded finite mirror chokepoint diagnostic on the strict default `NPL_HALF=25` `connect_radius=4.0` card at `N=15` and `N=25` only; not a single-surface family theorem and not an asymptotic claim. The dense `NPL_HALF=60` `connect_radius=5.0` boundary card retention through `N=100` is covered by the separate retained boundary-fit note (see [`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)) and is not part of this note's retained scope.
+**Claim type:** bounded_theorem
+
+**Primary runner (load-bearing):** [`scripts/mirror_chokepoint_joint.py`](../scripts/mirror_chokepoint_joint.py) — registered strict-default scan runner for the `NPL_HALF=25, connect_radius=4.0, layer2_prob=0.0` card.
+**Primary runner registered cache (load-bearing):** [`logs/runner-cache/mirror_chokepoint_joint.txt`](../logs/runner-cache/mirror_chokepoint_joint.txt) — registered cached stdout (`exit_code=0`, `status=ok`) from which the bounded `N=15`/`N=25` rows below are read directly, and which records `FAIL` for `N=40, 60, 80, 100` on this card.
+**Certificate runner (load-bearing):** [`scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`](../scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py) — registered assertion-gated certificate runner that mechanically verifies the bounded `N=15`/`N=25` table values against the strict joint cache, the strict-card header (`NPL_HALF=25`, `k=5.0`, 16 seeds), and the `N=40/60/80/100` FAIL markers; exits zero on PASS.
+**Certificate runner registered cache (load-bearing):** [`logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt`](../logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt) — registered cached stdout (`exit_code=0`, `status=ok`) showing `PASS=5/5` for the certificate.
 
 This note freezes the current review-safe mirror result on the strict
-chokepoint family in:
-
-[`scripts/mirror_chokepoint_joint.py`](../scripts/mirror_chokepoint_joint.py)
-
-The registered runner-cache for this strict default card is:
-
-[`logs/runner-cache/mirror_chokepoint_joint.txt`](../logs/runner-cache/mirror_chokepoint_joint.txt)
-
-The assertion-gated certificate runner that mechanically verifies this
-note's retained `N=15`/`N=25` rows against that cache is:
-
-[`scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py`](../scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py)
-
-Its registered runner-cache is:
-
-[`logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt`](../logs/runner-cache/mirror_chokepoint_note_certificate_runner_2026_05_09.txt)
+chokepoint family. All four artifacts above (primary runner source +
+cache, certificate runner source + cache) are load-bearing one-hop
+dependencies and are present in the worktree as registered files.
 
 Historical exploratory log files (`logs/2026-04-03-mirror-chokepoint-*`) are
 not part of the retained provenance for this note and are not relied upon
@@ -137,6 +130,23 @@ For the canonical fixed-family decoherence fit on the bounded dense boundary
 mirror pocket, see:
 
 [`docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+
+## Audit boundary (2026-05-10 — load-bearing artifacts re-cited at the top)
+
+This revision addresses the generated-audit repair target:
+
+> runner_artifact_issue — supply logs/runner-cache/mirror_chokepoint_joint.txt,
+> scripts/mirror_chokepoint_note_certificate_runner_2026_05_09.py, and its
+> cached PASS stdout as the direct runner artifacts for re-audit.
+
+All four load-bearing artifacts are present in the repo (registered with
+SHA-pinned `logs/runner-cache/` caches) and were already cited in the
+"Registered runner artifacts" section. This revision lifts them into the
+note header so the audit packet construction can pick them up as direct
+one-hop registered dependencies without scrolling. The bounded-row
+content is unchanged. The note is already as narrow as the certificate
+runner enforces (`N=15`/`N=25` mirror p2=0 only on the strict default
+card, with `N=40/60/80/100` explicitly recorded FAIL).
 
 ## Audit boundary (2026-04-28; re-narrowed 2026-05-09)
 

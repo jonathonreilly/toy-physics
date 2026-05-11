@@ -15385,6 +15385,10 @@
       "to": "mirror_chokepoint_boundary_fit_note"
     },
     {
+      "from": "mirror_gravity_probe_note",
+      "to": "mirror_chokepoint_note"
+    },
+    {
       "from": "mirror_mutual_information_chokepoint_note",
       "to": "mirror_chokepoint_note"
     },
@@ -15395,6 +15399,10 @@
     {
       "from": "mirror_mutual_information_note",
       "to": "mirror_mutual_information_chokepoint_note"
+    },
+    {
+      "from": "mirror_vs_central_head_to_head_note",
+      "to": "mirror_chokepoint_note"
     },
     {
       "from": "mirror_vs_lattice_program_note",
@@ -53242,11 +53250,11 @@
     },
     "mirror_2d_gravity_law_note": {
       "claim_id": "mirror_2d_gravity_law_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "4fe0bcd569530b92aecd966c22d63ed374165c94fc44a8fef478f83b0527627a",
+      "note_hash": "b258a8401a89bf51fd970d332c489b85ff795cad1aba47c511ad53fe782eec80",
       "path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
       "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note"
@@ -53264,11 +53272,11 @@
     },
     "mirror_2d_validation_note": {
       "claim_id": "mirror_2d_validation_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "5f5e24517ca21e59fbabaf6b636020986a5792b6158761c83e0a09d4cb8873f6",
+      "note_hash": "633b7d41a4651d228576f8c753011bc992fe9b4be8e71f06c554f30b92c01f22",
       "path": "docs/MIRROR_2D_VALIDATION_NOTE.md",
       "runner_path": "scripts/mirror_2d_validation.py",
       "title": "Exact 2D Mirror Validation Note"
@@ -53286,13 +53294,13 @@
     },
     "mirror_chokepoint_note": {
       "claim_id": "mirror_chokepoint_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "mirror_chokepoint_boundary_fit_note"
       ],
-      "note_hash": "19607243c8116e616b1d1625d050c17e46b9956d65f3b8a6c38fd7a7b6dd168a",
+      "note_hash": "28a64284b184e9b653e90058ed9226c52e72f5172596b6c1a036dcddd424ad1e",
       "path": "docs/MIRROR_CHOKEPOINT_NOTE.md",
       "runner_path": null,
       "title": "Mirror Chokepoint Note"
@@ -53302,19 +53310,21 @@
       "claim_type_author_hint": "bounded_theorem",
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "ec20ba2fcc1313125e87bbc898db9845476f7cb3d9eb092c637c616a2fe93d7f",
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "note_hash": "87f312ecf7e6c57a8ef89d23b36dd68715675075a4b69461de0f9c753a54ba94",
       "path": "docs/MIRROR_GRAVITY_PROBE_NOTE.md",
-      "runner_path": "scripts/mirror_gravity_fixed_anchor.py",
+      "runner_path": null,
       "title": "Mirror Gravity Probe Note"
     },
     "mirror_grown_combined_note": {
       "claim_id": "mirror_grown_combined_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "5971fe8cc172a2b2a64bda75580099f7996fc6727e0d46464c92017c3018868c",
+      "note_hash": "c16030e36312694637851b2af7c6bf2906fbb71aa8e89ef76fae82836c55da31",
       "path": "docs/MIRROR_GROWN_COMBINED_NOTE.md",
       "runner_path": "scripts/mirror_grown_combined.py",
       "title": "Mirror + Grown Combined Note"
@@ -53370,11 +53380,13 @@
     },
     "mirror_vs_central_head_to_head_note": {
       "claim_id": "mirror_vs_central_head_to_head_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
       "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "b60c8d3eed73e5a988f52a363888009f8d38d282f75959d3e50c483d9ce36634",
+      "deps": [
+        "mirror_chokepoint_note"
+      ],
+      "note_hash": "99057b59f4416a408b53ceaf5263fb425d3f25a1c3c5053df138e87c16ec6be1",
       "path": "docs/MIRROR_VS_CENTRAL_HEAD_TO_HEAD_NOTE.md",
       "runner_path": "scripts/mirror_vs_central_head_to_head.py",
       "title": "Mirror vs Central Head-To-Head Note"
@@ -63199,11 +63211,11 @@
     },
     "structured_mirror_bornsafe_scan_note": {
       "claim_id": "structured_mirror_bornsafe_scan_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "293797ccc677e6bcda56f18966e7da4dd84b3b1bef7caa31bd1249d7efa54797",
+      "note_hash": "d3046cf1fd35d2b199819f1043ad26e1ebe9ab242860b31bf9fc7745a9d3261a",
       "path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
       "runner_path": "scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py",
       "title": "Structured Mirror Born-Safe Scan Note"
@@ -69042,11 +69054,9 @@
     "mirror_2d_operator_cauchy_note_2026-05-10",
     "mirror_2d_validation_note",
     "mirror_chokepoint_boundary_fit_note",
-    "mirror_gravity_probe_note",
     "mirror_grown_combined_note",
     "mirror_mutual_information_canonical_families_note",
     "mirror_program_synthesis",
-    "mirror_vs_central_head_to_head_note",
     "missing_runner_inventory_2026-05-03",
     "monopole_derived_note",
     "moonshot_failure_audit_note",
@@ -69373,27 +69383,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 303,
+      "bounded_theorem": 308,
       "decoration": 1,
       "meta": 64,
       "no_go": 44,
-      "none": 1592,
+      "none": 1586,
       "open_gate": 35,
-      "positive_theorem": 141
+      "positive_theorem": 142
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 768,
+      "bounded_theorem": 769,
       "decoration": 1,
       "meta": 64,
       "no_go": 149,
       "none": 448,
       "open_gate": 122,
-      "positive_theorem": 628
+      "positive_theorem": 627
     },
-    "edge_count": 8641,
+    "edge_count": 8643,
     "leaf_count": 615,
     "node_count": 2180,
-    "root_count": 819,
-    "runners_with_path": 1792
+    "root_count": 817,
+    "runners_with_path": 1791
   }
 }

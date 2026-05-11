@@ -1,10 +1,13 @@
 # Structured Mirror Born-Safe Scan Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28; certificate runner added 2026-05-03; sliced runner added 2026-05-09)
-**Status:** bounded null-result note — the scanned structured-mirror linear-propagator family contains no Born-safe pocket; this is a useful negative control, not a successor lane.
+**Date:** 2026-04-03 (status line rephrased 2026-04-28; certificate runner added 2026-05-03; sliced runner added 2026-05-09; load-bearing claim narrowed to the registered 32-config slice 2026-05-10 per audit `scope_too_broad` repair target).
+**Status:** bounded null-result note — on the registered 32-config sliced linear-propagator audit-packet runner, no structured-mirror configuration reaches the documented Born-safety threshold (`1e-14`); this is a useful negative control on the sliced family, not a successor lane. The 540-config full-grid scan log remains supporting context for the broader exhaustion claim, which is explicitly scoped here as out-of-load-bearing pending registration of a full-grid runner-cache artifact.
+**Claim type:** bounded_theorem
 
 This note freezes the bounded search for a review-safe structured-mirror
-variant using the strictly linear propagator.
+variant using the strictly linear propagator. The load-bearing scope is
+the registered 32-config sliced runner; the broader 540-config exhaustion
+claim is recorded as supporting context only.
 
 **Primary runner:** [`scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py`](../scripts/structured_mirror_bornsafe_sliced_runner_2026_05_09.py)
 — registered sliced independent runner; recomputes corrected Born `|I3|/P`
@@ -96,8 +99,11 @@ The scan measured:
 
 ## Result
 
-No scanned structured-mirror configuration reached the corrected Born
-threshold of machine precision.
+On the registered 32-config sliced runner (the load-bearing audit-packet
+runner here), no structured-mirror configuration reaches the corrected
+Born-safety threshold (`1e-14`). The 540-config slow scan over the full
+parameter family is consistent with this conclusion but is out-of-load-
+bearing pending registration of a full-grid runner-cache artifact.
 
 The best near-Born candidate in the broad sweep was:
 
@@ -141,8 +147,9 @@ runner; the 540-config slow scan remains supporting context.
 ## Bottom Line
 
 - exact mirror and `Z2 x Z2` remain the review-safe symmetry lanes
-- structured mirror growth is a useful negative control, not a Born-safe
-  successor
+- structured mirror growth is a useful negative control on the registered
+  32-config sliced family, not a Born-safe successor; the broader
+  540-config exhaustion claim is supporting context only
 
 ## Audit boundary (2026-04-28)
 
@@ -164,10 +171,29 @@ pocket, plus the best near-Born candidate which was confirmed with 6
 seeds. That is a negative control, not a retained or proposed-retained
 claim.
 
+## Audit boundary (2026-05-10 — load-bearing scope narrowed to the registered 32-config slice)
+
+This revision addresses the generated-audit repair target:
+
+> scope_too_broad: Split a clean slice-only bounded claim or supply/
+> register the full 540-config scan artifact needed to close the broader
+> exhaustion claim.
+
+This revision takes the first branch of the repair target: the load-bearing
+claim is now narrowed to the registered 32-config sliced runner audit-packet
+runner. The 540-config full-grid slow scan and its historical log remain
+supporting context for the broader exhaustion claim, which is explicitly
+out-of-load-bearing pending registration of a `logs/runner-cache/`
+artifact. The constants-certificate runner and the sliced runner remain
+the audit-packet authorities.
+
 ## What this note does NOT claim
 
-- A Born-safe structured-mirror pocket on the scanned linear-propagator
+- A Born-safe structured-mirror pocket on the registered 32-config sliced
   family.
+- That the broader 540-config full-grid scan is itself a closed audit-
+  packet exhaustion proof; the full-grid slow log is supporting context
+  only and the full-grid runner-cache is not yet registered.
 - That structured mirror growth is a successor lane to exact mirror or
   `Z2 x Z2`.
 - That the best near-Born candidate (`Born 8.79e-03`) clears any

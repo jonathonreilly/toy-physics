@@ -1,15 +1,19 @@
 # Mirror + Grown Combined Note
 
-**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict)
-**Status:** bounded exploratory negative control; the grown-symmetry scout does not approximate the higher-symmetry mirror / Z2 x Z2 benefit and is not a successor lane.
+**Date:** 2026-04-03 (status line rephrased 2026-04-28 per audit-lane verdict; load-bearing scope narrowed to the standalone finite grown-mirror negative-control table 2026-05-10 per audit `scope_too_broad` repair target).
+**Status:** bounded standalone finite negative-control note — the grown-symmetry scout produces a finite reproducible table over `d_growth ∈ {2, 3}` and `n_layers ∈ {18, 25, 30, 40}`, with weak joint performance (small `1 - pur_min`, mostly small or negative gravity). The cross-lane "does not approximate the higher-symmetry mirror / Z2 x Z2 benefit" claim is recorded as supporting context only and is not load-bearing here, since the comparator notes are not registered as one-hop dependencies.
+**Claim type:** bounded_theorem
+**Primary runner (load-bearing):** [`scripts/mirror_grown_combined.py`](../scripts/mirror_grown_combined.py).
+**Primary runner registered cache (load-bearing):** [`logs/runner-cache/mirror_grown_combined.txt`](../logs/runner-cache/mirror_grown_combined.txt) — registered cached stdout (`exit_code=0`, `status=ok`) backing every row in the table below.
 
-This note records the grown-symmetry scout in:
+This note records the grown-symmetry scout. The 2026-05-10 narrowing
+restricts the load-bearing scope to the standalone finite table reproduced
+from the registered runner cache; the cross-lane comparator language is
+demoted to out-of-load-bearing context.
 
-[`scripts/mirror_grown_combined.py`](/Users/jonreilly/Projects/Physics/scripts/mirror_grown_combined.py)
+Historical log (audit-trail):
 
-Log:
-
-[`logs/2026-04-03-mirror-grown-combined.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-03-mirror-grown-combined.txt)
+[`logs/2026-04-03-mirror-grown-combined.txt`](../logs/2026-04-03-mirror-grown-combined.txt)
 
 ## Question
 
@@ -24,51 +28,79 @@ The script tests:
 - `n_layers = 18, 25, 30, 40`
 - `npl = 30`
 
-## Results
+## Results (load-bearing — read directly from the registered cache)
 
-The grown mirror scout remains Born-safe where it runs, but the joint
-performance is weak compared with the retained symmetry lanes.
+The grown mirror scout produces a finite reproducible table on the
+registered runner cache. The values below are read directly from
+`logs/runner-cache/mirror_grown_combined.txt` and reflect the registered
+seed seed-set used by that cache; small numerical differences from any
+prior run reflect different stochastic seeds and are expected.
 
-### `d_growth = 2`
+### `d_growth = 2` (3D, Z2 y-mirror)
 
-| N | pur_min | 1-pur_min | gravity |
-|---|---:|---:|---:|
-| 18 | `0.9729` | `0.0271` | `-0.074` |
-| 25 | `0.9630` | `0.0370` | `+0.070` |
-| 30 | `0.9602` | `0.0398` | `+0.111` |
-| 40 | `0.9822` | `0.0178` | `+1.086` |
+| N | pur_min | 1-pur_min | gravity | n_ok |
+|---|---:|---:|---:|---:|
+| 18 | `0.9686` | `0.0314` | `-0.284` | `16` |
+| 25 | `0.9646` | `0.0354` | `-0.008` | `16` |
+| 30 | `0.9627` | `0.0373` | `-0.018` | `16` |
+| 40 | `0.9821` | `0.0179` | `+1.030` | `16` |
 
-### `d_growth = 3`
+### `d_growth = 3` (4D, Z2 y-mirror)
 
-| N | pur_min | 1-pur_min | gravity |
-|---|---:|---:|---:|
-| 18 | `0.9687` | `0.0313` | `+0.236` |
-| 25 | `0.9633` | `0.0367` | `+0.068` |
-| 30 | `0.9243` | `0.0757` | `+0.059` |
-| 40 | `0.9355` | `0.0645` | `+0.478` |
+| N | pur_min | 1-pur_min | gravity | n_ok |
+|---|---:|---:|---:|---:|
+| 18 | `0.9702` | `0.0298` | `+0.246` | `16` |
+| 25 | `0.9542` | `0.0458` | `+0.002` | `16` |
+| 30 | `0.9239` | `0.0761` | `+0.031` | `16` |
+| 40 | `0.9424` | `0.0576` | `+0.419` | `16` |
 
-## Narrow Read
+The standalone narrow read on these registered rows: small `1 - pur_min`,
+gravity weakly distributed around zero with a single positive outlier near
+`N = 40` for `d_growth = 2`, and small or near-zero gravity elsewhere. As
+a finite standalone table this is a useful negative control on this
+scout family.
 
-- The grown mirror scaffold is Born-safe where it runs.
-- It does not reproduce the mirror chokepoint pocket.
-- It does not approximate the `Z2xZ2` joint benefit near the density optimum.
-- The best row in this scout is still a weak joint result rather than a
-  retained emergence-facing lead.
+## Narrow Read (load-bearing)
 
-## Conclusion
+- The grown mirror scout produces a finite reproducible table on the
+  registered runner cache (`d_growth ∈ {2, 3}`, `n_layers ∈ {18, 25, 30,
+  40}`).
+- The joint performance on this standalone table is weak: small
+  `1 - pur_min` across all rows, gravity weakly distributed around zero
+  with a single positive outlier near `N = 40` for `d_growth = 2`.
 
-The grown mirror scaffold is a useful negative control for the emergence-facing
-story, but it is not the successor lane.
+## Out-of-load-bearing scope
 
-The safe statement is:
+The following are recorded for context but are not load-bearing for any
+claim in this note:
 
-- **exploratory only:** yes
-- **retained long-term vector:** no
-- **approximation to retained `Z2xZ2` benefit:** no
+- Any quantitative comparison to the mirror chokepoint pocket or the
+  `Z2 x Z2` lane (those comparator notes are not registered as one-hop
+  dependencies here; the standalone table above does not require them).
+- Any "approximation to the higher-symmetry mirror / `Z2 x Z2` benefit" claim; the
+  load-bearing scope is just the standalone scout table.
 
-If the emergence-facing symmetry story is to become a live successor lane, it
-needs a new generator that preserves the symmetry benefit more directly than
-this grown mirror scaffold does.
+## Conclusion (standalone, load-bearing scope)
+
+The grown mirror scout, read as a finite standalone table on the
+registered runner cache, is a useful negative control on this scaffold:
+small `1 - pur_min` and weak gravity. As a standalone control row, this
+is closed by the registered cache. Any cross-lane "successor lane"
+language would require registered one-hop dependencies on the comparator
+lane notes and is out-of-load-bearing here.
+
+## Audit boundary (2026-05-10 — load-bearing scope narrowed to the standalone table)
+
+This revision addresses the generated-audit repair target:
+
+> scope_too_broad: add classified C PASS lines for the grown-scout
+> metrics and cite/register the mirror and Z2xZ2 comparison rows, or
+> narrow the note to a standalone finite negative control.
+
+This revision takes the second branch of the repair target: the load-
+bearing claim is narrowed to the standalone finite negative-control
+table read directly from the registered runner cache. Cross-lane
+comparator language is demoted to out-of-load-bearing context.
 
 ## Audit boundary (2026-04-28)
 
@@ -90,8 +122,7 @@ Audit verdict (`audited_failed`, leaf criticality):
 ## What this note does NOT claim
 
 - A successor lane to the mirror or `Z2 x Z2` higher-symmetry families.
-- Any approximation to the higher-symmetry benefit on the grown
-  scaffold.
+- Any quantitative cross-lane approximation claim on the grown scout.
 - That the grown mirror scaffold should be retained at any tier.
 
 ## What would close this lane (Path A future work)
@@ -99,4 +130,5 @@ Audit verdict (`audited_failed`, leaf criticality):
 A future worker pursuing reinstatement of a grown-symmetry successor
 lane would need to author a separate retained note with a runner that
 actually reproduces the mirror / `Z2 x Z2` higher-symmetry benefit on a
-generated scaffold.
+generated scaffold, plus registered one-hop dependencies on the
+comparator artifacts.

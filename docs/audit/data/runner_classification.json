@@ -12924,18 +12924,6 @@
       "dominant_class": null,
       "runner": "scripts/mirror_chokepoint_boundary_fit_certificate.py"
     },
-    "mirror_gravity_probe_note": {
-      "assert_count": 0,
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "runner": "scripts/mirror_gravity_fixed_anchor.py"
-    },
     "mirror_grown_combined_note": {
       "assert_count": 0,
       "counts": {
@@ -44321,21 +44309,6 @@
       "dominant_class": null,
       "exists": true
     },
-    "scripts/mirror_gravity_fixed_anchor.py": {
-      "assert_count": 0,
-      "claims": [
-        "mirror_gravity_probe_note"
-      ],
-      "counts": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0
-      },
-      "decoration_candidate": false,
-      "dominant_class": null,
-      "exists": true
-    },
     "scripts/mirror_grown_combined.py": {
       "assert_count": 0,
       "claims": [
@@ -46996,9 +46969,9 @@
       "B": 172,
       "C": 680,
       "D": 263,
-      "none": 420
+      "none": 419
     },
-    "runners_classified": 1680,
+    "runners_classified": 1679,
     "runners_with_C": 859,
     "runners_with_D": 477
   }
