@@ -1,10 +1,10 @@
 # Audit Queue
 
-**Total pending:** 1248
+**Total pending:** 1247
 **Ready (all deps already at retained-grade or metadata tiers):** 100
 
 By criticality:
-- `critical`: 699
+- `critical`: 698
 - `high`: 38
 - `medium`: 177
 - `leaf`: 334
@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `source_driven_field_recovery_sweep_note` | bounded_theorem | audit_in_progress | critical | 456 | 9.34 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/source_driven_field_recovery_sweep.py` |
+| 1 | `minimal_source_driven_field_probe_note` | bounded_theorem | unaudited | critical | 455 | 10.83 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/minimal_source_driven_field_probe.py` |
 | 2 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | positive_theorem | unaudited | critical | 448 | 19.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_alpha_lm_geometric_mean_identity.py` |
 | 3 | `claude_complex_action_grown_companion_note` | positive_theorem | unaudited | critical | 444 | 13.30 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/complex_action_grown_companion.py` |
 | 4 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 431 | 9.26 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` |

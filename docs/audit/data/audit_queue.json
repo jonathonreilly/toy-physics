@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 699,
+    "critical": 698,
     "high": 38,
     "leaf": 334,
     "medium": 177
@@ -5531,24 +5531,26 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "source_driven_field_recovery_sweep_note",
-      "claim_scope": "Audited only the bounded numerical theorem for the exact self-contained 3D lattice runner, fixed source strengths, fixed c_field/damp settings, target max calibrations, centroid-z readout, and printed threshold gates.",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "minimal_source_driven_field_probe_note",
+      "claim_scope": null,
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
+      "claim_type_provenance": "migration_hint",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [],
-      "direct_in_degree": 1,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 9.336,
-      "note_path": "docs/SOURCE_DRIVEN_FIELD_RECOVERY_SWEEP_NOTE.md",
-      "queue_reason": "audit_in_progress",
+      "cross_confirmation_status": null,
+      "deps": [
+        "source_driven_field_recovery_sweep_note"
+      ],
+      "direct_in_degree": 4,
+      "effective_status": "unaudited",
+      "load_bearing_score": 10.833,
+      "note_path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
+      "queue_reason": "unaudited",
       "ready": true,
-      "runner_path": "scripts/source_driven_field_recovery_sweep.py",
-      "transitive_descendants": 456
+      "runner_path": "scripts/minimal_source_driven_field_probe.py",
+      "transitive_descendants": 455
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -8340,29 +8342,6 @@
       "queue_reason": "unaudited",
       "ready": false,
       "runner_path": "scripts/gate_b_weak_connectivity_harness.py",
-      "transitive_descendants": 455
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "minimal_source_driven_field_probe_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "source_driven_field_recovery_sweep_note"
-      ],
-      "direct_in_degree": 4,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.833,
-      "note_path": "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/minimal_source_driven_field_probe.py",
       "transitive_descendants": 455
     },
     {
@@ -38789,5 +38768,5 @@
     }
   ],
   "ready_count": 100,
-  "total_pending": 1248
+  "total_pending": 1247
 }
