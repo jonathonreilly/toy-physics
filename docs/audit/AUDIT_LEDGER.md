@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 97 |
 | **retained_no_go** | 132 |
-| **retained_bounded** | 278 |
+| **retained_bounded** | 279 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 13 |
-| unaudited | 1201 |
+| unaudited | 1200 |
 | audit_in_progress | 19 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 27 |
-| `audited_clean` | 469 |
+| `audited_clean` | 470 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 14 |
 | `audited_renaming` | 15 |
-| `unaudited` | 1314 |
+| `unaudited` | 1313 |
 
 | claim_type | count |
 |---|---:|
@@ -368,6 +368,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | D | - |
+| `koide_y_substrate_anomaly_forcing_note_2026-05-08_probey_substrate_anomaly` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `lattice_3d_dense_refinement_reconciliation_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
@@ -6510,6 +6511,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Using the fixed comparator masses in the runner, none of t, b, or c passes the 5% mass-error gate for integer Delta n or simple rational p/q with q <= 6.  _(class `D`)_
 - **chain closes:** True — The note states a finite external-comparator protocol and the runner exhausts exactly the listed integer and q<=6 rational candidates against the stated masses and gate. The near b/c half-power relation is explicitly kept as a non-derived observation outside the audited negative claim.
 - **rationale:** The audited claim is narrowly bounded to a finite comparator protocol rather than a framework mass theorem. The runner recomputes Delta n and the best integer and q<=6 rational fits for t, b, and c using the stated comparator masses, and every best fit exceeds the 5% gate. Residual risk is limited to the diagnostic value of the chosen alpha_LM context and mass inputs; those are presented as comparator settings, not promoted to derived physics.
+- **auditor confidence:** high
+
+### `koide_y_substrate_anomaly_forcing_note_2026-05-08_probey_substrate_anomaly`
+
+- **Note:** [`KOIDE_Y_SUBSTRATE_ANOMALY_FORCING_NOTE_2026-05-08_probeY_substrate_anomaly.md`](../../docs/KOIDE_Y_SUBSTRATE_ANOMALY_FORCING_NOTE_2026-05-08_probeY_substrate_anomaly.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded anomaly-only no-selection result: the displayed one-generation rational hypercharge family cancels the listed perturbative anomaly traces for arbitrary N_c, Witten parity restricts one generation to odd N_c rather than N_c=3, generation count and nonzero hypercharge scaling remain unselected, vectorlike additions remain anomaly-free, and no map to the BAE operator-coefficient condition is supplied. No positive Standard Model carrier derivation is audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Perturbative SU(N_c)^2 U(1), SU(2)^2 U(1), gravitational-U(1), and U(1)^3 anomaly cancellation, together with SU(2) Witten parity, does not by itself select the full Standard Model carrier sector.  _(class `A`)_
+- **chain closes:** True — The load-bearing statements follow by direct rational anomaly-trace algebra and the standard Witten even-doublet parity condition stated in the note. The result is negative and bounded to anomaly-only selection, so it does not require a retained substrate-to-carrier bridge to close.
+- **rationale:** The note does not claim anomaly cancellation is useless or derive an alternate carrier sector; it only rules out anomaly cancellation alone as forcing the listed choices. The runner verifies the exact-rational traces, Witten parity boundary, generation additivity, hypercharge homogeneity, vectorlike cancellation, and category separation from operator coefficients. Residual risk is the usual dependence on standard anomaly-bookkeeping conventions, which are explicit bounded mathematical inputs rather than hidden framework premises.
 - **auditor confidence:** high
 
 ### `koide_z3_joint_projector_identity_note_2026-04-19`
