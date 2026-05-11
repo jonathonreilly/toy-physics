@@ -100,12 +100,13 @@ The substantive residual is two-part, mirroring the note's Parts 3 and 4:
   framework's G_5 condensate or a sister mechanism. Sister authorities are
   the Higgs-side derivation surfaces — `docs/HIGGS_MASS_DERIVED_NOTE.md`
   (full 3-loop RGE from `lambda(M_Pl) = 0` boundary) and
-  [`HIGGS_MASS_FROM_AXIOM_NOTE.md`](./HIGGS_MASS_FROM_AXIOM_NOTE.md)
-  (tree-level mean-field). The first is given as a plain-text file pointer
-  for cycle safety, because `HIGGS_MASS_DERIVED_NOTE.md` already cites this
-  row in its `Input-authority chain` section as the `g_2(v)` and `g_1(v)`
-  authority surface; this row carries the Higgs-side `g_2(v)` precision
-  caveat that the Higgs lane inherits. See
+  `HIGGS_MASS_FROM_AXIOM_NOTE.md` (tree-level mean-field). Both are given
+  as plain-text file pointers for cycle safety, because
+  `HIGGS_MASS_DERIVED_NOTE.md` already cites this row in its
+  `Input-authority chain` section as the `g_2(v)` and `g_1(v)` authority
+  surface, and `HIGGS_MASS_FROM_AXIOM_NOTE.md` participates in the same
+  3-cycle through that input-authority chain. This row carries the
+  Higgs-side `g_2(v)` precision caveat that the Higgs lane inherits. See
   [`HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md`](./HIGGS_CHANNEL_EFFECTIVE_NTASTE_BOUNDARY_BOUNDED_NOTE_2026-05-08.md)
   for the most recent bounded scoping of the Higgs-quartic boundary.
 

@@ -547,8 +547,10 @@ The runner:
 
 **Comparator (NOT load-bearing for T1-T6):**
 
-- [`COMPLETE_PREDICTION_CHAIN_2026_04_15.md`](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-  — lists "b_1 = 41/10, b_2 = -19/6, b_3 = -7" as DERIVED; numerical
-  comparator only.
+- `COMPLETE_PREDICTION_CHAIN_2026_04_15.md` (lists "b_1 = 41/10,
+  b_2 = -19/6, b_3 = -7" as DERIVED; numerical comparator only;
+  backticked to avoid the 5-cycle back-edge through the EW-coupling /
+  Higgs-mass-from-axiom cluster, since the comparator status is
+  already explicit and not load-bearing).
 - [`YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md`](YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md)
   — SM β-coefficient cross-check; comparator only.

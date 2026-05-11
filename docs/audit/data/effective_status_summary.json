@@ -32,11 +32,11 @@
       "s3_time_bilinear_tensor_action_note"
     ],
     [
-      "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
-      "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+      "hypercharge_identification_note",
+      "lhcm_matter_assignment_from_su3_representation_note_2026-05-02"
     ]
   ],
-  "cycles_detected": 279,
+  "cycles_detected": 269,
   "effective_status_counts": {
     "audited_conditional": 259,
     "audited_failed": 26,

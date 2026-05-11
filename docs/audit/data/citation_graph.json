@@ -3658,10 +3658,6 @@
     },
     {
       "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
-      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
-    },
-    {
-      "from": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "to": "left_handed_charge_matching_note"
     },
     {
@@ -7994,10 +7990,6 @@
     },
     {
       "from": "ew_coupling_derivation_note",
-      "to": "higgs_mass_from_axiom_note"
-    },
-    {
-      "from": "ew_coupling_derivation_note",
       "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
     },
     {
@@ -9954,31 +9946,11 @@
     },
     {
       "from": "higgs_mass_from_axiom_note",
-      "to": "higgs_mass_derived_note"
-    },
-    {
-      "from": "higgs_mass_from_axiom_note",
       "to": "higgs_from_lattice_note"
     },
     {
       "from": "higgs_mass_from_axiom_note",
       "to": "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08"
-    },
-    {
-      "from": "higgs_mass_from_axiom_note",
-      "to": "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
-    },
-    {
-      "from": "higgs_mass_from_axiom_note",
-      "to": "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08"
-    },
-    {
-      "from": "higgs_mass_from_axiom_note",
-      "to": "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08"
-    },
-    {
-      "from": "higgs_mass_from_axiom_note",
-      "to": "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08"
     },
     {
       "from": "higgs_mass_from_axiom_note",
@@ -17538,10 +17510,6 @@
     },
     {
       "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
-      "to": "ckm_from_mass_hierarchy_note"
-    },
-    {
-      "from": "quark_mass_ratios_taste_staircase_support_note_2026-04-25",
       "to": "cl3_taste_generation_theorem"
     },
     {
@@ -19427,10 +19395,6 @@
     {
       "from": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
-    },
-    {
-      "from": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
-      "to": "complete_prediction_chain_2026_04_15"
     },
     {
       "from": "su2_weak_beta_coefficient_structural_closed_form_theorem_note_2026-04-26",
@@ -37844,11 +37808,10 @@
       "deps": [
         "ckm_atlas_axiom_closure_note",
         "alpha_s_derived_note",
-        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
         "left_handed_charge_matching_note",
         "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24"
       ],
-      "note_hash": "bba12eb3da3c6fc92eee578b2fc5d48dc5fedbf4414fb6a16bab4d5585c88c70",
+      "note_hash": "da531363cca4953f90e09c6002a570f4e086345dc3184174300cce759751fc16",
       "path": "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_ckm_cp_phase_structural_identity.py",
       "title": "CKM CP-Phase Structural Identity Theorem"
@@ -43257,10 +43220,9 @@
         "yt_ew_color_projection_theorem",
         "g_bare_canonical_convention_narrow_theorem_note_2026-05-02",
         "yt_zero_import_authority_note",
-        "higgs_mass_from_axiom_note",
         "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08"
       ],
-      "note_hash": "21bac46b5978d3e9cdba42ca2556ab8df44ce30f40410feb248f95ceb4fa7c51",
+      "note_hash": "dc66d244e581a26aa7cebfcd6247c24cb418de010090a97ec930df50b6f0b34d",
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
       "runner_path": "scripts/ew_coupling_bounded_status_runner_2026_05_03.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
@@ -46369,16 +46331,11 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "higgs_mass_derived_note",
         "higgs_from_lattice_note",
         "wilson_bz_corner_hamming_staircase_bounded_note_2026-05-08",
-        "higgs_channel_effective_ntaste_boundary_bounded_note_2026-05-08",
-        "wilson_corrected_v_taste_tree_level_bounded_note_2026-05-08",
-        "wilson_vtaste_extremum_leading_order_in_r_bounded_note_2026-05-08",
-        "wilson_m_h_tree_at_extremum_leading_order_in_r_bounded_note_2026-05-08",
         "yt_ew_color_projection_theorem"
       ],
-      "note_hash": "196faccf4ac24381dd67f78ca89638e3f07d120e3266c85d62507e7b4869fc47",
+      "note_hash": "2fd89ab558a445cfe6e5f4a46ea577396f1c078db24a163e1ec088c15429ac3e",
       "path": "docs/HIGGS_MASS_FROM_AXIOM_NOTE.md",
       "runner_path": "scripts/higgs_tree_level_mean_field_runner_2026_05_03.py",
       "title": "Higgs Mass from the Axiom: Complete Derivation with N_c Tracking"
@@ -58002,13 +57959,12 @@
         "alpha_s_derived_note",
         "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
         "ckm_atlas_axiom_closure_note",
-        "ckm_from_mass_hierarchy_note",
         "cl3_taste_generation_theorem",
         "observable_principle_from_axiom_note",
         "up_type_mass_ratio_ckm_inversion_note",
         "ckm_down_type_scale_convention_support_note_2026-04-22"
       ],
-      "note_hash": "7a3e4d1ca02bcafa6a90a6f1c65345f311d5b3bb79f8c63f898487605b94d7aa",
+      "note_hash": "289f5b5d9b8d31889ee5e43175b3277ac267cd4e43520622d7797a3451eceeea",
       "path": "docs/QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md",
       "runner_path": "scripts/frontier_quark_mass_ratios_taste_staircase_support.py",
       "title": "Quark Mass Ratios from the Taste-Staircase + EWSB Cascade"
@@ -61169,10 +61125,9 @@
         "three_generation_structure_note",
         "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
         "yt_ew_color_projection_theorem",
-        "complete_prediction_chain_2026_04_15",
         "yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18"
       ],
-      "note_hash": "9b8291718cb12ebc05d2edee245757bafc301b1a686a753c02d1f9218bafd1fc",
+      "note_hash": "de3355198821d70c9313f24fe4b7c9673574fc11a60188d7405ecb058c164701",
       "path": "docs/SU2_WEAK_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_su2_weak_beta_coefficient_structural_closed_form.py",
       "title": "SU(2)_L Weak 1-Loop \u03b2-Function Coefficient Structural Closed Form via S1: b_2 = 19/6"
@@ -67127,7 +67082,7 @@
       "open_gate": 117,
       "positive_theorem": 609
     },
-    "edge_count": 8354,
+    "edge_count": 8345,
     "leaf_count": 565,
     "node_count": 2111,
     "root_count": 794,
