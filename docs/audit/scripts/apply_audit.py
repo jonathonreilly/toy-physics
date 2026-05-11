@@ -233,6 +233,12 @@ def judicial_summary_from_blob(judgment: dict) -> dict:
         "first_auditor_error": judgment.get("first_auditor_error"),
         "second_auditor_error": judgment.get("second_auditor_error"),
     }
+    decoration_parent = (
+        judgment.get("ratified_decoration_parent_claim_id")
+        or judgment.get("decoration_parent_claim_id")
+    )
+    if decoration_parent:
+        summary["decoration_parent_claim_id"] = decoration_parent
     if "runner_check_breakdown" in judgment:
         summary["runner_check_breakdown"] = judgment["runner_check_breakdown"]
     return summary
@@ -491,6 +497,12 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
             f"ratified_claim_type {ratified_claim_type!r} does not match "
             f"{chosen_label}_audit claim_type {chosen_claim_type!r}"
         )
+    ratified_decoration_parent = (
+        judgment.get("ratified_decoration_parent_claim_id")
+        or judgment.get("decoration_parent_claim_id")
+    )
+    if ratified_verdict == "audited_decoration" and not ratified_decoration_parent:
+        return False, "judicial audited_decoration requires decoration_parent_claim_id"
     ratified_class = judgment.get("ratified_load_bearing_step_class")
 
     row["cross_confirmation"]["status"] = (
@@ -521,6 +533,10 @@ def apply_judicial_review(ledger: dict, judgment: dict) -> tuple[bool, str]:
     if ratified_verdict == "audited_clean":
         row["open_dependency_paths"] = []
         row["decoration_parent_claim_id"] = None
+    elif ratified_verdict == "audited_decoration":
+        row["decoration_parent_claim_id"] = ratified_decoration_parent
+    else:
+        row["decoration_parent_claim_id"] = judgment.get("decoration_parent_claim_id")
     row["auditor_confidence"] = judgment.get("auditor_confidence", "judicial")
     row["blocker"] = None
     row["audit_state_snapshot"] = snapshot_audit_state(row, rows)
