@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 76 |
 | **retained_no_go** | 127 |
 | **retained_bounded** | 243 |
-| _retained_pending_chain_ | 1 |
+| _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1109 |
+| unaudited | 1108 |
 | meta | 98 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
@@ -42,20 +42,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audited_clean` | 415 |
 | `audited_conditional` | 261 |
-| `audited_decoration` | 12 |
+| `audited_decoration` | 13 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1207 |
+| `unaudited` | 1206 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 834 |
-| `decoration` | 14 |
+| `decoration` | 15 |
 | `meta` | 106 |
 | `no_go` | 207 |
 | `open_gate` | 112 |
-| `positive_theorem` | 730 |
+| `positive_theorem` | 729 |
 
 | criticality | count |
 |---|---:|
@@ -64,7 +64,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 258 |
 | `leaf` | 676 |
 
-- **Retained pending chain closure:** 1
+- **Retained pending chain closure:** 2
 - **Citation cycles detected:** 264
 
 ### Runner classification (static heuristic)
@@ -788,6 +788,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_interacting_bridge_locality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `yt_zero_import_chain_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `alpha_s_derived_narrow_theorem_note_2026-05-10` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | `alpha_s_derived_note` |
+| `ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | fresh_context | codex-gpt-5.5 | A | `ckm_atlas_axiom_closure_note` |
 | `cl3_quark_antiquark_color_singlet_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | fresh_context | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `diamond_signal_budget_hardening_note` | decoration | ~~audited_decoration~~ | `decoration_under_moving_source_retarded_portability_note` | cross_family | codex-gpt-5.5 | A | `moving_source_retarded_portability_note` |
 | `g_bare_rescaling_freedom_removal_theorem_note_2026-05-03` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
@@ -2075,6 +2076,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The direct trace computation gives r_0=3g_0, r_1=6 Re(g_1), r_2=6 Im(g_1), so substitution yields 2 r_0^2-(r_1^2+r_2^2)=18(g_0^2-2|g_1|^2).  _(class `A`)_
 - **chain closes:** True — The trace identities for C and C^2 determine the three responses exactly, and the master identity follows by direct substitution. Since 18 is nonzero, the cone equation is equivalent to g_0^2=2|g_1|^2 globally, with kappa only defined when g_1 != 0.
 - **rationale:** The claim is a self-contained algebraic identity over explicitly defined 3x3 matrices and scalar parameters. The runner source constructs the matrices and computes the responses symbolically with Sympy rather than importing a physical premise or external comparator. There are no cited dependencies, tuned numerical inputs, or parent-claim reductions needed for the narrow statement.
+- **auditor confidence:** high
+
+### `ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CKM_ATLAS_CLOSURE_FORMULA_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CKM_ATLAS_CLOSURE_FORMULA_ALGEBRA_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Audited only the scoped algebraic consequences (U1)-(U3), IS2 parametrically, IS1/IS3/IS4 at framework counts (2,3,6), and BM1/BM2 plus the framework Bernoulli table under the stated input identities and count constraints.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** _retained_pending_chain_  (reason: `decoration_waiting_on:ckm_atlas_axiom_closure_note`)
+- **auditor:** `codex-audit-loop-019e14b5-5ad6-7860-9c7f-eceea18219de`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** Given the parametric input identities, the count constraint, the imported off-diagonal magnitudes, and the row-sum tautologies, the three closure blocks (U), (IS), and (BM) are forced closed-form expressions by algebraic substitution.  _(class `A`)_
+- **chain closes:** True — The symbolic and rational checks close the stated algebra: the disputed expressions are direct substitutions or framework-count specialisations of the hypotheses. No external physical bridge, alpha_s value, PDG comparator, or atlas authority is needed inside the narrowed scope.
+- **rationale:** Issue: the packet proves real algebraic consequences of already-stated CKM atlas input identities, but it adds no independent observable, comparator, first-principles computation, or compression beyond the parent closure package. Why this blocks: under the Algebraic Decoration Policy, exact algebraic restatements with zero D-class checks should not stand as separate retained theorem rows even when the algebra is correct. Repair target: either box this under the CKM atlas closure/input-identity corollary inventory, or attach a new retained comparator/structural compression that is load-bearing outside the parent algebra. Claim boundary until fixed: valid as a scoped algebraic corollary, not as an independent retained theorem surface.
+- **decoration parent:** `ckm_atlas_axiom_closure_note`
 - **auditor confidence:** high
 
 ### `ckm_barred_apex_angle_exact_closed_form_theorem_note_2026-04-25`

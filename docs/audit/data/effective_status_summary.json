@@ -1,11 +1,11 @@
 {
   "claim_type_counts": {
     "bounded_theorem": 834,
-    "decoration": 14,
+    "decoration": 15,
     "meta": 106,
     "no_go": 207,
     "open_gate": 112,
-    "positive_theorem": 730
+    "positive_theorem": 729
   },
   "cycle_examples": [
     [
@@ -73,11 +73,12 @@
     "retained": 76,
     "retained_bounded": 243,
     "retained_no_go": 127,
-    "retained_pending_chain": 1,
-    "unaudited": 1109
+    "retained_pending_chain": 2,
+    "unaudited": 1108
   },
-  "retained_pending_chain_count": 1,
+  "retained_pending_chain_count": 2,
   "retained_pending_chain_examples": [
-    "alpha_s_derived_narrow_theorem_note_2026-05-10"
+    "alpha_s_derived_narrow_theorem_note_2026-05-10",
+    "ckm_atlas_closure_formula_algebra_narrow_theorem_note_2026-05-10"
   ]
 }
