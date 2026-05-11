@@ -1,0 +1,167 @@
+
+========================================================================
+SECTION 1: CITED WILSON CHAIN CONSTANTS (Probe 19 reference)
+========================================================================
+  cited <P>            = 0.5934
+  cited M_Pl           = 1.221000e+19 GeV
+  cited alpha_bare     = 0.0795774715
+  cited u_0            = 0.8776813812
+  cited alpha_LM       = 0.0906678360
+  cited (7/8)^(1/4)    = 0.9671682101
+  Wilson prefix A         = 1.036465e+19 GeV
+  log(alpha_LM)           = -2.400553
+  PASS  Probe-19 m_tau Wilson chain reproduces PDG to <0.05% (sanity)
+        m_tau(chain) = 1.777105 GeV, PDG 1.7768 GeV, rel = 1.7162e-04
+
+========================================================================
+SECTION 2: TEST 1 - REQUIRED EXPONENT n_q FOR HEAVY QUARKS
+========================================================================
+
+  Required n_q so that A * alpha_LM^n_q = m_q (PDG):
+
+  Particle                       m (GeV)        n_q    residue
+  ------------------------- ------------ ---------- ----------
+  m_t (pole)                1.730000e+02    16.0928    +0.0928
+  m_t (MS-bar)              1.625000e+02    16.1189    +0.1189
+  m_b (MS-bar)              4.180000e+00    17.6437    -0.3563
+  m_c (MS-bar)              1.270000e+00    18.1400    +0.1400
+  m_s (MS-bar)              9.350000e-02    19.2267    +0.2267
+  m_d (MS-bar)              4.670000e-03    20.4751    +0.4751
+  m_u (MS-bar)              2.160000e-03    20.7963    -0.2037
+  m_tau                     1.776800e+00    18.0001    +0.0001
+  m_mu                      1.056584e-01    19.1758    +0.1758
+  m_e                       5.109990e-04    21.3968    +0.3968
+
+  PASS  m_tau hits integer n=18 to <0.001 (Probe-19 closure unique among species)
+        m_tau residue = 0.000071
+  PASS  m_t (pole) residue >= 0.09 (non-integer, not Wilson-chain-closed)
+        residue = 0.0928 (vs m_tau 7.1484e-05)
+  PASS  m_t (MS-bar) residue >= 0.09 (non-integer, not Wilson-chain-closed)
+        residue = 0.1189 (vs m_tau 7.1484e-05)
+  PASS  m_b (MS-bar) residue >= 0.09 (non-integer, not Wilson-chain-closed)
+        residue = 0.3563 (vs m_tau 7.1484e-05)
+  PASS  m_c (MS-bar) residue >= 0.09 (non-integer, not Wilson-chain-closed)
+        residue = 0.1400 (vs m_tau 7.1484e-05)
+  PASS  m_b has worst residue (>0.3) — strongest non-closure signal
+        m_b residue = 0.3563
+
+========================================================================
+SECTION 3: TEST 2 - SIMPLE STRUCTURAL FACTOR SCAN
+========================================================================
+
+  Searching n in [14, 23], factor F in candidates, match threshold 5%:
+
+  m_t (pole): NO match found at <5% threshold
+  m_t (MS-bar): NO match found at <5% threshold
+  m_b (MS-bar): NO match found at <5% threshold
+  m_c (MS-bar):
+    n=18, F=1/sqrt(2)       pred=1.256603e+00  residue=1.055%
+  m_s (MS-bar):
+    n=19, F=1/sqrt(3)       pred=9.302629e-02  residue=0.507%
+
+  PASS  m_t (pole) has no simple-factor match at <5% (no closure)
+  PASS  m_t (MS-bar) has no simple-factor match at <5% (no closure)
+  PASS  m_b has no simple-factor match at <5% (no closure)
+  PASS  m_c best match residue >> Probe-19 tier (>30x worse)
+        best residue 1.055% vs Probe-19 m_tau 0.0172%
+  PASS  up-type triplet (m_t, m_c, m_u) lacks consistent simple-factor pattern
+        no F closes m_t and m_c at the same threshold
+
+========================================================================
+SECTION 4: TEST 3 - KOIDE Q FOR QUARK TRIPLETS
+========================================================================
+
+  Triplet                              Q    |Q - 2/3|
+  ------------------------- ------------ ------------
+  Charged leptons               0.666657   9.5388e-06
+  Up-type (pole m_t)            0.849094   1.8243e-01
+  Up-type (MS-bar m_t)          0.845087   1.7842e-01
+  Down-type                     0.731346   6.4679e-02
+  Target (2/3)                  0.666667
+
+  PASS  charged leptons satisfy Koide Q = 2/3 to 0.005% (Probe-19 BAE-circulant)
+        Q_lepton = 0.6666571279
+  PASS  up-type Koide Q significantly different from 2/3 (>10% deviation)
+        |Q_up - 2/3| = 0.1824, ratio = 1.2736
+  PASS  down-type Koide Q significantly different from 2/3 (>5% deviation)
+        |Q_dn - 2/3| = 0.0647, ratio = 1.0970
+  PASS  quarks NOT on BAE-circulant (would force Q=2/3 exactly)
+        Probe-19 mechanism (BAE forces Q=2/3) cannot extend to quark sector
+
+========================================================================
+SECTION 5: TEST 4 - CITED y_t/m_t ALTERNATIVE CHAIN
+========================================================================
+  Cited y_t(M_Pl) = sqrt(4 pi alpha_LM) / sqrt(6) = 0.435769
+  v_EW (cited)         = 246.3030 GeV
+  m_t (y_t=1 attractor)   = v_EW / sqrt(2) = 174.1625 GeV
+  m_t (PDG pole)          = 173.0 GeV
+  y_t=1 attractor deviation: 0.672%
+  PASS  y_t=1 attractor m_t = v_EW/sqrt(2) is not cited Probe-19 chain
+        the repo-derived chain uses y_t QFP + RGE, not direct alpha_LM^n_t
+
+  m_b open admission (per YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18):
+    species-uniform Ward gives m_b ~= 145 GeV (vs PDG 4.18 GeV, 35x overshoot)
+    species-differentiation primitive required to close absolute m_b scale
+    Probe X-L1-Threshold confirms: Wilson chain alone does not provide it.
+  PASS  m_b is a known open admission (species-differentiation primitive)
+        Probe X-L1-Threshold negative result is consistent with this admission
+
+========================================================================
+SECTION 6: PDG-INPUT FIREWALL
+========================================================================
+  This probe constructs the test using only the cited Wilson-chain inputs:
+    - cited <P> = 0.5934 (MC, not PDG)
+    - cited M_Pl = 1.221e19 GeV (UV cutoff)
+    - cited alpha_bare = 1/(4 pi)
+    - cited u_0, alpha_LM (from above)
+    - cited (7/8)^(1/4)
+    - cited Probe-19 chain pattern (n=18 for m_tau)
+
+  PDG quark masses appear ONLY:
+    (1) as falsifiability comparators (post-derivation)
+    (2) to compute the REQUIRED n_q for the negative test
+        (the test is: 'does any integer n_q work?', not 'fit n_q to m_q')
+
+  The test outcome (negative) is INDEPENDENT of which PDG value is used:
+    no integer n_q at Probe-19-tier precision exists for m_c, m_b, m_t,
+    regardless of whether m_t (pole) = 173.0 or m_t (MS-bar) = 162.5.
+  PASS  PDG values used only as comparators / required-exponent computation
+        negative result robust to PDG mass scheme choices
+
+========================================================================
+SECTION 7: HONEST NEGATIVE RESULT
+========================================================================
+  RESULT: BOUNDED OBSTRUCTION on Wilson-chain extension to heavy quarks.
+
+  Sharpened residue (R1, R2a-c, R3):
+
+  (R1) Probe-19's clean n=18 exponent is m_tau-specific.
+       No other particle in the SM lies on integer alpha_LM^n at <0.5%
+       precision.
+
+  (R2a) Integer-exponent Wilson chain: residues 0.09-0.47 from nearest
+        integer for heavy quarks (m_t, m_b, m_c). At alpha_LM ~ 0.09,
+        residue 0.1 corresponds to ~21% mass error; residue 0.4 ~ 57%.
+        All >> Probe-19 m_tau closure (0.017%).
+
+  (R2b) Integer + simple structural factor: only sporadic isolated hits
+        (m_c with 1/sqrt(2), m_s with 1/sqrt(3)) at 30-60x worse
+        precision than Probe-19. No consistent triplet pattern.
+
+  (R2c) BAE-circulant Koide closure: empirically ruled out — quarks have
+        Q_up = 0.85, Q_down = 0.73, neither equals 2/3.
+
+  (R3) Threshold matching coefficients remain literature imports for
+       Lane 1 alpha_s closure. Probe X-L1-Threshold forecloses the
+       Wilson-chain candidate route. Other closure candidates (RGE
+       running, cited y_t QFP, or species-differentiation primitive
+       for m_b) remain on the table.
+
+  Scope boundary:
+    No parent theorem changed. No new axiom added. No new admission
+    admitted. The L1 bridge admission landscape is sharpened, not closed.
+  PASS  honest negative result recorded (sharpened obstruction)
+
+========================================================================
+=== TOTAL: PASS=20, FAIL=0 ===
+========================================================================

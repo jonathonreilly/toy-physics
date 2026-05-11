@@ -11652,6 +11652,18 @@
       "dominant_class": "C",
       "runner": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py"
     },
+    "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 24
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_koide_x_l1_threshold_2026_05_08_probeX_L1_threshold.py"
+    },
     "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological": {
       "assert_count": 1,
       "counts": {
@@ -24866,6 +24878,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_koide_x_l1_threshold_2026_05_08_probeX_L1_threshold.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 24
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_koide_y_bae_topological_2026_05_10_probeY_bae_topological.py": {
@@ -47359,11 +47386,11 @@
       "A": 151,
       "B": 174,
       "C": 684,
-      "D": 268,
+      "D": 269,
       "none": 416
     },
-    "runners_classified": 1693,
+    "runners_classified": 1694,
     "runners_with_C": 867,
-    "runners_with_D": 486
+    "runners_with_D": 487
   }
 }

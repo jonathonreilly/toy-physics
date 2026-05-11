@@ -14661,6 +14661,26 @@
       "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
     },
     {
+      "from": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "to": "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19"
+    },
+    {
+      "from": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "to": "charged_lepton_koide_cone_algebraic_equivalence_note"
+    },
+    {
+      "from": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "to": "yt_bottom_yukawa_retention_analysis_note_2026-04-18"
+    },
+    {
+      "from": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
       "from": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
       "to": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07"
     },
@@ -51964,6 +51984,23 @@
       "runner_path": "scripts/cl3_koide_x_l1_msbar_2026_05_08_probeX_L1_msbar.py",
       "title": "Probe X-L1-MSbar \u2014 Beta-Function Coefficients in a Lattice/`<P>` Scheme: Bounded-Tier Source Note"
     },
+    "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold": {
+      "claim_id": "koide_x_l1_threshold_heavy_quark_wilson_note_2026-05-08_probex_l1_threshold",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_bae_probe_wilson_chain_mass_sharpened_note_2026-05-09_probe19",
+        "complete_prediction_chain_2026_04_15",
+        "charged_lepton_koide_cone_algebraic_equivalence_note",
+        "yt_bottom_yukawa_retention_analysis_note_2026-04-18",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+      ],
+      "note_hash": "9f3f4882f4ff841cf41c8ec9313ff82f727a7fc16a2517cf20986c2d4680006f",
+      "path": "docs/KOIDE_X_L1_THRESHOLD_HEAVY_QUARK_WILSON_NOTE_2026-05-08_probeX_L1_threshold.md",
+      "runner_path": "scripts/cl3_koide_x_l1_threshold_2026_05_08_probeX_L1_threshold.py",
+      "title": "Probe X-L1-Threshold \u2014 Heavy-Quark Wilson Chain Test (Negative Result, Bounded Obstruction)"
+    },
     "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological": {
       "claim_id": "koide_y_bae_topological_index_ktheory_note_2026-05-10_probey_bae_topological",
       "claim_type_author_hint": "bounded_theorem",
@@ -70149,7 +70186,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 338,
+      "bounded_theorem": 339,
       "meta": 71,
       "no_go": 44,
       "none": 1561,
@@ -70157,17 +70194,17 @@
       "positive_theorem": 143
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 796,
+      "bounded_theorem": 797,
       "meta": 71,
       "no_go": 149,
       "none": 445,
       "open_gate": 116,
       "positive_theorem": 616
     },
-    "edge_count": 8765,
-    "leaf_count": 623,
-    "node_count": 2193,
+    "edge_count": 8770,
+    "leaf_count": 624,
+    "node_count": 2194,
     "root_count": 802,
-    "runners_with_path": 1806
+    "runners_with_path": 1807
   }
 }
