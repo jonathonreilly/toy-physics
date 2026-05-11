@@ -4269,6 +4269,30 @@
       "to": "staggered_fermion_card_2026-04-11"
     },
     {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d"
+    },
+    {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo"
+    },
+    {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25"
+    },
+    {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "su3_casimir_fundamental_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "su3_adjoint_casimir_theorem_note_2026-05-02"
+    },
+    {
+      "from": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "to": "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+    },
+    {
       "from": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
       "to": "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d"
     },
@@ -38682,6 +38706,24 @@
       "runner_path": "scripts/cl3_closure_c_bb_f2_1_correction_2026_05_10_cBB_correction.py",
       "title": "C-B(b) Born-as-Source Open-Gate Propagation Note"
     },
+    "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a": {
+      "claim_id": "closure_c_l1_hk_msbar_3l_conversion_note_2026-05-10_cl1a",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (structurally positive; numerical inputs still admitted)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "primitive_p_l1_d_period_functor_note_2026-05-10_ppl1_d",
+        "c_iso_su3_nlo_closure_bounded_note_2026-05-08_su3nlo",
+        "ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25",
+        "su3_casimir_fundamental_theorem_note_2026-05-02",
+        "su3_adjoint_casimir_theorem_note_2026-05-02",
+        "koide_x_l1_msbar_native_scheme_note_2026-05-08_probex_l1_msbar"
+      ],
+      "note_hash": "1917d87a197c8fb12ba729118e977d3a5fbc4c529413ec129f76277b589effff",
+      "path": "docs/CLOSURE_C_L1_HK_MSBAR_3L_CONVERSION_NOTE_2026-05-10_cL1a.md",
+      "runner_path": "scripts/cl3_closure_c_l1a_2026_05_10_cL1a.py",
+      "title": "Closure C-L1a --- HK <-> MSbar 3-Loop Scheme Conversion Structure: Bounded-Tier Source Note"
+    },
     "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c": {
       "claim_id": "closure_c_l1_per_graph_casimir_note_2026-05-10_cl1c",
       "claim_type_author_hint": "bounded_theorem",
@@ -67499,7 +67541,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 267,
+      "bounded_theorem": 268,
       "decoration": 1,
       "meta": 59,
       "no_go": 28,
@@ -67508,7 +67550,7 @@
       "positive_theorem": 114
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 749,
+      "bounded_theorem": 750,
       "decoration": 1,
       "meta": 59,
       "no_go": 135,
@@ -67516,10 +67558,10 @@
       "open_gate": 119,
       "positive_theorem": 614
     },
-    "edge_count": 8391,
+    "edge_count": 8397,
     "leaf_count": 579,
-    "node_count": 2128,
+    "node_count": 2129,
     "root_count": 799,
-    "runners_with_path": 1741
+    "runners_with_path": 1742
   }
 }
