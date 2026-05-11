@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 411 |
-| critical | `audited_conditional` | 95 |
+| critical | `unaudited` | 412 |
+| critical | `audited_conditional` | 94 |
 | critical | `audited_numerical_match` | 10 |
 | critical | `audited_renaming` | 8 |
 | medium | `unaudited` | 3 |
@@ -486,7 +486,7 @@ publication tables phrase it.
 | critical | `universal_gr_casimir_block_localization_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_discrete_global_closure_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_gr_invariant_nonlinear_completion_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `universal_gr_isotropic_glue_operator_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
+| critical | `universal_gr_isotropic_glue_operator_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_isotropic_schur_localization_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `universal_gr_lorentzian_global_atlas_closure_note` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `universal_gr_lorentzian_signature_extension_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

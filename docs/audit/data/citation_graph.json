@@ -64744,11 +64744,11 @@
     },
     "universal_gr_isotropic_glue_operator_note": {
       "claim_id": "universal_gr_isotropic_glue_operator_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": "bounded_structural_assembly",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "dfa57d7b881006ff4cb9914c41b120c79574f4ccc74e48a9431c08ba6e43ae91",
+      "note_hash": "80e6acdc8468bf78c645847515580bb8eefcd741fa85b253536aa587192c3216",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md",
       "runner_path": null,
       "title": "Universal GR Isotropic Glue Operator on `PL S^3 x R`"
@@ -69084,11 +69084,11 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 284,
+      "bounded_theorem": 285,
       "decoration": 1,
       "meta": 63,
       "no_go": 40,
-      "none": 1622,
+      "none": 1621,
       "open_gate": 34,
       "positive_theorem": 134
     },

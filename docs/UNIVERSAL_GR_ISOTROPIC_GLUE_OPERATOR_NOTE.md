@@ -10,8 +10,49 @@ ingredients above, not a derivation closing them.
 **Date:** 2026-04-14 (audit-narrowing refresh: 2026-05-10)  
 **Branch:** `codex/review-active`  
 **Role:** direct universal route / structural-assembly step
-**Claim type:** bounded_structural_assembly
-**Status authority:** independent audit lane only.
+**Claim type:** bounded_theorem
+**Status authority:** source-note proposal only; audit verdict and
+effective status are set by the independent audit lane. The
+`bounded_theorem` label is a source-side claim-boundary declaration,
+not an audit verdict; the prior `bounded_structural_assembly` label
+was non-canonical (the audit-pipeline `compute_effective_status.py`
+recognizes `positive_theorem`, `bounded_theorem`, `no_go`,
+`open_gate`, `decoration`, `meta`), and the 2026-05-10 audit verdict's
+repair-target option (b) "narrow the claim to an explicitly
+hypothetical definition over named assumed inputs" is implemented
+by retyping to `bounded_theorem` with the four imports formalized
+as bounded admissions in §"Bounded admissions" below.
+
+## Bounded admissions
+
+The load-bearing claim is **conditional on the four bounded admissions**
+below. None of (BA-1)–(BA-4) is derived in this note; each is admitted
+as a named bounded sister-authority input. The chain closes class-A
+algebraically from (BA-1)–(BA-4) plus elementary tensor-product
+algebra; the chain does **not** derive the admissions themselves.
+
+(BA-1) **Local universal Hessian.** The exact local universal Hessian
+
+```text
+M_D = a^{-2} P_lapse + (ab)^{-1} P_shift + b^{-2} P_trace + b^{-2} P_shear
+```
+
+on the invariant background `D = diag(a, b, b, b)` is admitted. Taken
+from the support-tier discrete-Einstein/Regge lift chain.
+
+(BA-2) **Route-2 slice generator.** The exact slice generator
+`Lambda_R` (symmetric and positive on the invariant block) is admitted.
+Taken from the Route-2 slice-generator construction.
+
+(BA-3) **Canonical `3+1` block projectors.** The lapse / shift / trace /
+shear block projectors `(P_lapse, P_shift, P_trace, P_shear)` are
+admitted as canonical and exact. Taken from the canonical `3+1`
+block-localization chain.
+
+(BA-4) **Invariant-background Schur irreducibility.** The
+Schur-irreducibility statement on the shift and shear sectors over the
+invariant background is admitted. Taken from the invariant-background
+Schur localization.
 
 ## Audit boundary
 
@@ -21,27 +62,14 @@ historically below has been narrowed: the operator `K_GR^iso(D)` is the
 **unique covariant quadratic combination of the four imported ingredients
 listed below**, not a uniqueness theorem over all possible covariant quadratic
 operators on `PL S^3 x R`. Eliminating other covariant quadratic terms requires
-the imported Schur-irreducibility and block-localization authorities to be
+(BA-4) Schur-irreducibility and (BA-3) block-localization to be
 independently accepted.
 
-**Admitted authority inputs (cited but not derived in this note):**
-
-- the exact local universal Hessian `M_D = a^-2 P_lapse + (ab)^-1 P_shift +
-  b^-2 P_trace + b^-2 P_shear` on the invariant background, taken from the
-  support-tier discrete-Einstein/Regge lift chain;
-- the exact slice generator `Lambda_R` (symmetric and positive on the
-  invariant block), taken from the Route-2 slice-generator construction;
-- the canonical lapse / shift / trace / shear block projectors
-  `(P_lapse, P_shift, P_trace, P_shear)`, taken from the canonical `3+1`
-  block-localization chain;
-- the Schur-irreducibility statement on the shift and shear sectors over the
-  invariant background, taken from the invariant-background Schur localization.
-
-This note does **not** re-derive any of those four imports. It only states
-that, conditional on them, the tensor-product combination
-`K_GR^iso(D) = M_D ⊗ Lambda_R` is the unique covariant quadratic combination
-that uses each imported ingredient exactly once and respects the imported
-block decomposition.
+This note does **not** re-derive (BA-1)–(BA-4). It only states that,
+conditional on them, the tensor-product combination
+`K_GR^iso(D) = M_D ⊗ Lambda_R` is the unique covariant quadratic
+combination that uses each imported ingredient exactly once and
+respects the imported block decomposition.
 
 ## Verdict (scope-bounded)
 
@@ -110,9 +138,9 @@ This operator has the right exact features simultaneously:
 - local metric-channel weights from the universal Hessian
 - exact slice dynamics from the Schur boundary action
 - canonical Hamiltonian / momentum / spatial block split
-- exact restriction to the scalar `A1` bridge surface
+- exact restriction to the scalar bridge surface (legacy alias: `A1`)
 
-On the `A1` core, the operator reduces to the exact restricted discrete
+On the scalar bridge core, the operator reduces to the exact restricted discrete
 Einstein/Regge lift after the background-rescaling already encoded by
 `M_D`.
 

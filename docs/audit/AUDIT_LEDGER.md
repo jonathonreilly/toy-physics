@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 253 |
 | _retained_pending_chain_ | 2 |
 | open_gate | 13 |
-| unaudited | 1159 |
+| unaudited | 1160 |
 | meta | 102 |
 | ~~audited_numerical_match~~ | 19 |
 | ~~audited_renaming~~ | 19 |
-| ~~audited_conditional~~ | 259 |
+| ~~audited_conditional~~ | 258 |
 | ~~audited_failed~~ | 23 |
 | `decoration_under_cl3_color_automorphism_theorem` | 4 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 2 |
 | `audited_clean` | 429 |
-| `audited_conditional` | 259 |
+| `audited_conditional` | 258 |
 | `audited_decoration` | 13 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 19 |
 | `audited_renaming` | 19 |
-| `unaudited` | 1261 |
+| `unaudited` | 1262 |
 
 | claim_type | count |
 |---|---:|
@@ -782,7 +782,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_signed_source_control_support_note_2026-04-30` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `universal_gr_block_constraint_interpretation_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `universal_gr_invariant_frame_obstruction_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | A | - |
-| `universal_gr_isotropic_glue_operator_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_isotropic_schur_localization_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `universal_gr_lorentzian_global_atlas_closure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `universal_gr_tensor_action_blocker_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | E | - |
@@ -11120,19 +11119,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The weight-1 complement sectors appear with multiplicity two, the quotient-kernel spectrum is frame-invariant, therefore no representation-theoretic invariant in the current atlas selects a unique universal complement frame.  _(class `A`)_
 - **chain closes:** False — The representation-theoretic implication is plausible, but the note does not exhibit an exhaustive current invariant atlas or a theorem that the listed invariant data are all available selectors. The supplied runner does not execute its checks in this checkout because it fails on a missing POLARIZATION_UNIVERSAL_WEIGHT_DECOMPOSITION_NOTE.md before PASS output.
 - **rationale:** Issue: the no-go rests on the unstated premise that the current invariant tensor atlas is exhausted by the listed SO(3)/SO(2), Pi_A1, weight-decomposition, and quotient-spectrum data, and the runner cannot reproduce the weight-decomposition dependency in the current checkout. Why this blocks: without that exhaustive selector theorem, a hostile reviewer can reject the universal no-canonical-section conclusion while accepting the multiplicity-two algebra. Repair target: include or cite a retained theorem/runner over the current checkout proving atlas exhaustion and absence of invariant section selectors, and restore or register the weight-decomposition artifact. Claim boundary until fixed: conditional no-go for the displayed representation data only.
-- **auditor confidence:** high
-
-### `universal_gr_isotropic_glue_operator_note`
-
-- **Note:** [`UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md`](../../docs/UNIVERSAL_GR_ISOTROPIC_GLUE_OPERATOR_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded structural assembly of K_GR^iso(D) = M_D ⊗ Lambda_R from four imported ingredients on the invariant background D = diag(a,b,b,b).
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e120c-a319-7cb2-af00-06499dc9237d`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** Conditional on the four admitted authority inputs, the unique covariant quadratic combination of these imported ingredients that uses each ingredient exactly once and respects the imported block decomposition is K_GR^iso(D) = M_D ⊗ Lambda_R.  _(class `A`)_
-- **chain closes:** False — The algebraic tensor-product assembly would be a class-A closure only if the four imported ingredients were available as retained-grade inputs. The restricted packet lists no cited authorities, while the note explicitly depends on imported Hessian, slice-generator, projector, and Schur-irreducibility authorities.
-- **rationale:** Issue: the load-bearing theorem is conditional on four admitted authorities that are not supplied as one-hop dependencies. Why this blocks: without those inputs, the note does not establish the Hessian weights, Lambda_R properties, canonical projectors, or Schur irreducibility needed for the claimed uniqueness within the imported block decomposition. Repair target: add explicit dependency edges to retained-grade notes proving each imported ingredient, or narrow the claim to an explicitly hypothetical definition over named assumed inputs. Claim boundary until fixed: only a conditional bookkeeping assembly, not a retained bounded theorem.
 - **auditor confidence:** high
 
 ### `universal_gr_isotropic_schur_localization_note`
