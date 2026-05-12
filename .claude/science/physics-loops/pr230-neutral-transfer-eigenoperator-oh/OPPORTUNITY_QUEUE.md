@@ -100,6 +100,14 @@ non-colliding wave is chunks007-008; the clean physics-closure priority remains
 accepted `O_H`/action plus strict pole rows, strict W/Z accepted-action
 physical response, or neutral H3/H4 physical-transfer authority.
 
+Block42 launches chunks007-008 as run-control support.  It does not change the
+queue ranking and does not add completed row evidence yet.  Wait for
+chunks007-008 to finish, then package completed-mode checkpoints before
+launching another support wave.  The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
+
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
 change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial

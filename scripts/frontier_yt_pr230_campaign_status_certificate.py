@@ -5398,6 +5398,13 @@ def main() -> int:
     schur_higher_shell_active_chunks = schur_higher_shell_wave_launcher.get(
         "active_chunk_indices"
     )
+    schur_higher_shell_launched_chunks = sorted(
+        row.get("chunk_index")
+        for row in schur_higher_shell_wave_launcher.get("launched", [])
+        if isinstance(row, dict)
+        and row.get("alive_after_verify_seconds") is True
+        and isinstance(row.get("chunk_index"), int)
+    )
     schur_higher_shell_completed_or_active = (
         (
             schur_higher_shell_active_or_completed == [1, 2]
@@ -5424,6 +5431,22 @@ def main() -> int:
             and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6]
             and schur_higher_shell_active_chunks == []
         )
+        or (
+            schur_higher_shell_active_or_completed == [1, 2, 3, 4, 5, 6, 7, 8]
+            and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6]
+            and schur_higher_shell_active_chunks == [7, 8]
+        )
+        or (
+            schur_higher_shell_active_or_completed == [1, 2, 3, 4, 5, 6, 7, 8]
+            and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6, 7, 8]
+            and schur_higher_shell_active_chunks == []
+        )
+    )
+    schur_higher_shell_chunks007_008_launched = (
+        schur_higher_shell_wave_launcher.get("launch_mode") is True
+        and schur_higher_shell_launched_chunks == [7, 8]
+        and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6]
+        and schur_higher_shell_active_or_completed == [1, 2, 3, 4, 5, 6]
     )
     report(
         "pr230-schur-higher-shell-wave-launcher-run-control-only",
@@ -5431,10 +5454,22 @@ def main() -> int:
         in str(statuses["pr230_schur_higher_shell_wave_launcher"])
         and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
         and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
-        and schur_higher_shell_wave_launcher.get("launch_mode") is False
-        and schur_higher_shell_completed_or_active
+        and (schur_higher_shell_completed_or_active or schur_higher_shell_chunks007_008_launched)
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
         statuses["pr230_schur_higher_shell_wave_launcher"],
+    )
+    report(
+        "pr230-schur-higher-shell-chunks007-008-launched-run-control-only",
+        "higher-shell Schur scalar-LSZ wave launcher status"
+        in str(statuses["pr230_schur_higher_shell_wave_launcher"])
+        and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
+        and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
+        and schur_higher_shell_chunks007_008_launched
+        and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
+        {
+            "launched_chunks": schur_higher_shell_launched_chunks,
+            "completed_chunks": schur_higher_shell_completed_chunks,
+        },
     )
     schur_higher_shell_chunk001 = certificates[
         "pr230_schur_higher_shell_chunk001_checkpoint"
@@ -7399,8 +7434,11 @@ def main() -> int:
         in str(statuses["pr230_schur_higher_shell_wave_launcher"])
         and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
         and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
-        and schur_higher_shell_completed_or_active
+        and (schur_higher_shell_completed_or_active or schur_higher_shell_chunks007_008_launched)
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2
+    )
+    result["schur_higher_shell_chunks007_008_launched_run_control_only"] = (
+        schur_higher_shell_chunks007_008_launched
     )
     result["schur_higher_shell_chunks001_002_checkpointed_support_only"] = (
         schur_higher_shell_chunks001_002_checkpointed

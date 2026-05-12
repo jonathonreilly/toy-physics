@@ -7,6 +7,32 @@ Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
 
+## Block42 Result
+
+Created `YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS007_008_LAUNCH_CHECKPOINT`.
+
+This block launches the next non-colliding higher-shell wave after chunks001-006
+were packaged.  The launcher starts chunks007-008 and verifies both workers are
+alive after the verification interval.  The campaign status runner is updated
+to recognize this launch-state explicitly through the launcher `launched`
+field.
+
+Result:
+
+- chunk007 launched with pid `79294` and seed `2026057007`;
+- chunk008 launched with pid `79295` and seed `2026057008`;
+- wave launcher passes `PASS=11 FAIL=0`;
+- campaign status passes `PASS=401 FAIL=0`;
+- no retained or `proposed_retained` wording is authorized.
+
+Boundary: this is run-control support only.  It writes no completed row
+evidence for chunks007-008, and launched jobs are not source-Higgs,
+scalar-LSZ, Schur, W/Z, or top-Yukawa closure.
+
+Next exact action: wait for chunks007-008 to finish, then package completed
+row JSONs and volume artifacts with chunk checkpoints before launching any
+successor wave.
+
 ## Block41 Result
 
 Created `YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS005_006_COMPLETED_CHECKPOINT`.
