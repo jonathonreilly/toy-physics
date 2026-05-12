@@ -21,6 +21,8 @@
 - Treating `C_sx/C_xx` aliases as `C_sH/C_HH`.
 - Treating equal-time finite rows as a Euclidean transfer kernel.
 - Setting `kappa_s=1`, `c2=1`, `Z_match=1`, or `g2=1`.
+- Treating W/Z mass+response ratios as absolute `y_t` without strict `g2`,
+  explicit `v`, or another absolute EW normalization theorem.
 
 ## Block A Import Audit Result
 
@@ -46,3 +48,12 @@ unmeasured orthogonal neutral direction can rotate the would-be Higgs readout
 without changing those rows.  A future neutral-rank route needs a real
 same-surface transfer/off-diagonal generator, primitive-cone certificate, or
 strict source-Higgs/WZ response rows.
+
+## Block39 W/Z Mass-Response Audit Result
+
+W/Z mass-plus-response rows do not self-normalize the absolute coupling.  The
+scale orbit `(v,dv/ds) -> lambda(v,dv/ds)` with
+`(y_t,g2,gY) -> (y_t,g2,gY)/lambda` preserves top/W/Z masses and same-source
+response slopes while changing absolute `y_t`.  A future W/Z route still needs
+strict non-observed `g2`, explicit `v` as substrate input, or another absolute
+EW normalization theorem.

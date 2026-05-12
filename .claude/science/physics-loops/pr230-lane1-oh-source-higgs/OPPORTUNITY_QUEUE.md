@@ -1,17 +1,18 @@
 # Opportunity Queue
 
-## Active Ranking After Block38
+## Active Ranking After Block39
 
-1. **Strict W/Z physical-response packet.**
-   A same-source physical-response route may bypass canonical `O_H` if it can
-   derive the relevant response operator and normalization from measured W/Z
-   sector rows without observed-value selectors.
+1. **Native scalar/action/LSZ theorem.**
+   Highest remaining non-chunk route after W/Z mass-response
+   self-normalization failed.  Reopen only with a concrete new primitive such
+   as an exact Hubbard-Stratonovich kernel, scalar carrier from the fermion
+   determinant, or same-surface action derivation.
 
-2. **Native scalar/action/LSZ theorem.**
-   Reopen only with a concrete new primitive such as an exact
-   Hubbard-Stratonovich kernel, scalar carrier from the fermion determinant, or
-   same-surface action derivation.  The current Block37 artifact says the
-   existing PR230 substrate does not already contain it.
+2. **Strict W/Z physical-response packet with absolute authority.**
+   Still viable only if it supplies production W/Z rows plus strict
+   non-observed `g2`, explicit `v` substrate authority, or another absolute EW
+   normalization theorem.  Block39 closes the W/Z mass+response
+   self-normalization shortcut.
 
 3. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,

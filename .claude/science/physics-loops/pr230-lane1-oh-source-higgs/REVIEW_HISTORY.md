@@ -63,3 +63,17 @@ performed directly against the changed files and repo governance surfaces:
   older neutral-rank no-gos.
 - Status check: `proposal_allowed=false`; no `proposed_retained` wording is
   authorized.
+
+## Self-Review: Block39
+
+- Overclaim check: passed.  The note blocks only W/Z mass-plus-response
+  self-normalization; it does not claim a permanent no-go against W/Z closure
+  with strict `g2`/`v` authority.
+- Physics check: passed.  The scale orbit holds all top/W/Z masses and
+  same-source response slopes fixed while varying absolute `y_t`, `g2`, `gY`,
+  `v`, and `dv/ds`; therefore the shortcut determines only ratios.
+- Forbidden-import check: passed.  The runner does not use observed
+  top/W/Z/`y_t`/`g2`, `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`,
+  static EW algebra as response evidence, or scout rows as production.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.

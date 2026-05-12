@@ -77,6 +77,7 @@ PARENTS = {
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
+    "pr230_wz_mass_response_self_normalization_no_go": "outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json",
     "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
     "same_source_sector_overlap": "outputs/yt_same_source_sector_overlap_identity_obstruction_2026-05-02.json",
     "canonical_higgs_operator": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
@@ -3291,6 +3292,23 @@ def main() -> int:
         is True,
         statuses["wz_g2_response_self_normalization_no_go"],
     )
+    wz_mass_response_self_normalization_no_go_blocks = (
+        "WZ top-W-Z mass-plus-response self-normalization"
+        in statuses["pr230_wz_mass_response_self_normalization_no_go"]
+        and certs["pr230_wz_mass_response_self_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_wz_mass_response_self_normalization_no_go"].get(
+            "wz_mass_response_self_normalization_no_go_passed"
+        )
+        is True
+    )
+    report(
+        "pr230-wz-mass-response-self-normalization-no-go-blocks",
+        wz_mass_response_self_normalization_no_go_blocks,
+        statuses["pr230_wz_mass_response_self_normalization_no_go"],
+    )
     report(
         "wz-g2-bare-running-bridge-attempt-blocks",
         "WZ g2 bare-to-low-scale running bridge"
@@ -3724,6 +3742,7 @@ def main() -> int:
         "schur_route_completion_blocks": schur_route_completion_blocks,
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
+        "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,

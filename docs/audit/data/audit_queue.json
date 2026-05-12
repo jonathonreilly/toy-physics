@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 720,
+    "leaf": 721,
     "medium": 331
   },
-  "generated_at": "2026-05-12T01:57:01.450358+00:00",
+  "generated_at": "2026-05-12T02:06:42.688433+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -23058,6 +23058,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_wz_mass_response_self_normalization_no_go_note_2026-05-12",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_WZ_MASS_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-12.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_wz_response_route_completion_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26412,6 +26429,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 887,
-  "total_pending": 1288
+  "ready_count": 888,
+  "total_pending": 1289
 }

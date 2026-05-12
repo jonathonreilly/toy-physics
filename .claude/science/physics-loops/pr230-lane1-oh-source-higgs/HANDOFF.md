@@ -43,6 +43,12 @@ pole to be the only neutral scalar direction.  They do not.  A three-direction
 completion `(source_s, taste_radial_x, orthogonal_neutral_n)` preserves all
 current rows while varying the source-Higgs overlap.
 
+Block39 attacked the W/Z mass-response self-normalization shortcut.  It checks
+whether ideal top/W/Z mass rows plus same-source response slopes could remove
+the need for strict `g2` or `v` authority.  They cannot: a scale orbit keeps
+all masses and slopes fixed while varying absolute `y_t`, `g2`, `gY`, `v`, and
+`dv/ds`.
+
 ## Checks Run
 
 ```text
@@ -57,6 +63,10 @@ python3 scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py
 python3 -m py_compile scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py
 python3 scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py
 # SUMMARY: PASS=12 FAIL=0
+
+python3 -m py_compile scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py
+python3 scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py
+# SUMMARY: PASS=15 FAIL=0
 
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
@@ -83,10 +93,10 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=165 FAIL=0
+# SUMMARY: PASS=166 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=367 FAIL=0
+# campaign status SUMMARY: PASS=368 FAIL=0
 ```
 
 ## Current Status
@@ -98,17 +108,17 @@ derive a strict W/Z physical-response packet, a native scalar/action/LSZ theorem
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
-`C_sH/C_HH`, and the source-Higgs pole pipeline correctly refuses to generate
-closure evidence.
+`C_sH/C_HH`, and W/Z mass+response rows cannot replace the missing absolute
+`g2`/`v` authority.
 
 ## Next Exact Action
 
-Pivot to the strict W/Z physical-response bypass.  The next block should not
-re-run row inventory.  It should try one of:
+Pivot to the native scalar/action/LSZ theorem route.  The next block should not
+re-run row inventory or W/Z self-normalization.  It should try one of:
 
 ```text
-strict W/Z physical-response packet
 new native scalar/action/LSZ primitive
+strict W/Z physical-response packet with absolute g2/v authority
 new same-surface neutral transfer primitive
 ```
 

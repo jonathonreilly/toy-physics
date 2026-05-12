@@ -36,9 +36,20 @@ Status: exact negative boundary on the current surface.  Complete
 rank one because an unmeasured orthogonal neutral direction can vary the
 source-Higgs overlap while preserving current rows.
 
+## Block39: W/Z Mass-Response Self-Normalization No-Go
+
+- Note: `docs/YT_PR230_WZ_MASS_RESPONSE_SELF_NORMALIZATION_NO_GO_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py`
+- Certificate: `outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  Top/W/Z mass rows
+plus same-source response slopes determine ratios only; they do not fix
+absolute `y_t` without strict `g2`, explicit `v`, or another absolute EW
+normalization authority.
+
 ## Future Positive Artifact
 
-The next artifact that could move the lane positively is a strict W/Z
-physical-response packet, a genuinely new native scalar/action/LSZ theorem, or
-a new same-surface neutral transfer primitive not present in the current row
-packet.
+The next artifact that could move the lane positively is a genuinely new native
+scalar/action/LSZ theorem, a strict W/Z physical-response packet with absolute
+`g2`/`v` authority, or a new same-surface neutral transfer primitive not
+present in the current row packet.

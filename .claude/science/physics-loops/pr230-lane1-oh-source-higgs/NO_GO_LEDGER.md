@@ -20,6 +20,12 @@
   `C_ss/C_sx/C_xx` subblock and top bare-mass response rows are preserved by a
   three-direction completion with an unmeasured orthogonal neutral scalar and
   variable source-Higgs overlap.
+- W/Z mass-plus-response self-normalization is not closure: even ideal
+  top/W/Z mass rows plus same-source response slopes are invariant under
+  `(v,dv/ds) -> lambda (v,dv/ds)` and
+  `(y_t,g2,gY) -> (y_t,g2,gY)/lambda`, so they determine ratios but not
+  absolute `y_t` without strict `g2`, explicit `v`, or another absolute EW
+  normalization authority.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary
@@ -27,5 +33,5 @@
 These are current-surface shortcut blockers, not permanent impossibility
 theorems.  They retire if a future native scalar/action/LSZ theorem,
 explicitly admitted action extension plus strict rows, same-surface neutral
-transfer/primitive-cone theorem, or strict W/Z physical-response packet
-supplies the missing bridge.
+transfer/primitive-cone theorem, or strict W/Z physical-response packet with
+absolute `g2`/`v` authority supplies the missing bridge.

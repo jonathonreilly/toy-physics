@@ -1,0 +1,190 @@
+{
+  "actual_current_surface_status": "exact negative boundary / WZ top-W-Z mass-plus-response self-normalization does not fix absolute y_t on the current PR230 surface",
+  "admitted_observation_status": null,
+  "allowed_escape_routes": [
+    "supply a strict non-observed g2 certificate from an allowed authority",
+    "admit v as an explicit substrate input for the specific readout and keep that dependency visible",
+    "derive an absolute EW normalization theorem outside top/W/Z mass-response rows",
+    "return to direct m_t measurement with explicit v input and matching bridge"
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future strict non-observed g2 certificate, absolute v authority accepted as a substrate input, or another absolute EW normalization theorem is supplied",
+  "exact_next_action": "Do not pursue W/Z mass+response self-normalization as a g2/v replacement.  Continue only with a strict g2/v authority, a real W/Z production packet plus that authority, or a different native scalar/action/LSZ or neutral-transfer primitive.",
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_v_or_g2_by_unit_convention": false,
+    "treated_scout_or_smoke_rows_as_production": false,
+    "treated_static_ew_algebra_as_response_rows": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_g2_selector": false,
+    "used_observed_top_w_z_or_yt_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "mass_response_scale_orbit": {
+    "invariant_observables": {
+      "M_W": [
+        78.72
+      ],
+      "M_W_over_M_Z": [
+        0.871575537125
+      ],
+      "M_Z": [
+        90.319193973374
+      ],
+      "dM_W_ds": [
+        1.024
+      ],
+      "dM_W_ds_over_dM_Z_ds": [
+        0.871575537125
+      ],
+      "dM_Z_ds": [
+        1.174883824044
+      ],
+      "dm_top_ds": [
+        2.081722363813
+      ],
+      "dm_top_ds_over_dM_W_ds": [
+        2.032931995911
+      ],
+      "m_top": [
+        160.032406718139
+      ],
+      "m_top_over_M_W": [
+        2.032931995911
+      ]
+    },
+    "rows": [
+      {
+        "lambda": 0.5,
+        "observables": {
+          "M_W": 78.72,
+          "M_W_over_M_Z": 0.8715755371245492,
+          "M_Z": 90.31919397337424,
+          "dM_W_ds": 1.024,
+          "dM_W_ds_over_dM_Z_ds": 0.8715755371245492,
+          "dM_Z_ds": 1.1748838240438926,
+          "dm_top_ds": 2.081722363813196,
+          "dm_top_ds_over_dM_W_ds": 2.032931995911324,
+          "m_top": 160.03240671813944,
+          "m_top_over_M_W": 2.032931995911324
+        },
+        "parameters": {
+          "dv_ds": 1.6,
+          "g2": 1.28,
+          "gY": 0.72,
+          "gZ": 1.4686047800548656,
+          "v": 123.0,
+          "y_t": 1.84
+        }
+      },
+      {
+        "lambda": 1.0,
+        "observables": {
+          "M_W": 78.72,
+          "M_W_over_M_Z": 0.8715755371245492,
+          "M_Z": 90.31919397337424,
+          "dM_W_ds": 1.024,
+          "dM_W_ds_over_dM_Z_ds": 0.8715755371245492,
+          "dM_Z_ds": 1.1748838240438926,
+          "dm_top_ds": 2.081722363813196,
+          "dm_top_ds_over_dM_W_ds": 2.032931995911324,
+          "m_top": 160.03240671813944,
+          "m_top_over_M_W": 2.032931995911324
+        },
+        "parameters": {
+          "dv_ds": 3.2,
+          "g2": 0.64,
+          "gY": 0.36,
+          "gZ": 0.7343023900274328,
+          "v": 246.0,
+          "y_t": 0.92
+        }
+      },
+      {
+        "lambda": 2.0,
+        "observables": {
+          "M_W": 78.72,
+          "M_W_over_M_Z": 0.8715755371245492,
+          "M_Z": 90.31919397337424,
+          "dM_W_ds": 1.024,
+          "dM_W_ds_over_dM_Z_ds": 0.8715755371245492,
+          "dM_Z_ds": 1.1748838240438926,
+          "dm_top_ds": 2.081722363813196,
+          "dm_top_ds_over_dM_W_ds": 2.032931995911324,
+          "m_top": 160.03240671813944,
+          "m_top_over_M_W": 2.032931995911324
+        },
+        "parameters": {
+          "dv_ds": 6.4,
+          "g2": 0.32,
+          "gY": 0.18,
+          "gZ": 0.3671511950137164,
+          "v": 492.0,
+          "y_t": 0.46
+        }
+      }
+    ],
+    "transformation": "(v,dv_ds)->lambda*(v,dv_ds); (y_t,g2,gY)->(y_t,g2,gY)/lambda",
+    "varying_parameters": {
+      "dv_ds": [
+        1.6,
+        3.2,
+        6.4
+      ],
+      "g2": [
+        0.32,
+        0.64,
+        1.28
+      ],
+      "gY": [
+        0.18,
+        0.36,
+        0.72
+      ],
+      "gZ": [
+        0.367151195014,
+        0.734302390027,
+        1.468604780055
+      ],
+      "v": [
+        123.0,
+        246.0,
+        492.0
+      ],
+      "y_t": [
+        0.46,
+        0.92,
+        1.84
+      ]
+    }
+  },
+  "parent_statuses": {
+    "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
+    "wz_accepted_action_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
+    "wz_g2_authority_firewall": "exact negative boundary / WZ response g2 authority absent for PR230",
+    "wz_g2_bare_running_bridge_attempt": "exact negative boundary / WZ g2 bare-to-low-scale running bridge not derivable on current PR230 surface",
+    "wz_g2_response_self_normalization_no_go": "exact negative boundary / WZ response-only g2 self-normalization no-go",
+    "wz_mass_fit_path": "exact negative boundary / WZ correlator mass-fit path absent on PR230 surface",
+    "wz_physical_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist",
+    "wz_response_ratio_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The same idealized top/W/Z mass and same-source response rows are invariant under v,dv/ds scaling with inverse coupling scaling. They determine ratios, not absolute y_t, unless a strict g2/v normalization authority is supplied.",
+  "strict_g2_certificate_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not use observed top/W/Z/y_t/g2 values as proof selectors",
+    "does not use H_unit, yt_ward_identity, y_t_bare, alpha_LM, plaquette, or u0",
+    "does not set v, g2, c2, Z_match, or kappa_s by unit convention",
+    "does not treat W/Z scout or smoke rows as production evidence"
+  ],
+  "summary": {
+    "fail": 0,
+    "pass": 15
+  },
+  "wz_mass_response_self_normalization_no_go_passed": true
+}

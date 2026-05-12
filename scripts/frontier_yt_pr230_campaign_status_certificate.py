@@ -476,6 +476,9 @@ def main() -> int:
         "wz_g2_response_self_normalization_no_go": load(
             "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json"
         ),
+        "pr230_wz_mass_response_self_normalization_no_go": load(
+            "outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2354,6 +2357,23 @@ def main() -> int:
         )
         is True,
         statuses["wz_g2_response_self_normalization_no_go"],
+    )
+    wz_mass_response_self_normalization_no_go_blocks = (
+        "WZ top-W-Z mass-plus-response self-normalization"
+        in str(statuses["pr230_wz_mass_response_self_normalization_no_go"])
+        and certificates["pr230_wz_mass_response_self_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_wz_mass_response_self_normalization_no_go"].get(
+            "wz_mass_response_self_normalization_no_go_passed"
+        )
+        is True
+    )
+    report(
+        "pr230-wz-mass-response-self-normalization-no-go-blocks",
+        wz_mass_response_self_normalization_no_go_blocks,
+        statuses["pr230_wz_mass_response_self_normalization_no_go"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6036,6 +6056,7 @@ def main() -> int:
         "remaining_routes": remaining_routes,
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
+        "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
