@@ -3,14 +3,14 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-block48-operator-boundary
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block50 post-chunks001-002 source-Higgs bridge intake guard complete; canonical O_H/source-overlap, strict mixed-source subtraction packet, W/Z packet, H3/H4 artifact, C_ss/C_sH/C_HH(tau), or scalar/action/LSZ primitive remains next"
+active_block: "Block51 same-source FH-LSZ full-L12 support reclassification complete; L12 chunk completeness is no longer the blocker, while response stability, scalar pole/model-class/FV/IR, canonical Higgs identity, W/Z packet, H3/H4 artifact, C_ss/C_sH/C_HH(tau), or scalar/action/LSZ primitive remains next"
 target_status: best-honest-status
-actual_current_surface_status: "exact negative boundary: completed higher-shell chunks001-002 are partial taste-radial C_sx/C_xx support, not PR230 source-Higgs bridge closure"
+actual_current_surface_status: "bounded support plus exact boundary: complete L12 same-source FH-LSZ support is present, but response stability, scalar pole/model-class/FV/IR, and canonical-Higgs identity gates remain open; completed higher-shell chunks001-002 remain partial taste-radial C_sx/C_xx support"
 conditional_surface_status: "conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
-hard_residual: "certified canonical O_H/source-overlap bridge, strict mixed-source additive-top subtraction packet, same-surface neutral-transfer primitive, genuinely new W/Z production packet with strict absolute authority, or a genuinely new scalar/action/LSZ primitive not already blocked; origin/main Ward Step 3 remains only an audited open_gate and chunks001-002 remain partial taste-radial support"
+hard_residual: "certified canonical O_H/source-overlap bridge, response-stable same-source FH-LSZ physical pole packet with scalar pole/model-class/FV/IR authority, strict mixed-source additive-top subtraction packet, same-surface neutral-transfer primitive, genuinely new W/Z production packet with strict absolute authority, or a genuinely new scalar/action/LSZ primitive not already blocked; origin/main Ward Step 3 remains only an audited open_gate and chunks001-002 remain partial taste-radial support"
 completed_checks:
   - "frontier_yt_pr230_lane1_oh_root_theorem_attempt.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_lane1_action_premise_derivation_attempt.py: PASS=15 FAIL=0"
@@ -27,6 +27,9 @@ completed_checks:
   - "frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py: PASS=16 FAIL=0"
   - "frontier_yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard.py: PASS=15 FAIL=0"
   - "frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py: PASS=17 FAIL=0"
+  - "frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py: PASS=8 FAIL=0"
+  - "frontier_yt_fh_lsz_ready_chunk_response_stability.py: PASS=6 FAIL=0"
+  - "frontier_yt_same_source_pole_data_sufficiency_gate.py: PASS=12 FAIL=0"
   - "frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_fms_oh_candidate_action_packet.py: PASS=13 FAIL=0"
   - "frontier_yt_pr230_source_higgs_direct_pole_row_contract.py: PASS=18 FAIL=0"
@@ -37,4 +40,4 @@ completed_checks:
   - "frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0"
   - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=178 FAIL=0"
   - "frontier_yt_pr230_campaign_status_certificate.py: PASS=387 FAIL=0"
-next_exact_action: "Do not treat finite C_sx covariance, active worker intent, completed higher-shell chunks001-002, higher-shell source-Higgs cross rows under the taste-radial certificate, top mass-scan dE/dm_bare rows, ordinary top/scalar-source tau correlators, empty guarded source-Higgs blocks, MC configuration-index target samples, reduced source-Higgs smoke, or origin/main YT_WARD Step 3 audited open_gate status as strict bridge evidence. A positive route must add a completed same-surface H3/H4 neutral artifact, production C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, a strict W/Z packet with mixed-source T_total/A_top/W rows plus covariance/action/g2/v authority, or a new scalar/action/LSZ primitive."
+next_exact_action: "Do not relitigate L12 FH-LSZ chunk completeness: it is complete support. A positive route must now improve the response-stability estimator with justified same-surface authority, derive retained-grade scalar pole/model-class/FV/IR plus canonical-Higgs identity, add a completed same-surface H3/H4 neutral artifact, production C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, a strict W/Z packet with mixed-source T_total/A_top/W rows plus covariance/action/g2/v authority, or a new scalar/action/LSZ primitive."

@@ -219,3 +219,15 @@ rows, disabled source-Higgs time kernels, scalar-LSZ normalization
 chunks may be accumulated as support, but source-Higgs closure still needs a
 canonical `O_H`/source-overlap certificate plus strict physical Euclidean
 `C_ss/C_sH/C_HH(tau)` pole rows with Gram/FV/IR authority.
+
+## Block51 Same-Source FH/LSZ Full-L12 Support Reclassification Result
+
+The L12 same-source FH-LSZ support packet is now complete and should be
+treated honestly as complete support, not as missing chunk production.  The
+updated gates record `63/63` chunks, full target-time-series support, and
+support-only same-source `dE/ds` plus `C_ss/Gamma_ss` statistics.  The route
+still depends on open imports: response stability is not passed
+(`relative_stdev=0.90147`, `spread_ratio=5.93489`), the isolated scalar-pole
+derivative and model-class/FV/IR authority are absent, and the measured scalar
+source pole is not certified as canonical Higgs radial `O_H`.  L12 support is
+therefore not a retained or `proposed_retained` top-Yukawa readout.

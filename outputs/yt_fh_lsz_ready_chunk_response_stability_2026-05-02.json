@@ -1,10 +1,10 @@
 {
   "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
-  "exact_next_action": "Continue seed-controlled chunks and rerun this diagnostic with a larger ready set; in parallel, continue the canonical-Higgs identity or same-source W/Z response route.",
+  "exact_next_action": "Do not relitigate L12 chunk completeness.  Either improve the response-stability estimator with a justified same-surface method or continue the canonical-Higgs identity / same-source W/Z response route.",
   "fail_count": 0,
   "pass_count": 6,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The ready set is partial and response stability is not passed; scalar LSZ/canonical-Higgs gates remain open.",
+  "proposal_allowed_reason": "The ready L12 set response stability is not passed; scalar LSZ/canonical-Higgs gates remain open.",
   "ready_set_certificate": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
   "response_rows": [
     {
@@ -970,7 +970,7 @@
     "does not treat dE/ds as physical dE/dh",
     "does not set kappa_s = 1",
     "does not use observed top mass, observed y_t, H_unit, Ward authority, alpha_LM, plaquette, or u0",
-    "does not treat a partial L12 set as production closure"
+    "does not treat an L12-only ready set as production closure"
   ],
-  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the 63/63 partial set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
+  "verdict": "The current seed-controlled ready chunks expose same-source dE/ds, but the complete L12 set is not stable enough to use as production response evidence beyond bounded support.  The chunk slopes are finite but have large chunk-to-chunk spread.  Even a stable slope would still require scalar LSZ pole derivative, model-class/FV/IR control, and canonical-Higgs identity before physical y_t closure."
 }

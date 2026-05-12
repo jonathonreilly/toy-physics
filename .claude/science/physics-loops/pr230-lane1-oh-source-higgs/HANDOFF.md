@@ -129,6 +129,13 @@ source/operator cross rows are still taste-radial `C_sx/C_xx` aliases under
 source-Higgs time kernel, no derived scalar-LSZ normalization, no W/Z response,
 and no physical-yukawa readout.
 
+Block51 repairs a stale same-source FH/LSZ gate.  The older pole-data
+sufficiency gate still expected incomplete L12 production, but the current
+surface has complete `63/63` L12 same-source FH-LSZ support.  The updated gates
+record that progress while preserving the claim boundary: response stability
+is not passed, scalar pole/model-class/FV/IR authority is absent, and the
+measured source pole is not certified as canonical Higgs radial `O_H`.
+
 ## Checks Run
 
 ```text
@@ -192,6 +199,14 @@ python3 -m py_compile scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_
 python3 scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py
 # SUMMARY: PASS=17 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
+# SUMMARY: PASS=6 FAIL=0
+python3 scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+# SUMMARY: PASS=12 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -248,6 +263,10 @@ The origin/main YT_WARD Step 3 audited `open_gate` row also cannot replace
 those missing PR230 bridge artifacts.
 Completed higher-shell chunks001-002 also cannot replace them; the prefix is
 bounded taste-radial support only.
+The full L12 same-source FH-LSZ packet is complete bounded support, so chunk
+completeness is no longer the relevant blocker.  It still cannot replace
+response stability, scalar pole/model-class/FV/IR authority, or canonical
+Higgs identity.
 
 ## Next Exact Action
 
@@ -277,3 +296,7 @@ or physical top-Yukawa derivation.
 Do not treat completed higher-shell chunks001-002 as a complete packet,
 canonical `O_H`, source-Higgs pole rows, scalar-LSZ/FV/IR authority, W/Z
 response, or physical-yukawa readout.
+Do not spend another block on L12 same-source FH-LSZ chunk completeness unless
+new files land; it is complete support.  The next same-source route must target
+response stability, scalar pole/model-class/FV/IR authority, canonical-Higgs
+identity, or W/Z physical response.

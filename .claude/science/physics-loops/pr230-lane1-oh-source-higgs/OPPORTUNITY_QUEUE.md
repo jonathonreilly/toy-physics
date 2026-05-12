@@ -1,6 +1,11 @@
 # Opportunity Queue
 
-## Active Ranking After Block50
+## Active Ranking After Block51
+
+Block51 update: L12 same-source FH-LSZ chunk completeness is no longer a live
+blocker.  The `63/63` packet is complete bounded support, but response
+stability, scalar pole/model-class/FV/IR authority, and canonical-Higgs pole
+identity remain open.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -20,7 +25,9 @@
    is only an `open_gate` coefficient diagnostic, not a PR230 neutral-transfer
    or source-Higgs closure artifact.  Block50 shows completed higher-shell
    chunks001-002 are partial taste-radial prefix support, not a source-Higgs
-   bridge or neutral-transfer artifact.
+   bridge or neutral-transfer artifact.  Block51 shows complete L12
+   same-source FH-LSZ support still does not provide the neutral transfer,
+   physical pole, or canonical-Higgs identity.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -49,7 +56,14 @@
    Completed chunks001-002 also cannot be used as the row path because they
    contain no pole residues, source-Higgs time kernel, or canonical `O_H`.
 
-5. **Schur higher-shell rows if they finish.**
+5. **Response-stability / scalar-pole model-class repair for completed L12 FH-LSZ support.**
+   The support packet is now complete, so do not spend work on chunk
+   completeness.  A positive move must supply a justified response-stability
+   estimator or retained-grade scalar-pole derivative/model-class/FV/IR
+   theorem plus canonical-Higgs identity.  Otherwise this lane remains
+   bounded support.
+
+6. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not
    reopened until completed JSON/certificates land and are checked against the
    H3/H4, pole/FV/IR, and canonical coupling obligations.  Under the current
@@ -57,7 +71,7 @@
    completed chunks001-002 prefix is now explicitly checkpointed as support
    only by Block50.
 
-6. **Ward Step 3 same-1PI route if future bridge lands.**
+7. **Ward Step 3 same-1PI route if future bridge lands.**
    Origin/main has an audited-clean `open_gate` coefficient diagnostic, but
    Block49 prevents importing it as PR230 closure.  Reopen only with a
    Wick-level same-1PI bridge and independent scalar pole/LSZ plus canonical

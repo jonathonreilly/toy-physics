@@ -430,6 +430,9 @@ this was a narrow intake guard for an external branch artifact.
   authorized.
 - Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
   and does not update claim surfaces or audit verdicts.
+- Audit Compatibility: PASS.  The full audit pipeline seeds the new note with
+  effective status `bounded`; `audit_lint.py --strict` reports only the known
+  five warnings.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; aggregate gates compile
   and report `PASS=177 FAIL=0` and `PASS=385 FAIL=0`.
@@ -471,3 +474,37 @@ this was a narrow completed-prefix intake guard.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; aggregate gates compile
   and report `PASS=178 FAIL=0` and `PASS=387 FAIL=0`.
+
+## Self-Review: Block51
+
+- Overclaim check: passed.  The note and runners retire only the stale
+  incomplete-L12 wording and keep the result at bounded support.  They do not
+  claim retained or `proposed_retained` top-Yukawa closure.
+- Physics check: passed.  The updated gates verify complete `63/63` L12
+  same-source FH-LSZ support, then block on response stability
+  (`relative_stdev=0.90147`, `spread_ratio=5.93489`), scalar pole/model-class
+  and FV/IR authority, and canonical-Higgs pole identity.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`,
+  L12-only support as retained evidence, or source-only rows as strict
+  `C_sH/C_HH` source-Higgs rows.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block51 Package
+
+Local review-loop was performed directly against the changed package because
+this was a stale-boundary repair and support reclassification.
+
+- Code / Runner: PASS.  The changed runners compile and report `PASS=8`,
+  `PASS=6`, and `PASS=12` with zero failures.
+- Physics Claim Boundary: BOUNDED SUPPORT / OPEN GATES.  The L12 packet is
+  complete support; response stability, scalar pole/model-class/FV/IR, and
+  canonical-Higgs identity remain open.
+- Imports / Support: DISCLOSED.  Complete L12 support, unstable response,
+  missing scalar-pole derivative, missing FV/IR/model-class authority, and
+  missing canonical `O_H` are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces or audit verdicts.

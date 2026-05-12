@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:37:40.395075+00:00",
+  "generated_at": "2026-05-12T04:51:54.603748+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43711,6 +43711,16 @@
       "runner_path": "scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py",
       "title": "YT PR230 Same-Source EW/Higgs Action Ansatz Gate Note"
     },
+    "yt_pr230_same_source_fh_lsz_full_l12_support_reclassification_note_2026-05-12": {
+      "claim_id": "yt_pr230_same_source_fh_lsz_full_l12_support_reclassification_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / full L12 same-source FH/LSZ packet complete; source-Higgs closure gates remain open",
+      "deps": [],
+      "note_hash": "94964975db3ce04ea38d99c41f66c7233e6863095f02d2c6a321c847c169a033",
+      "path": "docs/YT_PR230_SAME_SOURCE_FH_LSZ_FULL_L12_SUPPORT_RECLASSIFICATION_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py",
+      "title": "PR230 Same-Source FH/LSZ Full-L12 Support Reclassification"
+    },
     "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07": {
       "claim_id": "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
       "current_status": "unknown",
@@ -47270,6 +47280,7 @@
     "yt_pr230_review_backpressure_pass_note_2026-05-01",
     "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06",
     "yt_pr230_same_source_ew_higgs_action_ansatz_gate_note_2026-05-06",
+    "yt_pr230_same_source_fh_lsz_full_l12_support_reclassification_note_2026-05-12",
     "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
     "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07",
     "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06",
@@ -47460,12 +47471,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1132,
-    "node_count": 2151,
-    "root_count": 1650,
-    "runners_with_path": 1626,
+    "leaf_count": 1133,
+    "node_count": 2152,
+    "root_count": 1651,
+    "runners_with_path": 1627,
     "status_counts": {
-      "bounded": 598,
+      "bounded": 599,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,

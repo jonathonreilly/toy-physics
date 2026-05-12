@@ -16,7 +16,9 @@
    neutral transfer, canonical `O_H`, or source-Higgs row artifact.  Block50
    adds that completed higher-shell chunks001-002 are partial taste-radial
    prefix support, with no canonical `O_H`, pole rows, time kernel, scalar-LSZ
-   authority, or W/Z response.
+   authority, or W/Z response.  Block51 adds that complete L12 same-source
+   FH-LSZ support does not supply a neutral transfer, physical source-Higgs
+   pole, or canonical-Higgs identity.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only
@@ -44,7 +46,14 @@
    not strict `C_sH/C_HH` closure.  Block50 confirms this for the completed
    chunks001-002 prefix.
 
-5. **Ward Step 3 same-1PI route.**
+5. **Same-source FH-LSZ invariant readout.**
+   Block51 repairs the stale incompleteness boundary: the L12 packet is now
+   complete support.  The route remains bounded support because response
+   stability is not passed, no retained-grade scalar pole derivative or
+   model-class/FV/IR authority exists, and the scalar source pole is not
+   certified as canonical Higgs radial `O_H`.
+
+6. **Ward Step 3 same-1PI route.**
    Origin/main now has an audited-clean Step 3 row, but its effective status is
    `open_gate` and its note leaves the same-1PI bridge, scalar pole/LSZ,
    canonical `O_H`, production source-Higgs rows, and Gram/FV/IR/model authority

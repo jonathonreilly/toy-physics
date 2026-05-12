@@ -134,4 +134,15 @@ Lane 1 Block50: post-chunks001-002 source-Higgs bridge intake guard
   C_sx/C_xx support only; they have no canonical O_H, pole-residue rows,
   source-Higgs time kernel, scalar-LSZ/FV/IR authority, W/Z response, or
   physical-yukawa readout, and cannot be imported as PR230 source-Higgs closure
+
+Lane 1 Block51: same-source FH-LSZ full-L12 support reclassification
+- status: bounded support plus exact boundary on the current surface
+- runners: scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py;
+  scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py;
+  scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+- result: PASS=8 FAIL=0; PASS=6 FAIL=0; PASS=12 FAIL=0
+- conclusion: L12 FH-LSZ support is complete at 63/63 and should no longer be
+  treated as missing chunk production; the route still blocks on response
+  stability, scalar pole/model-class/FV/IR authority, and canonical-Higgs pole
+  identity
 ```

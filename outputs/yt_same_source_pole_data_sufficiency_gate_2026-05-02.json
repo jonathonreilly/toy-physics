@@ -1,10 +1,11 @@
 {
   "actual_current_surface_status": "open / same-source pole-data sufficiency gate not passed",
-  "exact_next_action": "Finish seed-controlled FH/LSZ chunks, rerun combiner/stability, then process same-source pole data through postprocess, model-class/FV/IR, and Higgs-identity gates.",
+  "exact_next_action": "Do not relitigate chunk completeness.  Attack response stability, retained-grade scalar pole/model-class/FV/IR authority, or the independent Higgs-identity gate.",
   "fail_count": 0,
   "gate_passed": false,
   "parent_certificates": {
     "cl3_automorphism": "outputs/yt_cl3_automorphism_source_identity_no_go_2026-05-02.json",
+    "full_target_timeseries": "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json",
     "higgs_identity_gate": "outputs/yt_fh_lsz_higgs_pole_identity_gate_2026-05-02.json",
     "invariant_readout": "outputs/yt_fh_lsz_invariant_readout_theorem_2026-05-01.json",
     "model_class_gate": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
@@ -12,9 +13,9 @@
     "ready_chunk_response": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
     "ready_chunk_set": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json"
   },
-  "pass_count": 11,
+  "pass_count": 12,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The sufficiency theorem is support only; production, model-class/FV/IR, and Higgs-identity gates remain open.",
+  "proposal_allowed_reason": "The sufficiency theorem and complete L12 support packet are support only; response stability, model-class/FV/IR, and Higgs-identity gates remain open.",
   "same_source_algebra_rows": [
     {
       "dE_ds": 0.045,
@@ -55,7 +56,7 @@
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not set kappa_s = 1",
-    "does not use reduced or partial chunks as production evidence",
+    "does not use L12-only chunks as closure evidence",
     "does not use H_unit, yt_ward_identity, observed top mass, observed y_t, alpha_LM, plaquette, u0, c2 = 1, or Z_match = 1"
   ],
   "sufficient_conditions": [
@@ -66,31 +67,45 @@
     },
     {
       "certificate": "outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json",
-      "condition": "complete seed-controlled L12 production chunk set",
-      "current": "6/63",
-      "satisfied": false
+      "condition": "complete seed-controlled L12 production support chunk set",
+      "current": "63/63",
+      "satisfied": true
+    },
+    {
+      "certificate": "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json",
+      "condition": "complete L12 target-timeseries support packet",
+      "current": {
+        "available_saved_configurations": 1008,
+        "expected_chunks": 63,
+        "missing_chunks": 0,
+        "present_chunks": 63,
+        "ready_chunks": 63,
+        "target_saved_configurations": 1000
+      },
+      "satisfied": true
     },
     {
       "certificate": "outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json",
       "condition": "production response stability",
       "current": {
-        "max_slope": 6.80363930805008,
-        "min_slope": 1.2423254657958398,
-        "n_chunks": 6,
-        "relative_fit_error": 5.316526773686292,
-        "relative_stdev": 0.8727054943583518,
-        "slope_mean": 3.1592802558002706,
-        "slope_stdev": 2.757121237454755,
-        "spread_ratio": 5.476535332624479,
+        "max_slope": 7.3549193842802785,
+        "min_slope": 1.2392686775356556,
+        "n_chunks": 63,
+        "relative_fit_error": 8.475672954249996,
+        "relative_stdev": 0.9014700698097433,
+        "slope_mean": 2.2787280538618377,
+        "slope_stdev": 2.0542051377922514,
+        "spread_ratio": 5.934886855129659,
         "stability_acceptance_rule": "n>=8, relative_stdev<0.25, spread_ratio<2",
         "stability_passed": false,
-        "typical_fit_error": 16.796398065540615
+        "typical_fit_error": 19.313753736207506
       },
       "satisfied": false
     },
     {
       "certificate": "outputs/yt_fh_lsz_production_postprocess_gate_2026-05-01.json",
-      "condition": "postprocess gate has same-source dE/ds, Gamma_ss(q), pole derivative, FV/IR control",
+      "condition": "postprocess gate has retained-grade same-source dE/ds, Gamma_ss(q), pole derivative, FV/IR control",
+      "l12_support_ready": true,
       "satisfied": false
     },
     {
@@ -104,5 +119,5 @@
       "satisfied": false
     }
   ],
-  "verdict": "The exact positive-side FH/LSZ route is now explicit: same-source production dE_top/ds and same-source scalar D'(pole) remove the source-coordinate normalization freedom by the invariant product (dE/ds)*sqrt(D'_ss).  This does not set kappa_s=1.  Retained closure still requires completed seed-controlled production data, response stability, a valid pole/model-class/FV/IR postprocess, and an independent certificate that the measured source pole is the canonical Higgs radial mode.  Those gates are not passed on the current PR #230 surface."
+  "verdict": "The exact positive-side FH/LSZ route is now explicit: same-source production dE_top/ds and same-source scalar D'(pole) remove the source-coordinate normalization freedom by the invariant product (dE/ds)*sqrt(D'_ss).  This does not set kappa_s=1.  Retained the closure route now has complete L12 same-source production support, but still requires response stability, a retained-grade pole/model-class/FV/IR postprocess, and an independent certificate that the measured source pole is the canonical Higgs radial mode.  Those closure gates are not passed on the current PR #230 surface."
 }

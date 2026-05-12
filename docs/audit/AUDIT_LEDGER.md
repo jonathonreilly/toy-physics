@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-05-12T04:37:44.316252+00:00
+**Generated:** 2026-05-12T04:51:58.257406+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md); archival handling: [STALE_NARRATIVE_POLICY.md](STALE_NARRATIVE_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 81 |
 | _proposed_retained_ | 8 |
-| bounded | 433 |
+| bounded | 434 |
 | support | 332 |
 | open | 81 |
 | unknown | 189 |
@@ -39,14 +39,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 58 |
 | `audited_numerical_match` | 11 |
 | `audited_renaming` | 11 |
-| `unaudited` | 1308 |
+| `unaudited` | 1309 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 73 |
 | `high` | 339 |
 | `medium` | 442 |
-| `leaf` | 1200 |
+| `leaf` | 1201 |
 
 - **Proposed claims demoted by upstream:** 130
 - **Citation cycles detected:** 61

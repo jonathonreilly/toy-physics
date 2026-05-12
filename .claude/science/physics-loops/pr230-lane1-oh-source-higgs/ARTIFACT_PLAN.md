@@ -183,13 +183,34 @@ taste-radial `C_sx/C_xx` aliases under `x`; they contain no pole residues, no
 source-Higgs time kernel, no derived scalar LSZ normalization, no W/Z response,
 and no canonical-Higgs identity.
 
+## Block51: Same-Source FH/LSZ Full-L12 Support Reclassification
+
+- Note: `docs/YT_PR230_SAME_SOURCE_FH_LSZ_FULL_L12_SUPPORT_RECLASSIFICATION_NOTE_2026-05-12.md`
+- Runners:
+  `scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py`,
+  `scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py`,
+  `scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py`
+- Certificates:
+  `outputs/yt_fh_lsz_ready_chunk_set_checkpoint_2026-05-02.json`,
+  `outputs/yt_fh_lsz_ready_chunk_response_stability_2026-05-02.json`,
+  `outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json`
+
+Status: bounded support plus exact boundary.  The old same-source pole-data
+gate is repaired so it no longer treats L12 chunk completeness as missing:
+`63/63` L12 FH-LSZ chunks and full target-time-series support are complete.
+The route still blocks because response stability is not passed
+(`relative_stdev=0.90147`, `spread_ratio=5.93489`), scalar pole/model-class
+and FV/IR authority remain open, and the canonical-Higgs pole identity is not
+certified.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
 reduced smoke, active worker intent, completed higher-shell chunks001-002,
-higher-shell taste-radial cross rows, or origin/main Ward Step 3 open-gate status, a strict W/Z physical-response packet
-with actual mixed-source `T_total/A_top/W` rows, matched covariance, accepted
-action, and absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ
-primitive not already covered by Block41.
+completed L12 same-source FH-LSZ support, higher-shell taste-radial cross
+rows, or origin/main Ward Step 3 open-gate status; a strict W/Z
+physical-response packet with actual mixed-source `T_total/A_top/W` rows,
+matched covariance, accepted action, and absolute `g2`/`v` authority; or a
+genuinely new scalar/action/LSZ primitive not already covered by Block41.

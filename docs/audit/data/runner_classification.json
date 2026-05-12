@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T04:37:43.582569+00:00",
+  "generated_at": "2026-05-12T04:51:57.536733+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17641,6 +17641,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_same_source_ew_higgs_action_ansatz_gate.py"
     },
+    "yt_pr230_same_source_fh_lsz_full_l12_support_reclassification_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py"
+    },
     "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07": {
       "assert_count": 1,
       "counts": {
@@ -34176,7 +34188,8 @@
     "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py": {
       "assert_count": 1,
       "claims": [
-        "yt_fh_lsz_ready_chunk_set_checkpoint_note_2026-05-02"
+        "yt_fh_lsz_ready_chunk_set_checkpoint_note_2026-05-02",
+        "yt_pr230_same_source_fh_lsz_full_l12_support_reclassification_note_2026-05-12"
       ],
       "counts": {
         "A": 0,

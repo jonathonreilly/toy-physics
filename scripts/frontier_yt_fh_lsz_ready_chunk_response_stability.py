@@ -5,8 +5,8 @@ PR #230 FH/LSZ ready chunk response-stability diagnostic.
 This runner checks the same-source dE/ds slopes in the current seed-controlled
 ready L12 chunk set.  It is a production diagnostic only.  A stable slope would
 still need the scalar LSZ/canonical-Higgs gates before physical y_t closure;
-an unstable partial set blocks using the current ready chunks as anything
-stronger than bounded support.
+an unstable complete or partial L12 set blocks using the current ready chunks
+as anything stronger than bounded support.
 """
 
 from __future__ import annotations
@@ -94,6 +94,9 @@ def main() -> int:
     print("=" * 72)
 
     ready_set = load_json(READY_SET)
+    ready_summary = ready_set.get("chunk_summary", {}) if isinstance(ready_set.get("chunk_summary"), dict) else {}
+    expected_chunks = int(ready_summary.get("expected_chunks", 63))
+    complete_l12 = len(ready_set.get("ready_chunk_indices", [])) >= expected_chunks > 0
     ready_indices = [
         int(index)
         for index in ready_set.get("ready_chunk_indices", [])
@@ -117,12 +120,13 @@ def main() -> int:
         and spread_ratio is not None
         and spread_ratio < 2.0
     )
+    set_label = "complete L12 set" if complete_l12 else f"{len(slopes)}/{expected_chunks} partial L12 set"
 
     report("ready-set-certificate-present", bool(ready_set), str(READY_SET.relative_to(ROOT)))
     report("ready-chunks-loaded", len(rows) >= 4 and all(row["ready"] for row in rows), f"ready_indices={ready_indices}")
     report("finite-source-slopes", len(slopes) == len(rows) and len(slopes) >= 4, f"slopes={slopes}")
     report(
-        "partial-set-stability-not-passed",
+        "ready-set-stability-not-passed",
         not stability_passed,
         f"relative_stdev={relative_stdev}, spread_ratio={spread_ratio}, n={len(slopes)}",
     )
@@ -139,14 +143,14 @@ def main() -> int:
         "actual_current_surface_status": "bounded-support / FH-LSZ ready chunk response-stability diagnostic",
         "verdict": (
             "The current seed-controlled ready chunks expose same-source dE/ds, "
-            f"but the {len(slopes)}/63 partial set is not stable enough to use "
-            "as production response evidence beyond bounded support.  The chunk slopes are "
+            f"but the {set_label} is not stable enough to use as production "
+            "response evidence beyond bounded support.  The chunk slopes are "
             "finite but have large chunk-to-chunk spread.  Even a stable slope "
             "would still require scalar LSZ pole derivative, model-class/FV/IR "
             "control, and canonical-Higgs identity before physical y_t closure."
         ),
         "proposal_allowed": False,
-        "proposal_allowed_reason": "The ready set is partial and response stability is not passed; scalar LSZ/canonical-Higgs gates remain open.",
+        "proposal_allowed_reason": "The ready L12 set response stability is not passed; scalar LSZ/canonical-Higgs gates remain open.",
         "ready_set_certificate": str(READY_SET.relative_to(ROOT)),
         "response_rows": rows,
         "stability_summary": {
@@ -166,12 +170,13 @@ def main() -> int:
             "does not treat dE/ds as physical dE/dh",
             "does not set kappa_s = 1",
             "does not use observed top mass, observed y_t, H_unit, Ward authority, alpha_LM, plaquette, or u0",
-            "does not treat a partial L12 set as production closure",
+            "does not treat an L12-only ready set as production closure",
         ],
         "exact_next_action": (
-            "Continue seed-controlled chunks and rerun this diagnostic with a "
-            "larger ready set; in parallel, continue the canonical-Higgs "
-            "identity or same-source W/Z response route."
+            "Do not relitigate L12 chunk completeness.  Either improve the "
+            "response-stability estimator with a justified same-surface method "
+            "or continue the canonical-Higgs identity / same-source W/Z "
+            "response route."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

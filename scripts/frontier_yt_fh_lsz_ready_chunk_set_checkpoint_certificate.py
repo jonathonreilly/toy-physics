@@ -219,6 +219,12 @@ def main() -> int:
             "L16/L24 scaling, an isolated scalar-pole derivative, model-class "
             "control, FV/IR control, or Higgs-identity authority."
         )
+        exact_next_action = (
+            "Do not relitigate L12 chunk completeness.  Switch foreground "
+            "effort to response stability, analytic Higgs-identity/scalar-"
+            "denominator authority, strict W/Z response, or another same-"
+            "surface bridge."
+        )
     else:
         actual_status = "bounded-support / FH-LSZ ready chunk-set production checkpoint"
         readiness_sentence = (
@@ -229,6 +235,12 @@ def main() -> int:
             "The ready chunk set is partial L12 production support only; no combined "
             "L12, L16/L24, pole derivative, model-class, FV/IR, or Higgs-identity "
             "certificate exists."
+        )
+        exact_next_action = (
+            "Continue collecting seed-controlled L12 chunks and rerun this "
+            "dynamic checkpoint as each chunk finishes; switch foreground "
+            "effort to a higher-probability analytic Higgs-identity/scalar-"
+            "denominator route while production chunks run."
         )
 
     result = {
@@ -248,18 +260,13 @@ def main() -> int:
         "minimum_expected_ready_indices": MIN_READY_INDICES,
         "chunk_rows": chunk_rows,
         "strict_non_claims": [
-            "does not use partial L12 chunks as retained evidence",
+            "does not use L12 chunks as closure evidence",
             "does not set kappa_s = 1",
             "does not use H_unit, Ward authority, observed target values, alpha_LM, plaquette, or u0 as proof input",
             "does not treat source response as a physical Higgs readout",
             "does not bypass pole derivative, model-class, FV/IR, or canonical-Higgs identity gates",
         ],
-        "exact_next_action": (
-            "Continue collecting seed-controlled L12 chunks and rerun this dynamic "
-            "checkpoint as each chunk finishes; switch foreground effort to a "
-            "higher-probability analytic Higgs-identity/scalar-denominator route "
-            "while production chunks run."
-        ),
+        "exact_next_action": exact_next_action,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
