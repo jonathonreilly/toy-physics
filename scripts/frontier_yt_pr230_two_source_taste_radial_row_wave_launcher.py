@@ -299,6 +299,7 @@ def main() -> int:
         and max_concurrent_ok
         and active_within_limit
         and launch_capacity > 0
+        and bool(launchable_rows)
     )
 
     launched: list[dict[str, Any]] = []
@@ -336,6 +337,26 @@ def main() -> int:
         "no-resume commands, and a conservative concurrency cap.  It is run-control "
         "support only and does not create C_sx/C_xx row evidence unless the harness "
         "later writes completed chunk certificates."
+    )
+    all_manifest_outputs_present = (
+        len(rows) == 63
+        and len(completed_chunks) == 63
+        and not eligible_rows
+        and not active_chunk_set
+        and not blocking_partial_dirs
+    )
+    exact_next_action = (
+        "All manifest row chunks are complete and no row workers are active; do "
+        "not launch another wave.  Use the existing chunk package audit and row "
+        "combiner gates as bounded C_sx/C_xx support only, then pursue canonical "
+        "O_H/source-Higgs, scalar pole/FV/IR, Schur, or physical-response authority."
+        if all_manifest_outputs_present
+        else (
+            "When the active chunks finish, rerun this launcher with --launch and "
+            "--max-concurrent 2, then run the row schema/checkpoint gates on each "
+            "completed chunk.  Only completed chunk JSON plus pole/FV/IR and "
+            "canonical-source authority can become physics evidence."
+        )
     )
     result = {
         "actual_current_surface_status": (
@@ -375,12 +396,7 @@ def main() -> int:
             "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
-        "exact_next_action": (
-            "When the active chunks finish, rerun this launcher with --launch and "
-            "--max-concurrent 2, then run the row schema/checkpoint gates on each "
-            "completed chunk.  Only completed chunk JSON plus pole/FV/IR and "
-            "canonical-source authority can become physics evidence."
-        ),
+        "exact_next_action": exact_next_action,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
