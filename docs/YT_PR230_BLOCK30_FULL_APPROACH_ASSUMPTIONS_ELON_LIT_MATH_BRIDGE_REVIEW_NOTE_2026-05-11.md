@@ -160,6 +160,26 @@ missing physical objects are defined.
 | Bougerol-Lacroix bridge round2 | Cautionary tautology example | Not physical `O_H` or `y_t` authority |
 | W/Z response and additive-top contracts | Strong fallback route | Missing strict packet, covariance, `g2`, and `delta_perp` |
 
+## Negative-Result Audit Boundary
+
+The no-go and firewall notes checked in this review are current-surface
+shortcut blockers, not permanent impossibility theorems against the physics
+routes themselves.  They remain correct only at the authority level they
+actually test:
+
+- source-only scalar rows do not determine a source-Higgs overlap without
+  `O_H`, `C_sH`, and `C_HH`;
+- positivity, reflection positivity, or determinant positivity alone do not
+  prove neutral scalar primitivity or rank-one overlap;
+- W/Z algebra does not become a PR #230 proof until strict matched response
+  rows, covariance, `g2`, and transverse-contamination control exist;
+- Ward, beta-lambda, and Picard-Fuchs work can reopen routes only after their
+  missing physical-readout, stationarity, or functional-definition premises
+  are supplied.
+
+Future same-surface artifacts that supply those missing premises should be
+tested directly rather than rejected by the older shortcut no-go labels.
+
 ## Decision
 
 The consolidated ranking is unchanged but better justified:

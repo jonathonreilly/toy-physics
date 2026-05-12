@@ -56,6 +56,13 @@ does not use observed `g2`, observed W/Z/top/`y_t` selectors, `H_unit`,
 `yt_ward_identity`, `alpha_LM`, plaquette, `u0`, `kappa_s=1`, `c2=1`,
 `Z_match=1`, or `k_top/k_gauge=1`.
 
+This is a current-surface PR #230 authority firewall, not a theorem that
+`g2` can never be supplied by a different route.  A future audit-clean
+non-observed `g2` certificate, if explicitly admitted as a PR #230 input, or a
+same-source W/Z response theorem that cancels `g2`, retires this blocker.  The
+negative result here is only that the present W/Z route may not silently import
+the existing repo-level EW package value as its missing strict evidence.
+
 ## Next Action
 
 Supply a strict non-observed `g2` certificate from an allowed authority, or
