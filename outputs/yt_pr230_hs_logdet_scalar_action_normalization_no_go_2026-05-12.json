@@ -1,0 +1,149 @@
+{
+  "accepted_current_surface": false,
+  "actual_current_surface_status": "support / exact negative boundary: HS-logdet auxiliary scalar action normalization does not derive canonical O_H on the current PR230 surface",
+  "admitted_observation_status": null,
+  "allowed_escape_routes": [
+    "derive a native Cl(3)/Z3 scalar action and LSZ metric",
+    "supply a two-source same-surface determinant functional with certified canonical O_H",
+    "measure strict C_ss/C_sH/C_HH pole rows after an accepted O_H theorem",
+    "derive a neutral primitive transfer theorem that fixes the Higgs direction"
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_identity_derived": false,
+  "canonical_scalar_lsz_fixed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface four-fermion/kernel covariance, dynamic scalar carrier, accepted action, canonical LSZ metric, and strict C_ss/C_sH/C_HH pole rows are supplied",
+  "exact_next_action": "Do not treat HS/logdet auxiliary fields as canonical O_H.  Continue with a real native scalar/action/LSZ theorem, a certified two-source O_H determinant functional, a neutral primitive transfer theorem, or strict source-Higgs pole rows after O_H is independently supplied.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "added_scalar_contact_coupling_as_axiom": false,
+    "claimed_retained_or_proposed_retained": false,
+    "relabelled_C_sx_C_xx_as_C_sH_C_HH": false,
+    "set_auxiliary_normalization_by_unit_convention": false,
+    "set_source_higgs_overlap_to_one": false,
+    "treated_formal_hs_field_as_physical_higgs": false,
+    "treated_source_only_logdet_as_two_source_rows": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_higgs_or_yukawa_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hs_auxiliary_rewrite_unique": false,
+  "hs_logdet_scalar_action_normalization_no_go_passed": true,
+  "hs_rescaling_counterfamily": [
+    {
+      "auxiliary_propagator": 0.425,
+      "coupling_squared_times_propagator": 1.7,
+      "field_scale_a": 0.5,
+      "integrated_source_kernel_K": 1.7,
+      "lsz_like_field_norm": 0.6519202405202649,
+      "readout_factor_if_auxiliary_is_called_H": 2.0,
+      "source_coupling_to_auxiliary": 2.0,
+      "source_current_J": 0.4,
+      "source_functional_log_weight": 0.136
+    },
+    {
+      "auxiliary_propagator": 1.7,
+      "coupling_squared_times_propagator": 1.7,
+      "field_scale_a": 1.0,
+      "integrated_source_kernel_K": 1.7,
+      "lsz_like_field_norm": 1.3038404810405297,
+      "readout_factor_if_auxiliary_is_called_H": 1.0,
+      "source_coupling_to_auxiliary": 1.0,
+      "source_current_J": 0.4,
+      "source_functional_log_weight": 0.136
+    },
+    {
+      "auxiliary_propagator": 6.8,
+      "coupling_squared_times_propagator": 1.7,
+      "field_scale_a": 2.0,
+      "integrated_source_kernel_K": 1.7,
+      "lsz_like_field_norm": 2.6076809620810595,
+      "readout_factor_if_auxiliary_is_called_H": 0.5,
+      "source_coupling_to_auxiliary": 0.5,
+      "source_current_J": 0.4,
+      "source_functional_log_weight": 0.136
+    }
+  ],
+  "hypothetical_axiom_status": null,
+  "neutral_rotation_counterfamily": [
+    {
+      "candidate_HH_residue_C_HH": 1.7,
+      "candidate_source_H_residue_C_sH": 1.7,
+      "candidate_source_higgs_overlap": 1.0,
+      "gram_purity_ratio": 1.0,
+      "source_only_rows_unchanged": true,
+      "source_source_residue_C_ss": 1.7,
+      "theta": 0.0
+    },
+    {
+      "candidate_HH_residue_C_HH": 1.7,
+      "candidate_source_H_residue_C_sH": 1.4722431864335457,
+      "candidate_source_higgs_overlap": 0.8660254037844387,
+      "gram_purity_ratio": 0.7500000000000001,
+      "source_only_rows_unchanged": true,
+      "source_source_residue_C_ss": 1.7,
+      "theta": 0.5235987755982988
+    },
+    {
+      "candidate_HH_residue_C_HH": 1.7,
+      "candidate_source_H_residue_C_sH": 0.8500000000000002,
+      "candidate_source_higgs_overlap": 0.5000000000000001,
+      "gram_purity_ratio": 0.2500000000000001,
+      "source_only_rows_unchanged": true,
+      "source_source_residue_C_ss": 1.7,
+      "theta": 1.0471975511965976
+    }
+  ],
+  "open_imports": [
+    "same-surface four-fermion or scalar-channel kernel/covariance",
+    "dynamic scalar carrier derived from Cl(3)/Z3 or explicitly adopted action extension",
+    "canonical scalar LSZ/metric normalization",
+    "source-Higgs overlap or Gram rows with a certified O_H operator",
+    "strict C_ss/C_sH/C_HH pole rows and FV/IR/model-class authority"
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_oh_hard_residual": "outputs/yt_pr230_canonical_oh_hard_residual_equivalence_gate_2026-05-07.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "hs_rpa_pole_condition": "outputs/yt_hs_rpa_pole_condition_attempt_2026-05-01.json",
+    "lane1_action_premise": "outputs/yt_pr230_lane1_action_premise_derivation_attempt_2026-05-12.json",
+    "logdet_hessian": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
+    "scalar_bs_kernel_residue_degeneracy": "outputs/yt_scalar_bs_kernel_residue_degeneracy_2026-05-01.json",
+    "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
+    "scalar_kernel_enhancement_import": "outputs/yt_scalar_kernel_enhancement_import_audit_2026-05-01.json",
+    "scalar_ladder_eigen_derivative": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "scalar_pole_determinant": "outputs/yt_scalar_pole_determinant_gate_2026-05-01.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_hard_residual": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "hs_rpa_pole_condition": "exact negative boundary / HS-RPA contact route open only with new kernel theorem",
+    "lane1_action_premise": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+    "logdet_hessian": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
+    "scalar_bs_kernel_residue_degeneracy": "exact negative boundary / scalar Bethe-Salpeter pole-residue degeneracy",
+    "scalar_carrier_projector_closure": "open / scalar carrier-projector closure attempt blocked",
+    "scalar_kernel_enhancement_import": "exact negative boundary / scalar-kernel enhancement import audit",
+    "scalar_ladder_eigen_derivative": "exact-support / scalar ladder eigen-derivative gate",
+    "scalar_pole_determinant": "exact-support / scalar pole determinant gate"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The same integrated source/logdet functional admits HS rescalings and neutral rotations that change auxiliary normalization and source-Higgs overlap.  A formal auxiliary field is therefore not canonical O_H authority without an independent same-surface action and LSZ certificate.",
+  "same_surface_cl3_z3_derived": false,
+  "source_higgs_pole_rows_strict": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not define y_t_bare or use H_unit/Ward matrix-element readout",
+    "does not use observed top/Higgs/y_t values as selectors",
+    "does not use alpha_LM, plaquette, or u0",
+    "does not set auxiliary normalization, source-Higgs overlap, c2, Z_match, or kappa_s to one",
+    "does not relabel support-only C_sx/C_xx rows as physical C_sH/C_HH rows"
+  ],
+  "summary": {
+    "fail": 0,
+    "pass": 18
+  }
+}

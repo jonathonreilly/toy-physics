@@ -1,10 +1,11 @@
 # Route Portfolio
 
 1. **Native scalar/action/LSZ theorem for `x=O_H`.**
-   Current best non-chunk route after Block39.  Block37 says the existing
-   current surface does not already derive this; reopen only with a new
-   primitive such as a derived scalar carrier, exact Hubbard-Stratonovich
-   kernel, or same-surface action theorem.
+   Current best non-chunk route after Block40, but the formal HS/logdet
+   auxiliary-field shortcut is closed on the current surface.  Reopen only
+   with a new primitive such as a derived scalar carrier plus fixed LSZ metric,
+   a same-surface scalar-channel kernel/covariance, or an actual action
+   theorem.
 
 2. **W/Z response bypass.**
    Still viable only with accepted response authority, production W/Z rows,

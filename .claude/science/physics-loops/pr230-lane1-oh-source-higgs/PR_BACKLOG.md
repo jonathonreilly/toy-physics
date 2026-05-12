@@ -28,4 +28,20 @@ Lane 1 Block38: neutral rank-one bypass post-Block37 audit
 - conclusion: complete C_ss/C_sx/C_xx rows and top bare-mass response support
   do not force neutral rank one; an unmeasured orthogonal neutral direction
   can vary source-Higgs overlap while preserving current rows
+
+Lane 1 Block39: W/Z mass-response self-normalization no-go
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py
+- result: PASS=15 FAIL=0
+- conclusion: top/W/Z mass rows plus response slopes determine ratios only;
+  absolute y_t still needs strict g2, explicit v, or another absolute EW
+  normalization authority
+
+Lane 1 Block40: HS/logdet scalar-action normalization no-go
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_hs_logdet_scalar_action_normalization_no_go.py
+- result: PASS=18 FAIL=0
+- conclusion: formal auxiliary scalar rewrites preserve source/logdet data
+  while changing auxiliary normalization and source-Higgs overlap; canonical
+  O_H still needs a same-surface action/LSZ theorem or strict rows
 ```

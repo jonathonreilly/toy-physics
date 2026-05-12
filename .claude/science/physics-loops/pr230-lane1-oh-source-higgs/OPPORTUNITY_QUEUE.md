@@ -1,12 +1,12 @@
 # Opportunity Queue
 
-## Active Ranking After Block39
+## Active Ranking After Block40
 
 1. **Native scalar/action/LSZ theorem.**
-   Highest remaining non-chunk route after W/Z mass-response
-   self-normalization failed.  Reopen only with a concrete new primitive such
-   as an exact Hubbard-Stratonovich kernel, scalar carrier from the fermion
-   determinant, or same-surface action derivation.
+   Highest remaining non-chunk route, but Block40 closes the formal HS/logdet
+   normalization shortcut.  Reopen only with a concrete new primitive such as
+   a same-surface scalar-channel kernel/covariance, scalar carrier from the
+   fermion determinant with fixed LSZ metric, or same-surface action theorem.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Still viable only if it supplies production W/Z rows plus strict

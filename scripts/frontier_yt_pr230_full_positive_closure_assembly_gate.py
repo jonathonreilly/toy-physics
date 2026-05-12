@@ -160,6 +160,7 @@ PARENTS = {
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
     "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
+    "pr230_hs_logdet_scalar_action_normalization_no_go": "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -413,6 +414,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
                 "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
                 "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
+                "formal HS/logdet auxiliary scalar rewrites do not fix canonical O_H normalization or source-Higgs overlap",
                 "Z3 entropy/gap/reversibility selectors either import an external principle or select a different transfer",
             ],
             "parents": [
@@ -422,6 +424,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["neutral_scalar_burnside_irreducibility"],
                 PARENTS["neutral_offdiagonal_generator_derivation"],
                 PARENTS["pr230_logdet_hessian_neutral_mixing_attempt"],
+                PARENTS["pr230_hs_logdet_scalar_action_normalization_no_go"],
                 PARENTS["pr230_neutral_primitive_route_completion"],
                 PARENTS["pr230_z3_lazy_selector_no_go"],
             ],
@@ -1963,6 +1966,14 @@ def main() -> int:
             "exact_negative_boundary_passed"
         )
         is True
+        and certs["pr230_hs_logdet_scalar_action_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_hs_logdet_scalar_action_normalization_no_go"].get(
+            "hs_logdet_scalar_action_normalization_no_go_passed"
+        )
+        is True
         and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
         and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
         is True
@@ -3309,6 +3320,23 @@ def main() -> int:
         wz_mass_response_self_normalization_no_go_blocks,
         statuses["pr230_wz_mass_response_self_normalization_no_go"],
     )
+    hs_logdet_scalar_action_normalization_no_go_blocks = (
+        "HS-logdet auxiliary scalar action normalization"
+        in statuses["pr230_hs_logdet_scalar_action_normalization_no_go"]
+        and certs["pr230_hs_logdet_scalar_action_normalization_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_hs_logdet_scalar_action_normalization_no_go"].get(
+            "hs_logdet_scalar_action_normalization_no_go_passed"
+        )
+        is True
+    )
+    report(
+        "pr230-hs-logdet-scalar-action-normalization-no-go-blocks",
+        hs_logdet_scalar_action_normalization_no_go_blocks,
+        statuses["pr230_hs_logdet_scalar_action_normalization_no_go"],
+    )
     report(
         "wz-g2-bare-running-bridge-attempt-blocks",
         "WZ g2 bare-to-low-scale running bridge"
@@ -3743,6 +3771,7 @@ def main() -> int:
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
+        "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
@@ -3778,6 +3807,7 @@ def main() -> int:
             "does not define y_t through a matrix element or y_t_bare",
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
+            "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
             "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",

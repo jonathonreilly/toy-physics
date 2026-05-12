@@ -23,6 +23,8 @@
 - Setting `kappa_s=1`, `c2=1`, `Z_match=1`, or `g2=1`.
 - Treating W/Z mass+response ratios as absolute `y_t` without strict `g2`,
   explicit `v`, or another absolute EW normalization theorem.
+- Treating a formal Hubbard-Stratonovich/logdet auxiliary scalar rewrite as
+  canonical `O_H` or scalar LSZ authority.
 
 ## Block A Import Audit Result
 
@@ -57,3 +59,14 @@ scale orbit `(v,dv/ds) -> lambda(v,dv/ds)` with
 response slopes while changing absolute `y_t`.  A future W/Z route still needs
 strict non-observed `g2`, explicit `v` as substrate input, or another absolute
 EW normalization theorem.
+
+## Block40 HS/Logdet Scalar-Action Normalization Result
+
+Formal HS/logdet auxiliary fields do not supply canonical `O_H` on the current
+surface.  A rescaling of the auxiliary field preserves the integrated source
+functional while changing the auxiliary propagator, source coupling, and
+LSZ-like field norm.  A neutral rotation preserves source-only rows while
+changing the candidate source-Higgs overlap and Gram purity.  A future scalar
+route therefore needs a same-surface scalar-channel kernel/covariance, dynamic
+scalar carrier, accepted action, scalar LSZ metric, and strict
+`C_ss/C_sH/C_HH` pole rows.

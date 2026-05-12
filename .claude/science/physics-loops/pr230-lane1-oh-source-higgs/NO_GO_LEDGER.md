@@ -26,12 +26,18 @@
   `(y_t,g2,gY) -> (y_t,g2,gY)/lambda`, so they determine ratios but not
   absolute `y_t` without strict `g2`, explicit `v`, or another absolute EW
   normalization authority.
+- Formal HS/logdet auxiliary scalar rewrites are not canonical `O_H`
+  authority: source-functional rescalings and neutral rotations preserve the
+  current source/logdet data while changing auxiliary normalization,
+  source-Higgs overlap, and Gram purity unless a same-surface scalar
+  kernel/action/LSZ theorem supplies them.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
-theorems.  They retire if a future native scalar/action/LSZ theorem,
-explicitly admitted action extension plus strict rows, same-surface neutral
-transfer/primitive-cone theorem, or strict W/Z physical-response packet with
-absolute `g2`/`v` authority supplies the missing bridge.
+theorems.  They retire if a future native scalar/action/LSZ theorem with a
+fixed kernel/covariance and scalar metric, explicitly admitted action
+extension plus strict rows, same-surface neutral transfer/primitive-cone
+theorem, or strict W/Z physical-response packet with absolute `g2`/`v`
+authority supplies the missing bridge.

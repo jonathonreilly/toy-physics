@@ -77,3 +77,37 @@ performed directly against the changed files and repo governance surfaces:
   static EW algebra as response evidence, or scout rows as production.
 - Status check: `proposal_allowed=false`; no `proposed_retained` wording is
   authorized.
+
+## Self-Review: Block40
+
+- Overclaim check: passed.  The note blocks only the HS/logdet auxiliary-field
+  shortcut on the current PR230 surface; it does not claim a permanent no-go
+  against a future native scalar/action theorem.
+- Physics check: passed.  The HS rescaling family preserves the integrated
+  source functional while changing auxiliary normalization, and the neutral
+  rotation family preserves source-only rows while changing source-Higgs
+  overlap and Gram purity.
+- Forbidden-import check: passed.  The runner does not use observed
+  top/Higgs/`y_t` values, `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette,
+  `u0`, unit normalization, or alias relabeling.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block40 Package
+
+Local review-loop was run without subagent fanout because this session did not
+have a fresh explicit delegation request for reviewer agents.  Required checks
+were performed directly against the changed files and repo governance surfaces:
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=18 FAIL=0`.
+- Physics Claim Boundary: SUPPORT / exact negative boundary.  The note blocks
+  the HS/logdet shortcut only on the current surface and lists reopen routes.
+- Imports / Support: DISCLOSED.  The missing scalar-channel
+  kernel/covariance, dynamic scalar carrier, accepted action, scalar LSZ
+  metric, and strict `C_ss/C_sH/C_HH` rows are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop
+  work and the audit pipeline seeds it as `support`.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings.

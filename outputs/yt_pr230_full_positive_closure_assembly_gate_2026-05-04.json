@@ -86,6 +86,7 @@
   "fms_post_degree_route_support_not_closure": true,
   "fms_source_overlap_readout_gate_support_not_closure": true,
   "higgs_mass_source_action_bridge_support_not_closure": true,
+  "hs_logdet_scalar_action_normalization_no_go_blocks": true,
   "kinetic_taste_mixing_bridge_blocks_shortcut": true,
   "negative_route_applicability_review_passed": true,
   "neutral_primitive_route_completion_blocks": true,
@@ -177,6 +178,7 @@
     "pr230_genuine_source_pole_artifact_intake": "outputs/yt_pr230_genuine_source_pole_artifact_intake_2026-05-06.json",
     "pr230_higgs_mass_source_action_bridge": "outputs/yt_pr230_higgs_mass_source_action_bridge_2026-05-06.json",
     "pr230_holonomic_source_response_feasibility_gate": "outputs/yt_pr230_holonomic_source_response_feasibility_gate_2026-05-05.json",
+    "pr230_hs_logdet_scalar_action_normalization_no_go": "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
     "pr230_kinetic_taste_mixing_bridge": "outputs/yt_pr230_kinetic_taste_mixing_bridge_attempt_2026-05-06.json",
     "pr230_l12_chunk_compute_status": "outputs/yt_pr230_l12_chunk_compute_status_2026-05-06.json",
     "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
@@ -357,6 +359,7 @@
     "pr230_genuine_source_pole_artifact_intake": "exact-support / genuine same-source O_sp source-pole artifact intake; canonical O_H bridge open",
     "pr230_higgs_mass_source_action_bridge": "conditional-support / Higgs mass-source action bridge; same-surface EW/Higgs action and source-Higgs rows absent",
     "pr230_holonomic_source_response_feasibility_gate": "exact negative boundary / PR541-style holonomic source-response route is relevant but blocked by missing current-surface O_H and h-source",
+    "pr230_hs_logdet_scalar_action_normalization_no_go": "support / exact negative boundary: HS-logdet auxiliary scalar action normalization does not derive canonical O_H on the current PR230 surface",
     "pr230_kinetic_taste_mixing_bridge": "exact negative boundary / current staggered kinetic taste symmetry does not supply the PR230 source-Higgs bridge",
     "pr230_l12_chunk_compute_status": "bounded-support / completed L12 same-source chunk compute status; physical y_t closure still open",
     "pr230_logdet_hessian_neutral_mixing_attempt": "exact negative boundary / source-only staggered logdet Hessian does not derive the neutral Higgs mixing bridge",
@@ -456,7 +459,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 166,
+  "pass_count": 167,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The assembly gate rejects the current surface and also rejects a hypothetical chunk-only completion.  A positive proposal first needs scalar-LSZ pole/FV/IR/model-class closure plus one accepted source-overlap/physical-response bridge and retained-route approval.",
@@ -472,6 +475,7 @@
         "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
         "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
         "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
+        "formal HS/logdet auxiliary scalar rewrites do not fix canonical O_H normalization or source-Higgs overlap",
         "Z3 entropy/gap/reversibility selectors either import an external principle or select a different transfer"
       ],
       "parents": [
@@ -481,6 +485,7 @@
         "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
         "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
         "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
+        "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
         "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
         "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json"
       ],
@@ -615,6 +620,7 @@
     "does not define y_t through a matrix element or y_t_bare",
     "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
     "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
+    "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
     "does not treat W/Z smoke-schema rows as production EW response evidence",
     "does not treat current-surface non-chunk exhaustion as retained closure",
     "does not treat the Higgs/taste condensate stack as PR230 O_H authority",
