@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:24:31.084062+00:00",
+  "generated_at": "2026-05-12T04:28:20.156337+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43791,6 +43791,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py",
       "title": "PR230 Higher-Shell Chunks001-002 Completed Checkpoint"
     },
+    "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12": {
+      "claim_id": "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "run-control / higher-shell Schur scalar-LSZ chunks003-004 active",
+      "deps": [],
+      "note_hash": "b74ad91e65fb22535c4eb94a6f69973d368752ad339a7a1c7a8ad0b1a603e713",
+      "path": "docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS003_004_LAUNCH_CHECKPOINT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py",
+      "title": "PR230 Higher-Shell Chunks003-004 Launch Checkpoint"
+    },
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
       "current_status": "bounded",
@@ -47258,6 +47268,7 @@
     "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07",
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
     "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12",
+    "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12",
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
     "yt_pr230_schur_higher_shell_wave_launcher_note_2026-05-12",
     "yt_pr230_schur_route_completion_note_2026-05-06",
@@ -47438,17 +47449,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1130,
-    "node_count": 2149,
-    "root_count": 1648,
-    "runners_with_path": 1624,
+    "leaf_count": 1131,
+    "node_count": 2150,
+    "root_count": 1649,
+    "runners_with_path": 1625,
     "status_counts": {
       "bounded": 598,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 591
+      "unknown": 592
     }
   }
 }

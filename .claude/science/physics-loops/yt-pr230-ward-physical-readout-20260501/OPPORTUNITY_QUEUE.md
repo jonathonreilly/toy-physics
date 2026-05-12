@@ -1,5 +1,20 @@
 # Opportunity Queue
 
+2026-05-12 higher-shell chunks003-004 launch checkpoint: the separate
+higher-shell Schur/scalar-LSZ wave has advanced to chunks003-004 under the
+same non-colliding roots and two-worker cap.  Chunk003 uses seed
+`2026057003` and pid `84017`; chunk004 uses seed `2026057004` and pid
+`84018`.  Pending checkpoints pass (`PASS=2 FAIL=0` each), and the wave
+status records `completed_chunk_indices=[1,2]`,
+`active_chunk_indices=[3,4]`, and
+`active_or_completed_chunk_indices=[1,2,3,4]`.  This is run-control only:
+active workers, logs, pids, partial directories, and pending checkpoints are
+not row evidence.  The next executable support artifact is completed-mode
+chunk003/chunk004 checkpoints after row JSON exists.  Closure still requires
+complete higher-shell rows plus complete-monotonicity/contact/threshold/
+model-class/pole/FV/IR authority and a canonical `O_H`/source-overlap or
+physical W/Z response bridge.
+
 2026-05-12 higher-shell chunks001-002 completed checkpoint: the separate
 higher-shell Schur/scalar-LSZ chunks001-002 now have completed row JSON and
 completed-mode checkpoints (`PASS=15 FAIL=0` each).  The wave launcher records

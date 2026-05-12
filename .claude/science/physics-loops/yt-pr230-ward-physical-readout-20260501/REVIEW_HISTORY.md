@@ -6897,7 +6897,7 @@ Review stance: bounded production-row support only.
   chunks001-002 state and to check both completed-mode certificates.
 - Validation: chunk001 `PASS=15 FAIL=0`, chunk002 `PASS=15 FAIL=0`, wave
   launcher `PASS=11 FAIL=0`, campaign status `PASS=384 FAIL=0`, assumption
-  stress `PASS=105 FAIL=0`, full assembly `PASS=176 FAIL=0`, retained route
+  stress `PASS=105 FAIL=0`, full assembly `PASS=177 FAIL=0`, retained route
   `PASS=319 FAIL=0`, completion audit `PASS=73 FAIL=0`, audit pipeline OK
   with 5 known warnings and newly seeded=1, strict audit lint OK with 5 known
   warnings, and `git diff --check` OK.
@@ -6907,3 +6907,27 @@ higher-shell packet, not Schur A/B/C kernel rows, not complete monotonicity,
 not scalar pole/FV/IR authority, not canonical `O_H`, not canonical
 `C_sH/C_HH`, not W/Z response, and not retained or `proposed_retained`
 closure.
+
+## 2026-05-12 - Higher-Shell Chunks003-004 Launch Checkpoint
+
+Review stance: run-control support only.
+
+- Launched higher-shell chunks003-004 under the separate non-colliding roots
+  with a two-worker cap.
+- Added
+  `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS003_004_LAUNCH_CHECKPOINT_NOTE_2026-05-12.md`.
+- Added pending checkpoint certificates for chunks003-004.
+- Updated the campaign-status runner/certificate to recognize the completed
+  chunks001-002 plus active-pending chunks003-004 state.
+- Validation: launch `PASS=11 FAIL=0`, chunk003 pending checkpoint
+  `PASS=2 FAIL=0`, chunk004 pending checkpoint `PASS=2 FAIL=0`, wave status
+  `PASS=11 FAIL=0`, campaign status `PASS=386 FAIL=0`, assumption stress
+  `PASS=105 FAIL=0`, full assembly `PASS=177 FAIL=0`, retained route
+  `PASS=319 FAIL=0`, completion audit `PASS=73 FAIL=0`, audit pipeline OK
+  with 5 known warnings and newly seeded=1, strict audit lint OK with 5 known
+  warnings, and `git diff --check` OK.
+
+Disposition: active jobs are not evidence.  No higher-shell chunk003/chunk004
+row output is usable until completed-mode checkpointing passes, and no
+scalar-LSZ/Schur, canonical `O_H`, W/Z response, retained, or
+`proposed_retained` closure is authorized.

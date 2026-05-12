@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T04:24:33.912993+00:00",
+  "generated_at": "2026-05-12T04:28:22.907671+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17724,6 +17724,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py"
+    },
+    "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py"
     },
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
       "assert_count": 1,
@@ -37122,6 +37134,7 @@
     "scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py": {
       "assert_count": 1,
       "claims": [
+        "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12",
         "yt_pr230_schur_higher_shell_wave_launcher_note_2026-05-12"
       ],
       "counts": {

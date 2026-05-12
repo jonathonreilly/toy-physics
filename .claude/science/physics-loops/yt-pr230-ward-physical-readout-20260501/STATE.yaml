@@ -2254,7 +2254,7 @@ checkpoint_2026_05_12_fh_lsz_target_timeseries_full_set:
 checkpoint_2026_05_12_schur_higher_shell_chunks001_002_completed:
   actual_current_surface_status: "bounded-support / higher-shell Schur scalar-LSZ chunks001-002 completed-mode checkpoints passed; proposal_allowed=false"
   runner_pass_fail: "chunk001 15/0; chunk002 15/0; wave launcher 11/0; campaign status 384/0"
-  aggregate_refresh: "assumption stress 105/0; full assembly 176/0; retained route 319/0; completion audit 73/0; audit pipeline OK with 5 known warnings and newly seeded=1; strict audit lint OK with 5 known warnings; git diff --check OK"
+  aggregate_refresh: "assumption stress 105/0; full assembly 177/0; retained route 319/0; completion audit 73/0; audit pipeline OK with 5 known warnings and newly seeded=1; strict audit lint OK with 5 known warnings; git diff --check OK"
   completed_chunks: [1, 2]
   active_higher_shell_chunks: []
   next_launchable_chunks_under_two_worker_cap: [3, 4]
@@ -2264,3 +2264,20 @@ checkpoint_2026_05_12_schur_higher_shell_chunks001_002_completed:
   metadata_boundary: "fixed seeds 2026057001/2026057002; numba_gauge_seed_v1; selected-mass-only FH/LSZ at mass 0.75; eleven finite C_ss/C_sx/C_xx higher-shell modes; taste-radial source-cross certificate is not canonical O_H"
   closure_boundary: "partial finite higher-shell support only; not a complete higher-shell packet, not Schur A/B/C rows, not complete monotonicity, not scalar pole/FV/IR authority, not canonical O_H, not canonical C_sH/C_HH, not W/Z response, not physical kappa_s, not retained or proposed_retained closure"
   next_exact_action: "If compute is allocated, launch chunks003-004 under the same separate roots and two-worker cap, then run completed-mode checkpoints before any combiner or scalar-LSZ/Schur authority gate consumes those rows."
+checkpoint_2026_05_12_schur_higher_shell_chunks003_004_launch:
+  actual_current_surface_status: "run-control / higher-shell Schur scalar-LSZ chunks003-004 active pending; proposal_allowed=false"
+  runner_pass_fail: "launch 11/0; chunk003 pending 2/0; chunk004 pending 2/0; wave status 11/0; campaign status 386/0"
+  aggregate_refresh: "assumption stress 105/0; full assembly 177/0; retained route 319/0; completion audit 73/0; audit pipeline OK with 5 known warnings and newly seeded=1; strict audit lint OK with 5 known warnings; git diff --check OK"
+  completed_chunks: [1, 2]
+  active_higher_shell_chunks: [3, 4]
+  active_pids:
+    chunk003: 84017
+    chunk004: 84018
+  seeds:
+    chunk003: 2026057003
+    chunk004: 2026057004
+  row_roots:
+    row_certificates: "outputs/yt_pr230_schur_higher_shell_rows/"
+    production_artifacts: "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/"
+  closure_boundary: "active-pending run-control only; logs, pids, active workers, partial directories, and pending checkpoints are not row evidence, not complete higher-shell data, not Schur A/B/C rows, not complete monotonicity, not scalar pole/FV/IR authority, not canonical O_H, not canonical C_sH/C_HH, not W/Z response, not physical kappa_s, not retained or proposed_retained closure"
+  next_exact_action: "Monitor chunks003-004.  When completed row JSON exists, run completed-mode checkpoints before any combiner or scalar-LSZ/Schur authority gate consumes those rows."

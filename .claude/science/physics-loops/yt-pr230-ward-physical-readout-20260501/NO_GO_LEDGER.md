@@ -1,5 +1,18 @@
 # No-Go Ledger
 
+## Higher-shell chunks003-004 active state is not row evidence
+
+The 2026-05-12 higher-shell chunks003-004 launch checkpoint starts the next
+two-worker wave, but it records active-pending run-control only.  Pending
+checkpoints for chunks003-004 pass because each chunk has one active worker
+under the expected seed and path.
+
+Do not treat chunks003-004 active workers, logs, pids, partial directories,
+pending checkpoints, launcher status, or launch capacity as completed
+higher-shell rows, Schur A/B/C kernel rows, complete monotonicity, physical
+`kappa_s`, strict scalar-LSZ threshold/FV/IR authority, W/Z response,
+retained, or proposed-retained closure.
+
 ## Higher-shell chunks001-002 are not scalar-LSZ or source-Higgs closure
 
 The 2026-05-12 higher-shell chunks001-002 completed checkpoint records two

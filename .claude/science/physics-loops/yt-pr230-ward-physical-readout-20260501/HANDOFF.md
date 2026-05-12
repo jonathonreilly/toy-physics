@@ -5387,3 +5387,41 @@ Next exact action: launch chunks003-004 under the same non-colliding roots and
 two-worker cap only when compute is allocated, then run completed-mode
 checkpoints before any combiner or scalar-LSZ/Schur authority gate consumes
 them.
+
+## 2026-05-12 - Higher-Shell Chunks003-004 Launch Checkpoint
+
+Chunks003-004 are now active under the separate higher-shell Schur/scalar-LSZ
+roots:
+
+```text
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2 --chunk-indices 3-4 --launch --verify-seconds 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 3 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk003_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 4 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk004_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=386 FAIL=0
+```
+
+Run control: chunk003 uses seed `2026057003` and pid `84017`; chunk004 uses
+seed `2026057004` and pid `84018`.  The status certificate records
+`completed_chunk_indices=[1,2]`, `active_chunk_indices=[3,4]`, and
+`active_or_completed_chunk_indices=[1,2,3,4]`.
+
+Claim boundary: chunks003-004 are active-pending only.  Logs, pids, active
+processes, partial directories, and pending checkpoints are not row evidence,
+not a complete higher-shell packet, not Schur A/B/C rows, not complete
+monotonicity, not scalar pole/FV/IR authority, not canonical `O_H`, not
+canonical `C_sH/C_HH`, not W/Z response, not physical `kappa_s`, and not
+retained or `proposed_retained` closure.
+
+Next exact action: monitor chunks003-004.  When completed row JSON exists, run
+completed-mode checkpoints before any combiner or scalar-LSZ/Schur authority
+gate consumes those rows.

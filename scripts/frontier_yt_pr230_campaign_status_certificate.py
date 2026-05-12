@@ -881,6 +881,12 @@ def main() -> int:
         "pr230_schur_higher_shell_chunk002_checkpoint": load(
             "outputs/yt_pr230_schur_higher_shell_chunk002_checkpoint_2026-05-12.json"
         ),
+        "pr230_schur_higher_shell_chunk003_pending_checkpoint": load(
+            "outputs/yt_pr230_schur_higher_shell_chunk003_pending_checkpoint_2026-05-12.json"
+        ),
+        "pr230_schur_higher_shell_chunk004_pending_checkpoint": load(
+            "outputs/yt_pr230_schur_higher_shell_chunk004_pending_checkpoint_2026-05-12.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -4973,11 +4979,26 @@ def main() -> int:
     schur_higher_shell_wave_launcher = certificates[
         "pr230_schur_higher_shell_wave_launcher"
     ]
+    schur_higher_shell_active_or_completed = schur_higher_shell_wave_launcher.get(
+        "active_or_completed_chunk_indices"
+    )
+    schur_higher_shell_completed_chunks = schur_higher_shell_wave_launcher.get(
+        "completed_chunk_indices"
+    )
+    schur_higher_shell_active_chunks = schur_higher_shell_wave_launcher.get(
+        "active_chunk_indices"
+    )
     schur_higher_shell_completed_or_active = (
-        schur_higher_shell_wave_launcher.get("active_or_completed_chunk_indices")
-        == [1, 2]
-        and schur_higher_shell_wave_launcher.get("completed_chunk_indices") in ([], [1, 2])
-        and schur_higher_shell_wave_launcher.get("active_chunk_indices") in ([1, 2], [])
+        (
+            schur_higher_shell_active_or_completed == [1, 2]
+            and schur_higher_shell_completed_chunks in ([], [1, 2])
+            and schur_higher_shell_active_chunks in ([1, 2], [])
+        )
+        or (
+            schur_higher_shell_active_or_completed == [1, 2, 3, 4]
+            and schur_higher_shell_completed_chunks == [1, 2]
+            and schur_higher_shell_active_chunks == [3, 4]
+        )
     )
     report(
         "pr230-schur-higher-shell-wave-launcher-run-control-only",
@@ -5014,6 +5035,38 @@ def main() -> int:
         {
             "chunk001": statuses["pr230_schur_higher_shell_chunk001_checkpoint"],
             "chunk002": statuses["pr230_schur_higher_shell_chunk002_checkpoint"],
+        },
+    )
+    schur_higher_shell_chunk003_pending = certificates[
+        "pr230_schur_higher_shell_chunk003_pending_checkpoint"
+    ]
+    schur_higher_shell_chunk004_pending = certificates[
+        "pr230_schur_higher_shell_chunk004_pending_checkpoint"
+    ]
+    schur_higher_shell_chunks003_004_pending = (
+        schur_higher_shell_chunk003_pending.get("chunk_index") == 3
+        and schur_higher_shell_chunk004_pending.get("chunk_index") == 4
+        and schur_higher_shell_chunk003_pending.get("completed") is False
+        and schur_higher_shell_chunk004_pending.get("completed") is False
+        and schur_higher_shell_chunk003_pending.get("pending_active") is True
+        and schur_higher_shell_chunk004_pending.get("pending_active") is True
+        and schur_higher_shell_chunk003_pending.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk004_pending.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk003_pending.get("proposal_allowed") is False
+        and schur_higher_shell_chunk004_pending.get("proposal_allowed") is False
+        and schur_higher_shell_chunk003_pending.get("bare_retained_allowed") is False
+        and schur_higher_shell_chunk004_pending.get("bare_retained_allowed") is False
+    )
+    report(
+        "pr230-schur-higher-shell-chunks003-004-pending-support-only",
+        schur_higher_shell_chunks003_004_pending,
+        {
+            "chunk003": statuses[
+                "pr230_schur_higher_shell_chunk003_pending_checkpoint"
+            ],
+            "chunk004": statuses[
+                "pr230_schur_higher_shell_chunk004_pending_checkpoint"
+            ],
         },
     )
     report(
@@ -6871,6 +6924,9 @@ def main() -> int:
     )
     result["schur_higher_shell_chunks001_002_checkpointed_support_only"] = (
         schur_higher_shell_chunks001_002_checkpointed
+    )
+    result["schur_higher_shell_chunks003_004_pending_support_only"] = (
+        schur_higher_shell_chunks003_004_pending
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")

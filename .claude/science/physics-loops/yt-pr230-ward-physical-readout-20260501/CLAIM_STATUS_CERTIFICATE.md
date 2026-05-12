@@ -5849,6 +5849,39 @@ pole/FV/IR authority, not canonical `O_H`, not canonical `C_sH/C_HH`, not W/Z
 response, not physical `kappa_s`, and not retained or `proposed_retained`
 closure.
 
+## 2026-05-12 - Higher-Shell Chunks003-004 Launch Checkpoint
+
+```text
+actual_current_surface_status: run-control / higher-shell Schur scalar-LSZ chunks003-004 active pending
+conditional_surface_status: null
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2 --chunk-indices 3-4 --launch --verify-seconds 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 3 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk003_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 4 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk004_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=386 FAIL=0
+```
+
+Chunks003-004 are live run-control only under the higher-shell roots with
+fixed seeds `2026057003` and `2026057004`.  Pending checkpoints are not row
+evidence.  This is not complete higher-shell data, not Schur A/B/C kernel
+rows, not complete monotonicity, not scalar pole/FV/IR authority, not
+canonical `O_H`, not canonical `C_sH/C_HH`, not W/Z response, not physical
+`kappa_s`, and not retained or `proposed_retained` closure.
+
 ## 2026-05-12 - FH/LSZ Target-Timeseries Full-Set Checkpoint
 
 ```text
