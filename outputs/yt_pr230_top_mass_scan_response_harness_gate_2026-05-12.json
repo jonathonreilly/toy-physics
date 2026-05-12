@@ -1,0 +1,58 @@
+{
+  "actual_current_surface_status": "bounded-support / top mass-scan response harness schema gate",
+  "bare_retained_allowed": false,
+  "fail_count": 0,
+  "finite_multi_tau_slope_count": 6,
+  "finite_tau1_slope_count": 2,
+  "mass_scan_bracket_masses_lat": [
+    0.45,
+    0.75,
+    1.05
+  ],
+  "mass_scan_masses_lat": [
+    0.45,
+    0.75,
+    1.05
+  ],
+  "measurement_count": 2,
+  "metadata_top_mass_scan_response": {
+    "enabled": true,
+    "extra_solve_count": 0,
+    "mass_scan_masses_lat": [
+      0.45,
+      0.75,
+      1.05
+    ],
+    "physical_higgs_normalization": "not_derived",
+    "row_schema_version": "top_mass_scan_response_v1",
+    "selected_mass_parameter": 0.75,
+    "serialization": "per_configuration_effective_energies_and_slopes",
+    "source_coordinate": "uniform additive Dirac bare mass m_bare",
+    "strict_limit": "This serializes per-configuration top mass-scan slopes already computed for the three-mass scan. It is future same-ensemble covariance/subtraction support only, not dE/dh and not a retained/proposed-retained y_t readout.",
+    "used_as_physical_yukawa_readout": false,
+    "uses_existing_three_mass_top_correlator_scan": true
+  },
+  "pass_count": 14,
+  "per_configuration_effective_energy_row_count": 2,
+  "per_configuration_multi_tau_slope_row_count": 2,
+  "per_configuration_slope_row_count": 2,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Top bare-mass response rows do not derive canonical-Higgs/source-overlap, kappa_s, W/Z identity, g2 authority, or physical y_t closure.",
+  "row_schema_version": "top_mass_scan_response_v1",
+  "scalar_source_response_rows_preserved": true,
+  "scalar_two_point_css_timeseries_modes": {
+    "0,0,0": true
+  },
+  "seed_control_version": "numba_gauge_seed_v1",
+  "selected_mass_parameter": 0.75,
+  "smoke_artifact": "outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat dE/dm_bare as dE/dh",
+    "does not derive or set kappa_s = 1",
+    "does not import H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed m_t, or observed y_t as proof authority",
+    "does not provide W/Z response rows, matched covariance, or g2 authority"
+  ],
+  "top_mass_scan_response_harness_gate_passed": true,
+  "verdict": "The reduced smoke artifact validates that the production harness serializes per-configuration top mass-scan effective energies and bare-mass slopes while preserving scalar FH/LSZ target time series, C_ss time series, and numba seed control.  This is support for future same-ensemble covariance/subtraction gates only."
+}

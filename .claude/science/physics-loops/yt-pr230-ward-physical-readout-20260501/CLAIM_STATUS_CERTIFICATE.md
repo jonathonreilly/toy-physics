@@ -1,5 +1,39 @@
 # Claim Status Certificate
 
+Block35 top mass-scan response harness rows:
+
+```text
+actual_current_surface_status: bounded-support / production harness support rows; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=105 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=164 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=318 FAIL=0
+
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=73 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=365 FAIL=0
+```
+
+The new `top_mass_scan_response_analysis` field reuses the existing
+three-mass top correlator scan and adds no new solves.  It is infrastructure
+support for future W/Z covariance/subtraction rows only.  It is not `dE/dh`,
+not `kappa_s`, not same-source W/Z response, not matched covariance, not
+strict `g2`, not canonical `O_H`, not source-Higgs pole rows, and not retained
+or `proposed_retained` evidence.  Existing completed chunks predate this field
+and must not be treated as containing these rows.
+
 Block34 complete additive-top Jacobian refresh:
 
 ```text

@@ -53,6 +53,7 @@ PARENTS = {
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
     "additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
+    "top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -714,6 +715,18 @@ def main() -> int:
         ).get("strict_electroweak_g2_certificate")
         is False
     )
+    top_mass_scan_response_harness_not_closure = (
+        "top mass-scan response harness schema gate"
+        in parent_statuses["top_mass_scan_response_harness_gate"]
+        and certs["top_mass_scan_response_harness_gate"].get("proposal_allowed")
+        is False
+        and certs["top_mass_scan_response_harness_gate"].get(
+            "top_mass_scan_response_harness_gate_passed"
+        )
+        is True
+        and certs["top_mass_scan_response_harness_gate"].get("row_schema_version")
+        == "top_mass_scan_response_v1"
+    )
     post_fms_source_overlap_necessity_blocks_current_inference = (
         "post-FMS source-overlap not derivable"
         in parent_statuses["post_fms_source_overlap_necessity_gate"]
@@ -1269,6 +1282,7 @@ def main() -> int:
     report("radial-spurion-action-contract-not-closure", radial_spurion_action_contract_not_closure, parent_statuses["radial_spurion_action_contract"])
     report("additive-source-radial-spurion-incompatibility-not-closure", additive_source_radial_spurion_incompatibility_not_closure, parent_statuses["additive_source_radial_spurion_incompatibility"])
     report("additive-top-subtraction-row-contract-not-closure", additive_top_subtraction_row_contract_not_closure, parent_statuses["additive_top_subtraction_row_contract"])
+    report("top-mass-scan-response-harness-not-closure", top_mass_scan_response_harness_not_closure, parent_statuses["top_mass_scan_response_harness_gate"])
     report("wz-response-ratio-identifiability-contract-not-closure", wz_response_ratio_identifiability_contract_not_closure, parent_statuses["wz_response_ratio_identifiability_contract"])
     report("wz-same-source-action-minimal-certificate-cut-open", wz_same_source_action_minimal_certificate_cut_open, parent_statuses["wz_same_source_action_minimal_certificate_cut"])
     report("wz-accepted-action-response-root-checkpoint-blocks", wz_accepted_action_response_root_checkpoint_blocks, parent_statuses["wz_accepted_action_response_root_checkpoint"])
@@ -1454,6 +1468,7 @@ def main() -> int:
             "radial_spurion_action_contract_not_closure": radial_spurion_action_contract_not_closure,
             "additive_source_radial_spurion_incompatibility_not_closure": additive_source_radial_spurion_incompatibility_not_closure,
             "additive_top_subtraction_row_contract_not_closure": additive_top_subtraction_row_contract_not_closure,
+            "top_mass_scan_response_harness_not_closure": top_mass_scan_response_harness_not_closure,
             "wz_response_ratio_identifiability_contract_not_closure": wz_response_ratio_identifiability_contract_not_closure,
             "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
             "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,

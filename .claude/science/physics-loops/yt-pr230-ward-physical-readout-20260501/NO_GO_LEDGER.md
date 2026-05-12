@@ -4003,3 +4003,18 @@ FV/IR/threshold authority, no W/Z response, and no primitive neutral transfer.
 Reopen as closure only with a complete same-surface artifact satisfying one of
 the named physical authorities.  Do not reopen because the partial packet grew
 from 36 to 38 chunks.
+
+## 2026-05-12 - Top Mass-Scan Response Rows Are Not Physical Readout
+
+No-go on the current surface: block35 adds a harness schema for
+per-configuration top mass-scan `dE/dm_bare` rows, but the reduced smoke is
+schema validation only and existing production chunks predate the field.  Even
+after future production reruns, these rows are additive bare-mass response
+support, not `dE/dh`, not `kappa_s`, not W/Z response, not matched covariance,
+not strict `g2`, and not a final top-Yukawa readout.
+
+Reopen as closure only after the row schema is used in production together
+with accepted same-source EW/Higgs action, W/Z response rows, matched
+top/W/Z covariance, strict non-observed `g2`, and a final subtracted-response
+certificate, or after an independent canonical `O_H` / source-Higgs pole-row
+route closes.

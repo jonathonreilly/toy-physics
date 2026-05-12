@@ -1,5 +1,24 @@
 # Opportunity Queue
 
+2026-05-12 block35 top mass-scan response harness rows: the production harness
+now emits `top_mass_scan_response_analysis` from the existing three-mass top
+correlator scan.  The rows serialize per-configuration tau=1 effective
+energies, endpoint `dE/dm_bare` slopes around the selected middle mass, and
+multi-tau slope rows with explicit metadata saying
+`physical_higgs_normalization=not_derived`,
+`used_as_physical_yukawa_readout=false`, and `extra_solve_count=0`.  This is a
+useful future W/Z subtraction/covariance primitive but not closure: the rows
+are additive bare-mass response, not `dE/dh`, not same-source W/Z response,
+not strict matched covariance, not strict non-observed `g2`, not canonical
+`O_H`, and not source-Higgs pole residue evidence.  Existing production chunks
+predate this field; future strict W/Z packet production must rerun with this
+schema if these rows become load-bearing.  Highest-value next action remains
+the clean source-Higgs root: accepted same-surface EW/Higgs action plus a
+canonical `O_H` certificate, followed by production
+`C_ss/C_sH/C_HH` pole rows and overlap/Gram/FV/IR gates.  First fallback is a
+genuine same-source W/Z physical-response packet with accepted action,
+matched covariance, strict non-observed `g2`, and final subtracted response.
+
 2026-05-12 block34 complete additive-top Jacobian refresh: the W/Z fallback
 now has a complete bounded-support top-additive packet from chunks001-063.
 `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json` records

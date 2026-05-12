@@ -1,5 +1,29 @@
 # Review History
 
+## 2026-05-12 - Block35 Top Mass-Scan Response Harness Rows
+
+Review stance: bounded infrastructure support / future W/Z subtraction rows,
+no closure.
+
+- Extended the production harness to serialize
+  `top_mass_scan_response_analysis` from the existing three-mass top scan.
+- Added a support-only gate and smoke artifact proving the new schema appears
+  while scalar FH/LSZ selected-mass-only rows, scalar source-response rows,
+  scalar `C_ss_timeseries`, and `numba_gauge_seed_v1` seed metadata remain
+  present.
+- Wired the support-only gate through assumption/import stress, full assembly,
+  retained-route, completion audit, and campaign-status certificates.
+- Validation at block checkpoint: py_compile OK; top mass-scan response gate
+  `PASS=14 FAIL=0`; assumption/import stress `PASS=105 FAIL=0`; full
+  positive closure assembly `PASS=164 FAIL=0`; retained-route certificate
+  `PASS=318 FAIL=0`; positive closure completion audit `PASS=73 FAIL=0`;
+  campaign status `PASS=365 FAIL=0`.
+
+Disposition: support only.  The new rows are `dE/dm_bare`, not physical
+`dE/dh`; they do not derive `kappa_s`, canonical `O_H`, W/Z response,
+matched covariance, strict `g2`, scalar-LSZ residue, retained closure, or
+`proposed_retained` closure.
+
 ## 2026-05-12 - Block34 Complete Additive-Top Jacobian Refresh
 
 Review stance: bounded support / W/Z subtraction support packet, no closure.

@@ -266,6 +266,9 @@ def main() -> int:
         "additive_top_subtraction_row_contract": load(
             "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json"
         ),
+        "top_mass_scan_response_harness_gate": load(
+            "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json"
+        ),
         "wz_response_ratio_identifiability_contract": load(
             "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
         ),
@@ -1906,6 +1909,21 @@ def main() -> int:
         is False,
         schur_one_pole_scout.get("actual_current_surface_status"),
     )
+    top_mass_scan_response = certificates["top_mass_scan_response_harness_gate"]
+    top_mass_scan_response_support_only = (
+        "top mass-scan response harness schema gate"
+        in str(top_mass_scan_response.get("actual_current_surface_status"))
+        and top_mass_scan_response.get("proposal_allowed") is False
+        and top_mass_scan_response.get("top_mass_scan_response_harness_gate_passed")
+        is True
+        and top_mass_scan_response.get("row_schema_version")
+        == "top_mass_scan_response_v1"
+    )
+    report(
+        "top-mass-scan-response-harness-support-only",
+        top_mass_scan_response_support_only,
+        top_mass_scan_response.get("actual_current_surface_status"),
+    )
 
     result = {
         "actual_current_surface_status": "open / assumption-import stress complete",
@@ -2125,7 +2143,11 @@ def main() -> int:
             "exact corrected ratio requires same-ensemble additive-top "
             "Jacobian rows, W/Z response rows, matched covariance, strict "
             "non-observed g2 authority, and an accepted action certificate "
-            "before it can be a physical-response closure route.  "
+            "before it can be a physical-response closure route.  The top "
+            "mass-scan response harness serializes same-ensemble dE/dm_bare "
+            "support rows from existing three-mass scans, but the assumption "
+            "firewall keeps those rows distinct from dE/dh until canonical "
+            "source-overlap or W/Z identity authority exists.  "
             "Positive closure still requires "
             "production evidence plus heavy matching, "
             "or an independent scalar pole/LSZ theorem."
@@ -2135,6 +2157,7 @@ def main() -> int:
         "checked_certificates": {
             name: cert.get("actual_current_surface_status") for name, cert in certificates.items()
         },
+        "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_support_only,
         "missing_forbidden_terms": missing_terms,
         "strict_non_claims": [
             "not a y_t derivation",
@@ -2170,6 +2193,7 @@ def main() -> int:
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not treat the current additive top source as a no-independent-top radial spurion",
             "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
+            "does not treat top mass-scan dE/dm_bare rows as dE/dh, kappa_s, W/Z response, or y_t closure",
             "does not treat the W/Z same-source minimal certificate cut as an accepted action certificate or W/Z response evidence",
             "does not infer Res C_sH from source-only rows, FMS C_HH, or taste-radial C_sx/C_xx chunks",
             "does not treat configuration timeseries or static C_ss/C_sx/C_xx covariance as a same-surface Euclidean-time transfer kernel",

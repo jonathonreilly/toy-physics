@@ -85,6 +85,7 @@
     "taste_condensate_oh_bridge": "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
     "taste_radial_canonical_oh_selector_gate": "outputs/yt_pr230_taste_radial_canonical_oh_selector_gate_2026-05-06.json",
     "taste_radial_to_source_higgs_promotion_contract": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
+    "top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
@@ -156,6 +157,7 @@
     "taste_condensate_oh_bridge": "exact negative boundary / taste-condensate Higgs stack does not supply PR230 O_H bridge",
     "taste_radial_canonical_oh_selector_gate": "exact-support / degree-one taste-radial uniqueness with exact negative boundary for symmetry-only canonical O_H selection",
     "taste_radial_to_source_higgs_promotion_contract": "exact-support / taste-radial-to-source-Higgs promotion contract; current promotion blocked by absent canonical O_H identity/action/LSZ premise",
+    "top_mass_scan_response_harness_gate": "bounded-support / top mass-scan response harness schema gate",
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "two_source_taste_radial_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
@@ -175,7 +177,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 72,
+  "pass_count": 73,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -227,6 +229,7 @@
     "taste_condensate_oh_bridge_blocked": true,
     "taste_radial_canonical_oh_selector_blocks_symmetry_shortcut": true,
     "taste_radial_to_source_higgs_promotion_contract_support_not_closure": true,
+    "top_mass_scan_response_harness_not_closure": true,
     "two_source_taste_radial_action_not_closure": true,
     "two_source_taste_radial_chunk_package_not_closure": true,
     "two_source_taste_radial_primitive_transfer_candidate_not_h3": true,

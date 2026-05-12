@@ -953,6 +953,9 @@ def main() -> int:
         "fh_lsz_selected_mass_normal_cache_speedup": load(
             "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json"
         ),
+        "top_mass_scan_response_harness_gate": load(
+            "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json"
+        ),
         "fh_lsz_global_production_collision_guard": load(
             "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
         ),
@@ -4894,6 +4897,20 @@ def main() -> int:
         in str(statuses["fh_lsz_selected_mass_normal_cache_speedup"]),
         statuses["fh_lsz_selected_mass_normal_cache_speedup"],
     )
+    top_mass_scan_response_harness_support_not_evidence = (
+        "top mass-scan response harness schema gate"
+        in str(statuses["top_mass_scan_response_harness_gate"])
+        and certificates["top_mass_scan_response_harness_gate"].get("proposal_allowed") is False
+        and certificates["top_mass_scan_response_harness_gate"].get(
+            "top_mass_scan_response_harness_gate_passed"
+        )
+        is True
+    )
+    report(
+        "top-mass-scan-response-harness-support-not-evidence",
+        top_mass_scan_response_harness_support_not_evidence,
+        statuses["top_mass_scan_response_harness_gate"],
+    )
     report(
         "fh-lsz-global-production-collision-guard-not-evidence",
         "FH-LSZ global production collision guard"
@@ -5993,6 +6010,7 @@ def main() -> int:
         "proposal_allowed_reason": "Open imports remain across every non-production shortcut route.",
         "certificate_statuses": statuses,
         "remaining_routes": remaining_routes,
+        "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",

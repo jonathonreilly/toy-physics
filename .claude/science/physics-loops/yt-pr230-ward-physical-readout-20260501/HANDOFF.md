@@ -1,5 +1,34 @@
 # Handoff
 
+Latest checkpoint, 2026-05-12 block35 top mass-scan response harness rows:
+
+- Extended `scripts/yt_direct_lattice_correlator_production.py` so each
+  ensemble now includes `top_mass_scan_response_analysis` built from the
+  already computed three-mass top correlator scan.
+- Added `scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py`,
+  `docs/YT_PR230_TOP_MASS_SCAN_RESPONSE_HARNESS_GATE_NOTE_2026-05-12.md`,
+  `outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json`,
+  and `outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json`.
+- The new rows record per-configuration top effective energies, tau=1
+  endpoint `dE/dm_bare` slopes around mass `0.75`, multi-tau slope rows, and
+  metadata with `extra_solve_count=0`, `physical_higgs_normalization` not
+  derived, and `used_as_physical_yukawa_readout=false`.
+- Validation: top mass-scan response harness gate `PASS=14 FAIL=0`;
+  assumption/import stress `PASS=105 FAIL=0`; full positive closure assembly
+  `PASS=164 FAIL=0`; retained-route certificate `PASS=318 FAIL=0`; positive
+  closure completion audit `PASS=73 FAIL=0`; campaign status certificate
+  `PASS=365 FAIL=0`.
+- Claim boundary: these are additive bare-mass response support rows, not
+  physical `dE/dh`, not `kappa_s`, not same-source W/Z response, not matched
+  covariance, not strict non-observed `g2`, not canonical `O_H`, and not
+  retained or `proposed_retained` top-Yukawa closure.  Existing production
+  chunks predate this field.
+- Exact next action: if staying on the cleanest physics closure path, derive
+  or certify same-surface accepted EW/Higgs action plus canonical `O_H`; then
+  launch production `C_ss/C_sH/C_HH` source-Higgs pole rows.  If taking the
+  W/Z fallback, rerun strict same-source response packets with this schema and
+  matched per-configuration covariance.
+
 Latest checkpoint, 2026-05-12 block34 complete additive-top Jacobian refresh:
 
 - Refreshed `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`

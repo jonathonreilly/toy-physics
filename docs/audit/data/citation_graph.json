@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:31:35.503720+00:00",
+  "generated_at": "2026-05-12T01:37:40.997007+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42400,7 +42400,7 @@
       "current_status": "open",
       "current_status_raw": "open / physical-bridge admission checkpoint; PR230 top-Yukawa",
       "deps": [],
-      "note_hash": "ccca00d375456565cb26a7c2e7b7e1a4a2e973963ea9c1ffba2067ee77ebb382",
+      "note_hash": "597f65a9745d9dc8acf862155baa43e8ce79bdbd051901becf3519d667ddc03e",
       "path": "docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md",
       "runner_path": "scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py",
       "title": "PR230 Block35 Post-Block34 Physical-Bridge Admission Checkpoint"
@@ -43534,6 +43534,16 @@
       "path": "docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py",
       "title": "PR230 Taste-Radial To Source-Higgs Promotion Contract"
+    },
+    "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / infrastructure only",
+      "deps": [],
+      "note_hash": "edad20dd19e4de7b097f7b76776b8743df4937dbad07e4d2b1b4e975629b13b4",
+      "path": "docs/YT_PR230_TOP_MASS_SCAN_RESPONSE_HARNESS_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py",
+      "title": "PR #230 Top Mass-Scan Response Harness Gate"
     },
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
@@ -46764,6 +46774,7 @@
     "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
     "yt_pr230_taste_radial_canonical_oh_selector_gate_note_2026-05-06",
     "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
+    "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12",
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12",
@@ -46922,12 +46933,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4701,
-    "leaf_count": 1132,
-    "node_count": 2128,
-    "root_count": 1633,
-    "runners_with_path": 1603,
+    "leaf_count": 1133,
+    "node_count": 2129,
+    "root_count": 1634,
+    "runners_with_path": 1604,
     "status_counts": {
-      "bounded": 595,
+      "bounded": 596,
       "open": 113,
       "proposed_promoted": 1,
       "proposed_retained": 373,

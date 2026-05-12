@@ -131,6 +131,7 @@ PARENTS = {
     "pr230_radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "pr230_additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
     "pr230_additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
+    "pr230_top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -1412,6 +1413,22 @@ def main() -> int:
         ).get("strict_electroweak_g2_certificate")
         is False
     )
+    top_mass_scan_response_harness_support_not_closure = (
+        "top mass-scan response harness schema gate"
+        in statuses["pr230_top_mass_scan_response_harness_gate"]
+        and certs["pr230_top_mass_scan_response_harness_gate"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_top_mass_scan_response_harness_gate"].get(
+            "top_mass_scan_response_harness_gate_passed"
+        )
+        is True
+        and certs["pr230_top_mass_scan_response_harness_gate"].get(
+            "row_schema_version"
+        )
+        == "top_mass_scan_response_v1"
+    )
     wz_response_ratio_identifiability_contract_support_not_closure = (
         "WZ response-ratio identifiability contract"
         in statuses["pr230_wz_response_ratio_identifiability_contract"]
@@ -2613,6 +2630,11 @@ def main() -> int:
         statuses["pr230_additive_top_subtraction_row_contract"],
     )
     report(
+        "top-mass-scan-response-harness-support-not-closure",
+        top_mass_scan_response_harness_support_not_closure,
+        statuses["pr230_top_mass_scan_response_harness_gate"],
+    )
+    report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
         wz_response_ratio_identifiability_contract_support_not_closure,
         statuses["pr230_wz_response_ratio_identifiability_contract"],
@@ -3665,6 +3687,7 @@ def main() -> int:
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "additive_source_radial_spurion_incompatibility_support_not_closure": additive_source_radial_spurion_incompatibility_support_not_closure,
         "additive_top_subtraction_row_contract_support_not_closure": additive_top_subtraction_row_contract_support_not_closure,
+        "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
@@ -3725,6 +3748,7 @@ def main() -> int:
             "does not treat the radial-spurion sector-overlap theorem as current additive-source sector-overlap closure",
             "does not treat the current additive top source as a no-independent-top radial spurion",
             "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
+            "does not treat top mass-scan dE/dm_bare rows as dE/dh, W/Z response, kappa_s, or y_t closure",
             "does not treat the W/Z same-source minimal certificate cut as accepted action authority or response rows",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",

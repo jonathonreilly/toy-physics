@@ -7,7 +7,7 @@ closure remains open
 **Certificate:** `outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json`
 
 ```yaml
-actual_current_surface_status: open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top commits are support only and no physical bridge is admitted
+actual_current_surface_status: open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, additive-top, top mass-scan response harness, and lane-1 O_H root theorem-attempt commits are support/no-go only and no physical bridge is admitted
 conditional_surface_status: support if a future accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH rows exists, or if a strict W/Z physical-response packet or neutral H3/H4 physical-transfer authority exists
 proposal_allowed: false
 bare_retained_allowed: false
@@ -23,10 +23,12 @@ response authority.
 
 The PR head then packaged chunk063, clarified no-go scope boundaries,
 refreshed the complete-packet promotion contract, refreshed the OS transfer
-alias firewall, and refreshed complete additive-top support.  Block35 is the
-supervisor-continuation checkpoint after those support-only inputs.  It checks
-the committed PR head for the three ranked physical bridge inputs and refuses
-to spend another block on shortcut gates or route inventory:
+alias firewall, refreshed complete additive-top support, and later added
+top mass-scan response harness rows and a lane-1 O_H root theorem attempt.
+Block35 is the supervisor-continuation checkpoint after those support-only
+inputs.  It checks the committed PR head for the three ranked physical bridge
+inputs and refuses to spend another block on shortcut gates or route
+inventory:
 
 1. accepted same-surface `O_H` / EW-Higgs action plus strict
    `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority;
@@ -44,9 +46,11 @@ untracked output, active logs, or the live chunk worker.
 The committed head after block30 contains no new physical bridge packet.  It
 does contain support-only chunk063 rows, no-go-scope wording, a promotion
 contract refresh, an OS transfer alias firewall, and additive-top row/contract
-support, but those do not certify `x=O_H`, accepted action authority, strict
-`C_ss/C_sH/C_HH` pole rows, W/Z physical response, a same-surface transfer
-kernel, matched W/Z covariance, or neutral H3/H4 physical transfer.
+support.  It may also contain top mass-scan `dE/dm_bare` harness rows.  These
+support artifacts, plus the lane-1 exact negative boundary attempt, do not
+certify `x=O_H`, accepted action authority, strict `C_ss/C_sH/C_HH` pole rows,
+W/Z physical response, a same-surface transfer kernel, matched W/Z covariance,
+strict non-observed `g2`, `kappa_s`, or neutral H3/H4 physical transfer.
 
 - Source-Higgs is not admitted: accepted same-surface action/operator
   authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, and
@@ -63,8 +67,10 @@ Honest status: open / admission checkpoint.  `proposal_allowed=false`.
 
 This block does not claim retained or `proposed_retained` closure.  It does
 not promote block30 route review, chunk063 completion, the promotion contract,
-the OS transfer alias firewall, or additive-top support into physical bridge
-evidence, does not use
+the OS transfer alias firewall, additive-top support, or top mass-scan
+response harness rows into physical bridge evidence, and does not treat the
+lane-1 O_H root theorem attempt as a canonical O_H certificate.  It does not
+use
 `yt_ward_identity`, `H_unit`, `y_t_bare`, observed target values, observed
 `g2`, `alpha_LM`, plaquette, `u0`, or unit-normalization conventions, and does
 not relabel `C_sx/C_xx` as `C_sH/C_HH` before `x=O_H` is certified.
@@ -74,9 +80,9 @@ not relabel `C_sx/C_xx` as `C_sH/C_HH` before `x=O_H` is certified.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
 python3 scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py
-# SUMMARY: PASS=14 FAIL=0
+# SUMMARY: PASS=16 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=365 FAIL=0
+# SUMMARY: PASS=366 FAIL=0
 ```
 
 Next exact action: supply one committed physical bridge artifact: accepted

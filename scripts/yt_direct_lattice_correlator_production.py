@@ -1769,6 +1769,150 @@ def fit_scalar_source_response(
     }
 
 
+def fit_top_mass_scan_response(
+    measurements: dict[float, list[list[float]]],
+    selected_mass: float,
+) -> dict[str, Any]:
+    def effective_energy_at_tau(corr: list[float], tau: int) -> float:
+        if tau < 0 or len(corr) <= tau + 1:
+            return float("nan")
+        c0 = float(corr[tau])
+        c1 = float(corr[tau + 1])
+        if c0 <= 0.0 or c1 <= 0.0:
+            return float("nan")
+        return float(math.log(c0 / c1))
+
+    masses = sorted(float(mass) for mass in measurements)
+    bracket_masses = []
+    if len(masses) >= 2:
+        lower = [mass for mass in masses if mass < float(selected_mass)]
+        upper = [mass for mass in masses if mass > float(selected_mass)]
+        if lower and upper:
+            bracket_masses = [float(lower[-1]), float(selected_mass), float(upper[0])]
+        else:
+            bracket_masses = [float(masses[0]), float(masses[-1])]
+
+    common_count = min((len(rows) for rows in measurements.values()), default=0)
+    max_tau = -1
+    if common_count > 0 and masses:
+        min_corr_len = min(
+            len(measurements[mass][cfg_index])
+            for mass in masses
+            for cfg_index in range(common_count)
+        )
+        max_tau = max(min_corr_len - 2, -1)
+    tau_windows = list(range(max_tau + 1))
+    per_configuration_effective_energies = []
+    per_configuration_slopes = []
+    per_configuration_multi_tau_effective_energies = []
+    per_configuration_multi_tau_slopes = []
+    finite_tau1_slope_count = 0
+    finite_multi_tau_slope_count = 0
+
+    low_mass = float(bracket_masses[0]) if len(bracket_masses) >= 2 else float("nan")
+    high_mass = float(bracket_masses[-1]) if len(bracket_masses) >= 2 else float("nan")
+    mass_delta = high_mass - low_mass if math.isfinite(low_mass) and math.isfinite(high_mass) else float("nan")
+
+    for cfg_index in range(common_count):
+        energies_by_mass: dict[str, float] = {}
+        for mass in masses:
+            energy = effective_energy_at_tau(measurements[mass][cfg_index], 1)
+            energies_by_mass[f"{float(mass):.12g}"] = energy
+        per_configuration_effective_energies.append(
+            {
+                "configuration_index": cfg_index,
+                "effective_energy_tau1_by_mass": energies_by_mass,
+            }
+        )
+
+        slope_value = float("nan")
+        if len(bracket_masses) >= 2 and math.isfinite(mass_delta) and abs(mass_delta) > 1.0e-15:
+            e_low = energies_by_mass.get(f"{low_mass:.12g}", float("nan"))
+            e_high = energies_by_mass.get(f"{high_mass:.12g}", float("nan"))
+            if math.isfinite(float(e_low)) and math.isfinite(float(e_high)):
+                slope_value = float((float(e_high) - float(e_low)) / mass_delta)
+        if math.isfinite(slope_value):
+            finite_tau1_slope_count += 1
+        per_configuration_slopes.append(
+            {
+                "configuration_index": cfg_index,
+                "bracket_masses_lat": bracket_masses,
+                "selected_mass_parameter": float(selected_mass),
+                "slope_dE_dm_bare_tau1": slope_value,
+                "finite": math.isfinite(slope_value),
+            }
+        )
+
+        multi_tau_energies_by_tau: dict[str, dict[str, float]] = {}
+        multi_tau_slopes: dict[str, float] = {}
+        for tau in tau_windows:
+            tau_energies_by_mass = {}
+            for mass in masses:
+                energy = effective_energy_at_tau(measurements[mass][cfg_index], tau)
+                tau_energies_by_mass[f"{float(mass):.12g}"] = energy
+            multi_tau_energies_by_tau[str(tau)] = tau_energies_by_mass
+
+            tau_slope = float("nan")
+            if len(bracket_masses) >= 2 and math.isfinite(mass_delta) and abs(mass_delta) > 1.0e-15:
+                tau_low = tau_energies_by_mass.get(f"{low_mass:.12g}", float("nan"))
+                tau_high = tau_energies_by_mass.get(f"{high_mass:.12g}", float("nan"))
+                if math.isfinite(float(tau_low)) and math.isfinite(float(tau_high)):
+                    tau_slope = float((float(tau_high) - float(tau_low)) / mass_delta)
+            multi_tau_slopes[str(tau)] = tau_slope
+            if math.isfinite(tau_slope):
+                finite_multi_tau_slope_count += 1
+
+        per_configuration_multi_tau_effective_energies.append(
+            {
+                "configuration_index": cfg_index,
+                "tau_min": int(tau_windows[0]) if tau_windows else None,
+                "tau_max": int(tau_windows[-1]) if tau_windows else None,
+                "effective_energy_by_tau_and_mass": multi_tau_energies_by_tau,
+            }
+        )
+        per_configuration_multi_tau_slopes.append(
+            {
+                "configuration_index": cfg_index,
+                "bracket_masses_lat": bracket_masses,
+                "selected_mass_parameter": float(selected_mass),
+                "tau_min": int(tau_windows[0]) if tau_windows else None,
+                "tau_max": int(tau_windows[-1]) if tau_windows else None,
+                "slope_dE_dm_bare_by_tau": multi_tau_slopes,
+                "finite_tau_count": sum(
+                    1 for value in multi_tau_slopes.values() if math.isfinite(float(value))
+                ),
+            }
+        )
+
+    return {
+        "row_schema_version": "top_mass_scan_response_v1",
+        "source_coordinate": "uniform additive Dirac bare mass m_bare",
+        "selected_mass_parameter": float(selected_mass),
+        "mass_scan_masses_lat": masses,
+        "mass_scan_bracket_masses_lat": bracket_masses,
+        "configuration_count": int(common_count),
+        "finite_tau1_slope_count": int(finite_tau1_slope_count),
+        "finite_multi_tau_slope_count": int(finite_multi_tau_slope_count),
+        "multi_tau_window_range": {
+            "tau_min": int(tau_windows[0]) if tau_windows else None,
+            "tau_max": int(tau_windows[-1]) if tau_windows else None,
+            "tau_windows": [int(tau) for tau in tau_windows],
+        },
+        "per_configuration_effective_energies": per_configuration_effective_energies,
+        "per_configuration_slopes": per_configuration_slopes,
+        "per_configuration_multi_tau_effective_energies": per_configuration_multi_tau_effective_energies,
+        "per_configuration_multi_tau_slopes": per_configuration_multi_tau_slopes,
+        "used_as_physical_yukawa_readout": False,
+        "physical_higgs_normalization": "not_derived",
+        "strict_limit": (
+            "Per-configuration top mass-scan slopes are same-ensemble response "
+            "support for future covariance/subtraction gates only. They are "
+            "not dE/dh, not kappa_s, and not physical y_t evidence without "
+            "canonical-Higgs/source-overlap or W/Z response identity authority."
+        ),
+    }
+
+
 def fit_scalar_two_point_lsz(
     scalar_two_point_measurements: dict[str, list[dict[str, Any]]],
     spatial_l: int,
@@ -2573,6 +2717,8 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
             selected_mass,
         )
 
+    top_mass_scan_response_analysis = fit_top_mass_scan_response(measurements, selected_mass)
+
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
 
@@ -2598,6 +2744,7 @@ def run_volume(args: argparse.Namespace, spatial_l: int, time_l: int, masses: li
         "plaquette_measurements": [float(x) for x in plaquettes],
         "plaquette_mean": float(np.mean(plaquettes)) if plaquettes else None,
         "mass_parameter_scan": mass_scan,
+        "top_mass_scan_response_analysis": top_mass_scan_response_analysis,
         "selected_mass_parameter": selected_mass,
         "fh_lsz_measurement_policy": fh_lsz_policy,
         "correlators": correlator_rows,
@@ -2855,6 +3002,8 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
             selected_mass,
         )
 
+    top_mass_scan_response_analysis = fit_top_mass_scan_response(measurements, selected_mass)
+
     if selected_fit is None:
         selected_fit = mass_scan[len(mass_scan) // 2]
 
@@ -2888,6 +3037,7 @@ def run_volume_numba(args: argparse.Namespace, spatial_l: int, time_l: int, mass
         "plaquette_measurements": [float(x) for x in plaquettes],
         "plaquette_mean": float(np.mean(plaquettes)) if plaquettes else None,
         "mass_parameter_scan": mass_scan,
+        "top_mass_scan_response_analysis": top_mass_scan_response_analysis,
         "selected_mass_parameter": selected_mass,
         "fh_lsz_measurement_policy": fh_lsz_policy,
         "correlators": correlator_rows,
@@ -3081,6 +3231,24 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "non_selected_masses_skipped": fh_lsz_policy.get("non_selected_masses_scalar_fh_lsz_skipped", []),
                 "physical_higgs_normalization": "not_derived",
                 "used_as_physical_yukawa_readout": False,
+            },
+            "top_mass_scan_response": {
+                "enabled": len(masses) >= 2,
+                "row_schema_version": "top_mass_scan_response_v1",
+                "source_coordinate": "uniform additive Dirac bare mass m_bare",
+                "selected_mass_parameter": fh_lsz_policy.get("selected_mass_parameter"),
+                "mass_scan_masses_lat": masses,
+                "serialization": "per_configuration_effective_energies_and_slopes",
+                "extra_solve_count": 0,
+                "uses_existing_three_mass_top_correlator_scan": True,
+                "physical_higgs_normalization": "not_derived",
+                "used_as_physical_yukawa_readout": False,
+                "strict_limit": (
+                    "This serializes per-configuration top mass-scan slopes "
+                    "already computed for the three-mass scan. It is future "
+                    "same-ensemble covariance/subtraction support only, not "
+                    "dE/dh and not a retained/proposed-retained y_t readout."
+                ),
             },
             "schur_kprime_kernel_rows": {
                 "enabled": False,

@@ -1,5 +1,18 @@
 # Artifact Plan
 
+Completed in block 35:
+
+- `scripts/yt_direct_lattice_correlator_production.py`
+- `scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py`
+- `outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json`
+- `outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json`
+- `docs/YT_PR230_TOP_MASS_SCAN_RESPONSE_HARNESS_GATE_NOTE_2026-05-12.md`
+- `outputs/yt_pr230_assumption_import_stress_2026-05-01.json`
+- `outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json`
+- `outputs/yt_retained_closure_route_certificate_2026-05-01.json`
+- `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+
 Completed in block 1:
 
 - `scripts/frontier_yt_pr230_global_proof_audit.py`

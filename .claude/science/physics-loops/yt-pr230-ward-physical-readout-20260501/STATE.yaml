@@ -6,20 +6,20 @@ runtime_budget_requested: "12h"
 campaign_started_at_utc: "2026-05-01T16:00:07Z"
 checkpoint_interval: "30m"
 deep_block: "90m"
-date: "2026-05-07"
-worktree: "/private/tmp/pr230-wroute-build"
-branch: "codex/pr230-wroute-build tracking origin/claude/yt-direct-lattice-correlator-2026-04-30"
+date: "2026-05-12"
+worktree: "/private/tmp/pr230-neutral-transfer-eigenoperator-campaign-trusted"
+branch: "claude/yt-direct-lattice-correlator-2026-04-30 tracking origin/claude/yt-direct-lattice-correlator-2026-04-30"
 repo_lock:
   default_lock_status: "not used for this worktree"
-  workspace_lock_status: "acquired for post-O_sp completion audit block"
+  workspace_lock_status: "refreshed for block35 top mass-scan response harness checkpoint"
   workspace_lock_path: "/Users/jonBridger/physics_worker_lock.json"
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block34-complete-additive-top-jacobian-refresh
-blocks_completed: 34
-active_route: "W/Z accepted-action fallback support: complete additive-top coarse Jacobian refresh"
-active_hard_residual: "The completed chunks001-063 packet now feeds the additive-top Jacobian builder.  The refreshed bounded-support packet writes 63/63 coarse A_top=dE_top/dm_bare rows from the preserved three-mass scans and the subtraction contract records them as complete bounded support only.  The current surface still lacks strict per-configuration additive rows, W/Z response rows, matched covariance, strict non-observed g2, accepted same-source EW/Higgs action, canonical O_H/source-Higgs pole rows, strict scalar-LSZ/FV/threshold authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
+current_phase: campaign-block35-top-mass-scan-response-harness
+blocks_completed: 35
+active_route: "W/Z accepted-action fallback support: per-configuration top mass-scan response harness rows"
+active_hard_residual: "The harness now serializes top_mass_scan_response_analysis from existing three-mass top correlators: per-configuration tau=1 and multi-tau dE/dm_bare support rows with no extra solves.  This improves future covariance/subtraction instrumentation but does not close the current surface.  Existing production chunks predate the field, and current PR230 still lacks accepted W/Z action, production W/Z response rows, matched covariance, strict non-observed g2, canonical O_H/source-Higgs pole rows, strict scalar-LSZ/FV/threshold authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
 checkpoint_2026_05_12_block34_complete_additive_top_jacobian_refresh:
   actual_current_surface_status: "bounded-support / complete 63-row additive-top coarse Jacobian packet; W/Z subtraction closure remains open"
   proposal_allowed: false
@@ -28,7 +28,39 @@ checkpoint_2026_05_12_block34_complete_additive_top_jacobian_refresh:
   row_packet: "chunks001-063 consumed from committed package audit; complete_chunk_packet=true; active chunks=[]; row_count=63"
   boundary: "A_top rows are chunk-level three-mass endpoint slopes, not strict per-configuration same-source additive rows, not matched covariance, not W/Z response rows, not strict g2 authority, not accepted action authority, and not y_t evidence."
   exact_next_action: "For W/Z closure, supply accepted same-source EW/Higgs action plus production W/Z response rows, same-source top/additive rows with matched covariance, strict non-observed g2, and subtracted-response readout; otherwise return to canonical O_H plus source-Higgs pole rows."
+checkpoint_2026_05_12_block35_top_mass_scan_response_harness:
+  actual_current_surface_status: "bounded-support / top mass-scan response harness schema gate; production closure still open"
+  proposal_allowed: false
+  bare_retained_allowed: false
+  runner_pass_fail: "top mass-scan response harness gate 14/0"
+  aggregate_refresh: "assumption stress 105/0; full assembly 164/0; retained route 318/0; completion audit 73/0; campaign status 365/0"
+  harness_change: "scripts/yt_direct_lattice_correlator_production.py now serializes top_mass_scan_response_analysis from existing three-mass top correlators"
+  row_schema_version: top_mass_scan_response_v1
+  smoke_artifact: outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json
+  gate: outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json
+  note: docs/YT_PR230_TOP_MASS_SCAN_RESPONSE_HARNESS_GATE_NOTE_2026-05-12.md
+  extra_solve_count: 0
+  physical_higgs_normalization: not_derived
+  used_as_physical_yukawa_readout: false
+  strict_boundary: "dE/dm_bare rows are support for future covariance/subtraction gates only; they are not dE/dh, kappa_s, W/Z response, strict g2, or top-Yukawa closure"
+  existing_production_chunks_have_new_field: false
+  closure_authorized: false
+  exact_next_action: "Use this schema in future production reruns only after accepted action/WZ response/covariance/g2 authority exists; current positive closure still needs canonical O_H/source-Higgs pole rows, strict W/Z physical response, Schur pole authority, or neutral physical-transfer authority."
 files_touched:
+  - "scripts/yt_direct_lattice_correlator_production.py"
+  - "scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py"
+  - "docs/YT_PR230_TOP_MASS_SCAN_RESPONSE_HARNESS_GATE_NOTE_2026-05-12.md"
+  - "outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json"
+  - "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/PR_BODY_BLOCK35.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ARTIFACT_PLAN.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/ASSUMPTIONS_AND_IMPORTS.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/HANDOFF.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/OPPORTUNITY_QUEUE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/NO_GO_LEDGER.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/CLAIM_STATUS_CERTIFICATE.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/REVIEW_HISTORY.md"
+  - ".claude/science/physics-loops/yt-pr230-ward-physical-readout-20260501/STATE.yaml"
   - "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"
   - "outputs/yt_pr230_clean_source_higgs_math_tool_route_selector_2026-05-05.json"

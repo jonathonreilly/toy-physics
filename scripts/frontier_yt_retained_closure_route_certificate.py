@@ -362,6 +362,7 @@ def main() -> int:
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_multitau_target_timeseries_harness": "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
+        "top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
         "fh_lsz_global_production_collision_guard": "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json",
         "fh_lsz_target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
         "higgs_pole_identity_latest_blocker": "outputs/yt_higgs_pole_identity_latest_blocker_certificate_2026-05-02.json",
@@ -3846,6 +3847,15 @@ def main() -> int:
         in certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("actual_current_surface_status", "")
         and certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("proposal_allowed") is False
     )
+    top_mass_scan_response_harness_support_not_evidence = (
+        "top mass-scan response harness schema gate"
+        in certificates["top_mass_scan_response_harness_gate"].get("actual_current_surface_status", "")
+        and certificates["top_mass_scan_response_harness_gate"].get("proposal_allowed") is False
+        and certificates["top_mass_scan_response_harness_gate"].get(
+            "top_mass_scan_response_harness_gate_passed"
+        )
+        is True
+    )
     global_production_collision_guard_not_evidence = (
         "FH-LSZ global production collision guard"
         in certificates["fh_lsz_global_production_collision_guard"].get("actual_current_surface_status", "")
@@ -5928,6 +5938,13 @@ def main() -> int:
         certificates["fh_lsz_selected_mass_normal_cache_speedup"].get("actual_current_surface_status", ""),
     )
     report(
+        "top-mass-scan-response-harness-support-not-evidence",
+        top_mass_scan_response_harness_support_not_evidence,
+        certificates["top_mass_scan_response_harness_gate"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "fh-lsz-global-production-collision-guard-not-evidence",
         global_production_collision_guard_not_evidence,
         certificates["fh_lsz_global_production_collision_guard"].get("actual_current_surface_status", ""),
@@ -6688,6 +6705,7 @@ def main() -> int:
         "radial_spurion_action_contract_support_not_closure": radial_spurion_action_contract_support_not_closure,
         "additive_source_radial_spurion_incompatibility_support_not_closure": additive_source_radial_spurion_incompatibility_support_not_closure,
         "additive_top_subtraction_row_contract_support_not_closure": additive_top_subtraction_row_contract_support_not_closure,
+        "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
