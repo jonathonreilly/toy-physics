@@ -166,6 +166,11 @@ measure with no isolated pole atom; finite-window pole-like behavior is not a
 residue certificate.  The compact-source spectral lane now needs a microscopic
 scalar denominator/contact/threshold theorem or strict physical rows.
 
+Block60 closes one smaller support ambiguity: the compact additive source
+selects the source-channel taste-singlet carrier with source-coordinate factor
+`sqrt(16)=4`.  This supports future denominator work but is not canonical
+`O_H`, pole-residue, `K'(pole)`, or threshold/FVIR authority.
+
 ## Checks Run
 
 ```text
@@ -637,3 +642,41 @@ Next exact action: do not replay finite-volume source positivity.  Pursue a
 microscopic scalar denominator/contact/threshold theorem, same-surface
 primitive transfer/canonical `O_H` authority, or strict physical source-Higgs
 / WZ rows.  Chunk workers remain separate.
+
+## Block60 Compact Source Taste-Singlet Carrier Gate
+
+Added `docs/YT_PR230_BLOCK60_COMPACT_SOURCE_TASTE_SINGLET_CARRIER_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py`,
+and `outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json`.
+
+Result: exact-support / source-channel taste-singlet carrier coordinate.  The
+additive staggered source couples to the unnormalized taste-singlet scalar sum,
+equivalently the unit taste singlet with fixed source-coordinate factor `4`.
+The runner preserves the canonical-normalization no-gos: no canonical `O_H`,
+no pole residue, no `K'(pole)`, and no threshold/FVIR authority.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=186 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=395 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+```
+
+Next exact action: use the fixed source carrier only as support; derive
+`K'(pole)`/residue and threshold/FVIR/contact authority, or supply strict
+physical rows plus canonical `O_H`/response authority.

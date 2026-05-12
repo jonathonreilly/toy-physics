@@ -49,6 +49,11 @@ pole-like behavior while having zero isolated pole residue.  The next scalar
 route must add new microscopic denominator/contact/threshold authority or
 strict physical rows; it cannot replay finite-volume positivity.
 
+Block60 update: the compact additive source fixes the source-channel
+taste-singlet carrier coordinate.  This is useful support for the scalar
+denominator route but does not close canonical `O_H`, pole residue,
+`K'(pole)`, or threshold/FVIR authority.
+
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
    primitive-cone certificate, strict neutral transfer artifact, or production
@@ -152,3 +157,10 @@ add a microscopic denominator/contact/threshold theorem, a canonical
 `O_H`/action/LSZ bridge with strict rows, a same-surface primitive transfer
 certificate, or strict physical response rows.  Another finite-volume
 positivity or finite-window spectral artifact is not enough.
+
+## Block60 Update
+
+The source-channel carrier ambiguity is narrowed: the compact additive source
+selects the taste-singlet source carrier with fixed source-coordinate factor
+`sqrt(16)=4`.  This support should be used in any future denominator theorem,
+but it is not a canonical Higgs normalization or physical `y_t` readout.

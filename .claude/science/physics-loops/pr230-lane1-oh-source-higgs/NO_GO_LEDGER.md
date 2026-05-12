@@ -149,3 +149,7 @@ and pole-residue step directly rather than restating reflection positivity.
 After Block59, that direct promotion is blocked too.  The next admissible
 scalar route must add new microscopic scalar denominator/contact/threshold
 authority or strict physical rows; finite-volume positivity alone is exhausted.
+Block60 is positive support, not a no-go: it fixes the source-channel
+taste-singlet carrier coordinate.  It does not retire the no-go boundary
+against treating that carrier as canonical `O_H` or scalar LSZ residue
+authority.

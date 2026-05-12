@@ -32,6 +32,7 @@ PARENTS = {
     "block57_compact_source_functional_foundation": "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json",
     "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
     "block59_source_spectral_pole_promotion_obstruction": "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json",
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -666,6 +667,34 @@ def main() -> int:
         is False
         and certs["block59_source_spectral_pole_promotion_obstruction"].get(
             "canonical_oh_authority_present"
+        )
+        is False
+    )
+    block60_source_carrier_support_not_closure = (
+        "compact additive source fixes the source-channel taste-singlet carrier"
+        in statuses["block60_compact_source_taste_singlet_carrier"]
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "canonical_oh_authority_present"
+        )
+        is False
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "pole_residue_authority_present"
+        )
+        is False
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "kprime_authority_present"
+        )
+        is False
+        and certs["block60_compact_source_taste_singlet_carrier"].get(
+            "threshold_fvir_authority_present"
         )
         is False
     )
@@ -2755,6 +2784,11 @@ def main() -> int:
         block59_source_spectral_pole_promotion_blocks,
         statuses["block59_source_spectral_pole_promotion_obstruction"],
     )
+    report(
+        "block60-source-carrier-support-not-closure",
+        block60_source_carrier_support_not_closure,
+        statuses["block60_compact_source_taste_singlet_carrier"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4254,6 +4288,7 @@ def main() -> int:
         "block57_compact_foundation_support_not_closure": block57_compact_foundation_support_not_closure,
         "block58_compact_spectral_support_not_closure": block58_compact_spectral_support_not_closure,
         "block59_source_spectral_pole_promotion_blocks": block59_source_spectral_pole_promotion_blocks,
+        "block60_source_carrier_support_not_closure": block60_source_carrier_support_not_closure,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4337,6 +4372,7 @@ def main() -> int:
             "does not treat the Block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
             "does not treat the Block58 finite-volume source-channel spectral sum as thermodynamic pole saturation, LSZ residue authority, or canonical O_H",
             "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after Block59",
+            "does not treat the Block60 source-channel taste-singlet carrier as canonical O_H or scalar LSZ residue authority",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "

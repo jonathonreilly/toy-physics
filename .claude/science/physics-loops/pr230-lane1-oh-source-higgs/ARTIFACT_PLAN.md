@@ -321,6 +321,19 @@ closure claim.  It constructs an atomless soft-continuum thermodynamic
 counterfamily preserving finite-volume spectral support while the isolated
 pole residue lower bound remains zero.
 
+## Block60: Compact Source Taste-Singlet Carrier Gate
+
+- Note:
+  `docs/YT_PR230_BLOCK60_COMPACT_SOURCE_TASTE_SINGLET_CARRIER_GATE_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json`
+
+Status: exact-support / compact additive source fixes the source-channel
+taste-singlet carrier coordinate.  This is not a closure claim.  Canonical
+`O_H`, pole residue, `K'(pole)`, and threshold/FVIR authority remain absent.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing

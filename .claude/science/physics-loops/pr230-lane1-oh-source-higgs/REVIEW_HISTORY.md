@@ -801,3 +801,39 @@ reviewer roles were applied locally to the changed files.
   surfaces.
 - Audit Compatibility: PASS.  The full audit pipeline seeds Block59 and
   `audit_lint.py --strict` reports only the known five warnings.
+
+## Self-Review: Block60
+
+- Overclaim check: passed.  The note and runner say exact-support /
+  source-channel taste-singlet carrier coordinate, not canonical `O_H`, LSZ
+  authority, or `proposed_retained`.
+- Physics check: passed.  The algebra fixes only the additive source carrier
+  and source-coordinate factor `sqrt(16)=4`; it preserves the prior
+  taste-normalization and carrier/projector boundaries.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`,
+  `c2=1`, or `Z_match=1`.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block60 Package
+
+Local review-loop was performed directly against the changed package.  No
+parallel reviewer agents were launched in this session; the review-loop
+reviewer roles were applied locally to the changed files.
+
+- Code / Runner: PASS.  The new runner compiles and reports
+  `PASS=11 FAIL=0`; the aggregate gates report `PASS=186 FAIL=0` and
+  `PASS=395 FAIL=0`.
+- Physics Claim Boundary: EXACT SUPPORT.  The source-channel carrier is fixed;
+  canonical `O_H`, scalar pole residue, `K'(pole)`, threshold, and FVIR remain
+  open.
+- Imports / Support: DISCLOSED.  Parent taste/projector and carrier closure
+  attempts are loaded and preserved.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not apply audit verdicts or update publication/manuscript claim
+  surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline seeds Block60 and
+  `audit_lint.py --strict` reports only the known five warnings.

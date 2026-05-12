@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T06:33:53.078215+00:00",
+  "generated_at": "2026-05-12T06:39:25.465942+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16800,6 +16800,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py"
+    },
+    "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py"
     },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "assert_count": 1,
@@ -36098,6 +36110,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_campaign_status_certificate.py": {
       "assert_count": 1,
       "claims": [
@@ -43214,13 +43241,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 257,
+      "B": 258,
       "C": 544,
       "D": 338,
       "none": 404
     },
-    "runners_classified": 1553,
-    "runners_with_C": 861,
-    "runners_with_D": 633
+    "runners_classified": 1554,
+    "runners_with_C": 862,
+    "runners_with_D": 634
   }
 }

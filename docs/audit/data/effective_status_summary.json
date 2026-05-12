@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-12T06:33:53.465417+00:00",
+  "computed_at": "2026-05-12T06:39:25.831384+00:00",
   "cycle_examples": [
     [
       "lorentz_boost_covariance_2d_theorem_note",
@@ -25,7 +25,7 @@
   ],
   "cycles_detected": 61,
   "effective_status_counts": {
-    "audited_conditional": 749,
+    "audited_conditional": 750,
     "audited_decoration": 5,
     "audited_failed": 122,
     "audited_numerical_match": 15,

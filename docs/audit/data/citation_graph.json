@@ -8753,6 +8753,26 @@
       "to": "yt_scalar_spectral_saturation_no_go_note_2026-05-01"
     },
     {
+      "from": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "to": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "to": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "to": "yt_scalar_taste_projector_normalization_attempt_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "to": "yt_taste_singlet_ladder_normalization_boundary_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "to": "yt_scalar_carrier_projector_closure_attempt_note_2026-05-02"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19105,7 +19125,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T06:33:50.442585+00:00",
+  "generated_at": "2026-05-12T06:39:22.845597+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42868,6 +42888,22 @@
       "runner_path": "scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py",
       "title": "PR230 Block59 Source-Spectral Pole-Promotion Obstruction"
     },
+    "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "exact-support / compact additive source fixes the source-channel",
+      "deps": [
+        "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+        "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+        "yt_scalar_taste_projector_normalization_attempt_note_2026-05-01",
+        "yt_taste_singlet_ladder_normalization_boundary_note_2026-05-01",
+        "yt_scalar_carrier_projector_closure_attempt_note_2026-05-02"
+      ],
+      "note_hash": "4928531f8c8fe642d30d019557f741aa62a5ea001dcc7a7a203dcbf77e653879",
+      "path": "docs/YT_PR230_BLOCK60_COMPACT_SOURCE_TASTE_SINGLET_CARRIER_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py",
+      "title": "PR230 Block60 Compact Source Taste-Singlet Carrier Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47648,17 +47684,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4776,
-    "leaf_count": 1124,
-    "node_count": 2160,
+    "edge_count": 4781,
+    "leaf_count": 1122,
+    "node_count": 2161,
     "root_count": 1656,
-    "runners_with_path": 1635,
+    "runners_with_path": 1636,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 475,
+      "support": 476,
       "unknown": 593
     }
   }

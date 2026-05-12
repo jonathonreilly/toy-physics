@@ -848,6 +848,9 @@ def main() -> int:
         "pr230_block59_source_spectral_pole_promotion_obstruction": load(
             "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json"
         ),
+        "pr230_block60_compact_source_taste_singlet_carrier": load(
+            "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4907,6 +4910,37 @@ def main() -> int:
         is False,
         statuses["pr230_block59_source_spectral_pole_promotion_obstruction"],
     )
+    block60_compact_source_taste_singlet_carrier = certificates[
+        "pr230_block60_compact_source_taste_singlet_carrier"
+    ]
+    report(
+        "pr230-block60-source-carrier-support-not-closure",
+        "compact additive source fixes the source-channel taste-singlet carrier"
+        in str(statuses["pr230_block60_compact_source_taste_singlet_carrier"])
+        and block60_compact_source_taste_singlet_carrier.get("proposal_allowed")
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block60_compact_source_taste_singlet_carrier.get(
+            "canonical_oh_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "pole_residue_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "kprime_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "threshold_fvir_authority_present"
+        )
+        is False,
+        statuses["pr230_block60_compact_source_taste_singlet_carrier"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6999,6 +7033,7 @@ def main() -> int:
             "does not treat block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
             "does not treat block58 finite-volume source-channel spectral support as thermodynamic pole saturation, scalar LSZ residue authority, or canonical O_H",
             "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after block59",
+            "does not treat block60 source-channel taste-singlet carrier support as canonical O_H or scalar LSZ residue authority",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8481,6 +8516,30 @@ def main() -> int:
         is False
         and block59_source_spectral_pole_promotion_obstruction.get(
             "canonical_oh_authority_present"
+        )
+        is False
+    )
+    result["block60_source_carrier_support_not_closure"] = (
+        block60_compact_source_taste_singlet_carrier.get("proposal_allowed")
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block60_compact_source_taste_singlet_carrier.get(
+            "canonical_oh_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "pole_residue_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "kprime_authority_present"
+        )
+        is False
+        and block60_compact_source_taste_singlet_carrier.get(
+            "threshold_fvir_authority_present"
         )
         is False
     )

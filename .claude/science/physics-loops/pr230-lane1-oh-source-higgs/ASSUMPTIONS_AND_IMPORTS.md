@@ -348,3 +348,16 @@ support"; that part is done.  It is a new microscopic scalar
 denominator/contact theorem or strict physical-row packet that supplies
 uniform thermodynamic/FVIR pole, threshold, residue, contact/continuum, and
 canonical `O_H` or physical-response authority.
+
+## Block60 Compact Source Taste-Singlet Carrier Result
+
+The compact additive source fixes the source-channel taste carrier.  The
+source shift `D_KS(m) -> D_KS(m+s)` couples to the unnormalized taste-singlet
+local scalar sum, equivalently to the unit taste singlet with fixed
+source-coordinate factor `sqrt(16)=4`.  This retires the ambiguity of which
+taste carrier the additive source probes inside the source channel.
+
+This does not identify the source taste singlet with canonical `O_H`, derive
+the scalar pole residue, derive `K'(pole)`, or supply threshold/FVIR/contact
+authority.  The source-coordinate carrier is support for the scalar
+denominator route, not a physical top-Yukawa readout.

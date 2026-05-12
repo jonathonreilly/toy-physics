@@ -39,7 +39,9 @@
    to thermodynamic isolated-pole/residue authority.  This route can continue
    only with new microscopic authority: a scalar denominator/contact theorem
    with threshold/FVIR, pole-residue, contact/continuum, and canonical `O_H` or
-   physical-response bridge control.
+   physical-response bridge control.  Block60 fixes the source-channel taste
+   carrier inside this route, but not the denominator derivative, residue,
+   threshold/FVIR, or canonical-Higgs bridge.
 
 4. **Native scalar/action/LSZ theorem for `x=O_H`.**
    Block41 exhausts the current native scalar/action/LSZ route queue.  Reopen
@@ -143,3 +145,11 @@ soft-continuum limits preserve finite-volume positivity and finite-window
 pole-like correlators while removing the isolated pole atom.  The compact-
 source lane now needs new microscopic denominator/contact/threshold authority
 or strict physical rows; finite spectral support alone is exhausted.
+
+## Block60 Update
+
+The additive source now has a fixed source-channel carrier: the taste-singlet
+local scalar sum, or unit taste singlet with source-coordinate factor
+`sqrt(16)=4`.  This should be treated as source-channel support only.  It does
+not solve the canonical `O_H` identity, `K'(pole)`, pole-residue, or threshold
+/ FVIR pieces.
