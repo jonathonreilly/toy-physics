@@ -836,6 +836,9 @@ def main() -> int:
         "pr230_block55_canonical_neutral_primitive_cut": load(
             "outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json"
         ),
+        "pr230_block56_scalar_pole_fvir_root_cut": load(
+            "outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4764,6 +4767,28 @@ def main() -> int:
         ],
         statuses["pr230_block55_canonical_neutral_primitive_cut"],
     )
+    block56_scalar_pole_fvir_root_cut = certificates[
+        "pr230_block56_scalar_pole_fvir_root_cut"
+    ]
+    report(
+        "pr230-block56-scalar-pole-fvir-root-cut-not-closure",
+        "Block56 scalar-pole-FVIR root cut"
+        in str(statuses["pr230_block56_scalar_pole_fvir_root_cut"])
+        and block56_scalar_pole_fvir_root_cut.get("proposal_allowed") is False
+        and block56_scalar_pole_fvir_root_cut.get("bare_retained_allowed")
+        is False
+        and block56_scalar_pole_fvir_root_cut.get(
+            "block56_scalar_pole_fvir_root_cut_passed"
+        )
+        is True
+        and block56_scalar_pole_fvir_root_cut.get("scalar_pole_fvir_root_closed")
+        is False
+        and "same-surface scalar denominator/contact/subtraction theorem"
+        in block56_scalar_pole_fvir_root_cut.get(
+            "remaining_scalar_authority_obligations", []
+        ),
+        statuses["pr230_block56_scalar_pole_fvir_root_cut"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -8236,6 +8261,21 @@ def main() -> int:
             "strict physical C_ss/C_sH/C_HH(tau) rows or equivalent source-overlap theorem",
         ]
     )
+    result["block56_scalar_fvir_cut_not_closure"] = (
+        block56_scalar_pole_fvir_root_cut.get("proposal_allowed") is False
+        and block56_scalar_pole_fvir_root_cut.get("bare_retained_allowed")
+        is False
+        and block56_scalar_pole_fvir_root_cut.get(
+            "block56_scalar_pole_fvir_root_cut_passed"
+        )
+        is True
+        and block56_scalar_pole_fvir_root_cut.get("scalar_pole_fvir_root_closed")
+        is False
+        and "same-surface scalar denominator/contact/subtraction theorem"
+        in block56_scalar_pole_fvir_root_cut.get(
+            "remaining_scalar_authority_obligations", []
+        )
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -8293,6 +8333,7 @@ def main() -> int:
         "does not treat the block53 residual-minimality checkpoint as physical response readout authorization, scalar pole/FV/IR authority, canonical-Higgs identity, or positive closure",
         "does not treat the block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
         "does not treat the block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
+        "does not treat the block56 scalar/FVIR root cut as scalar-pole authority or positive closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

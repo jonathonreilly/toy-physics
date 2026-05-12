@@ -106,14 +106,22 @@
   still leave a two-neutral-singlet counterfamily unless a same-surface
   primitive transfer/cone certificate or accepted canonical `O_H` action/LSZ
   certificate with strict rows lands.
+- Block56 scalar-pole/FVIR root cut is not closure: current FH-LSZ rows,
+  finite-shell fits, Stieltjes/Pade checks, contact repairs, holonomic
+  continuations, finite-volume discreteness, and source-Higgs row contracts do
+  not provide strict scalar pole/model-class/FV/IR authority.  A future route
+  must supply a same-surface scalar denominator/contact theorem with threshold
+  and FV/IR pole control, or strict physical rows that bypass scalar-source
+  normalization.
 
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
-theorems.  After Block54, the next positive route should retire at least one
-of the two surviving live roots directly.  They retire if a future native
-scalar/action/LSZ theorem with a fixed kernel/covariance and scalar metric,
-explicitly admitted action extension plus strict rows, same-surface neutral
-transfer/primitive-cone theorem, or strict W/Z physical-response packet with
-mixed-source `T_total/A_top/W` rows, matched covariance, accepted action
-authority, and absolute `g2`/`v` authority supplies the missing bridge.
+theorems.  After Block56, the next positive route should supply a fresh
+primitive-bearing artifact directly.  They retire if a future native
+scalar/action/LSZ theorem with a fixed kernel/covariance, scalar metric,
+contact/threshold/FVIR authority; explicitly admitted action extension plus
+strict rows; same-surface neutral transfer/primitive-cone theorem; or strict
+W/Z physical-response packet with mixed-source `T_total/A_top/W` rows, matched
+covariance, accepted action authority, and absolute `g2`/`v` authority supplies
+the missing bridge.

@@ -104,3 +104,13 @@ counterfamily.  A future positive artifact must supply a same-surface primitive
 transfer/cone certificate or accepted canonical `O_H`/action/LSZ authority with
 strict source-Higgs rows.  Otherwise the next non-chunk lane should target
 scalar pole/model-class/FV/IR authority.
+
+## Block56 Update
+
+The scalar pole/model-class/FV/IR root is now cut more tightly.  Current
+FH-LSZ rows, finite-shell pole fits, Stieltjes/Pade checks, contact repairs,
+holonomic continuations, finite-volume discreteness, and source-Higgs row
+contracts do not close strict scalar authority.  A future positive artifact
+must supply a same-surface scalar denominator/contact theorem with
+threshold/FVIR/pole control, or strict physical source-Higgs/WZ rows that
+bypass scalar-source normalization while supplying the same controls.

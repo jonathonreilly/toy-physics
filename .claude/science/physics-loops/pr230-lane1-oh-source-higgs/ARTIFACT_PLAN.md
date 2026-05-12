@@ -260,11 +260,26 @@ conditional Perron support do not close the canonical-Higgs/neutral-transfer
 root; the route now needs a same-surface primitive transfer/cone certificate
 or accepted canonical `O_H`/action/LSZ authority with strict source-Higgs rows.
 
+## Block56: Scalar-Pole/FVIR Root Cut Gate
+
+- Note: `docs/YT_PR230_BLOCK56_SCALAR_POLE_FVIR_ROOT_CUT_GATE_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json`
+
+Status: exact-support / scalar-pole-FVIR root cut.  This is not a closure
+claim.  It records that current FH-LSZ rows, finite-shell fits,
+Stieltjes/Pade checks, contact repairs, holonomic continuations,
+finite-volume discreteness, and source-Higgs row contracts do not close strict
+scalar pole/model-class/FV/IR authority.  Positive closure now needs a
+same-surface scalar denominator/contact theorem with threshold/FVIR/pole
+control, or a strict physical row bypass that supplies those controls.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
-Block55-root artifact, not another inventory checkpoint: scalar
-pole/model-class/FV/IR authority; a same-surface primitive transfer/cone
-certificate; accepted canonical `O_H`/action/LSZ authority with strict
-source-Higgs rows; or a strict W/Z/source-Higgs physical response packet that
-supplies those roots without forbidden imports.
+artifact, not another inventory checkpoint: a same-surface scalar
+denominator/contact theorem with threshold/FVIR/pole control; a same-surface
+primitive transfer/cone certificate; accepted canonical `O_H`/action/LSZ
+authority with strict source-Higgs rows; or a strict W/Z/source-Higgs physical
+response packet that supplies those roots without forbidden imports.

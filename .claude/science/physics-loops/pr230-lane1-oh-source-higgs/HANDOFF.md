@@ -449,3 +449,39 @@ python3 docs/audit/scripts/audit_lint.py --strict
 Next exact action: pivot to scalar pole/model-class/FV/IR authority unless a
 new primitive transfer/cone or accepted canonical `O_H` artifact appears.  Do
 not interrupt the active higher-shell chunk workers.
+
+## Block56 Scalar-Pole/FVIR Root Cut
+
+Added `docs/YT_PR230_BLOCK56_SCALAR_POLE_FVIR_ROOT_CUT_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py`, and
+`outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json`.
+
+Result: exact-support / scalar-pole-FVIR root cut.  The current scalar/FH-LSZ
+surface does not close strict scalar pole/model-class/FV/IR authority.  The
+runner verifies that raw `C_ss` is not a strict Stieltjes LSZ object, finite
+holonomic and finite-prefix Stieltjes data remain ambiguous, contact
+subtraction is not identified, pole saturation/threshold/FVIR authority is
+absent, and strict source-Higgs pole rows are absent.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=182 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=391 FAIL=0
+```
+
+Next exact action: a positive move now requires a fresh primitive-bearing
+artifact: same-surface scalar denominator/contact theorem with
+threshold/FVIR/pole control, same-surface primitive transfer/cone certificate,
+accepted canonical `O_H`/action/LSZ authority with strict `C_ss/C_sH/C_HH`
+rows, or strict W/Z/source-Higgs physical rows.  More current-surface
+inventory is not a closure path.

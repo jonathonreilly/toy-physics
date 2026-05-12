@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact-support / block55 canonical-neutral primitive cut: complete L12 same-source FH-LSZ support and common-window response stability support are present; physical readout authorization is reduced; current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-Higgs or neutral-transfer root
+actual_current_surface_status: exact-support / block56 scalar-pole-FVIR root cut: complete L12 same-source FH-LSZ support and common-window response stability support are present; physical readout authorization is reduced; current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-Higgs or neutral-transfer root; current scalar/FH-LSZ/Stieltjes/contact/finite-volume/source-Higgs contract artifacts do not close scalar pole/model-class/FV/IR authority
 conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, and common-window response stability support; Block54 closes the response-instrumentation side as support and Block55 cuts the current canonical-neutral route, but scalar pole/model-class/FV/IR authority is absent, no dynamic Phi/action exists, no canonical O_H identity exists, no physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority exist, and no neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, and common-window response stability support; Block54 closes the response-instrumentation side as support, Block55 cuts the current canonical-neutral route, and Block56 cuts the current scalar/FVIR shortcut surface, but no same-surface scalar denominator/contact theorem, threshold/FVIR/pole authority, dynamic Phi/action, canonical O_H identity, physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority, neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -158,4 +158,12 @@ Block55 canonical-neutral primitive cut result:
 frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py: PASS=13 FAIL=0
 frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=181 FAIL=0
 frontier_yt_pr230_campaign_status_certificate.py: PASS=390 FAIL=0
+```
+
+Block56 scalar-pole/FVIR root cut result:
+
+```text
+frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py: PASS=18 FAIL=0
+frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=182 FAIL=0
+frontier_yt_pr230_campaign_status_certificate.py: PASS=391 FAIL=0
 ```

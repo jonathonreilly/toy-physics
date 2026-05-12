@@ -281,3 +281,16 @@ two-singlet counterfamily with identical source-only observables and variable
 source-to-candidate overlap.  The remaining import is a same-surface primitive
 transfer/cone certificate or accepted canonical `O_H`/action/LSZ authority with
 strict source-Higgs rows.
+
+## Block56 Scalar-Pole/FVIR Root Cut Result
+
+The current scalar/FH-LSZ stack narrows but does not close the scalar
+pole/model-class/FV/IR import.  Raw `C_ss` rows are not a strict Stieltjes
+scalar-LSZ object; finite-shell holonomic and finite-prefix Stieltjes
+certificates leave pole-residue counterfamilies; contact subtraction is not
+identified; finite-volume discreteness does not prove pole saturation; and
+source-Higgs row artifacts are contracts or aliases, not strict physical
+`C_ss/C_sH/C_HH` pole rows.  The remaining import is a same-surface scalar
+denominator/contact/subtraction theorem with threshold, FV/IR, and
+pole-residue authority, or a strict physical row bypass that supplies those
+controls without scalar-source normalization.

@@ -1,0 +1,302 @@
+{
+  "actual_current_surface_status": "exact-support / Block56 scalar-pole-FVIR root cut; current scalar/FH-LSZ artifacts do not close scalar pole/model-class/FV/IR authority",
+  "bare_retained_allowed": false,
+  "block56_scalar_pole_fvir_root_cut_passed": true,
+  "condition_checks": {
+    "affine_contact_shortcut_closed": true,
+    "aggregate_still_open": true,
+    "block54_scalar_root_survives": true,
+    "block55_not_scalar_closure": true,
+    "contact_subtraction_not_identified": true,
+    "current_proxy_not_positive_spectral": true,
+    "finite_prefix_not_determinate": true,
+    "holonomic_finite_shell_ambiguous": true,
+    "model_class_not_authority": true,
+    "polynomial_contact_shortcut_closed": true,
+    "raw_scalar_rows_not_strict_lsz": true,
+    "source_higgs_strict_rows_absent": true,
+    "stieltjes_moment_not_certificate": true,
+    "threshold_fv_ir_not_authority": true
+  },
+  "counterfamily_witnesses": {
+    "finite_prefix_same_moments_different_residue": {
+      "all_altered_weights_positive": true,
+      "all_base_weights_positive": true,
+      "altered_pole_residue": 1.1000139173360466,
+      "altered_prefix_moments": [
+        6.020161962220786,
+        20.489831202447146,
+        76.55615805008472,
+        295.7907855497326,
+        1160.3837057610065
+      ],
+      "altered_weights": [
+        1.1000139173360466,
+        0.32970047624933385,
+        0.27378869795736416,
+        0.20618841026807702,
+        0.19412161179834417,
+        0.15387879080607386,
+        0.12802514370162155,
+        0.075
+      ],
+      "base_pole_residue": 1.1,
+      "base_prefix_moments": [
+        6.020161962220786,
+        20.489831202447146,
+        76.55615805008473,
+        295.7907855497326,
+        1160.3837057610065
+      ],
+      "base_weights": [
+        1.1,
+        0.33,
+        0.27,
+        0.22,
+        0.18,
+        0.15,
+        0.12,
+        0.1
+      ],
+      "construction": "A positive discrete Stieltjes measure with eight support atoms is perturbed along the nullspace of the moment map for orders 0..4. The checked finite prefix is unchanged while the isolated-pole atom weight changes.",
+      "epsilon": 0.03330273293044648,
+      "finite_prefix_stieltjes_counterfamily_passed": true,
+      "higher_moment_order_10_delta": 51.41914305463433,
+      "max_prefix_moment_delta": 1.4210854715202004e-14,
+      "moment_prefix_orders": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "perturbation_vector": [
+        0.00041790372206416244,
+        -0.00899396909231758,
+        0.11376537671178316,
+        -0.4147284176577581,
+        0.4240376256158161,
+        0.11647064564265049,
+        0.24097552949730158,
+        -0.7506891417053693
+      ],
+      "pole_mass_squared": 0.25,
+      "pole_residue_changes": true,
+      "pole_residue_delta": 1.3917336046498363e-05,
+      "same_finite_prefix": true,
+      "stieltjes_measure_kind": "positive finite atomic measures",
+      "support_masses_squared": [
+        0.25,
+        0.4,
+        0.7,
+        1.1,
+        1.7,
+        2.6,
+        4.0,
+        6.3
+      ]
+    },
+    "holonomic_same_samples_different_residue": {
+      "altered_function": "base + eps*prod_i(x-x_i)/(x+m0)",
+      "altered_residue": 1.150088524762883,
+      "altered_samples": [
+        2.9419150858175245,
+        1.820957514356573,
+        1.3301176937714125,
+        1.052998864193455,
+        0.9156028368794326,
+        0.7786076036029067,
+        0.678335315306023,
+        0.5559018274918336
+      ],
+      "base_function": "R0/(x+m0) + W/(x+M)",
+      "base_residue": 1.15,
+      "base_samples": [
+        2.9419150858175245,
+        1.820957514356573,
+        1.3301176937714125,
+        1.052998864193455,
+        0.9156028368794326,
+        0.7786076036029067,
+        0.678335315306023,
+        0.5559018274918336
+      ],
+      "construction": "Two rational holonomic continuations agree on every finite shell sample but have different residues at the same isolated pole.",
+      "lesson": "Finite-shell exact interpolation, PSLQ hits, or the existence of some holonomic continuation do not select the physical scalar denominator or pole residue.  The ODE/denominator and boundary data must be derived from the same PR230 path integral, with Stieltjes positivity, contact subtraction, threshold, and FV/IR control.",
+      "max_sample_delta": 0.0,
+      "pole_location_x": -0.41,
+      "rational_functions_are_holonomic": true,
+      "residue_shift": 8.852476288299249e-05,
+      "residues_differ": true,
+      "same_finite_shell_values": true,
+      "shell_points": [
+        0.0,
+        0.26794919243112264,
+        0.5358983848622453,
+        0.803847577293368,
+        1.0,
+        1.2679491924311224,
+        1.5358983848622452,
+        2.0
+      ],
+      "stieltjes_or_threshold_authority_supplied": false
+    }
+  },
+  "current_scalar_authority_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_scalar_object",
+      "required": "same-surface scalar two-point/denominator object with a fixed source scheme and contact subtraction"
+    },
+    {
+      "current_satisfied": false,
+      "id": "positive_stieltjes_or_exact_denominator",
+      "required": "strict Stieltjes/moment certificate with all-order/tail control, or an exact microscopic denominator theorem"
+    },
+    {
+      "current_satisfied": false,
+      "id": "isolated_pole_residue_interval",
+      "required": "isolated scalar pole with a positive tight residue interval; finite-shell fit intervals with zero lower bound do not qualify"
+    },
+    {
+      "current_satisfied": false,
+      "id": "threshold_and_fv_ir",
+      "required": "continuum threshold/gap plus multivolume FV/IR/zero-mode limiting-order authority"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_readout_or_physical_bypass",
+      "required": "canonical O_H/source-overlap bridge with strict C_ss/C_sH/C_HH rows, or a physical W/Z/source-Higgs bypass carrying the same pole/FVIR authority"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "no H_unit, Ward, y_t_bare, alpha_LM/plaquette/u0, observed selector, unit kappa/c2/Z_match, or contact/FV shortcut"
+    }
+  ],
+  "exact_next_action": "Pursue a genuinely new same-surface scalar denominator/contact theorem with threshold/FVIR control, or bypass scalar-source normalization with strict source-Higgs/WZ physical rows.  If no such artifact lands, wait for chunk outputs only as support and keep PR230 draft/open.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_effective_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_contact_subtraction_as_chosen": false,
+    "treated_fv_discreteness_as_pole_saturation": false,
+    "treated_source_higgs_contract_as_rows": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_finite_shell_pslq_selector": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "obstruction_matrix": [
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
+      "reason": "raw proxy is positive but violates required non-increasing Stieltjes behavior and has no FV/IR or threshold authority",
+      "root": "raw C_ss as scalar-LSZ object"
+    },
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+      "reason": "same finite shell values admit holonomic rational continuations with different pole residues",
+      "root": "finite-shell exact/holonomic continuation"
+    },
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
+      "reason": "positive measures can share the checked finite prefix while changing the pole atom and higher tail",
+      "root": "finite moment/Stieltjes prefix"
+    },
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
+      "reason": "current finite rows do not identify a unique same-surface contact subtraction; affine and polynomial repairs are non-authority",
+      "root": "contact-subtracted scalar object"
+    },
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+      "reason": "near-pole continuum and finite-volume level families keep the residue lower bound at zero without a uniform gap or denominator theorem",
+      "root": "pole saturation / threshold / FVIR"
+    },
+    {
+      "current_result": "blocked",
+      "parent": "outputs/yt_pr230_source_higgs_direct_pole_row_contract_2026-05-07.json",
+      "reason": "only contracts and reduced/noncanonical smoke exist; strict C_ss/C_sH/C_HH production pole rows are absent",
+      "root": "strict source-Higgs bypass"
+    }
+  ],
+  "parent_certificates": {
+    "affine_contact_complete_monotonicity": "outputs/yt_fh_lsz_affine_contact_complete_monotonicity_no_go_2026-05-05.json",
+    "block54_response_readout_reduction": "outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json",
+    "block55_canonical_neutral_primitive_cut": "outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "complete_bernstein_inverse": "outputs/yt_fh_lsz_complete_bernstein_inverse_diagnostic_2026-05-05.json",
+    "contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
+    "fh_lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
+    "fh_lsz_model_class_semantic_firewall": "outputs/yt_fh_lsz_model_class_semantic_firewall_2026-05-04.json",
+    "finite_volume_pole_saturation": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "pade_stieltjes_bounds": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "pole_saturation_threshold": "outputs/yt_fh_lsz_pole_saturation_threshold_gate_2026-05-02.json",
+    "polefit8x8_stieltjes_proxy": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "polynomial_contact_finite_shell": "outputs/yt_fh_lsz_polynomial_contact_finite_shell_no_go_2026-05-05.json",
+    "polynomial_contact_repair": "outputs/yt_fh_lsz_polynomial_contact_repair_no_go_2026-05-05.json",
+    "scalar_lsz_carleman_tauberian": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
+    "scalar_lsz_holonomic_exact": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+    "soft_continuum_threshold": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "source_higgs_direct_pole_row_contract": "outputs/yt_pr230_source_higgs_direct_pole_row_contract_2026-05-07.json",
+    "source_higgs_pole_row_acceptance_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "stieltjes_moment_certificate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "strict_scalar_lsz_moment_fv": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
+    "threshold_authority_import_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "affine_contact_complete_monotonicity": "exact negative boundary / affine contact complete-monotonicity no-go",
+    "block54_response_readout_reduction": "exact-support / Block54 response-readout root reduction; response-side support closed, physical readout still waits on scalar/FVIR and canonical-Higgs roots",
+    "block55_canonical_neutral_primitive_cut": "exact-support / Block55 canonical-neutral primitive cut; canonical-Higgs/neutral-transfer root still open",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "complete_bernstein_inverse": "exact negative boundary / current polefit8x8 inverse proxy fails complete-Bernstein monotonicity",
+    "contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
+    "fh_lsz_model_class": "open / FH-LSZ pole-fit model-class gate blocks finite-shell fit as evidence",
+    "fh_lsz_model_class_semantic_firewall": "bounded-support / FH-LSZ model-class semantic firewall passed",
+    "finite_volume_pole_saturation": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "pade_stieltjes_bounds": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+    "pole_saturation_threshold": "open / FH-LSZ pole-saturation threshold gate blocks current finite-shell fit",
+    "polefit8x8_stieltjes_proxy": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
+    "polynomial_contact_finite_shell": "exact negative boundary / finite-shell polynomial contact non-identifiability no-go",
+    "polynomial_contact_repair": "exact negative boundary / polynomial contact repair not scalar-LSZ authority",
+    "scalar_lsz_carleman_tauberian": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+    "scalar_lsz_holonomic_exact": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
+    "soft_continuum_threshold": "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
+    "source_higgs_direct_pole_row_contract": "exact-support / direct source-Higgs pole-row contract; O_H and production C_sH/C_HH rows are absent",
+    "source_higgs_pole_row_acceptance_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "stieltjes_moment_certificate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "strict_scalar_lsz_moment_fv": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
+    "threshold_authority_import_audit": "exact negative boundary / FH-LSZ threshold-authority import audit"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No current artifact supplies a same-surface scalar object, contact subtraction, strict positive spectral/moment certificate, isolated-pole residue interval, threshold/FVIR authority, or strict C_ss/C_sH/C_HH physical rows.",
+  "remaining_scalar_authority_obligations": [
+    "same-surface scalar denominator/contact/subtraction theorem",
+    "strict positive Stieltjes or exact denominator certificate with all-order/tail control",
+    "isolated scalar pole plus tight positive residue interval",
+    "continuum threshold/gap and multivolume FV/IR limiting-order authority",
+    "canonical O_H/source-overlap bridge with strict rows, or a physical W/Z/source-Higgs bypass"
+  ],
+  "scalar_pole_fvir_root_closed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not claim a permanent no-go against scalar LSZ",
+    "does not define y_t through a matrix element or y_t_bare",
+    "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, or Z_match=1",
+    "does not treat finite-shell, holonomic, contact-repaired, FV-discrete, or source-Higgs contract artifacts as physical y_t readouts"
+  ],
+  "verdict": "The remaining scalar authority root is now cut on the current surface.  Existing FH-LSZ rows, finite-shell fits, Stieltjes/Pade checks, contact-subtraction repairs, holonomic continuations, and finite-volume discreteness do not provide strict scalar-LSZ pole authority.  The positive route remains open only through a same-surface scalar denominator/contact theorem with threshold and FVIR control, or through strict physical source-Higgs/WZ rows that bypass scalar-source normalization."
+}

@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block55
+## Active Ranking After Block56
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -18,6 +18,12 @@ Block55 update: the current degree-one, FMS, finite `C_sx`, and conditional
 Perron support stack does not close the canonical-Higgs/neutral-transfer root.
 That root now needs a same-surface primitive transfer/cone certificate or
 accepted canonical `O_H`/action/LSZ authority with strict source-Higgs rows.
+
+Block56 update: the current scalar/FH-LSZ/Stieltjes/contact/finite-volume
+surface does not close scalar pole/model-class/FV/IR authority.  That root now
+needs a same-surface scalar denominator/contact theorem with threshold,
+FV/IR, and pole-residue control, or strict physical rows that bypass
+scalar-source normalization while supplying those controls.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -65,8 +71,9 @@ accepted canonical `O_H`/action/LSZ authority with strict source-Higgs rows.
    finite-shell exact-math attempts, or the HS/logdet scalar-action
    normalization shortcut.  Block53 records that scalar pole/model-class/FV/IR
    authority remains a minimal root.  Block54 leaves it as one of the two
-   surviving roots.  Block55 leaves this as the next non-chunk root to attack
-   if no new primitive transfer / canonical `O_H` artifact lands.
+   surviving roots.  Block56 cuts the current scalar shortcut stack, so this
+   route now requires a new denominator/contact/threshold/FVIR theorem rather
+   than another finite-shell or contact-repair certificate.
 
 4. **Strict source-Higgs time-kernel row path after `O_H`.**
    Existing pipeline refuses current aliases correctly.  Launch only after an

@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-05-12T05:47:29.968773+00:00",
+  "computed_at": "2026-05-12T05:59:42.073382+00:00",
   "criticality_counts": {
     "critical": 73,
     "high": 340,
-    "leaf": 1272,
+    "leaf": 1273,
     "medium": 471
   },
   "flagship_signal_used": false,
-  "node_count": 2156,
+  "node_count": 2157,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,

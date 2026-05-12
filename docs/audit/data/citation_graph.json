@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T05:47:26.617263+00:00",
+  "generated_at": "2026-05-12T05:59:38.683265+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42735,6 +42735,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py",
       "title": "PR230 Block55 Canonical-Neutral Primitive Cut Gate"
     },
+    "yt_pr230_block56_scalar_pole_fvir_root_cut_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block56_scalar_pole_fvir_root_cut_gate_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "exact-support / current scalar/FH-LSZ artifacts do not close scalar pole/model-class/FV/IR authority",
+      "deps": [],
+      "note_hash": "c62d5defe62a24f41ae0cda8e68ca87062ac79a6701e1a7d4f2222ed9b92b9e1",
+      "path": "docs/YT_PR230_BLOCK56_SCALAR_POLE_FVIR_ROOT_CUT_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py",
+      "title": "PR230 Block56 Scalar-Pole/FVIR Root Cut Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47232,6 +47242,7 @@
     "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12",
     "yt_pr230_block54_response_readout_reduction_gate_note_2026-05-12",
     "yt_pr230_block55_canonical_neutral_primitive_cut_gate_note_2026-05-12",
+    "yt_pr230_block56_scalar_pole_fvir_root_cut_gate_note_2026-05-12",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -47515,16 +47526,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1137,
-    "node_count": 2156,
-    "root_count": 1655,
-    "runners_with_path": 1631,
+    "leaf_count": 1138,
+    "node_count": 2157,
+    "root_count": 1656,
+    "runners_with_path": 1632,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 471,
+      "support": 472,
       "unknown": 593
     }
   }
