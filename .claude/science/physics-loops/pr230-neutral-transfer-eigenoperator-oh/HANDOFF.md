@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-11 19:52 EDT
+Checkpoint: 2026-05-11 20:18 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -393,12 +393,22 @@ new physics evidence, does not admit source-Higgs, W/Z, or neutral H3/H4 routes
 without explicit production/certificate inputs, does not relabel `C_sx/C_xx`
 as `C_sH/C_HH`, and does not touch the live chunk worker.
 
+Block28 is exact support only.  It does not treat degree-one radial-tangent
+uniqueness as an accepted same-surface action premise, does not certify
+canonical `O_H`, does not produce strict `C_ss/C_sH/C_HH` pole rows, and does
+not touch the live chunk worker.
+
+Block29 is routing-only.  It selects W/Z as the fallback after source-Higgs
+remains support-only, but it does not claim accepted action, production W/Z
+rows, same-source top rows, matched covariance, strict non-observed `g2`,
+`delta_perp`, or final W-response authority.
+
 ## Delivery
 
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block28 should follow the same direct PR #230 landing path unless
+Block09 through block29 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -470,6 +480,12 @@ support intake / no closure.  The checkpoint consumes committed PR-head state
 and the degree-one radial-tangent theorem only, records that PR #230 head
 `e17c4856` moved only by the block27 checkpoint commit, and leaves proposal
 language denied.  No independent audit verdict was applied.
+
+Local review disposition for block29: pass open post-block28 W/Z pivot
+admission / no route admitted.  The checkpoint consumes committed PR-head
+state only, records that PR #230 head `8c1c3fa` moved only by the block28
+support intake, selects W/Z as fallback after source-Higgs remains support-only,
+and leaves proposal language denied.  No independent audit verdict was applied.
 
 ## Next Exact Action
 
@@ -658,6 +674,8 @@ bash docs/audit/scripts/run_pipeline.sh
 # OK, 5 known warnings
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
+git diff --check
+# OK
 ```
 
 ## Block19 FMS `O_H` Candidate/Action Packet
@@ -1288,3 +1306,70 @@ Gram/FV/IR checks.  If unavailable, pivot to strict W/Z matched physical
 response with accepted action, same-source top/W covariance, strict
 non-observed `g2`, `delta_perp`, and final W-response authority.  Do not treat
 chunk063 completion alone as closure.
+
+## Block29 Post-Block28 W/Z Pivot Admission Checkpoint
+
+Resumed on 2026-05-11 after block28 landed on the draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The only commit after the previous block28 input head
+`e17c485639be9229af4d8ecb65222efdc159b0d1` is the block28 degree-one
+`O_H` support intake.  Block29 records the required campaign pivot after that
+support-only result: source-Higgs remains first priority but is not admitted
+without accepted same-surface `O_H` action/operator authority plus strict
+`C_ss/C_sH/C_HH` rows; W/Z accepted-action response is selected as the next
+fallback but is not admitted without its required production packet.
+
+Result:
+
+- block29 W/Z pivot admission passes with `PASS=13 FAIL=0`;
+- campaign status passes with `PASS=363 FAIL=0`;
+- source-Higgs remains blocked after block28 because accepted action/operator
+  authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` rows, Gram/FV/IR
+  authority, and production certificate are absent;
+- W/Z is selected as fallback but lacks accepted action, canonical
+  `O_H`/sector-overlap authority, production W/Z rows, same-source top rows,
+  matched covariance, strict non-observed `g2`, `delta_perp`, and final
+  W-response authority;
+- neutral H3/H4 remains not admitted;
+- the row stream remains a `62/63` committed prefix with
+  `combined_rows_written=false`;
+- no live chunk-worker output was touched or inspected.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py`
+- `docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, PR backlog, and block29 PR body
+
+Honest status: open / post-block28 W/Z pivot admission checkpoint.  Current
+surface remains open and `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=363 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
+Next exact action: reopen source-Higgs only with accepted same-surface `O_H`
+action/operator authority plus strict `C_ss/C_sH/C_HH` rows.  If unavailable,
+continue W/Z only with accepted action, production W/Z rows, same-source top
+rows, matched covariance, strict non-observed `g2`, `delta_perp`, and final
+W-response authority.  Do not treat chunk063 completion alone as closure.

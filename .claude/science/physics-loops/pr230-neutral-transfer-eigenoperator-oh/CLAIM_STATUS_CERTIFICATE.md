@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block28_degree_one_oh_support_intake_checkpoint`.
+Current block: `block29_post_block28_wz_pivot_admission_checkpoint`.
 
 ```yaml
-actual_current_surface_status: exact-support / block28 degree-one O_H support intake; current surface remains open because the action premise, canonical O_H certificate, source-Higgs pole rows, strict W/Z packet, and neutral H3/H4 authority remain absent
-conditional_surface_status: degree-one O_H axis support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization; readout support only after strict C_ss/C_sH/C_HH rows exist
+actual_current_surface_status: open / block29 post-block28 W/Z pivot admission checkpoint; source-Higgs degree-one support is exact support only and the W/Z accepted-action response route is not admitted without the required production packet
+conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block28 intakes an exact support theorem: the degree-one Z3-covariant radial tangent is unique and matches the taste-radial axis under a future same-surface action premise. It is not a closure artifact because the current surface still lacks the degree-one action premise, canonical O_H certificate, strict C_ss/C_sH/C_HH pole rows, Gram/FV/IR authority, accepted W/Z action/response packet, and neutral H3/H4 physical-transfer authority."
+proposal_allowed_reason: "Block29 is a pivot-admission checkpoint. It verifies that block28 supplied only exact degree-one O_H support, then selects the W/Z accepted-action response route as the fallback while recording that accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority are absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -91,6 +91,12 @@ Reason:
     theorem as exact support only; the future same-surface action premise,
     canonical `O_H`, source-Higgs pole rows, W/Z accepted-action response
     packet, and neutral H3/H4 authority remain absent.
+19. Block29 records that after block28 landed, PR #230 moved only by the
+    block28 exact-support checkpoint.  It pivots to W/Z as the next fallback
+    after source-Higgs remains support-only, but the W/Z accepted-action
+    response route is not admitted without accepted action, production W/Z
+    rows, same-source top rows, matched covariance, strict non-observed `g2`,
+    `delta_perp`, and final W-response authority.
 
 Prior block certificate summary:
 
@@ -207,5 +213,10 @@ Prior block certificate summary:
   current surface still lacks that premise, canonical `O_H`, strict
   `C_ss/C_sH/C_HH` pole rows, W/Z accepted-action response, and neutral H3/H4
   authority.
-- Block01 through Block28 all have `proposal_allowed=false`; their boundaries
+- Block29 actual status: open / post-block28 W/Z pivot admission checkpoint;
+  source-Higgs remains support-only after block28, the W/Z accepted-action
+  response route is selected as fallback but lacks accepted action, production
+  W/Z rows, same-source top rows, matched covariance, strict non-observed
+  `g2`, `delta_perp`, and final W-response authority.
+- Block01 through Block29 all have `proposal_allowed=false`; their boundaries
   remain active.

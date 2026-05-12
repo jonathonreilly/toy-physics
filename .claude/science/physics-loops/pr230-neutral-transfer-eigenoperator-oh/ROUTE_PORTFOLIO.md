@@ -745,3 +745,43 @@
      authority with accepted same-surface EW/Higgs action or canonical `O_H`;
      otherwise pivot to strict W/Z matched physical-response rows.  Do not
      treat block27, chunk063, or finite `C_sx/C_xx` staging rows as closure.
+
+## Selected Block29 Route
+
+**Post-block28 W/Z pivot admission checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 4.
+- Claim-state movement: verifies that PR #230 head `8c1c3fa` moved only by
+  the block28 exact-support intake after input head `e17c485`, then records
+  the required pivot from blocked source-Higgs closure to the W/Z
+  accepted-action response route.  The W/Z route is selected as the next
+  fallback but is not admitted without the required production/action packet.
+- Artifact: `YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT`.
+
+## Block29 Fan-Out Synthesis
+
+1. **Source-Higgs frame**
+   - Result: sharper but still not admitted.  The degree-one `O_H` axis
+     theorem remains exact support only; accepted same-surface action/operator
+     authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` rows, Gram/FV/IR
+     authority, and production certificate remain absent.
+
+2. **W/Z accepted-action response frame**
+   - Result: selected as fallback but not admitted.  Accepted action,
+     canonical `O_H`/sector-overlap authority, production W/Z rows,
+     same-source top rows, matched covariance, strict non-observed `g2`,
+     `delta_perp`, and final W-response rows remain absent.
+
+3. **Neutral H3/H4 frame**
+   - Result: still not admitted.  Physical neutral transfer/off-diagonal
+     generator authority and source/canonical-Higgs coupling authority remain
+     absent.
+
+4. **Next admissible route**
+   - Result: unchanged in kind.  Reopen source-Higgs only with accepted
+     same-surface `O_H` action/operator authority plus strict
+     `C_ss/C_sH/C_HH` rows.  Otherwise continue W/Z only with accepted action,
+     production W/Z rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp`, and final W-response authority.

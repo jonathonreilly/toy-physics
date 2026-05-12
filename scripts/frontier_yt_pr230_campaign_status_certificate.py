@@ -782,6 +782,9 @@ def main() -> int:
         "pr230_block28_degree_one_oh_support_intake": load(
             "outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json"
         ),
+        "pr230_block29_post_block28_wz_pivot_admission": load(
+            "outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3988,6 +3991,49 @@ def main() -> int:
         is True,
         statuses["pr230_block28_degree_one_oh_support_intake"],
     )
+    block29_post_block28_wz_pivot_admission = certificates[
+        "pr230_block29_post_block28_wz_pivot_admission"
+    ]
+    report(
+        "pr230-block29-post-block28-wz-pivot-not-admitted",
+        "block29 post-block28 W/Z pivot admission checkpoint"
+        in str(statuses["pr230_block29_post_block28_wz_pivot_admission"])
+        and block29_post_block28_wz_pivot_admission.get("proposal_allowed")
+        is False
+        and block29_post_block28_wz_pivot_admission.get(
+            "live_chunk_worker", {}
+        ).get("touched")
+        is False
+        and block29_post_block28_wz_pivot_admission.get(
+            "live_chunk_worker", {}
+        ).get("inspected_active_output")
+        is False
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "only-block28-support-since-block28-input-head"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "block28-exact-support-no-closure"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "source-higgs-route-blocked-after-block28"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "wz-pivot-selected-after-source-higgs-block"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "wz-pivot-not-admitted-without-required-packet"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True,
+        statuses["pr230_block29_post_block28_wz_pivot_admission"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6793,6 +6839,41 @@ def main() -> int:
         )
         is True
     )
+    result["block29_post_block28_wz_pivot_not_admitted"] = (
+        block29_post_block28_wz_pivot_admission.get("proposal_allowed") is False
+        and block29_post_block28_wz_pivot_admission.get(
+            "live_chunk_worker", {}
+        ).get("touched")
+        is False
+        and block29_post_block28_wz_pivot_admission.get(
+            "live_chunk_worker", {}
+        ).get("inspected_active_output")
+        is False
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "only-block28-support-since-block28-input-head"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "block28-exact-support-no-closure"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "source-higgs-route-blocked-after-block28"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "wz-pivot-selected-after-source-higgs-block"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "wz-pivot-not-admitted-without-required-packet"
+        )
+        is True
+        and block29_post_block28_wz_pivot_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -6833,6 +6914,7 @@ def main() -> int:
         "does not treat the block25 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat the block26 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat the block27 checkpoint commit or the degree-one O_H support intake as actual canonical O_H/source-Higgs pole-row closure",
+        "does not treat the post-block28 W/Z pivot admission checkpoint as accepted-action response evidence",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

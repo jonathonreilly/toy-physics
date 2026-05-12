@@ -243,6 +243,8 @@ bash docs/audit/scripts/run_pipeline.sh
 # OK, 5 known warnings; newly seeded=1, re-audit required=2
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
+git diff --check
+# OK
 ```
 
 ## Block21
@@ -375,6 +377,45 @@ rg status/firewall review
 # forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
 git diff --check
 # OK
+```
+
+## Block29
+
+Local review run on 2026-05-11 20:18 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py`
+- `outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json`
+- `docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block29 pivot-admission runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Source-Higgs remains support-only after block28; W/Z is selected as fallback but not admitted without accepted action, production rows, covariance, strict `g2`, `delta_perp`, and final W-response authority. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; W/Z scout/smoke rows, coarse additive-top rows, and finite `C_sx/C_xx` rows are not promoted. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only and does not touch or inspect the live chunk worker. |
+| Audit Compatibility | PASS | Campaign status certificate consumes block29 and passes with PASS=363 FAIL=0; audit pipeline and strict lint pass with the known 5 warnings. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=363 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
 ```
 
 ## Block19

@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-11T19:52:44-04:00"
+checkpoint_time: "2026-05-11T20:18:00-04:00"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 28
-active_science_block: block28_degree_one_oh_support_intake_checkpoint
-active_route: "Degree-one O_H support intake after block27 landed; current PR head e17c485 is only the block27 checkpoint after the previous landed-checkpoint input head f1d72283, and the committed degree-one radial-tangent O_H theorem is exact support only until a same-surface EW/Higgs action premise, canonical O_H certificate, and strict C_ss/C_sH/C_HH pole rows exist"
+cycle_count: 29
+active_science_block: block29_post_block28_wz_pivot_admission_checkpoint
+active_route: "Post-block28 W/Z pivot admission checkpoint; current PR head 8c1c3fa is only the block28 degree-one O_H support intake after input head e17c485, source-Higgs remains blocked without accepted same-surface O_H/action authority and strict C_ss/C_sH/C_HH rows, and the W/Z accepted-action response route is selected as the next fallback but not admitted without accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority"
 target_status: best-honest-status
-actual_current_surface_status: "exact-support / block28 degree-one O_H support intake; current surface remains open because the action premise, canonical O_H certificate, source-Higgs pole rows, strict W/Z packet, and neutral H3/H4 authority remain absent"
-conditional_surface_status: support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization, plus strict C_ss/C_sH/C_HH pole rows; or if a strict W/Z matched physical-response packet or neutral H3/H4 physical-transfer authority is supplied
+actual_current_surface_status: "open / block29 post-block28 W/Z pivot admission checkpoint; source-Higgs degree-one support is exact support only and the W/Z accepted-action response route is not admitted without the required production packet"
+conditional_surface_status: support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization, plus strict C_ss/C_sH/C_HH pole rows; or if a strict W/Z matched physical-response packet with accepted action, same-source top/W covariance, strict non-observed g2, delta_perp, and final W-response rows is supplied
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block28 intakes an exact support theorem rather than a closure artifact. The current PR head is e17c485639be9229af4d8ecb65222efdc159b0d1 and the only commit since the previous landed-checkpoint input head f1d72283b92fb1b76292ea8ba53d7586ad0c294d is the block27 checkpoint. The degree-one radial-tangent O_H theorem uniquely selects the taste-radial axis only under a future same-surface EW/Higgs action premise; the premise, canonical O_H certificate, strict C_ss/C_sH/C_HH pole rows, scalar-LSZ/FV/IR authority, Gram flatness, accepted W/Z action/response rows, matched covariance, delta_perp authority, strict g2, and neutral H3/H4 physical-transfer authority remain absent."
+proposal_allowed_reason: "Block29 is an open pivot-admission checkpoint rather than a closure artifact. The current PR head is 8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23 and the only commit since the previous block28 input head e17c485639be9229af4d8ecb65222efdc159b0d1 is the block28 degree-one O_H support intake. Source-Higgs remains blocked without accepted same-surface O_H/action authority, canonical O_H, strict C_ss/C_sH/C_HH pole rows, scalar-LSZ/FV/IR authority, and Gram flatness. The W/Z fallback is selected but not admitted because accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows remain absent."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block20 makes the kappa_sH residue readout exact once rows exist, while block28 sharpens the source-Higgs route by intaking the degree-one O_H axis theorem as exact support only; it does not supply the action premise, canonical O_H, or pole rows."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block20 makes the kappa_sH residue readout exact once rows exist, block28 sharpens the source-Higgs route as exact support only, and block29 records the required W/Z pivot while keeping that route closed until the production packet exists."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -49,6 +49,7 @@ minimal_allowed_premises:
   - "block26 post-block25 landed checkpoint as open routing/checkpoint status only; the block25 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
   - "block27 post-block26 landed checkpoint as open routing/checkpoint status only; the block26 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
   - "block28 degree-one O_H support intake as exact support only; the degree-one Z3-covariant radial tangent is unique under a future action premise, but the premise, canonical O_H certificate, and strict source-Higgs pole rows remain absent"
+  - "block29 post-block28 W/Z pivot admission checkpoint as open routing/checkpoint status only; W/Z is selected as fallback after source-Higgs remains blocked, but accepted action and production response/covariance/g2/delta_perp rows remain absent"
 forbidden_imports:
   - "yt_ward_identity, H_unit-to-top matrix element, y_t_bare, observed y_t, observed top mass"
   - "observed W/Z masses or observed g2 as proof input"
@@ -88,6 +89,9 @@ files_touched:
   - scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py
   - docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md
   - outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json
+  - scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py
+  - docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md
+  - outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json
   - docs/YT_PR230_ADDITIVE_RESPONSE_AGGREGATE_WIRING_NOTE_2026-05-07.md
   - scripts/frontier_yt_pr230_assumption_import_stress.py
   - outputs/yt_pr230_assumption_import_stress_2026-05-01.json
@@ -146,6 +150,7 @@ files_touched:
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK25.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK26.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK27.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK29.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK09.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK10.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK11.md
@@ -376,10 +381,21 @@ commands_run:
   - "2026-05-11 block28: rg status/firewall review # forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion"
   - "2026-05-11 block28: git diff --check # OK"
   - "2026-05-11 block28: YAML/JSON parse check # OK"
-review_disposition: pass_exact_support_block28_degree_one_oh_support_intake_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block28 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Supply an accepted same-surface EW/Higgs action or canonical O_H certificate that makes the degree-one radial tangent premise current-surface authority, then produce strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR checks. If unavailable, pivot to a strict W/Z matched physical-response packet with accepted action, same-source top/W covariance, strict non-observed g2, delta_perp, and final W-response authority. Do not treat chunk063 completion alone as closure."
-stop_condition: "Yield after coherent block28 support-intake push if runtime remains; the degree-one O_H theorem is exact support only, no ranked source-Higgs/WZ/neutral route is admitted without explicit production/certificate inputs, chunks001-062 are bounded support only, and no retained/proposed_retained closure is authorized."
+  - "2026-05-11 block29: sed -n read of physics-loop SKILL.md, STATE.yaml, and HANDOFF.md before other work; git fetch origin; verified PR #230 head 8c1c3fa"
+  - "2026-05-11 block29: read repo grounding surfaces, OPPORTUNITY_QUEUE, and CLAIM_STATUS_CERTIFICATE; queue still ranks source-Higgs first and W/Z second but requires explicit production/certificate inputs"
+  - "2026-05-11 block29: python3 -m py_compile scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py # OK"
+  - "2026-05-11 block29: python3 scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py # PASS=13 FAIL=0"
+  - "2026-05-11 block29: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=363 FAIL=0"
+  - "2026-05-11 block29: link check for block29 note/handoff/PR body # missing_links=[]"
+  - "2026-05-11 block29: bash docs/audit/scripts/run_pipeline.sh # OK; newly seeded=1, re-audit required=0, 5 known warnings"
+  - "2026-05-11 block29: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "2026-05-11 block29: rg status/firewall review # forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion"
+  - "2026-05-11 block29: YAML/JSON parse check # OK"
+  - "2026-05-11 block29: git diff --check # OK"
+review_disposition: pass_open_block29_post_block28_wz_pivot_admission_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block29 PR not opened because PR #230 remains the landing path"
+next_exact_action: "Reopen source-Higgs only with accepted same-surface O_H action/operator authority plus strict C_ss/C_sH/C_HH rows. If unavailable, continue W/Z only with accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority. Do not treat chunk063 completion alone as closure."
+stop_condition: "Yield after coherent block29 pivot-admission push if runtime remains; block29 selected the W/Z fallback after source-Higgs stayed blocked, but no ranked source-Higgs/WZ/neutral route is admitted without explicit production/certificate inputs, chunks001-062 are bounded support only, and no retained/proposed_retained closure is authorized."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -567,6 +583,36 @@ block28_degree_one_oh_support_intake_checkpoint:
   neutral_h3h4_route_admitted: false
   completed_prefix: "001-062"
   missing_completed_checkpoint_evidence: "063"
+  live_worker_touched: false
+  closure_authorized: false
+  proposal_allowed: false
+block29_post_block28_wz_pivot_admission_checkpoint:
+  runner: scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py
+  note: docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md
+  output: outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json
+  pr_head: 8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23
+  previous_block28_input_head: e17c485639be9229af4d8ecb65222efdc159b0d1
+  verification: "block29 W/Z pivot admission PASS=13 FAIL=0; campaign status PASS=363 FAIL=0"
+  consumed_committed_pr_head_only: true
+  only_block28_support_since_previous_input_head: true
+  source_higgs_route_blocked_after_block28: true
+  wz_pivot_selected_after_source_higgs_block: true
+  wz_pivot_admitted: false
+  wz_missing_roots:
+    - accepted_same_source_ew_action
+    - canonical_higgs_operator_certificate
+    - wz_correlator_mass_fit_rows
+    - same_source_top_response_certificate
+    - strict_electroweak_g2_certificate
+    - fh_gauge_mass_response_measurement_rows
+    - fh_gauge_mass_response_certificate
+    - top_wz_matched_covariance_certificate
+    - delta_perp_correction_certificate
+    - same_source_w_response_rows
+  neutral_h3h4_route_admitted: false
+  completed_prefix: "001-062"
+  missing_completed_checkpoint_evidence: "063"
+  combined_rows_written: false
   live_worker_touched: false
   closure_authorized: false
   proposal_allowed: false

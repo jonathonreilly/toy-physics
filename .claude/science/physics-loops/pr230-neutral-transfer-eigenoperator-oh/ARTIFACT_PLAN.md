@@ -538,3 +538,20 @@ not available, pivot to a strict W/Z matched physical-response packet with
 accepted action, same-source top/W covariance, strict non-observed `g2`,
 `delta_perp`, and final W-response rows.  Chunk063 completion alone remains
 support-only.
+
+Block29 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Post-block28 W/Z pivot admission runner | `scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py` | Created; PASS=13 FAIL=0 |
+| Post-block28 W/Z pivot admission certificate | `outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json` | Created; source-Higgs remains support-only and W/Z fallback is selected but not admitted |
+| Post-block28 W/Z pivot admission note | `docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block29; PASS=363 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block29 checkpoint |
+
+Follow-on artifact target after block29 is unchanged in kind.  Reopen
+source-Higgs only with accepted same-surface `O_H` action/operator authority
+plus strict `C_ss/C_sH/C_HH` rows with Gram/FV/IR authority.  Otherwise
+continue W/Z only with accepted action, production W/Z rows, same-source top
+rows, matched covariance, strict non-observed `g2`, `delta_perp`, and final
+W-response authority.  Chunk063 completion alone remains support-only.

@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block28 degree-one `O_H` support intake checkpoint.
+Campaign mode queue after block29 post-block28 W/Z pivot admission checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -252,6 +252,34 @@ Block27 verifies that draft PR #230 head
 checkpoint after the previous landed-checkpoint input head
 `8b0d95db83c6f8458b0547c1da32e690941e36a3`.  It adds no positive physics
 packet and admits no ranked route.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with Gram/FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral H3/H4 physical-transfer authority.
+
+Chunk063 completion alone remains support-only and is not a queue-admission
+condition.  Do not run another current-surface shortcut gate from this lane
+unless one of the explicit production/certificate inputs lands.
+
+## Block29 Post-Block28 W/Z Pivot Admission Checkpoint
+
+Block29 verifies that draft PR #230 head
+`8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23` is only the block28 degree-one
+`O_H` support intake after the previous block28 input head
+`e17c485639be9229af4d8ecb65222efdc159b0d1`.
+
+It records the required pivot after the source-Higgs support-only result:
+source-Higgs remains rank 1 but is not admitted without accepted same-surface
+`O_H` action/operator authority plus strict `C_ss/C_sH/C_HH` rows.  The W/Z
+accepted-action response route is selected as the next fallback but is also
+not admitted without accepted action, canonical `O_H`/sector-overlap authority,
+production W/Z rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response authority.
 
 Queue remains:
 

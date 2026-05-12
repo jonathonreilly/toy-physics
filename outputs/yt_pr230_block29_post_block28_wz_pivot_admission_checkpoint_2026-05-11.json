@@ -1,0 +1,177 @@
+{
+  "actual_current_surface_status": "open / block29 post-block28 W/Z pivot admission checkpoint; source-Higgs degree-one support is exact support only and the W/Z accepted-action response route is not admitted without the required production packet",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block28_input_head": "e17c485639be9229af4d8ecb65222efdc159b0d1",
+  "checkpoint_timestamp_utc": "2026-05-12T00:18:28.525154+00:00",
+  "checks": {
+    "block28-exact-support-no-closure": true,
+    "degree-one-support-still-conditional": true,
+    "forbidden-firewall-clean": true,
+    "inspected-head-is-current-pr-head": true,
+    "neutral-h3h4-route-not-admitted": true,
+    "no-parent-authorizes-proposal": true,
+    "only-block28-support-since-block28-input-head": true,
+    "parent-certificates-present": true,
+    "parent-runners-have-no-fails": true,
+    "row-prefix-still-bounded-staging": true,
+    "source-higgs-route-blocked-after-block28": true,
+    "wz-pivot-not-admitted-without-required-packet": true,
+    "wz-pivot-selected-after-source-higgs-block": true
+  },
+  "commits_since_block28_input": [
+    "8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23\tRecord PR230 block28 degree-one OH support intake"
+  ],
+  "conditional_surface_status": "source-Higgs support remains conditional on accepted same-surface EW/Higgs action or canonical O_H plus strict C_ss/C_sH/C_HH rows; W/Z support would require accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority",
+  "disallowed_paths_since_block28_input": [],
+  "exact_next_action": "Reopen the source-Higgs route only with accepted same-surface O_H action/operator authority plus strict C_ss/C_sH/C_HH rows.  If unavailable, continue the W/Z route only with accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh_before_canonical_oh": false,
+    "assumed_k_top_equals_k_gauge": false,
+    "assumed_top_wz_covariance": false,
+    "inspected_active_chunk_output": false,
+    "promoted_scout_or_smoke_rows": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_or_operator": false,
+    "used_observed_wz_or_g2": false,
+    "used_observed_y_t_or_top_mass": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "inspected_head": "8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23",
+  "inspected_subject": "Record PR230 block28 degree-one OH support intake",
+  "inspection_ref": "HEAD",
+  "live_chunk_worker": {
+    "inspected_active_output": false,
+    "touched": false
+  },
+  "local_head": "8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23",
+  "local_subject": "Record PR230 block28 degree-one OH support intake",
+  "main_head": "7baa2d4867be5cc6b153148f7c41b669d4815176",
+  "parents": {
+    "additive_top_rows": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
+    "block28_degree_one_oh_support_intake": "outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "degree_one_action_premise": "outputs/yt_pr230_degree_one_higgs_action_premise_gate_2026-05-06.json",
+    "degree_one_radial_tangent_oh": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
+    "fms_oh_candidate_action": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "fms_source_overlap_readout": "outputs/yt_pr230_fms_source_overlap_readout_gate_2026-05-07.json",
+    "neutral_h3h4_aperture": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
+    "source_higgs_aperture": "outputs/yt_pr230_source_higgs_bridge_aperture_checkpoint_2026-05-07.json",
+    "two_source_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
+    "two_source_package": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
+    "wz_accepted_action_root": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
+    "wz_physical_response_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json"
+  },
+  "pass_count": 13,
+  "paths_since_block28_input": [
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ARTIFACT_PLAN.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ASSUMPTIONS_AND_IMPORTS.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/CLAIM_STATUS_CERTIFICATE.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/HANDOFF.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/NO_GO_LEDGER.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/OPPORTUNITY_QUEUE.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BACKLOG.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK28.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/REVIEW_HISTORY.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/ROUTE_PORTFOLIO.md",
+    ".claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/STATE.yaml",
+    "docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md",
+    "docs/audit/AUDIT_LEDGER.md",
+    "docs/audit/AUDIT_QUEUE.md",
+    "docs/audit/data/audit_ledger.json",
+    "docs/audit/data/audit_queue.json",
+    "docs/audit/data/citation_graph.json",
+    "docs/audit/data/effective_status_summary.json",
+    "docs/audit/data/load_bearing_summary.json",
+    "docs/audit/data/runner_classification.json",
+    "outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json",
+    "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py",
+    "scripts/frontier_yt_pr230_campaign_status_certificate.py"
+  ],
+  "pr_head": "8c1c3fa1a31e9ab8cb5e37fcc1ab60d8916a6f23",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Block29 is a pivot-admission checkpoint.  It verifies that block28 only supplied exact degree-one O_H support, then selects the W/Z accepted-action response route as the next fallback while recording that its accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority are absent.",
+  "route_admission": {
+    "rank1_source_higgs": {
+      "decision": "blocked_after_block28_exact_support",
+      "missing": [
+        "canonical_higgs_operator_certificate",
+        "source_higgs_measurement_rows",
+        "source_higgs_production_certificate",
+        "two_source_combined_rows"
+      ],
+      "required_paths": {
+        "canonical_higgs_operator_certificate": false,
+        "source_higgs_measurement_rows": false,
+        "source_higgs_production_certificate": false,
+        "two_source_combined_rows": false
+      }
+    },
+    "rank2_wz_accepted_action_response": {
+      "decision": "pivot_selected_but_not_admitted_without_required_packet",
+      "missing": [
+        "accepted_same_source_ew_action",
+        "canonical_higgs_operator_certificate",
+        "delta_perp_correction_certificate",
+        "fh_gauge_mass_response_certificate",
+        "fh_gauge_mass_response_measurement_rows",
+        "same_source_top_response_certificate",
+        "same_source_w_response_rows",
+        "strict_electroweak_g2_certificate",
+        "top_wz_matched_covariance_certificate",
+        "wz_correlator_mass_fit_rows"
+      ],
+      "required_paths": {
+        "accepted_same_source_ew_action": false,
+        "canonical_higgs_operator_certificate": false,
+        "delta_perp_correction_certificate": false,
+        "fh_gauge_mass_response_certificate": false,
+        "fh_gauge_mass_response_measurement_rows": false,
+        "same_source_top_response_certificate": false,
+        "same_source_w_response_rows": false,
+        "strict_electroweak_g2_certificate": false,
+        "top_wz_matched_covariance_certificate": false,
+        "wz_correlator_mass_fit_rows": false
+      }
+    },
+    "rank3_neutral_h3h4": {
+      "decision": "not_admitted",
+      "missing": [
+        "neutral_h3_physical_transfer",
+        "neutral_h4_source_higgs_coupling"
+      ],
+      "required_paths": {
+        "neutral_h3_physical_transfer": false,
+        "neutral_h4_source_higgs_coupling": false
+      }
+    }
+  },
+  "row_prefix": {
+    "closure_role": "bounded staging support only",
+    "combined_rows_written": false,
+    "completed_chunk_count": 62,
+    "completed_prefix_last": 62,
+    "expected_chunks": 63,
+    "ready_chunks": 62
+  },
+  "strict_non_claims": [
+    "does not treat the degree-one theorem as an actual canonical O_H certificate",
+    "does not identify taste-radial x with canonical O_H on the current surface",
+    "does not relabel C_sx/C_xx as C_sH/C_HH",
+    "does not promote W/Z scout or smoke rows to production evidence",
+    "does not treat additive-top coarse rows as matched covariance",
+    "does not treat chunk063 completion alone as closure",
+    "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, u0, or unit matching conventions",
+    "does not touch or inspect live chunk-worker output"
+  ]
+}

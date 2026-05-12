@@ -8541,6 +8541,30 @@
       "to": "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
     },
     {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11"
+    },
+    {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -18781,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:02:51.107397+00:00",
+  "generated_at": "2026-05-12T00:18:49.377423+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42344,6 +42368,23 @@
       "runner_path": "scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py",
       "title": "PR230 Block28 Degree-One O_H Support Intake Checkpoint"
     },
+    "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11": {
+      "claim_id": "yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_note_2026-05-11",
+      "current_status": "open",
+      "current_status_raw": "open / W/Z pivot admission checkpoint; no current-surface closure",
+      "deps": [
+        "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+        "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
+        "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07",
+        "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07",
+        "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+        "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
+      ],
+      "note_hash": "8bfff68b9fd77c07d9d038e1e5cc05e467ee7a3c51f4cd5fbbf073e3e9baa7b7",
+      "path": "docs/YT_PR230_BLOCK29_POST_BLOCK28_WZ_PIVOT_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py",
+      "title": "PR230 Block29 Post-Block28 W/Z Pivot Admission Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -46836,14 +46877,14 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4695,
+    "edge_count": 4701,
     "leaf_count": 1128,
-    "node_count": 2123,
+    "node_count": 2124,
     "root_count": 1629,
-    "runners_with_path": 1599,
+    "runners_with_path": 1600,
     "status_counts": {
       "bounded": 593,
-      "open": 111,
+      "open": 112,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 462,
