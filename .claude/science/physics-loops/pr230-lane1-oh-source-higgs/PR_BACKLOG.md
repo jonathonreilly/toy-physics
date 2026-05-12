@@ -174,4 +174,14 @@ Lane 1 Block54: response-readout reduction
   readout authorization reduces to scalar pole/model-class/FV/IR authority and
   canonical-Higgs identity or same-surface neutral-transfer authority.  No
   proposed_retained wording is authorized.
+
+Lane 1 Block55: canonical-neutral primitive cut
+- status: exact-support / canonical-neutral primitive cut on the current surface
+- runner: scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py
+- result: PASS=13 FAIL=0; aggregate gates PASS=181 FAIL=0 and PASS=390 FAIL=0
+- conclusion: current degree-one, FMS, finite C_sx, and conditional Perron
+  support does not close the canonical-Higgs/neutral-transfer root; the route
+  needs a same-surface primitive transfer/cone certificate or accepted
+  canonical O_H/action/LSZ authority with strict source-Higgs rows.  No
+  proposed_retained wording is authorized.
 ```

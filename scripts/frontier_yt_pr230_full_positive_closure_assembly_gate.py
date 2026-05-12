@@ -27,6 +27,7 @@ PARENTS = {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
     "block53_lane1_residual_minimality": "outputs/yt_pr230_block53_lane1_residual_minimality_gate_2026-05-12.json",
     "block54_response_readout_reduction": "outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json",
+    "block55_canonical_neutral_primitive_cut": "outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -516,6 +517,32 @@ def main() -> int:
         == {
             "scalar pole/model-class/FV/IR authority",
             "canonical-Higgs pole identity or same-surface neutral-transfer bridge",
+        }
+    )
+    block55_canonical_neutral_cut_not_closure = (
+        certs["block55_canonical_neutral_primitive_cut"].get("proposal_allowed")
+        is False
+        and certs["block55_canonical_neutral_primitive_cut"].get(
+            "bare_retained_allowed"
+        )
+        is False
+        and certs["block55_canonical_neutral_primitive_cut"].get(
+            "block55_canonical_neutral_primitive_cut_passed"
+        )
+        is True
+        and certs["block55_canonical_neutral_primitive_cut"].get(
+            "canonical_neutral_root_closed"
+        )
+        is False
+        and set(
+            certs["block55_canonical_neutral_primitive_cut"].get(
+                "remaining_canonical_neutral_obligations", []
+            )
+        )
+        == {
+            "accepted same-surface canonical O_H/action/LSZ certificate",
+            "or same-surface primitive neutral transfer / irreducible cone certificate",
+            "strict physical C_ss/C_sH/C_HH(tau) rows or equivalent source-overlap theorem",
         }
     )
     finite_source_support = (
@@ -2579,6 +2606,11 @@ def main() -> int:
         block54_response_readout_reduction_not_closure,
         statuses["block54_response_readout_reduction"],
     )
+    report(
+        "block55-canonical-neutral-cut-not-closure",
+        block55_canonical_neutral_cut_not_closure,
+        statuses["block55_canonical_neutral_primitive_cut"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4073,6 +4105,7 @@ def main() -> int:
         "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
         "block53_residual_minimality_not_closure": block53_residual_minimality_not_closure,
         "block54_response_readout_reduction_not_closure": block54_response_readout_reduction_not_closure,
+        "block55_canonical_neutral_cut_not_closure": block55_canonical_neutral_cut_not_closure,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4151,6 +4184,7 @@ def main() -> int:
             "does not treat a source-Higgs pole-row acceptance contract as evidence that such rows exist",
             "does not treat the Block53 residual-minimality checkpoint as positive closure",
             "does not treat the Block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
+            "does not treat the Block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "

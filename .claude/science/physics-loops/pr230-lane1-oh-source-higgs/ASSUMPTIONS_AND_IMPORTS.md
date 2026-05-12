@@ -269,3 +269,15 @@ This retires physical response readout authorization as an independent
 response-window import, but it does not authorize the physical `y_t` readout.
 The remaining imports are scalar pole/model-class/FV/IR authority and
 canonical-Higgs identity or same-surface neutral-transfer authority.
+
+## Block55 Canonical-Neutral Primitive Cut Result
+
+The current operator/neutral stack narrows but does not close the
+canonical-Higgs or same-surface neutral-transfer import.  Degree-one
+radial-tangent support and the FMS candidate packet do not adopt a current
+surface action/LSZ certificate; finite `C_sx` rows do not define a transfer
+generator or primitive cone; and the neutral multiplicity gate still contains a
+two-singlet counterfamily with identical source-only observables and variable
+source-to-candidate overlap.  The remaining import is a same-surface primitive
+transfer/cone certificate or accepted canonical `O_H`/action/LSZ authority with
+strict source-Higgs rows.

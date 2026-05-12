@@ -247,10 +247,24 @@ and that physical readout authorization reduces to the two still-open roots:
 scalar pole/model-class/FV/IR authority and canonical-Higgs identity or
 same-surface neutral-transfer authority.
 
+## Block55: Canonical-Neutral Primitive Cut Gate
+
+- Note: `docs/YT_PR230_BLOCK55_CANONICAL_NEUTRAL_PRIMITIVE_CUT_GATE_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json`
+
+Status: exact-support / canonical-neutral primitive cut.  This is not a new
+closure claim.  It records that current degree-one, FMS, finite `C_sx`, and
+conditional Perron support do not close the canonical-Higgs/neutral-transfer
+root; the route now needs a same-surface primitive transfer/cone certificate
+or accepted canonical `O_H`/action/LSZ authority with strict source-Higgs rows.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
-Block54-root artifact, not another inventory checkpoint: canonical-Higgs or
-same-surface neutral-transfer authority; scalar pole/model-class/FV/IR
-authority; or a strict W/Z/source-Higgs physical response packet that supplies
-those roots without forbidden imports.
+Block55-root artifact, not another inventory checkpoint: scalar
+pole/model-class/FV/IR authority; a same-surface primitive transfer/cone
+certificate; accepted canonical `O_H`/action/LSZ authority with strict
+source-Higgs rows; or a strict W/Z/source-Higgs physical response packet that
+supplies those roots without forbidden imports.

@@ -101,6 +101,11 @@
   response-instrumentation side is support-complete and reduces physical
   readout authorization to scalar/FVIR plus canonical-Higgs/neutral-transfer
   authority, but it does not supply either surviving root.
+- Block55 canonical-neutral primitive cut is not closure: degree-one support,
+  FMS candidate support, finite `C_sx` rows, and conditional Perron support
+  still leave a two-neutral-singlet counterfamily unless a same-surface
+  primitive transfer/cone certificate or accepted canonical `O_H` action/LSZ
+  certificate with strict rows lands.
 
 ## Scope Boundary
 

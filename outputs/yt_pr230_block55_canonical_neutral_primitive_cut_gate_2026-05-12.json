@@ -1,0 +1,72 @@
+{
+  "actual_current_surface_status": "exact-support / Block55 canonical-neutral primitive cut; canonical-Higgs/neutral-transfer root still open",
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block55_canonical_neutral_primitive_cut_passed": true,
+  "canonical_neutral_root_closed": false,
+  "conditional_surface_status": "conditional-support if a future accepted same-surface O_H/action/LSZ certificate or primitive neutral transfer/cone certificate supplies strict source-Higgs rows or equivalent source-overlap authority",
+  "counterfamily_overlap_range": {
+    "max": 1.0,
+    "min": 6.123233995736766e-17
+  },
+  "exact_next_action": "Attack the canonical-neutral root only with a new same-surface primitive transfer/cone certificate or accepted O_H/action/LSZ certificate plus strict physical C_ss/C_sH/C_HH rows; otherwise pivot to scalar pole/model-class/FV/IR authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_effective_or_proposed_retained": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "treated_degree_one_support_as_current_oh_proof": false,
+    "treated_finite_c_sx_as_transfer_generator": false,
+    "treated_fms_candidate_as_adopted_action": false,
+    "treated_positivity_support_as_primitive_cone_certificate": false,
+    "treated_source_higgs_contract_as_rows": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "parent_certificates": {
+    "block54_response_readout_reduction": "outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "degree_one_radial_tangent_oh": "outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json",
+    "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_primitive_cone_certificate_gate": "outputs/yt_neutral_scalar_primitive_cone_certificate_gate_2026-05-05.json",
+    "positivity_improving_rank_one_support": "outputs/yt_positivity_improving_neutral_scalar_rank_one_support_2026-05-03.json",
+    "same_surface_neutral_multiplicity_one": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
+    "source_higgs_pole_row_contract": "outputs/yt_pr230_source_higgs_pole_row_acceptance_contract_2026-05-06.json",
+    "two_source_primitive_transfer_candidate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "block54_response_readout_reduction": "exact-support / Block54 response-readout root reduction; response-side support closed, physical readout still waits on scalar/FVIR and canonical-Higgs roots",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "degree_one_radial_tangent_oh": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_primitive_cone_certificate_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "positivity_improving_rank_one_support": "conditional-support / positivity-improving neutral-scalar rank-one theorem; premise absent",
+    "same_surface_neutral_multiplicity_one": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "two_source_primitive_transfer_candidate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer"
+  },
+  "pass_count": 13,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Degree-one and FMS support narrow the operator shape, and conditional Perron support identifies the right route, but the current surface still admits a two-neutral-singlet counterfamily and lacks primitive neutral transfer, canonical O_H/action/LSZ, and strict C_sH/C_HH rows.",
+  "remaining_canonical_neutral_obligations": [
+    "accepted same-surface canonical O_H/action/LSZ certificate",
+    "or same-surface primitive neutral transfer / irreducible cone certificate",
+    "strict physical C_ss/C_sH/C_HH(tau) rows or equivalent source-overlap theorem"
+  ],
+  "strict_non_claims": [
+    "does not claim effective or proposed_retained y_t closure",
+    "does not treat degree-one uniqueness as canonical O_H authority",
+    "does not treat FMS candidate support as adopted action",
+    "does not treat finite C_sx rows as a transfer generator or primitive cone",
+    "does not treat conditional Perron support as a current primitive certificate",
+    "does not treat the source-Higgs pole-row contract as row evidence",
+    "does not use H_unit, yt_ward_identity, y_t_bare, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

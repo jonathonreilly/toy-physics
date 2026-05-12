@@ -833,6 +833,9 @@ def main() -> int:
         "pr230_block54_response_readout_reduction": load(
             "outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json"
         ),
+        "pr230_block55_canonical_neutral_primitive_cut": load(
+            "outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4732,6 +4735,35 @@ def main() -> int:
         ],
         statuses["pr230_block54_response_readout_reduction"],
     )
+    block55_canonical_neutral_primitive_cut = certificates[
+        "pr230_block55_canonical_neutral_primitive_cut"
+    ]
+    report(
+        "pr230-block55-canonical-neutral-primitive-cut-not-closure",
+        "Block55 canonical-neutral primitive cut"
+        in str(statuses["pr230_block55_canonical_neutral_primitive_cut"])
+        and block55_canonical_neutral_primitive_cut.get("proposal_allowed")
+        is False
+        and block55_canonical_neutral_primitive_cut.get("bare_retained_allowed")
+        is False
+        and block55_canonical_neutral_primitive_cut.get(
+            "block55_canonical_neutral_primitive_cut_passed"
+        )
+        is True
+        and block55_canonical_neutral_primitive_cut.get(
+            "canonical_neutral_root_closed"
+        )
+        is False
+        and block55_canonical_neutral_primitive_cut.get(
+            "remaining_canonical_neutral_obligations"
+        )
+        == [
+            "accepted same-surface canonical O_H/action/LSZ certificate",
+            "or same-surface primitive neutral transfer / irreducible cone certificate",
+            "strict physical C_ss/C_sH/C_HH(tau) rows or equivalent source-overlap theorem",
+        ],
+        statuses["pr230_block55_canonical_neutral_primitive_cut"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6800,6 +6832,7 @@ def main() -> int:
         "block39_post_block38_queue_admission_not_closure": False,
         "block53_lane1_residual_minimality_not_closure": False,
         "block54_response_readout_reduction_not_closure": False,
+        "block55_canonical_neutral_cut_not_closure": False,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6819,6 +6852,7 @@ def main() -> int:
             "does not treat block39 post-block38 queue-admission status as production evidence",
             "does not treat block53 residual-minimality status as positive closure",
             "does not treat block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
+            "does not treat block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8181,6 +8215,27 @@ def main() -> int:
             "canonical-Higgs pole identity or same-surface neutral-transfer bridge",
         ]
     )
+    result["block55_canonical_neutral_cut_not_closure"] = (
+        block55_canonical_neutral_primitive_cut.get("proposal_allowed") is False
+        and block55_canonical_neutral_primitive_cut.get("bare_retained_allowed")
+        is False
+        and block55_canonical_neutral_primitive_cut.get(
+            "block55_canonical_neutral_primitive_cut_passed"
+        )
+        is True
+        and block55_canonical_neutral_primitive_cut.get(
+            "canonical_neutral_root_closed"
+        )
+        is False
+        and block55_canonical_neutral_primitive_cut.get(
+            "remaining_canonical_neutral_obligations"
+        )
+        == [
+            "accepted same-surface canonical O_H/action/LSZ certificate",
+            "or same-surface primitive neutral transfer / irreducible cone certificate",
+            "strict physical C_ss/C_sH/C_HH(tau) rows or equivalent source-overlap theorem",
+        ]
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -8237,6 +8292,7 @@ def main() -> int:
         "does not treat the block39 post-block38 queue-admission checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat the block53 residual-minimality checkpoint as physical response readout authorization, scalar pole/FV/IR authority, canonical-Higgs identity, or positive closure",
         "does not treat the block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
+        "does not treat the block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

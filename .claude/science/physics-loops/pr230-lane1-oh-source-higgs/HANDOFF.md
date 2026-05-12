@@ -407,3 +407,45 @@ Next exact action: attack one of the two surviving roots directly.  Do not
 reopen response-window stability as a standalone blocker unless new evidence
 invalidates the support gates, and do not interrupt the active higher-shell
 chunk workers.
+
+## Block55 Canonical-Neutral Primitive Cut
+
+Added `docs/YT_PR230_BLOCK55_CANONICAL_NEUTRAL_PRIMITIVE_CUT_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py`, and
+`outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json`.
+
+Result: exact-support / canonical-neutral primitive cut.  The current
+degree-one, FMS, finite `C_sx`, and conditional Perron support stack does not
+close the canonical-Higgs / neutral-transfer root.  It leaves a two-neutral
+singlet counterfamily unless a same-surface primitive transfer/cone certificate
+or accepted canonical `O_H`/action/LSZ certificate with strict source-Higgs rows
+lands.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=181 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=390 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; known five warnings only.
+```
+
+Next exact action: pivot to scalar pole/model-class/FV/IR authority unless a
+new primitive transfer/cone or accepted canonical `O_H` artifact appears.  Do
+not interrupt the active higher-shell chunk workers.

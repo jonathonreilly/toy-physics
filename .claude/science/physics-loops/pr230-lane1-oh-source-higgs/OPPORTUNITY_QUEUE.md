@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block54
+## Active Ranking After Block55
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -13,6 +13,11 @@ Block54 update: response instrumentation is support-complete.  Physical
 readout authorization reduces to the two still-open roots: scalar
 pole/model-class/FV/IR authority and canonical-Higgs pole identity or
 same-surface neutral-transfer authority.
+
+Block55 update: the current degree-one, FMS, finite `C_sx`, and conditional
+Perron support stack does not close the canonical-Higgs/neutral-transfer root.
+That root now needs a same-surface primitive transfer/cone certificate or
+accepted canonical `O_H`/action/LSZ authority with strict source-Higgs rows.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -38,6 +43,8 @@ same-surface neutral-transfer authority.
    response support also does not provide those bridges.  Block53 confirms
    this is one of the three remaining roots, not a support/inventory issue.
    Block54 reduces physical readout to this root plus scalar/FVIR authority.
+   Block55 shows current support does not close it; a new primitive transfer or
+   canonical `O_H` action/LSZ artifact is required.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -58,7 +65,8 @@ same-surface neutral-transfer authority.
    finite-shell exact-math attempts, or the HS/logdet scalar-action
    normalization shortcut.  Block53 records that scalar pole/model-class/FV/IR
    authority remains a minimal root.  Block54 leaves it as one of the two
-   surviving roots.
+   surviving roots.  Block55 leaves this as the next non-chunk root to attack
+   if no new primitive transfer / canonical `O_H` artifact lands.
 
 4. **Strict source-Higgs time-kernel row path after `O_H`.**
    Existing pipeline refuses current aliases correctly.  Launch only after an

@@ -94,3 +94,13 @@ response-instrumentation side is support-complete, so the remaining positive
 work should not reopen response-window stability as a standalone issue.  The
 surviving roots are scalar pole/model-class/FV/IR authority and
 canonical-Higgs identity or same-surface neutral-transfer authority.
+
+## Block55 Update
+
+The canonical-Higgs / neutral-transfer root is now cut more tightly.  Current
+degree-one support, FMS candidate support, finite `C_sx` rows, and conditional
+Perron support do not close it; they still allow a two-neutral-singlet
+counterfamily.  A future positive artifact must supply a same-surface primitive
+transfer/cone certificate or accepted canonical `O_H`/action/LSZ authority with
+strict source-Higgs rows.  Otherwise the next non-chunk lane should target
+scalar pole/model-class/FV/IR authority.

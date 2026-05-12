@@ -3,14 +3,14 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-block48-operator-boundary
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block54 response-readout root reduction complete; response instrumentation is support-complete and physical readout authorization reduces to two still-open roots: scalar pole/model-class/FV/IR authority and canonical-Higgs identity or same-surface neutral-transfer bridge"
+active_block: "Block55 canonical-neutral primitive cut complete; response instrumentation is support-complete, and the canonical-Higgs/neutral-transfer root now requires a same-surface primitive transfer/cone certificate or accepted canonical O_H/action/LSZ certificate plus strict source-Higgs rows"
 target_status: best-honest-status
-actual_current_surface_status: "exact-support plus bounded support: complete L12 same-source FH-LSZ support and common-window response stability support are present, and Block54 reduces physical readout authorization to scalar pole/model-class/FV/IR plus canonical-Higgs or neutral-transfer authority; completed higher-shell chunks001-002 remain partial taste-radial C_sx/C_xx support"
+actual_current_surface_status: "exact-support plus bounded support: complete L12 same-source FH-LSZ support and common-window response stability support are present; Block54 reduces physical readout authorization to scalar pole/model-class/FV/IR plus canonical-Higgs or neutral-transfer authority; Block55 proves current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-neutral root"
 conditional_surface_status: "conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
-hard_residual: "one of the two remaining roots must be supplied directly: scalar pole/model-class/FV/IR authority or canonical-Higgs pole identity / same-surface neutral-transfer bridge; strict W/Z/source-Higgs production can substitute only if it supplies those roots"
+hard_residual: "one of the two remaining roots must be supplied directly: scalar pole/model-class/FV/IR authority or a same-surface primitive transfer/cone certificate / accepted canonical O_H-action-LSZ bridge with strict source-Higgs rows; strict W/Z/source-Higgs production can substitute only if it supplies those roots"
 completed_checks:
   - "frontier_yt_pr230_lane1_oh_root_theorem_attempt.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_lane1_action_premise_derivation_attempt.py: PASS=15 FAIL=0"
@@ -48,4 +48,7 @@ completed_checks:
   - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=180 FAIL=0"
   - "frontier_yt_pr230_campaign_status_certificate.py: PASS=389 FAIL=0"
   - "frontier_yt_retained_closure_route_certificate.py: PASS=319 FAIL=0"
-next_exact_action: "Stop inventory cycling. Attack one surviving root directly: derive/measure canonical-Higgs or neutral-transfer authority, derive scalar pole/model-class/FV/IR authority, or build a strict W/Z/source-Higgs physical response packet that supplies those roots. Chunk workers remain separate and should not be interrupted."
+  - "frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py: PASS=13 FAIL=0"
+  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=181 FAIL=0"
+  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=390 FAIL=0"
+next_exact_action: "Attack scalar pole/model-class/FV/IR authority, or supply a new same-surface primitive transfer/cone certificate or accepted canonical O_H-action-LSZ bridge with strict source-Higgs rows. Chunk workers remain separate and should not be interrupted."

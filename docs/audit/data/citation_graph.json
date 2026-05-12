@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T05:37:32.044247+00:00",
+  "generated_at": "2026-05-12T05:47:26.617263+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42725,6 +42725,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block54_response_readout_reduction_gate.py",
       "title": "PR230 Block54 Response-Readout Reduction Gate"
     },
+    "yt_pr230_block55_canonical_neutral_primitive_cut_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block55_canonical_neutral_primitive_cut_gate_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "exact-support / canonical-neutral primitive cut; physical closure still blocked",
+      "deps": [],
+      "note_hash": "7e0edc339c030d94887782c62af0c46470778ad7eb06e0e63c7974871cd174d9",
+      "path": "docs/YT_PR230_BLOCK55_CANONICAL_NEUTRAL_PRIMITIVE_CUT_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block55_canonical_neutral_primitive_cut_gate.py",
+      "title": "PR230 Block55 Canonical-Neutral Primitive Cut Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47221,6 +47231,7 @@
     "yt_pr230_block39_post_block38_queue_admission_checkpoint_note_2026-05-12",
     "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12",
     "yt_pr230_block54_response_readout_reduction_gate_note_2026-05-12",
+    "yt_pr230_block55_canonical_neutral_primitive_cut_gate_note_2026-05-12",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -47504,16 +47515,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1136,
-    "node_count": 2155,
-    "root_count": 1654,
-    "runners_with_path": 1630,
+    "leaf_count": 1137,
+    "node_count": 2156,
+    "root_count": 1655,
+    "runners_with_path": 1631,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 470,
+      "support": 471,
       "unknown": 593
     }
   }
