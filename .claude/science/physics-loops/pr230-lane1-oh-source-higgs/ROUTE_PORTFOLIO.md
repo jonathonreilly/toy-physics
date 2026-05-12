@@ -4,10 +4,12 @@
    Block38 says the current finite row packet and top bare-mass response do not
    force this.  Block43 says complete source target-time-series support also
    does not force this.  Block44 says MC configuration-index target samples are
-   not physical Euclidean transfer/Krylov evidence.  Reopen only with a
-   physical Euclidean `C_ij(tau)` matrix, transfer/off-diagonal generator,
-   primitive-cone certificate, strict neutral transfer artifact, or strict
-   `C_sH/C_HH` pole rows with canonical-Higgs authority.
+   not physical Euclidean transfer/Krylov evidence.  Block45 says ordinary
+   top/scalar-source tau correlators and reduced smoke are not strict
+   source-Higgs row evidence.  Reopen only with a physical Euclidean
+   `C_ij(tau)` matrix, transfer/off-diagonal generator, primitive-cone
+   certificate, strict neutral transfer artifact, or strict `C_sH/C_HH` pole
+   rows with canonical-Higgs authority.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only
@@ -25,4 +27,5 @@
    Becomes executable only after `O_H` certification.  Requires
    `C_ss/C_sH/C_HH(t)`, pole isolation, covariance, FV/IR/model-class checks,
    and Gram flatness.  MC configuration-index target samples do not satisfy the
-   `t`/`tau` requirement.
+   `t`/`tau` requirement; ordinary top/scalar tau rows and reduced smoke do not
+   satisfy the production source-Higgs requirement.

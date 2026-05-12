@@ -111,11 +111,24 @@ autocovariance, so a Krylov/Lanczos or OS-transfer construction from MC order
 would depend on run-control metadata rather than a same-surface physical
 kernel.
 
+## Block45: Physical Euclidean Source-Higgs Row Absence
+
+- Note: `docs/YT_PR230_PHYSICAL_EUCLIDEAN_SOURCE_HIGGS_ROW_ABSENCE_AFTER_BLOCK44_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py`
+- Certificate: `outputs/yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The production chunks
+do contain ordinary tau-keyed top correlators and scalar-source response fits,
+but source-Higgs production is disabled or guarded empty.  The only explicit
+`C_sH/C_HH(tau)` matrix rows are reduced smoke with canonical `O_H` false and
+physical Higgs normalization `not_derived`.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
-present in the current MC target-time-series packet, a strict W/Z
+present in the current MC target-time-series packet, ordinary tau correlators,
+or reduced smoke, a strict W/Z
 physical-response packet with actual production rows and absolute `g2`/`v`
 authority, or a genuinely new scalar/action/LSZ primitive not already covered
 by Block41.

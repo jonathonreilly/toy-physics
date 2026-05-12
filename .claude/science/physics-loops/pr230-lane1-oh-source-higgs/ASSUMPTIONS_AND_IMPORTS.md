@@ -8,6 +8,8 @@
 - Complete `63/63` FH-LSZ target time series as source-coordinate `dE/ds` and
   `C_ss/Gamma_ss` support only; their `configuration_index` order is Monte
   Carlo run-control metadata, not Euclidean operator time.
+- Tau-keyed top correlators and scalar-source response fits as top/scalar
+  support only; they are not source-Higgs `C_ss/C_sH/C_HH(tau)` rows.
 - Degree-one radial-tangent `O_H` theorem as exact support under its explicit
   future action premise.
 - FMS `O_H` candidate/action packet as conditional support only.
@@ -36,6 +38,9 @@
 - Treating MC configuration-index target time series, MC autocorrelation, or
   arbitrary sample-order lag covariance as an OS transfer kernel,
   Krylov/Lanczos generator, or physical source-Higgs time-separation row.
+- Treating ordinary top tau correlators, scalar-source tau fits, empty guarded
+  source-Higgs blocks, or reduced source-Higgs smoke rows as strict production
+  `C_sH/C_HH` pole evidence.
 
 ## Block A Import Audit Result
 
@@ -125,3 +130,13 @@ and variance while changing lag-one covariance, proving that the lag structure
 belongs to MC ordering rather than a physical operator-time separation.  A
 future route needs physical Euclidean `C_ij(tau)` rows or a same-surface
 neutral transfer/off-diagonal generator.
+
+## Block45 Physical Euclidean Source-Higgs Row Absence Result
+
+The current production chunks do contain tau-keyed top correlators and
+scalar-source response fits, but these are not strict source-Higgs
+`C_ss/C_sH/C_HH(tau)` rows.  Source-Higgs production is disabled; guarded
+analysis blocks are empty where present; no source-Higgs time-kernel production
+row files exist.  The only explicit `C_sH/C_HH(tau)` matrix rows are reduced
+smoke with one measurement, canonical `O_H` false, physical Higgs normalization
+`not_derived`, and no physical-yukawa readout.

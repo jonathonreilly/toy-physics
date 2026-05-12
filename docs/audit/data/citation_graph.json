@@ -19013,7 +19013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T03:12:10.187223+00:00",
+  "generated_at": "2026-05-12T03:22:23.625137+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43515,6 +43515,16 @@
       "runner_path": "scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py",
       "title": "PR #230 OS Transfer-Kernel Artifact Gate"
     },
+    "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12": {
+      "claim_id": "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: tau-keyed production correlators are not",
+      "deps": [],
+      "note_hash": "a09e1de3726bf290ac1398794e8b0e6e729cffa2077ec35a935f4668da8064d0",
+      "path": "docs/YT_PR230_PHYSICAL_EUCLIDEAN_SOURCE_HIGGS_ROW_ABSENCE_AFTER_BLOCK44_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py",
+      "title": "PR230 Physical Euclidean Source-Higgs Row Absence After Block44"
+    },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "claim_id": "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
       "current_status": "open",
@@ -47128,6 +47138,7 @@
     "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06",
     "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
     "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07",
+    "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
@@ -47325,17 +47336,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4753,
-    "leaf_count": 1123,
-    "node_count": 2141,
-    "root_count": 1641,
-    "runners_with_path": 1616,
+    "leaf_count": 1124,
+    "node_count": 2142,
+    "root_count": 1642,
+    "runners_with_path": 1617,
     "status_counts": {
       "bounded": 597,
       "open": 115,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 586
+      "unknown": 587
     }
   }
 }

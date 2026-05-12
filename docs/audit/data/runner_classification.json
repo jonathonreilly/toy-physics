@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T03:12:13.323119+00:00",
+  "generated_at": "2026-05-12T03:22:26.650450+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17448,6 +17448,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py"
+    },
+    "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py"
     },
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01": {
       "assert_count": 1,
@@ -36663,6 +36675,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_physics_loop_assumption_audit.py": {
       "assert_count": 1,
       "claims": [
@@ -42743,13 +42770,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 247,
+      "B": 248,
       "C": 539,
       "D": 337,
       "none": 404
     },
-    "runners_classified": 1537,
-    "runners_with_C": 846,
+    "runners_classified": 1538,
+    "runners_with_C": 847,
     "runners_with_D": 620
   }
 }

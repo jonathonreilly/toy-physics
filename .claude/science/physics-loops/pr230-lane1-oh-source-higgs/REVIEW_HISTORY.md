@@ -244,3 +244,39 @@ this was a narrow current-surface boundary update.
 - Audit Compatibility: PASS.  The full audit pipeline and
   `audit_lint.py --strict` complete with only the known five warnings; the
   aggregate gates compile and report `PASS=172 FAIL=0` and `PASS=377 FAIL=0`.
+
+## Self-Review: Block45
+
+- Overclaim check: passed.  The note blocks only the shortcut from ordinary
+  tau-keyed production correlators or reduced smoke to strict
+  `C_ss/C_sH/C_HH(tau)` source-Higgs pole rows.  It does not claim a permanent
+  no-go against future source-Higgs production.
+- Physics check: passed.  The runner checks all 63 chunks, distinguishes top
+  tau correlators and scalar-source response tau fits from source-Higgs rows,
+  accepts empty guarded source-Higgs blocks as absence guards, and verifies
+  that the only explicit `C_sH/C_HH(tau)` matrix rows are reduced smoke.
+- Forbidden-import check: passed.  The runner does not use observed targets,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, reduced smoke as
+  production, unit normalization, or `C_sx/C_xx -> C_sH/C_HH` relabeling.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block45 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow current-surface boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=20 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Tau-keyed production
+  correlators are present, but admissible source-Higgs production rows are
+  absent.
+- Imports / Support: DISCLOSED.  The absent canonical `O_H`, production
+  `C_ss/C_sH/C_HH(tau)` rows, pole residues, Gram purity, and FV/IR/model-class
+  authority are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline and
+  `audit_lint.py --strict` complete with only the known five warnings; the
+  aggregate gates compile and report `PASS=173 FAIL=0` and `PASS=378 FAIL=0`.

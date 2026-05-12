@@ -80,4 +80,13 @@ Lane 1 Block44: MC target-time-series Krylov/transfer no-go
   Euclidean operator time; permutation preserves ensemble statistics while
   changing lag covariance, so MC order cannot supply an OS transfer, Krylov
   neutral generator, or source-Higgs pole row
+
+Lane 1 Block45: physical Euclidean source-Higgs row absence
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py
+- result: PASS=20 FAIL=0
+- conclusion: production chunks contain ordinary tau-keyed top correlators and
+  scalar-source response fits, but source-Higgs production is disabled or
+  guarded empty; the only C_sH/C_HH(tau) matrix rows are reduced smoke, not
+  strict production pole evidence
 ```

@@ -494,6 +494,9 @@ def main() -> int:
         "pr230_mc_timeseries_krylov_transfer_no_go_after_block43": load(
             "outputs/yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_2026-05-12.json"
         ),
+        "pr230_physical_euclidean_source_higgs_row_absence_after_block44": load(
+            "outputs/yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2498,6 +2501,27 @@ def main() -> int:
         "pr230-mc-timeseries-krylov-transfer-no-go-blocks",
         mc_timeseries_krylov_transfer_no_go_blocks,
         statuses["pr230_mc_timeseries_krylov_transfer_no_go_after_block43"],
+    )
+    physical_euclidean_source_higgs_row_absence_blocks = (
+        "tau-keyed production correlators are not"
+        in str(
+            statuses[
+                "pr230_physical_euclidean_source_higgs_row_absence_after_block44"
+            ]
+        )
+        and certificates[
+            "pr230_physical_euclidean_source_higgs_row_absence_after_block44"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_physical_euclidean_source_higgs_row_absence_after_block44"
+        ].get("physical_euclidean_source_higgs_row_absence_passed")
+        is True
+    )
+    report(
+        "pr230-physical-euclidean-source-higgs-row-absence-blocks",
+        physical_euclidean_source_higgs_row_absence_blocks,
+        statuses["pr230_physical_euclidean_source_higgs_row_absence_after_block44"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6347,6 +6371,7 @@ def main() -> int:
         "block37_post_block36_supervisor_yield_not_closure": False,
         "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
         "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,
+        "physical_euclidean_source_higgs_row_absence_blocks": physical_euclidean_source_higgs_row_absence_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6358,6 +6383,7 @@ def main() -> int:
             "does not treat block37 post-block36 supervisor-yield status as production evidence",
             "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
             "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
+            "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,

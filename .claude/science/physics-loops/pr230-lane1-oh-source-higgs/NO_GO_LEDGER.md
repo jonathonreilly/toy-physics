@@ -52,6 +52,12 @@
   changes lag autocovariance, so a transfer/Krylov construction from MC order
   would depend on run-control metadata rather than a same-surface physical
   time-separation kernel.
+- Tau-keyed production correlators are not physical source-Higgs
+  `C_ss/C_sH/C_HH(tau)` rows after Block44: all chunks have ordinary top tau
+  correlators and scalar-source response tau fits, but source-Higgs production
+  is disabled or guarded empty; the only explicit `C_sH/C_HH(tau)` matrix rows
+  are reduced smoke with canonical `O_H` false and Higgs normalization
+  `not_derived`.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary
