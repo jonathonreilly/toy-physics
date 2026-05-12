@@ -1,0 +1,63 @@
+{
+  "actual_current_surface_status": "exact negative boundary / origin/main audited YT_WARD Step 3 row is an open_gate coefficient diagnostic, not PR230 O_H/source-Higgs closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support only if a future Wick-level same-1PI bridge is combined with independent scalar pole/LSZ normalization and a canonical O_H/source-Higgs row authority accepted by PR230 gates",
+  "exact_next_action": "Keep PR230 on the existing positive routes: derive canonical O_H, measure/derive C_sH/C_HH pole rows with Gram purity, or supply an independent neutral-transfer/WZ physical-response bridge.  Do not use the origin/main Ward Step 3 audit-clean open_gate as closure.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "treated_hunit_projection_as_canonical_oh": false,
+    "treated_open_gate_as_retained_closure": false,
+    "treated_same_1pi_coefficient_as_scalar_lsz_normalization": false,
+    "treated_yt_ward_step3_as_pr230_oh_certificate": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_observed_top_or_yukawa_targets": false,
+    "used_y_t_bare_or_hunit_matrix_element_readout": false,
+    "used_yt_ward_identity_as_load_bearing_pr230_input": false
+  },
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "Wick-level same-1PI bridge, if using the Ward route at all",
+    "independent scalar pole/LSZ normalization",
+    "canonical O_H identity/normalization certificate",
+    "production C_ss/C_sH/C_HH(tau) source-Higgs pole rows",
+    "source-Higgs Gram/FV/IR/model-class authority"
+  ],
+  "origin_main": {
+    "audit_status": "audited_clean",
+    "chain_closure_explanation": "The runner verifies the source-scope text, symbolic coefficient residual, canonical gate, off-surface counterexample, D12 Fierz input, and H_unit normalization checks. The note correctly stops at the open gate and does not claim to derive g_bare=1 or prove same-1PI equivalence.",
+    "claim_id": "yt_ward_step3_same_1pi_construction_narrow_theorem_note_2026-05-10",
+    "claim_type": "open_gate",
+    "effective_status": "open_gate",
+    "note_path": "docs/YT_WARD_STEP3_SAME_1PI_CONSTRUCTION_NARROW_THEOREM_NOTE_2026-05-10.md",
+    "notes_for_re_audit_if_any": "Recheck only if this row is cited as deriving g_bare=1, proving the Standard Model top-Yukawa observable, or closing same-1PI equivalence rather than identifying the remaining open gate.",
+    "open_dependency_paths": [
+      "same-1PI bridge between OGE contraction and H_unit decomposition remains unproved"
+    ],
+    "ref": "origin/main",
+    "runner_path": "scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py"
+  },
+  "origin_main_yt_ward_step3_open_gate_intake_guard_passed": true,
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "retained_route": "open / retained closure not yet reached",
+    "same_1pi_scalar_pole_boundary": "exact negative boundary / same-1PI not PR230 closure",
+    "source_higgs_gram_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate"
+  },
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The upstream row is audited_clean only as an open_gate.  It records coefficient bookkeeping and an unproved same-1PI bridge, while PR230 still lacks canonical O_H, C_sH/C_HH rows, scalar LSZ/pole normalization, and retained-route authorization.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not treat an audited open_gate as a positive theorem",
+    "does not use YT_WARD Step 3 as load-bearing PR230 authority",
+    "does not treat H_unit projection as canonical O_H",
+    "does not define y_t_bare or y_t through a matrix element",
+    "does not use observed top/y_t targets, alpha_LM, plaquette, or u0"
+  ]
+}

@@ -11,6 +11,9 @@
    Euclidean `C_ij(tau)` matrix, transfer/off-diagonal generator,
    primitive-cone certificate, strict neutral transfer artifact, or strict
    `C_sH/C_HH` pole rows with canonical-Higgs authority.
+   Block49 adds that origin/main's audited YT_WARD Step 3 row is only an
+   `open_gate` coefficient diagnostic; it does not supply the missing PR230
+   neutral transfer, canonical `O_H`, or source-Higgs row artifact.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only
@@ -36,3 +39,10 @@
    active higher-shell cross rows use the taste-radial second-source
    certificate, so completion under that certificate is `C_sx/C_xx` support,
    not strict `C_sH/C_HH` closure.
+
+5. **Ward Step 3 same-1PI route.**
+   Origin/main now has an audited-clean Step 3 row, but its effective status is
+   `open_gate` and its note leaves the same-1PI bridge, scalar pole/LSZ,
+   canonical `O_H`, production source-Higgs rows, and Gram/FV/IR/model authority
+   open.  This route remains non-PR230-closure until those bridge artifacts are
+   supplied directly.

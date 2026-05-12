@@ -100,6 +100,7 @@
   "one_higgs_taste_axis_completeness_blocks_shortcut": true,
   "origin_main_composite_higgs_not_closure": true,
   "origin_main_ew_m_residual_not_closure": true,
+  "origin_main_yt_ward_step3_open_gate_not_closure": true,
   "orthogonal_top_coupling_exclusion_candidate_rejected": true,
   "os_transfer_kernel_artifact_absent": true,
   "parent_certificates": {
@@ -202,6 +203,7 @@
     "pr230_one_higgs_taste_axis_completeness": "outputs/yt_pr230_one_higgs_taste_axis_completeness_attempt_2026-05-06.json",
     "pr230_origin_main_composite_higgs_intake_guard": "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json",
     "pr230_origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
+    "pr230_origin_main_yt_ward_step3_open_gate_intake_guard": "outputs/yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_2026-05-12.json",
     "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "pr230_os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
     "pr230_physical_euclidean_source_higgs_row_absence_after_block44": "outputs/yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_2026-05-12.json",
@@ -392,6 +394,7 @@
     "pr230_one_higgs_taste_axis_completeness": "exact negative boundary / one-Higgs taste-axis completeness not derived from current PR230 taste/EW stack",
     "pr230_origin_main_composite_higgs_intake_guard": "exact negative boundary / origin/main composite-Higgs stretch packet is conditional cross-lane context, not PR230 same-surface O_H/C_sH/C_HH closure",
     "pr230_origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
+    "pr230_origin_main_yt_ward_step3_open_gate_intake_guard": "exact negative boundary / origin/main audited YT_WARD Step 3 row is an open_gate coefficient diagnostic, not PR230 O_H/source-Higgs closure",
     "pr230_orthogonal_top_coupling_exclusion_candidate_gate": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
     "pr230_os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
     "pr230_physical_euclidean_source_higgs_row_absence_after_block44": "exact negative boundary / tau-keyed production correlators are not physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) rows",
@@ -482,7 +485,7 @@
     "wz_smoke_to_production_no_go": "exact negative boundary / WZ smoke rows cannot be promoted to production WZ response",
     "wz_source_coordinate_transport_no_go": "exact negative boundary / WZ source-coordinate transport shortcut rejected"
   },
-  "pass_count": 176,
+  "pass_count": 177,
   "physical_euclidean_source_higgs_row_absence_blocks": true,
   "post_fms_source_overlap_necessity_blocks_current_inference": true,
   "proposal_allowed": false,

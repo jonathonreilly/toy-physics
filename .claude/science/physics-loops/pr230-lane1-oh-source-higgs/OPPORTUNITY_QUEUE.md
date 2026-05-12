@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block48
+## Active Ranking After Block49
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -16,7 +16,9 @@
    adjacent top mass-scan support also does not supply the missing neutral
    source-Higgs or subtraction bridge.  Block48 shows the active higher-shell
    cross rows are launched under a taste-radial certificate, not canonical
-   `O_H` authority.
+   `O_H` authority.  Block49 shows the origin/main audited YT_WARD Step 3 row
+   is only an `open_gate` coefficient diagnostic, not a PR230 neutral-transfer
+   or source-Higgs closure artifact.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -39,10 +41,18 @@
    `C_ij(tau)` rows rather than MC configuration-index target samples,
    ordinary top/scalar tau correlators, empty guarded source-Higgs blocks, or
    reduced smoke.  Higher-shell rows under the current taste-radial certificate
-   remain `C_sx/C_xx` support until a canonical bridge lands.
+   remain `C_sx/C_xx` support until a canonical bridge lands.  Origin/main
+   YT_WARD Step 3 cannot be used as that bridge because it leaves same-1PI,
+   scalar pole/LSZ, canonical `O_H`, and strict source-Higgs rows open.
 
 5. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not
    reopened until completed JSON/certificates land and are checked against the
    H3/H4, pole/FV/IR, and canonical coupling obligations.  Under the current
    operator certificate, completion alone cannot satisfy `C_sH/C_HH`.
+
+6. **Ward Step 3 same-1PI route if future bridge lands.**
+   Origin/main has an audited-clean `open_gate` coefficient diagnostic, but
+   Block49 prevents importing it as PR230 closure.  Reopen only with a
+   Wick-level same-1PI bridge and independent scalar pole/LSZ plus canonical
+   `O_H` and production source-Higgs row authority.

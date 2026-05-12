@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 241,
-    "leaf": 714,
+    "leaf": 715,
     "medium": 350
   },
-  "generated_at": "2026-05-12T04:18:09.970447+00:00",
+  "generated_at": "2026-05-12T04:24:34.354807+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -22558,6 +22558,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_note_2026-05-12",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_ORIGIN_MAIN_YT_WARD_STEP3_OPEN_GATE_INTAKE_GUARD_NOTE_2026-05-12.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26748,6 +26765,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 900,
-  "total_pending": 1305
+  "ready_count": 901,
+  "total_pending": 1306
 }

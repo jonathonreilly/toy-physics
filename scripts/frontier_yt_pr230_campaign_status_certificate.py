@@ -1010,6 +1010,9 @@ def main() -> int:
         "higher_shell_source_higgs_operator_certificate_boundary": load(
             "outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json"
         ),
+        "origin_main_yt_ward_step3_open_gate_intake_guard": load(
+            "outputs/yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_2026-05-12.json"
+        ),
         "neutral_rank_one_bypass_post_block37_audit": load(
             "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json"
         ),
@@ -5486,6 +5489,22 @@ def main() -> int:
         )
         is False
     )
+    origin_main_yt_ward_step3_open_gate_not_closure = (
+        "origin/main audited YT_WARD Step 3 row is an open_gate"
+        in str(statuses["origin_main_yt_ward_step3_open_gate_intake_guard"])
+        and certificates["origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "origin_main_yt_ward_step3_open_gate_intake_guard_passed"
+        )
+        is True
+        and certificates["origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "origin_main", {}
+        ).get("effective_status")
+        == "open_gate"
+    )
     neutral_rank_one_bypass_post_block37_blocks = (
         "post-Block37 neutral rank-one bypass not closed"
         in str(statuses["neutral_rank_one_bypass_post_block37_audit"])
@@ -5516,6 +5535,11 @@ def main() -> int:
         "higher-shell-source-higgs-operator-certificate-boundary-blocks",
         higher_shell_source_higgs_operator_certificate_boundary_blocks,
         statuses["higher_shell_source_higgs_operator_certificate_boundary"],
+    )
+    report(
+        "origin-main-yt-ward-step3-open-gate-not-closure",
+        origin_main_yt_ward_step3_open_gate_not_closure,
+        statuses["origin_main_yt_ward_step3_open_gate_intake_guard"],
     )
     report(
         "neutral-rank-one-bypass-post-block37-blocks-current-surface",
@@ -6624,6 +6648,7 @@ def main() -> int:
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
         "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        "origin_main_yt_ward_step3_open_gate_not_closure": origin_main_yt_ward_step3_open_gate_not_closure,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,

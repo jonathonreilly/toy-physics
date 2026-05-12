@@ -159,12 +159,25 @@ second-source certificate, whose canonical-Higgs identity is false.  Completed
 rows under that certificate remain `C_sx/C_xx` taste-radial support, not strict
 `C_sH/C_HH` source-Higgs pole evidence.
 
+## Block49: Origin/Main YT_WARD Step 3 Open-Gate Intake Guard
+
+- Note: `docs/YT_PR230_ORIGIN_MAIN_YT_WARD_STEP3_OPEN_GATE_INTAKE_GUARD_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard.py`
+- Certificate: `outputs/yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  `origin/main` has an
+audited-clean `YT_WARD` Step 3 coefficient diagnostic, but the audit-clean row
+is explicitly an `open_gate`: the same-1PI bridge remains unproved and the row
+does not derive `g_bare=1`, physical top Yukawa, canonical `O_H`,
+`C_sH/C_HH` rows, or scalar LSZ normalization for PR230.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
-reduced smoke, active worker intent, or higher-shell taste-radial cross rows, a strict W/Z physical-response packet
+reduced smoke, active worker intent, higher-shell taste-radial cross rows, or
+origin/main Ward Step 3 open-gate status, a strict W/Z physical-response packet
 with actual mixed-source `T_total/A_top/W` rows, matched covariance, accepted
 action, and absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ
 primitive not already covered by Block41.

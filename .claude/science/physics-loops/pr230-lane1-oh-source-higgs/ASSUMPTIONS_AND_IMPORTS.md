@@ -21,6 +21,9 @@
 - Higher-shell source/operator cross rows under the current taste-radial
   second-source certificate as `C_sx/C_xx` support only; not strict
   canonical-Higgs `C_sH/C_HH` rows.
+- Origin/main audited YT_WARD Step 3 same-1PI construction as an
+  `open_gate` coefficient diagnostic only; not PR230 `O_H`, source-Higgs,
+  `g_bare=1`, or SM top-Yukawa closure.
 
 ## Forbidden Proof Inputs
 
@@ -54,6 +57,9 @@
 - Treating higher-shell source/operator cross rows emitted under the
   taste-radial second-source certificate as canonical-Higgs `C_sH/C_HH` rows or
   pole-residue evidence.
+- Treating origin/main audited YT_WARD Step 3 `open_gate` status as PR230
+  canonical `O_H` authority, source-Higgs pole evidence, same-1PI closure,
+  `g_bare=1` derivation, or physical top-Yukawa derivation.
 
 ## Block A Import Audit Result
 
@@ -182,3 +188,14 @@ whose `canonical_higgs_operator_identity_passed` flag is false.  The harness
 preserves this distinction with `C_sx/C_xx` aliases for the taste-radial
 second source.  Future completed chunks under this certificate remain support
 unless a separate canonical `O_H` or source-overlap bridge lands.
+
+## Block49 Origin/Main YT_WARD Step 3 Intake Guard Result
+
+The origin/main audited YT_WARD Step 3 row is audit-clean only as an
+`open_gate` coefficient diagnostic.  Its note and audit ledger explicitly
+leave the same-1PI bridge unproved and do not derive `g_bare=1` or the SM
+top-Yukawa observable.  It therefore cannot be imported as PR230 canonical
+`O_H`, source-Higgs pole-row, or retained-route closure.  A future Ward route
+would still need the same-1PI bridge plus independent scalar pole/LSZ,
+canonical `O_H`, production `C_ss/C_sH/C_HH(tau)` rows, and Gram/FV/IR/model
+authority.

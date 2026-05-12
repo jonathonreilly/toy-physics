@@ -397,3 +397,39 @@ this was a narrow operator-certificate boundary update.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; the aggregate gates
   compile and report `PASS=176 FAIL=0` and `PASS=382 FAIL=0`.
+
+## Self-Review: Block49
+
+- Overclaim check: passed.  The note says only that origin/main YT_WARD Step 3
+  is an audited `open_gate` and cannot be imported as PR230 closure.  It does
+  not demote the origin/main audit result and does not claim a permanent no-go
+  against a future Ward route.
+- Physics check: passed.  The runner reads the origin/main note, paired
+  runner, and audit ledger and verifies that the row's effective status is
+  `open_gate`, same-1PI remains unproved, `g_bare=1` is not derived, and the
+  SM top-Yukawa observable is not proved.
+- Forbidden-import check: passed.  The runner does not use `H_unit`, Ward Step
+  3 as load-bearing PR230 authority, `y_t_bare`, observed selectors,
+  `alpha_LM`, plaquette, `u0`, alias relabeling, or retained/proposed-retained
+  wording.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block49 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow intake guard for an external branch artifact.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=15 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Origin/main Step 3 remains
+  valid as an audited `open_gate`, but it is not PR230 source-Higgs closure.
+- Imports / Support: DISCLOSED.  The absent same-1PI bridge, scalar pole/LSZ,
+  canonical `O_H`, source-Higgs rows, and Gram/FV/IR/model authority are
+  explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces or audit verdicts.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings; aggregate gates compile
+  and report `PASS=177 FAIL=0` and `PASS=385 FAIL=0`.

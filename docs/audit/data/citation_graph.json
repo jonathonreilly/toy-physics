@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:18:07.006251+00:00",
+  "generated_at": "2026-05-12T04:24:31.084062+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43561,6 +43561,16 @@
       "runner_path": "scripts/frontier_yt_pr230_origin_main_ew_m_residual_intake_guard.py",
       "title": "PR230 Origin-Main EW M-Residual Intake Guard"
     },
+    "yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_note_2026-05-12": {
+      "claim_id": "yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: origin/main audited `YT_WARD` Step 3 row",
+      "deps": [],
+      "note_hash": "66af6b5ff7ba61826a303aad187a2e36ef2e1a42a4756dc10548c94d2fb25a3a",
+      "path": "docs/YT_PR230_ORIGIN_MAIN_YT_WARD_STEP3_OPEN_GATE_INTAKE_GUARD_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard.py",
+      "title": "PR230 Origin/Main YT_WARD Step 3 Open-Gate Intake Guard"
+    },
     "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07": {
       "claim_id": "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
       "current_status": "unknown",
@@ -47225,6 +47235,7 @@
     "yt_pr230_open_surface_bridge_intake_note_2026-05-07",
     "yt_pr230_origin_main_composite_higgs_intake_guard_note_2026-05-06",
     "yt_pr230_origin_main_ew_m_residual_intake_guard_note_2026-05-06",
+    "yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_note_2026-05-12",
     "yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_note_2026-05-07",
     "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07",
     "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12",
@@ -47427,17 +47438,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1129,
-    "node_count": 2148,
-    "root_count": 1647,
-    "runners_with_path": 1623,
+    "leaf_count": 1130,
+    "node_count": 2149,
+    "root_count": 1648,
+    "runners_with_path": 1624,
     "status_counts": {
       "bounded": 598,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 590
+      "unknown": 591
     }
   }
 }

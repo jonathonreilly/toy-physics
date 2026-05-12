@@ -116,4 +116,13 @@ Lane 1 Block48: higher-shell source-Higgs operator-certificate boundary
   taste-radial second-source certificate, not canonical O_H; completed rows
   under that certificate remain C_sx/C_xx support unless a separate canonical
   O_H/source-overlap bridge lands
+
+Lane 1 Block49: origin/main YT_WARD Step 3 open-gate intake guard
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard.py
+- result: PASS=15 FAIL=0
+- conclusion: origin/main audited YT_WARD Step 3 is audit-clean only as an
+  open_gate coefficient diagnostic; it leaves same-1PI, scalar pole/LSZ,
+  canonical O_H, source-Higgs rows, and Gram/FV/IR/model authority open and
+  cannot be imported as PR230 retained-route closure
 ```

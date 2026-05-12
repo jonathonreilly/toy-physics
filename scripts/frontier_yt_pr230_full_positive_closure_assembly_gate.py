@@ -136,6 +136,7 @@ PARENTS = {
     "pr230_top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "pr230_top_mass_scan_subtraction_contract_applicability_audit": "outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json",
     "pr230_higher_shell_source_higgs_operator_certificate_boundary": "outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json",
+    "pr230_origin_main_yt_ward_step3_open_gate_intake_guard": "outputs/yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_2026-05-12.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -1493,6 +1494,22 @@ def main() -> int:
         )
         is False
     )
+    origin_main_yt_ward_step3_open_gate_not_closure = (
+        "origin/main audited YT_WARD Step 3 row is an open_gate"
+        in statuses["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"]
+        and certs["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "origin_main_yt_ward_step3_open_gate_intake_guard_passed"
+        )
+        is True
+        and certs["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"].get(
+            "origin_main", {}
+        ).get("effective_status")
+        == "open_gate"
+    )
     neutral_rank_one_bypass_post_block37_blocks = (
         "post-Block37 neutral rank-one bypass not closed"
         in statuses["pr230_neutral_rank_one_bypass_post_block37_audit"]
@@ -2746,6 +2763,11 @@ def main() -> int:
         statuses["pr230_higher_shell_source_higgs_operator_certificate_boundary"],
     )
     report(
+        "origin-main-yt-ward-step3-open-gate-not-closure",
+        origin_main_yt_ward_step3_open_gate_not_closure,
+        statuses["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"],
+    )
+    report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
         wz_response_ratio_identifiability_contract_support_not_closure,
         statuses["pr230_wz_response_ratio_identifiability_contract"],
@@ -3942,6 +3964,7 @@ def main() -> int:
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_closure,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
         "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        "origin_main_yt_ward_step3_open_gate_not_closure": origin_main_yt_ward_step3_open_gate_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,

@@ -74,6 +74,10 @@
   `canonical_higgs_operator_identity_passed=false`, and the harness aliases the
   rows as `C_sx/C_xx` support until a separate canonical `O_H` or
   source-overlap bridge lands.
+- The origin/main `YT_WARD` Step 3 row audited clean only as an `open_gate` is
+  not PR230 closure: it records coefficient bookkeeping and an unproved
+  same-1PI bridge, not canonical `O_H`, source-Higgs `C_sH/C_HH` pole rows,
+  scalar LSZ/pole normalization, or retained-route authorization.
 
 ## Scope Boundary
 
