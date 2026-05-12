@@ -101,3 +101,12 @@ Canonical parent note: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md` (`c
 - `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
 
 Therefore `claim_type: bounded_theorem` until that gate closes. When that gate closes, the lane becomes eligible for independent audit/governance retagging as `positive_theorem`; the audit pipeline recomputes `effective_status`, but it does not silently invent a new `claim_type`. The substantive science content of this note is unchanged by this retag.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [pmns_c3_character_holonomy_closure_note](PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md)
+- [pmns_current_bank_value_selection_nogo_note](PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
+- [pmns_sole_axiom_hw1_source_transfer_boundary_note](PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- [staggered_dirac_realization_gate_note_2026-05-03](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)

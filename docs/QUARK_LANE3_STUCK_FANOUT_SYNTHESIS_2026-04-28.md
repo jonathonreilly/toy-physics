@@ -134,3 +134,16 @@ Canonical parent note: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md` (`c
 - `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
 
 Therefore `claim_type: bounded_theorem` until that gate closes. When that gate closes, the lane becomes eligible for independent audit/governance retagging as `positive_theorem`; the audit pipeline recomputes `effective_status`, but it does not silently invent a new `claim_type`. The substantive science content of this note is unchanged by this retag.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_dirac_realization_gate_note_2026-05-03](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)
+- [sm_one_higgs_yukawa_gauge_selection_theorem_note_2026-04-26](SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md)
+- [quark_lane3_bounded_companion_retention_firewall_note_2026-04-27](QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md)
+- [quark_route2_source_domain_bridge_no_go_note_2026-04-28](QUARK_ROUTE2_SOURCE_DOMAIN_BRIDGE_NO_GO_NOTE_2026-04-28.md)
+- [quark_five_sixths_scale_selection_boundary_note_2026-04-28](QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md)
+- [quark_generation_equivariant_ward_degeneracy_no_go_note_2026-04-28](QUARK_GENERATION_EQUIVARIANT_WARD_DEGENERACY_NO_GO_NOTE_2026-04-28.md)
+- [quark_c3_oriented_ward_splitter_support_note_2026-04-28](QUARK_C3_ORIENTED_WARD_SPLITTER_SUPPORT_NOTE_2026-04-28.md)
+- [quark_rpsr_c3_joint_readout_rank_boundary_note_2026-04-28](QUARK_RPSR_C3_JOINT_READOUT_RANK_BOUNDARY_NOTE_2026-04-28.md)

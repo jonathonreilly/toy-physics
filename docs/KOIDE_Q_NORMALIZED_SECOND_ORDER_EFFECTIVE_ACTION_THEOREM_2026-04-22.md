@@ -373,3 +373,9 @@ This note does **not**:
 - close the separate `delta = 2/9` Brannen-phase bridge;
 - claim a Nature-grade closure of `Q = 2/3` on the charged-lepton
   lane.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_q_reduced_observable_restriction_theorem_2026-04-22](KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)

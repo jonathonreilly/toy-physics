@@ -265,3 +265,14 @@ It does **not** close Lane 6 itself. Lane 6 remains open via the
 research-level routes (M1, M5-a, M5-c) listed in §5.
 
 A runner accompanies this note (`scripts/frontier_charged_lepton_y_tau_ward_combined_no_go.py`).
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [yt_ward_identity_derivation_theorem](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- [charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26](CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md)
+- [ckm_ew_lattice_a4_bridge_retained_identity_note_2026-04-25](CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md)
+- [ckm_koide_cross_sector_z3_closure_theorem_note_2026-04-25](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md)
+- [koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29](KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md)
+- [lepton_block_scalar_singlet_composite_uniqueness_d17_prime_theorem_note_2026-05-10](LEPTON_BLOCK_SCALAR_SINGLET_COMPOSITE_UNIQUENESS_D17_PRIME_THEOREM_NOTE_2026-05-10.md)

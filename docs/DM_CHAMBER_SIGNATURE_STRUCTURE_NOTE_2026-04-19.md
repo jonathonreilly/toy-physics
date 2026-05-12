@@ -135,3 +135,10 @@ Retained DM runners on main pass unchanged:
 - `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md` (retained path theorem, on main)
 - `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (reading order)
 - Uhlig 1982 (Linear Algebra Appl. 46); Mehl-Mehrmann-Ran-Rodman 2016; Milnor Morse Theory 1963.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [dm_dple_dimension_parametric_extremum_theorem_note_2026-04-19](DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md)
+- [dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md)

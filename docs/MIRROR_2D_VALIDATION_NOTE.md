@@ -124,3 +124,9 @@ caches are present in the worktree as direct one-hop dependencies:
 Both authorities are registered in `logs/runner-cache/`. The bounded table
 rows close from the primary runner cache; the exact-2D-mirror linear-
 propagator premise closes from the imported-authority cache.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [mirror_program_synthesis](MIRROR_PROGRAM_SYNTHESIS.md)

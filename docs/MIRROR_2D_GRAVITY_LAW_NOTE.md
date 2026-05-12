@@ -192,3 +192,9 @@ worktree as one-hop registered dependencies:
 The bounded null-result claim closes from the primary runner's cached stdout
 plus the imported-authority cache (for the exact-mirror generator and linear
 propagator); the companion cleanup table remains diagnostic context.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [mirror_program_synthesis](MIRROR_PROGRAM_SYNTHESIS.md)

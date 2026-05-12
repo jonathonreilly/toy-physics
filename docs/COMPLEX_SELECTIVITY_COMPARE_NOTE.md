@@ -138,3 +138,9 @@ listed family slices, not a universal family theorem; until the
 four unwired inputs land as one-hop edges, the headline reads as
 a **partial bounded comparison** rather than the full selectivity
 split.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [alt_connectivity_family_fm_transfer_note](ALT_CONNECTIVITY_FAMILY_FM_TRANSFER_NOTE.md)

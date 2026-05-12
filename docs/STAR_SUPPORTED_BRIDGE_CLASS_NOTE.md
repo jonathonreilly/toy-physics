@@ -169,3 +169,4 @@ class D registration targets named by the verdict's
 pattern used by the
 `DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` cluster
 (commit `8e84f0c23`).
+- [oh_static_constraint_lift_note](OH_STATIC_CONSTRAINT_LIFT_NOTE.md)

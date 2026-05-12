@@ -79,3 +79,9 @@ The honest interpretation is:
 - for a mesoscopic source object, top-N remains the least-bad control unless a future sweep finds a non-degenerate localized family with comparable capture and width stability
 
 This is a bounded negative result, not a failure of the broader surrogate lane.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [quasi_persistent_relaunch_probe_note](QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md)

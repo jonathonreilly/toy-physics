@@ -173,3 +173,13 @@ Canonical parent note: `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md` (`c
 - `GENERATION_AXIOM_BOUNDARY_NOTE.md` (preserved)
 
 Therefore `claim_type: bounded_theorem` until that gate closes. When that gate closes, the lane becomes eligible for independent audit/governance retagging as `positive_theorem`; the audit pipeline recomputes `effective_status`, but it does not silently invent a new `claim_type`. The substantive science content of this note is unchanged by this retag.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [lanes.open_science.03_quark_mass_retention_open_lane_2026-04-26](lanes/open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md)
+- [quark_mass_ratio_review_packet_2026-04-18](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md)
+- [down_type_mass_ratio_ckm_dual_note](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
+- [quark_up_amplitude_candidate_scan_note_2026-04-19](QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md)
+- [yt_bottom_yukawa_retention_analysis_note_2026-04-18](YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md)

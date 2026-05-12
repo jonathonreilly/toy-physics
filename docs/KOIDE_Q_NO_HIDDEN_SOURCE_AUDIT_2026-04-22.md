@@ -181,3 +181,10 @@ reduced observable restriction note and the normalized second-order
 effective action note in the same `Q` cluster (see audit ledger rows
 `koide_q_reduced_observable_restriction_theorem_2026-04-22` and
 `koide_q_normalized_second_order_effective_action_theorem_2026-04-22`).
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [koide_q_reduced_observable_restriction_theorem_2026-04-22](KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)
+- [koide_q_normalized_second_order_effective_action_theorem_2026-04-22](KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md)

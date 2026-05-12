@@ -55,3 +55,10 @@ produced cycle-0047 in the citation graph
 (`docs/audit/data/cycle_inventory.json`). File pointer:
 `HIGGS_MASS_DERIVED_NOTE.md`.
 -->
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [higgs_mass_derived_note](HIGGS_MASS_DERIVED_NOTE.md)
+- [vacuum_critical_stability_note](VACUUM_CRITICAL_STABILITY_NOTE.md)

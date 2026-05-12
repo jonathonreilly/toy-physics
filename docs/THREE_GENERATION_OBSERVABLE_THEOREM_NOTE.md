@@ -314,3 +314,9 @@ Therefore `claim_type: bounded_theorem` until that gate closes. When that
 gate closes, the lane becomes eligible for independent audit/governance
 retagging as `positive_theorem`; downstream status remains pipeline-owned.
 The substantive science content of this note is unchanged by this retag.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [staggered_dirac_realization_gate_note_2026-05-03](STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md)

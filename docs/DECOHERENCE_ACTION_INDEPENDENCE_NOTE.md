@@ -72,3 +72,9 @@ The decoherence converges as h → 0 on the tested family:
 
 This convergence is a property of the LATTICE, not the action, on the
 frozen 3D `1/L^2` branch.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [valley_linear_action_note](VALLEY_LINEAR_ACTION_NOTE.md)

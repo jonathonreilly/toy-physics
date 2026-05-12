@@ -208,3 +208,11 @@ above and would close the missing bridge theorem the audit names. It is
 not attempted in this scout note; this note remains a bounded scout that
 catalogs the available external static-energy/force-scale literature
 without promoting the Lane 1 `sqrt(sigma)` row.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30](HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
+- [hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30](HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md)
+- [hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27](HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)

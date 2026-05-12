@@ -482,3 +482,4 @@ This subsection is informational reuse-discipline only; it does not
 promote the audit verdict, does not alter the recorded
 `load_bearing_step_class: B`, and does not amend the audit JSON
 ledger.
+- [su3_cube_index_graph_shortcut_open_gate_note_2026-05-03](SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md)

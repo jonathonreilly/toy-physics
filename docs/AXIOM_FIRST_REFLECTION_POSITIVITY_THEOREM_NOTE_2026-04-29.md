@@ -576,3 +576,4 @@ mutually consistent on `A_min`.
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - `STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md` (downstream consumer; backticked to avoid length-2 cycle — citation graph direction is *downstream → upstream*, see §"Step 3a — det(M) ≥ 0: closed-form bridge for the symmetric-canonical surface")
+- [staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05](STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md)

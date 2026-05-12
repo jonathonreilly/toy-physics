@@ -165,3 +165,9 @@ negative either. After Lane α++, it should be read as:
 > with growing oscillation amplitude. So the current read is narrower than
 > the original '2/3 partial positive': Fam1/Fam3 remain internally consistent,
 > but Fam2 does not share that behavior at the tested refinements."
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [kubo_fam2_refinement_note](KUBO_FAM2_REFINEMENT_NOTE.md)
