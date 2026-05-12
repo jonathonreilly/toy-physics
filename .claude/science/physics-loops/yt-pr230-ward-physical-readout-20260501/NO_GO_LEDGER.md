@@ -4046,3 +4046,16 @@ Reopen as closure only after completed-mode chunk checkpoints pass and later
 combiner/complete-monotonicity/contact/threshold/model-class/pole/FV/IR plus
 canonical `O_H`/source-overlap or physical W/Z response bridge gates pass.  Do
 not reopen because workers are active.
+
+## 2026-05-12 - Full FH/LSZ Target-Timeseries Packet Is Not Closure
+
+No-go on the current surface: the L12 FH/LSZ target-timeseries packet is now
+complete at `63/63` chunks with an empty replacement queue and target ESS
+passing, but it is still same-source production-processing support.  It does
+not derive `kappa_s`, identify the scalar source with canonical `O_H`, provide
+`C_sH/C_HH` pole rows, provide W/Z response rows, supply strict non-observed
+`g2`, or prove scalar-LSZ model-class/FV/IR authority.
+
+Reopen as closure only after one of those missing physical authorities is
+supplied.  Do not reopen because target-timeseries bookkeeping or target ESS
+is complete.

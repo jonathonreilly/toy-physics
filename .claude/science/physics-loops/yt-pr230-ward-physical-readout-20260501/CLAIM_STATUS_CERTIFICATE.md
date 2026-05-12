@@ -5814,6 +5814,25 @@ The package is finite `C_ss/C_sx/C_xx` row support only.  It is not canonical
 `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z
 response, and not retained or proposed-retained closure.
 
+## 2026-05-12 - FH/LSZ Target-Timeseries Full-Set Checkpoint
+
+```text
+actual_current_surface_status: bounded-support / FH-LSZ full L12 target-timeseries packet checkpoint
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The current L12 FH/LSZ target-timeseries replacement queue is empty:
+`present=63`, `ready=63`, `missing=0`, `complete_count=63`, and
+`complete_for_all_ready_chunks=true`.  The packet is seed-controlled and
+schema-complete for the target rows, but it remains production-processing
+support only.  It is not `kappa_s`, not canonical `O_H`, not `C_sH/C_HH`, not
+same-source W/Z response, not strict `g2`, not scalar-LSZ/FV/IR authority, and
+not retained or proposed-retained closure.
+
 ## 2026-05-12 - Block38 Higher-Shell Chunks001-002 Launch
 
 ```text

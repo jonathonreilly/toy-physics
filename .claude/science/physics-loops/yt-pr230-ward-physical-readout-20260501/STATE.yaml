@@ -2243,3 +2243,11 @@ checkpoint_2026_05_07_schur_x_given_source_one_pole_scout:
   aggregate_refresh: "assumption stress 93/0; campaign 341/0; full assembly 154/0; retained route 308/0; completion audit 63/0"
   current_active_chunks: "chunks037-038 active/live status remains run-control only until completed JSON and completed-mode checkpoints exist"
   next_exact_action: "Use the one-pole mass/residue only to target future higher-shell or multivolume diagnostics.  Closure still requires one-pole/threshold/FV/IR model-class authority plus canonical O_H/source-overlap, or a genuine same-source W/Z physical-response bridge with strict action/covariance/g2 authority."
+checkpoint_2026_05_12_fh_lsz_target_timeseries_full_set:
+  actual_current_surface_status: "bounded-support / FH-LSZ full L12 target-timeseries packet checkpoint; proposal_allowed=false"
+  runner_pass_fail: "combiner 9/0; autocorrelation ESS 11/0; target-observable ESS 8/0; replacement queue 9/0; full-set checkpoint 9/0"
+  target_timeseries_state: "present=63 ready=63 missing=0 complete_count=63 complete_for_all_ready_chunks=true replacement_queue=[]"
+  schema_boundary: "all chunks preserve numba_gauge_seed_v1 seed control, distinct seeds, source-response target time series, and scalar C_ss_timeseries rows for the four target modes; chunks001-004 and 011-012 predate selected-mass/normal-cache optimization and are recorded as valid mixed metadata"
+  closure_boundary: "not kappa_s, not canonical O_H, not C_sH/C_HH pole rows, not W/Z response, not strict g2, not scalar-LSZ model-class/FV/IR authority, not retained or proposed-retained closure"
+  current_active_chunks: "higher-shell Schur/scalar-LSZ chunks001-002 active under separate roots; live workers are run-control only"
+  next_exact_action: "Monitor higher-shell chunks001-002.  When completed row JSON exists, run completed-mode higher-shell chunk checkpoints before any Schur/scalar-LSZ authority gate consumes those rows."

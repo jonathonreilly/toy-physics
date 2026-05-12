@@ -18921,7 +18921,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T02:32:32.076035+00:00",
+  "generated_at": "2026-05-12T02:43:39.326012+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42667,6 +42667,16 @@
       "runner_path": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py",
       "title": "PR230 Exact Tensor Schur Row Feasibility Attempt"
     },
+    "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12": {
+      "claim_id": "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / full L12 FH/LSZ target-timeseries packet packaged;",
+      "deps": [],
+      "note_hash": "928d942a341630a178925572f71e0404b0f35c0a1805125578496db26d9adfe4",
+      "path": "docs/YT_PR230_FH_LSZ_TARGET_TIMESERIES_FULL_SET_CHECKPOINT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py",
+      "title": "PR230 FH/LSZ Target-Timeseries Full-Set Checkpoint"
+    },
     "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07": {
       "claim_id": "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
       "current_status": "support",
@@ -46893,6 +46903,7 @@
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
     "yt_pr230_det_positivity_bridge_intake_gate_note_2026-05-05",
     "yt_pr230_exact_tensor_schur_row_feasibility_attempt_note_2026-05-05",
+    "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12",
     "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
     "yt_pr230_fms_composite_oh_conditional_theorem_note_2026-05-06",
     "yt_pr230_fms_literature_source_overlap_intake_note_2026-05-07",
@@ -47155,12 +47166,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4730,
-    "leaf_count": 1125,
-    "node_count": 2136,
-    "root_count": 1638,
-    "runners_with_path": 1611,
+    "leaf_count": 1126,
+    "node_count": 2137,
+    "root_count": 1639,
+    "runners_with_path": 1612,
     "status_counts": {
-      "bounded": 596,
+      "bounded": 597,
       "open": 114,
       "proposed_promoted": 1,
       "proposed_retained": 373,

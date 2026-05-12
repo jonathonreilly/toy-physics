@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T02:32:35.046327+00:00",
+  "generated_at": "2026-05-12T02:43:42.251280+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16800,6 +16800,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_exact_tensor_schur_row_feasibility_attempt.py"
+    },
+    "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py"
     },
     "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07": {
       "assert_count": 1,
@@ -34113,6 +34125,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_fh_lsz_target_timeseries_harness_certificate.py": {
       "assert_count": 1,
       "claims": [
@@ -42605,15 +42632,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 109,
+    "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 9,
-      "B": 246,
+      "B": 247,
       "C": 539,
       "D": 334,
       "none": 404
     },
-    "runners_classified": 1532,
+    "runners_classified": 1533,
     "runners_with_C": 842,
     "runners_with_D": 617
   }

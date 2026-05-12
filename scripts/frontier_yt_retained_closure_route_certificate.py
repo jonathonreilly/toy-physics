@@ -359,6 +359,7 @@ def main() -> int:
         "fh_lsz_response_window_acceptance_gate": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
         "fh_lsz_legacy_v2_backfill_feasibility": "outputs/yt_fh_lsz_legacy_v2_backfill_feasibility_2026-05-04.json",
         "fh_lsz_target_timeseries_replacement_queue": "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json",
+        "fh_lsz_target_timeseries_full_set_checkpoint": "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json",
         "fh_lsz_target_timeseries_harness": "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json",
         "fh_lsz_multitau_target_timeseries_harness": "outputs/yt_fh_lsz_multitau_target_timeseries_harness_certificate_2026-05-03.json",
         "fh_lsz_selected_mass_normal_cache_speedup": "outputs/yt_fh_lsz_selected_mass_normal_cache_speedup_certificate_2026-05-03.json",
@@ -3829,6 +3830,19 @@ def main() -> int:
             is True
         )
     )
+    target_timeseries_full_set_checkpoint_cert = certificates[
+        "fh_lsz_target_timeseries_full_set_checkpoint"
+    ]
+    target_timeseries_full_set_checkpoint_not_closure = (
+        "FH-LSZ full L12 target-timeseries packet checkpoint"
+        in target_timeseries_full_set_checkpoint_cert.get("actual_current_surface_status", "")
+        and target_timeseries_full_set_checkpoint_cert.get("proposal_allowed") is False
+        and target_timeseries_full_set_checkpoint_cert.get("schema_summary", {}).get(
+            "checked_chunks"
+        )
+        == 63
+        and target_timeseries_full_set_checkpoint_cert.get("replacement_queue") == []
+    )
     target_timeseries_harness_support_not_evidence = (
         "target time-series harness extension"
         in certificates["fh_lsz_target_timeseries_harness"].get("actual_current_surface_status", "")
@@ -5919,6 +5933,11 @@ def main() -> int:
         "fh-lsz-target-timeseries-replacement-queue-not-closure",
         target_timeseries_replacement_queue_not_closure,
         certificates["fh_lsz_target_timeseries_replacement_queue"].get("actual_current_surface_status", ""),
+    )
+    report(
+        "fh-lsz-target-timeseries-full-set-checkpoint-not-closure",
+        target_timeseries_full_set_checkpoint_not_closure,
+        certificates["fh_lsz_target_timeseries_full_set_checkpoint"].get("actual_current_surface_status", ""),
     )
     report(
         "fh-lsz-target-timeseries-harness-support-not-evidence",

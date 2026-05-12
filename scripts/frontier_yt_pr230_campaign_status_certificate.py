@@ -959,6 +959,9 @@ def main() -> int:
         "fh_lsz_target_timeseries_replacement_queue": load(
             "outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json"
         ),
+        "fh_lsz_target_timeseries_full_set_checkpoint": load(
+            "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json"
+        ),
         "fh_lsz_target_timeseries_harness": load(
             "outputs/yt_fh_lsz_target_timeseries_harness_certificate_2026-05-02.json"
         ),
@@ -5041,6 +5044,12 @@ def main() -> int:
         "FH-LSZ target-timeseries replacement queue"
         in str(statuses["fh_lsz_target_timeseries_replacement_queue"]),
         statuses["fh_lsz_target_timeseries_replacement_queue"],
+    )
+    report(
+        "fh-lsz-target-timeseries-full-set-checkpoint-not-closure",
+        "FH-LSZ full L12 target-timeseries packet checkpoint"
+        in str(statuses["fh_lsz_target_timeseries_full_set_checkpoint"]),
+        statuses["fh_lsz_target_timeseries_full_set_checkpoint"],
     )
     report(
         "fh-lsz-target-timeseries-harness-support-not-evidence",

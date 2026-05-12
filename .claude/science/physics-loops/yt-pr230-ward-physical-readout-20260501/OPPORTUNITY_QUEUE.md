@@ -2053,3 +2053,11 @@ The ranking is now:
 Do not treat `launch_allowed_now=true` as evidence.  It only means a separate
 higher-shell production wave can be started without colliding with the
 completed four-mode packet.
+
+2026-05-12 update: the separate FH/LSZ target-timeseries replacement queue is
+now fully packaged for the L12 ready set: `present=63`, `ready=63`,
+`complete_count=63`, and `replacement_queue=[]`.  This removes the old
+target-timeseries bookkeeping blocker but does not move the closure ranking.
+Target ESS and complete target rows are still production-processing support,
+not source-to-canonical-Higgs normalization, scalar-LSZ/FV/IR authority, W/Z
+response, or retained/proposed-retained closure.

@@ -5311,3 +5311,44 @@ top-Yukawa closure.
 Next exact action: monitor chunks001-002.  When completed row JSON exists,
 run completed-mode higher-shell chunk checkpoints before combining rows or
 using them in any Schur/scalar-LSZ authority gate.
+
+## 2026-05-12 - Block39 FH/LSZ Target-Timeseries Full-Set Checkpoint
+
+The older FH/LSZ target-timeseries replacement campaign is now packaged as
+complete for the current L12 ready set.  This is separate from the live
+higher-shell row wave above.
+
+```text
+python3 scripts/frontier_yt_fh_lsz_chunk_combiner_gate.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_autocorrelation_ess_gate.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_observable_ess_certificate.py
+# SUMMARY: PASS=8 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_replacement_queue.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py
+# SUMMARY: PASS=9 FAIL=0
+```
+
+The refreshed state is `present=63`, `ready=63`, `missing=0`,
+`complete_count=63`, `complete_for_all_ready_chunks=true`, and
+`replacement_queue=[]`.  The full-set checkpoint verifies `numba_gauge_seed_v1`
+seed control, 63 distinct seeds, production target schema, source-response
+target time series, and scalar `C_ss_timeseries` rows for the four target
+modes.  Chunks001-004 and 011-012 validly predate the selected-mass/normal-cache
+optimization, so the certificate records mixed optimization metadata rather
+than requiring every historical chunk to carry the later optimization flags.
+
+This is bounded production-processing support only.  It does not derive
+`kappa_s`, canonical `O_H`, `C_sH/C_HH` pole rows, W/Z response rows, strict
+`g2`, scalar-LSZ model-class/FV/IR authority, retained, or
+`proposed_retained` closure.
+
+Next exact action: keep monitoring higher-shell chunks001-002.  When completed
+row JSON exists, run completed-mode higher-shell checkpoints before any
+Schur/scalar-LSZ authority gate consumes those rows.

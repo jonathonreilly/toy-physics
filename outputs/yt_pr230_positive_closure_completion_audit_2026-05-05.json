@@ -358,6 +358,7 @@
               "Burnside/double-commutant route has no same-surface off-diagonal neutral generator",
               "direct off-diagonal generator derivation attempt finds only absent or block-diagonal current rows",
               "source-only logdet Hessian leaves the second neutral source h/O_H underdetermined",
+              "formal HS/logdet auxiliary scalar rewrites do not fix canonical O_H normalization or source-Higgs overlap",
               "Z3 entropy/gap/reversibility selectors either import an external principle or select a different transfer"
             ],
             "parents": [
@@ -367,6 +368,7 @@
               "outputs/yt_neutral_scalar_burnside_irreducibility_attempt_2026-05-05.json",
               "outputs/yt_neutral_offdiagonal_generator_derivation_attempt_2026-05-05.json",
               "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
+              "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
               "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
               "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json"
             ],

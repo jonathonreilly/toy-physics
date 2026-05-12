@@ -6853,3 +6853,29 @@ Disposition: active jobs are not evidence.  No higher-shell row output is
 usable until completed-mode checkpointing passes, and no scalar-LSZ/Schur,
 canonical `O_H`, W/Z response, retained, or proposed-retained closure is
 authorized.
+
+## 2026-05-12 - Block39 FH/LSZ Target-Timeseries Full-Set Checkpoint
+
+Review stance: bounded production-processing support only.
+
+- Added
+  `scripts/frontier_yt_fh_lsz_target_timeseries_full_set_checkpoint.py`.
+- Added
+  `docs/YT_PR230_FH_LSZ_TARGET_TIMESERIES_FULL_SET_CHECKPOINT_NOTE_2026-05-12.md`.
+- Added
+  `outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json`.
+- Refreshed
+  `outputs/yt_fh_lsz_target_timeseries_replacement_queue_2026-05-02.json`
+  from the current 63/63 ready set.
+- Wired the full-set checkpoint into the retained-route, campaign-status, and
+  full-positive-assembly gates.
+- Validation: combiner `PASS=9 FAIL=0`, autocorrelation/ESS `PASS=11 FAIL=0`,
+  target-observable ESS `PASS=8 FAIL=0`, replacement queue `PASS=9 FAIL=0`,
+  full-set checkpoint `PASS=9 FAIL=0`.
+
+Disposition: target-timeseries queue complete, not closure.  The packet
+preserves seed control and target schemas across chunks001-063, but still does
+not supply `kappa_s`, canonical `O_H`, `C_sH/C_HH` pole rows, W/Z response
+rows, strict `g2`, scalar-LSZ/FV/IR authority, retained, or
+proposed-retained closure.  Higher-shell chunks001-002 remain live run-control
+state only.

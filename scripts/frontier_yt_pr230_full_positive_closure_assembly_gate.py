@@ -30,6 +30,7 @@ PARENTS = {
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
     "fh_lsz_target_ess": "outputs/yt_fh_lsz_target_observable_ess_certificate_2026-05-03.json",
     "fh_lsz_autocorrelation_ess": "outputs/yt_fh_lsz_autocorrelation_ess_gate_2026-05-02.json",
+    "fh_lsz_target_timeseries_full_set": "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json",
     "fh_lsz_polefit8x8_combiner": "outputs/yt_fh_lsz_polefit8x8_chunk_combiner_gate_2026-05-04.json",
     "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
     "fh_lsz_model_class": "outputs/yt_fh_lsz_pole_fit_model_class_gate_2026-05-02.json",
@@ -474,6 +475,14 @@ def main() -> int:
     ess_support = (
         certs["fh_lsz_target_ess"].get("target_observable_ess_gate_passed") is True
         or "ESS" in statuses["fh_lsz_target_ess"]
+    )
+    full_target_timeseries_support = (
+        certs["fh_lsz_target_timeseries_full_set"].get("proposal_allowed") is False
+        and certs["fh_lsz_target_timeseries_full_set"].get("schema_summary", {}).get(
+            "checked_chunks"
+        )
+        == 63
+        and certs["fh_lsz_target_timeseries_full_set"].get("replacement_queue") == []
     )
     polefit_support_only = (
         certs["fh_lsz_polefit8x8_combiner"].get("proposal_allowed") is False
@@ -2436,6 +2445,11 @@ def main() -> int:
     report("response-side-support-present", response_side_support, statuses["fh_lsz_common_window_response"])
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
+    report(
+        "target-timeseries-full-set-support-not-closure",
+        full_target_timeseries_support,
+        statuses["fh_lsz_target_timeseries_full_set"],
+    )
     report("polefit8x8-support-only", polefit_support_only, statuses["fh_lsz_polefit8x8_postprocessor"])
     report(
         "genuine-source-pole-artifact-support-only",
