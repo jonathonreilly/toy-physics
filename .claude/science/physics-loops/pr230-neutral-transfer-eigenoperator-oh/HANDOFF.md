@@ -1,11 +1,67 @@
 # Handoff
 
-Checkpoint: 2026-05-12 15:50 EDT
+Checkpoint: 2026-05-12 16:03 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block49 Result
+
+Created `YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS015_016_LAUNCH_CHECKPOINT`.
+
+This block launches the next non-colliding higher-shell support wave after
+chunks013-014 were packaged.  The launcher starts chunks015-016 and verifies
+both workers are alive after the verification interval.  The campaign status
+runner was extended to recognize the restricted 15/16 launch-state as
+run-control support and passes after consuming the launcher certificate.
+
+Result:
+
+- chunk015 launched with pid `93772` and seed `2026057015`;
+- chunk016 launched with pid `93773` and seed `2026057016`;
+- wave launcher passes `PASS=11 FAIL=0`;
+- campaign status passes `PASS=413 FAIL=0`;
+- assumption stress passes `PASS=105 FAIL=0`;
+- full positive closure assembly passes `PASS=194 FAIL=0`;
+- retained route certificate passes `PASS=319 FAIL=0`;
+- positive-closure completion audit passes `PASS=73 FAIL=0`;
+- no retained or `proposed_retained` wording is authorized.
+
+Boundary: chunks015-016 are run-control only until completed-mode checkpoints
+pass.  Active processes, logs, pid files, partial directories, and launch-state
+certificates are not completed row evidence.  This block does not supply
+canonical `O_H`, strict `C_sH/C_HH` pole rows, Schur A/B/C kernel rows,
+scalar-LSZ/FV/IR authority, W/Z response, physical `kappa_s`, or top-Yukawa
+closure.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py
+# OK
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2 --chunk-indices 15-16 --launch --verify-seconds 5
+# SUMMARY: PASS=11 FAIL=0; launched chunks015-016 pids 93772,93773
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=413 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=105 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=194 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=73 FAIL=0
+```
+
+Next exact action: wait for chunks015-016 to finish, then run completed-mode
+chunk checkpoints and package row JSON plus volume artifacts.  For physics
+closure, supply one primitive-bearing artifact: accepted same-surface
+`O_H`/action plus physical Euclidean `C_ss/C_sH/C_HH(tau)` rows with
+Gram/FV/IR authority, or a strict W/Z physical-response packet with accepted
+action, production rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response rows.
 
 ## Block48 Result
 
