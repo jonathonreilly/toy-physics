@@ -401,3 +401,26 @@ using fixed seeds from base `2026057000`, no `--resume`, and the existing
 checkpoint/aggregate firewalls.  Treat completed chunks as support only until
 complete monotonicity, pole/threshold/FV/IR, and canonical `O_H` or physical
 response bridge gates pass.
+
+## 2026-05-12 Block38 Higher-Shell Chunks001-002 Active Wave
+
+Current artifact:
+`outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`.
+
+Chunks001-002 are active under the separate higher-shell roots with a
+two-worker cap and fixed seeds from base `2026057000`.  This is not row
+evidence.  The active wave only creates the next possible support artifact:
+completed higher-shell row JSON that must pass completed-mode chunk
+checkpointing before any combiner, Schur, scalar-LSZ, or route-assembly gate
+may consume it.
+
+Next artifact: rerun
+`scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py` in
+completed mode for chunks001-002 once their row JSON exists.  The pending
+certificates currently record run-control only:
+`outputs/yt_pr230_schur_higher_shell_chunk001_pending_checkpoint_2026-05-12.json`
+and
+`outputs/yt_pr230_schur_higher_shell_chunk002_pending_checkpoint_2026-05-12.json`.
+The completed checkpoint must verify production metadata, seed control,
+selected-mass-only FH/LSZ, the 11-mode higher-shell scalar/source-Higgs time
+series, no `--resume`, and the claim firewall.

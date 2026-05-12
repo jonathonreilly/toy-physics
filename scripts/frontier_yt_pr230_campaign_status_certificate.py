@@ -839,6 +839,9 @@ def main() -> int:
         "pr230_schur_higher_shell_production_contract": load(
             "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
         ),
+        "pr230_schur_higher_shell_wave_launcher": load(
+            "outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -4504,6 +4507,20 @@ def main() -> int:
         is True,
         statuses["pr230_schur_higher_shell_production_contract"],
     )
+    schur_higher_shell_wave_launcher = certificates[
+        "pr230_schur_higher_shell_wave_launcher"
+    ]
+    report(
+        "pr230-schur-higher-shell-wave-launcher-run-control-only",
+        "higher-shell Schur scalar-LSZ wave launcher status"
+        in str(statuses["pr230_schur_higher_shell_wave_launcher"])
+        and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
+        and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
+        and schur_higher_shell_wave_launcher.get("launch_mode") is False
+        and schur_higher_shell_wave_launcher.get("active_chunk_indices") == [1, 2]
+        and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
+        statuses["pr230_schur_higher_shell_wave_launcher"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -6245,6 +6262,14 @@ def main() -> int:
         )
         is True
     )
+    result["schur_higher_shell_wave_launcher_run_control_only"] = (
+        "higher-shell Schur scalar-LSZ wave launcher status"
+        in str(statuses["pr230_schur_higher_shell_wave_launcher"])
+        and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
+        and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
+        and schur_higher_shell_wave_launcher.get("active_chunk_indices") == [1, 2]
+        and schur_higher_shell_wave_launcher.get("max_concurrent") == 2
+    )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")
         is True
@@ -7201,6 +7226,7 @@ def main() -> int:
         "does not treat the post-block28 W/Z pivot admission checkpoint as accepted-action response evidence",
         "does not treat the block30 assumptions/first-principles/literature/math/repo-bridge review as PR230 top-Yukawa closure",
         "does not treat the block35 post-block34 physical-bridge admission checkpoint as a new source-Higgs, W/Z, or neutral H3/H4 production artifact",
+        "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, or launch status as row evidence",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

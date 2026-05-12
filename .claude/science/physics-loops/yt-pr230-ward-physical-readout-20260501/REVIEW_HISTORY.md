@@ -6833,3 +6833,23 @@ completed.
 - Disposition: bounded infrastructure support only.  `launch_allowed_now=true`
   is not row evidence and does not authorize retained or `proposed_retained`
   closure.
+
+## 2026-05-12 - Block38 Higher-Shell Chunks001-002 Launch
+
+Review stance: run-control support only.
+
+- Added `scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py`.
+- Added `scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py`.
+- Added
+  `docs/YT_PR230_SCHUR_HIGHER_SHELL_WAVE_LAUNCHER_NOTE_2026-05-12.md`.
+- Added `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`.
+- Added active-pending checkpoint certificates for chunks001-002.
+- Launched higher-shell chunks001-002 under separate non-colliding roots with
+  seeds `2026057001` and `2026057002` and a two-worker cap.
+- Validation: wave launcher `PASS=11 FAIL=0`; pending chunk checkpoints
+  `PASS=2 FAIL=0` each; campaign status `PASS=369 FAIL=0`.
+
+Disposition: active jobs are not evidence.  No higher-shell row output is
+usable until completed-mode checkpointing passes, and no scalar-LSZ/Schur,
+canonical `O_H`, W/Z response, retained, or proposed-retained closure is
+authorized.

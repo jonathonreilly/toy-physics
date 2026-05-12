@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block37-higher-shell-schur-lsz-launch-preflight
-blocks_completed: 37
+current_phase: campaign-block38-higher-shell-schur-lsz-wave-launch
+blocks_completed: 38
 active_route: "strict scalar-LSZ / Schur higher-shell route"
-active_hard_residual: "After the complete four-mode 63/63 C_ss/C_sx/C_xx packet and Block36 lane-1 O_H no-go, the higher-shell Schur/scalar-LSZ contract is refreshed: launch preflight is clear for a separate non-colliding higher-shell campaign, but no jobs are launched and no higher-shell rows exist.  This is infrastructure support only.  Current PR230 still lacks accepted canonical O_H/source-Higgs pole rows, strict W/Z physical response with g2/covariance authority, Schur pole/threshold/FV authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
+active_hard_residual: "After the complete four-mode 63/63 C_ss/C_sx/C_xx packet and Block36 lane-1 O_H no-go, the separate higher-shell Schur/scalar-LSZ campaign has started with chunks001-002 active under non-colliding roots and a two-worker cap.  This is run-control support only: active jobs, logs, pid files, partial directories, and uncheckpointed row outputs are not physics evidence.  Current PR230 still lacks accepted canonical O_H/source-Higgs pole rows, strict W/Z physical response with g2/covariance authority, Schur pole/threshold/FV authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
 checkpoint_2026_05_12_block34_complete_additive_top_jacobian_refresh:
   actual_current_surface_status: "bounded-support / complete 63-row additive-top coarse Jacobian packet; W/Z subtraction closure remains open"
   proposal_allowed: false
@@ -59,6 +59,18 @@ checkpoint_2026_05_12_block37_higher_shell_schur_lsz_launch_preflight:
   mode_levels_L12: "[0, 0.267949192431123, 0.535898384862245, 0.803847577293368, 1.0]"
   strict_boundary: "Launch-preflight support is not higher-shell row evidence, not complete monotonicity, not threshold/FV/IR authority, not a scalar pole, not canonical O_H/source-overlap authority, not W/Z response authority, and not y_t closure."
   exact_next_action: "If compute is allocated, launch a separate higher-shell production wave under the non-colliding roots with fixed seeds and no --resume; then checkpoint completed chunks before any scalar-LSZ/Schur authority claim."
+checkpoint_2026_05_12_block38_higher_shell_schur_lsz_wave_launch:
+  actual_current_surface_status: "run-control / higher-shell Schur scalar-LSZ chunks001-002 active; not physics evidence and no closure"
+  proposal_allowed: false
+  bare_retained_allowed: false
+  runner_pass_fail: "higher-shell Schur/scalar-LSZ wave launcher 11/0; pending chunk checkpoints 2/0 each; campaign status 369/0"
+  active_chunk_indices: "[1, 2]"
+  max_concurrent: 2
+  seeds: "[2026057001, 2026057002]"
+  launch_roots: "outputs/yt_pr230_schur_higher_shell_rows/ and outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/"
+  strict_boundary: "Active higher-shell workers, logs, pid files, empty directories, partial directories, launch status, and uncheckpointed row outputs are run-control state only; they are not complete monotonicity, scalar pole, FV/IR, canonical O_H/source-overlap, W/Z response, kappa_s, retained, or proposed_retained authority."
+  pending_checkpoints: "outputs/yt_pr230_schur_higher_shell_chunk001_pending_checkpoint_2026-05-12.json and outputs/yt_pr230_schur_higher_shell_chunk002_pending_checkpoint_2026-05-12.json"
+  exact_next_action: "Monitor chunks001-002; once completed row JSON exists, rerun the higher-shell chunk checkpoint without --allow-pending-active before combining rows or making any scalar-LSZ/Schur authority claim."
 files_touched:
   - "scripts/yt_direct_lattice_correlator_production.py"
   - "scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py"

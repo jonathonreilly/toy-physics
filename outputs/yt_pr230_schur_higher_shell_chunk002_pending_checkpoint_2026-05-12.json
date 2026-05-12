@@ -1,0 +1,29 @@
+{
+  "active_process_rows": [
+    {
+      "chunk_index": 2,
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1;1,1,0;1,0,1;0,1,1;1,1,1;2,0,0;0,2,0;0,0,2 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1;1,1,0;1,0,1;0,1,1;1,1,1;2,0,0;0,2,0;0,0,2 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk002 --seed 2026057002 --output outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk002_2026-05-07.json",
+      "pid": 43522
+    }
+  ],
+  "actual_current_surface_status": "run-control / higher-shell Schur scalar-LSZ chunk002 active-pending checkpoint; no completed row JSON present",
+  "bare_retained_allowed": false,
+  "checkpoint_passed": true,
+  "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk002/L12xT24/ensemble_measurement.json",
+  "chunk_index": 2,
+  "chunk_output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk002_2026-05-07.json",
+  "completed": false,
+  "exact_next_action": "Wait for completed chunk JSON, then rerun without --allow-pending-active to validate production row schema and seed control.",
+  "fail_count": 0,
+  "pass_count": 2,
+  "pending_active": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A pending active higher-shell chunk is run-control state only.  It is not row evidence, complete monotonicity, scalar-pole authority, canonical O_H authority, or y_t closure.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat active processes, logs, pid files, or partial directories as row evidence",
+    "does not treat C_sx/C_xx as canonical-Higgs C_sH/C_HH",
+    "does not claim complete monotonicity, scalar pole authority, FV/IR authority, canonical O_H, source-overlap, or W/Z response",
+    "does not set kappa_s = 1, c2 = 1, or Z_match = 1"
+  ]
+}

@@ -1096,3 +1096,19 @@ Additional forbidden load-bearing assumptions:
 - future higher-shell roots = existing Schur `A/B/C` pole rows
 - launch preflight = canonical `O_H`, source-overlap, W/Z response, retained,
   or proposed-retained closure
+
+2026-05-12 higher-shell Schur/scalar-LSZ chunks001-002 active wave:
+
+The launched higher-shell chunks are run-control state only.  Active process
+rows, logs, pid files, empty directories, partial directories, and
+uncheckpointed higher-shell row outputs are not load-bearing proof inputs.
+
+Additional forbidden load-bearing assumptions:
+
+- active higher-shell chunks001-002 = row evidence
+- chunk pid/log existence = completed measurement
+- partial higher-shell output directories = scalar-LSZ authority
+- uncheckpointed higher-shell JSON = complete monotonicity or pole authority
+- two active chunks = complete higher-shell packet
+- higher-shell run-control = canonical `O_H`, source-overlap, W/Z response,
+  retained, or proposed-retained closure

@@ -5814,6 +5814,32 @@ The package is finite `C_ss/C_sx/C_xx` row support only.  It is not canonical
 `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z
 response, and not retained or proposed-retained closure.
 
+## 2026-05-12 - Block38 Higher-Shell Chunks001-002 Launch
+
+```text
+actual_current_surface_status: run-control / higher-shell Schur scalar-LSZ chunks001-002 active; not physics evidence and no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 1 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk001_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 2 --allow-pending-active --output outputs/yt_pr230_schur_higher_shell_chunk002_pending_checkpoint_2026-05-12.json
+# SUMMARY: PASS=2 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=369 FAIL=0
+```
+
+The launch is run-control support only.  Active workers, logs, pid files,
+empty directories, partial directories, launch status, and uncheckpointed row
+outputs are not row evidence, not complete monotonicity, not scalar-pole or
+threshold/FV/IR authority, not canonical `O_H`, not source-overlap, not W/Z
+response, and not retained or proposed-retained closure.
+
 ## 2026-05-12 - Higher-Shell Schur/Scalar-LSZ Launch Preflight
 
 ```text

@@ -4032,3 +4032,17 @@ produces completed-mode row artifacts and passes complete monotonicity,
 contact/threshold/model-class, pole, FV/IR, and canonical `O_H`/source-overlap
 or physical W/Z response bridge gates.  Do not reopen because a launch
 preflight is clear.
+
+## 2026-05-12 - Active Higher-Shell Chunks Are Not Scalar-LSZ Authority
+
+No-go on the current surface: active chunks001-002 in the higher-shell
+Schur/scalar-LSZ wave are run-control state only.  The launch uses separate
+non-colliding roots, fixed seeds, no `--resume`, and a two-worker cap, but
+active pids, logs, pid files, empty directories, partial directories, and
+uncheckpointed row outputs do not supply higher-shell row evidence or physics
+closure.
+
+Reopen as closure only after completed-mode chunk checkpoints pass and later
+combiner/complete-monotonicity/contact/threshold/model-class/pole/FV/IR plus
+canonical `O_H`/source-overlap or physical W/Z response bridge gates pass.  Do
+not reopen because workers are active.
