@@ -31,6 +31,7 @@ PARENTS = {
     "block56_scalar_pole_fvir_root_cut": "outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json",
     "block57_compact_source_functional_foundation": "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json",
     "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "block59_source_spectral_pole_promotion_obstruction": "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -629,6 +630,42 @@ def main() -> int:
         is False
         and certs["block58_compact_source_spectral_support"].get(
             "scalar_pole_fvir_root_closed"
+        )
+        is False
+    )
+    block59_source_spectral_pole_promotion_blocks = (
+        "finite-volume source spectral positivity does not promote"
+        in statuses["block59_source_spectral_pole_promotion_obstruction"]
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "bare_retained_allowed"
+        )
+        is False
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "block59_source_spectral_pole_promotion_obstruction_passed"
+        )
+        is True
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "finite_volume_source_spectral_support_loaded"
+        )
+        is True
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "thermodynamic_pole_authority_present"
+        )
+        is False
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "uniform_threshold_gap_authority_present"
+        )
+        is False
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "residue_lower_bound_certified"
+        )
+        is False
+        and certs["block59_source_spectral_pole_promotion_obstruction"].get(
+            "canonical_oh_authority_present"
         )
         is False
     )
@@ -2713,6 +2750,11 @@ def main() -> int:
         block58_compact_spectral_support_not_closure,
         statuses["block58_compact_source_spectral_support"],
     )
+    report(
+        "block59-source-spectral-pole-promotion-blocks",
+        block59_source_spectral_pole_promotion_blocks,
+        statuses["block59_source_spectral_pole_promotion_obstruction"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4211,6 +4253,7 @@ def main() -> int:
         "block56_scalar_fvir_cut_not_closure": block56_scalar_fvir_cut_not_closure,
         "block57_compact_foundation_support_not_closure": block57_compact_foundation_support_not_closure,
         "block58_compact_spectral_support_not_closure": block58_compact_spectral_support_not_closure,
+        "block59_source_spectral_pole_promotion_blocks": block59_source_spectral_pole_promotion_blocks,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4293,6 +4336,7 @@ def main() -> int:
             "does not treat the Block56 scalar/FVIR root cut as scalar-pole authority or positive closure",
             "does not treat the Block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
             "does not treat the Block58 finite-volume source-channel spectral sum as thermodynamic pole saturation, LSZ residue authority, or canonical O_H",
+            "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after Block59",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "
@@ -4312,10 +4356,10 @@ def main() -> int:
             "compact finite-volume source functional, yielding scalar denominator "
             "closure, "
             "or a neutral-sector irreducibility theorem.  After Block58, the "
-            "most direct non-chunk target is a uniform thermodynamic/FVIR "
-            "source-spectral theorem that promotes the finite-volume positive "
-            "spectral sum to an isolated scalar pole/residue interval without "
-            "assuming canonical O_H.  Rerun this assembly "
+            "most direct non-chunk target is now stricter: a new microscopic "
+            "scalar denominator/contact theorem or strict physical rows that "
+            "supply uniform thermodynamic/FVIR pole, threshold, residue, and "
+            "canonical-O_H/response authority.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
             "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "
             "gate, plus the cycle-18 reopen-freshness gate, before any "

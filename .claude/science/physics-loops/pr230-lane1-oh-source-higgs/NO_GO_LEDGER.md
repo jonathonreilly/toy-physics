@@ -123,6 +123,11 @@
   object only.  It does not imply thermodynamic pole saturation, a stable
   scalar pole atom, LSZ residue authority, FV/IR/toron limiting control,
   contact/continuum subtraction authority, or canonical `O_H`.
+- Block59 source-spectral pole-promotion obstruction blocks the direct
+  promotion: finite-volume positive source spectral sums are compatible with
+  atomless soft-continuum thermodynamic limits.  Pole-like finite-window
+  behavior and positive finite-volume weights do not certify an isolated pole
+  atom or positive residue lower bound.
 
 ## Scope Boundary
 
@@ -141,3 +146,6 @@ transfer/spectral authority, pole/residue and FV/IR control, and canonical
 After Block58, finite-volume spectral positivity is available as support, so
 the next admissible scalar route must address the uniform thermodynamic/FVIR
 and pole-residue step directly rather than restating reflection positivity.
+After Block59, that direct promotion is blocked too.  The next admissible
+scalar route must add new microscopic scalar denominator/contact/threshold
+authority or strict physical rows; finite-volume positivity alone is exhausted.

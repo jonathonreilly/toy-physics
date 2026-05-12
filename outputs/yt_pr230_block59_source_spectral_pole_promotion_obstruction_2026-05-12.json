@@ -1,0 +1,159 @@
+{
+  "actual_current_surface_status": "no-go / exact negative boundary for the current PR230 surface: Block59 finite-volume source spectral positivity does not promote to thermodynamic scalar pole authority",
+  "admitted_observation_status": null,
+  "atomless_soft_continuum_counterfamily": {
+    "finite_volume_lowest_gap_decreases": true,
+    "finite_volume_max_level_residue_decreases": true,
+    "finite_volume_rows": [
+      {
+        "L": 12,
+        "lowest_level_gap_from_edge": 8.333333333333333e-05,
+        "max_individual_level_residue": 0.03333333333333333,
+        "n_levels_in_soft_band": 12,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      },
+      {
+        "L": 16,
+        "lowest_level_gap_from_edge": 6.25e-05,
+        "max_individual_level_residue": 0.025,
+        "n_levels_in_soft_band": 16,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      },
+      {
+        "L": 24,
+        "lowest_level_gap_from_edge": 4.1666666666666665e-05,
+        "max_individual_level_residue": 0.016666666666666666,
+        "n_levels_in_soft_band": 24,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      },
+      {
+        "L": 32,
+        "lowest_level_gap_from_edge": 3.125e-05,
+        "max_individual_level_residue": 0.0125,
+        "n_levels_in_soft_band": 32,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      },
+      {
+        "L": 48,
+        "lowest_level_gap_from_edge": 2.0833333333333333e-05,
+        "max_individual_level_residue": 0.008333333333333333,
+        "n_levels_in_soft_band": 48,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      },
+      {
+        "L": 64,
+        "lowest_level_gap_from_edge": 1.5625e-05,
+        "max_individual_level_residue": 0.00625,
+        "n_levels_in_soft_band": 64,
+        "positive_finite_volume_spectral_sum": true,
+        "total_soft_band_weight": 0.4
+      }
+    ],
+    "finite_window_rows": [
+      {
+        "atomless_soft_band_correlator": 0.24245058305478404,
+        "pole_correlator": 0.2426122638850534,
+        "relative_difference": 0.0006664165598238388,
+        "t": 1
+      },
+      {
+        "atomless_soft_band_correlator": 0.14695572117112246,
+        "pole_correlator": 0.14715177646857694,
+        "relative_difference": 0.0013323338811091028,
+        "t": 2
+      },
+      {
+        "atomless_soft_band_correlator": 0.053989971964856054,
+        "pole_correlator": 0.054134113294645084,
+        "relative_difference": 0.0026626709299640123,
+        "t": 4
+      },
+      {
+        "atomless_soft_band_correlator": 0.007287299162965798,
+        "pole_correlator": 0.007326255555493672,
+        "relative_difference": 0.005317367409967378,
+        "t": 8
+      },
+      {
+        "atomless_soft_band_correlator": 0.000983604443796368,
+        "pole_correlator": 0.0009915008706665434,
+        "relative_difference": 0.00796411491284614,
+        "t": 12
+      }
+    ],
+    "max_finite_window_relative_difference": 0.00796411491284614,
+    "soft_band_density": "rho(E)=2(E-m0)/epsilon^2 on [m0,m0+epsilon]",
+    "soft_band_width": 0.001,
+    "spectral_edge_m0": 0.5,
+    "tail_ratio_decreases": true,
+    "tail_rows": [
+      {
+        "atom_residue_in_limit": 0.0,
+        "soft_band_divided_by_pole_atom_with_same_edge": 0.9357680320888796,
+        "t": 100.0
+      },
+      {
+        "atom_residue_in_limit": 0.0,
+        "soft_band_divided_by_pole_atom_with_same_edge": 0.5284822353142307,
+        "t": 1000.0
+      },
+      {
+        "atom_residue_in_limit": 0.0,
+        "soft_band_divided_by_pole_atom_with_same_edge": 0.019990012015452256,
+        "t": 10000.0
+      }
+    ],
+    "total_source_weight": 0.4
+  },
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block59_source_spectral_pole_promotion_obstruction_passed": true,
+  "canonical_oh_authority_present": false,
+  "conditional_surface_status": "conditional-support if a future uniform thermodynamic/FVIR source-spectral theorem supplies an isolated pole atom, residue interval, contact/continuum map, and canonical O_H or physical response bridge",
+  "exact_next_action": "A positive scalar route now needs a new uniform thermodynamic/FVIR source-spectral pole theorem or strict physical rows with model, FV/IR, residue, and canonical-O_H/response authority.  Otherwise the current compact-source lane is exact-boundary support only.",
+  "fail_count": 0,
+  "finite_volume_source_spectral_support_loaded": true,
+  "hypothetical_axiom_status": null,
+  "parent_certificates": {
+    "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "confinement_gap_threshold_import_audit": "outputs/yt_confinement_gap_threshold_import_audit_2026-05-02.json",
+    "finite_volume_pole_saturation_obstruction": "outputs/yt_fh_lsz_finite_volume_pole_saturation_obstruction_2026-05-02.json",
+    "scalar_spectral_saturation_no_go": "outputs/yt_scalar_spectral_saturation_no_go_2026-05-01.json",
+    "soft_continuum_threshold_no_go": "outputs/yt_fh_lsz_soft_continuum_threshold_no_go_2026-05-02.json",
+    "source_overlap_sum_rule_no_go": "outputs/yt_source_overlap_sum_rule_no_go_2026-05-02.json",
+    "threshold_authority_import_audit": "outputs/yt_fh_lsz_threshold_authority_import_audit_2026-05-02.json"
+  },
+  "parent_statuses": {
+    "block58_compact_source_spectral_support": "exact-support / Block58 finite-volume compact source-channel spectral support; thermodynamic pole/FVIR and canonical-O_H roots remain open",
+    "confinement_gap_threshold_import_audit": "exact negative boundary / confinement gap not scalar LSZ threshold",
+    "finite_volume_pole_saturation_obstruction": "exact negative boundary / FH-LSZ finite-volume pole-saturation obstruction",
+    "scalar_spectral_saturation_no_go": "exact negative boundary / scalar spectral saturation no-go",
+    "soft_continuum_threshold_no_go": "exact negative boundary / FH-LSZ soft-continuum threshold no-go",
+    "source_overlap_sum_rule_no_go": "exact negative boundary / source-overlap spectral sum-rule no-go",
+    "threshold_authority_import_audit": "exact negative boundary / FH-LSZ threshold-authority import audit"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite-volume positive source spectral support is compatible with atomless soft-continuum thermodynamic limits.  The current surface has no uniform threshold gap, pole-saturation theorem, residue lower bound, or canonical O_H authority.",
+  "remaining_scalar_authority_obligations": [
+    "uniform thermodynamic/FVIR theorem for the compact source spectral measure",
+    "isolated scalar pole atom or threshold gap with positive residue lower bound",
+    "contact/continuum subtraction map from compact source correlator to scalar LSZ",
+    "canonical O_H/source-overlap identity or strict physical-response bridge"
+  ],
+  "residue_lower_bound_certified": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat finite-volume spectral positivity as pole saturation",
+    "does not infer scalar LSZ residue authority from confinement or mass-gap language",
+    "does not identify the source spectral measure with canonical O_H",
+    "does not use H_unit, Ward, y_t_bare, observed top/Yukawa values, alpha_LM, plaquette, u0, kappa_s=1, c2=1, or Z_match=1"
+  ],
+  "thermodynamic_pole_authority_present": false,
+  "uniform_threshold_gap_authority_present": false
+}

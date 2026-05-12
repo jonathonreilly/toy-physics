@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact-support / block58 compact source-channel spectral support: complete L12 same-source FH-LSZ support and common-window response stability support are present; physical readout authorization is reduced; current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-Higgs or neutral-transfer root; current scalar/FH-LSZ/Stieltjes/contact/finite-volume/source-Higgs contract artifacts do not close scalar pole/model-class/FV/IR authority; finite compact source-functional support exists and now has finite-volume positive source-channel spectral support, but not thermodynamic pole/FVIR/residue or canonical O_H authority
-conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or a thermodynamic transfer/spectral theorem built from the exact compact source functional with pole/FVIR/contact and canonical O_H or physical-response bridge authority
+actual_current_surface_status: exact negative boundary plus exact-support / block59 source-spectral pole-promotion obstruction: complete L12 same-source FH-LSZ support and common-window response stability support are present; physical readout authorization is reduced; current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-Higgs or neutral-transfer root; current scalar/FH-LSZ/Stieltjes/contact/finite-volume/source-Higgs contract artifacts do not close scalar pole/model-class/FV/IR authority; finite compact source-functional support and finite-volume positive source-channel spectral support exist, but finite-volume positivity does not promote to thermodynamic pole/FVIR/residue or canonical O_H authority
+conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or a microscopic scalar denominator/contact theorem built from the exact compact source functional with threshold/FVIR/pole/residue/contact and canonical O_H or physical-response bridge authority
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, common-window response stability support, Block57 exact compact finite-volume source-functional support, and Block58 finite-volume positive source-channel spectral support; Block54 closes the response-instrumentation side as support, Block55 cuts the current canonical-neutral route, Block56 cuts the current scalar/FVIR shortcut surface, Block57 scopes the ladder/toron/contact negatives, and Block58 preserves the reflection-positivity LSZ shortcut no-go, but no thermodynamic scalar transfer/spectral theorem, threshold/FVIR/pole authority, dynamic Phi/action, canonical O_H identity, physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority, neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, common-window response stability support, Block57 exact compact finite-volume source-functional support, and Block58 finite-volume positive source-channel spectral support; Block54 closes the response-instrumentation side as support, Block55 cuts the current canonical-neutral route, Block56 cuts the current scalar/FVIR shortcut surface, Block57 scopes the ladder/toron/contact negatives, Block58 preserves the reflection-positivity LSZ shortcut no-go, and Block59 blocks finite-volume spectral positivity as thermodynamic pole authority, but no microscopic scalar denominator/contact theorem, threshold/FVIR/pole authority, dynamic Phi/action, canonical O_H identity, physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority, neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -182,4 +182,12 @@ Block58 compact source-channel spectral support result:
 frontier_yt_pr230_block58_compact_source_spectral_support_gate.py: PASS=13 FAIL=0
 frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=184 FAIL=0
 frontier_yt_pr230_campaign_status_certificate.py: PASS=393 FAIL=0
+```
+
+Block59 source-spectral pole-promotion obstruction result:
+
+```text
+frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py: PASS=11 FAIL=0
+frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=185 FAIL=0
+frontier_yt_pr230_campaign_status_certificate.py: PASS=394 FAIL=0
 ```

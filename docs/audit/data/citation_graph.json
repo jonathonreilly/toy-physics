@@ -8725,6 +8725,34 @@
       "to": "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
     },
     {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_finite_volume_pole_saturation_obstruction_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_soft_continuum_threshold_no_go_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_threshold_authority_import_audit_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_confinement_gap_threshold_import_audit_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "to": "yt_scalar_spectral_saturation_no_go_note_2026-05-01"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19077,7 +19105,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T06:20:58.141366+00:00",
+  "generated_at": "2026-05-12T06:33:50.442585+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42822,6 +42850,24 @@
       "runner_path": "scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py",
       "title": "PR230 Block58 Compact Source-Channel Spectral Support Gate"
     },
+    "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12": {
+      "claim_id": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the current PR230 surface:",
+      "deps": [
+        "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+        "yt_fh_lsz_finite_volume_pole_saturation_obstruction_note_2026-05-02",
+        "yt_fh_lsz_soft_continuum_threshold_no_go_note_2026-05-02",
+        "yt_fh_lsz_threshold_authority_import_audit_note_2026-05-02",
+        "yt_confinement_gap_threshold_import_audit_note_2026-05-02",
+        "yt_source_overlap_spectral_sum_rule_no_go_note_2026-05-02",
+        "yt_scalar_spectral_saturation_no_go_note_2026-05-01"
+      ],
+      "note_hash": "22e4376afde579046545c12dfff161abb2d202351b99d706f112b719f517ae4d",
+      "path": "docs/YT_PR230_BLOCK59_SOURCE_SPECTRAL_POLE_PROMOTION_OBSTRUCTION_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py",
+      "title": "PR230 Block59 Source-Spectral Pole-Promotion Obstruction"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47602,17 +47648,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4769,
-    "leaf_count": 1130,
-    "node_count": 2159,
+    "edge_count": 4776,
+    "leaf_count": 1124,
+    "node_count": 2160,
     "root_count": 1656,
-    "runners_with_path": 1634,
+    "runners_with_path": 1635,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 474,
+      "support": 475,
       "unknown": 593
     }
   }

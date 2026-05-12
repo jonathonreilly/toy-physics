@@ -331,3 +331,20 @@ The next import is now narrower: a uniform thermodynamic/FVIR source-spectral
 theorem that promotes the finite-volume positive spectral sum to controlled
 scalar pole/residue authority, followed by canonical `O_H`/source-overlap or a
 strict physical-response bridge.
+
+## Block59 Source-Spectral Pole-Promotion Obstruction Result
+
+The promotion from Block58 finite-volume spectral positivity to a
+thermodynamic isolated scalar pole is blocked on the current surface.  A
+positive atomless soft-continuum counterfamily preserves finite-volume source
+spectral support and finite-window pole-like behavior while the individual
+finite-volume residues vanish and the thermodynamic limiting measure has no
+pole atom.  This confirms that the existing finite-volume, threshold,
+confinement-gap, sum-rule, and spectral-saturation no-gos apply to the Block58
+surface.
+
+The remaining scalar import is no longer "derive reflection-positive spectral
+support"; that part is done.  It is a new microscopic scalar
+denominator/contact theorem or strict physical-row packet that supplies
+uniform thermodynamic/FVIR pole, threshold, residue, contact/continuum, and
+canonical `O_H` or physical-response authority.

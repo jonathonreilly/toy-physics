@@ -32,14 +32,14 @@
    they do not supply the strict mixed-source `T_total/A_top/W` subtraction
    packet, matched covariance, accepted action, or absolute `g2`/`v` authority.
 
-3. **Uniform thermodynamic/FVIR compact-source spectral theorem.**
+3. **Microscopic scalar denominator/contact/threshold theorem.**
    Block57 provides the exact compact finite-volume scalar-source functional,
    and Block58 provides finite-volume positive source-channel spectral support.
-   This route is now the cleanest scalar-side route, but only if the next
-   theorem proves a controlled thermodynamic/FVIR limit, isolated scalar pole
-   atom, pole residue interval, contact/continuum map, and then connects the
-   result to canonical `O_H` or an equivalent physical-response bridge.  Finite
-   spectral positivity alone is explicitly not enough.
+   Block59 shows finite-volume spectral positivity cannot be promoted directly
+   to thermodynamic isolated-pole/residue authority.  This route can continue
+   only with new microscopic authority: a scalar denominator/contact theorem
+   with threshold/FVIR, pole-residue, contact/continuum, and canonical `O_H` or
+   physical-response bridge control.
 
 4. **Native scalar/action/LSZ theorem for `x=O_H`.**
    Block41 exhausts the current native scalar/action/LSZ route queue.  Reopen
@@ -82,8 +82,8 @@
 ## Next Positive Artifact
 
 The next artifact that could move the lane positively must attack one of the
-Block54 surviving roots directly: a uniform thermodynamic/FVIR compact-source
-spectral pole theorem with residue/contact authority; a new same-surface
+Block54 surviving roots directly: a microscopic scalar denominator/contact/
+threshold theorem with FVIR pole-residue authority; a new same-surface
 neutral transfer primitive or canonical-Higgs identity theorem; a physical
 Euclidean `C_ij(tau)` row packet with scalar pole/FV/IR/model authority and
 canonical-Higgs authority; a strict W/Z physical-response packet with actual mixed-source
@@ -94,8 +94,8 @@ More inventory of the current MC target-time-series packet, ordinary tau
 correlators, reduced smoke, active worker intent, completed higher-shell
 chunks001-002, completed L12 same-source FH-LSZ support, common-window response
 support, Block54 response-readout reduction, higher-shell taste-radial cross
-rows, or origin/main Ward Step 3 `open_gate` status is not a positive closure
-path.
+rows, finite-volume compact-source spectral positivity, or origin/main Ward
+Step 3 `open_gate` status is not a positive closure path.
 
 ## Block54 Update
 
@@ -135,3 +135,11 @@ next scalar route is now a uniform thermodynamic/FVIR source-spectral pole
 theorem with residue/contact authority; merely restating finite-volume
 positivity, finite analyticity, or finite-volume discreteness is not a positive
 closure path.
+
+## Block59 Update
+
+The direct finite-volume source-spectral promotion is now blocked.  Atomless
+soft-continuum limits preserve finite-volume positivity and finite-window
+pole-like correlators while removing the isolated pole atom.  The compact-
+source lane now needs new microscopic denominator/contact/threshold authority
+or strict physical rows; finite spectral support alone is exhausted.

@@ -160,6 +160,12 @@ additive scalar-source correlator.  The reflection-positivity LSZ shortcut
 no-go still applies: this is not thermodynamic pole saturation, scalar LSZ
 residue authority, FV/IR control, or canonical `O_H`.
 
+Block59 tests that promotion directly and blocks it.  Positive finite-volume
+source spectral sums can converge to an atomless soft-continuum thermodynamic
+measure with no isolated pole atom; finite-window pole-like behavior is not a
+residue certificate.  The compact-source spectral lane now needs a microscopic
+scalar denominator/contact/threshold theorem or strict physical rows.
+
 ## Checks Run
 
 ```text
@@ -588,3 +594,46 @@ Next exact action: attack the uniform thermodynamic/FVIR source-spectral pole
 theorem.  Either derive a stable scalar pole/residue interval from the compact
 source spectral measure, or write the exact obstruction.  Do not duplicate or
 interrupt chunk processing.
+
+## Block59 Source-Spectral Pole-Promotion Obstruction
+
+Added `docs/YT_PR230_BLOCK59_SOURCE_SPECTRAL_POLE_PROMOTION_OBSTRUCTION_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py`,
+and `outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json`.
+
+Result: exact negative boundary / finite-volume source spectral positivity
+does not promote to thermodynamic scalar pole authority.  The runner verifies
+that all relevant existing finite-volume, threshold, confinement-gap, sum-rule,
+and spectral-saturation no-gos still apply to the Block58 surface.  It
+constructs a positive atomless soft-continuum counterfamily with finite-window
+pole-like behavior and zero limiting pole residue.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=185 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=394 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; known five warnings only.
+```
+
+Next exact action: do not replay finite-volume source positivity.  Pursue a
+microscopic scalar denominator/contact/threshold theorem, same-surface
+primitive transfer/canonical `O_H` authority, or strict physical source-Higgs
+/ WZ rows.  Chunk workers remain separate.

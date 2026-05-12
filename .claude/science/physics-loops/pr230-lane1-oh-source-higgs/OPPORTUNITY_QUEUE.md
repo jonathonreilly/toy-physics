@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block58
+## Active Ranking After Block59
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -42,6 +42,13 @@ thermodynamic/FVIR pole saturation and residue control for that spectral
 measure, then connect to canonical `O_H` or an equivalent physical response
 bridge.
 
+Block59 update: that direct finite-volume spectral positivity promotion is now
+refuted on the current surface.  Atomless soft-continuum thermodynamic limits
+can preserve finite-volume positive source spectral sums and finite-window
+pole-like behavior while having zero isolated pole residue.  The next scalar
+route must add new microscopic denominator/contact/threshold authority or
+strict physical rows; it cannot replay finite-volume positivity.
+
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
    primitive-cone certificate, strict neutral transfer artifact, or production
@@ -80,17 +87,13 @@ bridge.
    strict packet roots.  After Block54, that packet must still supply scalar
    FV/IR authority and canonical-Higgs or neutral-transfer authority.
 
-3. **Uniform thermodynamic/FVIR source-spectral pole theorem.**
+3. **Microscopic scalar denominator/contact/threshold theorem.**
    Use Block57's exact compact finite-volume source-functional foundation to
-   derive the actual scalar source-channel transfer/spectral object.  Block58
-   has now supplied the finite-volume positive spectral sum, so the live hard
-   target is narrower: isolated pole/residue interval, contact/continuum map,
-   FV/IR/toron limiting order, and a proof that the limiting spectral measure
-   has the required scalar pole.  This is now the best non-chunk scalar route
-   because it avoids the over-scoped ladder zero-mode objection and the
-   finite-row contact-repair shortcut.  It still must not promote finite
-   spectral positivity alone to pole authority, and it still needs canonical
-   `O_H`/source-overlap or a physical response bridge.
+   derive a stronger microscopic scalar-channel object.  Block58 supplied the
+   finite-volume positive spectral sum, and Block59 shows that promoting that
+   support directly is not valid.  This route must add new authority beyond
+   finite-volume positivity: threshold/FVIR, pole/residue, contact/continuum,
+   and canonical `O_H`/source-overlap or a physical response bridge.
 
 4. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only
@@ -138,3 +141,14 @@ bridge.
    Block49 prevents importing it as PR230 closure.  Reopen only with a
    Wick-level same-1PI bridge and independent scalar pole/LSZ plus canonical
    `O_H` and production source-Higgs row authority.
+
+## Block59 Update
+
+The compact-source spectral lane has moved from support to a precise
+obstruction.  Block58 supplied finite-volume positive source-channel spectral
+support; Block59 proves that this support does not promote to thermodynamic
+isolated-pole/residue authority.  The next admissible non-chunk artifact must
+add a microscopic denominator/contact/threshold theorem, a canonical
+`O_H`/action/LSZ bridge with strict rows, a same-surface primitive transfer
+certificate, or strict physical response rows.  Another finite-volume
+positivity or finite-window spectral artifact is not enough.

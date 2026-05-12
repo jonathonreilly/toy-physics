@@ -306,11 +306,26 @@ finite-volume source-channel spectral representation.  Thermodynamic pole
 saturation, FVIR limiting control, LSZ residue authority, and canonical
 `O_H`/source-overlap remain absent.
 
+## Block59: Source-Spectral Pole-Promotion Obstruction
+
+- Note:
+  `docs/YT_PR230_BLOCK59_SOURCE_SPECTRAL_POLE_PROMOTION_OBSTRUCTION_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block59_source_spectral_pole_promotion_obstruction.py`
+- Certificate:
+  `outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json`
+
+Status: exact negative boundary / finite-volume source spectral positivity
+does not promote to thermodynamic scalar pole authority.  This is not a
+closure claim.  It constructs an atomless soft-continuum thermodynamic
+counterfamily preserving finite-volume spectral support while the isolated
+pole residue lower bound remains zero.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
-artifact, not another inventory checkpoint: a uniform thermodynamic/FVIR
-source-spectral pole theorem with residue/contact control; a same-surface
+artifact, not another inventory checkpoint: a microscopic scalar
+denominator/contact/threshold theorem with FVIR pole-residue control; a same-surface
 primitive transfer/cone certificate; accepted canonical `O_H`/action/LSZ
 authority with strict source-Higgs rows; or a strict W/Z/source-Higgs physical
 response packet that supplies those roots without forbidden imports.

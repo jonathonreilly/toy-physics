@@ -845,6 +845,9 @@ def main() -> int:
         "pr230_block58_compact_source_spectral_support": load(
             "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json"
         ),
+        "pr230_block59_source_spectral_pole_promotion_obstruction": load(
+            "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4863,6 +4866,47 @@ def main() -> int:
         is False,
         statuses["pr230_block58_compact_source_spectral_support"],
     )
+    block59_source_spectral_pole_promotion_obstruction = certificates[
+        "pr230_block59_source_spectral_pole_promotion_obstruction"
+    ]
+    report(
+        "pr230-block59-source-spectral-pole-promotion-blocks",
+        "finite-volume source spectral positivity does not promote"
+        in str(statuses["pr230_block59_source_spectral_pole_promotion_obstruction"])
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "proposal_allowed"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "bare_retained_allowed"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "block59_source_spectral_pole_promotion_obstruction_passed"
+        )
+        is True
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "finite_volume_source_spectral_support_loaded"
+        )
+        is True
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "thermodynamic_pole_authority_present"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "uniform_threshold_gap_authority_present"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "residue_lower_bound_certified"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "canonical_oh_authority_present"
+        )
+        is False,
+        statuses["pr230_block59_source_spectral_pole_promotion_obstruction"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6954,6 +6998,7 @@ def main() -> int:
             "does not treat block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
             "does not treat block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
             "does not treat block58 finite-volume source-channel spectral support as thermodynamic pole saturation, scalar LSZ residue authority, or canonical O_H",
+            "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after block59",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8402,6 +8447,40 @@ def main() -> int:
         is False
         and block58_compact_source_spectral_support.get(
             "scalar_pole_fvir_root_closed"
+        )
+        is False
+    )
+    result["block59_source_spectral_pole_promotion_blocks"] = (
+        block59_source_spectral_pole_promotion_obstruction.get(
+            "proposal_allowed"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "bare_retained_allowed"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "block59_source_spectral_pole_promotion_obstruction_passed"
+        )
+        is True
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "finite_volume_source_spectral_support_loaded"
+        )
+        is True
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "thermodynamic_pole_authority_present"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "uniform_threshold_gap_authority_present"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "residue_lower_bound_certified"
+        )
+        is False
+        and block59_source_spectral_pole_promotion_obstruction.get(
+            "canonical_oh_authority_present"
         )
         is False
     )
