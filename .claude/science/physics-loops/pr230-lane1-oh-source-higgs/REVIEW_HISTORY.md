@@ -143,3 +143,35 @@ performed directly against the changed files and repo governance surfaces:
   work and the audit pipeline seeds it as `support`.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings.
+
+## Self-Review: Block42
+
+- Overclaim check: passed.  The note says the W/Z absolute-authority route is
+  exhausted on the current surface, not permanently impossible and not closed.
+- Physics check: passed.  The runner consumes current W/Z response-ratio,
+  action-cut, physical-packet intake, mass-response, row, covariance, g2, and
+  source-identity parents and requires actual strict packet roots before
+  reopening the route.
+- Forbidden-import check: passed.  The runner does not use observed selectors,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, static EW algebra,
+  smoke rows, unit normalization, or assumed covariance.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block42 Package
+
+Local review-loop was run without subagent fanout; the branch policy did not
+require new reviewer agents for this narrow package.  Required checks were
+performed directly against the changed files and repo governance surfaces:
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=26 FAIL=0`.
+- Physics Claim Boundary: SUPPORT / exact negative boundary.  The W/Z route is
+  exhausted only on the current surface and lists exact reopen inputs.
+- Imports / Support: DISCLOSED.  The note names the absent accepted action,
+  production W/Z rows, covariance, strict `g2`/`v`, and `delta_perp` authority.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop
+  work and the audit pipeline seeds it as `support`.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings.

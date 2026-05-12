@@ -74,9 +74,22 @@ finite-shell exact-math routes are all blocked, support-only, or open.  The
 native scalar/action/LSZ lane now requires a genuinely new same-surface
 primitive before it can reopen.
 
+## Block42: W/Z Absolute-Authority Route Exhaustion
+
+- Note: `docs/YT_PR230_WZ_ABSOLUTE_AUTHORITY_ROUTE_EXHAUSTION_AFTER_BLOCK41_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py`
+- Certificate: `outputs/yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The W/Z route has
+response-ratio support, action-cut support, smoke/schema infrastructure, and
+no-go boundaries for self-normalization, source-coordinate, Goldstone,
+covariance, and `g2` shortcuts, but it has no production W/Z rows, matched
+top/WZ covariance, strict non-observed `g2`, explicit `v`, or accepted action.
+
 ## Future Positive Artifact
 
-The next artifact that could move the lane positively is a strict W/Z
-physical-response packet with absolute `g2`/`v` authority, a new same-surface
-neutral transfer primitive not present in the current row packet, or a
-genuinely new scalar/action/LSZ primitive not already covered by Block41.
+The next artifact that could move the lane positively is a new same-surface
+neutral transfer primitive not present in the current row packet, a strict W/Z
+physical-response packet with actual production rows and absolute `g2`/`v`
+authority, or a genuinely new scalar/action/LSZ primitive not already covered
+by Block41.

@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: support / exact negative boundary: native scalar/action/LSZ current-surface route exhausted after Block40 without a new primitive
-conditional_surface_status: conditional-support if a future same-surface scalar kernel/covariance, dynamic scalar carrier, accepted action, scalar LSZ metric, strict C_ss/C_sH/C_HH rows, strict W/Z absolute authority, or neutral-transfer primitive lands
+actual_current_surface_status: support / exact negative boundary: W/Z absolute-authority current-surface route exhausted after Block41 without production W/Z rows and strict g2/v authority
+conditional_surface_status: conditional-support if a future same-surface neutral-transfer primitive, strict W/Z physical-response packet with absolute g2/v authority, or genuinely new scalar/action/LSZ primitive lands
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, W/Z response contracts, and exhausted native scalar/action/LSZ support-only routes, but no dynamic Phi/action, canonical O_H identity, neutral primitive transfer, off-diagonal generator, scalar LSZ metric, strict source-Higgs pole rows, strict W/Z production packet, or absolute g2/v authority
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, W/Z response contracts, and exhausted native scalar/action/LSZ plus W/Z absolute-authority support-only routes, but no dynamic Phi/action, canonical O_H identity, neutral primitive transfer, off-diagonal generator, scalar LSZ metric, strict source-Higgs pole rows, strict W/Z production packet, or absolute g2/v authority
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -53,6 +53,13 @@ Native scalar/action/LSZ route exhaustion result:
 ```text
 python3 scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py
 # SUMMARY: PASS=18 FAIL=0
+```
+
+W/Z absolute-authority route exhaustion result:
+
+```text
+python3 scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py
+# SUMMARY: PASS=26 FAIL=0
 ```
 
 Pipeline refusal result:

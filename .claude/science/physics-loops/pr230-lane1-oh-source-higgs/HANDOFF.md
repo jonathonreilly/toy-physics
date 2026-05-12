@@ -64,6 +64,13 @@ effective-potential Hessian, existing canonical-scalar surfaces,
 source-to-Higgs LSZ, scalar carrier/projector, and finite-shell exact-math
 routes are all blocked, support-only, or open on the current surface.
 
+Block42 records the route-level consequence for the W/Z absolute-authority
+fallback.  The current W/Z surface has response-ratio support, action-cut
+support, row contracts, smoke/schema infrastructure, and no-go boundaries, but
+no accepted same-source action, production W/Z response rows, matched top/WZ
+covariance, strict non-observed `g2`, explicit `v`, `delta_perp` authority, or
+final physical-response packet.
+
 ## Checks Run
 
 ```text
@@ -91,6 +98,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_native_scalar_action_lsz_route_e
 python3 scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py
 # SUMMARY: PASS=18 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py
+python3 scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py
+# SUMMARY: PASS=26 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -116,10 +127,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=168 FAIL=0
+# SUMMARY: PASS=170 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=372 FAIL=0
+# campaign status SUMMARY: PASS=374 FAIL=0
 ```
 
 ## Current Status
@@ -127,7 +139,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive a strict W/Z physical-response packet with absolute authority, a new same-surface neutral transfer primitive, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
+derive a new same-surface neutral transfer primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -141,8 +153,8 @@ re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
 normalization, or W/Z self-normalization.  It should try one of:
 
 ```text
-strict W/Z physical-response packet with absolute g2/v authority
 new same-surface neutral transfer primitive
+strict W/Z physical-response packet with actual production rows plus absolute g2/v authority
 new native scalar/action/LSZ primitive not already tested
 ```
 

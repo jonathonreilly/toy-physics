@@ -1,18 +1,19 @@
 # Opportunity Queue
 
-## Active Ranking After Block41
+## Active Ranking After Block42
 
-1. **Strict W/Z physical-response packet with absolute authority.**
-   Still viable only if it supplies production W/Z rows plus strict
-   non-observed `g2`, explicit `v` substrate authority, or another absolute EW
-   normalization theorem.  Block39 closes the W/Z mass+response
-   self-normalization shortcut.
-
-2. **Same-surface neutral transfer primitive.**
+1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
    primitive-cone certificate, or strict neutral transfer artifact.  Block38
    shows the current row packet and top mass-scan response support do not force
    this.
+
+2. **Strict W/Z physical-response packet with absolute authority.**
+   Reopen only when actual strict packet roots exist: accepted action,
+   production W/Z rows, same-source top rows, matched covariance, strict
+   non-observed `g2` or explicit `v` authority, and `delta_perp` control.
+   Block42 records that the current W/Z surface is exhausted without those
+   roots.
 
 3. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only

@@ -485,6 +485,9 @@ def main() -> int:
         "pr230_native_scalar_action_lsz_route_exhaustion_after_block40": load(
             "outputs/yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_2026-05-12.json"
         ),
+        "pr230_wz_absolute_authority_route_exhaustion_after_block41": load(
+            "outputs/yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2427,6 +2430,27 @@ def main() -> int:
         "pr230-native-scalar-action-lsz-route-exhaustion-blocks",
         native_scalar_action_lsz_route_exhaustion_blocks,
         statuses["pr230_native_scalar_action_lsz_route_exhaustion_after_block40"],
+    )
+    wz_absolute_authority_route_exhaustion_blocks = (
+        "W/Z absolute-authority current-surface route exhausted"
+        in str(
+            statuses[
+                "pr230_wz_absolute_authority_route_exhaustion_after_block41"
+            ]
+        )
+        and certificates[
+            "pr230_wz_absolute_authority_route_exhaustion_after_block41"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_wz_absolute_authority_route_exhaustion_after_block41"
+        ].get("wz_absolute_authority_route_exhaustion_passed")
+        is True
+    )
+    report(
+        "pr230-wz-absolute-authority-route-exhaustion-blocks",
+        wz_absolute_authority_route_exhaustion_blocks,
+        statuses["pr230_wz_absolute_authority_route_exhaustion_after_block41"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6208,6 +6232,7 @@ def main() -> int:
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
+        "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6215,6 +6240,7 @@ def main() -> int:
             "does not allow H_unit matrix-element definition as y_t readout",
             "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
             "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
+            "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -7433,6 +7459,7 @@ def main() -> int:
         "does not treat the block35 post-block34 physical-bridge admission checkpoint as a new source-Higgs, W/Z, or neutral H3/H4 production artifact",
         "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, or launch status as row evidence",
         "does not treat the block36 source-Higgs/WZ dispatch checkpoint, lane1 action-premise boundary, top mass-scan support rows, higher-shell preflight, neutral rank-one bypass boundary, or W/Z self-normalization no-go as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
+        "does not treat the Block42 W/Z absolute-authority route exhaustion as permanent W/Z no-go or as PR230 closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

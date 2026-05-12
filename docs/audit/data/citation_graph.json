@@ -8789,6 +8789,62 @@
       "to": "yt_pr230_os_transfer_kernel_artifact_gate_note_2026-05-07"
     },
     {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_response_route_completion_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_mass_response_self_normalization_no_go_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_wz_g2_authority_firewall_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "to": "yt_top_wz_factorization_independence_gate_note_2026-05-05"
+    },
+    {
       "from": "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -18921,7 +18977,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T02:43:39.326012+00:00",
+  "generated_at": "2026-05-12T02:47:07.833234+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -44053,6 +44109,31 @@
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_schur_subblock_witness.py",
       "title": "PR230 Two-Source Taste-Radial Schur-Subblock Witness"
     },
+    "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12": {
+      "claim_id": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary: W/Z absolute-authority",
+      "deps": [
+        "yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_note_2026-05-12",
+        "yt_pr230_wz_response_route_completion_note_2026-05-06",
+        "yt_pr230_canonical_oh_wz_common_action_cut_note_2026-05-07",
+        "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+        "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07",
+        "yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07",
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
+        "yt_pr230_wz_mass_response_self_normalization_no_go_note_2026-05-12",
+        "yt_wz_g2_authority_firewall_note_2026-05-05",
+        "yt_wz_g2_response_self_normalization_no_go_note_2026-05-05",
+        "yt_pr230_wz_g2_bare_running_bridge_attempt_note_2026-05-05",
+        "yt_wz_correlator_mass_fit_path_gate_note_2026-05-04",
+        "yt_top_wz_covariance_theorem_import_audit_note_2026-05-05",
+        "yt_top_wz_factorization_independence_gate_note_2026-05-05"
+      ],
+      "note_hash": "ba7ad0fb4d70c6f7f223d0016a96303e289957b773d226b4929ecfbc43c724ff",
+      "path": "docs/YT_PR230_WZ_ABSOLUTE_AUTHORITY_ROUTE_EXHAUSTION_AFTER_BLOCK41_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py",
+      "title": "PR230 W/Z Absolute-Authority Route Exhaustion After Block41"
+    },
     "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07": {
       "claim_id": "yt_pr230_wz_accepted_action_response_root_checkpoint_note_2026-05-07",
       "current_status": "support",
@@ -47165,17 +47246,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4730,
-    "leaf_count": 1126,
-    "node_count": 2137,
+    "edge_count": 4744,
+    "leaf_count": 1123,
+    "node_count": 2138,
     "root_count": 1639,
-    "runners_with_path": 1612,
+    "runners_with_path": 1613,
     "status_counts": {
       "bounded": 597,
       "open": 114,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 468,
+      "support": 469,
       "unknown": 584
     }
   }

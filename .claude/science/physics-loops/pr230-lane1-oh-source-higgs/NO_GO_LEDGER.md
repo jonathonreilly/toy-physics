@@ -36,6 +36,11 @@
   scalar-LSZ bookkeeping, source-functional LSZ, effective-potential Hessian,
   canonical-scalar import, source-to-Higgs LSZ, scalar carrier/projector, and
   finite-shell exact-math attempts all leave a load-bearing primitive open.
+- The current W/Z absolute-authority route queue is exhausted after Block41:
+  response-ratio support, action-cut support, smoke/schema rows, mass-response
+  self-normalization, source-coordinate, Goldstone, covariance, factorization,
+  response-only `g2`, and bare-running `g2` routes still leave production W/Z
+  rows and strict absolute `g2`/`v` authority open.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary

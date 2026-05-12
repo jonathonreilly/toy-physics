@@ -52,4 +52,14 @@ Lane 1 Block41: native scalar/action/LSZ route exhaustion
 - conclusion: all current native scalar/action/LSZ routes are blocked,
   support-only, or open; the next positive route must be W/Z absolute
   authority, neutral transfer, or a genuinely new scalar/action primitive
+
+Lane 1 Block42: W/Z absolute-authority route exhaustion
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py
+- result: PASS=26 FAIL=0
+- conclusion: current W/Z support contracts and no-go boundaries do not supply
+  accepted action, production W/Z rows, matched covariance, strict g2/v
+  authority, delta_perp control, or a final physical-response packet; the next
+  positive route should start with neutral transfer or an actual strict W/Z
+  packet root
 ```

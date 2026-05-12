@@ -25,6 +25,9 @@
   explicit `v`, or another absolute EW normalization theorem.
 - Treating a formal Hubbard-Stratonovich/logdet auxiliary scalar rewrite as
   canonical `O_H` or scalar LSZ authority.
+- Treating W/Z response-ratio contracts, smoke/schema rows, or ideal
+  mass-plus-response rows as an absolute `y_t` readout without production W/Z
+  rows and strict `g2`/`v` authority.
 
 ## Block A Import Audit Result
 
@@ -81,3 +84,15 @@ LSZ, scalar carrier/projector, and finite-shell exact-math routes all leave a
 load-bearing primitive open.  This is not a permanent no-go; it means the
 campaign must pivot to strict W/Z absolute authority, neutral transfer, or a
 new scalar/action primitive not already tested.
+
+## Block42 W/Z Absolute-Authority Route Exhaustion Result
+
+The current W/Z absolute-authority queue is exhausted on the present PR230
+surface.  Response-ratio algebra, minimal action cuts, row contracts,
+smoke/schema infrastructure, source-coordinate and Goldstone no-goes,
+covariance/factorization no-goes, `g2` authority firewalls, and mass-response
+self-normalization no-goes do not supply accepted action, production W/Z
+response rows, matched top/WZ covariance, strict non-observed `g2`, explicit
+`v`, `delta_perp` authority, or final W/Z physical-response packet.  This is
+not a permanent W/Z no-go; it means the route reopens only with actual strict
+packet roots or a new absolute-normalization theorem.
