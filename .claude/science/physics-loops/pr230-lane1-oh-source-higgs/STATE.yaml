@@ -3,17 +3,18 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block37 action-premise derivation attempt complete; pivot target selected"
+active_block: "Block38 neutral rank-one bypass audit complete; W/Z response bypass selected next"
 target_status: best-honest-status
-actual_current_surface_status: "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority"
-conditional_surface_status: "conditional-support if a future theorem derives a dynamic Phi/action/LSZ from Cl(3)/Z3, or if an explicit action extension is admitted and then strict C_ss/C_sH/C_HH pole rows are measured"
+actual_current_surface_status: "exact negative boundary / post-Block37 neutral rank-one bypass not closed on the current PR230 surface"
+conditional_surface_status: "conditional-support if a future same-surface neutral transfer, off-diagonal generator, primitive-cone certificate, strict C_ss/C_sH/C_HH pole rows, or strict W/Z physical-response packet lands"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
-hard_residual: "native dynamic scalar carrier/action/LSZ theorem or a bypassing neutral rank-one/strict WZ physical-response theorem"
+hard_residual: "strict W/Z physical-response packet, or a genuinely new native scalar/action/LSZ or neutral-transfer primitive"
 completed_checks:
   - "frontier_yt_pr230_lane1_oh_root_theorem_attempt.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_lane1_action_premise_derivation_attempt.py: PASS=15 FAIL=0"
+  - "frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py: PASS=12 FAIL=0"
   - "frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_fms_oh_candidate_action_packet.py: PASS=13 FAIL=0"
   - "frontier_yt_pr230_source_higgs_direct_pole_row_contract.py: PASS=18 FAIL=0"
@@ -22,5 +23,6 @@ completed_checks:
   - "frontier_yt_source_higgs_pole_residue_extractor.py: PASS=9 FAIL=0"
   - "frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0"
   - "frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0"
-  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=364 FAIL=0"
-next_exact_action: "Pivot from action-adoption to neutral rank-one or strict W/Z physical-response bypass; do not relabel C_sx/C_xx without x=canonical O_H."
+  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=165 FAIL=0"
+  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=367 FAIL=0"
+next_exact_action: "Attack strict W/Z physical-response bypass; do not treat top bare-mass response or C_sx/C_xx rows as Higgs response."

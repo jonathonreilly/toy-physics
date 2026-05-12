@@ -49,3 +49,17 @@ performed directly against the changed files and repo governance surfaces:
   narrowed to use the minimal input stack directly for the "no scalar action in
   the substrate input list" check; the failed side note is no longer a
   dependency.
+
+## Self-Review: Block38
+
+- Overclaim check: passed.  The note says current-surface exact negative
+  boundary, not permanent no-go and not retained closure.
+- Forbidden-import check: passed.  The runner firewall blocks `H_unit`,
+  `yt_ward_identity`, `y_t_bare`, observed selectors, `alpha_LM`, plaquette,
+  `u0`, `C_sx/C_xx -> C_sH/C_HH` relabeling, top mass-scan-as-Higgs-response,
+  positivity-as-primitive-cone, and unit-overlap shortcuts.
+- New-data relevance check: passed.  The block explicitly tests the completed
+  row packet and top mass-scan response support rather than relying only on
+  older neutral-rank no-gos.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.

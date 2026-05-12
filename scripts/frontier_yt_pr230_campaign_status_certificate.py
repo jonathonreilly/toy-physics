@@ -956,6 +956,9 @@ def main() -> int:
         "top_mass_scan_response_harness_gate": load(
             "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json"
         ),
+        "neutral_rank_one_bypass_post_block37_audit": load(
+            "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json"
+        ),
         "fh_lsz_global_production_collision_guard": load(
             "outputs/yt_fh_lsz_global_production_collision_guard_2026-05-04.json"
         ),
@@ -4906,10 +4909,31 @@ def main() -> int:
         )
         is True
     )
+    neutral_rank_one_bypass_post_block37_blocks = (
+        "post-Block37 neutral rank-one bypass not closed"
+        in str(statuses["neutral_rank_one_bypass_post_block37_audit"])
+        and certificates["neutral_rank_one_bypass_post_block37_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["neutral_rank_one_bypass_post_block37_audit"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certificates["neutral_rank_one_bypass_post_block37_audit"].get(
+            "rank_one_bypass_closed"
+        )
+        is False
+    )
     report(
         "top-mass-scan-response-harness-support-not-evidence",
         top_mass_scan_response_harness_support_not_evidence,
         statuses["top_mass_scan_response_harness_gate"],
+    )
+    report(
+        "neutral-rank-one-bypass-post-block37-blocks-current-surface",
+        neutral_rank_one_bypass_post_block37_blocks,
+        statuses["neutral_rank_one_bypass_post_block37_audit"],
     )
     report(
         "fh-lsz-global-production-collision-guard-not-evidence",
@@ -6011,6 +6035,7 @@ def main() -> int:
         "certificate_statuses": statuses,
         "remaining_routes": remaining_routes,
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
+        "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",

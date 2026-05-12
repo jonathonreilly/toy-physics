@@ -154,6 +154,7 @@ PARENTS = {
     "pr230_fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
+    "pr230_neutral_rank_one_bypass_post_block37_audit": "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
     "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
@@ -1428,6 +1429,22 @@ def main() -> int:
             "row_schema_version"
         )
         == "top_mass_scan_response_v1"
+    )
+    neutral_rank_one_bypass_post_block37_blocks = (
+        "post-Block37 neutral rank-one bypass not closed"
+        in statuses["pr230_neutral_rank_one_bypass_post_block37_audit"]
+        and certs["pr230_neutral_rank_one_bypass_post_block37_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_neutral_rank_one_bypass_post_block37_audit"].get(
+            "exact_negative_boundary_passed"
+        )
+        is True
+        and certs["pr230_neutral_rank_one_bypass_post_block37_audit"].get(
+            "rank_one_bypass_closed"
+        )
+        is False
     )
     wz_response_ratio_identifiability_contract_support_not_closure = (
         "WZ response-ratio identifiability contract"
@@ -2825,6 +2842,11 @@ def main() -> int:
         statuses["pr230_derived_bridge_rank_one_closure_attempt"],
     )
     report(
+        "neutral-rank-one-bypass-post-block37-blocks-current-surface",
+        neutral_rank_one_bypass_post_block37_blocks,
+        statuses["pr230_neutral_rank_one_bypass_post_block37_audit"],
+    )
+    report(
         "source-sector-pattern-transfer-relevant-not-closure",
         "source-sector pattern is relevant"
         in statuses["pr230_source_sector_pattern_transfer_gate"]
@@ -3701,6 +3723,7 @@ def main() -> int:
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
         "schur_route_completion_blocks": schur_route_completion_blocks,
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
+        "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,

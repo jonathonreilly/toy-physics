@@ -36,6 +36,13 @@ insertions, complete finite `C_ss/C_sx/C_xx` support, and conditional FMS
 support, but no dynamic `Phi`, accepted scalar action, canonical radial `h`,
 LSZ/metric authority, or strict source-Higgs pole rows.
 
+Block38 attacked the neutral rank-one bypass.  It combines the completed
+`C_ss/C_sx/C_xx` packet, top bare-mass response support, and existing
+neutral-rank artifacts, then checks whether they force the measured source
+pole to be the only neutral scalar direction.  They do not.  A three-direction
+completion `(source_s, taste_radial_x, orthogonal_neutral_n)` preserves all
+current rows while varying the source-Higgs overlap.
+
 ## Checks Run
 
 ```text
@@ -46,6 +53,10 @@ python3 scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py
 python3 -m py_compile scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py
 python3 scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py
 # SUMMARY: PASS=15 FAIL=0
+
+python3 -m py_compile scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py
+python3 scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py
+# SUMMARY: PASS=12 FAIL=0
 
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
@@ -72,9 +83,10 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=165 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=364 FAIL=0
+# campaign status SUMMARY: PASS=367 FAIL=0
 ```
 
 ## Current Status
@@ -82,7 +94,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive a native dynamic scalar/action/LSZ theorem, or bypass it with a neutral rank-one theorem or strict W/Z physical-response packet
+derive a strict W/Z physical-response packet, a native scalar/action/LSZ theorem, or a new same-surface neutral transfer primitive
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -91,13 +103,14 @@ closure evidence.
 
 ## Next Exact Action
 
-Pivot from direct action-adoption to the best bypass theorem.  The next block
-should not re-run row inventory.  It should try one of:
+Pivot to the strict W/Z physical-response bypass.  The next block should not
+re-run row inventory.  It should try one of:
 
 ```text
-neutral rank-one theorem
 strict W/Z physical-response packet
 new native scalar/action/LSZ primitive
+new same-surface neutral transfer primitive
 ```
 
-Do not relabel `C_sx/C_xx` as `C_sH/C_HH` without canonical `O_H` authority.
+Do not treat top bare-mass response as Higgs response, and do not relabel
+`C_sx/C_xx` as `C_sH/C_HH` without canonical `O_H` authority.

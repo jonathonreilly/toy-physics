@@ -36,3 +36,13 @@ EW/Higgs action, canonical radial `h`, scalar LSZ/metric authority, or an
 exact Hubbard-Stratonovich/four-fermion route that would make those fields
 same-surface rather than adopted.  The FMS packet remains conditional support,
 not an action authority.
+
+## Block38 Neutral Rank-One Audit Result
+
+The completed taste-radial row packet and top bare-mass response harness do not
+derive a rank-one neutral scalar bridge.  The current measurements constrain
+the `source_s`/`taste_radial_x` subblock and top bare-mass response, while an
+unmeasured orthogonal neutral direction can rotate the would-be Higgs readout
+without changing those rows.  A future neutral-rank route needs a real
+same-surface transfer/off-diagonal generator, primitive-cone certificate, or
+strict source-Higgs/WZ response rows.

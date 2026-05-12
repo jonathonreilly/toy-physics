@@ -8657,6 +8657,42 @@
       "to": "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12"
     },
     {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_neutral_primitive_route_completion_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "to": "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07"
+    },
+    {
       "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
       "to": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06"
     },
@@ -18825,7 +18861,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:53:05.872334+00:00",
+  "generated_at": "2026-05-12T01:56:58.240223+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42811,6 +42847,26 @@
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
       "title": "PR230 Neutral Primitive Route Completion"
     },
+    "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12": {
+      "claim_id": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary on the current PR230 surface",
+      "deps": [
+        "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+        "yt_pr230_two_source_taste_radial_row_combiner_gate_note_2026-05-06",
+        "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12",
+        "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
+        "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
+        "yt_pr230_neutral_primitive_route_completion_note_2026-05-06",
+        "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07",
+        "yt_pr230_same_surface_neutral_multiplicity_one_candidate_attempt_note_2026-05-07",
+        "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07"
+      ],
+      "note_hash": "9b641d8d6cf3fca80d97e7448e752f34b142ca4455b870e01e392de8a4e13b4a",
+      "path": "docs/YT_PR230_NEUTRAL_RANK_ONE_BYPASS_POST_BLOCK37_AUDIT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py",
+      "title": "PR230 Neutral Rank-One Bypass Post-Block37 Audit"
+    },
     "yt_pr230_neutral_transfer_chunks051_062_current_head_checkpoint_note_2026-05-08": {
       "claim_id": "yt_pr230_neutral_transfer_chunks051_062_current_head_checkpoint_note_2026-05-08",
       "current_status": "bounded",
@@ -46968,17 +47024,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4706,
-    "leaf_count": 1131,
-    "node_count": 2130,
+    "edge_count": 4715,
+    "leaf_count": 1126,
+    "node_count": 2131,
     "root_count": 1634,
-    "runners_with_path": 1605,
+    "runners_with_path": 1606,
     "status_counts": {
       "bounded": 596,
       "open": 113,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 464,
+      "support": 465,
       "unknown": 583
     }
   }

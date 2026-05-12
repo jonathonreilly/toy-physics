@@ -16,11 +16,16 @@
   adopt a current-surface action or prove source overlap.
 - Equal-time `C_ss/C_sx/C_xx` rows do not determine OS transfer kernel,
   isolated pole residue, or canonical `O_H`.
+- Post-Block37 neutral rank-one bypass is not closed: the complete
+  `C_ss/C_sx/C_xx` subblock and top bare-mass response rows are preserved by a
+  three-direction completion with an unmeasured orthogonal neutral scalar and
+  variable source-Higgs overlap.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
 theorems.  They retire if a future native scalar/action/LSZ theorem,
-explicitly admitted action extension plus strict rows, neutral rank-one
-theorem, or strict W/Z physical-response packet supplies the missing bridge.
+explicitly admitted action extension plus strict rows, same-surface neutral
+transfer/primitive-cone theorem, or strict W/Z physical-response packet
+supplies the missing bridge.

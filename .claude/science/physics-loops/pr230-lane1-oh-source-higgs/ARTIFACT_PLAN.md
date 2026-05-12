@@ -25,8 +25,20 @@ substrate does not derive a dynamic `Phi`, accepted EW/Higgs action,
 canonical radial `h`, scalar LSZ/metric authority, or strict source-Higgs pole
 rows.
 
+## Block38: Neutral Rank-One Bypass Audit
+
+- Note: `docs/YT_PR230_NEUTRAL_RANK_ONE_BYPASS_POST_BLOCK37_AUDIT_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_neutral_rank_one_bypass_post_block37_audit.py`
+- Certificate: `outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  Complete
+`C_ss/C_sx/C_xx` rows and top bare-mass response support do not force neutral
+rank one because an unmeasured orthogonal neutral direction can vary the
+source-Higgs overlap while preserving current rows.
+
 ## Future Positive Artifact
 
-The next artifact that could move the lane positively is a neutral rank-one
-theorem or strict W/Z physical-response packet that bypasses the missing
-action premise, or a genuinely new native scalar/action/LSZ theorem.
+The next artifact that could move the lane positively is a strict W/Z
+physical-response packet, a genuinely new native scalar/action/LSZ theorem, or
+a new same-surface neutral transfer primitive not present in the current row
+packet.

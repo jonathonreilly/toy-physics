@@ -1,0 +1,182 @@
+{
+  "actual_current_surface_status": "exact negative boundary / post-Block37 neutral rank-one bypass not closed on the current PR230 surface",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface neutral transfer, off-diagonal generator, primitive-cone certificate, strict C_ss/C_sH/C_HH pole rows, or strict W/Z physical-response packet lands",
+  "counterfamily": [
+    {
+      "available_subblock": {
+        "C_ss": 0.12239945839272869,
+        "C_sx": -5.628254370365994e-06,
+        "C_xx": 0.28083911307505577
+      },
+      "basis": [
+        "source_s",
+        "taste_radial_x",
+        "orthogonal_neutral_n"
+      ],
+      "candidate_C_HH": 0.28083911307505577,
+      "candidate_C_sH": -5.628254370365994e-06,
+      "candidate_source_higgs_rho": -3.0356742922514752e-05,
+      "case": "taste_radial_aligned",
+      "current_rows_change": false,
+      "neutral_rank_one_forced": false,
+      "top_mass_scan_response_change": false,
+      "unmeasured_completion": {
+        "C_nn": 0.28083911307505577,
+        "C_sn": 0.0,
+        "C_xn": 0.0,
+        "H_theta": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "available_subblock": {
+        "C_ss": 0.12239945839272869,
+        "C_sx": -5.628254370365994e-06,
+        "C_xx": 0.28083911307505577
+      },
+      "basis": [
+        "source_s",
+        "taste_radial_x",
+        "orthogonal_neutral_n"
+      ],
+      "candidate_C_HH": 0.2808391130750558,
+      "candidate_C_sH": -4.8742112636977414e-06,
+      "candidate_source_higgs_rho": -2.6289710547051236e-05,
+      "case": "rotated_30deg",
+      "current_rows_change": false,
+      "neutral_rank_one_forced": false,
+      "top_mass_scan_response_change": false,
+      "unmeasured_completion": {
+        "C_nn": 0.28083911307505577,
+        "C_sn": 0.0,
+        "C_xn": 0.0,
+        "H_theta": [
+          0.0,
+          0.8660254037844387,
+          0.49999999999999994
+        ]
+      }
+    },
+    {
+      "available_subblock": {
+        "C_ss": 0.12239945839272869,
+        "C_sx": -5.628254370365994e-06,
+        "C_xx": 0.28083911307505577
+      },
+      "basis": [
+        "source_s",
+        "taste_radial_x",
+        "orthogonal_neutral_n"
+      ],
+      "candidate_C_HH": 0.28083911307505577,
+      "candidate_C_sH": -2.8141271851829974e-06,
+      "candidate_source_higgs_rho": -1.517837146125738e-05,
+      "case": "rotated_60deg",
+      "current_rows_change": false,
+      "neutral_rank_one_forced": false,
+      "top_mass_scan_response_change": false,
+      "unmeasured_completion": {
+        "C_nn": 0.28083911307505577,
+        "C_sn": 0.0,
+        "C_xn": 0.0,
+        "H_theta": [
+          0.0,
+          0.5000000000000001,
+          0.8660254037844386
+        ]
+      }
+    },
+    {
+      "available_subblock": {
+        "C_ss": 0.12239945839272869,
+        "C_sx": -5.628254370365994e-06,
+        "C_xx": 0.28083911307505577
+      },
+      "basis": [
+        "source_s",
+        "taste_radial_x",
+        "orthogonal_neutral_n"
+      ],
+      "candidate_C_HH": 0.28083911307505577,
+      "candidate_C_sH": -3.4463118497279083e-22,
+      "candidate_source_higgs_rho": -1.8588144026298382e-21,
+      "case": "orthogonal_neutral",
+      "current_rows_change": false,
+      "neutral_rank_one_forced": false,
+      "top_mass_scan_response_change": false,
+      "unmeasured_completion": {
+        "C_nn": 0.28083911307505577,
+        "C_sn": 0.0,
+        "C_xn": 0.0,
+        "H_theta": [
+          0.0,
+          6.123233995736766e-17,
+          1.0
+        ]
+      }
+    }
+  ],
+  "exact_negative_boundary_passed": true,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_c2_or_zmatch_to_one": false,
+    "touched_live_chunk_worker": false,
+    "treated_c_sx_c_xx_as_c_sH_c_HH": false,
+    "treated_positivity_as_primitive_cone": false,
+    "treated_source_only_rows_as_neutral_transfer": false,
+    "treated_top_mass_scan_as_higgs_response": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_target_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "same-surface physical neutral transfer or off-diagonal generator",
+    "primitive-cone / irreducibility certificate",
+    "canonical scalar LSZ/FV/IR metric",
+    "source-Higgs C_sH/C_HH pole-overlap rows or neutral rank-one theorem",
+    "strict W/Z physical-response packet if bypassing O_H"
+  ],
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "derived_rank_one_attempt": "exact negative boundary / derived rank-one bridge not closed on current PR230 surface",
+    "hard_residual_gate": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
+    "lane1_action_premise": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+    "lane1_oh_root": "no-go / exact negative boundary for lane-1 Block A: current PR230 support stack does not derive x=canonical O_H or accepted action authority",
+    "measurement_rows": "bounded-support / two-source taste-radial complete L12 C_sx/C_xx row packet; canonical O_H and pole/FV/IR authority still absent",
+    "multiplicity_one_candidate": "exact negative boundary / same-surface neutral multiplicity-one candidate attempt rejected on current PR230 surface",
+    "multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "neutral_primitive_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "neutral_transfer_mixing_no_go": "exact negative boundary / current same-surface Z3 eigenoperator data do not certify a physical neutral scalar transfer or O_H bridge",
+    "offdiagonal_generator_attempt": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "primitive_cone_gate": "exact-support / neutral-scalar primitive-cone certificate gate; strict irreducibility certificate absent",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
+    "top_mass_scan_response": "bounded-support / top mass-scan response harness schema gate"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The completed C_ss/C_sx/C_xx packet and top bare-mass response rows do not determine the unmeasured orthogonal neutral sector.  Existing rank-one, primitive-cone, multiplicity-one, and off-diagonal-generator gates still reject the current surface.",
+  "rank_one_bypass_closed": false,
+  "strict_future_artifacts_present": {
+    "canonical_higgs_operator_certificate": false,
+    "electroweak_g2_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "neutral_rank_one_purity_certificate": false,
+    "same_source_wz_response_rows": false,
+    "same_surface_neutral_transfer_operator": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_production_certificate": false
+  },
+  "summary": {
+    "fail": 0,
+    "pass": 12
+  }
+}
