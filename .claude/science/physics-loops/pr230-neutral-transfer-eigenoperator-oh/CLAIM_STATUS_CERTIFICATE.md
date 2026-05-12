@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block42_schur_higher_shell_chunks007_008_launch_checkpoint`.
+Current block: `block43_schur_higher_shell_chunks007_008_completed_chunks009_010_launch_checkpoint`.
 
 ```yaml
-actual_current_surface_status: bounded-support / block42 higher-shell Schur scalar-LSZ chunks007-008 launch checkpoint passed; run-control only, no retained/proposed_retained closure
+actual_current_surface_status: bounded-support / block43 higher-shell Schur scalar-LSZ chunks007-008 completed-mode checkpoints passed; chunks009-010 launched as run-control only; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block42 is a launch/run-control checkpoint, not a retained/proposed-retained theorem. Chunks007-008 are running and are not completed row evidence. They do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block43 is a bounded-support/run-control checkpoint, not a retained/proposed-retained theorem. Chunks007-008 completed-mode checkpoints pass but remain same-source C_ss plus taste-radial C_sx/C_xx support under an unratified second-source certificate. Chunks009-010 are launched only. This block does not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,15 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block43 records completed higher-shell chunks007-008 as bounded support
+   only and launches chunks009-010 as run-control only.  The completed-mode
+   checkpoints pass for seed control, selected-mass FH/LSZ metadata,
+   higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows, and
+   forbidden-import firewalls, but the rows are not Schur A/B/C kernel rows,
+   strict scalar-LSZ moment/FV/IR authority, canonical `O_H`, canonical
+   `C_sH/C_HH` pole rows, W/Z response, physical `kappa_s`, or retained
+   top-Yukawa closure.  The launched chunks009-010 are not completed evidence
+   until completed-mode checkpoints pass.
 0. Block42 records higher-shell chunks007-008 launch-state as run-control
    support only.  The wave launcher passes and both launched workers survived
    the verification interval, but no completed row JSON, volume artifact, or

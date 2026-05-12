@@ -1,11 +1,51 @@
 # Handoff
 
-Checkpoint: 2026-05-12 02:40 EDT
+Checkpoint: 2026-05-12 08:53 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block43 Result
+
+Created
+`YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS007_008_COMPLETED_AND_009_010_LAUNCH_CHECKPOINT`.
+
+This block resumes after the higher-shell chunks007-008 worker wave completed
+and packages the row outputs.  Both completed-mode chunk checkpoints pass
+after the workers write row JSONs and volume artifacts.  The wave launcher
+status records `completed_chunk_indices=[1,2,3,4,5,6,7,8]`, no active workers,
+and planned next chunks `[9,10]`; it is then run in launch mode and starts
+chunks009-010 with both workers alive after verification.
+
+Result:
+
+- chunk007 completed with seed `2026057007`,
+  `created_utc=2026-05-12T12:48:45Z`, and
+  `runtime_seconds=7609.597`;
+- chunk008 completed with seed `2026057008`,
+  `created_utc=2026-05-12T12:48:41Z`, and
+  `runtime_seconds=7605.274`;
+- both checkpoints verify selected-mass-only FH/LSZ metadata at mass `0.75`,
+  preserved three-mass top scans, eleven higher-shell `C_ss` time-series rows,
+  eleven taste-radial `C_sx/C_xx` source-cross rows, seed control, and clean
+  forbidden-import firewalls;
+- chunk009 launched with pid `39242` and seed `2026057009`;
+- chunk010 launched with pid `39243` and seed `2026057010`;
+- campaign status passes `PASS=403 FAIL=0`;
+- no retained or `proposed_retained` wording is authorized.
+
+Boundary: chunks007-008 are higher-shell support rows only, and chunks009-010
+are run-control only until completed-mode checkpoints pass.  This block does
+not supply a complete higher-shell packet, Schur A/B/C kernel rows, strict
+scalar-LSZ moment/FV/IR authority, canonical `O_H`, strict canonical
+`C_sH/C_HH` pole rows, W/Z response, physical `kappa_s`, or top-Yukawa
+closure.
+
+Next exact action: wait for chunks009-010 to finish, then package completed
+row JSONs and volume artifacts with chunk checkpoints before making any final
+support packet statement.
 
 ## Block42 Result
 

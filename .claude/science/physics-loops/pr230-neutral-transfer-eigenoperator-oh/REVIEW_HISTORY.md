@@ -1,5 +1,31 @@
 # Review History
 
+## Block43
+
+Local review run on 2026-05-12 08:53 EDT.
+
+Scope:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS007_008_COMPLETED_AND_009_010_LAUNCH_CHECKPOINT_NOTE_2026-05-12.md`
+- `outputs/yt_pr230_schur_higher_shell_chunk007_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_chunk008_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk007_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk008_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Disposition: pass bounded support plus run-control support.  Completed-mode
+checkpoints for chunks007 and 008 pass 15/0, the wave launcher status passes
+11/0 with completed chunks001-008 and planned chunks009-010, and the launcher
+then starts chunks009-010 with both workers alive after verification.  Campaign
+status passes 403/0 after consuming the completed chunks007-008 checkpoints
+and the chunks009-010 launch state.  This block does not promote taste-radial
+`C_sx/C_xx` to canonical `C_sH/C_HH`, does not provide Schur A/B/C kernel
+rows, scalar-LSZ/FV/IR authority, W/Z response, physical `kappa_s`, retained,
+or `proposed_retained` closure.
+
 ## Block42
 
 Local review run on 2026-05-12 06:45 EDT.
