@@ -1,11 +1,45 @@
 ===== runner cache v1 =====
 runner: scripts/valley_linear_robustness_sweep.py
-runner_sha256: a75a82e67ec1ae095f3cfb7cd907aa033c109851cb517aa3ab5f98588bc38378
-timeout_sec: 120
-exit_code: None
-elapsed_sec: 120.01
-status: timeout
+runner_sha256: d35520085cf162bcf866b3fd9212d1d0897588474e468d204f7a691644211ea1
+timeout_sec: 1800
+exit_code: 0
+elapsed_sec: 71.34
+status: ok
 ----- stdout -----
+==============================================================================
+VALLEY-LINEAR ROBUSTNESS SWEEP
+Action: S = L(1-f)
+Kernel: 1/L^2 with h^2 measure
+Scope: bounded lattice robustness replay, not a theorem card
+==============================================================================
+h=0.5, STRENGTH=5e-05, K=5.0, LAM=10.0
+
+SWEEP 1: Width (L=12, max_d=3, h=0.5)
+  W= 4 Born=2.1e-15 | d_TV=0.76 | MI=0.57 bits | Decoh=49.2% | Grav=+0.000114 (TOWARD) | F~M=1.00 | Tail=n/a
+  W= 6 Born=2.5e-15 | d_TV=0.78 | MI=0.61 bits | Decoh=49.5% | Grav=+0.000136 (TOWARD) | F~M=1.00 | Tail=n/a
+  W= 8 Born=2.5e-15 | d_TV=0.79 | MI=0.59 bits | Decoh=49.4% | Grav=+0.000144 (TOWARD) | F~M=1.00 | Tail=b^(-1.47), R²=0.996, n=4
+  W=10 Born=2.2e-15 | d_TV=0.79 | MI=0.57 bits | Decoh=49.4% | Grav=+0.000150 (TOWARD) | F~M=1.00 | Tail=b^(-1.08), R²=0.941, n=6
+
+SWEEP 2: Connectivity (L=12, W=8, h=0.5)
+  max_d=1 Born=6.9e-16 | d_TV=0.91 | MI=0.83 bits | Decoh=50.0% | Grav=+0.000229 (TOWARD) | F~M=1.00 | Tail=b^(-0.85), R²=0.931, n=4
+  max_d=2 Born=1.6e-15 | d_TV=0.77 | MI=0.60 bits | Decoh=48.4% | Grav=+0.000165 (TOWARD) | F~M=1.00 | Tail=b^(-0.47), R²=0.888, n=6
+  max_d=3 Born=2.5e-15 | d_TV=0.79 | MI=0.59 bits | Decoh=49.4% | Grav=+0.000144 (TOWARD) | F~M=1.00 | Tail=b^(-1.47), R²=0.996, n=4
+
+SWEEP 3: Length (W=8, max_d=3, h=0.5)
+  L= 8 Born=2.1e-15 | d_TV=0.78 | MI=0.56 bits | Decoh=49.6% | Grav=+0.000114 (TOWARD) | F~M=1.00 | Tail=b^(-0.93), R²=0.962, n=6
+  L=10 Born=2.2e-15 | d_TV=0.80 | MI=0.59 bits | Decoh=49.6% | Grav=+0.000133 (TOWARD) | F~M=1.00 | Tail=b^(-1.19), R²=0.978, n=5
+  L=12 Born=2.5e-15 | d_TV=0.79 | MI=0.59 bits | Decoh=49.4% | Grav=+0.000144 (TOWARD) | F~M=1.00 | Tail=b^(-1.47), R²=0.996, n=4
+  L=15 Born=2.7e-15 | d_TV=0.77 | MI=0.59 bits | Decoh=49.2% | Grav=+0.000164 (TOWARD) | F~M=1.00 | Tail=b^(-1.02), R²=0.887, n=4
+  L=18 Born=2.1e-15 | d_TV=0.75 | MI=0.58 bits | Decoh=48.7% | Grav=+0.000178 (TOWARD) | F~M=1.00 | Tail=b^(-1.06), R²=0.941, n=3
+
+SAFE INTERPRETATION
+- valley-linear is promisingly robust on the tested 3D ordered-lattice slices
+- Born remains machine-clean across the tested width/connectivity/length rows
+- the retained rows keep F~M at 1.00 on these sweeps
+- tail fits are only reported when there are enough post-peak points; otherwise n/a
+- this is a frozen replay of the memo tables, not a proof of universality
+
+Total time: 71s
 
 ----- stderr -----
 

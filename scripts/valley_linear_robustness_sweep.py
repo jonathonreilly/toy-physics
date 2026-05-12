@@ -52,6 +52,8 @@ BASE_W = 8
 BASE_MAX_D = 3
 Z_MASS_PHYS = 3
 
+AUDIT_TIMEOUT_SEC = 1800
+
 
 @dataclass
 class Row:
