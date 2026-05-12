@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-12T01:50:00Z"
+checkpoint_time: "2026-05-12T01:29:42Z"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 35
-active_science_block: block35_post_block34_physical_bridge_admission_checkpoint
-active_route: "Post-block34 physical-bridge admission checkpoint; consumes committed block31 chunk063 support, block32 promotion-contract support, block33 OS-transfer alias-firewall support, block34 additive-top support, and current PR-head paths only. Source-Higgs, W/Z, and neutral H3/H4 routes remain waiting on explicit production/certificate inputs; no live chunk worker output was touched."
+cycle_count: 36
+active_science_block: block36_source_higgs_wz_dispatch_checkpoint
+active_route: "Block36 consumes the new lane-1 O_H root theorem attempt, top mass-scan response harness gate, lane-1 action-premise boundary, higher-shell Schur/scalar-LSZ preflight, neutral rank-one bypass boundary, W/Z mass-response self-normalization no-go, higher-shell Schur wave launch, and HS/logdet scalar-action normalization no-go as support/no-go/run-control inputs, checkpoints the blocked canonical O_H/source-Higgs route after block35, and selects strict W/Z accepted-action physical response as the active fallback. This is a dispatch checkpoint only: source-Higgs still requires accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH rows, W/Z still requires accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows, and neutral H3/H4 still requires physical transfer/source-Higgs coupling authority. No live chunk worker output was touched."
 target_status: best-honest-status
-actual_current_surface_status: "open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top commits are support only and no physical bridge is admitted"
-conditional_surface_status: support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization, plus strict C_ss/C_sH/C_HH pole rows; or if a strict W/Z matched physical-response packet with accepted action, same-source top/W covariance, strict non-observed g2, delta_perp, and final W-response rows is supplied
+actual_current_surface_status: "open / block36 source-Higgs route checkpointed and W/Z accepted-action response pivot selected; no physical bridge packet is admitted"
+conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block35 is an admission/yield checkpoint after the committed chunk063 package, no-go scope clarification, complete-packet promotion contract refresh, OS-transfer alias firewall refresh, and additive-top support refresh. The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate."
+proposal_allowed_reason: "Block36 is a dispatch checkpoint. It consumes the lane-1 O_H root theorem attempt, lane-1 action-premise boundary, neutral rank-one bypass audit, W/Z mass-response self-normalization no-go, and HS/logdet scalar-action normalization no-go as exact negative boundaries, treats the top mass-scan response harness and higher-shell Schur/scalar-LSZ preflight as support only, treats the higher-shell Schur wave launch as run-control only, checkpoints the blocked canonical O_H/source-Higgs route after block35, selects strict W/Z accepted-action response as the active fallback, and confirms that no route has the required accepted action, production rows, matched covariance, strict g2, source-Higgs pole authority, or neutral physical-transfer authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness and Euclidean-time/pole authority; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block35 confirms that block31 chunk063 completion, block32 promotion-contract refresh, block33 OS-transfer alias firewall, and block34 additive-top support refresh are support only, not a physical bridge."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness and Euclidean-time/pole authority; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block36 consumes the lane-1 O_H root no-go, lane-1 action-premise no-go, neutral rank-one bypass no-go, W/Z mass-response self-normalization no-go, HS/logdet scalar-action normalization no-go, top mass-scan support-only gate, higher-shell preflight support-only gate, and higher-shell wave launch run-control gate, records source-Higgs as checkpointed/waiting, and selects W/Z accepted-action response as the active fallback, not as an admitted closure route."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -49,6 +49,15 @@ minimal_allowed_premises:
   - "block33 complete-packet OS transfer-kernel refresh as exact boundary only; completed finite rows have no scalar Euclidean-time C_ij(t) kernel and C_sH/C_HH schema fields are taste-radial aliases"
   - "block34 complete additive-top support as bounded support only; additive-top rows/subtraction contract still lack accepted action, W/Z response rows, strict g2, and matched covariance"
   - "block35 post-block34 physical-bridge admission checkpoint as open routing/checkpoint status only; it consumes committed PR-head paths after the additive-top support refresh and admits no source-Higgs, W/Z, or neutral H3/H4 route without explicit production/certificate inputs"
+  - "lane-1 O_H root theorem attempt as exact negative boundary; complete taste-radial rows plus degree-one and FMS support do not derive x=canonical O_H or accepted action authority"
+  - "lane-1 action-premise derivation attempt as exact negative boundary; the current minimal substrate plus support stack does not derive accepted EW/Higgs action or canonical O_H authority"
+  - "top mass-scan response harness gate as bounded support only; bare-mass dE/dm_bare rows are not dE/dh, source-Higgs normalization, W/Z covariance, or retained top-Yukawa readout"
+  - "higher-shell Schur/scalar-LSZ preflight as bounded support only; it launches no jobs, writes no rows, and supplies no pole, threshold, FV/IR, source-Higgs, or W/Z authority"
+  - "neutral rank-one bypass post-block37 audit as exact negative boundary; completed finite rows and top bare-mass support do not determine the unmeasured orthogonal neutral sector"
+  - "W/Z mass-response self-normalization no-go as exact negative boundary; the top-W-Z mass-plus-response dictionary does not fix absolute y_t, strict g2, or absolute normalization on the current PR230 surface"
+  - "higher-shell Schur wave launch as run-control only; active-pending chunks001-002, logs, pid files, and launch status are not row evidence or scalar-LSZ/Schur authority"
+  - "HS/logdet scalar-action normalization no-go as exact negative boundary; formal auxiliary scalar rewrites do not derive canonical O_H, scalar LSZ metric, or source-Higgs overlap on the current PR230 surface"
+  - "block36 source-Higgs/WZ dispatch checkpoint as open routing/checkpoint status only; it consumes the lane-1 no-go, lane-1 action-premise no-go, neutral rank-one bypass no-go, W/Z mass-response self-normalization no-go, HS/logdet scalar-action normalization no-go, top mass-scan support-only gate, higher-shell preflight support-only gate, and higher-shell wave launch run-control gate, checkpoints source-Higgs as waiting on accepted O_H/action plus strict C_ss/C_sH/C_HH rows, selects W/Z accepted-action response as active fallback, and admits no route without explicit production/certificate inputs"
   - "block23 remote-candidate intake as open routing/checkpoint status only; fetched Higgs/EW branches are not PR230 same-surface artifacts without parseable required-path certificates"
   - "block24 queue-pivot admission checkpoint as open routing/checkpoint status only; the block23 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
   - "block25 post-block24 landed checkpoint as open routing/checkpoint status only; the block24 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
@@ -77,6 +86,9 @@ files_touched:
   - outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json
   - scripts/frontier_yt_pr230_campaign_status_certificate.py
   - outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  - scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py
+  - docs/YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT_NOTE_2026-05-12.md
+  - outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json
   - scripts/frontier_yt_pr230_block23_remote_candidate_intake_checkpoint.py
   - docs/YT_PR230_BLOCK23_REMOTE_CANDIDATE_INTAKE_CHECKPOINT_NOTE_2026-05-11.md
   - outputs/yt_pr230_block23_remote_candidate_intake_checkpoint_2026-05-11.json
@@ -438,10 +450,18 @@ commands_run:
   - "2026-05-12 block35: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
   - "2026-05-12 block35: rg forbidden/status firewall review # hits are exclusion/conditional statements only; no retained/proposed_retained promotion"
   - "2026-05-12 block35: git diff --check # OK"
-review_disposition: pass_open_block35_physical_bridge_admission_checkpoint_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block35 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Build one physical bridge artifact: accepted same-surface EW/Higgs action/canonical O_H plus strict C_ss/C_sH/C_HH(t) pole rows, strict W/Z matched physical response, or neutral primitive/rank-one theorem with physical transfer and source-Higgs coupling authority."
-stop_condition: "Coherent block35 post-block34 admission checkpoint; no retained/proposed_retained closure is authorized and no further current-surface shortcut gate is admissible without explicit physical bridge input."
+  - "2026-05-12 block36: python3 -m py_compile scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py # OK"
+  - "2026-05-12 block36: python3 scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py # PASS=23 FAIL=0; source-Higgs checkpointed and W/Z accepted-action response selected as active fallback"
+  - "2026-05-12 block36: python3 scripts/frontier_yt_pr230_campaign_status_certificate.py # PASS=371 FAIL=0; no closure/proposal authorized"
+  - "2026-05-12 block36: bash docs/audit/scripts/run_pipeline.sh # OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings"
+  - "2026-05-12 block36: python3 docs/audit/scripts/audit_lint.py --strict # OK, 5 known warnings"
+  - "2026-05-12 block36: YAML/JSON parse and link checks # OK, missing_links=[]"
+  - "2026-05-12 block36: rg forbidden/status firewall review # hits are exclusion/conditional statements only; no retained/proposed_retained promotion"
+  - "2026-05-12 block36: git diff --check # OK"
+review_disposition: pass_open_block36_source_higgs_wz_dispatch_checkpoint_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block36 PR not opened because PR #230 remains the landing path"
+next_exact_action: "For W/Z, supply accepted same-source EW/Higgs action plus production W/Z mass-response rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Reopen source-Higgs only with accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH pole rows."
+stop_condition: "Coherent block36 source-Higgs/WZ dispatch checkpoint; no retained/proposed_retained closure is authorized and no further current-surface shortcut gate is admissible without explicit physical bridge input."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -748,6 +768,28 @@ block35_post_block34_physical_bridge_admission_checkpoint:
   additive_top_support_committed: true
   source_higgs_route_admitted: false
   wz_physical_response_route_admitted: false
+  neutral_h3h4_route_admitted: false
+  live_worker_touched: false
+  closure_authorized: false
+  proposal_allowed: false
+block36_source_higgs_wz_dispatch_checkpoint:
+  runner: scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py
+  note: docs/YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT_NOTE_2026-05-12.md
+  output: outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json
+  parent_pr_head: 56a1e671063b00c1b1e6f5e2d5bd7390f92c7fbe
+  verification: "block36 source-Higgs/WZ dispatch PASS=23 FAIL=0; campaign status PASS=371 FAIL=0"
+  lane1_oh_root_attempt_consumed: true
+  lane1_action_premise_boundary_consumed: true
+  top_mass_scan_support_only_consumed: true
+  higher_shell_preflight_support_only_consumed: true
+  neutral_rank_one_bypass_boundary_consumed: true
+  wz_mass_response_self_normalization_no_go_consumed: true
+  higher_shell_wave_launch_run_control_only_consumed: true
+  hs_logdet_scalar_normalization_no_go_consumed: true
+  source_higgs_route_checkpointed: true
+  source_higgs_route_admitted: false
+  wz_pivot_selected_after_source_higgs_block: true
+  wz_pivot_admitted: false
   neutral_h3h4_route_admitted: false
   live_worker_touched: false
   closure_authorized: false

@@ -180,6 +180,18 @@ strict source-Higgs rows, strict W/Z physical-response packet, or neutral
 H3/H4 physical-transfer authority is present.  No standalone block35 review PR
 should be opened unless PR #230 integration fails.
 
+Block36 follows the same direct PR #230 landing path.  It checkpoints the
+blocked canonical `O_H` / source-Higgs route after consuming the lane-1 `O_H`
+root theorem, action-premise, and neutral rank-one bypass exact negative
+boundaries plus the W/Z mass-response self-normalization no-go, the top
+mass-scan and higher-shell preflight support-only gates, and the higher-shell
+Schur wave launch run-control gate plus the HS/logdet scalar-action
+normalization no-go, and selects strict W/Z accepted-action physical response as active
+fallback, while recording that W/Z is not admitted without accepted action,
+production W/Z rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response rows.  No standalone
+block36 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

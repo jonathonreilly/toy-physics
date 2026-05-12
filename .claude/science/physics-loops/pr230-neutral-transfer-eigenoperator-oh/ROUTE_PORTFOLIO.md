@@ -852,3 +852,57 @@
 4. **Next admissible route**
    - Supply one committed physical bridge artifact.  Do not reopen shortcut
      gates or route inventory without such an input.
+
+## Selected Block36 Route
+
+**Source-Higgs / W/Z dispatch checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 5.
+- Claim-state movement: checkpoints the blocked action-first `O_H` /
+  source-Higgs route after consuming the lane-1 `O_H` root theorem attempt and
+  lane-1 action-premise exact negative boundaries, treats top mass-scan rows as
+  support only, treats higher-shell preflight as future-production support
+  only, consumes the neutral rank-one bypass exact negative boundary and W/Z
+  mass-response self-normalization no-go, treats the higher-shell Schur wave
+  launch as run-control only, consumes the HS/logdet scalar-action
+  normalization no-go, then
+  selects strict W/Z accepted-action physical response as active fallback.  It does not admit either route without explicit
+  production/certificate inputs.
+- Artifact: `YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT`.
+
+## Block36 Fan-Out Synthesis
+
+1. **Action-first `O_H` / source-Higgs**
+   - Result: checkpointed as blocked.  Accepted same-surface action/operator
+     authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, and
+     Gram/FV/IR authority are absent; the lane-1 root and action-premise
+     attempts record that the current complete packet plus degree-one/FMS
+     support still does not derive `x = canonical O_H` or accepted action;
+     higher-shell preflight launches no jobs and writes no rows, and the
+     higher-shell wave launch is active-pending run-control only.  The
+     HS/logdet auxiliary-scalar normalization shortcut also does not derive
+     canonical `O_H` or scalar LSZ authority.
+
+2. **Strict W/Z accepted-action response**
+   - Result: selected as active fallback but not admitted.  Accepted action,
+     production W/Z rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp`, and final W-response rows remain absent;
+     the top mass-scan response harness is bare-mass support only, not a W/Z
+     matched response/covariance packet, and the mass-response
+     self-normalization no-go does not remove the strict `g2` or absolute
+     normalization requirements.
+
+3. **Neutral H3/H4**
+   - Result: still fallback-only.  Physical neutral transfer/off-diagonal
+     generator and source/canonical-Higgs coupling authority are absent; the
+     neutral rank-one bypass audit is an exact negative boundary on the current
+     surface.
+
+4. **Next exact action**
+   - For W/Z, supply accepted same-source EW/Higgs action plus production W/Z
+     mass-response rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp` authority, and final W-response rows.
+     Reopen source-Higgs only with accepted same-surface `O_H`/action plus
+     strict `C_ss/C_sH/C_HH` pole rows.

@@ -639,3 +639,20 @@ bridge artifact.  Accepted same-surface EW/Higgs action/canonical `O_H` plus
 strict `C_ss/C_sH/C_HH` pole rows remains rank one, strict W/Z matched
 physical response remains rank two, and neutral H3/H4 physical-transfer
 authority remains rank three.
+
+Block36 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Source-Higgs / W/Z dispatch runner | `scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py` | Created; PASS=23 FAIL=0 |
+| Source-Higgs / W/Z dispatch certificate | `outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json` | Created; consumes the lane-1 `O_H` root no-go, lane-1 action-premise no-go, neutral rank-one bypass no-go, W/Z mass-response self-normalization no-go, HS/logdet scalar-action normalization no-go, top mass-scan support-only gate, higher-shell preflight, and higher-shell Schur wave launch run-control gate; checkpoints source-Higgs as blocked and selects W/Z accepted-action response as active fallback without admitting closure |
+| Source-Higgs / W/Z dispatch note | `docs/YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT_NOTE_2026-05-12.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block36 plus upstream higher-shell wave and HS/logdet no-go gates; PASS=371 FAIL=0; no proposal allowed |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block36 checkpoint |
+
+Follow-on artifact target after block36 is now explicit for the active fallback:
+for W/Z, supply accepted same-source EW/Higgs action plus production W/Z
+mass-response rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp` authority, and final W-response rows.  Reopen
+source-Higgs only with accepted same-surface `O_H`/action plus strict
+`C_ss/C_sH/C_HH` pole rows.

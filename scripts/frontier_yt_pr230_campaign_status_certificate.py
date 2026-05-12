@@ -797,6 +797,9 @@ def main() -> int:
         "pr230_block35_post_block34_physical_bridge_admission": load(
             "outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json"
         ),
+        "pr230_block36_source_higgs_wz_dispatch": load(
+            "outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4221,6 +4224,82 @@ def main() -> int:
         is True,
         statuses["pr230_block35_post_block34_physical_bridge_admission"],
     )
+    block36_source_higgs_wz_dispatch = certificates[
+        "pr230_block36_source_higgs_wz_dispatch"
+    ]
+    report(
+        "pr230-block36-source-higgs-wz-dispatch-not-closure",
+        "block36 source-Higgs route checkpointed and W/Z accepted-action response pivot selected"
+        in str(statuses["pr230_block36_source_higgs_wz_dispatch"])
+        and block36_source_higgs_wz_dispatch.get("proposal_allowed") is False
+        and block36_source_higgs_wz_dispatch.get("bare_retained_allowed")
+        is False
+        and block36_source_higgs_wz_dispatch.get(
+            "block36_source_higgs_wz_dispatch_checkpoint_passed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block36_source_higgs_wz_dispatch.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "lane1-oh-root-attempt-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "lane1-action-premise-boundary-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "top-mass-scan-response-support-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "higher-shell-preflight-support-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "neutral-rank-one-bypass-boundary-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-mass-response-self-normalization-no-go-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "higher-shell-wave-launch-run-control-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "hs-logdet-scalar-normalization-no-go-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "source-higgs-route-checkpointed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-pivot-selected-after-source-higgs-block"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-pivot-not-admitted"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "no-route-admitted-without-explicit-input"
+        )
+        is True,
+        statuses["pr230_block36_source_higgs_wz_dispatch"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -7205,6 +7284,75 @@ def main() -> int:
         )
         is True
     )
+    result["block36_source_higgs_wz_dispatch_not_closure"] = (
+        block36_source_higgs_wz_dispatch.get("proposal_allowed") is False
+        and block36_source_higgs_wz_dispatch.get("bare_retained_allowed")
+        is False
+        and block36_source_higgs_wz_dispatch.get(
+            "block36_source_higgs_wz_dispatch_checkpoint_passed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block36_source_higgs_wz_dispatch.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "lane1-oh-root-attempt-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "lane1-action-premise-boundary-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "top-mass-scan-response-support-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "higher-shell-preflight-support-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "neutral-rank-one-bypass-boundary-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-mass-response-self-normalization-no-go-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "higher-shell-wave-launch-run-control-only"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "hs-logdet-scalar-normalization-no-go-consumed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "source-higgs-route-checkpointed"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-pivot-selected-after-source-higgs-block"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "wz-pivot-not-admitted"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+        and block36_source_higgs_wz_dispatch.get("checks", {}).get(
+            "no-route-admitted-without-explicit-input"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -7249,6 +7397,7 @@ def main() -> int:
         "does not treat the block30 assumptions/first-principles/literature/math/repo-bridge review as PR230 top-Yukawa closure",
         "does not treat the block35 post-block34 physical-bridge admission checkpoint as a new source-Higgs, W/Z, or neutral H3/H4 production artifact",
         "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, or launch status as row evidence",
+        "does not treat the block36 source-Higgs/WZ dispatch checkpoint, lane1 action-premise boundary, top mass-scan support rows, higher-shell preflight, neutral rank-one bypass boundary, or W/Z self-normalization no-go as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

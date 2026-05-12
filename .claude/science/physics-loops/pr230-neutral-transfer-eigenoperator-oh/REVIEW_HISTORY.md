@@ -1376,3 +1376,46 @@ python3 link/parse checks
 git diff --check
 # OK
 ```
+
+## Block36
+
+Local review run on 2026-05-12 01:29 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py`
+- `outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json`
+- `docs/YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT_NOTE_2026-05-12.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block36 runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Block36 is dispatch-only: it consumes the lane-1 `O_H` root theorem, action-premise, neutral rank-one bypass, W/Z mass-response self-normalization, and HS/logdet scalar-action normalization exact negative boundaries plus top mass-scan and higher-shell support-only inputs, treats the higher-shell Schur wave launch as run-control only, checkpoints source-Higgs as waiting on accepted action/operator authority and strict pole rows, and selects W/Z as active fallback without admitting it. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, top/W covariance assumption, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The note includes markdown dependency links for the audit citation graph, updates the loop pack, and keeps PR #230 as the landing path. |
+| Audit Compatibility | PASS | Block36 PASS=23 FAIL=0 and campaign status PASS=371 FAIL=0; audit pipeline newly seeded=0 with re-audit required=0 on final rerun, strict lint is OK with 5 known warnings, link/parse/diff checks are clean. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py
+# SUMMARY: PASS=23 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=371 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+python3 link/parse checks
+# parse_ok, missing_links=[]
+git diff --check
+# OK
+```

@@ -1,11 +1,64 @@
 # Handoff
 
-Checkpoint: 2026-05-11 20:18 EDT
+Checkpoint: 2026-05-11 21:29 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block36 Result
+
+Created `YT_PR230_BLOCK36_SOURCE_HIGGS_WZ_DISPATCH_CHECKPOINT`.
+
+This block resumes after block35 without touching the live chunk worker.  It
+consumes the new PR-head lane-1 `O_H` root theorem attempt, top mass-scan
+response harness gate, lane-1 action-premise derivation attempt,
+higher-shell Schur/scalar-LSZ preflight, the neutral rank-one bypass
+boundary, the W/Z mass-response self-normalization no-go, and the higher-shell
+Schur wave launch, plus the HS/logdet scalar-action normalization no-go.
+These are support/no-go inputs only: the lane-1 and neutral bypass
+attempts are exact negative boundaries for current `x=canonical O_H`,
+accepted-action derivation, and neutral rank-one bypass; the top mass-scan rows
+are bare-mass support only; the higher-shell preflight launches no jobs and
+writes no rows; and the W/Z mass-plus-response dictionary still does not fix
+absolute normalization on the current surface.  The higher-shell wave launch
+is active-pending run-control only, not completed row evidence.  It then
+checkpoints the blocked canonical `O_H` / source-Higgs route, with the
+HS/logdet auxiliary-scalar normalization shortcut also blocked, and selects
+strict W/Z accepted-action physical response as the active fallback.  The
+pivot is a dispatch decision only, not closure.
+
+Result:
+
+- source-Higgs remains waiting on accepted same-surface action/operator
+  authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, and
+  Gram/FV/IR authority after the lane-1 root and action-premise attempts fail
+  on the current surface;
+- W/Z is selected as active fallback but remains waiting on accepted action,
+  production W/Z mass-response rows, same-source top rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response rows after the
+  mass-response self-normalization shortcut fails;
+- neutral H3/H4 remains fallback-only without physical neutral transfer and
+  source/canonical-Higgs coupling authority;
+- no retained or `proposed_retained` wording is authorized.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py
+# SUMMARY: PASS=23 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=371 FAIL=0
+```
+
+Next exact action: for W/Z, supply accepted same-source EW/Higgs action plus
+production W/Z mass-response rows, same-source top rows, matched covariance,
+strict non-observed `g2`, `delta_perp` authority, and final W-response rows.
+Reopen source-Higgs only with accepted same-surface `O_H`/action plus strict
+`C_ss/C_sH/C_HH` pole rows.
 
 ## Blocks 01-04
 
@@ -505,7 +558,7 @@ covariance, strict non-observed g2, delta_perp authority, and final
 W-response rows
 ```
 
-Existing `001-062` `C_sx/C_xx` rows are bounded staging support only.  Do not
+Existing `001-063` `C_sx/C_xx` rows are bounded staging support only.  Do not
 cycle more current-surface shortcut gates, do not promote W/Z scout/smoke rows
 to production evidence, and do not touch or package live-worker chunks from
 this lane.
@@ -519,11 +572,12 @@ contact-subtracted or denominator-derived scalar two-point object, threshold
 gap, multivolume FV/IR authority, and canonical `O_H`/source-Higgs or strict
 W/Z bridge are supplied.
 
-If neither artifact exists on resume, do not spend the next block re-proving
-the same absence.  Either supply one of the required artifacts from another
-worker/branch, or keep yielding this lane as waiting on the explicit
-production/certificate inputs while the outer supervisor runs independent
-positive work.
+Block36 has already checkpointed the source-Higgs route and selected W/Z
+accepted-action physical response as the active fallback.  If neither artifact
+exists on resume, do not spend the next block re-proving the same absence.
+Either supply one of the required artifacts from another worker/branch, or keep
+yielding this lane as waiting on the explicit production/certificate inputs
+while the outer supervisor runs independent positive work.
 
 Block17 adds one W/Z-repair support input: 46 chunk-level `A_top` rows.  The
 next W/Z move is to replace those with per-configuration same-source

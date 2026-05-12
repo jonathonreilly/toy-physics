@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block35_post_block34_physical_bridge_admission_checkpoint`.
+Current block: `block36_source_higgs_wz_dispatch_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top commits are support only and no physical bridge is admitted
-conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
+actual_current_surface_status: open / block36 source-Higgs route checkpointed and W/Z accepted-action response pivot selected; no physical bridge packet is admitted
+conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block35 is an admission/yield checkpoint after chunk063, no-go scope clarification, complete-packet promotion contract refresh, OS transfer alias firewall, and additive-top support refresh. The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate."
+proposal_allowed_reason: "Block36 is a dispatch checkpoint. It consumes the lane-1 O_H root theorem attempt, lane-1 action-premise boundary, neutral rank-one bypass audit, W/Z mass-response self-normalization no-go, and HS/logdet scalar-action normalization no-go as exact negative boundaries, treats top mass-scan response rows and higher-shell preflight as support only, treats the higher-shell Schur wave launch as run-control only, checkpoints the blocked canonical O_H/source-Higgs route after block35, selects strict W/Z accepted-action response as the active fallback, and confirms that no route has the required accepted action, production rows, matched covariance, strict g2, source-Higgs pole authority, or neutral physical-transfer authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -119,6 +119,19 @@ Reason:
     `taste_radial_alias_mismatch_count=0`; static equal-time rows do not supply
     a same-surface transfer generator, pole residue, canonical `O_H`, or
     source-Higgs overlap.
+24. Block36 consumes the new lane-1 `O_H` root theorem attempt, lane-1
+    action-premise boundary, neutral rank-one bypass audit, and W/Z
+    mass-response self-normalization no-go plus the HS/logdet scalar-action
+    normalization no-go as exact negative boundaries, and treats the top
+    mass-scan response harness plus higher-shell preflight as support only and
+    the higher-shell Schur wave launch as run-control only.
+    It records that
+    source-Higgs is checkpointed as waiting on accepted same-surface
+    action/operator authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole
+    rows, and Gram/FV/IR authority.  W/Z accepted-action response is selected
+    as the active fallback, but accepted action, production W/Z rows,
+    same-source top rows, matched covariance, strict non-observed `g2`,
+    `delta_perp`, and final W-response rows remain absent.
 
 Prior block certificate summary:
 
@@ -266,5 +279,17 @@ Prior block certificate summary:
   and confirms no accepted same-surface `O_H`/action plus strict
   `C_ss/C_sH/C_HH` rows, no strict W/Z matched physical-response packet, and
   no neutral H3/H4 physical-transfer authority are present.
-- Block01 through Block35 all have `proposal_allowed=false`; their boundaries
+- Block36 actual status: open / source-Higgs route checkpointed and W/Z
+  accepted-action response pivot selected; it consumes the lane-1 `O_H` root
+  attempt and lane-1 action-premise attempt as current-surface exact negative
+  boundaries, the neutral rank-one bypass boundary, the W/Z
+  mass-response self-normalization no-go, and the HS/logdet scalar-action
+  normalization no-go, treats top mass-scan rows and
+  higher-shell preflight as support only, treats higher-shell wave launch as
+  run-control only, records that the
+  source-Higgs route remains blocked on accepted action/operator authority and
+  strict pole rows, selects W/Z as active fallback, and confirms that W/Z is
+  not admitted without accepted action, production rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response authority.
+- Block01 through Block36 all have `proposal_allowed=false`; their boundaries
   remain active.

@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block35 post-block34 physical-bridge admission checkpoint.
+Campaign mode queue after block36 source-Higgs / W/Z dispatch checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -28,6 +28,20 @@ is admitted on the current surface.  Rank one remains certified canonical
 `O_H` plus strict source-Higgs pole rows, rank two remains strict W/Z matched
 physical response with accepted action/covariance/`g2`/`delta_perp`, and rank
 three remains neutral H3/H4 physical-transfer authority.
+
+Block36 consumes the new lane-1 `O_H` root theorem attempt, lane-1
+action-premise derivation attempt, neutral rank-one bypass audit, and W/Z
+mass-response self-normalization no-go plus the HS/logdet scalar-action
+normalization no-go as exact negative boundaries, and treats the top mass-scan
+response harness and higher-shell preflight as support only.  It also consumes
+the higher-shell Schur wave launch as run-control only, not row evidence.
+It treats the neutral rank-one bypass audit as an exact negative
+boundary for the fallback neutral route.  Rank one is checkpointed as waiting on accepted same-surface action/operator authority,
+canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, and Gram/FV/IR authority.
+It selects rank two, strict W/Z accepted-action physical response, as the
+active fallback while keeping it inadmissible until accepted action, production
+W/Z rows, same-source top rows, matched covariance, strict non-observed `g2`,
+`delta_perp`, and final W-response rows are supplied.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
