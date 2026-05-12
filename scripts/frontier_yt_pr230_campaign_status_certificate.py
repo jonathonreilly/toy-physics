@@ -827,6 +827,9 @@ def main() -> int:
         "pr230_block39_post_block38_queue_admission": load(
             "outputs/yt_pr230_block39_post_block38_queue_admission_checkpoint_2026-05-12.json"
         ),
+        "pr230_block53_lane1_residual_minimality": load(
+            "outputs/yt_pr230_block53_lane1_residual_minimality_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4673,6 +4676,34 @@ def main() -> int:
         is True,
         statuses["pr230_block39_post_block38_queue_admission"],
     )
+    block53_lane1_residual_minimality = certificates[
+        "pr230_block53_lane1_residual_minimality"
+    ]
+    report(
+        "pr230-block53-lane1-residual-minimality-not-closure",
+        "block53 residual-minimality checkpoint"
+        in str(statuses["pr230_block53_lane1_residual_minimality"])
+        and block53_lane1_residual_minimality.get("proposal_allowed") is False
+        and block53_lane1_residual_minimality.get("bare_retained_allowed") is False
+        and block53_lane1_residual_minimality.get(
+            "block53_residual_minimality_gate_passed"
+        )
+        is True
+        and block53_lane1_residual_minimality.get("current_support_closed") is True
+        and block53_lane1_residual_minimality.get("closure_not_authorized") is True
+        and block53_lane1_residual_minimality.get("minimal_remaining_roots")
+        == [
+            "physical response readout authorization",
+            "scalar pole/model-class/FV/IR authority",
+            "canonical-Higgs pole identity or same-surface neutral-transfer bridge",
+        ]
+        and not any(
+            block53_lane1_residual_minimality.get(
+                "future_artifact_presence", {}
+            ).values()
+        ),
+        statuses["pr230_block53_lane1_residual_minimality"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6739,6 +6770,7 @@ def main() -> int:
         "block38_bridge_stuck_fanout_not_closure": False,
         "neutral_offdiagonal_post_block45_applicability_blocks": neutral_offdiagonal_post_block45_applicability_blocks,
         "block39_post_block38_queue_admission_not_closure": False,
+        "block53_lane1_residual_minimality_not_closure": False,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6756,6 +6788,7 @@ def main() -> int:
             "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
             "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as strict C_sH/C_HH source-Higgs rows",
             "does not treat block39 post-block38 queue-admission status as production evidence",
+            "does not treat block53 residual-minimality status as positive closure",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8084,6 +8117,22 @@ def main() -> int:
         )
         is True
     )
+    result["block53_lane1_residual_minimality_not_closure"] = (
+        block53_lane1_residual_minimality.get("proposal_allowed") is False
+        and block53_lane1_residual_minimality.get("bare_retained_allowed")
+        is False
+        and block53_lane1_residual_minimality.get(
+            "block53_residual_minimality_gate_passed"
+        )
+        is True
+        and block53_lane1_residual_minimality.get("current_support_closed") is True
+        and block53_lane1_residual_minimality.get("closure_not_authorized") is True
+        and not any(
+            block53_lane1_residual_minimality.get(
+                "future_artifact_presence", {}
+            ).values()
+        )
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -8138,6 +8187,7 @@ def main() -> int:
         "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
         "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as strict C_sH/C_HH source-Higgs rows",
         "does not treat the block39 post-block38 queue-admission checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
+        "does not treat the block53 residual-minimality checkpoint as physical response readout authorization, scalar pole/FV/IR authority, canonical-Higgs identity, or positive closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

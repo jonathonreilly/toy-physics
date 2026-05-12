@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:58:33.231191+00:00",
+  "generated_at": "2026-05-12T05:22:19.603239+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42705,6 +42705,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py",
       "title": "PR230 Block39 Post-Block38 Queue-Admission Checkpoint"
     },
+    "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "open / residual-minimality checkpoint; bounded support closed, positive-closure route still blocked",
+      "deps": [],
+      "note_hash": "2f86fa190e13d01662daed8e81d06fa8cf2c73739f8c20114f183a096d118421",
+      "path": "docs/YT_PR230_BLOCK53_LANE1_RESIDUAL_MINIMALITY_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py",
+      "title": "PR230 Block53 Lane-1 Residual Minimality Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47199,6 +47209,7 @@
     "yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_note_2026-05-11",
     "yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_note_2026-05-11",
     "yt_pr230_block39_post_block38_queue_admission_checkpoint_note_2026-05-12",
+    "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -47482,12 +47493,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1134,
-    "node_count": 2153,
-    "root_count": 1652,
-    "runners_with_path": 1628,
+    "leaf_count": 1135,
+    "node_count": 2154,
+    "root_count": 1653,
+    "runners_with_path": 1629,
     "status_counts": {
-      "bounded": 600,
+      "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,

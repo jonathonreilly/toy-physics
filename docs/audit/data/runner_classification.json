@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T04:58:36.332743+00:00",
+  "generated_at": "2026-05-12T05:22:22.601620+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16717,16 +16717,28 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py"
     },
+    "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 2,
-        "C": 1,
+        "B": 3,
+        "C": 0,
         "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_campaign_status_certificate.py"
     },
     "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07": {
@@ -35909,6 +35921,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_block53_lane1_residual_minimality_gate_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_campaign_status_certificate.py": {
       "assert_count": 1,
       "claims": [
@@ -35916,12 +35943,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 2,
-        "C": 1,
+        "B": 3,
+        "C": 0,
         "D": 3
       },
       "decoration_candidate": false,
-      "dominant_class": "D",
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_yt_pr230_canonical_oh_accepted_action_stretch_attempt.py": {
@@ -43025,13 +43052,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 253,
-      "C": 540,
-      "D": 339,
+      "B": 254,
+      "C": 541,
+      "D": 338,
       "none": 404
     },
-    "runners_classified": 1546,
+    "runners_classified": 1547,
     "runners_with_C": 855,
-    "runners_with_D": 626
+    "runners_with_D": 627
   }
 }

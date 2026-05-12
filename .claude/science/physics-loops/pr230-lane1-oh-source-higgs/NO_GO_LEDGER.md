@@ -83,7 +83,7 @@
   `canonical_higgs_operator_identity_passed=false`, no pole-residue rows,
   disabled source-Higgs time kernels, scalar-LSZ normalization `not_derived`,
   and W/Z response disabled.
-- Complete L12 same-source FH-LSZ support is not retained PR230 closure: the
+- Complete L12 same-source FH-LSZ support is not positive PR230 closure: the
   stale chunk-incompleteness boundary is retired, but raw fitted-slope response
   stability is not passed, scalar pole/model-class/FV/IR authority is absent,
   and the measured scalar source pole is not certified as canonical Higgs
@@ -92,13 +92,19 @@
   it repairs the response-side support diagnostic, but
   `readout_switch_authorized=false` and scalar pole/model-class/FV/IR plus
   canonical-Higgs identity remain absent.
+- Block53 residual-minimality is not closure: it only proves that the current
+  support-side objections have been narrowed to three live physics roots:
+  physical response readout authorization, scalar pole/model-class/FV/IR
+  authority, and canonical-Higgs identity or same-surface neutral-transfer
+  authority.
 
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
-theorems.  They retire if a future native scalar/action/LSZ theorem with a
-fixed kernel/covariance and scalar metric, explicitly admitted action
-extension plus strict rows, same-surface neutral transfer/primitive-cone
-theorem, or strict W/Z physical-response packet with mixed-source
-`T_total/A_top/W` rows, matched covariance, accepted action authority, and
-absolute `g2`/`v` authority supplies the missing bridge.
+theorems.  After Block53, the next positive route should retire at least one
+of the three live roots directly.  They retire if a future native
+scalar/action/LSZ theorem with a fixed kernel/covariance and scalar metric,
+explicitly admitted action extension plus strict rows, same-surface neutral
+transfer/primitive-cone theorem, or strict W/Z physical-response packet with
+mixed-source `T_total/A_top/W` rows, matched covariance, accepted action
+authority, and absolute `g2`/`v` authority supplies the missing bridge.

@@ -25,6 +25,7 @@ OUTPUT = ROOT / "outputs" / "yt_pr230_full_positive_closure_assembly_gate_2026-0
 PARENTS = {
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "block53_lane1_residual_minimality": "outputs/yt_pr230_block53_lane1_residual_minimality_gate_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -476,6 +477,19 @@ def main() -> int:
     response_side_support = (
         certs["fh_lsz_common_window_response"].get("common_window_response_gate_passed") is True
         or "support" in statuses["fh_lsz_common_window_response"]
+    )
+    block53_residual_minimality_not_closure = (
+        certs["block53_lane1_residual_minimality"].get("proposal_allowed") is False
+        and certs["block53_lane1_residual_minimality"].get("bare_retained_allowed")
+        is False
+        and certs["block53_lane1_residual_minimality"].get(
+            "block53_residual_minimality_gate_passed"
+        )
+        is True
+        and certs["block53_lane1_residual_minimality"].get("current_support_closed")
+        is True
+        and certs["block53_lane1_residual_minimality"].get("closure_not_authorized")
+        is True
     )
     finite_source_support = (
         certs["fh_lsz_finite_source_linearity"].get("finite_source_linearity_gate_passed") is True
@@ -2528,6 +2542,11 @@ def main() -> int:
     report("parent-certificates-present", not missing_parents, f"missing={missing_parents}")
     report("no-parent-authorizes-proposal", not proposal_allowed_parents, f"proposal_allowed={proposal_allowed_parents}")
     report("response-side-support-present", response_side_support, statuses["fh_lsz_common_window_response"])
+    report(
+        "block53-residual-minimality-not-closure",
+        block53_residual_minimality_not_closure,
+        statuses["block53_lane1_residual_minimality"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4020,6 +4039,7 @@ def main() -> int:
         "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
         "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
         "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
+        "block53_residual_minimality_not_closure": block53_residual_minimality_not_closure,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4096,6 +4116,7 @@ def main() -> int:
             "does not treat cycle-33 post-cycle-32 main-audit-status-drift guard closure as positive evidence",
             "does not treat packaged C_sx/C_xx chunks as canonical C_sH/C_HH pole rows",
             "does not treat a source-Higgs pole-row acceptance contract as evidence that such rows exist",
+            "does not treat the Block53 residual-minimality checkpoint as positive closure",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "

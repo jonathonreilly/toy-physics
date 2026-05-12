@@ -314,3 +314,53 @@ response-side stability support unless new response data land; common-window
 support is already packaged.  The next same-source route must target physical
 response readout authorization, scalar pole/model-class/FV/IR authority,
 canonical-Higgs identity, or W/Z physical response.
+
+## Block53 Residual-Minimality Checkpoint
+
+Added `docs/YT_PR230_BLOCK53_LANE1_RESIDUAL_MINIMALITY_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py`, and
+`outputs/yt_pr230_block53_lane1_residual_minimality_gate_2026-05-12.json`.
+
+Result: open / residual-minimality checkpoint.  L12 FH-LSZ support and
+common-window response-side stability support are closed as bounded support,
+but positive PR230 closure remains blocked by exactly three physics roots:
+physical response readout authorization, scalar pole/model-class/FV/IR
+authority, and canonical-Higgs pole identity or an equivalent same-surface
+neutral-transfer bridge.
+
+The three parallel explorer probes reached the same conclusion for the current
+surface: no overlooked scalar/action/LSZ theorem, neutral H3/H4/primitive-cone
+artifact, or W/Z physical-response packet supplies those roots after Block52.
+The W/Z and neutral routes remain open only after future strict artifacts; they
+are not current authority.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py
+# SUMMARY: PASS=17 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=179 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=388 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; known five warnings only.
+
+git diff --check
+# no whitespace errors
+```
+
+Next exact action: stop inventory cycling.  Attack one remaining root directly:
+derive/measure canonical-Higgs or neutral-transfer authority, derive scalar
+pole/model-class/FV/IR authority, or build strict W/Z/source-Higgs physical
+response rows that authorize the readout switch.  Do not interrupt the active
+higher-shell chunk workers.

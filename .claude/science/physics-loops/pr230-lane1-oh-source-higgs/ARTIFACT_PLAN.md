@@ -220,15 +220,24 @@ complete L12 set.  The physical response readout switch remains unauthorized,
 so scalar pole/model-class/FV/IR authority and canonical-Higgs pole identity
 remain the next blockers.
 
+## Block53: Lane-1 Residual-Minimality Checkpoint
+
+- Note: `docs/YT_PR230_BLOCK53_LANE1_RESIDUAL_MINIMALITY_GATE_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block53_lane1_residual_minimality_gate_2026-05-12.json`
+
+Status: open / residual-minimality checkpoint.  This is not a new closure
+claim.  It records that L12 FH-LSZ chunk completeness and common-window
+response-side support are closed as bounded support, while retained-route
+closure remains blocked by physical response readout authorization, scalar
+pole/model-class/FV/IR authority, and canonical-Higgs pole identity or
+same-surface neutral-transfer authority.
+
 ## Future Positive Artifact
 
-The next artifact that could move the lane positively is a new same-surface
-neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
-present in the current MC target-time-series packet, ordinary tau correlators,
-reduced smoke, active worker intent, completed higher-shell chunks001-002,
-completed L12 same-source FH-LSZ support, common-window response support,
-higher-shell taste-radial cross rows, or origin/main Ward Step 3 open-gate
-status; a strict W/Z physical-response packet with actual mixed-source
-`T_total/A_top/W` rows, matched covariance, accepted action, and absolute
-`g2`/`v` authority; or a genuinely new scalar/action/LSZ primitive not already
-covered by Block41.
+The next artifact that could move the lane positively is a primitive-bearing
+Block53-root artifact, not another inventory checkpoint: canonical-Higgs or
+same-surface neutral-transfer authority; scalar pole/model-class/FV/IR
+authority; or a strict W/Z/source-Higgs physical response packet that
+authorizes the readout switch without forbidden imports.

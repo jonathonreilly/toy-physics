@@ -25,6 +25,9 @@
   `C_ss/C_sx/C_xx` support only; not a complete packet, pole-row packet,
   canonical `O_H`, scalar-LSZ/FV/IR authority, W/Z response, or retained-route
   closure.
+- Complete L12 same-source FH-LSZ support and common-window response stability
+  support as bounded support only; not physical top-Yukawa readout and not
+  authorization to replace `dE/ds` by `dE/dh`.
 - Origin/main audited YT_WARD Step 3 same-1PI construction as an
   `open_gate` coefficient diagnostic only; not PR230 `O_H`, source-Higgs,
   `g_bare=1`, or SM top-Yukawa closure.
@@ -68,6 +71,9 @@
 - Treating origin/main audited YT_WARD Step 3 `open_gate` status as PR230
   canonical `O_H` authority, source-Higgs pole evidence, same-1PI closure,
   `g_bare=1` derivation, or physical top-Yukawa derivation.
+- Treating Block53 residual-minimality as closure, retained-route evidence, or
+  permission to skip physical response readout authorization, scalar
+  pole/model-class/FV/IR authority, or canonical-Higgs identity.
 
 ## Block A Import Audit Result
 
@@ -243,3 +249,13 @@ support across the full L12 set: the mean common-window slope is
 `readout_switch_authorized=false`, so the remaining imports are physical
 response readout authorization, scalar pole/model-class/FV/IR authority, and
 canonical-Higgs pole identity.
+
+## Block53 Residual-Minimality Result
+
+The post-Block52 surface is now narrow but still open.  The support artifacts
+that were previously suspected blockers are closed as support: L12 same-source
+FH-LSZ completeness and common-window response stability.  The minimal
+remaining current-surface imports are physical response readout authorization,
+scalar pole/model-class/FV/IR authority, and canonical-Higgs pole identity or
+same-surface neutral-transfer authority.  No `proposed_retained` wording is
+authorized until one of those roots is actually supplied and review passes.

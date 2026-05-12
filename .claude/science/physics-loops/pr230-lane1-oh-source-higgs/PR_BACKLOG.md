@@ -155,4 +155,14 @@ Lane 1 Block52: common-window response support intake
   full L12 set, but `readout_switch_authorized=false`; the remaining blockers
   are physical response readout authorization, scalar pole/model-class/FV/IR
   authority, and canonical-Higgs identity
+
+Lane 1 Block53: residual-minimality checkpoint
+- status: open / residual-minimality checkpoint on the current surface
+- runner: scripts/frontier_yt_pr230_block53_lane1_residual_minimality_gate.py
+- result: PASS=17 FAIL=0; aggregate gates PASS=179 FAIL=0 and PASS=388 FAIL=0
+- conclusion: L12 chunk completeness and common-window response stability are
+  closed as bounded support; the minimal remaining roots are physical response
+  readout authorization, scalar pole/model-class/FV/IR authority, and
+  canonical-Higgs identity or same-surface neutral-transfer authority.  No
+  proposed_retained wording is authorized.
 ```

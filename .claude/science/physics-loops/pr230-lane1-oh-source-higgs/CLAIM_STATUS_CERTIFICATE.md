@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: bounded support plus exact boundary: complete L12 same-source FH-LSZ support and common-window response stability support are present, but physical readout authorization, scalar pole/model-class/FV/IR, and canonical-Higgs identity gates remain open; completed higher-shell chunks001-002 are partial taste-radial C_sx/C_xx support, not PR230 source-Higgs bridge closure
+actual_current_surface_status: open / block53 residual-minimality checkpoint: complete L12 same-source FH-LSZ support and common-window response stability support are present, but physical readout authorization, scalar pole/model-class/FV/IR, and canonical-Higgs identity or same-surface neutral-transfer authority remain open
 conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, common-window response stability support, ordinary top/scalar-source tau correlators, W/Z response contracts, completed higher-shell chunks001-002 under taste-radial cross-row authority, an origin/main YT_WARD Step 3 row audited clean only as an open_gate, and exhausted native scalar/action/LSZ plus W/Z absolute-authority support-only routes, but physical response readout authorization is absent, scalar pole/model-class/FV/IR authority is absent, no dynamic Phi/action exists, no canonical O_H identity exists, no physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority exist, and no neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, and common-window response stability support, but the physical readout switch is not authorized, scalar pole/model-class/FV/IR authority is absent, no dynamic Phi/action exists, no canonical O_H identity exists, no physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority exist, and no neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -136,4 +136,12 @@ frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0
 frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0
 frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=178 FAIL=0
 frontier_yt_pr230_campaign_status_certificate.py: PASS=387 FAIL=0
+```
+
+Block53 residual-minimality result:
+
+```text
+frontier_yt_pr230_block53_lane1_residual_minimality_gate.py: PASS=17 FAIL=0
+frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=179 FAIL=0
+frontier_yt_pr230_campaign_status_certificate.py: PASS=388 FAIL=0
 ```
