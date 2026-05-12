@@ -41,6 +41,11 @@
   self-normalization, source-coordinate, Goldstone, covariance, factorization,
   response-only `g2`, and bare-running `g2` routes still leave production W/Z
   rows and strict absolute `g2`/`v` authority open.
+- Full FH-LSZ target time series are not a same-surface neutral-transfer or
+  canonical-Higgs bridge after Block42: the complete 63/63 L12 packet supplies
+  source-coordinate `dE/ds` and `C_ss/Gamma_ss` time series, but no neutral
+  transfer matrix, off-diagonal generator, primitive-cone certificate,
+  canonical-Higgs normalization, or strict `C_sH/C_HH` pole rows.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary

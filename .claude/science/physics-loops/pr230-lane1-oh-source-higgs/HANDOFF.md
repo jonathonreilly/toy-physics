@@ -71,6 +71,14 @@ no accepted same-source action, production W/Z response rows, matched top/WZ
 covariance, strict non-observed `g2`, explicit `v`, `delta_perp` authority, or
 final physical-response packet.
 
+Block43 tests the newest complete 63/63 FH-LSZ L12 target-time-series packet
+against the same-surface neutral-transfer route.  The packet is production
+support for source-coordinate `dE/ds` and `C_ss/Gamma_ss` time series, but it
+still has no neutral transfer matrix, source-to-triplet off-diagonal
+generator, primitive-cone certificate, canonical-Higgs normalization, or
+strict `C_sH/C_HH` pole rows.  A neutral completion can preserve all observed
+source time series while changing the candidate source-Higgs overlap.
+
 ## Checks Run
 
 ```text
@@ -102,6 +110,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_wz_absolute_authority_route_exha
 python3 scripts/frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py
 # SUMMARY: PASS=26 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py
+python3 scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py
+# SUMMARY: PASS=18 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -127,11 +139,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=170 FAIL=0
+# SUMMARY: PASS=171 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=374 FAIL=0
+# campaign status SUMMARY: PASS=376 FAIL=0
 ```
 
 ## Current Status
@@ -139,7 +151,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive a new same-surface neutral transfer primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
+derive a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -150,10 +162,11 @@ Without that, the completed taste-radial rows cannot be promoted to
 
 Continue only with a new primitive-bearing route.  The next block should not
 re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
-normalization, or W/Z self-normalization.  It should try one of:
+normalization, W/Z self-normalization, or target-time-series source-only
+promotion.  It should try one of:
 
 ```text
-new same-surface neutral transfer primitive
+new same-surface neutral transfer/off-diagonal generator primitive
 strict W/Z physical-response packet with actual production rows plus absolute g2/v authority
 new native scalar/action/LSZ primitive not already tested
 ```

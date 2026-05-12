@@ -2,8 +2,10 @@
 
 1. **Neutral rank-one theorem.**
    Block38 says the current finite row packet and top bare-mass response do not
-   force this.  Reopen only with a physical transfer/off-diagonal generator,
-   primitive-cone certificate, or strict neutral transfer artifact.
+   force this.  Block43 says complete source target-time-series support also
+   does not force this.  Reopen only with a physical transfer/off-diagonal
+   generator, primitive-cone certificate, strict neutral transfer artifact, or
+   strict `C_sH/C_HH` pole rows with canonical-Higgs authority.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only

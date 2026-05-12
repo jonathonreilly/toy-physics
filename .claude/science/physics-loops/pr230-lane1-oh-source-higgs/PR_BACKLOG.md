@@ -62,4 +62,13 @@ Lane 1 Block42: W/Z absolute-authority route exhaustion
   authority, delta_perp control, or a final physical-response packet; the next
   positive route should start with neutral transfer or an actual strict W/Z
   packet root
+
+Lane 1 Block43: full target-time-series neutral-transfer lift no-go
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py
+- result: PASS=18 FAIL=0
+- conclusion: complete 63/63 source target-time-series support gives dE/ds
+  and C_ss/Gamma_ss statistics, but no neutral transfer matrix, off-diagonal
+  generator, primitive-cone certificate, canonical-Higgs normalization, or
+  strict C_sH/C_HH pole rows
 ```

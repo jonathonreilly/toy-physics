@@ -5,6 +5,8 @@
 - Cl(3)/Z3 substrate and PR230 source primitives.
 - Complete `63/63` two-source taste-radial packet as finite `C_ss/C_sx/C_xx`
   support only.
+- Complete `63/63` FH-LSZ target time series as source-coordinate `dE/ds` and
+  `C_ss/Gamma_ss` support only.
 - Degree-one radial-tangent `O_H` theorem as exact support under its explicit
   future action premise.
 - FMS `O_H` candidate/action packet as conditional support only.
@@ -28,6 +30,8 @@
 - Treating W/Z response-ratio contracts, smoke/schema rows, or ideal
   mass-plus-response rows as an absolute `y_t` readout without production W/Z
   rows and strict `g2`/`v` authority.
+- Treating complete source target time series as same-surface neutral transfer,
+  canonical `O_H`, `dE/dh`, or strict `C_sH/C_HH` pole rows.
 
 ## Block A Import Audit Result
 
@@ -96,3 +100,13 @@ response rows, matched top/WZ covariance, strict non-observed `g2`, explicit
 `v`, `delta_perp` authority, or final W/Z physical-response packet.  This is
 not a permanent W/Z no-go; it means the route reopens only with actual strict
 packet roots or a new absolute-normalization theorem.
+
+## Block43 Full Target-Time-Series Neutral-Transfer Lift Result
+
+The complete 63/63 L12 FH-LSZ target-time-series packet remains source-only
+support on the current surface.  It supplies source-coordinate `dE/ds` and
+`C_ss/Gamma_ss` time series, but no neutral transfer matrix, source-to-triplet
+off-diagonal generator, primitive-cone certificate, canonical-Higgs
+normalization, or strict `C_sH/C_HH` pole rows.  A future neutral route needs
+one of those artifacts explicitly; it cannot promote source time series by
+alias.

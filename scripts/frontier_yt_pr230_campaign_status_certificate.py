@@ -488,6 +488,9 @@ def main() -> int:
         "pr230_wz_absolute_authority_route_exhaustion_after_block41": load(
             "outputs/yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_2026-05-12.json"
         ),
+        "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42": load(
+            "outputs/yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2454,6 +2457,27 @@ def main() -> int:
         "pr230-wz-absolute-authority-route-exhaustion-blocks",
         wz_absolute_authority_route_exhaustion_blocks,
         statuses["pr230_wz_absolute_authority_route_exhaustion_after_block41"],
+    )
+    full_timeseries_neutral_transfer_lift_no_go_blocks = (
+        "full FH-LSZ target-timeseries packet does not lift PR230"
+        in str(
+            statuses[
+                "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"
+            ]
+        )
+        and certificates[
+            "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"
+        ].get("full_timeseries_neutral_transfer_lift_no_go_passed")
+        is True
+    )
+    report(
+        "pr230-full-timeseries-neutral-transfer-lift-no-go-blocks",
+        full_timeseries_neutral_transfer_lift_no_go_blocks,
+        statuses["pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6301,6 +6325,7 @@ def main() -> int:
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
         "block37_post_block36_supervisor_yield_not_closure": False,
+        "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6310,6 +6335,7 @@ def main() -> int:
             "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
             "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
             "does not treat block37 post-block36 supervisor-yield status as production evidence",
+            "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,

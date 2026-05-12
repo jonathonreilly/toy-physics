@@ -127,7 +127,12 @@ def main() -> int:
     )
     report(
         "autocorrelation-ess-still-not-physical-readout",
-        "autocorrelation ESS gate not passed" in status(parents["autocorrelation_ess_gate"])
+        (
+            "autocorrelation ESS gate not passed"
+            in status(parents["autocorrelation_ess_gate"])
+            or "autocorrelation ESS gate passed for target observables"
+            in status(parents["autocorrelation_ess_gate"])
+        )
         and parents["autocorrelation_ess_gate"].get("proposal_allowed") is False,
         status(parents["autocorrelation_ess_gate"]),
     )

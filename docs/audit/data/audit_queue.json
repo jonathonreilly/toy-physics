@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 241,
-    "leaf": 710,
+    "leaf": 711,
     "medium": 345
   },
-  "generated_at": "2026-05-12T02:56:11.176789+00:00",
+  "generated_at": "2026-05-12T03:01:48.015879+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21608,6 +21608,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_note_2026-05-12",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_FULL_TIMESERIES_NEUTRAL_TRANSFER_LIFT_NO_GO_AFTER_BLOCK42_NOTE_2026-05-12.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_genuine_source_pole_artifact_intake_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26589,6 +26606,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 892,
-  "total_pending": 1296
+  "ready_count": 893,
+  "total_pending": 1297
 }

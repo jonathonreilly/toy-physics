@@ -1,12 +1,13 @@
 # Opportunity Queue
 
-## Active Ranking After Block42
+## Active Ranking After Block43
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
-   primitive-cone certificate, or strict neutral transfer artifact.  Block38
-   shows the current row packet and top mass-scan response support do not force
-   this.
+   primitive-cone certificate, strict neutral transfer artifact, or production
+   `C_sH/C_HH` pole rows with canonical-Higgs authority.  Block38 shows the
+   current row packet and top mass-scan response support do not force this;
+   Block43 shows complete source target-time series also do not force this.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,

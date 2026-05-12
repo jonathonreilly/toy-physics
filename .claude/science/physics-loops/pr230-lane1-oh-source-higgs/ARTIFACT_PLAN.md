@@ -86,10 +86,22 @@ no-go boundaries for self-normalization, source-coordinate, Goldstone,
 covariance, and `g2` shortcuts, but it has no production W/Z rows, matched
 top/WZ covariance, strict non-observed `g2`, explicit `v`, or accepted action.
 
+## Block43: Full Target-Time-Series Neutral-Transfer Lift No-Go
+
+- Note: `docs/YT_PR230_FULL_TIMESERIES_NEUTRAL_TRANSFER_LIFT_NO_GO_AFTER_BLOCK42_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py`
+- Certificate: `outputs/yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The complete 63/63
+L12 FH-LSZ target-time-series packet supports source-coordinate `dE/ds` and
+`C_ss/Gamma_ss` statistics, but does not supply a same-surface neutral transfer
+operator, off-diagonal generator, primitive-cone certificate, canonical-Higgs
+normalization, or strict `C_sH/C_HH` pole rows.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
-neutral transfer primitive not present in the current row packet, a strict W/Z
-physical-response packet with actual production rows and absolute `g2`/`v`
-authority, or a genuinely new scalar/action/LSZ primitive not already covered
-by Block41.
+neutral transfer primitive not present in the current row or source-time-series
+packet, a strict W/Z physical-response packet with actual production rows and
+absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ primitive not
+already covered by Block41.

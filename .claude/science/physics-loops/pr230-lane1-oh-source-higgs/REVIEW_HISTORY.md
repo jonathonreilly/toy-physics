@@ -175,3 +175,36 @@ performed directly against the changed files and repo governance surfaces:
   work and the audit pipeline seeds it as `support`.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings.
+
+## Self-Review: Block43
+
+- Overclaim check: passed.  The note says only that the complete FH-LSZ
+  target-time-series packet does not lift the current surface to neutral
+  transfer or canonical-Higgs closure.  It does not claim a permanent no-go.
+- Physics check: passed.  The runner checks all 63 chunks, verifies the schema
+  is source-only, and supplies a neutral-completion family preserving observed
+  source time series while varying the candidate source-Higgs overlap.
+- Forbidden-import check: passed.  The runner does not use observed targets,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, `dE/ds -> dE/dh`,
+  unit normalization, primitive-cone relabeling, or `C_ss -> C_sH/C_HH`.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block43 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow current-surface boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=18 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  The complete source
+  target-time-series support remains support-only for source-coordinate
+  statistics.
+- Imports / Support: DISCLOSED.  The absent neutral transfer matrix,
+  off-diagonal generator, primitive-cone certificate, canonical-Higgs
+  normalization, and strict `C_sH/C_HH` pole rows are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline and
+  `audit_lint.py --strict` complete with only the known five warnings.

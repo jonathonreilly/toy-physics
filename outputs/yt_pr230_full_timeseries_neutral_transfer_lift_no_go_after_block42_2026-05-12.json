@@ -1,0 +1,269 @@
+{
+  "actual_current_surface_status": "exact negative boundary / full FH-LSZ target-timeseries packet does not lift PR230 to a same-surface neutral transfer or O_H bridge",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if future target-time rows include a genuine same-surface neutral transfer/off-diagonal generator, strict C_sH/C_HH pole rows, primitive-cone certificate, or canonical-Higgs coupling authority",
+  "counterfamily": [
+    {
+      "basis": [
+        "source_pole_s",
+        "unmeasured_orthogonal_neutral_n"
+      ],
+      "candidate_C_HH_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "candidate_C_sH_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "candidate_source_higgs_overlap_scale": 1.0,
+      "case": "pure_source_axis",
+      "neutral_transfer_or_offdiagonal_generator_supplied": false,
+      "observed_C_ss_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "observed_source_timeseries_change": false,
+      "unmeasured_completion": {
+        "C_nn_timeseries": [
+          1.0,
+          0.42,
+          0.18,
+          0.08
+        ],
+        "C_sn_timeseries": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "H_theta": [
+          1.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "basis": [
+        "source_pole_s",
+        "unmeasured_orthogonal_neutral_n"
+      ],
+      "candidate_C_HH_timeseries": [
+        1.0,
+        0.42000000000000004,
+        0.18,
+        0.08000000000000002
+      ],
+      "candidate_C_sH_timeseries": [
+        0.8660254037844387,
+        0.36373066958946426,
+        0.15588457268119896,
+        0.06928203230275509
+      ],
+      "candidate_source_higgs_overlap_scale": 0.8660254037844387,
+      "case": "mixed_30deg",
+      "neutral_transfer_or_offdiagonal_generator_supplied": false,
+      "observed_C_ss_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "observed_source_timeseries_change": false,
+      "unmeasured_completion": {
+        "C_nn_timeseries": [
+          1.0,
+          0.42,
+          0.18,
+          0.08
+        ],
+        "C_sn_timeseries": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "H_theta": [
+          0.8660254037844387,
+          0.49999999999999994
+        ]
+      }
+    },
+    {
+      "basis": [
+        "source_pole_s",
+        "unmeasured_orthogonal_neutral_n"
+      ],
+      "candidate_C_HH_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "candidate_C_sH_timeseries": [
+        0.5000000000000001,
+        0.21000000000000005,
+        0.09000000000000001,
+        0.04000000000000001
+      ],
+      "candidate_source_higgs_overlap_scale": 0.5000000000000001,
+      "case": "mixed_60deg",
+      "neutral_transfer_or_offdiagonal_generator_supplied": false,
+      "observed_C_ss_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "observed_source_timeseries_change": false,
+      "unmeasured_completion": {
+        "C_nn_timeseries": [
+          1.0,
+          0.42,
+          0.18,
+          0.08
+        ],
+        "C_sn_timeseries": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "H_theta": [
+          0.5000000000000001,
+          0.8660254037844386
+        ]
+      }
+    },
+    {
+      "basis": [
+        "source_pole_s",
+        "unmeasured_orthogonal_neutral_n"
+      ],
+      "candidate_C_HH_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "candidate_C_sH_timeseries": [
+        6.123233995736766e-17,
+        2.5717582782094416e-17,
+        1.1021821192326179e-17,
+        4.898587196589413e-18
+      ],
+      "candidate_source_higgs_overlap_scale": 6.123233995736766e-17,
+      "case": "orthogonal_higgs_axis",
+      "neutral_transfer_or_offdiagonal_generator_supplied": false,
+      "observed_C_ss_timeseries": [
+        1.0,
+        0.42,
+        0.18,
+        0.08
+      ],
+      "observed_source_timeseries_change": false,
+      "unmeasured_completion": {
+        "C_nn_timeseries": [
+          1.0,
+          0.42,
+          0.18,
+          0.08
+        ],
+        "C_sn_timeseries": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "H_theta": [
+          6.123233995736766e-17,
+          1.0
+        ]
+      }
+    }
+  ],
+  "exact_next_action": "Do not treat the full target-timeseries packet as H3/H4 closure.  A positive neutral route must add a same-surface transfer/off-diagonal generator or production C_sH/C_HH rows with canonical-Higgs authority.",
+  "fail_count": 0,
+  "full_timeseries_neutral_transfer_lift_no_go_passed": true,
+  "future_artifact_presence": {
+    "canonical_higgs_operator_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "neutral_scalar_rank_one_purity_certificate": false,
+    "same_surface_neutral_transfer_operator": false,
+    "source_higgs_measurement_rows": false,
+    "source_higgs_production_certificate": false
+  },
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "same-surface neutral transfer operator or off-diagonal generator",
+    "primitive-cone / irreducibility certificate",
+    "canonical-Higgs source coupling or C_sH/C_HH pole rows",
+    "scalar LSZ/FV/IR metric linking source target rows to h"
+  ],
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "neutral_h3h4_aperture": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
+    "neutral_primitive_route_completion": "outputs/yt_pr230_neutral_primitive_route_completion_2026-05-06.json",
+    "neutral_rank_one_bypass_post_block37": "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json",
+    "neutral_transfer_eigenoperator_source_mixing_no_go": "outputs/yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_2026-05-07.json",
+    "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
+    "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
+    "target_timeseries_full_set": "outputs/yt_fh_lsz_target_timeseries_full_set_checkpoint_2026-05-12.json",
+    "target_timeseries_higgs_identity_no_go": "outputs/yt_fh_lsz_target_timeseries_higgs_identity_no_go_2026-05-02.json",
+    "two_source_taste_radial_primitive_transfer_candidate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "neutral_primitive_route_completion": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
+    "neutral_rank_one_bypass_post_block37": "exact negative boundary / post-Block37 neutral rank-one bypass not closed on the current PR230 surface",
+    "neutral_transfer_eigenoperator_source_mixing_no_go": "exact negative boundary / current same-surface Z3 eigenoperator data do not certify a physical neutral scalar transfer or O_H bridge",
+    "os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "target_timeseries_full_set": "bounded-support / FH-LSZ full L12 target-timeseries packet checkpoint",
+    "target_timeseries_higgs_identity_no_go": "exact negative boundary / FH-LSZ target time series not canonical-Higgs identity",
+    "two_source_taste_radial_primitive_transfer_candidate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The completed 63/63 target-timeseries packet is source-coordinate production support only.  It has C_ss/Gamma_ss and dE/ds target rows, but no C_sH/C_HH, neutral transfer matrix, off-diagonal generator, primitive-cone certificate, or canonical-Higgs normalization.",
+  "schema_summary": {
+    "bad_mode_chunks": [],
+    "checked_chunks": 63,
+    "chunks_with_forbidden_neutral_keys": [],
+    "expected_configurations_per_mode": 16,
+    "expected_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,1,0",
+      "1,0,0"
+    ],
+    "missing_chunks": [],
+    "source_physical_higgs_normalization_absent": true,
+    "source_strict_limit_blocks_h_readout": true
+  },
+  "strict_non_claims": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_c2_zmatch_g2_or_overlap_to_one": false,
+    "treated_c_ss_timeseries_as_c_sH_or_c_HH": false,
+    "treated_finite_source_autocorrelation_as_primitive_cone": false,
+    "treated_source_timeseries_as_neutral_transfer": false,
+    "treated_target_dE_ds_as_dE_dh": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_target_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  }
+}
