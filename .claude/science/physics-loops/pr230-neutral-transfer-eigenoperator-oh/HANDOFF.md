@@ -1519,3 +1519,47 @@ Next exact action: build one physical bridge artifact: accepted same-surface
 EW/Higgs action/canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows, strict
 W/Z matched physical response, or a neutral primitive/rank-one theorem with a
 physical transfer kernel and source-Higgs coupling authority.
+
+## Block33 Complete-Packet OS Transfer/Alias Firewall
+
+Block33 refreshes the OS transfer-kernel route against the complete finite
+packet and adds an explicit alias firewall.
+
+Artifacts refreshed:
+
+- `scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py`
+- `outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json`
+- `docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, handoff, and block33 PR body
+
+Result:
+
+- `ready_chunks=63`;
+- `combined_rows_written=true`;
+- `chunks_with_top_tau_correlators=63`;
+- `chunks_with_scalar_time_kernel=0`;
+- `chunks_with_taste_radial_alias_metadata=63`;
+- `taste_radial_alias_mismatch_count=0`;
+- `same_surface_transfer_or_gevp_present=false`;
+- `proposal_allowed=false`.
+
+Honest status: exact support plus negative boundary.  The complete finite
+packet is equal-time taste-radial support only.  It is not a scalar
+Euclidean-time kernel, not a transfer generator, not a pole-residue packet, and
+not canonical source-Higgs overlap authority.  The apparent `C_sH/C_HH` fields
+are verified aliases of `C_sx/C_xx`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# OK
+python3 scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
+Next exact action: build one physical bridge artifact: same-surface
+`C_ss(t)/C_sH(t)/C_HH(t)` rows with certified canonical `O_H`, strict W/Z
+matched physical response, or a neutral primitive/rank-one theorem with a
+physical transfer kernel and source-Higgs coupling authority.

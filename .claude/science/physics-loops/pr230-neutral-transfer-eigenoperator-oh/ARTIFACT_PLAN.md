@@ -609,3 +609,17 @@ Block32 artifacts:
 Follow-on artifact target after block32 is unchanged in kind: the finite
 taste-radial packet and its promotion contract are current.  Closure now
 requires a real same-surface bridge artifact, not more finite packet work.
+
+Block33 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Complete-packet OS transfer-kernel runner | `scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py` | Refreshed with alias firewall; PASS=13 FAIL=0 |
+| Complete-packet OS transfer-kernel certificate | `outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json` | Refreshed; `ready_chunks=63`, `combined_rows_written=true`, `chunks_with_top_tau_correlators=63`, `chunks_with_scalar_time_kernel=0`, `chunks_with_taste_radial_alias_metadata=63`, `taste_radial_alias_mismatch_count=0` |
+| OS transfer-kernel note | `docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md` | Refreshed; complete packet still lacks scalar Euclidean-time kernels and apparent `C_sH/C_HH` fields are aliases |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block33 checkpoint |
+
+Follow-on artifact target after block33 is stricter: source-Higgs closure needs
+same-surface `C_ss(t)/C_sH(t)/C_HH(t)` rows with certified canonical `O_H`, or
+authorized `C_ss(t)/C_sx(t)/C_xx(t)` rows after a physical `x=O_H` theorem.
+Equal-time finite packet work is exhausted as a closure route.

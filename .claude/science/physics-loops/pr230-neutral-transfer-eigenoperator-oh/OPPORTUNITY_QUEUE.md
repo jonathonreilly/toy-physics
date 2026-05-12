@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block32 complete-packet promotion-contract refresh.
+Campaign mode queue after block33 complete-packet OS transfer/alias-firewall refresh.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -333,6 +333,23 @@ Queue remains:
    `delta_perp`, and final W-response authority;
 3. neutral H3/H4 physical-transfer/irreducibility authority plus
    source/canonical-Higgs coupling.
+
+## Block33 Complete-Packet OS Transfer/Alias Firewall
+
+Block33 refreshes the OS transfer-kernel gate after the complete packet and
+promotion-contract refresh.  It verifies that the packet has `63/63` ready
+chunks and `combined_rows_written=true`, but:
+
+- top tau correlators are present in all 63 chunks;
+- scalar Euclidean-time kernels are present in 0 chunks;
+- taste-radial alias metadata is present in all 63 chunks;
+- `C_sH/C_HH` alias fields match `C_sx/C_xx` with zero mismatches.
+
+The queue is unchanged.  The finite equal-time packet cannot be used as a
+transfer generator, pole-residue packet, or canonical source-Higgs overlap.
+The next positive artifact must be actual same-surface `C_ij(t)` rows with a
+certified physical operator basis, or a W/Z/neutral theorem that bypasses the
+source-Higgs pole route without importing a forbidden normalization.
 
 No further finite `C_sx/C_xx` chunk production is a clean physics closure path
 unless a new theorem first identifies `x` with canonical `O_H` and supplies the

@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-12T01:15:00Z"
+checkpoint_time: "2026-05-12T01:35:00Z"
 branch: physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 32
-active_science_block: block32_complete_packet_promotion_contract_refresh
-active_route: "Complete-packet taste-radial-to-source-Higgs promotion contract refresh; the finite 63/63 C_ss/C_sx/C_xx packet is now explicitly audited as complete taste-radial support, but promotion to canonical C_sH/C_HH remains blocked by absent x=canonical O_H identity/action/LSZ authority and strict source-Higgs pole rows"
+cycle_count: 33
+active_science_block: block33_complete_packet_os_transfer_alias_firewall
+active_route: "Complete-packet OS transfer-kernel gate refresh; the finite 63/63 row packet has top tau correlators but zero scalar Euclidean-time kernels, and its C_sH/C_HH schema fields are verified aliases of taste-radial C_sx/C_xx rather than canonical source-Higgs pole rows"
 target_status: best-honest-status
-actual_current_surface_status: "exact-support / block32 complete-packet taste-radial-to-source-Higgs promotion contract refresh; finite 63/63 rows are complete but not promotable to canonical source-Higgs rows on the current surface"
+actual_current_surface_status: "exact support plus negative boundary / block33 complete-packet OS transfer-kernel and alias-firewall refresh; finite 63/63 rows do not determine a transfer generator, pole residue, or canonical source-Higgs overlap"
 conditional_surface_status: support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization, plus strict C_ss/C_sH/C_HH pole rows; or if a strict W/Z matched physical-response packet with accepted action, same-source top/W covariance, strict non-observed g2, delta_perp, and final W-response rows is supplied
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block32 refreshes the taste-radial-to-source-Higgs promotion contract after chunk063: row_packet_status now records ready=63/63, combined_rows_written=true, and complete_packet=true. The promotion rule still denies C_sx/C_xx -> C_sH/C_HH because x=canonical O_H, same-surface action/LSZ authority, strict source-Higgs pole rows, Gram/FV/IR authority, and aggregate proposal gates remain absent."
+proposal_allowed_reason: "Block33 refreshes the OS transfer-kernel gate after chunk063 and block32. It records ready=63/63, combined_rows_written=true, chunks_with_top_tau_correlators=63, chunks_with_scalar_time_kernel=0, chunks_with_taste_radial_alias_metadata=63, and taste_radial_alias_mismatch_count=0. The current packet is complete equal-time taste-radial support only; it is not a scalar Euclidean-time kernel, transfer generator, pole-residue packet, canonical O_H authority, or source-Higgs overlap authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block32 closes the stale partial-packet loophole in the promotion contract: even the complete finite packet is not a canonical source-Higgs packet without the missing physical map."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and production C_ss/C_sH/C_HH pole rows with Gram flatness and Euclidean-time/pole authority; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block33 closes the stale scalar-time-kernel loophole: the complete packet still has no scalar C_ij(t) rows and its C_sH/C_HH fields are aliases."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -46,6 +46,7 @@ minimal_allowed_premises:
   - "block30 full-approach assumptions/first-principles/literature/math/repo-bridge review as bounded support only; it supplies route selection and import firewall, not action/O_H/row/WZ/neutral authority"
   - "block31 chunk063 final package as bounded support only; completed finite C_ss/C_sx/C_xx rows do not supply canonical O_H, C_sH/C_HH pole rows, scalar-LSZ/FV/IR authority, W/Z response, or neutral H3/H4 authority"
   - "block32 complete-packet promotion contract refresh as exact support only; completed finite C_sx/C_xx rows are promotable to C_sH/C_HH only after x=canonical O_H identity/action/LSZ authority and strict pole rows"
+  - "block33 complete-packet OS transfer-kernel refresh as exact boundary only; completed finite rows have no scalar Euclidean-time C_ij(t) kernel and C_sH/C_HH schema fields are taste-radial aliases"
   - "block23 remote-candidate intake as open routing/checkpoint status only; fetched Higgs/EW branches are not PR230 same-surface artifacts without parseable required-path certificates"
   - "block24 queue-pivot admission checkpoint as open routing/checkpoint status only; the block23 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
   - "block25 post-block24 landed checkpoint as open routing/checkpoint status only; the block24 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
@@ -103,6 +104,10 @@ files_touched:
   - docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md
   - outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK32.md
+  - scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+  - docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md
+  - outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK33.md
   - outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk063/L12xT24/ensemble_measurement.json
   - outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json
   - outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json
@@ -419,10 +424,14 @@ commands_run:
   - "2026-05-12 block32: python3 -m py_compile scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py # OK"
   - "2026-05-12 block32: python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py # PASS=11 FAIL=0; ready=63/63 complete_packet=true combined_rows_written=true; current_promotion_allowed=false"
   - "2026-05-12 block32: reran full assembly PASS=163 FAIL=0, retained route PASS=317 FAIL=0, completion audit PASS=72 FAIL=0, campaign status PASS=364 FAIL=0; no closure/proposal authorized"
-review_disposition: pass_exact_support_block32_complete_packet_promotion_contract_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block32 PR not opened because PR #230 remains the landing path"
-next_exact_action: "The finite C_sx/C_xx packet is complete and the promotion contract is current. Build one physical bridge artifact: accepted same-surface EW/Higgs action/canonical O_H plus strict C_ss/C_sH/C_HH pole rows, strict W/Z matched physical response, or neutral primitive/rank-one theorem with physical transfer and source-Higgs coupling authority."
-stop_condition: "Coherent block32 complete-packet promotion-contract refresh; no retained/proposed_retained closure is authorized and no further finite-packet promotion is admissible without x=canonical O_H/action/LSZ/pole authority."
+  - "2026-05-12 block33: python3 -m py_compile scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py # OK"
+  - "2026-05-12 block33: python3 scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py # PASS=13 FAIL=0; ready=63/63; scalar time kernels=0; alias metadata chunks=63; alias mismatches=0"
+  - "2026-05-12 block33: assumption stress PASS=104 FAIL=0; full assembly PASS=163 FAIL=0; retained route PASS=317 FAIL=0; completion audit PASS=72 FAIL=0; campaign status PASS=364 FAIL=0"
+  - "2026-05-12 block33: audit pipeline OK with 5 known warnings; strict audit lint OK with 5 known warnings; git diff --check OK"
+review_disposition: pass_exact_boundary_block33_complete_packet_os_transfer_alias_firewall_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block33 PR not opened because PR #230 remains the landing path"
+next_exact_action: "The finite C_sx/C_xx packet is complete, the promotion contract is current, and the OS gate confirms no scalar Euclidean-time kernel exists. Build one physical bridge artifact: accepted same-surface EW/Higgs action/canonical O_H plus strict C_ss/C_sH/C_HH(t) pole rows, strict W/Z matched physical response, or neutral primitive/rank-one theorem with physical transfer and source-Higgs coupling authority."
+stop_condition: "Coherent block33 complete-packet OS transfer/alias-firewall refresh; no retained/proposed_retained closure is authorized and no finite equal-time packet can be used as transfer/pole/source-Higgs authority without new C_ij(t) rows or a physical bridge theorem."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -695,5 +704,19 @@ block32_complete_packet_promotion_contract_refresh:
     row_kind: taste_radial_C_sx_C_xx
     canonical_source_higgs_rows_present: false
   current_promotion_allowed: false
+  closure_authorized: false
+  proposal_allowed: false
+block33_complete_packet_os_transfer_alias_firewall:
+  runner: scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+  note: docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md
+  output: outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json
+  verification: "OS transfer gate PASS=13 FAIL=0; ready=63/63; combined_rows_written=true; chunks_with_top_tau_correlators=63; chunks_with_scalar_time_kernel=0; chunks_with_taste_radial_alias_metadata=63; taste_radial_alias_mismatch_count=0"
+  os_transfer_kernel_artifact_present: false
+  same_surface_transfer_or_gevp_present: false
+  current_schema_boundary:
+    chunks_with_top_tau_correlators: 63
+    chunks_with_scalar_time_kernel: 0
+    chunks_with_taste_radial_alias_metadata: 63
+    taste_radial_alias_mismatch_count: 0
   closure_authorized: false
   proposal_allowed: false

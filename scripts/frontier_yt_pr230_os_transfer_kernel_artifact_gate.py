@@ -174,6 +174,8 @@ def parse_scalar_rows(manifest_rows: list[dict[str, Any]]) -> tuple[list[dict[st
     schema = {
         "chunks_with_top_tau_correlators": 0,
         "chunks_with_scalar_time_kernel": 0,
+        "chunks_with_taste_radial_alias_metadata": 0,
+        "taste_radial_alias_mismatch_count": 0,
         "source_mode_keys_seen": {},
     }
     for manifest_row in manifest_rows:
@@ -190,6 +192,13 @@ def parse_scalar_rows(manifest_rows: list[dict[str, Any]]) -> tuple[list[dict[st
         if not isinstance(source, dict):
             issues.append(f"chunk{manifest_row.get('chunk_index')} source-higgs block absent")
             continue
+        alias = source.get("two_source_taste_radial_row_aliases")
+        if (
+            isinstance(alias, dict)
+            and alias.get("C_sx_aliases_C_sH_schema_field") is True
+            and alias.get("C_xx_aliases_C_HH_schema_field") is True
+        ):
+            schema["chunks_with_taste_radial_alias_metadata"] += 1
         mode_rows = source.get("mode_rows")
         if not isinstance(mode_rows, dict) or set(mode_rows) != EXPECTED_MODES:
             issues.append(f"chunk{manifest_row.get('chunk_index')} mode set mismatch")
@@ -205,9 +214,15 @@ def parse_scalar_rows(manifest_rows: list[dict[str, Any]]) -> tuple[list[dict[st
             c_ss = mode_row.get("C_ss_real")
             c_sx = mode_row.get("C_sx_real")
             c_xx = mode_row.get("C_xx_real")
+            c_sh = mode_row.get("C_sH_real")
+            c_hh = mode_row.get("C_HH_real")
             if not (finite(c_ss) and finite(c_sx) and finite(c_xx)):
                 issues.append(f"chunk{manifest_row.get('chunk_index')} {mode} nonfinite finite-row Gram")
                 continue
+            if finite(c_sh) and abs(float(c_sh) - float(c_sx)) > 1.0e-15:
+                schema["taste_radial_alias_mismatch_count"] += 1
+            if finite(c_hh) and abs(float(c_hh) - float(c_xx)) > 1.0e-15:
+                schema["taste_radial_alias_mismatch_count"] += 1
             rows.append(
                 {
                     "chunk_index": int(manifest_row["chunk_index"]),
@@ -364,6 +379,11 @@ def main() -> int:
         and scalar_time_kernel_absent
         and bool(ready_rows)
     )
+    taste_radial_alias_firewall = (
+        schema["chunks_with_taste_radial_alias_metadata"] == len(ready_rows)
+        and schema["taste_radial_alias_mismatch_count"] == 0
+        and bool(ready_rows)
+    )
     static_witness = build_static_gram_witness(mean_gram(scalar_rows, ZERO_MODE))
     os_kernel_artifact_present = False
     same_surface_transfer_or_gevp_present = False
@@ -372,6 +392,7 @@ def main() -> int:
         parents["retained_route"].get("proposal_allowed") is False
         and parents["campaign_status"].get("proposal_allowed") is False
         and os_kernel_artifact_present is False
+        and taste_radial_alias_firewall
     )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
@@ -380,6 +401,7 @@ def main() -> int:
     report("scalar-finite-rows-schema-clean", not row_issues, f"issues={row_issues[:4]}")
     report("finite-equal-time-gram-positive", finite_grams_positive, "C_ss*C_xx-C_sx^2 positive on ready rows")
     report("top-time-correlators-not-confused-with-scalar-kernel", top_tau_present_but_not_scalar_matrix, str(schema))
+    report("taste-radial-csH-cHH-alias-firewall", taste_radial_alias_firewall, str(schema))
     report("scalar-euclidean-time-kernel-absent", scalar_time_kernel_absent, f"chunks_with_scalar_time_kernel={schema['chunks_with_scalar_time_kernel']}")
     report("static-gram-underdetermination-witness-valid", static_witness.get("witness_valid") is True, f"C1_delta={static_witness.get('C1_kernel_delta_norm')}")
     report("os-transfer-kernel-artifact-absent", not os_kernel_artifact_present, "no same-surface C_ij(t) row packet")
@@ -430,6 +452,7 @@ def main() -> int:
             "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, or kappa_s=1",
             "does not treat configuration timeseries as Euclidean-time correlation kernels",
             "does not treat finite C_sx covariance as a transfer/action matrix",
+            "does not treat aliased C_sH/C_HH schema fields as canonical source-Higgs rows",
             "does not treat taste-radial x as canonical O_H",
             "does not use OS, transfer-matrix, GEVP, D-module, tensor, PSLQ, or value-recognition method names as proof authority",
         ],

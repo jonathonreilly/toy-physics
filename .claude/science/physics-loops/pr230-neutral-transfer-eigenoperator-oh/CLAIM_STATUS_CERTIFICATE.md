@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block32_complete_packet_promotion_contract_refresh`.
+Current block: `block33_complete_packet_os_transfer_alias_firewall`.
 
 ```yaml
-actual_current_surface_status: exact-support / block32 complete-packet taste-radial-to-source-Higgs promotion contract refresh; finite two-source taste-radial chunks001-063 are complete and combined, but current promotion to canonical source-Higgs rows remains blocked
+actual_current_surface_status: exact support plus negative boundary / block33 complete-packet OS transfer-kernel and alias-firewall refresh; finite two-source taste-radial chunks001-063 are complete and combined, but current rows are not scalar Euclidean-time kernels, transfer generators, pole residues, or canonical source-Higgs rows
 conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block32 refreshes the promotion contract after chunk063. The finite 63/63 C_ss/C_sx/C_xx packet is complete and combined, but C_sx/C_xx may not be relabeled as C_sH/C_HH until x=canonical O_H identity/action/LSZ authority, strict source-Higgs pole rows, Gram/FV/IR authority, and aggregate proposal gates exist."
+proposal_allowed_reason: "Block33 refreshes the OS transfer-kernel gate after chunk063 and block32. The complete packet has top tau correlators in 63 chunks but scalar time kernels in 0 chunks, and the apparent C_sH/C_HH schema fields are verified aliases of C_sx/C_xx with alias metadata in all 63 chunks and zero mismatches. No transfer/pole/source-Higgs promotion is authorized."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -112,6 +112,13 @@ Reason:
     the missing objects remain `x=canonical O_H` identity/action/LSZ authority,
     strict `C_ss/C_sH/C_HH` pole rows, Gram/FV/IR authority, and aggregate
     proposal approval.
+23. Block33 records that the OS transfer-kernel gate now consumes the complete
+    packet explicitly.  It verifies `chunks_with_top_tau_correlators=63`,
+    `chunks_with_scalar_time_kernel=0`,
+    `chunks_with_taste_radial_alias_metadata=63`, and
+    `taste_radial_alias_mismatch_count=0`; static equal-time rows do not supply
+    a same-surface transfer generator, pole residue, canonical `O_H`, or
+    source-Higgs overlap.
 
 Prior block certificate summary:
 
@@ -249,5 +256,9 @@ Prior block certificate summary:
   refresh; the promotion rule is current for the complete finite packet and
   still denies `C_sx/C_xx -> C_sH/C_HH` without same-surface canonical
   `O_H` identity/action/LSZ authority and strict pole/FV/IR support.
-- Block01 through Block32 all have `proposal_allowed=false`; their boundaries
+- Block33 actual status: exact support plus negative boundary / complete-packet
+  OS transfer-kernel and alias-firewall refresh; the complete packet has no
+  scalar Euclidean-time kernel and its apparent `C_sH/C_HH` fields are
+  taste-radial aliases, not canonical source-Higgs pole rows.
+- Block01 through Block33 all have `proposal_allowed=false`; their boundaries
   remain active.

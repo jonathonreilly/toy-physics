@@ -44,14 +44,25 @@ primitive transfer.
 
 ## Result
 
-The current row packet has top correlators with a `tau` axis, but the scalar
-source/taste-radial matrix rows have configuration timeseries, not
-Euclidean-time matrix rows.  The new certificate therefore records:
+After the chunk063 final package, the complete row packet has `63/63` chunks
+and `combined_rows_written=true`.  It has top correlators with a `tau` axis in
+all 63 chunks, but the scalar source/taste-radial matrix rows have
+configuration timeseries, not Euclidean-time matrix rows.  The refreshed
+certificate therefore records:
 
 - `os_transfer_kernel_artifact_present=false`
 - `same_surface_transfer_or_gevp_present=false`
+- `chunks_with_top_tau_correlators=63`
+- `chunks_with_scalar_time_kernel=0`
+- `chunks_with_taste_radial_alias_metadata=63`
+- `taste_radial_alias_mismatch_count=0`
 - `proposal_allowed=false`
 - `bare_retained_allowed=false`
+
+The alias check is load-bearing for the claim firewall: the schema fields
+named `C_sH/C_HH` match the taste-radial `C_sx/C_xx` rows and are explicitly
+marked as aliases, so they are not canonical source-Higgs pole rows on the
+current surface.
 
 The executable witness constructs two distinct positive self-adjoint transfer
 candidates with the same equal-time Gram `C(0)=G`.  Since both candidates are
@@ -77,3 +88,12 @@ inputs.
 
 This is support plus a negative boundary only.  It does not authorize retained
 or proposed-retained closure, and PR #230 remains draft/open.
+
+## Verification
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# OK
+python3 scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py
+# SUMMARY: PASS=13 FAIL=0
+```

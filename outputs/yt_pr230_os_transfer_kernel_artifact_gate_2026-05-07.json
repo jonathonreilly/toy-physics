@@ -3,11 +3,12 @@
   "admitted_observation_status": null,
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
-  "combined_rows_written": false,
+  "combined_rows_written": true,
   "conditional_surface_status": "conditional-support if future production supplies same-surface Euclidean-time C_ij(t) matrices for source and canonical O_H or a certified physical neutral basis, then OS/transfer/GEVP pole and overlap authority can be evaluated",
   "current_schema_boundary": {
     "chunks_with_scalar_time_kernel": 0,
-    "chunks_with_top_tau_correlators": 32,
+    "chunks_with_taste_radial_alias_metadata": 63,
+    "chunks_with_top_tau_correlators": 63,
     "source_mode_keys_seen": {
       "0,0,0": [
         "C_HH_imag",
@@ -133,22 +134,23 @@
         "momentum_mode",
         "p_hat_sq"
       ]
-    }
+    },
+    "taste_radial_alias_mismatch_count": 0
   },
   "exact_next_action": "Implement a same-surface scalar correlation-matrix production row: C_ss(t), C_sH(t), and C_HH(t) for certified canonical O_H, or C_ss(t), C_sx(t), and C_xx(t) plus a same-surface theorem identifying x with canonical O_H/physical neutral transfer.  The certificate must include reflection-positive/GEVP pole extraction, FV/IR/threshold authority, overlap normalization, covariance, seed metadata, and all claim firewalls.",
   "expected_chunks": 63,
   "fail_count": 0,
   "finite_equal_time_gram_rows": {
     "positive_definite": true,
-    "row_count": 128,
+    "row_count": 252,
     "zero_mode_mean_gram": [
       [
-        0.12240429599042713,
-        -3.0266873080226556e-05
+        0.12239945839272869,
+        -5.628254370365994e-06
       ],
       [
-        -3.0266873080226556e-05,
-        0.28084540401011865
+        -5.628254370365994e-06,
+        0.28083911307505577
       ]
     ]
   },
@@ -204,12 +206,12 @@
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "strict_scalar_lsz_moment_fv": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
     "two_source_primitive_transfer_candidate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
-    "two_source_row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure"
+    "two_source_row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent"
   },
-  "pass_count": 12,
+  "pass_count": 13,
   "proposal_allowed": false,
   "proposal_allowed_reason": "The current finite row packet is an equal-time source/taste-radial covariance diagnostic.  It is not a time-lag transfer kernel, not a canonical O_H row packet, and not scalar-LSZ normalization authority.",
-  "ready_chunks": 32,
+  "ready_chunks": 63,
   "required_future_artifact_contract": [
     {
       "current_satisfied": false,
@@ -244,27 +246,27 @@
   ],
   "same_surface_transfer_or_gevp_present": false,
   "static_gram_underdetermination_witness": {
-    "C1_kernel_delta_norm": 0.04478705861076843,
+    "C1_kernel_delta_norm": 0.0447903901788224,
     "candidate_A_C1_kernel": [
       [
-        0.08042535296697331,
-        -1.3027958104811618e-05
+        0.08042217486863142,
+        -2.4226001334381027e-06
       ],
       [
-        -1.302795810481162e-05,
-        0.0788702707224036
+        -2.4226001334381014e-06,
+        0.07886850359906601
       ]
     ],
-    "candidate_A_C1_symmetric_error": 1.6940658945086007e-21,
-    "candidate_A_offdiagonal_transfer_norm": 3.699268140529516e-05,
+    "candidate_A_C1_symmetric_error": 1.2705494208814505e-21,
+    "candidate_A_offdiagonal_transfer_norm": 6.879183473122049e-06,
     "candidate_A_transfer_in_source_x_basis": [
       [
-        0.6570468222164314,
-        -3.699268140529516e-05
+        0.6570468198980989,
+        -6.879183473122049e-06
       ],
       [
-        2.4421958034720673e-05,
-        0.2808316193770049
+        4.541484582482594e-06,
+        0.28083162169533765
       ]
     ],
     "candidate_A_whitened_transfer": [
@@ -279,24 +281,24 @@
     ],
     "candidate_B_C1_kernel": [
       [
-        0.07241923232181516,
-        0.02641779395117851
+        0.07241916380127486,
+        0.026427910709827536
       ],
       [
-        0.02641779395117852,
-        0.0972265074238887
+        0.02642791070982752,
+        0.09722856046792744
       ]
     ],
-    "candidate_B_C1_symmetric_error": 1.0408340855860843e-17,
-    "candidate_B_offdiagonal_transfer_norm": 0.21590968355358295,
+    "candidate_B_C1_symmetric_error": 1.734723475976807e-17,
+    "candidate_B_offdiagonal_transfer_norm": 0.21593117832530517,
     "candidate_B_transfer_in_source_x_basis": [
       [
-        0.5916629046948001,
-        0.21590968355358295
+        0.591666780692982,
+        0.21593117832530517
       ],
       [
-        0.09412901674641162,
-        0.34621553689863616
+        0.0941152408279678,
+        0.3462116609004543
       ]
     ],
     "candidate_B_whitened_transfer": [
@@ -310,16 +312,16 @@
       ]
     ],
     "interpretation": "The same equal-time positive Gram C(0)=G admits multiple positive self-adjoint transfer candidates once the Euclidean-time kernel is not supplied.  Static C_ss/C_sx/C_xx rows therefore cannot select the physical off-diagonal generator, pole residue, or O_H overlap.",
-    "minimum_gram_eigenvalue": 0.12240429020857176,
-    "offdiagonal_transfer_delta_norm": 0.21587269087217764,
+    "minimum_gram_eigenvalue": 0.12239945819279612,
+    "offdiagonal_transfer_delta_norm": 0.21592429914183206,
     "same_C0_gram": [
       [
-        0.12240429599042713,
-        -3.0266873080226556e-05
+        0.12239945839272869,
+        -5.628254370365994e-06
       ],
       [
-        -3.0266873080226556e-05,
-        0.28084540401011865
+        -5.628254370365994e-06,
+        0.28083911307505577
       ]
     ],
     "static_gram_positive_definite": true,
@@ -330,6 +332,7 @@
     "does not use H_unit, Ward identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, c2=1, Z_match=1, or kappa_s=1",
     "does not treat configuration timeseries as Euclidean-time correlation kernels",
     "does not treat finite C_sx covariance as a transfer/action matrix",
+    "does not treat aliased C_sH/C_HH schema fields as canonical source-Higgs rows",
     "does not treat taste-radial x as canonical O_H",
     "does not use OS, transfer-matrix, GEVP, D-module, tensor, PSLQ, or value-recognition method names as proof authority"
   ]

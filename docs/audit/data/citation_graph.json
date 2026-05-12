@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:51:39.356238+00:00",
+  "generated_at": "2026-05-12T00:58:46.644476+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43150,7 +43150,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "dad55ee2db41e5847ed204d236d8a2af84366d22324ab1a7e06e3ce60e0f03d7",
+      "note_hash": "63c8fda0e0493f18b69afe79be118fe016bd4728a8efd6236e01f382750c876b",
       "path": "docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py",
       "title": "PR #230 OS Transfer-Kernel Artifact Gate"
