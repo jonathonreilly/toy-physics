@@ -107,4 +107,13 @@ Lane 1 Block47: top-mass-scan subtraction-contract applicability audit
   satisfy the additive-top subtraction row contract and still leave missing
   mixed-source T_total, strict A_top, W/Z rows, matched covariance, strict
   g2/v, accepted action, and subtracted readout authority
+
+Lane 1 Block48: higher-shell source-Higgs operator-certificate boundary
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py
+- result: PASS=16 FAIL=0
+- conclusion: active higher-shell source/operator cross rows use the
+  taste-radial second-source certificate, not canonical O_H; completed rows
+  under that certificate remain C_sx/C_xx support unless a separate canonical
+  O_H/source-overlap bridge lands
 ```

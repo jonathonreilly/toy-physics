@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block47
+## Active Ranking After Block48
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -14,7 +14,9 @@
    Block46 shows those post-Block45 artifacts and active Schur worker intent do
    not reopen the route without a completed H3/H4 artifact.  Block47 shows the
    adjacent top mass-scan support also does not supply the missing neutral
-   source-Higgs or subtraction bridge.
+   source-Higgs or subtraction bridge.  Block48 shows the active higher-shell
+   cross rows are launched under a taste-radial certificate, not canonical
+   `O_H` authority.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -36,9 +38,11 @@
    `O_H` certificate exists and the rows are physical Euclidean
    `C_ij(tau)` rows rather than MC configuration-index target samples,
    ordinary top/scalar tau correlators, empty guarded source-Higgs blocks, or
-   reduced smoke, or keep as acceptance-schema support.
+   reduced smoke.  Higher-shell rows under the current taste-radial certificate
+   remain `C_sx/C_xx` support until a canonical bridge lands.
 
 5. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not
    reopened until completed JSON/certificates land and are checked against the
-   H3/H4, pole/FV/IR, and canonical coupling obligations.
+   H3/H4, pole/FV/IR, and canonical coupling obligations.  Under the current
+   operator certificate, completion alone cannot satisfy `C_sH/C_HH`.

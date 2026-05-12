@@ -358,3 +358,42 @@ this was a narrow applicability boundary update.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; the aggregate gates
   compile and report `PASS=175 FAIL=0` and `PASS=381 FAIL=0`.
+
+## Self-Review: Block48
+
+- Overclaim check: passed.  The note says only that currently launched
+  higher-shell source/operator cross rows use the taste-radial second-source
+  certificate, not canonical `O_H`.  It does not claim a permanent no-go
+  against future canonical source-Higgs production.
+- Physics check: passed.  The runner consumes the higher-shell wave launcher,
+  pending chunk checkpoints, taste-radial action certificate, source-Higgs
+  readiness, pole/Gram gates, Block44 source-Higgs row boundary, and aggregate
+  gates.  It checks the actual operator-certificate path supplied to the
+  active production commands.
+- Forbidden-import check: passed.  The runner does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, taste-radial
+  `x -> O_H`, `C_sx/C_xx -> C_sH/C_HH`, pending workers as row evidence,
+  completed finite rows as pole residues, or retained/proposed-retained
+  wording.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block48 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow operator-certificate boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=16 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Higher-shell rows under the
+  current certificate remain taste-radial `C_sx/C_xx` support, not strict
+  canonical-Higgs `C_sH/C_HH` evidence.
+- Imports / Support: DISCLOSED.  The absent canonical `O_H`, source-overlap or
+  neutral-transfer bridge, strict source-Higgs rows, pole/FV/IR authority, and
+  Gram-purity authority are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings; the aggregate gates
+  compile and report `PASS=176 FAIL=0` and `PASS=382 FAIL=0`.

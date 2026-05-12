@@ -147,12 +147,24 @@ coordinate.  They are not `dE/dh`, `T_total`, `A_top`, W/Z response rows,
 matched covariance, strict `g2`/`v`, accepted action authority, or a subtracted
 readout packet.
 
+## Block48: Higher-Shell Source-Higgs Operator-Certificate Boundary
+
+- Note: `docs/YT_PR230_HIGHER_SHELL_SOURCE_HIGGS_OPERATOR_CERTIFICATE_BOUNDARY_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py`
+- Certificate: `outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The active
+higher-shell cross-correlator commands use the PR230 taste-radial
+second-source certificate, whose canonical-Higgs identity is false.  Completed
+rows under that certificate remain `C_sx/C_xx` taste-radial support, not strict
+`C_sH/C_HH` source-Higgs pole evidence.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
-reduced smoke, or active worker intent, a strict W/Z physical-response packet
+reduced smoke, active worker intent, or higher-shell taste-radial cross rows, a strict W/Z physical-response packet
 with actual mixed-source `T_total/A_top/W` rows, matched covariance, accepted
 action, and absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ
 primitive not already covered by Block41.

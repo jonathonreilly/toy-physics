@@ -1,0 +1,94 @@
+{
+  "actual_current_surface_status": "exact negative boundary / higher-shell source-Higgs cross rows use the taste-radial second-source certificate, not canonical O_H",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "completed_higher_shell_outputs": [],
+  "conditional_surface_status": "conditional-support if future rows are rerun with a certified canonical O_H operator or a separate same-surface O_H/source-overlap bridge passes",
+  "exact_next_action": "If the higher-shell chunks finish, checkpoint them as taste-radial C_sx/C_xx support unless a separate canonical O_H/source-overlap certificate lands.  Do not treat C_sH/C_HH schema fields emitted under the current certificate as strict source-Higgs rows.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "treated_c_sx_c_xx_aliases_as_strict_c_sh_c_hh": false,
+    "treated_completed_higher_shell_rows_as_pole_residues": false,
+    "treated_pending_workers_as_row_evidence": false,
+    "treated_taste_radial_x_as_canonical_oh": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "higher_shell_source_higgs_operator_certificate_boundary_passed": true,
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "certified canonical O_H operator identity",
+    "same-surface source-overlap or physical neutral-transfer bridge",
+    "strict production C_ss/C_sH/C_HH(tau) rows under canonical O_H authority",
+    "pole/FV/IR/model-class and Gram-purity authority"
+  ],
+  "operator_certificate_summary": {
+    "canonical_higgs_operator_identity_passed": false,
+    "firewall": {
+      "claimed_retained_or_proposed_retained": false,
+      "set_kappa_s_equal_one": false,
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_taste_radial_axis_as_canonical_oh": false,
+      "used_yt_ward_identity": false
+    },
+    "hunit_used_as_operator": false,
+    "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+    "proposal_allowed": false
+  },
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "higher_shell_chunk001_pending": "outputs/yt_pr230_schur_higher_shell_chunk001_pending_checkpoint_2026-05-12.json",
+    "higher_shell_chunk002_pending": "outputs/yt_pr230_schur_higher_shell_chunk002_pending_checkpoint_2026-05-12.json",
+    "higher_shell_wave_launcher": "outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json",
+    "physical_euclidean_source_higgs_absence": "outputs/yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_2026-05-12.json",
+    "source_higgs_cross_correlator_manifest": "outputs/yt_source_higgs_cross_correlator_manifest_2026-05-02.json",
+    "source_higgs_gram_purity_postprocessor": "outputs/yt_source_higgs_gram_purity_postprocess_2026-05-03.json",
+    "source_higgs_pole_residue_extractor": "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json",
+    "source_higgs_production_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
+    "two_source_taste_radial_action_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "higher_shell_chunk001_pending": "run-control / higher-shell Schur scalar-LSZ chunk001 active-pending checkpoint; no completed row JSON present",
+    "higher_shell_chunk002_pending": "run-control / higher-shell Schur scalar-LSZ chunk002 active-pending checkpoint; no completed row JSON present",
+    "higher_shell_wave_launcher": "run-control / higher-shell Schur scalar-LSZ wave launcher status; active or launched jobs are not physics evidence",
+    "physical_euclidean_source_higgs_absence": "exact negative boundary / tau-keyed production correlators are not physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) rows",
+    "source_higgs_cross_correlator_manifest": "bounded-support / source-Higgs cross-correlator production manifest",
+    "source_higgs_gram_purity_postprocessor": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "source_higgs_pole_residue_extractor": "open / source-Higgs pole-residue extractor awaiting valid production rows",
+    "source_higgs_production_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "two_source_taste_radial_action_certificate": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent"
+  },
+  "pass_count": 16,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The active higher-shell source/operator cross-correlator commands use the PR230 taste-radial second-source certificate.  That certificate explicitly has canonical_higgs_operator_identity_passed=false, so rows under it are C_sx/C_xx support rather than strict C_sH/C_HH evidence.",
+  "source_higgs_command_summary": [
+    {
+      "active": false,
+      "chunk_index": 1,
+      "operator_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+      "output": null,
+      "output_present": false,
+      "source_higgs_cross_modes": "0,0,0;1,0,0;0,1,0;0,0,1;1,1,0;1,0,1;0,1,1;1,1,1;2,0,0;0,2,0;0,0,2",
+      "source_higgs_cross_noises": "16"
+    },
+    {
+      "active": false,
+      "chunk_index": 2,
+      "operator_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+      "output": null,
+      "output_present": false,
+      "source_higgs_cross_modes": "0,0,0;1,0,0;0,1,0;0,0,1;1,1,0;1,0,1;0,1,1;1,1,1;2,0,0;0,2,0;0,0,2",
+      "source_higgs_cross_noises": "16"
+    }
+  ]
+}

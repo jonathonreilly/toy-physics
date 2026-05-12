@@ -998,6 +998,9 @@ def main() -> int:
         "top_mass_scan_subtraction_contract_applicability_audit": load(
             "outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json"
         ),
+        "higher_shell_source_higgs_operator_certificate_boundary": load(
+            "outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json"
+        ),
         "neutral_rank_one_bypass_post_block37_audit": load(
             "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json"
         ),
@@ -5352,6 +5355,24 @@ def main() -> int:
         ].get("strict_row_presence", {}).get("strict_electroweak_g2_certificate")
         is False
     )
+    higher_shell_source_higgs_operator_certificate_boundary_blocks = (
+        "higher-shell source-Higgs cross rows use"
+        in str(statuses["higher_shell_source_higgs_operator_certificate_boundary"])
+        and certificates[
+            "higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("higher_shell_source_higgs_operator_certificate_boundary_passed")
+        is True
+        and certificates[
+            "higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("operator_certificate_summary", {}).get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
     neutral_rank_one_bypass_post_block37_blocks = (
         "post-Block37 neutral rank-one bypass not closed"
         in str(statuses["neutral_rank_one_bypass_post_block37_audit"])
@@ -5377,6 +5398,11 @@ def main() -> int:
         "top-mass-scan-subtraction-contract-applicability-blocks",
         top_mass_scan_subtraction_contract_applicability_blocks,
         statuses["top_mass_scan_subtraction_contract_applicability_audit"],
+    )
+    report(
+        "higher-shell-source-higgs-operator-certificate-boundary-blocks",
+        higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        statuses["higher_shell_source_higgs_operator_certificate_boundary"],
     )
     report(
         "neutral-rank-one-bypass-post-block37-blocks-current-surface",
@@ -6484,6 +6510,7 @@ def main() -> int:
         "remaining_routes": remaining_routes,
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
+        "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
@@ -6510,6 +6537,7 @@ def main() -> int:
             "does not treat block38 bridge stuck-fanout status as production evidence",
             "does not treat finite C_sx covariance, active worker intent, or post-Block45 support as a neutral off-diagonal generator",
             "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
+            "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as strict C_sH/C_HH source-Higgs rows",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -7828,6 +7856,7 @@ def main() -> int:
         "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
         "does not treat the block38 bridge stuck-fanout checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
+        "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as strict C_sH/C_HH source-Higgs rows",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

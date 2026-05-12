@@ -18,6 +18,9 @@
 - Additive-top Jacobian rows as bounded support only; not lane-1 closure.
 - Top mass-scan `dE/dm_bare` rows as bare-mass-coordinate support only; not
   strict additive-top subtraction closure.
+- Higher-shell source/operator cross rows under the current taste-radial
+  second-source certificate as `C_sx/C_xx` support only; not strict
+  canonical-Higgs `C_sH/C_HH` rows.
 
 ## Forbidden Proof Inputs
 
@@ -48,6 +51,9 @@
   transfer/off-diagonal generator.
 - Treating top mass-scan `dE/dm_bare` rows as `dE/dh`, `T_total`, `A_top`, W/Z
   response, matched covariance, or a strict additive-top subtraction packet.
+- Treating higher-shell source/operator cross rows emitted under the
+  taste-radial second-source certificate as canonical-Higgs `C_sH/C_HH` rows or
+  pole-residue evidence.
 
 ## Block A Import Audit Result
 
@@ -166,3 +172,13 @@ additive Dirac bare-mass coordinate, with physical Higgs normalization marked
 same-ensemble `T_total`, strict `A_top`, W/Z response rows, matched covariance,
 strict `g2` or explicit `v` authority, and accepted same-source action
 authority.
+
+## Block48 Higher-Shell Source-Higgs Operator-Certificate Boundary Result
+
+The current higher-shell cross-correlator launch does not supply strict
+source-Higgs rows.  The commands use
+`outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json`,
+whose `canonical_higgs_operator_identity_passed` flag is false.  The harness
+preserves this distinction with `C_sx/C_xx` aliases for the taste-radial
+second source.  Future completed chunks under this certificate remain support
+unless a separate canonical `O_H` or source-overlap bridge lands.

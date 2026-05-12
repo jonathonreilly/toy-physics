@@ -32,4 +32,7 @@
    `C_ss/C_sH/C_HH(t)`, pole isolation, covariance, FV/IR/model-class checks,
    and Gram flatness.  MC configuration-index target samples do not satisfy the
    `t`/`tau` requirement; ordinary top/scalar tau rows and reduced smoke do not
-   satisfy the production source-Higgs requirement.
+   satisfy the production source-Higgs requirement.  Block48 adds that the
+   active higher-shell cross rows use the taste-radial second-source
+   certificate, so completion under that certificate is `C_sx/C_xx` support,
+   not strict `C_sH/C_HH` closure.

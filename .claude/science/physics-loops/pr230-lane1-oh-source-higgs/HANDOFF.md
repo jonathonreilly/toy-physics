@@ -106,6 +106,13 @@ coordinate, with physical Higgs normalization `not_derived`; they are not
 `dE/dh`, `T_total`, `A_top`, W/Z response rows, matched covariance, strict
 `g2`/`v`, accepted action authority, or a subtracted readout packet.
 
+Block48 checks the active higher-shell source/operator cross-correlator launch
+against the operator certificate supplied to the production harness.  The
+commands use the PR230 taste-radial second-source certificate, whose canonical
+Higgs identity flag is false.  Completed rows under that certificate remain
+`C_sx/C_xx` taste-radial support, not strict canonical-Higgs `C_sH/C_HH` pole
+evidence.
+
 ## Checks Run
 
 ```text
@@ -157,6 +164,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_top_mass_scan_subtraction_contra
 python3 scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py
 # SUMMARY: PASS=16 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py
+python3 scripts/frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py
+# SUMMARY: PASS=16 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -182,11 +193,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=175 FAIL=0
+# SUMMARY: PASS=176 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=381 FAIL=0
+# campaign status SUMMARY: PASS=382 FAIL=0
 ```
 
 ## Current Status
@@ -209,7 +220,9 @@ normalization, W/Z self-normalization, or target-time-series source-only
 promotion, and it should not treat finite `C_sx` covariance, active worker
 intent, MC configuration-index order, ordinary tau correlators, empty guarded
 blocks, reduced smoke, or top mass-scan `dE/dm_bare` rows as strict bridge
-evidence.  It should try one of:
+evidence.  It should also not treat higher-shell source/operator rows emitted
+under the current taste-radial certificate as strict `C_sH/C_HH`.  It should
+try one of:
 
 ```text
 production physical Euclidean C_ss/C_sH/C_HH(tau) source-Higgs rows after canonical O_H authority

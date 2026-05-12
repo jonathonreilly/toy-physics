@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T03:50:27.177783+00:00",
+  "generated_at": "2026-05-12T04:02:27.217893+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42965,6 +42965,16 @@
       "runner_path": "scripts/frontier_yt_pr230_higgs_mass_source_action_bridge.py",
       "title": "PR230 Higgs Mass-Source Action Bridge"
     },
+    "yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_note_2026-05-12": {
+      "claim_id": "yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: higher-shell source-Higgs cross rows use",
+      "deps": [],
+      "note_hash": "19c4328517122f50828dba25c40b84a500ee3e39a406318ccfcd0dc0a31f051e",
+      "path": "docs/YT_PR230_HIGHER_SHELL_SOURCE_HIGGS_OPERATOR_CERTIFICATE_BOUNDARY_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_higher_shell_source_higgs_operator_certificate_boundary.py",
+      "title": "PR230 Higher-Shell Source-Higgs Operator-Certificate Boundary"
+    },
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05": {
       "claim_id": "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
       "current_status": "unknown",
@@ -47141,6 +47151,7 @@
     "yt_pr230_global_yt_proof_audit_note_2026-05-01",
     "yt_pr230_gns_source_higgs_flat_extension_attempt_note_2026-05-05",
     "yt_pr230_higgs_mass_source_action_bridge_note_2026-05-06",
+    "yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_note_2026-05-12",
     "yt_pr230_holonomic_source_response_feasibility_gate_note_2026-05-05",
     "yt_pr230_hs_logdet_scalar_action_normalization_no_go_note_2026-05-12",
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
@@ -47394,17 +47405,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1126,
-    "node_count": 2145,
-    "root_count": 1644,
-    "runners_with_path": 1620,
+    "leaf_count": 1127,
+    "node_count": 2146,
+    "root_count": 1645,
+    "runners_with_path": 1621,
     "status_counts": {
       "bounded": 597,
       "open": 116,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 589
+      "unknown": 590
     }
   }
 }

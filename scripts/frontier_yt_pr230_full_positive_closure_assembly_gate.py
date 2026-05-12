@@ -135,6 +135,7 @@ PARENTS = {
     "pr230_additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
     "pr230_top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "pr230_top_mass_scan_subtraction_contract_applicability_audit": "outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json",
+    "pr230_higher_shell_source_higgs_operator_certificate_boundary": "outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
     "pr230_wz_accepted_action_response_root_checkpoint": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
@@ -1474,6 +1475,24 @@ def main() -> int:
         ].get("strict_row_presence", {}).get("strict_electroweak_g2_certificate")
         is False
     )
+    higher_shell_source_higgs_operator_certificate_boundary_blocks = (
+        "higher-shell source-Higgs cross rows use"
+        in statuses["pr230_higher_shell_source_higgs_operator_certificate_boundary"]
+        and certs[
+            "pr230_higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("proposal_allowed")
+        is False
+        and certs[
+            "pr230_higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("higher_shell_source_higgs_operator_certificate_boundary_passed")
+        is True
+        and certs[
+            "pr230_higher_shell_source_higgs_operator_certificate_boundary"
+        ].get("operator_certificate_summary", {}).get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+    )
     neutral_rank_one_bypass_post_block37_blocks = (
         "post-Block37 neutral rank-one bypass not closed"
         in statuses["pr230_neutral_rank_one_bypass_post_block37_audit"]
@@ -2722,6 +2741,11 @@ def main() -> int:
         statuses["pr230_top_mass_scan_subtraction_contract_applicability_audit"],
     )
     report(
+        "higher-shell-source-higgs-operator-certificate-boundary-blocks",
+        higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        statuses["pr230_higher_shell_source_higgs_operator_certificate_boundary"],
+    )
+    report(
         "wz-response-ratio-identifiability-contract-support-not-closure",
         wz_response_ratio_identifiability_contract_support_not_closure,
         statuses["pr230_wz_response_ratio_identifiability_contract"],
@@ -3917,6 +3941,7 @@ def main() -> int:
         "additive_top_subtraction_row_contract_support_not_closure": additive_top_subtraction_row_contract_support_not_closure,
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_closure,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
+        "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
         "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
@@ -3995,6 +4020,7 @@ def main() -> int:
             "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
             "does not treat top mass-scan dE/dm_bare rows as dE/dh, W/Z response, kappa_s, or y_t closure",
             "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
+            "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as strict C_sH/C_HH source-Higgs rows",
             "does not treat the W/Z same-source minimal certificate cut as accepted action authority or response rows",
             "does not treat current Schur sufficiency or row-definition machinery as proof without a neutral kernel basis plus same-surface A/B/C rows",
             "does not treat conditional Perron support, determinant positivity, or source-only generators as a primitive neutral rank-one theorem",

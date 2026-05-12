@@ -68,6 +68,12 @@
   closure: they are bare-mass-coordinate support, not `dE/dh`, `T_total`,
   `A_top`, or W/Z response rows, and they do not provide matched covariance,
   strict `g2`/`v`, accepted action authority, or a subtracted readout packet.
+- Higher-shell source/operator cross rows launched under the current
+  taste-radial second-source certificate are not strict canonical-Higgs
+  `C_sH/C_HH` closure: the supplied operator certificate explicitly has
+  `canonical_higgs_operator_identity_passed=false`, and the harness aliases the
+  rows as `C_sx/C_xx` support until a separate canonical `O_H` or
+  source-overlap bridge lands.
 
 ## Scope Boundary
 
