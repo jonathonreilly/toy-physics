@@ -294,3 +294,19 @@ source-Higgs row artifacts are contracts or aliases, not strict physical
 denominator/contact/subtraction theorem with threshold, FV/IR, and
 pole-residue authority, or a strict physical row bypass that supplies those
 controls without scalar-source normalization.
+
+## Block57 Compact Source-Functional Foundation Result
+
+The scalar route is now scoped more precisely.  The zero-mode/flat-toron and
+contact negatives remain correct, but they do not globally invalidate the
+exact compact finite-volume Cl(3)/Z3 source functional.  They block the
+perturbative ladder denominator, trivial-toron selection, and finite-row
+contact-repair shortcuts.  With the specified additive scalar source in the
+finite staggered determinant, the bare finite-volume source curvature/contact
+scheme exists as exact support, and the exact compact functional integrates
+flat torons rather than selecting the trivial sector.
+
+The still-open import is the hard physical theorem: thermodynamic
+transfer/spectral authority for that exact source channel, an isolated scalar
+source pole and tight residue interval, FV/IR/toron limiting order, and a
+canonical `O_H`/source-overlap or strict physical-response bridge.

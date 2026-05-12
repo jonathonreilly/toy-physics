@@ -29,6 +29,7 @@ PARENTS = {
     "block54_response_readout_reduction": "outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json",
     "block55_canonical_neutral_primitive_cut": "outputs/yt_pr230_block55_canonical_neutral_primitive_cut_gate_2026-05-12.json",
     "block56_scalar_pole_fvir_root_cut": "outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json",
+    "block57_compact_source_functional_foundation": "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -565,6 +566,34 @@ def main() -> int:
         in certs["block56_scalar_pole_fvir_root_cut"].get(
             "remaining_scalar_authority_obligations", []
         )
+    )
+    block57_compact_foundation_support_not_closure = (
+        "compact finite-volume scalar-source functional foundation"
+        in statuses["block57_compact_source_functional_foundation"]
+        and certs["block57_compact_source_functional_foundation"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block57_compact_source_functional_foundation"].get(
+            "bare_retained_allowed"
+        )
+        is False
+        and certs["block57_compact_source_functional_foundation"].get(
+            "block57_compact_source_functional_foundation_passed"
+        )
+        is True
+        and certs["block57_compact_source_functional_foundation"].get(
+            "finite_volume_compact_source_functional_defined"
+        )
+        is True
+        and certs["block57_compact_source_functional_foundation"].get(
+            "exact_denominator_or_pole_authority_present"
+        )
+        is False
+        and certs["block57_compact_source_functional_foundation"].get(
+            "scalar_pole_fvir_root_closed"
+        )
+        is False
     )
     finite_source_support = (
         certs["fh_lsz_finite_source_linearity"].get("finite_source_linearity_gate_passed") is True
@@ -2637,6 +2666,11 @@ def main() -> int:
         block56_scalar_fvir_cut_not_closure,
         statuses["block56_scalar_pole_fvir_root_cut"],
     )
+    report(
+        "block57-compact-source-foundation-support-not-closure",
+        block57_compact_foundation_support_not_closure,
+        statuses["block57_compact_source_functional_foundation"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4133,6 +4167,7 @@ def main() -> int:
         "block54_response_readout_reduction_not_closure": block54_response_readout_reduction_not_closure,
         "block55_canonical_neutral_cut_not_closure": block55_canonical_neutral_cut_not_closure,
         "block56_scalar_fvir_cut_not_closure": block56_scalar_fvir_cut_not_closure,
+        "block57_compact_foundation_support_not_closure": block57_compact_foundation_support_not_closure,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4213,6 +4248,7 @@ def main() -> int:
             "does not treat the Block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
             "does not treat the Block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
             "does not treat the Block56 scalar/FVIR root cut as scalar-pole authority or positive closure",
+            "does not treat the Block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "
@@ -4228,7 +4264,9 @@ def main() -> int:
             "a real top/W factorization theorem, and sector-overlap identity, "
             "with source identity supplied by real rows or a certificate rather "
             "than Goldstone bookkeeping, a strict Stieltjes moment certificate "
-            "or same-surface Schur A/B/C kernel rows with scalar denominator closure, "
+            "or a thermodynamic transfer/spectral theorem built from the exact "
+            "compact finite-volume source functional, yielding scalar denominator "
+            "closure, "
             "or a neutral-sector irreducibility theorem.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
             "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "

@@ -1,0 +1,124 @@
+{
+  "actual_current_surface_status": "exact-support / Block57 compact finite-volume scalar-source functional foundation; ladder zero-mode no-gos scoped, bare finite-volume contact/source curvature exists, pole/FVIR/O_H roots remain open",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block57_compact_source_functional_foundation_passed": true,
+  "compact_toron_witness": {
+    "compact_Z0": 1.50125,
+    "compact_d2logZ_ds2": -1.2235155133697215,
+    "compact_dlogZ_ds": 1.5986677768526227,
+    "compact_minus_trivial_curvature": -0.39104933230832695,
+    "trivial_toron_Z0": 2.4024999999999994,
+    "trivial_toron_d2logZ_ds2": -0.8324661810613946
+  },
+  "conditional_surface_status": "conditional-support if future work derives thermodynamic transfer/spectral authority, isolated scalar pole and residue, FV/IR limiting control, and canonical O_H or physical-response bridge",
+  "exact_denominator_or_pole_authority_present": false,
+  "exact_next_action": "Use the compact finite-volume source functional as the foundation for a genuine thermodynamic transfer/spectral theorem: derive the scalar source-channel spectral representation, isolated pole and residue interval, FV/IR/toron limiting order, and then pair it with canonical O_H/source-overlap or strict physical response rows.",
+  "fail_count": 0,
+  "finite_volume_bare_contact_scheme_defined": true,
+  "finite_volume_compact_source_functional_defined": true,
+  "flat_torons_integrated_not_selected": true,
+  "hypothetical_axiom_status": null,
+  "ladder_zero_mode_no_gos_scope_limited": true,
+  "no_go_scope_rows": [
+    {
+      "applies_to": "finite Wilson-exchange ladder with noncompact IR regulator and retained/removed gauge zero mode choices",
+      "does_not_apply_as": "proof that the exact compact finite-volume Haar path integral is undefined",
+      "id": "scalar_zero_mode_limit_order",
+      "negative_result_is_correct": true
+    },
+    {
+      "applies_to": "shortcut that selects the trivial Cartan toron from a flat action-degenerate family",
+      "does_not_apply_as": "obstruction to exact compact integration over flat torons",
+      "id": "flat_toron_scalar_denominator",
+      "negative_result_is_correct": true
+    },
+    {
+      "applies_to": "attempt to choose a continuum/local contact subtraction from finite C_ss rows or monotonicity repair",
+      "does_not_apply_as": "obstruction to defining the bare finite-volume source curvature by functional derivatives of the specified lattice source action",
+      "id": "contact_subtraction_identifiability",
+      "negative_result_is_correct": true
+    },
+    {
+      "applies_to": "source-only attempt to identify the measured source pole with canonical O_H",
+      "does_not_apply_as": "obstruction to constructing the LSZ-normalized source-pole operator once an isolated source pole is supplied",
+      "id": "source_functional_lsz_identifiability",
+      "negative_result_is_correct": true
+    }
+  ],
+  "parent_certificates": {
+    "block56_scalar_pole_fvir_root_cut": "outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json",
+    "contact_subtraction_identifiability": "outputs/yt_fh_lsz_contact_subtraction_identifiability_2026-05-05.json",
+    "flat_toron_scalar_denominator": "outputs/yt_flat_toron_scalar_denominator_obstruction_2026-05-01.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "scalar_contact_scheme_boundary": "outputs/yt_scalar_source_contact_term_scheme_boundary_2026-05-01.json",
+    "scalar_source_two_point": "outputs/yt_scalar_source_two_point_stretch_2026-05-01.json",
+    "scalar_zero_mode_limit_order": "outputs/yt_scalar_zero_mode_limit_order_theorem_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "zero_mode_import_audit": "outputs/yt_zero_mode_prescription_import_audit_2026-05-01.json"
+  },
+  "parent_statuses": {
+    "block56_scalar_pole_fvir_root_cut": "exact-support / Block56 scalar-pole-FVIR root cut; current scalar/FH-LSZ artifacts do not close scalar pole/model-class/FV/IR authority",
+    "contact_subtraction_identifiability": "exact negative boundary / contact-subtraction identifiability obstruction",
+    "flat_toron_scalar_denominator": "exact negative boundary / flat toron scalar-denominator obstruction",
+    "legendre_source_pole_operator": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
+    "scalar_contact_scheme_boundary": "exact negative boundary / scalar source contact-term scheme boundary",
+    "scalar_source_two_point": "exact-support / open bridge",
+    "scalar_zero_mode_limit_order": "exact negative boundary / scalar zero-mode limit-order theorem",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "zero_mode_import_audit": "exact negative boundary / zero-mode prescription import audit"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Finite compact source-functional analyticity and bare contact definition are support only.  They do not provide the isolated scalar pole, LSZ residue, FV/IR limiting theorem, or canonical O_H/source-overlap bridge required for PR230 closure.",
+  "remaining_positive_contract": [
+    {
+      "current_satisfied": false,
+      "id": "thermodynamic_transfer_spectral_authority",
+      "required": "derive OS/transfer or equivalent spectral representation for the compact scalar source channel in the PR230 limit"
+    },
+    {
+      "current_satisfied": false,
+      "id": "isolated_scalar_pole",
+      "required": "prove or measure an isolated scalar source pole with a positive tight residue interval"
+    },
+    {
+      "current_satisfied": false,
+      "id": "fv_ir_limiting_order",
+      "required": "derive the finite-volume/IR/toron limiting order for the exact compact source channel"
+    },
+    {
+      "current_satisfied": false,
+      "id": "contact_renormalization_to_continuum_lsz",
+      "required": "derive how the bare finite-volume source curvature maps to the continuum/LSZ object, including any contact/subtraction scheme"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_oh_or_physical_bypass",
+      "required": "derive canonical O_H/source-pole identity, strict C_ss/C_sH/C_HH Gram rows, neutral-transfer primitive, or strict W/Z physical-response bypass"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "no H_unit, Ward, y_t_bare, observed selector, alpha_LM/plaquette/u0, or unit kappa/c2/Z_match shortcut"
+    }
+  ],
+  "remaining_scalar_authority_obligations": [
+    "thermodynamic transfer/spectral theorem for the exact compact source channel",
+    "isolated scalar pole and tight positive LSZ residue interval",
+    "finite-volume/IR/toron limiting-order authority",
+    "continuum/contact/subtraction map from bare source derivatives to scalar LSZ",
+    "canonical O_H/source-pole identity, strict C_ss/C_sH/C_HH Gram rows, neutral-transfer primitive, or strict W/Z physical-response bypass"
+  ],
+  "scalar_pole_fvir_root_closed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat the compact finite-volume source functional as an isolated scalar-pole theorem",
+    "does not use the perturbative ladder denominator as the exact source denominator",
+    "does not select the trivial toron sector",
+    "does not choose a contact subtraction from finite rows or monotonicity repair",
+    "does not identify O_s or O_sp with canonical O_H",
+    "does not use H_unit, yt_ward_identity, y_t_bare, observed top/y_t values, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1"
+  ]
+}

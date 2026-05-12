@@ -8681,6 +8681,30 @@
       "to": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
     },
     {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_pr230_block56_scalar_pole_fvir_root_cut_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_scalar_zero_mode_limit_order_theorem_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_flat_toron_scalar_denominator_obstruction_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_legendre_source_pole_operator_construction_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "to": "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19033,7 +19057,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T05:59:38.683265+00:00",
+  "generated_at": "2026-05-12T06:13:41.152486+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42745,6 +42769,23 @@
       "runner_path": "scripts/frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py",
       "title": "PR230 Block56 Scalar-Pole/FVIR Root Cut Gate"
     },
+    "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "exact-support / compact finite-volume scalar-source foundation,",
+      "deps": [
+        "yt_pr230_block56_scalar_pole_fvir_root_cut_gate_note_2026-05-12",
+        "yt_scalar_zero_mode_limit_order_theorem_note_2026-05-01",
+        "yt_flat_toron_scalar_denominator_obstruction_note_2026-05-01",
+        "yt_fh_lsz_contact_subtraction_identifiability_note_2026-05-05",
+        "yt_legendre_source_pole_operator_construction_note_2026-05-03",
+        "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+      ],
+      "note_hash": "d18bccfcb54f5b00d048b88a15b5cb76cfc5098f8b9fe088430cdad142290d7b",
+      "path": "docs/YT_PR230_BLOCK57_COMPACT_SOURCE_FUNCTIONAL_FOUNDATION_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py",
+      "title": "PR230 Block57 Compact Source-Functional Foundation Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47525,17 +47566,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4758,
-    "leaf_count": 1138,
-    "node_count": 2157,
+    "edge_count": 4764,
+    "leaf_count": 1133,
+    "node_count": 2158,
     "root_count": 1656,
-    "runners_with_path": 1632,
+    "runners_with_path": 1633,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 472,
+      "support": 473,
       "unknown": 593
     }
   }

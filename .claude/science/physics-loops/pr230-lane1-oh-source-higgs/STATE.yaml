@@ -3,14 +3,14 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-block48-operator-boundary
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block56 scalar-pole/FVIR root cut complete; response instrumentation is support-complete, the canonical-Higgs/neutral-transfer root is cut to primitive-transfer or accepted canonical O_H/action/LSZ authority, and the scalar root is cut to a same-surface scalar denominator/contact theorem with threshold/FVIR control or strict physical row bypass"
+active_block: "Block57 compact source-functional foundation complete; response instrumentation is support-complete, the canonical-Higgs/neutral-transfer root is cut to primitive-transfer or accepted canonical O_H/action/LSZ authority, the current scalar shortcut stack is cut, and the exact compact finite-volume source functional is established as support while thermodynamic spectral/pole/FVIR/O_H roots remain open"
 target_status: best-honest-status
-actual_current_surface_status: "exact-support plus bounded support: complete L12 same-source FH-LSZ support and common-window response stability support are present; Block54 reduces physical readout authorization to scalar pole/model-class/FV/IR plus canonical-Higgs or neutral-transfer authority; Block55 proves current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-neutral root; Block56 proves current scalar/FH-LSZ/Stieltjes/contact/finite-volume/source-Higgs contract artifacts do not close scalar pole/model-class/FV/IR authority"
+actual_current_surface_status: "exact-support plus bounded support: complete L12 same-source FH-LSZ support and common-window response stability support are present; Block54 reduces physical readout authorization to scalar pole/model-class/FV/IR plus canonical-Higgs or neutral-transfer authority; Block55 proves current degree-one/FMS/finite-C_sx/Perron support does not close the canonical-neutral root; Block56 proves current scalar/FH-LSZ/Stieltjes/contact/finite-volume/source-Higgs contract artifacts do not close scalar pole/model-class/FV/IR authority; Block57 scopes the ladder/toron/contact negatives and establishes the exact compact finite-volume source functional as support, but not pole/FVIR or canonical-O_H authority"
 conditional_surface_status: "conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
-hard_residual: "positive closure now needs a fresh primitive-bearing artifact, not another current-surface shortcut: either a same-surface scalar denominator/contact theorem with threshold/FVIR/pole control, a same-surface primitive transfer/cone certificate, accepted canonical O_H-action-LSZ bridge with strict C_ss/C_sH/C_HH rows, or strict W/Z/source-Higgs physical rows that supply those roots"
+hard_residual: "positive closure now needs a thermodynamic/spectral theorem or physical-row bridge, not another finite-support shortcut: derive scalar source-channel transfer/spectral authority, isolated pole/residue, FV/IR/toron limiting control, plus canonical O_H/source-overlap authority; or supply a same-surface primitive transfer/cone certificate, accepted canonical O_H-action-LSZ bridge with strict C_ss/C_sH/C_HH rows, or strict W/Z/source-Higgs physical rows that supply those roots"
 completed_checks:
   - "frontier_yt_pr230_lane1_oh_root_theorem_attempt.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_lane1_action_premise_derivation_attempt.py: PASS=15 FAIL=0"
@@ -52,4 +52,7 @@ completed_checks:
   - "frontier_yt_pr230_block56_scalar_pole_fvir_root_cut_gate.py: PASS=18 FAIL=0"
   - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=182 FAIL=0"
   - "frontier_yt_pr230_campaign_status_certificate.py: PASS=391 FAIL=0"
-next_exact_action: "Pursue a fresh primitive-bearing positive artifact: same-surface scalar denominator/contact theorem with threshold/FVIR/pole control, same-surface primitive transfer/cone certificate, accepted canonical O_H-action-LSZ bridge with strict C_ss/C_sH/C_HH rows, or strict W/Z/source-Higgs physical rows. Chunk workers remain separate and should not be interrupted."
+  - "frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py: PASS=14 FAIL=0"
+  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=183 FAIL=0"
+  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=392 FAIL=0"
+next_exact_action: "Build on Block57 with a genuine compact-source transfer/spectral theorem attempt: derive reflection/transfer positivity for the exact source channel, isolated scalar pole/residue and FV/IR/toron limiting control, then pair with canonical O_H/source-overlap or strict physical response rows. Chunk workers remain separate and should not be interrupted."

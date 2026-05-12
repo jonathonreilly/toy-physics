@@ -25,6 +25,15 @@ needs a same-surface scalar denominator/contact theorem with threshold,
 FV/IR, and pole-residue control, or strict physical rows that bypass
 scalar-source normalization while supplying those controls.
 
+Block57 update: the prior zero-mode/flat-toron/contact negatives are scoped.
+They block the perturbative ladder denominator, trivial-toron selection, and
+finite-row contact-repair shortcuts, but do not invalidate the exact compact
+finite-volume source functional.  The finite compact source functional is now
+the clean scalar foundation; the next positive scalar move must derive
+thermodynamic transfer/spectral authority, isolated pole/residue, FV/IR/toron
+limiting order, and canonical `O_H`/source-overlap or physical-response
+identity from that foundation.
+
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
    primitive-cone certificate, strict neutral transfer artifact, or production
@@ -63,7 +72,17 @@ scalar-source normalization while supplying those controls.
    strict packet roots.  After Block54, that packet must still supply scalar
    FV/IR authority and canonical-Higgs or neutral-transfer authority.
 
-3. **New native scalar/action/LSZ primitive.**
+3. **Exact compact source-channel transfer/spectral theorem.**
+   Use Block57's exact compact finite-volume source-functional foundation to
+   derive the actual scalar source-channel transfer/spectral object, isolated
+   pole/residue interval, contact/continuum map, and FV/IR/toron limiting
+   order.  This is now the best non-chunk scalar route because it avoids the
+   over-scoped ladder zero-mode objection and the finite-row contact-repair
+   shortcut.  It still must not promote finite analyticity alone to pole
+   authority, and it still needs canonical `O_H`/source-overlap or a physical
+   response bridge.
+
+4. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only
    with a genuinely new same-surface primitive not already covered by minimal
    action, FMS, HS/logdet, Legendre, source-reparametrization, LSZ
@@ -73,9 +92,11 @@ scalar-source normalization while supplying those controls.
    authority remains a minimal root.  Block54 leaves it as one of the two
    surviving roots.  Block56 cuts the current scalar shortcut stack, so this
    route now requires a new denominator/contact/threshold/FVIR theorem rather
-   than another finite-shell or contact-repair certificate.
+   than another finite-shell or contact-repair certificate.  Block57 clarifies
+   that the denominator theorem should be built from the exact compact source
+   functional, not the perturbative ladder shortcut.
 
-4. **Strict source-Higgs time-kernel row path after `O_H`.**
+5. **Strict source-Higgs time-kernel row path after `O_H`.**
    Existing pipeline refuses current aliases correctly.  Launch only after an
    `O_H` certificate exists and the rows are physical Euclidean
    `C_ij(tau)` rows rather than MC configuration-index target samples,
@@ -87,14 +108,14 @@ scalar-source normalization while supplying those controls.
    Completed chunks001-002 also cannot be used as the row path because they
    contain no pole residues, source-Higgs time kernel, or canonical `O_H`.
 
-5. **Physical readout authorization for completed L12 FH-LSZ support.**
+6. **Physical readout authorization for completed L12 FH-LSZ support.**
    The support packet is complete and response-side stability support is
    available through the common-window gate.  Block54 reduces this route to the
    two remaining roots: scalar-pole derivative/model-class/FV/IR authority and
    canonical-Higgs identity or same-surface neutral transfer.  Otherwise this
    lane remains bounded support.
 
-6. **Schur higher-shell rows if they finish.**
+7. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not
    reopened until completed JSON/certificates land and are checked against the
    H3/H4, pole/FV/IR, and canonical coupling obligations.  Under the current
@@ -102,7 +123,7 @@ scalar-source normalization while supplying those controls.
    completed chunks001-002 prefix is now explicitly checkpointed as support
    only by Block50.
 
-7. **Ward Step 3 same-1PI route if future bridge lands.**
+8. **Ward Step 3 same-1PI route if future bridge lands.**
    Origin/main has an audited-clean `open_gate` coefficient diagnostic, but
    Block49 prevents importing it as PR230 closure.  Reopen only with a
    Wick-level same-1PI bridge and independent scalar pole/LSZ plus canonical

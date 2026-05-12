@@ -144,6 +144,15 @@ bounded support across the full L12 set.  The physical response readout switch
 is still unauthorized, so scalar-LSZ/model-class/FV/IR and canonical-Higgs
 identity remain the actual blockers.
 
+Block57 scopes the scalar no-go surface.  The zero-mode, flat-toron, and
+contact negative results are correct for the perturbative ladder denominator,
+trivial-toron selection, and finite-row contact-repair shortcuts, but they do
+not globally invalidate the exact compact finite-volume source functional.
+The exact compact source functional is now recorded as support; the hard
+positive route is the thermodynamic transfer/spectral theorem, isolated pole
+and residue, FV/IR/toron limiting order, and canonical `O_H` or physical
+response bridge.
+
 ## Checks Run
 
 ```text
@@ -264,7 +273,7 @@ git diff --check
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive production physical Euclidean C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, or a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
+derive compact-source thermodynamic transfer/spectral authority with isolated scalar pole/residue and FV/IR/toron control, then canonical O_H/source-overlap or strict physical-response authority; or derive production physical Euclidean C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -294,6 +303,7 @@ as strict `C_sH/C_HH`.  It should
 try one of:
 
 ```text
+compact-source thermodynamic transfer/spectral theorem with scalar pole/residue and FV/IR/toron authority
 production physical Euclidean C_ss/C_sH/C_HH(tau) source-Higgs rows after canonical O_H authority
 new same-surface neutral transfer/off-diagonal generator primitive
 strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority
@@ -485,3 +495,47 @@ threshold/FVIR/pole control, same-surface primitive transfer/cone certificate,
 accepted canonical `O_H`/action/LSZ authority with strict `C_ss/C_sH/C_HH`
 rows, or strict W/Z/source-Higgs physical rows.  More current-surface
 inventory is not a closure path.
+
+## Block57 Compact Source-Functional Foundation
+
+Added `docs/YT_PR230_BLOCK57_COMPACT_SOURCE_FUNCTIONAL_FOUNDATION_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py`,
+and `outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json`.
+
+Result: exact-support / compact finite-volume scalar-source foundation.  The
+zero-mode, flat-toron, and contact negatives remain correct but are scoped:
+they block perturbative ladder denominators, trivial-toron selection, and
+finite-row contact-repair shortcuts, not the exact compact finite-volume
+source functional.  The compact finite-volume source functional has a
+well-defined bare source curvature/contact scheme and integrates flat torons
+rather than selecting the trivial toron.
+
+This is support only.  It does not supply thermodynamic transfer/spectral
+authority, an isolated scalar pole or residue interval, FV/IR/toron limiting
+order, continuum contact/subtraction map, or canonical `O_H`/source-overlap
+identity.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py
+# SUMMARY: PASS=14 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=183 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=392 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+```
+
+Next exact action: build on the compact finite-volume source functional with a
+real thermodynamic transfer/spectral theorem attempt.  The theorem must derive
+scalar source-channel spectral representation, isolated pole/residue, FV/IR
+and toron limiting authority, and then pair that with canonical `O_H` or a
+strict physical-response bridge.  Do not interrupt the active chunk workers.

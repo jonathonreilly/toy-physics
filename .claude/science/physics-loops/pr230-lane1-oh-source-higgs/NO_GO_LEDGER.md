@@ -113,6 +113,11 @@
   must supply a same-surface scalar denominator/contact theorem with threshold
   and FV/IR pole control, or strict physical rows that bypass scalar-source
   normalization.
+- Block57 compact source-functional foundation is not closure: it scopes prior
+  zero-mode/flat-toron/contact negatives and establishes the finite compact
+  source functional as a support object, but it does not supply a
+  thermodynamic spectral theorem, isolated scalar pole, FV/IR/toron limiting
+  order, LSZ residue interval, or canonical `O_H`/source-overlap bridge.
 
 ## Scope Boundary
 
@@ -124,4 +129,7 @@ contact/threshold/FVIR authority; explicitly admitted action extension plus
 strict rows; same-surface neutral transfer/primitive-cone theorem; or strict
 W/Z physical-response packet with mixed-source `T_total/A_top/W` rows, matched
 covariance, accepted action authority, and absolute `g2`/`v` authority supplies
-the missing bridge.
+the missing bridge.  After Block57, the next scalar route may use the exact
+compact finite-volume source functional as foundation, but must still derive
+transfer/spectral authority, pole/residue and FV/IR control, and canonical
+`O_H` or physical-response identity before it can retire the blocker.

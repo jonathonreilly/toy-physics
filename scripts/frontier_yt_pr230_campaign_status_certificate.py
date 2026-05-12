@@ -839,6 +839,9 @@ def main() -> int:
         "pr230_block56_scalar_pole_fvir_root_cut": load(
             "outputs/yt_pr230_block56_scalar_pole_fvir_root_cut_gate_2026-05-12.json"
         ),
+        "pr230_block57_compact_source_functional_foundation": load(
+            "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4789,6 +4792,37 @@ def main() -> int:
         ),
         statuses["pr230_block56_scalar_pole_fvir_root_cut"],
     )
+    block57_compact_source_functional_foundation = certificates[
+        "pr230_block57_compact_source_functional_foundation"
+    ]
+    report(
+        "pr230-block57-compact-source-foundation-support-not-closure",
+        "compact finite-volume scalar-source functional foundation"
+        in str(statuses["pr230_block57_compact_source_functional_foundation"])
+        and block57_compact_source_functional_foundation.get("proposal_allowed")
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "bare_retained_allowed"
+        )
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "block57_compact_source_functional_foundation_passed"
+        )
+        is True
+        and block57_compact_source_functional_foundation.get(
+            "finite_volume_compact_source_functional_defined"
+        )
+        is True
+        and block57_compact_source_functional_foundation.get(
+            "exact_denominator_or_pole_authority_present"
+        )
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "scalar_pole_fvir_root_closed"
+        )
+        is False,
+        statuses["pr230_block57_compact_source_functional_foundation"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -8275,6 +8309,30 @@ def main() -> int:
         in block56_scalar_pole_fvir_root_cut.get(
             "remaining_scalar_authority_obligations", []
         )
+    )
+    result["block57_compact_foundation_support_not_closure"] = (
+        block57_compact_source_functional_foundation.get("proposal_allowed")
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "bare_retained_allowed"
+        )
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "block57_compact_source_functional_foundation_passed"
+        )
+        is True
+        and block57_compact_source_functional_foundation.get(
+            "finite_volume_compact_source_functional_defined"
+        )
+        is True
+        and block57_compact_source_functional_foundation.get(
+            "exact_denominator_or_pole_authority_present"
+        )
+        is False
+        and block57_compact_source_functional_foundation.get(
+            "scalar_pole_fvir_root_closed"
+        )
+        is False
     )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
