@@ -259,3 +259,13 @@ remaining current-surface imports are physical response readout authorization,
 scalar pole/model-class/FV/IR authority, and canonical-Higgs pole identity or
 same-surface neutral-transfer authority.  No `proposed_retained` wording is
 authorized until one of those roots is actually supplied and review passes.
+
+## Block54 Response-Readout Reduction Result
+
+The response-instrumentation side is now support-complete: invariant readout,
+finite-source linearity, common-window response stability, replacement
+response stability, and v2 target response stability all pass as support.
+This retires physical response readout authorization as an independent
+response-window import, but it does not authorize the physical `y_t` readout.
+The remaining imports are scalar pole/model-class/FV/IR authority and
+canonical-Higgs identity or same-surface neutral-transfer authority.

@@ -97,12 +97,16 @@
   physical response readout authorization, scalar pole/model-class/FV/IR
   authority, and canonical-Higgs identity or same-surface neutral-transfer
   authority.
+- Block54 response-readout reduction is not closure: it proves the
+  response-instrumentation side is support-complete and reduces physical
+  readout authorization to scalar/FVIR plus canonical-Higgs/neutral-transfer
+  authority, but it does not supply either surviving root.
 
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
-theorems.  After Block53, the next positive route should retire at least one
-of the three live roots directly.  They retire if a future native
+theorems.  After Block54, the next positive route should retire at least one
+of the two surviving live roots directly.  They retire if a future native
 scalar/action/LSZ theorem with a fixed kernel/covariance and scalar metric,
 explicitly admitted action extension plus strict rows, same-surface neutral
 transfer/primitive-cone theorem, or strict W/Z physical-response packet with

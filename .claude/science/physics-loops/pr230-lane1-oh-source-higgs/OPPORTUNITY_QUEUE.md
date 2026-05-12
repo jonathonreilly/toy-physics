@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block53
+## Active Ranking After Block54
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -8,6 +8,11 @@ bounded support, and the common-window response gate passes as support.  The
 minimal remaining roots are physical response readout authorization, scalar
 pole/model-class/FV/IR authority, and canonical-Higgs pole identity or an
 equivalent same-surface neutral-transfer bridge.
+
+Block54 update: response instrumentation is support-complete.  Physical
+readout authorization reduces to the two still-open roots: scalar
+pole/model-class/FV/IR authority and canonical-Higgs pole identity or
+same-surface neutral-transfer authority.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -32,6 +37,7 @@ equivalent same-surface neutral-transfer bridge.
    physical pole, or canonical-Higgs identity.  Block52 shows common-window
    response support also does not provide those bridges.  Block53 confirms
    this is one of the three remaining roots, not a support/inventory issue.
+   Block54 reduces physical readout to this root plus scalar/FVIR authority.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -41,7 +47,8 @@ equivalent same-surface neutral-transfer bridge.
    roots.  Block47 adds that top mass-scan `dE/dm_bare` rows are not the
    required mixed-source `T_total/A_top/W` subtraction packet.  Block53 and
    the W/Z explorer report confirm the route remains conditional on future
-   strict packet roots.
+   strict packet roots.  After Block54, that packet must still supply scalar
+   FV/IR authority and canonical-Higgs or neutral-transfer authority.
 
 3. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only
@@ -50,7 +57,8 @@ equivalent same-surface neutral-transfer bridge.
    bookkeeping, source-functional LSZ, Hessian, import-audit, carrier/projector,
    finite-shell exact-math attempts, or the HS/logdet scalar-action
    normalization shortcut.  Block53 records that scalar pole/model-class/FV/IR
-   authority remains a minimal root.
+   authority remains a minimal root.  Block54 leaves it as one of the two
+   surviving roots.
 
 4. **Strict source-Higgs time-kernel row path after `O_H`.**
    Existing pipeline refuses current aliases correctly.  Launch only after an
@@ -66,10 +74,10 @@ equivalent same-surface neutral-transfer bridge.
 
 5. **Physical readout authorization for completed L12 FH-LSZ support.**
    The support packet is complete and response-side stability support is
-   available through the common-window gate.  Block53 narrows this route to the
-   three remaining roots: physical readout authorization, scalar-pole
-   derivative/model-class/FV/IR authority, and canonical-Higgs identity or
-   same-surface neutral transfer.  Otherwise this lane remains bounded support.
+   available through the common-window gate.  Block54 reduces this route to the
+   two remaining roots: scalar-pole derivative/model-class/FV/IR authority and
+   canonical-Higgs identity or same-surface neutral transfer.  Otherwise this
+   lane remains bounded support.
 
 6. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not

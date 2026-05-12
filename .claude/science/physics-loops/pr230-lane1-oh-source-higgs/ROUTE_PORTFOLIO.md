@@ -73,14 +73,24 @@
 ## Next Positive Artifact
 
 The next artifact that could move the lane positively must attack one of the
-Block53 roots directly: a new same-surface neutral transfer primitive or
-canonical-Higgs identity theorem; a physical Euclidean `C_ij(tau)` row packet
-with scalar pole/FV/IR/model authority and canonical-Higgs authority; a strict
-W/Z physical-response packet with actual mixed-source `T_total/A_top/W` rows,
-matched covariance, accepted action, and absolute `g2`/`v` authority; or a
-genuinely new scalar/action/LSZ primitive not already covered by Block41.
+Block54 surviving roots directly: a new same-surface neutral transfer primitive
+or canonical-Higgs identity theorem; a physical Euclidean `C_ij(tau)` row
+packet with scalar pole/FV/IR/model authority and canonical-Higgs authority; a
+strict W/Z physical-response packet with actual mixed-source
+`T_total/A_top/W` rows, matched covariance, accepted action, and absolute
+`g2`/`v` authority; or a genuinely new scalar/action/LSZ primitive not already
+covered by Block41.
 More inventory of the current MC target-time-series packet, ordinary tau
 correlators, reduced smoke, active worker intent, completed higher-shell
 chunks001-002, completed L12 same-source FH-LSZ support, common-window response
-support, higher-shell taste-radial cross rows, or origin/main Ward Step 3
-`open_gate` status is not a positive closure path.
+support, Block54 response-readout reduction, higher-shell taste-radial cross
+rows, or origin/main Ward Step 3 `open_gate` status is not a positive closure
+path.
+
+## Block54 Update
+
+The same-source FH-LSZ response-readout root has been reduced.  The
+response-instrumentation side is support-complete, so the remaining positive
+work should not reopen response-window stability as a standalone issue.  The
+surviving roots are scalar pole/model-class/FV/IR authority and
+canonical-Higgs identity or same-surface neutral-transfer authority.

@@ -364,3 +364,46 @@ derive/measure canonical-Higgs or neutral-transfer authority, derive scalar
 pole/model-class/FV/IR authority, or build strict W/Z/source-Higgs physical
 response rows that authorize the readout switch.  Do not interrupt the active
 higher-shell chunk workers.
+
+## Block54 Response-Readout Reduction
+
+Added `docs/YT_PR230_BLOCK54_RESPONSE_READOUT_REDUCTION_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block54_response_readout_reduction_gate.py`, and
+`outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json`.
+
+Result: exact-support / response-readout root reduction.  The response-side
+instrumentation support is complete, so physical readout authorization is no
+longer an independent response-window blocker.  Positive PR230 closure remains
+blocked by two physics roots: scalar pole/model-class/FV/IR authority and
+canonical-Higgs pole identity or an equivalent same-surface neutral-transfer
+bridge.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block54_response_readout_reduction_gate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block54_response_readout_reduction_gate.py
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=180 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=389 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; known five warnings only.
+```
+
+Next exact action: attack one of the two surviving roots directly.  Do not
+reopen response-window stability as a standalone blocker unless new evidence
+invalidates the support gates, and do not interrupt the active higher-shell
+chunk workers.

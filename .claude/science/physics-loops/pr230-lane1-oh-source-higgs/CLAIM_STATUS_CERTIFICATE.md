@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: open / block53 residual-minimality checkpoint: complete L12 same-source FH-LSZ support and common-window response stability support are present, but physical readout authorization, scalar pole/model-class/FV/IR, and canonical-Higgs identity or same-surface neutral-transfer authority remain open
+actual_current_surface_status: exact-support / block54 response-readout root reduction: complete L12 same-source FH-LSZ support and common-window response stability support are present, and physical response readout authorization now reduces to scalar pole/model-class/FV/IR plus canonical-Higgs identity or same-surface neutral-transfer authority
 conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, and common-window response stability support, but the physical readout switch is not authorized, scalar pole/model-class/FV/IR authority is absent, no dynamic Phi/action exists, no canonical O_H identity exists, no physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority exist, and no neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete 63/63 L12 same-source FH-LSZ target-time-series support, and common-window response stability support; Block54 closes the response-instrumentation side as support, but scalar pole/model-class/FV/IR authority is absent, no dynamic Phi/action exists, no canonical O_H identity exists, no physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows under canonical authority exist, and no neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority exists
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -144,4 +144,10 @@ Block53 residual-minimality result:
 frontier_yt_pr230_block53_lane1_residual_minimality_gate.py: PASS=17 FAIL=0
 frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=179 FAIL=0
 frontier_yt_pr230_campaign_status_certificate.py: PASS=388 FAIL=0
+```
+
+Block54 response-readout reduction result:
+
+```text
+frontier_yt_pr230_block54_response_readout_reduction_gate.py: PASS=15 FAIL=0
 ```

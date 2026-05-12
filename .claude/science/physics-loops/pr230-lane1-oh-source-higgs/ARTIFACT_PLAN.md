@@ -234,10 +234,23 @@ closure remains blocked by physical response readout authorization, scalar
 pole/model-class/FV/IR authority, and canonical-Higgs pole identity or
 same-surface neutral-transfer authority.
 
+## Block54: Response-Readout Reduction Gate
+
+- Note: `docs/YT_PR230_BLOCK54_RESPONSE_READOUT_REDUCTION_GATE_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_block54_response_readout_reduction_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block54_response_readout_reduction_gate_2026-05-12.json`
+
+Status: exact-support / response-readout root reduction.  This is not a new
+closure claim.  It records that response-instrumentation support is complete
+and that physical readout authorization reduces to the two still-open roots:
+scalar pole/model-class/FV/IR authority and canonical-Higgs identity or
+same-surface neutral-transfer authority.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
-Block53-root artifact, not another inventory checkpoint: canonical-Higgs or
+Block54-root artifact, not another inventory checkpoint: canonical-Higgs or
 same-surface neutral-transfer authority; scalar pole/model-class/FV/IR
-authority; or a strict W/Z/source-Higgs physical response packet that
-authorizes the readout switch without forbidden imports.
+authority; or a strict W/Z/source-Higgs physical response packet that supplies
+those roots without forbidden imports.
