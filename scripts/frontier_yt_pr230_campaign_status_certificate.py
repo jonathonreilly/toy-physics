@@ -960,6 +960,12 @@ def main() -> int:
         "pr230_schur_higher_shell_chunk010_checkpoint": load_optional(
             "outputs/yt_pr230_schur_higher_shell_chunk010_checkpoint_2026-05-12.json"
         ),
+        "pr230_schur_higher_shell_chunk011_checkpoint": load_optional(
+            "outputs/yt_pr230_schur_higher_shell_chunk011_checkpoint_2026-05-12.json"
+        ),
+        "pr230_schur_higher_shell_chunk012_checkpoint": load_optional(
+            "outputs/yt_pr230_schur_higher_shell_chunk012_checkpoint_2026-05-12.json"
+        ),
         "pr230_post_chunks001_002_source_higgs_bridge_intake_guard": load(
             "outputs/yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_2026-05-12.json"
         ),
@@ -5526,6 +5532,20 @@ def main() -> int:
             == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             and schur_higher_shell_active_chunks == []
         )
+        or (
+            schur_higher_shell_active_or_completed
+            == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            and schur_higher_shell_completed_chunks
+            == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            and schur_higher_shell_active_chunks == [11, 12]
+        )
+        or (
+            schur_higher_shell_active_or_completed
+            == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            and schur_higher_shell_completed_chunks
+            == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            and schur_higher_shell_active_chunks == []
+        )
     )
     schur_higher_shell_chunks007_008_launched = (
         schur_higher_shell_wave_launcher.get("launch_mode") is True
@@ -5538,6 +5558,13 @@ def main() -> int:
         and schur_higher_shell_launched_chunks == [9, 10]
         and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6, 7, 8]
         and schur_higher_shell_active_or_completed == [1, 2, 3, 4, 5, 6, 7, 8]
+    )
+    schur_higher_shell_chunks011_012_launched = (
+        schur_higher_shell_wave_launcher.get("launch_mode") is True
+        and schur_higher_shell_launched_chunks == [11, 12]
+        and schur_higher_shell_completed_chunks == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        and schur_higher_shell_active_or_completed
+        == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     )
     schur_higher_shell_chunk007 = certificates[
         "pr230_schur_higher_shell_chunk007_checkpoint"
@@ -5575,6 +5602,24 @@ def main() -> int:
         and schur_higher_shell_chunk009.get("bare_retained_allowed") is False
         and schur_higher_shell_chunk010.get("bare_retained_allowed") is False
     )
+    schur_higher_shell_chunk011 = certificates[
+        "pr230_schur_higher_shell_chunk011_checkpoint"
+    ]
+    schur_higher_shell_chunk012 = certificates[
+        "pr230_schur_higher_shell_chunk012_checkpoint"
+    ]
+    schur_higher_shell_chunks011_012_checkpointed = (
+        schur_higher_shell_chunk011.get("chunk_index") == 11
+        and schur_higher_shell_chunk012.get("chunk_index") == 12
+        and schur_higher_shell_chunk011.get("completed") is True
+        and schur_higher_shell_chunk012.get("completed") is True
+        and schur_higher_shell_chunk011.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk012.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk011.get("proposal_allowed") is False
+        and schur_higher_shell_chunk012.get("proposal_allowed") is False
+        and schur_higher_shell_chunk011.get("bare_retained_allowed") is False
+        and schur_higher_shell_chunk012.get("bare_retained_allowed") is False
+    )
     report(
         "pr230-schur-higher-shell-wave-launcher-run-control-only",
         "higher-shell Schur scalar-LSZ wave launcher status"
@@ -5585,6 +5630,7 @@ def main() -> int:
             schur_higher_shell_completed_or_active
             or schur_higher_shell_chunks007_008_launched
             or schur_higher_shell_chunks009_010_launched
+            or schur_higher_shell_chunks011_012_launched
         )
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
         statuses["pr230_schur_higher_shell_wave_launcher"],
@@ -5626,6 +5672,28 @@ def main() -> int:
                 "launched_chunks": schur_higher_shell_launched_chunks,
                 "completed_chunks": schur_higher_shell_completed_chunks,
                 "checkpointed_chunks009_010": schur_higher_shell_chunks009_010_checkpointed,
+            },
+        )
+    if (
+        schur_higher_shell_chunks011_012_launched
+        or schur_higher_shell_chunk011
+        or schur_higher_shell_chunk012
+    ):
+        report(
+            "pr230-schur-higher-shell-chunks011-012-run-control-or-checkpointed-support-only",
+            "higher-shell Schur scalar-LSZ wave launcher status"
+            in str(statuses["pr230_schur_higher_shell_wave_launcher"])
+            and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
+            and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
+            and (
+                schur_higher_shell_chunks011_012_launched
+                or schur_higher_shell_chunks011_012_checkpointed
+            )
+            and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
+            {
+                "launched_chunks": schur_higher_shell_launched_chunks,
+                "completed_chunks": schur_higher_shell_completed_chunks,
+                "checkpointed_chunks011_012": schur_higher_shell_chunks011_012_checkpointed,
             },
         )
     schur_higher_shell_chunk001 = certificates[
@@ -5722,6 +5790,15 @@ def main() -> int:
             {
                 "chunk009": statuses["pr230_schur_higher_shell_chunk009_checkpoint"],
                 "chunk010": statuses["pr230_schur_higher_shell_chunk010_checkpoint"],
+            },
+        )
+    if schur_higher_shell_chunk011 or schur_higher_shell_chunk012:
+        report(
+            "pr230-schur-higher-shell-chunks011-012-checkpointed-support-only",
+            schur_higher_shell_chunks011_012_checkpointed,
+            {
+                "chunk011": statuses["pr230_schur_higher_shell_chunk011_checkpoint"],
+                "chunk012": statuses["pr230_schur_higher_shell_chunk012_checkpoint"],
             },
         )
     post_chunks001_002_bridge_guard = certificates[
@@ -7613,6 +7690,7 @@ def main() -> int:
             schur_higher_shell_completed_or_active
             or schur_higher_shell_chunks007_008_launched
             or schur_higher_shell_chunks009_010_launched
+            or schur_higher_shell_chunks011_012_launched
         )
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2
     )
@@ -7621,6 +7699,9 @@ def main() -> int:
     )
     result["schur_higher_shell_chunks009_010_launched_run_control_only"] = (
         schur_higher_shell_chunks009_010_launched
+    )
+    result["schur_higher_shell_chunks011_012_launched_run_control_only"] = (
+        schur_higher_shell_chunks011_012_launched
     )
     result["schur_higher_shell_chunks001_002_checkpointed_support_only"] = (
         schur_higher_shell_chunks001_002_checkpointed
@@ -7636,6 +7717,9 @@ def main() -> int:
     )
     result["schur_higher_shell_chunks009_010_checkpointed_support_only"] = (
         schur_higher_shell_chunks009_010_checkpointed
+    )
+    result["schur_higher_shell_chunks011_012_checkpointed_support_only"] = (
+        schur_higher_shell_chunks011_012_checkpointed
     )
     result["post_chunks001_002_source_higgs_bridge_intake_blocks"] = (
         post_chunks001_002_source_higgs_bridge_intake_blocks

@@ -10,7 +10,9 @@
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
   ],
   "active_process_count": 0,
   "active_process_rows": [],
@@ -28,7 +30,9 @@
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
   ],
   "completed_outputs_are_not_overwritten": true,
   "considered_rows": [
@@ -148,9 +152,9 @@
       "command_ok": true,
       "command_reason": "no-resume higher-shell production command",
       "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk011_2026-05-07.json",
-      "output_present": false,
+      "output_present": true,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk011",
-      "production_output_dir_present": false,
+      "production_output_dir_present": true,
       "seed": 2026057011
     },
     {
@@ -159,9 +163,9 @@
       "command_ok": true,
       "command_reason": "no-resume higher-shell production command",
       "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk012_2026-05-07.json",
-      "output_present": false,
+      "output_present": true,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk012",
-      "production_output_dir_present": false,
+      "production_output_dir_present": true,
       "seed": 2026057012
     },
     {
@@ -728,8 +732,6 @@
   ],
   "contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
   "eligible_chunk_indices_before_capacity": [
-    11,
-    12,
     13,
     14,
     15,
@@ -786,33 +788,14 @@
   "fail_count": 0,
   "launch_allowed_before_action": true,
   "launch_capacity": 2,
-  "launch_mode": true,
-  "launched": [
-    {
-      "alive_after_verify_seconds": true,
-      "chunk_index": 11,
-      "log": "outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk011_20260512T151553Z.log",
-      "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk011_2026-05-07.json",
-      "pid": 88639,
-      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk011",
-      "seed": 2026057011
-    },
-    {
-      "alive_after_verify_seconds": true,
-      "chunk_index": 12,
-      "log": "outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk012_20260512T151553Z.log",
-      "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk012_2026-05-07.json",
-      "pid": 88640,
-      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk012",
-      "seed": 2026057012
-    }
-  ],
+  "launch_mode": false,
+  "launched": [],
   "max_concurrent": 2,
   "partial_directories_count_as_non_evidence": true,
   "pass_count": 11,
   "planned_launch_chunk_indices": [
-    11,
-    12
+    13,
+    14
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "Higher-shell launch status cannot supply completed row evidence, complete monotonicity, scalar pole authority, FV/IR authority, canonical O_H/source-overlap authority, W/Z response, or y_t closure.",
