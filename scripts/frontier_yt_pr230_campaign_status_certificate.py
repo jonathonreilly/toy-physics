@@ -842,6 +842,9 @@ def main() -> int:
         "pr230_block57_compact_source_functional_foundation": load(
             "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json"
         ),
+        "pr230_block58_compact_source_spectral_support": load(
+            "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4823,6 +4826,43 @@ def main() -> int:
         is False,
         statuses["pr230_block57_compact_source_functional_foundation"],
     )
+    block58_compact_source_spectral_support = certificates[
+        "pr230_block58_compact_source_spectral_support"
+    ]
+    report(
+        "pr230-block58-compact-source-spectral-support-not-closure",
+        "finite-volume compact source-channel spectral support"
+        in str(statuses["pr230_block58_compact_source_spectral_support"])
+        and block58_compact_source_spectral_support.get("proposal_allowed")
+        is False
+        and block58_compact_source_spectral_support.get("bare_retained_allowed")
+        is False
+        and block58_compact_source_spectral_support.get(
+            "block58_compact_source_spectral_support_passed"
+        )
+        is True
+        and block58_compact_source_spectral_support.get(
+            "finite_volume_source_spectral_representation_present"
+        )
+        is True
+        and block58_compact_source_spectral_support.get(
+            "thermodynamic_limit_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
+            "isolated_pole_residue_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
+            "canonical_oh_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
+            "scalar_pole_fvir_root_closed"
+        )
+        is False,
+        statuses["pr230_block58_compact_source_spectral_support"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6912,6 +6952,8 @@ def main() -> int:
             "does not treat block53 residual-minimality status as positive closure",
             "does not treat block54 response-readout reduction as scalar/FVIR authority, canonical-Higgs identity, or positive closure",
             "does not treat block55 canonical-neutral primitive cut as canonical O_H, neutral transfer, or positive closure",
+            "does not treat block57 compact source-functional foundation as an isolated-pole, FVIR, or canonical-O_H theorem",
+            "does not treat block58 finite-volume source-channel spectral support as thermodynamic pole saturation, scalar LSZ residue authority, or canonical O_H",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8330,6 +8372,35 @@ def main() -> int:
         )
         is False
         and block57_compact_source_functional_foundation.get(
+            "scalar_pole_fvir_root_closed"
+        )
+        is False
+    )
+    result["block58_compact_spectral_support_not_closure"] = (
+        block58_compact_source_spectral_support.get("proposal_allowed") is False
+        and block58_compact_source_spectral_support.get("bare_retained_allowed")
+        is False
+        and block58_compact_source_spectral_support.get(
+            "block58_compact_source_spectral_support_passed"
+        )
+        is True
+        and block58_compact_source_spectral_support.get(
+            "finite_volume_source_spectral_representation_present"
+        )
+        is True
+        and block58_compact_source_spectral_support.get(
+            "thermodynamic_limit_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
+            "isolated_pole_residue_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
+            "canonical_oh_authority_present"
+        )
+        is False
+        and block58_compact_source_spectral_support.get(
             "scalar_pole_fvir_root_closed"
         )
         is False

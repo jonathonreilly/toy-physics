@@ -8705,6 +8705,26 @@
       "to": "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
     },
     {
+      "from": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "to": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "to": "axiom_first_reflection_positivity_theorem_note_2026-04-29"
+    },
+    {
+      "from": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "to": "axiom_first_spectrum_condition_theorem_note_2026-04-29"
+    },
+    {
+      "from": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "to": "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "to": "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19057,7 +19077,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T06:13:41.152486+00:00",
+  "generated_at": "2026-05-12T06:20:58.141366+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42786,6 +42806,22 @@
       "runner_path": "scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py",
       "title": "PR230 Block57 Compact Source-Functional Foundation Gate"
     },
+    "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12": {
+      "claim_id": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "exact-support / finite-volume compact source-channel spectral",
+      "deps": [
+        "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+        "axiom_first_reflection_positivity_theorem_note_2026-04-29",
+        "axiom_first_spectrum_condition_theorem_note_2026-04-29",
+        "yt_reflection_positivity_lsz_shortcut_no_go_note_2026-05-02",
+        "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+      ],
+      "note_hash": "31bc85c634b5bebf7918a1ec72f8d925ee408e2068c02390bc69bae1b9b8b8e2",
+      "path": "docs/YT_PR230_BLOCK58_COMPACT_SOURCE_SPECTRAL_SUPPORT_GATE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py",
+      "title": "PR230 Block58 Compact Source-Channel Spectral Support Gate"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47566,17 +47602,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4764,
-    "leaf_count": 1133,
-    "node_count": 2158,
+    "edge_count": 4769,
+    "leaf_count": 1130,
+    "node_count": 2159,
     "root_count": 1656,
-    "runners_with_path": 1633,
+    "runners_with_path": 1634,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 473,
+      "support": 474,
       "unknown": 593
     }
   }

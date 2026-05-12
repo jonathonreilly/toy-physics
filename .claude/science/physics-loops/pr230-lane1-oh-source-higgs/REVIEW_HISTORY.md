@@ -723,3 +723,42 @@ reviewer roles were applied locally to the changed files.
   surfaces.
 - Audit Compatibility: PASS.  The full audit pipeline seeds Block57 and
   `audit_lint.py --strict` reports only the known five warnings.
+
+## Self-Review: Block58
+
+- Overclaim check: passed.  The note and runner say exact-support /
+  finite-volume compact source-channel spectral support, not thermodynamic
+  scalar-pole/FVIR authority and not `proposed_retained` closure.
+- Physics check: passed.  The package uses reflection positivity and the
+  spectrum condition only to obtain a finite-volume positive spectral
+  representation.  It preserves the LSZ shortcut no-go and leaves pole
+  saturation, residue, FV/IR, contact/continuum, and canonical `O_H` open.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`,
+  `c2=1`, `Z_match=1`, finite-volume positivity as pole saturation, or
+  source-channel rows as canonical-Higgs rows.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block58 Package
+
+Local review-loop was performed directly against the changed package.  No
+parallel reviewer agents were launched in this session; the review-loop
+reviewer roles were applied locally to the changed files.
+
+- Code / Runner: PASS.  The new runner compiles and reports
+  `PASS=13 FAIL=0`; the aggregate gates report `PASS=184 FAIL=0` and
+  `PASS=393 FAIL=0`.
+- Physics Claim Boundary: EXACT SUPPORT.  Finite-volume source spectral
+  positivity is support only.  The thermodynamic pole/FVIR/residue,
+  contact/continuum, and canonical `O_H` roots remain open.
+- Imports / Support: DISCLOSED.  Parent surfaces are linked in the note.  The
+  audit pipeline seeds the row as support and no parent authorizes proposal
+  language.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not apply audit verdicts or update publication/manuscript claim
+  surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline seeds Block58 and
+  `audit_lint.py --strict` reports only the known five warnings.

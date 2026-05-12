@@ -153,6 +153,13 @@ positive route is the thermodynamic transfer/spectral theorem, isolated pole
 and residue, FV/IR/toron limiting order, and canonical `O_H` or physical
 response bridge.
 
+Block58 adds the finite-volume spectral support step.  The compact source
+functional, reflection positivity, and the spectrum condition give a positive
+finite-volume source-channel spectral representation for the connected
+additive scalar-source correlator.  The reflection-positivity LSZ shortcut
+no-go still applies: this is not thermodynamic pole saturation, scalar LSZ
+residue authority, FV/IR control, or canonical `O_H`.
+
 ## Checks Run
 
 ```text
@@ -539,3 +546,45 @@ real thermodynamic transfer/spectral theorem attempt.  The theorem must derive
 scalar source-channel spectral representation, isolated pole/residue, FV/IR
 and toron limiting authority, and then pair that with canonical `O_H` or a
 strict physical-response bridge.  Do not interrupt the active chunk workers.
+
+## Block58 Compact Source-Channel Spectral Support
+
+Added `docs/YT_PR230_BLOCK58_COMPACT_SOURCE_SPECTRAL_SUPPORT_GATE_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py`, and
+`outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json`.
+
+Result: exact-support / finite-volume compact source-channel spectral support.
+The runner verifies a positive finite-volume spectral sum for the connected
+source correlator and preserves the existing LSZ shortcut no-go.  It explicitly
+does not authorize thermodynamic pole saturation, an LSZ residue interval,
+FV/IR/toron limiting control, or canonical `O_H`/source-overlap authority.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=184 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=393 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+
+bash docs/audit/scripts/run_pipeline.sh
+# Pipeline complete; audit_lint reports only the known five warnings.
+
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; known five warnings only.
+```
+
+Next exact action: attack the uniform thermodynamic/FVIR source-spectral pole
+theorem.  Either derive a stable scalar pole/residue interval from the compact
+source spectral measure, or write the exact obstruction.  Do not duplicate or
+interrupt chunk processing.

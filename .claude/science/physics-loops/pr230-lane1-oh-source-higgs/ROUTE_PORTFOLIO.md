@@ -32,13 +32,22 @@
    they do not supply the strict mixed-source `T_total/A_top/W` subtraction
    packet, matched covariance, accepted action, or absolute `g2`/`v` authority.
 
-3. **Native scalar/action/LSZ theorem for `x=O_H`.**
+3. **Uniform thermodynamic/FVIR compact-source spectral theorem.**
+   Block57 provides the exact compact finite-volume scalar-source functional,
+   and Block58 provides finite-volume positive source-channel spectral support.
+   This route is now the cleanest scalar-side route, but only if the next
+   theorem proves a controlled thermodynamic/FVIR limit, isolated scalar pole
+   atom, pole residue interval, contact/continuum map, and then connects the
+   result to canonical `O_H` or an equivalent physical-response bridge.  Finite
+   spectral positivity alone is explicitly not enough.
+
+4. **Native scalar/action/LSZ theorem for `x=O_H`.**
    Block41 exhausts the current native scalar/action/LSZ route queue.  Reopen
    only with a genuinely new primitive such as a derived scalar carrier plus
    fixed LSZ metric, a same-surface scalar-channel kernel/covariance, or an
    actual action theorem not already covered by the Block41 parent set.
 
-4. **Strict source-Higgs pole rows.**
+5. **Strict source-Higgs pole rows.**
    Becomes executable only after `O_H` certification.  Requires
    `C_ss/C_sH/C_HH(t)`, pole isolation, covariance, FV/IR/model-class checks,
    and Gram flatness.  MC configuration-index target samples do not satisfy the
@@ -52,7 +61,7 @@
    canonical-Higgs authority, scalar pole/FV/IR/model authority, and physical
    readout authorization.
 
-5. **Same-source FH-LSZ invariant readout.**
+6. **Same-source FH-LSZ invariant readout.**
    Block51 repairs the stale incompleteness boundary: the L12 packet is now
    complete support.  Block52 narrows the response issue: raw fitted-slope
    stability fails, but the predeclared common-window response gate passes as
@@ -63,7 +72,7 @@
    the minimal current-surface residual set and prevents another inventory
    cycle from being mistaken for a closure route.
 
-6. **Ward Step 3 same-1PI route.**
+7. **Ward Step 3 same-1PI route.**
    Origin/main now has an audited-clean Step 3 row, but its effective status is
    `open_gate` and its note leaves the same-1PI bridge, scalar pole/LSZ,
    canonical `O_H`, production source-Higgs rows, and Gram/FV/IR/model authority
@@ -73,10 +82,11 @@
 ## Next Positive Artifact
 
 The next artifact that could move the lane positively must attack one of the
-Block54 surviving roots directly: a new same-surface neutral transfer primitive
-or canonical-Higgs identity theorem; a physical Euclidean `C_ij(tau)` row
-packet with scalar pole/FV/IR/model authority and canonical-Higgs authority; a
-strict W/Z physical-response packet with actual mixed-source
+Block54 surviving roots directly: a uniform thermodynamic/FVIR compact-source
+spectral pole theorem with residue/contact authority; a new same-surface
+neutral transfer primitive or canonical-Higgs identity theorem; a physical
+Euclidean `C_ij(tau)` row packet with scalar pole/FV/IR/model authority and
+canonical-Higgs authority; a strict W/Z physical-response packet with actual mixed-source
 `T_total/A_top/W` rows, matched covariance, accepted action, and absolute
 `g2`/`v` authority; or a genuinely new scalar/action/LSZ primitive not already
 covered by Block41.
@@ -114,3 +124,14 @@ contracts do not close strict scalar authority.  A future positive artifact
 must supply a same-surface scalar denominator/contact theorem with
 threshold/FVIR/pole control, or strict physical source-Higgs/WZ rows that
 bypass scalar-source normalization while supplying the same controls.
+
+## Block57/58 Update
+
+The scalar route has a better foundation but not closure.  Block57 scopes the
+zero-mode/flat-toron/contact no-gos and records the exact compact finite-volume
+source functional.  Block58 adds finite-volume positive source-channel spectral
+support from reflection positivity and the spectrum condition.  The admissible
+next scalar route is now a uniform thermodynamic/FVIR source-spectral pole
+theorem with residue/contact authority; merely restating finite-volume
+positivity, finite analyticity, or finite-volume discreteness is not a positive
+closure path.

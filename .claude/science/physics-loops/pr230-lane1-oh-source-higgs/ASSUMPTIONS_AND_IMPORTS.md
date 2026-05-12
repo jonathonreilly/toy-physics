@@ -310,3 +310,24 @@ The still-open import is the hard physical theorem: thermodynamic
 transfer/spectral authority for that exact source channel, an isolated scalar
 source pole and tight residue interval, FV/IR/toron limiting order, and a
 canonical `O_H`/source-overlap or strict physical-response bridge.
+
+## Block58 Compact Source-Channel Spectral Support Result
+
+The exact compact source functional now has the next finite-volume support
+step.  Combining Block57 with the current reflection-positivity and spectrum
+condition surfaces gives a positive finite-volume source-channel spectral sum
+
+```text
+C_ss(t) = sum_{n>0} |<0|O_s|n>|^2 exp(-(E_n-E_0)t)
+```
+
+for the connected additive scalar-source correlator.  This is real support,
+not closure.  It does not determine the thermodynamic limiting order, isolate
+a scalar pole atom, bound the pole residue interval, fix contact/continuum
+subtractions, or identify the source-channel operator with canonical `O_H`.
+The reflection-positivity LSZ shortcut no-go remains in force.
+
+The next import is now narrower: a uniform thermodynamic/FVIR source-spectral
+theorem that promotes the finite-volume positive spectral sum to controlled
+scalar pole/residue authority, followed by canonical `O_H`/source-overlap or a
+strict physical-response bridge.

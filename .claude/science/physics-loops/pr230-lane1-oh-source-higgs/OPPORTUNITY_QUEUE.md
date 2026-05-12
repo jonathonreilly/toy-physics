@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block56
+## Active Ranking After Block58
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -33,6 +33,14 @@ the clean scalar foundation; the next positive scalar move must derive
 thermodynamic transfer/spectral authority, isolated pole/residue, FV/IR/toron
 limiting order, and canonical `O_H`/source-overlap or physical-response
 identity from that foundation.
+
+Block58 update: reflection-positive finite-volume source-channel spectral
+support is now explicit.  This retires "do we at least have a positive
+finite-volume spectral sum?" as a support-side question.  It does not retire
+the physics blocker: the next scalar move must prove or refute uniform
+thermodynamic/FVIR pole saturation and residue control for that spectral
+measure, then connect to canonical `O_H` or an equivalent physical response
+bridge.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -72,15 +80,17 @@ identity from that foundation.
    strict packet roots.  After Block54, that packet must still supply scalar
    FV/IR authority and canonical-Higgs or neutral-transfer authority.
 
-3. **Exact compact source-channel transfer/spectral theorem.**
+3. **Uniform thermodynamic/FVIR source-spectral pole theorem.**
    Use Block57's exact compact finite-volume source-functional foundation to
-   derive the actual scalar source-channel transfer/spectral object, isolated
-   pole/residue interval, contact/continuum map, and FV/IR/toron limiting
-   order.  This is now the best non-chunk scalar route because it avoids the
-   over-scoped ladder zero-mode objection and the finite-row contact-repair
-   shortcut.  It still must not promote finite analyticity alone to pole
-   authority, and it still needs canonical `O_H`/source-overlap or a physical
-   response bridge.
+   derive the actual scalar source-channel transfer/spectral object.  Block58
+   has now supplied the finite-volume positive spectral sum, so the live hard
+   target is narrower: isolated pole/residue interval, contact/continuum map,
+   FV/IR/toron limiting order, and a proof that the limiting spectral measure
+   has the required scalar pole.  This is now the best non-chunk scalar route
+   because it avoids the over-scoped ladder zero-mode objection and the
+   finite-row contact-repair shortcut.  It still must not promote finite
+   spectral positivity alone to pole authority, and it still needs canonical
+   `O_H`/source-overlap or a physical response bridge.
 
 4. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only

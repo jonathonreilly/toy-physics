@@ -275,11 +275,42 @@ scalar pole/model-class/FV/IR authority.  Positive closure now needs a
 same-surface scalar denominator/contact theorem with threshold/FVIR/pole
 control, or a strict physical row bypass that supplies those controls.
 
+## Block57: Compact Source-Functional Foundation Gate
+
+- Note:
+  `docs/YT_PR230_BLOCK57_COMPACT_SOURCE_FUNCTIONAL_FOUNDATION_GATE_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block57_compact_source_functional_foundation_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json`
+
+Status: exact-support / compact source-functional foundation.  This is not a
+closure claim.  It scopes the zero-mode, flat-toron, and contact no-gos to
+their valid shortcut surfaces and records the exact compact finite-volume
+source functional as support.  Pole/FVIR/residue and canonical `O_H` authority
+remain absent.
+
+## Block58: Compact Source-Channel Spectral Support Gate
+
+- Note:
+  `docs/YT_PR230_BLOCK58_COMPACT_SOURCE_SPECTRAL_SUPPORT_GATE_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block58_compact_source_spectral_support_gate.py`
+- Certificate:
+  `outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json`
+
+Status: exact-support / finite-volume compact source-channel spectral support.
+This is not a closure claim.  It combines the exact compact source functional
+with reflection positivity and the spectrum condition to obtain a positive
+finite-volume source-channel spectral representation.  Thermodynamic pole
+saturation, FVIR limiting control, LSZ residue authority, and canonical
+`O_H`/source-overlap remain absent.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
-artifact, not another inventory checkpoint: a same-surface scalar
-denominator/contact theorem with threshold/FVIR/pole control; a same-surface
+artifact, not another inventory checkpoint: a uniform thermodynamic/FVIR
+source-spectral pole theorem with residue/contact control; a same-surface
 primitive transfer/cone certificate; accepted canonical `O_H`/action/LSZ
 authority with strict source-Higgs rows; or a strict W/Z/source-Higgs physical
 response packet that supplies those roots without forbidden imports.

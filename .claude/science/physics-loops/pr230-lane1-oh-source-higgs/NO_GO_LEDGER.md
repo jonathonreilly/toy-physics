@@ -118,6 +118,11 @@
   source functional as a support object, but it does not supply a
   thermodynamic spectral theorem, isolated scalar pole, FV/IR/toron limiting
   order, LSZ residue interval, or canonical `O_H`/source-overlap bridge.
+- Block58 compact source-channel spectral support is not closure: finite-volume
+  reflection-positive source-channel spectral representation is a support
+  object only.  It does not imply thermodynamic pole saturation, a stable
+  scalar pole atom, LSZ residue authority, FV/IR/toron limiting control,
+  contact/continuum subtraction authority, or canonical `O_H`.
 
 ## Scope Boundary
 
@@ -133,3 +138,6 @@ the missing bridge.  After Block57, the next scalar route may use the exact
 compact finite-volume source functional as foundation, but must still derive
 transfer/spectral authority, pole/residue and FV/IR control, and canonical
 `O_H` or physical-response identity before it can retire the blocker.
+After Block58, finite-volume spectral positivity is available as support, so
+the next admissible scalar route must address the uniform thermodynamic/FVIR
+and pole-residue step directly rather than restating reflection positivity.
