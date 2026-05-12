@@ -18825,7 +18825,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:43:55.983990+00:00",
+  "generated_at": "2026-05-12T01:53:05.872334+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42420,7 +42420,7 @@
       "current_status": "open",
       "current_status_raw": "open / physical-bridge admission checkpoint; PR230 top-Yukawa",
       "deps": [],
-      "note_hash": "597f65a9745d9dc8acf862155baa43e8ce79bdbd051901becf3519d667ddc03e",
+      "note_hash": "eab76d7a7291801d73145d513eb764576a2589bff0f881f6a1b3a2a3419790ca",
       "path": "docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md",
       "runner_path": "scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py",
       "title": "PR230 Block35 Post-Block34 Physical-Bridge Admission Checkpoint"
@@ -43394,9 +43394,9 @@
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
       "current_status": "bounded",
-      "current_status_raw": "bounded support / higher-shell production contract; no physics",
+      "current_status_raw": "bounded support / higher-shell production contract; launch preflight",
       "deps": [],
-      "note_hash": "c71cd29794c75d8c0db6671ecab52844b908a9e3150839229c3c35ede2eb0f9f",
+      "note_hash": "d420062f75428568ab94c4233ed980ea68a79a10e3bbb624ab5789b64d9d2fb9",
       "path": "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py",
       "title": "PR230 Higher-Shell Schur/Scalar-LSZ Production Contract"

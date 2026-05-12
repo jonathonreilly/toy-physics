@@ -2,12 +2,12 @@
 """
 PR #230 higher-shell Schur/scalar-LSZ production contract.
 
-The active two-source taste-radial row wave is a guarded four-mode campaign.
-It should not be mutated midstream.  This runner defines the separate future
-higher-shell campaign needed by the Schur/strict scalar-LSZ route, verifies
-that it would use non-colliding outputs and seeds, and records why it is only
-infrastructure support until rows, pole/threshold authority, and FV/IR checks
-exist.
+The two-source taste-radial row wave was a guarded four-mode campaign and
+should not be mutated in place.  After the four-mode packet is complete, this
+runner defines the separate higher-shell campaign needed by the Schur/strict
+scalar-LSZ route, verifies that it would use non-colliding outputs and seeds,
+and records why it is only infrastructure support until rows, pole/threshold
+authority, and FV/IR checks exist.
 """
 
 from __future__ import annotations
@@ -260,6 +260,7 @@ def forbidden_firewall() -> dict[str, bool]:
     return {
         "mutated_active_four_mode_manifest": False,
         "launched_jobs": False,
+        "wrote_higher_shell_rows": False,
         "used_hunit_matrix_element_readout": False,
         "used_yt_ward_identity": False,
         "used_observed_top_or_yukawa_as_selector": False,
@@ -288,6 +289,12 @@ def main() -> int:
     preview = noncollision_preview()
 
     current_manifest_is_four_mode = current_modes == set(BASE_FOUR_MODES)
+    complete_four_mode_packet = (
+        parents["row_combiner"].get("ready_chunks") == CHUNK_COUNT
+        and parents["row_combiner"].get("expected_chunks") == CHUNK_COUNT
+        and parents["row_combiner"].get("combined_rows_written") is True
+        and parents["row_combiner"].get("proposal_allowed") is False
+    )
     higher_shell_has_enough_levels = len(levels) >= 5 and levels[0] == 0.0
     future_paths_distinct_from_current = all(
         "yt_pr230_two_source_taste_radial_rows" not in row["output"]
@@ -299,7 +306,15 @@ def main() -> int:
     future_dirs_absent = not any((ROOT / row["production_output_dir"]).exists() for row in preview)
     seeds_distinct = len({row["seed"] for row in preview}) == CHUNK_COUNT
     no_resume = all("--resume" not in row["command"] for row in preview)
-    launch_allowed_now = False
+    launch_allowed_now = (
+        complete_four_mode_packet
+        and not active_rows
+        and future_outputs_absent
+        and future_dirs_absent
+        and future_paths_distinct_from_current
+        and seeds_distinct
+        and no_resume
+    )
     strict_lsz_currently_absent = (
         parents["strict_scalar_lsz"].get("strict_scalar_lsz_moment_fv_authority_present")
         is False
@@ -324,13 +339,15 @@ def main() -> int:
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposal_parents, f"proposal_allowed={proposal_parents}")
     report("active-four-mode-manifest-unchanged", current_manifest_is_four_mode, f"current_modes={sorted(current_modes)}")
+    report("complete-four-mode-packet-present", complete_four_mode_packet, f"ready={parents['row_combiner'].get('ready_chunks')}/{parents['row_combiner'].get('expected_chunks')}")
     report("higher-shell-mode-set-has-five-ordered-levels", higher_shell_has_enough_levels, f"levels={levels}")
     report("future-paths-do-not-collide-with-active-campaign", future_paths_distinct_from_current, "separate output roots")
     report("future-outputs-absent", future_outputs_absent, "no overwrite of future higher-shell rows")
     report("future-production-dirs-absent", future_dirs_absent, "no partial higher-shell dirs")
     report("future-seeds-distinct", seeds_distinct, f"base={SEED_BASE}")
     report("future-commands-no-resume", no_resume, "replacement-style fresh chunks only")
-    report("active-workers-detected-so-launch-blocked", bool(active_rows), f"active={[(row.get('chunk_index'), row.get('pid')) for row in active_rows]}")
+    report("no-active-workers-detected", not active_rows, f"active={[(row.get('chunk_index'), row.get('pid')) for row in active_rows]}")
+    report("launch-preflight-clear-no-rows-written", launch_allowed_now, f"launch_allowed_now={launch_allowed_now}")
     report("strict-lsz-current-authority-absent", strict_lsz_currently_absent, statuses["strict_scalar_lsz"])
     report("schur-first-shell-support-only", schur_first_shell_support_only, statuses["schur_complete_monotonicity"])
     report("schur-pole-lift-authority-absent", pole_lift_absent, statuses["schur_pole_lift"])
@@ -341,27 +358,34 @@ def main() -> int:
     result = {
         "actual_current_surface_status": (
             "bounded-support / higher-shell Schur scalar-LSZ production contract; "
-            "future campaign only, no physics closure"
+            "launch preflight clear after four-mode 63/63 completion; no physics closure"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "This contract defines a non-colliding higher-shell row campaign.  It "
-            "does not launch jobs, does not write measurement rows, and does not "
-            "supply complete monotonicity, threshold, FV/IR, pole, canonical O_H, "
-            "or physical-response authority."
+            "This contract defines a non-colliding higher-shell row campaign and "
+            "the launch preflight is now clear because the four-mode packet is "
+            "complete and no active workers are detected.  It still does not "
+            "launch jobs, does not write measurement rows, and does not supply "
+            "complete monotonicity, threshold, FV/IR, pole, canonical O_H, or "
+            "physical-response authority."
         ),
         "bare_retained_allowed": False,
         "audit_required_before_effective_retained": True,
         "higher_shell_schur_production_contract_passed": FAIL_COUNT == 0,
         "current_four_mode_campaign_must_remain_unmixed": True,
+        "complete_four_mode_packet": complete_four_mode_packet,
         "current_manifest": rel(CURRENT_MANIFEST),
         "current_manifest_modes": sorted(current_modes),
         "active_process_rows": active_rows,
         "launch_allowed_now": launch_allowed_now,
-        "launch_block_reason": (
-            "active two-source taste-radial workers are running and the current "
-            "four-mode 63-chunk packet must not be mixed with higher-shell rows"
+        "launch_block_reason": None
+        if launch_allowed_now
+        else (
+            "higher-shell launch is blocked until the four-mode packet is "
+            "complete, active workers are absent, and future paths are empty"
         ),
+        "jobs_launched_by_contract": False,
+        "rows_written_by_contract": False,
         "higher_shell_modes": modes,
         "ordered_p_hat_sq_levels_L12": levels,
         "future_noncollision_preview": preview,

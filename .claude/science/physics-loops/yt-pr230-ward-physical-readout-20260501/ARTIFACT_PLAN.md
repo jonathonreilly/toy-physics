@@ -384,3 +384,20 @@ suitable scale/heavy-quark treatment, or derive the scalar projector,
 interacting denominator, pole-residue, taste/scalar-carrier projection,
 continuum/projector limit, and finite-`N_c=3` continuum bound that the Ward
 route still lacks.
+
+## 2026-05-12 Block37 Higher-Shell Schur/Scalar-LSZ Preflight
+
+Current artifact: refreshed
+`outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json`.
+
+The separate higher-shell campaign is now launch-admissible because the
+four-mode packet is complete and no active workers are detected.  The artifact
+does not launch jobs or write rows.
+
+Next artifact if compute is allocated: launch initial higher-shell chunks under
+`outputs/yt_pr230_schur_higher_shell_rows/` and
+`outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/`,
+using fixed seeds from base `2026057000`, no `--resume`, and the existing
+checkpoint/aggregate firewalls.  Treat completed chunks as support only until
+complete monotonicity, pole/threshold/FV/IR, and canonical `O_H` or physical
+response bridge gates pass.

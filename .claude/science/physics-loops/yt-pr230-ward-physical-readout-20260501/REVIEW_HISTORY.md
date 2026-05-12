@@ -6820,3 +6820,16 @@ row evidence for route diagnostics, not canonical `O_H`, not canonical
 `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z response, and not retained
 or proposed-retained closure.  Chunks039-040 are run-control only until
 completed.
+
+## 2026-05-12 - Block37 Higher-Shell Launch Preflight
+
+- Updated `scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py`
+  from stale active-worker blocking to current launch-preflight status after
+  the completed `63/63` four-mode packet.
+- Validation: higher-shell contract `PASS=18 FAIL=0`; assumption stress
+  `PASS=105 FAIL=0`; full assembly `PASS=164 FAIL=0`; retained-route
+  `PASS=318 FAIL=0`; completion audit `PASS=73 FAIL=0`; campaign status
+  `PASS=366 FAIL=0`.
+- Disposition: bounded infrastructure support only.  `launch_allowed_now=true`
+  is not row evidence and does not authorize retained or `proposed_retained`
+  closure.

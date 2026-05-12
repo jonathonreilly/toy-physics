@@ -5814,6 +5814,33 @@ The package is finite `C_ss/C_sx/C_xx` row support only.  It is not canonical
 `O_H`, not canonical `C_sH/C_HH`, not scalar-LSZ/FV authority, not W/Z
 response, and not retained or proposed-retained closure.
 
+## 2026-05-12 - Higher-Shell Schur/Scalar-LSZ Launch Preflight
+
+```text
+actual_current_surface_status: bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=105 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=164 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=318 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=73 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=366 FAIL=0
+```
+
+The preflight is support-only.  `launch_allowed_now=true` does not authorize
+retained or `proposed_retained` closure because no higher-shell rows,
+complete-monotonicity certificate, threshold/FV/IR authority, pole-residue
+authority, canonical `O_H` bridge, or W/Z physical-response bridge exists.
+
 ## 2026-05-07 - Higher-Shell Schur/Scalar-LSZ Production Contract
 
 ```text

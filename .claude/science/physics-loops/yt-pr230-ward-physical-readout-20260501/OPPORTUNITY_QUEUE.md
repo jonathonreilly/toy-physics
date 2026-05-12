@@ -2019,3 +2019,21 @@ diagnostics still leave raw `C_ss` rejected, `C_x|s` as first-shell support
 only, and the one-pole interpolation blocked by positive two-pole endpoint
 counterfamilies.  Chunks039-040 are active under the two-worker cap and remain
 run-control only until completed JSON and completed-mode checkpoints exist.
+
+2026-05-12 update: after the final `63/63` four-mode packet and lane-1
+canonical-`O_H` no-go, the higher-shell Schur/scalar-LSZ contract is the next
+launch-admissible concrete route artifact.  Its preflight is clear under
+separate non-colliding roots, but it has launched no jobs and written no rows.
+The ranking is now:
+
+1. Certified `O_H/C_sH/C_HH` pole rows or same-surface canonical `O_H`.
+2. Genuine W/Z rows with accepted action, identity/covariance, and strict
+   non-observed `g2`.
+3. Higher-shell Schur/scalar-LSZ production rows under the refreshed contract,
+   followed by complete monotonicity, pole/threshold/FV/IR, and a bridge to
+   canonical `O_H` or physical response.
+4. Neutral primitive/off-diagonal-generator certificate.
+
+Do not treat `launch_allowed_now=true` as evidence.  It only means a separate
+higher-shell production wave can be started without colliding with the
+completed four-mode packet.

@@ -16,10 +16,10 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block35-top-mass-scan-response-harness
-blocks_completed: 35
-active_route: "W/Z accepted-action fallback support: per-configuration top mass-scan response harness rows"
-active_hard_residual: "The harness now serializes top_mass_scan_response_analysis from existing three-mass top correlators: per-configuration tau=1 and multi-tau dE/dm_bare support rows with no extra solves.  This improves future covariance/subtraction instrumentation but does not close the current surface.  Existing production chunks predate the field, and current PR230 still lacks accepted W/Z action, production W/Z response rows, matched covariance, strict non-observed g2, canonical O_H/source-Higgs pole rows, strict scalar-LSZ/FV/threshold authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
+current_phase: campaign-block37-higher-shell-schur-lsz-launch-preflight
+blocks_completed: 37
+active_route: "strict scalar-LSZ / Schur higher-shell route"
+active_hard_residual: "After the complete four-mode 63/63 C_ss/C_sx/C_xx packet and Block36 lane-1 O_H no-go, the higher-shell Schur/scalar-LSZ contract is refreshed: launch preflight is clear for a separate non-colliding higher-shell campaign, but no jobs are launched and no higher-shell rows exist.  This is infrastructure support only.  Current PR230 still lacks accepted canonical O_H/source-Higgs pole rows, strict W/Z physical response with g2/covariance authority, Schur pole/threshold/FV authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
 checkpoint_2026_05_12_block34_complete_additive_top_jacobian_refresh:
   actual_current_surface_status: "bounded-support / complete 63-row additive-top coarse Jacobian packet; W/Z subtraction closure remains open"
   proposal_allowed: false
@@ -46,6 +46,19 @@ checkpoint_2026_05_12_block35_top_mass_scan_response_harness:
   existing_production_chunks_have_new_field: false
   closure_authorized: false
   exact_next_action: "Use this schema in future production reruns only after accepted action/WZ response/covariance/g2 authority exists; current positive closure still needs canonical O_H/source-Higgs pole rows, strict W/Z physical response, Schur pole authority, or neutral physical-transfer authority."
+checkpoint_2026_05_12_block37_higher_shell_schur_lsz_launch_preflight:
+  actual_current_surface_status: "bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure"
+  proposal_allowed: false
+  bare_retained_allowed: false
+  runner_pass_fail: "higher-shell Schur/scalar-LSZ production contract 18/0"
+  aggregate_refresh: "assumption stress 105/0; full assembly 164/0; retained route 318/0; completion audit 73/0; campaign status 366/0"
+  launch_allowed_now: true
+  jobs_launched_by_contract: false
+  rows_written_by_contract: false
+  complete_four_mode_packet: true
+  mode_levels_L12: "[0, 0.267949192431123, 0.535898384862245, 0.803847577293368, 1.0]"
+  strict_boundary: "Launch-preflight support is not higher-shell row evidence, not complete monotonicity, not threshold/FV/IR authority, not a scalar pole, not canonical O_H/source-overlap authority, not W/Z response authority, and not y_t closure."
+  exact_next_action: "If compute is allocated, launch a separate higher-shell production wave under the non-colliding roots with fixed seeds and no --resume; then checkpoint completed chunks before any scalar-LSZ/Schur authority claim."
 files_touched:
   - "scripts/yt_direct_lattice_correlator_production.py"
   - "scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py"

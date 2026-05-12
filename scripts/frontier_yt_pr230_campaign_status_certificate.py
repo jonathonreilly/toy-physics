@@ -4474,7 +4474,7 @@ def main() -> int:
             "higher_shell_schur_production_contract_passed"
         )
         is True
-        and schur_higher_shell_contract.get("launch_allowed_now") is False
+        and schur_higher_shell_contract.get("rows_written_by_contract") is False
         and schur_higher_shell_contract.get(
             "current_four_mode_campaign_must_remain_unmixed"
         )
@@ -6193,7 +6193,7 @@ def main() -> int:
             "higher_shell_schur_production_contract_passed"
         )
         is True
-        and schur_higher_shell_contract.get("launch_allowed_now") is False
+        and schur_higher_shell_contract.get("rows_written_by_contract") is False
         and schur_higher_shell_contract.get(
             "current_four_mode_campaign_must_remain_unmixed"
         )

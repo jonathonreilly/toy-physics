@@ -4018,3 +4018,17 @@ with accepted same-source EW/Higgs action, W/Z response rows, matched
 top/W/Z covariance, strict non-observed `g2`, and a final subtracted-response
 certificate, or after an independent canonical `O_H` / source-Higgs pole-row
 route closes.
+
+## 2026-05-12 - Higher-Shell Launch Preflight Is Not Scalar-LSZ Authority
+
+No-go on the current surface: clearing the higher-shell Schur/scalar-LSZ launch
+preflight does not supply higher-shell rows or physics closure.  The runner
+confirms the four-mode packet is complete, no active workers are present, and
+future roots/seeds are non-colliding, but it launches no jobs and writes no
+measurement rows.
+
+Reopen as closure only after a separate higher-shell production wave actually
+produces completed-mode row artifacts and passes complete monotonicity,
+contact/threshold/model-class, pole, FV/IR, and canonical `O_H`/source-overlap
+or physical W/Z response bridge gates.  Do not reopen because a launch
+preflight is clear.

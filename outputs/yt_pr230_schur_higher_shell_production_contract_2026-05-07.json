@@ -8,21 +8,11 @@
     "require threshold/model-class/pole and multivolume FV/IR authority before scalar-LSZ closure",
     "require canonical O_H/source-overlap or W/Z physical-response bridge before y_t closure"
   ],
-  "active_process_rows": [
-    {
-      "chunk_index": 36,
-      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk036 --seed 2026056036 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk036_2026-05-06.json",
-      "pid": 16368
-    },
-    {
-      "chunk_index": 37,
-      "command": "/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python scripts/yt_direct_lattice_correlator_production.py --volumes 12x24 --masses 0.45,0.75,1.05 --therm 1000 --measurements 16 --separation 20 --engine numba --production-targets --scalar-source-shifts=-0.01,0.0,0.01 --scalar-two-point-modes 0,0,0;1,0,0;0,1,0;0,0,1 --scalar-two-point-noises 16 --source-higgs-cross-modes 0,0,0;1,0,0;0,1,0;0,0,1 --source-higgs-cross-noises 16 --source-higgs-operator-certificate outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json --production-output-dir outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk037 --seed 2026056037 --output outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk037_2026-05-06.json",
-      "pid": 34011
-    }
-  ],
-  "actual_current_surface_status": "bounded-support / higher-shell Schur scalar-LSZ production contract; future campaign only, no physics closure",
+  "active_process_rows": [],
+  "actual_current_surface_status": "bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure",
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
+  "complete_four_mode_packet": true,
   "current_four_mode_campaign_must_remain_unmixed": true,
   "current_manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
   "current_manifest_modes": [
@@ -43,7 +33,8 @@
     "used_hunit_matrix_element_readout": false,
     "used_observed_top_or_yukawa_as_selector": false,
     "used_reduced_pilot_as_production_evidence": false,
-    "used_yt_ward_identity": false
+    "used_yt_ward_identity": false,
+    "wrote_higher_shell_rows": false
   },
   "future_noncollision_preview": [
     {
@@ -2567,7 +2558,7 @@
       "seed": 2026057063
     }
   ],
-  "generated_at_utc": "2026-05-07T09:12:32.900208+00:00",
+  "generated_at_utc": "2026-05-12T01:51:22.792082+00:00",
   "higher_shell_modes": [
     {
       "mode": "0,0,0",
@@ -2626,8 +2617,9 @@
     }
   ],
   "higher_shell_schur_production_contract_passed": true,
-  "launch_allowed_now": false,
-  "launch_block_reason": "active two-source taste-radial workers are running and the current four-mode 63-chunk packet must not be mixed with higher-shell rows",
+  "jobs_launched_by_contract": false,
+  "launch_allowed_now": true,
+  "launch_block_reason": null,
   "ordered_p_hat_sq_levels_L12": [
     0.0,
     0.267949192431123,
@@ -2638,16 +2630,17 @@
   "parent_statuses": {
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
     "retained_route": "open / retained closure not yet reached",
-    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
     "schur_complete_monotonicity": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
     "schur_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
     "schur_repair": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
     "strict_scalar_lsz": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
   },
-  "pass_count": 16,
+  "pass_count": 18,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "This contract defines a non-colliding higher-shell row campaign.  It does not launch jobs, does not write measurement rows, and does not supply complete monotonicity, threshold, FV/IR, pole, canonical O_H, or physical-response authority.",
+  "proposal_allowed_reason": "This contract defines a non-colliding higher-shell row campaign and the launch preflight is now clear because the four-mode packet is complete and no active workers are detected.  It still does not launch jobs, does not write measurement rows, and does not supply complete monotonicity, threshold, FV/IR, pole, canonical O_H, or physical-response authority.",
+  "rows_written_by_contract": false,
   "strict_non_claims": [
     "not production evidence",
     "not a scalar-LSZ moment certificate",

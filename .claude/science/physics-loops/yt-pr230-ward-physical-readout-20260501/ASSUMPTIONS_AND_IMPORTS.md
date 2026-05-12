@@ -1080,3 +1080,19 @@ Additional forbidden load-bearing assumptions:
 - finite `C_sx/C_xx` rows = canonical `C_sH/C_HH`
 - finite first-shell Schur support = scalar-LSZ/FV authority
 - H1/H2 Z3 support plus 62 finite rows = H3/H4 primitive transfer authority
+
+2026-05-12 higher-shell Schur/scalar-LSZ launch preflight:
+
+The refreshed higher-shell contract is launch-admissible infrastructure only.
+The completed four-mode packet and absent active workers clear the run-control
+preflight for a separate higher-shell campaign, but no higher-shell rows have
+been launched or written.
+
+Additional forbidden load-bearing assumptions:
+
+- `launch_allowed_now=true` = measurement evidence
+- higher-shell command preview = complete monotonicity
+- five planned `q_hat^2` levels = scalar-pole/threshold/FV authority
+- future higher-shell roots = existing Schur `A/B/C` pole rows
+- launch preflight = canonical `O_H`, source-overlap, W/Z response, retained,
+  or proposed-retained closure

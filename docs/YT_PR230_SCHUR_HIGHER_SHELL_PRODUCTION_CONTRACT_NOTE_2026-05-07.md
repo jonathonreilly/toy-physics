@@ -1,7 +1,7 @@
 # PR230 Higher-Shell Schur/Scalar-LSZ Production Contract
 
-Status: bounded support / higher-shell production contract; no physics
-closure.
+Status: bounded support / higher-shell production contract; launch preflight
+clear after four-mode `63/63` completion; no physics closure.
 
 Runner:
 `scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py`
@@ -11,14 +11,14 @@ Certificate:
 
 ## Purpose
 
-The current two-source taste-radial row campaign is a live four-mode
-`63`-chunk packet.  It should not be changed midstream.  Its strict
-scalar-LSZ/Schur diagnostics have only two ordered `q_hat^2` levels, so
-`C_x|s` can pass a first-shell Stieltjes direction but cannot test complete
-monotonicity or threshold structure.
+The two-source taste-radial row campaign is a guarded four-mode `63`-chunk
+packet.  It should not be changed in place.  Its strict scalar-LSZ/Schur
+diagnostics have only two ordered `q_hat^2` levels, so `C_x|s` can pass a
+first-shell Stieltjes direction but cannot test complete monotonicity or
+threshold structure.
 
 This contract defines a separate future higher-shell campaign rather than
-mutating chunks037-063.
+mutating the completed four-mode packet.
 
 ## Contract
 
@@ -54,11 +54,13 @@ measurement rows.
 
 ## Current Boundary
 
-The active campaign remains the four-mode `C_ss/C_sx/C_xx` packet and must
-finish or be separately checkpointed before any higher-shell campaign is
-launched.  The refreshed certificate detects chunks036-037 as active; chunk035
-has completed but is not packaged by this support-only contract.  The contract
-is infrastructure support only.  It does not supply:
+The four-mode `C_ss/C_sx/C_xx` packet is now complete at `63/63`, the combiner
+has written the combined rows, no active production workers are detected, and
+the future higher-shell output roots are empty.  Therefore the launch preflight
+for a separate higher-shell row campaign is clear.
+
+The contract still does not launch jobs and writes no measurement rows.  It is
+infrastructure support only.  It does not supply:
 
 - a complete higher-shell packet;
 - complete monotonicity;
@@ -73,5 +75,5 @@ No `y_t` closure proposal is authorized.
 
 ```bash
 python3 scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py
-# SUMMARY: PASS=16 FAIL=0
+# SUMMARY: PASS=18 FAIL=0
 ```

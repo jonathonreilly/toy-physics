@@ -1888,7 +1888,7 @@ def main() -> int:
         and higher_shell_contract.get("proposal_allowed") is False
         and higher_shell_contract.get("higher_shell_schur_production_contract_passed")
         is True
-        and higher_shell_contract.get("launch_allowed_now") is False
+        and higher_shell_contract.get("rows_written_by_contract") is False
         and higher_shell_contract.get("current_four_mode_campaign_must_remain_unmixed")
         is True,
         higher_shell_contract.get("actual_current_surface_status"),

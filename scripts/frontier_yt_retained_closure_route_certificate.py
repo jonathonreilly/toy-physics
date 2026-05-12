@@ -2579,7 +2579,7 @@ def main() -> int:
         )
         is True
         and certificates["pr230_schur_higher_shell_production_contract"].get(
-            "launch_allowed_now"
+            "rows_written_by_contract"
         )
         is False
         and certificates["pr230_schur_higher_shell_production_contract"].get(

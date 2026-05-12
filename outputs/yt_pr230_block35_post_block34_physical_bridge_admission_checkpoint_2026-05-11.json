@@ -1,5 +1,5 @@
 {
-  "actual_current_surface_status": "open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, additive-top, and top mass-scan response harness commits plus lane-1 O_H root attempts are support/no-go only and no physical bridge is admitted",
+  "actual_current_surface_status": "open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, additive-top, and top mass-scan response harness commits plus lane-1 O_H/action attempts and higher-shell launch preflight are support/no-go only and no physical bridge is admitted",
   "additive_top_support": {
     "committed": true,
     "committed_path_presence": {
@@ -31,6 +31,7 @@
   "block34_additive_top_head": "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc",
   "block35_post_block34_physical_bridge_admission_checkpoint_passed": true,
   "block35_top_mass_scan_response_subject": "Refresh PR230 top mass-scan response harness",
+  "block37_higher_shell_preflight_subject": "Refresh PR230 higher-shell launch preflight",
   "campaign_decision": {
     "next_exact_action": "Supply one committed physical bridge artifact: accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH rows, strict W/Z matched physical response, or neutral H3/H4 physical-transfer authority.",
     "rank1_source_higgs": "waiting on explicit physical bridge input",
@@ -43,6 +44,8 @@
     "block30-parent-clean": true,
     "chunk063-package-committed-support-only": true,
     "forbidden-firewall-clean": true,
+    "higher-shell-launch-preflight-support-only": true,
+    "lane1-action-premise-attempt-support-only": true,
     "lane1-oh-root-theorem-attempt-support-only": true,
     "neutral-h3h4-not-admitted": true,
     "no-parent-authorizes-proposal": true,
@@ -71,7 +74,9 @@
     }
   },
   "commits_since_block29_input": [
-    "b6d7b367e566c7555f9eafaf9579b4ac7f28921b\tRefresh PR230 top mass-scan response harness",
+    "619dd87eecff8ab35adc9c61c2e0de590d0688c9\tRefresh PR230 higher-shell launch preflight",
+    "63a3cce58f735050e942c154fe8853338aac112a\tRecord PR230 lane1 action premise boundary",
+    "41d0292a8d758399a2daf2f25c31aa11e26ae5f1\tRefresh PR230 top mass-scan response harness",
     "7644411e812d046753cdf345e0ce0e446b340bbe\tRecord PR230 lane1 O_H root theorem attempt",
     "d46708be7bcb0d7545392f224ab4c7ddd38b9645\tRecord PR230 block35 physical bridge admission checkpoint",
     "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc\tRefresh PR230 complete additive-top support",
@@ -82,7 +87,9 @@
     "f7f42f27c16fd80db9b2c990294c7eb3c186423a\tRecord PR230 block30 full-approach bridge review"
   ],
   "commits_since_block30_head": [
-    "b6d7b367e566c7555f9eafaf9579b4ac7f28921b\tRefresh PR230 top mass-scan response harness",
+    "619dd87eecff8ab35adc9c61c2e0de590d0688c9\tRefresh PR230 higher-shell launch preflight",
+    "63a3cce58f735050e942c154fe8853338aac112a\tRecord PR230 lane1 action premise boundary",
+    "41d0292a8d758399a2daf2f25c31aa11e26ae5f1\tRefresh PR230 top mass-scan response harness",
     "7644411e812d046753cdf345e0ce0e446b340bbe\tRecord PR230 lane1 O_H root theorem attempt",
     "d46708be7bcb0d7545392f224ab4c7ddd38b9645\tRecord PR230 block35 physical bridge admission checkpoint",
     "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc\tRefresh PR230 complete additive-top support",
@@ -106,6 +113,8 @@
     "set_kappa_s_equal_one": false,
     "set_z_match_equal_one": false,
     "touched_live_chunk_worker": false,
+    "treated_higher_shell_preflight_as_rows_or_lsz_authority": false,
+    "treated_lane1_action_premise_no_go_as_action_authority": false,
     "treated_lane1_oh_attempt_as_canonical_oh_certificate": false,
     "treated_top_mass_scan_as_physical_response": false,
     "used_alpha_lm_plaquette_or_u0": false,
@@ -115,10 +124,39 @@
     "used_y_t_bare": false,
     "used_yt_ward_identity": false
   },
+  "higher_shell_launch_preflight_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "higher_shell_contract": true,
+      "higher_shell_note": true,
+      "higher_shell_runner": true
+    },
+    "decision": "support only; launch preflight is clear but the contract launches no jobs, writes no rows, and supplies no scalar-LSZ, pole, FV/IR, canonical O_H, W/Z response, or y_t authority",
+    "support_paths": {
+      "higher_shell_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+      "higher_shell_note": "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md",
+      "higher_shell_runner": "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py"
+    }
+  },
   "hypothetical_axiom_status": null,
-  "inspection_head": "b6d7b367e566c7555f9eafaf9579b4ac7f28921b",
+  "inspection_head": "619dd87eecff8ab35adc9c61c2e0de590d0688c9",
   "inspection_ref": "HEAD",
-  "inspection_subject": "Refresh PR230 top mass-scan response harness",
+  "inspection_subject": "Refresh PR230 higher-shell launch preflight",
+  "lane1_action_premise_attempt_subject": "Record PR230 lane1 action premise boundary",
+  "lane1_action_premise_attempt_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "lane1_action_premise_attempt": true,
+      "lane1_action_premise_note": true,
+      "lane1_action_premise_runner": true
+    },
+    "decision": "support/no-go only; the current lane-1 action-premise attempt records that the minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+    "support_paths": {
+      "lane1_action_premise_attempt": "outputs/yt_pr230_lane1_action_premise_derivation_attempt_2026-05-12.json",
+      "lane1_action_premise_note": "docs/YT_PR230_LANE1_ACTION_PREMISE_DERIVATION_ATTEMPT_NOTE_2026-05-12.md",
+      "lane1_action_premise_runner": "scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py"
+    }
+  },
   "lane1_oh_root_theorem_attempt_subject": "Record PR230 lane1 O_H root theorem attempt",
   "lane1_oh_root_theorem_attempt_support": {
     "committed": true,
@@ -138,8 +176,8 @@
     "inspected_active_output": false,
     "touched": false
   },
-  "local_head": "b6d7b367e566c7555f9eafaf9579b4ac7f28921b",
-  "local_subject": "Refresh PR230 top mass-scan response harness",
+  "local_head": "619dd87eecff8ab35adc9c61c2e0de590d0688c9",
+  "local_subject": "Refresh PR230 higher-shell launch preflight",
   "neutral_h3h4_bridge": {
     "admitted": false,
     "committed_path_presence": {
@@ -179,6 +217,8 @@
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
     "fms_oh_candidate_action": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
     "fms_source_overlap_readout": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
+    "higher_shell_launch_preflight": "bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure",
+    "lane1_action_premise_derivation_attempt": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
     "lane1_oh_root_theorem_attempt": "no-go / exact negative boundary for lane-1 Block A: current PR230 support stack does not derive x=canonical O_H or accepted action authority",
     "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
     "os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
@@ -189,9 +229,9 @@
     "wz_accepted_action_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
     "wz_physical_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist"
   },
-  "pass_count": 16,
-  "passes": 16,
-  "pr_head": "7644411e812d046753cdf345e0ce0e446b340bbe",
+  "pass_count": 18,
+  "passes": 18,
+  "pr_head": "63a3cce58f735050e942c154fe8853338aac112a",
   "pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30",
   "promotion_contract_support": {
     "committed": true,
@@ -208,7 +248,7 @@
     }
   },
   "proposal_allowed": false,
-  "proposal_allowed_reason": "Block35 is an admission/yield checkpoint after the committed chunk063 package, no-go scope clarification, and complete-packet promotion contract, OS transfer alias firewall, and additive-top support refreshes, plus optional top mass-scan response harness support.  A lane-1 O_H root theorem attempt is an exact negative boundary unless and until it supplies an accepted canonical O_H/action certificate.  The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate.",
+  "proposal_allowed_reason": "Block35 is an admission/yield checkpoint after the committed chunk063 package, no-go scope clarification, and complete-packet promotion contract, OS transfer alias firewall, and additive-top support refreshes, plus optional top mass-scan response harness support.  Lane-1 O_H/action attempts are exact negative boundaries unless and until they supply an accepted canonical O_H/action certificate.  Higher-shell launch preflight is infrastructure support until rows and strict scalar-LSZ/FV/IR authority exist.  The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate.",
   "source_higgs_bridge": {
     "admitted": false,
     "committed_path_presence": {
@@ -246,12 +286,12 @@
   "strict_non_claims": [
     "does not claim retained or proposed_retained top-Yukawa closure",
     "does not treat block30 route review as physical bridge evidence",
-    "does not treat chunk063 completion, the promotion contract, the OS transfer alias firewall, additive-top support, top mass-scan response harness rows, or lane-1 O_H root no-go attempts as physical bridge evidence",
+    "does not treat chunk063 completion, the promotion contract, the OS transfer alias firewall, additive-top support, top mass-scan response harness rows, lane-1 O_H/action no-go attempts, or higher-shell launch preflight as physical bridge evidence",
     "does not inspect live or untracked chunk-worker output",
     "does not treat C_sx/C_xx rows as C_sH/C_HH before x=O_H is certified",
     "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, u0, or unit conventions"
   ],
-  "timestamp_utc": "2026-05-12T01:36:05.480662+00:00",
+  "timestamp_utc": "2026-05-12T01:51:23.179450+00:00",
   "top_mass_scan_response_support": {
     "committed": true,
     "committed_path_presence": {

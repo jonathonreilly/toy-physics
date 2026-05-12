@@ -140,7 +140,7 @@
     "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
     "schur_complement_complete_monotonicity_gate": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
     "schur_complement_stieltjes_repair_gate": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
-    "schur_higher_shell_production_contract": "bounded-support / higher-shell Schur scalar-LSZ production contract; future campaign only, no physics closure",
+    "schur_higher_shell_production_contract": "bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "schur_x_given_source_one_pole_scout": "bounded-support / C_x|s one-pole finite-residue scout; positive endpoint fits are model-class diagnostics only, not scalar-LSZ pole authority",
     "source_coordinate_transport_gate": "exact negative boundary / source-coordinate transport to canonical O_H not derivable on current PR230 surface",

@@ -8,10 +8,10 @@ branch then packaged chunk063, clarified no-go scope boundaries, refreshed the
 complete-packet promotion contract, refreshed the OS transfer alias firewall,
 and refreshed complete additive-top support.  This checkpoint consumes those
 committed support-only inputs, plus any later top mass-scan response harness
-support rows or lane-1 O_H root theorem attempts, and checks whether the next
-campaign step is actually admitted: source-Higgs with accepted O_H/action and
-strict pole rows, strict W/Z matched physical response, or neutral H3/H4
-physical-transfer authority.
+support rows, lane-1 O_H/action no-go attempts, or higher-shell launch
+preflight support, and checks whether the next campaign step is actually
+admitted: source-Higgs with accepted O_H/action and strict pole rows, strict
+W/Z matched physical response, or neutral H3/H4 physical-transfer authority.
 
 It intentionally does not inspect live chunk-worker output and does not rerun a
 shortcut absence gate over untracked files.  It checks committed PR-head paths
@@ -52,6 +52,8 @@ BLOCK34_ADDITIVE_TOP_SUBJECT = "Refresh PR230 complete additive-top support"
 BLOCK35_SUBJECT = "Record PR230 block35 physical bridge admission checkpoint"
 BLOCK35_TOP_MASS_SCAN_RESPONSE_SUBJECT = "Refresh PR230 top mass-scan response harness"
 LANE1_OH_ROOT_THEOREM_ATTEMPT_SUBJECT = "Record PR230 lane1 O_H root theorem attempt"
+LANE1_ACTION_PREMISE_ATTEMPT_SUBJECT = "Record PR230 lane1 action premise boundary"
+BLOCK37_HIGHER_SHELL_PREFLIGHT_SUBJECT = "Refresh PR230 higher-shell launch preflight"
 
 PARENTS = {
     "block30_full_approach_review": "outputs/yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_2026-05-11.json",
@@ -70,6 +72,8 @@ PARENTS = {
     "additive_top_subtraction_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
     "top_mass_scan_response_harness": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "lane1_oh_root_theorem_attempt": "outputs/yt_pr230_lane1_oh_root_theorem_attempt_2026-05-12.json",
+    "lane1_action_premise_derivation_attempt": "outputs/yt_pr230_lane1_action_premise_derivation_attempt_2026-05-12.json",
+    "higher_shell_launch_preflight": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
 }
 
@@ -111,6 +115,18 @@ LANE1_OH_ROOT_THEOREM_SUPPORT_PATHS = {
     "lane1_oh_root_theorem_attempt": "outputs/yt_pr230_lane1_oh_root_theorem_attempt_2026-05-12.json",
     "lane1_oh_root_theorem_runner": "scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py",
     "lane1_oh_root_theorem_note": "docs/YT_PR230_LANE1_OH_ROOT_THEOREM_ATTEMPT_NOTE_2026-05-12.md",
+}
+
+LANE1_ACTION_PREMISE_SUPPORT_PATHS = {
+    "lane1_action_premise_attempt": "outputs/yt_pr230_lane1_action_premise_derivation_attempt_2026-05-12.json",
+    "lane1_action_premise_runner": "scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py",
+    "lane1_action_premise_note": "docs/YT_PR230_LANE1_ACTION_PREMISE_DERIVATION_ATTEMPT_NOTE_2026-05-12.md",
+}
+
+HIGHER_SHELL_PREFLIGHT_SUPPORT_PATHS = {
+    "higher_shell_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+    "higher_shell_runner": "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py",
+    "higher_shell_note": "docs/YT_PR230_SCHUR_HIGHER_SHELL_PRODUCTION_CONTRACT_NOTE_2026-05-07.md",
 }
 
 SOURCE_HIGGS_REQUIRED_PATHS = {
@@ -162,6 +178,8 @@ FORBIDDEN_FIREWALL = {
     "claimed_retained_or_proposed_retained": False,
     "treated_top_mass_scan_as_physical_response": False,
     "treated_lane1_oh_attempt_as_canonical_oh_certificate": False,
+    "treated_lane1_action_premise_no_go_as_action_authority": False,
+    "treated_higher_shell_preflight_as_rows_or_lsz_authority": False,
 }
 
 PASS_COUNT = 0
@@ -292,6 +310,12 @@ def main() -> int:
     lane1_oh_presence = present_at_ref(
         inspection_ref, LANE1_OH_ROOT_THEOREM_SUPPORT_PATHS
     )
+    lane1_action_premise_presence = present_at_ref(
+        inspection_ref, LANE1_ACTION_PREMISE_SUPPORT_PATHS
+    )
+    higher_shell_preflight_presence = present_at_ref(
+        inspection_ref, HIGHER_SHELL_PREFLIGHT_SUPPORT_PATHS
+    )
 
     block30_parent_clean = (
         parents["block30_full_approach_review"].get("proposal_allowed") is False
@@ -316,6 +340,8 @@ def main() -> int:
         BLOCK35_SUBJECT,
         BLOCK35_TOP_MASS_SCAN_RESPONSE_SUBJECT,
         LANE1_OH_ROOT_THEOREM_ATTEMPT_SUBJECT,
+        LANE1_ACTION_PREMISE_ATTEMPT_SUBJECT,
+        BLOCK37_HIGHER_SHELL_PREFLIGHT_SUBJECT,
     }
     post_block30_support_only_inputs = required_support_subjects.issubset(
         post_block30_subjects
@@ -331,6 +357,14 @@ def main() -> int:
     lane1_oh_support_committed = (
         LANE1_OH_ROOT_THEOREM_ATTEMPT_SUBJECT not in post_block30_subjects
         or all_present(lane1_oh_presence)
+    )
+    lane1_action_premise_support_committed = (
+        LANE1_ACTION_PREMISE_ATTEMPT_SUBJECT not in post_block30_subjects
+        or all_present(lane1_action_premise_presence)
+    )
+    higher_shell_preflight_support_committed = (
+        BLOCK37_HIGHER_SHELL_PREFLIGHT_SUBJECT not in post_block30_subjects
+        or all_present(higher_shell_preflight_presence)
     )
     source_admitted = source_higgs_admitted(source_presence)
     wz_admitted = all_present(wz_presence)
@@ -349,6 +383,8 @@ def main() -> int:
     report("additive-top-support-committed-support-only", additive_top_support_committed, str(additive_top_presence))
     report("top-mass-scan-response-committed-support-only", top_mass_scan_support_committed, str(top_mass_scan_presence))
     report("lane1-oh-root-theorem-attempt-support-only", lane1_oh_support_committed, str(lane1_oh_presence))
+    report("lane1-action-premise-attempt-support-only", lane1_action_premise_support_committed, str(lane1_action_premise_presence))
+    report("higher-shell-launch-preflight-support-only", higher_shell_preflight_support_committed, str(higher_shell_preflight_presence))
     report("source-higgs-physical-bridge-not-admitted", not source_admitted, str(source_presence))
     report("wz-physical-response-not-admitted", not wz_admitted, str(wz_presence))
     report("neutral-h3h4-not-admitted", not neutral_admitted, str(neutral_presence))
@@ -360,8 +396,8 @@ def main() -> int:
             "open / block35 post-block34 physical-bridge admission checkpoint; "
             "chunk063, no-go-scope, promotion-contract, OS-transfer-alias "
             "firewall, additive-top, and top mass-scan response harness commits "
-            "plus lane-1 O_H root attempts are support/no-go only and no "
-            "physical bridge is admitted"
+            "plus lane-1 O_H/action attempts and higher-shell launch preflight "
+            "are support/no-go only and no physical bridge is admitted"
         ),
         "conditional_surface_status": (
             "support if a future accepted same-surface O_H/action plus strict "
@@ -376,11 +412,13 @@ def main() -> int:
             "package, no-go scope clarification, and complete-packet promotion "
             "contract, OS transfer alias firewall, and additive-top support "
             "refreshes, plus optional top mass-scan response harness support.  "
-            "A lane-1 O_H root theorem attempt is an exact negative boundary "
-            "unless and until it supplies an accepted canonical O_H/action "
-            "certificate.  The PR head still has no accepted same-surface "
-            "O_H/action, strict source-Higgs pole rows, strict W/Z matched "
-            "response packet, or neutral H3/H4 physical-transfer certificate."
+            "Lane-1 O_H/action attempts are exact negative boundaries unless "
+            "and until they supply an accepted canonical O_H/action certificate.  "
+            "Higher-shell launch preflight is infrastructure support until rows "
+            "and strict scalar-LSZ/FV/IR authority exist.  The PR head still has "
+            "no accepted same-surface O_H/action, strict source-Higgs pole rows, "
+            "strict W/Z matched response packet, or neutral H3/H4 physical-transfer "
+            "certificate."
         ),
         "audit_required_before_effective_retained": True,
         "bare_retained_allowed": False,
@@ -401,6 +439,8 @@ def main() -> int:
         "block34_additive_top_head": BLOCK34_ADDITIVE_TOP_HEAD,
         "block35_top_mass_scan_response_subject": BLOCK35_TOP_MASS_SCAN_RESPONSE_SUBJECT,
         "lane1_oh_root_theorem_attempt_subject": LANE1_OH_ROOT_THEOREM_ATTEMPT_SUBJECT,
+        "lane1_action_premise_attempt_subject": LANE1_ACTION_PREMISE_ATTEMPT_SUBJECT,
+        "block37_higher_shell_preflight_subject": BLOCK37_HIGHER_SHELL_PREFLIGHT_SUBJECT,
         "commits_since_block29_input": commits_since_block29,
         "commits_since_block30_head": commits_since_block30,
         "parent_statuses": {name: status(cert) for name, cert in parents.items()},
@@ -463,6 +503,26 @@ def main() -> int:
                 "accepted action authority"
             ),
         },
+        "lane1_action_premise_attempt_support": {
+            "committed": lane1_action_premise_support_committed,
+            "support_paths": LANE1_ACTION_PREMISE_SUPPORT_PATHS,
+            "committed_path_presence": lane1_action_premise_presence,
+            "decision": (
+                "support/no-go only; the current lane-1 action-premise attempt "
+                "records that the minimal PR230 substrate does not derive "
+                "accepted EW/Higgs action or canonical O_H authority"
+            ),
+        },
+        "higher_shell_launch_preflight_support": {
+            "committed": higher_shell_preflight_support_committed,
+            "support_paths": HIGHER_SHELL_PREFLIGHT_SUPPORT_PATHS,
+            "committed_path_presence": higher_shell_preflight_presence,
+            "decision": (
+                "support only; launch preflight is clear but the contract "
+                "launches no jobs, writes no rows, and supplies no scalar-LSZ, "
+                "pole, FV/IR, canonical O_H, W/Z response, or y_t authority"
+            ),
+        },
         "source_higgs_bridge": {
             "admitted": source_admitted,
             "required_paths": SOURCE_HIGGS_REQUIRED_PATHS,
@@ -523,6 +583,8 @@ def main() -> int:
             "additive-top-support-committed-support-only": additive_top_support_committed,
             "top-mass-scan-response-committed-support-only": top_mass_scan_support_committed,
             "lane1-oh-root-theorem-attempt-support-only": lane1_oh_support_committed,
+            "lane1-action-premise-attempt-support-only": lane1_action_premise_support_committed,
+            "higher-shell-launch-preflight-support-only": higher_shell_preflight_support_committed,
             "source-higgs-physical-bridge-not-admitted": not source_admitted,
             "wz-physical-response-not-admitted": not wz_admitted,
             "neutral-h3h4-not-admitted": not neutral_admitted,
@@ -532,7 +594,7 @@ def main() -> int:
         "strict_non_claims": [
             "does not claim retained or proposed_retained top-Yukawa closure",
             "does not treat block30 route review as physical bridge evidence",
-            "does not treat chunk063 completion, the promotion contract, the OS transfer alias firewall, additive-top support, top mass-scan response harness rows, or lane-1 O_H root no-go attempts as physical bridge evidence",
+            "does not treat chunk063 completion, the promotion contract, the OS transfer alias firewall, additive-top support, top mass-scan response harness rows, lane-1 O_H/action no-go attempts, or higher-shell launch preflight as physical bridge evidence",
             "does not inspect live or untracked chunk-worker output",
             "does not treat C_sx/C_xx rows as C_sH/C_HH before x=O_H is certified",
             "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, u0, or unit conventions",

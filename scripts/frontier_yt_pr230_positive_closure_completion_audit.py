@@ -968,7 +968,7 @@ def main() -> int:
         )
         is True
         and certs["schur_higher_shell_production_contract"].get(
-            "launch_allowed_now"
+            "rows_written_by_contract"
         )
         is False
         and certs["schur_higher_shell_production_contract"].get(
