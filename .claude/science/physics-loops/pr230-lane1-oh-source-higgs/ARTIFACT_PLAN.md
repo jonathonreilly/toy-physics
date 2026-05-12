@@ -135,12 +135,24 @@ off-diagonal/primitive-transfer route remains closed until a completed
 same-surface physical transfer/off-diagonal generator, primitive-cone
 certificate, strict source-Higgs row packet, or strict W/Z packet lands.
 
+## Block47: Top-Mass-Scan Subtraction-Contract Applicability Audit
+
+- Note: `docs/YT_PR230_TOP_MASS_SCAN_SUBTRACTION_CONTRACT_APPLICABILITY_AUDIT_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py`
+- Certificate: `outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The top mass-scan
+rows are `dE/dm_bare` support under a uniform additive Dirac bare-mass
+coordinate.  They are not `dE/dh`, `T_total`, `A_top`, W/Z response rows,
+matched covariance, strict `g2`/`v`, accepted action authority, or a subtracted
+readout packet.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
-reduced smoke, or active worker intent, a strict W/Z
-physical-response packet with actual production rows and absolute `g2`/`v`
-authority, or a genuinely new scalar/action/LSZ primitive not already covered
-by Block41.
+reduced smoke, or active worker intent, a strict W/Z physical-response packet
+with actual mixed-source `T_total/A_top/W` rows, matched covariance, accepted
+action, and absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ
+primitive not already covered by Block41.

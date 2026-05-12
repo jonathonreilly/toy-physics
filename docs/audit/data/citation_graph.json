@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T03:35:20.505859+00:00",
+  "generated_at": "2026-05-12T03:50:27.177783+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43951,6 +43951,16 @@
       "runner_path": "scripts/frontier_yt_pr230_top_mass_scan_response_harness_gate.py",
       "title": "PR #230 Top Mass-Scan Response Harness Gate"
     },
+    "yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_note_2026-05-12": {
+      "claim_id": "yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: top mass-scan response rows do not satisfy",
+      "deps": [],
+      "note_hash": "9cc3c7149ec13fb4ac0cbd391724ae973109a1db294bd41cc140aab99e1f6211",
+      "path": "docs/YT_PR230_TOP_MASS_SCAN_SUBTRACTION_CONTRACT_APPLICABILITY_AUDIT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py",
+      "title": "PR230 Top-Mass-Scan Subtraction-Contract Applicability Audit"
+    },
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
       "current_status": "support",
@@ -47224,6 +47234,7 @@
     "yt_pr230_taste_radial_canonical_oh_selector_gate_note_2026-05-06",
     "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
     "yt_pr230_top_mass_scan_response_harness_gate_note_2026-05-12",
+    "yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_note_2026-05-12",
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12",
@@ -47383,17 +47394,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1125,
-    "node_count": 2144,
-    "root_count": 1643,
-    "runners_with_path": 1619,
+    "leaf_count": 1126,
+    "node_count": 2145,
+    "root_count": 1644,
+    "runners_with_path": 1620,
     "status_counts": {
       "bounded": 597,
       "open": 116,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 588
+      "unknown": 589
     }
   }
 }

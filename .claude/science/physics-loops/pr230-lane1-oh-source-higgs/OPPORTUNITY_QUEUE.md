@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block46
+## Active Ranking After Block47
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -12,14 +12,17 @@
    transfer/Krylov substitute; Block45 shows ordinary tau-keyed top/scalar
    correlators are not source-Higgs rows.
    Block46 shows those post-Block45 artifacts and active Schur worker intent do
-   not reopen the route without a completed H3/H4 artifact.
+   not reopen the route without a completed H3/H4 artifact.  Block47 shows the
+   adjacent top mass-scan support also does not supply the missing neutral
+   source-Higgs or subtraction bridge.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
    production W/Z rows, same-source top rows, matched covariance, strict
    non-observed `g2` or explicit `v` authority, and `delta_perp` control.
    Block42 records that the current W/Z surface is exhausted without those
-   roots.
+   roots.  Block47 adds that top mass-scan `dE/dm_bare` rows are not the
+   required mixed-source `T_total/A_top/W` subtraction packet.
 
 3. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only

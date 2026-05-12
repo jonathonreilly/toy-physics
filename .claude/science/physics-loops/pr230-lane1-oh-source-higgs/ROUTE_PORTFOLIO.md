@@ -17,6 +17,9 @@
    with actual accepted response authority, production W/Z rows, matched top/W
    covariance, strict non-observed `g2` or explicit `v` substrate authority,
    additive-top subtraction, and transverse/orthogonal correction authority.
+   Block47 shows the current top mass-scan `dE/dm_bare` rows are support only;
+   they do not supply the strict mixed-source `T_total/A_top/W` subtraction
+   packet, matched covariance, accepted action, or absolute `g2`/`v` authority.
 
 3. **Native scalar/action/LSZ theorem for `x=O_H`.**
    Block41 exhausts the current native scalar/action/LSZ route queue.  Reopen

@@ -64,6 +64,10 @@
   completed same-surface H3/H4 physical transfer/off-diagonal generator,
   primitive-cone certificate, or source/canonical-Higgs coupling authority.
 - Additive-top coarse rows are not strict same-source subtraction closure.
+- Top mass-scan `dE/dm_bare` rows are not strict additive-top subtraction
+  closure: they are bare-mass-coordinate support, not `dE/dh`, `T_total`,
+  `A_top`, or W/Z response rows, and they do not provide matched covariance,
+  strict `g2`/`v`, accepted action authority, or a subtracted readout packet.
 
 ## Scope Boundary
 
@@ -71,5 +75,6 @@ These are current-surface shortcut blockers, not permanent impossibility
 theorems.  They retire if a future native scalar/action/LSZ theorem with a
 fixed kernel/covariance and scalar metric, explicitly admitted action
 extension plus strict rows, same-surface neutral transfer/primitive-cone
-theorem, or strict W/Z physical-response packet with absolute `g2`/`v`
-authority supplies the missing bridge.
+theorem, or strict W/Z physical-response packet with mixed-source
+`T_total/A_top/W` rows, matched covariance, accepted action authority, and
+absolute `g2`/`v` authority supplies the missing bridge.

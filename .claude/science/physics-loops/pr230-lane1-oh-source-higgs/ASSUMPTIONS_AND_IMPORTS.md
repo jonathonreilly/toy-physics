@@ -16,6 +16,8 @@
 - Source-Higgs pole-row, promotion, time-kernel, and Gram-purity contracts as
   future acceptance gates.
 - Additive-top Jacobian rows as bounded support only; not lane-1 closure.
+- Top mass-scan `dE/dm_bare` rows as bare-mass-coordinate support only; not
+  strict additive-top subtraction closure.
 
 ## Forbidden Proof Inputs
 
@@ -44,6 +46,8 @@
 - Treating finite `C_sx` covariance support, active worker intent, or
   incomplete Schur higher-shell production as a physical neutral
   transfer/off-diagonal generator.
+- Treating top mass-scan `dE/dm_bare` rows as `dE/dh`, `T_total`, `A_top`, W/Z
+  response, matched covariance, or a strict additive-top subtraction packet.
 
 ## Block A Import Audit Result
 
@@ -152,3 +156,13 @@ same-surface H3/H4 physical neutral transfer, off-diagonal generator,
 primitive-cone certificate, strict source-Higgs row packet, or strict W/Z
 physical-response packet.  Active Schur higher-shell workers are not counted
 as evidence until completed JSON/certificates land.
+
+## Block47 Top-Mass-Scan Subtraction-Contract Applicability Result
+
+The top mass-scan response harness does not satisfy the additive-top
+subtraction row contract.  Its rows are keyed by `dE/dm_bare` under a uniform
+additive Dirac bare-mass coordinate, with physical Higgs normalization marked
+`not_derived` and no physical-yukawa readout.  A future W/Z repair still needs
+same-ensemble `T_total`, strict `A_top`, W/Z response rows, matched covariance,
+strict `g2` or explicit `v` authority, and accepted same-source action
+authority.

@@ -320,3 +320,41 @@ this was a narrow post-Block45 applicability boundary update.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; the aggregate gates
   compile and report `PASS=174 FAIL=0` and `PASS=380 FAIL=0`.
+
+## Self-Review: Block47
+
+- Overclaim check: passed.  The note says only that top mass-scan
+  `dE/dm_bare` rows do not satisfy the additive-top subtraction row contract on
+  the current surface.  It does not claim a permanent no-go against a future
+  same-ensemble subtraction packet.
+- Physics check: passed.  The runner consumes the top mass-scan harness,
+  additive-top subtraction contract, additive-top Jacobian rows, W/Z
+  physical-response packet intake, covariance builder, `g2` builder, and
+  aggregate gates.  It distinguishes bare-mass response support from strict
+  mixed-source `T_total/A_top/W` subtraction evidence.
+- Forbidden-import check: passed.  The runner does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `dE/dm_bare ->
+  dE/dh`, mass-scan-as-W/Z response, bounded rows as strict rows, assumed
+  covariance, `A_top = 0`, or retained/proposed-retained wording.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block47 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow applicability boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=16 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Top mass-scan response
+  rows remain support-only bare-mass-coordinate rows, not strict
+  additive-top subtraction closure.
+- Imports / Support: DISCLOSED.  The absent mixed-source `T_total`, strict
+  `A_top`, W/Z rows, matched covariance, strict `g2`/`v`, accepted action, and
+  subtracted readout packet are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings; the aggregate gates
+  compile and report `PASS=175 FAIL=0` and `PASS=381 FAIL=0`.

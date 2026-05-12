@@ -1,0 +1,91 @@
+{
+  "actual_current_surface_status": "exact negative boundary / top mass-scan response harness does not satisfy the additive-top subtraction row contract",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if future same-ensemble rows provide mixed-source T_total, strict A_top, W/Z response, matched covariance, strict g2/v, and accepted action authority",
+  "exact_next_action": "Use top mass-scan rows only as support for a future subtraction packet.  Do not admit the W/Z repair route until mixed-source T_total, strict A_top, W/Z response rows, matched covariance, strict g2/v, and accepted action authority are all present.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "assumed_matched_covariance": false,
+    "claimed_retained_or_proposed_retained": false,
+    "set_additive_top_slope_to_zero": false,
+    "treated_bounded_additive_rows_as_strict_subtraction": false,
+    "treated_dE_dm_bare_as_dE_dh": false,
+    "treated_mass_scan_as_wz_response": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_observed_wz_or_g2": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "mixed-source total top response rows T_total",
+    "strict additive-top rows A_top in the same coordinate convention",
+    "production W/Z response rows",
+    "matched covariance for T_total, A_top, W/Z, and g2/v",
+    "strict non-observed g2 or explicit v authority",
+    "accepted same-source EW/Higgs action authority"
+  ],
+  "parent_certificates": {
+    "additive_top_jacobian_rows": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
+    "additive_top_subtraction_row_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
+    "block35_physical_bridge_admission": "outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
+    "top_mass_scan_response_smoke": "outputs/yt_pr230_top_mass_scan_response_harness_smoke_2026-05-12.json",
+    "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
+    "wz_accepted_action_response_root": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json",
+    "wz_physical_response_packet_intake": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json",
+    "wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "additive_top_jacobian_rows": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
+    "additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+    "block35_physical_bridge_admission": "open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, additive-top, and top mass-scan response harness commits plus lane-1 O_H/action attempts and higher-shell launch preflight are support/no-go only and no physical bridge is admitted",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "electroweak_g2_builder": "open / electroweak g2 certificate builder inputs absent",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "top_mass_scan_response_harness_gate": "bounded-support / top mass-scan response harness schema gate",
+    "top_mass_scan_response_smoke": "",
+    "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
+    "wz_accepted_action_response_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
+    "wz_physical_response_packet_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist",
+    "wz_response_ratio_identifiability_contract": "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent"
+  },
+  "pass_count": 16,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current top mass-scan rows are dE/dm_bare support under the uniform additive Dirac bare-mass coordinate.  They are not dE/dh, do not include W/Z response rows, do not provide matched covariance, and do not supply strict g2/v or accepted action authority.",
+  "strict_row_presence": {
+    "accepted_same_source_ew_action": false,
+    "matched_subtraction_covariance": false,
+    "mixed_source_total_top_rows": false,
+    "strict_additive_top_rows": false,
+    "strict_electroweak_g2_certificate": false,
+    "subtracted_response_readout": false,
+    "wz_response_rows": false
+  },
+  "top_mass_scan_payload_summary": {
+    "configuration_count": 2,
+    "physical_higgs_normalization": "not_derived",
+    "row_keys": [
+      "bracket_masses_lat",
+      "configuration_index",
+      "finite",
+      "finite_tau_count",
+      "selected_mass_parameter",
+      "slope_dE_dm_bare_by_tau",
+      "slope_dE_dm_bare_tau1",
+      "tau_max",
+      "tau_min"
+    ],
+    "row_schema_version": "top_mass_scan_response_v1",
+    "source_coordinate": "uniform additive Dirac bare mass m_bare",
+    "used_as_physical_yukawa_readout": false
+  },
+  "top_mass_scan_subtraction_contract_applicability_audit_passed": true
+}

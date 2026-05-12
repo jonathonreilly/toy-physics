@@ -99,6 +99,13 @@ leave no completed same-surface H3/H4 artifact.  Active Schur higher-shell
 worker intent is recorded only as non-evidence until completed JSON/certificates
 land.
 
+Block47 checks whether the top mass-scan response harness can satisfy the
+additive-top subtraction row contract used by the W/Z repair route.  It
+cannot.  The rows are `dE/dm_bare` under a uniform additive Dirac bare-mass
+coordinate, with physical Higgs normalization `not_derived`; they are not
+`dE/dh`, `T_total`, `A_top`, W/Z response rows, matched covariance, strict
+`g2`/`v`, accepted action authority, or a subtracted readout packet.
+
 ## Checks Run
 
 ```text
@@ -146,6 +153,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45
 python3 scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py
 # SUMMARY: PASS=14 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py
+python3 scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py
+# SUMMARY: PASS=16 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -171,11 +182,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=174 FAIL=0
+# SUMMARY: PASS=175 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=380 FAIL=0
+# campaign status SUMMARY: PASS=381 FAIL=0
 ```
 
 ## Current Status
@@ -183,7 +194,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive production physical Euclidean C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, or a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
+derive production physical Euclidean C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, or a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -197,12 +208,13 @@ re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
 normalization, W/Z self-normalization, or target-time-series source-only
 promotion, and it should not treat finite `C_sx` covariance, active worker
 intent, MC configuration-index order, ordinary tau correlators, empty guarded
-blocks, or reduced smoke as strict bridge evidence.  It should try one of:
+blocks, reduced smoke, or top mass-scan `dE/dm_bare` rows as strict bridge
+evidence.  It should try one of:
 
 ```text
 production physical Euclidean C_ss/C_sH/C_HH(tau) source-Higgs rows after canonical O_H authority
 new same-surface neutral transfer/off-diagonal generator primitive
-strict W/Z physical-response packet with actual production rows plus absolute g2/v authority
+strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority
 new native scalar/action/LSZ primitive not already tested
 ```
 

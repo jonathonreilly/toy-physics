@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: exact negative boundary: post-Block45 artifacts do not reopen the neutral off-diagonal generator or primitive-transfer route
-conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with absolute g2/v authority, or genuinely new scalar/action/LSZ primitive
+actual_current_surface_status: exact negative boundary: top mass-scan response rows do not satisfy the additive-top subtraction row contract
+conditional_surface_status: conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with mixed-source T_total/A_top/W rows, matched covariance, accepted action, and absolute g2/v authority, or genuinely new scalar/action/LSZ primitive
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete FH-LSZ source target-time-series support, ordinary top/scalar-source tau correlators, W/Z response contracts, and exhausted native scalar/action/LSZ plus W/Z absolute-authority support-only routes, but no dynamic Phi/action, canonical O_H identity, physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows, neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, or absolute g2/v authority
+proposal_allowed_reason: current surface has complete finite C_ss/C_sx/C_xx support, top bare-mass response support, complete FH-LSZ source target-time-series support, ordinary top/scalar-source tau correlators, W/Z response contracts, and exhausted native scalar/action/LSZ plus W/Z absolute-authority support-only routes, but no dynamic Phi/action, canonical O_H identity, physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) production rows, neutral primitive transfer/off-diagonal generator, scalar LSZ metric, strict W/Z production packet, mixed-source additive-top subtraction packet, matched covariance, or absolute g2/v authority
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -90,6 +90,13 @@ python3 scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability
 # SUMMARY: PASS=14 FAIL=0
 ```
 
+Top mass-scan subtraction-contract applicability audit result:
+
+```text
+python3 scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py
+# SUMMARY: PASS=16 FAIL=0
+```
+
 Pipeline refusal result:
 
 ```text
@@ -97,6 +104,6 @@ frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py: PASS=11 FA
 frontier_yt_source_higgs_pole_residue_extractor.py: PASS=9 FAIL=0
 frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0
 frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0
-frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=174 FAIL=0
-frontier_yt_pr230_campaign_status_certificate.py: PASS=380 FAIL=0
+frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=175 FAIL=0
+frontier_yt_pr230_campaign_status_certificate.py: PASS=381 FAIL=0
 ```

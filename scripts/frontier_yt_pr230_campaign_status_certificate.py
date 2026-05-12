@@ -995,6 +995,9 @@ def main() -> int:
         "top_mass_scan_response_harness_gate": load(
             "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json"
         ),
+        "top_mass_scan_subtraction_contract_applicability_audit": load(
+            "outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json"
+        ),
         "neutral_rank_one_bypass_post_block37_audit": load(
             "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json"
         ),
@@ -5325,6 +5328,30 @@ def main() -> int:
         )
         is True
     )
+    top_mass_scan_subtraction_contract_applicability_blocks = (
+        "top mass-scan response harness does not satisfy"
+        in str(statuses["top_mass_scan_subtraction_contract_applicability_audit"])
+        and certificates[
+            "top_mass_scan_subtraction_contract_applicability_audit"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "top_mass_scan_subtraction_contract_applicability_audit"
+        ].get("top_mass_scan_subtraction_contract_applicability_audit_passed")
+        is True
+        and certificates[
+            "top_mass_scan_subtraction_contract_applicability_audit"
+        ].get("strict_row_presence", {}).get("wz_response_rows")
+        is False
+        and certificates[
+            "top_mass_scan_subtraction_contract_applicability_audit"
+        ].get("strict_row_presence", {}).get("matched_subtraction_covariance")
+        is False
+        and certificates[
+            "top_mass_scan_subtraction_contract_applicability_audit"
+        ].get("strict_row_presence", {}).get("strict_electroweak_g2_certificate")
+        is False
+    )
     neutral_rank_one_bypass_post_block37_blocks = (
         "post-Block37 neutral rank-one bypass not closed"
         in str(statuses["neutral_rank_one_bypass_post_block37_audit"])
@@ -5345,6 +5372,11 @@ def main() -> int:
         "top-mass-scan-response-harness-support-not-evidence",
         top_mass_scan_response_harness_support_not_evidence,
         statuses["top_mass_scan_response_harness_gate"],
+    )
+    report(
+        "top-mass-scan-subtraction-contract-applicability-blocks",
+        top_mass_scan_subtraction_contract_applicability_blocks,
+        statuses["top_mass_scan_subtraction_contract_applicability_audit"],
     )
     report(
         "neutral-rank-one-bypass-post-block37-blocks-current-surface",
@@ -6451,6 +6483,7 @@ def main() -> int:
         "certificate_statuses": statuses,
         "remaining_routes": remaining_routes,
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
+        "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
@@ -6476,6 +6509,7 @@ def main() -> int:
             "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
             "does not treat block38 bridge stuck-fanout status as production evidence",
             "does not treat finite C_sx covariance, active worker intent, or post-Block45 support as a neutral off-diagonal generator",
+            "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -7793,6 +7827,7 @@ def main() -> int:
         "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
         "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
         "does not treat the block38 bridge stuck-fanout checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
+        "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction contract",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

@@ -98,4 +98,13 @@ Lane 1 Block46: neutral off-diagonal post-Block45 applicability audit
   the neutral off-diagonal/primitive-transfer route; finite C_sx support,
   MC target samples, ordinary tau rows, reduced smoke, and active worker
   intent still leave no completed same-surface H3/H4 neutral artifact
+
+Lane 1 Block47: top-mass-scan subtraction-contract applicability audit
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_top_mass_scan_subtraction_contract_applicability_audit.py
+- result: PASS=16 FAIL=0
+- conclusion: top mass-scan dE/dm_bare rows are support only; they do not
+  satisfy the additive-top subtraction row contract and still leave missing
+  mixed-source T_total, strict A_top, W/Z rows, matched covariance, strict
+  g2/v, accepted action, and subtracted readout authority
 ```
