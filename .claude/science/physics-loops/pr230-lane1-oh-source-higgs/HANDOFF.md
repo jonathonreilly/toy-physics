@@ -828,3 +828,36 @@ Next exact action: positive scalar closure now needs an actual residue
 authority: exact extremal/determinate moment certificate, direct pole-row
 residue measurement, or `K'(pole)` theorem, still paired with FV/IR/contact and
 canonical `O_H`/physical-response authority.
+## 2026-05-12 Four-Route Physics Fan-Out
+
+The latest requested fan-out ran four non-chunk probes, each with the
+assumptions exercise, first-principles reset, literature search, and
+mathematics search.
+
+- **Probe A / extremal moments:** landed
+  `docs/YT_PR230_BLOCK65_EXTREMAL_MOMENT_CERTIFICATE_ROUTE_NOTE_2026-05-12.md`.
+  It gives an exact sufficient certificate target: PSD Hankel/localizing
+  matrices, rank-flat extension, and localizing rank drop at
+  `lambda=s-m_pole^2=0` fix the pole atom/residue.  Current status is exact
+  support because the strict certificate rows are absent.
+- **Probe B / microscopic K-prime:** landed
+  `docs/YT_PR230_BLOCK66_MICROSCOPIC_KPRIME_ROW_OBSTRUCTION_NOTE_2026-05-12.md`.
+  It reduces the direct denominator route to a precise missing row:
+  `<l_*,K'(x_*)r_*>`, or equivalent transfer projection / Feshbach derivative
+  rows.  The same-pole witness shows the row cannot be inferred from carrier
+  or pole-location support.
+- **Probe C / canonical O_H:** landed
+  `docs/YT_PR230_BLOCK67_SAME_SURFACE_CANONICAL_OH_ACTION_LSZ_PROBE_NOTE_2026-05-12.md`.
+  It identifies the exact obstruction as two-neutral-slot action/LSZ
+  underdetermination: current source/taste-radial rows allow
+  `O_H=cos(theta)x+sin(theta)n`.
+- **Probe D / W/Z-neutral bypass:** landed
+  `docs/YT_PR230_BLOCK68_STRICT_WZ_NEUTRAL_TRANSFER_OBSTRUCTION_NOTE_2026-05-12.md`.
+  It shows W/Z rows have a one-dimensional absolute-normalization kernel until
+  strict `g2`, explicit `v`, or canonical source-response normalization is
+  supplied; neutral transfer still needs the off-diagonal primitive-transfer
+  datum.
+
+No probe claims retained or `proposed_retained` closure.  The actionable next
+science target is to produce one of the primitive-bearing rows/theorems above,
+not another completion audit.

@@ -247,3 +247,18 @@ prefixes plus fixed carrier/compact-source support do not fix pole atom mass
 or scalar LSZ residue.  `proposed_retained` remains disallowed until a future
 artifact supplies exact residue authority plus FV/IR/contact and canonical
 `O_H`/physical-response authority.
+## 2026-05-12 Four-Route Fan-Out Certificate
+
+```yaml
+actual_current_surface_status: open plus exact support plus exact negative boundaries; four-route fan-out produced no retained/proposed_retained PR230 closure
+conditional_surface_status: conditional-support if future work supplies strict extremal moment rows, K'(pole)/Schur derivative rows, same_surface_scalar_action_lsz_primitive or strict C_ss/C_sH/C_HH pole rows, or W/Z rows plus an absolute pin / neutral transfer primitive
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+proposal_allowed_reason: "The probes isolate sufficient future certificates and exact obstructions, but the primitive-bearing physical rows/theorems are absent on the current surface."
+audit_required_before_effective_retained: true
+bare_retained_allowed: false
+```
+
+No PR230 artifact from this fan-out may use bare `retained` or
+`proposed_retained` wording.

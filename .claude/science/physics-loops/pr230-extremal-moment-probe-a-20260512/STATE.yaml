@@ -1,0 +1,34 @@
+loop_slug: pr230-extremal-moment-probe-a-20260512
+target: "PR230 parallel probe A: strict extremal/determinate moment certificate route"
+actual_current_surface_status: "exact-support / strict extremal moment certificate route specified; current certificate absent"
+conditional_surface_status: "conditional-support if future same-surface flat-extension/localizing certificate plus FVIR/contact and O_H/physical-response bridge is supplied"
+hypothetical_axiom_status: null
+admitted_observation_status: null
+proposal_allowed: false
+bare_retained_allowed: false
+branch: codex/pr230-block48-operator-boundary
+base_branch: origin/claude/yt-direct-lattice-correlator-2026-04-30
+active_route: "truncated Stieltjes moment flat-extension/localizing matrix atom extraction"
+cycle_count: 1
+files_touched:
+  - docs/YT_PR230_BLOCK65_EXTREMAL_MOMENT_CERTIFICATE_ROUTE_NOTE_2026-05-12.md
+  - scripts/frontier_yt_pr230_block65_extremal_moment_certificate_route.py
+  - outputs/yt_pr230_block65_extremal_moment_certificate_route_2026-05-12.json
+  - .claude/science/physics-loops/pr230-extremal-moment-probe-a-20260512/
+open_imports:
+  - same-surface contact-subtracted scalar Stieltjes measure
+  - pole coordinate and threshold-side support lambda>=0
+  - exact or interval-certified moments through flat order
+  - rank-flat/extremal localizing certificate
+  - pole-atom rank drop and residue interval
+  - threshold/FVIR/contact authority
+  - canonical O_H/source-overlap or same-surface physical response bridge
+no_go_routes:
+  - "finite moment prefix alone as residue authority (Block64)"
+  - "current polefit8x8 C_ss proxy as Stieltjes certificate"
+review_findings: []
+checks_run:
+  - "python3 -m py_compile scripts/frontier_yt_pr230_block65_extremal_moment_certificate_route.py"
+  - "python3 scripts/frontier_yt_pr230_block65_extremal_moment_certificate_route.py"
+next_exact_action: "Produce outputs/yt_pr230_strict_extremal_moment_certificate_2026-05-12.json with all missing fields, or pivot to direct pole rows/K'(pole)/physical-response bridge."
+stop_condition: "Named probe completed with exact current-surface obstruction and executable witness."

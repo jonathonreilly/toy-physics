@@ -417,3 +417,30 @@ The still-open import is now explicit at the campaign level: a future positive
 route must carry one of those authorities directly.  Degree-one/FMS support,
 compact-source support, fixed carrier support, and chunk support are not
 admissible substitutes for the missing closure theorem or rows.
+
+## Block64 Finite-Moment Atom-Residue Obstruction Result
+
+Finite source/Stieltjes moment prefixes remain support only.  Block64 gives
+two positive measures with identical `m_0,m_1,m_2` but different candidate-pole
+atom masses, so finite-prefix agreement cannot fix the scalar LSZ residue.
+A future scalar pole-residue route must supply a strict
+determinacy/extremality certificate, direct pole-row residue measurement,
+microscopic `K'(pole)` theorem, or same-surface Schur pole-derivative rows.
+
+## Block65 Flat-Extension Certificate Target
+
+The moment route now has an explicit positive certificate target rather than a
+vague "need more moments" requirement.  A future source/Stieltjes row packet can
+fix the pole atom/residue if it supplies a positive moment matrix with
+rank-preserving flat extension and a localizing rank drop for
+`q(x) = (x - x0)^2` at the candidate pole.  The literature role is mathematical
+bridge only: Curto-Fialkow/Laurent-Mourrain flat-extension theorems justify the
+certificate form, but they do not provide the missing same-surface PR230
+moments, canonical `O_H`, FV/IR/contact authority, or physical-response bridge.
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Flat-extension theorem | Turns a PSD rank-preserving moment extension into a unique finite atomic measure | literature theorem | Curto-Fialkow / Laurent-Mourrain | Load-bearing only for the future certificate rule, not for current closure | Yes for moment-route closure if that route is used | Implement same-surface flat-extension certificate from PR230 rows | Exact-support rule only; no current certificate rows |
+| Localizing rank drop | Certifies an atom at the candidate pole and extracts its weight | literature theorem | Curto-Fialkow truncated K-moment theory | Load-bearing only for future atom-residue certificate | Yes for moment-route residue authority | Produce localizing matrix from same-surface pole moments | Exact-support target; not current closure |
+| Same-surface pole moments through flat extension | Required data for the certificate | unsupported import | PR230 future row packet | Yes | Yes | Direct source-Higgs/pole-row production or Schur pole-derivative theorem | Absent |
+| Canonical `O_H`/action/LSZ or equivalent physical response | Identifies the pole residue with the physical Higgs/source response | unsupported import | PR230 future theorem/packet | Yes | Yes | Accepted action-first `O_H`, strict `C_ss/C_sH/C_HH`, W/Z physical-response bridge | Absent |

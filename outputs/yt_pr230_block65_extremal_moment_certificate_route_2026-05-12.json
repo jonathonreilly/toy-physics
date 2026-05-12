@@ -1,0 +1,523 @@
+{
+  "actual_current_surface_status": "exact-support / strict extremal moment certificate route specified, but current PR230 surface lacks the flat-extension/localizing certificate and therefore still has no pole atom/residue authority",
+  "admitted_observation_status": null,
+  "assumptions_exercise": [
+    {
+      "assumption": "A positive scalar-source Stieltjes measure exists for the same PR230 source object.",
+      "if_wrong": "Hankel/localizing positivity would certify the wrong object or no positive measure at all.",
+      "test_or_derivation": "derive the measure from reflection positivity plus contact-subtracted scalar source; rerun monotonicity and Hankel checks on that exact object."
+    },
+    {
+      "assumption": "The finite source rows are actual moments of that measure, not shell-fit or contact-contaminated proxies.",
+      "if_wrong": "Moment-problem theorems do not apply to the data being promoted.",
+      "test_or_derivation": "produce source-coordinate, zero-source, contact-subtraction, and covariance metadata in the future certificate."
+    },
+    {
+      "assumption": "The pole location is same-surface and the shifted variable lambda has support lambda>=0.",
+      "if_wrong": "A localizing rank drop at lambda=0 is physically meaningless or tests the wrong spectral edge.",
+      "test_or_derivation": "derive scalar pole/gap theorem or direct pole-row measurement before rank-drop extraction."
+    },
+    {
+      "assumption": "The supplied moment order is high enough for flat extension/extremality.",
+      "if_wrong": "Block64 counterfamilies remain available and the atom/residue is not fixed.",
+      "test_or_derivation": "certify rank M_d=rank M_{d+1}, or extremal rank=variety cardinality plus consistency."
+    },
+    {
+      "assumption": "PSD and rank decisions survive numerical/covariance uncertainty.",
+      "if_wrong": "Near-flat numerical spectra can hide nonflat families with different atom masses.",
+      "test_or_derivation": "use exact rational/algebraic moments or interval linear algebra with explicit rank gaps."
+    },
+    {
+      "assumption": "The atom at lambda=0 is isolated from continuum/threshold effects.",
+      "if_wrong": "A soft continuum can mimic finite-window pole behavior with zero atom residue.",
+      "test_or_derivation": "threshold/FVIR theorem with positive residue lower bound and limiting-order control."
+    },
+    {
+      "assumption": "The source-pole residue is the physical scalar LSZ residue or has a certified bridge to it.",
+      "if_wrong": "The route recovers only a source-channel atom, not canonical O_H or W/Z physical response.",
+      "test_or_derivation": "supply C_sH/C_HH rows, Gram purity, or same-surface physical-response bridge."
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block65_extremal_moment_certificate_route_passed": true,
+  "conditional_surface_status": "conditional-support if a future same-surface scalar-source Stieltjes moment package supplies flat extension or extremal truncated-moment consistency, localizing rank drop at the pole, tight residue extraction, threshold/FVIR/contact authority, and canonical O_H or physical-response authority",
+  "current_missing_certificate_fields": [
+    "same_surface_scalar_measure",
+    "certified_pole_coordinate",
+    "exact_or_interval_moments_to_flat_order",
+    "positive_moment_matrices",
+    "flat_extension_or_extremality",
+    "pole_atom_rank_drop",
+    "residue_extraction",
+    "threshold_fvir_contact_authority",
+    "canonical_oh_or_physical_response_bridge"
+  ],
+  "current_pole_residue_authority_present": false,
+  "current_prefix_obstruction_witness": {
+    "extension_a_m0_to_m6": [
+      "1",
+      "1/2",
+      "1/3",
+      "1/4",
+      "5/24",
+      "3/16",
+      "17/96"
+    ],
+    "extension_b_m0_to_m6": [
+      "1",
+      "1/2",
+      "1/3",
+      "2/9",
+      "4/27",
+      "8/81",
+      "16/243"
+    ],
+    "extensions_differ_after_prefix": true,
+    "finite_prefix_flatness_certifiable": false,
+    "obstruction": "The current finite prefix m0..m2 cannot even form the higher moment matrices needed to check a flat rank-preserving extension.  Two positive completions agree on the prefix but differ in higher moments and in the pole atom at lambda=0.",
+    "pole_atom_a": "1/6",
+    "pole_atom_b": "1/4",
+    "pole_atoms_differ": true,
+    "prefixes_match": true,
+    "shared_prefix": [
+      "1",
+      "1/2",
+      "1/3"
+    ],
+    "shared_prefix_orders": [
+      0,
+      1,
+      2
+    ]
+  },
+  "exact_next_action": "Produce outputs/yt_pr230_strict_extremal_moment_certificate_2026-05-12.json with the missing fields above, or abandon the moment route in favor of direct pole rows, a K'(pole) theorem, or a physical W/Z response bridge.",
+  "fail_count": 0,
+  "first_principles_reduction": {
+    "minimal_load_bearing_drivers": [
+      "Cl(3)/Z3 compact scalar-source functional defines the source coordinate.",
+      "Reflection positivity gives finite-volume positive source-channel spectral sums.",
+      "A Stieltjes transform of a positive scalar measure turns pole residue into an atom mass.",
+      "Truncated moment theory fixes an atom only under determinacy/extremality/flat extension or tight Markov bounds with threshold authority.",
+      "Physical PR230 closure still needs canonical O_H/source-overlap or W/Z response authority."
+    ],
+    "removed_as_non_load_bearing_for_this_probe": [
+      "H_unit",
+      "yt_ward_identity",
+      "y_t_bare",
+      "alpha_LM",
+      "plaquette",
+      "u0",
+      "observed targets",
+      "kappa_s=1",
+      "c2=1",
+      "Z_match=1"
+    ]
+  },
+  "flat_extension_atom_witness": {
+    "atom_list_reproduces_moments": true,
+    "declared_atoms": [
+      {
+        "lambda": "0",
+        "weight": "1/5"
+      },
+      {
+        "lambda": "1/3",
+        "weight": "1/2"
+      },
+      {
+        "lambda": "1",
+        "weight": "3/10"
+      }
+    ],
+    "flat_extension_M3_psd": {
+      "minimum_principal_minor": "0",
+      "principal_minors": [
+        {
+          "determinant": "1",
+          "indices": [
+            0
+          ]
+        },
+        {
+          "determinant": "16/45",
+          "indices": [
+            1
+          ]
+        },
+        {
+          "determinant": "124/405",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "determinant": "1096/3645",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "determinant": "31/225",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "determinant": "364/2025",
+          "indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "determinant": "3631/18225",
+          "indices": [
+            0,
+            3
+          ]
+        },
+        {
+          "determinant": "1/135",
+          "indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "determinant": "16/1215",
+          "indices": [
+            1,
+            3
+          ]
+        },
+        {
+          "determinant": "1/1215",
+          "indices": [
+            2,
+            3
+          ]
+        },
+        {
+          "determinant": "1/675",
+          "indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "determinant": "16/6075",
+          "indices": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "determinant": "1/6075",
+          "indices": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "determinant": "0",
+          "indices": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "determinant": "0",
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "psd": true
+    },
+    "flat_extension_M3_rank": 3,
+    "flat_extremal_certificate_passed": true,
+    "localizing_lambda_M2_psd": {
+      "minimum_principal_minor": "0",
+      "principal_minors": [
+        {
+          "determinant": "7/15",
+          "indices": [
+            0
+          ]
+        },
+        {
+          "determinant": "43/135",
+          "indices": [
+            1
+          ]
+        },
+        {
+          "determinant": "367/1215",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "determinant": "1/45",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "determinant": "16/405",
+          "indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "determinant": "1/405",
+          "indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "determinant": "0",
+          "indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "psd": true
+    },
+    "localizing_lambda_M2_rank": 2,
+    "moment_matrix_M2_psd": {
+      "minimum_principal_minor": "1/675",
+      "principal_minors": [
+        {
+          "determinant": "1",
+          "indices": [
+            0
+          ]
+        },
+        {
+          "determinant": "16/45",
+          "indices": [
+            1
+          ]
+        },
+        {
+          "determinant": "124/405",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "determinant": "31/225",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "determinant": "364/2025",
+          "indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "determinant": "1/135",
+          "indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "determinant": "1/675",
+          "indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "psd": true
+    },
+    "moment_matrix_M2_rank": 3,
+    "moments_m0_to_m6": [
+      "1",
+      "7/15",
+      "16/45",
+      "43/135",
+      "124/405",
+      "367/1215",
+      "1096/3645"
+    ],
+    "pole_atom_count_from_rank_drop": 1,
+    "pole_residue_from_declared_atom": "1/5",
+    "rank_flat": true,
+    "threshold_gap_localizing_psd": {
+      "minimum_principal_minor": "0",
+      "principal_minors": [
+        {
+          "determinant": "7/15",
+          "indices": [
+            0
+          ]
+        },
+        {
+          "determinant": "43/135",
+          "indices": [
+            1
+          ]
+        },
+        {
+          "determinant": "367/1215",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "determinant": "1/45",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "determinant": "16/405",
+          "indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "determinant": "1/405",
+          "indices": [
+            1,
+            2
+          ]
+        },
+        {
+          "determinant": "0",
+          "indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "psd": true
+    },
+    "variable": "lambda = s - m_pole_squared, with certified support lambda >= 0"
+  },
+  "future_certificate": "outputs/yt_pr230_strict_extremal_moment_certificate_2026-05-12.json",
+  "future_certificate_checks": {},
+  "future_certificate_missing_or_failed_checks": [],
+  "hypothetical_axiom_status": null,
+  "math_route_summary": {
+    "sufficient_certificate": "For the shifted spectral variable lambda>=0, exact moments through a flat order with PSD moment/localizing matrices and rank M_d = rank M_{d+1} determine a unique finite atomic representing measure.  A rank drop in the lambda-localizing matrix counts the atom at lambda=0; the atom weight is the source-pole residue for that scalar measure.",
+    "why_current_surface_fails": "The current surface does not provide the higher moments, rank-flat extension, extremal variety/consistency data, localizing rank drop, residue interval, threshold/FVIR/contact authority, or canonical/physical-response bridge."
+  },
+  "parent_certificates": {
+    "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
+    "block64_finite_moment_atom_residue_obstruction": "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json",
+    "carleman_tauberian_attempt": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
+    "full_positive_closure_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "polefit8x8_stieltjes_proxy_diagnostic": "outputs/yt_fh_lsz_polefit8x8_stieltjes_proxy_diagnostic_2026-05-05.json",
+    "stieltjes_moment_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "block58_compact_source_spectral_support": "exact-support / Block58 finite-volume compact source-channel spectral support; thermodynamic pole/FVIR and canonical-O_H roots remain open",
+    "block60_compact_source_taste_singlet_carrier": "exact-support / Block60 compact additive source fixes the source-channel taste-singlet carrier coordinate; canonical O_H, pole residue, K-prime, and threshold/FVIR authority remain open",
+    "block64_finite_moment_atom_residue_obstruction": "no-go / exact negative boundary for the current PR230 surface: finite source/Stieltjes moment prefixes do not fix the pole atom mass or scalar LSZ residue without an additional strict determinacy/extremality certificate",
+    "carleman_tauberian_attempt": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+    "full_positive_closure_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "pade_stieltjes_bounds_gate": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+    "polefit8x8_stieltjes_proxy_diagnostic": "exact negative boundary / current polefit8x8 C_ss proxy fails Stieltjes monotonicity",
+    "stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent"
+  },
+  "pass_count": 11,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has finite source moments and source-carrier support only.  Block64 gives positive completions with the same finite prefix and different pole atom; no strict flat-extension or extremal localizing certificate is present.",
+  "strict_certificate_contract": [
+    {
+      "current_satisfied": false,
+      "id": "same_surface_scalar_measure",
+      "required": "contact-subtracted PR230 scalar-source Stieltjes measure with fixed source coordinate and zero-source limit",
+      "test_or_derivation": "derive from compact source functional plus contact/FVIR theorem; reject current polefit8x8 C_ss proxy until monotonicity and contact checks pass"
+    },
+    {
+      "current_satisfied": false,
+      "id": "certified_pole_coordinate",
+      "required": "same-surface pole location m_pole^2 and shifted variable lambda=s-m_pole^2 with support lambda>=0",
+      "test_or_derivation": "thermodynamic scalar pole/gap theorem or direct pole-row measurement with covariance"
+    },
+    {
+      "current_satisfied": false,
+      "id": "exact_or_interval_moments_to_flat_order",
+      "required": "moments m0..m_{2d+2} with rigorous intervals tight enough to certify ranks, PSD, and localizing constraints",
+      "test_or_derivation": "same-source moment production with rational/error certificates; not finite-shell fit reinterpretation"
+    },
+    {
+      "current_satisfied": false,
+      "id": "positive_moment_matrices",
+      "required": "Hankel moment matrices and shifted/localizing matrices PSD on the declared support",
+      "test_or_derivation": "principal-minor/eigenvalue lower bounds that survive covariance intervals"
+    },
+    {
+      "current_satisfied": false,
+      "id": "flat_extension_or_extremality",
+      "required": "rank M_d = rank M_{d+1}, or extremal rank=variety-cardinality plus consistency, with localizing matrices",
+      "test_or_derivation": "Curto-Fialkow flat extension or extremal truncated moment theorem certificate"
+    },
+    {
+      "current_satisfied": false,
+      "id": "pole_atom_rank_drop",
+      "required": "rank drop in the lambda-localizing matrix proving exactly one atom at lambda=0",
+      "test_or_derivation": "rank M_{d+1} - rank M_lambda = 1 after support has been shifted to the pole"
+    },
+    {
+      "current_satisfied": false,
+      "id": "residue_extraction",
+      "required": "atom list or equivalent recurrence/Vandermonde/Christoffel extraction with positive tight residue interval",
+      "test_or_derivation": "verify atoms reproduce moments and residue interval relative width <= 0.02"
+    },
+    {
+      "current_satisfied": false,
+      "id": "threshold_fvir_contact_authority",
+      "required": "thermodynamic threshold, finite-volume/IR limiting order, zero-mode, and contact-subtraction authority",
+      "test_or_derivation": "independent FVIR/contact runner or microscopic denominator theorem"
+    },
+    {
+      "current_satisfied": false,
+      "id": "canonical_oh_or_physical_response_bridge",
+      "required": "canonical O_H/source-overlap authority or same-surface W/Z physical-response bridge",
+      "test_or_derivation": "direct C_sH/C_HH pole rows, Gram purity, or equivalent physical response certificate"
+    },
+    {
+      "current_satisfied": true,
+      "id": "forbidden_import_firewall",
+      "required": "no H_unit, Ward, y_t_bare, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, or Z_match=1",
+      "test_or_derivation": "text/value firewall plus dependency audit"
+    }
+  ],
+  "strict_extremal_moment_certificate_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained PR230 closure",
+    "does not treat finite moment prefixes as residue authority",
+    "does not use H_unit, Ward, y_t_bare, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, or Z_match=1",
+    "does not identify source-pole residue with canonical O_H without a future bridge"
+  ]
+}

@@ -227,3 +227,41 @@ Updated admissible route order:
 
 Do not select another finite-prefix, Pade, finite-shell, compact-source, or
 carrier-normalization route unless it supplies a new strict residue authority.
+
+## Four-Route Fan-Out Update (2026-05-12)
+
+Four parallel probes ran the assumptions exercise, first-principles reset,
+literature search, and mathematics search on the remaining non-chunk closure
+routes.
+
+1. **Extremal moment route:** Block65 specifies a real sufficient certificate.
+   A same-surface scalar-source moment packet with PSD Hankel/localizing
+   matrices, rank-flat extension, and a localizing rank drop at
+   `lambda = 0` would fix the pole atom/residue.  Current surface status:
+   exact support only because the strict certificate rows are absent.
+2. **Microscopic `K'(pole)` route:** the direct Feshbach/Schur theorem reduces
+   the problem to one missing row, `<l_*,K'(x_*)r_*>`, or equivalent transfer
+   projection / Schur derivative rows.  Current surface status: exact negative
+   boundary against inferring that row from same-pole/source-carrier data.
+3. **Canonical `O_H`/action/LSZ route:** current rows allow a two-neutral-slot
+   completion `O_H = cos(theta) x + sin(theta) n`, so source/taste-radial rows
+   do not force canonical `O_H`.  Current surface status: exact negative
+   boundary; needs `same_surface_scalar_action_lsz_primitive` or strict
+   `C_ss/C_sH/C_HH` pole rows.
+4. **W/Z or neutral-transfer bypass:** W/Z response has a one-dimensional
+   absolute-normalization kernel until a strict `g2`, explicit `v`, or
+   canonical source-response normalization pin is supplied.  Neutral transfer
+   still needs the physical off-diagonal/primitive-transfer datum.  Current
+   surface status: exact negative boundary.
+
+Updated admissible route order:
+
+1. produce the strict extremal moment certificate rows or direct pole-residue
+   rows, because Block65 gives an exact acceptance target;
+2. produce the microscopic `K'(pole)` / Schur derivative / transfer-projection
+   row identified by the Feshbach probe;
+3. derive `same_surface_scalar_action_lsz_primitive` or measure strict
+   `C_ss/C_sH/C_HH` rows to kill the `O_H` neutral-admixture freedom;
+4. pursue W/Z only with a real absolute pin plus production W/Z/top rows and
+   matched covariance; pursue neutral transfer only with an off-diagonal
+   primitive-transfer theorem.

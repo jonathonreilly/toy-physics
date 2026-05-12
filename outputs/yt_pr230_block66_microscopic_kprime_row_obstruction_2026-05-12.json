@@ -1,0 +1,328 @@
+{
+  "actual_current_surface_status": "no-go / exact negative boundary for the current PR230 surface: microscopic source/transfer/Feshbach formalism reduces K'(pole) or pole residue to a missing same-surface derivative/projection row",
+  "admitted_observation_status": null,
+  "assumptions_exercise": [
+    {
+      "assumption": "same-surface analytic inverse kernel K(x) exists near the scalar pole",
+      "if_wrong": "the residue formula is only formal; source functional derivatives do not define K'(pole)",
+      "needed_for": "turn the source two-point function into a meromorphic inverse-kernel problem"
+    },
+    {
+      "assumption": "the pole is isolated and simple after the required FVIR/thermodynamic order",
+      "if_wrong": "continuous threshold or multipole behavior replaces a scalar LSZ residue by nonlocal spectral data",
+      "needed_for": "replace the resolvent by a one-pole Laurent term with a rank-one spectral projection"
+    },
+    {
+      "assumption": "left/right pole vectors or the spectral projection are defined on the same surface",
+      "if_wrong": "a denominator zero alone has no normalization and no physical residue",
+      "needed_for": "evaluate the numerator <u,r><l,u> and the derivative sandwich <l,K'(x*)r>"
+    },
+    {
+      "assumption": "source carrier normalization from the additive Cl(3)/Z3 scalar source is the source coordinate used in K",
+      "if_wrong": "the source residue can be rescaled without changing the pole location",
+      "needed_for": "prevent moving factors between source coordinate, operator, and numerator"
+    },
+    {
+      "assumption": "Feshbach/Schur P/Q split is a certified neutral scalar kernel split, not a source-only reconstruction",
+      "if_wrong": "Schur algebra is correct but its rows are labels without authority",
+      "needed_for": "interpret A/B/C rows and their derivatives as same-surface operator rows"
+    },
+    {
+      "assumption": "contact subtraction is fixed before taking the pole derivative",
+      "if_wrong": "finite contact choices can change inverse-curvature reads without changing finite source support",
+      "needed_for": "separate analytic contact curvature from the nonanalytic pole residue"
+    },
+    {
+      "assumption": "analytic continuation from Euclidean transfer data to the pole variable is authorized",
+      "if_wrong": "transfer energies or Euclidean moments do not define the required p^2 derivative",
+      "needed_for": "identify the derivative variable x used in K'(x*) with the scalar LSZ pole variable"
+    },
+    {
+      "assumption": "FVIR, toron, and thermodynamic limits commute with pole isolation and residue extraction",
+      "if_wrong": "atomless soft-continuum limits can erase the finite-volume pole residue",
+      "needed_for": "promote finite-volume spectral sums to a strict scalar pole row"
+    },
+    {
+      "assumption": "canonical O_H/source-overlap or strict physical response authority is supplied separately",
+      "if_wrong": "the route at most normalizes O_sp, not the canonical Higgs radial field",
+      "needed_for": "turn a source-pole residue into the top-Yukawa Higgs normalization used by PR230"
+    }
+  ],
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block66_microscopic_kprime_row_obstruction_passed": true,
+  "canonical_oh_or_physical_response_authority_present": false,
+  "conditional_surface_status": "conditional-support if future work supplies an analytic same-surface inverse kernel or transfer resolvent with an isolated simple pole, the spectral projection/source-overlap row, the K'(pole) derivative sandwich or Feshbach block derivative rows, contact/FVIR authority, and canonical O_H or strict physical-response authority",
+  "exact_next_action": "Do not replay source-functional, finite spectral, fixed-carrier, or finite-moment shortcuts.  A positive route must produce the same-surface derivative/projection row itself, or strict source-Higgs/physical-response pole rows with FVIR/contact and canonical O_H authority.",
+  "exact_operator_row_whose_absence_blocks_closure": [
+    "direct analytic-kernel row: <l_*, K'(x_*) r_*>",
+    "transfer row: <O_s Omega, P_* O_s Omega> plus isolated-pole/FVIR authority",
+    "Feshbach rows: P K' P, P K' Q, Q K' P, Q K' Q in the certified source/orthogonal split",
+    "canonical bridge row: O_sp to O_H overlap or strict physical W/Z response"
+  ],
+  "fail_count": 0,
+  "feshbach_derivative_formula": {
+    "denominator": "D_eff = P K P - P K Q R Q K P",
+    "derivative": "D_eff' = P K' P - P K' Q R Q K P - P K Q R Q K' P + P K Q R Q K' Q R Q K P",
+    "missing_rows": [
+      "P K'(x*) P",
+      "P K'(x*) Q and Q K'(x*) P",
+      "Q K'(x*) Q inside the reduced resolvent sandwich",
+      "same-surface P/Q neutral scalar kernel split"
+    ],
+    "orthogonal_projection": "Q = I - P",
+    "orthogonal_resolvent": "R(x*) = (Q K(x*) Q)^(-1) on Q-space",
+    "source_projection": "P"
+  },
+  "first_principles_minimal_driver": {
+    "blocked_shortcut": "Blocks57-64 provide support around the source functional, finite spectral positivity, source carrier, and finite moments.  They do not supply the derivative/projection row.",
+    "denominator_zero": {
+      "not_enough_because": "zeros do not determine Laurent residues",
+      "role": "locates the candidate source pole",
+      "row": "D(x*) = 0"
+    },
+    "derivative_at_zero": {
+      "not_enough_because": "it must be paired with a same-surface source numerator/projection",
+      "role": "fixes the inverse-propagator slope and therefore the denominator part of the residue",
+      "row": "D'(x*) = <l,K'(x*)r> or Feshbach D_eff'(x*)"
+    },
+    "numerator_or_source_normalization": {
+      "not_enough_because": "source-pole normalization still does not identify canonical O_H",
+      "role": "fixes the source overlap with the pole state",
+      "row": "N* = <u,r><l,u>, or N*=1 only after a certified source-coordinate Schur normalization"
+    },
+    "same_surface_primitives": [
+      "analytic transfer/inverse-kernel family K(x)",
+      "pole projection or left/right pole vectors",
+      "K'(x*) derivative row in the physical pole variable",
+      "source vector u from the compact additive scalar source",
+      "contact subtraction and FVIR/toron limiting order",
+      "canonical O_H/source-overlap or strict physical response authority"
+    ]
+  },
+  "hypothetical_axiom_status": null,
+  "literature_and_mathematics_search": [
+    {
+      "reference": "H. Feshbach, Unified Theory of Nuclear Reactions, Annals of Physics 5 (1958), doi:10.1016/0003-4916(58)90007-1",
+      "role": "projection/Feshbach denominator context; not a PR230 row source",
+      "topic": "Feshbach projection operators",
+      "url": "https://www.osti.gov/biblio/4272316"
+    },
+    {
+      "reference": "H. Feshbach, A Unified Theory of Nuclear Reactions. Part II, Annals of Physics 19 (1962), doi:10.1016/0003-4916(62)90221-X",
+      "role": "supports the distinction between formal projection identities and explicit projection rows",
+      "topic": "Feshbach projection operator flexibility and quantitative projections",
+      "url": "https://www.osti.gov/biblio/4796566"
+    },
+    {
+      "reference": "K. Osterwalder and E. Seiler, Gauge field theories on a lattice, Annals of Physics 110 (1978), doi:10.1016/0003-4916(78)90039-8",
+      "role": "stable transfer-matrix background for finite-volume spectral support",
+      "topic": "lattice reflection positivity and transfer matrices",
+      "url": "https://oamonitor.ireland.openaire.eu/rpo/rcsi/search/publication?pid=10.1016%2F0003-4916%2878%2990039-8"
+    },
+    {
+      "reference": "T. Kato, Perturbation theory for linear operators, Springer (1966), doi:10.1007/978-3-662-12678-3",
+      "role": "standard source for analytic eigenprojections and resolvent residues",
+      "topic": "analytic perturbation and spectral projections",
+      "url": "https://link.springer.com/book/10.1007/978-3-662-12678-3"
+    },
+    {
+      "reference": "analytic Fredholm theorem, standard operator-theory theorem",
+      "role": "context for meromorphic inverse families; does not provide PR230 pole rows",
+      "topic": "analytic Fredholm theorem",
+      "url": "https://en.wikipedia.org/wiki/Analytic_Fredholm_theorem"
+    },
+    {
+      "reference": "A. C. Lichtl, The Spectral Structure of Correlator Matrices, PoS LAT2007 (2007), arXiv:0711.4072",
+      "role": "lattice two-point correlator overlap context",
+      "topic": "lattice correlator spectral matrices",
+      "url": "https://arxiv.org/abs/0711.4072"
+    },
+    {
+      "reference": "D. Dudal, O. Oliveira, M. Roelfs, Kallen-Lehmann Spectral Representation of the Scalar SU(2) Glueball, EPJC 82 (2022), arXiv:2103.11846",
+      "role": "stable example of lattice scalar two-point functions as spectral-density inversion, not residue proof input",
+      "topic": "Kallen-Lehmann/Stieltjes lattice scalar correlators",
+      "url": "https://arxiv.org/abs/2103.11846"
+    },
+    {
+      "reference": "Krein-type and Birman-Schwinger resolvent formulas, operator-theory context",
+      "role": "mathematical analogy: zeros of reduced determinants still need derivative/projection data",
+      "topic": "Krein/Birman-Schwinger resolvent reductions",
+      "url": "https://academic.oup.com/plms/article/104/3/577/1547786"
+    }
+  ],
+  "operator_residue_identity": {
+    "general_formula": "Res_x=<u,r><l,u>/<l,K'(x*)r> for a simple pole of K(x)^(-1)",
+    "self_adjoint_formula": "Res_x=|<u,psi>|^2/<psi,K'(x*)psi>",
+    "source_pole_operator_limit": "unit residue can be obtained by O_sp normalization, but this is not canonical O_H authority",
+    "transfer_resolvent_formula": "Res_z <u,(1-zT)^(-1)u> = -z_* <u,P_*u> for isolated T-eigenvalue lambda_*=1/z_*"
+  },
+  "parent_certificates": {
+    "block57_compact_source_functional_foundation": "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json",
+    "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "block59_source_spectral_pole_promotion_obstruction": "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json",
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
+    "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
+    "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
+    "block63_lane1_completion_audit": "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json",
+    "block64_finite_moment_atom_residue_obstruction": "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json",
+    "legendre_source_pole_operator": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "schur_abc_definition_derivation_attempt": "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
+    "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_pole_lift_gate": "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "block57_compact_source_functional_foundation": "exact-support / Block57 compact finite-volume scalar-source functional foundation; ladder zero-mode no-gos scoped, bare finite-volume contact/source curvature exists, pole/FVIR/O_H roots remain open",
+    "block58_compact_source_spectral_support": "exact-support / Block58 finite-volume compact source-channel spectral support; thermodynamic pole/FVIR and canonical-O_H roots remain open",
+    "block59_source_spectral_pole_promotion_obstruction": "no-go / exact negative boundary for the current PR230 surface: Block59 finite-volume source spectral positivity does not promote to thermodynamic scalar pole authority",
+    "block60_compact_source_taste_singlet_carrier": "exact-support / Block60 compact additive source fixes the source-channel taste-singlet carrier coordinate; canonical O_H, pole residue, K-prime, and threshold/FVIR authority remain open",
+    "block61_post_carrier_kprime_obstruction": "no-go / exact negative boundary for the current PR230 surface: Block60 source-carrier support does not fix K-prime or pole residue",
+    "block62_compact_source_kprime_identifiability_obstruction": "no-go / exact negative boundary for the current PR230 surface: compact source support and fixed carrier do not identify K-prime or pole residue",
+    "block63_lane1_completion_audit": "open / exact lane-1 completion audit: full PR230 positive closure not achieved on the current surface",
+    "block64_finite_moment_atom_residue_obstruction": "no-go / exact negative boundary for the current PR230 surface: finite source/Stieltjes moment prefixes do not fix the pole atom mass or scalar LSZ residue without an additional strict determinacy/extremality certificate",
+    "legendre_source_pole_operator": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
+    "schur_abc_definition_derivation_attempt": "exact negative boundary / Schur A/B/C definition not derivable from current PR230 source-only surface",
+    "schur_complement_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "schur_kprime_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_pole_lift_gate": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem"
+  },
+  "pass_count": 14,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The formal residue theorem is conditional and exact, but the current PR230 surface does not contain the load-bearing same-surface pole derivative/projection row.  The executable operator witness keeps K(pole), source vector, nullvector, and denominator zero fixed while changing K'(pole) and the residue.",
+  "same_pole_operator_witness": {
+    "derivative_row_varies": 8.0,
+    "description": "All rows have the same K(0), source vector, Feshbach zero, and nullvector at the pole.  Only the same-surface derivative row K'(0) changes, so the residue changes.",
+    "pole": 0.0,
+    "residue_varies": 8.0,
+    "rows": [
+      {
+        "K_at_pole": [
+          [
+            0.045,
+            0.3
+          ],
+          [
+            0.3,
+            2.0
+          ]
+        ],
+        "K_x": "[[0.045 + alpha*x, 0.3], [0.3, 2.0]]",
+        "alpha": 0.5,
+        "feshbach_D_eff_at_pole": 0.0,
+        "feshbach_D_eff_prime_at_pole": 0.5,
+        "normalized_derivative_sandwich": 0.48899755501222497,
+        "normalized_numerator": 0.9779951100244499,
+        "residue": 2.0,
+        "right_nullvector_at_pole_unnormalized": [
+          1.0,
+          -0.15
+        ],
+        "same_pole_location": 0.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "K_at_pole": [
+          [
+            0.045,
+            0.3
+          ],
+          [
+            0.3,
+            2.0
+          ]
+        ],
+        "K_x": "[[0.045 + alpha*x, 0.3], [0.3, 2.0]]",
+        "alpha": 1.0,
+        "feshbach_D_eff_at_pole": 0.0,
+        "feshbach_D_eff_prime_at_pole": 1.0,
+        "normalized_derivative_sandwich": 0.9779951100244499,
+        "normalized_numerator": 0.9779951100244499,
+        "residue": 1.0,
+        "right_nullvector_at_pole_unnormalized": [
+          1.0,
+          -0.15
+        ],
+        "same_pole_location": 0.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "K_at_pole": [
+          [
+            0.045,
+            0.3
+          ],
+          [
+            0.3,
+            2.0
+          ]
+        ],
+        "K_x": "[[0.045 + alpha*x, 0.3], [0.3, 2.0]]",
+        "alpha": 2.0,
+        "feshbach_D_eff_at_pole": 0.0,
+        "feshbach_D_eff_prime_at_pole": 2.0,
+        "normalized_derivative_sandwich": 1.9559902200488999,
+        "normalized_numerator": 0.9779951100244499,
+        "residue": 0.5,
+        "right_nullvector_at_pole_unnormalized": [
+          1.0,
+          -0.15
+        ],
+        "same_pole_location": 0.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "K_at_pole": [
+          [
+            0.045,
+            0.3
+          ],
+          [
+            0.3,
+            2.0
+          ]
+        ],
+        "K_x": "[[0.045 + alpha*x, 0.3], [0.3, 2.0]]",
+        "alpha": 4.0,
+        "feshbach_D_eff_at_pole": 0.0,
+        "feshbach_D_eff_prime_at_pole": 4.0,
+        "normalized_derivative_sandwich": 3.9119804400977998,
+        "normalized_numerator": 0.9779951100244499,
+        "residue": 0.25,
+        "right_nullvector_at_pole_unnormalized": [
+          1.0,
+          -0.15
+        ],
+        "same_pole_location": 0.0,
+        "source_vector": [
+          1.0,
+          0.0
+        ]
+      }
+    ],
+    "same_K_at_pole": true,
+    "same_denominator_zero": true,
+    "same_source_vector": true
+  },
+  "same_surface_kprime_derivative_row_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not use finite-prefix moments, Pade rows, or finite endpoint secants as residue authority",
+    "does not infer Schur A/B/C rows from source-only C_ss data",
+    "does not identify O_s or O_sp with canonical O_H",
+    "does not use H_unit, Ward, y_t_bare, observed targets, alpha_LM, plaquette/u0, kappa_s=1, c2=1, or Z_match=1"
+  ],
+  "thermodynamic_fvir_isolated_pole_authority_present": false,
+  "transfer_spectral_projection_overlap_row_present": false
+}
