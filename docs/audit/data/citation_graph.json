@@ -8637,6 +8637,26 @@
       "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
     },
     {
+      "from": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "to": "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "to": "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "to": "yt_pr230_action_first_route_completion_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "to": "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12"
+    },
+    {
       "from": "yt_pr230_neutral_transfer_eigenoperator_source_mixing_no_go_note_2026-05-07",
       "to": "yt_pr230_same_surface_z3_taste_triplet_artifact_note_2026-05-06"
     },
@@ -18805,7 +18825,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:37:40.997007+00:00",
+  "generated_at": "2026-05-12T01:43:55.983990+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42695,6 +42715,22 @@
       "runner_path": "scripts/frontier_yt_pr230_l12_chunk_compute_status.py",
       "title": "PR230 completed-L12 chunk compute status"
     },
+    "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12": {
+      "claim_id": "yt_pr230_lane1_action_premise_derivation_attempt_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the current PR230 surface",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
+        "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
+        "yt_pr230_action_first_route_completion_note_2026-05-06",
+        "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12"
+      ],
+      "note_hash": "bd47aced94158f301dae77c69a47c0f8ded014da6c6b7fdaf0163f989ee6333e",
+      "path": "docs/YT_PR230_LANE1_ACTION_PREMISE_DERIVATION_ATTEMPT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py",
+      "title": "PR230 Lane 1 Action Premise Derivation Attempt"
+    },
     "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12": {
       "claim_id": "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12",
       "current_status": "support",
@@ -46932,17 +46968,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4701,
-    "leaf_count": 1133,
-    "node_count": 2129,
+    "edge_count": 4706,
+    "leaf_count": 1131,
+    "node_count": 2130,
     "root_count": 1634,
-    "runners_with_path": 1604,
+    "runners_with_path": 1605,
     "status_counts": {
       "bounded": 596,
       "open": 113,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 463,
+      "support": 464,
       "unknown": 583
     }
   }

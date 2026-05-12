@@ -1,12 +1,12 @@
 # Claim Status Certificate
 
 ```yaml
-actual_current_surface_status: no-go / exact negative boundary for lane-1 Block A; current PR230 support stack does not derive x=canonical O_H or accepted action authority
-conditional_surface_status: exact support if a future same-surface action/canonical-operator certificate proves x=canonical O_H with LSZ/metric normalization and strict C_ss/C_sH/C_HH pole rows
+actual_current_surface_status: no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority
+conditional_surface_status: conditional-support if a future theorem derives a dynamic Phi/action/LSZ from Cl(3)/Z3, or if an explicit action extension is admitted and then strict C_ss/C_sH/C_HH pole rows are measured
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: current surface has complete taste-radial C_sx/C_xx support and degree-one axis support, but accepted action authority, canonical O_H, C_sH/C_HH pole rows, scalar time-kernel authority, and Gram flatness remain absent
+proposal_allowed_reason: current surface has gauge-fermion dynamics, taste-radial source probes, degree-one/FMS support, and complete finite C_ss/C_sx/C_xx rows, but no dynamic Phi field, accepted scalar action, canonical O_H identity, LSZ metric, or strict source-Higgs pole-row packet
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -18,6 +18,13 @@ Block A runner result:
 ```text
 python3 scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py
 # SUMMARY: PASS=14 FAIL=0
+```
+
+Action-premise derivation result:
+
+```text
+python3 scripts/frontier_yt_pr230_lane1_action_premise_derivation_attempt.py
+# SUMMARY: PASS=15 FAIL=0
 ```
 
 Pipeline refusal result:

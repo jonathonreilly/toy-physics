@@ -1,0 +1,69 @@
+{
+  "action_completion_witness": {
+    "conclusion": "The current source/taste-radial insertion is an external probe of the existing gauge-fermion substrate.  It is not a derived dynamic Higgs action or canonical scalar field.",
+    "current_integration_variables": [
+      "SU(3) gauge links",
+      "staggered fermion/Grassmann fields",
+      "external source insertions"
+    ],
+    "fms_action_variables_required": [
+      "dynamic Higgs doublet Phi",
+      "radial background v",
+      "canonical scalar h",
+      "Goldstone pi fields",
+      "canonical scalar kinetic/LSZ metric"
+    ],
+    "missing_kernel_for_hs_rewrite": "No current PR230 certificate supplies a four-fermion kernel, positive auxiliary-field covariance, or exact Hubbard-Stratonovich identity that would introduce Phi as a derived same-surface field."
+  },
+  "actual_current_surface_status": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_lsz_metric_derived": false,
+  "canonical_oh_action_premise_derived": false,
+  "conditional_surface_status": "conditional-support if a future theorem derives a dynamic Phi/action/LSZ from Cl(3)/Z3, or if an explicit action extension is admitted and then strict C_ss/C_sH/C_HH pole rows are measured",
+  "exact_negative_boundary_passed": true,
+  "forbidden_firewall": {
+    "adopted_external_higgs_action_as_derived": false,
+    "claimed_retained_or_proposed_retained": false,
+    "relabelled_C_sx_C_xx_as_C_sH_C_HH": false,
+    "touched_live_chunk_worker": false,
+    "treated_fms_literature_as_proof": false,
+    "treated_hubbard_stratonovich_rewrite_as_available_without_kernel": false,
+    "treated_source_insertion_as_dynamic_scalar_field": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_target_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hs_rewrite_authority_present": false,
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "dynamic Phi or equivalent scalar carrier derived from Cl(3)/Z3",
+    "same-surface EW/Higgs action or accepted extension authority",
+    "canonical radial h and LSZ/metric normalization",
+    "source coordinate dS/ds = sum_x O_H(x) without additive top contamination",
+    "strict C_ss/C_sH/C_HH pole rows and Gram/FV/IR authority"
+  ],
+  "parent_statuses": {
+    "action_first_route_completion": "exact negative boundary / action-first O_H/C_sH/C_HH route not complete on current PR230 surface",
+    "additive_source_radial_spurion_incompatibility": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_accepted_action_stretch": "exact negative boundary / canonical O_H accepted-action root not derivable from the current PR230 support stack",
+    "fms_action_adoption_minimal_cut": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "lane1_oh_root": "no-go / exact negative boundary for lane-1 Block A: current PR230 support stack does not derive x=canonical O_H or accepted action authority",
+    "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_source_ew_action_semantic_firewall": "bounded-support / same-source EW action semantic firewall passed"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current substrate and certificates provide gauge-fermion dynamics, taste-radial source probes, and conditional FMS support, but no dynamic Phi field, accepted scalar action, canonical O_H identity, LSZ metric, or source-Higgs pole-row packet.",
+  "same_surface_ew_higgs_action_derived": false,
+  "same_surface_phi_derived": false,
+  "summary": {
+    "fail": 0,
+    "pass": 15
+  }
+}

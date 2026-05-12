@@ -6,6 +6,12 @@
 - `H_unit` is not an accepted canonical-Higgs operator on the PR230 surface.
 - Degree-one Z3 radial uniqueness selects the axis only after the missing
   same-surface action premise is supplied.
+- The minimal PR230 substrate currently supplies gauge links, staggered
+  fermions, and source insertions, but not a dynamic `Phi`, accepted scalar
+  action, canonical radial `h`, or scalar LSZ/metric authority.
+- The current certificates do not supply a four-fermion kernel, positive
+  auxiliary-field covariance, or exact Hubbard-Stratonovich identity that
+  would introduce `Phi` as a derived same-surface field.
 - FMS literature and candidate action support the operator shape, but do not
   adopt a current-surface action or prove source overlap.
 - Equal-time `C_ss/C_sx/C_xx` rows do not determine OS transfer kernel,
@@ -15,6 +21,6 @@
 ## Scope Boundary
 
 These are current-surface shortcut blockers, not permanent impossibility
-theorems.  They retire if a future same-surface action/canonical-operator
-certificate, strict source-Higgs pole rows, neutral rank-one theorem, or strict
-W/Z physical-response packet supplies the missing bridge.
+theorems.  They retire if a future native scalar/action/LSZ theorem,
+explicitly admitted action extension plus strict rows, neutral rank-one
+theorem, or strict W/Z physical-response packet supplies the missing bridge.

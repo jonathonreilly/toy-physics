@@ -3,19 +3,24 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block A complete; Block B/C refusal checks complete"
+active_block: "Block37 action-premise derivation attempt complete; pivot target selected"
 target_status: best-honest-status
-actual_current_surface_status: "no-go / exact negative boundary for lane-1 Block A; current PR230 support stack does not derive x=canonical O_H or accepted action authority"
-conditional_surface_status: "exact support if a future same-surface action/canonical-operator certificate proves x=canonical O_H with LSZ/metric normalization and strict C_ss/C_sH/C_HH pole rows"
+actual_current_surface_status: "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority"
+conditional_surface_status: "conditional-support if a future theorem derives a dynamic Phi/action/LSZ from Cl(3)/Z3, or if an explicit action extension is admitted and then strict C_ss/C_sH/C_HH pole rows are measured"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
-hard_residual: "same-surface action/canonical O_H identity plus LSZ/metric authority"
+hard_residual: "native dynamic scalar carrier/action/LSZ theorem or a bypassing neutral rank-one/strict WZ physical-response theorem"
 completed_checks:
   - "frontier_yt_pr230_lane1_oh_root_theorem_attempt.py: PASS=14 FAIL=0"
+  - "frontier_yt_pr230_lane1_action_premise_derivation_attempt.py: PASS=15 FAIL=0"
+  - "frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py: PASS=14 FAIL=0"
+  - "frontier_yt_pr230_fms_oh_candidate_action_packet.py: PASS=13 FAIL=0"
+  - "frontier_yt_pr230_source_higgs_direct_pole_row_contract.py: PASS=18 FAIL=0"
+  - "frontier_yt_pr230_canonical_oh_hard_residual_equivalence_gate.py: PASS=21 FAIL=0"
   - "frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py: PASS=11 FAIL=0"
   - "frontier_yt_source_higgs_pole_residue_extractor.py: PASS=9 FAIL=0"
   - "frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0"
   - "frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0"
   - "frontier_yt_pr230_campaign_status_certificate.py: PASS=364 FAIL=0"
-next_exact_action: "Try to derive the action/canonical-operator theorem directly; do not relabel C_sx/C_xx without x=canonical O_H."
+next_exact_action: "Pivot from action-adoption to neutral rank-one or strict W/Z physical-response bypass; do not relabel C_sx/C_xx without x=canonical O_H."

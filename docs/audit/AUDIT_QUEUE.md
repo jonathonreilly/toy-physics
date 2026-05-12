@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Generated:** 2026-05-12T01:37:43.950193+00:00
-**Total pending:** 1286
+**Generated:** 2026-05-12T01:43:58.950133+00:00
+**Total pending:** 1287
 **Ready (all deps already at a stable tier):** 887
 
 By criticality:
 - `critical`: 0
 - `high`: 237
-- `medium`: 329
+- `medium`: 330
 - `leaf`: 720
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
@@ -61,7 +61,7 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 43 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 249 | 14.97 |  | fresh_context_or_stronger | - |
 | 44 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 249 | 14.47 |  | fresh_context_or_stronger | - |
 | 45 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | high | 248 | 12.96 |  | fresh_context_or_stronger | `scripts/frontier_lh_anomaly_trace_catalog.py` |
-| 46 | `yt_zero_import_authority_note` | high | 210 | 11.22 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 46 | `yt_zero_import_authority_note` | high | 211 | 11.23 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
 | 47 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
 | 48 | `neutrino_majorana_finite_normal_grammar_no_go_note` | high | 179 | 10.49 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_finite_normal_grammar_nogo.py` |
 | 49 | `neutrino_majorana_pfaffian_extension_note` | high | 178 | 9.98 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_pfaffian_extension.py` |

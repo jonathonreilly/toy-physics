@@ -28,3 +28,11 @@ The current surface does not derive accepted action authority or
 `x=canonical O_H`.  The completed finite row packet remains useful support,
 but canonical `O_H`, LSZ/metric normalization, strict `C_sH/C_HH` pole rows,
 and Gram flatness remain open imports.
+
+## Block37 Action-Premise Audit Result
+
+The current minimal substrate does not derive a dynamic `Phi` field, accepted
+EW/Higgs action, canonical radial `h`, scalar LSZ/metric authority, or an
+exact Hubbard-Stratonovich/four-fermion route that would make those fields
+same-surface rather than adopted.  The FMS packet remains conditional support,
+not an action authority.
