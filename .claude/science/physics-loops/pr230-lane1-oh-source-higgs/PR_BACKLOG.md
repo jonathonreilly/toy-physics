@@ -71,4 +71,13 @@ Lane 1 Block43: full target-time-series neutral-transfer lift no-go
   and C_ss/Gamma_ss statistics, but no neutral transfer matrix, off-diagonal
   generator, primitive-cone certificate, canonical-Higgs normalization, or
   strict C_sH/C_HH pole rows
+
+Lane 1 Block44: MC target-time-series Krylov/transfer no-go
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py
+- result: PASS=17 FAIL=0
+- conclusion: target time series are ordered by MC configuration_index, not
+  Euclidean operator time; permutation preserves ensemble statistics while
+  changing lag covariance, so MC order cannot supply an OS transfer, Krylov
+  neutral generator, or source-Higgs pole row
 ```

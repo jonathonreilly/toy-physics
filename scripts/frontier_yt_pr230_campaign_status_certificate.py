@@ -491,6 +491,9 @@ def main() -> int:
         "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42": load(
             "outputs/yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_2026-05-12.json"
         ),
+        "pr230_mc_timeseries_krylov_transfer_no_go_after_block43": load(
+            "outputs/yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2478,6 +2481,23 @@ def main() -> int:
         "pr230-full-timeseries-neutral-transfer-lift-no-go-blocks",
         full_timeseries_neutral_transfer_lift_no_go_blocks,
         statuses["pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"],
+    )
+    mc_timeseries_krylov_transfer_no_go_blocks = (
+        "MC target time series are not"
+        in str(statuses["pr230_mc_timeseries_krylov_transfer_no_go_after_block43"])
+        and certificates[
+            "pr230_mc_timeseries_krylov_transfer_no_go_after_block43"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_mc_timeseries_krylov_transfer_no_go_after_block43"
+        ].get("mc_timeseries_krylov_transfer_no_go_passed")
+        is True
+    )
+    report(
+        "pr230-mc-timeseries-krylov-transfer-no-go-blocks",
+        mc_timeseries_krylov_transfer_no_go_blocks,
+        statuses["pr230_mc_timeseries_krylov_transfer_no_go_after_block43"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6326,6 +6346,7 @@ def main() -> int:
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
         "block37_post_block36_supervisor_yield_not_closure": False,
         "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
+        "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6336,6 +6357,7 @@ def main() -> int:
             "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
             "does not treat block37 post-block36 supervisor-yield status as production evidence",
             "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
+            "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,

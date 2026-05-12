@@ -46,6 +46,12 @@
   source-coordinate `dE/ds` and `C_ss/Gamma_ss` time series, but no neutral
   transfer matrix, off-diagonal generator, primitive-cone certificate,
   canonical-Higgs normalization, or strict `C_sH/C_HH` pole rows.
+- MC target time series are not an OS/Krylov transfer after Block43: the
+  packet samples are ordered by `configuration_index`, not Euclidean operator
+  time.  Permuting the same sample multiset preserves ensemble statistics but
+  changes lag autocovariance, so a transfer/Krylov construction from MC order
+  would depend on run-control metadata rather than a same-surface physical
+  time-separation kernel.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary

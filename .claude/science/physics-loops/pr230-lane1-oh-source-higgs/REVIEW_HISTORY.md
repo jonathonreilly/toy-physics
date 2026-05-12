@@ -208,3 +208,39 @@ this was a narrow current-surface boundary update.
   and does not update claim surfaces.
 - Audit Compatibility: PASS.  The full audit pipeline and
   `audit_lint.py --strict` complete with only the known five warnings.
+
+## Self-Review: Block44
+
+- Overclaim check: passed.  The note says only that MC configuration-index
+  target samples are not Euclidean transfer/Krylov evidence on the current
+  surface.  It does not claim a permanent no-go against future physical
+  `C_ij(tau)` rows or a same-surface neutral transfer primitive.
+- Physics check: passed.  The runner checks all 63 chunks, verifies the schema
+  contains `configuration_index` samples rather than `tau`/source-sink-time
+  transfer rows, and supplies a permutation witness showing that lag covariance
+  depends on arbitrary MC sample order.
+- Forbidden-import check: passed.  The runner does not use observed targets,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, `dE/ds -> dE/dh`,
+  MC autocorrelation as OS transfer, unit normalization, or
+  `C_ss -> C_sH/C_HH` relabeling.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block44 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow current-surface boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=17 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  The MC target-time-series
+  support remains support-only for source-coordinate ensemble statistics.
+- Imports / Support: DISCLOSED.  The absent Euclidean `C_ij(tau)` rows,
+  physical transfer kernel, same-surface off-diagonal generator, canonical
+  Higgs authority, and strict `C_sH/C_HH` pole rows are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline and
+  `audit_lint.py --strict` complete with only the known five warnings; the
+  aggregate gates compile and report `PASS=172 FAIL=0` and `PASS=377 FAIL=0`.

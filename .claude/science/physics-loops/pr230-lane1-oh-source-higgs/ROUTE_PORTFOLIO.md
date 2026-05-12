@@ -3,9 +3,11 @@
 1. **Neutral rank-one theorem.**
    Block38 says the current finite row packet and top bare-mass response do not
    force this.  Block43 says complete source target-time-series support also
-   does not force this.  Reopen only with a physical transfer/off-diagonal
-   generator, primitive-cone certificate, strict neutral transfer artifact, or
-   strict `C_sH/C_HH` pole rows with canonical-Higgs authority.
+   does not force this.  Block44 says MC configuration-index target samples are
+   not physical Euclidean transfer/Krylov evidence.  Reopen only with a
+   physical Euclidean `C_ij(tau)` matrix, transfer/off-diagonal generator,
+   primitive-cone certificate, strict neutral transfer artifact, or strict
+   `C_sH/C_HH` pole rows with canonical-Higgs authority.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only
@@ -22,4 +24,5 @@
 4. **Strict source-Higgs pole rows.**
    Becomes executable only after `O_H` certification.  Requires
    `C_ss/C_sH/C_HH(t)`, pole isolation, covariance, FV/IR/model-class checks,
-   and Gram flatness.
+   and Gram flatness.  MC configuration-index target samples do not satisfy the
+   `t`/`tau` requirement.

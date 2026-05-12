@@ -6,7 +6,8 @@
 - Complete `63/63` two-source taste-radial packet as finite `C_ss/C_sx/C_xx`
   support only.
 - Complete `63/63` FH-LSZ target time series as source-coordinate `dE/ds` and
-  `C_ss/Gamma_ss` support only.
+  `C_ss/Gamma_ss` support only; their `configuration_index` order is Monte
+  Carlo run-control metadata, not Euclidean operator time.
 - Degree-one radial-tangent `O_H` theorem as exact support under its explicit
   future action premise.
 - FMS `O_H` candidate/action packet as conditional support only.
@@ -32,6 +33,9 @@
   rows and strict `g2`/`v` authority.
 - Treating complete source target time series as same-surface neutral transfer,
   canonical `O_H`, `dE/dh`, or strict `C_sH/C_HH` pole rows.
+- Treating MC configuration-index target time series, MC autocorrelation, or
+  arbitrary sample-order lag covariance as an OS transfer kernel,
+  Krylov/Lanczos generator, or physical source-Higgs time-separation row.
 
 ## Block A Import Audit Result
 
@@ -110,3 +114,14 @@ off-diagonal generator, primitive-cone certificate, canonical-Higgs
 normalization, or strict `C_sH/C_HH` pole rows.  A future neutral route needs
 one of those artifacts explicitly; it cannot promote source time series by
 alias.
+
+## Block44 MC Target-Time-Series Krylov/Transfer Result
+
+The complete target-time-series packet cannot be used as an Euclidean
+transfer/Krylov substitute.  Its samples are keyed by MC `configuration_index`,
+and no row contains `tau`, source/sink time, transfer-kernel, Krylov-basis, or
+Lanczos-tridiagonal data.  A permutation witness preserves the ensemble mean
+and variance while changing lag-one covariance, proving that the lag structure
+belongs to MC ordering rather than a physical operator-time separation.  A
+future route needs physical Euclidean `C_ij(tau)` rows or a same-surface
+neutral transfer/off-diagonal generator.

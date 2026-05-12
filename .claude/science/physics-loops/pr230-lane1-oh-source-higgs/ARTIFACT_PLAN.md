@@ -98,10 +98,24 @@ L12 FH-LSZ target-time-series packet supports source-coordinate `dE/ds` and
 operator, off-diagonal generator, primitive-cone certificate, canonical-Higgs
 normalization, or strict `C_sH/C_HH` pole rows.
 
+## Block44: MC Target-Time-Series Krylov/Transfer No-Go
+
+- Note: `docs/YT_PR230_MC_TIMESERIES_KRYLOV_TRANSFER_NO_GO_AFTER_BLOCK43_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py`
+- Certificate: `outputs/yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The complete target
+time series are keyed by MC `configuration_index`, not Euclidean operator time.
+A permutation witness preserves ensemble source statistics while changing lag
+autocovariance, so a Krylov/Lanczos or OS-transfer construction from MC order
+would depend on run-control metadata rather than a same-surface physical
+kernel.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
-neutral transfer primitive not present in the current row or source-time-series
-packet, a strict W/Z physical-response packet with actual production rows and
-absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ primitive not
-already covered by Block41.
+neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
+present in the current MC target-time-series packet, a strict W/Z
+physical-response packet with actual production rows and absolute `g2`/`v`
+authority, or a genuinely new scalar/action/LSZ primitive not already covered
+by Block41.

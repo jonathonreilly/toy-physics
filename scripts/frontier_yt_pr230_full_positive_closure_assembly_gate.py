@@ -165,6 +165,7 @@ PARENTS = {
     "pr230_native_scalar_action_lsz_route_exhaustion_after_block40": "outputs/yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_2026-05-12.json",
     "pr230_wz_absolute_authority_route_exhaustion_after_block41": "outputs/yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_2026-05-12.json",
     "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42": "outputs/yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_2026-05-12.json",
+    "pr230_mc_timeseries_krylov_transfer_no_go_after_block43": "outputs/yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_2026-05-12.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -3413,6 +3414,23 @@ def main() -> int:
         full_timeseries_neutral_transfer_lift_no_go_blocks,
         statuses["pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42"],
     )
+    mc_timeseries_krylov_transfer_no_go_blocks = (
+        "MC target time series are not"
+        in statuses["pr230_mc_timeseries_krylov_transfer_no_go_after_block43"]
+        and certs[
+            "pr230_mc_timeseries_krylov_transfer_no_go_after_block43"
+        ].get("proposal_allowed")
+        is False
+        and certs[
+            "pr230_mc_timeseries_krylov_transfer_no_go_after_block43"
+        ].get("mc_timeseries_krylov_transfer_no_go_passed")
+        is True
+    )
+    report(
+        "pr230-mc-timeseries-krylov-transfer-no-go-blocks",
+        mc_timeseries_krylov_transfer_no_go_blocks,
+        statuses["pr230_mc_timeseries_krylov_transfer_no_go_after_block43"],
+    )
     report(
         "wz-g2-bare-running-bridge-attempt-blocks",
         "WZ g2 bare-to-low-scale running bridge"
@@ -3851,6 +3869,7 @@ def main() -> int:
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
         "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
+        "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
@@ -3890,6 +3909,7 @@ def main() -> int:
             "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
             "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
             "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
+            "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
             "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",

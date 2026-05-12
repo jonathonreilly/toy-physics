@@ -19013,7 +19013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T03:01:44.373101+00:00",
+  "generated_at": "2026-05-12T03:12:10.187223+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43025,6 +43025,16 @@
       "runner_path": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py",
       "title": "PR230 Matching/Running Bridge Gate"
     },
+    "yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_note_2026-05-12": {
+      "claim_id": "yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: MC target time series are not a",
+      "deps": [],
+      "note_hash": "003dca1b2b8ffabf41d2ba998f26055c2b595060adbcded03ead416732fcf7b1",
+      "path": "docs/YT_PR230_MC_TIMESERIES_KRYLOV_TRANSFER_NO_GO_AFTER_BLOCK43_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py",
+      "title": "PR230 MC Target-Time-Series Krylov/Transfer No-Go After Block43"
+    },
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05": {
       "claim_id": "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
       "current_status": "unknown",
@@ -47073,6 +47083,7 @@
     "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12",
     "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
+    "yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_note_2026-05-12",
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
     "yt_pr230_missing_bridge_literature_assumption_exercises_note_2026-05-05",
     "yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_note_2026-05-12",
@@ -47314,17 +47325,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4753,
-    "leaf_count": 1122,
-    "node_count": 2140,
-    "root_count": 1640,
-    "runners_with_path": 1615,
+    "leaf_count": 1123,
+    "node_count": 2141,
+    "root_count": 1641,
+    "runners_with_path": 1616,
     "status_counts": {
       "bounded": 597,
       "open": 115,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 585
+      "unknown": 586
     }
   }
 }

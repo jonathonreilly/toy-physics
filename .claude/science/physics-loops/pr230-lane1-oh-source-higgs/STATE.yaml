@@ -3,10 +3,10 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block43 full target-time-series neutral-transfer lift no-go complete; genuinely new neutral transfer, W/Z strict packet, or scalar/action/LSZ primitive remains next"
+active_block: "Block44 MC target-time-series Krylov/transfer no-go complete; genuinely new Euclidean C_ij(tau), neutral transfer, W/Z strict packet, or scalar/action/LSZ primitive remains next"
 target_status: best-honest-status
-actual_current_surface_status: "exact negative boundary: full FH-LSZ target-time-series packet does not lift PR230 to same-surface neutral transfer, canonical O_H, or C_sH/C_HH pole rows"
-conditional_surface_status: "conditional-support if a future same-surface neutral-transfer primitive, strict W/Z physical-response packet with absolute g2/v authority, or genuinely new scalar/action/LSZ primitive lands"
+actual_current_surface_status: "exact negative boundary: MC target time series are not Euclidean transfer, OS/Krylov evidence, same-surface neutral O_H bridge, or C_sH/C_HH pole rows"
+conditional_surface_status: "conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with absolute g2/v authority, or genuinely new scalar/action/LSZ primitive"
 proposal_allowed: false
 bare_retained_allowed: false
 audit_required_before_effective_retained: true
@@ -20,6 +20,7 @@ completed_checks:
   - "frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py: PASS=18 FAIL=0"
   - "frontier_yt_pr230_wz_absolute_authority_route_exhaustion_after_block41.py: PASS=26 FAIL=0"
   - "frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py: PASS=18 FAIL=0"
+  - "frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py: PASS=17 FAIL=0"
   - "frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_fms_oh_candidate_action_packet.py: PASS=13 FAIL=0"
   - "frontier_yt_pr230_source_higgs_direct_pole_row_contract.py: PASS=18 FAIL=0"
@@ -28,6 +29,6 @@ completed_checks:
   - "frontier_yt_source_higgs_pole_residue_extractor.py: PASS=9 FAIL=0"
   - "frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0"
   - "frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0"
-  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=171 FAIL=0"
-  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=376 FAIL=0"
-next_exact_action: "Do not treat the complete target-time-series packet as neutral transfer; pivot only to a genuinely new same-surface transfer/off-diagonal generator, strict W/Z packet with absolute authority, or new scalar/action/LSZ primitive."
+  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=172 FAIL=0"
+  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=377 FAIL=0"
+next_exact_action: "Do not treat MC configuration-index target time series as Euclidean transfer or Krylov evidence. A positive route must add physical Euclidean-time C_ij(tau) rows, a same-surface neutral transfer/off-diagonal generator, a strict W/Z packet with absolute authority, or a new scalar/action/LSZ primitive."

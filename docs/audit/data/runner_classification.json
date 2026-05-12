@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T03:01:47.505045+00:00",
+  "generated_at": "2026-05-12T03:12:13.323119+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17088,6 +17088,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_yt_pr230_matching_running_bridge_gate.py"
+    },
+    "yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py"
     },
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05": {
       "assert_count": 1,
@@ -36201,6 +36213,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_minimal_axioms_yukawa_summary_firewall.py": {
       "assert_count": 1,
       "claims": [
@@ -42715,14 +42742,14 @@
   "stats": {
     "decoration_candidates": 110,
     "dominant_class_distribution": {
-      "A": 9,
+      "A": 10,
       "B": 247,
       "C": 539,
       "D": 337,
       "none": 404
     },
-    "runners_classified": 1536,
-    "runners_with_C": 845,
+    "runners_classified": 1537,
+    "runners_with_C": 846,
     "runners_with_D": 620
   }
 }

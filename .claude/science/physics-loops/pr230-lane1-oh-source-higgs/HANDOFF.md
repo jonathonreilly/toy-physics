@@ -79,6 +79,12 @@ generator, primitive-cone certificate, canonical-Higgs normalization, or
 strict `C_sH/C_HH` pole rows.  A neutral completion can preserve all observed
 source time series while changing the candidate source-Higgs overlap.
 
+Block44 closes the adjacent Krylov/OS-transfer shortcut.  The target
+time-series rows are keyed by MC `configuration_index`, not Euclidean operator
+time.  A permutation witness preserves the same ensemble source statistics
+while changing lag covariance, so no physical transfer generator can be
+reconstructed from arbitrary MC sample order.
+
 ## Checks Run
 
 ```text
@@ -114,6 +120,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_full_timeseries_neutral_transfer
 python3 scripts/frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py
 # SUMMARY: PASS=18 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py
+python3 scripts/frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py
+# SUMMARY: PASS=17 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -139,11 +149,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=171 FAIL=0
+# SUMMARY: PASS=172 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=376 FAIL=0
+# campaign status SUMMARY: PASS=377 FAIL=0
 ```
 
 ## Current Status
@@ -151,7 +161,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
+derive physical Euclidean C_ij(tau) rows or a new same-surface neutral transfer/off-diagonal generator primitive, a strict W/Z physical-response packet with actual production rows plus absolute g2/v authority, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -163,9 +173,11 @@ Without that, the completed taste-radial rows cannot be promoted to
 Continue only with a new primitive-bearing route.  The next block should not
 re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
 normalization, W/Z self-normalization, or target-time-series source-only
-promotion.  It should try one of:
+promotion, and it should not treat MC configuration-index order as Euclidean
+time.  It should try one of:
 
 ```text
+physical Euclidean C_ij(tau) source-Higgs rows
 new same-surface neutral transfer/off-diagonal generator primitive
 strict W/Z physical-response packet with actual production rows plus absolute g2/v authority
 new native scalar/action/LSZ primitive not already tested
