@@ -156,6 +156,24 @@
       }
     }
   },
+  "kprime_pole_row_certificate": {
+    "available": false,
+    "complete_l12_kprime_rows": false,
+    "conservative_intervals": {
+      "effective_denominator_at_pole_hull": null,
+      "projected_kprime_at_pole_hull": null,
+      "source_numerator_at_pole_hull": null
+    },
+    "invalid_row_count": 0,
+    "invalid_rows": [],
+    "present_row_count": 0,
+    "schema_version": "yt_pr230_kprime_pole_row_v1",
+    "strict_certificate_passed": false,
+    "strict_certificate_status": "not passed; absent, partial, invalid, or non-excluding K-prime/source intervals",
+    "strict_limit": "A passed K-prime row certificate supplies source-pole denominator and projection data only. It still does not identify O_sp with the canonical Higgs mode or authorize retained/proposed-retained top-Yukawa closure by itself.",
+    "valid_chunks": [],
+    "valid_row_count": 0
+  },
   "metadata": {
     "chunk_count": 63,
     "complete_l12_target": true,

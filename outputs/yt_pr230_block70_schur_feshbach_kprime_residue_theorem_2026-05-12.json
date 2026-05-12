@@ -1,0 +1,407 @@
+{
+  "actual_current_surface_status": "exact-support / Block70 Schur-Feshbach K-prime residue theorem; physical rows absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "certificate_field_map": {
+    "analytic_kernel": [
+      "kernel_family_variable",
+      "schur_form",
+      "partition_certificate"
+    ],
+    "contact_separation": [
+      "analytic_contact_terms_separated",
+      "pole_residue_rows"
+    ],
+    "forbidden_import_firewall": [
+      "used_hunit_matrix_element_readout",
+      "used_yt_ward_identity",
+      "used_y_t_bare",
+      "used_alpha_lm",
+      "used_plaquette_or_u0",
+      "used_observed_target_selectors",
+      "used_alias_imports"
+    ],
+    "kprime_row": [
+      "K_prime_at_pole or D_eff_prime_at_pole",
+      "kprime_denominator"
+    ],
+    "left_right_vectors": [
+      "left_null_covector",
+      "right_null_vector",
+      "left_right_normalization_convention"
+    ],
+    "lsz_convention": [
+      "Dprime_ss_at_pole",
+      "Res_C_ss",
+      "selected_source_side_normalization"
+    ],
+    "same_surface": [
+      "same_surface_cl3_z3",
+      "phase"
+    ],
+    "simple_isolated_pole": [
+      "pole_control.isolated_scalar_pole_passed",
+      "pole_control.pole_location_x"
+    ],
+    "source_higgs_projection": [
+      "source_projection_numerator",
+      "source_coordinate",
+      "canonical_higgs_operator.operator_id"
+    ]
+  },
+  "conditional_surface_status": "If future same-surface Cl(3)/Z3 rows certify an analytic scalar kernel, simple isolated pole, left/right null vectors, K-prime row, source/Higgs projections, and contact separation, then the source-Higgs pole residue is fixed by the theorem formula.",
+  "exact_next_action": "Produce same-surface physical Schur/Feshbach rows carrying the mapped certificate fields, or produce source-Higgs C_sH/C_HH pole rows; then rerun the builder, Gram-purity postprocessor, assembly gate, and campaign status gate.",
+  "fail_count": 0,
+  "forbidden_import_firewall": {
+    "firewall_passed": true,
+    "flags": {
+      "used_alias_imports": false,
+      "used_alpha_lm": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_target_selectors": false,
+      "used_plaquette_or_u0": false,
+      "used_y_t_bare": false,
+      "used_yt_ward_identity": false
+    },
+    "forbidden_string_hits_in_proof_inputs": [],
+    "proof_inputs": [
+      "same-surface analytic scalar kernel family K(x) on the Cl(3)/Z3 source surface",
+      "strict Schur/Feshbach block partition with C(pole) invertible",
+      "simple isolated zero eigenvalue at x_pole",
+      "left/right null vectors and K-prime derivative row",
+      "analytic contact terms separated before taking residues"
+    ]
+  },
+  "hypothetical_axiom_status": null,
+  "minimal_hypotheses": [
+    "same-surface Cl(3)/Z3 scalar kernel family K(x)",
+    "analytic K(x) in the pole variable near x_pole",
+    "analytic contact terms separated from the pole part",
+    "simple isolated zero eigenvalue K(x_pole) r = 0, l K(x_pole) = 0",
+    "nonzero derivative row l K_prime(x_pole) r",
+    "source and Higgs probe projections supplied in the same basis and convention",
+    "declared pole-variable and inverse-kernel sign convention"
+  ],
+  "parent_certificates": {
+    "full_positive_closure_assembly_gate": {
+      "actual_current_surface_status": "open / full positive PR230 closure assembly gate not passed",
+      "bare_retained_allowed": false,
+      "path": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+      "proposal_allowed": false
+    },
+    "legendre_source_pole_operator": {
+      "actual_current_surface_status": "bounded-support / Legendre source-pole operator constructed; canonical O_H identity open",
+      "bare_retained_allowed": null,
+      "path": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+      "proposal_allowed": false
+    },
+    "schur_complement_kprime_sufficiency": {
+      "actual_current_surface_status": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+      "bare_retained_allowed": false,
+      "path": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+      "proposal_allowed": false
+    },
+    "schur_kernel_row_contract_gate": {
+      "actual_current_surface_status": "open / Schur kernel row contract gate not passed; current rows absent",
+      "bare_retained_allowed": false,
+      "path": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+      "proposal_allowed": false
+    },
+    "source_higgs_certificate_builder": {
+      "actual_current_surface_status": "open / source-Higgs cross-correlator rows absent",
+      "bare_retained_allowed": null,
+      "path": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+      "proposal_allowed": false
+    },
+    "source_higgs_pole_residue_extractor": {
+      "actual_current_surface_status": "open / source-Higgs pole-residue extractor awaiting valid production rows",
+      "bare_retained_allowed": null,
+      "path": "outputs/yt_source_higgs_pole_residue_extractor_2026-05-03.json",
+      "proposal_allowed": false
+    }
+  },
+  "pass_count": 16,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This theorem reduces the residue to concrete same-surface rows, but those physical Schur/Feshbach rows and the canonical-Higgs bridge are not present on the current PR230 surface.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not assert that current PR230 physical Schur rows exist",
+    "does not identify O_sp with O_H",
+    "does not set kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not use H_unit, yt_ward_identity, y_t_bare, alpha_LM, plaquette/u0, observed target selectors, or alias imports as load-bearing inputs"
+  ],
+  "theorem_formula": {
+    "connected_row_convention": "C_ab(x) = a K(x)^(-1) b + analytic contact",
+    "formula": "Res C_ab = (a r) (l b) / (l K_prime(x_pole) r)",
+    "one_source_schur_formula": "For K=[[A,B],[D,C]], D_eff=A-B C^{-1}D and Res C_sH = (h_s - B C^{-1} h_Q) / D_eff_prime at the pole.",
+    "residue_definition": "Res C_ab = lim_{x -> x_pole} (x - x_pole) C_ab(x)",
+    "sign_note": "If a row defines the denominator as p_pole^2 - p^2 or uses C = -K^{-1}, the recorded row must carry that sign convention; with the convention above no extra minus sign appears.",
+    "variable": "x = p^2 - p_pole^2, or the repo row's declared scalar-pole variable"
+  },
+  "toy_witness": {
+    "K0": [
+      [
+        -0.03807861951688667,
+        0.21,
+        -0.17,
+        0.09
+      ],
+      [
+        -0.11,
+        1.7,
+        0.2,
+        -0.1
+      ],
+      [
+        0.26,
+        0.05,
+        1.35,
+        0.18
+      ],
+      [
+        0.14,
+        0.12,
+        -0.08,
+        1.55
+      ]
+    ],
+    "K1": [
+      [
+        0.43,
+        0.04,
+        -0.02,
+        0.03
+      ],
+      [
+        0.07,
+        0.06,
+        -0.03,
+        0.02
+      ],
+      [
+        -0.04,
+        0.01,
+        -0.04,
+        0.05
+      ],
+      [
+        0.02,
+        -0.02,
+        0.03,
+        0.07
+      ]
+    ],
+    "K2": [
+      [
+        0.011,
+        0.004,
+        0.002,
+        -0.003
+      ],
+      [
+        0.003,
+        0.01,
+        0.004,
+        -0.003
+      ],
+      [
+        -0.002,
+        -0.002,
+        0.008,
+        0.001
+      ],
+      [
+        0.005,
+        0.003,
+        -0.005,
+        0.006
+      ]
+    ],
+    "block_preserving_schur_witness": {
+      "D_eff_at_pole": -6.938893903907228e-18,
+      "D_eff_prime_at_pole": 0.41849338680585607,
+      "abs_schur_derivative_error": 0.0,
+      "abs_schur_pole_error": 6.938893903907228e-18,
+      "orthogonal_block_transform": [
+        [
+          1.1,
+          0.2,
+          -0.1
+        ],
+        [
+          -0.05,
+          0.95,
+          0.12
+        ],
+        [
+          0.08,
+          -0.04,
+          1.05
+        ]
+      ]
+    },
+    "general_basis_witness": {
+      "abs_denominator_error": 5.551115123125783e-17,
+      "abs_numerator_error": 5.551115123125783e-17,
+      "abs_residue_error": 0.0,
+      "transform": [
+        [
+          1.2,
+          0.1,
+          -0.2,
+          0.05
+        ],
+        [
+          0.0,
+          0.9,
+          0.15,
+          -0.1
+        ],
+        [
+          0.2,
+          -0.05,
+          1.1,
+          0.08
+        ],
+        [
+          -0.1,
+          0.12,
+          0.04,
+          0.95
+        ]
+      ],
+      "transformed_residue": {
+        "kprime_denominator": 0.4184933868058561,
+        "left_projection": 1.0000000000000002,
+        "residue": 1.0159108117176803,
+        "right_projection": 0.42515195628841834,
+        "source_projection_numerator": 0.42515195628841845
+      }
+    },
+    "higgs_higgs_residue": {
+      "kprime_denominator": 0.41849338680585607,
+      "left_projection": 0.3389078126088956,
+      "residue": 0.3443001110049666,
+      "right_projection": 0.4251519562884184,
+      "source_projection_numerator": 0.14408731953210066
+    },
+    "laurent_limit_rows": [
+      {
+        "abs_error_with_contact": 0.00030730165748993343,
+        "abs_error_without_contact": 2.5283825100252955e-06,
+        "epsilon": 0.001,
+        "epsilon_times_contact": 0.00030983004,
+        "estimate_with_contact": 1.0162181133751702,
+        "estimate_without_contact": 1.0159082833351702
+      },
+      {
+        "abs_error_with_contact": 0.00015369293326217282,
+        "abs_error_without_contact": 1.2645717377690602e-06,
+        "epsilon": 0.0005,
+        "epsilon_times_contact": 0.000154957505,
+        "estimate_with_contact": 1.0160645046509424,
+        "estimate_without_contact": 1.0159095471459425
+      },
+      {
+        "abs_error_with_contact": 3.074532511271322e-05,
+        "abs_error_without_contact": 2.529749272284221e-07,
+        "epsilon": 0.0001,
+        "epsilon_times_contact": 3.099830004e-05,
+        "estimate_with_contact": 1.015941557042793,
+        "estimate_without_contact": 1.015910558742753
+      },
+      {
+        "abs_error_with_contact": 1.5373083607217453e-05,
+        "abs_error_without_contact": 1.264913978005211e-07,
+        "epsilon": 5e-05,
+        "epsilon_times_contact": 1.5499575005e-05,
+        "estimate_with_contact": 1.0159261848012875,
+        "estimate_without_contact": 1.0159106852262825
+      },
+      {
+        "abs_error_with_contact": 3.074686145021488e-06,
+        "abs_error_without_contact": 2.529685483310118e-08,
+        "epsilon": 1e-05,
+        "epsilon_times_contact": 3.0999830000400004e-06,
+        "estimate_with_contact": 1.0159138864038253,
+        "estimate_without_contact": 1.0159107864208254
+      }
+    ],
+    "schur_row": {
+      "A_at_pole": -0.03807861951688667,
+      "B_at_pole": [
+        0.21,
+        -0.17,
+        0.09
+      ],
+      "C_at_pole": [
+        [
+          1.7,
+          0.2,
+          -0.1
+        ],
+        [
+          0.05,
+          1.35,
+          0.18
+        ],
+        [
+          0.12,
+          -0.08,
+          1.55
+        ]
+      ],
+      "D_at_pole": [
+        -0.11,
+        0.26,
+        0.14
+      ],
+      "D_eff_at_pole": 0.0,
+      "D_eff_prime_at_pole": 0.41849338680585607,
+      "left_null_covector": [
+        [
+          1.0,
+          -0.12182707720613858,
+          0.13911043586133842,
+          -0.08207908785526113
+        ]
+      ],
+      "right_null_vector": [
+        [
+          1.0
+        ],
+        [
+          0.07982353679104583
+        ],
+        [
+          -0.18143344995330557
+        ],
+        [
+          -0.10586677445883222
+        ]
+      ]
+    },
+    "singular_values_K0": [
+      1.7524606014130424,
+      1.5796885171685786,
+      1.354996682831765,
+      9.90659463918141e-17
+    ],
+    "source_higgs_residue": {
+      "kprime_denominator": 0.41849338680585607,
+      "left_projection": 1.0,
+      "residue": 1.0159108117176803,
+      "right_projection": 0.4251519562884184,
+      "source_projection_numerator": 0.4251519562884184
+    },
+    "source_source_residue": {
+      "kprime_denominator": 0.41849338680585607,
+      "left_projection": 1.0,
+      "residue": 2.3895240200388437,
+      "right_projection": 1.0,
+      "source_projection_numerator": 1.0
+    },
+    "x_pole": 0.37
+  }
+}

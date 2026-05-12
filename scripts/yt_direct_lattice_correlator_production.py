@@ -54,6 +54,7 @@ PRODUCTION_OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_pr
 DEFAULT_CERTIFICATE = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_certificate_2026-04-30.json"
 PILOT_OUTPUT_DIR = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_pilot"
 PILOT_CERTIFICATE = REPO_ROOT / "outputs" / "yt_direct_lattice_correlator_pilot_certificate_2026-04-30.json"
+KPRIME_SCHEMA_VERSION = "yt_pr230_kprime_pole_row_v1"
 
 NC = 3
 NDIM = 4
@@ -927,6 +928,65 @@ def source_higgs_firewall_from_certificate(cert: dict[str, Any]) -> dict[str, An
         "used_alpha_lm_or_plaquette": firewall.get("used_alpha_lm_or_plaquette"),
         "used_hunit_matrix_element_readout": firewall.get("used_hunit_matrix_element_readout"),
         "used_taste_radial_axis_as_canonical_oh": firewall.get("used_taste_radial_axis_as_canonical_oh"),
+    }
+
+
+def load_schur_kprime_rows(path: Path | None) -> dict[str, Any]:
+    if path is None:
+        return {}
+    if not path.exists():
+        raise FileNotFoundError(f"Schur K-prime row sidecar not found: {path}")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError(f"Schur K-prime row sidecar must be a JSON object: {path}")
+    return data
+
+
+def normalize_schur_kprime_rows(data: dict[str, Any]) -> list[dict[str, Any]]:
+    if not data:
+        return []
+    rows = data.get("rows") or data.get("kprime_pole_rows") or data.get("schur_kprime_pole_rows")
+    if isinstance(rows, list):
+        schema_version = data.get("schema_version")
+        out = []
+        for row in rows:
+            if isinstance(row, dict):
+                copy = dict(row)
+                copy.setdefault("schema_version", schema_version)
+                out.append(copy)
+        return out
+    if data.get("schema_version") == KPRIME_SCHEMA_VERSION:
+        return [data]
+    return []
+
+
+def schur_kprime_rows_summary(data: dict[str, Any], path: Path | None) -> dict[str, Any]:
+    rows = normalize_schur_kprime_rows(data)
+    return {
+        "enabled": bool(rows),
+        "implementation_status": (
+            "sidecar_rows_attached_pending_combiner_contract"
+            if rows
+            else "absent_guarded"
+        ),
+        "schema_version": KPRIME_SCHEMA_VERSION,
+        "row_count": len(rows),
+        "row_source": str(path) if path is not None else None,
+        "required_measurement_objects": [
+            "transfer/Schur kernel row at the pole",
+            "derivative row with respect to the pole coordinate",
+            "left/right eigenvector or projection data for <l,K_prime(pole)r>",
+            "source numerator/projection row",
+            "error interval and provenance/firewall metadata",
+        ],
+        "finite_source_only_c_ss_is_not_schur_rows": True,
+        "used_as_physical_yukawa_readout": False,
+        "strict_limit": (
+            "K-prime sidecar rows are accepted only as structured chunk output. "
+            "The polefit combiner enforces schema, projection, interval, and "
+            "forbidden-import checks before any strict source-pole certificate "
+            "is recorded."
+        ),
     }
 
 
@@ -3163,6 +3223,10 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
     source_higgs_firewall = source_higgs_firewall_from_certificate(
         getattr(args, "source_higgs_operator_certificate_data", {})
     )
+    schur_kprime_summary = schur_kprime_rows_summary(
+        getattr(args, "schur_kprime_rows_data", {}),
+        getattr(args, "schur_kprime_rows", None),
+    )
     wz_smoke_enabled = wz_mass_response_smoke_enabled(args)
     evidence_scope = {
         "production": "user-requested production targets",
@@ -3250,26 +3314,7 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                     "dE/dh and not a retained/proposed-retained y_t readout."
                 ),
             },
-            "schur_kprime_kernel_rows": {
-                "enabled": False,
-                "implementation_status": "absent_guarded",
-                "required_measurement_objects": [
-                    "neutral scalar kernel partition K=[[A,B^T],[B,C]] on the same Cl3/Z3 surface",
-                    "A(pole) and A_prime(pole) for the source-pole coordinate",
-                    "B(pole) and B_prime(pole) for source-orthogonal neutral mixing",
-                    "C(pole), C_prime(pole), and C_inverse(pole) for the orthogonal neutral block",
-                    "pole isolation, finite-volume, finite-spacing, model-class, and identity certificates",
-                ],
-                "finite_source_only_c_ss_is_not_schur_rows": True,
-                "used_as_physical_yukawa_readout": False,
-                "strict_limit": (
-                    "Same-source C_ss(q) rows and finite source-response slopes "
-                    "must not be treated as Schur A/B/C kernel rows or as a "
-                    "K-prime closure certificate.  The Schur sufficiency theorem "
-                    "requires explicit same-surface kernel partition rows and "
-                    "pole derivatives."
-                ),
-            },
+            "schur_kprime_kernel_rows": schur_kprime_summary,
             "fh_lsz_measurement_policy": fh_lsz_policy,
             "source_higgs_cross_correlator": {
                 "enabled": source_higgs_enabled,
@@ -3424,6 +3469,11 @@ def build_certificate(args: argparse.Namespace, ensembles: list[dict[str, Any]])
                 "source_higgs_operator_certificate": (
                     str(args.source_higgs_operator_certificate)
                     if getattr(args, "source_higgs_operator_certificate", None) is not None
+                    else None
+                ),
+                "schur_kprime_rows": (
+                    str(args.schur_kprime_rows)
+                    if getattr(args, "schur_kprime_rows", None) is not None
                     else None
                 ),
                 "wz_mass_response_smoke": bool(getattr(args, "wz_mass_response_smoke", False)),
@@ -3741,6 +3791,16 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--schur-kprime-rows",
+        type=Path,
+        default=None,
+        help=(
+            "Optional JSON sidecar carrying yt_pr230_kprime_pole_row_v1 Schur/K-prime "
+            "pole rows to attach to the chunk certificate. The combiner enforces "
+            "the schema; the production harness only emits the rows as provenance."
+        ),
+    )
+    parser.add_argument(
         "--wz-source-shifts",
         default="",
         help=(
@@ -3879,6 +3939,7 @@ def main() -> int:
     args.source_higgs_operator_certificate_data = load_source_higgs_operator_certificate(
         args.source_higgs_operator_certificate
     )
+    args.schur_kprime_rows_data = load_schur_kprime_rows(args.schur_kprime_rows)
     if (args.source_higgs_cross_modes_parsed or args.source_higgs_cross_noises > 0) and not args.source_higgs_operator_certificate_data:
         print(
             "source_higgs_cross_correlator=disabled; "
@@ -3891,6 +3952,11 @@ def main() -> int:
         print(
             "source_higgs_time_kernel=disabled; "
             "--source-higgs-operator-certificate is required for C_sH(t)/C_HH(t) rows"
+        )
+    if args.schur_kprime_rows_data:
+        print(
+            "schur_kprime_rows=attached; "
+            "combiner must validate yt_pr230_kprime_pole_row_v1 before evidence use"
         )
     rng = np.random.default_rng(args.seed)
 
@@ -3951,9 +4017,13 @@ def main() -> int:
             print(f"  resume L={spatial_l}: loaded {artifact_path}")
         else:
             ensemble = run_volume(args, spatial_l, time_l, masses, rng)
+            if args.schur_kprime_rows_data:
+                ensemble["schur_kprime_pole_rows"] = normalize_schur_kprime_rows(args.schur_kprime_rows_data)
             if args.production_targets or args.pilot_targets:
                 written = write_volume_artifact(args.production_output_dir, ensemble)
                 print(f"  wrote volume artifact: {written}")
+        if args.resume and args.schur_kprime_rows_data:
+            ensemble["schur_kprime_pole_rows"] = normalize_schur_kprime_rows(args.schur_kprime_rows_data)
         ensembles.append(ensemble)
 
     certificate = build_certificate(args, ensembles)

@@ -863,6 +863,18 @@ def main() -> int:
         "pr230_block64_finite_moment_atom_residue_obstruction": load(
             "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json"
         ),
+        "pr230_block69_strict_kprime_pole_residue_certificate": load(
+            "outputs/yt_pr230_strict_kprime_pole_residue_certificate_2026-05-12.json"
+        ),
+        "pr230_block70_schur_feshbach_kprime_residue_theorem": load(
+            "outputs/yt_pr230_block70_schur_feshbach_kprime_residue_theorem_2026-05-12.json"
+        ),
+        "yt_source_higgs_pole_row_assembly": load(
+            "outputs/yt_source_higgs_pole_row_assembly_2026-05-12.json"
+        ),
+        "yt_canonical_oh_action_lsz_closure": load(
+            "outputs/yt_canonical_oh_action_lsz_closure_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -5079,6 +5091,47 @@ def main() -> int:
         )
         is False,
         statuses["pr230_block64_finite_moment_atom_residue_obstruction"],
+    )
+    block69_strict_kprime_certificate = certificates[
+        "pr230_block69_strict_kprime_pole_residue_certificate"
+    ]
+    report(
+        "pr230-block69-strict-kprime-certificate-builder-missing-rows",
+        "strict K-prime pole-residue certificate rows missing"
+        in str(statuses["pr230_block69_strict_kprime_pole_residue_certificate"])
+        and block69_strict_kprime_certificate.get("status") == "missing_rows"
+        and block69_strict_kprime_certificate.get("proposal_allowed") is False,
+        statuses["pr230_block69_strict_kprime_pole_residue_certificate"],
+    )
+    block70_schur_feshbach = certificates[
+        "pr230_block70_schur_feshbach_kprime_residue_theorem"
+    ]
+    report(
+        "pr230-block70-schur-feshbach-residue-theorem-exact-support",
+        "Block70 Schur-Feshbach K-prime residue theorem"
+        in str(statuses["pr230_block70_schur_feshbach_kprime_residue_theorem"])
+        and block70_schur_feshbach.get("proposal_allowed") is False
+        and block70_schur_feshbach.get("fail_count") == 0,
+        statuses["pr230_block70_schur_feshbach_kprime_residue_theorem"],
+    )
+    source_higgs_pole_assembly = certificates["yt_source_higgs_pole_row_assembly"]
+    report(
+        "yt-source-higgs-pole-row-assembly-blocked-by-missing-rows",
+        source_higgs_pole_assembly.get("strict_c_ss_c_sh_c_hh_rows_exist") is False
+        and source_higgs_pole_assembly.get("blocked_by_canonical_o_h_authority")
+        is True
+        and source_higgs_pole_assembly.get("blocked_by_missing_production_pole_rows")
+        is True
+        and source_higgs_pole_assembly.get("proposal_allowed") is False,
+        statuses["yt_source_higgs_pole_row_assembly"],
+    )
+    canonical_oh_action_lsz = certificates["yt_canonical_oh_action_lsz_closure"]
+    report(
+        "yt-canonical-oh-action-lsz-closure-attempt-blocked",
+        canonical_oh_action_lsz.get("same_surface_cl3_z3_derived") is False
+        and canonical_oh_action_lsz.get("accepted_current_surface") is False
+        and canonical_oh_action_lsz.get("proposal_allowed") is False,
+        statuses["yt_canonical_oh_action_lsz_closure"],
     )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"

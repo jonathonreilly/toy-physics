@@ -1,0 +1,262 @@
+{
+  "FV_IR_contact_term_checks": {
+    "contact_terms_subtracted_or_bounded": false,
+    "finite_volume_passed": false,
+    "ir_zero_mode_order_passed": false,
+    "model_class_or_analytic_continuation_passed": false,
+    "passed": false,
+    "raw": {}
+  },
+  "actual_current_surface_status": "open / strict K-prime pole-residue certificate rows missing",
+  "artifact": "yt_pr230_block69_strict_kprime_pole_residue_certificate_builder",
+  "bare_retained_allowed": false,
+  "candidate_present": false,
+  "derivative_row_l_Kprime_r_or_exact_equivalent": {
+    "provided_derivative_row": {},
+    "schur_attempt": {
+      "form": null,
+      "missing_one_orthogonal_mode_v1": [
+        "A_at_pole",
+        "B_at_pole",
+        "C_at_pole",
+        "A_prime_at_pole",
+        "B_prime_at_pole",
+        "C_prime_at_pole"
+      ],
+      "missing_precontracted_matrix_v1": [
+        "A_at_pole",
+        "B_Cinv_B_at_pole",
+        "A_prime_at_pole",
+        "two_Bprime_Cinv_B_at_pole",
+        "B_Cinv_Cprime_Cinv_B_at_pole"
+      ],
+      "reason": "missing Schur scalar or precontracted row intervals",
+      "valid": false
+    },
+    "valid": false
+  },
+  "diagnostic_finite_shell_pole_not_used_as_strict_input": {
+    "available": true,
+    "fit_kind": "diagnostic_weighted_linear_Gamma_vs_p_hat_sq",
+    "input_row_count": 8,
+    "pole_p_hat_sq": 12.237880647217002,
+    "reason_not_strict": "finite-shell diagnostic rows are not Schur/Feshbach K-prime residue rows",
+    "used_as_strict_input": false,
+    "window_p_hat_sq": [
+      0.0,
+      1.9999999999999996
+    ]
+  },
+  "exact_next_action": "Emit one accepted strict row artifact containing the pole coordinate, pole-fit window, source projection numerator, Schur/Feshbach rows or signed transfer-kernel derivative row, FV/IR/contact checks, and explicit forbidden-import firewall false fields; then rerun this builder.",
+  "fail_count": 0,
+  "forbidden_import_firewall": {
+    "missing_explicit_false_fields": [
+      "used_H_unit",
+      "used_yt_ward_identity",
+      "used_y_t_bare",
+      "used_alpha_LM",
+      "used_plaquette_u0",
+      "used_observed_target_selectors",
+      "used_alias_imports"
+    ],
+    "normalized": {
+      "used_H_unit": null,
+      "used_alias_imports": null,
+      "used_alpha_LM": null,
+      "used_observed_target_selectors": null,
+      "used_plaquette_u0": null,
+      "used_y_t_bare": null,
+      "used_yt_ward_identity": null
+    },
+    "passed": false,
+    "raw": {},
+    "violations": []
+  },
+  "missing_required_rows": [
+    "Schur/Feshbach A/B/C rows or exact derivative row",
+    "forbidden_import_firewall.used_H_unit",
+    "forbidden_import_firewall.used_alias_imports",
+    "forbidden_import_firewall.used_alpha_LM",
+    "forbidden_import_firewall.used_observed_target_selectors",
+    "forbidden_import_firewall.used_plaquette_u0",
+    "forbidden_import_firewall.used_y_t_bare",
+    "forbidden_import_firewall.used_yt_ward_identity",
+    "fv_ir_contact_checks.contact_terms_subtracted_or_bounded",
+    "fv_ir_contact_checks.finite_volume_passed",
+    "fv_ir_contact_checks.ir_zero_mode_order_passed",
+    "fv_ir_contact_checks.model_class_or_analytic_continuation_passed",
+    "one_orthogonal_mode_v1.A_at_pole",
+    "one_orthogonal_mode_v1.A_prime_at_pole",
+    "one_orthogonal_mode_v1.B_at_pole",
+    "one_orthogonal_mode_v1.B_prime_at_pole",
+    "one_orthogonal_mode_v1.C_at_pole",
+    "one_orthogonal_mode_v1.C_prime_at_pole",
+    "partition.isolated_scalar_pole_passed",
+    "partition.orthogonal_neutral_block_certified",
+    "partition.phase_supported",
+    "partition.same_surface_cl3_z3",
+    "partition.same_surface_neutral_scalar_kernel_partition_passed",
+    "partition.source_coordinate_named",
+    "partition.source_orthogonal_covariance_included",
+    "partition.source_pole_coordinate_certified",
+    "pole_coordinate interval/value",
+    "pole_fit_window provenance",
+    "precontracted_matrix_v1.A_at_pole",
+    "precontracted_matrix_v1.A_prime_at_pole",
+    "precontracted_matrix_v1.B_Cinv_B_at_pole",
+    "precontracted_matrix_v1.B_Cinv_Cprime_Cinv_B_at_pole",
+    "precontracted_matrix_v1.two_Bprime_Cinv_B_at_pole",
+    "source row/projection numerator container",
+    "source_projection_numerator_at_pole interval",
+    "strict row artifact absent"
+  ],
+  "parent_certificates": {
+    "fh_lsz_polefit8x8_postprocessor": "outputs/yt_fh_lsz_polefit8x8_postprocessor_2026-05-04.json",
+    "full_positive_assembly_gate": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "schur_kernel_row_contract_gate": "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+    "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "schur_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_row_candidate_extraction": "outputs/yt_schur_row_candidate_extraction_attempt_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "fh_lsz_polefit8x8_postprocessor": "bounded-support / FH-LSZ eight-mode-x8 finite-shell pole diagnostic",
+    "full_positive_assembly_gate": "open / full positive PR230 closure assembly gate not passed",
+    "schur_kernel_row_contract_gate": "open / Schur kernel row contract gate not passed; current rows absent",
+    "schur_kprime_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "schur_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "schur_row_candidate_extraction": "exact negative boundary / Schur row candidate extraction from finite ladder support"
+  },
+  "pass_count": 3,
+  "pole_coordinate": {
+    "interval": null,
+    "source": "pole_control",
+    "value": null,
+    "variable": "x"
+  },
+  "pole_fit_window": {},
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This Block69 artifact certifies only the strict K-prime pole-residue leg.  The parent PR230 retained-route/assembly gate remains authoritative for any proposed_retained wording.",
+  "required_emissions_contract": {
+    "artifact_paths_accepted_by_builder": [
+      "outputs/yt_pr230_block69_strict_kprime_pole_residue_rows_2026-05-12.json",
+      "outputs/yt_pr230_strict_kprime_pole_residue_rows_2026-05-12.json",
+      "outputs/yt_schur_kprime_pole_residue_rows_2026-05-12.json",
+      "outputs/yt_pr230_schur_scalar_kernel_rows_2026-05-12.json",
+      "outputs/yt_schur_scalar_kernel_rows_2026-05-03.json"
+    ],
+    "forbidden_import_firewall": [
+      "used_H_unit=false",
+      "used_yt_ward_identity=false",
+      "used_y_t_bare=false",
+      "used_alpha_LM=false",
+      "used_plaquette_u0=false",
+      "used_observed_target_selectors=false",
+      "used_alias_imports=false"
+    ],
+    "fv_ir_contact_term_checks": [
+      "finite_volume_passed=true",
+      "ir_zero_mode_order_passed=true",
+      "contact_terms_subtracted_or_bounded=true",
+      "model_class_or_analytic_continuation_passed=true"
+    ],
+    "pole_coordinate_and_fit_window": {
+      "pole_coordinate": {
+        "value or interval": "finite pole coordinate with source path/provenance",
+        "variable": "x or p_hat_sq"
+      },
+      "pole_fit_window": {
+        "fit_kind": "pole model or theorem row type",
+        "fit_provenance": "chunk/combiner/theorem emission id",
+        "window_points or x_min/x_max": "the certified pole-fit/analytic-continuation window"
+      }
+    },
+    "schur_or_feshbach_rows": {
+      "one_orthogonal_mode_v1": [
+        "A_at_pole interval",
+        "B_at_pole interval",
+        "C_at_pole interval excluding zero",
+        "A_prime_at_pole interval",
+        "B_prime_at_pole interval",
+        "C_prime_at_pole interval"
+      ],
+      "precontracted_matrix_v1": [
+        "A_at_pole interval",
+        "B_Cinv_B_at_pole interval",
+        "A_prime_at_pole interval",
+        "two_Bprime_Cinv_B_at_pole interval",
+        "B_Cinv_Cprime_Cinv_B_at_pole interval"
+      ],
+      "transfer_kernel_bilinear_v1": [
+        "<l,K'(pole)r> interval",
+        "explicit denominator_derivative_sign_convention",
+        "left/right eigenvector normalization certificate"
+      ]
+    },
+    "source_projection_numerator": {
+      "source_projection": {
+        "left_right_projection_rows": "or equivalent source-to-pole numerator rows",
+        "normalization_certificate": "same-source normalization, not kappa_s=1 by fiat",
+        "source_projection_numerator_interval": "[lo, hi] with lo > 0 for strict positivity"
+      }
+    },
+    "top_level_required": {
+      "phase": "production or theorem",
+      "same_surface_cl3_z3": true,
+      "source_coordinate": "same scalar source coordinate used by PR230 FH/LSZ response"
+    }
+  },
+  "residue_interval": {
+    "computed": false,
+    "reason": "missing numerator interval or denominator derivative interval",
+    "residue_interval": null
+  },
+  "row_inputs_checked": [
+    "outputs/yt_pr230_block69_strict_kprime_pole_residue_rows_2026-05-12.json",
+    "outputs/yt_pr230_strict_kprime_pole_residue_rows_2026-05-12.json",
+    "outputs/yt_schur_kprime_pole_residue_rows_2026-05-12.json",
+    "outputs/yt_pr230_schur_scalar_kernel_rows_2026-05-12.json",
+    "outputs/yt_schur_scalar_kernel_rows_2026-05-03.json"
+  ],
+  "schur_feshbach_or_transfer_kernel_rows": {
+    "derivative_certificate": {
+      "provided_derivative_row": {},
+      "schur_attempt": {
+        "form": null,
+        "missing_one_orthogonal_mode_v1": [
+          "A_at_pole",
+          "B_at_pole",
+          "C_at_pole",
+          "A_prime_at_pole",
+          "B_prime_at_pole",
+          "C_prime_at_pole"
+        ],
+        "missing_precontracted_matrix_v1": [
+          "A_at_pole",
+          "B_Cinv_B_at_pole",
+          "A_prime_at_pole",
+          "two_Bprime_Cinv_B_at_pole",
+          "B_Cinv_Cprime_Cinv_B_at_pole"
+        ],
+        "reason": "missing Schur scalar or precontracted row intervals",
+        "valid": false
+      },
+      "valid": false
+    },
+    "selected_rows": {}
+  },
+  "selected_row_input": null,
+  "source_row_projection_numerator": {
+    "numerator_interval": null,
+    "row": {}
+  },
+  "status": "missing_rows",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer K'(pole) from finite-shell C_ss rows or source-only slopes",
+    "does not use H_unit, yt_ward_identity, y_t_bare, alpha_LM, plaquette/u0, observed target selectors, or alias imports",
+    "does not set kappa_s=1, D_eff'(pole)=1, c2=1, Z_match=1, or cos(theta)=1",
+    "does not modify Planck, alpha_s, CLAIMS_TABLE, or manuscript surfaces"
+  ],
+  "strict_pass": false,
+  "verdict": "No complete strict K-prime pole-residue row artifact is present. The builder did not infer missing rows from finite-shell C_ss data or from the support-only Schur sufficiency theorem; it wrote the exact emissions contract needed for chunk/combiner/theorem code."
+}

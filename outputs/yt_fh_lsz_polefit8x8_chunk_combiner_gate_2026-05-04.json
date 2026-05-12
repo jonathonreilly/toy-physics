@@ -113,8 +113,207 @@
   "fail_count": 0,
   "first_blocking_issues": [],
   "first_missing_outputs": [],
+  "kprime_fixture_validation": {
+    "fixture_path": "fixtures/yt_pr230_kprime_pole_row_fixture.json",
+    "present": true,
+    "row_count": 1,
+    "row_validations": [
+      {
+        "checks": {
+          "chunk_index_recorded": true,
+          "denominator_interval_contains_value": true,
+          "denominator_interval_contains_zero": true,
+          "forbidden_set_c2_equal_one_false": true,
+          "forbidden_set_cos_theta_equal_one_false": true,
+          "forbidden_set_kappa_s_equal_one_false": true,
+          "forbidden_set_z_match_equal_one_false": true,
+          "forbidden_used_alias_imports_false": true,
+          "forbidden_used_alpha_lm_or_plaquette_u0_false": true,
+          "forbidden_used_hunit_matrix_element_readout_false": true,
+          "forbidden_used_observed_target_selectors_false": true,
+          "forbidden_used_reduced_cold_pilots_as_production_evidence_false": true,
+          "forbidden_used_y_t_bare_false": true,
+          "forbidden_used_yt_ward_identity_false": true,
+          "has_derivative_wrt_pole_coordinate": true,
+          "has_eigen_projection": true,
+          "has_error_interval": true,
+          "has_provenance": true,
+          "has_source_numerator_projection": true,
+          "has_transfer_schur_kernel_at_pole": true,
+          "kernel_prime_matrix_present": true,
+          "kprime_interval_contains_value": true,
+          "kprime_interval_excludes_zero": true,
+          "left_right_vectors_present": true,
+          "left_source_projection_matches": true,
+          "phase_allowed": true,
+          "production_output_dir_recorded": true,
+          "projected_kprime_matches_eigenprojection": true,
+          "projected_kprime_matches_schur_derivative": true,
+          "projection_normalization_nonzero": true,
+          "recorded_denominator_matches_schur": true,
+          "recorded_derivative_matches_schur": true,
+          "right_source_projection_matches": true,
+          "row_builder_recorded": true,
+          "same_surface_cl3_z3": true,
+          "schema_version": true,
+          "source_coordinate_named": true,
+          "source_numerator_interval_contains_value": true,
+          "source_numerator_interval_excludes_zero": true,
+          "source_numerator_matches_projection": true,
+          "source_vector_present": true,
+          "valid_schur_numeric_form": true
+        },
+        "computed": {
+          "effective_denominator_interval": [
+            -1e-12,
+            1e-12
+          ],
+          "left_source_projection": 1.0,
+          "projected_kprime_at_pole": 0.3453975308641975,
+          "projected_kprime_interval": [
+            0.344,
+            0.347
+          ],
+          "right_source_projection": 1.0,
+          "schur": {
+            "effective_denominator_at_pole": 0.0,
+            "effective_denominator_prime_at_pole": 0.3453975308641975,
+            "schur_form": "one_orthogonal_mode_v1",
+            "valid_numeric_form": true
+          },
+          "source_numerator_at_pole": 1.0,
+          "source_numerator_interval": [
+            0.999,
+            1.001
+          ]
+        },
+        "reasons": [],
+        "row_id": "fixture_one_orthogonal_mode_kprime_row",
+        "schema_version": "yt_pr230_kprime_pole_row_v1",
+        "valid": true
+      }
+    ],
+    "valid": true
+  },
+  "kprime_pole_row_certificate": {
+    "available": false,
+    "complete_l12_kprime_rows": false,
+    "conservative_intervals": {
+      "effective_denominator_at_pole_hull": null,
+      "projected_kprime_at_pole_hull": null,
+      "source_numerator_at_pole_hull": null
+    },
+    "invalid_row_count": 0,
+    "invalid_rows": [],
+    "present_row_count": 0,
+    "schema_version": "yt_pr230_kprime_pole_row_v1",
+    "strict_certificate_passed": false,
+    "strict_certificate_status": "not passed; absent, partial, invalid, or non-excluding K-prime/source intervals",
+    "strict_limit": "A passed K-prime row certificate supplies source-pole denominator and projection data only. It still does not identify O_sp with the canonical Higgs mode or authorize retained/proposed-retained top-Yukawa closure by itself.",
+    "valid_chunks": [],
+    "valid_row_count": 0
+  },
+  "kprime_pole_row_schema": {
+    "derivative_wrt_pole_coordinate": {
+      "coordinate": "pole coordinate, e.g. p_hat_sq or x",
+      "must_compute": "effective_denominator_prime_at_pole",
+      "one_orthogonal_mode_v1": [
+        "A_prime_at_pole",
+        "B_prime_at_pole",
+        "C_prime_at_pole"
+      ],
+      "precontracted_matrix_v1": [
+        "A_prime_at_pole",
+        "two_Bprime_Cinv_B_at_pole",
+        "B_Cinv_Cprime_Cinv_B_at_pole"
+      ],
+      "projection_sign_convention": "D_eff_prime"
+    },
+    "eigen_projection": {
+      "computed_check": "<l,K_prime(pole)r>/<l,r>",
+      "required": [
+        "left_eigenvector",
+        "right_eigenvector",
+        "kernel_prime_matrix_at_pole",
+        "projected_kprime_at_pole",
+        "vector_normalization"
+      ]
+    },
+    "error_interval": {
+      "required": [
+        "effective_denominator_at_pole",
+        "projected_kprime_at_pole",
+        "source_numerator_at_pole"
+      ],
+      "strict_certificate_requires": [
+        "effective_denominator_at_pole interval contains zero",
+        "projected_kprime_at_pole interval excludes zero",
+        "source_numerator_at_pole interval excludes zero"
+      ]
+    },
+    "provenance": {
+      "forbidden_import_firewall_false": [
+        "used_hunit_matrix_element_readout",
+        "used_yt_ward_identity",
+        "used_y_t_bare",
+        "used_alpha_lm_or_plaquette_u0",
+        "used_observed_target_selectors",
+        "used_alias_imports",
+        "used_reduced_cold_pilots_as_production_evidence",
+        "set_c2_equal_one",
+        "set_z_match_equal_one",
+        "set_kappa_s_equal_one",
+        "set_cos_theta_equal_one"
+      ],
+      "required": [
+        "phase",
+        "same_surface_cl3_z3",
+        "source_coordinate",
+        "chunk_index",
+        "production_output_dir",
+        "row_builder",
+        "forbidden_import_firewall"
+      ]
+    },
+    "required_sections_per_row": [
+      "transfer_schur_kernel_at_pole",
+      "derivative_wrt_pole_coordinate",
+      "eigen_projection",
+      "source_numerator_projection",
+      "error_interval",
+      "provenance"
+    ],
+    "row_container_locations": [
+      "ensemble.schur_kprime_pole_rows[]",
+      "metadata.schur_kprime_kernel_rows.rows[]",
+      "top-level kprime_pole_rows[]"
+    ],
+    "schema_version": "yt_pr230_kprime_pole_row_v1",
+    "source_numerator_projection": {
+      "computed_check": "<l,s><s,r>/<l,r>",
+      "required": [
+        "source_vector",
+        "left_source_projection",
+        "right_source_projection",
+        "source_numerator_at_pole"
+      ]
+    },
+    "transfer_schur_kernel_at_pole": {
+      "must_compute": "effective_denominator_at_pole",
+      "one_orthogonal_mode_v1": [
+        "A_at_pole",
+        "B_at_pole",
+        "C_at_pole"
+      ],
+      "precontracted_matrix_v1": [
+        "A_at_pole",
+        "B_Cinv_B_at_pole"
+      ],
+      "schur_form": "one_orthogonal_mode_v1 or precontracted_matrix_v1"
+    }
+  },
   "manifest": "outputs/yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json",
-  "pass_count": 6,
+  "pass_count": 8,
   "proposal_allowed": false,
   "proposal_allowed_reason": "L12 polefit8x8 rows do not close FV/IR, model-class, or canonical-Higgs/source-overlap gates.",
   "strict_non_claims": [

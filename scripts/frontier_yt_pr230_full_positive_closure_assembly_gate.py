@@ -37,6 +37,10 @@ PARENTS = {
     "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
     "block63_lane1_completion_audit": "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json",
     "block64_finite_moment_atom_residue_obstruction": "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json",
+    "block69_strict_kprime_pole_residue_certificate": "outputs/yt_pr230_strict_kprime_pole_residue_certificate_2026-05-12.json",
+    "block70_schur_feshbach_kprime_residue_theorem": "outputs/yt_pr230_block70_schur_feshbach_kprime_residue_theorem_2026-05-12.json",
+    "source_higgs_pole_row_assembly": "outputs/yt_source_higgs_pole_row_assembly_2026-05-12.json",
+    "canonical_oh_action_lsz_closure": "outputs/yt_canonical_oh_action_lsz_closure_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -325,6 +329,7 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
                 "current primitives do not derive same-surface O_H identity and normalization",
                 "production C_sH/C_HH pole residues absent",
+                "source-Higgs pole-row assembly finds zero strict C_ss/C_sH/C_HH pole-row candidates on the current surface",
                 "Gram-purity postprocessor awaiting production certificate",
                 "perfect Gram purity against an unratified supplied operator is not O_H authority",
                 "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes",
@@ -339,6 +344,8 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["canonical_higgs_semantic_firewall"],
                 PARENTS["cross_lane_oh_authority_audit"],
                 PARENTS["canonical_oh_premise_stretch"],
+                PARENTS["canonical_oh_action_lsz_closure"],
+                PARENTS["source_higgs_pole_row_assembly"],
                 PARENTS["pr230_taste_condensate_oh_bridge_audit"],
                 PARENTS["pr230_origin_main_composite_higgs_intake_guard"],
             ],
@@ -415,6 +422,8 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 "outside-math row-definition machinery still lacks a same-surface neutral kernel basis and projector",
                 "finite inverse A/B/C rows from C_ss/C_sx/C_xx are bounded support, not strict pole rows",
                 "finite endpoint inverse rows do not determine K'(pole) without a model class and FV/IR authority",
+                "Block69 strict K-prime certificate builder reports missing strict rows on the current surface",
+                "Block70 supplies the residue theorem, but physical row data are still required",
                 "canonical bridge still required after K-prime sufficiency",
             ],
             "parents": [
@@ -425,6 +434,8 @@ def route_statuses(certs: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]
                 PARENTS["pr230_two_source_taste_radial_schur_abc_finite_rows"],
                 PARENTS["pr230_two_source_taste_radial_schur_pole_lift_gate"],
                 PARENTS["pr230_schur_route_completion"],
+                PARENTS["block69_strict_kprime_pole_residue_certificate"],
+                PARENTS["block70_schur_feshbach_kprime_residue_theorem"],
             ],
         },
         "neutral_scalar_rank_one": {
@@ -2922,6 +2933,64 @@ def main() -> int:
         block64_finite_moment_atom_residue_blocks,
         statuses["block64_finite_moment_atom_residue_obstruction"],
     )
+    report(
+        "block69-strict-kprime-certificate-builder-missing-rows",
+        "strict K-prime pole-residue certificate rows missing"
+        in statuses["block69_strict_kprime_pole_residue_certificate"]
+        and certs["block69_strict_kprime_pole_residue_certificate"].get("status")
+        == "missing_rows"
+        and certs["block69_strict_kprime_pole_residue_certificate"].get(
+            "proposal_allowed"
+        )
+        is False,
+        statuses["block69_strict_kprime_pole_residue_certificate"],
+    )
+    report(
+        "block70-schur-feshbach-residue-theorem-exact-support",
+        "Block70 Schur-Feshbach K-prime residue theorem"
+        in statuses["block70_schur_feshbach_kprime_residue_theorem"]
+        and certs["block70_schur_feshbach_kprime_residue_theorem"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block70_schur_feshbach_kprime_residue_theorem"].get(
+            "fail_count"
+        )
+        == 0,
+        statuses["block70_schur_feshbach_kprime_residue_theorem"],
+    )
+    report(
+        "source-higgs-pole-row-assembly-blocked-by-missing-rows",
+        certs["source_higgs_pole_row_assembly"].get(
+            "strict_c_ss_c_sh_c_hh_rows_exist"
+        )
+        is False
+        and certs["source_higgs_pole_row_assembly"].get(
+            "blocked_by_canonical_o_h_authority"
+        )
+        is True
+        and certs["source_higgs_pole_row_assembly"].get(
+            "blocked_by_missing_production_pole_rows"
+        )
+        is True
+        and certs["source_higgs_pole_row_assembly"].get("proposal_allowed")
+        is False,
+        statuses["source_higgs_pole_row_assembly"],
+    )
+    report(
+        "canonical-oh-action-lsz-closure-attempt-blocked",
+        certs["canonical_oh_action_lsz_closure"].get(
+            "same_surface_cl3_z3_derived"
+        )
+        is False
+        and certs["canonical_oh_action_lsz_closure"].get(
+            "accepted_current_surface"
+        )
+        is False
+        and certs["canonical_oh_action_lsz_closure"].get("proposal_allowed")
+        is False,
+        statuses["canonical_oh_action_lsz_closure"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4356,6 +4425,23 @@ def main() -> int:
         "two_source_taste_radial_kprime_finite_shell_scout_not_closure": two_source_taste_radial_kprime_scout_not_closure,
         "two_source_taste_radial_schur_abc_finite_rows_not_closure": two_source_taste_radial_schur_abc_finite_rows_not_closure,
         "two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion": two_source_taste_radial_schur_pole_lift_gate_blocks_endpoint_promotion,
+        "block69_strict_kprime_certificate_status": certs[
+            "block69_strict_kprime_pole_residue_certificate"
+        ].get("status"),
+        "block70_schur_feshbach_theorem_exact_support": (
+            "Block70 Schur-Feshbach K-prime residue theorem"
+            in statuses["block70_schur_feshbach_kprime_residue_theorem"]
+            and certs["block70_schur_feshbach_kprime_residue_theorem"].get(
+                "fail_count"
+            )
+            == 0
+        ),
+        "source_higgs_pole_row_assembly_strict_rows_exist": certs[
+            "source_higgs_pole_row_assembly"
+        ].get("strict_c_ss_c_sh_c_hh_rows_exist"),
+        "canonical_oh_action_lsz_closure_accepted_current_surface": certs[
+            "canonical_oh_action_lsz_closure"
+        ].get("accepted_current_surface"),
         "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
         "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
         "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,
@@ -4513,6 +4599,10 @@ def main() -> int:
             "does not treat the Block60 source-channel carrier as K-prime or pole-residue authority after Block61",
             "does not treat compact source support plus fixed source carrier as K-prime or pole-residue authority after Block62",
             "does not treat finite source/Stieltjes moment prefixes as pole atom mass or scalar LSZ residue authority after Block64",
+            "does not treat the Block69 K-prime certificate builder as a populated strict certificate while it reports missing_rows",
+            "does not treat the Block70 Schur/Feshbach residue theorem as physical row data",
+            "does not treat source-Higgs pole-row assembly contracts as evidence that strict C_ss/C_sH/C_HH rows exist",
+            "does not treat the canonical O_H action/LSZ closure attempt as O_H authority while same_surface_cl3_z3_derived and accepted_current_surface are false",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "

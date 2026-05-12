@@ -20,6 +20,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MODE_BUDGET = ROOT / "outputs" / "yt_fh_lsz_pole_fit_mode_budget_2026-05-01.json"
 PAIRED_VARIANCE = ROOT / "outputs" / "yt_fh_lsz_paired_variance_calibration_gate_2026-05-04.json"
 OUTPUT = ROOT / "outputs" / "yt_fh_lsz_polefit8x8_chunk_manifest_2026-05-04.json"
+KPRIME_SCHEMA_VERSION = "yt_pr230_kprime_pole_row_v1"
+KPRIME_FIXTURE = ROOT / "fixtures" / "yt_pr230_kprime_pole_row_fixture.json"
 
 MASS_SPEC = "0.75"
 SOURCE_SHIFTS = "-0.01,0.0,0.01"
@@ -39,6 +41,19 @@ SEPARATION = 20
 CHUNK_COUNT = 63
 TARGET_MEASUREMENTS = 1000
 SEED_BASE = 2026051900
+KPRIME_FORBIDDEN_FALSE_FIELDS = [
+    "used_hunit_matrix_element_readout",
+    "used_yt_ward_identity",
+    "used_y_t_bare",
+    "used_alpha_lm_or_plaquette_u0",
+    "used_observed_target_selectors",
+    "used_alias_imports",
+    "used_reduced_cold_pilots_as_production_evidence",
+    "set_c2_equal_one",
+    "set_z_match_equal_one",
+    "set_kappa_s_equal_one",
+    "set_cos_theta_equal_one",
+]
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -75,6 +90,87 @@ def mode_string(modes: list[tuple[int, int, int]]) -> str:
 
 def p_hat_sq(mode: tuple[int, int, int], spatial_l: int = 12) -> float:
     return sum((2.0 * math.sin(math.pi * n / spatial_l)) ** 2 for n in mode)
+
+
+def kprime_emission_schema() -> dict[str, Any]:
+    return {
+        "schema_version": KPRIME_SCHEMA_VERSION,
+        "chunk_worker_flag": "--schur-kprime-rows",
+        "fixture": rel(KPRIME_FIXTURE),
+        "row_container_locations": [
+            "ensemble.schur_kprime_pole_rows[]",
+            "metadata.schur_kprime_kernel_rows.rows[]",
+            "top-level kprime_pole_rows[]",
+        ],
+        "required_sections_per_row": [
+            "transfer_schur_kernel_at_pole",
+            "derivative_wrt_pole_coordinate",
+            "eigen_projection",
+            "source_numerator_projection",
+            "error_interval",
+            "provenance",
+        ],
+        "transfer_schur_kernel_at_pole": {
+            "schur_form": "one_orthogonal_mode_v1 or precontracted_matrix_v1",
+            "one_orthogonal_mode_v1": ["A_at_pole", "B_at_pole", "C_at_pole"],
+            "precontracted_matrix_v1": ["A_at_pole", "B_Cinv_B_at_pole"],
+            "must_compute": "effective_denominator_at_pole",
+        },
+        "derivative_wrt_pole_coordinate": {
+            "coordinate": "pole coordinate, e.g. p_hat_sq or x",
+            "one_orthogonal_mode_v1": ["A_prime_at_pole", "B_prime_at_pole", "C_prime_at_pole"],
+            "precontracted_matrix_v1": [
+                "A_prime_at_pole",
+                "two_Bprime_Cinv_B_at_pole",
+                "B_Cinv_Cprime_Cinv_B_at_pole",
+            ],
+            "must_compute": "effective_denominator_prime_at_pole",
+            "projection_sign_convention": "D_eff_prime",
+        },
+        "eigen_projection": {
+            "required": [
+                "left_eigenvector",
+                "right_eigenvector",
+                "kernel_prime_matrix_at_pole",
+                "projected_kprime_at_pole",
+                "vector_normalization",
+            ],
+            "computed_check": "<l,K_prime(pole)r>/<l,r>",
+        },
+        "source_numerator_projection": {
+            "required": [
+                "source_vector",
+                "left_source_projection",
+                "right_source_projection",
+                "source_numerator_at_pole",
+            ],
+            "computed_check": "<l,s><s,r>/<l,r>",
+        },
+        "error_interval": {
+            "required": [
+                "effective_denominator_at_pole",
+                "projected_kprime_at_pole",
+                "source_numerator_at_pole",
+            ],
+            "strict_certificate_requires": [
+                "effective_denominator_at_pole interval contains zero",
+                "projected_kprime_at_pole interval excludes zero",
+                "source_numerator_at_pole interval excludes zero",
+            ],
+        },
+        "provenance": {
+            "required": [
+                "phase",
+                "same_surface_cl3_z3",
+                "source_coordinate",
+                "chunk_index",
+                "production_output_dir",
+                "row_builder",
+                "forbidden_import_firewall",
+            ],
+            "forbidden_import_firewall_false": KPRIME_FORBIDDEN_FALSE_FIELDS,
+        },
+    }
 
 
 def command_for_chunk(index: int) -> dict[str, Any]:
@@ -201,10 +297,13 @@ def main() -> int:
             "positive_shell_count": len(positive_shells),
             "zero_plus_three_positive_shells": len(shells) >= 4 and len(positive_shells) >= 3,
         },
+        "kprime_pole_row_emission_contract": kprime_emission_schema(),
         "commands": commands,
         "acceptance_requirements": [
             "completed chunks must be production phase and seed-controlled",
             "completed chunks must expose the same eight scalar-LSZ modes with x8 noise",
+            "closure-bearing K-prime chunks must attach rows matching yt_pr230_kprime_pole_row_v1",
+            "K-prime rows must include Schur pole rows, pole-coordinate derivatives, eigenprojection data, source numerator projection, intervals, and provenance firewalls",
             "do not combine with the four-mode/x16 L12 ensemble",
             "a complete L12 stream remains non-closure without L16/L24, FV/IR, model-class, and source-Higgs identity gates",
         ],

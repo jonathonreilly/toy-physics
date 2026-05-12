@@ -1,0 +1,85 @@
+{
+  "description": "Deterministic PR230 K-prime pole-row fixture for combiner schema validation only.",
+  "rows": [
+    {
+      "derivative_wrt_pole_coordinate": {
+        "A_prime_at_pole": 0.31,
+        "B_prime_at_pole": -0.08,
+        "C_prime_at_pole": 0.22,
+        "coordinate": "p_hat_sq",
+        "effective_denominator_prime_at_pole": 0.3453975308641975,
+        "projection_sign_convention": "D_eff_prime"
+      },
+      "eigen_projection": {
+        "kernel_prime_matrix_at_pole": [
+          [
+            0.3453975308641975
+          ]
+        ],
+        "left_eigenvector": [
+          1.0
+        ],
+        "projected_kprime_at_pole": 0.3453975308641975,
+        "right_eigenvector": [
+          1.0
+        ],
+        "vector_normalization": 1.0
+      },
+      "error_interval": {
+        "effective_denominator_at_pole": [
+          -1e-12,
+          1e-12
+        ],
+        "projected_kprime_at_pole": [
+          0.344,
+          0.347
+        ],
+        "source_numerator_at_pole": [
+          0.999,
+          1.001
+        ]
+      },
+      "provenance": {
+        "chunk_index": 0,
+        "forbidden_import_firewall": {
+          "set_c2_equal_one": false,
+          "set_cos_theta_equal_one": false,
+          "set_kappa_s_equal_one": false,
+          "set_z_match_equal_one": false,
+          "used_alias_imports": false,
+          "used_alpha_lm_or_plaquette_u0": false,
+          "used_hunit_matrix_element_readout": false,
+          "used_observed_target_selectors": false,
+          "used_reduced_cold_pilots_as_production_evidence": false,
+          "used_y_t_bare": false,
+          "used_yt_ward_identity": false
+        },
+        "phase": "fixture",
+        "production_output_dir": "fixtures",
+        "row_builder": "deterministic_fixture",
+        "same_surface_cl3_z3": true,
+        "source_coordinate": "same uniform additive lattice scalar source s"
+      },
+      "row_id": "fixture_one_orthogonal_mode_kprime_row",
+      "schema_version": "yt_pr230_kprime_pole_row_v1",
+      "source_numerator_projection": {
+        "left_source_projection": 1.0,
+        "right_source_projection": 1.0,
+        "source_numerator_at_pole": 1.0,
+        "source_vector": [
+          1.0
+        ]
+      },
+      "transfer_schur_kernel_at_pole": {
+        "A_at_pole": 0.042666666666666665,
+        "B_at_pole": 0.24,
+        "C_at_pole": 1.35,
+        "effective_denominator_at_pole": 0.0,
+        "pole_coordinate": "p_hat_sq",
+        "pole_location": -0.37,
+        "schur_form": "one_orthogonal_mode_v1"
+      }
+    }
+  ],
+  "schema_version": "yt_pr230_kprime_pole_row_v1"
+}

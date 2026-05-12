@@ -1,0 +1,117 @@
+{
+  "blocked_reason": "accepted action/LSZ O_H certificate is absent on the current PR230 surface",
+  "exact_missing_primitive": "A same-surface accepted EW/Higgs action and LSZ pinning theorem that proves the PR230 source-pole direction is the canonical Higgs radial direction, or equivalently supplies the accepted O_H certificate consumed by C_ss/C_sH/C_HH production rows.",
+  "forbidden_shortcuts": [
+    "H_unit",
+    "yt_ward_identity",
+    "y_t_bare",
+    "alpha_LM",
+    "plaquette/u0",
+    "observed target selectors",
+    "static EW algebra as operator identity",
+    "source-only O_sp schema padding",
+    "alias imports"
+  ],
+  "interface_kind": "canonical_oh_action_lsz_source_higgs_input_contract",
+  "measurement_rows_required_after_certificate": {
+    "correlators": [
+      "C_ss",
+      "C_sH",
+      "C_HH"
+    ],
+    "operator_certificate_ref": "the accepted certificate above",
+    "pole_residue_rows": [
+      {
+        "Res_C_HH": "required",
+        "Res_C_sH": "required",
+        "Res_C_ss": "required",
+        "finite_volume_ir_zero_mode_threshold_certificates": "required",
+        "isolated_pole_or_model_class_certificate": "required",
+        "p2_pole_or_mass_lattice": "required with uncertainty",
+        "pole_id": "common isolated scalar pole id",
+        "residue_covariance": "required for strict row use"
+      }
+    ],
+    "production_phase_metadata": true,
+    "same_ensemble": true,
+    "same_source_coordinate": true,
+    "strict_row_compatibility": {
+      "C_HH": "certified O_H self pole residue",
+      "C_sH": "same-ensemble cross pole residue between O_s/O_sp side and certified O_H",
+      "C_ss": "same-source scalar two-point pole residue",
+      "strict_limit": "finite-mode rows alone are not pole residues"
+    }
+  },
+  "operator_certificate_required": {
+    "accepted_action_certificate": "outputs/...json or docs/...md proving the same-surface EW/Higgs action",
+    "action_field_id": "dynamic Higgs doublet/radial mode field id on that action",
+    "action_surface_id": "same_surface_cl3_z3_ew_higgs_action",
+    "canonical_higgs_operator_identity_passed": true,
+    "canonical_higgs_operator_normalization_passed": true,
+    "canonical_normalization": {
+      "field_rescaling": "h_R = Z_H^{-1/2} h_bare after the action certificate fixes Z_H",
+      "kinetic_term_convention": "Euclidean scalar kinetic term normalized as 1/2 (partial h_R)^2 for the radial field",
+      "pole_residue_target": "unit residue for the canonically normalized h_R field; composite O_H residues must be measured and normalized by the certificate",
+      "sign_convention": "O_H sign may be chosen, but only an overall sign is free after the identity certificate",
+      "vev_convention": "<H> = (0, v/sqrt(2)) in the EW normalization, with O_H the radial fluctuation"
+    },
+    "certificate_kind": "canonical_higgs_operator",
+    "diagonal_vertex": {
+      "kind": "site_color_diagonal_values | constant_site_color_diagonal | staggered_parity_site_color_diagonal",
+      "normalization": "must be derived from the action/LSZ certificate, not fitted to a target"
+    },
+    "firewall": {
+      "used_alias_imports": false,
+      "used_alpha_lm_or_plaquette": false,
+      "used_hunit_matrix_element_readout": false,
+      "used_observed_targets_as_selectors": false,
+      "used_y_t_bare": false,
+      "used_yt_ward_identity": false
+    },
+    "forbidden_shortcut_audit_passed": true,
+    "hunit_used_as_operator": false,
+    "identity_certificate": "non-shortcut proof reference",
+    "identity_certificate_kind": "canonical_higgs_identity_theorem",
+    "lsz_residue_convention": {
+      "canonical_higgs_operator": "O_H is accepted only after its action certificate and C_HH pole residue convention are both supplied",
+      "connected_two_point_residue": "Res_C_AB = lim_{x->0} x C_AB(p)",
+      "euclidean_pole_variable": "x = p^2 - p_star^2",
+      "gram_purity_test": "Res(C_sH)^2 = Res(C_ss) Res(C_HH), equivalently Delta=0 and |rho_sH|=1",
+      "source_pole_operator": "O_sp = sqrt(dGamma_ss/dx|pole) O_s, so Res(C_sp,sp)=1"
+    },
+    "normalization_certificate": "non-shortcut proof reference",
+    "normalization_certificate_kind": "canonical_higgs_lsz_normalization",
+    "operator_definition": "action-derived O_H or gauge-invariant radial FMS operator, not a diagonal vertex by fiat",
+    "operator_id": "nonempty stable id for the canonical Higgs radial operator",
+    "same_source_coordinate": true,
+    "same_surface_cl3z3": true,
+    "source_coordinate": "same uniform additive lattice scalar source s entering m_bare + s",
+    "source_overlap_closure_mode": "source_higgs_gram_purity",
+    "static_ew_algebra_used_as_operator": false
+  },
+  "parent_certificates": {
+    "assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_operator_gate": "outputs/yt_canonical_higgs_operator_certificate_gate_2026-05-03.json",
+    "canonical_operator_realization": "outputs/yt_canonical_higgs_operator_realization_gate_2026-05-02.json",
+    "canonical_repo_authority": "outputs/yt_canonical_higgs_repo_authority_audit_2026-05-03.json",
+    "canonical_scalar_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "fms_construction": "outputs/yt_fms_oh_certificate_construction_attempt_2026-05-04.json",
+    "legendre_source_pole": "outputs/yt_legendre_source_pole_operator_construction_2026-05-03.json",
+    "osp_oh_assumption_audit": "outputs/yt_osp_oh_assumption_route_audit_2026-05-04.json",
+    "osp_oh_stretch": "outputs/yt_osp_oh_identity_stretch_attempt_2026-05-03.json",
+    "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+    "same_source_ew_action": "outputs/yt_wz_same_source_ew_action_gate_2026-05-04.json",
+    "sm_one_higgs_boundary": "outputs/yt_sm_one_higgs_oh_import_boundary_2026-05-03.json",
+    "source_higgs_builder": "outputs/yt_source_higgs_cross_correlator_certificate_builder_2026-05-03.json",
+    "source_higgs_contract": "outputs/yt_source_higgs_gram_purity_contract_witness_2026-05-03.json",
+    "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "This interface is a row contract only. It becomes launch-ready only after the accepted action/LSZ O_H certificate exists.",
+  "radial_tangent_gates_available": [
+    "scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py"
+  ],
+  "ready_for_source_higgs_rows": false,
+  "strict_rows_compatible": true
+}

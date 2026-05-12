@@ -1,0 +1,86 @@
+{
+  "candidate_rows_path": "outputs/yt_source_higgs_pole_rows_2026-05-12.json",
+  "canonical_higgs_operator": {
+    "canonical_higgs_operator_identity_passed": true,
+    "hunit_used_as_operator": false,
+    "identity_certificate": "path to same-surface identity certificate",
+    "lsz_normalization_certificate": "path to LSZ/canonical normalization certificate",
+    "operator_authority_scope": "same_surface_canonical_action_lsz",
+    "operator_definition": "same-surface radial/canonical-Higgs operator definition",
+    "operator_id": "nonempty canonical O_H id",
+    "same_surface_canonical_action_certificate": "path to action-surface authority certificate",
+    "static_ew_algebra_used_as_operator": false,
+    "surface_id": "must match top-level surface_id",
+    "surface_matches_measurement": true
+  },
+  "firewall": {
+    "used_alias_imports_as_load_bearing": false,
+    "used_alpha_lm_or_plaquette": false,
+    "used_alpha_lm_or_plaquette_u0": false,
+    "used_hunit_as_operator": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_targets_as_selectors": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_plaquette_u0": false,
+    "used_static_ew_algebra_as_operator": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "gram_purity": {
+    "gram_determinant": "Res_C_ss * Res_C_HH - Res_C_sH^2",
+    "normalized_overlap_rho_sH": "Res_C_sH / sqrt(Res_C_ss * Res_C_HH)",
+    "purity_condition": "Delta = 0 and |rho_sH| = 1 within covariance-aware tolerance",
+    "same_pole_coincidence_is_not_sufficient": true
+  },
+  "metadata": {
+    "artifact": "source_higgs_pole_row_ingestion_contract",
+    "compatible_with": [
+      "outputs/yt_schur_kernel_row_contract_gate_2026-05-03.json",
+      "source-Higgs Gram-purity postprocessor residue_matrix schema"
+    ],
+    "created_utc": "2026-05-12T12:24:14Z",
+    "status": "future strict row schema; current rows absent"
+  },
+  "partition_certificate": {
+    "canonical_higgs_operator_certified": true,
+    "same_surface_source_higgs_pairing_passed": true,
+    "source_higgs_covariance_included": true,
+    "source_numerator_projection_rows_compatible_with_kprime": true,
+    "source_pole_coordinate_certified": true
+  },
+  "pole_control": {
+    "analytic_contact_terms_fit_and_subtracted": true,
+    "contact_term_scheme_certificate_passed": true,
+    "fv_ir_zero_mode_control_passed": true,
+    "isolated_scalar_pole_passed": true,
+    "model_class_or_pole_saturation_certificate_passed": true,
+    "pole_fit_window": "named mode/time window",
+    "pole_location_scheme": "p_hat_sq or equivalent named variable",
+    "pole_location_x": "finite"
+  },
+  "required_top_level": {
+    "claims_physical_yukawa_closure": false,
+    "phase": "production",
+    "same_ensemble": true,
+    "same_source_coordinate": true,
+    "same_surface_cl3_z3": true,
+    "source_coordinate": "same scalar source coordinate used by C_ss and FH/LSZ source response",
+    "source_higgs_form": "pole_residue_matrix_v1",
+    "surface_id": "stable id shared by action, source coordinate, O_H, and row measurements"
+  },
+  "residue_matrix": {
+    "Res_C_HH": "finite canonical-Higgs pole residue",
+    "Res_C_HH_err": "finite or supplied by covariance",
+    "Res_C_sH": "finite source-Higgs cross pole residue",
+    "Res_C_sH_err": "finite or supplied by covariance",
+    "Res_C_ss": "finite source-source pole residue",
+    "Res_C_ss_err": "finite or supplied by covariance",
+    "residue_covariance": "3x3 covariance for [Res_C_ss, Res_C_sH, Res_C_HH]"
+  },
+  "strict_non_claims": [
+    "finite-mode C_ss/C_sH/C_HH rows are not pole residues",
+    "same-pole coincidence without residue Gram purity is not a closure",
+    "O_H is not accepted unless same-surface canonical action/LSZ authority is certified",
+    "H_unit, yt_ward_identity, y_t_bare, alpha_LM, plaquette/u0, observed selectors, and alias imports are non-load-bearing"
+  ]
+}
