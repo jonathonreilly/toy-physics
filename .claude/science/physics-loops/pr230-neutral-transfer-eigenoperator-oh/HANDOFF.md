@@ -1472,3 +1472,50 @@ same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with
 Gram/FV/IR authority; strict W/Z physical response with accepted action,
 matched covariance, strict non-observed `g2`, and `delta_perp`; or neutral
 H3/H4 physical-transfer/irreducibility plus source/canonical-Higgs coupling.
+
+## Block32 Complete-Packet Promotion Contract Refresh
+
+Block32 fixes the stale post-chunk063 promotion contract.  The runner now
+requires and records the completed finite taste-radial packet:
+
+- `ready_chunks=63`;
+- `expected_chunks=63`;
+- `combined_rows_written=true`;
+- `complete_packet=true`;
+- `current_promotion_allowed=false`.
+
+Artifacts refreshed:
+
+- `scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py`
+- `outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json`
+- `docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, handoff, and block32 PR body
+
+Honest status: exact-support / complete-packet promotion contract refresh.  The
+complete finite packet is not a canonical source-Higgs packet.  `C_sx/C_xx`
+may be promoted to `C_sH/C_HH` only after same-surface `x=canonical O_H`
+identity/action/LSZ authority, strict source-Higgs pole rows, Gram/FV/IR
+authority, and aggregate proposal gates exist.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# OK
+python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=364 FAIL=0
+```
+
+Next exact action: build one physical bridge artifact: accepted same-surface
+EW/Higgs action/canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows, strict
+W/Z matched physical response, or a neutral primitive/rank-one theorem with a
+physical transfer kernel and source-Higgs coupling authority.

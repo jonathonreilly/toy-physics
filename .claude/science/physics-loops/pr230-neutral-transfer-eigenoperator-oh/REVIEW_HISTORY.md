@@ -247,6 +247,44 @@ git diff --check
 # OK
 ```
 
+## Block32
+
+Local review run on 2026-05-12 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py`
+- `outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json`
+- `docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Promotion contract compiles and passes with `PASS=11 FAIL=0`; it now consumes the complete finite packet at `ready=63/63`, `combined_rows_written=true`, and `complete_packet=true`. |
+| Physics Claim Boundary | EXACT SUPPORT / NO CLOSURE | The refreshed rule keeps `current_promotion_allowed=false`; finite `C_sx/C_xx` rows are not canonical `C_sH/C_HH` without same-surface `x=canonical O_H` identity/action/LSZ authority and strict pole rows. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, `H_unit`, Ward identity, plaquette/u0 chain, `kappa_s=1`, `c2=1`, `Z_match=1`, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Audit Compatibility | PASS | Full assembly, retained route, completion audit, and campaign status were rerun and remain open/no-proposal. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# OK
+python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=163 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=364 FAIL=0
+```
+
 ## Block21
 
 Local review run on 2026-05-07 12:55 EDT.

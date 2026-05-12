@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block31 chunk063 final package.
+Campaign mode queue after block32 complete-packet promotion-contract refresh.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -337,3 +337,27 @@ Queue remains:
 No further finite `C_sx/C_xx` chunk production is a clean physics closure path
 unless a new theorem first identifies `x` with canonical `O_H` and supplies the
 missing pole/FV/IR authority.
+
+## Block32 Complete-Packet Promotion Contract Refresh
+
+Block32 refreshes the taste-radial-to-source-Higgs promotion contract after
+the chunk063 final package.  The contract now reads the complete finite packet
+as `ready=63/63`, `combined_rows_written=true`, and `complete_packet=true`.
+
+The queue is unchanged, but the stale partial-packet ambiguity is removed:
+completed `C_sx/C_xx` rows are still taste-radial support only.  They become
+canonical `C_sH/C_HH` rows only after a same-surface certificate proves
+`x=canonical O_H` with action, canonical LSZ/metric normalization,
+isolated-pole/FV/IR/model-class authority, and source-Higgs Gram or overlap
+authority.  The refreshed contract passes with `PASS=11 FAIL=0` and still
+sets `current_promotion_allowed=false`.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with pole-residue, Gram, threshold, and FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral H3/H4 physical-transfer/irreducibility authority plus
+   source/canonical-Higgs coupling.

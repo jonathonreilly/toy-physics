@@ -2,9 +2,9 @@
 """
 PR #230 taste-radial-to-source-Higgs promotion contract.
 
-The two-source row campaign is accumulating C_sx/C_xx rows for the exact
-taste-radial source x.  This runner records the only honest promotion rule:
-those rows become C_sH/C_HH source-Higgs rows only after a same-surface
+The two-source row campaign has completed the finite C_sx/C_xx rows for the
+exact taste-radial source x.  This runner records the only honest promotion
+rule: those rows become C_sH/C_HH source-Higgs rows only after a same-surface
 certificate identifies x with canonical O_H, including action, canonical
 LSZ/metric normalization, and pole/FV/IR authority.
 
@@ -127,12 +127,12 @@ def main() -> int:
     ready_chunks = count_or_value(certs["row_combiner"].get("ready_chunks"))
     ready_indices = certs["row_combiner"].get("ready_chunk_indices", [])
     expected_chunks = count_or_value(certs["row_combiner"].get("expected_chunks"))
-    row_packet_is_partial_taste_radial = (
+    row_packet_is_complete_taste_radial = (
         ready_chunks is not None
         and expected_chunks == 63
-        and 1 <= ready_chunks < expected_chunks
+        and ready_chunks == expected_chunks
         and len(ready_indices) == ready_chunks
-        and certs["row_combiner"].get("combined_rows_written") is False
+        and certs["row_combiner"].get("combined_rows_written") is True
         and "C_sx/C_xx" in statuses["row_combiner"]
     )
     strict_pole_contract_open = (
@@ -190,7 +190,7 @@ def main() -> int:
         and not proposal_allowed
         and action_axis_realized
         and degree_one_support_only
-        and row_packet_is_partial_taste_radial
+        and row_packet_is_complete_taste_radial
         and strict_pole_contract_open
         and overlap_contract_support_only
         and canonical_identity_absent
@@ -204,8 +204,8 @@ def main() -> int:
     report("two-source-taste-radial-axis-realized", action_axis_realized, statuses["two_source_action"])
     report("degree-one-theorem-support-only", degree_one_support_only, statuses["degree_one_radial_tangent"])
     report(
-        "row-packet-is-partial-taste-radial",
-        row_packet_is_partial_taste_radial,
+        "row-packet-is-complete-taste-radial",
+        row_packet_is_complete_taste_radial,
         f"ready={ready_chunks}/{expected_chunks}",
     )
     report("source-higgs-pole-contract-open", strict_pole_contract_open, statuses["source_higgs_pole_row_contract"])
@@ -230,9 +230,10 @@ def main() -> int:
         "admitted_observation_status": None,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
-            "The branch has taste-radial C_sx/C_xx support and an exact "
-            "degree-one axis theorem, but it lacks the identity x=canonical O_H, "
-            "source-Higgs pole rows, LSZ/FV/IR authority, and aggregate proposal gates."
+            "The branch has the complete finite taste-radial C_sx/C_xx packet "
+            "and an exact degree-one axis theorem, but it lacks the identity "
+            "x=canonical O_H, source-Higgs pole rows, LSZ/FV/IR authority, and "
+            "aggregate proposal gates."
         ),
         "bare_retained_allowed": False,
         "audit_required_before_effective_retained": True,
@@ -254,6 +255,7 @@ def main() -> int:
             "combined_rows_written": certs["row_combiner"].get(
                 "combined_rows_written"
             ),
+            "complete_packet": row_packet_is_complete_taste_radial,
             "row_kind": "taste_radial_C_sx_C_xx",
             "canonical_source_higgs_rows_present": False,
         },
@@ -268,11 +270,11 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, u0, reduced pilots, or value recognition",
         ],
         "exact_next_action": (
-            "Keep accumulating taste-radial C_sx/C_xx rows as bounded support.  "
-            "For promotion, supply same-surface x=canonical O_H identity/action/LSZ "
-            "authority, then rerun the source-Higgs pole-row acceptance contract, "
-            "Gram-purity postprocessor, scalar-LSZ gates, full assembly, retained-route, "
-            "and campaign gates."
+            "The finite taste-radial packet is complete.  For promotion, supply "
+            "same-surface x=canonical O_H identity/action/LSZ authority, then "
+            "rerun the source-Higgs pole-row acceptance contract, Gram-purity "
+            "postprocessor, scalar-LSZ gates, full assembly, retained-route, and "
+            "campaign gates."
         ),
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,

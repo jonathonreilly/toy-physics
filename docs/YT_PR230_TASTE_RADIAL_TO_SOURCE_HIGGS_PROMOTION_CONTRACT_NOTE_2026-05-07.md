@@ -8,9 +8,9 @@ current promotion blocked by absent canonical `O_H` identity/action/LSZ premise
 
 ## Purpose
 
-The two-source row campaign is producing rows named `C_sx/C_xx`, where `x` is
-the exact taste-radial source axis.  After the degree-one theorem, the clean
-question is:
+The two-source row campaign has completed rows named `C_sx/C_xx`, where `x`
+is the exact taste-radial source axis.  After the degree-one theorem and the
+chunk063 final package, the clean question is:
 
 ```text
 When, exactly, can these taste-radial rows be promoted into canonical
@@ -55,7 +55,8 @@ The current branch is blocked:
 - the canonical `O_H` certificate is absent;
 - source-Higgs `C_sH/C_HH` pole rows are absent;
 - source-Higgs production remains blocked by the missing `O_H` certificate;
-- the row combiner is still partial taste-radial support at `32/63` chunks;
+- the row combiner is now complete taste-radial support at `63/63` chunks with
+  `combined_rows_written=true`;
 - the full assembly, retained-route, and campaign gates deny proposal
   authorization.
 
@@ -77,8 +78,7 @@ python3 scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contrac
 
 ## Exact Next Action
 
-Keep accumulating taste-radial `C_sx/C_xx` rows as bounded support.  For
-promotion, supply same-surface `x=canonical O_H` identity/action/LSZ authority,
-then rerun the source-Higgs pole-row acceptance contract, Gram-purity
-postprocessor, scalar-LSZ gates, full assembly, retained-route, and campaign
-gates.
+The finite taste-radial packet is complete.  For promotion, supply
+same-surface `x=canonical O_H` identity/action/LSZ authority, then rerun the
+source-Higgs pole-row acceptance contract, Gram-purity postprocessor,
+scalar-LSZ gates, full assembly, retained-route, and campaign gates.

@@ -14,7 +14,7 @@
     "scalar_LSZ_FV_IR_model_class_authority_absent",
     "aggregate_proposal_gates_reject_closure"
   ],
-  "exact_next_action": "Keep accumulating taste-radial C_sx/C_xx rows as bounded support.  For promotion, supply same-surface x=canonical O_H identity/action/LSZ authority, then rerun the source-Higgs pole-row acceptance contract, Gram-purity postprocessor, scalar-LSZ gates, full assembly, retained-route, and campaign gates.",
+  "exact_next_action": "The finite taste-radial packet is complete.  For promotion, supply same-surface x=canonical O_H identity/action/LSZ authority, then rerun the source-Higgs pole-row acceptance contract, Gram-purity postprocessor, scalar-LSZ gates, full assembly, retained-route, and campaign gates.",
   "fail_count": 0,
   "forbidden_firewall": {
     "claimed_retained_or_proposed_retained": false,
@@ -49,7 +49,7 @@
     "degree_one_radial_tangent": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
     "full_assembly": "open / full positive PR230 closure assembly gate not passed",
     "retained_route": "open / retained closure not yet reached",
-    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
     "source_higgs_overlap_kappa_contract": "exact-support / source-Higgs overlap-kappa row contract; current row packet absent",
     "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
     "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
@@ -75,12 +75,13 @@
     }
   },
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The branch has taste-radial C_sx/C_xx support and an exact degree-one axis theorem, but it lacks the identity x=canonical O_H, source-Higgs pole rows, LSZ/FV/IR authority, and aggregate proposal gates.",
+  "proposal_allowed_reason": "The branch has the complete finite taste-radial C_sx/C_xx packet and an exact degree-one axis theorem, but it lacks the identity x=canonical O_H, source-Higgs pole rows, LSZ/FV/IR authority, and aggregate proposal gates.",
   "row_packet_status": {
     "canonical_source_higgs_rows_present": false,
-    "combined_rows_written": false,
+    "combined_rows_written": true,
+    "complete_packet": true,
     "expected_chunks": 63,
-    "ready_chunks": 32,
+    "ready_chunks": 63,
     "row_kind": "taste_radial_C_sx_C_xx"
   },
   "strict_non_claims": [

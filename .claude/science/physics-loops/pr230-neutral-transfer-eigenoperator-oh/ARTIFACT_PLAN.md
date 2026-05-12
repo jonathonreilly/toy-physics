@@ -595,3 +595,17 @@ Gram/FV/IR authority; strict W/Z matched physical response with accepted
 action, same-source rows, covariance, strict non-observed `g2`, `delta_perp`,
 and final W-response authority; or neutral H3/H4 physical-transfer authority
 plus source/canonical-Higgs coupling.
+
+Block32 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Complete-packet promotion contract runner | `scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py` | Refreshed; PASS=11 FAIL=0 |
+| Complete-packet promotion contract certificate | `outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json` | Refreshed; `ready_chunks=63`, `expected_chunks=63`, `combined_rows_written=true`, `complete_packet=true`, `current_promotion_allowed=false` |
+| Promotion contract note | `docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md` | Refreshed; finite packet is complete but not promotable without canonical `O_H` identity/action/LSZ authority |
+| Aggregate closure gates | `outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json`, `outputs/yt_retained_closure_route_certificate_2026-05-01.json`, `outputs/yt_pr230_positive_closure_completion_audit_2026-05-05.json`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Rerun; assembly PASS=163 FAIL=0, retained route PASS=317 FAIL=0, completion audit PASS=72 FAIL=0, campaign status PASS=364 FAIL=0; no proposal allowed |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block32 checkpoint |
+
+Follow-on artifact target after block32 is unchanged in kind: the finite
+taste-radial packet and its promotion contract are current.  Closure now
+requires a real same-surface bridge artifact, not more finite packet work.

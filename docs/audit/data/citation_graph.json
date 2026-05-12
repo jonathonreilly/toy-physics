@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:40:24.431894+00:00",
+  "generated_at": "2026-05-12T00:51:39.356238+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42390,7 +42390,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / full-approach physics-loop exercise; PR230",
       "deps": [],
-      "note_hash": "b525f518e5b6c1ea7eabe3dc043dead3c35a4d274b24d86a9e0c3396d2e8954e",
+      "note_hash": "d942f713e88be538fca0056895db33abdacf6cbb75cdfa7128424c0a71bfd5ce",
       "path": "docs/YT_PR230_BLOCK30_FULL_APPROACH_ASSUMPTIONS_ELON_LIT_MATH_BRIDGE_REVIEW_NOTE_2026-05-11.md",
       "runner_path": "scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py",
       "title": "PR230 Block30 Full-Approach Assumptions / Elon / Literature / Math / Bridge Review"
@@ -43510,7 +43510,7 @@
       "current_status": "support",
       "current_status_raw": "exact-support / taste-radial-to-source-Higgs promotion contract;",
       "deps": [],
-      "note_hash": "40110fc57892192cf6997cdfbdd8f320908a0d7b1e6b94d03e821aa1f15caaa6",
+      "note_hash": "3aeb3a89dfa90471d7569afd4e29c00052cac7777071515103e936db9de5bc6e",
       "path": "docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py",
       "title": "PR230 Taste-Radial To Source-Higgs Promotion Contract"
@@ -45073,7 +45073,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "bffffee1ef019d165d446fe7fb0e28c265ee1cd1ea68a3992c92b83a6a96f950",
+      "note_hash": "0e74fcfa99f9d2a3616bf03e648fe7959e6ff6ce58226a090a6693d6328327da",
       "path": "docs/YT_WZ_G2_AUTHORITY_FIREWALL_NOTE_2026-05-05.md",
       "runner_path": "scripts/frontier_yt_wz_g2_authority_firewall.py",
       "title": "PR #230 W/Z g2 Authority Firewall"

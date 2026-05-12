@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block31_chunk063_final_package`.
+Current block: `block32_complete_packet_promotion_contract_refresh`.
 
 ```yaml
-actual_current_surface_status: bounded-support / block31 chunk063 final package; finite two-source taste-radial chunks001-063 are complete and combined, while block30 full-approach review leaves PR230 y_t closure open
+actual_current_surface_status: exact-support / block32 complete-packet taste-radial-to-source-Higgs promotion contract refresh; finite two-source taste-radial chunks001-063 are complete and combined, but current promotion to canonical source-Higgs rows remains blocked
 conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block31 packages chunk063 and completes the finite 63/63 C_ss/C_sx/C_xx taste-radial packet with combined_rows_written=true. This is bounded staging support only: the packet is not canonical O_H, not canonical C_sH/C_HH pole evidence, not strict scalar-LSZ/FV/IR authority, not W/Z response evidence, and not neutral H3/H4 physical-transfer authority. Block30 remains a route-review/support artifact and does not supply the missing PR230 current-surface bridge."
+proposal_allowed_reason: "Block32 refreshes the promotion contract after chunk063. The finite 63/63 C_ss/C_sx/C_xx packet is complete and combined, but C_sx/C_xx may not be relabeled as C_sH/C_HH until x=canonical O_H identity/action/LSZ authority, strict source-Higgs pole rows, Gram/FV/IR authority, and aggregate proposal gates exist."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -106,6 +106,12 @@ Reason:
     promote finite `C_ss/C_sx/C_xx` rows to canonical `O_H`, canonical
     `C_sH/C_HH`, scalar-LSZ/FV/IR authority, W/Z response evidence, neutral
     H3/H4 authority, or top-Yukawa closure.
+22. Block32 records that the taste-radial-to-source-Higgs promotion contract
+    now consumes the complete 63/63 packet explicitly.  It sets
+    `complete_packet=true` while keeping `current_promotion_allowed=false`;
+    the missing objects remain `x=canonical O_H` identity/action/LSZ authority,
+    strict `C_ss/C_sH/C_HH` pole rows, Gram/FV/IR authority, and aggregate
+    proposal approval.
 
 Prior block certificate summary:
 
@@ -239,5 +245,9 @@ Prior block certificate summary:
   evidence only and does not supply canonical `O_H`, canonical `C_sH/C_HH`,
   strict scalar-LSZ/FV/IR authority, W/Z response rows, or neutral H3/H4
   physical-transfer authority.
-- Block01 through Block31 all have `proposal_allowed=false`; their boundaries
+- Block32 actual status: exact-support / complete-packet promotion contract
+  refresh; the promotion rule is current for the complete finite packet and
+  still denies `C_sx/C_xx -> C_sH/C_HH` without same-surface canonical
+  `O_H` identity/action/LSZ authority and strict pole/FV/IR support.
+- Block01 through Block32 all have `proposal_allowed=false`; their boundaries
   remain active.
