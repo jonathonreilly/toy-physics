@@ -1,5 +1,27 @@
 # Claim Status Certificate
 
+Block34 complete additive-top Jacobian refresh:
+
+```text
+actual_current_surface_status: bounded-support / complete chunks001-063 additive-top coarse Jacobian packet; no closure
+proposal_allowed: false
+bare_retained_allowed: false
+
+python3 scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py
+# SUMMARY: PASS=13 FAIL=0, row_count=63, complete_chunk_packet=true
+
+python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
+# SUMMARY: PASS=22 FAIL=0
+```
+
+The refreshed packet consumes the committed completed chunks001-063 row audit
+and writes a chunk-level coarse `A_top=dE_top/dm_bare` row for every chunk.
+It is useful W/Z-subtraction support only.  It is not strict
+per-configuration additive-top evidence, not matched covariance, not W/Z
+response, not strict non-observed `g2`, not accepted action authority, not
+canonical `O_H`, not source-Higgs pole rows, and not retained or
+`proposed_retained` evidence.
+
 Two-source taste-radial chunks061-062 package:
 
 ```text

@@ -1,5 +1,18 @@
 # No-Go Ledger
 
+## Complete additive-top coarse rows are not W/Z closure
+
+The 2026-05-12 block34 refresh consumes the completed chunks001-063 package
+and writes 63 bounded-support additive-top coarse Jacobian rows.  This closes
+the stale-prefix gap in the W/Z subtraction support surface, but it does not
+close the W/Z route.
+
+Do not treat the coarse `A_top=dE_top/dm_bare` packet as strict
+per-configuration additive-top rows, matched top/additive/W covariance, W/Z
+response rows, strict non-observed `g2`, accepted same-source EW/Higgs action,
+canonical `O_H`, source-Higgs pole rows, retained, or proposed-retained
+closure.
+
 ## Two-source chunks001-062 are not source-Higgs or scalar-LSZ closure
 
 The 2026-05-07 chunks061-062 package refresh advances the finite row prefix to

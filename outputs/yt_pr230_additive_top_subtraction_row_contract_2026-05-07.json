@@ -2,10 +2,12 @@
   "actual_current_surface_status": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
   "additive_top_jacobian_row_status": {
     "bounded_support": true,
+    "complete_chunk_packet": true,
+    "expected_chunk_count": 63,
     "path": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
     "present": true,
     "proposal_allowed": false,
-    "row_count": 52,
+    "row_count": 63,
     "status": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
     "strict": false
   },
@@ -171,7 +173,7 @@
   },
   "pass_count": 22,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The subtraction formula is exact support only.  The current PR230 surface lacks additive-top Jacobian rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted radial-spurion action authority.",
+  "proposal_allowed_reason": "The subtraction formula is exact support only.  The current PR230 surface has bounded coarse additive-top Jacobian rows, but still lacks strict per-configuration additive rows, W/Z response rows, matched covariance, strict non-observed g2, and accepted radial-spurion action authority.",
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
     "does not set the independent additive top slope to zero",

@@ -1,5 +1,18 @@
 # Opportunity Queue
 
+2026-05-12 block34 complete additive-top Jacobian refresh: the W/Z fallback
+now has a complete bounded-support top-additive packet from chunks001-063.
+`outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json` records
+`row_count=63`, `complete_chunk_packet=true`, active chunks `[]`, and
+`PASS=13 FAIL=0`; the subtraction contract records the packet as bounded
+support only with `PASS=22 FAIL=0`.  This improves the future W/Z subtraction
+surface but does not admit closure: strict per-configuration additive rows,
+production W/Z response rows, matched covariance, strict non-observed `g2`,
+accepted same-source EW/Higgs action, and final subtracted-response readout
+are still absent.  Highest-value next action remains a genuine same-surface
+canonical `O_H` plus `C_ss/C_sH/C_HH` pole rows, or the strict W/Z packet with
+all action/covariance/`g2` roots.
+
 2026-05-07 chunks061-062 package refresh: chunks001-062 are now packaged partial
 `C_sx/C_xx` support with `ready=62/63`; chunks061-062 pass completed-mode
 checkpointing and preserve selected-mass-only FH/LSZ, normal-equation cache

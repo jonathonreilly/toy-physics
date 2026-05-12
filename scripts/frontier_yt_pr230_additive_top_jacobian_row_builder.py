@@ -40,6 +40,8 @@ PARENTS = {
     "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
 }
 
+EXPECTED_CHUNK_COUNT = 63
+
 PASS_COUNT = 0
 FAIL_COUNT = 0
 
@@ -269,6 +271,12 @@ def main() -> int:
         and set(chunks) == completed_ids
         and not missing_contiguous
     )
+    complete_chunk_packet = (
+        row_count_ok
+        and len(rows) == EXPECTED_CHUNK_COUNT
+        and set(chunks) == set(range(1, EXPECTED_CHUNK_COUNT + 1))
+        and not active_ids
+    )
     support_rows_passed = all(
         [
             production_metadata_ok,
@@ -289,6 +297,11 @@ def main() -> int:
     report("three-mass-top-scan-preserved", bracket_ok, "bracket=[0.45, 0.75, 1.05]")
     report("cg-residuals-preserved", cg_ok, f"max_cg_residual={max_residual}")
     report("bounded-additive-top-jacobian-rows-written", support_rows_passed, f"row_count={len(rows)}")
+    report(
+        "complete-chunk-packet-consumed",
+        complete_chunk_packet,
+        f"rows={len(rows)}/{EXPECTED_CHUNK_COUNT} active={sorted(active_ids)}",
+    )
     report("strict-additive-top-jacobian-not-claimed", not strict_rows_passed, "no per-configuration mass-scan covariance")
     report("proposal-not-authorized", True, "proposal_allowed=false")
     report("forbidden-firewall-clean", True, "no observed target, H_unit, Ward, alpha_LM, plaquette/u0, kappa_s=1, c2=1, Z_match=1, or g2=1")
@@ -328,10 +341,12 @@ def main() -> int:
         "row_schema_version": "pr230_additive_top_jacobian_rows_v1",
         "row_source": {
             "input_glob": rel(INPUT_GLOB),
+            "expected_chunk_count": EXPECTED_CHUNK_COUNT,
             "completed_chunk_ids_from_package_audit": sorted(completed_ids),
             "active_chunk_ids_excluded": sorted(active_ids),
             "max_packaged_chunk_consumed": max(completed_ids) if completed_ids else None,
             "packaged_chunk_count": len(rows),
+            "complete_chunk_packet": complete_chunk_packet,
             "chunks": chunks,
             "missing_contiguous_chunks": missing_contiguous,
             "read_only": True,

@@ -1,14 +1,14 @@
 # PR230 Additive-Top Subtraction Row Contract
 
-**Status:** exact support / subtraction contract only; current rows and
-authority are absent
+**Status:** exact support / subtraction contract only; current coarse
+additive rows are bounded support and strict W/Z authority is absent
 
 **Runner:** `scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py`
 
 **Certificate:** `outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json`
 
 ```yaml
-actual_current_surface_status: exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent
+actual_current_surface_status: exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent
 conditional_surface_status: exact support for a future same-surface row packet that measures and subtracts the independent additive top component
 proposal_allowed: false
 bare_retained_allowed: false
@@ -66,10 +66,11 @@ be represented by multiple `y_t` values and corresponding additive slopes.
 Thus setting `A_top = 0` by convention would recreate the definition-as-
 derivation failure in a new coordinate.
 
-The current PR230 surface still lacks the additive-top Jacobian rows, W/Z
-response rows, matched covariance, strict `g2`, and accepted radial-spurion
-action authority.  This block therefore narrows a positive repair path but
-does not close PR230.
+The current PR230 surface now has a complete 63-row coarse additive-top
+Jacobian packet.  That is still bounded support only: strict subtraction needs
+per-configuration same-source additive rows, W/Z response rows, matched
+covariance, strict `g2`, and accepted radial-spurion action authority.  This
+block therefore narrows a positive repair path but does not close PR230.
 
 ## Non-Claims
 
@@ -85,5 +86,5 @@ touch the live chunk worker.
 ```bash
 python3 -m py_compile scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
 python3 scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py
-# SUMMARY: PASS=21 FAIL=0
+# SUMMARY: PASS=22 FAIL=0
 ```

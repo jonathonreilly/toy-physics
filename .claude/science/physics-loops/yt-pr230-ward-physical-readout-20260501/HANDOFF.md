@@ -1,5 +1,25 @@
 # Handoff
 
+Latest checkpoint, 2026-05-12 block34 complete additive-top Jacobian refresh:
+
+- Refreshed `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`
+  and `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json` after
+  chunk063 completion.  The builder now records `EXPECTED_CHUNK_COUNT=63`,
+  `row_count=63`, `complete_chunk_packet=true`, and active chunks `[]`.
+- Refreshed
+  `scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py` and
+  `outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json` so
+  the contract recognizes the complete coarse additive rows as bounded support
+  instead of saying additive rows are absent.
+- Updated the additive-top docs to the complete-packet statistics:
+  `A_top` mean `1.326289348247114`, weighted mean
+  `1.3259699921820414`, `T_total` mean `2.570078127590748`, and diagnostic
+  `T_total - A_top` mean `1.2437887793436337`.
+- Claim boundary: this is not W/Z closure.  Strict per-configuration
+  additive rows, W/Z response rows, matched covariance, strict non-observed
+  `g2`, accepted same-source EW/Higgs action, and final subtracted-response
+  readout remain absent.
+
 Latest checkpoint, 2026-05-07 two-source taste-radial chunks061-062 package:
 
 - Packaged chunks061-062 after the completed root JSONs and per-volume

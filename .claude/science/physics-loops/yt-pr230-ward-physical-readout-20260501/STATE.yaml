@@ -16,10 +16,18 @@ repo_lock:
   meta_lock_path: "/Users/jonBridger/.physics_worker_lock.guard"
   owner: "codex-pr230-positive-closure"
   holder_id: "codex-thread-pr230-positive-closure"
-current_phase: campaign-block-287-two-source-taste-radial-chunks061-062-package
-blocks_completed: 286
-active_route: "two-source taste-radial chunks061-062 packaging with chunk063 isolated run control"
-active_hard_residual: "Chunks061-062 are now completed-mode packaged into the PR230 two-source taste-radial C_ss/C_sx/C_xx row prefix.  The packet is ready=62/63 with combined_rows_written=false; chunk063 is the only active run-control worker and is not evidence.  Refreshed scalar-LSZ, Schur, source-Higgs, primitive-transfer, orthogonal-top, neutral H3/H4, assumption, campaign, full-assembly, retained-route, and completion-audit gates all pass while denying closure.  The current surface still lacks certified canonical O_H, production C_ss/C_sH/C_HH pole rows, strict scalar-LSZ/FV/threshold authority, strict W/Z accepted-action physical response, and neutral primitive/irreducibility authority."
+current_phase: campaign-block34-complete-additive-top-jacobian-refresh
+blocks_completed: 34
+active_route: "W/Z accepted-action fallback support: complete additive-top coarse Jacobian refresh"
+active_hard_residual: "The completed chunks001-063 packet now feeds the additive-top Jacobian builder.  The refreshed bounded-support packet writes 63/63 coarse A_top=dE_top/dm_bare rows from the preserved three-mass scans and the subtraction contract records them as complete bounded support only.  The current surface still lacks strict per-configuration additive rows, W/Z response rows, matched covariance, strict non-observed g2, accepted same-source EW/Higgs action, canonical O_H/source-Higgs pole rows, strict scalar-LSZ/FV/threshold authority, and neutral primitive/irreducibility authority.  No retained or proposed_retained closure is authorized."
+checkpoint_2026_05_12_block34_complete_additive_top_jacobian_refresh:
+  actual_current_surface_status: "bounded-support / complete 63-row additive-top coarse Jacobian packet; W/Z subtraction closure remains open"
+  proposal_allowed: false
+  bare_retained_allowed: false
+  runner_pass_fail: "additive-top Jacobian builder 13/0; additive-top subtraction row contract 22/0"
+  row_packet: "chunks001-063 consumed from committed package audit; complete_chunk_packet=true; active chunks=[]; row_count=63"
+  boundary: "A_top rows are chunk-level three-mass endpoint slopes, not strict per-configuration same-source additive rows, not matched covariance, not W/Z response rows, not strict g2 authority, not accepted action authority, and not y_t evidence."
+  exact_next_action: "For W/Z closure, supply accepted same-source EW/Higgs action plus production W/Z response rows, same-source top/additive rows with matched covariance, strict non-observed g2, and subtracted-response readout; otherwise return to canonical O_H plus source-Higgs pole rows."
 files_touched:
   - "docs/YT_PR230_FRESH_ARTIFACT_INTAKE_CHECKPOINT_NOTE_2026-05-07.md"
   - "outputs/yt_pr230_fresh_artifact_intake_checkpoint_2026-05-07.json"

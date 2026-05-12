@@ -1,5 +1,27 @@
 # Review History
 
+## 2026-05-12 - Block34 Complete Additive-Top Jacobian Refresh
+
+Review stance: bounded support / W/Z subtraction support packet, no closure.
+
+- Refreshed `scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py`
+  to record the complete 63-chunk packet and `complete_chunk_packet=true`.
+- Refreshed
+  `scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py` so the
+  contract distinguishes complete bounded additive rows from strict
+  per-configuration subtraction evidence.
+- Updated
+  `docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md`,
+  `docs/YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT_NOTE_2026-05-07.md`,
+  `outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json`, and
+  `outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json`.
+- Validation at block checkpoint: additive-top builder `PASS=13 FAIL=0`;
+  subtraction contract `PASS=22 FAIL=0`.
+
+Disposition: support only.  The refreshed packet is not matched covariance,
+not W/Z response, not strict `g2`, not accepted action authority, not
+canonical `O_H`, and not retained/proposed-retained closure.
+
 ## 2026-05-07 - Two-Source Taste-Radial Chunks061-062 Package
 
 Review stance: bounded support / partial row-wave package.

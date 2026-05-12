@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:58:46.644476+00:00",
+  "generated_at": "2026-05-12T01:09:41.741461+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42276,7 +42276,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / additive-top row artifact; closure not authorized.",
       "deps": [],
-      "note_hash": "94fc6bd3b2f3124f5074db5225a9a5f3a695ae905fcc6fabad527e6cd8aecb95",
+      "note_hash": "11708ed2a833a9590829b0eb935a3c90305757bc04aea24c00e4d388b11663c2",
       "path": "docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md",
       "runner_path": null,
       "title": "PR230 Additive-Top Jacobian Row Builder"
@@ -42284,9 +42284,9 @@
     "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07": {
       "claim_id": "yt_pr230_additive_top_subtraction_row_contract_note_2026-05-07",
       "current_status": "support",
-      "current_status_raw": "exact support / subtraction contract only; current rows and",
+      "current_status_raw": "exact support / subtraction contract only; current coarse",
       "deps": [],
-      "note_hash": "0439f91be323ecea46c240c3268560c6215957583f1637987127d6461353060c",
+      "note_hash": "1822e0791a3b54e110bec8874f4cfdfe5566907e4afdbe07dae08f639e7bc385",
       "path": "docs/YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py",
       "title": "PR230 Additive-Top Subtraction Row Contract"

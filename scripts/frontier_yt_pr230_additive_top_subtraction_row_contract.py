@@ -113,6 +113,8 @@ def additive_top_jacobian_row_status() -> dict[str, Any]:
         "path": rel(path),
         "status": rows.get("actual_current_surface_status", "present"),
         "row_count": rows.get("row_source", {}).get("packaged_chunk_count"),
+        "expected_chunk_count": rows.get("row_source", {}).get("expected_chunk_count"),
+        "complete_chunk_packet": rows.get("row_source", {}).get("complete_chunk_packet"),
     }
 
 
@@ -472,7 +474,13 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The subtraction formula is exact support only.  The current PR230 "
-            "surface lacks additive-top Jacobian rows, W/Z response rows, "
+            "surface has bounded coarse additive-top Jacobian rows, but still "
+            "lacks strict per-configuration additive rows, W/Z response rows, "
+            "matched covariance, strict non-observed g2, and accepted "
+            "radial-spurion action authority."
+            if additive_rows["present"]
+            else "The subtraction formula is exact support only.  The current "
+            "PR230 surface lacks additive-top Jacobian rows, W/Z response rows, "
             "matched covariance, strict non-observed g2, and accepted "
             "radial-spurion action authority."
         ),
