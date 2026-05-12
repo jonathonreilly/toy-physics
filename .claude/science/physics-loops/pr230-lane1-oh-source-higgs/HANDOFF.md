@@ -91,6 +91,14 @@ source-Higgs production is disabled or guarded empty.  The only explicit
 `C_sH/C_HH(tau)` matrix rows are reduced smoke, not strict production pole
 evidence.
 
+Block46 checks whether the newest post-Block45 surface reopens the older
+neutral off-diagonal generator or primitive-transfer route.  It does not.
+The existing neutral off-diagonal no-go, finite `C_sx` primitive-transfer
+boundary, H3/H4 aperture checkpoint, Blocks43-45, and aggregate gates still
+leave no completed same-surface H3/H4 artifact.  Active Schur higher-shell
+worker intent is recorded only as non-evidence until completed JSON/certificates
+land.
+
 ## Checks Run
 
 ```text
@@ -134,6 +142,10 @@ python3 -m py_compile scripts/frontier_yt_pr230_physical_euclidean_source_higgs_
 python3 scripts/frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py
 # SUMMARY: PASS=20 FAIL=0
 
+python3 -m py_compile scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py
+python3 scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py
+# SUMMARY: PASS=14 FAIL=0
+
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
 
@@ -159,11 +171,11 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=173 FAIL=0
+# SUMMARY: PASS=174 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 # SUMMARY: PASS=319 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=378 FAIL=0
+# campaign status SUMMARY: PASS=380 FAIL=0
 ```
 
 ## Current Status
@@ -183,9 +195,9 @@ Without that, the completed taste-radial rows cannot be promoted to
 Continue only with a new primitive-bearing route.  The next block should not
 re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
 normalization, W/Z self-normalization, or target-time-series source-only
-promotion, and it should not treat MC configuration-index order, ordinary tau
-correlators, empty guarded blocks, or reduced smoke as strict source-Higgs
-pole evidence.  It should try one of:
+promotion, and it should not treat finite `C_sx` covariance, active worker
+intent, MC configuration-index order, ordinary tau correlators, empty guarded
+blocks, or reduced smoke as strict bridge evidence.  It should try one of:
 
 ```text
 production physical Euclidean C_ss/C_sH/C_HH(tau) source-Higgs rows after canonical O_H authority

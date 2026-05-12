@@ -497,6 +497,9 @@ def main() -> int:
         "pr230_physical_euclidean_source_higgs_row_absence_after_block44": load(
             "outputs/yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_2026-05-12.json"
         ),
+        "pr230_neutral_offdiagonal_post_block45_applicability_audit": load(
+            "outputs/yt_pr230_neutral_offdiagonal_post_block45_applicability_audit_2026-05-12.json"
+        ),
         "pr230_wz_g2_bare_running_bridge_attempt": load(
             "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json"
         ),
@@ -2525,6 +2528,27 @@ def main() -> int:
         "pr230-physical-euclidean-source-higgs-row-absence-blocks",
         physical_euclidean_source_higgs_row_absence_blocks,
         statuses["pr230_physical_euclidean_source_higgs_row_absence_after_block44"],
+    )
+    neutral_offdiagonal_post_block45_applicability_blocks = (
+        "post-Block45 artifacts do not reopen"
+        in str(
+            statuses[
+                "pr230_neutral_offdiagonal_post_block45_applicability_audit"
+            ]
+        )
+        and certificates[
+            "pr230_neutral_offdiagonal_post_block45_applicability_audit"
+        ].get("proposal_allowed")
+        is False
+        and certificates[
+            "pr230_neutral_offdiagonal_post_block45_applicability_audit"
+        ].get("post_block45_neutral_offdiagonal_applicability_audit_passed")
+        is True
+    )
+    report(
+        "pr230-neutral-offdiagonal-post-block45-applicability-blocks",
+        neutral_offdiagonal_post_block45_applicability_blocks,
+        statuses["pr230_neutral_offdiagonal_post_block45_applicability_audit"],
     )
     report(
         "pr230-wz-g2-bare-running-bridge-attempt-blocks",
@@ -6437,6 +6461,7 @@ def main() -> int:
         "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,
         "physical_euclidean_source_higgs_row_absence_blocks": physical_euclidean_source_higgs_row_absence_blocks,
         "block38_bridge_stuck_fanout_not_closure": False,
+        "neutral_offdiagonal_post_block45_applicability_blocks": neutral_offdiagonal_post_block45_applicability_blocks,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6450,6 +6475,7 @@ def main() -> int:
             "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
             "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
             "does not treat block38 bridge stuck-fanout status as production evidence",
+            "does not treat finite C_sx covariance, active worker intent, or post-Block45 support as a neutral off-diagonal generator",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,

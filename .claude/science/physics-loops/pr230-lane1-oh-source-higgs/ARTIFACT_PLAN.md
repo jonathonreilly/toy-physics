@@ -123,12 +123,24 @@ but source-Higgs production is disabled or guarded empty.  The only explicit
 `C_sH/C_HH(tau)` matrix rows are reduced smoke with canonical `O_H` false and
 physical Higgs normalization `not_derived`.
 
+## Block46: Neutral Off-Diagonal Post-Block45 Applicability Audit
+
+- Note: `docs/YT_PR230_NEUTRAL_OFFDIAGONAL_POST_BLOCK45_APPLICABILITY_AUDIT_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py`
+- Certificate: `outputs/yt_pr230_neutral_offdiagonal_post_block45_applicability_audit_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  Blocks 43-45 and the
+active Schur higher-shell worker intent does not retire H3/H4.  The neutral
+off-diagonal/primitive-transfer route remains closed until a completed
+same-surface physical transfer/off-diagonal generator, primitive-cone
+certificate, strict source-Higgs row packet, or strict W/Z packet lands.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
-or reduced smoke, a strict W/Z
+reduced smoke, or active worker intent, a strict W/Z
 physical-response packet with actual production rows and absolute `g2`/`v`
 authority, or a genuinely new scalar/action/LSZ primitive not already covered
 by Block41.

@@ -280,3 +280,43 @@ this was a narrow current-surface boundary update.
 - Audit Compatibility: PASS.  The full audit pipeline and
   `audit_lint.py --strict` complete with only the known five warnings; the
   aggregate gates compile and report `PASS=173 FAIL=0` and `PASS=378 FAIL=0`.
+
+## Self-Review: Block46
+
+- Overclaim check: passed.  The note says only that post-Block45 artifacts do
+  not reopen the neutral off-diagonal generator or primitive-transfer route on
+  the current surface.  It does not claim a permanent no-go against future
+  H3/H4 neutral artifacts, strict source-Higgs rows, W/Z packets, or scalar
+  action/LSZ primitives.
+- Physics check: passed.  The runner consumes the existing neutral
+  off-diagonal no-go, finite `C_sx` primitive-transfer boundary, H3/H4
+  aperture checkpoint, Blocks43-45, and aggregate gates.  It also records that
+  active Schur higher-shell worker intent is not completed evidence.
+- Forbidden-import check: passed.  The runner does not use observed targets,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, finite `C_sx`
+  covariance as transfer, MC sample order as OS/Krylov transfer, top tau rows
+  as source-Higgs rows, reduced smoke as production, or worker intent as
+  evidence.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block46 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow post-Block45 applicability boundary update.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=14 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  The older neutral
+  off-diagonal/primitive-transfer route remains applicable after Blocks43-45;
+  no completed H3/H4 artifact or strict source-Higgs/WZ packet has landed.
+- Imports / Support: DISCLOSED.  The absent physical neutral transfer,
+  off-diagonal generator, primitive-cone certificate, canonical `O_H` authority,
+  strict source-Higgs rows, and strict W/Z physical-response packet are
+  explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings; the aggregate gates
+  compile and report `PASS=174 FAIL=0` and `PASS=380 FAIL=0`.

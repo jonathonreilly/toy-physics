@@ -3,9 +3,9 @@ mode: campaign
 runtime_budget: "12h requested"
 branch: codex/pr230-canonical-oh-action-cert-20260507
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
-active_block: "Block45 physical Euclidean source-Higgs row absence complete; genuinely new C_ss/C_sH/C_HH(tau), neutral transfer, W/Z strict packet, or scalar/action/LSZ primitive remains next"
+active_block: "Block46 neutral off-diagonal post-Block45 applicability audit complete; genuinely new H3/H4 artifact, C_ss/C_sH/C_HH(tau), W/Z strict packet, or scalar/action/LSZ primitive remains next"
 target_status: best-honest-status
-actual_current_surface_status: "exact negative boundary: tau-keyed production correlators are not physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) rows"
+actual_current_surface_status: "exact negative boundary: post-Block45 artifacts do not reopen the neutral off-diagonal generator or primitive-transfer route"
 conditional_surface_status: "conditional-support if future production supplies physical Euclidean C_ij(tau) rows, a same-surface neutral-transfer/off-diagonal generator, strict W/Z physical-response packet with absolute g2/v authority, or genuinely new scalar/action/LSZ primitive"
 proposal_allowed: false
 bare_retained_allowed: false
@@ -22,6 +22,7 @@ completed_checks:
   - "frontier_yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42.py: PASS=18 FAIL=0"
   - "frontier_yt_pr230_mc_timeseries_krylov_transfer_no_go_after_block43.py: PASS=17 FAIL=0"
   - "frontier_yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44.py: PASS=20 FAIL=0"
+  - "frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py: PASS=14 FAIL=0"
   - "frontier_yt_pr230_fms_oh_candidate_action_packet.py: PASS=13 FAIL=0"
   - "frontier_yt_pr230_source_higgs_direct_pole_row_contract.py: PASS=18 FAIL=0"
@@ -30,6 +31,6 @@ completed_checks:
   - "frontier_yt_source_higgs_pole_residue_extractor.py: PASS=9 FAIL=0"
   - "frontier_yt_source_higgs_cross_correlator_certificate_builder.py: PASS=5 FAIL=0"
   - "frontier_yt_source_higgs_gram_purity_postprocessor.py: PASS=3 FAIL=0"
-  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=173 FAIL=0"
-  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=378 FAIL=0"
-next_exact_action: "Do not treat ordinary top/scalar-source tau correlators, empty guarded source-Higgs blocks, MC configuration-index target samples, or reduced source-Higgs smoke as strict source-Higgs pole evidence. A positive route must add production C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, a same-surface neutral transfer/off-diagonal generator, a strict W/Z packet with absolute authority, or a new scalar/action/LSZ primitive."
+  - "frontier_yt_pr230_full_positive_closure_assembly_gate.py: PASS=174 FAIL=0"
+  - "frontier_yt_pr230_campaign_status_certificate.py: PASS=380 FAIL=0"
+next_exact_action: "Do not treat finite C_sx covariance, active worker intent, ordinary top/scalar-source tau correlators, empty guarded source-Higgs blocks, MC configuration-index target samples, or reduced source-Higgs smoke as strict bridge evidence. A positive route must add a completed same-surface H3/H4 neutral artifact, production C_ss/C_sH/C_HH(tau) rows after canonical O_H authority, a strict W/Z packet with absolute authority, or a new scalar/action/LSZ primitive."

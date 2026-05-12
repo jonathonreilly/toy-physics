@@ -58,6 +58,11 @@
   is disabled or guarded empty; the only explicit `C_sH/C_HH(tau)` matrix rows
   are reduced smoke with canonical `O_H` false and Higgs normalization
   `not_derived`.
+- Post-Block45 artifacts do not reopen the neutral off-diagonal generator
+  route: finite `C_sx` support, source target time series, MC ordering, ordinary
+  tau rows, reduced smoke, and active Schur worker intent do not supply a
+  completed same-surface H3/H4 physical transfer/off-diagonal generator,
+  primitive-cone certificate, or source/canonical-Higgs coupling authority.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary

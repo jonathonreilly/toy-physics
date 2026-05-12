@@ -6,10 +6,11 @@
    does not force this.  Block44 says MC configuration-index target samples are
    not physical Euclidean transfer/Krylov evidence.  Block45 says ordinary
    top/scalar-source tau correlators and reduced smoke are not strict
-   source-Higgs row evidence.  Reopen only with a physical Euclidean
-   `C_ij(tau)` matrix, transfer/off-diagonal generator, primitive-cone
-   certificate, strict neutral transfer artifact, or strict `C_sH/C_HH` pole
-   rows with canonical-Higgs authority.
+   source-Higgs row evidence.  Block46 says these post-Block45 artifacts and
+   active worker intent do not reopen the route.  Reopen only with a physical
+   Euclidean `C_ij(tau)` matrix, transfer/off-diagonal generator,
+   primitive-cone certificate, strict neutral transfer artifact, or strict
+   `C_sH/C_HH` pole rows with canonical-Higgs authority.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only

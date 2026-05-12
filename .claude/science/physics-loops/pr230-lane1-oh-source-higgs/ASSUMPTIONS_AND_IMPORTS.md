@@ -41,6 +41,9 @@
 - Treating ordinary top tau correlators, scalar-source tau fits, empty guarded
   source-Higgs blocks, or reduced source-Higgs smoke rows as strict production
   `C_sH/C_HH` pole evidence.
+- Treating finite `C_sx` covariance support, active worker intent, or
+  incomplete Schur higher-shell production as a physical neutral
+  transfer/off-diagonal generator.
 
 ## Block A Import Audit Result
 
@@ -140,3 +143,12 @@ analysis blocks are empty where present; no source-Higgs time-kernel production
 row files exist.  The only explicit `C_sH/C_HH(tau)` matrix rows are reduced
 smoke with one measurement, canonical `O_H` false, physical Higgs normalization
 `not_derived`, and no physical-yukawa readout.
+
+## Block46 Neutral Off-Diagonal Applicability Audit Result
+
+The older neutral off-diagonal generator no-go remains applicable after the
+Block43-45 source and tau audits.  The current surface still has no completed
+same-surface H3/H4 physical neutral transfer, off-diagonal generator,
+primitive-cone certificate, strict source-Higgs row packet, or strict W/Z
+physical-response packet.  Active Schur higher-shell workers are not counted
+as evidence until completed JSON/certificates land.

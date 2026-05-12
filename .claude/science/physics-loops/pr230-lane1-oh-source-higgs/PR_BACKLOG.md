@@ -89,4 +89,13 @@ Lane 1 Block45: physical Euclidean source-Higgs row absence
   scalar-source response fits, but source-Higgs production is disabled or
   guarded empty; the only C_sH/C_HH(tau) matrix rows are reduced smoke, not
   strict production pole evidence
+
+Lane 1 Block46: neutral off-diagonal post-Block45 applicability audit
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_neutral_offdiagonal_post_block45_applicability_audit.py
+- result: PASS=14 FAIL=0
+- conclusion: Blocks43-45 and Schur higher-shell worker intent do not reopen
+  the neutral off-diagonal/primitive-transfer route; finite C_sx support,
+  MC target samples, ordinary tau rows, reduced smoke, and active worker
+  intent still leave no completed same-surface H3/H4 neutral artifact
 ```
