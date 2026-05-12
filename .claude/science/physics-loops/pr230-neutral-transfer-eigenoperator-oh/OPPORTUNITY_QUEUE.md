@@ -120,6 +120,17 @@ priority remains accepted `O_H`/action plus strict source-Higgs pole rows,
 strict W/Z accepted-action physical response, or neutral H3/H4
 physical-transfer authority.
 
+Block44 packages completed chunks009-010.  It extends the checkpointed
+higher-shell support prefix to `10/63` planned support chunks, but it does not
+change the queue ranking: the rows are still same-source `C_ss` plus
+taste-radial `C_sx/C_xx` under the unratified second-source certificate, not
+canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C kernel
+rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response.  If
+continuing the support campaign, the next non-colliding wave is chunks011-012.
+The clean physics-closure priority remains accepted `O_H`/action plus strict
+source-Higgs pole rows, strict W/Z accepted-action physical response, or
+neutral H3/H4 physical-transfer authority.
+
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
 change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial

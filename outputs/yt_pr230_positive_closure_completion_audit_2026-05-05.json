@@ -443,6 +443,8 @@
               "outside-math row-definition machinery still lacks a same-surface neutral kernel basis and projector",
               "finite inverse A/B/C rows from C_ss/C_sx/C_xx are bounded support, not strict pole rows",
               "finite endpoint inverse rows do not determine K'(pole) without a model class and FV/IR authority",
+              "Block69 strict K-prime certificate builder reports missing strict rows on the current surface",
+              "Block70 supplies the residue theorem, but physical row data are still required",
               "canonical bridge still required after K-prime sufficiency"
             ],
             "parents": [
@@ -452,7 +454,9 @@
               "outputs/yt_pr230_schur_abc_definition_derivation_attempt_2026-05-05.json",
               "outputs/yt_pr230_two_source_taste_radial_schur_abc_finite_rows_2026-05-06.json",
               "outputs/yt_pr230_two_source_taste_radial_schur_pole_lift_gate_2026-05-06.json",
-              "outputs/yt_pr230_schur_route_completion_2026-05-06.json"
+              "outputs/yt_pr230_schur_route_completion_2026-05-06.json",
+              "outputs/yt_pr230_strict_kprime_pole_residue_certificate_2026-05-12.json",
+              "outputs/yt_pr230_block70_schur_feshbach_kprime_residue_theorem_2026-05-12.json"
             ],
             "passes_current_surface": false
           },
@@ -462,6 +466,7 @@
               "cross-lane O_h/O_H/Higgs artifacts audited as non-authority for PR230",
               "current primitives do not derive same-surface O_H identity and normalization",
               "production C_sH/C_HH pole residues absent",
+              "source-Higgs pole-row assembly finds zero strict C_ss/C_sH/C_HH pole-row candidates on the current surface",
               "Gram-purity postprocessor awaiting production certificate",
               "perfect Gram purity against an unratified supplied operator is not O_H authority",
               "Higgs/taste condensate stack has zero projection from the PR230 uniform mass source onto the trace-zero taste-Higgs axes",
@@ -476,6 +481,8 @@
               "outputs/yt_canonical_higgs_operator_semantic_firewall_2026-05-04.json",
               "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
               "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
+              "outputs/yt_canonical_oh_action_lsz_closure_2026-05-12.json",
+              "outputs/yt_source_higgs_pole_row_assembly_2026-05-12.json",
               "outputs/yt_pr230_taste_condensate_oh_bridge_audit_2026-05-06.json",
               "outputs/yt_pr230_origin_main_composite_higgs_intake_guard_2026-05-06.json"
             ],

@@ -1,5 +1,33 @@
 # Review History
 
+## Block44
+
+Local review run on 2026-05-12 10:59 EDT.
+
+Scope:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS009_010_COMPLETED_CHECKPOINT_NOTE_2026-05-12.md`
+- `outputs/yt_pr230_schur_higher_shell_chunk009_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_chunk010_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk009_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk010_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Disposition: pass bounded support.  Completed-mode checkpoints for chunks009
+and 010 pass 15/0, the wave launcher status passes 11/0 with completed
+chunks001-010 and planned chunks011-012, and campaign status passes 408/0
+after consuming the completed chunks009-010 checkpoints.  Assumption stress
+passes 105/0, full positive closure assembly passes 194/0, retained-route
+certificate passes 319/0, positive-closure completion audit passes 73/0, and
+audit pipeline plus strict audit lint pass with the five existing warnings.
+This block does not promote taste-radial `C_sx/C_xx` to canonical
+`C_sH/C_HH`, does not provide a complete higher-shell packet, Schur A/B/C
+kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical `kappa_s`,
+retained, or `proposed_retained` closure.
+
 ## Block43
 
 Local review run on 2026-05-12 08:53 EDT.
