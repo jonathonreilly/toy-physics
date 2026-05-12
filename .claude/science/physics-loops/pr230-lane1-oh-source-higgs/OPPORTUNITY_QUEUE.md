@@ -208,3 +208,22 @@ The lane-1 completion audit confirms that PR230 remains open, not
 Do not select another route that only inventories or restates existing
 degree-one/FMS, compact-source, fixed-carrier, finite-shell, or higher-shell
 chunk support.
+
+## Block64 Update
+
+The finite-moment atom-residue shortcut is now blocked.  Finite
+source/Stieltjes moment prefixes plus fixed carrier/compact-source support are
+not pole atom mass or scalar LSZ residue authority unless a strict
+determinacy/extremality certificate fixes the atom.
+
+Updated admissible route order:
+
+1. accepted same-surface canonical `O_H`/action/LSZ theorem;
+2. strict source-Higgs `C_ss/C_sH/C_HH` pole-row packet after canonical `O_H`;
+3. direct `K'(pole)`/pole-residue theorem, exact extremal moment certificate,
+   or same-surface Schur pole-derivative rows;
+4. strict W/Z or neutral-transfer physical response with absolute
+   normalization.
+
+Do not select another finite-prefix, Pade, finite-shell, compact-source, or
+carrier-normalization route unless it supplies a new strict residue authority.

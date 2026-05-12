@@ -1,7 +1,6 @@
 # Handoff
 
-Branch: `claude/yt-direct-lattice-correlator-2026-04-30` via local branch
-`codex/pr230-block48-operator-boundary`
+Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Loop slug: `pr230-lane1-oh-source-higgs`
 
@@ -796,3 +795,36 @@ canonical `O_H`/action/LSZ theorem, strict source-Higgs pole rows after that
 theorem, thermodynamic `K'(pole)`/residue theorem, same-surface Schur
 pole-derivative rows, or strict W/Z/neutral-transfer absolute-normalization
 authority.
+
+## Block64 Finite-Moment Atom-Residue Obstruction
+
+Added `docs/YT_PR230_BLOCK64_FINITE_MOMENT_ATOM_RESIDUE_OBSTRUCTION_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block64_finite_moment_atom_residue_obstruction.py`,
+and `outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json`.
+
+Result: no-go / exact negative boundary.  Finite source/Stieltjes moment
+prefixes plus fixed compact-source carrier do not fix the pole atom mass or
+scalar LSZ residue.  The runner checks two positive measures with identical
+`m0,m1,m2` and different candidate-pole atom mass, so finite moment agreement
+is not residue authority without a strict determinacy/extremality certificate.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block64_finite_moment_atom_residue_obstruction.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block64_finite_moment_atom_residue_obstruction.py
+# SUMMARY: PASS=12 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=190 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=399 FAIL=0
+```
+
+Next exact action: positive scalar closure now needs an actual residue
+authority: exact extremal/determinate moment certificate, direct pole-row
+residue measurement, or `K'(pole)` theorem, still paired with FV/IR/contact and
+canonical `O_H`/physical-response authority.

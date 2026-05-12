@@ -860,6 +860,9 @@ def main() -> int:
         "pr230_block63_lane1_completion_audit": load(
             "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json"
         ),
+        "pr230_block64_finite_moment_atom_residue_obstruction": load(
+            "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -5044,6 +5047,33 @@ def main() -> int:
         is True,
         statuses["pr230_block63_lane1_completion_audit"],
     )
+    block64_finite_moment_atom_residue_obstruction = certificates[
+        "pr230_block64_finite_moment_atom_residue_obstruction"
+    ]
+    report(
+        "pr230-block64-finite-moment-atom-residue-obstruction-blocks",
+        "finite source/Stieltjes moment prefixes do not fix the pole atom mass"
+        in str(statuses["pr230_block64_finite_moment_atom_residue_obstruction"])
+        and block64_finite_moment_atom_residue_obstruction.get("proposal_allowed")
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "block64_finite_moment_atom_residue_obstruction_passed"
+        )
+        is True
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "current_finite_prefix_residue_authority_present"
+        )
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "strict_extremal_moment_certificate_present"
+        )
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "pole_residue_authority_present"
+        )
+        is False,
+        statuses["pr230_block64_finite_moment_atom_residue_obstruction"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -7138,6 +7168,7 @@ def main() -> int:
             "does not treat block60 source-channel taste-singlet carrier support as canonical O_H or scalar LSZ residue authority",
             "does not treat block60 source-channel carrier support as K-prime or pole-residue authority after block61",
             "does not treat compact source support plus fixed source carrier as K-prime or pole-residue authority after block62",
+            "does not treat finite source/Stieltjes moment prefixes as pole atom mass or scalar LSZ residue authority after block64",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8717,6 +8748,26 @@ def main() -> int:
             "kprime_residue_absent_after_block62"
         )
         is True
+    )
+    result["block64_finite_moment_atom_residue_blocks"] = (
+        block64_finite_moment_atom_residue_obstruction.get("proposal_allowed")
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "block64_finite_moment_atom_residue_obstruction_passed"
+        )
+        is True
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "current_finite_prefix_residue_authority_present"
+        )
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "strict_extremal_moment_certificate_present"
+        )
+        is False
+        and block64_finite_moment_atom_residue_obstruction.get(
+            "pole_residue_authority_present"
+        )
+        is False
     )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True

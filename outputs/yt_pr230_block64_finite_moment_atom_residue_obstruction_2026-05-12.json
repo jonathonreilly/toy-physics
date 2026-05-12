@@ -1,0 +1,105 @@
+{
+  "actual_current_surface_status": "no-go / exact negative boundary for the current PR230 surface: finite source/Stieltjes moment prefixes do not fix the pole atom mass or scalar LSZ residue without an additional strict determinacy/extremality certificate",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block64_finite_moment_atom_residue_obstruction_passed": true,
+  "canonical_oh_or_physical_response_authority_present": false,
+  "compact_source_kprime_identifiability_blocked": true,
+  "conditional_surface_status": "conditional-support if a future exact moment/localizing-matrix extremality certificate, Carleman/Tauberian threshold theorem, direct pole-row residue measurement, or microscopic K'(pole) theorem is supplied together with FV/IR/contact and canonical O_H/physical-response authority",
+  "current_finite_prefix_residue_authority_present": false,
+  "direct_pole_row_residue_measurement_present": false,
+  "exact_next_action": "Positive closure must supply an actual residue authority: an extremal/determinate moment certificate, direct pole-row residue measurement, or K'(pole) theorem, then still pair it with FV/IR/contact and canonical O_H/physical-response authority.",
+  "fail_count": 0,
+  "finite_prefix_atom_counterfamily": {
+    "candidate_pole_x": "0",
+    "measure_a": [
+      {
+        "weight": "1/6",
+        "x": "0"
+      },
+      {
+        "weight": "2/3",
+        "x": "1/2"
+      },
+      {
+        "weight": "1/6",
+        "x": "1"
+      }
+    ],
+    "measure_b": [
+      {
+        "weight": "1/4",
+        "x": "0"
+      },
+      {
+        "weight": "3/4",
+        "x": "2/3"
+      }
+    ],
+    "moment_powers_checked": [
+      0,
+      1,
+      2
+    ],
+    "moments_a": [
+      "1",
+      "1/2",
+      "1/3"
+    ],
+    "moments_b": [
+      "1",
+      "1/2",
+      "1/3"
+    ],
+    "moments_match": true,
+    "pole_atom_mass_a": "1/6",
+    "pole_atom_mass_b": "1/4",
+    "pole_atom_masses_differ": true,
+    "residue_ratio_b_over_a": "3/2"
+  },
+  "hypothetical_axiom_status": null,
+  "kprime_authority_present": false,
+  "parent_certificates": {
+    "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "block59_source_spectral_pole_promotion_obstruction": "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json",
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
+    "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
+    "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
+    "fh_lsz_pade_stieltjes_bounds_gate": "outputs/yt_fh_lsz_pade_stieltjes_bounds_gate_2026-05-05.json",
+    "fh_lsz_stieltjes_moment_certificate_gate": "outputs/yt_fh_lsz_stieltjes_moment_certificate_gate_2026-05-05.json",
+    "finite_shell_identifiability": "outputs/yt_fh_lsz_finite_shell_identifiability_no_go_2026-05-02.json",
+    "scalar_lsz_carleman_tauberian": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json"
+  },
+  "parent_statuses": {
+    "block58_compact_source_spectral_support": "exact-support / Block58 finite-volume compact source-channel spectral support; thermodynamic pole/FVIR and canonical-O_H roots remain open",
+    "block59_source_spectral_pole_promotion_obstruction": "no-go / exact negative boundary for the current PR230 surface: Block59 finite-volume source spectral positivity does not promote to thermodynamic scalar pole authority",
+    "block60_compact_source_taste_singlet_carrier": "exact-support / Block60 compact additive source fixes the source-channel taste-singlet carrier coordinate; canonical O_H, pole residue, K-prime, and threshold/FVIR authority remain open",
+    "block61_post_carrier_kprime_obstruction": "no-go / exact negative boundary for the current PR230 surface: Block60 source-carrier support does not fix K-prime or pole residue",
+    "block62_compact_source_kprime_identifiability_obstruction": "no-go / exact negative boundary for the current PR230 surface: compact source support and fixed carrier do not identify K-prime or pole residue",
+    "fh_lsz_pade_stieltjes_bounds_gate": "exact-support / FH-LSZ Pade-Stieltjes bounds gate; strict moment-threshold certificate absent",
+    "fh_lsz_stieltjes_moment_certificate_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
+    "finite_shell_identifiability": "exact negative boundary / FH-LSZ finite-shell pole-fit identifiability no-go",
+    "scalar_lsz_carleman_tauberian": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows"
+  },
+  "pass_count": 12,
+  "pole_residue_authority_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has finite source moments and source-carrier support only.  The executable positive-measure counterfamily has identical m0,m1,m2 but different atom mass at the candidate pole.",
+  "remaining_positive_route_requirements": [
+    "strict exact moment/localizing-matrix extremality or determinacy certificate",
+    "or direct source-Higgs/pole rows measuring the residue with covariance",
+    "or microscopic K'(pole) denominator theorem",
+    "plus threshold/FVIR/contact authority",
+    "plus canonical O_H/source-overlap or physical W/Z response authority"
+  ],
+  "source_channel_taste_carrier_fixed": true,
+  "strict_extremal_moment_certificate_present": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not treat finite moments, Pade fits, or finite-shell pole fits as LSZ residue authority",
+    "does not infer K'(pole), pole atom mass, or kappa_s from source carrier normalization",
+    "does not use H_unit, yt_ward_identity, observed top/Yukawa values, alpha_LM, plaquette, u0, kappa_s=1, c2=1, or Z_match=1"
+  ],
+  "threshold_fvir_contact_authority_present": false
+}

@@ -1,5 +1,23 @@
 # Review History
 
+## Self-Review: Block64
+
+- Overclaim check: passed.  The note blocks only the finite-moment
+  pole-atom/residue shortcut on the current PR230 surface; it does not claim
+  retained closure or a permanent no-go against future strict moment,
+  denominator, direct pole-row, or physical-response authority.
+- Physics check: passed.  The runner constructs two positive measures with
+  identical `m0,m1,m2` and different candidate-pole atom mass, so finite moment
+  agreement is not by itself residue authority.
+- Forbidden-import check: passed.  The runner does not use observed selectors,
+  `H_unit`, Ward, `alpha_LM`, plaquette, `u0`, unit `kappa_s`, `c2`, or
+  `Z_match`.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+- Audit compatibility: passed.  The audit pipeline seeded the Block64 row,
+  `invalidate_stale_audits` reported `invalidated=0`, and strict audit lint
+  completed with no errors and the five existing warnings.
+
 ## Self-Review: Block A
 
 - Overclaim check: passed.  The new note says exact negative boundary on the

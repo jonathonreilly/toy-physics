@@ -36,6 +36,7 @@ PARENTS = {
     "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
     "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
     "block63_lane1_completion_audit": "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json",
+    "block64_finite_moment_atom_residue_obstruction": "outputs/yt_pr230_block64_finite_moment_atom_residue_obstruction_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -785,6 +786,30 @@ def main() -> int:
             "completion_checks", {}
         ).get("kprime_residue_absent_after_block62")
         is True
+    )
+    block64_finite_moment_atom_residue_blocks = (
+        "finite source/Stieltjes moment prefixes do not fix the pole atom mass"
+        in statuses["block64_finite_moment_atom_residue_obstruction"]
+        and certs["block64_finite_moment_atom_residue_obstruction"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block64_finite_moment_atom_residue_obstruction"].get(
+            "block64_finite_moment_atom_residue_obstruction_passed"
+        )
+        is True
+        and certs["block64_finite_moment_atom_residue_obstruction"].get(
+            "current_finite_prefix_residue_authority_present"
+        )
+        is False
+        and certs["block64_finite_moment_atom_residue_obstruction"].get(
+            "strict_extremal_moment_certificate_present"
+        )
+        is False
+        and certs["block64_finite_moment_atom_residue_obstruction"].get(
+            "pole_residue_authority_present"
+        )
+        is False
     )
     finite_source_support = (
         certs["fh_lsz_finite_source_linearity"].get("finite_source_linearity_gate_passed") is True
@@ -2892,6 +2917,11 @@ def main() -> int:
         block63_lane1_completion_audit_blocks_completion,
         statuses["block63_lane1_completion_audit"],
     )
+    report(
+        "block64-finite-moment-atom-residue-obstruction-blocks",
+        block64_finite_moment_atom_residue_blocks,
+        statuses["block64_finite_moment_atom_residue_obstruction"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4395,6 +4425,7 @@ def main() -> int:
         "block61_post_carrier_kprime_blocks": block61_post_carrier_kprime_blocks,
         "block62_compact_source_kprime_identifiability_blocks": block62_compact_source_kprime_identifiability_blocks,
         "block63_lane1_completion_audit_blocks_proposal": block63_lane1_completion_audit_blocks_completion,
+        "block64_finite_moment_atom_residue_blocks": block64_finite_moment_atom_residue_blocks,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4481,6 +4512,7 @@ def main() -> int:
             "does not treat the Block60 source-channel taste-singlet carrier as canonical O_H or scalar LSZ residue authority",
             "does not treat the Block60 source-channel carrier as K-prime or pole-residue authority after Block61",
             "does not treat compact source support plus fixed source carrier as K-prime or pole-residue authority after Block62",
+            "does not treat finite source/Stieltjes moment prefixes as pole atom mass or scalar LSZ residue authority after Block64",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "
@@ -4503,7 +4535,9 @@ def main() -> int:
             "most direct non-chunk target is now stricter: a new microscopic "
             "scalar denominator/contact theorem or strict physical rows that "
             "supply uniform thermodynamic/FVIR pole, threshold, residue, and "
-            "canonical-O_H/response authority.  Rerun this assembly "
+            "canonical-O_H/response authority.  After Block64, finite moment "
+            "prefixes also need a strict extremal/determinacy certificate "
+            "before they can be used as residue authority.  Rerun this assembly "
             "gate, including the cycle-15 independent-route admission gate, "
             "the cycle-16 reopen-source guard, and the cycle-17 stop-condition "
             "gate, plus the cycle-18 reopen-freshness gate, before any "

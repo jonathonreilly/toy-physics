@@ -139,6 +139,11 @@
   one-step source correlator `C1` while varying the pole residue.  Compact
   finite-volume source support plus fixed carrier is not `K'(pole)` or
   pole-residue authority.
+- Block64 finite-moment atom-residue obstruction blocks the finite
+  source/Stieltjes moment-prefix shortcut: positive measures can share the same
+  finite moments `m0,m1,m2` while assigning different atom mass to a candidate
+  pole.  Finite moment agreement is not scalar LSZ residue authority without a
+  strict determinacy/extremality certificate or direct residue row/theorem.
 
 ## Scope Boundary
 
@@ -180,4 +185,10 @@ completion boundary: full positive closure remains open until a future artifact
 supplies accepted same-surface canonical `O_H`/action/LSZ authority, strict
 physical `C_ss/C_sH/C_HH` rows with Gram/FVIR/model-class acceptance,
 `K'(pole)`/residue authority, same-surface Schur pole-derivative rows, or
-strict W/Z/neutral-transfer absolute-normalization authority.
+strict physical W/Z/neutral-transfer absolute-normalization authority.
+
+After Block64, finite moment prefixes are also exhausted as a scalar-residue
+proxy.  A future moment route must prove a strict extremal/determinate
+moment/localizing-matrix certificate that fixes the pole atom; otherwise the
+route must supply direct pole-residue rows, a `K'(pole)` theorem, or a
+physical-response/canonical-`O_H` bridge with threshold/FVIR/contact authority.

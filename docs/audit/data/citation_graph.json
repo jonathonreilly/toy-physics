@@ -8849,6 +8849,42 @@
       "to": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12"
     },
     {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05"
+    },
+    {
+      "from": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "to": "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19201,7 +19237,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T07:35:08.867407+00:00",
+  "generated_at": "2026-05-12T08:01:49.212333+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43032,6 +43068,26 @@
       "runner_path": "scripts/frontier_yt_pr230_block63_lane1_completion_audit.py",
       "title": "PR230 Block63 Lane-1 Completion Audit"
     },
+    "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12": {
+      "claim_id": "yt_pr230_block64_finite_moment_atom_residue_obstruction_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the current PR230 surface:",
+      "deps": [
+        "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+        "yt_pr230_block59_source_spectral_pole_promotion_obstruction_note_2026-05-12",
+        "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+        "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+        "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+        "yt_fh_lsz_stieltjes_moment_certificate_gate_note_2026-05-05",
+        "yt_fh_lsz_pade_stieltjes_bounds_gate_note_2026-05-05",
+        "yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_note_2026-05-05",
+        "yt_fh_lsz_finite_shell_identifiability_no_go_note_2026-05-02"
+      ],
+      "note_hash": "5e1c54390a2e418912d0f9ea63aee3e115cae352f289388ae953c525095cf43a",
+      "path": "docs/YT_PR230_BLOCK64_FINITE_MOMENT_ATOM_RESIDUE_OBSTRUCTION_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block64_finite_moment_atom_residue_obstruction.py",
+      "title": "PR230 Block64 Finite-Moment Atom-Residue Obstruction"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47823,17 +47879,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4800,
-    "leaf_count": 1115,
-    "node_count": 2165,
+    "edge_count": 4809,
+    "leaf_count": 1111,
+    "node_count": 2166,
     "root_count": 1657,
-    "runners_with_path": 1640,
+    "runners_with_path": 1641,
     "status_counts": {
       "bounded": 602,
       "open": 118,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 478,
+      "support": 479,
       "unknown": 593
     }
   }
