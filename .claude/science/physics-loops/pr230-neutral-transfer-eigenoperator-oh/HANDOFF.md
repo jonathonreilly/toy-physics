@@ -1,6 +1,6 @@
 # Handoff
 
-Checkpoint: 2026-05-11 19:37 EDT
+Checkpoint: 2026-05-11 19:52 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
@@ -398,7 +398,7 @@ as `C_sH/C_HH`, and does not touch the live chunk worker.
 User direction remains that PR230-specific block artifacts land in draft PR
 #230 rather than accumulating as parallel standalone review PRs.  Block02
 through block08 science content is already present on the draft PR #230 head.
-Block09 through block27 should follow the same direct PR #230 landing path unless
+Block09 through block28 should follow the same direct PR #230 landing path unless
 PR230 integration fails.
 
 ## Review
@@ -464,6 +464,12 @@ Local review disposition for block27: pass open post-block26 landed checkpoint
 records that PR #230 head `f1d72283` moved only by the block26 checkpoint
 commit, and leaves proposal language denied.  No independent audit verdict was
 applied.
+
+Local review disposition for block28: pass exact support degree-one `O_H`
+support intake / no closure.  The checkpoint consumes committed PR-head state
+and the degree-one radial-tangent theorem only, records that PR #230 head
+`e17c4856` moved only by the block27 checkpoint commit, and leaves proposal
+language denied.  No independent audit verdict was applied.
 
 ## Next Exact Action
 
@@ -1215,3 +1221,70 @@ with Gram/FV/IR authority, a strict W/Z matched physical-response packet with
 covariance/`delta_perp`/strict non-observed `g2`, or neutral H3/H4
 physical-transfer authority.  Do not run more current-surface shortcut gates
 from this lane, and do not treat chunk063 completion alone as closure.
+
+## Block28 Degree-One `O_H` Support Intake
+
+Resumed on 2026-05-11 after block27 landed on the draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = e17c485639be9229af4d8ecb65222efdc159b0d1
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The only commit after the previous landed-checkpoint input head
+`f1d72283b92fb1b76292ea8ba53d7586ad0c294d` is the block27 checkpoint commit.
+Block28 does not rerun the same absence gate.  It consumes the committed
+degree-one radial-tangent `O_H` theorem as exact source-Higgs support:
+
+```text
+if a future same-surface EW/Higgs action proves canonical O_H is a linear
+Z3-covariant radial tangent in span{S0,S1,S2}, the unique axis is
+(S0+S1+S2)/sqrt(3)
+```
+
+Result:
+
+- the degree-one support theorem passes with `PASS=14 FAIL=0`;
+- the block28 intake passes with `PASS=13 FAIL=0`;
+- campaign status passes with `PASS=362 FAIL=0`;
+- the theorem sharpens the source-Higgs route but does not supply the
+  same-surface action premise, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole
+  rows, Gram/FV/IR authority, accepted W/Z action/response, or neutral H3/H4
+  authority;
+- the row stream remains a `62/63` committed prefix with
+  `combined_rows_written=false`;
+- no live chunk-worker output was touched or inspected.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py`
+- `docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact
+  plan, review history, PR backlog, and block28 PR body
+
+Honest status: exact-support / degree-one `O_H` support intake.  Current
+surface remains open and `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=362 FAIL=0
+```
+
+Next exact action: supply an accepted same-surface EW/Higgs action or canonical
+`O_H` certificate that makes the degree-one radial tangent premise
+current-surface authority, then produce strict `C_ss/C_sH/C_HH` pole rows with
+Gram/FV/IR checks.  If unavailable, pivot to strict W/Z matched physical
+response with accepted action, same-source top/W covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response authority.  Do not treat
+chunk063 completion alone as closure.

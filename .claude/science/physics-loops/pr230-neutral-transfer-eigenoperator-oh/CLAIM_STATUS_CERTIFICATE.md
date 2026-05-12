@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block27_post_block26_landed_checkpoint`.
+Current block: `block28_degree_one_oh_support_intake_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block27 post-block26 landed checkpoint; PR head contains only the block26 checkpoint after the previous landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral H3/H4 opportunities all remain waiting on explicit production/certificate inputs
-conditional_surface_status: readout support if a future accepted same-surface FMS/EW-Higgs action, canonical O_H certificate, and accepted C_ss/C_sH/C_HH pole rows exist
+actual_current_surface_status: exact-support / block28 degree-one O_H support intake; current surface remains open because the action premise, canonical O_H certificate, source-Higgs pole rows, strict W/Z packet, and neutral H3/H4 authority remain absent
+conditional_surface_status: degree-one O_H axis support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization; readout support only after strict C_ss/C_sH/C_HH rows exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block27 is a landed-checkpoint, not a new closure artifact. The current PR head is f1d72283b92fb1b76292ea8ba53d7586ad0c294d and the only commit since the previous landed-checkpoint input head 8b0d95db83c6f8458b0547c1da32e690941e36a3 is the block26 checkpoint. The row package remains 62/63 with combined_rows_written=false and chunk063 absent as completed checkpoint evidence. No required source-Higgs, W/Z, or neutral H3/H4 certificate paths are present, and no forbidden import or live-worker output is used."
+proposal_allowed_reason: "Block28 intakes an exact support theorem: the degree-one Z3-covariant radial tangent is unique and matches the taste-radial axis under a future same-surface action premise. It is not a closure artifact because the current surface still lacks the degree-one action premise, canonical O_H certificate, strict C_ss/C_sH/C_HH pole rows, Gram/FV/IR authority, accepted W/Z action/response packet, and neutral H3/H4 physical-transfer authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -86,6 +86,11 @@ Reason:
 17. Block27 records that after block26 landed, PR #230 moved only by the
     block26 checkpoint commit; no ranked source-Higgs, W/Z, or neutral H3/H4
     opportunity is admitted without explicit production/certificate inputs.
+18. Block28 records that after block27 landed, PR #230 moved only by the
+    block27 checkpoint commit.  It intakes the degree-one radial-tangent `O_H`
+    theorem as exact support only; the future same-surface action premise,
+    canonical `O_H`, source-Higgs pole rows, W/Z accepted-action response
+    packet, and neutral H3/H4 authority remain absent.
 
 Prior block certificate summary:
 
@@ -196,5 +201,11 @@ Prior block certificate summary:
   landed-checkpoint input head, and ranked source-Higgs, W/Z, and neutral
   H3/H4 opportunities are not admitted without explicit production/certificate
   inputs.
-- Block01 through Block27 all have `proposal_allowed=false`; their boundaries
+- Block28 actual status: exact-support / degree-one `O_H` support intake; the
+  degree-one Z3-covariant radial tangent is unique and matches the
+  taste-radial source axis under a future same-surface action premise, but the
+  current surface still lacks that premise, canonical `O_H`, strict
+  `C_ss/C_sH/C_HH` pole rows, W/Z accepted-action response, and neutral H3/H4
+  authority.
+- Block01 through Block28 all have `proposal_allowed=false`; their boundaries
   remain active.

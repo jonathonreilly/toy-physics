@@ -8517,6 +8517,30 @@
       "to": "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06"
     },
     {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "to": "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -18757,7 +18781,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-11T23:43:54.515383+00:00",
+  "generated_at": "2026-05-12T00:02:51.107397+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42303,6 +42327,23 @@
       "runner_path": "scripts/frontier_yt_pr230_block27_post_block26_landed_checkpoint.py",
       "title": "PR230 Block27 Post-Block26 Landed Checkpoint"
     },
+    "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11": {
+      "claim_id": "yt_pr230_block28_degree_one_oh_support_intake_checkpoint_note_2026-05-11",
+      "current_status": "support",
+      "current_status_raw": "exact-support / degree-one `O_H` source-Higgs bridge intake; current",
+      "deps": [
+        "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
+        "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
+        "yt_pr230_fms_oh_candidate_action_packet_note_2026-05-07",
+        "yt_pr230_fms_source_overlap_readout_gate_note_2026-05-07",
+        "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+        "yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_note_2026-05-07"
+      ],
+      "note_hash": "24d48eb4bdc126019a8ed442a3f8f98a7b162f5d78a606b2e581f05f89559c15",
+      "path": "docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py",
+      "title": "PR230 Block28 Degree-One O_H Support Intake Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -46795,17 +46836,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4689,
-    "leaf_count": 1131,
-    "node_count": 2122,
+    "edge_count": 4695,
+    "leaf_count": 1128,
+    "node_count": 2123,
     "root_count": 1629,
-    "runners_with_path": 1598,
+    "runners_with_path": 1599,
     "status_counts": {
       "bounded": 593,
       "open": 111,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 461,
+      "support": 462,
       "unknown": 583
     }
   }

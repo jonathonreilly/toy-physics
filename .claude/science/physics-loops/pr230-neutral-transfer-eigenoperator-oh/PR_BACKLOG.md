@@ -145,6 +145,14 @@ source-Higgs, W/Z, or neutral H3/H4 opportunity is admitted without explicit
 production/certificate inputs.  No standalone block27 review PR should be
 opened unless PR #230 integration fails.
 
+Block28 follows the same direct PR #230 landing path.  It adds the degree-one
+`O_H` support intake checkpoint at PR head `e17c4856` and records that the
+degree-one radial-tangent theorem is exact source-Higgs bridge support only:
+the action premise, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, W/Z
+accepted-action response packet, and neutral H3/H4 authority remain absent.
+No standalone block28 review PR should be opened unless PR #230 integration
+fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

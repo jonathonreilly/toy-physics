@@ -518,3 +518,23 @@ same-source rows, covariance, strict non-observed `g2`, `delta_perp`, and
 final W-response authority; or neutral H3/H4 physical-transfer authority.  The
 block26 checkpoint commit and chunk063 completion alone are not closure
 artifacts.
+
+Block28 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Degree-one `O_H` support intake runner | `scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py` | Created; PASS=13 FAIL=0 |
+| Degree-one `O_H` support intake certificate | `outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json` | Created; intakes the degree-one radial-tangent `O_H` theorem as exact support only and records no closure |
+| Degree-one `O_H` support intake note | `docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md` | Created; exact-support checkpoint, closure not authorized |
+| Degree-one radial-tangent theorem | `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py`, `outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json` | Rerun; PASS=14 FAIL=0 |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block28; PASS=362 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block28 checkpoint |
+
+Follow-on artifact target after block28 is sharper but still requires a real
+input: accepted same-surface EW/Higgs action or canonical `O_H` certificate
+that makes the degree-one radial tangent premise current-surface authority,
+then strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority.  If that is
+not available, pivot to a strict W/Z matched physical-response packet with
+accepted action, same-source top/W covariance, strict non-observed `g2`,
+`delta_perp`, and final W-response rows.  Chunk063 completion alone remains
+support-only.

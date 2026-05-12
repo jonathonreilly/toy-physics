@@ -328,6 +328,55 @@ git diff --check
 # OK
 ```
 
+## Block28
+
+Local review run on 2026-05-11 19:52 EDT.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py`
+- `outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json`
+- `docs/YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT_NOTE_2026-05-11.md`
+- `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py`
+- `outputs/yt_pr230_degree_one_radial_tangent_oh_theorem_2026-05-07.json`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block28 runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | EXACT SUPPORT / NO CLOSURE | The degree-one radial-tangent theorem uniquely selects the taste-radial axis only under a future action premise.  The premise, canonical `O_H`, and strict `C_ss/C_sH/C_HH` pole rows remain absent. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state and existing support certificates only; it does not touch or inspect the live chunk worker. |
+| Audit Compatibility | PASS | Local review-loop ran without subagents.  One governance issue was fixed by adding markdown dependency links to the block28 note; audit pipeline/lint then passed with the known warning set. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_block28_degree_one_oh_support_intake_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=362 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=1 for the just-linked block28 note, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+python3 link check for block28 note/handoff/PR body
+# missing_links=[]
+rg status/firewall review
+# forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+git diff --check
+# OK
+```
+
 ## Block19
 
 Local review run on 2026-05-07 12:14 EDT.

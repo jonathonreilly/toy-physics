@@ -779,6 +779,9 @@ def main() -> int:
         "pr230_block27_post_block26_landed": load(
             "outputs/yt_pr230_block27_post_block26_landed_checkpoint_2026-05-11.json"
         ),
+        "pr230_block28_degree_one_oh_support_intake": load(
+            "outputs/yt_pr230_block28_degree_one_oh_support_intake_checkpoint_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -3939,6 +3942,52 @@ def main() -> int:
         is True,
         statuses["pr230_block27_post_block26_landed"],
     )
+    block28_degree_one_oh_support_intake = certificates[
+        "pr230_block28_degree_one_oh_support_intake"
+    ]
+    report(
+        "pr230-block28-degree-one-oh-support-intake-not-closure",
+        "block28 degree-one O_H support intake"
+        in str(statuses["pr230_block28_degree_one_oh_support_intake"])
+        and block28_degree_one_oh_support_intake.get("proposal_allowed") is False
+        and block28_degree_one_oh_support_intake.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block28_degree_one_oh_support_intake.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "only-block27-checkpoint-since-block27-input-head"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "degree-one-oh-support-loaded"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "degree-one-action-premise-still-missing"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "source-higgs-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "wz-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "neutral-h3h4-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True,
+        statuses["pr230_block28_degree_one_oh_support_intake"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6705,6 +6754,45 @@ def main() -> int:
         )
         is True
     )
+    result["block28_degree_one_oh_support_intake_not_closure"] = (
+        block28_degree_one_oh_support_intake.get("proposal_allowed") is False
+        and block28_degree_one_oh_support_intake.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block28_degree_one_oh_support_intake.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "only-block27-checkpoint-since-block27-input-head"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "degree-one-oh-support-loaded"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "degree-one-action-premise-still-missing"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "source-higgs-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "wz-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "neutral-h3h4-route-not-admitted"
+        )
+        is True
+        and block28_degree_one_oh_support_intake.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -6744,6 +6832,7 @@ def main() -> int:
         "does not treat the block24 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat the block25 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat the block26 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
+        "does not treat the block27 checkpoint commit or the degree-one O_H support intake as actual canonical O_H/source-Higgs pole-row closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

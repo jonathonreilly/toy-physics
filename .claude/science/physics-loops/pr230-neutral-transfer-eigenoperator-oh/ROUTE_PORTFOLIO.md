@@ -706,3 +706,42 @@
    - Result: unchanged.  Reopen only with one of the explicit
      production/certificate inputs above; do not treat the block26 checkpoint
      commit or chunk063 completion alone as closure.
+
+## Selected Block28 Route
+
+**Degree-one `O_H` support intake**
+
+- Type: exact support / source-Higgs bridge sharpening.
+- Dramatic-step score: 3.
+- Hard-residual pressure: 4.
+- Claim-state movement: folds the committed degree-one radial-tangent `O_H`
+  theorem into the loop sequence.  The theorem proves that a linear
+  Z3-covariant radial tangent in `span{S0,S1,S2}` has the unique axis
+  `(S0+S1+S2)/sqrt(3)`, matching the taste-radial source, but only under the
+  future same-surface EW/Higgs action premise.
+- Artifact: `YT_PR230_BLOCK28_DEGREE_ONE_OH_SUPPORT_INTAKE_CHECKPOINT`.
+
+## Block28 Fan-Out Synthesis
+
+1. **Source-Higgs frame**
+   - Result: sharpened but not admitted.  The degree-one axis theorem is exact
+     support, while the action premise, canonical `O_H`, strict
+     `C_ss/C_sH/C_HH` pole rows, Gram/FV/IR authority, and production
+     certificate remain absent.
+
+2. **W/Z frame**
+   - Result: still next fallback if source-Higgs inputs are unavailable.
+     Accepted action, canonical `O_H`/sector-overlap authority, production W/Z
+     rows, same-source top rows, matched covariance, strict non-observed `g2`,
+     `delta_perp`, and final W-response rows remain absent.
+
+3. **Neutral H3/H4 frame**
+   - Result: still not admitted.  Physical neutral transfer/off-diagonal
+     generator authority and source/canonical-Higgs coupling authority remain
+     absent.
+
+4. **Next admissible route**
+   - Result: unchanged in kind.  Make the degree-one premise current-surface
+     authority with accepted same-surface EW/Higgs action or canonical `O_H`;
+     otherwise pivot to strict W/Z matched physical-response rows.  Do not
+     treat block27, chunk063, or finite `C_sx/C_xx` staging rows as closure.
