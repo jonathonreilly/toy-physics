@@ -80,6 +80,15 @@ tau-keyed top/scalar-source correlators, empty guarded source-Higgs blocks,
 reduced source-Higgs smoke, and finite `C_sx/C_xx` rows are not
 queue-admission inputs.
 
+Block40 packages completed higher-shell chunks003-004.  The added row support
+does not change the queue ranking: the rows are still same-source `C_ss` plus
+taste-radial `C_sx/C_xx` under the unratified second-source certificate.  They
+are not canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C
+kernel rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response.  The
+next positive move remains a real accepted `O_H`/action plus strict
+source-Higgs pole-row packet, a strict W/Z accepted-action physical-response
+packet, or neutral H3/H4 physical-transfer authority.
+
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
 change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T06:54:16.969963+00:00",
+  "generated_at": "2026-05-12T07:04:33.077603+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17858,6 +17858,18 @@
       "runner": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py"
     },
     "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py"
+    },
+    "yt_pr230_schur_higher_shell_chunks003_004_completed_checkpoint_note_2026-05-12": {
       "assert_count": 2,
       "counts": {
         "A": 0,
@@ -37400,7 +37412,8 @@
     "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py": {
       "assert_count": 2,
       "claims": [
-        "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12"
+        "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12",
+        "yt_pr230_schur_higher_shell_chunks003_004_completed_checkpoint_note_2026-05-12"
       ],
       "counts": {
         "A": 0,

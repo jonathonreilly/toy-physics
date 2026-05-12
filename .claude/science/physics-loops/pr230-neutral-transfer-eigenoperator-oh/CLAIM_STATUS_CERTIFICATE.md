@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block39_post_block38_queue_admission_checkpoint`.
+Current block: `block40_schur_higher_shell_chunks003_004_completed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block39 post-block38 queue-admission checkpoint; block38 stuck fan-out, lane-1 Block45 Euclidean row boundary, post-Block45 neutral off-diagonal boundary, top mass-scan subtraction boundary, and higher-shell operator boundary leave source-Higgs not admitted, W/Z accepted-action response selected as fallback but not admitted, and neutral H3/H4 still blocked
+actual_current_surface_status: bounded-support / block40 higher-shell Schur scalar-LSZ chunks003-004 completed-mode checkpoints passed; row support only, no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block39 is a queue-admission checkpoint, not a retained/proposed-retained theorem. It consumes the block38 stuck fan-out, the lane-1 Block45 physical-Euclidean-row boundary, the post-Block45 neutral off-diagonal boundary, the top mass-scan subtraction boundary, and the higher-shell operator boundary, then records that no accepted action, canonical O_H certificate, production source-Higgs pole-row packet, strict W/Z packet, additive-top subtraction contract, neutral off-diagonal generator, or neutral H3/H4 certificate is present."
+proposal_allowed_reason: "Block40 is a completed-row support checkpoint, not a retained/proposed-retained theorem. Chunks003-004 add seed-controlled higher-shell C_ss and taste-radial C_sx/C_xx rows only. They do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -16,6 +16,14 @@ bare_retained_allowed: false
 Retained-proposal certificate result: fail.
 
 Reason:
+
+0. Block40 records completed higher-shell chunks003-004 as bounded support
+   only.  The completed-mode checkpoints pass for seed control, selected-mass
+   FH/LSZ metadata, higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows,
+   and forbidden-import firewalls, but the rows are not Schur A/B/C kernel
+   rows, strict scalar-LSZ moment/FV/IR authority, canonical `O_H`, canonical
+   `C_sH/C_HH` pole rows, W/Z response, physical `kappa_s`, or retained
+   top-Yukawa closure.
 
 1. Open imports remain: H3 physical neutral transfer/off-diagonal generator,
    H4 source/canonical-Higgs coupling, canonical `O_H`, production

@@ -19145,7 +19145,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T06:54:14.387539+00:00",
+  "generated_at": "2026-05-12T07:04:30.497522+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -44056,6 +44056,16 @@
       "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py",
       "title": "PR230 Higher-Shell Chunks001-002 Completed Checkpoint"
     },
+    "yt_pr230_schur_higher_shell_chunks003_004_completed_checkpoint_note_2026-05-12": {
+      "claim_id": "yt_pr230_schur_higher_shell_chunks003_004_completed_checkpoint_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / higher-shell Schur scalar-LSZ chunks003-004",
+      "deps": [],
+      "note_hash": "53547c58f48d07e81879e686ec24a7ca839ddcfe1a26e858ed322bfd05be5798",
+      "path": "docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS003_004_COMPLETED_CHECKPOINT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py",
+      "title": "PR230 Higher-Shell Chunks003-004 Completed Checkpoint"
+    },
     "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12": {
       "claim_id": "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12",
       "current_status": "unknown",
@@ -47540,6 +47550,7 @@
     "yt_pr230_schur_complement_complete_monotonicity_gate_note_2026-05-07",
     "yt_pr230_schur_complement_stieltjes_repair_gate_note_2026-05-07",
     "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12",
+    "yt_pr230_schur_higher_shell_chunks003_004_completed_checkpoint_note_2026-05-12",
     "yt_pr230_schur_higher_shell_chunks003_004_launch_checkpoint_note_2026-05-12",
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07",
     "yt_pr230_schur_higher_shell_wave_launcher_note_2026-05-12",
@@ -47721,12 +47732,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4786,
-    "leaf_count": 1118,
-    "node_count": 2162,
-    "root_count": 1656,
-    "runners_with_path": 1637,
+    "leaf_count": 1119,
+    "node_count": 2163,
+    "root_count": 1657,
+    "runners_with_path": 1638,
     "status_counts": {
-      "bounded": 601,
+      "bounded": 602,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,

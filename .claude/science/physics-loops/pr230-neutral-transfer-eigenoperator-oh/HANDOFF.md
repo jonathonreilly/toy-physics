@@ -1,11 +1,74 @@
 # Handoff
 
-Checkpoint: 2026-05-12 00:08 EDT
+Checkpoint: 2026-05-12 02:40 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block40 Result
+
+Created `YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS003_004_COMPLETED_CHECKPOINT`.
+
+This block resumes the live higher-shell workers and packages completed
+chunks003-004.  Both completed-mode chunk checkpoints pass after the workers
+write the row JSONs and volume artifacts.  The wave launcher status now
+records `completed_chunk_indices=[1,2,3,4]`, no active higher-shell workers,
+and no successor launch in this block.
+
+Result:
+
+- chunk003 completed with seed `2026057003`,
+  `created_utc=2026-05-12T06:29:14Z`, and
+  `runtime_seconds=7693.425`;
+- chunk004 completed with seed `2026057004`,
+  `created_utc=2026-05-12T06:29:28Z`, and
+  `runtime_seconds=7707.404`;
+- both checkpoints verify selected-mass-only FH/LSZ metadata at mass `0.75`,
+  preserved three-mass top scans, eleven higher-shell `C_ss` time-series rows,
+  eleven taste-radial `C_sx/C_xx` source-cross rows, seed control, and clean
+  forbidden-import firewalls;
+- campaign status now consumes completed chunks003-004 and passes;
+- no retained or `proposed_retained` wording is authorized.
+
+Boundary: these are higher-shell support rows only.  They are not Schur A/B/C
+kernel rows, not strict scalar-LSZ moment/FV/IR authority, not canonical `O_H`,
+not strict canonical `C_sH/C_HH` pole rows, not W/Z response, not physical
+`kappa_s`, and not top-Yukawa closure.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 3 --output outputs/yt_pr230_schur_higher_shell_chunk003_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 4 --output outputs/yt_pr230_schur_higher_shell_chunk004_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=396 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=105 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=187 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=73 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK: no errors; 5 existing warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK: no errors; 5 existing warnings
+```
+
+Next exact action: if the higher-shell support campaign continues, launch only
+the next non-colliding wave from the contract after this block is committed and
+pushed.  Positive physics closure still requires accepted same-surface
+`O_H`/action plus strict `C_ss/C_sH/C_HH` rows, a strict W/Z packet, or neutral
+H3/H4 physical-transfer authority.
 
 ## Block39 Result
 

@@ -1,5 +1,32 @@
 # Review History
 
+## Block40
+
+Local review run on 2026-05-12 02:40 EDT.
+
+Scope:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS003_004_COMPLETED_CHECKPOINT_NOTE_2026-05-12.md`
+- `outputs/yt_pr230_schur_higher_shell_chunk003_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_chunk004_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk003_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk004_2026-05-07.json`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Disposition: pass bounded support.  Completed-mode checkpoints for chunks003
+and 004 pass 15/0, the wave launcher status passes 11/0 with no active
+higher-shell workers, and the campaign status runner passes 396/0 after
+consuming completed checkpoints.  Assumption stress passes 105/0, full
+positive closure assembly passes 187/0, the retained-route certificate passes
+319/0, positive-closure completion audit passes 73/0, and audit pipeline plus
+strict audit lint pass with the five existing warnings.  The block is row
+support only: it does not
+promote taste-radial `C_sx/C_xx` to canonical `C_sH/C_HH`, does not provide
+Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical
+`kappa_s`, retained, or `proposed_retained` closure.
+
 ## Block01
 
 Review-loop run locally on 2026-05-07 08:13 EDT.
