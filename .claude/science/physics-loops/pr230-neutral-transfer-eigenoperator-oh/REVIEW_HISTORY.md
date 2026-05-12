@@ -1,5 +1,26 @@
 # Review History
 
+## Block45
+
+Local review run on 2026-05-12 11:17 EDT.
+
+Scope:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS011_012_LAUNCH_CHECKPOINT_NOTE_2026-05-12.md`
+- `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Disposition: pass run-control support.  The wave launcher passes 11/0 and
+records launched chunks011-012 with pids `88639` and `88640`; campaign status
+passes 408/0 after consuming the launcher state.  Assumption stress passes
+105/0, full positive closure assembly passes 194/0, retained-route
+certificate passes 319/0, positive-closure completion audit passes 73/0, and
+strict audit lint passes with the five existing warnings.  This block writes
+no completed chunks011-012 row evidence and authorizes no retained or
+`proposed_retained` closure language.
+
 ## Block44
 
 Local review run on 2026-05-12 10:59 EDT.

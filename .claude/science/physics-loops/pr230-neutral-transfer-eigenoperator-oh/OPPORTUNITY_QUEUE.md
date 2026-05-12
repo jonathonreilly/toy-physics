@@ -131,6 +131,14 @@ The clean physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
 
+Block45 launches chunks011-012 as run-control support.  It does not change the
+queue ranking and does not add completed row evidence yet.  Wait for
+chunks011-012 to finish, then package completed-mode checkpoints before
+launching another support wave.  The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
+
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
 change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial

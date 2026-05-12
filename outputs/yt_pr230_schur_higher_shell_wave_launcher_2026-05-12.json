@@ -786,8 +786,27 @@
   "fail_count": 0,
   "launch_allowed_before_action": true,
   "launch_capacity": 2,
-  "launch_mode": false,
-  "launched": [],
+  "launch_mode": true,
+  "launched": [
+    {
+      "alive_after_verify_seconds": true,
+      "chunk_index": 11,
+      "log": "outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk011_20260512T151553Z.log",
+      "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk011_2026-05-07.json",
+      "pid": 88639,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk011",
+      "seed": 2026057011
+    },
+    {
+      "alive_after_verify_seconds": true,
+      "chunk_index": 12,
+      "log": "outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk012_20260512T151553Z.log",
+      "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk012_2026-05-07.json",
+      "pid": 88640,
+      "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk012",
+      "seed": 2026057012
+    }
+  ],
   "max_concurrent": 2,
   "partial_directories_count_as_non_evidence": true,
   "pass_count": 11,
