@@ -497,7 +497,7 @@ python3 scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkp
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=364 FAIL=0
 bash docs/audit/scripts/run_pipeline.sh
-# OK, newly seeded=1, re-audit required=0, 5 known warnings
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 ```
@@ -1368,7 +1368,7 @@ python3 scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 # SUMMARY: PASS=365 FAIL=0
 bash docs/audit/scripts/run_pipeline.sh
-# OK, newly seeded=1, re-audit required=0, 5 known warnings
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
 python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 python3 link/parse checks
@@ -1416,6 +1416,51 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 python3 link/parse checks
 # parse_ok, missing_links=[]
+git diff --check
+# OK
+```
+
+## Block37
+
+Local review run on 2026-05-12 02:34 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py`
+- `outputs/yt_pr230_block37_post_block36_supervisor_yield_checkpoint_2026-05-12.json`
+- `docs/YT_PR230_BLOCK37_POST_BLOCK36_SUPERVISOR_YIELD_CHECKPOINT_NOTE_2026-05-12.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block37 runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Block37 is supervisor-yield only: FH-LSZ full-set support plus native-scalar/action/LSZ and W/Z absolute-authority route-exhaustion boundaries are consumed as support/no-go inputs, and no source-Higgs, W/Z, or neutral H3/H4 production/certificate input is present. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, top/W covariance assumption, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only, does not touch the live chunk worker, and keeps PR #230 as the landing path. |
+| Audit Compatibility | PASS | Block37 PASS=13 FAIL=0 and campaign status PASS=375 FAIL=0; final link/parse/firewall/audit/diff checks are recorded in the state. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=375 FAIL=0
+python3 link/parse checks
+# parse_ok, missing_links=[]
+rg status/firewall review
+# forbidden hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
 git diff --check
 # OK
 ```

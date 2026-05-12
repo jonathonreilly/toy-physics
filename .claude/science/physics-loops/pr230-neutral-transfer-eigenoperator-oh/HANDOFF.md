@@ -1,11 +1,60 @@
 # Handoff
 
-Checkpoint: 2026-05-11 21:29 EDT
+Checkpoint: 2026-05-11 22:34 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block37 Result
+
+Created `YT_PR230_BLOCK37_POST_BLOCK36_SUPERVISOR_YIELD_CHECKPOINT`.
+
+This block resumes after block36 without touching the live chunk worker.  It
+does not rerun source-Higgs, W/Z, or neutral absence as a new proof.  It checks
+the current PR #230 head after the post-block36 FH-LSZ full-set support commit,
+native scalar/action/LSZ route-exhaustion boundary, and W/Z
+absolute-authority route-exhaustion boundary.  Those commits add support/no-go
+state but no admitted production/certificate bridge input, so the current
+surface remains open and waiting on the same explicit inputs.
+
+Result:
+
+- source-Higgs remains waiting on accepted same-surface `O_H`/action plus
+  strict `C_ss/C_sH/C_HH` pole rows with Gram/FV/IR authority;
+- post-block36 FH-LSZ full-set support plus native-scalar/action/LSZ and W/Z
+  absolute-authority route-exhaustion boundaries are consumed as support/no-go
+  inputs only;
+- W/Z remains the active fallback but is not admitted without accepted action,
+  production W/Z mass-response rows, same-source top rows, matched covariance,
+  strict non-observed `g2`, `delta_perp`, and final W-response rows;
+- neutral H3/H4 remains blocked without physical neutral transfer/off-diagonal
+  dynamics plus source/canonical-Higgs coupling authority;
+- no retained or `proposed_retained` wording is authorized;
+- this lane should yield until the outer supervisor supplies one of the
+  missing production/certificate inputs.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=375 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, final rerun newly seeded=0, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
+Next exact action: supply one explicit missing artifact: accepted same-surface
+`O_H`/action plus strict `C_ss/C_sH/C_HH` rows with Gram/FV/IR authority, or a
+strict W/Z physical-response packet with accepted action, production rows,
+same-source top rows, matched covariance, strict non-observed `g2`,
+`delta_perp`, and final W-response rows.
 
 ## Block36 Result
 

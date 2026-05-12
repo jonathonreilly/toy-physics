@@ -906,3 +906,37 @@
      non-observed `g2`, `delta_perp` authority, and final W-response rows.
      Reopen source-Higgs only with accepted same-surface `O_H`/action plus
      strict `C_ss/C_sH/C_HH` pole rows.
+
+## Selected Block37 Route
+
+**Post-block36 supervisor-yield checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 5.
+- Claim-state movement: consumes FH-LSZ full-set support plus native
+  scalar/action/LSZ and W/Z absolute-authority route-exhaustion boundaries after
+  block36.  It does not rerun a shortcut as new proof; it records that the
+  active W/Z fallback and the source-Higgs and neutral routes are still waiting
+  on explicit missing inputs.
+- Artifact: `YT_PR230_BLOCK37_POST_BLOCK36_SUPERVISOR_YIELD_CHECKPOINT`.
+
+## Block37 Fan-Out Synthesis
+
+1. **Action-first `O_H` / source-Higgs**
+   - Result: still blocked.  Reopen only with accepted same-surface
+     `O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows and Gram/FV/IR
+     authority.
+
+2. **Strict W/Z accepted-action response**
+   - Result: remains active fallback but blocked.  Requires accepted action,
+     production W/Z rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp`, and final W-response rows.
+
+3. **Neutral H3/H4**
+   - Result: still fallback-only.  Physical neutral transfer/off-diagonal
+     generator and source/canonical-Higgs coupling authority remain absent.
+
+4. **Supervisor continuation**
+   - Yield this lane until one explicit production/certificate input lands.
+     Do not spend the next block re-proving the same current-surface absence.

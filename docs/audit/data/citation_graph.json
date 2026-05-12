@@ -8625,6 +8625,42 @@
       "to": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
     },
     {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -18977,7 +19013,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T02:47:07.833234+00:00",
+  "generated_at": "2026-05-12T02:56:07.746451+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42603,6 +42639,26 @@
       "runner_path": "scripts/frontier_yt_pr230_block36_source_higgs_wz_dispatch_checkpoint.py",
       "title": "PR230 Block36 Source-Higgs / W/Z Dispatch Checkpoint"
     },
+    "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12": {
+      "claim_id": "yt_pr230_block37_post_block36_supervisor_yield_checkpoint_note_2026-05-12",
+      "current_status": "open",
+      "current_status_raw": "open / W/Z accepted-action fallback remains blocked; no ranked",
+      "deps": [
+        "yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_note_2026-05-12",
+        "yt_pr230_fms_action_adoption_minimal_cut_note_2026-05-07",
+        "yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06",
+        "yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07",
+        "yt_pr230_wz_physical_response_packet_intake_checkpoint_note_2026-05-07",
+        "yt_pr230_neutral_rank_one_bypass_post_block37_audit_note_2026-05-12",
+        "yt_pr230_fh_lsz_target_timeseries_full_set_checkpoint_note_2026-05-12",
+        "yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_note_2026-05-12",
+        "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
+      ],
+      "note_hash": "fcf175fd6a341e881a5ada9759e84bbba3d09242b9078c1b73d244b381052a8d",
+      "path": "docs/YT_PR230_BLOCK37_POST_BLOCK36_SUPERVISOR_YIELD_CHECKPOINT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py",
+      "title": "PR230 Block37 Post-Block36 Supervisor-Yield Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47246,14 +47302,14 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4744,
-    "leaf_count": 1123,
-    "node_count": 2138,
+    "edge_count": 4753,
+    "leaf_count": 1121,
+    "node_count": 2139,
     "root_count": 1639,
-    "runners_with_path": 1613,
+    "runners_with_path": 1614,
     "status_counts": {
       "bounded": 597,
-      "open": 114,
+      "open": 115,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,

@@ -192,6 +192,13 @@ production W/Z rows, same-source top rows, matched covariance, strict
 non-observed `g2`, `delta_perp`, and final W-response rows.  No standalone
 block36 review PR should be opened unless PR #230 integration fails.
 
+Block37 follows the same direct PR #230 landing path.  It adds the
+post-block36 supervisor-yield checkpoint and records that the FH-LSZ full-set
+support commit plus native-scalar/action/LSZ and W/Z absolute-authority
+route-exhaustion boundaries do not admit source-Higgs, W/Z, or neutral H3/H4
+without the explicit missing inputs.  No standalone block37 review PR should be
+opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

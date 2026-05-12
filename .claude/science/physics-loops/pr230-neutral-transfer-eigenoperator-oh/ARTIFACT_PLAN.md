@@ -656,3 +656,20 @@ mass-response rows, same-source top rows, matched covariance, strict
 non-observed `g2`, `delta_perp` authority, and final W-response rows.  Reopen
 source-Higgs only with accepted same-surface `O_H`/action plus strict
 `C_ss/C_sH/C_HH` pole rows.
+
+Block37 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Post-block36 supervisor-yield runner | `scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py` | Created; PASS=13 FAIL=0 |
+| Post-block36 supervisor-yield certificate | `outputs/yt_pr230_block37_post_block36_supervisor_yield_checkpoint_2026-05-12.json` | Created; consumes post-block36 support/no-go commits and admits no ranked route |
+| Post-block36 supervisor-yield note | `docs/YT_PR230_BLOCK37_POST_BLOCK36_SUPERVISOR_YIELD_CHECKPOINT_NOTE_2026-05-12.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block37; PASS=375 FAIL=0; no proposal allowed |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block37 checkpoint |
+
+Follow-on artifact target after block37 is unchanged and explicit: supply one
+real bridge input.  Either accepted same-surface `O_H`/action plus strict
+`C_ss/C_sH/C_HH` rows with Gram/FV/IR authority, or a strict W/Z
+physical-response packet with accepted action, production rows, same-source top
+rows, matched covariance, strict non-observed `g2`, `delta_perp`, and final
+W-response rows.  Neutral H3/H4 reopens only with physical-transfer authority.

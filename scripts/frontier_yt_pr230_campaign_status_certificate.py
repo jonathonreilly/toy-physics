@@ -806,6 +806,9 @@ def main() -> int:
         "pr230_block36_source_higgs_wz_dispatch": load(
             "outputs/yt_pr230_block36_source_higgs_wz_dispatch_checkpoint_2026-05-12.json"
         ),
+        "pr230_block37_post_block36_supervisor_yield": load(
+            "outputs/yt_pr230_block37_post_block36_supervisor_yield_checkpoint_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4351,6 +4354,70 @@ def main() -> int:
         is True,
         statuses["pr230_block36_source_higgs_wz_dispatch"],
     )
+    block37_post_block36_supervisor_yield = certificates[
+        "pr230_block37_post_block36_supervisor_yield"
+    ]
+    report(
+        "pr230-block37-post-block36-supervisor-yield-not-closure",
+        "post-block36 supervisor-yield checkpoint"
+        in str(statuses["pr230_block37_post_block36_supervisor_yield"])
+        and block37_post_block36_supervisor_yield.get("proposal_allowed") is False
+        and block37_post_block36_supervisor_yield.get("bare_retained_allowed")
+        is False
+        and block37_post_block36_supervisor_yield.get(
+            "block37_post_block36_supervisor_yield_checkpoint_passed"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block37_post_block36_supervisor_yield.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "inspection-ref-is-current-pr-head"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "post-block36-commits-consumed"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "post-block36-inputs-support-or-boundary-only"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "block36-clean-dispatch-checkpoint"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "wz-active-fallback-still-blocked"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "source-higgs-reopen-requires-new-input"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "neutral-reopen-blocked-without-h3h4"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "no-ranked-route-admitted"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "yield-for-supervisor"
+        )
+        is True,
+        statuses["pr230_block37_post_block36_supervisor_yield"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6233,6 +6300,7 @@ def main() -> int:
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
+        "block37_post_block36_supervisor_yield_not_closure": False,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6241,6 +6309,7 @@ def main() -> int:
             "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
             "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
             "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
+            "does not treat block37 post-block36 supervisor-yield status as production evidence",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -7414,6 +7483,51 @@ def main() -> int:
         )
         is True
     )
+    result["block37_post_block36_supervisor_yield_not_closure"] = (
+        block37_post_block36_supervisor_yield.get("proposal_allowed") is False
+        and block37_post_block36_supervisor_yield.get("bare_retained_allowed")
+        is False
+        and block37_post_block36_supervisor_yield.get(
+            "block37_post_block36_supervisor_yield_checkpoint_passed"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block37_post_block36_supervisor_yield.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "post-block36-commits-consumed"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "post-block36-inputs-support-or-boundary-only"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "wz-active-fallback-still-blocked"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "source-higgs-reopen-requires-new-input"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "neutral-reopen-blocked-without-h3h4"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "no-ranked-route-admitted"
+        )
+        is True
+        and block37_post_block36_supervisor_yield.get("checks", {}).get(
+            "yield-for-supervisor"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -7460,6 +7574,7 @@ def main() -> int:
         "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, or launch status as row evidence",
         "does not treat the block36 source-Higgs/WZ dispatch checkpoint, lane1 action-premise boundary, top mass-scan support rows, higher-shell preflight, neutral rank-one bypass boundary, or W/Z self-normalization no-go as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat the Block42 W/Z absolute-authority route exhaustion as permanent W/Z no-go or as PR230 closure",
+        "does not treat the block37 post-block36 supervisor-yield checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

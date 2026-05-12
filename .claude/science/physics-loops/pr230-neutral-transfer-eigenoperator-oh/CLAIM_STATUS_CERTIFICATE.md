@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block36_source_higgs_wz_dispatch_checkpoint`.
+Current block: `block37_post_block36_supervisor_yield_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block36 source-Higgs route checkpointed and W/Z accepted-action response pivot selected; no physical bridge packet is admitted
+actual_current_surface_status: open / block37 post-block36 supervisor-yield checkpoint; post-block36 support/no-go commits are consumed, W/Z active fallback remains blocked, and no ranked route is admitted without fresh production/certificate inputs
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block36 is a dispatch checkpoint. It consumes the lane-1 O_H root theorem attempt, lane-1 action-premise boundary, neutral rank-one bypass audit, W/Z mass-response self-normalization no-go, and HS/logdet scalar-action normalization no-go as exact negative boundaries, treats top mass-scan response rows and higher-shell preflight as support only, treats the higher-shell Schur wave launch as run-control only, checkpoints the blocked canonical O_H/source-Higgs route after block35, selects strict W/Z accepted-action response as the active fallback, and confirms that no route has the required accepted action, production rows, matched covariance, strict g2, source-Higgs pole authority, or neutral physical-transfer authority."
+proposal_allowed_reason: "Block37 is a supervisor-yield checkpoint, not a new route theorem. The inspected PR head includes post-block36 FH-LSZ full-set support plus native-scalar/action/LSZ and W/Z absolute-authority route-exhaustion boundaries, but no admitted source-Higgs, W/Z, or neutral H3/H4 production/certificate input."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -132,6 +132,12 @@ Reason:
     as the active fallback, but accepted action, production W/Z rows,
     same-source top rows, matched covariance, strict non-observed `g2`,
     `delta_perp`, and final W-response rows remain absent.
+25. Block37 records that the inspected PR head includes the post-block36
+    FH-LSZ full-set support commit plus native scalar/action/LSZ and W/Z
+    absolute-authority route-exhaustion boundaries.  It treats those commits as
+    support/no-go inputs only, does not rerun a current-surface shortcut as new
+    proof, does not touch the live worker, and does not admit source-Higgs,
+    W/Z, or neutral H3/H4 without the explicit missing inputs.
 
 Prior block certificate summary:
 
@@ -291,5 +297,12 @@ Prior block certificate summary:
   strict pole rows, selects W/Z as active fallback, and confirms that W/Z is
   not admitted without accepted action, production rows, matched covariance,
   strict non-observed `g2`, `delta_perp`, and final W-response authority.
-- Block01 through Block36 all have `proposal_allowed=false`; their boundaries
+- Block37 actual status: open / post-block36 supervisor-yield checkpoint; it
+  consumes FH-LSZ full-set support plus native-scalar/action/LSZ and W/Z
+  absolute-authority route-exhaustion boundaries as support/no-go inputs only,
+  keeps W/Z as active fallback but blocked, keeps source-Higgs waiting on
+  accepted `O_H`/action plus strict pole rows, keeps neutral H3/H4 waiting on
+  physical-transfer authority, and yields until explicit production/certificate
+  inputs land.
+- Block01 through Block37 all have `proposal_allowed=false`; their boundaries
   remain active.

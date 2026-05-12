@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block36 source-Higgs / W/Z dispatch checkpoint.
+Campaign mode queue after block37 post-block36 supervisor-yield checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -42,6 +42,16 @@ It selects rank two, strict W/Z accepted-action physical response, as the
 active fallback while keeping it inadmissible until accepted action, production
 W/Z rows, same-source top rows, matched covariance, strict non-observed `g2`,
 `delta_perp`, and final W-response rows are supplied.
+
+Block37 consumes the post-block36 FH-LSZ full-set support commit plus native
+scalar/action/LSZ and W/Z absolute-authority route-exhaustion boundaries.  The
+queue is therefore unchanged: source-Higgs remains rank one but requires
+accepted same-surface `O_H`/action plus strict
+`C_ss/C_sH/C_HH` rows; W/Z remains the active fallback but requires the strict
+accepted-action physical-response packet; neutral H3/H4 remains blocked without
+physical-transfer authority.  This lane should yield until one of those
+explicit inputs is supplied rather than repeat another current-surface absence
+gate.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
