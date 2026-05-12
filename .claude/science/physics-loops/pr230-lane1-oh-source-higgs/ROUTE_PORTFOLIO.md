@@ -174,3 +174,19 @@ stand-ins for `K'(pole)`.  The next positive artifact must supply the pole
 derivative/residue, strict direct pole rows, same-surface primitive transfer,
 accepted canonical `O_H`/action/LSZ authority, or strict physical-response
 rows.
+
+## Block63 Update
+
+The lane-1 completion audit closes the process ambiguity: the current branch
+does not have a hidden complete route.  It has support plus exact boundaries.
+The only routes still worth spending science cycles on are routes that add new
+primitive authority:
+
+- same-surface accepted canonical `O_H`/action/LSZ;
+- strict physical source-Higgs pole rows under that authority;
+- scalar denominator `K'(pole)`/residue or Schur pole-derivative rows;
+- strict W/Z or neutral-transfer absolute-normalization authority.
+
+Any path that merely reuses degree-one/FMS support, finite-shell/chunk rows,
+compact-source positivity, or fixed carrier support is now classified as
+non-admissible for positive closure.

@@ -362,6 +362,21 @@ carrier does not identify `K'(pole)` or pole residue.  This is not a closure
 claim.  It preserves Blocks 57, 58, and 60 as support while blocking the
 compact-source-to-residue shortcut.
 
+## Block63: Lane-1 Completion Audit
+
+- Note:
+  `docs/YT_PR230_BLOCK63_LANE1_COMPLETION_AUDIT_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block63_lane1_completion_audit.py`
+- Certificate:
+  `outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json`
+
+Status: open / exact lane-1 completion audit.  This is not a closure claim.
+It verifies that full positive closure is not achieved on the current surface and
+that `proposed_retained` remains disallowed until same-surface canonical
+`O_H`/action/LSZ, strict `C_ss/C_sH/C_HH` rows, Gram/FVIR/model-class
+acceptance, and `K'(pole)`/residue authority are actually supplied.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing

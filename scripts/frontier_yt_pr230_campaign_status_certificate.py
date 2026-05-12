@@ -857,6 +857,9 @@ def main() -> int:
         "pr230_block62_compact_source_kprime_identifiability_obstruction": load(
             "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json"
         ),
+        "pr230_block63_lane1_completion_audit": load(
+            "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -5011,6 +5014,36 @@ def main() -> int:
         is False,
         statuses["pr230_block62_compact_source_kprime_identifiability_obstruction"],
     )
+    block63_lane1_completion_audit = certificates[
+        "pr230_block63_lane1_completion_audit"
+    ]
+    report(
+        "pr230-block63-lane1-completion-audit-blocks-proposal",
+        "full PR230 positive closure not achieved"
+        in str(statuses["pr230_block63_lane1_completion_audit"])
+        and block63_lane1_completion_audit.get(
+            "block63_lane1_completion_audit_passed"
+        )
+        is True
+        and block63_lane1_completion_audit.get("proposal_allowed") is False
+        and block63_lane1_completion_audit.get("proposed_retained_allowed")
+        is False
+        and block63_lane1_completion_audit.get("full_positive_closure_achieved")
+        is False
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "canonical_oh_absent"
+        )
+        is True
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "strict_source_higgs_rows_absent"
+        )
+        is True
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "kprime_residue_absent_after_block62"
+        )
+        is True,
+        statuses["pr230_block63_lane1_completion_audit"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -8661,6 +8694,29 @@ def main() -> int:
             "pole_residue_authority_present"
         )
         is False
+    )
+    result["block63_lane1_completion_audit_blocks_proposal"] = (
+        block63_lane1_completion_audit.get(
+            "block63_lane1_completion_audit_passed"
+        )
+        is True
+        and block63_lane1_completion_audit.get("proposal_allowed") is False
+        and block63_lane1_completion_audit.get("proposed_retained_allowed")
+        is False
+        and block63_lane1_completion_audit.get("full_positive_closure_achieved")
+        is False
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "canonical_oh_absent"
+        )
+        is True
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "strict_source_higgs_rows_absent"
+        )
+        is True
+        and block63_lane1_completion_audit.get("completion_checks", {}).get(
+            "kprime_residue_absent_after_block62"
+        )
+        is True
     )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True

@@ -757,3 +757,42 @@ normalization as residue authority.  The next positive scalar artifact must
 derive `K'(pole)` or pole residue directly, or bypass that route with strict
 physical rows plus canonical `O_H`/response and threshold/FVIR/contact
 authority.
+
+## Block63 Lane-1 Completion Audit
+
+Added `docs/YT_PR230_BLOCK63_LANE1_COMPLETION_AUDIT_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block63_lane1_completion_audit.py`, and
+`outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json`.
+
+Result: open / exact lane-1 completion audit.  The runner verifies that the
+current PR230 surface still lacks all artifacts required for full retained
+closure: accepted same-surface canonical `O_H`/action/LSZ authority, strict
+physical `C_ss/C_sH/C_HH` pole rows, source-Higgs Gram/FVIR/model-class
+acceptance, and `K'(pole)`/pole-residue authority.  It also records the latest
+higher-shell chunk003/004 rows as bounded support only.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block63_lane1_completion_audit.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block63_lane1_completion_audit.py
+# SUMMARY: PASS=16 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=189 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=398 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+```
+
+Next exact action: stop treating support inventory as a closure path.  A future
+positive block must carry new primitive authority: accepted same-surface
+canonical `O_H`/action/LSZ theorem, strict source-Higgs pole rows after that
+theorem, thermodynamic `K'(pole)`/residue theorem, same-surface Schur
+pole-derivative rows, or strict W/Z/neutral-transfer absolute-normalization
+authority.

@@ -173,3 +173,11 @@ residue.  The admissible scalar route is now only a direct microscopic
 `K'(pole)`/residue theorem, strict direct pole rows with threshold/FVIR/contact
 authority, or a different physical-response/canonical-`O_H` bridge that
 supplies those roots.
+
+After Block63, there is no current-surface completion path through support
+inventory alone.  This is not a permanent no-go against PR230.  It is an exact
+completion boundary: full positive closure remains open until a future artifact
+supplies accepted same-surface canonical `O_H`/action/LSZ authority, strict
+physical `C_ss/C_sH/C_HH` rows with Gram/FVIR/model-class acceptance,
+`K'(pole)`/residue authority, same-surface Schur pole-derivative rows, or
+strict W/Z/neutral-transfer absolute-normalization authority.

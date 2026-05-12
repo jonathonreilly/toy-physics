@@ -1,14 +1,14 @@
 # Audit Queue
 
-**Generated:** 2026-05-12T07:12:43.004705+00:00
-**Total pending:** 1323
+**Generated:** 2026-05-12T07:35:11.822334+00:00
+**Total pending:** 1324
 **Ready (all deps already at a stable tier):** 912
 
 By criticality:
 - `critical`: 0
-- `high`: 241
-- `medium`: 362
-- `leaf`: 720
+- `high`: 242
+- `medium`: 361
+- `leaf`: 721
 
 Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -58,13 +58,13 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 40 | `universal_qg_canonical_smooth_geometric_action_note` | high | 33 | 7.59 | Y | fresh_context_or_stronger | - |
 | 41 | `hubble_lane5_two_gate_dependency_firewall_note_2026-04-27` | high | 16 | 6.59 | Y | fresh_context_or_stronger | `scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py` |
 | 42 | `atomic_rydberg_dependency_firewall_note_2026-04-27` | high | 15 | 6.50 | Y | fresh_context_or_stronger | `scripts/frontier_atomic_rydberg_dependency_firewall.py` |
-| 43 | `yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06` | high | 13 | 6.31 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py` |
-| 44 | `yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07` | high | 11 | 7.08 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py` |
-| 45 | `yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07` | high | 11 | 6.08 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py` |
-| 46 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 249 | 14.97 |  | fresh_context_or_stronger | - |
-| 47 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 249 | 14.47 |  | fresh_context_or_stronger | - |
-| 48 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | high | 248 | 12.96 |  | fresh_context_or_stronger | `scripts/frontier_lh_anomaly_trace_catalog.py` |
-| 49 | `yt_zero_import_authority_note` | high | 216 | 11.26 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 50 | `neutrino_majorana_native_gaussian_no_go_note` | high | 180 | 10.00 |  | fresh_context_or_stronger | `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py` |
+| 43 | `yt_pr230_source_higgs_pole_row_acceptance_contract_note_2026-05-06` | high | 14 | 6.41 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_source_higgs_pole_row_acceptance_contract.py` |
+| 44 | `yt_pr230_wz_same_source_action_minimal_certificate_cut_note_2026-05-07` | high | 12 | 7.20 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_wz_same_source_action_minimal_certificate_cut.py` |
+| 45 | `yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07` | high | 12 | 6.20 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py` |
+| 46 | `yt_pr230_wz_response_ratio_identifiability_contract_note_2026-05-07` | high | 12 | 6.20 | Y | fresh_context_or_stronger | `scripts/frontier_yt_pr230_wz_response_ratio_identifiability_contract.py` |
+| 47 | `su2_witten_z2_anomaly_theorem_note_2026-04-24` | high | 249 | 14.97 |  | fresh_context_or_stronger | - |
+| 48 | `su3_cubic_anomaly_cancellation_theorem_note_2026-04-24` | high | 249 | 14.47 |  | fresh_context_or_stronger | - |
+| 49 | `lh_anomaly_trace_catalog_theorem_note_2026-04-25` | high | 248 | 12.96 |  | fresh_context_or_stronger | `scripts/frontier_lh_anomaly_trace_catalog.py` |
+| 50 | `yt_zero_import_authority_note` | high | 216 | 11.26 |  | fresh_context_or_stronger | `scripts/frontier_yt_ward_identity_derivation.py` |
 
 Full queue lives in `data/audit_queue.json`.

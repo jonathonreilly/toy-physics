@@ -192,3 +192,19 @@ any route that only adds finite-volume source positivity, compact moments, or
 carrier normalization.  Reopen with a direct scalar denominator derivative,
 strict direct pole rows, accepted canonical `O_H`/action/LSZ authority, a
 same-surface primitive transfer certificate, or strict physical-response rows.
+
+## Block63 Update
+
+The lane-1 completion audit confirms that PR230 remains open, not
+`proposed_retained`.  The top-ranked admissible routes are now:
+
+1. accepted same-surface canonical `O_H`/action/LSZ theorem;
+2. strict source-Higgs `C_ss/C_sH/C_HH` pole-row packet after canonical `O_H`;
+3. thermodynamic `K'(pole)`/pole-residue theorem or same-surface Schur
+   pole-derivative rows;
+4. strict W/Z or neutral-transfer physical response with absolute
+   normalization.
+
+Do not select another route that only inventories or restates existing
+degree-one/FMS, compact-source, fixed-carrier, finite-shell, or higher-shell
+chunk support.

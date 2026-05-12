@@ -35,6 +35,7 @@ PARENTS = {
     "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
     "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
     "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
+    "block63_lane1_completion_audit": "outputs/yt_pr230_block63_lane1_completion_audit_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -755,6 +756,35 @@ def main() -> int:
             "pole_residue_authority_present"
         )
         is False
+    )
+    block63_lane1_completion_audit_blocks_completion = (
+        "full PR230 positive closure not achieved"
+        in statuses["block63_lane1_completion_audit"]
+        and certs["block63_lane1_completion_audit"].get(
+            "block63_lane1_completion_audit_passed"
+        )
+        is True
+        and certs["block63_lane1_completion_audit"].get("proposal_allowed") is False
+        and certs["block63_lane1_completion_audit"].get(
+            "proposed_retained_allowed"
+        )
+        is False
+        and certs["block63_lane1_completion_audit"].get(
+            "full_positive_closure_achieved"
+        )
+        is False
+        and certs["block63_lane1_completion_audit"].get(
+            "completion_checks", {}
+        ).get("canonical_oh_absent")
+        is True
+        and certs["block63_lane1_completion_audit"].get(
+            "completion_checks", {}
+        ).get("strict_source_higgs_rows_absent")
+        is True
+        and certs["block63_lane1_completion_audit"].get(
+            "completion_checks", {}
+        ).get("kprime_residue_absent_after_block62")
+        is True
     )
     finite_source_support = (
         certs["fh_lsz_finite_source_linearity"].get("finite_source_linearity_gate_passed") is True
@@ -2857,6 +2887,11 @@ def main() -> int:
         block62_compact_source_kprime_identifiability_blocks,
         statuses["block62_compact_source_kprime_identifiability_obstruction"],
     )
+    report(
+        "block63-lane1-completion-audit-blocks-proposal",
+        block63_lane1_completion_audit_blocks_completion,
+        statuses["block63_lane1_completion_audit"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4359,6 +4394,7 @@ def main() -> int:
         "block60_source_carrier_support_not_closure": block60_source_carrier_support_not_closure,
         "block61_post_carrier_kprime_blocks": block61_post_carrier_kprime_blocks,
         "block62_compact_source_kprime_identifiability_blocks": block62_compact_source_kprime_identifiability_blocks,
+        "block63_lane1_completion_audit_blocks_proposal": block63_lane1_completion_audit_blocks_completion,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "

@@ -680,6 +680,8 @@ this was a scalar/FVIR root cut and PR230 delivery block.
 - Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
   and does not apply audit verdicts or update publication/manuscript claim
   surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline seeds Block63 and
+  `audit_lint.py --strict` reports only the known five warnings.
 - Audit Compatibility: PASS.  The full audit pipeline seeds Block56 as support,
   and `audit_lint.py --strict` reports only the known five warnings.
 
@@ -909,3 +911,38 @@ reviewer roles were applied locally to the changed files.
   surfaces.
 - Audit Compatibility: PASS.  The full audit pipeline seeds Block62 and
   `audit_lint.py --strict` reports only the known five warnings.
+
+## Self-Review: Block63
+
+- Overclaim check: passed.  The note and runner say open / exact lane-1
+  completion audit, not retained or `proposed_retained`.
+- Physics check: passed.  The audit maps the lane-1 objective to concrete
+  evidence and verifies the current surface lacks accepted canonical
+  `O_H`/action/LSZ authority, strict source-Higgs pole rows, Gram/FVIR/model
+  acceptance, and `K'(pole)`/pole-residue authority.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`,
+  `c2=1`, or `Z_match=1`.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block63 Package
+
+Local review-loop was performed directly against the changed package.  No
+parallel reviewer agents were launched in this session; the review-loop
+reviewer roles were applied locally to the changed files.
+
+- Code / Runner: PASS.  The new runner compiles and reports
+  `PASS=16 FAIL=0`; the aggregate gates report `PASS=189 FAIL=0` and
+  `PASS=398 FAIL=0`.
+- Physics Claim Boundary: OPEN COMPLETION AUDIT.  Block63 proves that the
+  current PR230 surface is not complete enough for retained or
+  `proposed_retained` closure; it does not claim a permanent physics no-go.
+- Imports / Support: DISCLOSED.  Degree-one/FMS support, source-Higgs row
+  contracts, Block62, chunk003/004, assembly, campaign, and retained-route
+  parents are loaded and preserved.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not apply audit verdicts or update publication/manuscript claim
+  surfaces.

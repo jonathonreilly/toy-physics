@@ -404,3 +404,16 @@ derive `K'(pole)` or pole-residue authority directly, or supply strict
 physical pole rows with contact/threshold/FVIR and canonical `O_H`/response
 authority.  Compact finite-volume source support is not an admissible proxy for
 the missing pole derivative.
+
+## Block63 Lane-1 Completion Audit Result
+
+The completion audit checks the whole lane-1 target rather than a single
+shortcut.  The current surface still lacks accepted same-surface canonical
+`O_H`/action/LSZ authority, physical `C_ss/C_sH/C_HH` pole rows, source-Higgs
+Gram/FVIR/model-class acceptance, and `K'(pole)`/pole-residue authority.  The
+latest higher-shell chunks remain bounded support only.
+
+The still-open import is now explicit at the campaign level: a future positive
+route must carry one of those authorities directly.  Degree-one/FMS support,
+compact-source support, fixed carrier support, and chunk support are not
+admissible substitutes for the missing closure theorem or rows.
