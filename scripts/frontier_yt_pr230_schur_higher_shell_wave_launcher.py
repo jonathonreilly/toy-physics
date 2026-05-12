@@ -353,7 +353,8 @@ def main() -> int:
     result = {
         "actual_current_surface_status": (
             "run-control / higher-shell Schur scalar-LSZ wave launcher status; "
-            "active or launched jobs are not physics evidence"
+            "active/launched jobs and partial completed higher-shell packets are "
+            "not closure evidence"
         ),
         "proposal_allowed": False,
         "proposal_allowed_reason": (
@@ -391,9 +392,10 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "When active higher-shell chunks finish, run completed-mode chunk "
-            "checkpoints before combining rows or making any scalar-LSZ/Schur "
-            "authority claim."
+            "For completed chunks, run completed-mode chunk checkpoints before "
+            "combining rows or making any scalar-LSZ/Schur authority claim. "
+            "If launch capacity is used later, launch only the next "
+            "non-colliding chunk wave under the fixed contract."
         ),
         "wave_launcher_passed": FAIL_COUNT == 0,
         "pass_count": PASS_COUNT,

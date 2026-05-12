@@ -1,5 +1,20 @@
 # No-Go Ledger
 
+## Higher-shell chunks001-002 are not scalar-LSZ or source-Higgs closure
+
+The 2026-05-12 higher-shell chunks001-002 completed checkpoint records two
+finished rows under the separate higher-shell roots.  Both completed-mode
+checkpoints pass with production metadata, fixed seeds, `numba_gauge_seed_v1`,
+selected-mass-only FH/LSZ policy, eleven scalar `C_ss` mode time series, and
+eleven taste-radial source-cross `C_sx/C_xx` mode time series.
+
+Do not treat chunks001-002, the wave-launcher status, launch capacity for
+chunks003-004, taste-radial `C_sx/C_xx` aliases, finite higher-shell rows, or
+partial packet statistics as canonical `O_H`, canonical `C_sH/C_HH`,
+Schur A/B/C kernel rows, complete monotonicity, physical `kappa_s`, strict
+scalar-LSZ threshold/FV/IR authority, W/Z response, retained, or
+proposed-retained closure.
+
 ## Complete additive-top coarse rows are not W/Z closure
 
 The 2026-05-12 block34 refresh consumes the completed chunks001-063 package

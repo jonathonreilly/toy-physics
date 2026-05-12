@@ -875,6 +875,12 @@ def main() -> int:
         "pr230_schur_higher_shell_wave_launcher": load(
             "outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json"
         ),
+        "pr230_schur_higher_shell_chunk001_checkpoint": load(
+            "outputs/yt_pr230_schur_higher_shell_chunk001_checkpoint_2026-05-12.json"
+        ),
+        "pr230_schur_higher_shell_chunk002_checkpoint": load(
+            "outputs/yt_pr230_schur_higher_shell_chunk002_checkpoint_2026-05-12.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -4964,6 +4970,12 @@ def main() -> int:
     schur_higher_shell_wave_launcher = certificates[
         "pr230_schur_higher_shell_wave_launcher"
     ]
+    schur_higher_shell_completed_or_active = (
+        schur_higher_shell_wave_launcher.get("active_or_completed_chunk_indices")
+        == [1, 2]
+        and schur_higher_shell_wave_launcher.get("completed_chunk_indices") in ([], [1, 2])
+        and schur_higher_shell_wave_launcher.get("active_chunk_indices") in ([1, 2], [])
+    )
     report(
         "pr230-schur-higher-shell-wave-launcher-run-control-only",
         "higher-shell Schur scalar-LSZ wave launcher status"
@@ -4971,9 +4983,35 @@ def main() -> int:
         and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
         and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
         and schur_higher_shell_wave_launcher.get("launch_mode") is False
-        and schur_higher_shell_wave_launcher.get("active_chunk_indices") == [1, 2]
+        and schur_higher_shell_completed_or_active
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2,
         statuses["pr230_schur_higher_shell_wave_launcher"],
+    )
+    schur_higher_shell_chunk001 = certificates[
+        "pr230_schur_higher_shell_chunk001_checkpoint"
+    ]
+    schur_higher_shell_chunk002 = certificates[
+        "pr230_schur_higher_shell_chunk002_checkpoint"
+    ]
+    schur_higher_shell_chunks001_002_checkpointed = (
+        schur_higher_shell_chunk001.get("chunk_index") == 1
+        and schur_higher_shell_chunk002.get("chunk_index") == 2
+        and schur_higher_shell_chunk001.get("completed") is True
+        and schur_higher_shell_chunk002.get("completed") is True
+        and schur_higher_shell_chunk001.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk002.get("checkpoint_passed") is True
+        and schur_higher_shell_chunk001.get("proposal_allowed") is False
+        and schur_higher_shell_chunk002.get("proposal_allowed") is False
+        and schur_higher_shell_chunk001.get("bare_retained_allowed") is False
+        and schur_higher_shell_chunk002.get("bare_retained_allowed") is False
+    )
+    report(
+        "pr230-schur-higher-shell-chunks001-002-checkpointed-support-only",
+        schur_higher_shell_chunks001_002_checkpointed,
+        {
+            "chunk001": statuses["pr230_schur_higher_shell_chunk001_checkpoint"],
+            "chunk002": statuses["pr230_schur_higher_shell_chunk002_checkpoint"],
+        },
     )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
@@ -6803,8 +6841,11 @@ def main() -> int:
         in str(statuses["pr230_schur_higher_shell_wave_launcher"])
         and schur_higher_shell_wave_launcher.get("proposal_allowed") is False
         and schur_higher_shell_wave_launcher.get("wave_launcher_passed") is True
-        and schur_higher_shell_wave_launcher.get("active_chunk_indices") == [1, 2]
+        and schur_higher_shell_completed_or_active
         and schur_higher_shell_wave_launcher.get("max_concurrent") == 2
+    )
+    result["schur_higher_shell_chunks001_002_checkpointed_support_only"] = (
+        schur_higher_shell_chunks001_002_checkpointed
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")
@@ -7977,7 +8018,7 @@ def main() -> int:
         "does not treat the post-block28 W/Z pivot admission checkpoint as accepted-action response evidence",
         "does not treat the block30 assumptions/first-principles/literature/math/repo-bridge review as PR230 top-Yukawa closure",
         "does not treat the block35 post-block34 physical-bridge admission checkpoint as a new source-Higgs, W/Z, or neutral H3/H4 production artifact",
-        "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, or launch status as row evidence",
+        "does not treat active higher-shell Schur/scalar-LSZ workers, logs, pid files, launch status, or partial higher-shell packets as closure evidence",
         "does not treat the block36 source-Higgs/WZ dispatch checkpoint, lane1 action-premise boundary, top mass-scan support rows, higher-shell preflight, neutral rank-one bypass boundary, or W/Z self-normalization no-go as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat the Block42 W/Z absolute-authority route exhaustion as permanent W/Z no-go or as PR230 closure",
         "does not treat the block37 post-block36 supervisor-yield checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",

@@ -6879,3 +6879,31 @@ not supply `kappa_s`, canonical `O_H`, `C_sH/C_HH` pole rows, W/Z response
 rows, strict `g2`, scalar-LSZ/FV/IR authority, retained, or
 proposed-retained closure.  Higher-shell chunks001-002 remain live run-control
 state only.
+
+## 2026-05-12 - Higher-Shell Chunks001-002 Completed Checkpoint
+
+Review stance: bounded production-row support only.
+
+- Added
+  `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS001_002_COMPLETED_CHECKPOINT_NOTE_2026-05-12.md`.
+- Added completed row artifacts for higher-shell chunks001-002 under
+  `outputs/yt_pr230_schur_higher_shell_rows/` and
+  `outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/`.
+- Added completed-mode checkpoint certificates for chunks001-002.
+- Refreshed the higher-shell wave-launcher certificate to record
+  `completed_chunk_indices=[1,2]`, no active higher-shell workers, and next
+  launch capacity for chunks003-004 without launching successors.
+- Updated the campaign-status runner/certificate to accept the completed
+  chunks001-002 state and to check both completed-mode certificates.
+- Validation: chunk001 `PASS=15 FAIL=0`, chunk002 `PASS=15 FAIL=0`, wave
+  launcher `PASS=11 FAIL=0`, campaign status `PASS=384 FAIL=0`, assumption
+  stress `PASS=105 FAIL=0`, full assembly `PASS=176 FAIL=0`, retained route
+  `PASS=319 FAIL=0`, completion audit `PASS=73 FAIL=0`, audit pipeline OK
+  with 5 known warnings and newly seeded=1, strict audit lint OK with 5 known
+  warnings, and `git diff --check` OK.
+
+Disposition: partial higher-shell support only.  The rows are not a complete
+higher-shell packet, not Schur A/B/C kernel rows, not complete monotonicity,
+not scalar pole/FV/IR authority, not canonical `O_H`, not canonical
+`C_sH/C_HH`, not W/Z response, and not retained or `proposed_retained`
+closure.

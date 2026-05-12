@@ -5352,3 +5352,38 @@ This is bounded production-processing support only.  It does not derive
 Next exact action: keep monitoring higher-shell chunks001-002.  When completed
 row JSON exists, run completed-mode higher-shell checkpoints before any
 Schur/scalar-LSZ authority gate consumes those rows.
+
+## 2026-05-12 - Higher-Shell Chunks001-002 Completed Checkpoint
+
+Chunks001-002 completed under the separate higher-shell Schur/scalar-LSZ roots
+and now have completed-mode checkpoint certificates:
+
+```text
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 1 --output outputs/yt_pr230_schur_higher_shell_chunk001_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 2 --output outputs/yt_pr230_schur_higher_shell_chunk002_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=384 FAIL=0
+```
+
+The wave launcher now reports `completed_chunk_indices=[1,2]`, no active
+higher-shell workers, and planned capacity for chunks003-004 if the next wave
+is launched later.  Successor chunks were not launched in this package block.
+
+Claim boundary: these are partial finite higher-shell `C_ss/C_sx/C_xx` rows
+under the taste-radial second-source certificate.  They are not a complete
+higher-shell packet, not Schur A/B/C rows, not complete monotonicity, not
+scalar pole/FV/IR authority, not canonical `O_H`, not canonical `C_sH/C_HH`,
+not W/Z response, not physical `kappa_s`, and not retained or
+`proposed_retained` closure.
+
+Next exact action: launch chunks003-004 under the same non-colliding roots and
+two-worker cap only when compute is allocated, then run completed-mode
+checkpoints before any combiner or scalar-LSZ/Schur authority gate consumes
+them.

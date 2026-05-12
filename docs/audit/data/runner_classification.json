@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T04:14:38.438264+00:00",
+  "generated_at": "2026-05-12T04:18:09.579421+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17700,6 +17700,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_schur_complement_stieltjes_repair_gate.py"
+    },
+    "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py"
     },
     "yt_pr230_schur_higher_shell_production_contract_note_2026-05-07": {
       "assert_count": 1,
@@ -37050,6 +37062,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py": {
+      "assert_count": 2,
+      "claims": [
+        "yt_pr230_schur_higher_shell_chunks001_002_completed_checkpoint_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_schur_higher_shell_production_contract.py": {
       "assert_count": 1,
       "claims": [
@@ -42905,13 +42932,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 251,
+      "B": 252,
       "C": 539,
       "D": 339,
       "none": 404
     },
-    "runners_classified": 1543,
-    "runners_with_C": 852,
-    "runners_with_D": 623
+    "runners_classified": 1544,
+    "runners_with_C": 853,
+    "runners_with_D": 624
   }
 }

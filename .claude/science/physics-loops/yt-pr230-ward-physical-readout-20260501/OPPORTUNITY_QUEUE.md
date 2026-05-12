@@ -1,20 +1,18 @@
 # Opportunity Queue
 
-2026-05-12 block38 higher-shell chunks001-002 launch: the separate
-higher-shell Schur/scalar-LSZ wave is now active under non-colliding roots with
-a conservative two-worker cap.  Chunk001 uses seed `2026057001`; chunk002 uses
-seed `2026057002`; neither uses `--resume`; both write only under
-`outputs/yt_pr230_schur_higher_shell_rows/` and
-`outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/`.
-This is run-control only, not evidence.  The next executable support artifact
-is completed-mode higher-shell chunk checkpoints for chunks001-002 after row
-JSON exists; pending checkpoints currently pass only as active-run-control
-certificates.  Closure still requires complete higher-shell rows plus
-complete-monotonicity/contact/threshold/model-class/pole/FV/IR authority and a
-canonical `O_H`/source-overlap or physical W/Z response bridge.  The cleanest
-positive route remains accepted same-surface canonical `O_H` plus
-`C_ss/C_sH/C_HH`; the running higher-shell wave is a Schur/scalar-LSZ support
-route, not a replacement for that bridge.
+2026-05-12 higher-shell chunks001-002 completed checkpoint: the separate
+higher-shell Schur/scalar-LSZ chunks001-002 now have completed row JSON and
+completed-mode checkpoints (`PASS=15 FAIL=0` each).  The wave launcher records
+no active higher-shell workers, `completed_chunk_indices=[1,2]`, and next
+launch capacity for chunks003-004 under the same two-worker cap, but no
+successor jobs were launched in this package block.  These rows are partial
+higher-shell bounded support only: source-cross rows are still taste-radial
+`C_sx/C_xx` rows, not canonical `C_sH/C_HH`, and the packet is not complete
+monotonicity, Schur A/B/C, scalar pole/FV/IR authority, canonical `O_H`,
+physical `kappa_s`, W/Z response, retained, or `proposed_retained` closure.
+The cleanest positive route remains accepted same-surface canonical `O_H` plus
+`C_ss/C_sH/C_HH` pole rows; next support action, if compute is allocated, is a
+non-colliding chunks003-004 launch followed by completed-mode checkpoints.
 
 2026-05-12 block35 top mass-scan response harness rows: the production harness
 now emits `top_mass_scan_response_analysis` from the existing three-mass top
