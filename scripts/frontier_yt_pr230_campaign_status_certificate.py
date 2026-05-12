@@ -851,6 +851,9 @@ def main() -> int:
         "pr230_block60_compact_source_taste_singlet_carrier": load(
             "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json"
         ),
+        "pr230_block61_post_carrier_kprime_obstruction": load(
+            "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4941,6 +4944,33 @@ def main() -> int:
         is False,
         statuses["pr230_block60_compact_source_taste_singlet_carrier"],
     )
+    block61_post_carrier_kprime_obstruction = certificates[
+        "pr230_block61_post_carrier_kprime_obstruction"
+    ]
+    report(
+        "pr230-block61-post-carrier-kprime-obstruction-blocks",
+        "source-carrier support does not fix K-prime or pole residue"
+        in str(statuses["pr230_block61_post_carrier_kprime_obstruction"])
+        and block61_post_carrier_kprime_obstruction.get("proposal_allowed")
+        is False
+        and block61_post_carrier_kprime_obstruction.get(
+            "block61_post_carrier_kprime_obstruction_passed"
+        )
+        is True
+        and block61_post_carrier_kprime_obstruction.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block61_post_carrier_kprime_obstruction.get(
+            "kprime_authority_present"
+        )
+        is False
+        and block61_post_carrier_kprime_obstruction.get(
+            "pole_residue_authority_present"
+        )
+        is False,
+        statuses["pr230_block61_post_carrier_kprime_obstruction"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -7034,6 +7064,7 @@ def main() -> int:
             "does not treat block58 finite-volume source-channel spectral support as thermodynamic pole saturation, scalar LSZ residue authority, or canonical O_H",
             "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after block59",
             "does not treat block60 source-channel taste-singlet carrier support as canonical O_H or scalar LSZ residue authority",
+            "does not treat block60 source-channel carrier support as K-prime or pole-residue authority after block61",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8540,6 +8571,24 @@ def main() -> int:
         is False
         and block60_compact_source_taste_singlet_carrier.get(
             "threshold_fvir_authority_present"
+        )
+        is False
+    )
+    result["block61_post_carrier_kprime_blocks"] = (
+        block61_post_carrier_kprime_obstruction.get("proposal_allowed")
+        is False
+        and block61_post_carrier_kprime_obstruction.get(
+            "block61_post_carrier_kprime_obstruction_passed"
+        )
+        is True
+        and block61_post_carrier_kprime_obstruction.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block61_post_carrier_kprime_obstruction.get("kprime_authority_present")
+        is False
+        and block61_post_carrier_kprime_obstruction.get(
+            "pole_residue_authority_present"
         )
         is False
     )

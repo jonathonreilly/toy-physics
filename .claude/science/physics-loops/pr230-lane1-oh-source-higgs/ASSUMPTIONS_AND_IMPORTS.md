@@ -31,6 +31,11 @@
 - Origin/main audited YT_WARD Step 3 same-1PI construction as an
   `open_gate` coefficient diagnostic only; not PR230 `O_H`, source-Higgs,
   `g_bare=1`, or SM top-Yukawa closure.
+- Block60 source-channel taste-singlet carrier as exact source-channel support
+  only.
+- Block61 post-carrier K-prime obstruction as an exact negative boundary
+  against inferring `K'(pole)` or pole residue from the fixed source carrier
+  and fixed pole location.
 
 ## Forbidden Proof Inputs
 
@@ -74,6 +79,9 @@
 - Treating Block53 residual-minimality as closure, retained-route evidence, or
   permission to skip physical response readout authorization, scalar
   pole/model-class/FV/IR authority, or canonical-Higgs identity.
+- Treating the Block60 fixed source carrier or source-coordinate factor
+  `sqrt(16)=4` as scalar denominator derivative, pole-residue, or
+  `K'(pole)` authority after Block61.
 
 ## Block A Import Audit Result
 
@@ -361,3 +369,24 @@ This does not identify the source taste singlet with canonical `O_H`, derive
 the scalar pole residue, derive `K'(pole)`, or supply threshold/FVIR/contact
 authority.  The source-coordinate carrier is support for the scalar
 denominator route, not a physical top-Yukawa readout.
+
+## Block61 Post-Carrier K-Prime Obstruction Result
+
+The fixed source carrier does not promote to scalar denominator or residue
+authority.  The counterfamily
+
+```text
+D_z(x) = z (x - x_pole) + (x - x_pole)^2
+```
+
+preserves the pole location and source carrier while varying
+`D'_z(x_pole)=z`, hence varying the residue proxy `N/D'_z(x_pole)`.  This
+blocks the shortcut
+
+```text
+fixed source carrier + fixed scalar pole location => fixed K'(pole)/residue
+```
+
+on the current PR230 surface.  Positive closure still needs a same-surface
+`K'(pole)`/residue theorem, direct strict pole rows with contact/threshold/FVIR
+authority, or a canonical `O_H`/physical-response bridge.

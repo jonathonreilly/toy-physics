@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block59
+## Active Ranking After Block61
 
 Block53 update: L12 same-source FH-LSZ chunk completeness and response-side
 stability support are no longer live blockers.  The `63/63` packet is complete
@@ -54,6 +54,11 @@ taste-singlet carrier coordinate.  This is useful support for the scalar
 denominator route but does not close canonical `O_H`, pole residue,
 `K'(pole)`, or threshold/FVIR authority.
 
+Block61 update: the fixed carrier does not fix the scalar denominator
+derivative or residue.  A same-carrier denominator family preserves the pole
+location while varying `D'(pole)` and the residue proxy, so the scalar route
+cannot proceed by source-carrier normalization alone.
+
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
    primitive-cone certificate, strict neutral transfer artifact, or production
@@ -96,9 +101,12 @@ denominator route but does not close canonical `O_H`, pole residue,
    Use Block57's exact compact finite-volume source-functional foundation to
    derive a stronger microscopic scalar-channel object.  Block58 supplied the
    finite-volume positive spectral sum, and Block59 shows that promoting that
-   support directly is not valid.  This route must add new authority beyond
-   finite-volume positivity: threshold/FVIR, pole/residue, contact/continuum,
-   and canonical `O_H`/source-overlap or a physical response bridge.
+   support directly is not valid.  Block60 fixes the source-channel carrier,
+   and Block61 shows that fixed carrier plus fixed pole location still does
+   not determine `K'(pole)` or residue.  This route must add new authority
+   beyond finite-volume positivity and carrier normalization:
+   threshold/FVIR, `K'(pole)` or pole/residue, contact/continuum, and
+   canonical `O_H`/source-overlap or a physical response bridge.
 
 4. **New native scalar/action/LSZ primitive.**
    Block41 exhausts the current native scalar/action/LSZ queue.  Reopen only
@@ -164,3 +172,11 @@ The source-channel carrier ambiguity is narrowed: the compact additive source
 selects the taste-singlet source carrier with fixed source-coordinate factor
 `sqrt(16)=4`.  This support should be used in any future denominator theorem,
 but it is not a canonical Higgs normalization or physical `y_t` readout.
+
+## Block61 Update
+
+The post-carrier shortcut is now blocked.  Fixed source carrier and fixed pole
+location do not imply a fixed inverse-denominator derivative or residue.  The
+highest-probability non-chunk route remains a microscopic scalar denominator
+or contact/threshold theorem, but it must now attack `K'(pole)`/residue
+directly rather than reusing the Block60 carrier support as a proxy.

@@ -1,0 +1,83 @@
+{
+  "actual_current_surface_status": "no-go / exact negative boundary for the current PR230 surface: Block60 source-carrier support does not fix K-prime or pole residue",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block61_post_carrier_kprime_obstruction_passed": true,
+  "conditional_surface_status": "conditional-support if future work derives K'(pole), an LSZ residue interval, threshold/FVIR/contact authority, and canonical O_H or physical-response authority",
+  "exact_next_action": "A positive route needs an actual K'(pole)/residue theorem or direct pole-row measurement plus threshold/FVIR and canonical O_H/response authority.",
+  "fail_count": 0,
+  "hypothetical_axiom_status": null,
+  "kprime_authority_present": false,
+  "parent_certificates": {
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
+    "kprime_closure_attempt": "outputs/yt_kprime_closure_attempt_2026-05-02.json",
+    "scalar_kernel_ward_identity_obstruction": "outputs/yt_scalar_kernel_ward_identity_obstruction_2026-05-01.json",
+    "scalar_ladder_eigen_derivative_gate": "outputs/yt_scalar_ladder_eigen_derivative_gate_2026-05-01.json",
+    "scalar_ladder_residue_envelope_obstruction": "outputs/yt_scalar_ladder_residue_envelope_obstruction_2026-05-01.json"
+  },
+  "parent_statuses": {
+    "block60_compact_source_taste_singlet_carrier": "exact-support / Block60 compact additive source fixes the source-channel taste-singlet carrier coordinate; canonical O_H, pole residue, K-prime, and threshold/FVIR authority remain open",
+    "kprime_closure_attempt": "open / K-prime closure attempt blocked",
+    "scalar_kernel_ward_identity_obstruction": "exact negative boundary / scalar kernel Ward-identity obstruction",
+    "scalar_ladder_eigen_derivative_gate": "exact-support / scalar ladder eigen-derivative gate",
+    "scalar_ladder_residue_envelope_obstruction": "exact negative boundary / scalar ladder residue-envelope obstruction"
+  },
+  "pass_count": 9,
+  "pole_residue_authority_present": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A fixed source-channel carrier does not determine the scalar denominator derivative at the pole.  Same-carrier denominator families preserve the pole while changing the residue proxy.",
+  "remaining_scalar_authority_obligations": [
+    "derive K'(pole) or measure same-source pole residue directly",
+    "derive uniform threshold/FVIR/contact authority",
+    "derive canonical O_H/source-overlap or strict physical-response bridge"
+  ],
+  "same_pole_variable_residue_family": {
+    "derivative_varies": 8.0,
+    "numerator_at_pole": 1.0,
+    "pole_location_preserved": true,
+    "residue_proxy_varies": 8.0,
+    "rows": [
+      {
+        "D_z_at_pole": 0.0,
+        "D_z_prime_at_pole": 0.5,
+        "denominator": "D_z(x)=z*(x-x_pole)+(x-x_pole)^2",
+        "residue_proxy_N_over_Dprime": 2.0,
+        "source_carrier": "fixed Block60 taste-singlet source carrier",
+        "z": 0.5
+      },
+      {
+        "D_z_at_pole": 0.0,
+        "D_z_prime_at_pole": 1.0,
+        "denominator": "D_z(x)=z*(x-x_pole)+(x-x_pole)^2",
+        "residue_proxy_N_over_Dprime": 1.0,
+        "source_carrier": "fixed Block60 taste-singlet source carrier",
+        "z": 1.0
+      },
+      {
+        "D_z_at_pole": 0.0,
+        "D_z_prime_at_pole": 2.0,
+        "denominator": "D_z(x)=z*(x-x_pole)+(x-x_pole)^2",
+        "residue_proxy_N_over_Dprime": 0.5,
+        "source_carrier": "fixed Block60 taste-singlet source carrier",
+        "z": 2.0
+      },
+      {
+        "D_z_at_pole": 0.0,
+        "D_z_prime_at_pole": 4.0,
+        "denominator": "D_z(x)=z*(x-x_pole)+(x-x_pole)^2",
+        "residue_proxy_N_over_Dprime": 0.25,
+        "source_carrier": "fixed Block60 taste-singlet source carrier",
+        "z": 4.0
+      }
+    ],
+    "x_pole": -0.25
+  },
+  "source_channel_taste_carrier_fixed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer K'(pole) from source-carrier normalization",
+    "does not identify source carrier with canonical O_H",
+    "does not use H_unit, Ward, y_t_bare, observed top/Yukawa values, alpha_LM, plaquette, u0, kappa_s=1, c2=1, or Z_match=1"
+  ]
+}

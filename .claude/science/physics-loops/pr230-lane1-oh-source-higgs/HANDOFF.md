@@ -171,6 +171,14 @@ selects the source-channel taste-singlet carrier with source-coordinate factor
 `sqrt(16)=4`.  This supports future denominator work but is not canonical
 `O_H`, pole-residue, `K'(pole)`, or threshold/FVIR authority.
 
+Block61 checks the immediate post-Block60 shortcut.  A fixed source carrier
+and fixed scalar pole location do not determine `K'(pole)` or pole residue:
+the denominator family `D_z(x)=z(x-x_pole)+(x-x_pole)^2` preserves the pole
+and carrier while varying `D'_z(x_pole)` and the residue proxy.  The scalar
+route now needs an actual denominator derivative/residue theorem, strict
+direct pole rows with FVIR/contact authority, or a canonical `O_H`/physical
+response bridge.
+
 ## Checks Run
 
 ```text
@@ -680,3 +688,37 @@ bash docs/audit/scripts/run_pipeline.sh
 Next exact action: use the fixed source carrier only as support; derive
 `K'(pole)`/residue and threshold/FVIR/contact authority, or supply strict
 physical rows plus canonical `O_H`/response authority.
+
+## Block61 Post-Carrier K-Prime Obstruction
+
+Added `docs/YT_PR230_BLOCK61_POST_CARRIER_KPRIME_OBSTRUCTION_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py`, and
+`outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json`.
+
+Result: exact negative boundary / Block60 source-carrier support does not fix
+`K'(pole)` or pole residue.  The runner verifies parent blockers and constructs
+a same-carrier, same-pole denominator family with an 8x residue-proxy spread.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py
+# SUMMARY: PASS=9 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=187 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=396 FAIL=0
+
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+```
+
+Next exact action: do not replay source-carrier normalization as residue
+authority.  The next positive scalar artifact must derive `K'(pole)` or pole
+residue directly, or bypass that route with strict physical rows plus
+canonical `O_H`/response and threshold/FVIR/contact authority.

@@ -8773,6 +8773,26 @@
       "to": "yt_scalar_carrier_projector_closure_attempt_note_2026-05-02"
     },
     {
+      "from": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "to": "yt_kprime_closure_attempt_note_2026-05-02"
+    },
+    {
+      "from": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "to": "yt_scalar_kernel_ward_identity_obstruction_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "to": "yt_scalar_ladder_residue_envelope_obstruction_note_2026-05-01"
+    },
+    {
+      "from": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "to": "yt_scalar_ladder_eigen_derivative_gate_note_2026-05-01"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19125,7 +19145,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T06:39:22.845597+00:00",
+  "generated_at": "2026-05-12T06:54:14.387539+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42904,6 +42924,22 @@
       "runner_path": "scripts/frontier_yt_pr230_block60_compact_source_taste_singlet_carrier_gate.py",
       "title": "PR230 Block60 Compact Source Taste-Singlet Carrier Gate"
     },
+    "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12": {
+      "claim_id": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the current PR230 surface:",
+      "deps": [
+        "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+        "yt_kprime_closure_attempt_note_2026-05-02",
+        "yt_scalar_kernel_ward_identity_obstruction_note_2026-05-01",
+        "yt_scalar_ladder_residue_envelope_obstruction_note_2026-05-01",
+        "yt_scalar_ladder_eigen_derivative_gate_note_2026-05-01"
+      ],
+      "note_hash": "c9fcfbbacff44202fa4a38d9f96555aaff9613d823b4e55da32b63dad60e8059",
+      "path": "docs/YT_PR230_BLOCK61_POST_CARRIER_KPRIME_OBSTRUCTION_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py",
+      "title": "PR230 Block61 Post-Carrier K-Prime Obstruction"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47684,17 +47720,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4781,
-    "leaf_count": 1122,
-    "node_count": 2161,
+    "edge_count": 4786,
+    "leaf_count": 1118,
+    "node_count": 2162,
     "root_count": 1656,
-    "runners_with_path": 1636,
+    "runners_with_path": 1637,
     "status_counts": {
       "bounded": 601,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 476,
+      "support": 477,
       "unknown": 593
     }
   }

@@ -334,11 +334,26 @@ Status: exact-support / compact additive source fixes the source-channel
 taste-singlet carrier coordinate.  This is not a closure claim.  Canonical
 `O_H`, pole residue, `K'(pole)`, and threshold/FVIR authority remain absent.
 
+## Block61: Post-Carrier K-Prime Obstruction
+
+- Note:
+  `docs/YT_PR230_BLOCK61_POST_CARRIER_KPRIME_OBSTRUCTION_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py`
+- Certificate:
+  `outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json`
+
+Status: exact negative boundary / fixed source carrier plus fixed pole
+location does not determine `K'(pole)` or pole residue.  This is not a
+closure claim.  It preserves Block60 as support while blocking the carrier-to-
+residue shortcut.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing
 artifact, not another inventory checkpoint: a microscopic scalar
-denominator/contact/threshold theorem with FVIR pole-residue control; a same-surface
+denominator/contact/threshold theorem with `K'(pole)`/FVIR pole-residue
+control; a same-surface
 primitive transfer/cone certificate; accepted canonical `O_H`/action/LSZ
 authority with strict source-Higgs rows; or a strict W/Z/source-Higgs physical
 response packet that supplies those roots without forbidden imports.

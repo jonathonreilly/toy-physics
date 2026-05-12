@@ -153,3 +153,12 @@ local scalar sum, or unit taste singlet with source-coordinate factor
 `sqrt(16)=4`.  This should be treated as source-channel support only.  It does
 not solve the canonical `O_H` identity, `K'(pole)`, pole-residue, or threshold
 / FVIR pieces.
+
+## Block61 Update
+
+The fixed source-channel carrier does not solve the scalar denominator root.
+Same-carrier denominator families can preserve the scalar pole location while
+varying `D'(pole)` and hence the residue proxy.  Route priority remains on a
+microscopic scalar denominator/contact/threshold theorem, but that theorem
+must derive `K'(pole)` or pole-residue authority directly rather than using
+the Block60 carrier as a substitute.

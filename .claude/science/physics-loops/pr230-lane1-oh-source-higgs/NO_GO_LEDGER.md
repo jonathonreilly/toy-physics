@@ -128,6 +128,11 @@
   atomless soft-continuum thermodynamic limits.  Pole-like finite-window
   behavior and positive finite-volume weights do not certify an isolated pole
   atom or positive residue lower bound.
+- Block61 post-carrier K-prime obstruction blocks the fixed-carrier shortcut:
+  the compact additive source fixes the source-channel taste-singlet carrier,
+  but same-carrier denominators can preserve the scalar pole location while
+  varying `D'(pole)` and therefore the residue proxy.  Fixed source carrier is
+  not `K'(pole)` or pole-residue authority.
 
 ## Scope Boundary
 
@@ -153,3 +158,7 @@ Block60 is positive support, not a no-go: it fixes the source-channel
 taste-singlet carrier coordinate.  It does not retire the no-go boundary
 against treating that carrier as canonical `O_H` or scalar LSZ residue
 authority.
+After Block61, it also does not retire the scalar denominator boundary: the
+next positive scalar route must derive `K'(pole)`/residue directly, or supply
+strict direct pole rows plus threshold/FVIR/contact and canonical
+`O_H`/physical-response authority.

@@ -837,3 +837,39 @@ reviewer roles were applied locally to the changed files.
   surfaces.
 - Audit Compatibility: PASS.  The full audit pipeline seeds Block60 and
   `audit_lint.py --strict` reports only the known five warnings.
+
+## Self-Review: Block61
+
+- Overclaim check: passed.  The note and runner say exact negative boundary /
+  fixed source carrier does not fix `K'(pole)` or pole residue, not
+  `proposed_retained`.
+- Physics check: passed.  The counterfamily preserves the pole location and
+  source carrier while varying `D'(pole)` and the residue proxy; it directly
+  targets the attempted post-Block60 shortcut.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`,
+  `c2=1`, or `Z_match=1`.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block61 Package
+
+Local review-loop was performed directly against the changed package.  No
+parallel reviewer agents were launched in this session; the review-loop
+reviewer roles were applied locally to the changed files.
+
+- Code / Runner: PASS.  The new runner compiles and reports
+  `PASS=9 FAIL=0`; the aggregate gates report `PASS=187 FAIL=0` and
+  `PASS=396 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Fixed source carrier and
+  fixed pole location do not determine scalar denominator derivative or pole
+  residue.
+- Imports / Support: DISCLOSED.  Block60 carrier support and the existing
+  `K'(pole)`/residue blockers are loaded and preserved.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not apply audit verdicts or update publication/manuscript claim
+  surfaces.
+- Audit Compatibility: PASS.  The full audit pipeline seeds Block61 and
+  `audit_lint.py --strict` reports only the known five warnings.
