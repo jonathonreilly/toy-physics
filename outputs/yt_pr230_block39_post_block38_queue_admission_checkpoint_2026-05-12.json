@@ -1,0 +1,200 @@
+{
+  "actual_current_surface_status": "open / block39 post-block38 queue-admission checkpoint; block38 stuck fan-out, lane-1 Block45 Euclidean row boundary, and post-Block45 neutral off-diagonal, top mass-scan subtraction, and higher-shell operator boundaries leave source-Higgs not admitted, W/Z accepted-action response selected as fallback but not admitted, and neutral H3/H4 still blocked",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block39_post_block38_queue_admission_checkpoint_passed": true,
+  "campaign_decision": {
+    "next_exact_action": "Supply one primitive-bearing artifact: accepted same-surface O_H/action plus physical Euclidean C_ss/C_sH/C_HH(tau) rows with Gram/FV/IR authority, or a strict W/Z physical-response packet with accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response rows.",
+    "no_ranked_route_admitted": true,
+    "queue_pivot_executed": true,
+    "yield_for_supervisor": true
+  },
+  "checks": {
+    "block38-stuck-fanout-clean": true,
+    "forbidden-firewall-clean": true,
+    "higher-shell-operator-boundary-consumed": true,
+    "inspection-ref-is-current-pr-head": true,
+    "lane1-block45-source-higgs-row-boundary-consumed": true,
+    "neutral-h3h4-route-not-admitted": true,
+    "no-parent-authorizes-proposal": true,
+    "parent-certificates-have-no-fails": true,
+    "parent-certificates-present": true,
+    "post-block45-neutral-offdiagonal-boundary-consumed": true,
+    "queue-pivot-executed": true,
+    "source-higgs-route-not-admitted-after-block45": true,
+    "top-mass-scan-subtraction-boundary-consumed": true,
+    "wz-absolute-authority-still-blocked": true,
+    "wz-route-not-admitted-after-pivot": true,
+    "yield-for-supervisor": true
+  },
+  "conditional_surface_status": "source-Higgs support only if accepted same-surface O_H/action and physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority land; W/Z support only if accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows land",
+  "expected_inspection_head": "b0a765630fc789d76c9d9b0ee0a965e254596abc",
+  "expected_inspection_label": "current PR head after higher-shell operator boundary",
+  "fail_count": 0,
+  "fails": 0,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh_before_canonical_oh": false,
+    "assumed_k_top_equals_k_gauge": false,
+    "assumed_top_wz_covariance": false,
+    "claimed_retained_or_proposed_retained": false,
+    "inspected_active_chunk_output": false,
+    "promoted_reduced_source_higgs_smoke_to_production": false,
+    "promoted_tau_top_or_scalar_source_rows_to_source_higgs": false,
+    "promoted_wz_scout_or_smoke_rows": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_or_operator": false,
+    "used_observed_wz_or_g2": false,
+    "used_observed_y_t_or_top_mass": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "inspection_head": "b0a765630fc789d76c9d9b0ee0a965e254596abc",
+  "inspection_ref": "HEAD^",
+  "live_chunk_worker": {
+    "inspected_active_output": false,
+    "touched": false
+  },
+  "local_head": "3814baa3b8f1f6728b73840c2d38cc5114df92de",
+  "local_subject": "Record PR230 block39 queue admission checkpoint",
+  "neutral_h3h4_route": {
+    "admitted": false,
+    "committed_path_presence": {
+      "neutral_h3_physical_transfer": false,
+      "neutral_h4_source_higgs_coupling": false
+    },
+    "decision": "do not reopen without physical neutral transfer/off-diagonal dynamics plus source/canonical-Higgs coupling authority",
+    "missing_roots": [
+      "neutral_h3_physical_transfer",
+      "neutral_h4_source_higgs_coupling"
+    ],
+    "post_block45_neutral_offdiagonal_boundary_consumed": true,
+    "rank": 3,
+    "required_paths": {
+      "neutral_h3_physical_transfer": "outputs/yt_pr230_neutral_h3_physical_transfer_certificate_2026-05-11.json",
+      "neutral_h4_source_higgs_coupling": "outputs/yt_pr230_neutral_h4_source_higgs_coupling_certificate_2026-05-11.json"
+    }
+  },
+  "parent_statuses": {
+    "block38_bridge_stuck_fanout": "open / block38 bridge stuck-fanout checkpoint; five prioritized O_H/source-Higgs/WZ attack frames are blocked on the current surface and no ranked route is admitted without a fresh physical bridge artifact",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "higher_shell_source_higgs_operator_boundary": "exact negative boundary / higher-shell source-Higgs cross rows use the taste-radial second-source certificate, not canonical O_H",
+    "lane1_block45_physical_euclidean_rows": "exact negative boundary / tau-keyed production correlators are not physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) rows",
+    "neutral_offdiagonal_post_block45_applicability": "exact negative boundary / post-Block45 artifacts do not reopen the neutral off-diagonal generator or primitive-transfer route",
+    "top_mass_scan_subtraction_contract_applicability": "exact negative boundary / top mass-scan response harness does not satisfy the additive-top subtraction row contract",
+    "wz_absolute_authority": "support / exact negative boundary: W/Z absolute-authority current-surface route exhausted after Block41 without production W/Z rows and strict g2/v authority"
+  },
+  "pass_count": 16,
+  "passes": 16,
+  "pr_head": "b0a765630fc789d76c9d9b0ee0a965e254596abc",
+  "pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30",
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Block39 is a queue-admission checkpoint, not a retained/proposed-retained theorem.  It consumes the block38 stuck fan-out and the lane-1 Block45 physical-Euclidean-row boundary plus the post-Block45 neutral off-diagonal and top mass-scan subtraction plus higher-shell operator boundaries, then records that no accepted action, canonical O_H certificate, production source-Higgs pole-row packet, strict W/Z packet, additive-top subtraction row contract, neutral off-diagonal generator, or neutral H3/H4 certificate is present.",
+  "source_higgs_route": {
+    "admitted": false,
+    "block45_physical_euclidean_rows_boundary_consumed": true,
+    "committed_path_presence": {
+      "accepted_same_source_ew_action": false,
+      "accepted_same_surface_ew_higgs_action": false,
+      "canonical_higgs_operator_certificate": false,
+      "canonical_oh_certificate": false,
+      "physical_euclidean_source_higgs_rows": false,
+      "source_higgs_cross_correlator_rows": false,
+      "source_higgs_gram_fv_ir_authority": false,
+      "source_higgs_production_certificate": false,
+      "strict_source_higgs_pole_rows": false
+    },
+    "decision": "not admitted after Block45; reopen only with accepted same-surface O_H/action and physical Euclidean C_ss/C_sH/C_HH(tau) pole rows plus Gram/FV/IR authority",
+    "higher_shell_operator_boundary_consumed": true,
+    "missing_roots": [
+      "accepted_same_source_ew_action",
+      "accepted_same_surface_ew_higgs_action",
+      "canonical_higgs_operator_certificate",
+      "canonical_oh_certificate",
+      "physical_euclidean_source_higgs_rows",
+      "source_higgs_cross_correlator_rows",
+      "source_higgs_gram_fv_ir_authority",
+      "source_higgs_production_certificate",
+      "strict_source_higgs_pole_rows"
+    ],
+    "rank": 1,
+    "required_paths": {
+      "accepted_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+      "accepted_same_surface_ew_higgs_action": "outputs/yt_pr230_same_surface_ew_higgs_action_certificate_2026-05-07.json",
+      "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "canonical_oh_certificate": "outputs/yt_pr230_canonical_oh_certificate_2026-05-07.json",
+      "physical_euclidean_source_higgs_rows": "outputs/yt_pr230_physical_euclidean_source_higgs_rows_2026-05-12.json",
+      "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+      "source_higgs_gram_fv_ir_authority": "outputs/yt_pr230_source_higgs_gram_fv_ir_authority_certificate_2026-05-11.json",
+      "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+      "strict_source_higgs_pole_rows": "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json"
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not rerun block38 as new evidence",
+    "does not treat the lane-1 Block45 row boundary as a permanent no-go against future physical Euclidean rows",
+    "does not treat the post-Block45 neutral off-diagonal boundary as evidence for reopening the neutral primitive route",
+    "does not treat top mass-scan dE/dm_bare rows as satisfying the additive-top subtraction row contract",
+    "does not treat higher-shell source-Higgs cross rows emitted under the taste-radial second-source certificate as canonical O_H or strict C_sH/C_HH source-Higgs rows",
+    "does not treat ordinary top tau correlators as source-Higgs rows",
+    "does not treat scalar-source response fits as source-Higgs rows",
+    "does not promote reduced C_sH/C_HH smoke to production pole evidence",
+    "does not relabel C_sx/C_xx as C_sH/C_HH before x=O_H is certified",
+    "does not promote W/Z scout, smoke, ratio, or response-only rows to a strict W/Z packet",
+    "does not assume top/W covariance or k_top = k_gauge",
+    "does not set kappa_s, c2, Z_match, g2, or delta_perp by convention",
+    "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, or u0",
+    "does not inspect live or untracked chunk-worker output"
+  ],
+  "timestamp_utc": "2026-05-12T04:15:15.728254+00:00",
+  "wz_accepted_action_response_route": {
+    "admitted": false,
+    "committed_path_presence": {
+      "accepted_same_source_ew_action": false,
+      "canonical_higgs_operator_certificate": false,
+      "delta_perp_correction_certificate": false,
+      "fh_gauge_mass_response_certificate": false,
+      "fh_gauge_mass_response_rows": false,
+      "same_source_top_response_certificate": false,
+      "same_source_w_response_rows": false,
+      "strict_electroweak_g2_certificate": false,
+      "top_wz_matched_covariance_certificate": false,
+      "wz_correlator_mass_fit_rows": false
+    },
+    "decision": "not admitted; reopen only with accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows",
+    "missing_roots": [
+      "accepted_same_source_ew_action",
+      "canonical_higgs_operator_certificate",
+      "delta_perp_correction_certificate",
+      "fh_gauge_mass_response_certificate",
+      "fh_gauge_mass_response_rows",
+      "same_source_top_response_certificate",
+      "same_source_w_response_rows",
+      "strict_electroweak_g2_certificate",
+      "top_wz_matched_covariance_certificate",
+      "wz_correlator_mass_fit_rows"
+    ],
+    "rank": 2,
+    "required_paths": {
+      "accepted_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+      "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "delta_perp_correction_certificate": "outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json",
+      "fh_gauge_mass_response_certificate": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+      "fh_gauge_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+      "same_source_top_response_certificate": "outputs/yt_same_source_top_response_certificate_2026-05-04.json",
+      "same_source_w_response_rows": "outputs/yt_same_source_w_response_rows_2026-05-04.json",
+      "strict_electroweak_g2_certificate": "outputs/yt_electroweak_g2_certificate_2026-05-04.json",
+      "top_wz_matched_covariance_certificate": "outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json",
+      "wz_correlator_mass_fit_rows": "outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json"
+    },
+    "selected_after_source_higgs_block": true,
+    "top_mass_scan_subtraction_boundary_consumed": true
+  }
+}

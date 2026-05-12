@@ -1,11 +1,60 @@
 # Handoff
 
-Checkpoint: 2026-05-11 23:26 EDT
+Checkpoint: 2026-05-12 00:08 EDT
 
 Branch: `physics-loop/pr230-neutral-transfer-eigenoperator-oh-block02-20260507`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block39 Result
+
+Created `YT_PR230_BLOCK39_POST_BLOCK38_QUEUE_ADMISSION_CHECKPOINT`.
+
+This block resumes after block38 and consumes the lane-1 Block45 physical
+Euclidean source-Higgs row boundary plus the post-Block45 neutral off-diagonal
+applicability boundary plus the top mass-scan subtraction-contract boundary
+and the higher-shell source-Higgs operator boundary.  It does not rerun block38
+as new evidence and does not touch the live chunk worker.  The checkpoint
+pivots through the ranked queue exactly once: source-Higgs remains first
+priority but is not admitted after Block45, W/Z accepted-action physical
+response is selected as fallback but remains not admitted, and neutral H3/H4
+remains blocked.
+
+Result:
+
+- ordinary tau-keyed top correlators, scalar-source response fits, empty
+  guarded source-Higgs blocks, reduced source-Higgs smoke, and finite
+  `C_sx/C_xx` rows plus higher-shell rows under the taste-radial second-source
+  certificate are not strict physical Euclidean
+  `C_ss/C_sH/C_HH(tau)` pole evidence;
+- source-Higgs still requires accepted same-surface `O_H`/action plus physical
+  Euclidean `C_ss/C_sH/C_HH(tau)` pole rows with Gram/FV/IR authority;
+- W/Z remains the selected fallback but still requires accepted action,
+  production W/Z rows, same-source top rows, matched covariance, strict
+  non-observed `g2`, `delta_perp`, and final W-response rows; the top
+  mass-scan boundary does not satisfy the additive-top subtraction contract;
+- neutral H3/H4 remains blocked without physical transfer/off-diagonal
+  dynamics plus source/canonical-Higgs coupling authority, and the
+  post-Block45 neutral off-diagonal audit does not reopen the neutral route;
+- no retained or `proposed_retained` wording is authorized.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py
+# SUMMARY: PASS=16 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=383 FAIL=0
+```
+
+Next exact action: supply one primitive-bearing artifact: accepted same-surface
+`O_H`/action plus physical Euclidean `C_ss/C_sH/C_HH(tau)` rows with
+Gram/FV/IR authority, or a strict W/Z physical-response packet with accepted
+action, production rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response rows.
 
 ## Block38 Result
 
@@ -694,6 +743,13 @@ exists on resume, do not spend the next block re-proving the same absence.
 Either supply one of the required artifacts from another worker/branch, or keep
 yielding this lane as waiting on the explicit production/certificate inputs
 while the outer supervisor runs independent positive work.
+
+Block39 has now consumed block38 plus the lane-1 Block45 Euclidean-row
+boundary, the post-Block45 neutral off-diagonal boundary, and the top mass-scan
+subtraction boundary plus the higher-shell operator boundary, then made that
+yield explicit after pivoting through source-Higgs to W/Z.  The next block
+should not run another queue-admission or shortcut gate unless a new
+primitive-bearing artifact has landed.
 
 Block17 adds one W/Z-repair support input: 46 chunk-level `A_top` rows.  The
 next W/Z move is to replace those with per-configuration same-source

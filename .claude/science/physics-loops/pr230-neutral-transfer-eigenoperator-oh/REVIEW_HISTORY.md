@@ -247,6 +247,49 @@ git diff --check
 # OK
 ```
 
+## Block39
+
+Local review run on 2026-05-12 04:08 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py`
+- `outputs/yt_pr230_block39_post_block38_queue_admission_checkpoint_2026-05-12.json`
+- `docs/YT_PR230_BLOCK39_POST_BLOCK38_QUEUE_ADMISSION_CHECKPOINT_NOTE_2026-05-12.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block39 runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Block39 is queue-admission only: it consumes block38 plus lane-1 Block45 plus the post-Block45 neutral off-diagonal, top mass-scan subtraction, and higher-shell operator boundaries, keeps source-Higgs not admitted after tau-row/smoke/higher-shell shortcuts are blocked, selects W/Z as fallback, keeps W/Z not admitted without strict packet roots, and does not reopen neutral H3/H4. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, top/W covariance assumption, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only, does not touch the live chunk worker, and keeps PR #230 as the landing path. |
+| Audit Compatibility | PASS | Block39 PASS=16 FAIL=0 and campaign status PASS=383 FAIL=0; full audit/link/firewall checks are run before delivery. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py
+# SUMMARY: PASS=16 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=383 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+python3 link/parse checks
+# parse_ok, missing_links=[]
+git diff --check
+# OK
+```
+
 ## Block38
 
 Local review run on 2026-05-12 03:26 UTC.

@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block38 bridge stuck-fanout checkpoint.
+Campaign mode queue after block39 post-block38 queue-admission checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -61,6 +61,24 @@ unchanged but the next action is now narrower: do not cycle another shortcut
 gate from this lane.  Reopen only with a real accepted same-surface
 `O_H`/action plus strict source-Higgs pole-row packet, strict W/Z
 physical-response packet, or neutral H3/H4 physical-transfer authority.
+
+Block39 consumes block38 plus the lane-1 Block45 physical-Euclidean
+source-Higgs row boundary, the post-Block45 neutral off-diagonal boundary, and
+the top mass-scan subtraction-contract boundary plus the higher-shell operator
+boundary.  The queue admission state is unchanged but now narrower:
+source-Higgs remains first priority only if accepted same-surface `O_H`/action
+and physical Euclidean
+`C_ss/C_sH/C_HH(tau)` pole rows with Gram/FV/IR authority land.  W/Z remains
+the selected fallback, but only a strict packet with accepted action,
+production W/Z rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response rows admits the route.
+Top mass-scan `dE/dm_bare` rows do not satisfy the additive-top subtraction
+contract.  Higher-shell source-Higgs cross rows remain taste-radial
+second-source rows, not canonical `O_H` authority.  Neutral H3/H4 remains third
+and does not reopen from the post-Block45 applicability audit.  Ordinary
+tau-keyed top/scalar-source correlators, empty guarded source-Higgs blocks,
+reduced source-Higgs smoke, and finite `C_sx/C_xx` rows are not
+queue-admission inputs.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not

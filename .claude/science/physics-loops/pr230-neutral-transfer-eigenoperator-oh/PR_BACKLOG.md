@@ -206,6 +206,18 @@ multiplicity-one, taste-condensate `O_H`, and W/Z absolute-authority frames
 remain support-only or exact current-surface boundaries.  No standalone
 block38 review PR should be opened unless PR #230 integration fails.
 
+Block39 follows the same direct PR #230 landing path.  It adds the
+post-block38 queue-admission checkpoint at PR head `b0a765630` and consumes the
+lane-1 Block45 physical-Euclidean source-Higgs row boundary, the post-Block45
+neutral off-diagonal boundary, the top mass-scan subtraction boundary, and the
+higher-shell operator boundary.  Source-Higgs remains not admitted after
+tau-row/smoke/higher-shell shortcuts are blocked; W/Z accepted-action physical
+response is selected as fallback but remains not admitted without strict packet
+roots; top mass-scan `dE/dm_bare` rows do not satisfy the additive-top
+subtraction contract; neutral H3/H4 is not reopened by the post-Block45
+applicability audit.  No standalone block39 review PR should be opened unless
+PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

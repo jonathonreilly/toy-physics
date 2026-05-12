@@ -983,3 +983,47 @@
    - Yield this lane until one explicit missing physical bridge artifact lands:
      accepted same-surface `O_H`/action plus strict pole rows, strict W/Z
      physical-response packet, or neutral H3/H4 physical-transfer authority.
+
+## Selected Block39 Route
+
+**Post-block38 queue-admission checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 5.
+- Claim-state movement: consumes block38, the lane-1 Block45 physical
+  Euclidean source-Higgs row boundary, the post-Block45 neutral off-diagonal
+  boundary, the top mass-scan subtraction boundary, and the higher-shell
+  operator boundary.  It records that source-Higgs remains first priority but
+  is not admitted after tau-row/smoke/higher-shell shortcuts are blocked, then
+  pivots to W/Z accepted-action physical response as the selected fallback
+  while keeping it not admitted without strict packet roots.  The top mass-scan
+  boundary does not supply additive-top authority, higher-shell rows do not
+  certify canonical `O_H`, and neutral H3/H4 is not reopened by the post-Block45
+  applicability audit.
+- Artifact: `YT_PR230_BLOCK39_POST_BLOCK38_QUEUE_ADMISSION_CHECKPOINT`.
+
+## Block39 Queue Synthesis
+
+1. **Source-Higgs after Block45**
+   - Result: blocked.  Ordinary top tau correlators, scalar-source tau fits,
+     empty guarded source-Higgs blocks, reduced `C_sH/C_HH` smoke, and finite
+     `C_sx/C_xx` rows are not physical Euclidean source-Higgs pole evidence.
+     Higher-shell rows remain under the taste-radial second-source certificate,
+     not canonical `O_H`.
+
+2. **Strict W/Z accepted-action response**
+   - Result: selected fallback but blocked.  Requires accepted action,
+     production W/Z rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp`, and final W-response rows.  Top
+     mass-scan `dE/dm_bare` rows do not satisfy the additive-top subtraction
+     contract.
+
+3. **Neutral H3/H4**
+   - Result: fallback-only.  Physical neutral transfer/off-diagonal generator
+     and source/canonical-Higgs coupling authority remain absent; the
+     post-Block45 neutral off-diagonal audit is a boundary, not reopen evidence.
+
+4. **Supervisor continuation**
+   - Yield this lane until one primitive-bearing artifact lands.  Do not spend
+     the next block on another current-surface shortcut gate.

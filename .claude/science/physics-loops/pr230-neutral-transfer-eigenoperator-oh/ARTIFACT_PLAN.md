@@ -691,3 +691,19 @@ frames are all current-surface support/boundary results.  Reopen with a real
 accepted same-surface `O_H`/action plus strict source-Higgs pole-row packet, a
 strict W/Z physical-response packet, or neutral H3/H4 physical-transfer
 authority.
+
+Block39 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Post-block38 queue-admission runner | `scripts/frontier_yt_pr230_block39_post_block38_queue_admission_checkpoint.py` | Created; PASS=16 FAIL=0 |
+| Post-block38 queue-admission certificate | `outputs/yt_pr230_block39_post_block38_queue_admission_checkpoint_2026-05-12.json` | Created; consumes block38 plus lane-1 Block45, the post-Block45 neutral off-diagonal boundary, the top mass-scan subtraction boundary, and the higher-shell operator boundary, pivots source-Higgs to W/Z, and admits no ranked route |
+| Post-block38 queue-admission note | `docs/YT_PR230_BLOCK39_POST_BLOCK38_QUEUE_ADMISSION_CHECKPOINT_NOTE_2026-05-12.md` | Created; open queue-admission checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block39; PASS=383 FAIL=0; no proposal allowed |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block39 checkpoint |
+
+Follow-on artifact target after block39 is primitive-bearing only: accepted
+same-surface `O_H`/action plus physical Euclidean `C_ss/C_sH/C_HH(tau)` rows
+with Gram/FV/IR authority, or a strict W/Z physical-response packet with
+accepted action, production rows, same-source top rows, matched covariance,
+strict non-observed `g2`, `delta_perp`, and final W-response rows.

@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block38_bridge_stuck_fanout_checkpoint`.
+Current block: `block39_post_block38_queue_admission_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block38 bridge stuck-fanout checkpoint; five prioritized O_H/source-Higgs/WZ attack frames are blocked on the current surface and no ranked route is admitted without a fresh physical bridge artifact
-conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
+actual_current_surface_status: open / block39 post-block38 queue-admission checkpoint; block38 stuck fan-out, lane-1 Block45 Euclidean row boundary, post-Block45 neutral off-diagonal boundary, top mass-scan subtraction boundary, and higher-shell operator boundary leave source-Higgs not admitted, W/Z accepted-action response selected as fallback but not admitted, and neutral H3/H4 still blocked
+conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block38 is a stuck-fanout checkpoint, not a retained/proposed-retained theorem. It consumes existing source-Higgs and W/Z route attempts and records that each frame is support-only or an exact current-surface boundary. No accepted action, canonical O_H certificate, source-Higgs pole-row packet, strict W/Z packet, or neutral H3/H4 certificate is present."
+proposal_allowed_reason: "Block39 is a queue-admission checkpoint, not a retained/proposed-retained theorem. It consumes the block38 stuck fan-out, the lane-1 Block45 physical-Euclidean-row boundary, the post-Block45 neutral off-diagonal boundary, the top mass-scan subtraction boundary, and the higher-shell operator boundary, then records that no accepted action, canonical O_H certificate, production source-Higgs pole-row packet, strict W/Z packet, additive-top subtraction contract, neutral off-diagonal generator, or neutral H3/H4 certificate is present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -145,6 +145,21 @@ Reason:
     current-surface boundary; no accepted action, canonical `O_H`,
     source-Higgs pole-row packet, strict W/Z packet, covariance, strict `g2`,
     `delta_perp`, or neutral H3/H4 authority is supplied.
+27. Block39 records the post-block38 queue admission state after consuming the
+    lane-1 Block45 physical-Euclidean source-Higgs row boundary, the
+    post-Block45 neutral off-diagonal boundary, the top mass-scan subtraction
+    boundary, and the higher-shell operator boundary.  Source-Higgs
+    is not admitted after ordinary tau-keyed top/scalar-source correlators,
+    empty guarded source-Higgs blocks, reduced source-Higgs smoke, and
+    `C_sx/C_xx` rows are excluded as strict `C_ss/C_sH/C_HH(tau)` pole
+    evidence, and higher-shell cross rows under the taste-radial second-source
+    certificate do not supply canonical `O_H`.  W/Z is selected as fallback but remains not admitted without
+    accepted action, production W/Z rows, same-source top rows, matched
+    covariance, strict non-observed `g2`, `delta_perp`, and final W-response
+    rows; the top mass-scan boundary does not supply the additive-top
+    subtraction contract.  Neutral H3/H4 remains blocked because that
+    post-Block45 applicability audit does not supply a neutral off-diagonal
+    generator or primitive-transfer artifact.
 
 Prior block certificate summary:
 
