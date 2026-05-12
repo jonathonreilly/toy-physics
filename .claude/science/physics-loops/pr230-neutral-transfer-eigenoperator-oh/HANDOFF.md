@@ -1373,3 +1373,66 @@ action/operator authority plus strict `C_ss/C_sH/C_HH` rows.  If unavailable,
 continue W/Z only with accepted action, production W/Z rows, same-source top
 rows, matched covariance, strict non-observed `g2`, `delta_perp`, and final
 W-response authority.  Do not treat chunk063 completion alone as closure.
+
+## Block30 Full-Approach Assumptions / First-Principles / Literature / Math / Bridge Review
+
+Resumed on 2026-05-11 after block29 landed on the draft PR #230 head:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = 22c2f326ca79f709a7b72f84961a0f6749779648
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+This block runs the requested full physics-loop reset over the whole PR230
+approach after the W/Z pivot checkpoint: assumption questioning, a
+first-principles / 10x constraint reset, literature search, math search, and a
+cross-check of other repo bridge work.  The local physics-loop skill has no
+canonical "Elon exercise" section, so the packet records that interpretation
+explicitly and keeps it non-authoritative.
+
+Result:
+
+- the block30 runner passes with `PASS=20 FAIL=0`;
+- campaign status passes with `PASS=364 FAIL=0`;
+- 16 assumptions were stress-tested against the current PR230 surface;
+- the zeroth-principles chain reduces the blocker to a same-surface physical
+  map from PR230 source coordinate to canonical scalar/Higgs response with
+  time-kernel or response authority;
+- the literature search supports FMS/action-first and transfer-matrix route
+  shape, but supplies no PR230 proof import;
+- the math search supports moment/Herglotz/realization/Perron-Frobenius/Picard-
+  Fuchs tooling only after the missing physical operator/action/functional is
+  defined;
+- other repo bridge work was checked, including Ward repair, beta-lambda,
+  Picard-Fuchs plaquette, C3 obstruction, Bougerol-Lacroix, and W/Z contracts;
+- no checked bridge work supplies current PR230 closure.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py`
+- `outputs/yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_2026-05-11.json`
+- `docs/YT_PR230_BLOCK30_FULL_APPROACH_ASSUMPTIONS_ELON_LIT_MATH_BRIDGE_REVIEW_NOTE_2026-05-11.md`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, literature, no-go ledger,
+  artifact plan, review history, PR backlog, and block30 PR body
+
+Honest status: bounded-support / full-approach review.  Current surface remains
+open and `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py
+# SUMMARY: PASS=20 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=364 FAIL=0
+```
+
+Next exact action: stop adding bridge-inventory prose unless new evidence
+lands.  Build one physical bridge artifact: accepted same-surface EW/Higgs
+action/canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z
+matched physical response, or a neutral primitive/rank-one theorem with a
+physical transfer kernel and source-Higgs coupling authority.

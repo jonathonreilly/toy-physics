@@ -218,5 +218,12 @@ Prior block certificate summary:
   response route is selected as fallback but lacks accepted action, production
   W/Z rows, same-source top rows, matched covariance, strict non-observed
   `g2`, `delta_perp`, and final W-response authority.
-- Block01 through Block29 all have `proposal_allowed=false`; their boundaries
+- Block30 actual status: bounded-support / full-approach assumptions,
+  first-principles, literature, math, and repo-bridge review; it reduces the
+  blocker to a same-surface physical map from the PR230 source coordinate to
+  canonical scalar/Higgs response, and ranks action-first `O_H`, strict W/Z
+  matched response, and neutral primitive/rank-one routes.  It supplies no
+  new accepted action, canonical `O_H`, pole rows, W/Z packet, or neutral
+  transfer theorem.
+- Block01 through Block30 all have `proposal_allowed=false`; their boundaries
   remain active.

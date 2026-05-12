@@ -38,3 +38,22 @@ time-kernel manifest, with production `C_ss(t)`, `C_sH(t)`, `C_HH(t)`, pole
 residues, covariance, FV/IR checks, and Gram flatness.  If that surface cannot
 be accepted, the next hard theorem target is H3/H4 as a physical
 positive-kernel rank-one problem.
+
+## Block30 Full-Approach Literature And Math Search
+
+Block30 reruns the literature/math exercise on the full current PR230 approach
+after the block29 W/Z pivot.  All entries are classified as route/method
+support, theorem tooling, or analogy.  None is loaded as PR230 proof authority.
+
+| Surface | Sources | PR230 relevance | Boundary |
+|---|---|---|---|
+| Gauge-invariant Higgs/FMS | Froehlich-Morchio-Strocchi IHES P/81/12; Maas-Sondenheimer-Toerek arXiv:1709.07477 | Supports the shape of an action-first composite `O_H` route | Requires same-surface action, `Phi`, canonical `O_H`, and rows |
+| Gauge-Higgs lattice context | Fradkin-Shenker Phys. Rev. D 19, 3682 | Constrains action-adoption thinking | Not a source-overlap selector |
+| Transfer-matrix/time-kernel setting | Luescher transfer matrix theorem | Method support for future Euclidean pole rows | No current `O_H` or residue authority |
+| Lattice Higgs-Yukawa methodology | Bulava et al. arXiv:1210.1798; Gerhold/Jansen examples | Compute design precedent | Not a derivation when Yukawa is scanned/tuned |
+| Moment and spectral math | Curto-Fialkow, matrix Herglotz, Ho-Kalman, Prony | Future validators after `C_ss/C_sH/C_HH` rows exist | Cannot invent missing operator or entries |
+| Positive cones / exact ODEs | Rugh, Doplicher-Roberts, PR541/PR1131 Picard-Fuchs pattern | Possible theorem/computation accelerators | Only after physical transfer kernel or functional is defined |
+
+Conclusion: the literature/math search supports the route ranking but does not
+change closure status.  The irreducible missing object remains a same-surface
+physical map from PR230 source coordinate to canonical scalar/Higgs response.

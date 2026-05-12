@@ -161,6 +161,16 @@ same-source top rows, matched covariance, strict non-observed `g2`,
 `delta_perp`, and final W-response authority.  No standalone block29 review PR
 should be opened unless PR #230 integration fails.
 
+Block30 follows the same direct PR #230 landing path.  It adds the requested
+full-approach assumptions / first-principles / literature / math / repo-bridge
+review at PR head `22c2f326` and records that the irreducible blocker is the
+missing same-surface physical map from source coordinate to canonical
+scalar/Higgs response.  The local physics-loop skill has no canonical "Elon
+exercise" section; this block uses a first-principles / 10x reset plus
+zeroth-principles substrate-to-`y_t` chain and keeps it route-selection only.
+No standalone block30 review PR should be opened unless PR #230 integration
+fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

@@ -555,3 +555,22 @@ plus strict `C_ss/C_sH/C_HH` rows with Gram/FV/IR authority.  Otherwise
 continue W/Z only with accepted action, production W/Z rows, same-source top
 rows, matched covariance, strict non-observed `g2`, `delta_perp`, and final
 W-response authority.  Chunk063 completion alone remains support-only.
+
+Block30 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Full-approach assumptions / first-principles / literature / math / bridge-review runner | `scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py` | Created; PASS=20 FAIL=0 |
+| Full-approach review certificate | `outputs/yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_2026-05-11.json` | Created; records 16 assumptions, zeroth-principles chain, literature/math route classification, other bridge-work cross-check, and no closure |
+| Full-approach review note | `docs/YT_PR230_BLOCK30_FULL_APPROACH_ASSUMPTIONS_ELON_LIT_MATH_BRIDGE_REVIEW_NOTE_2026-05-11.md` | Created; bounded-support physics-loop exercise, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block30; PASS=364 FAIL=0 |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block30 full-approach review |
+
+Follow-on artifact target after block30 is explicitly narrowed to one of three
+real bridge objects: accepted same-surface EW/Higgs action/canonical `O_H` plus
+strict `C_ss/C_sH/C_HH` pole rows, strict W/Z matched physical response with
+accepted action and covariance/`g2`/`delta_perp`, or a neutral
+primitive/rank-one theorem with physical transfer and source-Higgs coupling
+authority.  Literature, math tools, Ward repairs, beta-lambda routes, and
+Picard-Fuchs bridge work are route context until they produce one of those
+objects.

@@ -785,3 +785,37 @@
      `C_ss/C_sH/C_HH` rows.  Otherwise continue W/Z only with accepted action,
      production W/Z rows, same-source top rows, matched covariance, strict
      non-observed `g2`, `delta_perp`, and final W-response authority.
+
+## Selected Block30 Route
+
+**Full-approach first-principles bridge review**
+
+- Type: bounded-support / route review.
+- Dramatic-step score: 2.
+- Hard-residual pressure: 5.
+- Claim-state movement: records that assumptions, literature, math tooling,
+  Ward repair, beta-lambda, Picard-Fuchs plaquette work, C3 obstruction, and
+  other bridge artifacts do not supply current PR230 closure.  The exercise
+  reduces the blocker to a same-surface physical map from source coordinate to
+  canonical scalar/Higgs response.
+- Artifact: `YT_PR230_BLOCK30_FULL_APPROACH_ASSUMPTIONS_ELON_LIT_MATH_BRIDGE_REVIEW`.
+
+## Block30 Fan-Out Synthesis
+
+1. **Action-first `O_H`**
+   - Best route.  It directly retires the missing map if a same-surface
+     EW/Higgs action, canonical `O_H`, LSZ normalization, and strict
+     `C_ss/C_sH/C_HH` pole rows can be supplied.
+
+2. **Strict W/Z matched physical response**
+   - Main bypass.  Block29 already selected it as fallback, but it still needs
+     accepted action, production W/Z rows, same-source top rows, covariance,
+     strict non-observed `g2`, `delta_perp`, and final W-response rows.
+
+3. **Neutral primitive/rank-one theorem**
+   - Theorem-only fallback.  Requires physical transfer/off-diagonal generator
+     authority and source/canonical-Higgs coupling authority.
+
+4. **Exact math**
+   - Accelerator only.  Picard-Fuchs, Herglotz, moments, Prony, and cone tools
+     become useful after the operator/action/functional exists.

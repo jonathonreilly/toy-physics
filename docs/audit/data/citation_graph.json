@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:18:49.377423+00:00",
+  "generated_at": "2026-05-12T00:29:51.843572+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42385,6 +42385,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py",
       "title": "PR230 Block29 Post-Block28 W/Z Pivot Admission Checkpoint"
     },
+    "yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_note_2026-05-11": {
+      "claim_id": "yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_note_2026-05-11",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / full-approach physics-loop exercise; PR230",
+      "deps": [],
+      "note_hash": "b525f518e5b6c1ea7eabe3dc043dead3c35a4d274b24d86a9e0c3396d2e8954e",
+      "path": "docs/YT_PR230_BLOCK30_FULL_APPROACH_ASSUMPTIONS_ELON_LIT_MATH_BRIDGE_REVIEW_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py",
+      "title": "PR230 Block30 Full-Approach Assumptions / Elon / Literature / Math / Bridge Review"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -46615,6 +46625,7 @@
     "yt_pr230_block25_post_block24_landed_checkpoint_note_2026-05-11",
     "yt_pr230_block26_post_block25_landed_checkpoint_note_2026-05-11",
     "yt_pr230_block27_post_block26_landed_checkpoint_note_2026-05-11",
+    "yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_note_2026-05-11",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -46878,12 +46889,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4701,
-    "leaf_count": 1128,
-    "node_count": 2124,
-    "root_count": 1629,
-    "runners_with_path": 1600,
+    "leaf_count": 1129,
+    "node_count": 2125,
+    "root_count": 1630,
+    "runners_with_path": 1601,
     "status_counts": {
-      "bounded": 593,
+      "bounded": 594,
       "open": 112,
       "proposed_promoted": 1,
       "proposed_retained": 373,

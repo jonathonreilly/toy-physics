@@ -785,6 +785,9 @@ def main() -> int:
         "pr230_block29_post_block28_wz_pivot_admission": load(
             "outputs/yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint_2026-05-11.json"
         ),
+        "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review": load(
+            "outputs/yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4034,6 +4037,48 @@ def main() -> int:
         is True,
         statuses["pr230_block29_post_block28_wz_pivot_admission"],
     )
+    block30_full_approach_review = certificates[
+        "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review"
+    ]
+    report(
+        "pr230-block30-full-approach-review-not-closure",
+        "full-approach exercise and repo-bridge review"
+        in str(
+            statuses[
+                "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review"
+            ]
+        )
+        and block30_full_approach_review.get("proposal_allowed") is False
+        and block30_full_approach_review.get("bare_retained_allowed") is False
+        and block30_full_approach_review.get(
+            "audit_required_before_effective_retained"
+        )
+        is True
+        and block30_full_approach_review.get("fails") == 0
+        and len(block30_full_approach_review.get("assumptions_exercise", [])) >= 16
+        and len(block30_full_approach_review.get("literature_search", [])) >= 5
+        and len(block30_full_approach_review.get("math_search", [])) >= 6
+        and len(block30_full_approach_review.get("repo_bridge_cross_check", [])) >= 10
+        and block30_full_approach_review.get("elon_exercise", {}).get(
+            "canonical_skill_section_found"
+        )
+        is False
+        and len(
+            block30_full_approach_review.get("elon_exercise", {}).get(
+                "zeroth_principles_chain", []
+            )
+        )
+        >= 5
+        and all(
+            value is True
+            for value in block30_full_approach_review.get(
+                "parent_presence", {}
+            ).values()
+        ),
+        statuses[
+            "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review"
+        ],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6874,6 +6919,33 @@ def main() -> int:
         )
         is True
     )
+    result["block30_full_approach_review_not_closure"] = (
+        block30_full_approach_review.get("proposal_allowed") is False
+        and block30_full_approach_review.get("bare_retained_allowed") is False
+        and block30_full_approach_review.get("audit_required_before_effective_retained")
+        is True
+        and block30_full_approach_review.get("fails") == 0
+        and len(block30_full_approach_review.get("assumptions_exercise", [])) >= 16
+        and len(block30_full_approach_review.get("literature_search", [])) >= 5
+        and len(block30_full_approach_review.get("math_search", [])) >= 6
+        and len(block30_full_approach_review.get("repo_bridge_cross_check", [])) >= 10
+        and block30_full_approach_review.get("elon_exercise", {}).get(
+            "canonical_skill_section_found"
+        )
+        is False
+        and len(
+            block30_full_approach_review.get("elon_exercise", {}).get(
+                "zeroth_principles_chain", []
+            )
+        )
+        >= 5
+        and all(
+            value is True
+            for value in block30_full_approach_review.get(
+                "parent_presence", {}
+            ).values()
+        )
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -6915,6 +6987,7 @@ def main() -> int:
         "does not treat the block26 checkpoint commit as a new physics packet or admit a queue item without explicit production/certificate inputs",
         "does not treat the block27 checkpoint commit or the degree-one O_H support intake as actual canonical O_H/source-Higgs pole-row closure",
         "does not treat the post-block28 W/Z pivot admission checkpoint as accepted-action response evidence",
+        "does not treat the block30 assumptions/first-principles/literature/math/repo-bridge review as PR230 top-Yukawa closure",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

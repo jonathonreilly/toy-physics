@@ -196,6 +196,30 @@ Chunk063 completion alone remains support-only and is not a queue-admission
 condition.  Do not run another current-surface shortcut gate from this lane
 unless one of the explicit production/certificate inputs lands.
 
+## Block30 Full-Approach Exercise
+
+Block30 reruns the full physics-loop exercise over the current PR230 approach:
+assumption questioning, a first-principles / 10x reset, a zeroth-principles
+substrate-to-`y_t` chain, targeted literature search, targeted math search, and
+cross-check of other repo bridge work.
+
+Conclusion: the blocker is not a missing numerical value.  It is the absent
+same-surface physical map from the PR230 source coordinate to canonical
+scalar/Higgs response, with enough time-kernel or response authority to read a
+pole residue.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with Gram/FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral primitive/rank-one theorem with physical transfer and source-Higgs
+   coupling authority.
+
+Do not spend more PR230 surface on route inventory unless new evidence lands.
+
 ## Block28 Degree-One `O_H` Support Intake
 
 Block28 verifies that draft PR #230 head
