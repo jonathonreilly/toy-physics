@@ -1,0 +1,177 @@
+{
+  "actual_current_surface_status": "support / exact negative boundary: native scalar/action/LSZ current-surface route exhausted after Block40 without a new primitive",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "conditional_surface_status": "conditional-support if a future same-surface scalar-channel kernel/covariance, dynamic scalar carrier, accepted action, scalar LSZ metric, strict C_ss/C_sH/C_HH pole rows, strict W/Z absolute authority, or neutral-transfer primitive lands",
+  "exact_next_action": "Demote the native scalar/action/LSZ route to closed on the current surface unless a new primitive appears.  Pivot the campaign to strict W/Z absolute-authority evidence or same-surface neutral transfer/primitive-cone theorem work.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "relabelled_C_sx_C_xx_as_C_sH_C_HH": false,
+    "set_kappa_c2_zmatch_or_overlap_to_one": false,
+    "treated_effective_potential_hessian_as_source_overlap": false,
+    "treated_finite_shell_exact_math_as_pole_lsz_authority": false,
+    "treated_hs_logdet_auxiliary_as_canonical_higgs": false,
+    "treated_legendre_transform_as_metric_fixing": false,
+    "treated_support_only_fms_as_adopted_action": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_higgs_yukawa_or_g2_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "native_scalar_action_lsz_route_exhaustion_passed": true,
+  "no_current_native_scalar_action_lsz_route_closes": true,
+  "parent_certificates": {
+    "campaign_status": "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json",
+    "canonical_scalar_normalization_import": "outputs/yt_canonical_scalar_normalization_import_audit_2026-05-01.json",
+    "effective_potential_hessian_source_overlap": "outputs/yt_effective_potential_hessian_source_overlap_no_go_2026-05-02.json",
+    "fms_action_adoption_minimal_cut": "outputs/yt_pr230_fms_action_adoption_minimal_cut_2026-05-07.json",
+    "fms_oh_candidate_action_packet": "outputs/yt_pr230_fms_oh_candidate_action_packet_2026-05-07.json",
+    "full_positive_assembly": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+    "hs_logdet_scalar_action_normalization": "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
+    "lane1_action_premise": "outputs/yt_pr230_lane1_action_premise_derivation_attempt_2026-05-12.json",
+    "legendre_kappa_gauge_freedom": "outputs/yt_legendre_kappa_gauge_freedom_2026-05-01.json",
+    "scalar_carrier_projector_closure": "outputs/yt_scalar_carrier_projector_closure_attempt_2026-05-02.json",
+    "scalar_lsz_carleman_tauberian_determinacy": "outputs/yt_pr230_scalar_lsz_carleman_tauberian_determinacy_attempt_2026-05-05.json",
+    "scalar_lsz_holonomic_exact_authority": "outputs/yt_pr230_scalar_lsz_holonomic_exact_authority_attempt_2026-05-05.json",
+    "scalar_lsz_normalization_cancellation": "outputs/yt_scalar_lsz_normalization_cancellation_2026-05-01.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json",
+    "source_reparametrization_gauge": "outputs/yt_source_reparametrization_gauge_no_go_2026-05-01.json",
+    "source_to_higgs_lsz_closure": "outputs/yt_source_to_higgs_lsz_closure_attempt_2026-05-01.json",
+    "strict_scalar_lsz_moment_fv_authority": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json"
+  },
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_scalar_normalization_import": "exact negative boundary / canonical scalar normalization import audit",
+    "effective_potential_hessian_source_overlap": "exact negative boundary / effective-potential Hessian not source-overlap identity",
+    "fms_action_adoption_minimal_cut": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "hs_logdet_scalar_action_normalization": "support / exact negative boundary: HS-logdet auxiliary scalar action normalization does not derive canonical O_H on the current PR230 surface",
+    "lane1_action_premise": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+    "legendre_kappa_gauge_freedom": "exact negative boundary / Legendre normalization freedom",
+    "scalar_carrier_projector_closure": "open / scalar carrier-projector closure attempt blocked",
+    "scalar_lsz_carleman_tauberian_determinacy": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+    "scalar_lsz_holonomic_exact_authority": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
+    "scalar_lsz_normalization_cancellation": "conditional-support / scalar LSZ normalization cancellation",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem",
+    "source_reparametrization_gauge": "exact negative boundary / source reparametrization gauge",
+    "source_to_higgs_lsz_closure": "open / source-to-Higgs LSZ closure attempt blocked",
+    "strict_scalar_lsz_moment_fv_authority": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority"
+  },
+  "pass_count": 18,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Every current native scalar/action/LSZ candidate is blocked, support-only, or conditional.  No route supplies dynamic Phi/action, canonical O_H identity, scalar LSZ metric, source-Higgs overlap, or strict pole rows on the current PR230 surface.",
+  "remaining_positive_routes": [
+    "genuinely new same-surface scalar/action/LSZ primitive with fixed kernel/covariance and scalar metric",
+    "strict W/Z physical-response packet with non-observed absolute g2/v authority",
+    "same-surface neutral transfer or primitive-cone theorem that fixes the physical Higgs direction",
+    "strict source-Higgs C_ss/C_sH/C_HH pole rows after canonical O_H is independently supplied"
+  ],
+  "route_table": [
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "no-go / exact negative boundary for lane-1 action-premise derivation: current minimal PR230 substrate does not derive accepted EW/Higgs action or canonical O_H authority",
+      "remaining_import": "dynamic Phi/action/canonical O_H/scalar LSZ not derived",
+      "route": "minimal Cl(3)/Z3 action premise"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+      "remaining_import": "candidate support only; no adopted same-surface EW/Higgs action or strict rows",
+      "route": "FMS candidate/action packet"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact-support / FMS action-adoption minimal cut; current PR230 surface has candidate support but no adopted same-surface action, canonical O_H, or strict pole rows",
+      "remaining_import": "minimal adoption cut still lacks action, LSZ metric, source identity, and pole rows",
+      "route": "FMS action-adoption minimal cut"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "support / exact negative boundary: HS-logdet auxiliary scalar action normalization does not derive canonical O_H on the current PR230 surface",
+      "remaining_import": "auxiliary normalization and source-Higgs overlap vary under rescaling/rotation",
+      "route": "HS/logdet auxiliary scalar"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / Legendre normalization freedom",
+      "remaining_import": "Legendre transform is covariant under source/operator rescaling",
+      "route": "Legendre effective action"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / source reparametrization gauge",
+      "remaining_import": "source normalization remains gauge freedom",
+      "route": "source reparametrization invariant response"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "conditional-support / scalar LSZ normalization cancellation",
+      "remaining_import": "bookkeeping cancellation only; interacting kernel and pole derivative open",
+      "route": "scalar LSZ normalization cancellation"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / source-functional LSZ identifiability theorem",
+      "remaining_import": "source-pole coupling does not determine overlap with canonical Higgs mode",
+      "route": "source-functional LSZ pole"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / effective-potential Hessian not source-overlap identity",
+      "remaining_import": "Hessian eigenvalues do not fix the microscopic source direction",
+      "route": "effective-potential Hessian / SSB algebra"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / canonical scalar normalization import audit",
+      "remaining_import": "EW/Higgs surfaces assume or structure canonical H; they do not derive PR230 source normalization",
+      "route": "existing canonical scalar normalization surfaces"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "open / source-to-Higgs LSZ closure attempt blocked",
+      "remaining_import": "named source-to-canonical-Higgs LSZ theorem remains open",
+      "route": "source-to-Higgs LSZ closure attempt"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "open / scalar carrier-projector closure attempt blocked",
+      "remaining_import": "physical scalar carrier/projector and K'(pole) remain open",
+      "route": "scalar carrier/projector closure"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / scalar-LSZ holonomic exact-authority not derivable from current finite-shell PR230 data",
+      "remaining_import": "finite shell data do not identify physical denominator or LSZ residue",
+      "route": "finite-shell exact math / holonomic LSZ"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / Carleman/Tauberian scalar-LSZ determinacy not derivable from current finite PR230 rows",
+      "remaining_import": "strict moment/FV/IR authority remains absent",
+      "route": "Carleman/Tauberian scalar LSZ determinacy"
+    },
+    {
+      "closes_current_surface": false,
+      "current_surface_result": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
+      "remaining_import": "strict scalar moment/FV authority is not present on current surface",
+      "route": "strict scalar LSZ moment/FV authority gate"
+    }
+  ],
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not declare a permanent no-go against future scalar/action physics",
+    "does not use H_unit, Ward, y_t_bare, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, Z_match, source-Higgs overlap, or auxiliary normalization to one",
+    "does not relabel C_sx/C_xx as C_sH/C_HH"
+  ],
+  "summary": {
+    "fail": 0,
+    "pass": 18
+  }
+}

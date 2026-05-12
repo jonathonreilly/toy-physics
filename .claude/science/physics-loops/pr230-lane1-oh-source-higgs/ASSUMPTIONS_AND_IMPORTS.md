@@ -70,3 +70,14 @@ changing the candidate source-Higgs overlap and Gram purity.  A future scalar
 route therefore needs a same-surface scalar-channel kernel/covariance, dynamic
 scalar carrier, accepted action, scalar LSZ metric, and strict
 `C_ss/C_sH/C_HH` pole rows.
+
+## Block41 Native Scalar/Action/LSZ Route Exhaustion Result
+
+The current native scalar/action/LSZ queue is exhausted on the present PR230
+surface.  The minimal action, FMS support, HS/logdet, Legendre, source
+reparametrization, scalar-LSZ cancellation, source-functional LSZ,
+effective-potential Hessian, existing canonical-scalar import, source-to-Higgs
+LSZ, scalar carrier/projector, and finite-shell exact-math routes all leave a
+load-bearing primitive open.  This is not a permanent no-go; it means the
+campaign must pivot to strict W/Z absolute authority, neutral transfer, or a
+new scalar/action primitive not already tested.

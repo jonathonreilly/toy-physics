@@ -57,6 +57,13 @@ auxiliary propagator, source coupling, and LSZ-like field norm; neutral
 rotations preserve source-only rows while changing source-Higgs overlap and
 Gram purity.
 
+Block41 records the route-level consequence for the top-ranked native
+scalar/action/LSZ lane.  Minimal action, FMS, HS/logdet, Legendre,
+source-reparametrization, scalar-LSZ bookkeeping, source-functional LSZ,
+effective-potential Hessian, existing canonical-scalar surfaces,
+source-to-Higgs LSZ, scalar carrier/projector, and finite-shell exact-math
+routes are all blocked, support-only, or open on the current surface.
+
 ## Checks Run
 
 ```text
@@ -78,6 +85,10 @@ python3 scripts/frontier_yt_pr230_wz_mass_response_self_normalization_no_go.py
 
 python3 -m py_compile scripts/frontier_yt_pr230_hs_logdet_scalar_action_normalization_no_go.py
 python3 scripts/frontier_yt_pr230_hs_logdet_scalar_action_normalization_no_go.py
+# SUMMARY: PASS=18 FAIL=0
+
+python3 -m py_compile scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py
+python3 scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py
 # SUMMARY: PASS=18 FAIL=0
 
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
@@ -105,10 +116,10 @@ python3 scripts/frontier_yt_source_higgs_gram_purity_postprocessor.py
 # SUMMARY: PASS=3 FAIL=0
 
 python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
-# SUMMARY: PASS=167 FAIL=0
+# SUMMARY: PASS=168 FAIL=0
 python3 scripts/frontier_yt_retained_closure_route_certificate.py
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# campaign status SUMMARY: PASS=370 FAIL=0
+# campaign status SUMMARY: PASS=372 FAIL=0
 ```
 
 ## Current Status
@@ -116,7 +127,7 @@ python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
 No full positive closure yet.  The exact remaining lane-1 blocker is:
 
 ```text
-derive a strict W/Z physical-response packet with absolute authority, a native scalar/action/LSZ theorem with fixed kernel/covariance and scalar metric, or a new same-surface neutral transfer primitive
+derive a strict W/Z physical-response packet with absolute authority, a new same-surface neutral transfer primitive, or a genuinely new scalar/action/LSZ primitive not already covered by Block41
 ```
 
 Without that, the completed taste-radial rows cannot be promoted to
@@ -126,13 +137,13 @@ Without that, the completed taste-radial rows cannot be promoted to
 ## Next Exact Action
 
 Continue only with a new primitive-bearing route.  The next block should not
-re-run row inventory, HS/logdet normalization, or W/Z self-normalization.  It
-should try one of:
+re-run row inventory, native scalar/action/LSZ route exhaustion, HS/logdet
+normalization, or W/Z self-normalization.  It should try one of:
 
 ```text
-new native scalar/action/LSZ primitive with fixed kernel/covariance
 strict W/Z physical-response packet with absolute g2/v authority
 new same-surface neutral transfer primitive
+new native scalar/action/LSZ primitive not already tested
 ```
 
 Do not treat top bare-mass response as Higgs response, and do not relabel

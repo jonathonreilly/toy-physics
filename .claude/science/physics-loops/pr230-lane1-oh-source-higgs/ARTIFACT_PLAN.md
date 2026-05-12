@@ -60,9 +60,23 @@ auxiliary normalization and source-Higgs overlap.  They do not derive
 canonical `O_H` without a same-surface kernel/action/LSZ theorem and strict
 source-Higgs pole rows.
 
+## Block41: Native Scalar/Action/LSZ Route Exhaustion
+
+- Note: `docs/YT_PR230_NATIVE_SCALAR_ACTION_LSZ_ROUTE_EXHAUSTION_AFTER_BLOCK40_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py`
+- Certificate: `outputs/yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  The minimal action,
+FMS support, HS/logdet, Legendre, source-reparametrization, scalar-LSZ
+bookkeeping, source-functional LSZ, effective-potential Hessian, existing
+canonical-scalar surfaces, source-to-Higgs LSZ, scalar carrier/projector, and
+finite-shell exact-math routes are all blocked, support-only, or open.  The
+native scalar/action/LSZ lane now requires a genuinely new same-surface
+primitive before it can reopen.
+
 ## Future Positive Artifact
 
-The next artifact that could move the lane positively is a genuinely new
-same-surface scalar/action/LSZ primitive, a strict W/Z physical-response packet
-with absolute `g2`/`v` authority, or a new same-surface neutral transfer
-primitive not present in the current row packet.
+The next artifact that could move the lane positively is a strict W/Z
+physical-response packet with absolute `g2`/`v` authority, a new same-surface
+neutral transfer primitive not present in the current row packet, or a
+genuinely new scalar/action/LSZ primitive not already covered by Block41.

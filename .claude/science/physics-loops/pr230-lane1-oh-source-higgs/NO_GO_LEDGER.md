@@ -31,6 +31,11 @@
   current source/logdet data while changing auxiliary normalization,
   source-Higgs overlap, and Gram purity unless a same-surface scalar
   kernel/action/LSZ theorem supplies them.
+- The current native scalar/action/LSZ route queue is exhausted after Block40:
+  minimal-action, FMS, HS/logdet, Legendre, source-reparametrization,
+  scalar-LSZ bookkeeping, source-functional LSZ, effective-potential Hessian,
+  canonical-scalar import, source-to-Higgs LSZ, scalar carrier/projector, and
+  finite-shell exact-math attempts all leave a load-bearing primitive open.
 - Additive-top coarse rows are not strict same-source subtraction closure.
 
 ## Scope Boundary

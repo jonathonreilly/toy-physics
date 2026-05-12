@@ -111,3 +111,35 @@ were performed directly against the changed files and repo governance surfaces:
   work and the audit pipeline seeds it as `support`.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings.
+
+## Self-Review: Block41
+
+- Overclaim check: passed.  The note says the native scalar/action/LSZ route
+  is exhausted on the current surface after Block40, not permanently impossible.
+- Physics check: passed.  The runner consumes the existing no-go/support
+  parents for minimal action, FMS, HS/logdet, Legendre,
+  source-reparametrization, scalar-LSZ bookkeeping, source-functional LSZ,
+  effective-potential Hessian, canonical scalar import, source-to-Higgs LSZ,
+  scalar carrier/projector, and finite-shell exact-math attempts.
+- Forbidden-import check: passed.  The runner does not use observed selectors,
+  `H_unit`, Ward, `y_t_bare`, `alpha_LM`, plaquette, `u0`, unit normalization,
+  or alias relabeling.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block41 Package
+
+Local review-loop was run without subagent fanout.  Required checks were
+performed directly against the changed files and repo governance surfaces:
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=18 FAIL=0`.
+- Physics Claim Boundary: SUPPORT / exact negative boundary.  The route is
+  exhausted only on the current surface and reopen routes are listed.
+- Imports / Support: DISCLOSED.  Every parent route is support-only, open, or
+  an exact negative boundary; no parent has `proposal_allowed=true`.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop
+  work and the audit pipeline seeds it as `support`.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings.

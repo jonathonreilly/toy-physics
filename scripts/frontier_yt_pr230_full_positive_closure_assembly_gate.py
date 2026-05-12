@@ -161,6 +161,7 @@ PARENTS = {
     "pr230_reflection_det_primitive_upgrade_gate": "outputs/yt_pr230_reflection_det_primitive_upgrade_gate_2026-05-05.json",
     "pr230_logdet_hessian_neutral_mixing_attempt": "outputs/yt_pr230_logdet_hessian_neutral_mixing_attempt_2026-05-05.json",
     "pr230_hs_logdet_scalar_action_normalization_no_go": "outputs/yt_pr230_hs_logdet_scalar_action_normalization_no_go_2026-05-12.json",
+    "pr230_native_scalar_action_lsz_route_exhaustion_after_block40": "outputs/yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_2026-05-12.json",
     "cross_lane_oh_authority_audit": "outputs/yt_cross_lane_oh_authority_audit_2026-05-05.json",
     "canonical_oh_premise_stretch": "outputs/yt_canonical_oh_premise_stretch_no_go_2026-05-05.json",
     "source_pole_mixing": "outputs/yt_source_pole_canonical_higgs_mixing_obstruction_2026-05-02.json",
@@ -1974,6 +1975,14 @@ def main() -> int:
             "hs_logdet_scalar_action_normalization_no_go_passed"
         )
         is True
+        and certs[
+            "pr230_native_scalar_action_lsz_route_exhaustion_after_block40"
+        ].get("proposal_allowed")
+        is False
+        and certs[
+            "pr230_native_scalar_action_lsz_route_exhaustion_after_block40"
+        ].get("native_scalar_action_lsz_route_exhaustion_passed")
+        is True
         and certs["canonical_oh_premise_stretch"].get("proposal_allowed") is False
         and certs["canonical_oh_premise_stretch"].get("premise_lattice_stretch_no_go_passed")
         is True
@@ -3337,6 +3346,23 @@ def main() -> int:
         hs_logdet_scalar_action_normalization_no_go_blocks,
         statuses["pr230_hs_logdet_scalar_action_normalization_no_go"],
     )
+    native_scalar_action_lsz_route_exhaustion_blocks = (
+        "native scalar/action/LSZ current-surface route exhausted"
+        in statuses["pr230_native_scalar_action_lsz_route_exhaustion_after_block40"]
+        and certs[
+            "pr230_native_scalar_action_lsz_route_exhaustion_after_block40"
+        ].get("proposal_allowed")
+        is False
+        and certs[
+            "pr230_native_scalar_action_lsz_route_exhaustion_after_block40"
+        ].get("native_scalar_action_lsz_route_exhaustion_passed")
+        is True
+    )
+    report(
+        "pr230-native-scalar-action-lsz-route-exhaustion-blocks",
+        native_scalar_action_lsz_route_exhaustion_blocks,
+        statuses["pr230_native_scalar_action_lsz_route_exhaustion_after_block40"],
+    )
     report(
         "wz-g2-bare-running-bridge-attempt-blocks",
         "WZ g2 bare-to-low-scale running bridge"
@@ -3772,6 +3798,7 @@ def main() -> int:
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
+        "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,
         "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
         "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
@@ -3808,6 +3835,7 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, observed targets, kappa_s=1, c2=1, Z_match=1, or cos(theta)=1",
             "does not treat static EW algebra, W/Z absent guards, source-only C_ss rows, or finite-shell fits as physical y_t readouts",
             "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
+            "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
             "does not treat W/Z smoke-schema rows as production EW response evidence",
             "does not treat current-surface non-chunk exhaustion as retained closure",
             "does not treat the Higgs/taste condensate stack as PR230 O_H authority",

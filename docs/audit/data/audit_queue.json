@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 238,
-    "leaf": 715,
+    "leaf": 716,
     "medium": 339
   },
-  "generated_at": "2026-05-12T02:28:27.953943+00:00",
+  "generated_at": "2026-05-12T02:32:35.490080+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -21667,6 +21667,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40_note_2026-05-12",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_NATIVE_SCALAR_ACTION_LSZ_ROUTE_EXHAUSTION_AFTER_BLOCK40_NOTE_2026-05-12.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py",
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_negative_route_applicability_review_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26496,6 +26513,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 890,
-  "total_pending": 1292
+  "ready_count": 891,
+  "total_pending": 1293
 }

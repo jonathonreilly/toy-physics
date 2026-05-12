@@ -44,4 +44,12 @@ Lane 1 Block40: HS/logdet scalar-action normalization no-go
 - conclusion: formal auxiliary scalar rewrites preserve source/logdet data
   while changing auxiliary normalization and source-Higgs overlap; canonical
   O_H still needs a same-surface action/LSZ theorem or strict rows
+
+Lane 1 Block41: native scalar/action/LSZ route exhaustion
+- status: exact negative boundary on the current surface
+- runner: scripts/frontier_yt_pr230_native_scalar_action_lsz_route_exhaustion_after_block40.py
+- result: PASS=18 FAIL=0
+- conclusion: all current native scalar/action/LSZ routes are blocked,
+  support-only, or open; the next positive route must be W/Z absolute
+  authority, neutral transfer, or a genuinely new scalar/action primitive
 ```
