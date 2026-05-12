@@ -8793,6 +8793,34 @@
       "to": "yt_scalar_ladder_eigen_derivative_gate_note_2026-05-01"
     },
     {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_schur_complement_kprime_sufficiency_note_2026-05-03"
+    },
+    {
+      "from": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "to": "yt_schur_kprime_row_absence_guard_note_2026-05-03"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19145,7 +19173,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T07:04:30.497522+00:00",
+  "generated_at": "2026-05-12T07:12:40.017163+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42940,6 +42968,24 @@
       "runner_path": "scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py",
       "title": "PR230 Block61 Post-Carrier K-Prime Obstruction"
     },
+    "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12": {
+      "claim_id": "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for the current PR230 surface:",
+      "deps": [
+        "yt_pr230_block57_compact_source_functional_foundation_gate_note_2026-05-12",
+        "yt_pr230_block58_compact_source_spectral_support_gate_note_2026-05-12",
+        "yt_pr230_block60_compact_source_taste_singlet_carrier_gate_note_2026-05-12",
+        "yt_pr230_block61_post_carrier_kprime_obstruction_note_2026-05-12",
+        "yt_source_functional_lsz_identifiability_theorem_note_2026-05-03",
+        "yt_schur_complement_kprime_sufficiency_note_2026-05-03",
+        "yt_schur_kprime_row_absence_guard_note_2026-05-03"
+      ],
+      "note_hash": "cfbfd4ffbb5c15a0ee12451e1903abd3af652bd2e7bef1e147490d85b05403dc",
+      "path": "docs/YT_PR230_BLOCK62_COMPACT_SOURCE_KPRIME_IDENTIFIABILITY_OBSTRUCTION_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py",
+      "title": "PR230 Block62 Compact-Source K-Prime Identifiability Obstruction"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47731,17 +47777,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4786,
-    "leaf_count": 1119,
-    "node_count": 2163,
+    "edge_count": 4793,
+    "leaf_count": 1117,
+    "node_count": 2164,
     "root_count": 1657,
-    "runners_with_path": 1638,
+    "runners_with_path": 1639,
     "status_counts": {
       "bounded": 602,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 477,
+      "support": 478,
       "unknown": 593
     }
   }

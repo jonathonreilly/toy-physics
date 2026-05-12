@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T07:04:33.077603+00:00",
+  "generated_at": "2026-05-12T07:12:42.612891+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16824,6 +16824,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_block61_post_carrier_kprime_obstruction.py"
+    },
+    "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py"
     },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "assert_count": 1,
@@ -36164,6 +36176,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_block62_compact_source_kprime_identifiability_obstruction_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_campaign_status_certificate.py": {
       "assert_count": 1,
       "claims": [
@@ -43281,13 +43308,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 259,
+      "B": 260,
       "C": 544,
       "D": 338,
       "none": 404
     },
-    "runners_classified": 1555,
-    "runners_with_C": 863,
-    "runners_with_D": 635
+    "runners_classified": 1556,
+    "runners_with_C": 864,
+    "runners_with_D": 636
   }
 }

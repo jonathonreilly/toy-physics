@@ -854,6 +854,9 @@ def main() -> int:
         "pr230_block61_post_carrier_kprime_obstruction": load(
             "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json"
         ),
+        "pr230_block62_compact_source_kprime_identifiability_obstruction": load(
+            "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4971,6 +4974,43 @@ def main() -> int:
         is False,
         statuses["pr230_block61_post_carrier_kprime_obstruction"],
     )
+    block62_compact_source_kprime_identifiability_obstruction = certificates[
+        "pr230_block62_compact_source_kprime_identifiability_obstruction"
+    ]
+    report(
+        "pr230-block62-compact-source-kprime-identifiability-obstruction-blocks",
+        "compact source support and fixed carrier do not identify K-prime or pole residue"
+        in str(statuses["pr230_block62_compact_source_kprime_identifiability_obstruction"])
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "proposal_allowed"
+        )
+        is False
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "block62_compact_source_kprime_identifiability_obstruction_passed"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "compact_source_support_loaded"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "finite_spectral_support_loaded"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "kprime_authority_present"
+        )
+        is False
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "pole_residue_authority_present"
+        )
+        is False,
+        statuses["pr230_block62_compact_source_kprime_identifiability_obstruction"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -7064,6 +7104,7 @@ def main() -> int:
             "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after block59",
             "does not treat block60 source-channel taste-singlet carrier support as canonical O_H or scalar LSZ residue authority",
             "does not treat block60 source-channel carrier support as K-prime or pole-residue authority after block61",
+            "does not treat compact source support plus fixed source carrier as K-prime or pole-residue authority after block62",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -8587,6 +8628,36 @@ def main() -> int:
         and block61_post_carrier_kprime_obstruction.get("kprime_authority_present")
         is False
         and block61_post_carrier_kprime_obstruction.get(
+            "pole_residue_authority_present"
+        )
+        is False
+    )
+    result["block62_compact_source_kprime_identifiability_blocks"] = (
+        block62_compact_source_kprime_identifiability_obstruction.get(
+            "proposal_allowed"
+        )
+        is False
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "block62_compact_source_kprime_identifiability_obstruction_passed"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "compact_source_support_loaded"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "finite_spectral_support_loaded"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and block62_compact_source_kprime_identifiability_obstruction.get(
+            "kprime_authority_present"
+        )
+        is False
+        and block62_compact_source_kprime_identifiability_obstruction.get(
             "pole_residue_authority_present"
         )
         is False

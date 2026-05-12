@@ -103,8 +103,10 @@ cannot proceed by source-carrier normalization alone.
    finite-volume positive spectral sum, and Block59 shows that promoting that
    support directly is not valid.  Block60 fixes the source-channel carrier,
    and Block61 shows that fixed carrier plus fixed pole location still does
-   not determine `K'(pole)` or residue.  This route must add new authority
-   beyond finite-volume positivity and carrier normalization:
+   not determine `K'(pole)` or residue.  Block62 shows that compact source
+   support plus fixed carrier also does not determine `K'(pole)` or residue.
+   This route must add new authority beyond finite-volume positivity, compact
+   source moments, and carrier normalization:
    threshold/FVIR, `K'(pole)` or pole/residue, contact/continuum, and
    canonical `O_H`/source-overlap or a physical response bridge.
 
@@ -180,3 +182,13 @@ location do not imply a fixed inverse-denominator derivative or residue.  The
 highest-probability non-chunk route remains a microscopic scalar denominator
 or contact/threshold theorem, but it must now attack `K'(pole)`/residue
 directly rather than reusing the Block60 carrier support as a proxy.
+
+## Block62 Update
+
+The compact-source shortcut is now blocked too.  Positive spectral
+counterfamilies can preserve the compact source support invariants and fixed
+carrier while moving the pole residue.  The non-chunk queue should now skip
+any route that only adds finite-volume source positivity, compact moments, or
+carrier normalization.  Reopen with a direct scalar denominator derivative,
+strict direct pole rows, accepted canonical `O_H`/action/LSZ authority, a
+same-surface primitive transfer certificate, or strict physical-response rows.

@@ -390,3 +390,17 @@ fixed source carrier + fixed scalar pole location => fixed K'(pole)/residue
 on the current PR230 surface.  Positive closure still needs a same-surface
 `K'(pole)`/residue theorem, direct strict pole rows with contact/threshold/FVIR
 authority, or a canonical `O_H`/physical-response bridge.
+
+## Block62 Compact-Source K-Prime Identifiability Obstruction Result
+
+Compact source support plus the fixed source carrier also does not promote to
+scalar denominator or residue authority.  The positive source-spectral
+counterfamily preserves the same pole mass, same source carrier, same source
+curvature `C0`, and same one-step source correlator `C1`, while varying the
+pole residue by about `3.2x`.
+
+The still-open import is therefore sharper: a positive scalar route must
+derive `K'(pole)` or pole-residue authority directly, or supply strict
+physical pole rows with contact/threshold/FVIR and canonical `O_H`/response
+authority.  Compact finite-volume source support is not an admissible proxy for
+the missing pole derivative.

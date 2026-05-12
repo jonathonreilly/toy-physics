@@ -722,3 +722,38 @@ Next exact action: do not replay source-carrier normalization as residue
 authority.  The next positive scalar artifact must derive `K'(pole)` or pole
 residue directly, or bypass that route with strict physical rows plus
 canonical `O_H`/response and threshold/FVIR/contact authority.
+
+## Block62 Compact-Source K-Prime Identifiability Obstruction
+
+Added `docs/YT_PR230_BLOCK62_COMPACT_SOURCE_KPRIME_IDENTIFIABILITY_OBSTRUCTION_NOTE_2026-05-12.md`,
+`scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py`,
+and
+`outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json`.
+
+Result: exact negative boundary / compact source support plus fixed source
+carrier does not identify `K'(pole)` or pole residue.  The runner verifies
+parent support and blockers, then constructs positive spectral measures with
+the same pole mass, same source carrier, same `C0`, and same `C1`, while
+varying pole residue by about `3.2x`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+
+python3 scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py
+# SUMMARY: PASS=11 FAIL=0
+
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=188 FAIL=0
+
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=397 FAIL=0
+```
+
+Next exact action: do not replay compact-source support or source-carrier
+normalization as residue authority.  The next positive scalar artifact must
+derive `K'(pole)` or pole residue directly, or bypass that route with strict
+physical rows plus canonical `O_H`/response and threshold/FVIR/contact
+authority.

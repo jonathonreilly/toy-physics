@@ -133,6 +133,12 @@
   but same-carrier denominators can preserve the scalar pole location while
   varying `D'(pole)` and therefore the residue proxy.  Fixed source carrier is
   not `K'(pole)` or pole-residue authority.
+- Block62 compact-source K-prime identifiability obstruction blocks the
+  stronger compact-source shortcut: positive source spectral measures can
+  preserve the same pole mass, source carrier, source curvature `C0`, and
+  one-step source correlator `C1` while varying the pole residue.  Compact
+  finite-volume source support plus fixed carrier is not `K'(pole)` or
+  pole-residue authority.
 
 ## Scope Boundary
 
@@ -162,3 +168,8 @@ After Block61, it also does not retire the scalar denominator boundary: the
 next positive scalar route must derive `K'(pole)`/residue directly, or supply
 strict direct pole rows plus threshold/FVIR/contact and canonical
 `O_H`/physical-response authority.
+After Block62, compact-source support is also exhausted as a proxy for pole
+residue.  The admissible scalar route is now only a direct microscopic
+`K'(pole)`/residue theorem, strict direct pole rows with threshold/FVIR/contact
+authority, or a different physical-response/canonical-`O_H` bridge that
+supplies those roots.

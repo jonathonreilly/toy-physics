@@ -162,3 +162,15 @@ varying `D'(pole)` and hence the residue proxy.  Route priority remains on a
 microscopic scalar denominator/contact/threshold theorem, but that theorem
 must derive `K'(pole)` or pole-residue authority directly rather than using
 the Block60 carrier as a substitute.
+
+## Block62 Update
+
+The compact-source shortcut is now blocked at the same root.  Positive
+source-spectral families can preserve the compact source invariants currently
+available on the branch while varying pole residue.  Route priority remains
+unchanged but stricter: do not spend more loop cycles on finite-volume source
+positivity, compact-source moment support, or carrier normalization as
+stand-ins for `K'(pole)`.  The next positive artifact must supply the pole
+derivative/residue, strict direct pole rows, same-surface primitive transfer,
+accepted canonical `O_H`/action/LSZ authority, or strict physical-response
+rows.

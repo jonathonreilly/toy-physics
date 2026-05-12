@@ -348,6 +348,20 @@ location does not determine `K'(pole)` or pole residue.  This is not a
 closure claim.  It preserves Block60 as support while blocking the carrier-to-
 residue shortcut.
 
+## Block62: Compact-Source K-Prime Identifiability Obstruction
+
+- Note:
+  `docs/YT_PR230_BLOCK62_COMPACT_SOURCE_KPRIME_IDENTIFIABILITY_OBSTRUCTION_NOTE_2026-05-12.md`
+- Runner:
+  `scripts/frontier_yt_pr230_block62_compact_source_kprime_identifiability_obstruction.py`
+- Certificate:
+  `outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json`
+
+Status: exact negative boundary / compact source support plus fixed source
+carrier does not identify `K'(pole)` or pole residue.  This is not a closure
+claim.  It preserves Blocks 57, 58, and 60 as support while blocking the
+compact-source-to-residue shortcut.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a primitive-bearing

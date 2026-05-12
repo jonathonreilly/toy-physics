@@ -1,0 +1,109 @@
+{
+  "actual_current_surface_status": "no-go / exact negative boundary for the current PR230 surface: compact source support and fixed carrier do not identify K-prime or pole residue",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block62_compact_source_kprime_identifiability_obstruction_passed": true,
+  "compact_source_support_loaded": true,
+  "conditional_surface_status": "conditional-support if future work supplies same-surface Schur A/B/C kernel rows and pole derivatives, direct C_ss/C_sH/C_HH pole rows, or a thermodynamic scalar denominator theorem",
+  "exact_next_action": "A positive route must supply actual Schur kernel rows, strict source-Higgs pole rows, or a thermodynamic scalar denominator theorem.  Compact-source support and carrier normalization are exhausted as shortcuts.",
+  "fail_count": 0,
+  "finite_spectral_support_loaded": true,
+  "hypothetical_axiom_status": null,
+  "kprime_authority_present": false,
+  "parent_certificates": {
+    "block57_compact_source_functional_foundation": "outputs/yt_pr230_block57_compact_source_functional_foundation_gate_2026-05-12.json",
+    "block58_compact_source_spectral_support": "outputs/yt_pr230_block58_compact_source_spectral_support_gate_2026-05-12.json",
+    "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
+    "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
+    "schur_complement_kprime_sufficiency": "outputs/yt_schur_complement_kprime_sufficiency_2026-05-03.json",
+    "schur_kprime_row_absence_guard": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
+    "source_functional_lsz_identifiability": "outputs/yt_source_functional_lsz_identifiability_theorem_2026-05-03.json"
+  },
+  "parent_statuses": {
+    "block57_compact_source_functional_foundation": "exact-support / Block57 compact finite-volume scalar-source functional foundation; ladder zero-mode no-gos scoped, bare finite-volume contact/source curvature exists, pole/FVIR/O_H roots remain open",
+    "block58_compact_source_spectral_support": "exact-support / Block58 finite-volume compact source-channel spectral support; thermodynamic pole/FVIR and canonical-O_H roots remain open",
+    "block60_compact_source_taste_singlet_carrier": "exact-support / Block60 compact additive source fixes the source-channel taste-singlet carrier coordinate; canonical O_H, pole residue, K-prime, and threshold/FVIR authority remain open",
+    "block61_post_carrier_kprime_obstruction": "no-go / exact negative boundary for the current PR230 surface: Block60 source-carrier support does not fix K-prime or pole residue",
+    "schur_complement_kprime_sufficiency": "exact-support / Schur-complement K-prime sufficiency theorem; current rows absent",
+    "schur_kprime_row_absence_guard": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
+    "source_functional_lsz_identifiability": "exact negative boundary / source-functional LSZ identifiability theorem"
+  },
+  "pass_count": 11,
+  "pole_residue_authority_present": false,
+  "positive_same_support_variable_residue_family": {
+    "all_positive_spectral_measures": true,
+    "pole_mass": 1.0,
+    "pole_residue_spread": 3.2222222222222223,
+    "reference_one_step_value": 0.22123150443942963,
+    "reference_total_weight": 1.0,
+    "rows": [
+      {
+        "all_weights_nonnegative": true,
+        "background_masses": [
+          1.4,
+          8.0
+        ],
+        "background_weights": [
+          0.6283488277632745,
+          0.19165117223672556
+        ],
+        "one_step_source_correlator_C1": 0.22123150443942968,
+        "pole_mass": 1.0,
+        "pole_residue": 0.18,
+        "same_source_carrier": "Block60 taste-singlet source carrier",
+        "source_curvature_C0": 1.0
+      },
+      {
+        "all_weights_nonnegative": true,
+        "background_masses": [
+          1.4,
+          8.0
+        ],
+        "background_weights": [
+          0.3,
+          0.3
+        ],
+        "one_step_source_correlator_C1": 0.22123150443942963,
+        "pole_mass": 1.0,
+        "pole_residue": 0.4,
+        "same_source_carrier": "Block60 taste-singlet source carrier",
+        "source_curvature_C0": 1.0
+      },
+      {
+        "all_weights_nonnegative": true,
+        "background_masses": [
+          1.4,
+          8.0
+        ],
+        "background_weights": [
+          0.0313509591027755,
+          0.3886490408972245
+        ],
+        "one_step_source_correlator_C1": 0.22123150443942963,
+        "pole_mass": 1.0,
+        "pole_residue": 0.58,
+        "same_source_carrier": "Block60 taste-singlet source carrier",
+        "source_curvature_C0": 1.0
+      }
+    ],
+    "same_one_step_source_correlator": 5.551115123125783e-17,
+    "same_source_curvature": 0.0
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The compact source functional and fixed source carrier do not determine K'(pole) or the pole residue.  Positive spectral measures can preserve the current source-support invariants while changing the residue.",
+  "remaining_scalar_authority_obligations": [
+    "same-surface Schur A/B/C kernel rows with pole derivatives",
+    "strict C_ss/C_sH/C_HH pole rows with Gram/FVIR/contact authority",
+    "thermodynamic scalar denominator theorem deriving K'(pole) and pole residue",
+    "canonical O_H/source-overlap or strict physical-response bridge"
+  ],
+  "source_channel_taste_carrier_fixed": true,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not infer K'(pole) from compact source curvature or carrier normalization",
+    "does not treat finite source spectral positivity as pole-residue authority",
+    "does not identify source carrier with canonical O_H",
+    "does not use H_unit, Ward, y_t_bare, observed top/Yukawa values, alpha_LM, plaquette, u0, kappa_s=1, c2=1, or Z_match=1"
+  ]
+}

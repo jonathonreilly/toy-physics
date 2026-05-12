@@ -34,6 +34,7 @@ PARENTS = {
     "block59_source_spectral_pole_promotion_obstruction": "outputs/yt_pr230_block59_source_spectral_pole_promotion_obstruction_2026-05-12.json",
     "block60_compact_source_taste_singlet_carrier": "outputs/yt_pr230_block60_compact_source_taste_singlet_carrier_gate_2026-05-12.json",
     "block61_post_carrier_kprime_obstruction": "outputs/yt_pr230_block61_post_carrier_kprime_obstruction_2026-05-12.json",
+    "block62_compact_source_kprime_identifiability_obstruction": "outputs/yt_pr230_block62_compact_source_kprime_identifiability_obstruction_2026-05-12.json",
     "fh_lsz_common_window_response": "outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json",
     "fh_lsz_finite_source_linearity": "outputs/yt_fh_lsz_finite_source_linearity_gate_2026-05-02.json",
     "fh_lsz_response_window_acceptance": "outputs/yt_fh_lsz_response_window_acceptance_gate_2026-05-03.json",
@@ -719,6 +720,38 @@ def main() -> int:
         )
         is False
         and certs["block61_post_carrier_kprime_obstruction"].get(
+            "pole_residue_authority_present"
+        )
+        is False
+    )
+    block62_compact_source_kprime_identifiability_blocks = (
+        "compact source support and fixed carrier do not identify K-prime or pole residue"
+        in statuses["block62_compact_source_kprime_identifiability_obstruction"]
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "block62_compact_source_kprime_identifiability_obstruction_passed"
+        )
+        is True
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "compact_source_support_loaded"
+        )
+        is True
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "finite_spectral_support_loaded"
+        )
+        is True
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "source_channel_taste_carrier_fixed"
+        )
+        is True
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
+            "kprime_authority_present"
+        )
+        is False
+        and certs["block62_compact_source_kprime_identifiability_obstruction"].get(
             "pole_residue_authority_present"
         )
         is False
@@ -2819,6 +2852,11 @@ def main() -> int:
         block61_post_carrier_kprime_blocks,
         statuses["block61_post_carrier_kprime_obstruction"],
     )
+    report(
+        "block62-compact-source-kprime-identifiability-obstruction-blocks",
+        block62_compact_source_kprime_identifiability_blocks,
+        statuses["block62_compact_source_kprime_identifiability_obstruction"],
+    )
     report("finite-source-support-present", finite_source_support, statuses["fh_lsz_finite_source_linearity"])
     report("target-ess-support-present", ess_support, statuses["fh_lsz_target_ess"])
     report(
@@ -4320,6 +4358,7 @@ def main() -> int:
         "block59_source_spectral_pole_promotion_blocks": block59_source_spectral_pole_promotion_blocks,
         "block60_source_carrier_support_not_closure": block60_source_carrier_support_not_closure,
         "block61_post_carrier_kprime_blocks": block61_post_carrier_kprime_blocks,
+        "block62_compact_source_kprime_identifiability_blocks": block62_compact_source_kprime_identifiability_blocks,
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The assembly gate rejects the current surface and also rejects a "
@@ -4405,6 +4444,7 @@ def main() -> int:
             "does not treat finite-volume source spectral positivity as thermodynamic isolated-pole authority after Block59",
             "does not treat the Block60 source-channel taste-singlet carrier as canonical O_H or scalar LSZ residue authority",
             "does not treat the Block60 source-channel carrier as K-prime or pole-residue authority after Block61",
+            "does not treat compact source support plus fixed source carrier as K-prime or pole-residue authority after Block62",
         ],
         "exact_next_action": (
             "Keep the chunk worker on homogeneous production chunks and launch "
