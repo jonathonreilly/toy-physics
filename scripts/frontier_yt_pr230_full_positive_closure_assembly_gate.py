@@ -136,6 +136,7 @@ PARENTS = {
     "pr230_top_mass_scan_response_harness_gate": "outputs/yt_pr230_top_mass_scan_response_harness_gate_2026-05-12.json",
     "pr230_top_mass_scan_subtraction_contract_applicability_audit": "outputs/yt_pr230_top_mass_scan_subtraction_contract_applicability_audit_2026-05-12.json",
     "pr230_higher_shell_source_higgs_operator_certificate_boundary": "outputs/yt_pr230_higher_shell_source_higgs_operator_certificate_boundary_2026-05-12.json",
+    "pr230_post_chunks001_002_source_higgs_bridge_intake_guard": "outputs/yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_2026-05-12.json",
     "pr230_origin_main_yt_ward_step3_open_gate_intake_guard": "outputs/yt_pr230_origin_main_yt_ward_step3_open_gate_intake_guard_2026-05-12.json",
     "pr230_wz_response_ratio_identifiability_contract": "outputs/yt_pr230_wz_response_ratio_identifiability_contract_2026-05-07.json",
     "pr230_wz_same_source_action_minimal_certificate_cut": "outputs/yt_pr230_wz_same_source_action_minimal_certificate_cut_2026-05-07.json",
@@ -1494,6 +1495,24 @@ def main() -> int:
         )
         is False
     )
+    post_chunks001_002_source_higgs_bridge_intake_blocks = (
+        "completed higher-shell chunks001-002 are partial taste-radial"
+        in statuses["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"]
+        and certs["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"].get(
+            "post_chunks001_002_source_higgs_bridge_intake_guard_passed"
+        )
+        is True
+        and all(
+            summary.get("canonical_higgs_operator_identity_passed") is False
+            for summary in certs[
+                "pr230_post_chunks001_002_source_higgs_bridge_intake_guard"
+            ].get("row_summaries", {}).values()
+        )
+    )
     origin_main_yt_ward_step3_open_gate_not_closure = (
         "origin/main audited YT_WARD Step 3 row is an open_gate"
         in statuses["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"]
@@ -2763,6 +2782,11 @@ def main() -> int:
         statuses["pr230_higher_shell_source_higgs_operator_certificate_boundary"],
     )
     report(
+        "post-chunks001-002-source-higgs-bridge-intake-blocks",
+        post_chunks001_002_source_higgs_bridge_intake_blocks,
+        statuses["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"],
+    )
+    report(
         "origin-main-yt-ward-step3-open-gate-not-closure",
         origin_main_yt_ward_step3_open_gate_not_closure,
         statuses["pr230_origin_main_yt_ward_step3_open_gate_intake_guard"],
@@ -3964,6 +3988,7 @@ def main() -> int:
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_closure,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
         "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        "post_chunks001_002_source_higgs_bridge_intake_blocks": post_chunks001_002_source_higgs_bridge_intake_blocks,
         "origin_main_yt_ward_step3_open_gate_not_closure": origin_main_yt_ward_step3_open_gate_not_closure,
         "wz_response_ratio_identifiability_contract_support_not_closure": wz_response_ratio_identifiability_contract_support_not_closure,
         "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,

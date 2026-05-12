@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-## Active Ranking After Block49
+## Active Ranking After Block50
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -18,7 +18,9 @@
    cross rows are launched under a taste-radial certificate, not canonical
    `O_H` authority.  Block49 shows the origin/main audited YT_WARD Step 3 row
    is only an `open_gate` coefficient diagnostic, not a PR230 neutral-transfer
-   or source-Higgs closure artifact.
+   or source-Higgs closure artifact.  Block50 shows completed higher-shell
+   chunks001-002 are partial taste-radial prefix support, not a source-Higgs
+   bridge or neutral-transfer artifact.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -44,12 +46,16 @@
    remain `C_sx/C_xx` support until a canonical bridge lands.  Origin/main
    YT_WARD Step 3 cannot be used as that bridge because it leaves same-1PI,
    scalar pole/LSZ, canonical `O_H`, and strict source-Higgs rows open.
+   Completed chunks001-002 also cannot be used as the row path because they
+   contain no pole residues, source-Higgs time kernel, or canonical `O_H`.
 
 5. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not
    reopened until completed JSON/certificates land and are checked against the
    H3/H4, pole/FV/IR, and canonical coupling obligations.  Under the current
-   operator certificate, completion alone cannot satisfy `C_sH/C_HH`.
+   operator certificate, completion alone cannot satisfy `C_sH/C_HH`.  The
+   completed chunks001-002 prefix is now explicitly checkpointed as support
+   only by Block50.
 
 6. **Ward Step 3 same-1PI route if future bridge lands.**
    Origin/main has an audited-clean `open_gate` coefficient diagnostic, but

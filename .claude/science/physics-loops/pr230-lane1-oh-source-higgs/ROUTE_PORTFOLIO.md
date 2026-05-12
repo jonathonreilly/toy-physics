@@ -13,7 +13,10 @@
    `C_sH/C_HH` pole rows with canonical-Higgs authority.
    Block49 adds that origin/main's audited YT_WARD Step 3 row is only an
    `open_gate` coefficient diagnostic; it does not supply the missing PR230
-   neutral transfer, canonical `O_H`, or source-Higgs row artifact.
+   neutral transfer, canonical `O_H`, or source-Higgs row artifact.  Block50
+   adds that completed higher-shell chunks001-002 are partial taste-radial
+   prefix support, with no canonical `O_H`, pole rows, time kernel, scalar-LSZ
+   authority, or W/Z response.
 
 2. **W/Z response bypass.**
    Block42 exhausts the current W/Z absolute-authority surface.  Reopen only
@@ -38,7 +41,8 @@
    satisfy the production source-Higgs requirement.  Block48 adds that the
    active higher-shell cross rows use the taste-radial second-source
    certificate, so completion under that certificate is `C_sx/C_xx` support,
-   not strict `C_sH/C_HH` closure.
+   not strict `C_sH/C_HH` closure.  Block50 confirms this for the completed
+   chunks001-002 prefix.
 
 5. **Ward Step 3 same-1PI route.**
    Origin/main now has an audited-clean Step 3 row, but its effective status is

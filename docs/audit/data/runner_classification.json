@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T04:28:22.907671+00:00",
+  "generated_at": "2026-05-12T04:37:43.582569+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -17544,6 +17544,18 @@
       "decoration_candidate": false,
       "dominant_class": "B",
       "runner": "scripts/frontier_yt_pr230_positive_closure_completion_audit.py"
+    },
+    "yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py"
     },
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06": {
       "assert_count": 1,
@@ -36891,6 +36903,21 @@
       "dominant_class": "B",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 2,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_post_fms_source_overlap_necessity_gate.py": {
       "assert_count": 1,
       "claims": [
@@ -42972,13 +42999,13 @@
     "decoration_candidates": 110,
     "dominant_class_distribution": {
       "A": 10,
-      "B": 252,
+      "B": 253,
       "C": 540,
       "D": 339,
       "none": 404
     },
-    "runners_classified": 1545,
-    "runners_with_C": 854,
-    "runners_with_D": 625
+    "runners_classified": 1546,
+    "runners_with_C": 855,
+    "runners_with_D": 626
   }
 }

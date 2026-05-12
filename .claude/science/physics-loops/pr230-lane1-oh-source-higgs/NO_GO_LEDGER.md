@@ -78,6 +78,11 @@
   not PR230 closure: it records coefficient bookkeeping and an unproved
   same-1PI bridge, not canonical `O_H`, source-Higgs `C_sH/C_HH` pole rows,
   scalar LSZ/pole normalization, or retained-route authorization.
+- Completed higher-shell chunks001-002 are not PR230 source-Higgs bridge
+  closure: they are partial taste-radial `C_sx/C_xx` support with
+  `canonical_higgs_operator_identity_passed=false`, no pole-residue rows,
+  disabled source-Higgs time kernels, scalar-LSZ normalization `not_derived`,
+  and W/Z response disabled.
 
 ## Scope Boundary
 

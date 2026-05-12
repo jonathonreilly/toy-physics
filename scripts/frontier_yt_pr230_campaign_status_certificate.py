@@ -887,6 +887,9 @@ def main() -> int:
         "pr230_schur_higher_shell_chunk004_pending_checkpoint": load(
             "outputs/yt_pr230_schur_higher_shell_chunk004_pending_checkpoint_2026-05-12.json"
         ),
+        "pr230_post_chunks001_002_source_higgs_bridge_intake_guard": load(
+            "outputs/yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_2026-05-12.json"
+        ),
         "pr230_derived_bridge_rank_one_closure_attempt": load(
             "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json"
         ),
@@ -5069,6 +5072,27 @@ def main() -> int:
             ],
         },
     )
+    post_chunks001_002_bridge_guard = certificates[
+        "pr230_post_chunks001_002_source_higgs_bridge_intake_guard"
+    ]
+    post_chunks001_002_source_higgs_bridge_intake_blocks = (
+        "completed higher-shell chunks001-002 are partial taste-radial"
+        in str(statuses["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"])
+        and post_chunks001_002_bridge_guard.get("proposal_allowed") is False
+        and post_chunks001_002_bridge_guard.get(
+            "post_chunks001_002_source_higgs_bridge_intake_guard_passed"
+        )
+        is True
+        and all(
+            summary.get("canonical_higgs_operator_identity_passed") is False
+            for summary in post_chunks001_002_bridge_guard.get("row_summaries", {}).values()
+        )
+    )
+    report(
+        "pr230-post-chunks001-002-source-higgs-bridge-intake-blocks",
+        post_chunks001_002_source_higgs_bridge_intake_blocks,
+        statuses["pr230_post_chunks001_002_source_higgs_bridge_intake_guard"],
+    )
     report(
         "pr230-negative-route-applicability-review-preserves-reopen",
         "negative-route applicability review passed"
@@ -6701,6 +6725,7 @@ def main() -> int:
         "top_mass_scan_response_harness_support_not_closure": top_mass_scan_response_harness_support_not_evidence,
         "top_mass_scan_subtraction_contract_applicability_blocks": top_mass_scan_subtraction_contract_applicability_blocks,
         "higher_shell_source_higgs_operator_certificate_boundary_blocks": higher_shell_source_higgs_operator_certificate_boundary_blocks,
+        "post_chunks001_002_source_higgs_bridge_intake_blocks": post_chunks001_002_source_higgs_bridge_intake_blocks,
         "origin_main_yt_ward_step3_open_gate_not_closure": origin_main_yt_ward_step3_open_gate_not_closure,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
@@ -6927,6 +6952,9 @@ def main() -> int:
     )
     result["schur_higher_shell_chunks003_004_pending_support_only"] = (
         schur_higher_shell_chunks003_004_pending
+    )
+    result["post_chunks001_002_source_higgs_bridge_intake_blocks"] = (
+        post_chunks001_002_source_higgs_bridge_intake_blocks
     )
     result["source_coordinate_transport_completion_blocks"] = (
         source_transport_completion.get("source_coordinate_transport_completion_passed")

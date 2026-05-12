@@ -433,3 +433,41 @@ this was a narrow intake guard for an external branch artifact.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; aggregate gates compile
   and report `PASS=177 FAIL=0` and `PASS=385 FAIL=0`.
+
+## Self-Review: Block50
+
+- Overclaim check: passed.  The note says only that completed higher-shell
+  chunks001-002 are partial taste-radial support, not source-Higgs closure.  It
+  does not reject the chunks and does not claim a permanent no-go against a
+  future complete Schur/source-Higgs packet.
+- Physics check: passed.  The runner reads both completed chunk checkpoints,
+  the wave-launcher status, both row files, source-Higgs readiness, pole/Gram
+  gates, the physical Euclidean row absence boundary, and aggregate gates.
+  It verifies that the prefix has expected finite-mode support but no canonical
+  `O_H`, pole residues, source-Higgs time kernel, scalar-LSZ normalization, W/Z
+  response, or physical-yukawa readout.
+- Forbidden-import check: passed.  The runner does not use `H_unit`, Ward,
+  `y_t_bare`, observed selectors, `alpha_LM`, plaquette, `u0`, taste-radial
+  `x -> O_H`, `C_sx/C_xx -> C_sH/C_HH`, partial-prefix-as-complete-packet,
+  finite-rows-as-pole-residues, or retained/proposed-retained wording.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block50 Package
+
+Local review-loop was performed directly against the changed package because
+this was a narrow completed-prefix intake guard.
+
+- Code / Runner: PASS.  The new runner compiles and reports `PASS=17 FAIL=0`.
+- Physics Claim Boundary: EXACT NEGATIVE BOUNDARY.  Completed chunks001-002
+  are support-only taste-radial rows, not strict source-Higgs pole evidence.
+- Imports / Support: DISCLOSED.  The absent canonical `O_H`, production
+  `C_ss/C_sH/C_HH(tau)` rows, pole residues, Gram purity, scalar-LSZ/FV/IR
+  authority, complete higher-shell packet, and W/Z response are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
+- Repo Governance: PASS.  The artifact is branch-local PR230 science-loop work
+  and does not update claim surfaces or audit verdicts.
+- Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
+  pipeline complete with only the known five warnings; aggregate gates compile
+  and report `PASS=178 FAIL=0` and `PASS=387 FAIL=0`.

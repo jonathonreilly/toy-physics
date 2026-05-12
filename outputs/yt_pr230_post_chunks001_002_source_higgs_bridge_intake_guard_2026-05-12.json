@@ -1,0 +1,102 @@
+{
+  "actual_current_surface_status": "exact negative boundary / completed higher-shell chunks001-002 are partial taste-radial C_sx/C_xx support, not PR230 source-Higgs bridge closure",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "chunk_indices": [
+    1,
+    2
+  ],
+  "conditional_surface_status": "conditional-support only if a future canonical O_H/source-overlap certificate and production C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority land",
+  "exact_next_action": "Continue accumulating higher-shell chunks as support, but do not reopen source-Higgs closure until canonical O_H/source-overlap authority and strict physical Euclidean C_ss/C_sH/C_HH(tau) pole rows are present.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "treated_c_sx_c_xx_aliases_as_strict_c_sh_c_hh": false,
+    "treated_finite_momentum_rows_as_pole_residue_rows": false,
+    "treated_partial_higher_shell_prefix_as_complete_packet": false,
+    "treated_taste_radial_x_as_canonical_oh": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_as_selector": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "open_imports": [
+    "canonical O_H/source-overlap certificate",
+    "production C_ss/C_sH/C_HH(tau) source-Higgs pole rows",
+    "source-Higgs pole residues and Gram purity",
+    "scalar LSZ/FV/IR/model-class authority",
+    "complete higher-shell packet and downstream monotonicity/threshold checks, if pursuing the Schur route"
+  ],
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "chunk001_checkpoint": "bounded-support / higher-shell Schur scalar-LSZ chunk001 row checkpoint",
+    "chunk002_checkpoint": "bounded-support / higher-shell Schur scalar-LSZ chunk002 row checkpoint",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "operator_certificate_boundary": "exact negative boundary / higher-shell source-Higgs cross rows use the taste-radial second-source certificate, not canonical O_H",
+    "physical_euclidean_source_higgs_absence": "exact negative boundary / tau-keyed production correlators are not physical Euclidean source-Higgs C_ss/C_sH/C_HH(tau) rows",
+    "source_higgs_gram_postprocess": "open / O_sp-Higgs Gram-purity postprocess awaiting production certificate",
+    "source_higgs_pole_extractor": "open / source-Higgs pole-residue extractor awaiting valid production rows",
+    "source_higgs_readiness": "open / source-Higgs production launch blocked by missing O_H certificate",
+    "wave_launcher": "run-control / higher-shell Schur scalar-LSZ wave launcher status; active/launched jobs and partial completed higher-shell packets are not closure evidence"
+  },
+  "pass_count": 17,
+  "post_chunks001_002_source_higgs_bridge_intake_guard_passed": true,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Chunks001-002 are completed bounded support rows under the taste-radial second-source certificate.  They do not identify x with canonical O_H, do not supply pole residues or a time kernel, do not derive scalar LSZ/FV/IR authority, and do not enable the full positive closure or campaign gates.",
+  "row_summaries": {
+    "1": {
+      "aliases_available": true,
+      "c_sx_aliases_c_sh": true,
+      "c_xx_aliases_c_hh": true,
+      "canonical_higgs_operator_identity_passed": false,
+      "cross_modes_count": 11,
+      "ensemble_present": true,
+      "expected_cross_modes_present": true,
+      "expected_scalar_modes_present": true,
+      "firewall_clean": true,
+      "path": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk001_2026-05-07.json",
+      "pole_residue_rows_count": 0,
+      "present": true,
+      "scalar_lsz_physical_higgs_normalization": "not_derived",
+      "scalar_lsz_used_as_physical_yukawa_readout": false,
+      "scalar_modes_count": 11,
+      "source_operator_symbol": "x",
+      "time_kernel_mode_count": 0,
+      "time_kernel_physical_higgs_normalization": "not_derived",
+      "used_as_physical_yukawa_readout": false,
+      "wz_response_phase": "disabled"
+    },
+    "2": {
+      "aliases_available": true,
+      "c_sx_aliases_c_sh": true,
+      "c_xx_aliases_c_hh": true,
+      "canonical_higgs_operator_identity_passed": false,
+      "cross_modes_count": 11,
+      "ensemble_present": true,
+      "expected_cross_modes_present": true,
+      "expected_scalar_modes_present": true,
+      "firewall_clean": true,
+      "path": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk002_2026-05-07.json",
+      "pole_residue_rows_count": 0,
+      "present": true,
+      "scalar_lsz_physical_higgs_normalization": "not_derived",
+      "scalar_lsz_used_as_physical_yukawa_readout": false,
+      "scalar_modes_count": 11,
+      "source_operator_symbol": "x",
+      "time_kernel_mode_count": 0,
+      "time_kernel_physical_higgs_normalization": "not_derived",
+      "used_as_physical_yukawa_readout": false,
+      "wz_response_phase": "disabled"
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat chunks001-002 as a complete higher-shell packet",
+    "does not treat C_sx/C_xx aliases as canonical C_sH/C_HH",
+    "does not treat finite-momentum rows as pole-residue rows",
+    "does not use H_unit, yt_ward_identity, y_t_bare, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

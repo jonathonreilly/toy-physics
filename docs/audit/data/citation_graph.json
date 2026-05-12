@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:28:20.156337+00:00",
+  "generated_at": "2026-05-12T04:37:40.395075+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -43621,6 +43621,16 @@
       "runner_path": "scripts/frontier_yt_pr230_positive_closure_completion_audit.py",
       "title": "PR230 Positive Closure Completion Audit Note"
     },
+    "yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_note_2026-05-12": {
+      "claim_id": "yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_note_2026-05-12",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary: completed higher-shell chunks001-002 are",
+      "deps": [],
+      "note_hash": "6b374edf61c604073a481a5309cb69732f9c4b4bf66a37ce8f76ef38d11b1946",
+      "path": "docs/YT_PR230_POST_CHUNKS001_002_SOURCE_HIGGS_BRIDGE_INTAKE_GUARD_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py",
+      "title": "PR230 Post-Chunks001-002 Source-Higgs Bridge Intake Guard"
+    },
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06": {
       "claim_id": "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
       "current_status": "unknown",
@@ -47251,6 +47261,7 @@
     "yt_pr230_physical_euclidean_source_higgs_row_absence_after_block44_note_2026-05-12",
     "yt_pr230_physics_loop_assumption_audit_note_2026-05-01",
     "yt_pr230_positive_closure_completion_audit_note_2026-05-05",
+    "yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_note_2026-05-12",
     "yt_pr230_post_fms_source_overlap_necessity_gate_note_2026-05-06",
     "yt_pr230_queue_exhaustion_certificate_note_2026-05-01",
     "yt_pr230_radial_spurion_action_contract_note_2026-05-06",
@@ -47449,17 +47460,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1131,
-    "node_count": 2150,
-    "root_count": 1649,
-    "runners_with_path": 1625,
+    "leaf_count": 1132,
+    "node_count": 2151,
+    "root_count": 1650,
+    "runners_with_path": 1626,
     "status_counts": {
       "bounded": 598,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,
-      "unknown": 592
+      "unknown": 593
     }
   }
 }

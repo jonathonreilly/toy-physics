@@ -171,13 +171,25 @@ is explicitly an `open_gate`: the same-1PI bridge remains unproved and the row
 does not derive `g_bare=1`, physical top Yukawa, canonical `O_H`,
 `C_sH/C_HH` rows, or scalar LSZ normalization for PR230.
 
+## Block50: Post-Chunks001-002 Source-Higgs Bridge Intake Guard
+
+- Note: `docs/YT_PR230_POST_CHUNKS001_002_SOURCE_HIGGS_BRIDGE_INTAKE_GUARD_NOTE_2026-05-12.md`
+- Runner: `scripts/frontier_yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard.py`
+- Certificate: `outputs/yt_pr230_post_chunks001_002_source_higgs_bridge_intake_guard_2026-05-12.json`
+
+Status: exact negative boundary on the current surface.  Completed higher-shell
+chunks001-002 are real bounded support, but their cross rows are still
+taste-radial `C_sx/C_xx` aliases under `x`; they contain no pole residues, no
+source-Higgs time kernel, no derived scalar LSZ normalization, no W/Z response,
+and no canonical-Higgs identity.
+
 ## Future Positive Artifact
 
 The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
-reduced smoke, active worker intent, higher-shell taste-radial cross rows, or
-origin/main Ward Step 3 open-gate status, a strict W/Z physical-response packet
+reduced smoke, active worker intent, completed higher-shell chunks001-002,
+higher-shell taste-radial cross rows, or origin/main Ward Step 3 open-gate status, a strict W/Z physical-response packet
 with actual mixed-source `T_total/A_top/W` rows, matched covariance, accepted
 action, and absolute `g2`/`v` authority, or a genuinely new scalar/action/LSZ
 primitive not already covered by Block41.
