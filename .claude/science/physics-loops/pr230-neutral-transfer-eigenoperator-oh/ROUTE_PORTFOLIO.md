@@ -940,3 +940,46 @@
 4. **Supervisor continuation**
    - Yield this lane until one explicit production/certificate input lands.
      Do not spend the next block re-proving the same current-surface absence.
+
+## Selected Block38 Route
+
+**Bridge stuck-fanout checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 5.
+- Claim-state movement: consumes five priority frames after block37, on the
+  current PR head after the block42/block43/block44 boundaries, without
+  rerunning block37 as new evidence: degree-one `O_H` action premise,
+  same-source EW action adoption, same-surface neutral multiplicity-one,
+  taste-condensate `O_H`, and W/Z absolute-authority response.  It records that
+  every frame is support-only or an exact current-surface boundary, so no
+  ranked route is admitted without explicit production/certificate inputs.
+- Artifact: `YT_PR230_BLOCK38_BRIDGE_STUCK_FANOUT_CHECKPOINT`.
+
+## Block38 Fan-Out Synthesis
+
+1. **Degree-one `O_H` / source-Higgs premise**
+   - Result: exact boundary.  The degree-one filter selects the taste-radial
+     axis, but the same-surface action premise and canonical `O_H` certificate
+     remain absent.
+
+2. **Same-source EW action adoption**
+   - Result: exact boundary.  The action ansatz supplies action-form support
+     only; canonical-Higgs, sector-overlap, W/Z mass-fit, and accepted
+     certificate inputs are absent.
+
+3. **Neutral multiplicity-one / taste-condensate `O_H` bridges**
+   - Result: exact/support boundaries.  The current neutral two-singlet
+     surface can rotate the candidate Higgs direction, and the PR230 uniform
+     source has zero projection onto the trace-zero taste-axis Higgs operators.
+
+4. **Strict W/Z accepted-action response**
+   - Result: active fallback but blocked.  Requires accepted action,
+     production W/Z rows, same-source top rows, matched covariance, strict
+     non-observed `g2`, `delta_perp`, and final W-response rows.
+
+5. **Supervisor continuation**
+   - Yield this lane until one explicit missing physical bridge artifact lands:
+     accepted same-surface `O_H`/action plus strict pole rows, strict W/Z
+     physical-response packet, or neutral H3/H4 physical-transfer authority.

@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block37 post-block36 supervisor-yield checkpoint.
+Campaign mode queue after block38 bridge stuck-fanout checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -52,6 +52,15 @@ accepted-action physical-response packet; neutral H3/H4 remains blocked without
 physical-transfer authority.  This lane should yield until one of those
 explicit inputs is supplied rather than repeat another current-surface absence
 gate.
+
+Block38 records the required stuck fan-out after that yield: degree-one `O_H`
+action premise, same-source EW action adoption, same-surface neutral
+multiplicity-one, taste-condensate `O_H`, and W/Z absolute-authority response
+frames are all support-only or exact current-surface boundaries.  The queue is
+unchanged but the next action is now narrower: do not cycle another shortcut
+gate from this lane.  Reopen only with a real accepted same-surface
+`O_H`/action plus strict source-Higgs pole-row packet, strict W/Z
+physical-response packet, or neutral H3/H4 physical-transfer authority.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not

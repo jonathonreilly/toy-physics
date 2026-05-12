@@ -199,6 +199,13 @@ route-exhaustion boundaries do not admit source-Higgs, W/Z, or neutral H3/H4
 without the explicit missing inputs.  No standalone block37 review PR should be
 opened unless PR #230 integration fails.
 
+Block38 follows the same direct PR #230 landing path.  It adds the bridge
+stuck-fanout checkpoint at PR head `858aa682` and records that degree-one
+`O_H` action premise, same-source EW action adoption, same-surface neutral
+multiplicity-one, taste-condensate `O_H`, and W/Z absolute-authority frames
+remain support-only or exact current-surface boundaries.  No standalone
+block38 review PR should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

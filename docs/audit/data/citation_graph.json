@@ -8661,6 +8661,26 @@
       "to": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
     },
     {
+      "from": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07"
+    },
+    {
+      "from": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06"
+    },
+    {
+      "from": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "to": "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
+    },
+    {
       "from": "yt_pr230_canonical_oh_accepted_action_stretch_attempt_note_2026-05-07",
       "to": "yt_canonical_higgs_operator_certificate_gate_note_2026-05-03"
     },
@@ -19013,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T03:22:23.625137+00:00",
+  "generated_at": "2026-05-12T03:27:38.146348+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42659,6 +42679,22 @@
       "runner_path": "scripts/frontier_yt_pr230_block37_post_block36_supervisor_yield_checkpoint.py",
       "title": "PR230 Block37 Post-Block36 Supervisor-Yield Checkpoint"
     },
+    "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12": {
+      "claim_id": "yt_pr230_block38_bridge_stuck_fanout_checkpoint_note_2026-05-12",
+      "current_status": "open",
+      "current_status_raw": "open / five prioritized source-Higgs and W/Z bridge frames remain",
+      "deps": [
+        "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
+        "yt_pr230_same_source_ew_action_adoption_attempt_note_2026-05-06",
+        "yt_pr230_same_surface_neutral_multiplicity_one_gate_note_2026-05-07",
+        "yt_pr230_taste_condensate_oh_bridge_audit_note_2026-05-06",
+        "yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_note_2026-05-12"
+      ],
+      "note_hash": "dc4a735c45f785e6d7d0ba00d8f6791f9c4e951c1899bbbc3750091e6d436652",
+      "path": "docs/YT_PR230_BLOCK38_BRIDGE_STUCK_FANOUT_CHECKPOINT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_block38_bridge_stuck_fanout_checkpoint.py",
+      "title": "PR230 Block38 Bridge Stuck-Fanout Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -47335,14 +47371,14 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4753,
+    "edge_count": 4758,
     "leaf_count": 1124,
-    "node_count": 2142,
+    "node_count": 2143,
     "root_count": 1642,
-    "runners_with_path": 1617,
+    "runners_with_path": 1618,
     "status_counts": {
       "bounded": 597,
-      "open": 115,
+      "open": 116,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 469,

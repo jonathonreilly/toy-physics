@@ -818,6 +818,9 @@ def main() -> int:
         "pr230_block37_post_block36_supervisor_yield": load(
             "outputs/yt_pr230_block37_post_block36_supervisor_yield_checkpoint_2026-05-12.json"
         ),
+        "pr230_block38_bridge_stuck_fanout": load(
+            "outputs/yt_pr230_block38_bridge_stuck_fanout_checkpoint_2026-05-12.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4486,6 +4489,67 @@ def main() -> int:
         is True,
         statuses["pr230_block37_post_block36_supervisor_yield"],
     )
+    block38_bridge_stuck_fanout = certificates["pr230_block38_bridge_stuck_fanout"]
+    report(
+        "pr230-block38-bridge-stuck-fanout-not-closure",
+        "block38 bridge stuck-fanout checkpoint"
+        in str(statuses["pr230_block38_bridge_stuck_fanout"])
+        and block38_bridge_stuck_fanout.get("proposal_allowed") is False
+        and block38_bridge_stuck_fanout.get("bare_retained_allowed") is False
+        and block38_bridge_stuck_fanout.get(
+            "block38_bridge_stuck_fanout_checkpoint_passed"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block38_bridge_stuck_fanout.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "inspection-ref-is-current-pr-head"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "block37-yield-clean"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "degree-one-oh-premise-frame-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "same-source-ew-action-adoption-frame-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "same-surface-neutral-multiplicity-frame-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "taste-condensate-oh-bridge-frame-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "wz-absolute-authority-frame-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "five-frame-stuck-fanout-all-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "yield-for-supervisor"
+        )
+        is True,
+        statuses["pr230_block38_bridge_stuck_fanout"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6372,6 +6436,7 @@ def main() -> int:
         "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
         "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,
         "physical_euclidean_source_higgs_row_absence_blocks": physical_euclidean_source_higgs_row_absence_blocks,
+        "block38_bridge_stuck_fanout_not_closure": False,
         "strict_non_claims": [
             "does not claim retained closure",
             "does not count non-independent historical chunks as production evidence",
@@ -6384,6 +6449,7 @@ def main() -> int:
             "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
             "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
             "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
+            "does not treat block38 bridge stuck-fanout status as production evidence",
             "does not treat chunk completion alone as positive retained closure",
         ],
         "pass_count": PASS_COUNT,
@@ -7602,6 +7668,54 @@ def main() -> int:
         )
         is True
     )
+    result["block38_bridge_stuck_fanout_not_closure"] = (
+        block38_bridge_stuck_fanout.get("proposal_allowed") is False
+        and block38_bridge_stuck_fanout.get("bare_retained_allowed") is False
+        and block38_bridge_stuck_fanout.get(
+            "block38_bridge_stuck_fanout_checkpoint_passed"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block38_bridge_stuck_fanout.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "inspection-ref-is-current-pr-head"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "block37-yield-clean"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "five-frame-stuck-fanout-all-blocked"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "source-higgs-required-roots-still-absent"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "wz-required-roots-still-absent"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "neutral-h3h4-required-roots-still-absent"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+        and block38_bridge_stuck_fanout.get("checks", {}).get(
+            "yield-for-supervisor"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -7649,6 +7763,10 @@ def main() -> int:
         "does not treat the block36 source-Higgs/WZ dispatch checkpoint, lane1 action-premise boundary, top mass-scan support rows, higher-shell preflight, neutral rank-one bypass boundary, or W/Z self-normalization no-go as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat the Block42 W/Z absolute-authority route exhaustion as permanent W/Z no-go or as PR230 closure",
         "does not treat the block37 post-block36 supervisor-yield checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
+        "does not treat the complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
+        "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
+        "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",
+        "does not treat the block38 bridge stuck-fanout checkpoint as accepted action, source-Higgs pole-row, W/Z response-row, covariance, strict g2, or neutral H3/H4 evidence",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

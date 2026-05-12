@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block37_post_block36_supervisor_yield_checkpoint`.
+Current block: `block38_bridge_stuck_fanout_checkpoint`.
 
 ```yaml
-actual_current_surface_status: open / block37 post-block36 supervisor-yield checkpoint; post-block36 support/no-go commits are consumed, W/Z active fallback remains blocked, and no ranked route is admitted without fresh production/certificate inputs
+actual_current_surface_status: open / block38 bridge stuck-fanout checkpoint; five prioritized O_H/source-Higgs/WZ attack frames are blocked on the current surface and no ranked route is admitted without a fresh physical bridge artifact
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies strict C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block37 is a supervisor-yield checkpoint, not a new route theorem. The inspected PR head includes post-block36 FH-LSZ full-set support plus native-scalar/action/LSZ and W/Z absolute-authority route-exhaustion boundaries, but no admitted source-Higgs, W/Z, or neutral H3/H4 production/certificate input."
+proposal_allowed_reason: "Block38 is a stuck-fanout checkpoint, not a retained/proposed-retained theorem. It consumes existing source-Higgs and W/Z route attempts and records that each frame is support-only or an exact current-surface boundary. No accepted action, canonical O_H certificate, source-Higgs pole-row packet, strict W/Z packet, or neutral H3/H4 certificate is present."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -138,6 +138,13 @@ Reason:
     support/no-go inputs only, does not rerun a current-surface shortcut as new
     proof, does not touch the live worker, and does not admit source-Higgs,
     W/Z, or neutral H3/H4 without the explicit missing inputs.
+26. Block38 records a stuck fan-out over the prioritized bridge frames:
+    degree-one `O_H` action premise, same-source EW action adoption,
+    same-surface neutral multiplicity-one, taste-condensate `O_H`, and W/Z
+    absolute-authority response.  Each is support-only or an exact
+    current-surface boundary; no accepted action, canonical `O_H`,
+    source-Higgs pole-row packet, strict W/Z packet, covariance, strict `g2`,
+    `delta_perp`, or neutral H3/H4 authority is supplied.
 
 Prior block certificate summary:
 
@@ -304,5 +311,11 @@ Prior block certificate summary:
   accepted `O_H`/action plus strict pole rows, keeps neutral H3/H4 waiting on
   physical-transfer authority, and yields until explicit production/certificate
   inputs land.
-- Block01 through Block37 all have `proposal_allowed=false`; their boundaries
+- Block38 actual status: open / bridge stuck-fanout checkpoint; it consumes
+  the degree-one `O_H` premise, same-source EW action adoption,
+  same-surface neutral multiplicity-one, taste-condensate `O_H`, and W/Z
+  absolute-authority frames as support-only or exact current-surface
+  boundaries, admits no ranked route, and yields until explicit
+  production/certificate inputs land.
+- Block01 through Block38 all have `proposal_allowed=false`; their boundaries
   remain active.

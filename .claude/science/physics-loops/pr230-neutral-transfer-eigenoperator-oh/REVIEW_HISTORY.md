@@ -247,6 +247,51 @@ git diff --check
 # OK
 ```
 
+## Block38
+
+Local review run on 2026-05-12 03:26 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block38_bridge_stuck_fanout_checkpoint.py`
+- `outputs/yt_pr230_block38_bridge_stuck_fanout_checkpoint_2026-05-12.json`
+- `docs/YT_PR230_BLOCK38_BRIDGE_STUCK_FANOUT_CHECKPOINT_NOTE_2026-05-12.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block38 runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Block38 is stuck-fanout only: degree-one `O_H` premise, same-source EW action adoption, same-surface neutral multiplicity-one, taste-condensate `O_H`, and W/Z absolute-authority frames remain support-only or exact current-surface boundaries. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, top/W covariance assumption, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only, does not touch the live chunk worker, and keeps PR #230 as the landing path. |
+| Audit Compatibility | PASS | Block38 PASS=16 FAIL=0 and campaign status PASS=379 FAIL=0 on the current PR head after block42/block43/block44; audit pipeline and strict lint passed with 5 known warnings, link/parse checks passed, and diff/firewall checks are clean. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block38_bridge_stuck_fanout_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block38_bridge_stuck_fanout_checkpoint.py
+# SUMMARY: PASS=16 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=379 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+YAML/JSON parse and link checks
+# OK, missing_links=[]
+rg forbidden/status firewall review
+# hits are exclusion/conditional statements only; no retained/proposed_retained promotion
+git diff --check
+# OK
+```
+
 ## Block32
 
 Local review run on 2026-05-12 UTC.
