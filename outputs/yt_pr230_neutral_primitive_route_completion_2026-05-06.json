@@ -47,7 +47,7 @@
     "neutral_burnside_attempt": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
     "neutral_commutant_no_go": "exact negative boundary / neutral scalar commutant does not force rank-one purity",
     "neutral_dynamical_rank_one": "exact negative boundary / dynamical rank-one neutral scalar theorem not derived",
-    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 62 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
     "neutral_irreducibility_audit": "exact negative boundary / neutral-scalar irreducibility authority absent on current PR230 surface",
     "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
     "neutral_rank_one_gate": "open / neutral scalar rank-one purity gate not passed",

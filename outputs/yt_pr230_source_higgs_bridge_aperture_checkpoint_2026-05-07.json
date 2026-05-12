@@ -1,11 +1,11 @@
 {
-  "actual_current_surface_status": "bounded-support / source-Higgs bridge aperture checkpoint; 62 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+  "actual_current_surface_status": "bounded-support / source-Higgs bridge aperture checkpoint; 63 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
   "admitted_observation_status": null,
   "audit_required_before_effective_retained": true,
   "bare_retained_allowed": false,
   "conditional_surface_status": "exact support if a future same-surface canonical O_H certificate, production C_ss/C_sH/C_HH pole rows, complete row/FV/IR authority, and Gram flatness land without forbidden imports",
   "current_surface_closure_satisfied": false,
-  "exact_next_action": "Continue only through a real missing artifact: same-surface canonical O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, a neutral primitive/rank-one authority theorem, or W/Z physical-response rows with accepted action, sector-overlap, matched covariance, and strict non-observed g2.  Existing 62/63 C_sx/C_xx rows are bounded source-Higgs staging evidence only.",
+  "exact_next_action": "Continue only through a real missing artifact: same-surface canonical O_H plus production C_ss/C_sH/C_HH pole rows with Gram flatness, a neutral primitive/rank-one authority theorem, or W/Z physical-response rows with accepted action, sector-overlap, matched covariance, and strict non-observed g2.  Existing 63/63 C_sx/C_xx rows are bounded source-Higgs staging evidence only.",
   "fail_count": 0,
   "forbidden_firewall": {
     "aliased_c_sx_to_c_sh_before_canonical_oh": false,
@@ -26,14 +26,13 @@
     "same_source_ew_action_certificate": false,
     "source_higgs_measurement_rows": false,
     "source_higgs_production_certificate": false,
-    "two_source_combined_rows": false,
+    "two_source_combined_rows": true,
     "wz_response_ratio_rows": false
   },
   "hypothetical_axiom_status": null,
   "open_aperture_gates": [
     "canonical O_H certificate",
     "production C_ss/C_sH/C_HH pole rows",
-    "two-source taste-radial C_sx/C_xx staging rows",
     "completed row package evidence boundary",
     "source-Higgs launch readiness",
     "time-kernel / GEVP physical pole authority",
@@ -53,9 +52,9 @@
     "two_source_row_combiner": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
     "wz_accepted_action_root": "outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json"
   },
-  "pass_count": 18,
+  "pass_count": 19,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The current aperture has useful two-source taste-radial staging rows and source-Higgs contracts, but canonical O_H, production C_sH/C_HH pole rows, complete 63/63 row packet, strict scalar LSZ/FV/IR authority, and Gram flatness are absent.",
+  "proposal_allowed_reason": "The current aperture has useful two-source taste-radial staging rows and source-Higgs contracts, but canonical O_H, production C_sH/C_HH pole rows, strict scalar LSZ/FV/IR authority, and Gram flatness are absent.  The complete 63/63 two-source packet is finite C_sx/C_xx support only.",
   "source_higgs_aperture_table": [
     {
       "blocks_closure": true,
@@ -70,14 +69,14 @@
       "gate": "production C_ss/C_sH/C_HH pole rows"
     },
     {
-      "blocks_closure": true,
-      "current_status": "bounded-support: 62/63 chunks ready",
+      "blocks_closure": false,
+      "current_status": "bounded-support: 63/63 chunks ready",
       "evidence": "outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json",
       "gate": "two-source taste-radial C_sx/C_xx staging rows"
     },
     {
       "blocks_closure": true,
-      "current_status": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
+      "current_status": "bounded-support / two-source taste-radial chunks001-063 packaged; active chunks, logs, and pending checkpoints are not evidence",
       "evidence": "outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json",
       "gate": "completed row package evidence boundary"
     },
@@ -117,12 +116,10 @@
     "does not treat the W/Z fallback as closed after block08"
   ],
   "two_source_rows": {
-    "combined_rows_written": false,
+    "combined_rows_written": true,
     "expected_chunks": 63,
-    "missing_chunk_indices": [
-      63
-    ],
-    "present_chunks": 62,
+    "missing_chunk_indices": [],
+    "present_chunks": 63,
     "ready_chunk_indices": [
       1,
       2,
@@ -185,9 +182,10 @@
       59,
       60,
       61,
-      62
+      62,
+      63
     ],
-    "ready_chunks": 62,
+    "ready_chunks": 63,
     "strict_limit": "These are two-source taste-radial C_sx/C_xx rows. They are not canonical-Higgs C_sH/C_HH pole rows before O_H is certified."
   }
 }

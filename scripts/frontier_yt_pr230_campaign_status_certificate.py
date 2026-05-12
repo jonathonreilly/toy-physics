@@ -2844,15 +2844,30 @@ def main() -> int:
     two_source_taste_radial_row_combiner = certificates[
         "pr230_two_source_taste_radial_row_combiner_gate"
     ]
+    two_source_combiner_ready = two_source_taste_radial_row_combiner.get("ready_chunks")
+    two_source_combiner_expected = two_source_taste_radial_row_combiner.get("expected_chunks")
+    two_source_combiner_support_boundary = (
+        isinstance(two_source_combiner_ready, int)
+        and isinstance(two_source_combiner_expected, int)
+        and (
+            (
+                two_source_taste_radial_row_combiner.get("combined_rows_written")
+                is False
+                and 0 < two_source_combiner_ready < two_source_combiner_expected
+            )
+            or (
+                two_source_taste_radial_row_combiner.get("combined_rows_written")
+                is True
+                and two_source_combiner_ready == two_source_combiner_expected == 63
+            )
+        )
+    )
     report(
         "pr230-two-source-taste-radial-row-combiner-support-not-closure",
         "two-source taste-radial C_sx/C_xx row combiner gate"
         in str(statuses["pr230_two_source_taste_radial_row_combiner_gate"])
         and two_source_taste_radial_row_combiner.get("proposal_allowed") is False
-        and two_source_taste_radial_row_combiner.get("combined_rows_written")
-        is False
-        and two_source_taste_radial_row_combiner.get("ready_chunks")
-        < two_source_taste_radial_row_combiner.get("expected_chunks")
+        and two_source_combiner_support_boundary
         and two_source_taste_radial_row_combiner.get("fail_count") == 0,
         statuses["pr230_two_source_taste_radial_row_combiner_gate"],
     )
@@ -3674,6 +3689,30 @@ def main() -> int:
         "two_source_rows", {}
     )
     source_higgs_aperture_ready = source_higgs_aperture_rows.get("ready_chunks")
+    source_higgs_aperture_combiner_boundary = (
+        isinstance(source_higgs_aperture_ready, int)
+        and 42 <= source_higgs_aperture_ready <= 63
+        and source_higgs_aperture_rows.get("present_chunks")
+        == source_higgs_aperture_ready
+        and source_higgs_aperture_rows.get("expected_chunks") == 63
+        and (
+            (
+                source_higgs_aperture_rows.get("combined_rows_written") is False
+                and source_higgs_aperture_ready < 63
+            )
+            or (
+                source_higgs_aperture_rows.get("combined_rows_written") is True
+                and source_higgs_aperture_ready == 63
+            )
+        )
+    )
+    source_higgs_closure_future_absent = not any(
+        value
+        for name, value in source_higgs_bridge_aperture_checkpoint.get(
+            "future_artifact_presence", {}
+        ).items()
+        if name != "two_source_combined_rows"
+    )
     report(
         "pr230-source-higgs-bridge-aperture-checkpoint-support-not-closure",
         "source-Higgs bridge aperture checkpoint"
@@ -3688,17 +3727,8 @@ def main() -> int:
             "current_surface_closure_satisfied"
         )
         is False
-        and isinstance(source_higgs_aperture_ready, int)
-        and 42 <= source_higgs_aperture_ready < 63
-        and source_higgs_aperture_rows.get("present_chunks")
-        == source_higgs_aperture_ready
-        and source_higgs_aperture_rows.get("expected_chunks") == 63
-        and source_higgs_aperture_rows.get("combined_rows_written") is False
-        and not any(
-            source_higgs_bridge_aperture_checkpoint.get(
-                "future_artifact_presence", {}
-            ).values()
-        )
+        and source_higgs_aperture_combiner_boundary
+        and source_higgs_closure_future_absent
         and all(
             value is False
             for value in source_higgs_bridge_aperture_checkpoint.get(
@@ -4200,7 +4230,16 @@ def main() -> int:
         and neutral_h3h4_ready_chunks >= 44
         and neutral_h3h4_rows.get("present_chunks") == neutral_h3h4_ready_chunks
         and neutral_h3h4_rows.get("expected_chunks") == 63
-        and neutral_h3h4_rows.get("combined_rows_written") is False
+        and (
+            (
+                neutral_h3h4_rows.get("combined_rows_written") is False
+                and neutral_h3h4_ready_chunks < 63
+            )
+            or (
+                neutral_h3h4_rows.get("combined_rows_written") is True
+                and neutral_h3h4_ready_chunks == 63
+            )
+        )
         and neutral_h3h4_diagnostics.get("chunk_counts_seen")
         == [neutral_h3h4_ready_chunks]
     )
@@ -6122,9 +6161,7 @@ def main() -> int:
     )
     result["two_source_taste_radial_row_combiner_support_not_closure"] = (
         two_source_taste_radial_row_combiner.get("proposal_allowed") is False
-        and two_source_taste_radial_row_combiner.get("combined_rows_written") is False
-        and two_source_taste_radial_row_combiner.get("ready_chunks")
-        < two_source_taste_radial_row_combiner.get("expected_chunks")
+        and two_source_combiner_support_boundary
         and two_source_taste_radial_row_combiner.get("fail_count") == 0
     )
     result["two_source_taste_radial_schur_subblock_support_not_closure"] = (
@@ -6642,12 +6679,7 @@ def main() -> int:
             "current_surface_closure_satisfied"
         )
         is False
-        and isinstance(source_higgs_aperture_ready, int)
-        and 42 <= source_higgs_aperture_ready < 63
-        and source_higgs_aperture_rows.get("present_chunks")
-        == source_higgs_aperture_ready
-        and source_higgs_aperture_rows.get("expected_chunks") == 63
-        and source_higgs_aperture_rows.get("combined_rows_written") is False
+        and source_higgs_aperture_combiner_boundary
     )
     result["fresh_artifact_intake_checkpoint_no_new_artifact"] = (
         fresh_artifact_intake_checkpoint.get("proposal_allowed") is False

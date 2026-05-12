@@ -6,7 +6,7 @@
   "canonical_higgs_or_physical_response_bridge_present": false,
   "complete_monotonicity_authority_passed": false,
   "conditional_surface_status": null,
-  "exact_next_action": "Use C_x|s as a targeted diagnostic while the 63-chunk row packet finishes, but for closure add higher-shell/multivolume Schur rows plus a pole/threshold theorem, or supply canonical O_H/C_spH/C_HH rows or a genuine W/Z response bridge.",
+  "exact_next_action": "Use C_x|s as a targeted diagnostic while the 63-chunk row packet is complete finite support, but for closure add higher-shell/multivolume Schur rows plus a pole/threshold theorem, or supply canonical O_H/C_spH/C_HH rows or a genuine W/Z response bridge.",
   "expected_chunks": 63,
   "fail_count": 0,
   "finite_difference_requirements": [
@@ -70,7 +70,7 @@
   "parent_statuses": {
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
     "retained_route": "open / retained closure not yet reached",
-    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; partial row set is not closure",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
     "schur_abc": "bounded-support / finite Schur A/B/C inverse-block rows from two-source taste-radial correlator subblocks; strict pole rows absent",
     "schur_kprime": "bounded-support / finite-shell Schur inverse-slope scout from two-source taste-radial rows; strict K-prime pole authority absent",
     "schur_pole_lift": "exact negative boundary / finite Schur A/B/C rows do not lift to strict pole-row authority without model-class, pole, and FV/IR authority",
@@ -81,8 +81,8 @@
   "pass_count": 15,
   "pole_model_class_authority_present": false,
   "proposal_allowed": false,
-  "proposal_allowed_reason": "A zero-to-first-shell decrease is only a necessary Stieltjes check. The current packet has two q_hat^2 levels, incomplete chunks, no pole/model-class rows, no spectral threshold theorem, no multivolume FV/IR limit, and no canonical O_H or W/Z bridge.",
-  "ready_chunks": 62,
+  "proposal_allowed_reason": "A zero-to-first-shell decrease is only a necessary Stieltjes check. The current packet has two q_hat^2 levels, no pole/model-class rows, no spectral threshold theorem, no multivolume FV/IR limit, and no canonical O_H or W/Z bridge.",
+  "ready_chunks": 63,
   "schur_complement_complete_monotonicity_gate_passed": true,
   "strict_non_claims": [
     "does not claim retained or proposed_retained y_t closure",
@@ -96,26 +96,26 @@
   "x_given_source_first_shell_stieltjes_support": true,
   "x_given_source_summary": {
     "shell": {
-      "count": 60,
+      "count": 63,
       "max": 0.2697468820611708,
-      "mean": 0.26954117790443743,
+      "mean": 0.269542267362236,
       "min": 0.26922228807280013,
-      "stderr": 1.2671624389765273e-05
+      "stderr": 1.2196831484642552e-05
     },
     "shell_minus_zero": {
-      "count": 60,
+      "count": 63,
       "max": -0.01124889363522047,
-      "mean": -0.011297290570988858,
+      "mean": -0.011296744172012731,
       "min": -0.011359817384653581,
-      "stderr": 2.902941314339042e-06
+      "stderr": 2.926386308314129e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": -631.4581297917338,
+    "shell_minus_zero_z_score_from_chunk_scatter": -658.3697754540183,
     "zero": {
-      "count": 60,
+      "count": 63,
       "max": 0.2810229245536583,
-      "mean": 0.2808384684754263,
+      "mean": 0.28083901153424873,
       "min": 0.28052990454907417,
-      "stderr": 1.262975175955038e-05
+      "stderr": 1.2068842901375737e-05
     }
   }
 }

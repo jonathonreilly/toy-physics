@@ -10,7 +10,7 @@ current surface remains open
 **Certificate:** `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`
 
 ```yaml
-actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 62 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
+actual_current_surface_status: bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling
 conditional_surface_status: exact support if a future same-surface primitive neutral transfer or off-diagonal generator certificate supplies H3 and a canonical O_H/source-Higgs or W/Z physical-response packet supplies H4 without forbidden imports
 proposal_allowed: false
 bare_retained_allowed: false
@@ -36,8 +36,8 @@ What is genuinely present:
 
 - H1 same-surface Z3 taste-triplet support is loaded.
 - H2 positive-cone equal-magnitude support is loaded.
-- The two-source taste-radial row combiner now sees the contiguous `001-062`
-  prefix out of `63` chunks.
+- The two-source taste-radial row combiner now sees the complete contiguous
+  `001-063` packet.
 - The finite `C_ss/C_sx/C_xx` diagnostics are schema-clean bounded staging
   evidence.
 
@@ -52,7 +52,7 @@ What remains absent:
   covariance, and strict non-observed `g2`.
 
 The finite `C_sx/C_xx` rows are covariance/correlator evidence, not a transfer
-or action matrix.  The current partial-row Gram determinants are positive, so
+or action matrix.  The current finite-row Gram determinants are positive, so
 they also do not give a finite rank-one flatness certificate.  Promoting those
 rows to H3 would import the missing transfer theorem.
 
@@ -86,7 +86,7 @@ python3 scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py
 # SUMMARY: PASS=9 FAIL=0
 ```
 
-Refresh note: the 2026-05-07 runner now accepts the current contiguous row
-prefix dynamically.  At this checkpoint it consumes `ready=62/63` rather than
-the earlier `ready=44/63`, `ready=52/63`, `ready=53/63`, `ready=54/63`,
-`ready=58/63`, and `ready=60/63` prefixes; the H3/H4 boundary is unchanged.
+Refresh note: the 2026-05-12 runner now accepts the complete current row packet
+as support-only.  At this checkpoint it consumes `ready=63/63` with
+`combined_rows_written=true` rather than the earlier partial prefixes; the
+H3/H4 boundary is unchanged.

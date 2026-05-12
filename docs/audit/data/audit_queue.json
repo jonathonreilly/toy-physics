@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 0,
     "high": 237,
-    "leaf": 716,
+    "leaf": 717,
     "medium": 329
   },
-  "generated_at": "2026-05-12T00:29:54.766750+00:00",
+  "generated_at": "2026-05-12T00:40:27.348795+00:00",
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger",
@@ -22514,6 +22514,23 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK063_FINAL_PACKAGE_NOTE_2026-05-12.md",
+      "ready": true,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26294,6 +26311,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 883,
-  "total_pending": 1282
+  "ready_count": 884,
+  "total_pending": 1283
 }

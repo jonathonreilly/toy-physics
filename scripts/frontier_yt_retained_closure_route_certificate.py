@@ -1488,29 +1488,29 @@ def main() -> int:
         )
         is False
     )
+    two_source_combiner = certificates["pr230_two_source_taste_radial_row_combiner_gate"]
+    two_source_combiner_ready = two_source_combiner.get("ready_chunks")
+    two_source_combiner_expected = two_source_combiner.get("expected_chunks")
+    two_source_combiner_support_boundary = (
+        isinstance(two_source_combiner_ready, int)
+        and isinstance(two_source_combiner_expected, int)
+        and (
+            (
+                two_source_combiner.get("combined_rows_written") is False
+                and 0 < two_source_combiner_ready < two_source_combiner_expected
+            )
+            or (
+                two_source_combiner.get("combined_rows_written") is True
+                and two_source_combiner_ready == two_source_combiner_expected == 63
+            )
+        )
+    )
     two_source_taste_radial_row_combiner_support_not_closure = (
         "two-source taste-radial C_sx/C_xx row combiner gate"
-        in certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "actual_current_surface_status", ""
-        )
-        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "proposal_allowed"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "combined_rows_written"
-        )
-        is False
-        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "ready_chunks"
-        )
-        < certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "expected_chunks"
-        )
-        and certificates["pr230_two_source_taste_radial_row_combiner_gate"].get(
-            "fail_count"
-        )
-        == 0
+        in two_source_combiner.get("actual_current_surface_status", "")
+        and two_source_combiner.get("proposal_allowed") is False
+        and two_source_combiner_support_boundary
+        and two_source_combiner.get("fail_count") == 0
     )
     two_source_taste_radial_schur_subblock_support_not_closure = (
         "two-source taste-radial Schur-subblock witness"

@@ -140,11 +140,11 @@ def strict_blockers(
     witness: dict[str, Any],
 ) -> dict[str, bool]:
     return {
-        "complete_63_of_63_combined_packet_absent": not (
+        "complete_63_of_63_packet_support_only": (
             finite_abc.get("ready_chunks") == finite_abc.get("expected_chunks")
             and finite_abc.get("expected_chunks") == 63
         ),
-        "combined_rows_packet_written_absent": True,
+        "finite_combined_rows_are_not_strict_kernel_rows": True,
         "strict_schur_contract_gate_not_passed": schur_contract.get(
             "schur_kernel_row_contract_gate_passed"
         )
@@ -310,7 +310,7 @@ def main() -> int:
             "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
         ],
         "exact_next_action": (
-            "Complete and combine the row packet, then supply either an accepted "
+            "Use the complete finite packet only as staging support, then supply either an accepted "
             "model-class/pole-derivative theorem with FV/IR control or direct "
             "strict neutral-kernel A/B/C pole rows.  Without that, pivot to "
             "O_H/C_sH/C_HH rows or same-source W/Z response."

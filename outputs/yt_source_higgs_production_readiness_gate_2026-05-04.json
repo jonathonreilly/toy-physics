@@ -1865,6 +1865,22 @@
       "source_higgs_metadata_enabled": true,
       "two_source_taste_radial_aliases_available": true,
       "used_as_physical_yukawa_readout": false
+    },
+    {
+      "c_sx_aliases_c_sh_schema_field": true,
+      "c_xx_aliases_c_hh_schema_field": true,
+      "canonical_higgs_operator_identity_passed": false,
+      "chunk_index": 63,
+      "mode_row_count": 4,
+      "operator_certificate_path": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+      "operator_id": "pr230_taste_radial_hypercube_flip_source_v1",
+      "path": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json",
+      "phase": "production",
+      "pole_residue_row_count": 0,
+      "source_higgs_analysis_present": true,
+      "source_higgs_metadata_enabled": true,
+      "two_source_taste_radial_aliases_available": true,
+      "used_as_physical_yukawa_readout": false
     }
   ],
   "taste_radial_rows_are_c_sx_c_xx_not_c_sH_c_HH": true,

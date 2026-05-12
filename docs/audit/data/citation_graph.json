@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T00:29:51.843572+00:00",
+  "generated_at": "2026-05-12T00:40:24.431894+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42740,7 +42740,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / neutral primitive H3/H4 aperture checkpoint;",
       "deps": [],
-      "note_hash": "f29cfbcc7f4d209c8f237acfc8c681a761b13da6068ec4be4b895b41c587804e",
+      "note_hash": "338e5a17b5a080c3e0feb98f28fa10cca56dcb1c188bf64ef4ca3f6982c33574",
       "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_H3H4_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_h3h4_aperture_checkpoint.py",
       "title": "PR230 Neutral Primitive H3/H4 Aperture Checkpoint"
@@ -42750,7 +42750,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / neutral primitive-rank-one route not complete on current PR230 surface",
       "deps": [],
-      "note_hash": "3b9010b2b076634fc613a78492ae5aa008e38b3ba024fd508708997823a5361e",
+      "note_hash": "d2dbbf5dfada04dac3fac8fb9dd65b51d012f4d29083db17ed28ce0771a29771",
       "path": "docs/YT_PR230_NEUTRAL_PRIMITIVE_ROUTE_COMPLETION_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_neutral_primitive_route_completion.py",
       "title": "PR230 Neutral Primitive Route Completion"
@@ -43390,7 +43390,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded-support / source-Higgs bridge aperture checkpoint; current",
       "deps": [],
-      "note_hash": "4924c7cc73bfbdcace2849aba567d7d47fddfe03c1b154bcce78e0d8edffdf4a",
+      "note_hash": "d7b7475540befebbc4893290d60d205d44ad4ea03fcebcc4b8122415990441d9",
       "path": "docs/YT_PR230_SOURCE_HIGGS_BRIDGE_APERTURE_CHECKPOINT_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_source_higgs_bridge_aperture_checkpoint.py",
       "title": "PR230 Source-Higgs Bridge Aperture Checkpoint"
@@ -43480,7 +43480,7 @@
       "current_status": "unknown",
       "current_status_raw": "exact negative boundary / current two-source taste-radial raw `C_ss` rows do not supply strict scalar-LSZ moment/FV authority",
       "deps": [],
-      "note_hash": "be54f45312108bd3edb58253fc944db7fffa421d986f47d88989e3854d5e31d0",
+      "note_hash": "0fb0a4ffdcc3d570640acbee8c017bcb7dc109185e48ed52fff5560eac095b5d",
       "path": "docs/YT_PR230_STRICT_SCALAR_LSZ_MOMENT_FV_AUTHORITY_GATE_NOTE_2026-05-07.md",
       "runner_path": "scripts/frontier_yt_pr230_strict_scalar_lsz_moment_fv_authority_gate.py",
       "title": "PR #230 Strict Scalar-LSZ Moment/FV Authority Gate"
@@ -43534,6 +43534,16 @@
       "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHART_CERTIFICATE_NOTE_2026-05-06.md",
       "runner_path": "scripts/frontier_yt_pr230_two_source_taste_radial_chart_certificate.py",
       "title": "PR230 Two-Source Taste-Radial Chart Certificate"
+    },
+    "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12": {
+      "claim_id": "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded-support / chunks001-063 packaged; no closure",
+      "deps": [],
+      "note_hash": "4075c455cf164a048acb863d870ae94e72ce7a3398c7f0c7fc95a2be73d2ae3e",
+      "path": "docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK063_FINAL_PACKAGE_NOTE_2026-05-12.md",
+      "runner_path": null,
+      "title": "PR230 Two-Source Taste-Radial Chunk063 Final Package"
     },
     "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06": {
       "claim_id": "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
@@ -46734,6 +46744,7 @@
     "yt_pr230_taste_radial_to_source_higgs_promotion_contract_note_2026-05-07",
     "yt_pr230_two_source_taste_radial_action_certificate_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chart_certificate_note_2026-05-06",
+    "yt_pr230_two_source_taste_radial_chunk063_final_package_note_2026-05-12",
     "yt_pr230_two_source_taste_radial_chunk_checkpoint_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunk_package_audit_note_2026-05-06",
     "yt_pr230_two_source_taste_radial_chunks031_032_package_note_2026-05-07",
@@ -46889,12 +46900,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4701,
-    "leaf_count": 1129,
-    "node_count": 2125,
-    "root_count": 1630,
+    "leaf_count": 1130,
+    "node_count": 2126,
+    "root_count": 1631,
     "runners_with_path": 1601,
     "status_counts": {
-      "bounded": 594,
+      "bounded": 595,
       "open": 112,
       "proposed_promoted": 1,
       "proposed_retained": 373,

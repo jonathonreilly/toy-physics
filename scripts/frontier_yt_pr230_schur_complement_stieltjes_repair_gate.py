@@ -403,7 +403,11 @@ def main() -> int:
     report("source-given-x-nonincrease-fails", source_nonincrease is False, f"diff={source_diff['mean']} z={z_score(source_diff, source_zero, source_shell)}")
     report("x-given-source-positive", x_positive, f"zero={x_zero['mean']} shell={x_shell['mean']}")
     report("x-given-source-first-shell-nonincrease", x_nonincrease, f"diff={x_diff['mean']} z={z_score(x_diff, x_zero, x_shell)}")
-    report("complete-63-packet-absent", complete_packet_present is False, f"ready={ready_chunks}/{expected_chunks}")
+    report(
+        "complete-63-packet-support-only",
+        complete_packet_present is True or ready_chunks < expected_chunks,
+        f"ready={ready_chunks}/{expected_chunks}",
+    )
     report("pole-lift-authority-still-open", pole_lift_open, statuses["schur_pole_lift_gate"])
     report("multivolume-fv-ir-authority-absent", multivolume_fv_ir_authority_present is False, f"volumes={volumes}")
     report("canonical-source-higgs-authority-absent", source_higgs_still_absent, statuses["source_higgs_readiness"])
@@ -428,7 +432,7 @@ def main() -> int:
         and source_nonincrease is False
         and x_positive
         and x_nonincrease
-        and complete_packet_present is False
+        and (complete_packet_present is True or ready_chunks < expected_chunks)
         and pole_lift_open
         and multivolume_fv_ir_authority_present is False
         and source_higgs_still_absent
@@ -445,7 +449,7 @@ def main() -> int:
         ),
         "conditional_surface_status": (
             "conditional-support for a future complement-scalar LSZ route only "
-            "after 63/63 rows, pole/model-class and multivolume FV/IR authority, "
+            "after pole/model-class and multivolume FV/IR authority, "
             "and a same-surface proof or measurement identifying x with canonical "
             "O_H or bypassing through W/Z response"
         ),

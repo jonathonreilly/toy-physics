@@ -340,7 +340,11 @@ def main() -> int:
     schur_route_open = parents["schur_route_completion"].get("proposal_allowed") is False
     retained_open = parents["retained_route"].get("proposal_allowed") is False
     campaign_open = parents["campaign_status"].get("proposal_allowed") is False
-    partial_packet = isinstance(ready_chunks, int) and isinstance(expected_chunks, int) and ready_chunks < expected_chunks
+    packet_support_boundary = (
+        isinstance(ready_chunks, int)
+        and isinstance(expected_chunks, int)
+        and 0 < ready_chunks <= expected_chunks
+    )
 
     report("parent-certificates-present", not missing, f"missing={missing}")
     report("no-parent-authorizes-proposal", not proposals, f"proposal_allowed={proposals}")
@@ -350,7 +354,7 @@ def main() -> int:
     report("chunk-row-audits-clean", not chunk_issues, f"issues={chunk_issues[:5]}")
     report("zero-plus-first-shell-complete", shell_complete, f"chunks={len(chunks)} ready={ready_chunks}")
     report("finite-shell-schur-slopes-finite", finite_slopes, str(summary))
-    report("partial-packet-boundary-preserved", partial_packet, f"ready={ready_chunks}/{expected_chunks}")
+    report("finite-packet-boundary-preserved", packet_support_boundary, f"ready={ready_chunks}/{expected_chunks}")
     report("strict-schur-contract-still-open", strict_contract_still_open, statuses["schur_kernel_contract"])
     report("schur-route-still-open", schur_route_open, statuses["schur_route_completion"])
     report("retained-route-still-open", retained_open, statuses["retained_route"])
@@ -366,7 +370,7 @@ def main() -> int:
         and not chunk_issues
         and shell_complete
         and finite_slopes
-        and partial_packet
+        and packet_support_boundary
         and strict_contract_still_open
         and schur_route_open
         and retained_open
@@ -432,8 +436,8 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "After more chunks complete, rerun this scout on the larger row set. "
-            "For closure, replace the scout with a pole extraction/FV-IR theorem "
+            "Use the complete finite packet only as staging support.  For closure, "
+            "replace the scout with a pole extraction/FV-IR theorem "
             "for K'(pole), or supply canonical O_H/source-overlap or W/Z "
             "physical-response authority."
         ),

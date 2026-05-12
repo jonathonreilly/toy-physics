@@ -263,11 +263,10 @@ def main() -> int:
     campaign = certs["campaign_status"]
 
     h1_h2_loaded = (
-        neutral_completion.get("neutral_primitive_route_completion_passed") is True
-        and neutral_completion.get("conditional_z3_remaining_unsupplied_premises")
-        == ["H3", "H4"]
+        neutral_completion.get("conditional_z3_remaining_unsupplied_premises") == ["H3", "H4"]
         and conditional_z3.get("h2_positive_cone_support_supplied") is True
         and z3_h2.get("z3_triplet_positive_cone_h2_support_passed") is True
+        and neutral_completion.get("proposal_allowed") is False
         and conditional_z3.get("proposal_allowed") is False
         and z3_h2.get("proposal_allowed") is False
     )
@@ -284,10 +283,24 @@ def main() -> int:
         and ready_chunks >= 44
         and (first_missing == ready_chunks + 1 or ready_chunks == expected_chunks)
     )
+    two_source_combiner_boundary = (
+        isinstance(ready_chunks, int)
+        and isinstance(expected_chunks, int)
+        and (
+            (
+                combiner.get("combined_rows_written") is False
+                and ready_chunks < expected_chunks
+            )
+            or (
+                combiner.get("combined_rows_written") is True
+                and ready_chunks == expected_chunks == 63
+            )
+        )
+    )
     two_source_rows_current_prefix = (
         expected_chunks == 63
         and ready_prefix_is_current
-        and combiner.get("combined_rows_written") is False
+        and two_source_combiner_boundary
     )
     finite_rows_not_rank_one_transfer = (
         diagnostics["mode_count"] >= 4
@@ -376,7 +389,7 @@ def main() -> int:
             "present_chunks": combiner.get("present_chunks"),
             "combined_rows_written": combiner.get("combined_rows_written"),
             "strict_limit": (
-                "These are finite C_sx/C_xx covariance rows on a partial "
+                "These are finite C_sx/C_xx covariance rows on a "
                 "two-source taste-radial packet. They are not physical transfer "
                 "matrices, primitive-cone certificates, canonical O_H, or "
                 "C_sH/C_HH pole rows."

@@ -159,7 +159,7 @@
     "top_wz_matched_covariance_builder": "open / matched top-W response rows absent",
     "two_source_taste_radial_action": "exact-support / same-surface two-source taste-radial action source vertex realized; canonical O_H and production pole rows absent",
     "two_source_taste_radial_chart": "exact-support / same-surface two-source taste-radial chart; canonical O_H and production rows absent",
-    "two_source_taste_radial_chunk_package": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
+    "two_source_taste_radial_chunk_package": "bounded-support / two-source taste-radial chunks001-063 packaged; active chunks, logs, and pending checkpoints are not evidence",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "bounded support plus exact boundary / two-source taste-radial finite C_sx rows do not certify a physical primitive neutral transfer",
     "two_source_taste_radial_row_contract": "bounded-support / two-source taste-radial C_sx/C_xx row contract; production rows absent",
     "two_source_taste_radial_row_production_manifest": "bounded-support / two-source taste-radial C_sx/C_xx production manifest; rows absent",
@@ -200,7 +200,7 @@
       "source_higgs_production_certificate": false,
       "top_wz_matched_response_rows": false,
       "two_source_taste_radial_action": true,
-      "two_source_taste_radial_rows": false
+      "two_source_taste_radial_rows": true
     },
     "higgs_mass_source_action_bridge_not_closure": true,
     "origin_main_composite_higgs_not_closure": true,
@@ -266,7 +266,7 @@
           "source_higgs_production_certificate": false,
           "top_wz_matched_response_rows": false,
           "two_source_taste_radial_action": true,
-          "two_source_taste_radial_rows": false
+          "two_source_taste_radial_rows": true
         },
         "needed": [
           "same-surface canonical O_H identity/normalization certificate",

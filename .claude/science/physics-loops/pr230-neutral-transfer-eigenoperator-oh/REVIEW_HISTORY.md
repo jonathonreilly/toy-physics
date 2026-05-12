@@ -411,7 +411,7 @@ python3 -m py_compile scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_ad
 python3 scripts/frontier_yt_pr230_block29_post_block28_wz_pivot_admission_checkpoint.py
 # SUMMARY: PASS=13 FAIL=0
 python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
-# SUMMARY: PASS=363 FAIL=0
+# SUMMARY: PASS=364 FAIL=0
 bash docs/audit/scripts/run_pipeline.sh
 # OK, newly seeded=1, re-audit required=0, 5 known warnings
 python3 docs/audit/scripts/audit_lint.py --strict
@@ -545,6 +545,50 @@ python3 docs/audit/scripts/audit_lint.py --strict
 # OK, 5 known warnings
 git diff --check
 # OK
+```
+
+## Block31
+
+Local review run on 2026-05-12 00:32 UTC.
+
+Scope:
+
+- chunk063 production ensemble and row certificate;
+- `outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json`;
+- `outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json`;
+- refreshed source-Higgs, scalar-LSZ, Schur, primitive-transfer, neutral
+  H3/H4, campaign, retained-route, and completion-audit certificates;
+- `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK063_FINAL_PACKAGE_NOTE_2026-05-12.md`;
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`.
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Chunk063 checkpoint passes, package audit reports chunks001-063 complete, and the combiner writes the 63/63 finite row packet. |
+| Physics Claim Boundary | BOUNDED SUPPORT / NO CLOSURE | The complete finite `C_ss/C_sx/C_xx` packet remains taste-radial support only, not canonical `O_H`, canonical `C_sH/C_HH`, scalar-LSZ/FV/IR authority, W/Z response evidence, neutral H3/H4 authority, or top-Yukawa closure. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, `H_unit`, Ward identity, W/Z scout promotion, `kappa_s=1`, `c2=1`, `Z_match=1`, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The old row-wave supervisor is stopped after no active chunks remain; the live-status scratch file is not committed. |
+| Audit Compatibility | PASS | Integrated route runners, py_compile, JSON parse, conflict scan, audit pipeline, strict lint, and `git diff --check` pass after remote block28/block29 integration. |
+
+Checks:
+
+```bash
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_checkpoint.py --chunk-index 63
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_chunk_package_audit.py
+# SUMMARY: PASS=10 FAIL=0
+python3 scripts/frontier_yt_pr230_two_source_taste_radial_row_combiner_gate.py
+# SUMMARY: PASS=13 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=104 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=364 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=317 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=72 FAIL=0
 ```
 
 ## Block18

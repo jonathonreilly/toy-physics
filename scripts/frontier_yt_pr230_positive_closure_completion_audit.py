@@ -272,13 +272,24 @@ def main() -> int:
         ).get("canonical_higgs_operator_identity_passed")
         is False
     )
+    two_source_rows_payload = load_json(FUTURE_BRIDGE_FILES["two_source_taste_radial_rows"])
+    two_source_rows_support_present = (
+        future_bridge_presence["two_source_taste_radial_rows"] is True
+        and two_source_rows_payload.get("proposal_allowed") is False
+        and two_source_rows_payload.get("bare_retained_allowed") is False
+        and len(two_source_rows_payload.get("completed_chunk_indices", [])) == 63
+        and "canonical O_H and pole/FV/IR authority still absent"
+        in two_source_rows_payload.get("actual_current_surface_status", "")
+    )
     no_unclosed_future_bridge_files_present = (
         all(
             present is False
             for name, present in future_bridge_presence.items()
-            if name != "two_source_taste_radial_action"
+            if name
+            not in {"two_source_taste_radial_action", "two_source_taste_radial_rows"}
         )
         and two_source_action_support_present
+        and two_source_rows_support_present
     )
     taste_condensate_bridge_blocked = (
         certs["taste_condensate_oh_bridge"].get("taste_condensate_oh_bridge_audit_passed")

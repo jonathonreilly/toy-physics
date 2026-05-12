@@ -1,0 +1,53 @@
+{
+  "action_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+  "actual_current_surface_status": "bounded-support / two-source taste-radial chunk063 C_sx/C_xx row checkpoint",
+  "bare_retained_allowed": false,
+  "checkpoint_passed": true,
+  "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk063/L12xT24/ensemble_measurement.json",
+  "chunk_index": 63,
+  "chunk_output": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json",
+  "chunk_summary": {
+    "active_process_rows_for_chunk": [],
+    "expected_seed": 2026056063,
+    "mass_scan_count": 3,
+    "phase": "production",
+    "pole_residue_rows_count": 0,
+    "scalar_lsz_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,1,0",
+      "1,0,0"
+    ],
+    "seed": 2026056063,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "selected_mass_parameter": 0.75,
+    "source_higgs_aliases": {
+      "C_sx_aliases_C_sH_schema_field": true,
+      "C_xx_aliases_C_HH_schema_field": true,
+      "available": true,
+      "source_operator_symbol": "x",
+      "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+    },
+    "source_higgs_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,1,0",
+      "1,0,0"
+    ],
+    "source_response_target_series_count": 16
+  },
+  "completed": true,
+  "exact_next_action": "Accumulate more completed chunks, run this checkpoint on each, combine C_sx/C_xx rows, extract pole/FV/IR diagnostics, and separately supply canonical O_H/source-overlap or physical-response authority.",
+  "fail_count": 0,
+  "manifest": "outputs/yt_pr230_two_source_taste_radial_row_production_manifest_2026-05-06.json",
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A single completed C_sx/C_xx chunk is partial row support only.  It does not identify the taste-radial source with canonical O_H, does not derive kappa_s, and does not provide pole/FV/IR or retained-route authority.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat one chunk as combined L12 row evidence",
+    "does not treat C_sx/C_xx as canonical-Higgs C_sH/C_HH",
+    "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}

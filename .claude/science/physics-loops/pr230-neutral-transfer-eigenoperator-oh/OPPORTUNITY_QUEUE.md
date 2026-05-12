@@ -1,40 +1,35 @@
 # Opportunity Queue
 
-Campaign mode queue after block29 post-block28 W/Z pivot admission checkpoint.
+Campaign mode queue after block31 chunk063 final package.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
-| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh accepted/derived `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current/fetched stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14/block21/block22 aperture checkpoints, block16 open-surface intake, block18 fresh-artifact intake, block19 FMS candidate/action packet, block23 remote-candidate intake, and block28 degree-one `O_H` support intake | Medium | Medium | Direct source-Higgs closure root | Proceed only after the degree-one action premise is made current-surface authority through accepted same-surface `O_H`/EW-Higgs action and production `C_ss/C_sH/C_HH` pole rows. Existing 62/63 `C_sx/C_xx` chunks and fetched Higgs/EW branches are bounded staging/support only. |
+| 1 | Certified `O_H` plus production source-Higgs pole rows with Gram flatness | Medium if a fresh accepted/derived `O_H` artifact or production `C_ss/C_sH/C_HH` row packet appears; blocked on current/fetched stack | 2-3 | Block06 contract, block07 hard-residual gate, block09/block14/block21/block22/block30 aperture checkpoints, block16 open-surface intake, block18 fresh-artifact intake, block19 FMS candidate/action packet, block23 remote-candidate intake, and block28 degree-one `O_H` support intake | Medium | Medium | Direct source-Higgs closure root | Proceed only after the degree-one action premise is made current-surface authority through accepted same-surface `O_H`/EW-Higgs action and production `C_ss/C_sH/C_HH` pole rows. The complete 63/63 finite `C_sx/C_xx` packet and fetched Higgs/EW branches are bounded staging/support only. |
 | 2 | Strict W/Z physical-response packet with accepted action | Medium-low if real row/action/covariance artifacts appear; blocked by block11/block15/block18 and block23 on current/fetched stack | 5-7 | Block05 subtraction contract, block08 W/Z checkpoint, block11 packet intake, block15 additive aggregate wiring, block17 additive-top coarse rows, block18 fresh-artifact intake, and block23 remote-candidate intake | High | Medium | W/Z repair | Requires accepted action, canonical `O_H`/sector-overlap authority, production W/Z mass-fit rows, same-source top rows, matched covariance, strict non-observed `g2`, `delta_perp` authority, and final W-response rows. Existing scout/smoke rows, coarse additive-top rows, and fetched non-PR230 Higgs/EW branches are non-closure. |
 | 3 | Same-surface neutral primitive/rank-one theorem | Medium-low only with a fresh H3/H4 certificate | 2 | Block07 hard-residual gate, neutral primitive gates, and block10 H3/H4 aperture checkpoint | Medium | Medium | Independent of W/Z covariance and source-Higgs rows | H1/H2 support is loaded, but current finite `C_sx/C_xx` rows do not supply physical transfer. Reopen only with same-surface H3 physical transfer/off-diagonal generator plus H4 source/canonical-Higgs coupling authority. |
-| 4 | Complete/replace source-Higgs production row packet | Medium-low | 3 | Block22 now audits 62/63 current rows | Medium | Medium | Production continuation | Complete the 63/63 packet or replace it with real canonical `C_sH/C_HH` rows only after `O_H` is certified; do not touch active workers from this lane. |
+| 4 | Replace finite taste-radial packet with source-Higgs production rows | Medium-low | 3 | Block31 now audits the complete 63/63 finite `C_sx/C_xx` packet | Medium | Medium | Production continuation | The finite packet is complete. The next production move is real canonical `C_ss/C_sH/C_HH` pole rows only after `O_H` is certified; no more finite chunk production is a closure path. |
 | 5 | Replacement radial-spurion action certificate | Medium-low | 2 | Block04 plus block08 W/Z checkpoint | High | Medium | Direct W/Z action repair | Build only if a real same-surface clean radial action artifact exists. |
 | 6 | Same-surface source-radial off-diagonal generator/action row | Medium-low | 2 | Block01 runner gives exact target | High | Small | Direct continuation | Reopen only if a genuine off-diagonal neutral transfer/action artifact appears. |
-| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract | Medium | Medium | Support-only | Block22 refreshed the source-Higgs/scalar-LSZ intake to the current 62/63 prefix while excluding chunk063 as completed evidence; it remains support-only and not a closure route. |
+| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract plus complete 63/63 packet | Medium | Medium | Support-only | Block31 refreshed the source-Higgs/scalar-LSZ/Schur intake to the complete 63/63 packet; it remains support-only and not a closure route. |
 
 No global stop is justified, but the refreshed queue does not authorize another
-current-surface shortcut gate.  Block14 confirms the source-Higgs route has a
-larger staging aperture but no current closure: `001-046` taste-radial rows are
-not canonical `C_sH/C_HH` pole rows.  Block10 checked the next neutral
-primitive route: H1/H2 support is real, but the current `62/63` finite `C_sx/C_xx`
-rows do not provide H3 physical neutral transfer or H4 source/canonical-Higgs
-coupling.  Block11 checked the W/Z physical-response intake: current W/Z
-scout/smoke rows and support contracts do not constitute the accepted-action
-production packet.
+current-surface shortcut gate.  Earlier blocks confirm the source-Higgs route
+has a larger staging aperture but no current closure: finite taste-radial rows
+are not canonical `C_sH/C_HH` pole rows.  The neutral primitive route has H1/H2
+support, but even the complete `63/63` finite `C_sx/C_xx` packet does not
+provide H3 physical neutral transfer or H4 source/canonical-Higgs coupling.
+The W/Z physical-response intake still has only scout/smoke rows and support
+contracts, not the accepted-action production packet.
 
-Block22 consumes the current PR head after chunks051-062 were packaged and
-refreshes the row-dependent gates to `62/63`.  The larger prefix improves
-statistics but does not change the
-ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial staging
-diagnostics, not canonical `C_sH/C_HH` pole rows, not strict scalar-LSZ/FV/IR
-authority, and not W/Z response evidence.  Chunk063 is not counted as evidence
-until a completed checkpoint is present.
+Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
+`63/63` packet.  The larger packet improves support statistics but does not
+change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial
+staging diagnostics, not canonical `C_sH/C_HH` pole rows, not strict
+scalar-LSZ/FV/IR authority, and not W/Z response evidence.
 
-Block22 verified the draft PR #230 head is now
-`376e3e2f1dca58a04ade8b042ae80b310f6a5905`.  The post-block21 head movement
-packages chunks051-062 and updates the finite `C_sx/C_xx` row prefix to 62/63.
-The strict scalar-LSZ diagnostic still rejects the raw proxy, now with
-`z=193.5686242048355` across the 62 ready chunks, and the branch still has
+Block31 packages chunk063 and updates the finite `C_sx/C_xx` row packet to
+63/63.  The strict scalar-LSZ diagnostic still rejects the raw proxy, now with
+`z=195.191222800661` across the 63 ready chunks, and the branch still has
 `proposal_allowed=false`.  Certified canonical `O_H`, accepted same-source
 EW/Higgs action, source-Higgs pole rows, W/Z production rows, matched
 covariance, strict `g2`, and aggregate approval remain absent.
@@ -317,3 +312,28 @@ Queue remains:
 Chunk063 completion alone remains support-only and is not a queue-admission
 condition.  Do not run another current-surface shortcut gate from this lane
 unless one of the explicit production/certificate inputs lands.
+
+## Block31 Chunk063 Final Package
+
+Block31 imports chunk063, runs the chunk checkpoint, audits the row package,
+writes the combined `63/63` finite `C_ss/C_sx/C_xx` packet, and refreshes the
+row-dependent gates after remote block28/block29 landed.
+
+This completes finite taste-radial chunk production but does not admit a
+closure route.  The packet is not canonical `O_H`, not canonical
+`C_sH/C_HH`, not strict scalar-LSZ/FV/IR authority, not W/Z response evidence,
+and not neutral H3/H4 physical-transfer authority.
+
+Queue remains:
+
+1. accepted same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` rows
+   with pole-residue, Gram, threshold, and FV/IR authority;
+2. strict W/Z physical-response packet with accepted action, production W/Z
+   rows, same-source top rows, matched covariance, strict non-observed `g2`,
+   `delta_perp`, and final W-response authority;
+3. neutral H3/H4 physical-transfer/irreducibility authority plus
+   source/canonical-Higgs coupling.
+
+No further finite `C_sx/C_xx` chunk production is a clean physics closure path
+unless a new theorem first identifies `x` with canonical `O_H` and supplies the
+missing pole/FV/IR authority.

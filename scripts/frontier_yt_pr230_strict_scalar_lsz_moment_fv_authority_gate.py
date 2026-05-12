@@ -287,7 +287,11 @@ def main() -> int:
     report("stieltjes-nonincrease-violation-detected", current_raw_proxy_fails, f"shell-zero={diff_summary['mean']} z={diff_z}")
     report("strict-scalar-lsz-authority-absent", strict_authority_present is False, "raw proxy is diagnostic only")
     report("fv-ir-authority-absent", multivolume_fv_ir_authority_present is False, f"volumes={volumes}")
-    report("complete-63-packet-absent", complete_packet_present is False, f"ready={ready_chunks}/{expected_chunks}")
+    report(
+        "complete-63-packet-support-only",
+        complete_packet_present is True or ready_chunks < expected_chunks,
+        f"ready={ready_chunks}/{expected_chunks}",
+    )
     report("forbidden-import-firewall-clean", clean_firewall, "no forbidden proof input used")
     report("does-not-authorize-proposed-retained", True, "proposal_allowed=false")
 
@@ -309,7 +313,7 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "The gate finds a necessary Stieltjes monotonicity violation in the "
-            "current raw C_ss proxy and also records no 63/63 combined packet, no "
+            "current raw C_ss proxy and also records no "
             "multivolume FV/IR authority, no isolated-pole/model-class authority, "
             "and no canonical O_H/source-overlap authority."
         ),
@@ -343,7 +347,7 @@ def main() -> int:
             "does not set kappa_s, c2, or Z_match to one",
             "does not treat raw C_ss as canonical O_H or physical y_t evidence",
             "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, or observed top/y_t targets",
-            "does not treat partial chunks or reduced pilots as production closure evidence",
+            "does not treat completed chunks or reduced pilots as production closure evidence",
         ],
         "exact_next_action": (
             "Derive or measure a certified contact-subtracted/denominator scalar "

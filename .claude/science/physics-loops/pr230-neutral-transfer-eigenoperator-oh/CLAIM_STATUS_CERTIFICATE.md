@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block29_post_block28_wz_pivot_admission_checkpoint`.
+Current block: `block31_chunk063_final_package`.
 
 ```yaml
-actual_current_surface_status: open / block29 post-block28 W/Z pivot admission checkpoint; source-Higgs degree-one support is exact support only and the W/Z accepted-action response route is not admitted without the required production packet
+actual_current_surface_status: bounded-support / block31 chunk063 final package; finite two-source taste-radial chunks001-063 are complete and combined, while block30 full-approach review leaves PR230 y_t closure open
 conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block29 is a pivot-admission checkpoint. It verifies that block28 supplied only exact degree-one O_H support, then selects the W/Z accepted-action response route as the fallback while recording that accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority are absent."
+proposal_allowed_reason: "Block31 packages chunk063 and completes the finite 63/63 C_ss/C_sx/C_xx taste-radial packet with combined_rows_written=true. This is bounded staging support only: the packet is not canonical O_H, not canonical C_sH/C_HH pole evidence, not strict scalar-LSZ/FV/IR authority, not W/Z response evidence, and not neutral H3/H4 physical-transfer authority. Block30 remains a route-review/support artifact and does not supply the missing PR230 current-surface bridge."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -97,6 +97,15 @@ Reason:
     response route is not admitted without accepted action, production W/Z
     rows, same-source top rows, matched covariance, strict non-observed `g2`,
     `delta_perp`, and final W-response authority.
+20. Block30 records the full-approach assumption/literature/math/bridge review
+    as route-selection support only. It does not supply an accepted action,
+    canonical `O_H`, strict pole rows, a W/Z packet, or a neutral transfer
+    theorem.
+21. Block31 records that chunk063 is packaged and the finite taste-radial
+    packet is complete at 63/63 with combined rows written. It does not
+    promote finite `C_ss/C_sx/C_xx` rows to canonical `O_H`, canonical
+    `C_sH/C_HH`, scalar-LSZ/FV/IR authority, W/Z response evidence, neutral
+    H3/H4 authority, or top-Yukawa closure.
 
 Prior block certificate summary:
 
@@ -225,5 +234,10 @@ Prior block certificate summary:
   matched response, and neutral primitive/rank-one routes.  It supplies no
   new accepted action, canonical `O_H`, pole rows, W/Z packet, or neutral
   transfer theorem.
-- Block01 through Block30 all have `proposal_allowed=false`; their boundaries
+- Block31 actual status: bounded-support / chunk063 final package; the
+  completed 63/63 finite `C_ss/C_sx/C_xx` packet is combined as staging
+  evidence only and does not supply canonical `O_H`, canonical `C_sH/C_HH`,
+  strict scalar-LSZ/FV/IR authority, W/Z response rows, or neutral H3/H4
+  physical-transfer authority.
+- Block01 through Block31 all have `proposal_allowed=false`; their boundaries
   remain active.

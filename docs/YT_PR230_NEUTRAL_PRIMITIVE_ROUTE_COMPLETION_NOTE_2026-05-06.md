@@ -31,8 +31,8 @@ primitive-transfer certificate, or supply future physical rows.
 
 The completion gate now consumes
 `outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json`
-directly.  That aperture loads the current `62/63` `C_sx/C_xx` row prefix and
-keeps the exact missing roots explicit:
+directly.  The latest refresh loads the complete `63/63` `C_sx/C_xx` packet as
+support-only and keeps the exact missing roots explicit:
 
 - H3 physical neutral transfer / off-diagonal generator: absent;
 - H3 primitive-cone or irreducibility certificate: absent;

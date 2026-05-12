@@ -288,10 +288,18 @@ def main() -> int:
         and parents["two_source_row_contract"].get("proposal_allowed") is False
     )
     combiner_support = (
-        parents["two_source_combiner"].get("combined_rows_written") is False
-        and isinstance(ready_chunks, int)
+        isinstance(ready_chunks, int)
         and isinstance(expected_chunks, int)
-        and 0 < ready_chunks < expected_chunks
+        and (
+            (
+                parents["two_source_combiner"].get("combined_rows_written") is False
+                and 0 < ready_chunks < expected_chunks
+            )
+            or (
+                parents["two_source_combiner"].get("combined_rows_written") is True
+                and ready_chunks == expected_chunks == 63
+            )
+        )
         and parents["two_source_combiner"].get("proposal_allowed") is False
     )
     schur_contract_still_strictly_open = (
@@ -311,7 +319,7 @@ def main() -> int:
     report("two-source-chart-support-loaded", chart_support, statuses["two_source_chart"])
     report("two-source-action-support-loaded", action_support, statuses["two_source_action"])
     report("two-source-row-contract-loaded", row_contract_support, statuses["two_source_row_contract"])
-    report("partial-combiner-support-loaded", combiner_support, f"ready={ready_chunks}/{expected_chunks}")
+    report("combiner-support-loaded", combiner_support, f"ready={ready_chunks}/{expected_chunks}")
     report("ready-manifest-rows-found", len(ready_manifest_rows) == ready_chunks, f"rows={len(ready_manifest_rows)}")
     report("chunk-row-audits-clean", not chunk_issues, f"issues={chunk_issues[:5]}")
     report("all-ready-mode-counts-present", all_mode_counts_ok, f"modes={summary}")
@@ -396,14 +404,14 @@ def main() -> int:
         "strict_non_claims": [
             "does not claim retained or proposed_retained y_t closure",
             "does not treat taste-radial x as canonical O_H",
-            "does not treat partial C_sx/C_xx rows as canonical C_sH/C_HH rows",
+            "does not treat finite C_sx/C_xx rows as canonical C_sH/C_HH rows",
             "does not treat finite correlator subblocks as K'(pole) Schur kernel rows",
             "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Continue chunk production to 63/63, then either fit a real pole/derivative "
-            "Schur kernel packet for the source/complement block or supply canonical "
+            "Use the complete finite packet only as staging support.  For closure, "
+            "fit a real pole/derivative Schur kernel packet for the source/complement block or supply canonical "
             "O_H/source-overlap or W/Z physical-response authority."
         ),
         "pass_count": PASS_COUNT,

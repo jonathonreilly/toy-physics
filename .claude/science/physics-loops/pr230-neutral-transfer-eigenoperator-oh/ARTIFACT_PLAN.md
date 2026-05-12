@@ -574,3 +574,24 @@ primitive/rank-one theorem with physical transfer and source-Higgs coupling
 authority.  Literature, math tools, Ward repairs, beta-lambda routes, and
 Picard-Fuchs bridge work are route context until they produce one of those
 objects.
+
+Block31 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Chunk063 production ensemble | `outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk063/L12xT24/ensemble_measurement.json` | Imported; production metadata preserved |
+| Chunk063 row certificate | `outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json` | Imported; selected-mass-only scalar FH/LSZ and taste-radial rows at `m=0.75` |
+| Chunk063 checkpoint certificate | `outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json` | Created; PASS=15 FAIL=0 |
+| Package audit | `outputs/yt_pr230_two_source_taste_radial_chunk_package_audit_2026-05-06.json` | Refreshed; chunks001-063 complete, active ids empty, PASS=10 FAIL=0 |
+| Row combiner and combined rows | `outputs/yt_pr230_two_source_taste_radial_row_combiner_gate_2026-05-06.json`, `outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json` | Refreshed; ready=63/63, combined rows written, support-only |
+| Source-Higgs/scalar-LSZ/Schur/primitive/neutral/campaign certificates | Existing paired runner outputs | Refreshed to consume the complete packet while preserving no-closure firewalls |
+| Final package note | `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK063_FINAL_PACKAGE_NOTE_2026-05-12.md` | Created; bounded-support checkpoint |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block31 checkpoint |
+
+Follow-on artifact target after block31 is narrower: finite `C_sx/C_xx`
+chunk production is complete, so the next positive artifact must be accepted
+same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with
+Gram/FV/IR authority; strict W/Z matched physical response with accepted
+action, same-source rows, covariance, strict non-observed `g2`, `delta_perp`,
+and final W-response authority; or neutral H3/H4 physical-transfer authority
+plus source/canonical-Higgs coupling.

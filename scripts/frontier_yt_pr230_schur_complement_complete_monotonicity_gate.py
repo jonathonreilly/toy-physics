@@ -167,9 +167,13 @@ def main() -> int:
         and float(x_diff["mean"]) < 0.0
     )
     source_given_x_rejected = schur.get("source_given_x_stieltjes_first_shell_failed") is True
-    complete_packet_absent = parents["row_combiner"].get("combined_rows_written") is False
     ready_count = parents["row_combiner"].get("ready_chunks")
     expected_count = parents["row_combiner"].get("expected_chunks")
+    finite_packet_support_boundary = (
+        isinstance(ready_count, int)
+        and isinstance(expected_count, int)
+        and 0 < ready_count <= expected_count
+    )
     only_two_p_levels = len(p_levels) == 2
     higher_differences_unavailable = only_two_p_levels
     pole_authority_absent = (
@@ -202,7 +206,7 @@ def main() -> int:
     report("no-parent-authorizes-proposal", not proposal_parents, f"proposal_allowed={proposal_parents}")
     report("x-given-source-first-shell-support", first_shell_support, f"diff={x_diff.get('mean')} z={x_z}")
     report("source-given-x-first-shell-rejected", source_given_x_rejected, statuses["schur_repair"])
-    report("complete-row-packet-absent", complete_packet_absent, f"ready={ready_count}/{expected_count}")
+    report("finite-row-packet-support-only", finite_packet_support_boundary, f"ready={ready_count}/{expected_count}")
     report("only-zero-and-first-shell-momenta", only_two_p_levels, f"p_levels={p_levels}")
     report("higher-complete-monotonicity-unavailable", higher_differences_unavailable, "need at least three ordered q_hat^2 levels or analytic theorem")
     report("finite-schur-abc-not-strict-kernel-rows", finite_schur_not_strict, statuses["schur_abc"])
@@ -226,7 +230,7 @@ def main() -> int:
         "proposal_allowed": False,
         "proposal_allowed_reason": (
             "A zero-to-first-shell decrease is only a necessary Stieltjes check. "
-            "The current packet has two q_hat^2 levels, incomplete chunks, no "
+            "The current packet has two q_hat^2 levels, no "
             "pole/model-class rows, no spectral threshold theorem, no multivolume "
             "FV/IR limit, and no canonical O_H or W/Z bridge."
         ),
@@ -257,7 +261,7 @@ def main() -> int:
         ],
         "exact_next_action": (
             "Use C_x|s as a targeted diagnostic while the 63-chunk row packet "
-            "finishes, but for closure add higher-shell/multivolume Schur rows "
+            "is complete finite support, but for closure add higher-shell/multivolume Schur rows "
             "plus a pole/threshold theorem, or supply canonical O_H/C_spH/C_HH "
             "rows or a genuine W/Z response bridge."
         ),

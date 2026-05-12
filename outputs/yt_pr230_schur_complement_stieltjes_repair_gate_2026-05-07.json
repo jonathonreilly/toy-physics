@@ -5,8 +5,8 @@
   "bare_retained_allowed": false,
   "canonical_higgs_operator_identity_passed": false,
   "chunk_issues": [],
-  "complete_63_packet_present": false,
-  "conditional_surface_status": "conditional-support for a future complement-scalar LSZ route only after 63/63 rows, pole/model-class and multivolume FV/IR authority, and a same-surface proof or measurement identifying x with canonical O_H or bypassing through W/Z response",
+  "complete_63_packet_present": true,
+  "conditional_surface_status": "conditional-support for a future complement-scalar LSZ route only after pole/model-class and multivolume FV/IR authority, and a same-surface proof or measurement identifying x with canonical O_H or bypassing through W/Z response",
   "exact_next_action": "Use C_x|s as the targeted complement-scalar diagnostic after more chunks complete, but for closure supply a canonical O_H/source-overlap identity, real C_spH/C_HH pole rows, a W/Z physical-response bypass, or a pole/FV/IR theorem that makes the Schur residual load-bearing.",
   "expected_chunks": 63,
   "fail_count": 0,
@@ -3829,6 +3829,67 @@
       "shell_p_hat_sq_mean": 0.26794919243112264,
       "volume": "12x24",
       "zero_p_hat_sq": 0.0
+    },
+    {
+      "C_source_given_x_shell_mean": 0.12545984929701226,
+      "C_source_given_x_shell_minus_zero": 0.0029315884581132823,
+      "C_source_given_x_zero": 0.12252826083889898,
+      "C_x_given_source_shell_mean": 0.2696310806408825,
+      "C_x_given_source_shell_minus_zero": -0.011268540228566937,
+      "C_x_given_source_zero": 0.2808996208694494,
+      "chunk_index": 63,
+      "mode_rows": {
+        "0,0,0": {
+          "C_source_given_x": 0.12252826083889898,
+          "C_ss": 0.12252826122736292,
+          "C_sx": 1.0446021975900403e-05,
+          "C_x_given_source": 0.2808996208694494,
+          "C_xx": 0.2808996217600144,
+          "Delta_sx": 0.034418142124559105,
+          "mode": "0,0,0",
+          "p_hat_sq": 0.0,
+          "rho_sx": 5.6306330175185965e-05
+        },
+        "0,0,1": {
+          "C_source_given_x": 0.12550366561018297,
+          "C_ss": 0.12550366642717387,
+          "C_sx": 1.4862983459939527e-05,
+          "C_x_given_source": 0.27039258098845714,
+          "C_xx": 0.27039258274863104,
+          "Delta_sx": 0.03393526028875792,
+          "mode": "0,0,1",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 8.068269583096405e-05
+        },
+        "0,1,0": {
+          "C_source_given_x": 0.12544172678341053,
+          "C_ss": 0.12544173920107157,
+          "C_sx": 5.785678599363046e-05,
+          "C_x_given_source": 0.26956826621957114,
+          "C_xx": 0.26956829290453027,
+          "Delta_sx": 0.033815112148000474,
+          "mode": "0,1,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 0.00031462908473740316
+        },
+        "1,0,0": {
+          "C_source_given_x": 0.1254341554974433,
+          "C_ss": 0.12543415550061865,
+          "C_sx": 9.240983331164636e-07,
+          "C_x_given_source": 0.26893239471461916,
+          "C_xx": 0.26893239472142716,
+          "Delta_sx": 0.03373330781778729,
+          "mode": "1,0,0",
+          "p_hat_sq": 0.26794919243112264,
+          "rho_sx": 5.031398572565857e-06
+        }
+      },
+      "rho_sx_shell_mean": 0.00013344772638031101,
+      "rho_sx_zero": 5.6306330175185965e-05,
+      "seed": 2026056063,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_p_hat_sq": 0.0
     }
   ],
   "proposal_allowed": false,
@@ -3895,9 +3956,10 @@
     59,
     60,
     61,
-    62
+    62,
+    63
   ],
-  "ready_chunks": 62,
+  "ready_chunks": 63,
   "row_definition": {
     "C_source_given_x": "Delta_sx / C_xx",
     "C_x_given_source": "Delta_sx / C_ss",
@@ -3910,26 +3972,26 @@
   "source_given_x_stieltjes_first_shell_passed": false,
   "source_given_x_summary": {
     "shell": {
-      "count": 62,
+      "count": 63,
       "max": 0.12556725651890951,
-      "mean": 0.12534808091585495,
+      "mean": 0.12534985501714316,
       "min": 0.12510629629938855,
-      "stderr": 1.105693078650765e-05
+      "stderr": 1.1023702639332816e-05
     },
     "shell_minus_zero": {
-      "count": 62,
+      "count": 63,
       "max": 0.003012342079657143,
-      "mean": 0.002950744947621796,
+      "mean": 0.002950440876359756,
       "min": 0.0029108370910620046,
-      "stderr": 2.6230923152989705e-06
+      "stderr": 2.5989691146485617e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": 183.0330151929934,
+    "shell_minus_zero_z_score_from_chunk_scatter": 183.2910011852805,
     "zero": {
-      "count": 62,
+      "count": 63,
       "max": 0.12264386254073878,
-      "mean": 0.12239733596823316,
+      "mean": 0.12239941414078342,
       "min": 0.12216447997537969,
-      "stderr": 1.1732143980108503e-05
+      "stderr": 1.1729977751323725e-05
     }
   },
   "stieltjes_necessary_condition": "For C(x)=int dmu(s)/(x+s), dmu(s)>=0, x=q_hat^2, C is non-increasing: C(x2)-C(x1)<=0 for x2>x1.  A zero-to-first-shell increase rejects that object as the strict unsubtracted positive Stieltjes scalar two-point candidate.  A decrease is only a necessary first-shell check, not scalar-LSZ authority.",
@@ -3947,26 +4009,26 @@
   "x_given_source_stieltjes_first_shell_passed": true,
   "x_given_source_summary": {
     "shell": {
-      "count": 62,
+      "count": 63,
       "max": 0.2697468820611708,
-      "mean": 0.26954083488999975,
+      "mean": 0.269542267362236,
       "min": 0.26922228807280013,
-      "stderr": 1.2309382971913202e-05
+      "stderr": 1.2196831484642552e-05
     },
     "shell_minus_zero": {
-      "count": 62,
+      "count": 63,
       "max": -0.01124889363522047,
-      "mean": -0.011297199074326372,
+      "mean": -0.011296744172012731,
       "min": -0.011359817384653581,
-      "stderr": 2.93782133160796e-06
+      "stderr": 2.926386308314129e-06
     },
-    "shell_minus_zero_z_score_from_chunk_scatter": -651.1959236955531,
+    "shell_minus_zero_z_score_from_chunk_scatter": -658.3697754540183,
     "zero": {
-      "count": 62,
+      "count": 63,
       "max": 0.2810229245536583,
-      "mean": 0.2808380339643261,
+      "mean": 0.28083901153424873,
       "min": 0.28052990454907417,
-      "stderr": 1.222479577726465e-05
+      "stderr": 1.2068842901375737e-05
     }
   }
 }

@@ -244,11 +244,10 @@ def main() -> int:
     all_blocks_positive = all(
         row.get("positive_correlator_block") is True for row in observations
     )
-    complete_packet_absent = (
+    finite_packet_support_boundary = (
         isinstance(ready_count, int)
         and isinstance(expected_count, int)
-        and ready_count < expected_count
-        and combiner.get("combined_rows_written") is False
+        and 0 < ready_count <= expected_count
     )
     candidate_rejected = (
         parents["same_surface_neutral_multiplicity_candidate"].get("candidate_accepted")
@@ -273,7 +272,7 @@ def main() -> int:
     report("chunk-row-audits-clean", not issues, f"issues={issues[:4]}")
     report("finite-offdiagonal-csx-observed", finite_offdiagonal_observed, "finite C_sx rows exist")
     report("finite-correlator-blocks-positive", all_blocks_positive, "C_ss*C_xx-C_sx^2 > 0 on ready rows")
-    report("complete-row-packet-still-absent", complete_packet_absent, f"ready={ready_count}/{expected_count}")
+    report("finite-row-packet-support-only", finite_packet_support_boundary, f"ready={ready_count}/{expected_count}")
     report("same-surface-candidate-still-rejected", candidate_rejected, statuses["same_surface_neutral_multiplicity_candidate"])
     report("neutral-primitive-route-still-missing-h3", primitive_route_still_missing_h3, statuses["neutral_primitive_route_completion"])
     report("finite-to-pole-lift-blocks-transfer-promotion", pole_lift_blocks_derivative, statuses["finite_to_pole_lift"])

@@ -212,7 +212,7 @@ def partial_mode_diagnostics(chunk_audits: list[dict[str, Any]]) -> dict[str, An
             }
         mode_summary["strict_limit"] = (
             "rho_sx_real and finite_row_gram_determinant_real are finite-mode "
-            "C_sx/C_xx diagnostics on partial chunks. They are not isolated-pole "
+            "C_sx/C_xx diagnostics on the current chunk packet. They are not isolated-pole "
             "residues, not canonical C_sH/C_HH rows, and not y_t evidence."
         )
         summary[mode] = mode_summary
@@ -278,15 +278,19 @@ def main() -> int:
     report("combined-output-written-only-if-all-ready", combined_written == all_ready, f"combined_written={combined_written}")
     report(
         "partial-finite-overlap-diagnostics-non-evidence",
-        partial_set and all("rho_sx_real" in row for row in summary.values()),
-        "rho_sx/Gram diagnostics are finite-mode scout fields only",
+        (partial_set or all_ready)
+        and all(
+            "rho_sx_real" in row and "finite_row_gram_determinant_real" in row
+            for row in summary.values()
+        ),
+        "rho_sx/Gram diagnostics are finite-mode support fields only",
     )
     report("does-not-authorize-retained-proposal", proposal_allowed is False, "row combiner support only")
 
     result = {
         "actual_current_surface_status": (
             "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; "
-            "partial row set is not closure"
+            "canonical O_H and pole/FV/IR authority still absent"
         ),
         "proposal_allowed": proposal_allowed,
         "bare_retained_allowed": False,
@@ -303,7 +307,7 @@ def main() -> int:
         "bad_chunk_audits": bad,
         "partial_mode_diagnostics": summary,
         "strict_non_claims": [
-            "does not treat partial chunks as combined L12 row evidence",
+            "does not treat finite C_sx/C_xx rows as canonical-Higgs pole evidence",
             "does not treat C_sx/C_xx aliases as canonical-Higgs C_sH/C_HH rows",
             "does not derive canonical O_H or kappa_s",
             "does not supply pole/FV/IR authority",

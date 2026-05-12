@@ -6,7 +6,7 @@ The Schur-complement repair gate found that the finite residual
 
     C_x|s(q) = det([[C_ss, C_sx], [C_sx, C_xx]]) / C_ss(q)
 
-passes the zero-to-first-shell Stieltjes direction on the current partial
+passes the zero-to-first-shell Stieltjes direction on the current finite
 packet.  With only two q_hat^2 levels, those two endpoint values determine a
 unique one-pole ansatz C(x)=R/(x+m^2), but they do not determine a physical
 pole or residue.  This runner records the one-pole scout and explicitly
@@ -253,7 +253,13 @@ def main() -> int:
         complete.get("canonical_higgs_or_physical_response_bridge_present") is False
         and parents["source_higgs_readiness"].get("source_higgs_launch_ready") is False
     )
-    incomplete_packet = parents["row_combiner"].get("combined_rows_written") is False
+    ready_chunks = parents["row_combiner"].get("ready_chunks")
+    expected_chunks = parents["row_combiner"].get("expected_chunks")
+    finite_packet_support_boundary = (
+        isinstance(ready_chunks, int)
+        and isinstance(expected_chunks, int)
+        and 0 < ready_chunks <= expected_chunks
+    )
     retained_open = parents["retained_route"].get("proposal_allowed") is False
     campaign_open = parents["campaign_status"].get("proposal_allowed") is False
     firewall_clean = all(value is False for value in forbidden_firewall().values())
@@ -266,7 +272,7 @@ def main() -> int:
     report("positive-two-pole-counterfamilies", positive_counterfamilies, str(counterfamilies))
     report("model-class-pole-authority-absent", model_class_authority_absent, statuses["schur_complete_monotonicity"])
     report("canonical-or-physical-response-bridge-absent", bridge_absent, statuses["source_higgs_readiness"])
-    report("complete-packet-absent", incomplete_packet, f"ready={parents['row_combiner'].get('ready_chunks')}/{parents['row_combiner'].get('expected_chunks')}")
+    report("finite-packet-support-only", finite_packet_support_boundary, f"ready={ready_chunks}/{expected_chunks}")
     report("retained-route-still-open", retained_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
     report("forbidden-import-firewall-clean", firewall_clean, str(forbidden_firewall()))

@@ -4,7 +4,7 @@
   "bare_retained_allowed": false,
   "canonical_higgs_operator_identity_passed": false,
   "chunk_issues": [],
-  "complete_63_packet_present": false,
+  "complete_63_packet_present": true,
   "current_raw_c_ss_proxy_fails_stieltjes_monotonicity": true,
   "exact_next_action": "Derive or measure a certified contact-subtracted/denominator scalar two-point object with threshold and multivolume FV/IR authority, or bypass scalar LSZ with same-source C_spH/C_HH pole rows or W/Z physical-response rows.",
   "expected_chunks": 63,
@@ -44,7 +44,7 @@
     "stieltjes_moment_gate": "exact-support / FH-LSZ Stieltjes moment-certificate gate; strict positive certificate absent",
     "threshold_authority_audit": "exact negative boundary / FH-LSZ threshold-authority import audit"
   },
-  "parsed_chunks": 62,
+  "parsed_chunks": 63,
   "pass_count": 13,
   "per_chunk_rows": [
     {
@@ -2340,26 +2340,63 @@
       "volume": "12x24",
       "zero_C_ss_real": 0.12256928749248086,
       "zero_p_hat_sq": 0.0
+    },
+    {
+      "chunk_index": 63,
+      "mode_rows": {
+        "0,0,0": {
+          "C_ss_real": 0.12230504239110793,
+          "C_ss_real_config_stderr": 9.758595077667702e-05,
+          "p_hat_sq": 0.0,
+          "timeseries_count": 16
+        },
+        "0,0,1": {
+          "C_ss_real": 0.12525289090937622,
+          "C_ss_real_config_stderr": 9.673713920565832e-05,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "0,1,0": {
+          "C_ss_real": 0.1252640363248732,
+          "C_ss_real_config_stderr": 9.273019255604696e-05,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        },
+        "1,0,0": {
+          "C_ss_real": 0.12523515918115102,
+          "C_ss_real_config_stderr": 8.469021841468914e-05,
+          "p_hat_sq": 0.26794919243112264,
+          "timeseries_count": 16
+        }
+      },
+      "seed": 2026056063,
+      "selected_mass_parameter": 0.75,
+      "shell_C_ss_real_mean": 0.12525069547180015,
+      "shell_minus_zero": 0.002945653080692223,
+      "shell_p_hat_sq_mean": 0.26794919243112264,
+      "volume": "12x24",
+      "zero_C_ss_real": 0.12230504239110793,
+      "zero_p_hat_sq": 0.0
     }
   ],
   "proposal_allowed": false,
-  "proposal_allowed_reason": "The gate finds a necessary Stieltjes monotonicity violation in the current raw C_ss proxy and also records no 63/63 combined packet, no multivolume FV/IR authority, no isolated-pole/model-class authority, and no canonical O_H/source-overlap authority.",
+  "proposal_allowed_reason": "The gate finds a necessary Stieltjes monotonicity violation in the current raw C_ss proxy and also records no multivolume FV/IR authority, no isolated-pole/model-class authority, and no canonical O_H/source-overlap authority.",
   "raw_c_ss_rows_positive": true,
-  "ready_chunks": 62,
+  "ready_chunks": 63,
   "shell_minus_zero_summary": {
-    "count": 62,
+    "count": 63,
     "max": 0.0030000103444333404,
-    "mean": 0.002950461969593025,
+    "mean": 0.002950385638023171,
     "min": 0.002890116126499989,
-    "stderr": 2.830277577165888e-06
+    "stderr": 2.7860360730790015e-06
   },
-  "shell_minus_zero_z_score_from_chunk_scatter": 193.5686242048355,
+  "shell_minus_zero_z_score_from_chunk_scatter": 195.191222800661,
   "shell_summary": {
-    "count": 62,
+    "count": 63,
     "max": 0.12551651195700791,
-    "mean": 0.1253366106591121,
+    "mean": 0.12533524692598016,
     "min": 0.12515980073473093,
-    "stderr": 1.0291677208963886e-05
+    "stderr": 1.0218409463454682e-05
   },
   "stieltjes_theorem": "For C(x)=int dmu(s)/(x+s) with dmu(s)>=0 and x=q_hat^2>=0, C(x2)-C(x1)=-(x2-x1) int dmu(s)/((x2+s)(x1+s)) <= 0 for x2>x1. A raw scalar-source proxy that increases from the zero mode to a higher shell is therefore not the strict unsubtracted Stieltjes two-point object needed for scalar-LSZ moment authority.",
   "strict_non_claims": [
@@ -2367,7 +2404,7 @@
     "does not set kappa_s, c2, or Z_match to one",
     "does not treat raw C_ss as canonical O_H or physical y_t evidence",
     "does not use H_unit, yt_ward_identity, alpha_LM, plaquette/u0, or observed top/y_t targets",
-    "does not treat partial chunks or reduced pilots as production closure evidence"
+    "does not treat completed chunks or reduced pilots as production closure evidence"
   ],
   "strict_scalar_lsz_moment_fv_authority_gate_passed": true,
   "strict_scalar_lsz_moment_fv_authority_present": false,
@@ -2377,10 +2414,10 @@
     "12x24"
   ],
   "zero_mode_summary": {
-    "count": 62,
+    "count": 63,
     "max": 0.12259617590647398,
-    "mean": 0.12238614868951907,
+    "mean": 0.12238486128795699,
     "min": 0.12221302909665574,
-    "stderr": 1.1243396303926518e-05
+    "stderr": 1.1138142647124882e-05
   }
 }

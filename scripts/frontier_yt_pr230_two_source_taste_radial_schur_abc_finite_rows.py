@@ -395,10 +395,10 @@ def main() -> int:
     )
     retained_open = parents["retained_route"].get("proposal_allowed") is False
     campaign_open = parents["campaign_status"].get("proposal_allowed") is False
-    partial_packet = (
+    packet_support_boundary = (
         isinstance(ready_chunks, int)
         and isinstance(expected_chunks, int)
-        and ready_chunks < expected_chunks
+        and 0 < ready_chunks <= expected_chunks
     )
     clean_firewall = all(value is False for value in forbidden_firewall().values())
 
@@ -415,7 +415,7 @@ def main() -> int:
     report("finite-inverse-abc-rows-finite", finite_rows, "A_f/B_f/C_f rows finite with Delta_sx>0")
     report("inverse-identity-check-clean", inverse_identity_clean, "max |G K - I| residual < 1e-10")
     report("finite-shell-abc-differences-finite", finite_derivatives, str(summary))
-    report("partial-packet-boundary-preserved", partial_packet, f"ready={ready_chunks}/{expected_chunks}")
+    report("finite-packet-boundary-preserved", packet_support_boundary, f"ready={ready_chunks}/{expected_chunks}")
     report("retained-route-still-open", retained_open, statuses["retained_route"])
     report("campaign-status-still-open", campaign_open, statuses["campaign_status"])
     report("forbidden-firewall-clean", clean_firewall, str(forbidden_firewall()))
@@ -434,7 +434,7 @@ def main() -> int:
         and finite_rows
         and inverse_identity_clean
         and finite_derivatives
-        and partial_packet
+        and packet_support_boundary
         and retained_open
         and campaign_open
         and clean_firewall
@@ -500,7 +500,7 @@ def main() -> int:
             "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
         ],
         "exact_next_action": (
-            "Rerun on larger completed row sets as chunks finish.  For closure, "
+            "Use the complete finite packet only as staging support.  For closure, "
             "replace finite inverse rows with isolated-pole K'(pole)/A'B'C' "
             "authority or add canonical O_H/source-overlap or W/Z response authority."
         ),

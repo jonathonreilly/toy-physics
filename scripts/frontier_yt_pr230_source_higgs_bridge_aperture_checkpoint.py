@@ -244,19 +244,27 @@ def main() -> int:
         and direct.get("current_surface_contract_satisfied") is False
         and direct.get("proposal_allowed") is False
     )
-    partial_rows_are_current_prefix = (
+    two_source_rows_are_current_prefix = (
         expected_chunks == 63
         and isinstance(ready_chunks, int)
         and present_chunks == ready_chunks
-        and 42 <= ready_chunks < expected_chunks
+        and 42 <= ready_chunks <= expected_chunks
         and first_ready == 1
         and last_ready == ready_chunks
     )
-    partial_rows_not_combined = (
-        combiner.get("combined_rows_written") is False
-        and isinstance(missing_indices, list)
-        and bool(missing_indices)
-        and missing_indices[0] == int(ready_chunks) + 1
+    two_source_combiner_boundary = (
+        (
+            combiner.get("combined_rows_written") is False
+            and isinstance(missing_indices, list)
+            and bool(missing_indices)
+            and missing_indices[0] == int(ready_chunks) + 1
+        )
+        or (
+            ready_chunks == expected_chunks == 63
+            and combiner.get("combined_rows_written") is True
+            and isinstance(missing_indices, list)
+            and not missing_indices
+        )
     )
     package_passed_support_only = (
         package.get("chunk_package_audit_passed") is True
@@ -280,7 +288,6 @@ def main() -> int:
     strict_lsz_boundary = (
         lsz.get("strict_scalar_lsz_moment_fv_authority_gate_passed") is True
         and lsz.get("strict_scalar_lsz_moment_fv_authority_present") is False
-        and lsz.get("complete_63_packet_present") is False
         and lsz.get("proposal_allowed") is False
     )
     builder_rows_absent = (
@@ -296,7 +303,14 @@ def main() -> int:
         "not closed" in status(wz) or "exact negative boundary" in status(wz)
     )
     campaign_denies_proposal = campaign.get("proposal_allowed") is False
-    future_artifacts_absent = not any(futures.values())
+    closure_future_artifacts_absent = not any(
+        value for name, value in futures.items() if name != "two_source_combined_rows"
+    )
+    two_source_combined_rows_support_only = (
+        futures.get("two_source_combined_rows") is True
+        and ready_chunks == expected_chunks == 63
+        and combiner.get("combined_rows_written") is True
+    )
     firewall_clean = not any(FORBIDDEN_FIREWALL.values())
 
     report("parent-certificates-present", not missing, f"missing={missing}")
@@ -305,10 +319,14 @@ def main() -> int:
     report("direct-source-Higgs-contract-support-only", direct_contract_support_only, status(direct))
     report(
         "two-source-ready-prefix-current",
-        partial_rows_are_current_prefix,
+        two_source_rows_are_current_prefix,
         f"ready={first_ready}-{last_ready}/{expected_chunks}",
     )
-    report("partial-two-source-rows-not-combined", partial_rows_not_combined, f"missing_head={missing_indices[:5] if isinstance(missing_indices, list) else missing_indices}")
+    report(
+        "two-source-combiner-boundary-preserved",
+        two_source_combiner_boundary,
+        f"combined={combiner.get('combined_rows_written')} missing_head={missing_indices[:5] if isinstance(missing_indices, list) else missing_indices}",
+    )
     report("chunk-package-pass-support-only", package_passed_support_only, status(package))
     report("source-Higgs-production-readiness-blocks-C_sH", readiness_blocks_csh, status(readiness))
     report("time-kernel-GEVP-contract-support-only", time_kernel_support_only, status(gevp))
@@ -317,7 +335,8 @@ def main() -> int:
     report("source-Higgs-Gram-purity-not-passed", gram_not_passed, status(gram))
     report("WZ-fallback-still-open-after-block08", wz_fallback_still_open, status(wz))
     report("campaign-status-denies-proposal", campaign_denies_proposal, status(campaign))
-    report("future-artifact-files-absent", future_artifacts_absent, f"future_presence={futures}")
+    report("two-source-combined-rows-support-only", two_source_combined_rows_support_only, f"future_presence={futures}")
+    report("closure-future-artifact-files-absent", closure_future_artifacts_absent, f"future_presence={futures}")
     report("forbidden-firewall-clean", firewall_clean, str(FORBIDDEN_FIREWALL))
     report("aperture-open-gates-recorded", len(open_gates) >= 5, f"open_gates={open_gates}")
     report("does-not-authorize-proposed-retained", True, "proposal_allowed=false")
@@ -340,8 +359,9 @@ def main() -> int:
         "proposal_allowed_reason": (
             "The current aperture has useful two-source taste-radial staging "
             "rows and source-Higgs contracts, but canonical O_H, production "
-            "C_sH/C_HH pole rows, complete 63/63 row packet, strict scalar "
-            "LSZ/FV/IR authority, and Gram flatness are absent."
+            "C_sH/C_HH pole rows, strict scalar LSZ/FV/IR authority, and Gram "
+            "flatness are absent.  The complete 63/63 two-source packet is "
+            "finite C_sx/C_xx support only."
         ),
         "audit_required_before_effective_retained": True,
         "bare_retained_allowed": False,

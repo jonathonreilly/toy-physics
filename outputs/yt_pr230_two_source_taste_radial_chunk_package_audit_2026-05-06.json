@@ -2,10 +2,10 @@
   "active_chunk_ids": [],
   "active_chunks_counted_as_evidence": false,
   "active_process_rows": [],
-  "actual_current_surface_status": "bounded-support / two-source taste-radial chunks001-062 packaged; active chunks, logs, and pending checkpoints are not evidence",
+  "actual_current_surface_status": "bounded-support / two-source taste-radial chunks001-063 packaged; active chunks, logs, and pending checkpoints are not evidence",
   "bare_retained_allowed": false,
   "chunk_package_audit_passed": true,
-  "completed_chunk_count": 62,
+  "completed_chunk_count": 63,
   "completed_chunk_ids": [
     1,
     2,
@@ -68,9 +68,10 @@
     59,
     60,
     61,
-    62
+    62,
+    63
   ],
-  "completed_prefix_last": 62,
+  "completed_prefix_last": 63,
   "completed_rows": [
     {
       "artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk001/L12xT24/ensemble_measurement.json",
@@ -1063,6 +1064,22 @@
         "source_operator_symbol": "x",
         "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
       }
+    },
+    {
+      "artifact": "outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk063/L12xT24/ensemble_measurement.json",
+      "checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json",
+      "checkpoint_passed": true,
+      "chunk_index": 63,
+      "pole_residue_rows_count": 0,
+      "proposal_allowed": false,
+      "row": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json",
+      "source_higgs_aliases": {
+        "C_sx_aliases_C_sH_schema_field": true,
+        "C_xx_aliases_C_HH_schema_field": true,
+        "available": true,
+        "source_operator_symbol": "x",
+        "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+      }
     }
   ],
   "fail_count": 0,
@@ -1145,7 +1162,8 @@
     59,
     60,
     61,
-    62
+    62,
+    63
   ],
   "strict_non_claims": [
     "does not claim retained or proposed_retained PR230 closure",

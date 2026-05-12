@@ -1436,3 +1436,39 @@ lands.  Build one physical bridge artifact: accepted same-surface EW/Higgs
 action/canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z
 matched physical response, or a neutral primitive/rank-one theorem with a
 physical transfer kernel and source-Higgs coupling authority.
+
+## Block31 Chunk063 Final Package
+
+Block31 finishes the last finite two-source taste-radial chunk package after
+remote block30 landed.
+
+Artifacts added/refreshed:
+
+- `outputs/yt_direct_lattice_correlator_production_two_source_taste_radial_rows/L12_T24_chunk063/L12xT24/ensemble_measurement.json`
+- `outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json`
+- `outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json`
+- `outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json`
+- `docs/YT_PR230_TWO_SOURCE_TASTE_RADIAL_CHUNK063_FINAL_PACKAGE_NOTE_2026-05-12.md`
+
+Result:
+
+- chunks001-063 are packaged and the packet is complete at `63/63`;
+- the combiner writes the combined finite `C_ss/C_sx/C_xx` rows;
+- production metadata remains intact: selected mass `0.75`, seed
+  `2026056063`, three-mass top scan, `numba_gauge_seed_v1`,
+  selected-mass-only scalar FH/LSZ/taste-radial rows, and normal-equation
+  cache metadata;
+- the old row-wave supervisor was stopped after package audit reported no
+  active chunks.
+
+Honest status: bounded-support / finite taste-radial packet complete.  This is
+not canonical `O_H`, not canonical `C_sH/C_HH`, not strict scalar-LSZ/FV/IR
+authority, not W/Z response evidence, not neutral H3/H4 physical-transfer
+authority, and not retained or `proposed_retained` top-Yukawa closure.
+
+Exact next action: finite `C_sx/C_xx` chunk production is complete.  Reopen the
+PR230 positive lane only with one of the explicit missing artifacts: accepted
+same-surface canonical `O_H` plus strict `C_ss/C_sH/C_HH` pole rows with
+Gram/FV/IR authority; strict W/Z physical response with accepted action,
+matched covariance, strict non-observed `g2`, and `delta_perp`; or neutral
+H3/H4 physical-transfer/irreducibility plus source/canonical-Higgs coupling.
