@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T01:25:15.456088+00:00",
+  "generated_at": "2026-05-12T01:31:38.043289+00:00",
   "per_claim": {
     "3d_correction_master_note": {
       "assert_count": 0,
@@ -16980,6 +16980,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_pr230_l12_chunk_compute_status.py"
+    },
+    "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py"
     },
     "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05": {
       "assert_count": 1,
@@ -35910,6 +35922,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py": {
+      "assert_count": 1,
+      "claims": [
+        "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_yt_pr230_logdet_hessian_neutral_mixing_attempt.py": {
       "assert_count": 1,
       "claims": [
@@ -42367,11 +42394,11 @@
       "A": 9,
       "B": 245,
       "C": 536,
-      "D": 329,
+      "D": 330,
       "none": 404
     },
-    "runners_classified": 1523,
-    "runners_with_C": 833,
-    "runners_with_D": 608
+    "runners_classified": 1524,
+    "runners_with_C": 834,
+    "runners_with_D": 609
   }
 }

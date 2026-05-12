@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:25:12.929538+00:00",
+  "generated_at": "2026-05-12T01:31:35.503720+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42695,6 +42695,16 @@
       "runner_path": "scripts/frontier_yt_pr230_l12_chunk_compute_status.py",
       "title": "PR230 completed-L12 chunk compute status"
     },
+    "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12": {
+      "claim_id": "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12",
+      "current_status": "support",
+      "current_status_raw": "no-go / exact negative boundary for lane-1 Block A on the current",
+      "deps": [],
+      "note_hash": "654c354e936140f7879cef1012dc116ed0df5664aa860b2f01befda141735fee",
+      "path": "docs/YT_PR230_LANE1_OH_ROOT_THEOREM_ATTEMPT_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_pr230_lane1_oh_root_theorem_attempt.py",
+      "title": "PR230 Lane 1 O_H Root Theorem Attempt"
+    },
     "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05": {
       "claim_id": "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
       "current_status": "unknown",
@@ -46672,6 +46682,7 @@
     "yt_pr230_invariant_ring_oh_certificate_attempt_note_2026-05-05",
     "yt_pr230_kinetic_taste_mixing_bridge_attempt_note_2026-05-06",
     "yt_pr230_l12_chunk_compute_status_note_2026-05-06",
+    "yt_pr230_lane1_oh_root_theorem_attempt_note_2026-05-12",
     "yt_pr230_logdet_hessian_neutral_mixing_attempt_note_2026-05-05",
     "yt_pr230_matching_running_bridge_gate_note_2026-05-04",
     "yt_pr230_minimal_axioms_yukawa_summary_firewall_note_2026-05-05",
@@ -46911,16 +46922,16 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4701,
-    "leaf_count": 1131,
-    "node_count": 2127,
-    "root_count": 1632,
-    "runners_with_path": 1602,
+    "leaf_count": 1132,
+    "node_count": 2128,
+    "root_count": 1633,
+    "runners_with_path": 1603,
     "status_counts": {
       "bounded": 595,
       "open": 113,
       "proposed_promoted": 1,
       "proposed_retained": 373,
-      "support": 462,
+      "support": 463,
       "unknown": 583
     }
   }

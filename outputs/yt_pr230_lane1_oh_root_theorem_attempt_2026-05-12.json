@@ -1,0 +1,112 @@
+{
+  "accepted_current_surface": false,
+  "actual_current_surface_status": "no-go / exact negative boundary for lane-1 Block A: current PR230 support stack does not derive x=canonical O_H or accepted action authority",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_lsz_metric_derived": false,
+  "canonical_oh_identity_derived": false,
+  "complete_taste_radial_packet": true,
+  "conditional_surface_status": "exact support if a future same-surface action/canonical-operator certificate proves x=canonical O_H with LSZ/metric normalization and strict C_ss/C_sH/C_HH pole rows",
+  "current_promotion_allowed": false,
+  "exact_negative_boundary_passed": true,
+  "expected_chunks": 63,
+  "forbidden_firewall": {
+    "claimed_retained_or_proposed_retained": false,
+    "identified_taste_radial_x_as_canonical_O_H": false,
+    "renamed_C_sx_C_xx_as_C_sH_C_HH": false,
+    "set_c2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "treated_conditional_fms_packet_as_accepted_action": false,
+    "treated_equal_time_rows_as_transfer_kernel": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_or_yukawa_selector": false,
+    "used_observed_wz_mass_or_g2_selector": false,
+    "used_reduced_pilot_as_production": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "lane1_block": "A",
+  "lane1_block_result": "exact_negative_boundary_current_surface_only",
+  "open_imports": [
+    "same-surface EW/Higgs action or canonical-operator theorem",
+    "x=canonical O_H identity and normalization certificate",
+    "canonical LSZ/metric and limiting-order authority",
+    "production C_ss/C_sH/C_HH pole rows",
+    "source-Higgs Gram flatness or equivalent rank-one theorem",
+    "FV/IR/model-class scalar-pole authority"
+  ],
+  "parent_statuses": {
+    "additive_top_rows": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
+    "additive_top_subtraction_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "canonical_oh_hard_residual": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
+    "degree_one_radial_tangent": "exact-support / degree-one radial-tangent O_H uniqueness theorem; same-surface action/LSZ premise and pole rows absent",
+    "fms_oh_candidate_action_packet": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "os_transfer_kernel_artifact": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "retained_route": "open / retained closure not yet reached",
+    "row_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
+    "source_higgs_direct_pole_row_contract": "exact-support / direct source-Higgs pole-row contract; O_H and production C_sH/C_HH rows are absent",
+    "source_higgs_time_kernel_gevp": "bounded-support / source-Higgs time-kernel GEVP contract; smoke rows are not physics closure",
+    "taste_radial_promotion_contract": "exact-support / taste-radial-to-source-Higgs promotion contract; current promotion blocked by absent canonical O_H identity/action/LSZ premise"
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface has complete taste-radial C_sx/C_xx support and degree-one axis support, but accepted action authority, canonical O_H, C_sH/C_HH pole rows, scalar time-kernel authority, and Gram flatness remain absent.",
+  "ready_chunks": 63,
+  "retirement_paths": [
+    "derive/adopt same-surface action and canonical O_H, then rerun promotion and pole-row gates",
+    "measure strict C_ss/C_sH/C_HH time-kernel rows for certified O_H",
+    "prove a neutral rank-one theorem that forces x=O_H or kappa=1 without relabeling",
+    "bypass through strict same-source W/Z physical-response packet"
+  ],
+  "same_surface_cl3_z3_derived": false,
+  "scalar_time_kernel_present": false,
+  "source_higgs_pole_rows_present": false,
+  "summary": {
+    "fail": 0,
+    "pass": 14
+  },
+  "witness": {
+    "completion_A": {
+      "canonical_O_H": [
+        1.0,
+        0.0
+      ],
+      "promotion_allowed_if_action_LSZ_also_certified": true,
+      "source_higgs_overlap": 1.0,
+      "x_dot_O_H": 1.0
+    },
+    "completion_B": {
+      "canonical_O_H": [
+        0.7071067811865476,
+        0.7071067811865475
+      ],
+      "promotion_allowed_on_current_surface": false,
+      "source_higgs_overlap": 0.7071067811865476,
+      "x_dot_O_H": 0.7071067811865476
+    },
+    "interpretation": "Current PR230 rows measure x, not canonical O_H.  Until the action/LSZ/canonical-operator premise fixes O_H, both completions preserve the current measured x-packet while giving different source-Higgs overlap.",
+    "orthogonal_neutral_axis": [
+      0.0,
+      1.0
+    ],
+    "overlap_difference": 0.2928932188134524,
+    "same_current_observed_rows": {
+      "C_HH": "absent",
+      "C_sH": "absent",
+      "C_ss": "fixed",
+      "C_sx": "fixed",
+      "C_xx": "fixed",
+      "operator_measured": "x_taste_radial"
+    },
+    "source_axis_x": [
+      1.0,
+      0.0
+    ],
+    "theta_radians": 0.7853981633974483
+  }
+}
