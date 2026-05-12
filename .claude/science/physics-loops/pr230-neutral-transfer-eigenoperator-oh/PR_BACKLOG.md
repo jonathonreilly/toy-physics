@@ -171,6 +171,15 @@ zeroth-principles substrate-to-`y_t` chain and keeps it route-selection only.
 No standalone block30 review PR should be opened unless PR #230 integration
 fails.
 
+Block35 follows the same direct PR #230 landing path.  It adds the
+post-block34 physical-bridge admission checkpoint at PR head `da3d6d8e` and
+records that chunk063 completion, no-go-scope clarification, the
+promotion-contract refresh, the OS transfer alias firewall, and additive-top
+support refresh are support only; no accepted same-surface `O_H`/action plus
+strict source-Higgs rows, strict W/Z physical-response packet, or neutral
+H3/H4 physical-transfer authority is present.  No standalone block35 review PR
+should be opened unless PR #230 integration fails.
+
 Recovery commands if direct PR #230 push or view fails:
 
 ```bash

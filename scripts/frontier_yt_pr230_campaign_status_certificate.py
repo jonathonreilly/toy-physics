@@ -788,6 +788,9 @@ def main() -> int:
         "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review": load(
             "outputs/yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_2026-05-11.json"
         ),
+        "pr230_block35_post_block34_physical_bridge_admission": load(
+            "outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json"
+        ),
         "pr230_post_fms_source_overlap_necessity_gate": load(
             "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json"
         ),
@@ -4109,6 +4112,66 @@ def main() -> int:
             "pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review"
         ],
     )
+    block35_post_block34_bridge_admission = certificates[
+        "pr230_block35_post_block34_physical_bridge_admission"
+    ]
+    report(
+        "pr230-block35-post-block34-bridge-admission-not-closure",
+        "block35 post-block34 physical-bridge admission checkpoint"
+        in str(statuses["pr230_block35_post_block34_physical_bridge_admission"])
+        and block35_post_block34_bridge_admission.get("proposal_allowed") is False
+        and block35_post_block34_bridge_admission.get("bare_retained_allowed")
+        is False
+        and block35_post_block34_bridge_admission.get(
+            "block35_post_block34_physical_bridge_admission_checkpoint_passed"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block35_post_block34_bridge_admission.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "post-block30-inputs-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "chunk063-package-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "promotion-contract-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "os-transfer-alias-firewall-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "additive-top-support-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "source-higgs-physical-bridge-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "wz-physical-response-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "neutral-h3h4-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True,
+        statuses["pr230_block35_post_block34_physical_bridge_admission"],
+    )
     post_fms_source_overlap_necessity_gate = certificates[
         "pr230_post_fms_source_overlap_necessity_gate"
     ]
@@ -6978,6 +7041,59 @@ def main() -> int:
             ).values()
         )
     )
+    result["block35_post_block34_physical_bridge_not_admitted"] = (
+        block35_post_block34_bridge_admission.get("proposal_allowed") is False
+        and block35_post_block34_bridge_admission.get("bare_retained_allowed")
+        is False
+        and block35_post_block34_bridge_admission.get(
+            "block35_post_block34_physical_bridge_admission_checkpoint_passed"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("live_chunk_worker", {}).get(
+            "touched"
+        )
+        is False
+        and block35_post_block34_bridge_admission.get("live_chunk_worker", {}).get(
+            "inspected_active_output"
+        )
+        is False
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "post-block30-inputs-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "chunk063-package-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "promotion-contract-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "os-transfer-alias-firewall-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "additive-top-support-committed-support-only"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "source-higgs-physical-bridge-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "wz-physical-response-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "neutral-h3h4-not-admitted"
+        )
+        is True
+        and block35_post_block34_bridge_admission.get("checks", {}).get(
+            "forbidden-firewall-clean"
+        )
+        is True
+    )
     result["schur_route_completion_blocks"] = (
         schur_route_completion.get("schur_route_completion_passed") is True
         and schur_route_completion.get("proposal_allowed") is False
@@ -7020,6 +7136,7 @@ def main() -> int:
         "does not treat the block27 checkpoint commit or the degree-one O_H support intake as actual canonical O_H/source-Higgs pole-row closure",
         "does not treat the post-block28 W/Z pivot admission checkpoint as accepted-action response evidence",
         "does not treat the block30 assumptions/first-principles/literature/math/repo-bridge review as PR230 top-Yukawa closure",
+        "does not treat the block35 post-block34 physical-bridge admission checkpoint as a new source-Higgs, W/Z, or neutral H3/H4 production artifact",
         "does not treat origin/main audit/effective-status drift as same-surface physics evidence",
         "does not treat repeated origin/main effective-status drift as same-surface physics evidence",
         "does not treat post-cycle-24 origin/main audit/effective-status drift as same-surface physics evidence",

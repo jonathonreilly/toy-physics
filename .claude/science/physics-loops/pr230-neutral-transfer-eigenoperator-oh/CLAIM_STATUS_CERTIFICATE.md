@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block33_complete_packet_os_transfer_alias_firewall`.
+Current block: `block35_post_block34_physical_bridge_admission_checkpoint`.
 
 ```yaml
-actual_current_surface_status: exact support plus negative boundary / block33 complete-packet OS transfer-kernel and alias-firewall refresh; finite two-source taste-radial chunks001-063 are complete and combined, but current rows are not scalar Euclidean-time kernels, transfer generators, pole residues, or canonical source-Higgs rows
+actual_current_surface_status: open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top commits are support only and no physical bridge is admitted
 conditional_surface_status: source-Higgs support if a future accepted same-surface FMS/EW-Higgs action proves canonical O_H is a linear Z3-covariant radial tangent and supplies canonical LSZ normalization plus strict C_ss/C_sH/C_HH rows; W/Z support only if accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority exist
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block33 refreshes the OS transfer-kernel gate after chunk063 and block32. The complete packet has top tau correlators in 63 chunks but scalar time kernels in 0 chunks, and the apparent C_sH/C_HH schema fields are verified aliases of C_sx/C_xx with alias metadata in all 63 chunks and zero mismatches. No transfer/pole/source-Higgs promotion is authorized."
+proposal_allowed_reason: "Block35 is an admission/yield checkpoint after chunk063, no-go scope clarification, complete-packet promotion contract refresh, OS transfer alias firewall, and additive-top support refresh. The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -260,5 +260,11 @@ Prior block certificate summary:
   OS transfer-kernel and alias-firewall refresh; the complete packet has no
   scalar Euclidean-time kernel and its apparent `C_sH/C_HH` fields are
   taste-radial aliases, not canonical source-Higgs pole rows.
-- Block01 through Block33 all have `proposal_allowed=false`; their boundaries
+- Block35 actual status: open / post-block34 physical-bridge admission
+  checkpoint; it consumes chunk063, no-go-scope, promotion-contract,
+  OS-transfer-alias firewall, and additive-top commits as support-only inputs
+  and confirms no accepted same-surface `O_H`/action plus strict
+  `C_ss/C_sH/C_HH` rows, no strict W/Z matched physical-response packet, and
+  no neutral H3/H4 physical-transfer authority are present.
+- Block01 through Block35 all have `proposal_allowed=false`; their boundaries
   remain active.

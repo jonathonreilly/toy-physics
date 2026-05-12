@@ -1,0 +1,267 @@
+{
+  "actual_current_surface_status": "open / block35 post-block34 physical-bridge admission checkpoint; chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top commits are support only and no physical bridge is admitted",
+  "additive_top_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "additive_top_jacobian_note": true,
+      "additive_top_jacobian_rows": true,
+      "additive_top_jacobian_runner": true,
+      "additive_top_subtraction_contract": true,
+      "additive_top_subtraction_note": true,
+      "additive_top_subtraction_runner": true
+    },
+    "decision": "support only; additive-top rows and subtraction contract still require accepted action, W/Z response rows, strict g2, and matched covariance before a physical response can be admitted",
+    "support_paths": {
+      "additive_top_jacobian_note": "docs/YT_PR230_ADDITIVE_TOP_JACOBIAN_ROW_BUILDER_NOTE_2026-05-07.md",
+      "additive_top_jacobian_rows": "outputs/yt_pr230_additive_top_jacobian_rows_2026-05-07.json",
+      "additive_top_jacobian_runner": "scripts/frontier_yt_pr230_additive_top_jacobian_row_builder.py",
+      "additive_top_subtraction_contract": "outputs/yt_pr230_additive_top_subtraction_row_contract_2026-05-07.json",
+      "additive_top_subtraction_note": "docs/YT_PR230_ADDITIVE_TOP_SUBTRACTION_ROW_CONTRACT_NOTE_2026-05-07.md",
+      "additive_top_subtraction_runner": "scripts/frontier_yt_pr230_additive_top_subtraction_row_contract.py"
+    }
+  },
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block30_head": "f7f42f27c16fd80db9b2c990294c7eb3c186423a",
+  "block31_chunk_head": "8a63348cc9fe71dac07a2eb0d1b39efe9227dfa6",
+  "block31_scope_head": "20233ff2efa146386b0c7d07b1db24deae4b9a91",
+  "block32_promotion_head": "4c4e91445254a4709ec93e268cf2415d7046cdeb",
+  "block33_os_transfer_head": "05feeafc01e475b38bc5a150278bd1eaddecbd88",
+  "block34_additive_top_head": "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc",
+  "block35_post_block34_physical_bridge_admission_checkpoint_passed": true,
+  "campaign_decision": {
+    "next_exact_action": "Supply one committed physical bridge artifact: accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH rows, strict W/Z matched physical response, or neutral H3/H4 physical-transfer authority.",
+    "rank1_source_higgs": "waiting on explicit physical bridge input",
+    "rank2_wz": "waiting on explicit accepted-action physical-response packet",
+    "rank3_neutral_h3h4": "waiting on physical transfer/coupling certificate",
+    "yield_for_supervisor": true
+  },
+  "checks": {
+    "additive-top-support-committed-support-only": true,
+    "block30-parent-clean": true,
+    "chunk063-package-committed-support-only": true,
+    "forbidden-firewall-clean": true,
+    "neutral-h3h4-not-admitted": true,
+    "no-parent-authorizes-proposal": true,
+    "no-route-admitted-without-explicit-input": true,
+    "os-transfer-alias-firewall-committed-support-only": true,
+    "parent-certificates-have-no-fails": true,
+    "parent-certificates-present": true,
+    "post-block30-inputs-support-only": true,
+    "promotion-contract-committed-support-only": true,
+    "source-higgs-physical-bridge-not-admitted": true,
+    "wz-physical-response-not-admitted": true
+  },
+  "chunk063_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "chunk063_checkpoint": true,
+      "chunk063_rows": true,
+      "combined_taste_radial_rows": true
+    },
+    "decision": "support only; chunk063 completes the taste-radial C_sx/C_xx packet but does not certify x=O_H or C_sH/C_HH pole rows",
+    "support_paths": {
+      "chunk063_checkpoint": "outputs/yt_pr230_two_source_taste_radial_chunk063_checkpoint_2026-05-06.json",
+      "chunk063_rows": "outputs/yt_pr230_two_source_taste_radial_rows/yt_pr230_two_source_taste_radial_rows_L12_T24_chunk063_2026-05-06.json",
+      "combined_taste_radial_rows": "outputs/yt_pr230_two_source_taste_radial_measurement_rows_2026-05-06.json"
+    }
+  },
+  "commits_since_block29_input": [
+    "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc\tRefresh PR230 complete additive-top support",
+    "05feeafc01e475b38bc5a150278bd1eaddecbd88\tRefresh PR230 OS transfer alias firewall",
+    "4c4e91445254a4709ec93e268cf2415d7046cdeb\tRefresh PR230 complete-packet promotion contract",
+    "20233ff2efa146386b0c7d07b1db24deae4b9a91\tClarify PR230 no-go scope boundaries",
+    "8a63348cc9fe71dac07a2eb0d1b39efe9227dfa6\tPackage PR230 two-source chunk063",
+    "f7f42f27c16fd80db9b2c990294c7eb3c186423a\tRecord PR230 block30 full-approach bridge review"
+  ],
+  "commits_since_block30_head": [
+    "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc\tRefresh PR230 complete additive-top support",
+    "05feeafc01e475b38bc5a150278bd1eaddecbd88\tRefresh PR230 OS transfer alias firewall",
+    "4c4e91445254a4709ec93e268cf2415d7046cdeb\tRefresh PR230 complete-packet promotion contract",
+    "20233ff2efa146386b0c7d07b1db24deae4b9a91\tClarify PR230 no-go scope boundaries",
+    "8a63348cc9fe71dac07a2eb0d1b39efe9227dfa6\tPackage PR230 two-source chunk063"
+  ],
+  "conditional_surface_status": "support if a future accepted same-surface O_H/action plus strict C_ss/C_sH/C_HH rows lands, or if a strict W/Z physical-response packet or neutral H3/H4 physical-transfer authority lands",
+  "fail_count": 0,
+  "fails": 0,
+  "forbidden_firewall": {
+    "aliased_c_sx_to_c_sh_before_canonical_oh": false,
+    "assumed_k_top_equals_k_gauge": false,
+    "assumed_top_wz_covariance": false,
+    "claimed_retained_or_proposed_retained": false,
+    "inspected_active_chunk_output": false,
+    "promoted_wz_scout_or_smoke_rows": false,
+    "set_c2_equal_one": false,
+    "set_g2_equal_one": false,
+    "set_kappa_s_equal_one": false,
+    "set_z_match_equal_one": false,
+    "touched_live_chunk_worker": false,
+    "used_alpha_lm_plaquette_or_u0": false,
+    "used_hunit_matrix_element_or_operator": false,
+    "used_observed_wz_or_g2": false,
+    "used_observed_y_t_or_top_mass": false,
+    "used_y_t_bare": false,
+    "used_yt_ward_identity": false
+  },
+  "hypothetical_axiom_status": null,
+  "inspection_head": "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc",
+  "inspection_ref": "HEAD^",
+  "inspection_subject": "Refresh PR230 complete additive-top support",
+  "live_chunk_worker": {
+    "inspected_active_output": false,
+    "touched": false
+  },
+  "local_head": "a6091cd55ee80cd46828a989b6a211abbeed195f",
+  "local_subject": "Record PR230 block35 physical bridge admission checkpoint",
+  "neutral_h3h4_bridge": {
+    "admitted": false,
+    "committed_path_presence": {
+      "neutral_h3_physical_transfer": false,
+      "neutral_h4_source_higgs_coupling": false
+    },
+    "decision": "not admitted; reopen only with same-surface physical transfer and source/canonical-Higgs coupling authority",
+    "missing_roots": [
+      "neutral_h3_physical_transfer",
+      "neutral_h4_source_higgs_coupling"
+    ],
+    "required_paths": {
+      "neutral_h3_physical_transfer": "outputs/yt_pr230_neutral_h3_physical_transfer_certificate_2026-05-11.json",
+      "neutral_h4_source_higgs_coupling": "outputs/yt_pr230_neutral_h4_source_higgs_coupling_certificate_2026-05-11.json"
+    }
+  },
+  "os_transfer_alias_firewall_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "os_transfer_kernel_gate_certificate": true,
+      "os_transfer_kernel_gate_note": true,
+      "os_transfer_kernel_gate_runner": true
+    },
+    "decision": "support only; the OS transfer kernel gate blocks equal-time C_ss/C_sx/C_xx rows from being treated as a same-surface transfer kernel or pole residue",
+    "support_paths": {
+      "os_transfer_kernel_gate_certificate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
+      "os_transfer_kernel_gate_note": "docs/YT_PR230_OS_TRANSFER_KERNEL_ARTIFACT_GATE_NOTE_2026-05-07.md",
+      "os_transfer_kernel_gate_runner": "scripts/frontier_yt_pr230_os_transfer_kernel_artifact_gate.py"
+    }
+  },
+  "parent_statuses": {
+    "additive_top_jacobian_rows": "bounded-support / additive-top coarse Jacobian rows from packaged three-mass top scans; strict subtraction closure still open",
+    "additive_top_subtraction_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
+    "block28_degree_one_oh_support": "exact-support / block28 degree-one O_H support intake; current surface remains open because action premise, canonical O_H certificate, source-Higgs pole rows, strict W/Z packet, and neutral H3/H4 authority remain absent",
+    "block29_wz_pivot_admission": "open / block29 post-block28 W/Z pivot admission checkpoint; source-Higgs degree-one support is exact support only and the W/Z accepted-action response route is not admitted without the required production packet",
+    "block30_full_approach_review": "bounded-support / full-approach exercise and repo-bridge review; PR230 y_t closure remains open",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "fms_oh_candidate_action": "conditional-support / FMS O_H candidate/action packet; current PR230 surface has no adopted same-surface EW/Higgs action, canonical O_H certificate, or C_ss/C_sH/C_HH pole rows",
+    "fms_source_overlap_readout": "exact-support / FMS source-overlap readout gate; action, canonical O_H, and strict C_ss/C_sH/C_HH pole rows absent on current PR230 surface",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "taste_radial_source_higgs_promotion_contract": "exact-support / taste-radial-to-source-Higgs promotion contract; current promotion blocked by absent canonical O_H identity/action/LSZ premise",
+    "two_source_combiner": "bounded-support / two-source taste-radial C_sx/C_xx row combiner gate; canonical O_H and pole/FV/IR authority still absent",
+    "two_source_package": "bounded-support / two-source taste-radial chunks001-063 packaged; active chunks, logs, and pending checkpoints are not evidence",
+    "wz_accepted_action_root": "exact negative boundary / WZ accepted-action response root not closed by current sector-overlap, radial-action, or mass-fit candidates",
+    "wz_physical_response_intake": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist"
+  },
+  "pass_count": 14,
+  "passes": 14,
+  "pr_head": "da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc",
+  "pr_ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30",
+  "promotion_contract_support": {
+    "committed": true,
+    "committed_path_presence": {
+      "promotion_contract_certificate": true,
+      "promotion_contract_note": true,
+      "promotion_contract_runner": true
+    },
+    "decision": "support only; the complete-packet promotion contract preserves the requirement for accepted x=O_H/canonical-Higgs authority and strict C_ss/C_sH/C_HH pole rows",
+    "support_paths": {
+      "promotion_contract_certificate": "outputs/yt_pr230_taste_radial_to_source_higgs_promotion_contract_2026-05-07.json",
+      "promotion_contract_note": "docs/YT_PR230_TASTE_RADIAL_TO_SOURCE_HIGGS_PROMOTION_CONTRACT_NOTE_2026-05-07.md",
+      "promotion_contract_runner": "scripts/frontier_yt_pr230_taste_radial_to_source_higgs_promotion_contract.py"
+    }
+  },
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "Block35 is an admission/yield checkpoint after the committed chunk063 package, no-go scope clarification, and complete-packet promotion contract, OS transfer alias firewall, and additive-top support refreshes.  The PR head still has no accepted same-surface O_H/action, strict source-Higgs pole rows, strict W/Z matched response packet, or neutral H3/H4 physical-transfer certificate.",
+  "source_higgs_bridge": {
+    "admitted": false,
+    "committed_path_presence": {
+      "accepted_same_source_ew_action": false,
+      "accepted_same_surface_ew_higgs_action": false,
+      "canonical_higgs_operator_certificate": false,
+      "canonical_oh_certificate": false,
+      "source_higgs_cross_correlator_rows": false,
+      "source_higgs_gram_fv_ir_authority": false,
+      "source_higgs_production_certificate": false,
+      "strict_source_higgs_pole_rows": false
+    },
+    "decision": "not admitted; reopen only with accepted O_H/action, canonical operator authority, strict C_ss/C_sH/C_HH pole rows, and Gram/FV/IR authority",
+    "missing_roots": [
+      "accepted_same_source_ew_action",
+      "accepted_same_surface_ew_higgs_action",
+      "canonical_higgs_operator_certificate",
+      "canonical_oh_certificate",
+      "source_higgs_cross_correlator_rows",
+      "source_higgs_gram_fv_ir_authority",
+      "source_higgs_production_certificate",
+      "strict_source_higgs_pole_rows"
+    ],
+    "required_paths": {
+      "accepted_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+      "accepted_same_surface_ew_higgs_action": "outputs/yt_pr230_same_surface_ew_higgs_action_certificate_2026-05-07.json",
+      "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "canonical_oh_certificate": "outputs/yt_pr230_canonical_oh_certificate_2026-05-07.json",
+      "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+      "source_higgs_gram_fv_ir_authority": "outputs/yt_pr230_source_higgs_gram_fv_ir_authority_certificate_2026-05-11.json",
+      "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+      "strict_source_higgs_pole_rows": "outputs/yt_pr230_source_higgs_pole_rows_2026-05-06.json"
+    }
+  },
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not treat block30 route review as physical bridge evidence",
+    "does not treat chunk063 completion, the promotion contract, the OS transfer alias firewall, or additive-top support as physical bridge evidence",
+    "does not inspect live or untracked chunk-worker output",
+    "does not treat C_sx/C_xx rows as C_sH/C_HH before x=O_H is certified",
+    "does not use Ward, H_unit, y_t_bare, observed targets, observed g2, alpha_LM, plaquette, u0, or unit conventions"
+  ],
+  "timestamp_utc": "2026-05-12T01:25:04.652402+00:00",
+  "wz_physical_response_bridge": {
+    "admitted": false,
+    "committed_path_presence": {
+      "accepted_same_source_ew_action": false,
+      "canonical_higgs_operator_certificate": false,
+      "delta_perp_correction_certificate": false,
+      "fh_gauge_mass_response_certificate": false,
+      "fh_gauge_mass_response_rows": false,
+      "same_source_top_response_certificate": false,
+      "same_source_w_response_rows": false,
+      "strict_electroweak_g2_certificate": false,
+      "top_wz_matched_covariance_certificate": false,
+      "wz_correlator_mass_fit_rows": false
+    },
+    "decision": "not admitted; continue only with accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response rows",
+    "missing_roots": [
+      "accepted_same_source_ew_action",
+      "canonical_higgs_operator_certificate",
+      "delta_perp_correction_certificate",
+      "fh_gauge_mass_response_certificate",
+      "fh_gauge_mass_response_rows",
+      "same_source_top_response_certificate",
+      "same_source_w_response_rows",
+      "strict_electroweak_g2_certificate",
+      "top_wz_matched_covariance_certificate",
+      "wz_correlator_mass_fit_rows"
+    ],
+    "required_paths": {
+      "accepted_same_source_ew_action": "outputs/yt_wz_same_source_ew_action_certificate_2026-05-04.json",
+      "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+      "delta_perp_correction_certificate": "outputs/yt_same_source_w_response_orthogonal_correction_certificate_2026-05-04.json",
+      "fh_gauge_mass_response_certificate": "outputs/yt_fh_gauge_mass_response_certificate_2026-05-02.json",
+      "fh_gauge_mass_response_rows": "outputs/yt_fh_gauge_mass_response_measurement_rows_2026-05-03.json",
+      "same_source_top_response_certificate": "outputs/yt_same_source_top_response_certificate_2026-05-04.json",
+      "same_source_w_response_rows": "outputs/yt_same_source_w_response_rows_2026-05-04.json",
+      "strict_electroweak_g2_certificate": "outputs/yt_electroweak_g2_certificate_2026-05-04.json",
+      "top_wz_matched_covariance_certificate": "outputs/yt_top_wz_matched_covariance_certificate_2026-05-04.json",
+      "wz_correlator_mass_fit_rows": "outputs/yt_wz_correlator_mass_fit_rows_2026-05-04.json"
+    }
+  }
+}

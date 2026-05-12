@@ -1333,3 +1333,46 @@ rg status/firewall review
 git diff --check
 # OK
 ```
+
+## Block35
+
+Local review run on 2026-05-12 01:50 UTC.
+
+Scope:
+
+- `scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py`
+- `outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json`
+- `docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md`
+- `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Block35 checkpoint runner compiles and passes; campaign status consumes it and remains pass. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Current PR head `da3d6d8e` contains chunk063, no-go-scope, promotion-contract, OS-transfer-alias, and additive-top support after block30, but no source-Higgs, W/Z, or neutral H3/H4 production/certificate input. |
+| Imports / Support | CLEAN / DISCLOSED | Forbidden imports remain excluded; no observed target, unit convention, plaquette/u0 chain, W/Z scout promotion, or `C_sx -> C_sH` alias is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Repo Governance | PASS | The checkpoint consumes committed PR-head state only and does not touch or inspect the live chunk worker. |
+| Audit Compatibility | PASS | Block35 PASS=14 FAIL=0 and campaign status PASS=365 FAIL=0 after rebase; audit pipeline newly seeded=1 with re-audit required=0, strict lint is OK with 5 known warnings, link/parse/diff checks are clean. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=365 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, newly seeded=1, re-audit required=0, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+python3 link/parse checks
+# parse_ok, missing_links=[]
+git diff --check
+# OK
+```

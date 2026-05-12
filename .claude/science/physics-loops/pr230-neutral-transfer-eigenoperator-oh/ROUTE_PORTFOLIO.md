@@ -819,3 +819,36 @@
 4. **Exact math**
    - Accelerator only.  Picard-Fuchs, Herglotz, moments, Prony, and cone tools
      become useful after the operator/action/functional exists.
+
+## Selected Block35 Route
+
+**Post-block34 physical-bridge admission checkpoint**
+
+- Type: open / routing checkpoint.
+- Dramatic-step score: 1.
+- Hard-residual pressure: 5.
+- Claim-state movement: consumes committed PR-head paths after block30 and
+  records that chunk063, promotion-contract, OS-transfer-alias, and additive-top
+  support updates are support only.  Source-Higgs, W/Z, and neutral H3/H4
+  routes remain waiting on explicit production/certificate artifacts.
+- Artifact: `YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT`.
+
+## Block35 Fan-Out Synthesis
+
+1. **Action-first `O_H` / source-Higgs**
+   - Still rank 1 but not admitted.  Accepted same-surface action/operator
+     authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` rows, and
+     Gram/FV/IR authority are absent.
+
+2. **Strict W/Z matched physical response**
+   - Still rank 2 and not admitted.  Accepted action, W/Z rows, same-source
+     top rows, matched covariance, strict non-observed `g2`, `delta_perp`, and
+     final W-response rows are absent.
+
+3. **Neutral H3/H4**
+   - Still rank 3 and not admitted.  Physical transfer/off-diagonal generator
+     and source/canonical-Higgs coupling authority are absent.
+
+4. **Next admissible route**
+   - Supply one committed physical bridge artifact.  Do not reopen shortcut
+     gates or route inventory without such an input.

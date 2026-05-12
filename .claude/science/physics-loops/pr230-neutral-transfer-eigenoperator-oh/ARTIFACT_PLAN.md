@@ -623,3 +623,19 @@ Follow-on artifact target after block33 is stricter: source-Higgs closure needs
 same-surface `C_ss(t)/C_sH(t)/C_HH(t)` rows with certified canonical `O_H`, or
 authorized `C_ss(t)/C_sx(t)/C_xx(t)` rows after a physical `x=O_H` theorem.
 Equal-time finite packet work is exhausted as a closure route.
+
+Block35 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Post-block34 physical-bridge admission runner | `scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py` | Created; PASS=14 FAIL=0 |
+| Post-block34 physical-bridge admission certificate | `outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json` | Created; consumes chunk063, no-go-scope, promotion-contract, OS-transfer-alias firewall, and additive-top support commits as support-only inputs and admits no route |
+| Post-block34 physical-bridge admission note | `docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md` | Created; open/routing checkpoint, closure not authorized |
+| Campaign status | `scripts/frontier_yt_pr230_campaign_status_certificate.py`, `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json` | Updated to consume block35; no proposal allowed |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated for block35 checkpoint |
+
+Follow-on artifact target after block35 is unchanged: supply a real physical
+bridge artifact.  Accepted same-surface EW/Higgs action/canonical `O_H` plus
+strict `C_ss/C_sH/C_HH` pole rows remains rank one, strict W/Z matched
+physical response remains rank two, and neutral H3/H4 physical-transfer
+authority remains rank three.

@@ -18805,7 +18805,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T01:09:41.741461+00:00",
+  "generated_at": "2026-05-12T01:25:12.929538+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42395,6 +42395,16 @@
       "runner_path": "scripts/frontier_yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review.py",
       "title": "PR230 Block30 Full-Approach Assumptions / Elon / Literature / Math / Bridge Review"
     },
+    "yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_note_2026-05-11": {
+      "claim_id": "yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_note_2026-05-11",
+      "current_status": "open",
+      "current_status_raw": "open / physical-bridge admission checkpoint; PR230 top-Yukawa",
+      "deps": [],
+      "note_hash": "ccca00d375456565cb26a7c2e7b7e1a4a2e973963ea9c1ffba2067ee77ebb382",
+      "path": "docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py",
+      "title": "PR230 Block35 Post-Block34 Physical-Bridge Admission Checkpoint"
+    },
     "yt_pr230_campaign_status_certificate_note_2026-05-01": {
       "claim_id": "yt_pr230_campaign_status_certificate_note_2026-05-01",
       "current_status": "open",
@@ -46636,6 +46646,7 @@
     "yt_pr230_block26_post_block25_landed_checkpoint_note_2026-05-11",
     "yt_pr230_block27_post_block26_landed_checkpoint_note_2026-05-11",
     "yt_pr230_block30_full_approach_assumptions_elon_lit_math_bridge_review_note_2026-05-11",
+    "yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_note_2026-05-11",
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
@@ -46900,13 +46911,13 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4701,
-    "leaf_count": 1130,
-    "node_count": 2126,
-    "root_count": 1631,
-    "runners_with_path": 1601,
+    "leaf_count": 1131,
+    "node_count": 2127,
+    "root_count": 1632,
+    "runners_with_path": 1602,
     "status_counts": {
       "bounded": 595,
-      "open": 112,
+      "open": 113,
       "proposed_promoted": 1,
       "proposed_retained": 373,
       "support": 462,

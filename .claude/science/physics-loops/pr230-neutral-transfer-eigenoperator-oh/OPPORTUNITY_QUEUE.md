@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block33 complete-packet OS transfer/alias-firewall refresh.
+Campaign mode queue after block35 post-block34 physical-bridge admission checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -20,6 +20,14 @@ support, but even the complete `63/63` finite `C_sx/C_xx` packet does not
 provide H3 physical neutral transfer or H4 source/canonical-Higgs coupling.
 The W/Z physical-response intake still has only scout/smoke rows and support
 contracts, not the accepted-action production packet.
+
+Block35 consumes the committed block31 chunk063 package, no-go-scope
+clarification, block32 promotion contract, block33 OS transfer alias firewall,
+and block34 additive-top support refresh as support-only inputs.  No queue item
+is admitted on the current surface.  Rank one remains certified canonical
+`O_H` plus strict source-Higgs pole rows, rank two remains strict W/Z matched
+physical response with accepted action/covariance/`g2`/`delta_perp`, and rank
+three remains neutral H3/H4 physical-transfer authority.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not

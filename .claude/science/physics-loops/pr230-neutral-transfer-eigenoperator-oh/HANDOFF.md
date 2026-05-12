@@ -1563,3 +1563,58 @@ Next exact action: build one physical bridge artifact: same-surface
 `C_ss(t)/C_sH(t)/C_HH(t)` rows with certified canonical `O_H`, strict W/Z
 matched physical response, or a neutral primitive/rank-one theorem with a
 physical transfer kernel and source-Higgs coupling authority.
+
+## Block35 Post-Block34 Physical-Bridge Admission Checkpoint
+
+Block35 resumes after the PR head advanced through support-only block31,
+block32, block33, and block34 work:
+
+```text
+HEAD = origin/claude/yt-direct-lattice-correlator-2026-04-30 = da3d6d8e3d022ad81d9f3f19d62ae8e9e87d8ebc
+PR #230 = open draft, head claude/yt-direct-lattice-correlator-2026-04-30
+```
+
+The checkpoint consumes only committed PR-head paths.  It does not inspect
+untracked outputs, active logs, or the live chunk worker.  The committed inputs
+after block30 are chunk063 completion, no-go scope clarification, the
+complete-packet promotion contract refresh, the OS transfer alias firewall, and
+the complete additive-top support refresh; all are support only.
+
+Result:
+
+- source-Higgs is not admitted: accepted same-surface action/operator
+  authority, canonical `O_H`, strict `C_ss/C_sH/C_HH` pole rows, and
+  Gram/FV/IR authority are absent;
+- W/Z is not admitted: accepted action, production W/Z mass-fit rows,
+  same-source top response, matched covariance, strict non-observed `g2`,
+  `delta_perp`, and final W-response rows are absent;
+- neutral H3/H4 is not admitted: same-surface physical transfer and
+  source/canonical-Higgs coupling authority are absent.
+
+Files added/updated:
+
+- `scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py`
+- `docs/YT_PR230_BLOCK35_POST_BLOCK34_PHYSICAL_BRIDGE_ADMISSION_CHECKPOINT_NOTE_2026-05-11.md`
+- `outputs/yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint_2026-05-11.json`
+- refreshed `scripts/frontier_yt_pr230_campaign_status_certificate.py`
+- refreshed `outputs/yt_pr230_campaign_status_certificate_2026-05-01.json`
+- loop pack state, queue, certificate, assumptions, no-go ledger, artifact plan,
+  review history, PR backlog, and block35 PR body
+
+Honest status: open / physical-bridge admission checkpoint.  Current surface
+remains open and `proposal_allowed=false`.
+
+Verification:
+
+```text
+python3 -m py_compile scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py scripts/frontier_yt_pr230_campaign_status_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_block35_post_block34_physical_bridge_admission_checkpoint.py
+# SUMMARY: PASS=14 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=365 FAIL=0
+```
+
+Next exact action: supply one committed physical bridge artifact: accepted
+same-surface `O_H`/action plus strict `C_ss/C_sH/C_HH` rows, strict W/Z
+matched physical response, or neutral H3/H4 physical-transfer authority.
