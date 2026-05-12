@@ -89,6 +89,17 @@ next positive move remains a real accepted `O_H`/action plus strict
 source-Higgs pole-row packet, a strict W/Z accepted-action physical-response
 packet, or neutral H3/H4 physical-transfer authority.
 
+Block41 packages completed higher-shell chunks005-006.  The row wave extends
+the higher-shell support prefix to `6/` planned chunks but does not change the
+queue ranking.  The rows are still same-source `C_ss` plus taste-radial
+`C_sx/C_xx` under the unratified second-source certificate, not a complete
+higher-shell packet, not canonical `O_H`, not strict `C_sH/C_HH` pole rows,
+not Schur A/B/C kernel rows, not scalar-LSZ moment/FV/IR authority, and not W/Z
+response.  If continuing the production support campaign, the next
+non-colliding wave is chunks007-008; the clean physics-closure priority remains
+accepted `O_H`/action plus strict pole rows, strict W/Z accepted-action
+physical response, or neutral H3/H4 physical-transfer authority.
+
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
 change the ranking: the rows are still finite `C_ss/C_sx/C_xx` taste-radial

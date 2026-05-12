@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block40_schur_higher_shell_chunks003_004_completed_checkpoint`.
+Current block: `block41_schur_higher_shell_chunks005_006_completed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: bounded-support / block40 higher-shell Schur scalar-LSZ chunks003-004 completed-mode checkpoints passed; row support only, no retained/proposed_retained closure
+actual_current_surface_status: bounded-support / block41 higher-shell Schur scalar-LSZ chunks005-006 completed-mode checkpoints passed; row support only, no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block40 is a completed-row support checkpoint, not a retained/proposed-retained theorem. Chunks003-004 add seed-controlled higher-shell C_ss and taste-radial C_sx/C_xx rows only. They do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block41 is a completed-row support checkpoint, not a retained/proposed-retained theorem. Chunks005-006 add seed-controlled higher-shell C_ss and taste-radial C_sx/C_xx rows only. They do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,13 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block41 records completed higher-shell chunks005-006 as bounded support
+   only.  The completed-mode checkpoints pass for seed control, selected-mass
+   FH/LSZ metadata, higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows,
+   and forbidden-import firewalls, but the rows are not Schur A/B/C kernel
+   rows, strict scalar-LSZ moment/FV/IR authority, canonical `O_H`, canonical
+   `C_sH/C_HH` pole rows, W/Z response, physical `kappa_s`, or retained
+   top-Yukawa closure.
 0. Block40 records completed higher-shell chunks003-004 as bounded support
    only.  The completed-mode checkpoints pass for seed control, selected-mass
    FH/LSZ metadata, higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows,
