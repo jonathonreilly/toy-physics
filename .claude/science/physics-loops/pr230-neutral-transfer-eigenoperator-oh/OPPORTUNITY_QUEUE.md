@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block46 higher-shell chunks011-012 completed checkpoint.
+Campaign mode queue after block47 higher-shell chunks013-014 launch checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -149,6 +149,16 @@ continuing the support campaign, the next non-colliding wave is chunks013-014.
 The clean physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
+
+Block47 launches chunks013-014 as run-control support.  It does not change the
+queue ranking and does not add completed row evidence yet.  Active workers,
+logs, pid files, partial directories, and launch-state certificates are not
+source-Higgs, Schur, scalar-LSZ, W/Z, or top-Yukawa closure evidence.  Wait for
+chunks013-014 to finish, then package completed-mode checkpoints before
+launching another support wave.  The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
 
 Block31 consumes chunk063 and refreshes the row-dependent gates to the complete
 `63/63` packet.  The larger packet improves support statistics but does not
