@@ -142,7 +142,17 @@ Lane 1 Block51: same-source FH-LSZ full-L12 support reclassification
   scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
 - result: PASS=8 FAIL=0; PASS=6 FAIL=0; PASS=12 FAIL=0
 - conclusion: L12 FH-LSZ support is complete at 63/63 and should no longer be
-  treated as missing chunk production; the route still blocks on response
-  stability, scalar pole/model-class/FV/IR authority, and canonical-Higgs pole
-  identity
+  treated as missing chunk production; raw fitted-slope response stability
+  fails and is refined by Block52, while scalar pole/model-class/FV/IR
+  authority and canonical-Higgs pole identity remain open
+
+Lane 1 Block52: common-window response support intake
+- status: bounded support plus exact boundary on the current surface
+- runners: scripts/frontier_yt_fh_lsz_common_window_response_gate.py;
+  scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
+- result: PASS=14 FAIL=0; PASS=13 FAIL=0
+- conclusion: common-window response stability support is accepted across the
+  full L12 set, but `readout_switch_authorized=false`; the remaining blockers
+  are physical response readout authorization, scalar pole/model-class/FV/IR
+  authority, and canonical-Higgs identity
 ```

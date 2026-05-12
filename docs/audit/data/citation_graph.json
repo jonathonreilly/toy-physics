@@ -19033,7 +19033,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-05-12T04:51:54.603748+00:00",
+  "generated_at": "2026-05-12T04:58:33.231191+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -42775,6 +42775,16 @@
       "runner_path": "scripts/frontier_yt_pr230_clean_source_higgs_math_tool_route_selector.py",
       "title": "PR230 Clean Source-Higgs Math-Tool Route Selector"
     },
+    "yt_pr230_common_window_response_support_intake_note_2026-05-12": {
+      "claim_id": "yt_pr230_common_window_response_support_intake_note_2026-05-12",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support / common-window response stability support accepted; physical readout switch remains blocked",
+      "deps": [],
+      "note_hash": "c84daa9875aa9c32261c732e87d0ac6363c7f7cb4848e879a726fa50f606e56c",
+      "path": "docs/YT_PR230_COMMON_WINDOW_RESPONSE_SUPPORT_INTAKE_NOTE_2026-05-12.md",
+      "runner_path": "scripts/frontier_yt_fh_lsz_common_window_response_gate.py",
+      "title": "PR230 Common-Window Response Support Intake"
+    },
     "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06": {
       "claim_id": "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
       "current_status": "unknown",
@@ -43716,7 +43726,7 @@
       "current_status": "bounded",
       "current_status_raw": "bounded support / full L12 same-source FH/LSZ packet complete; source-Higgs closure gates remain open",
       "deps": [],
-      "note_hash": "94964975db3ce04ea38d99c41f66c7233e6863095f02d2c6a321c847c169a033",
+      "note_hash": "0c619e22ba22a99fa2eb82abbbad3eb0c4fb3455655b1599577a8456203ab66b",
       "path": "docs/YT_PR230_SAME_SOURCE_FH_LSZ_FULL_L12_SUPPORT_RECLASSIFICATION_NOTE_2026-05-12.md",
       "runner_path": "scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py",
       "title": "PR230 Same-Source FH/LSZ Full-L12 Support Reclassification"
@@ -47192,6 +47202,7 @@
     "yt_pr230_campaign_status_certificate_note_2026-05-01",
     "yt_pr230_canonical_oh_hard_residual_equivalence_gate_note_2026-05-07",
     "yt_pr230_clean_source_higgs_math_tool_route_selector_note_2026-05-05",
+    "yt_pr230_common_window_response_support_intake_note_2026-05-12",
     "yt_pr230_degree_one_higgs_action_premise_gate_note_2026-05-06",
     "yt_pr230_degree_one_radial_tangent_oh_theorem_note_2026-05-07",
     "yt_pr230_derived_bridge_rank_one_closure_attempt_note_2026-05-05",
@@ -47471,12 +47482,12 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4758,
-    "leaf_count": 1133,
-    "node_count": 2152,
-    "root_count": 1651,
-    "runners_with_path": 1627,
+    "leaf_count": 1134,
+    "node_count": 2153,
+    "root_count": 1652,
+    "runners_with_path": 1628,
     "status_counts": {
-      "bounded": 599,
+      "bounded": 600,
       "open": 117,
       "proposed_promoted": 1,
       "proposed_retained": 373,

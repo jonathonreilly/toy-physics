@@ -1,11 +1,12 @@
 # Opportunity Queue
 
-## Active Ranking After Block51
+## Active Ranking After Block52
 
-Block51 update: L12 same-source FH-LSZ chunk completeness is no longer a live
-blocker.  The `63/63` packet is complete bounded support, but response
-stability, scalar pole/model-class/FV/IR authority, and canonical-Higgs pole
-identity remain open.
+Block52 update: L12 same-source FH-LSZ chunk completeness and response-side
+stability support are no longer live blockers.  The `63/63` packet is complete
+bounded support, and the common-window response gate passes as support, but the
+physical response readout switch, scalar pole/model-class/FV/IR authority, and
+canonical-Higgs pole identity remain open.
 
 1. **Same-surface neutral transfer primitive.**
    Reopen the neutral rank-one route only with a new off-diagonal generator,
@@ -27,7 +28,8 @@ identity remain open.
    chunks001-002 are partial taste-radial prefix support, not a source-Higgs
    bridge or neutral-transfer artifact.  Block51 shows complete L12
    same-source FH-LSZ support still does not provide the neutral transfer,
-   physical pole, or canonical-Higgs identity.
+   physical pole, or canonical-Higgs identity.  Block52 shows common-window
+   response support also does not provide those bridges.
 
 2. **Strict W/Z physical-response packet with absolute authority.**
    Reopen only when actual strict packet roots exist: accepted action,
@@ -56,12 +58,12 @@ identity remain open.
    Completed chunks001-002 also cannot be used as the row path because they
    contain no pole residues, source-Higgs time kernel, or canonical `O_H`.
 
-5. **Response-stability / scalar-pole model-class repair for completed L12 FH-LSZ support.**
-   The support packet is now complete, so do not spend work on chunk
-   completeness.  A positive move must supply a justified response-stability
-   estimator or retained-grade scalar-pole derivative/model-class/FV/IR
-   theorem plus canonical-Higgs identity.  Otherwise this lane remains
-   bounded support.
+5. **Physical readout authorization for completed L12 FH-LSZ support.**
+   The support packet is complete and response-side stability support is
+   available through the common-window gate.  A positive move must now supply
+   scalar-pole derivative/model-class/FV/IR authority plus canonical-Higgs
+   identity, or an independent W/Z/action bridge that authorizes the physical
+   response readout.  Otherwise this lane remains bounded support.
 
 6. **Schur higher-shell rows if they finish.**
    Worker intent may become support artifacts later, but the route is not

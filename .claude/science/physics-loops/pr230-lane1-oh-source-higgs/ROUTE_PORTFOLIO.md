@@ -48,10 +48,12 @@
 
 5. **Same-source FH-LSZ invariant readout.**
    Block51 repairs the stale incompleteness boundary: the L12 packet is now
-   complete support.  The route remains bounded support because response
-   stability is not passed, no retained-grade scalar pole derivative or
-   model-class/FV/IR authority exists, and the scalar source pole is not
-   certified as canonical Higgs radial `O_H`.
+   complete support.  Block52 narrows the response issue: raw fitted-slope
+   stability fails, but the predeclared common-window response gate passes as
+   bounded support.  The route remains bounded support because no physical
+   response readout switch is authorized, no retained-grade scalar pole
+   derivative or model-class/FV/IR authority exists, and the scalar source pole
+   is not certified as canonical Higgs radial `O_H`.
 
 6. **Ward Step 3 same-1PI route.**
    Origin/main now has an audited-clean Step 3 row, but its effective status is

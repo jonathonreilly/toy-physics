@@ -231,3 +231,15 @@ still depends on open imports: response stability is not passed
 derivative and model-class/FV/IR authority are absent, and the measured scalar
 source pole is not certified as canonical Higgs radial `O_H`.  L12 support is
 therefore not a retained or `proposed_retained` top-Yukawa readout.
+
+## Block52 Common-Window Response Support Intake Result
+
+The broad response-stability blocker is narrowed.  Raw fitted-slope stability
+still fails, but the predeclared common-window response gate supplies bounded
+support across the full L12 set: the mean common-window slope is
+`1.4254094730430789`, the chunk-level relative standard deviation is
+`0.00561579672777511`, and the pooled relative standard error is
+`0.0007075238835801541`.  The common-window gate explicitly sets
+`readout_switch_authorized=false`, so the remaining imports are physical
+response readout authorization, scalar pole/model-class/FV/IR authority, and
+canonical-Higgs pole identity.

@@ -84,9 +84,14 @@
   disabled source-Higgs time kernels, scalar-LSZ normalization `not_derived`,
   and W/Z response disabled.
 - Complete L12 same-source FH-LSZ support is not retained PR230 closure: the
-  stale chunk-incompleteness boundary is retired, but response stability is not
-  passed, scalar pole/model-class/FV/IR authority is absent, and the measured
-  scalar source pole is not certified as canonical Higgs radial `O_H`.
+  stale chunk-incompleteness boundary is retired, but raw fitted-slope response
+  stability is not passed, scalar pole/model-class/FV/IR authority is absent,
+  and the measured scalar source pole is not certified as canonical Higgs
+  radial `O_H`.
+- Common-window response stability support is not physical top-Yukawa readout:
+  it repairs the response-side support diagnostic, but
+  `readout_switch_authorized=false` and scalar pole/model-class/FV/IR plus
+  canonical-Higgs identity remain absent.
 
 ## Scope Boundary
 

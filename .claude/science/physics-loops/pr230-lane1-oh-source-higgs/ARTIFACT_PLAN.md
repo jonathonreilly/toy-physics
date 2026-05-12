@@ -198,10 +198,27 @@ and no canonical-Higgs identity.
 Status: bounded support plus exact boundary.  The old same-source pole-data
 gate is repaired so it no longer treats L12 chunk completeness as missing:
 `63/63` L12 FH-LSZ chunks and full target-time-series support are complete.
-The route still blocks because response stability is not passed
-(`relative_stdev=0.90147`, `spread_ratio=5.93489`), scalar pole/model-class
-and FV/IR authority remain open, and the canonical-Higgs pole identity is not
-certified.
+The raw fitted-slope response stability check still fails
+(`relative_stdev=0.90147`, `spread_ratio=5.93489`).  Block52 refines this
+with common-window support; scalar pole/model-class and FV/IR authority remain
+open, and the canonical-Higgs pole identity is not certified.
+
+## Block52: Common-Window Response Support Intake
+
+- Note: `docs/YT_PR230_COMMON_WINDOW_RESPONSE_SUPPORT_INTAKE_NOTE_2026-05-12.md`
+- Runners:
+  `scripts/frontier_yt_fh_lsz_common_window_response_gate.py`,
+  `scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py`
+- Certificates:
+  `outputs/yt_fh_lsz_common_window_response_gate_2026-05-04.json`,
+  `outputs/yt_same_source_pole_data_sufficiency_gate_2026-05-02.json`
+
+Status: bounded support plus exact boundary.  The broad response-stability
+blocker is narrowed: raw fitted-slope stability still fails, but the
+predeclared common-window response gate passes as bounded support across the
+complete L12 set.  The physical response readout switch remains unauthorized,
+so scalar pole/model-class/FV/IR authority and canonical-Higgs pole identity
+remain the next blockers.
 
 ## Future Positive Artifact
 
@@ -209,8 +226,9 @@ The next artifact that could move the lane positively is a new same-surface
 neutral transfer primitive or physical Euclidean `C_ij(tau)` row packet not
 present in the current MC target-time-series packet, ordinary tau correlators,
 reduced smoke, active worker intent, completed higher-shell chunks001-002,
-completed L12 same-source FH-LSZ support, higher-shell taste-radial cross
-rows, or origin/main Ward Step 3 open-gate status; a strict W/Z
-physical-response packet with actual mixed-source `T_total/A_top/W` rows,
-matched covariance, accepted action, and absolute `g2`/`v` authority; or a
-genuinely new scalar/action/LSZ primitive not already covered by Block41.
+completed L12 same-source FH-LSZ support, common-window response support,
+higher-shell taste-radial cross rows, or origin/main Ward Step 3 open-gate
+status; a strict W/Z physical-response packet with actual mixed-source
+`T_total/A_top/W` rows, matched covariance, accepted action, and absolute
+`g2`/`v` authority; or a genuinely new scalar/action/LSZ primitive not already
+covered by Block41.

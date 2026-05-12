@@ -45,13 +45,18 @@ The updated gates separate the finished support from the remaining blockers:
 
 The remaining blockers are:
 
-- response stability: `relative_stdev=0.90147`, `spread_ratio=5.93489`;
+- raw fitted-slope response stability:
+  `relative_stdev=0.90147`, `spread_ratio=5.93489`;
 - no retained-grade isolated scalar pole derivative `D'_ss(pole)`;
 - finite-shell/model-class/FV/IR authority remains open;
 - the measured scalar source pole is not certified as the canonical Higgs
   radial mode used by `v`;
 - no same-source W/Z physical-response packet with strict non-observed
   `g2`/`v` authority exists.
+
+Block52 refines the first item: the raw fitted-slope instability has a
+common-window bounded-support repair, but that repair still does not authorize
+a physical readout switch.
 
 ## Boundary
 
@@ -87,5 +92,5 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
 python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 # SUMMARY: PASS=6 FAIL=0
 python3 scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
 ```

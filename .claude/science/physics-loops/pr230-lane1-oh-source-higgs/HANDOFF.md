@@ -132,9 +132,17 @@ and no physical-yukawa readout.
 Block51 repairs a stale same-source FH/LSZ gate.  The older pole-data
 sufficiency gate still expected incomplete L12 production, but the current
 surface has complete `63/63` L12 same-source FH-LSZ support.  The updated gates
-record that progress while preserving the claim boundary: response stability
-is not passed, scalar pole/model-class/FV/IR authority is absent, and the
-measured source pole is not certified as canonical Higgs radial `O_H`.
+record that progress while preserving the claim boundary: raw fitted-slope
+response stability is not passed, scalar pole/model-class/FV/IR authority is
+absent, and the measured source pole is not certified as canonical Higgs
+radial `O_H`.
+
+Block52 refines the response-stability boundary.  The raw fitted-slope
+stability check fails because mixed source-shift fit windows contaminate the
+surface, but the predeclared `tau=10..12` common-window response gate passes as
+bounded support across the full L12 set.  The physical response readout switch
+is still unauthorized, so scalar-LSZ/model-class/FV/IR and canonical-Higgs
+identity remain the actual blockers.
 
 ## Checks Run
 
@@ -205,7 +213,10 @@ python3 scripts/frontier_yt_fh_lsz_ready_chunk_set_checkpoint_certificate.py
 python3 scripts/frontier_yt_fh_lsz_ready_chunk_response_stability.py
 # SUMMARY: PASS=6 FAIL=0
 python3 scripts/frontier_yt_same_source_pole_data_sufficiency_gate.py
-# SUMMARY: PASS=12 FAIL=0
+# SUMMARY: PASS=13 FAIL=0
+
+python3 scripts/frontier_yt_fh_lsz_common_window_response_gate.py
+# SUMMARY: PASS=14 FAIL=0
 
 python3 scripts/frontier_yt_pr230_degree_one_radial_tangent_oh_theorem.py
 # SUMMARY: PASS=14 FAIL=0
@@ -265,8 +276,9 @@ Completed higher-shell chunks001-002 also cannot replace them; the prefix is
 bounded taste-radial support only.
 The full L12 same-source FH-LSZ packet is complete bounded support, so chunk
 completeness is no longer the relevant blocker.  It still cannot replace
-response stability, scalar pole/model-class/FV/IR authority, or canonical
-Higgs identity.
+physical response readout authorization, scalar pole/model-class/FV/IR
+authority, or canonical Higgs identity.  The common-window response gate
+supplies response-side stability support only.
 
 ## Next Exact Action
 
@@ -297,6 +309,8 @@ Do not treat completed higher-shell chunks001-002 as a complete packet,
 canonical `O_H`, source-Higgs pole rows, scalar-LSZ/FV/IR authority, W/Z
 response, or physical-yukawa readout.
 Do not spend another block on L12 same-source FH-LSZ chunk completeness unless
-new files land; it is complete support.  The next same-source route must target
-response stability, scalar pole/model-class/FV/IR authority, canonical-Higgs
-identity, or W/Z physical response.
+new files land; it is complete support.  Do not spend another block on
+response-side stability support unless new response data land; common-window
+support is already packaged.  The next same-source route must target physical
+response readout authorization, scalar pole/model-class/FV/IR authority,
+canonical-Higgs identity, or W/Z physical response.

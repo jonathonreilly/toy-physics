@@ -433,6 +433,36 @@ this was a narrow intake guard for an external branch artifact.
 - Audit Compatibility: PASS.  The full audit pipeline seeds the new note with
   effective status `bounded`; `audit_lint.py --strict` reports only the known
   five warnings.
+
+## Self-Review: Block52
+
+- Overclaim check: passed.  The note says only that common-window response
+  stability is bounded support and that the physical readout switch remains
+  unauthorized.
+- Physics check: passed.  The block distinguishes raw fitted-slope instability
+  from the predeclared common-window support gate and does not use the latter
+  as `dE/dh`.
+- Forbidden-import check: passed.  The package does not use `H_unit`, Ward,
+  observed selectors, `alpha_LM`, plaquette, `u0`, `kappa_s=1`, or
+  common-window support as physical top-Yukawa evidence.
+- Status check: `proposal_allowed=false`; no `proposed_retained` wording is
+  authorized.
+
+## Review-Loop Pass: Block52 Package
+
+Local review-loop was performed directly against the changed package because
+this was a bounded-support intake and stale-blocker refinement.
+
+- Code / Runner: PASS.  The updated sufficiency gate compiles and reports
+  `PASS=13 FAIL=0`; the common-window response gate reports
+  `PASS=14 FAIL=0`.
+- Physics Claim Boundary: BOUNDED SUPPORT / OPEN GATES.  Response-side
+  stability support is available; physical readout authorization,
+  scalar-LSZ/model-class/FV/IR, and canonical-Higgs identity remain open.
+- Imports / Support: DISCLOSED.  The support gate and the open physical
+  readout switch are explicit.
+- Nature Retention: OPEN.  No retained-grade or proposed-retained package is
+  authorized.
 - Audit Compatibility: PASS.  `audit_lint.py --strict` and the full audit
   pipeline complete with only the known five warnings; aggregate gates compile
   and report `PASS=177 FAIL=0` and `PASS=385 FAIL=0`.
