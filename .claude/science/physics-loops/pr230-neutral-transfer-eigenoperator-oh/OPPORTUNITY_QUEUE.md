@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block55 higher-shell chunks021-022 launch checkpoint.
+Campaign mode queue after block56 higher-shell chunks021-022 completed checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -20,6 +20,17 @@ support, but even the complete `63/63` finite `C_sx/C_xx` packet does not
 provide H3 physical neutral transfer or H4 source/canonical-Higgs coupling.
 The W/Z physical-response intake still has only scout/smoke rows and support
 contracts, not the accepted-action production packet.
+
+Block56 packages completed higher-shell chunks021-022. It extends the
+checkpointed higher-shell support prefix to `22/63` planned support chunks, but
+it does not change the queue ranking: the rows are still same-source `C_ss`
+plus taste-radial `C_sx/C_xx` under the unratified second-source certificate,
+not canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C kernel
+rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response. If
+continuing the support campaign, the next non-colliding wave is chunks023-024.
+The clean physics-closure priority remains accepted `O_H`/action plus strict
+source-Higgs pole rows, strict W/Z accepted-action physical response, or
+neutral H3/H4 physical-transfer authority.
 
 Block35 consumes the committed block31 chunk063 package, no-go-scope
 clarification, block32 promotion contract, block33 OS transfer alias firewall,
