@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block65_schur_higher_shell_chunks031_032_launch_checkpoint`.
+Current block: `block66_schur_higher_shell_chunks031_032_completed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: run-control / block65 higher-shell Schur scalar-LSZ chunks031-032 launched; active workers are not row evidence; no retained/proposed_retained closure
+actual_current_surface_status: bounded-support / block66 higher-shell Schur scalar-LSZ chunks031-032 completed-mode checkpoints passed; higher-shell support prefix 32/63; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block65 is run-control support only, not a retained/proposed-retained theorem. Chunks031-032 launched and survived the verification interval, but active processes, logs, pid files, partial directories, and launch-state certificates are not completed row evidence. This block does not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block66 is bounded higher-shell support only, not a retained/proposed-retained theorem. Chunks031-032 completed-mode checkpoints pass and the higher-shell support prefix is now 32/63, but this is not a complete higher-shell packet and does not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block66 records completed higher-shell chunks031-032 as bounded support
+   only. The completed-mode checkpoints pass for seed control,
+   selected-mass FH/LSZ metadata, normal-equation cache metadata,
+   higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows, and
+   forbidden-import firewalls, but the 32/63 higher-shell prefix is not a
+   complete higher-shell packet, Schur A/B/C kernel rows, strict scalar-LSZ
+   moment/FV/IR authority, canonical `O_H`, canonical `C_sH/C_HH` pole rows,
+   W/Z response, physical `kappa_s`, or retained top-Yukawa closure.
 0. Block65 records higher-shell chunks031-032 launch-state as run-control
    support only. The wave launcher passes and both launched workers survived
    the verification interval, but no completed row JSON, volume artifact, or

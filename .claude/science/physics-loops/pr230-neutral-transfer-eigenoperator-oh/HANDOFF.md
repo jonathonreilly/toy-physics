@@ -1,11 +1,86 @@
 # Handoff
 
-Checkpoint: 2026-05-13 10:22 EDT
+Checkpoint: 2026-05-13 12:33 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block66 Result
+
+Created
+`YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS031_032_COMPLETED_CHECKPOINT`.
+
+This block resumes after the higher-shell chunks031-032 worker wave completed
+and packages the row outputs. Both completed-mode chunk checkpoints pass after
+the workers write row JSONs and volume artifacts. The wave launcher status now
+records
+`completed_chunk_indices=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]`,
+no active higher-shell workers, and planned next chunks `[33,34]`; this block
+does not launch the next wave.
+
+Result:
+
+- chunk031 completed with seed `2026057031` and
+  `created_utc=2026-05-13T16:26:30Z`;
+- chunk032 completed with seed `2026057032` and
+  `created_utc=2026-05-13T16:26:13Z`;
+- both checkpoints verify selected-mass-only FH/LSZ metadata at mass `0.75`,
+  preserved three-mass top scans, normal-equation cache metadata, eleven
+  higher-shell `C_ss` time-series rows, eleven taste-radial `C_sx/C_xx`
+  source-cross rows, seed control, and clean forbidden-input firewalls;
+- wave launcher passes `PASS=11 FAIL=0` with completed prefix `[1..32]`,
+  active `[]`, planned `[33,34]`;
+- campaign status passes `PASS=421 FAIL=0`;
+- assumption stress passes `PASS=105 FAIL=0`;
+- full positive closure assembly passes `PASS=194 FAIL=0`;
+- retained route certificate passes `PASS=319 FAIL=0`;
+- positive-closure completion audit passes `PASS=73 FAIL=0`;
+- no retained or `proposed_retained` wording is authorized.
+
+Boundary: chunks031-032 are bounded higher-shell support only. They extend the
+completed higher-shell prefix to 32/63, but they do not supply a complete
+higher-shell packet, canonical `O_H`, strict `C_sH/C_HH` pole rows, Schur A/B/C
+kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical `kappa_s`, or
+top-Yukawa closure.
+
+Verification:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py scripts/frontier_yt_retained_closure_route_certificate.py
+# OK
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 31 --output outputs/yt_pr230_schur_higher_shell_chunk031_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_schur_higher_shell_chunk_checkpoint.py --chunk-index 32 --output outputs/yt_pr230_schur_higher_shell_chunk032_checkpoint_2026-05-12.json
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_pr230_schur_higher_shell_wave_launcher.py --max-concurrent 2
+# SUMMARY: PASS=11 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=421 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=105 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=194 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=319 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=73 FAIL=0
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+git diff --check
+# OK
+```
+
+Next exact action: if the higher-shell support campaign continues, launch only
+the next non-colliding wave `[33,34]` under the two-worker cap. For physics
+closure, supply one primitive-bearing artifact: accepted same-surface
+`O_H`/action plus physical Euclidean `C_ss/C_sH/C_HH(tau)` rows with
+Gram/FV/IR authority, or a strict W/Z physical-response packet with accepted
+action, production rows, same-source top rows, matched covariance, strict
+non-observed `g2`, `delta_perp`, and final W-response rows.
 
 ## Block65 Result
 
