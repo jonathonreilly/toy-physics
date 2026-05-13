@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block70 higher-shell chunks035-036 completed
+Campaign mode queue after block71 higher-shell chunks037-038 launch
 checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
@@ -165,6 +165,14 @@ continuing the support campaign, the next non-colliding wave is chunks037-038.
 The clean physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
+
+Block71 launches chunks037-038 as run-control support. It does not change the
+queue ranking and does not add completed row evidence yet. Wait for
+chunks037-038 to finish, then package completed-mode checkpoints before
+launching another support wave. The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
 
 Block35 consumes the committed block31 chunk063 package, no-go-scope
 clarification, block32 promotion contract, block33 OS transfer alias firewall,
