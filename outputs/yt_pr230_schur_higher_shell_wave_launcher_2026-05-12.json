@@ -18,7 +18,9 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "active_process_count": 0,
   "active_process_rows": [],
@@ -44,7 +46,9 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "completed_outputs_are_not_overwritten": true,
   "considered_rows": [
@@ -252,9 +256,9 @@
       "command_ok": true,
       "command_reason": "no-resume higher-shell production command",
       "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk019_2026-05-07.json",
-      "output_present": false,
+      "output_present": true,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk019",
-      "production_output_dir_present": false,
+      "production_output_dir_present": true,
       "seed": 2026057019
     },
     {
@@ -263,9 +267,9 @@
       "command_ok": true,
       "command_reason": "no-resume higher-shell production command",
       "output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk020_2026-05-07.json",
-      "output_present": false,
+      "output_present": true,
       "production_output_dir": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk020",
-      "production_output_dir_present": false,
+      "production_output_dir_present": true,
       "seed": 2026057020
     },
     {
@@ -744,8 +748,6 @@
   ],
   "contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
   "eligible_chunk_indices_before_capacity": [
-    19,
-    20,
     21,
     22,
     23,
@@ -800,8 +802,8 @@
   "partial_directories_count_as_non_evidence": true,
   "pass_count": 11,
   "planned_launch_chunk_indices": [
-    19,
-    20
+    21,
+    22
   ],
   "proposal_allowed": false,
   "proposal_allowed_reason": "Higher-shell launch status cannot supply completed row evidence, complete monotonicity, scalar pole authority, FV/IR authority, canonical O_H/source-overlap authority, W/Z response, or y_t closure.",

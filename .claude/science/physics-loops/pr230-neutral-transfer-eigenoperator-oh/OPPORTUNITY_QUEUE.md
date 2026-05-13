@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block52 higher-shell chunks017-018 completed checkpoint.
+Campaign mode queue after block54 higher-shell chunks019-020 completed checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -165,6 +165,25 @@ taste-radial `C_sx/C_xx` under the unratified second-source certificate, not
 canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C kernel
 rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response. If
 continuing the support campaign, the next non-colliding wave is chunks019-020.
+The clean physics-closure priority remains accepted `O_H`/action plus strict
+source-Higgs pole rows, strict W/Z accepted-action physical response, or
+neutral H3/H4 physical-transfer authority.
+
+Block53 launches chunks019-020 as run-control support. It does not change the
+queue ranking and does not add completed row evidence yet. Wait for
+chunks019-020 to finish, then package completed-mode checkpoints before
+launching another support wave. The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
+
+Block54 packages completed chunks019-020. It extends the checkpointed
+higher-shell support prefix to `20/63` planned support chunks, but it does not
+change the queue ranking: the rows are still same-source `C_ss` plus
+taste-radial `C_sx/C_xx` under the unratified second-source certificate, not
+canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C kernel
+rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response. If
+continuing the support campaign, the next non-colliding wave is chunks021-022.
 The clean physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
