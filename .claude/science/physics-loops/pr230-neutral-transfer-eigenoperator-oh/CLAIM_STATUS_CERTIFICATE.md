@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block71_schur_higher_shell_chunks037_038_launch_checkpoint`.
+Current block: `block72_schur_higher_shell_chunks037_038_completed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: run-control support / block71 higher-shell Schur scalar-LSZ chunks037-038 launched; completed higher-shell support prefix remains 36/63; no retained/proposed_retained closure
+actual_current_surface_status: bounded-support / block72 higher-shell Schur scalar-LSZ chunks037-038 completed-mode checkpoints passed; completed higher-shell support prefix 38/63; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block71 is run-control support only, not a retained/proposed-retained theorem. Chunks037-038 were launched and survived the launcher verification interval, but active jobs, logs, pid files, partial directories, and launch-state certificates are not completed row evidence and do not supply a complete higher-shell packet, canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block72 is bounded higher-shell support only, not a retained/proposed-retained theorem. Chunks037-038 completed and their completed-mode checkpoints pass, but the 38/63 higher-shell prefix is not a complete higher-shell packet and does not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block72 records completed higher-shell chunks037-038 as bounded support
+   only. The completed-mode checkpoints pass for seed control,
+   selected-mass FH/LSZ metadata, normal-equation cache metadata,
+   higher-shell `C_ss` rows, taste-radial `C_sx/C_xx` rows, and
+   forbidden-import firewalls, but the 38/63 higher-shell prefix is not a
+   complete higher-shell packet, Schur A/B/C kernel rows, strict scalar-LSZ
+   moment/FV/IR authority, canonical `O_H`, canonical `C_sH/C_HH` pole rows,
+   W/Z response, physical `kappa_s`, or retained top-Yukawa closure.
 0. Block71 records higher-shell chunks037-038 launch-state as run-control
    support only. The wave launcher passes and both launched workers survived
    the verification interval, but no completed row JSON, volume artifact, or
