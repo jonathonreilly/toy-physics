@@ -223,6 +223,14 @@ The clean physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
 
+Block77 launches chunks043-044 as run-control support. It does not change the
+queue ranking and does not add completed row evidence yet. Wait for
+chunks043-044 to finish, then package completed-mode checkpoints before
+launching another support wave. The clean physics-closure priority remains
+unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
+accepted-action physical response, or neutral H3/H4 physical-transfer
+authority.
+
 Block35 consumes the committed block31 chunk063 package, no-go-scope
 clarification, block32 promotion contract, block33 OS transfer alias firewall,
 and block34 additive-top support refresh as support-only inputs.  No queue item

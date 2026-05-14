@@ -4172,3 +4172,41 @@ non-colliding wave chunks043-044 and package completed-mode checkpoints after
 the workers finish. Clean physics closure still requires accepted same-surface
 `O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z matched
 physical response, or neutral H3/H4 physical-transfer authority.
+
+## Block77 Higher-Shell Chunks043-044 Launch
+
+Block77 launches the next non-colliding higher-shell support wave after the
+completed Block76 prefix reached `42/63`.
+
+Artifacts:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS043_044_LAUNCH_CHECKPOINT_NOTE_2026-05-14.md`
+- `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`
+
+Launch details:
+
+- chunk043: pid `31031`, seed `2026057043`, log
+  `outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk043_20260514T040055Z.log`
+- chunk044: pid `31032`, seed `2026057044`, log
+  `outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk044_20260514T040055Z.log`
+
+Validation:
+
+```text
+wave launcher launch PASS=11 FAIL=0
+campaign status PASS=421 FAIL=0
+assumption stress PASS=105 FAIL=0
+full positive closure assembly PASS=194 FAIL=0
+retained route PASS=319 FAIL=0
+positive closure completion audit PASS=73 FAIL=0
+```
+
+Honest status: run-control support / higher-shell chunks043-044 launched. The
+completed prefix remains `42/63` until row JSONs exist and completed-mode chunk
+checkpoints pass. Active processes, logs, pids, and partial directories are not
+completed row evidence and do not authorize retained or `proposed_retained`
+top-Yukawa closure.
+
+Exact next action: wait for chunks043-044 to finish, then run completed-mode
+chunk checkpoints and package the row JSON plus volume artifacts before
+launching another support wave.

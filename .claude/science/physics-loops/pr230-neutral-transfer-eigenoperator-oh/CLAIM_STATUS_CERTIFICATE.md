@@ -556,6 +556,11 @@ Prior block certificate summary:
   higher-shell packet, canonical `O_H`, strict `C_sH/C_HH` pole rows, Schur
   A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical
   `kappa_s`, or closure.
+- Block77 actual status: run-control support / higher-shell chunks043-044
+  launched. Active jobs, logs, pid references, partial directories, and launch
+  certificates are not completed row evidence. The completed higher-shell
+  support prefix remains `42/63` until completed-mode checkpoints pass.
 - Block01 through Block38 all have `proposal_allowed=false`; their boundaries
   remain active.
 - Block76 has `proposal_allowed=false`; PR #230 remains draft/open.
+- Block77 has `proposal_allowed=false`; PR #230 remains draft/open.
