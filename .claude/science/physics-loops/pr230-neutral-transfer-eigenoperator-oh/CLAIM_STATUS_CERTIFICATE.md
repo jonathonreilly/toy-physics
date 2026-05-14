@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block75_schur_higher_shell_chunks041_042_launch_checkpoint`.
+Current block: `block78_schur_higher_shell_chunks043_044_completed_checkpoint`.
 
 ```yaml
-actual_current_surface_status: run-control support / block75 higher-shell Schur scalar-LSZ chunks041-042 launched; completed higher-shell support prefix remains 40/63; no retained/proposed_retained closure
+actual_current_surface_status: bounded-support / block78 higher-shell Schur scalar-LSZ chunks043-044 completed-mode checkpoints passed; completed higher-shell support prefix 44/63; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block75 is run-control support only, not a retained/proposed-retained theorem. Chunks041-042 were launched and survived the launcher verification interval, but active jobs, logs, pid files, partial directories, and launch-state certificates are not completed row evidence and do not supply a complete higher-shell packet, canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block78 is bounded support only, not a retained/proposed-retained theorem. Chunks043-044 completed-mode checkpoints pass and extend the higher-shell support prefix to 44/63, but the rows remain same-source C_ss plus taste-radial C_sx/C_xx support. They do not supply a complete higher-shell packet, canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -560,7 +560,15 @@ Prior block certificate summary:
   launched. Active jobs, logs, pid references, partial directories, and launch
   certificates are not completed row evidence. The completed higher-shell
   support prefix remains `42/63` until completed-mode checkpoints pass.
+- Block78 actual status: bounded-support / higher-shell chunks043-044
+   completed. The completed-mode checkpoints pass and extend the higher-shell
+   support prefix to `44/63`, but the rows remain same-source `C_ss` plus
+   taste-radial `C_sx/C_xx` support. They do not supply a complete
+   higher-shell packet, canonical `O_H`, strict `C_sH/C_HH` pole rows, Schur
+   A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical
+   `kappa_s`, or closure.
 - Block01 through Block38 all have `proposal_allowed=false`; their boundaries
   remain active.
 - Block76 has `proposal_allowed=false`; PR #230 remains draft/open.
 - Block77 has `proposal_allowed=false`; PR #230 remains draft/open.
+- Block78 has `proposal_allowed=false`; PR #230 remains draft/open.

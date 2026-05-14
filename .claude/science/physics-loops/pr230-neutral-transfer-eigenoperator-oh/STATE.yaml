@@ -1,24 +1,24 @@
 loop_slug: pr230-neutral-transfer-eigenoperator-oh
 mode: campaign
 runtime_budget: "12h total, outer-supervisor managed"
-checkpoint_time: "2026-05-14T04:01:31Z"
+checkpoint_time: "2026-05-14T06:08:29Z"
 branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_branch: claude/yt-direct-lattice-correlator-2026-04-30
 base_head_at_start: 76c5d93e7
 lock_status: "branch-local science block; did not touch live chunk worker; scripts/automation_lock.py known to fail on hardcoded /Users/jonreilly path"
-cycle_count: 77
-active_science_block: block77_schur_higher_shell_chunks043_044_launch_checkpoint
-active_route: "Block77 launches higher-shell Schur/scalar-LSZ chunks043-044 as the next non-colliding support wave under the two-worker cap. The launcher verifies pids 31031 and 31032 alive after the verification interval, with seeds 2026057043 and 2026057044 and distinct production roots. This is run-control support only: the completed prefix remains 42/63 until completed-mode checkpoints pass, and active jobs/logs/partial directories are not row evidence or top-Yukawa closure."
+cycle_count: 78
+active_science_block: block78_schur_higher_shell_chunks043_044_completed_checkpoint
+active_route: "Block78 packages completed higher-shell Schur/scalar-LSZ chunks043-044 after both workers exited cleanly and wrote row JSON plus volume artifacts. Completed-mode chunk checkpoints pass for seeds 2026057043 and 2026057044; the launcher now reports completed prefix 44/63, active workers [], and planned next wave [45,46]. This is bounded support only and not top-Yukawa closure."
 target_status: best-honest-status
-actual_current_surface_status: "run-control support / block77 higher-shell Schur scalar-LSZ chunks043-044 launched; completed higher-shell support prefix remains 42/63; no retained/proposed_retained closure"
+actual_current_surface_status: "bounded-support / block78 higher-shell Schur scalar-LSZ chunks043-044 completed-mode checkpoints passed; completed higher-shell support prefix 44/63; no retained/proposed_retained closure"
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block77 is run-control support only, not a retained/proposed-retained theorem. Chunks043-044 were launched and survived the launcher verification interval, but active jobs, logs, pid files, partial directories, and launch-state certificates are not completed row evidence and do not supply a complete higher-shell packet, canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block78 is bounded support only, not a retained/proposed-retained theorem. Chunks043-044 completed-mode checkpoints pass and extend the higher-shell support prefix to 44/63, but the rows remain same-source C_ss plus taste-radial C_sx/C_xx support. They do not supply a complete higher-shell packet, canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
-hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram flatness and FV/IR authority; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block77 launches chunks043-044 as run-control support but does not change these missing primitives."
+hard_residual: "Positive work still requires one of the explicit future disjunct artifacts: an accepted/derived same-surface EW/Higgs action plus canonical O_H and physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram flatness and FV/IR authority; same-surface neutral scalar H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority; or a strict W/Z physical-response packet with accepted action, sector-overlap/canonical O_H authority, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows. Block78 packages chunks043-044 as bounded support but does not change these missing primitives."
 minimal_allowed_premises:
   - "Cl(3)/Z^3 substrate and current PR230 same-surface source primitives"
   - "same-surface W/Z action-root support contracts at their stated support-only status"
@@ -99,6 +99,7 @@ minimal_allowed_premises:
   - "block75 higher-shell chunks041-042 launch checkpoint as run-control support only; launched workers are not completed row evidence and do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, or top-Yukawa closure"
   - "block76 higher-shell chunks041-042 completed checkpoint as bounded support only; completed chunks041-042 remain C_ss plus taste-radial C_sx/C_xx support, the prefix is 42/63 not a complete packet, and the rows do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, or top-Yukawa closure"
   - "block77 higher-shell chunks043-044 launch checkpoint as run-control support only; launched workers are not completed row evidence and do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, or top-Yukawa closure"
+  - "block78 higher-shell chunks043-044 completed checkpoint as bounded support only; completed chunks043-044 remain C_ss plus taste-radial C_sx/C_xx support, the prefix is 44/63 not a complete packet, and the rows do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, or top-Yukawa closure"
   - "block23 remote-candidate intake as open routing/checkpoint status only; fetched Higgs/EW branches are not PR230 same-surface artifacts without parseable required-path certificates"
   - "block24 queue-pivot admission checkpoint as open routing/checkpoint status only; the block23 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
   - "block25 post-block24 landed checkpoint as open routing/checkpoint status only; the block24 checkpoint commit is not a new physics packet and no ranked route is admitted without explicit production/certificate inputs"
@@ -114,6 +115,14 @@ forbidden_imports:
   - "static EW algebra, support contracts, formal GEVP smoke, or response-ratio algebra as accepted physical action/response"
   - "assuming k_top=k_gauge or top/W covariance without a same-surface theorem or matched rows"
 files_touched:
+  - docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS043_044_COMPLETED_CHECKPOINT_NOTE_2026-05-14.md
+  - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK78.md
+  - outputs/yt_pr230_schur_higher_shell_chunk043_checkpoint_2026-05-12.json
+  - outputs/yt_pr230_schur_higher_shell_chunk044_checkpoint_2026-05-12.json
+  - outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk043_2026-05-07.json
+  - outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk044_2026-05-07.json
+  - outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk043/L12xT24/ensemble_measurement.json
+  - outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk044/L12xT24/ensemble_measurement.json
   - docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS043_044_LAUNCH_CHECKPOINT_NOTE_2026-05-14.md
   - .claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/PR_BODY_BLOCK77.md
   - outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json
@@ -897,10 +906,10 @@ commands_run:
   - "2026-05-13 block71: campaign status PASS=421 FAIL=0 after restricted chunks037-038 launch-state"
   - "2026-05-13 block71: assumption stress PASS=105 FAIL=0; full assembly PASS=194 FAIL=0; retained route PASS=319 FAIL=0; completion audit PASS=73 FAIL=0"
   - "2026-05-13 block71: audit pipeline OK; strict audit lint OK with 5 known warnings; generated docs/audit diffs reverted; git diff --check OK"
-review_disposition: pass_run_control_block77_higher_shell_chunks043_044_launch_no_closure
-pr_status: "direct integration into open draft PR #230 landing path; standalone block77 PR not opened because PR #230 remains the landing path"
-next_exact_action: "Wait for chunks043-044 to finish, then run completed-mode chunk checkpoints and package row JSON plus volume artifacts before launching another support wave. For physics closure, supply one primitive-bearing artifact: accepted same-surface O_H/action plus physical Euclidean C_ss/C_sH/C_HH(tau) rows with Gram/FV/IR authority, or strict W/Z physical-response packet with accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response rows."
-stop_condition: "Coherent block77 chunks043-044 launch checkpoint; no retained/proposed_retained closure is authorized. Active chunks043-044 are run-control only and are not completed row evidence."
+review_disposition: pass_bounded_support_block78_higher_shell_chunks043_044_completed_no_closure
+pr_status: "direct integration into open draft PR #230 landing path; standalone block78 PR not opened because PR #230 remains the landing path"
+next_exact_action: "If continuing the support campaign, launch only the next non-colliding wave chunks045-046 under the two-worker cap. For physics closure, supply one primitive-bearing artifact: accepted same-surface O_H/action plus physical Euclidean C_ss/C_sH/C_HH(tau) rows with Gram/FV/IR authority, or strict W/Z physical-response packet with accepted action, production rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response rows."
+stop_condition: "Coherent block78 chunks043-044 completed checkpoint; no retained/proposed_retained closure is authorized. Completed chunks043-044 are bounded support only and are not a complete higher-shell packet or physical readout."
 block16_open_surface_bridge_intake:
   runner: scripts/frontier_yt_pr230_open_surface_bridge_intake.py
   note: docs/YT_PR230_OPEN_SURFACE_BRIDGE_INTAKE_NOTE_2026-05-07.md
@@ -1643,6 +1652,39 @@ block77_schur_higher_shell_chunks043_044_launch_checkpoint:
       production_output_dir: outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk044
   completed_prefix_before_launch: "001-042"
   launched_workers_counted_as_evidence: false
+  strict_scalar_lsz_authority_present: false
+  canonical_oh_certified: false
+  source_higgs_pole_rows_present: false
+  schur_abc_kernel_rows_present: false
+  strict_wz_packet_present: false
+  neutral_h3h4_authority_present: false
+  closure_authorized: false
+  proposal_allowed: false
+block78_schur_higher_shell_chunks043_044_completed_checkpoint:
+  note: docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS043_044_COMPLETED_CHECKPOINT_NOTE_2026-05-14.md
+  chunk043_checkpoint: outputs/yt_pr230_schur_higher_shell_chunk043_checkpoint_2026-05-12.json
+  chunk044_checkpoint: outputs/yt_pr230_schur_higher_shell_chunk044_checkpoint_2026-05-12.json
+  chunk043_row: outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk043_2026-05-07.json
+  chunk044_row: outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk044_2026-05-07.json
+  chunk043_volume_artifact: outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk043/L12xT24/ensemble_measurement.json
+  chunk044_volume_artifact: outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk044/L12xT24/ensemble_measurement.json
+  wave_launcher: outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json
+  campaign_status: outputs/yt_pr230_campaign_status_certificate_2026-05-01.json
+  verification: "chunk043 checkpoint PASS=15 FAIL=0; chunk044 checkpoint PASS=15 FAIL=0; wave launcher PASS=11 FAIL=0 completed=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44] active=[] planned=[45,46]; campaign status PASS=421 FAIL=0; assumption stress PASS=105 FAIL=0; full positive closure assembly PASS=194 FAIL=0; retained route PASS=319 FAIL=0; positive closure completion audit PASS=73 FAIL=0; audit pipeline OK and strict audit lint OK with 5 known warnings; git diff --check OK"
+  completed_prefix: "001-044"
+  expected_contract_chunks: 63
+  selected_mass: 0.75
+  seeds:
+    chunk043: 2026057043
+    chunk044: 2026057044
+  created_utc:
+    chunk043: "2026-05-14T06:04:16Z"
+    chunk044: "2026-05-14T06:04:52Z"
+  seed_control_version: numba_gauge_seed_v1
+  active_workers_after_checkpoint: []
+  planned_next_wave_if_continuing:
+    - 45
+    - 46
   strict_scalar_lsz_authority_present: false
   canonical_oh_certified: false
   source_higgs_pole_rows_present: false
