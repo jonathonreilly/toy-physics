@@ -1,11 +1,52 @@
 # Handoff
 
-Checkpoint: 2026-05-14 08:44 EDT
+Checkpoint: 2026-05-14 08:49 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block85 Higher-Shell Chunks051-052 Launch
+
+Block85 launches the next non-colliding higher-shell support wave after the
+completed Block84 prefix reached `50/63`.
+
+Artifacts:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS051_052_LAUNCH_CHECKPOINT_NOTE_2026-05-14.md`
+- `outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json`
+
+Launch details:
+
+- chunk051: pid `79756`, seed `2026057051`, log
+  `outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk051_20260514T124922Z.log`
+- chunk052: pid `79757`, seed `2026057052`, log
+  `outputs/yt_pr230_schur_higher_shell_rows/logs/L12_T24_chunk052_20260514T124922Z.log`
+
+Validation:
+
+```text
+wave launcher launch PASS=11 FAIL=0
+ps check: pids 79756 and 79757 alive after launch
+campaign status PASS=421 FAIL=0
+assumption stress PASS=105 FAIL=0
+full positive closure assembly PASS=194 FAIL=0
+retained route PASS=319 FAIL=0
+positive closure completion audit PASS=73 FAIL=0
+audit pipeline and strict audit lint OK with 5 known warnings
+git diff --check OK
+```
+
+Honest status: run-control support / higher-shell chunks051-052 launched. The
+completed prefix remains `50/63` until row JSONs exist and completed-mode chunk
+checkpoints pass. Active processes, logs, pids, and partial directories are not
+completed row evidence and do not authorize retained or `proposed_retained`
+top-Yukawa closure.
+
+Exact next action: wait for chunks051-052 to finish, then run completed-mode
+chunk checkpoints and package the row JSON plus volume artifacts before
+launching another support wave.
 
 ## Block84 Higher-Shell Chunks049-050 Completed
 
