@@ -212,6 +212,17 @@ unchanged: accepted `O_H`/action plus strict source-Higgs pole rows, strict W/Z
 accepted-action physical response, or neutral H3/H4 physical-transfer
 authority.
 
+Block76 packages completed higher-shell chunks041-042. It extends the
+checkpointed higher-shell support prefix to `42/63` planned support chunks, but
+it does not change the queue ranking: the rows are still same-source `C_ss`
+plus taste-radial `C_sx/C_xx` under the unratified second-source certificate,
+not canonical `O_H`, not strict `C_sH/C_HH` pole rows, not Schur A/B/C kernel
+rows, not scalar-LSZ moment/FV/IR authority, and not W/Z response. If
+continuing the support campaign, the next non-colliding wave is chunks043-044.
+The clean physics-closure priority remains accepted `O_H`/action plus strict
+source-Higgs pole rows, strict W/Z accepted-action physical response, or
+neutral H3/H4 physical-transfer authority.
+
 Block35 consumes the committed block31 chunk063 package, no-go-scope
 clarification, block32 promotion contract, block33 OS transfer alias firewall,
 and block34 additive-top support refresh as support-only inputs.  No queue item

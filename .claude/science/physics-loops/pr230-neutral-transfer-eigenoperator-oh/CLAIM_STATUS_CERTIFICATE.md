@@ -549,5 +549,13 @@ Prior block certificate summary:
   absolute-authority frames as support-only or exact current-surface
   boundaries, admits no ranked route, and yields until explicit
   production/certificate inputs land.
+- Block76 actual status: bounded-support / higher-shell chunks041-042
+  completed. The completed-mode checkpoints pass and extend the higher-shell
+  support prefix to `42/63`, but the rows remain same-source `C_ss` plus
+  taste-radial `C_sx/C_xx` support. They do not supply a complete
+  higher-shell packet, canonical `O_H`, strict `C_sH/C_HH` pole rows, Schur
+  A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response, physical
+  `kappa_s`, or closure.
 - Block01 through Block38 all have `proposal_allowed=false`; their boundaries
   remain active.
+- Block76 has `proposal_allowed=false`; PR #230 remains draft/open.
