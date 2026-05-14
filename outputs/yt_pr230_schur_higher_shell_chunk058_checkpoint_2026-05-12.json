@@ -1,0 +1,67 @@
+{
+  "action_certificate": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
+  "actual_current_surface_status": "bounded-support / higher-shell Schur scalar-LSZ chunk058 row checkpoint",
+  "bare_retained_allowed": false,
+  "checkpoint_passed": true,
+  "chunk_artifact": "outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk058/L12xT24/ensemble_measurement.json",
+  "chunk_index": 58,
+  "chunk_output": "outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk058_2026-05-07.json",
+  "chunk_summary": {
+    "active_process_rows_for_chunk": [],
+    "expected_seed": 2026057058,
+    "mass_scan_count": 3,
+    "phase": "production",
+    "pole_residue_rows_count": 0,
+    "scalar_lsz_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,0,2",
+      "0,1,0",
+      "0,1,1",
+      "0,2,0",
+      "1,0,0",
+      "1,0,1",
+      "1,1,0",
+      "1,1,1",
+      "2,0,0"
+    ],
+    "seed": 2026057058,
+    "seed_control_version": "numba_gauge_seed_v1",
+    "selected_mass_parameter": 0.75,
+    "source_higgs_aliases": {
+      "C_sx_aliases_C_sH_schema_field": true,
+      "C_xx_aliases_C_HH_schema_field": true,
+      "available": true,
+      "source_operator_symbol": "x",
+      "strict_limit": "C_sx/C_xx aliases are second-source taste-radial rows.  They are not canonical-Higgs C_sH/C_HH rows unless a separate canonical O_H/source-overlap bridge passes."
+    },
+    "source_higgs_modes": [
+      "0,0,0",
+      "0,0,1",
+      "0,0,2",
+      "0,1,0",
+      "0,1,1",
+      "0,2,0",
+      "1,0,0",
+      "1,0,1",
+      "1,1,0",
+      "1,1,1",
+      "2,0,0"
+    ]
+  },
+  "completed": true,
+  "contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+  "exact_next_action": "Accumulate completed higher-shell chunks, run this checkpoint on each, combine higher-shell rows, then run complete-monotonicity, threshold/model-class/pole/FV/IR, and canonical-source bridge gates.",
+  "fail_count": 0,
+  "pass_count": 15,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "A single completed higher-shell chunk is partial row support only.  It does not identify the taste-radial source with canonical O_H, does not derive kappa_s, and does not provide complete monotonicity, pole/FV/IR, or retained-route authority.",
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained y_t closure",
+    "does not treat one higher-shell chunk as a complete scalar-LSZ row packet",
+    "does not treat C_sx/C_xx as canonical-Higgs C_sH/C_HH",
+    "does not claim complete monotonicity, scalar pole authority, FV/IR authority, canonical O_H, source-overlap, or W/Z response",
+    "does not set kappa_s = 1, c2 = 1, or Z_match = 1",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0"
+  ]
+}
