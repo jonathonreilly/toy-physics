@@ -1,11 +1,57 @@
 # Handoff
 
-Checkpoint: 2026-05-14 06:39 EDT
+Checkpoint: 2026-05-14 08:44 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block84 Higher-Shell Chunks049-050 Completed
+
+Block84 packages the completed higher-shell support wave for chunks049-050.
+Both workers exited cleanly and wrote row JSON plus volume artifacts.
+
+Artifacts:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_CHUNKS049_050_COMPLETED_CHECKPOINT_NOTE_2026-05-14.md`
+- `outputs/yt_pr230_schur_higher_shell_chunk049_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_chunk050_checkpoint_2026-05-12.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk049_2026-05-07.json`
+- `outputs/yt_pr230_schur_higher_shell_rows/yt_pr230_schur_higher_shell_rows_L12_T24_chunk050_2026-05-07.json`
+- `outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk049/L12xT24/ensemble_measurement.json`
+- `outputs/yt_direct_lattice_correlator_production_schur_higher_shell_rows/L12_T24_chunk050/L12xT24/ensemble_measurement.json`
+
+Completed prefix: `50/63`. The wave launcher now reports active `[]` and
+planned next wave `[51,52]`.
+
+Verification:
+
+```text
+chunk049 checkpoint PASS=15 FAIL=0
+chunk050 checkpoint PASS=15 FAIL=0
+wave launcher PASS=11 FAIL=0 completed=[1..50] active=[] planned=[51,52]
+campaign status PASS=421 FAIL=0
+assumption stress PASS=105 FAIL=0
+full positive closure assembly PASS=194 FAIL=0
+retained route PASS=319 FAIL=0
+positive closure completion audit PASS=73 FAIL=0
+audit pipeline and strict audit lint OK with 5 known warnings
+git diff --check OK
+```
+
+Honest status: bounded-support / higher-shell chunks049-050 completed. The
+rows remain same-source `C_ss` plus taste-radial `C_sx/C_xx` support. They are
+not a complete higher-shell packet, not canonical `O_H`, not strict
+`C_sH/C_HH` pole rows, not Schur A/B/C kernel rows, not scalar-LSZ/FV/IR
+authority, not W/Z response, and not retained or `proposed_retained`
+top-Yukawa closure.
+
+Exact next action: if continuing the support campaign, launch the next
+non-colliding wave chunks051-052 and package completed-mode checkpoints after
+the workers finish. Clean physics closure still requires accepted same-surface
+`O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z matched
+physical response, or neutral H3/H4 physical-transfer authority.
 
 ## Block83 Higher-Shell Chunks049-050 Launch
 
