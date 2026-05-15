@@ -1,0 +1,75 @@
+==============================================================================
+New-physics probe: muon anomalous magnetic moment (npG2) -- verification
+==============================================================================
+
+==============================================================================
+Section 1: Pauli structural anchor (P1)
+==============================================================================
+[PASS] S1.0 numpy import -- numpy available
+[PASS] S1.1 P1 Cl(3) anticommutation {sigma_i, sigma_j} = 2 delta_ij I -- max |dev| = 0.00e+00
+[PASS] S1.2 P1 Pauli vertex algebra sigma_i sigma_j = delta_ij I + i eps_ijk sigma_k -- max |dev| = 0.00e+00
+[PASS] S1.3 P1 Gordon non-rel reduction: sigma^{ij} = (i/2)[sigma_i,sigma_j] = -eps_ijk sigma_k -- max |dev| = 0.00e+00
+[PASS] S1.4 P1 narrow theorem note exists on retained surface -- path = CL3_PAULI_IRREP_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md
+[PASS] S1.5 P1 retained Cl(3) Pauli irrep has dim_C = 2 -- dim = 2
+
+==============================================================================
+Section 2: Retained alpha_EM coupling (P2)
+==============================================================================
+[PASS] S2.1 P2 prediction-chain doc exists on retained surface -- path = COMPLETE_PREDICTION_CHAIN_2026_04_15.md
+[PASS] S2.2 P2 retained 1/alpha_EM(M_Z) ~ 127.67 in prediction chain -- string '127.67' present alongside '1/alpha_EM(M_Z)'
+[PASS] S2.3 P2 a_l^(1) at alpha(M_Z) numerical value -- a_l^(1) at alpha(MZ) = 1.246612e-03 (~106.9% of a_mu^exp)
+[PASS] S2.4 P2 a_l^(1) at alpha(0) comparator (NOT retained -- alpha(0) blocked per R-Lep/R-Q-Heavy/R-Had-NP) -- a_l^(1) at alpha(0) = 1.161410e-03 (~99.61% of a_mu^exp -- 1-loop carries the bulk)
+[PASS] S2.5 P2 alpha(M_Z) -> alpha(0) running firewall doc exists -- path = ATOMIC_LANE2_QED_RUNNING_DEPENDENCY_FIREWALL_NOTE_2026-04-30.md
+
+==============================================================================
+Section 3: Schwinger 1-loop ADMITTED, not derived (P3)
+==============================================================================
+[PASS] S3.1 P3 no retained source-note derives a_l = alpha/(2 pi) on Cl(3)/Z^3 surface today -- candidate derivation notes found = 0
+[PASS] S3.2 P3 parallel admission: R-Lep in firewall doc names 'retained QED leptonic-loop primitive' -- R-Lep marker present
+[PASS] S3.3 P3 continuous-Minkowski 1-loop QED vertex NOT retained on Cl(3)/Z^3 substrate -- framework substrate is Z^3 lattice; continuous flat-space loop integration is admitted from standard QED
+[PASS] S3.4 P3 admitted 1-loop a_l is universal: a_e = a_mu = a_tau = alpha/(2 pi) -- a_e = a_mu = a_tau = 1.161410e-03 (independent of lepton mass at 1-loop)
+
+==============================================================================
+Section 4: 2-loop QED blocked by Lane 6 (P4)
+==============================================================================
+[PASS] S4.1 P4 Lane 6 charged-lepton mass review note exists -- path = CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md
+[PASS] S4.2 P4 Lane 6 package is bounded with observational pin (not retained derivation of m_mu/m_e) -- doc marks 'bounded' + 'observational pin'
+[PASS] S4.3 P4 leading-log 2-loop coefficient A_2(m_mu/m_e) magnitude consistent with standard QED -- leading-log = 1.082755 vs full = 1.094258 (full requires mass ratio)
+[PASS] S4.4 P4 2-loop contribution a_mu^(2) magnitude ~+413000e-11 (blocked, not retained) -- a_mu^(2) ~ 413217e-11 (depends on m_mu/m_e, m_mu/m_tau)
+[PASS] S4.5 P4 no retained-derived note for m_mu/m_e ratio (blocking 2-loop) -- candidate retained-derived notes = 0
+
+==============================================================================
+Section 5: HVP and HLbL blocked by Lane 1 (P5)
+==============================================================================
+[PASS] S5.1 P5 R-Had-NP admission in firewall: hadronic VP requires R(s) or Lane 1 substrate -- R-Had-NP marker + R(s) marker present
+[PASS] S5.2 P5 firewall explicitly names Lane 1 substrate hadron spectroscopy as alternative -- 'Lane 1' marker present in firewall
+[PASS] S5.3 P5 no retained-derived hadronic R(s) ratio on Cl(3)/Z^3 surface -- candidates found = 0
+[PASS] S5.4 P5 a_mu^HVP comparator range (data-driven vs BMW lattice): ~6800e-11 to ~7100e-11 -- range = 6800-7100 e-11 -- spread is the SM uncertainty driver
+[PASS] S5.5 P5 a_mu^HLbL comparator ~+92e-11 (blocked, same Lane 1 dependency) -- a_mu^HLbL ~ +92e-11 (comparator only)
+
+==============================================================================
+Section 6: No a_mu^SM closure from retained surface (P6)
+==============================================================================
+[PASS] S6.1 P6 admission inventory: seven named open admissions enumerated -- count = 7
+[PASS] S6.x P6 admission ADM-Schw present in inventory -- 1-loop Schwinger integral admitted from standard QED
+[PASS] S6.x P6 admission ADM-alpha(0) present in inventory -- alpha_EM(M_Z) -> alpha(0) running, blocked per R-Lep/R-Q-Heavy/R-Had-NP
+[PASS] S6.x P6 admission ADM-2loop present in inventory -- 2-loop QED mass-ratio coefficients, blocked by Lane 6
+[PASS] S6.x P6 admission ADM-3loop+ present in inventory -- 3-loop and higher pure QED, blocked by Lane 6 + admitted loop primitive
+[PASS] S6.x P6 admission ADM-HVP present in inventory -- Hadronic vacuum polarization, blocked by Lane 1 / admitted R(s) or BMW lattice
+[PASS] S6.x P6 admission ADM-HLbL present in inventory -- Hadronic light-by-light, blocked by Lane 1
+[PASS] S6.x P6 admission ADM-EW present in inventory -- Electroweak contribution, blocked by open Higgs lane
+[PASS] S6.9 P6 no retained-derived a_mu^SM source-note on Cl(3)/Z^3 surface today -- candidate retained-derived a_mu^SM notes = 0
+[PASS] S6.10 P6 1-loop universal at alpha(0) covers ~99.6% of a_mu^exp; remaining ~0.4% is blocked -- coverage = 99.6131% (the remaining 0.3869% is the precision target -- blocked)
+[PASS] S6.11 P6 Fermilab/BNL anomaly Delta a_mu ~250e-11 is ~0.0002% of a_mu^exp -- requires SM precision the framework lacks -- Delta a_mu/a_mu^exp ~ 0.000214% (anomaly is in the parts-per-million regime)
+[PASS] S6.12 P6 framework does NOT predict a_mu^SM or Delta a_mu today -- honest verdict: 7 named open admissions block full SM prediction
+
+==============================================================================
+Section 7: Synthesis
+==============================================================================
+[PASS] S7.1 npG2 bounded-theorem synthesis recorded -- framework does not predict the muon g-2 anomaly today
+[PASS] S7.2 not corollary churn: muon-g-2 admission inventory is structurally new -- ADM-* set is distinct from R-* set in alpha_EM firewall
+[PASS] S7.3 audit boundary respected -- this is a source-note proposal -- claim_type, audit_status, effective_status remain audit-lane authority
+
+==============================================================================
+=== TOTAL: PASS=40, FAIL=0 ===
+==============================================================================
