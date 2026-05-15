@@ -930,6 +930,9 @@ def main() -> int:
         "pr230_schur_higher_shell_wave_launcher": load(
             "outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json"
         ),
+        "pr230_schur_higher_shell_complete_packet_monotonicity": load(
+            "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json"
+        ),
         "pr230_schur_higher_shell_chunk001_checkpoint": load(
             "outputs/yt_pr230_schur_higher_shell_chunk001_checkpoint_2026-05-12.json"
         ),
@@ -5500,6 +5503,37 @@ def main() -> int:
         is True,
         statuses["pr230_schur_higher_shell_production_contract"],
     )
+    schur_higher_shell_complete_packet_monotonicity = certificates[
+        "pr230_schur_higher_shell_complete_packet_monotonicity"
+    ]
+    schur_higher_shell_complete_packet_monotonicity_blocks = (
+        "complete 63/63 higher-shell finite rows fail"
+        in str(statuses["pr230_schur_higher_shell_complete_packet_monotonicity"])
+        and schur_higher_shell_complete_packet_monotonicity.get("proposal_allowed") is False
+        and schur_higher_shell_complete_packet_monotonicity.get(
+            "higher_shell_complete_packet_monotonicity_gate_passed"
+        )
+        is True
+        and schur_higher_shell_complete_packet_monotonicity.get("complete_packet_chunk_count") == 63
+        and schur_higher_shell_complete_packet_monotonicity.get(
+            "strict_schur_or_scalar_lsz_authority_passed"
+        )
+        is False
+        and schur_higher_shell_complete_packet_monotonicity.get(
+            "canonical_higgs_operator_identity_passed"
+        )
+        is False
+        and bool(
+            schur_higher_shell_complete_packet_monotonicity.get(
+                "failing_complete_monotonicity_fields"
+            )
+        )
+    )
+    report(
+        "pr230-schur-higher-shell-complete-packet-monotonicity-blocks-shortcut",
+        schur_higher_shell_complete_packet_monotonicity_blocks,
+        statuses["pr230_schur_higher_shell_complete_packet_monotonicity"],
+    )
     schur_higher_shell_wave_launcher = certificates[
         "pr230_schur_higher_shell_wave_launcher"
     ]
@@ -8233,6 +8267,9 @@ def main() -> int:
             "current_four_mode_campaign_must_remain_unmixed"
         )
         is True
+    )
+    result["schur_higher_shell_complete_packet_monotonicity_blocks_shortcut"] = (
+        schur_higher_shell_complete_packet_monotonicity_blocks
     )
     result["schur_higher_shell_wave_launcher_run_control_only"] = (
         "higher-shell Schur scalar-LSZ wave launcher status"

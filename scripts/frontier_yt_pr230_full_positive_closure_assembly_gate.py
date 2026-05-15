@@ -175,6 +175,7 @@ PARENTS = {
     "pr230_source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "pr230_fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+    "pr230_schur_higher_shell_complete_packet_monotonicity": "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json",
     "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
     "pr230_neutral_rank_one_bypass_post_block37_audit": "outputs/yt_pr230_neutral_rank_one_bypass_post_block37_audit_2026-05-12.json",
     "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
@@ -2271,6 +2272,31 @@ def main() -> int:
         )
         is True
     )
+    schur_higher_shell_complete_packet_monotonicity_blocks = (
+        "complete 63/63 higher-shell finite rows fail"
+        in statuses["pr230_schur_higher_shell_complete_packet_monotonicity"]
+        and certs["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "higher_shell_complete_packet_monotonicity_gate_passed"
+        )
+        is True
+        and certs["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "complete_packet_chunk_count"
+        )
+        == 63
+        and certs["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "strict_schur_or_scalar_lsz_authority_passed"
+        )
+        is False
+        and bool(
+            certs["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+                "failing_complete_monotonicity_fields"
+            )
+        )
+    )
     scalar_lsz_blocks = (
         certs["fh_lsz_model_class"].get("proposal_allowed") is False
         and certs["fh_lsz_model_class_semantic_firewall"].get("proposal_allowed") is False
@@ -2294,6 +2320,7 @@ def main() -> int:
             "complete_bernstein_inverse_certificate_passed"
         )
         is False
+        and schur_higher_shell_complete_packet_monotonicity_blocks
         and certs["pr230_scalar_lsz_holonomic_exact_authority"].get("proposal_allowed")
         is False
         and certs["pr230_scalar_lsz_holonomic_exact_authority"].get(
@@ -3358,6 +3385,11 @@ def main() -> int:
         "schur-higher-shell-production-contract-not-evidence",
         schur_higher_shell_production_contract_not_evidence,
         statuses["pr230_schur_higher_shell_production_contract"],
+    )
+    report(
+        "schur-higher-shell-complete-packet-monotonicity-blocks-shortcut",
+        schur_higher_shell_complete_packet_monotonicity_blocks,
+        statuses["pr230_schur_higher_shell_complete_packet_monotonicity"],
     )
     report(
         "canonical-higgs-semantic-firewall-support-only",
@@ -4500,6 +4532,7 @@ def main() -> int:
         "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
         "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
         "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
+        "schur_higher_shell_complete_packet_monotonicity_blocks_shortcut": schur_higher_shell_complete_packet_monotonicity_blocks,
         "block53_residual_minimality_not_closure": block53_residual_minimality_not_closure,
         "block54_response_readout_reduction_not_closure": block54_response_readout_reduction_not_closure,
         "block55_canonical_neutral_cut_not_closure": block55_canonical_neutral_cut_not_closure,

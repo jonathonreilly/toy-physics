@@ -1,11 +1,47 @@
 # Handoff
 
-Checkpoint: 2026-05-15 00:01 EDT
+Checkpoint: 2026-05-15 00:17 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block99 Higher-Shell Complete-Packet Monotonicity Boundary
+
+Block99 consumes the completed `63/63` higher-shell finite row packet and
+tests the finite Schur/scalar-LSZ promotion shortcut across the five available
+`qhat^2` levels. All row JSONs and completed-mode checkpoints are
+schema-clean, but every tested finite scalar/Schur proxy fails the necessary
+Stieltjes divided-difference sign pattern.
+
+Artifacts:
+
+- `docs/YT_PR230_SCHUR_HIGHER_SHELL_COMPLETE_PACKET_MONOTONICITY_GATE_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate.py`
+- `outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json`
+
+Validation:
+
+```text
+higher-shell complete-packet monotonicity PASS=12 FAIL=0
+campaign status PASS=422 FAIL=0
+assumption stress PASS=106 FAIL=0
+retained route PASS=320 FAIL=0
+full positive closure assembly PASS=195 FAIL=0
+positive closure completion audit PASS=74 FAIL=0
+```
+
+Honest status: exact negative boundary / complete higher-shell finite rows do
+not promote to strict scalar-LSZ/Schur pole authority. The result preserves the
+claim firewall: no canonical `O_H`, no strict `C_sH/C_HH` pole rows, no
+FV/IR authority, no W/Z response, no physical `kappa_s`, and no retained or
+`proposed_retained` top-Yukawa closure.
+
+Exact next action: stop replaying finite higher-shell promotion. Closure needs
+one fresh same-surface primitive-bearing artifact: certified
+`O_H/C_sH/C_HH`, strict W/Z physical response, strict Schur pole derivative
+rows with FV/IR authority, or neutral H3/H4 transfer authority.
 
 ## Block98 Higher-Shell Chunk063 Completed
 

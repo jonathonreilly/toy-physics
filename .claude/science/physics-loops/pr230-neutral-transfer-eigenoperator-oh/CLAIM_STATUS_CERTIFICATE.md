@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block98_schur_higher_shell_chunk063_completed_checkpoint`.
+Current block: `block99_schur_higher_shell_complete_packet_monotonicity_gate`.
 
 ```yaml
-actual_current_surface_status: bounded-support / block98 final higher-shell Schur scalar-LSZ chunk063 completed-mode checkpoint passed; planned finite higher-shell support rows 63/63 complete; no retained/proposed_retained closure
+actual_current_surface_status: exact negative boundary / block99 complete 63/63 higher-shell finite rows fail necessary Stieltjes complete-monotonicity sign tests for strict scalar-LSZ/Schur pole authority; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block98 is bounded higher-shell support only, not a retained/proposed-retained theorem. The planned finite higher-shell chunk queue is now 63/63 complete, but the rows remain same-source C_ss plus taste-radial C_sx/C_xx support under the unratified second-source certificate and do not supply canonical O_H, strict C_sH/C_HH pole rows, Schur A/B/C kernel rows, scalar-LSZ/FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block99 is an exact negative boundary for finite higher-shell row promotion only, not a retained/proposed-retained theorem. The completed 63/63 finite rows fail the necessary Stieltjes complete-monotonicity shortcut and still remain same-source C_ss plus taste-radial C_sx/C_xx support under the unratified second-source certificate. They do not supply canonical O_H, strict C_sH/C_HH pole rows, isolated-pole Schur A/B/C rows, FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block99 records the complete higher-shell finite packet as an exact negative
+   boundary for the finite-row promotion shortcut. All `63/63` chunk rows and
+   checkpoints are schema-clean and the finite inverse-block identity check is
+   clean, but every tested finite scalar/Schur proxy fails the necessary
+   Stieltjes divided-difference sign pattern. The packet cannot be promoted to
+   strict scalar-LSZ or Schur pole authority and does not supply canonical
+   `O_H`, strict `C_sH/C_HH` pole rows, FV/IR authority, W/Z response, or
+   physical `kappa_s`.
 0. Block98 records final higher-shell chunk063 completion as bounded support
    only. The completed-mode checkpoint passes for seed control, selected-mass
    FH/LSZ metadata, normal-equation cache metadata, higher-shell `C_ss` rows,

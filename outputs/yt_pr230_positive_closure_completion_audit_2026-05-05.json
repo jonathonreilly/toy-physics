@@ -68,6 +68,7 @@
     "same_surface_neutral_multiplicity_one_gate": "outputs/yt_pr230_same_surface_neutral_multiplicity_one_gate_2026-05-07.json",
     "schur_complement_complete_monotonicity_gate": "outputs/yt_pr230_schur_complement_complete_monotonicity_gate_2026-05-07.json",
     "schur_complement_stieltjes_repair_gate": "outputs/yt_pr230_schur_complement_stieltjes_repair_gate_2026-05-07.json",
+    "schur_higher_shell_complete_packet_monotonicity": "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json",
     "schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
     "schur_x_given_source_one_pole_scout": "outputs/yt_pr230_schur_x_given_source_one_pole_scout_2026-05-07.json",
@@ -140,6 +141,7 @@
     "same_surface_neutral_multiplicity_one_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
     "schur_complement_complete_monotonicity_gate": "bounded support plus exact boundary / C_x|s Schur residual passes the necessary first-shell Stieltjes direction but lacks complete monotonicity, threshold, pole, FV/IR, and source-bridge authority",
     "schur_complement_stieltjes_repair_gate": "bounded-support / Schur-complement Stieltjes repair split: C_s|x fails first-shell monotonicity while C_x|s survives the necessary first-shell check; scalar-LSZ authority absent",
+    "schur_higher_shell_complete_packet_monotonicity": "exact negative boundary / complete 63/63 higher-shell finite rows fail necessary Stieltjes complete-monotonicity sign tests for strict scalar-LSZ/Schur pole authority",
     "schur_higher_shell_production_contract": "bounded-support / higher-shell Schur scalar-LSZ production contract; launch preflight clear after four-mode 63/63 completion; no physics closure",
     "schur_kprime_rows": "bounded-support / Schur K-prime row absence guard; finite source-only rows rejected",
     "schur_x_given_source_one_pole_scout": "bounded-support / C_x|s one-pole finite-residue scout; positive endpoint fits are model-class diagnostics only, not scalar-LSZ pole authority",
@@ -177,7 +179,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 73,
+  "pass_count": 74,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -217,6 +219,7 @@
     "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": true,
     "schur_complement_complete_monotonicity_not_closure": true,
     "schur_complement_stieltjes_repair_not_closure": true,
+    "schur_higher_shell_complete_packet_monotonicity_blocks_shortcut": true,
     "schur_higher_shell_production_contract_not_evidence": true,
     "schur_x_given_source_one_pole_scout_not_authority": true,
     "source_coordinate_transport_blocked": true,

@@ -326,6 +326,9 @@ def main() -> int:
         "schur_higher_shell_production_contract": load(
             "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json"
         ),
+        "schur_higher_shell_complete_packet_monotonicity": load(
+            "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1893,6 +1896,24 @@ def main() -> int:
         is True,
         higher_shell_contract.get("actual_current_surface_status"),
     )
+    higher_shell_complete_packet = certificates[
+        "schur_higher_shell_complete_packet_monotonicity"
+    ]
+    report(
+        "higher-shell-complete-packet-monotonicity-blocks-shortcut",
+        "complete 63/63 higher-shell finite rows fail"
+        in str(higher_shell_complete_packet.get("actual_current_surface_status"))
+        and higher_shell_complete_packet.get("proposal_allowed") is False
+        and higher_shell_complete_packet.get(
+            "higher_shell_complete_packet_monotonicity_gate_passed"
+        )
+        is True
+        and higher_shell_complete_packet.get("complete_packet_chunk_count") == 63
+        and higher_shell_complete_packet.get("strict_schur_or_scalar_lsz_authority_passed")
+        is False
+        and bool(higher_shell_complete_packet.get("failing_complete_monotonicity_fields")),
+        higher_shell_complete_packet.get("actual_current_surface_status"),
+    )
     schur_one_pole_scout = certificates["schur_x_given_source_one_pole_scout"]
     report(
         "schur-x-given-source-one-pole-scout-not-authority",
@@ -2203,6 +2224,7 @@ def main() -> int:
             "does not treat common O_H/WZ root cuts or accepted-action stretch checkpoints as canonical O_H, accepted action, W/Z rows, covariance, strict g2, or y_t closure",
             "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
             "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
+            "does not treat complete 63/63 higher-shell finite-row monotonicity diagnostics as strict scalar-LSZ, Schur pole-row, FV/IR, canonical O_H, or y_t authority",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "pass_count": PASS_COUNT,

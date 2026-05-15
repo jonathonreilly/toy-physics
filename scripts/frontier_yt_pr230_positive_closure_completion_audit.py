@@ -68,6 +68,7 @@ PARENTS = {
     "source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
     "fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
     "schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+    "schur_higher_shell_complete_packet_monotonicity": "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json",
     "two_source_taste_radial_primitive_transfer_candidate_gate": "outputs/yt_pr230_two_source_taste_radial_primitive_transfer_candidate_gate_2026-05-07.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "strict_scalar_lsz_moment_fv_authority_gate": "outputs/yt_pr230_strict_scalar_lsz_moment_fv_authority_gate_2026-05-07.json",
@@ -976,6 +977,31 @@ def main() -> int:
         )
         is True
     )
+    schur_higher_shell_complete_packet_monotonicity_blocks = (
+        "complete 63/63 higher-shell finite rows fail"
+        in parent_statuses["schur_higher_shell_complete_packet_monotonicity"]
+        and certs["schur_higher_shell_complete_packet_monotonicity"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["schur_higher_shell_complete_packet_monotonicity"].get(
+            "higher_shell_complete_packet_monotonicity_gate_passed"
+        )
+        is True
+        and certs["schur_higher_shell_complete_packet_monotonicity"].get(
+            "complete_packet_chunk_count"
+        )
+        == 63
+        and certs["schur_higher_shell_complete_packet_monotonicity"].get(
+            "strict_schur_or_scalar_lsz_authority_passed"
+        )
+        is False
+        and bool(
+            certs["schur_higher_shell_complete_packet_monotonicity"].get(
+                "failing_complete_monotonicity_fields"
+            )
+        )
+    )
     two_source_taste_radial_primitive_transfer_candidate_not_h3 = (
         "finite C_sx rows do not certify a physical primitive neutral transfer"
         in parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"]
@@ -1303,6 +1329,7 @@ def main() -> int:
     report("source-higgs-time-kernel-production-manifest-not-evidence", source_higgs_time_kernel_production_manifest_not_evidence, parent_statuses["source_higgs_time_kernel_production_manifest"])
     report("fms-literature-source-overlap-intake-non-authority", fms_literature_source_overlap_intake_non_authority, parent_statuses["fms_literature_source_overlap_intake"])
     report("schur-higher-shell-production-contract-not-evidence", schur_higher_shell_production_contract_not_evidence, parent_statuses["schur_higher_shell_production_contract"])
+    report("schur-higher-shell-complete-packet-monotonicity-blocks-shortcut", schur_higher_shell_complete_packet_monotonicity_blocks, parent_statuses["schur_higher_shell_complete_packet_monotonicity"])
     report("two-source-taste-radial-primitive-transfer-candidate-not-h3", two_source_taste_radial_primitive_transfer_candidate_not_h3, parent_statuses["two_source_taste_radial_primitive_transfer_candidate_gate"])
     report("orthogonal-top-coupling-exclusion-candidate-rejected", orthogonal_top_coupling_exclusion_candidate_rejected, parent_statuses["orthogonal_top_coupling_exclusion_candidate_gate"])
     report("strict-scalar-lsz-moment-fv-authority-absent", strict_scalar_lsz_moment_fv_authority_absent, parent_statuses["strict_scalar_lsz_moment_fv_authority_gate"])
@@ -1488,6 +1515,7 @@ def main() -> int:
             "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
             "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
             "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
+            "schur_higher_shell_complete_packet_monotonicity_blocks_shortcut": schur_higher_shell_complete_packet_monotonicity_blocks,
             "two_source_taste_radial_primitive_transfer_candidate_not_h3": two_source_taste_radial_primitive_transfer_candidate_not_h3,
             "orthogonal_top_coupling_exclusion_candidate_rejected": orthogonal_top_coupling_exclusion_candidate_rejected,
             "strict_scalar_lsz_moment_fv_authority_absent": strict_scalar_lsz_moment_fv_authority_absent,

@@ -1,7 +1,7 @@
 # Opportunity Queue
 
-Campaign mode queue after block98 final higher-shell chunk063 completed
-checkpoint.
+Campaign mode queue after block99 complete higher-shell finite-packet
+monotonicity boundary.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -11,10 +11,13 @@ checkpoint.
 | 4 | Replace finite taste-radial packet with source-Higgs production rows | Medium-low | 3 | Block31 now audits the complete 63/63 finite `C_sx/C_xx` packet | Medium | Medium | Production continuation | The finite packet is complete. The next production move is real canonical `C_ss/C_sH/C_HH` pole rows only after `O_H` is certified; no more finite chunk production is a closure path. |
 | 5 | Replacement radial-spurion action certificate | Medium-low | 2 | Block04 plus block08 W/Z checkpoint | High | Medium | Direct W/Z action repair | Build only if a real same-surface clean radial action artifact exists. |
 | 6 | Same-surface source-radial off-diagonal generator/action row | Medium-low | 2 | Block01 runner gives exact target | High | Small | Direct continuation | Reopen only if a genuine off-diagonal neutral transfer/action artifact appears. |
-| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low-medium | 4 | Existing support and production contract plus complete 63/63 packet | Medium | Medium | Support-only | Block31 refreshed the source-Higgs/scalar-LSZ/Schur intake to the complete 63/63 packet; it remains support-only and not a closure route. |
+| 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low | 4 | Complete 63/63 packet plus Block99 monotonicity gate | Medium | Medium | Support-only / shortcut closed | Block99 consumes the complete 63/63 packet and all tested finite scalar/Schur proxies fail the necessary Stieltjes divided-difference signs. Do not replay finite-row promotion; reopen only with strict Schur pole derivative rows and FV/IR authority or a physical bridge artifact. |
 
 No global stop is justified, but the refreshed queue does not authorize another
-current-surface shortcut gate.  Earlier blocks confirm the source-Higgs route
+current-surface finite-row shortcut gate. Block99 closes the complete
+higher-shell packet as strict scalar-LSZ/Schur authority: the finite rows are
+schema-clean and complete, but all tested finite proxies fail the necessary
+Stieltjes divided-difference signs. Earlier blocks confirm the source-Higgs route
 has a larger staging aperture but no current closure: finite taste-radial rows
 are not canonical `C_sH/C_HH` pole rows.  The neutral primitive route has H1/H2
 support, but even the complete `63/63` finite `C_sx/C_xx` packet does not

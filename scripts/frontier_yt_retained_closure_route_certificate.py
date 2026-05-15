@@ -217,6 +217,7 @@ def main() -> int:
         "pr230_source_higgs_time_kernel_production_manifest": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
         "pr230_fms_literature_source_overlap_intake": "outputs/yt_pr230_fms_literature_source_overlap_intake_2026-05-07.json",
         "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
+        "pr230_schur_higher_shell_complete_packet_monotonicity": "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -2587,6 +2588,33 @@ def main() -> int:
             "current_four_mode_campaign_must_remain_unmixed"
         )
         is True
+    )
+    schur_higher_shell_complete_packet_monotonicity_blocks = (
+        "complete 63/63 higher-shell finite rows fail"
+        in certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "higher_shell_complete_packet_monotonicity_gate_passed"
+        )
+        is True
+        and certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "complete_packet_chunk_count"
+        )
+        == 63
+        and certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "strict_schur_or_scalar_lsz_authority_passed"
+        )
+        is False
+        and bool(
+            certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+                "failing_complete_monotonicity_fields"
+            )
+        )
     )
     derived_bridge_rank_one_closure_attempt_blocks = (
         "derived rank-one bridge not closed"
@@ -5335,6 +5363,13 @@ def main() -> int:
         ),
     )
     report(
+        "schur-higher-shell-complete-packet-monotonicity-blocks-shortcut",
+        schur_higher_shell_complete_packet_monotonicity_blocks,
+        certificates["pr230_schur_higher_shell_complete_packet_monotonicity"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "derived-bridge-rank-one-attempt-blocks-current-source-only-closure",
         derived_bridge_rank_one_closure_attempt_blocks,
         certificates["pr230_derived_bridge_rank_one_closure_attempt"].get(
@@ -6748,6 +6783,7 @@ def main() -> int:
         "source_higgs_time_kernel_production_manifest_not_evidence": source_higgs_time_kernel_production_manifest_not_evidence,
         "fms_literature_source_overlap_intake_non_authority": fms_literature_source_overlap_intake_non_authority,
         "schur_higher_shell_production_contract_not_evidence": schur_higher_shell_production_contract_not_evidence,
+        "schur_higher_shell_complete_packet_monotonicity_blocks_shortcut": schur_higher_shell_complete_packet_monotonicity_blocks,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }
