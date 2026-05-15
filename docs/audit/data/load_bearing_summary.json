@@ -2,11 +2,11 @@
   "criticality_counts": {
     "critical": 1062,
     "high": 57,
-    "leaf": 804,
+    "leaf": 802,
     "medium": 287
   },
   "flagship_signal_used": false,
-  "node_count": 2210,
+  "node_count": 2211,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -19,152 +19,152 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 46.692,
-      "transitive_descendants": 826
+      "load_bearing_score": 47.202,
+      "transitive_descendants": 832
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
       "criticality": "critical",
-      "load_bearing_score": 45.437,
-      "transitive_descendants": 489
+      "load_bearing_score": 45.451,
+      "transitive_descendants": 494
     },
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 43.338,
-      "transitive_descendants": 646
+      "load_bearing_score": 43.366,
+      "transitive_descendants": 659
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 40.387,
-      "transitive_descendants": 946
+      "load_bearing_score": 40.396,
+      "transitive_descendants": 952
     },
     {
       "claim_id": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
       "criticality": "critical",
-      "load_bearing_score": 39.238,
-      "transitive_descendants": 426
+      "load_bearing_score": 39.285,
+      "transitive_descendants": 440
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 39.195,
-      "transitive_descendants": 828
+      "load_bearing_score": 39.206,
+      "transitive_descendants": 834
     },
     {
       "claim_id": "alpha_s_derived_note",
       "criticality": "critical",
-      "load_bearing_score": 37.386,
-      "transitive_descendants": 668
+      "load_bearing_score": 37.414,
+      "transitive_descendants": 681
     },
     {
       "claim_id": "koide_circulant_character_derivation_note_2026-04-18",
       "criticality": "critical",
-      "load_bearing_score": 35.207,
-      "transitive_descendants": 417
+      "load_bearing_score": 35.785,
+      "transitive_descendants": 440
     },
     {
       "claim_id": "yt_ward_identity_derivation_theorem",
       "criticality": "critical",
-      "load_bearing_score": 34.205,
-      "transitive_descendants": 589
+      "load_bearing_score": 34.236,
+      "transitive_descendants": 602
     },
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 32.366,
-      "transitive_descendants": 932
+      "load_bearing_score": 32.375,
+      "transitive_descendants": 938
     },
     {
       "claim_id": "yt_ew_color_projection_theorem",
       "criticality": "critical",
-      "load_bearing_score": 31.76,
-      "transitive_descendants": 612
+      "load_bearing_score": 31.79,
+      "transitive_descendants": 625
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
       "criticality": "critical",
-      "load_bearing_score": 31.474,
-      "transitive_descendants": 502
+      "load_bearing_score": 31.536,
+      "transitive_descendants": 524
     },
     {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
       "criticality": "critical",
-      "load_bearing_score": 30.707,
-      "transitive_descendants": 417
+      "load_bearing_score": 30.785,
+      "transitive_descendants": 440
     },
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 30.522,
-      "transitive_descendants": 734
+      "load_bearing_score": 30.549,
+      "transitive_descendants": 748
     },
     {
       "claim_id": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "criticality": "critical",
-      "load_bearing_score": 30.469,
-      "transitive_descendants": 500
+      "load_bearing_score": 30.531,
+      "transitive_descendants": 522
     },
     {
       "claim_id": "staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07",
       "criticality": "critical",
-      "load_bearing_score": 29.258,
-      "transitive_descendants": 432
+      "load_bearing_score": 29.304,
+      "transitive_descendants": 446
     },
     {
       "claim_id": "three_generation_structure_note",
       "criticality": "critical",
-      "load_bearing_score": 29.257,
-      "transitive_descendants": 611
+      "load_bearing_score": 29.271,
+      "transitive_descendants": 617
     },
     {
       "claim_id": "cl3_color_automorphism_theorem",
       "criticality": "critical",
-      "load_bearing_score": 29.043,
-      "transitive_descendants": 745
+      "load_bearing_score": 29.068,
+      "transitive_descendants": 758
     },
     {
       "claim_id": "left_handed_charge_matching_note",
       "criticality": "critical",
-      "load_bearing_score": 28.014,
-      "transitive_descendants": 730
+      "load_bearing_score": 28.026,
+      "transitive_descendants": 736
     },
     {
       "claim_id": "plaquette_self_consistency_note",
       "criticality": "critical",
-      "load_bearing_score": 27.504,
-      "transitive_descendants": 725
+      "load_bearing_score": 27.529,
+      "transitive_descendants": 738
     },
     {
       "claim_id": "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16",
       "criticality": "critical",
-      "load_bearing_score": 27.207,
-      "transitive_descendants": 417
+      "load_bearing_score": 27.285,
+      "transitive_descendants": 440
     },
     {
       "claim_id": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
       "criticality": "critical",
-      "load_bearing_score": 26.94,
-      "transitive_descendants": 490
+      "load_bearing_score": 27.003,
+      "transitive_descendants": 512
     },
     {
       "claim_id": "ckm_atlas_axiom_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 26.577,
-      "transitive_descendants": 539
+      "load_bearing_score": 26.634,
+      "transitive_descendants": 561
     },
     {
       "claim_id": "standard_model_hypercharge_uniqueness_theorem_note_2026-04-24",
       "criticality": "critical",
-      "load_bearing_score": 26.561,
-      "transitive_descendants": 533
+      "load_bearing_score": 26.619,
+      "transitive_descendants": 555
     },
     {
       "claim_id": "cl3_sm_embedding_theorem",
       "criticality": "critical",
-      "load_bearing_score": 26.33,
-      "transitive_descendants": 454
+      "load_bearing_score": 26.401,
+      "transitive_descendants": 477
     }
   ]
 }
