@@ -213,11 +213,12 @@ produce both with consistent `m_eff`.
 
 ## What this closes
 
-- Scoped non-Schrödinger constraint on T_∞'s scattering subblock:
-  any continuum identification of T_∞ on field-free single-source
-  amplitude observables must reproduce the magnitude/phase shapes
-  AND their incompatible `m_eff`. The Schrödinger free-particle
-  propagator is ruled out.
+- Scoped non-Schrödinger constraint on the scattering response on this
+  harness: any continuum operator candidate proposed for the rescaled NN
+  harness's field-free single-source response must reproduce both the
+  fitted Gaussian magnitude / quadratic-phase shape AND their incompatible
+  `m_eff`. The Schrödinger free-particle propagator is ruled out as such
+  a candidate on this checked window.
 - Independently observes `√h` width scaling from a slit-free probe,
   giving a direct check that the `σ ∝ √h` collapse is a feature of
   this scoped rescaled NN computation.
@@ -229,11 +230,11 @@ produce both with consistent `m_eff`.
 
 ## What this does NOT close
 
-- A **positive** identification of T_∞'s scattering kernel.
-  The structure `K_∞(y_d) ∝ δ(y_d) · exp(i·c2_∞·y_d²)` is
-  observationally consistent with the data, but it is not a
-  conventional PDE propagator and we do not claim it as a
-  closed-form Trotter / resolvent identification.
+- A **positive** identification of a continuum scattering kernel for
+  this harness. The fitted shape `K(y_d) ∝ δ(y_d) · exp(i·c2_∞·y_d²)`
+  on this checked window is observationally consistent with the
+  measured data, but it is not a conventional PDE propagator and is
+  not claimed as a closed-form Trotter / resolvent identification.
 - Universal continuum claim across the framework. This applies
   to the **rescaled NN harness with `BETA = 0.8`, `K_PHYS = 5.0`,
   `L = 40`** and a single source at the origin. Other parameter

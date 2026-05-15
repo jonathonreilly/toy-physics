@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Universal-parameter verification of the closed-form C_arm and c2_inf
-formulas for the rescaled NN harness's continuum operator T_inf.
+formulas for the rescaled NN harness's fitted response-vector limits.
 
-The two harness-specific theorems landed in PR #1003 and PR #1007 give
-closed-form analytic predictions at canonical parameters
+The two harness-specific support notes landed in PR #1003 and PR #1007
+give closed-form analytic predictions at canonical parameters
 
     BETA=0.8, K_PHYS=5.0, FANOUT=3.0, PHYS_L=40.0, SLIT_Y=3.0, PHYS_W=20.0
 
