@@ -70970,10 +70970,10 @@
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8921,
-    "leaf_count": 619,
+    "edge_count": 8883,
+    "leaf_count": 622,
     "node_count": 2211,
-    "root_count": 770,
+    "root_count": 771,
     "runners_with_path": 1830
   }
 }
