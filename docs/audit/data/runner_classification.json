@@ -14016,6 +14016,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_two_amplitude_last_mile.py"
     },
+    "newphysics_np_strong_cp_theta_note_2026-05-10_npcp": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 34,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_np_strong_cp_theta_obstruction.py"
+    },
     "newton_derivation_top4_bridge_note": {
       "assert_count": 0,
       "counts": {
@@ -37201,6 +37213,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_np_strong_cp_theta_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "newphysics_np_strong_cp_theta_note_2026-05-10_npcp"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 34,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py": {
       "assert_count": 1,
       "claims": [
@@ -47895,12 +47922,12 @@
     "dominant_class_distribution": {
       "A": 154,
       "B": 175,
-      "C": 688,
+      "C": 689,
       "D": 276,
       "none": 417
     },
-    "runners_classified": 1710,
-    "runners_with_C": 877,
+    "runners_classified": 1711,
+    "runners_with_C": 878,
     "runners_with_D": 497
   }
 }
