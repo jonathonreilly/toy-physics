@@ -110,32 +110,47 @@ jobs:
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
           set -e
-          if [[ -z "$(git status --porcelain docs)" ]]; then
-            echo "No audit-data changes; nothing to commit."
-            exit 0
-          fi
           git config user.name  "audit-bot"
           git config user.email "audit-bot@users.noreply.github.com"
-          git add docs
-          if git diff --cached --quiet; then
-            echo "No audit-data changes after staging; nothing to commit."
-            exit 0
-          fi
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             msg="audit: nightly repair and pipeline refresh (automated) [skip ci]"
           else
             msg="audit: workflow_dispatch repair and pipeline refresh (automated) [skip ci]"
           fi
-          git commit -m "$msg"
-          # Race-condition safety: main may have moved while pipeline ran;
-          # rebase + retry once before giving up.
+
+          commit_if_needed() {
+            if [[ -z "$(git status --porcelain docs)" ]]; then
+              echo "No audit-data changes; nothing to commit."
+              return 1
+            fi
+            git add docs
+            if git diff --cached --quiet; then
+              echo "No audit-data changes after staging; nothing to commit."
+              return 1
+            fi
+            git commit -m "$msg"
+          }
+
+          commit_if_needed || exit 0
+
+          # Race-condition safety: main may have moved while the audit
+          # pipeline generated docs. Generated JSON/Markdown is not safe to
+          # rebase through conflicts, so refresh from the latest origin/main
+          # and rerun the deterministic repair/pipeline before retrying.
           for attempt in 1 2 3; do
             if git push; then
-              break
+              exit 0
             fi
-            echo "Push attempt $attempt failed; refetching and rebasing..."
+            if [[ "$attempt" == "3" ]]; then
+              echo "Push failed after $attempt attempts; aborting auto-commit."
+              exit 1
+            fi
+            echo "Push attempt $attempt failed; regenerating from latest origin/main..."
             git fetch origin main
-            git rebase origin/main || { echo "Rebase failed; aborting auto-commit"; exit 1; }
+            git reset --hard origin/main
+            python3 docs/audit/scripts/repair_missing_dependency_edges.py --apply
+            bash docs/audit/scripts/run_pipeline.sh
+            commit_if_needed || exit 0
           done
 
       - name: Upload audit queue artifact

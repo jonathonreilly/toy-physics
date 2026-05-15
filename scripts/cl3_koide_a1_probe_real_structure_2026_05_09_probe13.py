@@ -7,7 +7,7 @@ identified by Probe 12 as "the principle that selects R-isotype counting
 over C-character counting on M_3(C)_Herm under C_3-isotype decomposition."
 
 Probe 12's terminal sharpening:
-    Plancherel measure on \hat{C_3} is uniform (mu(chi) = 1/3 for each
+    Plancherel measure on \\hat{C_3} is uniform (mu(chi) = 1/3 for each
     of {1, omega, omega-bar}), giving (1, 2) weighting under the natural
     state on A^{C_3}, NOT (1, 1) weighting which would force kappa = 2 = A1.
 
@@ -44,7 +44,7 @@ VERDICT: SHARPENED OBSTRUCTION.
   Test 3 confirms: K combines omega and omega-bar isotypes into a real
   doublet (Z_2 antilinear involution swapping chi_omega <-> chi_obar).
 
-  Test 4 FAILS: K-quotient of \hat{C_3} has 2 K-orbits ({chi_1} singleton
+  Test 4 FAILS: K-quotient of \\hat{C_3} has 2 K-orbits ({chi_1} singleton
   and {chi_omega, chi_obar} doublet). Real-Plancherel weight on K-orbits
   is canonically (dim^2)/|G| = (1/3, 2/3) — a (1, 2) weighting, NOT
   (1, 1). The K-real-structure quotient gives a Z_2-reduced carrier,

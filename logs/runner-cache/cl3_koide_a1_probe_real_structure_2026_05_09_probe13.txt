@@ -1,13 +1,11 @@
 ===== runner cache v1 =====
 runner: scripts/cl3_koide_a1_probe_real_structure_2026_05_09_probe13.py
-runner_sha256: bc997b6e9a91bddb4131c01210b48bf2a6c9b84079b1c280966daedcac1520f5
+runner_sha256: 2b8e74dbe491815489e43cb53496c45b2de91719bf502fdaaaa5535f2810812a
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.18
+elapsed_sec: 0.19
 status: ok
 ----- stdout -----
-/private/tmp/cl3-review-open-prs-20260509b.7sXhoj/scripts/cl3_koide_a1_probe_real_structure_2026_05_09_probe13.py:10: SyntaxWarning: invalid escape sequence '\h'
-  Plancherel measure on \hat{C_3} is uniform (mu(chi) = 1/3 for each
 
 ======================================================================
 Probe 13 — Real-Structure / Antilinear-Involution Mechanism
