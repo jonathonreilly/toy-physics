@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_np_strong_cp_theta_obstruction.py
+runner_sha256: 0626c6d6033e1ece5ad86ff43aa30749c9c4779320ca8de4ddc6612f5f87069d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.25
+status: ok
+----- stdout -----
 ==============================================================================
 Strong-CP Single-Plaquette F-Tilde-F Operator-Class Obstruction
 ==============================================================================
@@ -42,3 +50,6 @@ PASS=13  FAIL=0
 All structural identities verified: within the single-plaquette action
 class, no CP-odd topological theta-term is admissible at leading order.
 theta_bare == 0 structurally on this action class.
+
+----- stderr -----
+
