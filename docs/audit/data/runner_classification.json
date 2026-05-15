@@ -14016,18 +14016,6 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_two_amplitude_last_mile.py"
     },
-    "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm": {
-      "assert_count": 2,
-      "counts": {
-        "A": 1,
-        "B": 0,
-        "C": 17,
-        "D": 18
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
-      "runner": "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py"
-    },
     "newton_derivation_top4_bridge_note": {
       "assert_count": 0,
       "counts": {
@@ -25454,21 +25442,6 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
-      "exists": true
-    },
-    "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py": {
-      "assert_count": 2,
-      "claims": [
-        "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm"
-      ],
-      "counts": {
-        "A": 1,
-        "B": 0,
-        "C": 17,
-        "D": 18
-      },
-      "decoration_candidate": false,
-      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_per_site_hilbert_dim_two_check.py": {
@@ -47923,11 +47896,11 @@
       "A": 154,
       "B": 175,
       "C": 688,
-      "D": 277,
+      "D": 276,
       "none": 417
     },
-    "runners_classified": 1711,
-    "runners_with_C": 878,
-    "runners_with_D": 498
+    "runners_classified": 1710,
+    "runners_with_C": 877,
+    "runners_with_D": 497
   }
 }
