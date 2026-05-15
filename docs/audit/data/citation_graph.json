@@ -51715,17 +51715,6 @@
       "runner_path": null,
       "title": "Koide Lane Audit Batch \u2014 Three Notes"
     },
-    "koide_lightcone_primitive_theorem_note_2026-05-10": {
-      "claim_id": "koide_lightcone_primitive_theorem_note_2026-05-10",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "f0f2391cb04ad11c17d4502a40b23be2a4aee0291284f20472fd2105f0e014f3",
-      "path": "docs/KOIDE_LIGHTCONE_PRIMITIVE_THEOREM_NOTE_2026-05-10.md",
-      "runner_path": "scripts/frontier_koide_lightcone_primitive.py",
-      "title": "Koide Lightcone Primitive \u2014 Operator-Level Equivalent of NSC"
-    },
     "koide_microscopic_scalar_selector_target_note_2026-04-18": {
       "claim_id": "koide_microscopic_scalar_selector_target_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -70715,7 +70704,6 @@
     "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
     "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
     "koide_kappa_two_orbit_dimension_factorization_note_2026-04-19",
-    "koide_lightcone_primitive_theorem_note_2026-05-10",
     "koide_moment_ratio_uniformity_theorem_note_2026-04-19",
     "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
     "koide_native_dimensionless_review_packet_2026-04-24",
@@ -71085,7 +71073,7 @@
       "no_go": 45,
       "none": 1552,
       "open_gate": 37,
-      "positive_theorem": 146
+      "positive_theorem": 145
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 811,
@@ -71093,12 +71081,12 @@
       "no_go": 150,
       "none": 444,
       "open_gate": 117,
-      "positive_theorem": 615
+      "positive_theorem": 614
     },
     "edge_count": 8908,
-    "leaf_count": 619,
-    "node_count": 2211,
-    "root_count": 771,
-    "runners_with_path": 1830
+    "leaf_count": 618,
+    "node_count": 2210,
+    "root_count": 770,
+    "runners_with_path": 1829
   }
 }

@@ -11016,18 +11016,6 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_koide_kappa_two_orbit_dimension_factorization.py"
     },
-    "koide_lightcone_primitive_theorem_note_2026-05-10": {
-      "assert_count": 5,
-      "counts": {
-        "A": 46,
-        "B": 0,
-        "C": 0,
-        "D": 4
-      },
-      "decoration_candidate": false,
-      "dominant_class": "A",
-      "runner": "scripts/frontier_koide_lightcone_primitive.py"
-    },
     "koide_microscopic_scalar_selector_target_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -35331,21 +35319,6 @@
       "dominant_class": "A",
       "exists": true
     },
-    "scripts/frontier_koide_lightcone_primitive.py": {
-      "assert_count": 5,
-      "claims": [
-        "koide_lightcone_primitive_theorem_note_2026-05-10"
-      ],
-      "counts": {
-        "A": 46,
-        "B": 0,
-        "C": 0,
-        "D": 4
-      },
-      "decoration_candidate": false,
-      "dominant_class": "A",
-      "exists": true
-    },
     "scripts/frontier_koide_microscopic_scalar_selector_target.py": {
       "assert_count": 1,
       "claims": [
@@ -47920,14 +47893,14 @@
   "stats": {
     "decoration_candidates": 202,
     "dominant_class_distribution": {
-      "A": 155,
+      "A": 154,
       "B": 175,
       "C": 688,
       "D": 276,
       "none": 417
     },
-    "runners_classified": 1711,
+    "runners_classified": 1710,
     "runners_with_C": 877,
-    "runners_with_D": 498
+    "runners_with_D": 497
   }
 }
