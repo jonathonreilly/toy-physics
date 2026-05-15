@@ -17145,6 +17145,26 @@
       "to": "neutrino_majorana_nur_charge2_primitive_reduction_note"
     },
     {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "strong_cp_theta_zero_note"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
       "from": "newtonian_distance_law_confirmed",
       "to": "valley_linear_wide_tail_note"
     },
@@ -56231,6 +56251,23 @@
       "runner_path": "scripts/frontier_neutrino_two_amplitude_last_mile.py",
       "title": "Neutrino Two-Amplitude Last-Mile Reduction"
     },
+    "newphysics_np_strong_cp_theta_note_2026-05-10_npcp": {
+      "claim_id": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": "new-physics source note (bridge derivation for the",
+      "claim_type_seed_hint": null,
+      "deps": [
+        "strong_cp_theta_zero_note",
+        "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10",
+        "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+        "minimal_axioms_2026-05-03",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "note_hash": "798af6d1706c703d2be932633978a05dd76e4b36ac2777d896d07604f922ebd2",
+      "path": "docs/NEWPHYSICS_NP_STRONG_CP_THETA_NOTE_2026-05-10_npCP.md",
+      "runner_path": "scripts/frontier_np_strong_cp_theta_obstruction.py",
+      "title": "Strong-CP Single-Plaquette F-Tilde-F Operator-Class Obstruction"
+    },
     "newton_derivation_note": {
       "claim_id": "newton_derivation_note",
       "claim_type_author_hint": null,
@@ -71071,7 +71108,7 @@
       "bounded_theorem": 357,
       "meta": 74,
       "no_go": 45,
-      "none": 1552,
+      "none": 1553,
       "open_gate": 37,
       "positive_theorem": 145
     },
@@ -71079,14 +71116,14 @@
       "bounded_theorem": 811,
       "meta": 74,
       "no_go": 150,
-      "none": 444,
+      "none": 445,
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8908,
+    "edge_count": 8913,
     "leaf_count": 618,
-    "node_count": 2210,
+    "node_count": 2211,
     "root_count": 770,
-    "runners_with_path": 1829
+    "runners_with_path": 1830
   }
 }
