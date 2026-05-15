@@ -50781,6 +50781,17 @@
       "runner_path": "scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py",
       "title": "Koide A1 Route F \u2014 Yukawa Casimir-Difference Bounded Obstruction"
     },
+    "koide_anticommuting_operator_derivation_theorem_note_2026-05-10": {
+      "claim_id": "koide_anticommuting_operator_derivation_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "5dc0bb05dea987387046542179df879868a5f7d5c8a93b8f4f0a81620609cd52",
+      "path": "docs/KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_anticommuting_operator_derivation.py",
+      "title": "Koide Anti-Commuting Operator \u2192 LCC Derivation Theorem"
+    },
     "koide_aps_block_by_block_forcing_note_2026-04-21": {
       "claim_id": "koide_aps_block_by_block_forcing_note_2026-04-21",
       "claim_type_author_hint": null,
@@ -70687,6 +70698,7 @@
     "koide_a1_loop_final_status_2026-04-22",
     "koide_a1_physical_bridge_attempt_2026-04-22",
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+    "koide_anticommuting_operator_derivation_theorem_note_2026-05-10",
     "koide_aps_block_by_block_forcing_note_2026-04-21",
     "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
     "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
@@ -71073,7 +71085,7 @@
       "no_go": 45,
       "none": 1552,
       "open_gate": 37,
-      "positive_theorem": 145
+      "positive_theorem": 146
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 811,
@@ -71081,12 +71093,12 @@
       "no_go": 150,
       "none": 444,
       "open_gate": 117,
-      "positive_theorem": 614
+      "positive_theorem": 615
     },
     "edge_count": 8908,
-    "leaf_count": 618,
-    "node_count": 2210,
-    "root_count": 770,
-    "runners_with_path": 1829
+    "leaf_count": 619,
+    "node_count": 2211,
+    "root_count": 771,
+    "runners_with_path": 1830
   }
 }
