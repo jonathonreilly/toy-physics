@@ -1,11 +1,44 @@
 # Handoff
 
-Checkpoint: 2026-05-15 01:02 EDT
+Checkpoint: 2026-05-15 01:25 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block102 Z3 Heat-Kernel Neutral-Transfer Attempt
+
+Block102 tests a stronger neutral primitive construction than the earlier lazy
+selector. On the same Z3 taste-triplet basis, the C3 Dirichlet form
+`Delta=2I-P-P^T` has heat kernels `exp(-t Delta)` that are symmetric,
+stochastic, strictly positive, and primitive for every `t>0`. This is a real
+finite primitive witness.
+
+It still does not close PR230. The current surface does not identify the heat
+kernel as the physical neutral transfer, does not derive the heat time/scale
+from the action, and does not supply H4 source/canonical-Higgs coupling.
+
+Artifacts:
+
+- `docs/YT_PR230_Z3_HEAT_KERNEL_NEUTRAL_TRANSFER_ATTEMPT_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_z3_heat_kernel_neutral_transfer_attempt.py`
+- `outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json`
+
+Validation:
+
+```text
+Z3 heat-kernel neutral-transfer attempt PASS=16 FAIL=0
+```
+
+Honest status: exact-support / mathematical primitive support only. No
+retained or `proposed_retained` proposal is authorized.
+
+Exact next action: reopen the neutral route only with a same-surface physical
+action or transfer certificate selecting the heat-kernel time/scale and a
+separate H4 source/canonical-Higgs coupling certificate. Otherwise pursue
+accepted `O_H`/action plus strict `C_ss/C_sH/C_HH` rows, strict W/Z response
+rows with an allowed absolute pin, or strict Schur/scalar-LSZ pole authority.
 
 ## Block101 Post-Block100 Completion/Reopen Audit
 

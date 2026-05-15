@@ -1,6 +1,7 @@
 # Opportunity Queue
 
-Campaign mode queue after block101 post-Block100 completion/reopen audit,
+Campaign mode queue after block102 Z3 heat-kernel neutral-transfer attempt,
+block101 post-Block100 completion/reopen audit,
 block100 W/Z explicit-`v` authority firewall, and block99 complete higher-shell
 finite-packet monotonicity boundary.
 
@@ -16,7 +17,10 @@ finite-packet monotonicity boundary.
 
 No global stop is justified, but the refreshed queue does not authorize another
 current-surface finite-row shortcut gate, package-`v` W/Z shortcut, or path-only
-remote-reopen shortcut. Block101 verifies the final chunk state is complete at
+remote-reopen shortcut. Block102 adds a genuine finite-group Z3 heat-kernel
+primitive witness, but it is mathematical support only: no current PR230 action
+selects the heat time/scale as physical transfer, and H4 source/canonical-Higgs
+coupling remains absent. Block101 verifies the final chunk state is complete at
 `63/63` with active `[]` and planned `[]`, while no current or fetched remote
 strict reopen artifact is admitted. Block99 closes the complete higher-shell
 packet as strict scalar-LSZ/Schur authority: the finite rows are schema-clean

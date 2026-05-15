@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block101_post_block100_completion_reopen_audit`.
+Current block: `block102_z3_heat_kernel_neutral_transfer_attempt`.
 
 ```yaml
-actual_current_surface_status: open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted
+actual_current_surface_status: exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block101 is a completion/reopen audit, not a retained/proposed-retained theorem. It verifies 63/63 chunk completion and confirms that retained-route, campaign, full-assembly, and completion-audit gates still reject the current surface. No current or fetched remote strict reopen artifact is present for accepted O_H/action plus C_ss/C_sH/C_HH pole rows, strict W/Z response with allowed absolute pin, strict Schur/scalar-LSZ pole authority, or neutral H3/H4 primitive-transfer authority."
+proposal_allowed_reason: "Block102 gives a real finite Z3 heat-kernel primitive witness, but it does not derive same-surface PR230 physical transfer/action authority, does not select the heat time/scale, and does not supply H4 source/canonical-Higgs coupling. No retained/proposed-retained closure is authorized."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,12 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block102 records the Z3 heat-kernel neutral-transfer attempt as exact
+   mathematical support only. The C3 Dirichlet-form heat kernel is primitive
+   for every `t>0`, but the actual PR230 surface does not identify it as the
+   physical neutral transfer, does not derive the heat time or diffusion
+   coefficient from the action, and does not supply H4 source/canonical-Higgs
+   coupling. The neutral primitive route remains open.
 0. Block101 records the post-Block100 completion/reopen audit as an open
    checkpoint. The final higher-shell queue is complete at `63/63` with active
    `[]` and planned `[]`, but all retained/proposal gates still reject closure

@@ -639,6 +639,9 @@ def main() -> int:
         "pr230_z3_lazy_selector_no_go": load(
             "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json"
         ),
+        "pr230_z3_heat_kernel_neutral_transfer_attempt": load(
+            "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json"
+        ),
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -3159,6 +3162,27 @@ def main() -> int:
         is False
         and z3_lazy_selector_no_go.get("pr230_closure_authorized") is False,
         statuses["pr230_z3_lazy_selector_no_go"],
+    )
+    z3_heat_kernel = certificates["pr230_z3_heat_kernel_neutral_transfer_attempt"]
+    z3_heat_kernel_support_not_h3h4 = (
+        "Z3 heat-kernel primitive transfer is mathematical support only"
+        in str(statuses["pr230_z3_heat_kernel_neutral_transfer_attempt"])
+        and z3_heat_kernel.get("proposal_allowed") is False
+        and z3_heat_kernel.get("z3_heat_kernel_neutral_transfer_attempt_passed")
+        is True
+        and z3_heat_kernel.get("mathematical_heat_kernel_primitive_support")
+        is True
+        and z3_heat_kernel.get("same_surface_physical_action_selects_heat_time")
+        is False
+        and z3_heat_kernel.get("strict_neutral_h3_authority_passed") is False
+        and z3_heat_kernel.get("strict_h4_source_canonical_higgs_coupling_passed")
+        is False
+        and z3_heat_kernel.get("pr230_closure_authorized") is False
+    )
+    report(
+        "pr230-z3-heat-kernel-neutral-transfer-support-not-h3h4",
+        z3_heat_kernel_support_not_h3h4,
+        statuses["pr230_z3_heat_kernel_neutral_transfer_attempt"],
     )
     same_surface_z3_taste_triplet = certificates["pr230_same_surface_z3_taste_triplet"]
     report(
@@ -8950,6 +8974,17 @@ def main() -> int:
         is False
         and z3_lazy_selector_no_go.get("pr230_closure_authorized") is False
         and z3_lazy_selector_no_go.get("proposal_allowed") is False
+    )
+    result["z3_heat_kernel_neutral_transfer_support_not_h3h4"] = (
+        z3_heat_kernel.get("z3_heat_kernel_neutral_transfer_attempt_passed") is True
+        and z3_heat_kernel.get("mathematical_heat_kernel_primitive_support") is True
+        and z3_heat_kernel.get("same_surface_physical_action_selects_heat_time")
+        is False
+        and z3_heat_kernel.get("strict_neutral_h3_authority_passed") is False
+        and z3_heat_kernel.get("strict_h4_source_canonical_higgs_coupling_passed")
+        is False
+        and z3_heat_kernel.get("pr230_closure_authorized") is False
+        and z3_heat_kernel.get("proposal_allowed") is False
     )
     result["same_surface_z3_taste_triplet_support_not_closure"] = (
         same_surface_z3_taste_triplet.get("same_surface_z3_triplet_artifact_passed")

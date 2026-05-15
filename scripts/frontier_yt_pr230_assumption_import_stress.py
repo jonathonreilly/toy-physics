@@ -164,6 +164,9 @@ def main() -> int:
         "z3_lazy_transfer_promotion_attempt": load(
             "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json"
         ),
+        "z3_heat_kernel_neutral_transfer_attempt": load(
+            "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -451,6 +454,8 @@ def main() -> int:
         "not proof selectors until same-surface primitive transfer, off-diagonal generator, or irreducibility certificate exists",
         "Z3 lazy-transfer promotion attempt",
         "same-surface neutral transfer/action or off-diagonal generator",
+        "Z3 heat-kernel neutral-transfer attempt",
+        "not proof selectors until a same-surface action selects the heat time and supplies H4 source/canonical-Higgs coupling",
         "Origin-main EW M-residual CMT packet",
         "CMT/u0/Fierz channel bookkeeping is not proof selectors",
         "Two-source taste-radial action source vertex",
@@ -1048,6 +1053,27 @@ def main() -> int:
         and z3_lazy_transfer.get("physical_lazy_transfer_instantiated") is False
         and z3_lazy_transfer.get("pr230_closure_authorized") is False,
         z3_lazy_transfer.get("actual_current_surface_status"),
+    )
+    z3_heat_kernel = certificates["z3_heat_kernel_neutral_transfer_attempt"]
+    z3_heat_kernel_support_not_h3h4 = (
+        "Z3 heat-kernel primitive transfer is mathematical support only"
+        in str(z3_heat_kernel.get("actual_current_surface_status"))
+        and z3_heat_kernel.get("proposal_allowed") is False
+        and z3_heat_kernel.get("z3_heat_kernel_neutral_transfer_attempt_passed")
+        is True
+        and z3_heat_kernel.get("mathematical_heat_kernel_primitive_support")
+        is True
+        and z3_heat_kernel.get("same_surface_physical_action_selects_heat_time")
+        is False
+        and z3_heat_kernel.get("strict_neutral_h3_authority_passed") is False
+        and z3_heat_kernel.get("strict_h4_source_canonical_higgs_coupling_passed")
+        is False
+        and z3_heat_kernel.get("pr230_closure_authorized") is False
+    )
+    report(
+        "z3-heat-kernel-neutral-transfer-support-not-h3h4",
+        z3_heat_kernel_support_not_h3h4,
+        z3_heat_kernel.get("actual_current_surface_status"),
     )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
@@ -2241,6 +2267,7 @@ def main() -> int:
             "does not treat the same-surface multiplicity-one intake gate as an accepted O_H certificate",
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
+            "does not treat a finite-group Z3 heat kernel as PR230 physical transfer without a same-surface action selecting its heat time and H4 source/canonical-Higgs coupling",
             "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",
             "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
@@ -2270,6 +2297,7 @@ def main() -> int:
             "does not treat post-Block100 completion/reopen audit status, completed chunks, or fetched remote path names as positive closure",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
+        "z3_heat_kernel_neutral_transfer_support_not_h3h4": z3_heat_kernel_support_not_h3h4,
         "wz_v_authority_firewall_blocks_package_v_import": wz_v_authority_firewall_blocks,
         "post_block100_completion_reopen_audit_blocks_path_only_reopen": post_block100_completion_reopen_blocks,
         "pass_count": PASS_COUNT,

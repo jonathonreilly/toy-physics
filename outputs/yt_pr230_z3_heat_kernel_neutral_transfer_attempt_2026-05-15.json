@@ -1,0 +1,256 @@
+{
+  "actual_current_surface_status": "exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "canonical_oh_identity_present": false,
+  "closure_achieved": false,
+  "conditional_surface_status": "If a future same-surface action or transfer certificate identifies exp(-t Delta) at a derived t as the PR230 neutral transfer and also supplies source/canonical-Higgs coupling authority, this finite heat-kernel witness can support the neutral primitive route.",
+  "exact_next_action": "Reopen the neutral route only with a same-surface physical action or transfer certificate selecting the heat-kernel time/scale and a separate H4 source/canonical-Higgs coupling certificate.  Otherwise pursue accepted O_H/action plus C_ss/C_sH/C_HH rows, strict W/Z response rows with allowed absolute pin, or strict Schur/scalar-LSZ pole authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "identifies_taste_triplet_or_source_with_canonical_oh": false,
+    "sets_c2_equal_one": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_z_match_equal_one": false,
+    "treats_heat_time_as_physical_action_parameter": false,
+    "treats_z3_heat_kernel_as_pr230_physical_transfer": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_cold_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "heat_kernel_dirichlet_form": {
+    "basis": [
+      "Phi_1_prime",
+      "Phi_2_prime",
+      "Phi_3_prime"
+    ],
+    "cyclic_generator_P": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "definition": "Delta = 2 I - P - P^T, K_t = exp(-t Delta)",
+    "heat_kernel_rows": [
+      {
+        "column_stochastic": true,
+        "commutes_with_z3_cycle": true,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "nontrivial_eigenvalue": 1.0,
+        "power16_max_abs_error_to_uniform_projector": 0.6666666666666667,
+        "primitive": false,
+        "primitive_power": null,
+        "row_stochastic": true,
+        "strictly_positive": false,
+        "symmetric": true,
+        "time": 0.0
+      },
+      {
+        "column_stochastic": true,
+        "commutes_with_z3_cycle": true,
+        "matrix": [
+          [
+            0.6482443684940098,
+            0.1758778157529951,
+            0.1758778157529951
+          ],
+          [
+            0.1758778157529951,
+            0.6482443684940098,
+            0.1758778157529951
+          ],
+          [
+            0.1758778157529951,
+            0.1758778157529951,
+            0.6482443684940098
+          ]
+        ],
+        "nontrivial_eigenvalue": 0.4723665527410147,
+        "power16_max_abs_error_to_uniform_projector": 4.096141568876721e-06,
+        "primitive": true,
+        "primitive_power": 1,
+        "row_stochastic": true,
+        "strictly_positive": true,
+        "symmetric": true,
+        "time": 0.25
+      },
+      {
+        "column_stochastic": true,
+        "commutes_with_z3_cycle": true,
+        "matrix": [
+          [
+            0.36652471224524263,
+            0.3167376438773787,
+            0.3167376438773787
+          ],
+          [
+            0.3167376438773787,
+            0.36652471224524263,
+            0.3167376438773787
+          ],
+          [
+            0.3167376438773787,
+            0.3167376438773787,
+            0.36652471224524263
+          ]
+        ],
+        "nontrivial_eigenvalue": 0.049787068367863944,
+        "power16_max_abs_error_to_uniform_projector": 0.0,
+        "primitive": true,
+        "primitive_power": 1,
+        "row_stochastic": true,
+        "strictly_positive": true,
+        "symmetric": true,
+        "time": 1.0
+      },
+      {
+        "column_stochastic": true,
+        "commutes_with_z3_cycle": true,
+        "matrix": [
+          [
+            0.33333742947490225,
+            0.3333312852625489,
+            0.3333312852625489
+          ],
+          [
+            0.3333312852625489,
+            0.33333742947490225,
+            0.3333312852625489
+          ],
+          [
+            0.3333312852625489,
+            0.3333312852625489,
+            0.33333742947490225
+          ]
+        ],
+        "nontrivial_eigenvalue": 6.14421235332821e-06,
+        "power16_max_abs_error_to_uniform_projector": 1.6653345369377348e-16,
+        "primitive": true,
+        "primitive_power": 1,
+        "row_stochastic": true,
+        "strictly_positive": true,
+        "symmetric": true,
+        "time": 4.0
+      }
+    ],
+    "laplacian_delta": [
+      [
+        2.0,
+        -1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        2.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        2.0
+      ]
+    ],
+    "rank_one_limit": [
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    ],
+    "spectrum_delta": [
+      0.0,
+      3.0,
+      3.0
+    ]
+  },
+  "heat_kernel_is_pr230_physical_neutral_transfer": false,
+  "heat_time_or_action_scale_selected": false,
+  "hypothetical_axiom_status": "Under an accepted new axiom that the C3 heat kernel with a specified time t is the same-surface neutral scalar transfer, H3 would be mathematically primitive; that axiom is not present on the actual surface and H4 remains additional.",
+  "mathematical_heat_kernel_primitive_support": true,
+  "parent_statuses": {
+    "block55_canonical_neutral_cut": "exact-support / Block55 canonical-neutral primitive cut; canonical-Higgs/neutral-transfer root still open",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_burnside_irreducibility": "exact negative boundary / Burnside neutral irreducibility attempt blocked by non-full current generator algebra",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "neutral_offdiagonal_generator": "exact negative boundary / neutral off-diagonal generator not derivable from current PR230 surface",
+    "post_block100_completion_reopen": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "z3_conditional_primitive": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
+    "z3_h2_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent",
+    "z3_lazy_selector_no_go": "exact negative boundary / Z3 lazy selector shortcuts do not derive the PR230 physical neutral transfer",
+    "z3_lazy_transfer_promotion": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action"
+  },
+  "pass_count": 16,
+  "physical_neutral_transfer_artifact_present": false,
+  "pr230_closure_authorized": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The heat kernel is a mathematical primitive semigroup, not an admitted PR230 physical transfer.  The current surface does not derive the heat time/scale, canonical O_H identity, source-Higgs overlap, scalar LSZ metric, or W/Z response bridge.",
+  "same_surface_physical_action_selects_heat_time": false,
+  "scalar_lsz_metric_present": false,
+  "source_higgs_pole_rows_present": false,
+  "source_identity_to_triplet_coupling_present": false,
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_transfer_operator": false,
+    "source_higgs_cross_rows": false,
+    "source_higgs_production_certificate": false,
+    "wz_response_rows": false
+  },
+  "strict_h4_source_canonical_higgs_coupling_passed": false,
+  "strict_neutral_h3_authority_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not write a neutral primitive-cone certificate",
+    "does not treat a finite-group heat kernel as physical PR230 dynamics",
+    "does not select the heat time or diffusion coefficient by convention",
+    "does not identify the Z3 taste triplet, O_s, or O_sp with canonical O_H",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, Z_match, g2, v, or source-Higgs overlap to one"
+  ],
+  "z3_heat_kernel_neutral_transfer_attempt_passed": true
+}
