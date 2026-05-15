@@ -735,7 +735,7 @@ PMNS angles:
   - Retained PMNS package's affine H(m, delta, q_+) construction is
     structurally REQUIRED to fix this (already retained)
 
-Status: BOUNDED probe with 4 named admissions. Not retained.
+Status: BOUNDED probe with 7 named admissions. Not retained.
 Open derivation targets surfaced: rho_nu selection, delta_nu derivation,
 m_3 circulant-side scale, U_nu = DFT_3 over-mixing fix.
 """)
