@@ -219,6 +219,7 @@ def main() -> int:
         "pr230_schur_higher_shell_production_contract": "outputs/yt_pr230_schur_higher_shell_production_contract_2026-05-07.json",
         "pr230_schur_higher_shell_complete_packet_monotonicity": "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json",
         "pr230_wz_v_authority_firewall": "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
+        "pr230_post_block100_completion_reopen_audit": "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json",
         "pr230_derived_bridge_rank_one_closure_attempt": "outputs/yt_pr230_derived_bridge_rank_one_closure_attempt_2026-05-05.json",
         "pr230_source_sector_pattern_transfer_gate": "outputs/yt_pr230_source_sector_pattern_transfer_gate_2026-05-05.json",
         "pr230_det_positivity_bridge_intake_gate": "outputs/yt_pr230_det_positivity_bridge_intake_gate_2026-05-05.json",
@@ -3390,6 +3391,28 @@ def main() -> int:
         ).get("rejected_as_pr230_load_bearing_input")
         is True
     )
+    post_block100_completion_reopen_blocks = (
+        "positive closure not achieved"
+        in certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "completion_reopen_audit_passed"
+        )
+        is True
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "closure_achieved"
+        )
+        is False
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "fresh_artifact_admitted"
+        )
+        is False
+    )
     wz_g2_response_self_normalization_no_go_blocks = (
         "WZ response-only g2 self-normalization no-go"
         in certificates["wz_g2_response_self_normalization_no_go"].get(
@@ -5736,6 +5759,13 @@ def main() -> int:
         ),
     )
     report(
+        "pr230-post-block100-completion-reopen-audit-blocks",
+        post_block100_completion_reopen_blocks,
+        certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "wz-g2-response-self-normalization-no-go-blocks",
         wz_g2_response_self_normalization_no_go_blocks,
         certificates["wz_g2_response_self_normalization_no_go"].get(
@@ -6802,6 +6832,7 @@ def main() -> int:
         "action_first_route_completion_blocks": action_first_route_completion_blocks,
         "wz_response_route_completion_blocks": wz_response_route_completion_blocks,
         "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
+        "post_block100_completion_reopen_audit_blocks": post_block100_completion_reopen_blocks,
         "schur_route_completion_blocks": schur_route_completion_blocks,
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "oh_bridge_candidate_portfolio_open": oh_bridge_candidate_portfolio_open,

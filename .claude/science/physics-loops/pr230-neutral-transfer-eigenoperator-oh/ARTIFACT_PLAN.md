@@ -1,5 +1,26 @@
 # Artifact Plan
 
+Block101 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_post_block100_completion_reopen_audit.py` | Created; PASS=15 FAIL=0 |
+| Certificate | `outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json` | Created |
+| Completion/reopen note | `docs/YT_PR230_POST_BLOCK100_COMPLETION_REOPEN_AUDIT_NOTE_2026-05-15.md` | Created |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block101:
+
+```text
+outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json
+```
+
+plus strict source-Higgs `C_ss/C_sH/C_HH` pole rows, or a strict W/Z response
+packet with accepted action and an allowed absolute pin, or strict
+Schur/scalar-LSZ pole authority, or neutral H3/H4 primitive-transfer authority.
+Chunk completion, remote path names, finite-row monotonicity diagnostics, and
+package hierarchy `v` are not closure artifacts.
+
 Block100 artifacts:
 
 | Artifact | Path | Status |

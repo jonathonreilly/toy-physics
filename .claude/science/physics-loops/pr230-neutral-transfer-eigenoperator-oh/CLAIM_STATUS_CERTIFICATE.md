@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block100_wz_v_authority_firewall`.
+Current block: `block101_post_block100_completion_reopen_audit`.
 
 ```yaml
-actual_current_surface_status: exact negative boundary / block100 PR230 W/Z explicit-v authority absent; package hierarchy v rejected as load-bearing W/Z absolute pin; no retained/proposed_retained closure
+actual_current_surface_status: open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block100 is an exact negative boundary for the W/Z explicit-v shortcut only, not a retained/proposed-retained theorem. The strict PR230 explicit-v authority certificate is absent, and package hierarchy v is rejected because its visible derivation traverses forbidden alpha_LM / plaquette / u0 / M_Pl*alpha_LM^16 normalization surfaces. W/Z still lacks accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority; source-Higgs and scalar-LSZ routes still lack canonical O_H, strict C_sH/C_HH pole rows, FV/IR authority, and physical kappa_s."
+proposal_allowed_reason: "Block101 is a completion/reopen audit, not a retained/proposed-retained theorem. It verifies 63/63 chunk completion and confirms that retained-route, campaign, full-assembly, and completion-audit gates still reject the current surface. No current or fetched remote strict reopen artifact is present for accepted O_H/action plus C_ss/C_sH/C_HH pole rows, strict W/Z response with allowed absolute pin, strict Schur/scalar-LSZ pole authority, or neutral H3/H4 primitive-transfer authority."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block101 records the post-Block100 completion/reopen audit as an open
+   checkpoint. The final higher-shell queue is complete at `63/63` with active
+   `[]` and planned `[]`, but all retained/proposal gates still reject closure
+   and no current or fetched remote strict reopen artifact is admitted. The
+   required missing roots remain accepted same-surface `O_H`/action plus
+   strict `C_ss/C_sH/C_HH` pole rows, a strict W/Z response packet with an
+   allowed absolute pin, strict Schur/scalar-LSZ pole authority, or neutral
+   H3/H4 primitive-transfer authority.
 0. Block100 records the W/Z explicit-`v` authority firewall as an exact
    negative boundary. The strict PR230 explicit-`v` authority certificate is
    absent; package hierarchy `v=246.282818290129 GeV` is rejected as a

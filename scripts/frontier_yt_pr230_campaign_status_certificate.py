@@ -498,6 +498,9 @@ def main() -> int:
         "pr230_wz_v_authority_firewall": load(
             "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json"
         ),
+        "pr230_post_block100_completion_reopen_audit": load(
+            "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json"
+        ),
         "pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42": load(
             "outputs/yt_pr230_full_timeseries_neutral_transfer_lift_no_go_after_block42_2026-05-12.json"
         ),
@@ -2640,6 +2643,31 @@ def main() -> int:
         "pr230-wz-v-authority-firewall-blocks",
         wz_v_authority_firewall_blocks,
         statuses["pr230_wz_v_authority_firewall"],
+    )
+    post_block100_completion_reopen_blocks = (
+        "positive closure not achieved"
+        in str(statuses["pr230_post_block100_completion_reopen_audit"])
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "completion_reopen_audit_passed"
+        )
+        is True
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "closure_achieved"
+        )
+        is False
+        and certificates["pr230_post_block100_completion_reopen_audit"].get(
+            "fresh_artifact_admitted"
+        )
+        is False
+    )
+    report(
+        "pr230-post-block100-completion-reopen-audit-blocks",
+        post_block100_completion_reopen_blocks,
+        statuses["pr230_post_block100_completion_reopen_audit"],
     )
     full_timeseries_neutral_transfer_lift_no_go_blocks = (
         "full FH-LSZ target-timeseries packet does not lift PR230"
@@ -8075,6 +8103,7 @@ def main() -> int:
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
         "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
+        "post_block100_completion_reopen_audit_blocks": post_block100_completion_reopen_blocks,
         "block37_post_block36_supervisor_yield_not_closure": False,
         "full_timeseries_neutral_transfer_lift_no_go_blocks": full_timeseries_neutral_transfer_lift_no_go_blocks,
         "mc_timeseries_krylov_transfer_no_go_blocks": mc_timeseries_krylov_transfer_no_go_blocks,

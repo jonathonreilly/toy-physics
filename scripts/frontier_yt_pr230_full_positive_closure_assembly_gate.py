@@ -94,6 +94,7 @@ PARENTS = {
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
     "pr230_wz_v_authority_firewall": "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
+    "pr230_post_block100_completion_reopen_audit": "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "pr230_wz_mass_response_self_normalization_no_go": "outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json",
     "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
@@ -3936,6 +3937,31 @@ def main() -> int:
         wz_v_authority_firewall_blocks,
         statuses["pr230_wz_v_authority_firewall"],
     )
+    post_block100_completion_reopen_blocks = (
+        "positive closure not achieved"
+        in statuses["pr230_post_block100_completion_reopen_audit"]
+        and certs["pr230_post_block100_completion_reopen_audit"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certs["pr230_post_block100_completion_reopen_audit"].get(
+            "completion_reopen_audit_passed"
+        )
+        is True
+        and certs["pr230_post_block100_completion_reopen_audit"].get(
+            "closure_achieved"
+        )
+        is False
+        and certs["pr230_post_block100_completion_reopen_audit"].get(
+            "fresh_artifact_admitted"
+        )
+        is False
+    )
+    report(
+        "pr230-post-block100-completion-reopen-audit-blocks",
+        post_block100_completion_reopen_blocks,
+        statuses["pr230_post_block100_completion_reopen_audit"],
+    )
     report(
         "wz-g2-response-self-normalization-no-go-blocks",
         "WZ response-only g2 self-normalization no-go"
@@ -4539,6 +4565,7 @@ def main() -> int:
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
         "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
+        "post_block100_completion_reopen_audit_blocks": post_block100_completion_reopen_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,

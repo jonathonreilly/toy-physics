@@ -1,0 +1,231 @@
+{
+  "actual_current_surface_status": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "chunk_status": {
+    "active_chunk_indices": [],
+    "active_process_count": 0,
+    "chunks_complete": true,
+    "completed_chunk_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "planned_launch_chunk_indices": []
+  },
+  "closure_achieved": false,
+  "completion_reopen_audit_passed": true,
+  "conditional_surface_status": "reopen if a strict same-surface O_H/C_sH/C_HH packet, strict W/Z response packet with allowed absolute pin, strict Schur/scalar-LSZ pole authority, or neutral H3/H4 primitive-transfer certificate appears",
+  "current_reopen_artifacts": {
+    "canonical_higgs_operator_certificate": false,
+    "electroweak_v_authority_certificate": false,
+    "fh_lsz_carleman_tauberian_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_transfer_operator": false,
+    "schur_abc_kernel_rows": false,
+    "source_coordinate_transport_certificate": false,
+    "source_higgs_cross_correlator_rows": false,
+    "source_higgs_production_certificate": false,
+    "top_wz_matched_response_rows": false
+  },
+  "exact_next_action": "Stop replaying completed finite-chunk and package-v routes. The next productive physics action must create one named strict artifact: accepted same-surface O_H/action plus C_ss/C_sH/C_HH pole rows, a strict W/Z response packet with allowed absolute pin, strict Schur/scalar-LSZ pole authority, or neutral H3/H4 primitive-transfer authority.",
+  "fail_count": 0,
+  "fresh_artifact_admitted": false,
+  "hypothetical_axiom_status": null,
+  "missing_requirements": [
+    "canonical O_H / accepted same-surface EW-Higgs action authority",
+    "strict physical Euclidean C_ss/C_sH/C_HH pole rows with Gram/FV/IR authority",
+    "strict scalar-LSZ moment/threshold/FV authority or Schur pole-derivative rows",
+    "accepted same-source W/Z action plus production W/Z/top rows and matched covariance",
+    "allowed W/Z absolute pin: strict non-observed g2, strict non-forbidden v, or canonical source-response normalization",
+    "same-surface neutral H3/H4 primitive/off-diagonal transfer plus source/canonical-Higgs coupling authority",
+    "matching/running bridge after a physical source-overlap or W/Z response bridge",
+    "retained-route and campaign proposal authorization"
+  ],
+  "objective": "resume positive closure on PR #230",
+  "parent_statuses": {
+    "assumption_import_stress": "open / assumption-import stress complete",
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "chunk063_checkpoint": "bounded-support / higher-shell Schur scalar-LSZ chunk063 row checkpoint",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "higher_shell_complete_packet": "exact negative boundary / complete 63/63 higher-shell finite rows fail necessary Stieltjes complete-monotonicity sign tests for strict scalar-LSZ/Schur pole authority",
+    "higher_shell_wave_launcher": "run-control / higher-shell Schur scalar-LSZ wave launcher status; active/launched jobs and partial completed higher-shell packets are not closure evidence",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "retained_route": "open / retained closure not yet reached",
+    "source_higgs_bridge_aperture": "bounded-support / source-Higgs bridge aperture checkpoint; 63 completed C_sx/C_xx chunks do not close canonical O_H or C_sH/C_HH Gram flatness",
+    "source_higgs_pole_row_contract": "open / source-Higgs C_ss/C_sH/C_HH pole-row acceptance contract; strict rows absent on current surface",
+    "strict_scalar_lsz": "exact negative boundary / current two-source taste-radial raw C_ss rows do not supply strict scalar-LSZ moment/FV authority",
+    "wz_physical_response_packet": "exact negative boundary / WZ physical-response packet not present on current PR230 surface; only scout/schema and support-contract artifacts exist",
+    "wz_v_authority_firewall": "exact negative boundary / PR230 W/Z explicit-v authority absent; package hierarchy v is rejected as a load-bearing W/Z absolute pin"
+  },
+  "pass_count": 15,
+  "prompt_to_artifact_checklist": [
+    {
+      "covered": true,
+      "evidence": "outputs/yt_pr230_schur_higher_shell_wave_launcher_2026-05-12.json",
+      "requirement": "last higher-shell chunk campaign is finished"
+    },
+    {
+      "covered": true,
+      "evidence": "outputs/yt_pr230_schur_higher_shell_chunk063_checkpoint_2026-05-12.json",
+      "requirement": "chunk063 completed-mode checkpoint exists and passes"
+    },
+    {
+      "blocker": "open / retained closure not yet reached",
+      "covered": false,
+      "evidence": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+      "requirement": "full retained/proposed-retained top-Yukawa closure"
+    },
+    {
+      "blocker": "open / full positive PR230 closure assembly gate not passed",
+      "covered": false,
+      "evidence": "outputs/yt_pr230_full_positive_closure_assembly_gate_2026-05-04.json",
+      "requirement": "full positive closure assembly gate accepts the current surface"
+    },
+    {
+      "blocker": "named strict source-Higgs artifacts are absent",
+      "covered": false,
+      "evidence": {
+        "canonical_higgs_operator_certificate": "outputs/yt_canonical_higgs_operator_certificate_2026-05-03.json",
+        "electroweak_v_authority_certificate": "outputs/yt_electroweak_v_authority_certificate_2026-05-12.json",
+        "fh_lsz_carleman_tauberian_certificate": "outputs/yt_fh_lsz_carleman_tauberian_certificate_2026-05-05.json",
+        "neutral_primitive_cone_certificate": "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05.json",
+        "same_surface_neutral_transfer_operator": "outputs/yt_pr230_same_surface_neutral_transfer_operator_2026-05-06.json",
+        "schur_abc_kernel_rows": "outputs/yt_schur_abc_kernel_rows_2026-05-05.json",
+        "source_coordinate_transport_certificate": "outputs/yt_pr230_source_coordinate_transport_certificate_2026-05-06.json",
+        "source_higgs_cross_correlator_rows": "outputs/yt_source_higgs_cross_correlator_measurement_rows_2026-05-03.json",
+        "source_higgs_production_certificate": "outputs/yt_source_higgs_cross_correlator_production_certificate_2026-05-03.json",
+        "top_wz_matched_response_rows": "outputs/yt_top_wz_matched_response_rows_2026-05-04.json"
+      },
+      "requirement": "source-Higgs route has canonical O_H plus strict C_sH/C_HH rows"
+    },
+    {
+      "blocker": "W/Z packet intake and Block100 explicit-v firewall both block current surface",
+      "covered": false,
+      "evidence": "outputs/yt_pr230_wz_physical_response_packet_intake_checkpoint_2026-05-07.json",
+      "requirement": "W/Z response route has accepted action, rows, covariance, and allowed absolute pin"
+    },
+    {
+      "blocker": "neutral H3/H4 certificate is absent",
+      "covered": false,
+      "evidence": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
+      "requirement": "neutral primitive route has H3/H4 physical-transfer authority"
+    },
+    {
+      "covered": true,
+      "evidence": "local git refs/remotes/origin scan",
+      "requirement": "no fresh strict closure artifact is available on fetched remote refs"
+    },
+    {
+      "covered": true,
+      "evidence": [
+        "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
+        "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
+        "outputs/yt_pr230_campaign_status_certificate_2026-05-01.json"
+      ],
+      "requirement": "claim firewall remains active"
+    }
+  ],
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The final chunk packet is complete, but all retained/proposed-retained closure gates still reject the current surface and no fresh strict same-surface artifact is present on the branch or fetched remote refs.",
+  "remote_reopen_scan": {
+    "hits": [
+      {
+        "path": "outputs/yt_pr230_neutral_primitive_h3h4_aperture_checkpoint_2026-05-07.json",
+        "ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30"
+      },
+      {
+        "path": "outputs/yt_pr230_source_higgs_time_kernel_production_manifest_2026-05-07.json",
+        "ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30"
+      },
+      {
+        "path": "outputs/yt_pr230_wz_smoke_to_production_promotion_no_go_2026-05-05.json",
+        "ref": "origin/claude/yt-direct-lattice-correlator-2026-04-30"
+      }
+    ],
+    "hits_outside_current_pr230_ref": [],
+    "patterns": [
+      "outputs/yt_canonical_higgs_operator_certificate_2026-05-03\\.json$",
+      "outputs/yt_electroweak_v_authority_certificate_2026-05-12\\.json$",
+      "outputs/yt_source_higgs_cross_correlator_(measurement_rows|production_certificate)_2026-05-03\\.json$",
+      "outputs/yt_top_wz_matched_response_rows_2026-05-04\\.json$",
+      "outputs/yt_schur_abc_kernel_rows_2026-05-05\\.json$",
+      "outputs/yt_neutral_scalar_primitive_cone_certificate_2026-05-05\\.json$",
+      "outputs/yt_pr230_same_surface_neutral_transfer_operator_2026-05-06\\.json$",
+      "outputs/yt_pr230_source_coordinate_transport_certificate_2026-05-06\\.json$",
+      "outputs/yt_pr230_.*(source_higgs.*production|wz.*production|wz.*response_rows|neutral.*h3|neutral.*h4).*\\.json$"
+    ]
+  },
+  "strict_non_claims": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_kappa_s_c2_zmatch_or_g2_to_one": false,
+    "treated_completed_chunks_as_closure": false,
+    "treated_remote_path_names_as_closure_without_certificate": false,
+    "used_alpha_lm_plaquette_or_u0_as_authority": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_mass_or_yt_selector": false,
+    "used_package_v_as_authority": false,
+    "used_yt_ward_identity": false
+  }
+}

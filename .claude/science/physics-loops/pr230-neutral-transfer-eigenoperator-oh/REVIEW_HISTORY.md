@@ -1,5 +1,51 @@
 # Review History
 
+## Block101
+
+Local review run on 2026-05-15 05:02 UTC.
+
+Scope:
+
+- `docs/YT_PR230_POST_BLOCK100_COMPLETION_REOPEN_AUDIT_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_post_block100_completion_reopen_audit.py`
+- `outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json`
+- aggregate runners/certificates consuming the new completion/reopen boundary
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | New runner verifies `63/63` chunk completion, active `[]`, planned `[]`, clean parent certificates, and absence of named strict reopen artifacts on the current branch or fetched remote refs. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | Chunk completion and remote path names are not physics closure; accepted `O_H`/action, strict source-Higgs pole rows, strict W/Z response, Schur/scalar-LSZ pole authority, or neutral H3/H4 authority remain absent. |
+| Imports / Support | CLEAN / DISCLOSED | No observed selector, `H_unit`, `yt_ward_identity`, plaquette/u0 chain, package-`v`, `kappa_s=1`, `c2=1`, `Z_match=1`, or `g2=1` is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_post_block100_completion_reopen_audit.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_post_block100_completion_reopen_audit.py
+# SUMMARY: PASS=15 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=322 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=424 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=197 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=76 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=108 FAIL=0
+git diff --check
+# OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
 ## Block100
 
 Local review run on 2026-05-15 04:41 UTC.

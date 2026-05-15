@@ -44,6 +44,7 @@
     "origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "orthogonal_top_coupling_exclusion_candidate_gate": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
     "os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "post_block100_completion_reopen_audit": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
     "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "projector_norm": "exact negative boundary / projector-normalization obstruction",
     "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
@@ -105,7 +106,8 @@
   },
   "fail_count": 0,
   "missing_forbidden_terms": [],
-  "pass_count": 107,
+  "pass_count": 108,
+  "post_block100_completion_reopen_audit_blocks_path_only_reopen": true,
   "proposal_allowed": false,
   "proposal_allowed_reason": "Open scalar-LSZ and heavy-matching imports remain after assumption stress.",
   "strict_non_claims": [
@@ -154,6 +156,7 @@
     "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
     "does not treat complete 63/63 higher-shell finite-row monotonicity diagnostics as strict scalar-LSZ, Schur pole-row, FV/IR, canonical O_H, or y_t authority",
     "does not treat package hierarchy v as a PR230 W/Z absolute-normalization pin",
+    "does not treat post-Block100 completion/reopen audit status, completed chunks, or fetched remote path names as positive closure",
     "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes"
   ],
   "top_mass_scan_response_harness_support_not_closure": true,

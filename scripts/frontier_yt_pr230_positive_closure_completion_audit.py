@@ -89,6 +89,7 @@ PARENTS = {
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "wz_v_authority_firewall": "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
+    "post_block100_completion_reopen_audit": "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
@@ -1272,6 +1273,22 @@ def main() -> int:
         )
         is True
     )
+    post_block100_completion_reopen_blocks = (
+        "positive closure not achieved"
+        in parent_statuses["post_block100_completion_reopen_audit"]
+        and certs["post_block100_completion_reopen_audit"].get("proposal_allowed")
+        is False
+        and certs["post_block100_completion_reopen_audit"].get(
+            "completion_reopen_audit_passed"
+        )
+        is True
+        and certs["post_block100_completion_reopen_audit"].get("closure_achieved")
+        is False
+        and certs["post_block100_completion_reopen_audit"].get(
+            "fresh_artifact_admitted"
+        )
+        is False
+    )
     wz_open = (
         certs["wz_same_source_action"].get("same_source_ew_action_ready") is not True
         and certs["wz_mass_fit_response_row_builder"].get("strict_wz_mass_fit_response_row_builder_passed")
@@ -1364,6 +1381,11 @@ def main() -> int:
     report("source-higgs-route-open", source_higgs_open, parent_statuses["source_higgs_readiness"])
     report("same-source-wz-route-open", wz_open, "same-source EW action/WZ rows/covariance/g2 inputs absent")
     report("wz-v-authority-firewall-blocks", wz_v_authority_firewall_blocks, parent_statuses["wz_v_authority_firewall"])
+    report(
+        "post-block100-completion-reopen-audit-blocks",
+        post_block100_completion_reopen_blocks,
+        parent_statuses["post_block100_completion_reopen_audit"],
+    )
     report("wz-smoke-promotion-blocked", smoke_promotion_blocked, parent_statuses["wz_smoke_promotion_no_go"])
     report("schur-route-open", schur_open, parent_statuses["schur_kprime_rows"])
     report("neutral-rank-route-open", neutral_open, parent_statuses["neutral_primitive_cone"])
@@ -1516,6 +1538,7 @@ def main() -> int:
             "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
             "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
             "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
+            "post_block100_completion_reopen_audit_blocks": post_block100_completion_reopen_blocks,
             "canonical_oh_wz_common_action_cut_open": canonical_oh_wz_common_action_cut_open,
             "canonical_oh_accepted_action_stretch_blocks_current_stack": canonical_oh_accepted_action_stretch_blocks_current_stack,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,

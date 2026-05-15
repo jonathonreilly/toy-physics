@@ -1,7 +1,8 @@
 # Opportunity Queue
 
-Campaign mode queue after block100 W/Z explicit-`v` authority firewall and
-block99 complete higher-shell finite-packet monotonicity boundary.
+Campaign mode queue after block101 post-Block100 completion/reopen audit,
+block100 W/Z explicit-`v` authority firewall, and block99 complete higher-shell
+finite-packet monotonicity boundary.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
 |---:|---|---:|---:|---|---|---|---|---|
@@ -14,19 +15,22 @@ block99 complete higher-shell finite-packet monotonicity boundary.
 | 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low | 4 | Complete 63/63 packet plus Block99 monotonicity gate | Medium | Medium | Support-only / shortcut closed | Block99 consumes the complete 63/63 packet and all tested finite scalar/Schur proxies fail the necessary Stieltjes divided-difference signs. Do not replay finite-row promotion; reopen only with strict Schur pole derivative rows and FV/IR authority or a physical bridge artifact. |
 
 No global stop is justified, but the refreshed queue does not authorize another
-current-surface finite-row shortcut gate or a package-`v` W/Z shortcut. Block99
-closes the complete higher-shell packet as strict scalar-LSZ/Schur authority:
-the finite rows are schema-clean and complete, but all tested finite proxies
-fail the necessary Stieltjes divided-difference signs. Block100 closes the
-package hierarchy `v` import as a W/Z absolute pin: strict PR230 explicit-`v`
-authority is absent and the visible package derivation traverses forbidden
-normalization surfaces. Earlier blocks confirm the source-Higgs route has a
-larger staging aperture but no current closure: finite taste-radial rows are not
-canonical `C_sH/C_HH` pole rows. The neutral primitive route has H1/H2 support,
-but even the complete `63/63` finite `C_sx/C_xx` packet does not provide H3
-physical neutral transfer or H4 source/canonical-Higgs coupling. The W/Z
-physical-response intake still has only scout/smoke rows and support contracts,
-not the accepted-action production packet or an allowed absolute pin.
+current-surface finite-row shortcut gate, package-`v` W/Z shortcut, or path-only
+remote-reopen shortcut. Block101 verifies the final chunk state is complete at
+`63/63` with active `[]` and planned `[]`, while no current or fetched remote
+strict reopen artifact is admitted. Block99 closes the complete higher-shell
+packet as strict scalar-LSZ/Schur authority: the finite rows are schema-clean
+and complete, but all tested finite proxies fail the necessary Stieltjes
+divided-difference signs. Block100 closes the package hierarchy `v` import as a
+W/Z absolute pin: strict PR230 explicit-`v` authority is absent and the visible
+package derivation traverses forbidden normalization surfaces. Earlier blocks
+confirm the source-Higgs route has a larger staging aperture but no current
+closure: finite taste-radial rows are not canonical `C_sH/C_HH` pole rows. The
+neutral primitive route has H1/H2 support, but even the complete `63/63` finite
+`C_sx/C_xx` packet does not provide H3 physical neutral transfer or H4
+source/canonical-Higgs coupling. The W/Z physical-response intake still has
+only scout/smoke rows and support contracts, not the accepted-action production
+packet or an allowed absolute pin.
 
 Block80 packages completed higher-shell chunks045-046. It extends the
 checkpointed higher-shell support prefix to `46/63` planned support chunks, but

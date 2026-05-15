@@ -332,6 +332,9 @@ def main() -> int:
         "wz_v_authority_firewall": load(
             "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json"
         ),
+        "post_block100_completion_reopen_audit": load(
+            "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1938,6 +1941,20 @@ def main() -> int:
         wz_v_authority_firewall_blocks,
         wz_v_firewall.get("actual_current_surface_status"),
     )
+    post_block100_completion = certificates["post_block100_completion_reopen_audit"]
+    post_block100_completion_reopen_blocks = (
+        "positive closure not achieved"
+        in str(post_block100_completion.get("actual_current_surface_status"))
+        and post_block100_completion.get("proposal_allowed") is False
+        and post_block100_completion.get("completion_reopen_audit_passed") is True
+        and post_block100_completion.get("closure_achieved") is False
+        and post_block100_completion.get("fresh_artifact_admitted") is False
+    )
+    report(
+        "post-block100-completion-reopen-audit-blocks-path-only-reopen",
+        post_block100_completion_reopen_blocks,
+        post_block100_completion.get("actual_current_surface_status"),
+    )
     schur_one_pole_scout = certificates["schur_x_given_source_one_pole_scout"]
     report(
         "schur-x-given-source-one-pole-scout-not-authority",
@@ -2250,9 +2267,11 @@ def main() -> int:
             "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
             "does not treat complete 63/63 higher-shell finite-row monotonicity diagnostics as strict scalar-LSZ, Schur pole-row, FV/IR, canonical O_H, or y_t authority",
             "does not treat package hierarchy v as a PR230 W/Z absolute-normalization pin",
+            "does not treat post-Block100 completion/reopen audit status, completed chunks, or fetched remote path names as positive closure",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "wz_v_authority_firewall_blocks_package_v_import": wz_v_authority_firewall_blocks,
+        "post_block100_completion_reopen_audit_blocks_path_only_reopen": post_block100_completion_reopen_blocks,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

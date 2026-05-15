@@ -60,6 +60,7 @@
     "origin_main_ew_m_residual_intake_guard": "outputs/yt_pr230_origin_main_ew_m_residual_intake_guard_2026-05-06.json",
     "orthogonal_top_coupling_exclusion_candidate_gate": "outputs/yt_pr230_orthogonal_top_coupling_exclusion_candidate_gate_2026-05-07.json",
     "os_transfer_kernel_artifact_gate": "outputs/yt_pr230_os_transfer_kernel_artifact_gate_2026-05-07.json",
+    "post_block100_completion_reopen_audit": "outputs/yt_pr230_post_block100_completion_reopen_audit_2026-05-15.json",
     "post_fms_source_overlap_necessity_gate": "outputs/yt_pr230_post_fms_source_overlap_necessity_gate_2026-05-06.json",
     "radial_spurion_action_contract": "outputs/yt_pr230_radial_spurion_action_contract_2026-05-06.json",
     "retained_route": "outputs/yt_retained_closure_route_certificate_2026-05-01.json",
@@ -134,6 +135,7 @@
     "origin_main_ew_m_residual_intake_guard": "exact negative boundary / origin/main EW M-residual CMT packet is context-only channel bookkeeping, not PR230 same-source EW/WZ or O_H closure",
     "orthogonal_top_coupling_exclusion_candidate_gate": "exact negative boundary / orthogonal-neutral top-coupling exclusion candidate rejected on current PR230 surface",
     "os_transfer_kernel_artifact_gate": "exact support plus negative boundary / OS transfer-kernel artifact absent; equal-time C_ss/C_sx/C_xx covariance rows do not determine a same-surface transfer generator, pole residue, or source-Higgs overlap",
+    "post_block100_completion_reopen_audit": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
     "post_fms_source_overlap_necessity_gate": "exact negative boundary / post-FMS source-overlap not derivable from current PR230 source-only or C_sx/C_xx rows",
     "radial_spurion_action_contract": "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
     "retained_route": "open / retained closure not yet reached",
@@ -181,7 +183,7 @@
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 75,
+  "pass_count": 76,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -214,6 +216,7 @@
     "orthogonal_top_coupling_exclusion_candidate_rejected": true,
     "os_transfer_kernel_artifact_absent": true,
     "osp_higgs_rows_absent": true,
+    "post_block100_completion_reopen_audit_blocks": true,
     "post_fms_source_overlap_necessity_blocks_current_inference": true,
     "radial_spurion_action_contract_not_closure": true,
     "same_source_ew_action_adoption_attempt_not_closure": true,
