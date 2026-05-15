@@ -1,0 +1,155 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_forced_by_ward_rep_b_abstract_narrow.py
+runner_sha256: aa8e1d06cf1dcd48a21ec33329a4cbf65154916aadc3e9eb01865de35c78c538
+timeout_sec: 120
+exit_code: 1
+elapsed_sec: 0.48
+status: nonzero_exit
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: simultaneous-constraint forcing identity
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: symbolic forcing identity (T1) via sympy
+----------------------------------------------------------------------------------------
+  [PASS (A)] (W1) - (W2) algebraically equals (g^2 / (2 N) - c0) symbolically  (residual = 0)
+  [PASS (A)] multiplying by 2 N gives the polynomial g^2 - 2 N c0 = 0  (residual = 0)
+  [PASS (A)] forcing identity (T1) g^2 = 2 N c0 is the canonical algebraic form  ((trivially: g^2 - 2 N c0 = g^2 - 2 N c0))
+
+----------------------------------------------------------------------------------------
+Part 2: positive-branch unique solution (T2) via sympy.solve
+----------------------------------------------------------------------------------------
+
+  Solutions of g^2 = 2 N c0: g = [-sqrt(2)*sqrt(N*c0), sqrt(2)*sqrt(N*c0)]
+  [PASS (A)] solve gives two real roots g = ± sqrt(2 N c0)  (got [-sqrt(2)*sqrt(N*c0), sqrt(2)*sqrt(N*c0)])
+  [PASS (A)] positive branch g = sqrt(2 N c0) is uniquely determined  (positive branch = [sqrt(2)*sqrt(N*c0)])
+
+----------------------------------------------------------------------------------------
+Part 3: canonical numerical instance (T3) at (N, c0) = (3, 1/6) yields g = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] at (N, c0) = (3, 1/6): g^2 = 2 · 3 · (1/6) = 1 exact  (g^2 = 1)
+  [PASS (A)] at (N, c0) = (3, 1/6): positive branch g = 1 exact  (g = sqrt(1) = 1)
+  [PASS (A)] Fraction cross-check at (3, 1/6): g^2 = 1 exactly  (Fraction: g^2 = 2 · 3 · 1/6 = 1)
+
+----------------------------------------------------------------------------------------
+Part 4: alternative pair (N, c0) = (1, 1) yields g = sqrt(2) ≠ 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] at (N, c0) = (1, 1): g^2 = 2 · 1 · 1 = 2 exact  (g^2 = 2)
+  [PASS (A)] at (N, c0) = (1, 1): positive branch g = sqrt(2) ≠ 1  (g = sqrt(2) = sqrt(2))
+
+----------------------------------------------------------------------------------------
+Part 5: exact-rational sample grid of (N, c0) pairs
+----------------------------------------------------------------------------------------
+  [PASS (A)] forcing at (N, c0) = (2, 1/4): g^2 = 1  (g^2 = 2 · 2 · 1/4 = 1)
+  [PASS (A)] forcing at (N, c0) = (3, 2/3): g^2 = 4  (g^2 = 2 · 3 · 2/3 = 4)
+  [PASS (A)] forcing at (N, c0) = (5, 1/10): g^2 = 1  (g^2 = 2 · 5 · 1/10 = 1)
+  [PASS (A)] forcing at (N, c0) = (7, 1/2): g^2 = 7  (g^2 = 2 · 7 · 1/2 = 7)
+  [PASS (A)] forcing at (N, c0) = (11, 3/22): g^2 = 3  (g^2 = 2 · 11 · 3/22 = 3)
+  [PASS (A)] forcing at (N, c0) = (13, 5/26): g^2 = 5  (g^2 = 2 · 13 · 5/26 = 5)
+
+----------------------------------------------------------------------------------------
+Part 6: pair-specificity — g = 1 is NOT forced for arbitrary (N, c0)
+----------------------------------------------------------------------------------------
+  [PASS (A)] at (N, c0) = (3, 2/3): forced g^2 = 4 ≠ 1  (g = 1 NOT forced at this pair)
+  [PASS (A)] at (N, c0) = (7, 1/2): forced g^2 = 7 ≠ 1  (g = 1 NOT forced at this pair)
+  [PASS (A)] at (N, c0) = (11, 3/22): forced g^2 = 3 ≠ 1  (g = 1 NOT forced at this pair)
+  [PASS (A)] at (N, c0) = (13, 5/26): forced g^2 = 5 ≠ 1  (g = 1 NOT forced at this pair)
+
+----------------------------------------------------------------------------------------
+Part 7: c0 = 0 contradicts g > 0 (T2 boundary)
+----------------------------------------------------------------------------------------
+  [PASS (A)] at c0 = 0: g^2 = 0, contradicting g > 0 (boundary degeneracy)  (g^2 = 0 at c0 = 0; positive branch undefined)
+
+----------------------------------------------------------------------------------------
+Part 8: independence from any Ward / lattice / physical Cl(3) / Z^3 / SU(N_c) input
+----------------------------------------------------------------------------------------
+  [PASS (A)] identity holds at fully symbolic (N, c0) with no numerical values  (g^2 = 2·N·c0 is the algebraic forcing identity at any (N, c0))
+  [PASS (A)] at (N, c0) = (π/4, e): g^2 = (π e)/2 (irrational, but identity holds)  (g^2 = E*pi/2)
+
+----------------------------------------------------------------------------------------
+Part 9: note structure and narrow-scope discipline
+----------------------------------------------------------------------------------------
+  [PASS (A)] note contains: 'g_bare Forced by Ward Rep-B-Independence Abstract Narrow Theorem'  ()
+  [PASS (A)] note contains: 'Type:** positive_theorem'  ()
+  [PASS (A)] note contains: 'polynomial-algebra forcing identity'  ()
+  [PASS (A)] note contains: 'no Ward identity'  ()
+  [PASS (A)] note contains: 'no lattice gauge theory'  ()
+  [PASS (A)] note contains: 'Wilson\nplaquette action'  ()
+  [PASS (A)] note contains: 'no SU(N_c) gauge group'  ()
+  [PASS (A)] note contains: 'g^2  =  2 N c0'  ()
+  [PASS (A)] note contains: 'Cited dependencies\n\nNone'  ()
+  [PASS (A)] note contains: 'Forbidden imports check'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'g_bare = 1 is uniquely forced by physical Cl(3)'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'Wilson plaquette action is uniquely forced'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'g_bare = 1 follows from physical Cl(3) local algebra plus Z^3 spatial substrate'  ()
+  [PASS (A)] narrow scope avoids forbidden physical claim: 'Ward identity is derived from this note'  ()
+
+----------------------------------------------------------------------------------------
+Part 10: ledger context when available (no ledger modification)
+----------------------------------------------------------------------------------------
+
+  Parent row state in the current ledger (informational only):
+    claim_type: bounded_theorem
+    transitive_descendants: 460
+    deps: ['g_bare_canonical_convention_narrow_theorem_note_2026-05-02', 'g_bare_two_ward_rep_b_independence_theorem_note_2026-04-19', 'g_bare_two_ward_same_1pi_pinning_theorem_note_2026-04-19']
+
+  Self row state (post-pipeline):
+    claim_type: positive_theorem
+    deps: []
+  [FAIL (A)] self row not promoted to retained-grade by this runner  (effective_status='retained')
+  [PASS (A)] self row records zero load-bearing dependencies (deps=[])  (deps=[])
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (F, g, N, c0) be abstract symbolic variables with g > 0, N > 0,
+    F real, and c0 ∈ R_{>=0}.
+    Suppose the two algebraic constraints
+
+        (W1)  F^2  =  c0,                                          (1)
+        (W2)  F^2  =  g^2 / (2 N).                                 (2)
+
+  CONCLUSION:
+    Equating (1) and (2),
+
+        g^2  =  2 N c0.                                            (T1)
+
+    On the positive branch g > 0 (when c0 > 0),
+
+        g  =  sqrt(2 N c0).                                        (T2)
+
+    At (N, c0) = (3, 1/6), the forced value is g = 1; at (N, c0) = (1, 1),
+    the forced value is g = sqrt(2) ≠ 1 (pair-specific).             (T3)
+
+  Audit-lane class:
+    (A) -- pure polynomial algebra over R. No external observed/fitted/
+    literature/Ward/lattice/physical Cl(3) local algebra/Z^3 spatial
+    substrate/SU(N_c) input. Proof is one-line
+    direct algebraic substitution.
+
+  This narrow theorem is independent of the parent g_bare forced-by-Ward
+  bounded theorem's physical Ward Rep-B-independence + same-1PI pinning
+  framing. The numerical instance (N, c0) = (N_c, 1/6) = (3, 1/6) is just
+  one application; the forcing identity holds for any abstract
+  (F, g, N, c0) by the same algebraic substitution.
+
+  Distinct from the sibling
+  BETA_GBARE_RESCALING_ABSTRACT_IDENTITY_NARROW_THEOREM_NOTE_2026-05-10
+  (PR #1034), which captures the rescaling identity
+  β(g/c, N) = c^2 · β(g, N). The present note captures the
+  simultaneous-constraint forcing identity g^2 = 2 N c0 — different
+  abstract structure.
+
+
+========================================================================================
+  TOTAL: PASS=38, FAIL=1
+========================================================================================
+
+----- stderr -----
+

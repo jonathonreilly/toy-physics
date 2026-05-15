@@ -1,0 +1,37 @@
+===== runner cache v1 =====
+runner: scripts/frontier_link_local_first_variation_selector_bridge_narrow.py
+runner_sha256: 2fcfacddb60b1696817b11ee166cc06dd8c5eb70da90cca10fcc050bbcd08bac
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.15
+status: ok
+----- stdout -----
+PASS: Boolean event-cell basis has 16 subset states
+PASS: P_0 is a rank 1 orthogonal projector (rank=1)
+PASS: P_1 is a rank 4 orthogonal projector (rank=4)
+PASS: P_2 is a rank 6 orthogonal projector (rank=6)
+PASS: P_3 is a rank 4 orthogonal projector (rank=4)
+PASS: P_4 is a rank 1 orthogonal projector (rank=1)
+PASS: J_t has one-axis support (support=[1])
+PASS: J_x has one-axis support (support=[2])
+PASS: J_y has one-axis support (support=[4])
+PASS: J_z has one-axis support (support=[8])
+PASS: support projector of dS_link has rank four
+PASS: support projector of dS_link is orthogonal projector
+PASS: support projector of dS_link equals P_1
+PASS: bridge hypothesis gives P_A = P_1
+PASS: P_3 is orthogonal to P_1
+PASS: P_3 is not the support projector of dS_link
+PASS: rank-four Hamming-weight classes are P_1 and P_3 ([1, 3])
+PASS: P_1 and P_3 have equal rank but are distinct
+PASS: note exists
+PASS: note declares positive_theorem claim type
+PASS: note keeps independent audit authority
+PASS: note states hypotheses are not derived framework facts
+PASS: note has no markdown source-note dependency links
+PASS: note has no prefilled audit verdict vocabulary
+PASS: note has no bare A_min/A1/A2 framing
+PASS=25 FAIL=0
+
+----- stderr -----
+
