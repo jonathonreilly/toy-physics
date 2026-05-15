@@ -1,6 +1,7 @@
 # Opportunity Queue
 
-Campaign mode queue after block103 Z3 heat-kernel scale-selector no-go,
+Campaign mode queue after block104 Z3 heat-kernel source-coupling/H4 no-go,
+block103 Z3 heat-kernel scale-selector no-go,
 block102 Z3 heat-kernel neutral-transfer attempt,
 block101 post-Block100 completion/reopen audit,
 block100 W/Z explicit-`v` authority firewall, and block99 complete higher-shell
@@ -18,13 +19,17 @@ finite-packet monotonicity boundary.
 
 No global stop is justified, but the refreshed queue does not authorize another
 current-surface finite-row shortcut gate, package-`v` W/Z shortcut, path-only
-remote-reopen shortcut, or heat-kernel scale selector shortcut. Block103 closes
-the reversible heat-kernel time/scale selector: symmetry, cone, semigroup,
-reversibility, entropy, and spectral-gap criteria leave a continuum or a
-boundary/external selector, not a finite PR230 physical transfer. Block102 adds
-a genuine finite-group Z3 heat-kernel primitive witness, but it is mathematical
-support only: no current PR230 action selects the heat time/scale as physical
-transfer, and H4 source/canonical-Higgs coupling remains absent. Block101
+remote-reopen shortcut, heat-kernel scale selector shortcut, or
+source-triplet `eta` shortcut. Block104 closes the heat-kernel H4
+source-coupling shortcut: `diag(1,K_tau)` is reducible, while positive `eta`
+is independent same-surface action/transfer data and not a derived
+source/canonical-Higgs bridge. Block103 closes the reversible heat-kernel
+time/scale selector: symmetry, cone, semigroup, reversibility, entropy, and
+spectral-gap criteria leave a continuum or a boundary/external selector, not a
+finite PR230 physical transfer. Block102 adds a genuine finite-group Z3
+heat-kernel primitive witness, but it is mathematical support only: no current
+PR230 action selects the heat time/scale as physical transfer, and H4
+source/canonical-Higgs coupling remains absent. Block101
 verifies the final chunk state is complete at
 `63/63` with active `[]` and planned `[]`, while no current or fetched remote
 strict reopen artifact is admitted. Block99 closes the complete higher-shell

@@ -1,0 +1,361 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Z3 heat-kernel source-coupling data do not supply PR230 H4 source/canonical-Higgs coupling",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block_diagonal_source_extension": {
+    "column_stochastic": true,
+    "commutes_with_source_plus_triplet_z3": true,
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.36652471224524263,
+        0.3167376438773787,
+        0.3167376438773787
+      ],
+      [
+        0.0,
+        0.3167376438773787,
+        0.36652471224524263,
+        0.3167376438773787
+      ],
+      [
+        0.0,
+        0.3167376438773787,
+        0.3167376438773787,
+        0.36652471224524263
+      ]
+    ],
+    "primitive": false,
+    "primitive_power": null,
+    "row_stochastic": true,
+    "source_triplet_entries": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "strictly_positive": false,
+    "symmetric": true
+  },
+  "block_diagonal_source_extension_is_reducible": true,
+  "canonical_oh_identity_present": false,
+  "closure_achieved": false,
+  "conditional_surface_status": "If a future same-surface action, transfer operator, or off-diagonal generator fixes the source-triplet coupling eta and also supplies canonical O_H/source-Higgs pole authority, the Block102 heat-kernel primitive support can be reused.  Eta is absent on the actual current surface.",
+  "coupled_eta_witness_rows": [
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.0,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.36652471224524263,
+          0.3167376438773787,
+          0.3167376438773787
+        ],
+        [
+          0.0,
+          0.3167376438773787,
+          0.36652471224524263,
+          0.3167376438773787
+        ],
+        [
+          0.0,
+          0.3167376438773787,
+          0.3167376438773787,
+          0.36652471224524263
+        ]
+      ],
+      "primitive": false,
+      "primitive_power": null,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "strictly_positive": false,
+      "symmetric": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.02,
+      "matrix": [
+        [
+          0.94,
+          0.02,
+          0.02,
+          0.02
+        ],
+        [
+          0.02,
+          0.3591942180003378,
+          0.3104028909998311,
+          0.3104028909998311
+        ],
+        [
+          0.02,
+          0.3104028909998311,
+          0.3591942180003378,
+          0.3104028909998311
+        ],
+        [
+          0.02,
+          0.3104028909998311,
+          0.3104028909998311,
+          0.3591942180003378
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "strictly_positive": true,
+      "symmetric": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.05,
+      "matrix": [
+        [
+          0.85,
+          0.05,
+          0.05,
+          0.05
+        ],
+        [
+          0.05,
+          0.3481984766329805,
+          0.3009007616835097,
+          0.3009007616835097
+        ],
+        [
+          0.05,
+          0.3009007616835097,
+          0.3481984766329805,
+          0.3009007616835097
+        ],
+        [
+          0.05,
+          0.3009007616835097,
+          0.3009007616835097,
+          0.3481984766329805
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "strictly_positive": true,
+      "symmetric": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.1,
+      "matrix": [
+        [
+          0.7,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.3298722410207184,
+          0.28506387948964085,
+          0.28506387948964085
+        ],
+        [
+          0.1,
+          0.28506387948964085,
+          0.3298722410207184,
+          0.28506387948964085
+        ],
+        [
+          0.1,
+          0.28506387948964085,
+          0.28506387948964085,
+          0.3298722410207184
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "strictly_positive": true,
+      "symmetric": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.2,
+      "matrix": [
+        [
+          0.3999999999999999,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.29321976979619413,
+          0.25339011510190296,
+          0.25339011510190296
+        ],
+        [
+          0.2,
+          0.25339011510190296,
+          0.29321976979619413,
+          0.25339011510190296
+        ],
+        [
+          0.2,
+          0.25339011510190296,
+          0.25339011510190296,
+          0.29321976979619413
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 1,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "strictly_positive": true,
+      "symmetric": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_source_plus_triplet_z3": true,
+      "eta": 0.3333333333333333,
+      "matrix": [
+        [
+          0.0,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.2443498081634951,
+          0.21115842925158582,
+          0.21115842925158582
+        ],
+        [
+          0.3333333333333333,
+          0.21115842925158582,
+          0.2443498081634951,
+          0.21115842925158582
+        ],
+        [
+          0.3333333333333333,
+          0.21115842925158582,
+          0.21115842925158582,
+          0.2443498081634951
+        ]
+      ],
+      "primitive": true,
+      "primitive_power": 2,
+      "row_stochastic": true,
+      "source_triplet_entries": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "strictly_positive": false,
+      "symmetric": true
+    }
+  ],
+  "eta_continuum_not_selected": true,
+  "exact_next_action": "Reopen the neutral route only with a same-surface source-triplet coupling/action row, off-diagonal generator, or primitive-cone certificate that fixes eta and H4 source/canonical-Higgs coupling. Otherwise pursue accepted O_H/action with strict C_ss/C_sH/C_HH pole rows, strict W/Z response with an allowed absolute pin, or strict Schur/scalar-LSZ pole authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "identifies_taste_triplet_or_source_with_canonical_oh": false,
+    "sets_c2_equal_one": false,
+    "sets_heat_time_equal_one_by_convention": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_source_triplet_eta_by_convention": false,
+    "sets_z_match_equal_one": false,
+    "treats_z3_heat_kernel_as_pr230_physical_transfer": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_cold_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "h4_artifact_present": false,
+  "h4_source_canonical_higgs_coupling_passed": false,
+  "hypothetical_axiom_status": "Adding eta>0 as a new physical source-triplet coupling axiom can make the finite source-plus-triplet matrix primitive, but this is a new action/transfer premise and not a derivation from current PR230 artifacts.",
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "neutral_source_mixing_no_go": "exact negative boundary / current same-surface Z3 eigenoperator data do not certify a physical neutral scalar transfer or O_H bridge",
+    "post_block100_completion_reopen": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_neutral_multiplicity_gate": "exact support / same-surface neutral multiplicity-one artifact intake gate; current PR230 surface rejected",
+    "z3_heat_kernel_attempt": "exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent",
+    "z3_heat_kernel_scale_selector_no_go": "exact negative boundary / Z3 heat-kernel scale and time selectors do not derive the PR230 physical neutral transfer"
+  },
+  "pass_count": 13,
+  "physical_neutral_transfer_artifact_present": false,
+  "positive_eta_can_make_full_transfer_primitive": true,
+  "pr230_closure_authorized": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The heat-kernel triplet primitive does not couple the PR230 source singlet to canonical O_H.  A positive source-triplet eta is independent data; current artifacts do not derive or measure eta and do not provide C_sH/C_HH pole rows, canonical O_H, W/Z response, or scalar LSZ authority.",
+  "source_higgs_pole_rows_present": false,
+  "source_triplet_eta_required": true,
+  "source_triplet_eta_selected_by_current_surface": false,
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_transfer_operator": false,
+    "same_surface_source_triplet_coupling": false,
+    "source_higgs_cross_rows": false,
+    "source_higgs_production_certificate": false,
+    "wz_response_rows": false
+  },
+  "strict_neutral_h3_authority_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not set source-triplet eta by convention",
+    "does not treat eta>0 existence as a PR230 physical action",
+    "does not identify source singlet, taste triplet, O_s, or O_sp with canonical O_H",
+    "does not relabel C_sx/C_xx rows as C_sH/C_HH rows",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, Z_match, g2, v, heat time, diffusion scale, or source-Higgs overlap to one"
+  ],
+  "wz_response_rows_present": false,
+  "z3_heat_kernel_source_coupling_no_go_passed": true
+}

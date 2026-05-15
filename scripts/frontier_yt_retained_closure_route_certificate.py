@@ -157,6 +157,7 @@ def main() -> int:
         "pr230_z3_lazy_selector_no_go": "outputs/yt_pr230_z3_lazy_selector_no_go_2026-05-06.json",
         "pr230_z3_heat_kernel_neutral_transfer_attempt": "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json",
         "pr230_z3_heat_kernel_scale_selector_no_go": "outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json",
+        "pr230_z3_heat_kernel_source_coupling_no_go": "outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json",
         "pr230_source_coordinate_transport_completion": "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json",
         "pr230_two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
         "pr230_two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
@@ -1447,6 +1448,44 @@ def main() -> int:
         )
         is False
         and certificates["pr230_z3_heat_kernel_scale_selector_no_go"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+    )
+    z3_heat_kernel_source_coupling_blocks_h4 = (
+        "Z3 heat-kernel source-coupling data do not supply PR230 H4"
+        in certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "actual_current_surface_status", ""
+        )
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "proposal_allowed"
+        )
+        is False
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "z3_heat_kernel_source_coupling_no_go_passed"
+        )
+        is True
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "block_diagonal_source_extension_is_reducible"
+        )
+        is True
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "positive_eta_can_make_full_transfer_primitive"
+        )
+        is True
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "source_triplet_eta_selected_by_current_surface"
+        )
+        is False
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "h4_source_canonical_higgs_coupling_passed"
+        )
+        is False
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "strict_neutral_h3_authority_passed"
+        )
+        is False
+        and certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
             "pr230_closure_authorized"
         )
         is False
@@ -5113,6 +5152,13 @@ def main() -> int:
         ),
     )
     report(
+        "z3-heat-kernel-source-coupling-blocks-h4",
+        z3_heat_kernel_source_coupling_blocks_h4,
+        certificates["pr230_z3_heat_kernel_source_coupling_no_go"].get(
+            "actual_current_surface_status", ""
+        ),
+    )
+    report(
         "same-surface-z3-taste-triplet-support-not-closure",
         same_surface_z3_taste_triplet_support_not_closure,
         certificates["pr230_same_surface_z3_taste_triplet"].get(
@@ -6871,6 +6917,7 @@ def main() -> int:
         "z3_lazy_selector_no_go_blocks": z3_lazy_selector_no_go_blocks,
         "z3_heat_kernel_neutral_transfer_support_not_h3h4": z3_heat_kernel_support_not_h3h4,
         "z3_heat_kernel_scale_selector_blocks_shortcut": z3_heat_kernel_scale_selector_blocks_shortcut,
+        "z3_heat_kernel_source_coupling_blocks_h4": z3_heat_kernel_source_coupling_blocks_h4,
         "same_surface_z3_taste_triplet_support_not_closure": same_surface_z3_taste_triplet_support_not_closure,
         "source_coordinate_transport_completion_blocks": source_coordinate_transport_completion_blocks,
         "two_source_taste_radial_chart_support_not_closure": two_source_taste_radial_chart_support_not_closure,

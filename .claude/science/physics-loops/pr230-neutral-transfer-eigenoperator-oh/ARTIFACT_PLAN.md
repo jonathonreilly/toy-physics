@@ -1,5 +1,26 @@
 # Artifact Plan
 
+Block104 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_z3_heat_kernel_source_coupling_no_go.py` | Created; PASS=13 FAIL=0 |
+| Certificate | `outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json` | Created |
+| No-go note | `docs/YT_PR230_Z3_HEAT_KERNEL_SOURCE_COUPLING_NO_GO_NOTE_2026-05-15.md` | Created |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block104:
+
+```text
+outputs/yt_pr230_same_surface_source_triplet_coupling_2026-05-15.json
+```
+
+or a same-surface neutral off-diagonal generator / primitive-cone certificate
+that fixes `eta` plus H4 source/canonical-Higgs coupling, or a pivot to
+accepted `O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z
+response with an allowed absolute pin, or strict Schur/scalar-LSZ pole
+authority.
+
 Block103 artifacts:
 
 | Artifact | Path | Status |

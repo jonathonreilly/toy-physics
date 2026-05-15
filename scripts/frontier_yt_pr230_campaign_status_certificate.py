@@ -645,6 +645,9 @@ def main() -> int:
         "pr230_z3_heat_kernel_scale_selector_no_go": load(
             "outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json"
         ),
+        "pr230_z3_heat_kernel_source_coupling_no_go": load(
+            "outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json"
+        ),
         "pr230_source_coordinate_transport_completion": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -3216,6 +3219,42 @@ def main() -> int:
         "pr230-z3-heat-kernel-scale-selector-blocks-shortcut",
         z3_heat_kernel_scale_selector_blocks_shortcut,
         statuses["pr230_z3_heat_kernel_scale_selector_no_go"],
+    )
+    z3_heat_kernel_source_coupling = certificates[
+        "pr230_z3_heat_kernel_source_coupling_no_go"
+    ]
+    z3_heat_kernel_source_coupling_blocks_h4 = (
+        "Z3 heat-kernel source-coupling data do not supply PR230 H4"
+        in str(statuses["pr230_z3_heat_kernel_source_coupling_no_go"])
+        and z3_heat_kernel_source_coupling.get("proposal_allowed") is False
+        and z3_heat_kernel_source_coupling.get(
+            "z3_heat_kernel_source_coupling_no_go_passed"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "block_diagonal_source_extension_is_reducible"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "positive_eta_can_make_full_transfer_primitive"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "source_triplet_eta_selected_by_current_surface"
+        )
+        is False
+        and z3_heat_kernel_source_coupling.get(
+            "h4_source_canonical_higgs_coupling_passed"
+        )
+        is False
+        and z3_heat_kernel_source_coupling.get("strict_neutral_h3_authority_passed")
+        is False
+        and z3_heat_kernel_source_coupling.get("pr230_closure_authorized") is False
+    )
+    report(
+        "pr230-z3-heat-kernel-source-coupling-blocks-h4",
+        z3_heat_kernel_source_coupling_blocks_h4,
+        statuses["pr230_z3_heat_kernel_source_coupling_no_go"],
     )
     same_surface_z3_taste_triplet = certificates["pr230_same_surface_z3_taste_triplet"]
     report(
@@ -9038,6 +9077,32 @@ def main() -> int:
         is False
         and z3_heat_kernel_scale_selector.get("pr230_closure_authorized") is False
         and z3_heat_kernel_scale_selector.get("proposal_allowed") is False
+    )
+    result["z3_heat_kernel_source_coupling_blocks_h4"] = (
+        z3_heat_kernel_source_coupling.get(
+            "z3_heat_kernel_source_coupling_no_go_passed"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "block_diagonal_source_extension_is_reducible"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "positive_eta_can_make_full_transfer_primitive"
+        )
+        is True
+        and z3_heat_kernel_source_coupling.get(
+            "source_triplet_eta_selected_by_current_surface"
+        )
+        is False
+        and z3_heat_kernel_source_coupling.get(
+            "h4_source_canonical_higgs_coupling_passed"
+        )
+        is False
+        and z3_heat_kernel_source_coupling.get("strict_neutral_h3_authority_passed")
+        is False
+        and z3_heat_kernel_source_coupling.get("pr230_closure_authorized") is False
+        and z3_heat_kernel_source_coupling.get("proposal_allowed") is False
     )
     result["same_surface_z3_taste_triplet_support_not_closure"] = (
         same_surface_z3_taste_triplet.get("same_surface_z3_triplet_artifact_passed")

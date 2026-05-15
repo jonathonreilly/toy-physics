@@ -1,11 +1,49 @@
 # Handoff
 
-Checkpoint: 2026-05-15 01:35 EDT
+Checkpoint: 2026-05-15 01:52 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block104 Z3 Heat-Kernel Source-Coupling/H4 No-Go
+
+Block104 closes the remaining H4/source-coupling shortcut left by the Z3
+heat-kernel work.  The source-plus-triplet extension `diag(1,K_tau)` preserves
+the triplet heat-kernel support, but it is reducible and leaves the PR230
+source singlet isolated.  A positive source-triplet `eta` can make a formal
+four-state transfer primitive, but `eta` is independent same-surface
+action/transfer data.  Current PR230 artifacts do not derive or measure it and
+do not supply canonical `O_H`, physical `C_sH/C_HH` pole rows, W/Z response
+rows, or scalar-LSZ authority.
+
+Artifacts:
+
+- `docs/YT_PR230_Z3_HEAT_KERNEL_SOURCE_COUPLING_NO_GO_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_z3_heat_kernel_source_coupling_no_go.py`
+- `outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json`
+
+Validation:
+
+```text
+Z3 heat-kernel source-coupling no-go PASS=13 FAIL=0
+retained route PASS=325 FAIL=0
+campaign status PASS=427 FAIL=0
+full positive closure assembly PASS=200 FAIL=0
+positive closure completion audit PASS=79 FAIL=0
+assumption stress PASS=111 FAIL=0
+```
+
+Honest status: exact negative boundary. No retained or `proposed_retained`
+proposal is authorized.
+
+Exact next action: reopen the neutral route only with a same-surface
+source-triplet coupling/action row, off-diagonal generator, or primitive-cone
+certificate that fixes `eta` and H4 source/canonical-Higgs coupling. Otherwise
+pursue accepted `O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z
+response rows with an allowed absolute pin, or strict Schur/scalar-LSZ pole
+authority.
 
 ## Block103 Z3 Heat-Kernel Scale-Selector No-Go
 

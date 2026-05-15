@@ -106,6 +106,7 @@
     "z3_generation_action_lift_attempt": "outputs/yt_pr230_z3_generation_action_lift_attempt_2026-05-06.json",
     "z3_heat_kernel_neutral_transfer_attempt": "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json",
     "z3_heat_kernel_scale_selector_no_go": "outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json",
+    "z3_heat_kernel_source_coupling_no_go": "outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json",
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "z3_triplet_conditional_primitive_cone": "outputs/yt_pr230_z3_triplet_conditional_primitive_cone_theorem_2026-05-06.json",
     "z3_triplet_positive_cone_support": "outputs/yt_pr230_z3_triplet_positive_cone_support_certificate_2026-05-06.json"
@@ -183,11 +184,12 @@
     "z3_generation_action_lift_attempt": "exact negative boundary / Z3 generation-action lift to PR230 quark-bilinear triplet not derived on current surface",
     "z3_heat_kernel_neutral_transfer_attempt": "exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent",
     "z3_heat_kernel_scale_selector_no_go": "exact negative boundary / Z3 heat-kernel scale and time selectors do not derive the PR230 physical neutral transfer",
+    "z3_heat_kernel_source_coupling_no_go": "exact negative boundary / Z3 heat-kernel source-coupling data do not supply PR230 H4 source/canonical-Higgs coupling",
     "z3_lazy_transfer_promotion_attempt": "exact negative boundary / Z3 lazy-transfer promotion not derivable from current same-surface cyclic action",
     "z3_triplet_conditional_primitive_cone": "conditional-support / Z3-triplet primitive-cone theorem; same-surface PR230 primitive premise absent",
     "z3_triplet_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
   },
-  "pass_count": 78,
+  "pass_count": 79,
   "post_osp_support_evidence": {
     "additive_source_radial_spurion_incompatibility_not_closure": true,
     "additive_top_subtraction_row_contract_not_closure": true,
@@ -255,6 +257,7 @@
     "z3_generation_action_lift_not_derived": true,
     "z3_heat_kernel_neutral_transfer_support_not_h3h4": true,
     "z3_heat_kernel_scale_selector_blocks_shortcut": true,
+    "z3_heat_kernel_source_coupling_blocks_h4": true,
     "z3_lazy_transfer_promotion_not_derived": true,
     "z3_triplet_conditional_primitive_not_closure": true,
     "z3_triplet_positive_cone_h2_support_not_transfer": true
@@ -545,6 +548,7 @@
     "does not treat package hierarchy v as PR230 W/Z absolute-normalization authority",
     "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
     "does not treat a finite-group Z3 heat kernel as PR230 physical transfer without a same-surface action selecting its heat time and H4 source/canonical-Higgs coupling",
+    "does not treat source-triplet heat-kernel eta coupling as derived without a same-surface action/transfer row or H4 source/canonical-Higgs certificate",
     "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
     "does not treat the current additive top source as a no-independent-top radial spurion",
     "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",

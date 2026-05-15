@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block103_z3_heat_kernel_scale_selector_no_go`.
+Current block: `block104_z3_heat_kernel_source_coupling_no_go`.
 
 ```yaml
-actual_current_surface_status: exact negative boundary / Z3 heat-kernel scale and time selectors do not derive the PR230 physical neutral transfer
+actual_current_surface_status: exact negative boundary / Z3 heat-kernel source-coupling data do not supply PR230 H4 source/canonical-Higgs coupling
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block103 shows the Z3 heat-kernel family has a continuum of symmetry/cone/semigroup/reversible primitive members and no current-surface selector for heat time or diffusion scale. It supplies no physical neutral transfer/action authority, canonical O_H, H4 source/canonical-Higgs coupling, or retained/proposed-retained closure."
+proposal_allowed_reason: "Block104 shows the source-plus-triplet heat-kernel extension is reducible unless an independent source-triplet eta is supplied. Current PR230 artifacts do not derive or measure eta, do not identify the source or triplet as canonical O_H, and do not supply physical C_sH/C_HH pole rows, W/Z response, scalar-LSZ authority, or retained/proposed-retained closure."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block104 records the Z3 heat-kernel source-coupling/H4 no-go as an exact
+   negative boundary. The block-diagonal source-plus-triplet extension
+   `diag(1,K_tau)` keeps the triplet heat-kernel facts but is reducible and
+   has zero source-triplet entries. Adding a positive `eta` can make a formal
+   four-state transfer primitive, but `eta` is independent same-surface
+   action/transfer data. Current PR230 artifacts do not derive or measure
+   `eta`, identify the source or triplet as canonical `O_H`, or supply
+   physical `C_sH/C_HH` pole rows.
 0. Block103 records the Z3 heat-kernel scale-selector no-go as an exact
    negative boundary. The C3 heat-kernel family is a valid mathematical
    semigroup for every `tau>0`, but symmetry, cone, semigroup, reversibility,

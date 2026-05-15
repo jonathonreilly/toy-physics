@@ -34,6 +34,7 @@ PARENTS = {
     "z3_lazy_transfer_promotion_attempt": "outputs/yt_pr230_z3_lazy_transfer_promotion_attempt_2026-05-06.json",
     "z3_heat_kernel_neutral_transfer_attempt": "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json",
     "z3_heat_kernel_scale_selector_no_go": "outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json",
+    "z3_heat_kernel_source_coupling_no_go": "outputs/yt_pr230_z3_heat_kernel_source_coupling_no_go_2026-05-15.json",
     "two_source_taste_radial_chart": "outputs/yt_pr230_two_source_taste_radial_chart_certificate_2026-05-06.json",
     "two_source_taste_radial_action": "outputs/yt_pr230_two_source_taste_radial_action_certificate_2026-05-06.json",
     "two_source_taste_radial_row_contract": "outputs/yt_pr230_two_source_taste_radial_row_contract_2026-05-06.json",
@@ -916,6 +917,40 @@ def main() -> int:
         and "Z3 heat-kernel scale and time selectors do not derive"
         in parent_statuses["z3_heat_kernel_scale_selector_no_go"]
     )
+    z3_heat_kernel_source_coupling_blocks_h4 = (
+        certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "z3_heat_kernel_source_coupling_no_go_passed"
+        )
+        is True
+        and certs["z3_heat_kernel_source_coupling_no_go"].get("proposal_allowed")
+        is False
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "block_diagonal_source_extension_is_reducible"
+        )
+        is True
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "positive_eta_can_make_full_transfer_primitive"
+        )
+        is True
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "source_triplet_eta_selected_by_current_surface"
+        )
+        is False
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "h4_source_canonical_higgs_coupling_passed"
+        )
+        is False
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "strict_neutral_h3_authority_passed"
+        )
+        is False
+        and certs["z3_heat_kernel_source_coupling_no_go"].get(
+            "pr230_closure_authorized"
+        )
+        is False
+        and "Z3 heat-kernel source-coupling data do not supply PR230 H4"
+        in parent_statuses["z3_heat_kernel_source_coupling_no_go"]
+    )
     same_surface_neutral_multiplicity_gate_rejects_current_surface = (
         "same-surface neutral multiplicity-one artifact intake gate"
         in parent_statuses["same_surface_neutral_multiplicity_one_gate"]
@@ -1414,6 +1449,7 @@ def main() -> int:
     report("z3-lazy-transfer-promotion-not-derived", z3_lazy_transfer_promotion_not_derived, parent_statuses["z3_lazy_transfer_promotion_attempt"])
     report("z3-heat-kernel-neutral-transfer-support-not-h3h4", z3_heat_kernel_support_not_h3h4, parent_statuses["z3_heat_kernel_neutral_transfer_attempt"])
     report("z3-heat-kernel-scale-selector-blocks-shortcut", z3_heat_kernel_scale_selector_blocks_shortcut, parent_statuses["z3_heat_kernel_scale_selector_no_go"])
+    report("z3-heat-kernel-source-coupling-blocks-h4", z3_heat_kernel_source_coupling_blocks_h4, parent_statuses["z3_heat_kernel_source_coupling_no_go"])
     report("same-surface-neutral-multiplicity-one-gate-rejects-current-surface", same_surface_neutral_multiplicity_gate_rejects_current_surface, parent_statuses["same_surface_neutral_multiplicity_one_gate"])
     report("os-transfer-kernel-artifact-absent", os_transfer_kernel_artifact_absent, parent_statuses["os_transfer_kernel_artifact_gate"])
     report("source-higgs-time-kernel-harness-support-only", source_higgs_time_kernel_harness_support_only, parent_statuses["source_higgs_time_kernel_harness_extension_gate"])
@@ -1610,6 +1646,7 @@ def main() -> int:
             "z3_lazy_transfer_promotion_not_derived": z3_lazy_transfer_promotion_not_derived,
             "z3_heat_kernel_neutral_transfer_support_not_h3h4": z3_heat_kernel_support_not_h3h4,
             "z3_heat_kernel_scale_selector_blocks_shortcut": z3_heat_kernel_scale_selector_blocks_shortcut,
+            "z3_heat_kernel_source_coupling_blocks_h4": z3_heat_kernel_source_coupling_blocks_h4,
             "same_surface_neutral_multiplicity_one_gate_rejects_current_surface": same_surface_neutral_multiplicity_gate_rejects_current_surface,
             "os_transfer_kernel_artifact_absent": os_transfer_kernel_artifact_absent,
             "source_higgs_time_kernel_harness_support_only": source_higgs_time_kernel_harness_support_only,
@@ -1637,6 +1674,7 @@ def main() -> int:
             "does not treat package hierarchy v as PR230 W/Z absolute-normalization authority",
             "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
             "does not treat a finite-group Z3 heat kernel as PR230 physical transfer without a same-surface action selecting its heat time and H4 source/canonical-Higgs coupling",
+            "does not treat source-triplet heat-kernel eta coupling as derived without a same-surface action/transfer row or H4 source/canonical-Higgs certificate",
             "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
             "does not treat the current additive top source as a no-independent-top radial spurion",
             "does not treat the additive-top subtraction formula as closure before additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action exist",
