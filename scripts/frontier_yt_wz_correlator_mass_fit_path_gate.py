@@ -240,7 +240,12 @@ def main() -> int:
         "closure not yet reached" in status(certs["retained_route"])
         and certs["retained_route"].get("proposal_allowed") is False
     )
-    harness_has_wz_absent_guard = '"wz_mass_response"' in harness_text and '"implementation_status": "absent_guarded"' in harness_text
+    harness_has_wz_absent_guard = (
+        '"wz_mass_response"' in harness_text
+        and "absent_guarded" in harness_text
+        and "Static EW algebra, smoke" in harness_text
+        and "physics evidence" in harness_text
+    )
     harness_has_wz_smoke_schema_path = all(
         token in harness_text
         for token in (

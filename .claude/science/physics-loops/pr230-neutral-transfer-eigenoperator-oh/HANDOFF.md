@@ -5334,3 +5334,42 @@ top-Yukawa closure.
 Exact next action: wait for chunks043-044 to finish, then run completed-mode
 chunk checkpoints and package the row JSON plus volume artifacts before
 launching another support wave.
+
+## Block105 W/Z Probe Refresh
+
+Block105 is a maintenance-only checkpoint after the FH/LSZ selected-mass /
+normal-cache harness optimization.  It updates the W/Z row-production and W/Z
+mass-fit path probes so the current default-off synthetic W/Z smoke-schema
+flags are not mistaken for a real W/Z correlator mass-fit path, and so the
+current assembled `wz_mass_response` absent-guard metadata is recognized.
+
+Artifacts:
+
+- `scripts/frontier_yt_wz_response_row_production_attempt.py`
+- `scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py`
+- `outputs/yt_wz_response_row_production_attempt_2026-05-03.json`
+- `outputs/yt_wz_correlator_mass_fit_path_gate_2026-05-04.json`
+- `outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json`
+- `docs/YT_PR230_WZ_HARNESS_PROBE_REFRESH_NOTE_2026-05-15.md`
+
+Verification:
+
+```text
+W/Z row-production attempt PASS=12 FAIL=0
+W/Z mass-fit path gate PASS=17 FAIL=0
+py_compile PASS
+full positive closure assembly PASS=200 FAIL=0
+retained route PASS=325 FAIL=0
+positive closure completion audit PASS=79 FAIL=0
+campaign status PASS=427 FAIL=0
+assumption/import stress PASS=111 FAIL=0
+audit pipeline PASS with 5 existing warnings
+strict audit lint PASS with 5 existing warnings
+git diff --check PASS
+```
+
+Honest status: bounded-support / W/Z audit-probe maintenance only.  The W/Z
+route remains open: no same-source EW/Higgs action certificate, no W/Z
+correlator mass-fit rows, no same-source top/W covariance rows, no strict
+non-observed `g2`, and no canonical-Higgs identity are present.  No retained or
+`proposed_retained` closure is authorized.

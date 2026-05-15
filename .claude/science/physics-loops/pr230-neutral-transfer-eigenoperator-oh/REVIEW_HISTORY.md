@@ -280,6 +280,28 @@ git diff --check
 # OK
 ```
 
+## Block105
+
+Local review run on 2026-05-15.
+
+Scope:
+
+- `scripts/frontier_yt_wz_response_row_production_attempt.py`
+- `scripts/frontier_yt_wz_correlator_mass_fit_path_gate.py`
+- `outputs/yt_pr230_wz_accepted_action_response_root_checkpoint_2026-05-07.json`
+- `docs/YT_PR230_WZ_HARNESS_PROBE_REFRESH_NOTE_2026-05-15.md`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | The W/Z probes now classify the default-off smoke-schema `--wz-source-shifts` path as non-production and recognize the current absent-guard metadata. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | The change is probe maintenance only.  It writes no W/Z production rows and does not promote static EW algebra or smoke rows. |
+| Imports / Support | CLEAN / DISCLOSED | The forbidden-import firewall remains active: no `H_unit`, Ward identity, observed target selector, plaquette/u0, `c2=1`, `Z_match=1`, or `kappa_s=1`. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+| Audit Compatibility | PASS | W/Z row-production attempt PASS=12 FAIL=0, W/Z mass-fit path gate PASS=17 FAIL=0, aggregate closure/campaign gates pass with proposal denied, audit pipeline and strict lint pass with 5 existing warnings. |
+
+
 ## Block97
 
 Local review run on 2026-05-15 02:07 UTC.

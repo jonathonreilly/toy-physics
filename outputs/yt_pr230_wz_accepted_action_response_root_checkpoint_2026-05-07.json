@@ -53,7 +53,7 @@
   "hypothetical_axiom_status": null,
   "metadata": {
     "artifact": "yt_pr230_wz_accepted_action_response_root_checkpoint",
-    "created_utc": "2026-05-07T14:48:02Z"
+    "created_utc": "2026-05-15T06:15:19Z"
   },
   "parent_certificates": {
     "additive_source_radial_spurion_incompatibility": "outputs/yt_pr230_additive_source_radial_spurion_incompatibility_2026-05-07.json",
@@ -79,7 +79,7 @@
   },
   "parent_statuses": {
     "additive_source_radial_spurion_incompatibility": "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
-    "additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent",
+    "additive_top_subtraction_row_contract": "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
     "campaign_status": "open / active campaign continuing after current shortcut blocks",
     "canonical_higgs_operator_gate": "open / canonical-Higgs operator certificate absent",
     "canonical_oh_hard_residual_equivalence_gate": "exact negative boundary / canonical O_H hard residual not closed on current PR230 surface",
@@ -123,7 +123,7 @@
         "conditional support / same-source EW/Higgs action-extension ansatz specified; actual current-surface adoption absent",
         "exact-support / no-independent-top-source radial-spurion action contract; current additive-source action not adopted",
         "exact support/boundary / current additive source is incompatible with accepted radial-spurion action closure",
-        "exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent",
+        "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
         "exact negative boundary / ansatz-only same-source EW action adoption shortcut blocked",
         "open / same-source EW action certificate absent",
         "exact negative boundary / same-source EW action not defined on PR230 surface"
@@ -149,7 +149,7 @@
       "closes_wz_accepted_action_root": false,
       "evidence": [
         "exact-support / WZ response-ratio identifiability contract; current response rows, matched covariance, strict g2, and accepted same-source action are absent",
-        "exact-support / additive-top subtraction row contract; current additive Jacobian rows, W/Z rows, matched covariance, strict g2, and accepted action are absent",
+        "exact-support / additive-top subtraction row contract; current additive Jacobian rows are bounded support only, while W/Z rows, matched covariance, strict g2, and accepted action remain absent",
         "exact negative boundary / no importable same-surface top-W covariance theorem on current PR230 surface",
         "exact negative boundary / WZ response g2 authority absent for PR230"
       ],

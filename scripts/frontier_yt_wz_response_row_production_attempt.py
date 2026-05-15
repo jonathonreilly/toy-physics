@@ -85,19 +85,31 @@ def main() -> int:
     ew_note_text = read_text(EW_GAUGE_MASS_NOTE)
 
     future_rows_present = FUTURE_ROWS.exists()
+    harness_has_wz_smoke_schema_path = all(
+        token in harness_text
+        for token in (
+            "--wz-mass-response-smoke",
+            "smoke_schema_enabled_not_ew_production",
+            "synthetic_scout_contract_not_EW_field",
+        )
+    )
     harness_absent_guarded = (
         '"wz_mass_response"' in harness_text
-        and '"implementation_status": "absent_guarded"' in harness_text
-        and "This QCD top-correlator harness does not measure W/Z mass" in harness_text
+        and "absent_guarded" in harness_text
+        and "Static EW algebra, smoke" in harness_text
+        and "physics evidence" in harness_text
     )
     harness_has_raw_wz_correlator_path = any(
         token in harness_text
         for token in (
-            "--wz-source-shifts",
             "wz_correlator_measurement",
             "gauge_mass_response_analysis",
             "fit_wz_mass_correlator",
+            "wz_effective_mass_plateau",
         )
+    ) or (
+        "--wz-source-shifts" in harness_text
+        and not harness_has_wz_smoke_schema_path
     )
     ew_is_static_algebra = (
         "Object-level verifier for the EW Higgs gauge-mass diagonalization theorem" in ew_runner_text
