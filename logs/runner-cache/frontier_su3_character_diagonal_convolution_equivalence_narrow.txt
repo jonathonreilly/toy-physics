@@ -1,0 +1,101 @@
+===== runner cache v1 =====
+runner: scripts/frontier_su3_character_diagonal_convolution_equivalence_narrow.py
+runner_sha256: 1ccc51fb479e89d52b2d7f4a142203a8d5bd68d823fd5a046be80891f83821a2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 9.10
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1 (T1): Schur orthogonality on the finite truncation B_N = B_4
+----------------------------------------------------------------------------------------
+  Using N_GRID = 80 for Weyl integration; matrix size 25 x 25
+  [PASS (A)] Schur orthogonality off-diagonal: <chi_(p,q), chi_(p',q')> = 0 for (p,q) != (p',q') on test pairs  (off-diag pairs=72, ok=72, max err=6.848e-16)
+  [PASS (A)] Schur orthogonality diagonal: <chi_(p,q), chi_(p,q)> = 1 on test weights  (diag weights=9, ok=9, max abs deviation=1.266e-14)
+
+----------------------------------------------------------------------------------------
+Part 2 (T2): symbolic derivation of C_{Z/Z_(0,0)} chi_(p,q) = rho_(p,q) chi_(p,q)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T2) For abstract rational positive-symmetric (rho_(p,q)): Schur-orthogonal reduction yields C_{Z/Z_(0,0)} chi_(p,q) = rho_(p,q) chi_(p,q) for every (p,q) in B_N  (all 25 weights in B_4 pass exact algebraic reduction)
+
+----------------------------------------------------------------------------------------
+Part 3 (T3): uniqueness of (rho_(p,q)) for the diagonal operator R
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T3) Two distinct coefficient sequences rho^(1) != rho^(2) differ in exactly the perturbed entries  (entries differing = 2 (one symmetric pair perturbed: (2,1) and (1,2)))
+  [PASS (A)] (T3) Diagonal operators agree on every (p,q) except the perturbed pair  (all unaltered eigenvalues are identical between R^(1) and R^(2))
+  [PASS (A)] (T3) Diagonal operators disagree on exactly the perturbed pair (2,1) and (1,2)  (R^(1)[(2,1)] = 0.07692307692307693, R^(2)[(2,1)] = 0.08333333333333333)
+
+----------------------------------------------------------------------------------------
+Part 4 (T4): positivity, self-adjointness, conjugation-symmetry of R
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T4) R is positive: rho_(p,q) >= 0 on every weight in B_N  (min rho = 0.00125 >= 0)
+  [PASS (A)] (T4) R is self-adjoint (diagonal with real entries)  (||R - R^T||_inf = 0.000e+00)
+  [PASS (A)] (T4) R commutes with the conjugation swap (p,q) <-> (q,p)  (||[swap, R]||_inf = 0.000e+00)
+  [PASS (A)] (T4) Normalization: rho_(0,0) = 1 exactly  (|rho_(0,0) - 1| = 0.000e+00)
+
+----------------------------------------------------------------------------------------
+Part 5: concrete instance — trivial coefficient sequence collapses to projection
+----------------------------------------------------------------------------------------
+  [PASS (A)] concrete trivial instance: rho = (1, 0, ..., 0) gives projection onto chi_(0,0)  (C_{Z/Z_(0,0)} chi_(p,q) = 1 if (p,q)=(0,0) else 0)
+
+----------------------------------------------------------------------------------------
+Part 6: numerical consistency with bounded companion Wilson coefficients
+----------------------------------------------------------------------------------------
+  [PASS (A)] abstract numerical instance (Wilson coefficients as positive symmetric data) satisfies the abstract hypotheses  (min rho = 1.000000e-04, swap err = 0.000e+00, |rho_(0,0)-1| = 0.000e+00)
+  [PASS (A)] (T2) for the abstract numerical input: C_{Z/Z_(0,0)} chi_(p,q) = rho_(p,q) chi_(p,q) for every (p,q) in B_N (algebraic reduction, no Wilson-environment claim)  (exact eigen-action reduction on the abstract positive symmetric coefficient sequence)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Fix integer truncation N >= 0 with B_N = {(p, q) : 0 <= p, q <= N}.
+    Let (rho_(p,q))_(p,q in B_N) be an abstract real sequence with:
+      rho_(p,q) >= 0,
+      rho_(p,q) = rho_(q,p),
+      rho_(0,0) = 1.
+    Define
+      R chi_(p,q) = rho_(p,q) chi_(p,q),
+      Z(W)       = sum_(p,q in B_N) d_(p,q) rho_(p,q) chi_(p,q)(W),
+      Z_(0,0)    = d_(0,0) rho_(0,0) = 1,
+      C_{Z/Z_(0,0)} f (V) = int_{SU(3)} (Z(V W^{-1}) / Z_(0,0)) f(W) dW.
+
+  CONCLUSION:
+    (T1)  Schur character orthogonality on B_N:
+              <chi_(p,q), chi_(p',q')>_Haar
+                 = int_{SU(3)} chi_(p,q)(W) conj(chi_(p',q')(W)) dW
+                 = delta_((p,q),(p',q')).
+
+    (T2)  Diagonal-action identity:
+              C_{Z/Z_(0,0)} chi_(p,q) = rho_(p,q) chi_(p,q)  on V_N.
+
+    (T3)  Coefficient uniqueness:
+              R^(1) = R^(2)  iff  rho^(1) = rho^(2) on B_N.
+
+    (T4)  R is positive, self-adjoint (in the Schur-orthonormal character basis),
+          and commutes with the conjugation swap (p,q) <-> (q,p).
+
+  Audit-lane class:
+    (A) - pure finite-dim SU(3) representation theory on an abstract real
+    coefficient sequence. No Wilson action, no unmarked spatial environment,
+    no beta = 6 framework-point input, no identification with the parent
+    plaquette environment operator R_beta^env.
+
+  This narrow theorem isolates the abstract algebraic equivalence between
+  diagonal-coefficient operators and convolution-by-central-class-function
+  operators on the finite SU(3) character truncation. It does NOT close the
+  parent gate. The remaining physical-Wilson-coefficient derivation is
+  separately addressed by the bounded companion
+  GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.
+
+
+========================================================================================
+  TOTAL: PASS=13, FAIL=0
+========================================================================================
+PASS=13 FAIL=0
+
+----- stderr -----
+

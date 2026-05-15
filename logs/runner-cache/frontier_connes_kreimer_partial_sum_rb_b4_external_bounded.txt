@@ -1,0 +1,27 @@
+===== runner cache v1 =====
+runner: scripts/frontier_connes_kreimer_partial_sum_rb_b4_external_bounded.py
+runner_sha256: 33b7705715acba1fb91bfb3651eaab34836f6607747b215473eaff54393b7559
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+============================================================================
+CONNES-KREIMER PARTIAL-SUM RB B4 BOUNDED RUNNER
+============================================================================
+[PASS] strict prefix sum satisfies Rota-Baxter weight +1
+[PASS] strict prefix sum does not satisfy weight -1
+[PASS] strict prefix sum is not idempotent
+[PASS] B4 has 16 leaves
+[PASS] B4 has 31 nodes
+[PASS] B4 has 30 edges
+[PASS] B4 admissible-cut recursion gives 458329
+[PASS] first regular slot reads the imported character value tautologically
+[PASS] note avoids promotion language and bare admission labels
+============================================================================
+TOTAL: PASS=9 FAIL=0
+============================================================================
+VERDICT: external bounded algebra only; no framework bridge
+
+----- stderr -----
+

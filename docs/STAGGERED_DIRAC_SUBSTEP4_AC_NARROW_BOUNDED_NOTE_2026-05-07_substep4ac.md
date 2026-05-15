@@ -512,7 +512,7 @@ The runner verifies the canonical instance (`a = 1.5`, `b = 0.7`) at
 50-digit interval precision: commutator norm `|[H, U_{C_3}]| < 10^{-30}`,
 corner expectations all equal to within `10^{-30}`.
 
-Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
+Per `C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md` <!-- cycle-break 2026-05-15: forward ref backticked -->,
 the `C_3[111]` symmetry is the framework's **load-bearing preserved
 symmetry**, analogous to QCD `SU(3)` color or isospin `SU(2)`. The
 equal-expectation lemma is therefore proposed as a bounded structural
@@ -538,7 +538,7 @@ gives:
 - NQ ensures the orbit cannot decompose into smaller pieces, so no
   finer reduction is possible
 
-Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
+Per `C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md` <!-- cycle-break 2026-05-15: forward ref backticked -->,
 the residual "which cyclic shift" is a **labeling convention**
 identical in nature to standard particle-physics conventions
 `{u, c, t}`, `{ν_1, ν_2, ν_3}`, `{K_S, K_L}`, etc. — consuming zero

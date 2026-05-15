@@ -1,0 +1,93 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_single_clock_stone_finite_dim_exact_2026_05_10.py
+runner_sha256: 3999f4aa12847acc936173951833268a38635caffd752f952f3376d9982bea2a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+single_clock_stone_finite_dim_uniqueness_narrow_theorem_note_2026-05-10
+Goal: sympy-symbolic verification of (N1)-(N4) finite-dim spectral
+theorem on Hermitian positive T : H → H with `dim(H) = D < ∞`
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: construct a concrete 3x3 Hermitian positive T
+----------------------------------------------------------------------------------------
+  [PASS (A)] T is Hermitian (T = T^†)
+  [PASS (A)] T eigenvalues lie in (0, 1]: 1/2, 1/3, 1/4
+  [PASS (A)] T is positive: all eigenvalues > 0
+  [PASS (A)] ‖T‖_op ≤ 1: largest eigenvalue 1/2
+
+----------------------------------------------------------------------------------------
+Part 1: (N1) Spectral decomposition T = ∑ λ_k |k><k|
+----------------------------------------------------------------------------------------
+  [PASS (A)] P_1 + P_2 + P_3 = I_3 (completeness)
+  [PASS (A)] P_k² = P_k (idempotent projectors)
+  [PASS (A)] P_i P_j = 0 for i ≠ j (orthogonal)
+  [PASS (A)] T = ∑_k λ_k P_k spectral decomposition exact
+
+----------------------------------------------------------------------------------------
+Part 2: (N1) define H_gen = -(1/τ) log(T) via spectral calculus
+----------------------------------------------------------------------------------------
+  [PASS (A)] H_gen = ∑_k E_k P_k Hermitian
+  [PASS (A)] E_1, E_2, E_3 all non-negative (positive when λ < 1)  (E_1 = log(2), E_2 = log(3), E_3 = log(4))
+  [PASS (A)] exp(-τ H_gen) = T exact (functional-calculus identity)  (exp(-τ H_gen) = Matrix([[1/2, 0, 0], [0, 1/3, 0], [0, 0, 1/4]]))
+
+----------------------------------------------------------------------------------------
+Part 3: (N2) U(t) := exp(-i t H_gen) one-parameter group axioms
+----------------------------------------------------------------------------------------
+  [PASS (A)] U(0) = I_3 exact  (strongly continuous group identity at t = 0)
+  [PASS (A)] U(s)·U(t) = U(s+t) exact (one-parameter group composition)  (composition law verified by simplifying U(s)U(t) - U(s+t))
+  [PASS (A)] U(t)^† U(t) = I_3 exact (unitary)  (U^† U simplifies to identity)
+  [PASS (A)] dU(t)/dt|_{t=0} = -i H_gen exact (generator identification)  (confirms H_gen generates U(t))
+
+----------------------------------------------------------------------------------------
+Part 4: (N4) discrete-time / continuous-time consistency
+----------------------------------------------------------------------------------------
+  [PASS (A)] T^n = U(-i n τ) exact for symbolic positive integer n  (diff simplifies to Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]))
+  [PASS (A)] T² = ∑_k λ_k² P_k exact (concrete n=2 sanity)  (T² = Matrix([[1/4, 0, 0], [0, 1/9, 0], [0, 0, 1/16]]))
+
+----------------------------------------------------------------------------------------
+Part 5: (N3) Stone uniqueness via matrix-ODE
+----------------------------------------------------------------------------------------
+  [PASS (A)] dU(t)/dt = -i H_gen · U(t) exact (matrix ODE)  (confirms U(t) solves the generator ODE)
+  [PASS (A)] U(0) = I_3 (matrix-ODE initial condition; Picard-Lindelöf uniqueness)  (initial condition for Picard-Lindelöf matrix uniqueness)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual probes
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: non-Hermitian T (T ≠ T^†) breaks the construction  (confirms Hermiticity hypothesis is load-bearing)
+  [PASS (A)] counterfactual: non-positive Hermitian T with λ < 0 yields complex log  (log(-1/3)/τ = (log(3) - I*pi)/tau (imaginary part nonzero))
+  [PASS (A)] counterfactual: T with λ = 0 fails (log(0) = -∞, breaks log finite)  (trivial-kernel hypothesis required for finite H_gen)
+
+----------------------------------------------------------------------------------------
+Part 7: alternative initial value confirms parametric uniqueness
+----------------------------------------------------------------------------------------
+  [PASS (A)] alternative T' = diag(7/10, 1/5, 1/2) is Hermitian positive ≤ 1
+  [PASS (A)] alternative T': exp(-τ H_gen') = T' exact (functional calculus)  (confirms uniqueness of H_gen given T)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (N1) Spectral decomposition T = ∑ λ_k P_k for diag(1/2, 1/3, 1/4)
+    (N1) H_gen = -(1/τ) log(T) Hermitian non-negative
+    (N1) exp(-τ H_gen) = T (functional-calculus identity)
+    (N2) U(0) = I, U(s)·U(t) = U(s+t), U(t)^† U(t) = I exact in s, t
+    (N2) dU/dt|_{t=0} = -i H_gen (generator identification)
+    (N3) dU(t)/dt = -i H_gen · U(t) (matrix-ODE for Picard uniqueness)
+    (N4) T^n = U(-i n τ) exact for symbolic positive integer n
+    Concrete sanity: T² spectral match
+    Counterfactual: non-Hermitian T breaks identity
+    Counterfactual: λ < 0 yields complex log (positivity load-bearing)
+    Alternative T' = diag(7/10, 1/5, 1/2) confirms parametric uniqueness
+
+========================================================================================
+TOTAL: PASS=24, FAIL=0
+========================================================================================
+
+----- stderr -----
+

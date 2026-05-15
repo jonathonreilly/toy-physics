@@ -1,0 +1,110 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py
+runner_sha256: 24a7693fd786e14e6b495ea0c02429be3cfaae09144bde6e46354ed2b95e2b33
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.40
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy verification of block-local uniqueness of W = log|det(D+J)|
+      among CPT-even continuous additive scalar generators on real-D blocks.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: real anti-Hermitian test block D (instance i)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (X1.a) D anti-Hermitian: D + D.H == 0
+  [PASS (A)] (X1.b) D real (zero imaginary part on each entry)
+  [PASS (A)] (X1.c) D^T = -D (real-skew form, equivalent to real anti-Hermitian)
+  [PASS (A)] (X1.d) det(D) factorizes as the square of the Pfaffian condition  (det(D) = (a**2 - b**2 + c**2)**2)
+  [PASS (A)] (X1.e) selected test block is invertible: det(D) != 0  (det(D) at (a,b,c)=(1,2,3) = 36)
+
+----------------------------------------------------------------------------------------
+Part 2: real-symmetric source J ranges over Sym_4(R)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (J.a) J_scalar = j * I real-symmetric
+  [PASS (A)] (J.b) J_two = j I + s K real-symmetric
+
+----------------------------------------------------------------------------------------
+Part 3: Step 1 — det(D + J) is real for real D, real-symmetric J
+----------------------------------------------------------------------------------------
+  [PASS (A)] (Step 1.a) det(D + j I) is real for real D, real J  (det(D + jI) = a**4 - 2*a**2*b**2 + 2*a**2*c**2 + 2*a**2*j**2 + b**4 - 2*b**2*c**2 + 2*b**2*j**2 + c**4 + 2*c**2*j**2 + j**4)
+  [PASS (A)] (Step 1.b) det(D + jI + sK) is real for real D, real-symmetric J
+
+----------------------------------------------------------------------------------------
+Part 4: Step 4 — det factorizes on no-bond direct-sum blocks
+----------------------------------------------------------------------------------------
+  [PASS (A)] (Step 4) det(D_AB + J_AB) == det(D_A + J_A) * det(D_B + J_B) symbolically  (det = (aA**2 + jA**2)*(aB**2 + jB**2), factorized = aA**2*aB**2 + aA**2*jB**2 + aB**2*jA**2 + jA**2*jB**2)
+
+----------------------------------------------------------------------------------------
+Part 5: R2 — Re Tr log(D + J) == log|det(D + J)| identically on U_0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R2.a) det(D + jI) > 0 at chosen test point (so log is real)  (det(D + 0.1 I) at (a,b,c)=(1,2,3) = 362801/10000)
+  [PASS (A)] (R2.b) sum log|e_k| == log|det(D + J)| at test point  (diff = 0)
+  [PASS (A)] (R2.c) Re Tr log(D + J) == sum log|e_k| at test point  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: R1 — Im Tr log(D + J) is locally constant (zero derivatives)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R1.a) Im Tr log(D + j I) constant across j on a single component  (Im Tr log at j=0.1: 0, at j=0.2: 0)
+
+----------------------------------------------------------------------------------------
+Part 7: U2/U3 — source derivatives of W match Re Tr log at J = 0
+----------------------------------------------------------------------------------------
+  [PASS (A)] (U2.a) det(D + jI) at j=0 equals det(D)
+  [PASS (A)] (U2.b) ∂_j W = Tr(D^{-1}) at j=0 (Jacobi's formula consistency)  (∂_j W at 0 = 0, Tr D^{-1} = 0)
+  [PASS (A)] (U3.a) ∂^2_j W = -Tr(D^{-2}) at j=0 (matches log det Hessian formula)  (∂^2_j W at 0 = 4*(a**2 + b**2 + c**2)/(a**4 - 2*a**2*b**2 + 2*a**2*c**2 + b**4 - 2*b**2*c**2 + c**4))
+  [PASS (A)] (U2.c) ∂_j W (via half log det^2) == Tr(D^{-1}) at j=0  (∂_j h at 0 = 0)
+  [PASS (A)] (U3.b) ∂^2_j W (via half log det^2) == -Tr(D^{-2}) at j=0
+
+----------------------------------------------------------------------------------------
+Part 8: CE — Cauchy–Erdős closure: W satisfies the functional equation
+----------------------------------------------------------------------------------------
+  [PASS (A)] (CE.a) candidate f(r) = log r satisfies f(r1 r2) = f(r1) + f(r2)  (canonical log multiplicative-to-additive identity)
+  [PASS (A)] (CE.b) counterfactual: f(r) = r does NOT satisfy (CE)  (diff = r_A*r_B - r_A - r_B (nonzero confirms log is the unique closure))
+  [PASS (A)] (CE.c) counterfactual: f(r) = r^2 does NOT satisfy (CE)  (diff = r_A**2*r_B**2 - r_A**2 - r_B**2)
+  [PASS (A)] (CE.d) counterfactual: f(r) = 1 + log r does NOT satisfy (CE) — normalization (N) needed  (diff = -1 (= -1, so normalization (N) F[0] = 0 is what fixes the additive constant))
+  [PASS (A)] (CE.e) f(r) = c log r satisfies (CE) for any real c (one-parameter family)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 9: Im Tr log(D + J) integer winding indicator
+----------------------------------------------------------------------------------------
+  [PASS (A)] (Part 9.a) Im Tr log(D + j I) = 0 on real-D test point (eigenvalue pairs cancel)  (Im Tr log at j=0.1: 0)
+
+----------------------------------------------------------------------------------------
+Part 10: counterfactual — non-real (complex) anti-Hermitian D breaks Step 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf.0) D_cplx anti-Hermitian: D + D.H == 0
+  [PASS (A)] (cf.1) D_cplx is NOT real (entries have nonzero imaginary part)
+  [PASS (A)] (cf.2) det(D_cplx + jI) is NOT real for non-real D and real J — Step 1 fails  (Im(det(D_cplx + jI)) at j=1 = 2)
+
+----------------------------------------------------------------------------------------
+Part 11: cross-check — additivity (A) of W on no-bond split
+----------------------------------------------------------------------------------------
+  [PASS (A)] (A) W block-additive on no-bond split: W_AB = W_A + W_B numerically  (diff at (aA, aB, jA, jB) = (1, 2, 1/10, 2/10): 0)
+  [PASS (A)] (A.b) W block-additive symbolically (via expand_log + simplify, force=True)  (symbolic diff = 0)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (X1) test block D is real anti-Hermitian and invertible on the selected subregion
+    (Step 1) det(D + J) ∈ R for real D, real-symmetric J
+    (Step 4) det factorizes on no-bond direct-sum blocks
+    (R2) Re Tr log(D + J) = log|det(D + J)| at test point
+    (R1) Im Tr log(D + J) is locally constant on real-D block
+    (U2/U3) ∂_j W and ∂^2_j W at J=0 match Tr(D^{-1}) and -Tr(D^{-2})
+    (CE) candidate f(r) = c log r satisfies multiplicative-to-additive;
+      non-log candidates fail; one real parameter c is allowed
+    (A) W is block-additive on no-bond splits (Step 4 implication)
+    Counterfactual: non-real anti-Hermitian D breaks Step 1 — (X1) is load-bearing
+
+========================================================================================
+TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

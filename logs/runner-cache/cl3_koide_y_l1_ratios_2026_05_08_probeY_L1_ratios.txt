@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_y_l1_ratios_2026_05_08_probeY_L1_ratios.py
+runner_sha256: 261d7a8b489cc48986c8d4c041cf6062e8ab5761afbb7b618ab6ac7ef3109b7b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
 
 ================================================================================
 note boundary checks
@@ -36,3 +44,6 @@ runner import boundary
 [PASS] imports limited to stdlib (modules=['__future__', 'dataclasses', 'math', 'pathlib', 're', 'sys'])
 
 TOTAL: PASS=20 FAIL=0
+
+----- stderr -----
+

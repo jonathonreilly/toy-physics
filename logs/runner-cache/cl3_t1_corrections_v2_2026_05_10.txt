@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/cl3_t1_corrections_v2_2026_05_10.py
+runner_sha256: f19a00fa8bec7a1ff299b9a25a8b04e7c0f44212ca620a99c043ebd01d4fb1d3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+==============================================================================
+T1 hostile-review corrections verifier — 2026-05-10
+==============================================================================
+
+(A) M1 trace state degeneracy
+------------------------------------------------------------------------------
+Review context: #1049. Claim: tau_M(H) = Tr(pi_+(H)) + Tr(pi_perp(H)) collapses to Tr(H) on every Hermitian circulant, because Tr(C) = Tr(C^2) = 0.
+    max_delta_tau_minus_Tr: 0.000000
+    max_tracelessness_C_and_C2: 0.000000
+    BAE_saddle_ratio: 0.500000
+    L_M1_value_at_saddle: 2.197225
+  RESULT: PASS — M1 linear-trace form degenerates to Tr.
+
+(B) Y-S4b-RGE positive -> bounded tier downgrade
+------------------------------------------------------------------------------
+Review context: #956 + #1023. Claim: closure carries >=3 named imports {I2, I3, I4b}; tier-brief maps to BOUNDED.
+    named_imports: ['I2', 'I3']
+    matching_admissions: ['I4b']
+    conservative_count: 3
+    tier: BOUNDED
+    expected_tier_per_PR_956: BOUNDED
+    downgrade_from: POSITIVE
+    downgrade_to: BOUNDED
+  RESULT: PASS — Y-S4b-RGE tier corrected to BOUNDED.
+
+(C) m_t Ward-BC trajectory artifact
+------------------------------------------------------------------------------
+Review context: #1022. Claim: high-UV QFP band sits above the Ward-BC landing; Ward-BC y_t(v) ~ 0.97 (m_t = 169.4 GeV) is a 17-decade trajectory-truncation artifact, not a QFP attractor closure.
+    alpha_s_v: 0.103300
+    g3_v: 1.139345
+    g3_MPl: 0.489202
+    ir_results: [(0.7, 1.1068), (1.0, 1.1768), (1.3, 1.2081), (1.6, 1.2244), (1.8, 1.2313)]
+    ir_band_min: 1.106813
+    ir_band_max: 1.231310
+    ir_band_mean: 1.189483
+    ir_band_width: 0.124497
+    ward_BC_at_MPl: 0.435800
+    ward_trajectory_landing_at_v: 0.949990
+    ward_below_attractor: True
+    sm_physical_yt_v: 0.950000
+    attractor_above_one: True
+    band_narrow: True
+    not_sm_physical: True
+  RESULT: PASS — attractor mislocation confirmed, Ward-BC trajectory below attractor.
+
+==============================================================================
+OVERALL: PASS
+==============================================================================
+
+----- stderr -----
+

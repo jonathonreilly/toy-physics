@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_bd_congruence_invariance.py
+runner_sha256: 78a3b7bcdedc61d0e9785f3f41d401df29a2af879c7a0d99202b5c6726936b1c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
 
 ========================================================================================
  frontier_universal_gr_bd_congruence_invariance.py
@@ -148,3 +156,6 @@
  no hypotheses beyond (BA-1) are imported. The parent's bookkeeping
  consequence about global stationary sections is NOT claimed here;
  this is a split-note algebraic row only.
+
+----- stderr -----
+

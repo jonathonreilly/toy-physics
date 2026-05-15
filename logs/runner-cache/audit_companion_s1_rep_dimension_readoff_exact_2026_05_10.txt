@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_s1_rep_dimension_readoff_exact_2026_05_10.py
+runner_sha256: c1b4ce7b85334a4781f52bbd1058965985392b284c768c2b1a9c8580a6807753
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.39
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+S1_REP_DIMENSION_READOFF_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy-symbolic verification of (R1)-(R4) parametric in (p, c)
+plus framework (2, 3) and non-framework (3, 5), (4, 7) sanity
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic (p, c) = (p, c) positive integers
+  rep-literal (p, c) labels an SU(N_1) x SU(N_2) rep
+  (D1) n_pair  := dim_G1((p, c)) = p
+  (D2) n_color := dim_G2((p, c)) = c
+  (D3) n_quark := n_pair * n_color = p * c
+
+----------------------------------------------------------------------------------------
+Part 1: (R1) n_pair = p parametric
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R1) parametric: n_pair == p  (n_pair - p simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (R2) n_color = c parametric
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R2) parametric: n_color == c  (n_color - c simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (R3) n_quark = p * c parametric
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R3) parametric: n_quark == p * c  (n_quark - p*c simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (R4) A^2 = p / c parametric
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R4) parametric: A^2 == p / c  (A^2 - p/c simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (C1) A^4 = p^2 / c^2 derivable corollary
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) parametric: A^4 == p^2 / c^2  (A^4 - p^2/c^2 simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 6: (C2), (C3) cross-check corollaries
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2) parametric: n_quark / n_pair == c == n_color  (n_quark / n_pair - c simplifies to 0)
+  [PASS (A)] (C3) parametric: n_quark / n_color == p == n_pair  (n_quark / n_color - p simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 7: framework instance (p, c) = (2, 3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework (2, 3): n_pair = 2  (got n_pair = 2)
+  [PASS (A)] framework (2, 3): n_color = 3  (got n_color = 3)
+  [PASS (A)] framework (2, 3): n_quark = 6  (got n_quark = 6)
+  [PASS (A)] framework (2, 3): A^2 = 2/3  (got A^2 = 2/3)
+  [PASS (A)] framework (2, 3): A^4 = 4/9  (got A^4 = 4/9)
+
+----------------------------------------------------------------------------------------
+Part 8: non-framework instance (p, c) = (3, 5)
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-framework (3, 5): n_pair = 3, n_color = 5, n_quark = 15  (A^2 = 3/5)
+  [PASS (A)] non-framework (3, 5): A^2 = 3/5  (got A^2 = 3/5)
+  [PASS (A)] non-framework (3, 5): A^4 = 9/25  (got A^4 = 9/25)
+
+----------------------------------------------------------------------------------------
+Part 9: non-framework instance (p, c) = (4, 7)
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-framework (4, 7): n_pair = 4, n_color = 7, n_quark = 28  (A^2 = 4/7)
+  [PASS (A)] non-framework (4, 7): A^2 = 4/7  (got A^2 = 4/7)
+  [PASS (A)] non-framework (4, 7): A^4 = 16/49  (got A^4 = 16/49)
+
+----------------------------------------------------------------------------------------
+Part 10: independence-from-framework checks (free_symbols)
+----------------------------------------------------------------------------------------
+  [PASS (A)] parametric A^2 has free_symbols {p, c}  (free_symbols of A^2 = {c, p})
+  [PASS (A)] parametric n_quark has free_symbols {p, c}  (free_symbols of n_quark = {p, c})
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (R1) n_pair = p parametric
+    (R2) n_color = c parametric
+    (R3) n_quark = p * c parametric
+    (R4) A^2 = p / c parametric
+    (C1) A^4 = p^2 / c^2 parametric
+    (C2), (C3) cross-check identities
+    Framework (2, 3): (n_pair, n_color, n_quark, A^2, A^4) = (2, 3, 6, 2/3, 4/9)
+    Non-framework (3, 5): (3, 5, 15, 3/5, 9/25)
+    Non-framework (4, 7): (4, 7, 28, 4/7, 16/49)
+    Free-symbols independence-from-framework checks
+
+========================================================================================
+TOTAL: PASS=20, FAIL=0
+========================================================================================
+
+----- stderr -----
+

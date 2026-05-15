@@ -1,0 +1,52 @@
+===== runner cache v1 =====
+runner: scripts/yt_ward_step3_same_1pi_construction_2026_05_10.py
+runner_sha256: 87df628045a8e4b714816938b68f2f0b539af21256a21fabe36d02535f68c9ef
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.45
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Part 1: source scope
+----------------------------------------------------------------------------------------
+[PASS] note contains required scope text: **Type:** open_gate
+[PASS] note contains required scope text: same-1PI bridge remains
+[PASS] note contains required scope text: Does **not** derive `g_bare = 1`
+[PASS] note contains required scope text: not load-bearing dependencies
+[PASS] note avoids overclaim/status text: DERIVED tree-level identity
+[PASS] note avoids overclaim/status text: holds. The agreement is enforced
+[PASS] note avoids overclaim/status text: target_claim_type: positive_theorem
+[PASS] note avoids overclaim/status text: audited_clean
+
+----------------------------------------------------------------------------------------
+Part 2: symbolic coefficient algebra
+----------------------------------------------------------------------------------------
+[PASS] Rep A coefficient is c_S * g_bare^2 / (2 N_c)  (C_A=c_S*g_bare**2/(2*N_c))
+[PASS] Rep B coefficient is 1 / (N_c N_iso)  (C_B=1/(N_c*N_iso))
+[PASS] C_A - C_B residual has the expected gate factor  (residual=(N_iso*c_S*g_bare**2 - 2)/(2*N_c*N_iso))
+[PASS] C_A and C_B are not identical as symbolic functions of g_bare  (free_symbols=['N_c', 'N_iso', 'c_S', 'g_bare'])
+[PASS] Equating coefficients yields g_bare = sqrt(2 / (c_S N_iso)) on the positive branch  (solutions=[sqrt(2)/(sqrt(N_iso)*sqrt(c_S))])
+[PASS] Canonical residual is (g_bare^2 - 1) / 6  (canonical_residual=g_bare**2/6 - 1/6)
+[PASS] Canonical equality holds at g_bare = 1
+[PASS] Canonical equality fails off surface at g_bare = 2  (residual(g=2)=1/2)
+
+----------------------------------------------------------------------------------------
+Part 3: D12 SU(3) Fierz coefficient input
+----------------------------------------------------------------------------------------
+[PASS] Gell-Mann normalization Tr(Ta Tb) = delta_ab / 2  (err=1.11e-16)
+[PASS] D12 Fierz identity verified over all SU(3) index tuples  (err=5.55e-17)
+[PASS] D12 singlet coefficient is -1/(2 N_c) = -1/6
+
+----------------------------------------------------------------------------------------
+Part 4: H_unit normalization input
+----------------------------------------------------------------------------------------
+[PASS] H_unit diagonal entries are 1/sqrt(6)
+[PASS] Tr(H_unit) = sqrt(6)
+[PASS] Diagonal Wick-contraction count on Q_L is N_iso * N_c = 6
+[PASS] H_unit Wick saturation normalizes the diagonal count to 1  (6/6)
+
+TOTAL: PASS=23, FAIL=0
+
+----- stderr -----
+

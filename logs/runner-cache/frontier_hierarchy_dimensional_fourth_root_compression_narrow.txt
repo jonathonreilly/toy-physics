@@ -1,0 +1,35 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_dimensional_fourth_root_compression_narrow.py
+runner_sha256: 13ecc1848450636020ba2dea27451fcdde1bec9d6251da03ba0a3c3dcb5b44cf
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.29
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Dimensional fourth-root compression narrow theorem
+----------------------------------------------------------------------------------------
+  [PASS (A)] dimension count: [C_M f^alpha] = d*alpha  (mass_dim_output=alpha*d)
+  [PASS (A)] unique solution of d*alpha = 1 is alpha = 1/d  (solutions=[1/d])
+
+----------------------------------------------------------------------------------------
+Finite exact checks
+----------------------------------------------------------------------------------------
+  [PASS (A)] f^(1/d) has mass dimension one for d in {1,...,8}  (d=1:[M]=1, d=2:[M]=1, d=3:[M]=1, d=4:[M]=1, d=5:[M]=1, d=6:[M]=1, d=7:[M]=1, d=8:[M]=1)
+  [PASS (A)] at d=4 the exponent is exactly 1/4  (alpha=1/4)
+  [PASS (A)] 1/d = 1/4 occurs uniquely at d=4 in the finite table  (hits=[4])
+  [PASS (A)] d -> 1/d is strictly decreasing on checked positive integers  (1:1, 2:1/2, 3:1/3, 4:1/4, 5:1/5, 6:1/6, 7:1/7, 8:1/8, 9:1/9, 10:1/10, 11:1/11, 12:1/12, 13:1/13, 14:1/14, 15:1/15, 16:1/16)
+
+----------------------------------------------------------------------------------------
+Symbolic round trips
+----------------------------------------------------------------------------------------
+  [PASS (A)] (f^(1/d))^d = f for positive f and d in {1,...,8}  (d=1:diff=0, d=2:diff=0, d=3:diff=0, d=4:diff=0, d=5:diff=0, d=6:diff=0, d=7:diff=0, d=8:diff=0)
+  [PASS (A)] the d=4 round trip (M^4)^(1/4) = M holds for positive M  (diff=0)
+
+========================================================================================
+  TOTAL: PASS=8, FAIL=0
+========================================================================================
+
+----- stderr -----
+
