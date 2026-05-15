@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_koide_y_substrate_anomaly_2026_05_08_probeY_substrate_anomaly.py
+runner_sha256: 1f13feb06053c29bdbeda6ba0fc8d768ace2b56c15c0cfe7707264608019ef91
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
 
 ================================================================================
 note boundary checks
@@ -67,3 +75,6 @@ runner import boundary
 [PASS] imports limited to stdlib (modules=['__future__', 'fractions', 'pathlib', 're', 'sys'])
 
 TOTAL: PASS=39 FAIL=0
+
+----- stderr -----
+
