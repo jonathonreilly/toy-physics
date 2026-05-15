@@ -1,5 +1,7 @@
 # NN Lattice Rescaled-Lane Response-Vector Cauchy Certificate
 
+[CI re-trigger marker]
+
 **Date:** 2026-05-10
 **Claim type:** bounded_theorem
 **Status:** bounded numerical Cauchy certificate — on the
