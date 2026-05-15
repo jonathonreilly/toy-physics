@@ -26,10 +26,10 @@ Acceptance:
     - centroid - y_s drift |mu - y_s| < 1.0 in physical units
     - c2(h) varies by < 5% across the y_s grid (h fixed)
 
-If all three hold, the closed-form full kernel is registered as a
-bounded identification. If any partial deviation appears, the runner
-documents the deviation precisely and exits with a partial-bounded
-status.
+If all three hold, the fitted Gaussian × quadratic-phase kernel shape
+is recorded as a bounded numerical match on the checked window. If any
+partial deviation appears, the runner documents the deviation precisely
+and exits with a partial-bounded status.
 
 Guards:
 
@@ -704,11 +704,12 @@ def main() -> int:
     all_pass = (sigma_ok_all and c2_ok_all and drift_ok_all
                 and mag_r2_ok and phs_r2_ok)
     if all_pass:
-        print("BOUNDED IDENTIFICATION: the rescaled NN harness's full kernel")
-        print("A(y_s -> y_d) is translation-invariant Gaussian-magnitude with")
-        print("quadratic phase, both depending only on the displacement u = y_d - y_s.")
+        print("BOUNDED NUMERICAL KERNEL-SHAPE FIT: on this checked window the")
+        print("rescaled NN harness's field-free no-slit response A(y_s -> y_d)")
+        print("is fitted as translation-invariant Gaussian-magnitude with")
+        print("quadratic phase, both depending only on u = y_d - y_s.")
         print()
-        print("  Closed form (on this scoped harness, fits to within tolerance):")
+        print("  Fitted shape (on this scoped harness, matches to within tolerance):")
         print()
         print("      A(y_s -> y_d; h) = C_amp(h)")
         print("                        * exp[-(y_d - y_s)^2 / (2 sigma^2(h))]")

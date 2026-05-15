@@ -68,8 +68,11 @@ the source**, i.e. whether `A(y_s, y_d)` depends only on the displacement
 `u = y_d − y_s` rather than on `y_s` and `y_d` independently. This is the
 distinguishing feature of a translation-invariant integral kernel.
 
-If true, the full kernel of T_∞ on the rescaled NN harness is identified up
-to the scope of PR #997 + PR #1007 + PR #968.
+If observed, the field-free no-slit response kernel on this checked
+refinement window matches a translation-invariant Gaussian × quadratic-phase
+shape, fitted at the scope of PR #997 + PR #1007 + PR #968. This would be a
+bounded numerical kernel-shape fit, not a proof that a continuum integral
+kernel `T_∞` exists.
 
 ## Method
 
@@ -154,17 +157,19 @@ with `u = y_d − y_s`, and:
 - `c0(h)` carries the overall phase reference (immaterial for kernel
   shape).
 
-The two key continuum identifications:
+The two fitted features:
 
-- Magnitude: **Gaussian** in the displacement `u`, width `σ(h) ~ √h`
-  (vanishing in the continuum), with finite amplitude prefactor.
-- Phase: **quadratic** in `u`, curvature `c2(h) → c2_∞ ≈ 0.02999`
-  (finite in the continuum).
+- Magnitude: **Gaussian** in the displacement `u` on the checked window,
+  fitted width `σ(h) ~ √h` (vanishing under the fitted extrapolation), with
+  finite amplitude prefactor.
+- Phase: **quadratic** in `u` on the checked window, fitted curvature
+  `c2(h) → c2_∞ ≈ 0.02999` (finite under the fitted extrapolation).
 
-The two h-scalings are **independent**: `σ → 0` while `c2 → finite`. This
-is the non-Schrödinger property of PR #997, now generalized: it holds for
-every source position `y_s ∈ {−6, −3, 0, +3, +6}` to machine precision
-(translation invariance).
+The two h-scalings come out **independent** under the log-linear fit:
+`σ → 0` while `c2 → finite`. This matches the non-Schrödinger no-go
+recorded in PR #997, observed here for every source position
+`y_s ∈ {−6, −3, 0, +3, +6}` to machine precision on the checked window
+(translation-invariance fit, not a derivation).
 
 ## Slit-anchored cross-check (PR #968 connection)
 
@@ -192,10 +197,14 @@ PR #968 measures **C_arm = 2.71**. The residuals are:
 | L_2 (post-slit Huygens, 2/3 L_total) | 3.762 | **+38.81%** (fails) |
 | L_1 (source-to-slit, 1/3 L_total)    | 2.660 | **−1.85%** (passes within tolerance) |
 
-**The L_1 anchoring wins.** The per-arm width in PR #968's slit harness is
-the no-slit kernel's width restricted to the source-to-slit propagation
-length `L_1 = L_total / 3 = 13.33`. The naive Huygens picture
-(L_2 = 2 L_total / 3) is wrong by ~40%.
+**The L_1 reading is the closer of the two:** the per-arm width measured
+in PR #968's slit harness is matched by the no-slit kernel evaluated at
+the source-to-slit propagation length `L_1 = L_total / 3 = 13.33`, with
+residual −1.85% vs the L_2 reading's +38.81%. The post-slit Huygens
+reading (L_2 = 2 L_total / 3) is off the observed value by ~40% in this
+comparison; this does not constitute a derivation, but it does record
+which of the two candidate anchoring lengths fits PR #968's measured
+constant on this checked window.
 
 This matches the residuals reported in `lattice_nn_rescaled_C_arm_derivation.py`:
 
@@ -206,59 +215,69 @@ This matches the residuals reported in `lattice_nn_rescaled_C_arm_derivation.py`
 | **C_arm_coherent_slit**   | **2.4855** | **−8.31%** (closest)  |
 | **C_arm_pred(L_1) (this note)** | **2.6599** | **−1.85%** (sharper)  |
 
-The L_1 anchoring picture is **sharper** than even PR #968's own
-post-slit saddle by a factor of ~4× in residual error. The physical
-interpretation: a narrow slit at distance `L_1` from the source acts as
-a **selection filter** on the source's natural angular spread. The
-angular spread the source must have to reach the slit is `~ SLIT_Y / L_1`;
-the spread at the detector is this angular spread times the lever arm to
-the slit, which by the saddle scaling reduces to `(L_1 / L_total) · σ_amp²`.
+The L_1 reading has a smaller residual against PR #968's measured
+constant than the L_2 reading by a factor of ~4× on this comparison.
+One reading of this numerical pattern: a narrow slit at distance `L_1`
+from the source can be modelled as a selection filter on the source's
+natural angular spread — the angular spread the source has to develop
+to reach the slit is `~ SLIT_Y / L_1`, and the spread at the detector
+is that angular spread times the lever arm to the slit, which by the
+saddle scaling reduces to `(L_1 / L_total) · σ_amp²`. This is a
+candidate reading, supported by the numerical comparison; it is not
+derived from first principles in this note.
 
-This is *not* the Huygens reanchoring "slit acts as secondary source"
-picture (which would give the L_2 anchoring and is wrong by ~40%). The
-slit acts as a *projector* of the source's natural distribution onto a
-narrow channel; the propagation length set by the source-to-slit baseline
-controls how much angular spread the source had to develop to reach the
-slit. The post-slit propagation is geometrically slaved to that angular
-spread, not freshly generated.
+The alternative Huygens reading — slit acts as a secondary source,
+giving the L_2 anchoring — is off PR #968's measured constant by ~40%
+in this comparison. Under the selection-filter reading the post-slit
+propagation is geometrically tied to the source-to-slit angular spread
+rather than freshly generated; this is the reading that fits the
+numerical comparison, not a derivation that rules the Huygens reading
+out.
 
 The connection to PR #968's `L_2 = 2L/3` framing: PR #968 fits
 `σ_arm(h) = C_arm · √h` without committing to an anchoring length. The
 `L_2 = 2L/3` ansatz was the natural post-slit guess but did not produce
-the closed-form C_arm. The present source note identifies the right
-anchoring: `L_1 = L/3`, giving sharper residual.
+the closed-form C_arm. The present source note records that
+`L_1 = L/3` is the closer-matching anchoring against PR #968's measured
+constant on this checked window.
 
 ## Verdict
 
-**Bounded identification, source-note status.**
+**Bounded numerical kernel-shape fit, source-note status.**
 
 On the rescaled NN harness through `h = 0.0625` with five source positions:
 
-- the full field-free no-slit kernel `A(y_s → y_d; h)` is translation
-  invariant under integer-lattice shifts of `y_s`, to machine precision;
+- the field-free no-slit response `A(y_s → y_d; h)` is fitted as
+  translation-invariant under integer-lattice shifts of `y_s` to machine
+  precision on the checked grid — this follows from a symmetry of the
+  harness construction (the per-edge factor is y_s-independent), not from
+  an empirical convergence claim;
 - the magnitude is Gaussian in the displacement `u = y_d − y_s` with
   width `σ(h) ~ √h`, R² = 1.0000 at every grid row;
 - the phase is quadratic in `u` with curvature `c2(h) → c2_∞ ≈ 0.02999`
   (matches PR #1007 analytic to −0.33%), R² = 1.0000 at every grid row;
-- the slit-anchored cross-check connects PR #968's `C_arm ≈ 2.71` to
-  this runner's `C_amp ≈ 4.607` via the **L_1 (source-to-slit) anchoring**
-  `C_arm = √(1/3) · C_amp = 2.660` (residual −1.85%), **not** the
-  L_2 = 2L/3 post-slit Huygens anchoring (residual +38.81%).
+- the slit-anchored numerical cross-check matches PR #968's `C_arm ≈ 2.71`
+  to this runner's `C_amp ≈ 4.607` via the **L_1 (source-to-slit) reading**
+  `C_arm = √(1/3) · C_amp = 2.660` (residual −1.85%), and is off by ~40%
+  under the L_2 = 2L/3 post-slit Huygens reading (residual +38.81%). The
+  L_1 reading is the closer-matching choice on this comparison; it is not
+  derived from first principles in this note.
 
-The closed-form full kernel on this scoped harness is:
+The fitted response-kernel shape on this scoped harness is:
 
 ```
-A(y_s → y_d; h) = C_amp(h) · exp[−(y_d − y_s)² / (2 σ²(h))]
+A(y_s → y_d; h) ≈ C_amp(h) · exp[−(y_d − y_s)² / (2 σ²(h))]
                               · exp[i · (c0(h) + c2_∞ · (y_d − y_s)²)]
 ```
 
-with `σ(h) ≈ 4.61 · √h` (per log-linear fit) and `c2_∞ ≈ 0.02999` (PR
-#1007 closed form). The kernel is **not Schrödinger** (independent
-magnitude and phase length scales, PR #997 no-go) but is **translation
-invariant** and **Gaussian × quadratic-phase** in the displacement.
+on the checked grid, with `σ(h) ≈ 4.61 · √h` (per log-linear fit) and
+`c2_∞ ≈ 0.02999` (PR #1007 closed-form support note). The shape is
+**not Schrödinger** (independent magnitude and phase length scales,
+PR #997 no-go) and is fitted as **translation-invariant** and
+**Gaussian × quadratic-phase** in the displacement on the checked window.
 
-This is a bounded source-note identification, not a retained-family
-audit claim. The scope is:
+This is a bounded numerical source-note kernel-shape fit, not a
+retained-family audit claim. The scope is:
 
 - field-free, no-slit, single-source propagation;
 - five lattice source positions `y_s ∈ {−6, −3, 0, +3, +6}`;
@@ -266,10 +285,12 @@ audit claim. The scope is:
 - canonical harness parameters `BETA = 0.8`, `k = 5.0`, `L_total = 40`,
   `FANOUT = 3.0`.
 
-The slit-anchored cross-check is the scoped connection: the
-no-slit kernel of this note + the L_1 anchoring identified here together
-predict PR #968's `C_arm` to within 2%, providing a sharper saddle-point
-explanation for PR #968's per-arm width than was available before.
+The slit-anchored cross-check is a scoped numerical comparison: the
+no-slit kernel of this note + the L_1 reading together match PR #968's
+`C_arm` to within 2% on this checked window, which is a closer match
+than the L_2 reading or the prior saddle estimates in
+`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`. Whether
+this reading is the right physical picture remains open.
 
 ## Provenance
 

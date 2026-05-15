@@ -155,8 +155,8 @@ observable on the rescaled lane, not a continuum scalar.
 
 ## What this closes (bounded content)
 
-This note registers, as a numerical theorem on a fixed observable
-basis:
+This note registers, as a bounded numerical certificate on a fixed
+observable basis:
 
 1. The **chosen 15-component response vector has a fitted Cauchy tail**
    on the checked deterministic-rescale refinement window, with
