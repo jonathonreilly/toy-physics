@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Total pending:** 1181
+**Total pending:** 1182
 **Ready (all deps already at retained-grade or metadata tiers):** 4
 
 By criticality:
 - `critical`: 739
 - `high`: 33
-- `medium`: 150
+- `medium`: 151
 - `leaf`: 259
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
@@ -15,56 +15,56 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `decoherence_action_independence_note` | bounded_theorem | unaudited | critical | 446 | 9.80 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/decoherence_action_independence.py` |
-| 2 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 787 | 19.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
-| 3 | `cpt_exact_note` | positive_theorem | unaudited | critical | 785 | 23.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
-| 4 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 777 | 10.10 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
-| 5 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 776 | 18.60 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
-| 6 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 775 | 25.10 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
-| 7 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 775 | 11.10 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
-| 8 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 774 | 15.60 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
-| 9 | `hopping_bilinear_hermiticity_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 767 | 11.09 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/hopping_bilinear_hermiticity_check.py` |
-| 10 | `microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 766 | 11.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/microcausality_finite_range_h_bridge_2026_05_09.py` |
-| 11 | `light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09` | bounded_theorem | unaudited | critical | 765 | 10.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_crank_nicolson_lr_2026_05_09.py` |
-| 12 | `light_cone_framing_note` | positive_theorem | unaudited | critical | 764 | 11.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_staggered_dispersion.py` |
-| 13 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 763 | 14.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
-| 14 | `lorentz_boost_covariance_3plus1d_theorem_note` | positive_theorem | unaudited | critical | 763 | 14.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_3plus1d.py` |
-| 15 | `lorentz_kernel_positive_closure_note` | positive_theorem | unaudited | critical | 762 | 15.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_kernel_positive_closure.py` |
-| 16 | `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | unaudited | critical | 761 | 19.07 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_microcausality_check.py` |
-| 17 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | unaudited | critical | 759 | 16.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_single_clock_codimension1_evolution_check.py` |
-| 18 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | critical | 748 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
-| 19 | `anomaly_forces_time_theorem` | bounded_theorem | unaudited | critical | 747 | 30.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
-| 20 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 747 | 13.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
-| 21 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 747 | 13.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_wigner_l3_cube_partition.py` |
-| 22 | `gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03` | open_gate | unaudited | critical | 747 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_scalar_bridge_3plus1_native_tube_staging.py` |
-| 23 | `su3_cube_index_graph_shortcut_open_gate_note_2026-05-03` | open_gate | unaudited | critical | 747 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py` |
-| 24 | `su3_cube_perron_solve_combined_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 747 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_cube_perron_solve.py` |
-| 25 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | critical | 738 | 13.53 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
-| 26 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | unaudited | critical | 738 | 12.03 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
-| 27 | `plaquette_self_consistency_note` | bounded_theorem | unaudited | critical | 737 | 27.53 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 28 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | critical | 681 | 13.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_qcd_low_energy_running_bridge.py` |
-| 29 | `alpha_s_derived_note` | bounded_theorem | unaudited | critical | 680 | 37.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
-| 30 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 640 | 18.32 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
-| 31 | `s3_time_theta_to_slice_coupling_note` | open_gate | unaudited | critical | 637 | 10.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
-| 32 | `s3_time_spacetime_tensor_primitive_note` | bounded_theorem | unaudited | critical | 636 | 11.81 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_spacetime_tensor_primitive.py` |
-| 33 | `three_generation_structure_note` | bounded_theorem | unaudited | critical | 616 | 29.27 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |
-| 34 | `yt_vertex_power_derivation` | open_gate | unaudited | critical | 602 | 10.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_vertex_power.py` |
-| 35 | `yt_ward_identity_derivation_theorem` | bounded_theorem | unaudited | critical | 601 | 34.23 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 36 | `one_generation_matter_closure_note` | bounded_theorem | unaudited | critical | 595 | 24.72 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_right_handed_sector.py` |
-| 37 | `lhcm_matter_assignment_from_su3_representation_note_2026-05-02` | positive_theorem | unaudited | critical | 578 | 11.18 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lhcm_matter_assignment.py` |
-| 38 | `hypercharge_identification_note` | bounded_theorem | unaudited | critical | 576 | 18.17 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hypercharge_identification.py` |
-| 39 | `yt_color_projection_correction_note` | positive_theorem | unaudited | critical | 571 | 14.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
-| 40 | `yt_qfp_insensitivity_support_note` | bounded_theorem | unaudited | critical | 570 | 17.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
-| 41 | `yt_exact_schur_normal_form_uniqueness_note` | bounded_theorem | unaudited | critical | 570 | 16.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
-| 42 | `yt_boundary_theorem` | open_gate | unaudited | critical | 570 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_boundary_consistency.py` |
-| 43 | `yt_constructive_uv_bridge_note` | bounded_theorem | unaudited | critical | 570 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
-| 44 | `yt_interacting_bridge_locality_note` | bounded_theorem | unaudited | critical | 570 | 14.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_interacting_bridge_locality.py` |
-| 45 | `yt_bridge_hessian_selector_note` | bounded_theorem | unaudited | critical | 570 | 14.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_hessian_selector.py` |
-| 46 | `yt_bridge_rearrangement_principle_note` | bounded_theorem | unaudited | critical | 570 | 13.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_rearrangement_principle.py` |
-| 47 | `yt_zero_import_authority_note` | positive_theorem | unaudited | critical | 570 | 13.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 48 | `yt_bridge_higher_order_corrections_note` | bounded_theorem | unaudited | critical | 570 | 12.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_higher_order_corrections.py` |
-| 49 | `yt_bridge_nonlocal_corrections_note` | bounded_theorem | unaudited | critical | 570 | 12.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_nonlocal_corrections.py` |
-| 50 | `yt_bridge_action_invariant_note` | bounded_theorem | unaudited | critical | 570 | 12.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_action_invariant.py` |
+| 1 | `decoherence_action_independence_note` | bounded_theorem | unaudited | critical | 447 | 9.81 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/decoherence_action_independence.py` |
+| 2 | `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | unaudited | critical | 788 | 19.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_cl3_per_site_uniqueness_check.py` |
+| 3 | `cpt_exact_note` | positive_theorem | unaudited | critical | 786 | 23.12 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_cpt_exact.py` |
+| 4 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | unaudited | critical | 778 | 10.11 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py` |
+| 5 | `emergent_lorentz_invariance_note` | bounded_theorem | unaudited | critical | 777 | 18.60 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_emergent_lorentz_invariance.py` |
+| 6 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 776 | 25.10 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_reflection_positivity_check.py` |
+| 7 | `staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05` | positive_theorem | unaudited | critical | 776 | 11.10 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_staggered_wilson_det_positivity_bridge_2026_05_05.py` |
+| 8 | `lorentz_boost_covariance_2d_theorem_note` | positive_theorem | unaudited | critical | 775 | 15.60 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_2d.py` |
+| 9 | `hopping_bilinear_hermiticity_theorem_note_2026-05-02` | positive_theorem | unaudited | critical | 768 | 11.09 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/hopping_bilinear_hermiticity_check.py` |
+| 10 | `microcausality_finite_range_h_and_vlr_bridge_theorem_note_2026-05-09` | bounded_theorem | unaudited | critical | 767 | 11.59 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/microcausality_finite_range_h_bridge_2026_05_09.py` |
+| 11 | `light_cone_crank_nicolson_lieb_robinson_bridge_note_2026-05-09` | bounded_theorem | unaudited | critical | 766 | 10.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_crank_nicolson_lr_2026_05_09.py` |
+| 12 | `light_cone_framing_note` | positive_theorem | unaudited | critical | 765 | 11.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/light_cone_staggered_dispersion.py` |
+| 13 | `axiom_first_spectrum_condition_theorem_note_2026-04-29` | positive_theorem | unaudited | critical | 764 | 14.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_spectrum_condition_check.py` |
+| 14 | `lorentz_boost_covariance_3plus1d_theorem_note` | positive_theorem | unaudited | critical | 764 | 14.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_boost_3plus1d.py` |
+| 15 | `lorentz_kernel_positive_closure_note` | positive_theorem | unaudited | critical | 763 | 15.58 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lorentz_kernel_positive_closure.py` |
+| 16 | `axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01` | positive_theorem | unaudited | critical | 762 | 19.08 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_microcausality_check.py` |
+| 17 | `axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03` | positive_theorem | unaudited | critical | 760 | 16.57 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/axiom_first_single_clock_codimension1_evolution_check.py` |
+| 18 | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | positive_theorem | unaudited | critical | 749 | 14.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py` |
+| 19 | `anomaly_forces_time_theorem` | bounded_theorem | unaudited | critical | 748 | 30.55 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_anomaly_forces_time.py` |
+| 20 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | positive_theorem | unaudited | critical | 748 | 13.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_tensor_transfer_perron_solve.py` |
+| 21 | `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 748 | 13.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_wigner_l3_cube_partition.py` |
+| 22 | `gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03` | open_gate | unaudited | critical | 748 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_scalar_bridge_3plus1_native_tube_staging.py` |
+| 23 | `su3_cube_index_graph_shortcut_open_gate_note_2026-05-03` | open_gate | unaudited | critical | 748 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_cube_index_graph_shortcut_open_gate.py` |
+| 24 | `su3_cube_perron_solve_combined_theorem_note_2026-05-03` | bounded_theorem | unaudited | critical | 748 | 10.05 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_su3_cube_perron_solve.py` |
+| 25 | `gauge_vacuum_plaquette_bridge_support_note` | positive_theorem | unaudited | critical | 739 | 13.53 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py` |
+| 26 | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | bounded_theorem | unaudited | critical | 739 | 12.03 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py` |
+| 27 | `plaquette_self_consistency_note` | bounded_theorem | unaudited | critical | 738 | 27.53 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
+| 28 | `qcd_low_energy_running_bridge_note_2026-05-01` | bounded_theorem | unaudited | critical | 682 | 13.42 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_qcd_low_energy_running_bridge.py` |
+| 29 | `alpha_s_derived_note` | bounded_theorem | unaudited | critical | 681 | 37.41 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_zero_import_chain.py` |
+| 30 | `s3_general_r_derivation_note` | positive_theorem | unaudited | critical | 641 | 18.33 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_cap_uniqueness.py` |
+| 31 | `s3_time_theta_to_slice_coupling_note` | open_gate | unaudited | critical | 638 | 10.32 |  | fresh_context_or_stronger_with_cross_confirmation | - |
+| 32 | `s3_time_spacetime_tensor_primitive_note` | bounded_theorem | unaudited | critical | 637 | 11.82 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_time_spacetime_tensor_primitive.py` |
+| 33 | `three_generation_structure_note` | bounded_theorem | unaudited | critical | 617 | 29.77 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_fermi_point.py` |
+| 34 | `yt_vertex_power_derivation` | open_gate | unaudited | critical | 603 | 10.74 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_vertex_power.py` |
+| 35 | `yt_ward_identity_derivation_theorem` | bounded_theorem | unaudited | critical | 602 | 34.24 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 36 | `one_generation_matter_closure_note` | bounded_theorem | unaudited | critical | 596 | 24.72 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_right_handed_sector.py` |
+| 37 | `lhcm_matter_assignment_from_su3_representation_note_2026-05-02` | positive_theorem | unaudited | critical | 579 | 11.18 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_lhcm_matter_assignment.py` |
+| 38 | `hypercharge_identification_note` | bounded_theorem | unaudited | critical | 577 | 18.18 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hypercharge_identification.py` |
+| 39 | `yt_color_projection_correction_note` | positive_theorem | unaudited | critical | 572 | 14.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_color_projection_correction.py` |
+| 40 | `yt_qfp_insensitivity_support_note` | bounded_theorem | unaudited | critical | 571 | 17.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_qfp_insensitivity.py` |
+| 41 | `yt_exact_schur_normal_form_uniqueness_note` | bounded_theorem | unaudited | critical | 571 | 16.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_exact_schur_normal_form_uniqueness.py` |
+| 42 | `yt_boundary_theorem` | open_gate | unaudited | critical | 571 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_boundary_consistency.py` |
+| 43 | `yt_constructive_uv_bridge_note` | bounded_theorem | unaudited | critical | 571 | 15.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_constructive_uv_bridge.py` |
+| 44 | `yt_interacting_bridge_locality_note` | bounded_theorem | unaudited | critical | 571 | 14.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_interacting_bridge_locality.py` |
+| 45 | `yt_bridge_hessian_selector_note` | bounded_theorem | unaudited | critical | 571 | 14.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_hessian_selector.py` |
+| 46 | `yt_bridge_rearrangement_principle_note` | bounded_theorem | unaudited | critical | 571 | 13.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_rearrangement_principle.py` |
+| 47 | `yt_zero_import_authority_note` | positive_theorem | unaudited | critical | 571 | 13.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 48 | `yt_bridge_higher_order_corrections_note` | bounded_theorem | unaudited | critical | 571 | 12.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_higher_order_corrections.py` |
+| 49 | `yt_bridge_nonlocal_corrections_note` | bounded_theorem | unaudited | critical | 571 | 12.66 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_nonlocal_corrections.py` |
+| 50 | `yt_bridge_action_invariant_note` | bounded_theorem | unaudited | critical | 571 | 12.16 |  | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_yt_bridge_action_invariant.py` |
 
 ## Citation cycle break targets
 
@@ -72,30 +72,30 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
 |---:|---|---:|---:|---|---|---|
-| 1 | `cycle-0001` | 2 | 775 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
-| 2 | `cycle-0002` | 3 | 747 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
-| 3 | `cycle-0003` | 4 | 747 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
-| 4 | `cycle-0004` | 5 | 747 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
-| 5 | `cycle-0005` | 6 | 747 | `gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03` | critical | unaudited |
-| 6 | `cycle-0006` | 2 | 570 | `yt_bridge_action_invariant_note` | critical | unaudited |
-| 7 | `cycle-0007` | 2 | 570 | `yt_bridge_rearrangement_principle_note` | critical | unaudited |
-| 8 | `cycle-0008` | 2 | 570 | `yt_bridge_operator_closure_note` | critical | unaudited |
-| 9 | `cycle-0009` | 2 | 570 | `yt_ew_coupling_bridge_note` | critical | unaudited |
-| 10 | `cycle-0010` | 3 | 570 | `yt_bridge_hessian_selector_note` | critical | unaudited |
-| 11 | `cycle-0011` | 3 | 570 | `yt_bridge_moment_closure_note` | critical | unaudited |
-| 12 | `cycle-0012` | 3 | 570 | `yt_bridge_operator_closure_note` | critical | unaudited |
-| 13 | `cycle-0013` | 4 | 570 | `yt_bridge_hessian_selector_note` | critical | unaudited |
-| 14 | `cycle-0014` | 4 | 570 | `yt_bridge_hessian_selector_note` | critical | unaudited |
-| 15 | `cycle-0015` | 4 | 570 | `yt_bridge_operator_closure_note` | critical | unaudited |
-| 16 | `cycle-0016` | 8 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 17 | `cycle-0017` | 9 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 18 | `cycle-0018` | 9 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 19 | `cycle-0019` | 9 | 570 | `yt_bridge_uv_class_uniqueness_note` | critical | unaudited |
-| 20 | `cycle-0020` | 9 | 570 | `yt_bridge_uv_class_uniqueness_note` | critical | unaudited |
-| 21 | `cycle-0021` | 10 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 22 | `cycle-0022` | 10 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 23 | `cycle-0023` | 10 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 24 | `cycle-0024` | 10 | 570 | `yt_boundary_theorem` | critical | unaudited |
-| 25 | `cycle-0025` | 2 | 489 | `source_resolved_exact_green_h025_pocket_note` | critical | unaudited |
+| 1 | `cycle-0001` | 2 | 776 | `axiom_first_reflection_positivity_theorem_note_2026-04-29` | critical | unaudited |
+| 2 | `cycle-0002` | 3 | 748 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
+| 3 | `cycle-0003` | 4 | 748 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
+| 4 | `cycle-0004` | 5 | 748 | `gauge_vacuum_plaquette_tensor_transfer_perron_solve_note` | critical | unaudited |
+| 5 | `cycle-0005` | 6 | 748 | `gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03` | critical | unaudited |
+| 6 | `cycle-0006` | 2 | 571 | `yt_bridge_action_invariant_note` | critical | unaudited |
+| 7 | `cycle-0007` | 2 | 571 | `yt_bridge_rearrangement_principle_note` | critical | unaudited |
+| 8 | `cycle-0008` | 2 | 571 | `yt_bridge_operator_closure_note` | critical | unaudited |
+| 9 | `cycle-0009` | 2 | 571 | `yt_ew_coupling_bridge_note` | critical | unaudited |
+| 10 | `cycle-0010` | 3 | 571 | `yt_bridge_hessian_selector_note` | critical | unaudited |
+| 11 | `cycle-0011` | 3 | 571 | `yt_bridge_moment_closure_note` | critical | unaudited |
+| 12 | `cycle-0012` | 3 | 571 | `yt_bridge_operator_closure_note` | critical | unaudited |
+| 13 | `cycle-0013` | 4 | 571 | `yt_bridge_hessian_selector_note` | critical | unaudited |
+| 14 | `cycle-0014` | 4 | 571 | `yt_bridge_hessian_selector_note` | critical | unaudited |
+| 15 | `cycle-0015` | 4 | 571 | `yt_bridge_operator_closure_note` | critical | unaudited |
+| 16 | `cycle-0016` | 8 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 17 | `cycle-0017` | 9 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 18 | `cycle-0018` | 9 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 19 | `cycle-0019` | 9 | 571 | `yt_bridge_uv_class_uniqueness_note` | critical | unaudited |
+| 20 | `cycle-0020` | 9 | 571 | `yt_bridge_uv_class_uniqueness_note` | critical | unaudited |
+| 21 | `cycle-0021` | 10 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 22 | `cycle-0022` | 10 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 23 | `cycle-0023` | 10 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 24 | `cycle-0024` | 10 | 571 | `yt_boundary_theorem` | critical | unaudited |
+| 25 | `cycle-0025` | 2 | 490 | `source_resolved_exact_green_h025_pocket_note` | critical | unaudited |
 
 Full queue lives in `data/audit_queue.json`.
