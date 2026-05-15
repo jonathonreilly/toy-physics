@@ -1,6 +1,6 @@
 # Opportunity Queue
 
-Campaign mode queue after block96 higher-shell chunks061-062 completed
+Campaign mode queue after block97 final higher-shell chunk063 launch
 checkpoint.
 
 | Rank | Opportunity | Retained-positive probability | Missing imports | Runner availability | Review landability | Blast radius | Independence | Decision |
@@ -185,6 +185,13 @@ package its completed-mode checkpoint after it finishes. The clean
 physics-closure priority remains accepted `O_H`/action plus strict
 source-Higgs pole rows, strict W/Z accepted-action physical response, or
 neutral H3/H4 physical-transfer authority.
+
+Block97 launches final chunk063 as run-control support. It does not change the
+queue ranking and does not add completed row evidence yet. Wait for chunk063 to
+finish, then package the completed-mode checkpoint and final row/volume
+artifacts. The clean physics-closure priority remains unchanged: accepted
+`O_H`/action plus strict source-Higgs pole rows, strict W/Z accepted-action
+physical response, or neutral H3/H4 physical-transfer authority.
 
 Block56 packages completed higher-shell chunks021-022. It extends the
 checkpointed higher-shell support prefix to `22/63` planned support chunks, but
