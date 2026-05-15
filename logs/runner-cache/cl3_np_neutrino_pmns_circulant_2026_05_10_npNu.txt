@@ -1,0 +1,174 @@
+
+----------------------------------------------------------------------------------------
+Part 1: circulant eigenvalue formula (Pattern A, KOIDE_CIRCULANT_CHARACTER_BRIDGE)
+----------------------------------------------------------------------------------------
+  [PASS] H = aI + bC + bbar C^2 is Hermitian at (a=1.0, b=(0.5+0j))  (||H - H^dag||_F = 0.00e+00)
+  [PASS] eigvalsh(H) == [a + 2|b| cos(delta + 2pi k/3)] at (a=1.0, b=(0.5+0j))  (max |diff| = 6.66e-16)
+  [PASS] H = aI + bC + bbar C^2 is Hermitian at (a=2.0, b=(0.7+0.3j))  (||H - H^dag||_F = 0.00e+00)
+  [PASS] eigvalsh(H) == [a + 2|b| cos(delta + 2pi k/3)] at (a=2.0, b=(0.7+0.3j))  (max |diff| = 8.88e-16)
+  [PASS] H = aI + bC + bbar C^2 is Hermitian at (a=1.0, b=0.7071067811865475)  (||H - H^dag||_F = 0.00e+00)
+  [PASS] eigvalsh(H) == [a + 2|b| cos(delta + 2pi k/3)] at (a=1.0, b=0.7071067811865475)  (max |diff| = 4.44e-16)
+
+----------------------------------------------------------------------------------------
+Part 2: at BAE rho=1/2, Q = 2/3 for any delta (sector-INDEPENDENT under BAE)
+----------------------------------------------------------------------------------------
+  [PASS] Q_brannen_amp(BAE, delta) = 2/3 for all delta in [0, 2pi) (Brannen amplitude convention)  (max |Q - 2/3| = 4.44e-16)
+  [INFO] Q does not cross 0.33 at delta=2/9 on rho in [0.01, 5.0]
+
+----------------------------------------------------------------------------------------
+Part 3: H_B (Brannen neutrino phase delta_nu = 2/9 + pi/12) — lightest near-zero
+----------------------------------------------------------------------------------------
+  delta_nu (H_B) = 2/9 + pi/12 = 0.484022 rad
+  eigenvalues (a=1, |b|=1/sqrt(2)):
+    lambda_0 = 2.251764
+    lambda_1 = -0.195808
+    lambda_2 = 0.944044
+  |lambda_min| / |lambda_max| = 0.086958
+  [PASS] H_B yields Q_brannen = 2/3 (algebraic, independent of delta_nu)  (Q_brannen = 0.6666666667)
+  Dm^2_21 / Dm^2_31 (H_B prediction) = 0.169488
+  Dm^2_21 / Dm^2_31 (PDG comparator) = 0.029463
+  ratio deviation = 475.25%
+
+----------------------------------------------------------------------------------------
+Part 4: H_C (free delta_nu at BAE) — best delta for Dm^2_21/Dm^2_31 = 0.0295
+----------------------------------------------------------------------------------------
+  Best delta_nu = 1.977633 rad (113.3100 deg)
+  Best Dm^2_21 / Dm^2_31 = 0.029508 (target 0.029463)
+  Deviation = 0.004% absolute / 0.152% relative
+  Eigenvalue triple (sorted): [0.02403378 0.19394115 5.78202507]
+  Distance to Brannen delta (2/9 + pi/12): 1.493611 rad
+  delta_best mod (2pi/3) = 1.977633
+  delta_brannen mod (2pi/3) = 0.484022
+  [PASS] H_C admits delta_nu such that Dm^2_21 / Dm^2_31 matches observed  (best relative deviation = 0.15%)
+
+----------------------------------------------------------------------------------------
+Part 5: H_D (free rho, free delta) — scan parameter plane
+----------------------------------------------------------------------------------------
+  Points in (rho, delta) plane matching Dm^2_21/Dm^2_31 to <5% relative: 710
+    rho=0.0794, delta=0.042098 rad (2.41 deg), r=0.030179, m_k = (4.8711e-01, 5.4614e-01, 2.4431e+00)
+    rho=0.0794, delta=2.052297 rad (117.59 deg), r=0.030179, m_k = (4.8711e-01, 5.4614e-01, 2.4431e+00)
+    rho=0.0892, delta=0.042098 rad (2.41 deg), r=0.029268, m_k = (4.6218e-01, 5.2328e-01, 2.5497e+00)
+    rho=0.0892, delta=2.052297 rad (117.59 deg), r=0.029268, m_k = (4.6218e-01, 5.2328e-01, 2.5497e+00)
+    rho=0.0990, delta=0.042098 rad (2.41 deg), r=0.028417, m_k = (4.3918e-01, 5.0208e-01, 2.6527e+00)
+  [PASS] H_D parameter plane has at least one curve matching observed Dm^2_21/Dm^2_31  (matches = 710)
+
+----------------------------------------------------------------------------------------
+Part 6: PMNS angles from U_PMNS = U_e^dag U_nu = U_nu (Z_3-trichotomy U_e = I)
+----------------------------------------------------------------------------------------
+  [PASS] DFT_3 diagonalizes any circulant Hermitian H = aI + bC + bbar C^2  (||off-diag||_F = 7.69e-16)
+  |U_PMNS|^2 (pure circulant U_nu, U_e = I):
+    [[0.33333333 0.33333333 0.33333333]
+ [0.33333333 0.33333333 0.33333333]
+ [0.33333333 0.33333333 0.33333333]]
+  sin^2 theta_13 (DFT_3, = |U_e3|^2)      = 0.333333 (PDG comparator ~0.0218)
+  sin^2 theta_12 (DFT_3)                  = 0.500000 (PDG comparator ~0.307)
+  sin^2 theta_23 (DFT_3)                  = 0.500000 (PDG comparator ~0.545)
+  [PASS] Pure-circulant U_nu = DFT_3 OVERPREDICTS sin^2 theta_13 by factor ~15  (sin^2 theta_13 = 0.3333 >> observed 0.022 (ratio 15.3x))
+
+----------------------------------------------------------------------------------------
+Part 7: best-fit (a_nu, rho, delta) at observed splittings + retained m_3
+----------------------------------------------------------------------------------------
+  Best (rho_nu, delta_nu) for Dm^2_21 match:
+    rho_nu = 0.4636
+    delta_nu = 0.105778 rad (6.0606 deg)
+    Dm^2_21 (predicted, after scale to Dm^2_31 retained) = 7.4204e-05
+    Dm^2_21 (observed comparator) = 7.4100e-05
+    relative error in Dm^2_21 = 0.1400%
+    m_1^2 (predicted) = 1.8158e-05 eV^2
+    m_2^2 (predicted) = 9.2361e-05 eV^2
+    m_3^2 (predicted) = 2.5572e-03 eV^2
+    m_1 = 4.2612e-03 eV
+    m_2 = 9.6105e-03 eV
+    m_3 = 5.0568e-02 eV (retained 5.058e-2 eV)
+    Sigma m_nu = 6.4440e-02 eV (retained floor 50.58 meV)
+
+----------------------------------------------------------------------------------------
+Part 8: probe admissions and scope
+----------------------------------------------------------------------------------------
+Named admissions / open gates of this probe:
+  - BAE_NEUTRINO: |b_nu|^2 / a_nu^2 = 1/2 is NOT derived; not retained
+  - DELTA_NU_PI12: delta_nu = 2/9 + pi/12 (H_B) is a literature target, not derived
+  - SQRT_M_IDENTIFICATION: lambda_k = sqrt(m_k) is admitted (open positive-parent)
+  - U_e_EQ_I: assumed from CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY (retained)
+  - CIRCULANT_TRIMAXIMAL_OBSTRUCTION: U_nu = DFT_3 forces sin^2 theta_13 = 1/3 != 0.022
+  - NO_SOLAR_GAP_DERIVATION: Dm^2_21 fitted via rho_nu, delta_nu choice (not derived)
+  - NO_DELTA_CP_DERIVATION: CP phase requires complex Z_3 breaking (not retained)
+
+Verdict on the New Physics Probe:
+
+  This probe is BOUNDED — a numerical hypothesis test using the
+  charged-lepton-style C_3[111] circulant ansatz applied to the
+  neutrino sector. It does NOT claim:
+
+    (a) a derivation of any neutrino observable from A1+A2 alone
+        (sector-specific delta_nu and rho_nu are admitted);
+    (b) a closure of the solar-gap problem (delta_nu free / fitted);
+    (c) a derivation of PMNS angles (pure-circulant U_nu = DFT_3
+        gives trimaximal, FAILS observed sin^2 theta_13);
+    (d) a Koide-2/3 relation specific to neutrinos
+        (under BAE, Q = 2/3 is sector-INDEPENDENT; Foot-Brannen
+        Q_nu ~ 0.33 requires BREAKING BAE, which we test as H_D).
+
+  What this probe DOES contribute:
+
+    (P1) Algebraic confirmation that the circulant Q = 2/3 at BAE is
+         sector-independent (NEW: explicit dependence-on-delta analysis).
+    (P2) Numerical map of the (rho_nu, delta_nu) parameter plane showing
+         where Dm^2_21 / Dm^2_31 matches observed.
+    (P3) Explicit demonstration that pure-circulant U_nu = DFT_3
+         OVERPREDICTS sin^2 theta_13 by a factor ~15, hence the
+         retained PMNS package's "non-circulant tilt" (the affine
+         H(m, delta, q_+) construction) is STRUCTURALLY REQUIRED to
+         match the observed angle pattern.
+    (P4) A reasoned mapping from the Brannen neutrino phase
+         delta_nu = 2/9 + pi/12 to a near-massless lightest neutrino
+         on the BAE locus.
+
+  Open derivation targets that would promote this to retained:
+    1. selection principle for rho_nu (the BAE-analog ratio for nu sector)
+    2. derivation of delta_nu from Cl(3)/Z^3
+    3. derivation of m_3 absolute scale within the circulant framing
+       (currently retained via seesaw, not circulant)
+    4. resolution of the U_nu = DFT_3 over-mixing problem
+
+
+----------------------------------------------------------------------------------------
+Part 9: cross-check with retained DM_NEUTRINO_ATMOSPHERIC_SCALE + BOUNDS
+----------------------------------------------------------------------------------------
+  [PASS] m_3 predicted within 5% of retained 5.058e-2 eV (Dm^2_31 set; m_1 small)  (m_3 = 5.056835e-02 (retained 5.058000e-02; rel err 0.023%))
+  [PASS] Sigma m_nu (probe prediction) > 50.58 meV (retained floor)  (Sigma = 64.4400 meV)
+  [PASS] Dm^2_21 (probe prediction) < Dm^2_31 (retained theorem 4 inequality)  (Dm^2_21 = 7.4204e-05, Dm^2_31 = 2.5390e-03)
+  [PASS] All m_k >= 0 (positivity)  (m_k * scale = [np.float64(1.815769663906358e-05), np.float64(9.23614313592239e-05), np.float64(0.0025571576966390637)])
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+
+Probe: New-Physics neutrino PMNS circulant ansatz (npNu)
+
+Algebraic confirmations:
+  - Circulant eigenvalue formula (Pattern A): VERIFIED
+  - Q = 2/3 at BAE for ANY delta: VERIFIED (sector-independent)
+  - DFT_3 diagonalizes any circulant: VERIFIED
+
+Hypothesis tests (NUMERICAL, NOT DERIVATIONS):
+  - H_A (BAE + delta_lep): does not match neutrino spectrum
+  - H_B (BAE + delta = 2/9 + pi/12): near-massless lightest, Q = 2/3
+  - H_C (BAE + free delta): best delta exists for Dm^2_21 match
+  - H_D (free rho + free delta): curve of matches in parameter plane
+
+PMNS angles:
+  - Pure-circulant U_nu = DFT_3 gives trimaximal (sin^2 theta_13 = 1/3)
+  - 15x overshoot of observed sin^2 theta_13 ~ 0.022
+  - Retained PMNS package's affine H(m, delta, q_+) construction is
+    structurally REQUIRED to fix this (already retained)
+
+Status: BOUNDED probe with 4 named admissions. Not retained.
+Open derivation targets surfaced: rho_nu selection, delta_nu derivation,
+m_3 circulant-side scale, U_nu = DFT_3 over-mixing fix.
+
+
+========================================================================================
+  TOTAL: PASS=17, FAIL=0
+========================================================================================
+PASS=17 FAIL=0
