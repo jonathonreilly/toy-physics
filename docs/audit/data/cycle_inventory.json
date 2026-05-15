@@ -1,5 +1,5 @@
 {
-  "cycle_count": 178,
+  "cycle_count": 183,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -21682,6 +21682,230 @@
       "decision": null,
       "edges": [
         {
+          "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 6,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md",
+          "title": "NN Lattice Rescaled-Lane C_arm NNLO Saddle Note (2026-05-10)",
+          "transitive_descendants": 6
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0175",
+      "decision": null,
+      "edges": [
+        {
+          "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+        }
+      ],
+      "length": 2,
+      "max_transitive_descendants": 6,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
+          "title": "NN Lattice Rescaled-Lane Full Kernel Identification A(y_s -> y_d)",
+          "transitive_descendants": 6
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0176",
+      "decision": null,
+      "edges": [
+        {
+          "from": "nn_lattice_rescaled_c2_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c2_derivation_note_2026-05-10"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 6,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c2_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C2_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice c2_inf Phase-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
+          "title": "NN Lattice Rescaled-Lane Full Kernel Identification A(y_s -> y_d)",
+          "transitive_descendants": 6
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0177",
+      "decision": null,
+      "edges": [
+        {
+          "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 6,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md",
+          "title": "NN Lattice Rescaled-Lane C_arm NNLO Saddle Note (2026-05-10)",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Alpha-Constrained Refit Note",
+          "transitive_descendants": 6
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0178",
+      "decision": null,
+      "edges": [
+        {
+          "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10"
+        },
+        {
+          "from": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+          "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
+        }
+      ],
+      "length": 3,
+      "max_transitive_descendants": 6,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md",
+          "title": "NN Lattice Rescaled-Lane C_arm NNLO Saddle Note (2026-05-10)",
+          "transitive_descendants": 6
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/NN_LATTICE_RESCALED_C_ARM_NLO_SADDLE_NOTE_2026-05-10.md",
+          "title": "Rescaled NN Lattice C_arm Next-to-Leading-Order Saddle Note",
+          "transitive_descendants": 6
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0179",
+      "decision": null,
+      "edges": [
+        {
           "from": "kubo_continuum_limit_families_note",
           "to": "kubo_fam2_refinement_note"
         },
@@ -21715,7 +21939,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -21752,7 +21976,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -21789,7 +22013,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -21826,7 +22050,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0183",
       "decision": null,
       "edges": [
         {
@@ -21874,14 +22098,14 @@
     "17": 2,
     "18": 4,
     "19": 11,
-    "2": 39,
+    "2": 41,
     "20": 9,
     "21": 3,
     "22": 3,
     "23": 2,
     "24": 1,
     "25": 2,
-    "3": 19,
+    "3": 22,
     "4": 23,
     "5": 11,
     "6": 6,
