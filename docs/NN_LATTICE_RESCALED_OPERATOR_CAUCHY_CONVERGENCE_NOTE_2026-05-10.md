@@ -229,3 +229,4 @@ runner and check at every grid point. The result follows from running the
 framework's canonical propagator on the canonical 3-edge NN lattice with the
 deterministic-rescale schedule across six refinement points.
 
+Fri May 15 09:01:56 EDT 2026
