@@ -1,0 +1,108 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_anticommuting_operator_derivation.py
+runner_sha256: 5a211d29452ecf2df000048364a2a63c1fc3e4eb559355d53ee19da33540e42c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.35
+status: ok
+----- stdout -----
+==============================================================================
+KOIDE ANTI-COMMUTING OPERATOR DERIVATION THEOREM
+==============================================================================
+
+Verifies: if H Hermitian on R^3 satisfies {H, Γ_χ} = 0 and
+v is an eigenvector of H with λ ≠ 0, then <v|Γ_χ|v> = 0.
+Equivalently: Koide Q(v) = 2/3.
+
+Hermitian anti-commuting H is parametrized by:
+   H = (1/3)(1⊗h + h⊗1)  with  Σh = 0 (2-dim space of h).
+
+Each H gives 2 non-zero-eigenvalue eigenvectors, both satisfying
+Koide. As h varies, these eigenvectors lie on the Koide cone;
+no framework completeness claim is made here.
+
+
+==============================================================================
+PART 1: Γ_χ AS Z_3 CHARACTER GRADING (EIGENVALUES +1, -1, -1)
+==============================================================================
+  Γ_χ matrix:
+  Matrix([[-1/3, 2/3, 2/3], [2/3, -1/3, 2/3], [2/3, 2/3, -1/3]])
+  Γ_χ eigenvalues: {1: 1, -1: 2}
+
+  [PASS] Γ_χ has eigenvalue +1 with multiplicity 1 (singlet)  (+1 multiplicity = 1)
+  [PASS] Γ_χ has eigenvalue -1 with multiplicity 2 (doublet)  (-1 multiplicity = 2)
+  [PASS] Γ_χ acts as +1 on (1,1,1) direction (singlet eigenvector)  (Γ_χ (1,1,1)^T = Matrix([[1, 1, 1]]))
+
+==============================================================================
+PART 2: ANTI-COMMUTING H PARAMETRIZATION
+==============================================================================
+  [PASS] H is real symmetric (Hermitian) for any (h_1, h_2)  (H = H^T verified)
+  [PASS] Σ h_g = 0 (required for H to anti-commute)  (Σh = 0)
+  [PASS] {H, Γ_χ} = 0 symbolically for arbitrary (h_1, h_2) (sympy.simplify)  ({H, Γ_χ} = 0 verified)
+
+==============================================================================
+PART 3: MAIN DERIVATION ({H, Γ_χ} = 0 ⟹ <v|Γ_χ|v> = 0)
+==============================================================================
+  Two-way evaluation of <v|H Γ_χ|v>:
+    Way 1: <H v|Γ_χ|v> = λ <v|Γ_χ|v>  (H Hermitian, eigenvalue λ)
+    Way 2: -<v|Γ_χ H|v> = -<v|Γ_χ|H v> = -λ <v|Γ_χ|v>  (anti-comm)
+    Equating: λ <v|Γ_χ|v> = -λ <v|Γ_χ|v>
+    ⟹ 2λ <v|Γ_χ|v> = 0
+    ⟹ <v|Γ_χ|v> = 0 (since λ ≠ 0)
+
+  Specific H with h = (1, -1, 0):
+  Matrix([[2/3, 0, 1/3], [0, -2/3, -1/3], [1/3, -1/3, 0]])
+
+  [PASS] {H, Γ_χ} = 0 for h = (1, -1, 0)  (anti-commutation specific verified)
+  [PASS] H has eigenvalues {-λ, 0, +λ} (trace = 0, rank ≤ 2)  (eigenvalues = {-sqrt(6)/3: 1, sqrt(6)/3: 1, 0: 1})
+
+==============================================================================
+PART 4: EIGENSTRUCTURE OF H (SPECTRUM {-λ, 0, +λ})
+==============================================================================
+  [PASS] Tr(H) = 0 for any (h_1, h_2) [from Σh = 0]  (Tr(H) = 0)
+  [PASS] det(H) = 0 for any (h_1, h_2) [H has rank ≤ 2]  (det(H) = 0)
+  [PASS] Tr(H²) is a specific quadratic in (h_1, h_2)  (Tr(H²) = 4*h_1**2/3 + 4*h_1*h_2/3 + 4*h_2**2/3)
+  Eigenvalue magnitude λ = sqrt(Tr(H²)/2)
+  Specific (h_1, h_2) = (1, -1): Tr(H²) = 4/3
+
+==============================================================================
+PART 5: EXPLICIT EIGENVECTORS → <v|Γ_χ|v> = 0 (LCC)
+==============================================================================
+  λ = 0:  <v|Γ_χ|v> = -1
+  λ = -sqrt(6)/3:  <v|Γ_χ|v> = 0
+  [PASS] <v|Γ_χ|v> = 0 for non-zero eigenvalue λ = -sqrt(6)/3  (expectation = 0)
+  λ = sqrt(6)/3:  <v|Γ_χ|v> = 0
+  [PASS] <v|Γ_χ|v> = 0 for non-zero eigenvalue λ = sqrt(6)/3  (expectation = 0)
+  [PASS] Found 2 non-zero-eigenvalue eigenvectors satisfying LCC  (non-zero eigenvectors: 2)
+
+==============================================================================
+PART 6: GENERIC h FAMILY - 2-DIM KOIDE-SATISFYING PARAMETER SPACE
+==============================================================================
+  [PASS] All test h values: non-zero-eigenvalue eigenvectors satisfy <v|Γ_χ|v> = 0  (tested 4 h values)
+
+  Conclusion: a 2-dim parameter family of h (with Σh = 0) gives
+  a 2-dim family of Hermitian anti-commuting H operators, each
+  contributing a pair of Koide-satisfying eigenvectors. These
+  eigenvectors lie on the Koide cone in R^3; no framework
+  completeness claim is made here.
+
+==============================================================================
+PART 7: SYMBOLIC IDENTITY 2λ <v|Γ_χ|v> = 0
+==============================================================================
+  [PASS] v^T H Γ_χ v + v^T Γ_χ H v = 0 for any v (from {H, Γ_χ} = 0)  (sum = 0)
+
+==============================================================================
+SUMMARY CLASS-A ASSERTIONS
+==============================================================================
+  [PASS] Γ_χ eigenvalues = {+1 (singlet), -1 (doublet × 2)} (sympy.Eq)
+  [PASS] {H, Γ_χ} = 0 for arbitrary (h_1, h_2) (sympy.simplify on 3x3 zero)
+  [PASS] Tr(H) = 0 and det(H) = 0 (spectrum {-λ, 0, +λ})
+  [PASS] v^T H Γ_χ v + v^T Γ_χ H v = 0 for any v (sympy.simplify)
+  [PASS] Specific h = (1, -1, 0): non-zero-eigenvalue eigenvector satisfies LCC
+
+==============================================================================
+ANTI-COMMUTING OPERATOR DERIVATION: PASS=16 FAIL=0
+==============================================================================
+
+----- stderr -----
+

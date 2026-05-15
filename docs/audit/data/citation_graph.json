@@ -50604,6 +50604,17 @@
       "runner_path": "scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py",
       "title": "Koide A1 Route F \u2014 Yukawa Casimir-Difference Bounded Obstruction"
     },
+    "koide_anticommuting_operator_derivation_theorem_note_2026-05-10": {
+      "claim_id": "koide_anticommuting_operator_derivation_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "8863482ec88163e4df2952b5afb5f960d22a1c1c8dd4efd53ad362cecbf37167",
+      "path": "docs/KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_anticommuting_operator_derivation.py",
+      "title": "Koide Anti-Commuting Operator \u2192 LCC Derivation Theorem"
+    },
     "koide_aps_block_by_block_forcing_note_2026-04-21": {
       "claim_id": "koide_aps_block_by_block_forcing_note_2026-04-21",
       "claim_type_author_hint": null,
@@ -51537,6 +51548,17 @@
       "path": "docs/KOIDE_LANE_AUDIT_BATCH_NOTE_2026-05-02.md",
       "runner_path": null,
       "title": "Koide Lane Audit Batch \u2014 Three Notes"
+    },
+    "koide_lightcone_primitive_theorem_note_2026-05-10": {
+      "claim_id": "koide_lightcone_primitive_theorem_note_2026-05-10",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "0abab254285e1e03e12f2c2d8eea61ee5d58d6a9d035333c662357b0f932c36a",
+      "path": "docs/KOIDE_LIGHTCONE_PRIMITIVE_THEOREM_NOTE_2026-05-10.md",
+      "runner_path": "scripts/frontier_koide_lightcone_primitive.py",
+      "title": "Koide Lightcone Primitive \u2014 Operator-Level Equivalent of NSC"
     },
     "koide_microscopic_scalar_selector_target_note_2026-04-18": {
       "claim_id": "koide_microscopic_scalar_selector_target_note_2026-04-18",
@@ -70512,6 +70534,7 @@
     "koide_a1_loop_final_status_2026-04-22",
     "koide_a1_physical_bridge_attempt_2026-04-22",
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+    "koide_anticommuting_operator_derivation_theorem_note_2026-05-10",
     "koide_aps_block_by_block_forcing_note_2026-04-21",
     "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
     "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10",
@@ -70529,6 +70552,7 @@
     "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
     "koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19",
     "koide_kappa_two_orbit_dimension_factorization_note_2026-04-19",
+    "koide_lightcone_primitive_theorem_note_2026-05-10",
     "koide_moment_ratio_uniformity_theorem_note_2026-04-19",
     "koide_mru_weight_class_obstruction_theorem_note_2026-04-19",
     "koide_native_dimensionless_review_packet_2026-04-24",
@@ -70898,7 +70922,7 @@
       "no_go": 45,
       "none": 1552,
       "open_gate": 37,
-      "positive_theorem": 145
+      "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 811,
@@ -70906,12 +70930,12 @@
       "no_go": 150,
       "none": 444,
       "open_gate": 117,
-      "positive_theorem": 614
+      "positive_theorem": 616
     },
     "edge_count": 8873,
-    "leaf_count": 619,
-    "node_count": 2210,
-    "root_count": 771,
-    "runners_with_path": 1829
+    "leaf_count": 621,
+    "node_count": 2212,
+    "root_count": 773,
+    "runners_with_path": 1831
   }
 }

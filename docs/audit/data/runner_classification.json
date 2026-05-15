@@ -10380,6 +10380,18 @@
       "dominant_class": "D",
       "runner": "scripts/cl3_koide_a1_route_f_casimir_difference_2026_05_08_routef.py"
     },
+    "koide_anticommuting_operator_derivation_theorem_note_2026-05-10": {
+      "assert_count": 7,
+      "counts": {
+        "A": 26,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_koide_anticommuting_operator_derivation.py"
+    },
     "koide_aps_block_by_block_forcing_note_2026-04-21": {
       "assert_count": 0,
       "counts": {
@@ -11015,6 +11027,18 @@
       "decoration_candidate": false,
       "dominant_class": "A",
       "runner": "scripts/frontier_koide_kappa_two_orbit_dimension_factorization.py"
+    },
+    "koide_lightcone_primitive_theorem_note_2026-05-10": {
+      "assert_count": 5,
+      "counts": {
+        "A": 46,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_koide_lightcone_primitive.py"
     },
     "koide_microscopic_scalar_selector_target_note_2026-04-18": {
       "assert_count": 1,
@@ -34730,6 +34754,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_koide_anticommuting_operator_derivation.py": {
+      "assert_count": 7,
+      "claims": [
+        "koide_anticommuting_operator_derivation_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 26,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_koide_aps_block_by_block_forcing.py": {
       "assert_count": 0,
       "claims": [
@@ -35311,6 +35350,21 @@
       ],
       "counts": {
         "A": 32,
+        "B": 0,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_koide_lightcone_primitive.py": {
+      "assert_count": 5,
+      "claims": [
+        "koide_lightcone_primitive_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 46,
         "B": 0,
         "C": 0,
         "D": 4
@@ -47893,14 +47947,14 @@
   "stats": {
     "decoration_candidates": 202,
     "dominant_class_distribution": {
-      "A": 154,
+      "A": 156,
       "B": 175,
       "C": 688,
       "D": 276,
       "none": 417
     },
-    "runners_classified": 1710,
+    "runners_classified": 1712,
     "runners_with_C": 877,
-    "runners_with_D": 497
+    "runners_with_D": 499
   }
 }
