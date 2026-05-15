@@ -228,3 +228,4 @@ explicit decay fit and tail estimate. The audit guards are internal to the
 runner and check at every grid point. The result follows from running the
 framework's canonical propagator on the canonical 3-edge NN lattice with the
 deterministic-rescale schedule across six refinement points.
+
