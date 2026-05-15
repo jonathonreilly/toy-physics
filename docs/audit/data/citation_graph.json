@@ -17145,6 +17145,58 @@
       "to": "neutrino_majorana_nur_charge2_primitive_reduction_note"
     },
     {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_mass_derived_note"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "charged_lepton_koide_review_packet_2026-04-18"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_retained_status_note_2026-04-16"
+    },
+    {
       "from": "newtonian_distance_law_confirmed",
       "to": "valley_linear_wide_tail_note"
     },
@@ -56231,6 +56283,31 @@
       "runner_path": "scripts/frontier_neutrino_two_amplitude_last_mile.py",
       "title": "Neutrino Two-Amplitude Last-Mile Reduction"
     },
+    "newphysics_np_neutrino_pmns_note_2026-05-10_npnu": {
+      "claim_id": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (new-physics probe; numerical hypothesis test)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+        "neutrino_mass_derived_note",
+        "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
+        "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+        "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
+        "minimal_axioms_2026-05-03",
+        "charged_lepton_koide_review_packet_2026-04-18",
+        "neutrino_retained_status_note_2026-04-16"
+      ],
+      "note_hash": "301c28b3581a542ad967dae8fd35f5f5aec3668eb76e6cb0330a33fb8df28f5f",
+      "path": "docs/NEWPHYSICS_NP_NEUTRINO_PMNS_NOTE_2026-05-10_npNu.md",
+      "runner_path": "scripts/cl3_np_neutrino_pmns_circulant_2026_05_10_npNu.py",
+      "title": "New-Physics Probe \u2014 Neutrino PMNS Circulant Ansatz (npNu)"
+    },
     "newton_derivation_note": {
       "claim_id": "newton_derivation_note",
       "claim_type_author_hint": null,
@@ -71068,7 +71145,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 357,
+      "bounded_theorem": 358,
       "meta": 74,
       "no_go": 45,
       "none": 1552,
@@ -71076,17 +71153,17 @@
       "positive_theorem": 145
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 811,
+      "bounded_theorem": 812,
       "meta": 74,
       "no_go": 150,
       "none": 444,
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8908,
-    "leaf_count": 618,
-    "node_count": 2210,
+    "edge_count": 8921,
+    "leaf_count": 619,
+    "node_count": 2211,
     "root_count": 770,
-    "runners_with_path": 1829
+    "runners_with_path": 1830
   }
 }
