@@ -16997,6 +16997,42 @@
       "to": "neutrino_majorana_nur_charge2_primitive_reduction_note"
     },
     {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
+    },
+    {
       "from": "newtonian_distance_law_confirmed",
       "to": "valley_linear_wide_tail_note"
     },
@@ -56041,6 +56077,27 @@
       "runner_path": "scripts/frontier_neutrino_two_amplitude_last_mile.py",
       "title": "Neutrino Two-Amplitude Last-Mile Reduction"
     },
+    "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm": {
+      "claim_id": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (source theorem)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+        "ckm_atlas_axiom_closure_note",
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "minimal_axioms_2026-04-11",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "three_generation_structure_note",
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
+        "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
+      ],
+      "note_hash": "43eed2f84d5ca36e37713ad4ceb672b046d7104542027c84f050dd35f6645c23",
+      "path": "docs/NEWPHYSICS_NP_CKM_WOLFENSTEIN_NOTE_2026-05-10_npCKM.md",
+      "runner_path": "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py",
+      "title": "NEWPHYSICS NP-CKM-Wolfenstein \u2014 P-Heavy-A Circulant Cabibbo No-Go"
+    },
     "newton_derivation_note": {
       "claim_id": "newton_derivation_note",
       "claim_type_author_hint": null,
@@ -70880,7 +70937,7 @@
     "claim_type_author_hint_counts": {
       "bounded_theorem": 357,
       "meta": 74,
-      "no_go": 45,
+      "no_go": 46,
       "none": 1552,
       "open_gate": 37,
       "positive_theorem": 145
@@ -70888,15 +70945,15 @@
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 811,
       "meta": 74,
-      "no_go": 150,
+      "no_go": 151,
       "none": 444,
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8870,
-    "leaf_count": 621,
-    "node_count": 2210,
+    "edge_count": 8879,
+    "leaf_count": 622,
+    "node_count": 2211,
     "root_count": 771,
-    "runners_with_path": 1829
+    "runners_with_path": 1830
   }
 }

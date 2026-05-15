@@ -23,7 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
+<<<<<<< HEAD
 | unaudited | 1174 |
+=======
+| unaudited | 1177 |
+| audit_in_progress | 1 |
+>>>>>>> 79171af21 (newphysics: NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo no-go)
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
@@ -47,14 +52,18 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
+<<<<<<< HEAD
 | `unaudited` | 1287 |
+=======
+| `unaudited` | 1290 |
+>>>>>>> 79171af21 (newphysics: NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo no-go)
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 906 |
 | `decoration` | 15 |
 | `meta` | 116 |
-| `no_go` | 225 |
+| `no_go` | 226 |
 | `open_gate` | 108 |
 | `positive_theorem` | 731 |
 
@@ -62,17 +71,22 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 1056 |
 | `high` | 56 |
+<<<<<<< HEAD
 | `medium` | 254 |
 | `leaf` | 735 |
+=======
+| `medium` | 255 |
+| `leaf` | 733 |
+>>>>>>> 79171af21 (newphysics: NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo no-go)
 
 - **Retained pending chain closure:** 3
 - **Citation cycles detected:** 177
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1710
-- runners with (C) first-principles compute hits: 877
-- runners with (D) external comparator hits: 497
+- runners classified: 1711
+- runners with (C) first-principles compute hits: 878
+- runners with (D) external comparator hits: 498
 - decoration candidates (no C, no D): 202
 
 ## Top 25 by load-bearing score (topology only)
@@ -81,6 +95,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
+<<<<<<< HEAD
 | 1 | `minimal_axioms_2026-05-03` | meta | critical | 826 | 46.69 | `unaudited` | meta |
 | 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 489 | 45.44 | `unaudited` | unaudited |
 | 3 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 646 | 43.34 | `audited_conditional` | ~~audited_conditional~~ |
@@ -106,6 +121,33 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 539 | 26.58 | `unaudited` | unaudited |
 | 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 533 | 26.56 | `unaudited` | unaudited |
 | 25 | `cl3_sm_embedding_theorem` | positive_theorem | critical | 454 | 26.33 | `unaudited` | unaudited |
+=======
+| 1 | `minimal_axioms_2026-05-03` | meta | critical | 832 | 46.70 | `unaudited` | meta |
+| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 494 | 45.45 | `unaudited` | unaudited |
+| 3 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 659 | 43.37 | `audited_conditional` | ~~audited_conditional~~ |
+| 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 952 | 40.40 | `audited_clean` | **retained_bounded** |
+| 5 | `minimal_axioms_2026-04-11` | meta | critical | 834 | 39.71 | `unaudited` | meta |
+| 6 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 440 | 39.28 | `unaudited` | unaudited |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 681 | 37.41 | `unaudited` | unaudited |
+| 8 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 440 | 35.28 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 602 | 34.24 | `unaudited` | unaudited |
+| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 938 | 32.38 | `audited_clean` | **retained_bounded** |
+| 11 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 524 | 32.04 | `unaudited` | unaudited |
+| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 625 | 31.79 | `audited_clean` | **retained_bounded** |
+| 13 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 522 | 31.03 | `unaudited` | unaudited |
+| 14 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 440 | 30.79 | `unaudited` | unaudited |
+| 15 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 748 | 30.55 | `unaudited` | unaudited |
+| 16 | `three_generation_structure_note` | bounded_theorem | critical | 617 | 29.77 | `unaudited` | unaudited |
+| 17 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 446 | 29.30 | `unaudited` | unaudited |
+| 18 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 758 | 29.07 | `audited_clean` | **retained_bounded** |
+| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 736 | 28.03 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 738 | 27.53 | `unaudited` | unaudited |
+| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 512 | 27.50 | `unaudited` | unaudited |
+| 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 440 | 27.29 | `unaudited` | unaudited |
+| 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 561 | 27.13 | `unaudited` | unaudited |
+| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 555 | 26.62 | `unaudited` | unaudited |
+| 25 | `cl3_sm_embedding_theorem` | positive_theorem | critical | 477 | 26.40 | `unaudited` | unaudited |
+>>>>>>> 79171af21 (newphysics: NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo no-go)
 
 
 ## Applied audits

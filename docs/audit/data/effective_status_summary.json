@@ -3,7 +3,7 @@
     "bounded_theorem": 906,
     "decoration": 15,
     "meta": 116,
-    "no_go": 225,
+    "no_go": 226,
     "open_gate": 108,
     "positive_theorem": 731
   },
@@ -60,7 +60,11 @@
     "retained_bounded": 310,
     "retained_no_go": 133,
     "retained_pending_chain": 3,
+<<<<<<< HEAD
     "unaudited": 1174
+=======
+    "unaudited": 1177
+>>>>>>> 79171af21 (newphysics: NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo no-go)
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [
