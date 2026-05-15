@@ -1,0 +1,120 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_inverse_square_structural_sum_rule_narrow.py
+runner_sha256: 048e7afc665b225cfef2cad779d6f2af13fe597e8e0b2c5f44e38e56f9d4e2bc
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.76
+status: ok
+----- stdout -----
+CKM inverse-square structural sum-rule narrow theorem check
+
+
+----------------------------------------------------------------------------------------
+Part 1: (T1) product identity rho * A^2 = 1 / n_color^2
+----------------------------------------------------------------------------------------
+PASS: (1) (T1) rho * A^2 = 1/n_color^2 symbolically | diff = 0
+
+----------------------------------------------------------------------------------------
+Part 2: (T2) first sum-rule eta^2 + rho * A^2 = 1 / n_pair^2
+----------------------------------------------------------------------------------------
+PASS: (2) (T2) eta^2 + rho * A^2 = 1/n_pair^2 symbolically | diff = 0
+
+----------------------------------------------------------------------------------------
+Part 3: (T3) second sum-rule eta^2 + 2 rho A^2 = 1/n_pair^2 + 1/n_color^2
+----------------------------------------------------------------------------------------
+PASS: (3) (T3) eta^2 + 2*rho*A^2 = 1/n_pair^2 + 1/n_color^2 symbolically | diff = 0
+
+----------------------------------------------------------------------------------------
+Part 4: (T4) real-eta gate eta^2 > 0 iff n_color > n_pair
+----------------------------------------------------------------------------------------
+PASS: (4) (T4) eta^2 factorizes as (n_color-n_pair)(n_color+n_pair) / (n_pair n_color)^2 | diff = 0
+PASS: (5) (T4) positivity at (2,3): eta^2 = 5/36 > 0 (n_color > n_pair) | eta^2(2,3) = 5/36
+PASS: (6) (T4) negativity at (3,2): eta^2 = -5/36 < 0 (n_color < n_pair) | eta^2(3,2) = -5/36
+PASS: (7) (T4) zero at (2,2): eta^2 = 0 (n_color = n_pair, boundary) | eta^2(2,2) = 0
+
+----------------------------------------------------------------------------------------
+Part 5: (C1) corollary (T3) - (T2) = (T1) = 1/n_color^2
+----------------------------------------------------------------------------------------
+PASS: (8) (C1) (eta^2 + 2 rho*A^2) - (eta^2 + rho*A^2) = rho*A^2 symbolically | diff = 0
+PASS: (9) (C1-alt) (T3) - (T2) = 1/n_color^2 symbolically | diff = 0
+
+----------------------------------------------------------------------------------------
+Part 6: (T5-A) concrete framework instance (n_pair, n_color) = (2, 3)
+----------------------------------------------------------------------------------------
+PASS: (10) (T5-A) (2,3): rho = 1/6 | rho = 1/6
+PASS: (11) (T5-A) (2,3): A^2 = 2/3 | A^2 = 2/3
+PASS: (12) (T5-A) (2,3): eta^2 = 5/36 | eta^2 = 5/36
+PASS: (13) (T5-A) (2,3): rho * A^2 = 1/9 | rho*A^2 = 1/9
+PASS: (14) (T5-A) (2,3): eta^2 + rho*A^2 = 1/4 | T2-sum = 1/4
+PASS: (15) (T5-A) (2,3): eta^2 + 2*rho*A^2 = 13/36 | T3-sum = 13/36
+
+----------------------------------------------------------------------------------------
+Part 7: (T5-B) concrete non-framework instance (n_pair, n_color) = (3, 4)
+----------------------------------------------------------------------------------------
+PASS: (16) (T5-B) (3,4): rho = 1/12 | rho = 1/12
+PASS: (17) (T5-B) (3,4): A^2 = 3/4 | A^2 = 3/4
+PASS: (18) (T5-B) (3,4): eta^2 = 7/144 | eta^2 = 7/144
+PASS: (19) (T5-B) (3,4): rho * A^2 = 1/16 | rho*A^2 = 1/16
+PASS: (20) (T5-B) (3,4): eta^2 + rho*A^2 = 1/9 | T2-sum = 1/9
+PASS: (21) (T5-B) (3,4): eta^2 + 2*rho*A^2 = 25/144 | T3-sum = 25/144
+
+----------------------------------------------------------------------------------------
+Part 8: (T5-C) concrete extreme instance (n_pair, n_color) = (1, 2)
+----------------------------------------------------------------------------------------
+PASS: (22) (T5-C) (1,2): rho = 1/2 | rho = 1/2
+PASS: (23) (T5-C) (1,2): A^2 = 1/2 | A^2 = 1/2
+PASS: (24) (T5-C) (1,2): eta^2 = 3/4 | eta^2 = 3/4
+PASS: (25) (T5-C) (1,2): rho * A^2 = 1/4 | rho*A^2 = 1/4
+PASS: (26) (T5-C) (1,2): eta^2 + rho*A^2 = 1 | T2-sum = 1
+PASS: (27) (T5-C) (1,2): eta^2 + 2*rho*A^2 = 5/4 | T3-sum = 5/4
+
+----------------------------------------------------------------------------------------
+Part 9: (T5-D) cross-instance independence check at non-integer (n_pair, n_color)
+----------------------------------------------------------------------------------------
+PASS: (28) (T5-D) (sqrt(2), 7/2): T1 holds at non-integer tuple | T1 diff = 0
+PASS: (29) (T5-D) (sqrt(2), 7/2): T2 holds at non-integer tuple | T2 diff = 0
+PASS: (30) (T5-D) (sqrt(2), 7/2): T3 holds at non-integer tuple | T3 diff = 0
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let n_pair > 0 and n_color > 0 be abstract positive real symbols,
+    with rho, A^2, and eta^2 satisfying
+        (H1)  rho      = 1 / (n_pair * n_color),
+        (H2)  A^2      = n_pair / n_color,
+        (H3)  eta^2    = 1 / n_pair^2  -  1 / n_color^2.
+
+  CONCLUSION:
+    (T1)  rho * A^2  =  1 / n_color^2.
+    (T2)  eta^2 + rho * A^2  =  1 / n_pair^2.
+    (T3)  eta^2 + 2 * rho * A^2  =  1 / n_pair^2 + 1 / n_color^2.
+    (T4)  Real-eta gate: eta^2 > 0  iff  n_color > n_pair.
+    (C1)  (T3) - (T2) = (T1) = 1 / n_color^2.
+    (T5)  Specific instances:
+           (2,3): rho=1/6, A^2=2/3, eta^2=5/36, rho*A^2=1/9,
+                  T2-sum=1/4, T3-sum=13/36;
+           (3,4): rho=1/12, A^2=3/4, eta^2=7/144, rho*A^2=1/16,
+                  T2-sum=1/9, T3-sum=25/144;
+           (1,2): rho=1/2, A^2=1/2, eta^2=3/4, rho*A^2=1/4,
+                  T2-sum=1, T3-sum=5/4.
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over positive n_pair,n_color symbols.
+    No physical Cl(3) local algebra, Z^3 spatial substrate, CKM atlas,
+    projector split, alpha_s, Wolfenstein coordinate identification,
+    charged-lepton, staggered-Dirac, PMNS, PDG observable, or specific
+    count tuple is consumed.
+
+  This narrow theorem isolates the polynomial-algebra inverse-square
+  sum-rule from any physical CKM atlas / Wolfenstein / inverse-square
+  upstream framing.
+
+
+TOTAL: PASS=30, FAIL=0
+
+----- stderr -----
+

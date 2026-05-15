@@ -1,0 +1,140 @@
+===== runner cache v1 =====
+runner: scripts/frontier_ckm_cp_phase_rho_eta_to_delta_narrow.py
+runner_sha256: d054a5b852f7c7daca65fb59004b9c5e3380c4f9785b4a31a3b6b77468a1ff3a
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.82
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: CKM CP-phase rho-eta to delta algebraic core
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: (T1) rho^2 + eta^2 = r^2 under (P)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T1) rho^2 + eta^2 - r^2 = 0 under (P)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (T2) cos^2(delta) = w_axis
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T2) cos^2(delta) - w_axis = 0 under (P)  (diff = 0)
+  [PASS (A)] (T2-offP) cos^2(delta) = w_axis / (w_axis + w_perp) symbolically (no (P) needed)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: (T3) sin^2(delta) = w_perp
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T3) sin^2(delta) - w_perp = 0 under (P)  (diff = 0)
+  [PASS (A)] (T3-offP) sin^2(delta) = w_perp / (w_axis + w_perp) symbolically (no (P) needed)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (T4) Pythagorean identity cos^2 + sin^2 = 1 under (P)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T4) cos^2 + sin^2 - 1 = 0 under (P)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (T5) tan^2(delta) = w_perp / w_axis
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T5) tan^2(delta) - w_perp/w_axis = 0 symbolically  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: (T6) integer-k specialisation w_axis = 1/k, w_perp = (k-1)/k
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T6a) cos^2(delta) = 1/k under k-specialisation  (diff = 0)
+  [PASS (A)] (T6b) sin^2(delta) = (k-1)/k under k-specialisation  (diff = 0)
+  [PASS (A)] (T6c) tan^2(delta) = k - 1 under k-specialisation  (diff = 0)
+  [PASS (A)] (T6d) arccos(1/sqrt(k)) = arctan(sqrt(k-1)) at k = 2  (|lhs - rhs| = 1.110e-16)
+  [PASS (A)] (T6d) arccos(1/sqrt(k)) = arctan(sqrt(k-1)) at k = 3  (|lhs - rhs| = 1.110e-16)
+  [PASS (A)] (T6d) arccos(1/sqrt(k)) = arctan(sqrt(k-1)) at k = 6  (|lhs - rhs| = 2.220e-16)
+  [PASS (A)] (T6d) arccos(1/sqrt(k)) = arctan(sqrt(k-1)) at k = 12  (|lhs - rhs| = 0.000e+00)
+
+----------------------------------------------------------------------------------------
+Part 7: (T7) k = 6 numerical readout
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T7a) cos^2(delta) = 1/6 exact at (w_axis, w_perp) = (1/6, 5/6)  (cos^2 = 1/6)
+  [PASS (A)] (T7b) tan^2(delta) = 5 exact at (w_axis, w_perp) = (1/6, 5/6)  (tan^2 = 5)
+  [PASS (A)] (T7c) delta = arccos(1/sqrt(6)) = arctan(sqrt(5))  (diff = 2.220e-16)
+  [PASS (A)] (T7d) delta = 65.905157447889 deg numerical (within 1e-12)  (delta_deg = 65.905157447889)
+
+----------------------------------------------------------------------------------------
+Part 8: (T8) Jarlskog-shape symbolic substitution J_0 = lambda^6 A^2 eta
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T8) J_0 := lambda^6 A^2 eta = alpha^3 * sqrt(r^2 * w_perp) / (n_pair^2 * n_color)  (diff = 0)
+
+----------------------------------------------------------------------------------------
+Part 9: (T9) k = 6 numerical specialisation of (T8)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T9) J_0 = alpha^3 * sqrt(5) / 72 at (n_pair, n_color, r^2, w_perp) = (2, 3, 1/6, 5/6)  (J_substituted = sqrt(5)*alpha**3/72)
+
+----------------------------------------------------------------------------------------
+Part 10: (T10) Wolfenstein-truncated matrix witness with apex (rho, eta) = (1/6, sqrt(5)/6)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T10a) apex arctan(eta/rho) = arctan(sqrt(5)) at (rho, eta) = (1/6, sqrt(5)/6)  (diff = 0.000e+00)
+  [PASS (A)] (T10b) rho^2 + eta^2 = 1/6 exact at (1/6, sqrt(5)/6)  (rho^2 + eta^2 = 0.166666666666667)
+  [PASS (A)] (T10c) row 1 norm^2 = 1 + O(lambda^4) within 1e-2  (|row1|^2 = 1.000655)
+  [PASS (A)] (T10d) row 2 norm^2 = 1 + O(lambda^4) within 1e-2  (|row2|^2 = 1.002349)
+  [PASS (A)] (T10e) row 3 norm^2 = 1 + O(lambda^4) within 1e-2  (|row3|^2 = 1.001781)
+  [PASS (A)] (T10f) row1 . row2* ~ 0 to O(lambda^4)  (|row1.row2*| = 1.569e-04)
+  [PASS (A)] (T10g) row1 . row3* ~ 0 to O(lambda^4)  (|row1.row3*| = 2.149e-04)
+  [PASS (A)] (T10h) row2 . row3* ~ 0 to O(lambda^4)  (|row2.row3*| = 1.046e-03)
+
+----------------------------------------------------------------------------------------
+Part 11: Off-cone sanity (uniform partition w_axis = w_perp = 1/2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] uniform partition w_axis = w_perp = 1/2 gives cos^2 = 1/2 (off the k=6 cone)  (cos^2 = 1/2)
+  [PASS (A)] uniform partition gives tan^2 = 1 (off the k=6 cone, delta = pi/4)  (tan^2 = 1)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Abstract real positive symbols (w_axis, w_perp, r^2) with partition
+        (P)  w_axis + w_perp = 1,  w_axis > 0,  w_perp > 0,
+    and definitions
+        rho^2 := r^2 * w_axis,  eta^2 := r^2 * w_perp,
+        cos^2(delta) := rho^2 / (rho^2 + eta^2),
+        sin^2(delta) := eta^2 / (rho^2 + eta^2),
+        tan^2(delta) := sin^2(delta) / cos^2(delta).
+
+  CONCLUSION:
+    (T1) rho^2 + eta^2 = r^2 under (P).
+    (T2) cos^2(delta) = w_axis.
+    (T3) sin^2(delta) = w_perp.
+    (T4) cos^2 + sin^2 = 1 under (P).
+    (T5) tan^2(delta) = w_perp / w_axis.
+    (T6) k-specialisation w_axis = 1/k, w_perp = (k-1)/k:
+           cos^2 = 1/k, sin^2 = (k-1)/k, tan^2 = k-1,
+           delta = arccos(1/sqrt(k)) = arctan(sqrt(k-1)).
+    (T7) k = 6 instance: cos^2 = 1/6, tan = sqrt(5),
+         delta = 65.905157447889... deg.
+    (T8) Jarlskog-shape lambda^6 A^2 eta substitution reduces to
+         alpha^3 * sqrt(r^2 * w_perp) / (n_pair^2 * n_color) under
+         (J-l), (J-A), (D-eta).
+    (T9) (n_pair, n_color, r^2, w_perp) = (2, 3, 1/6, 5/6) gives
+         J_0 = alpha^3 * sqrt(5) / 72 (substitution form matches the
+         parent atlas's stated factorisation).
+    (T10) Diagnostic Wolfenstein-truncated matrix witness: a matrix with
+          apex (1/6, sqrt(5)/6) has arctan(eta/rho) = arctan(sqrt(5))
+          and row-normalization / row-orthogonality at O(lambda^4) precision.
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over abstract positive symbols
+    (w_axis, w_perp, r^2, alpha, n_pair, n_color, k). No CKM atlas
+    authority, no Wolfenstein structural identity, no projector-split
+    1+5 input, no alpha_s value, no PDG comparator.
+
+  This narrow theorem isolates the CP-plane-coordinate -> phase-angle
+  algebraic transformation from the upstream physical CKM-atlas /
+  Wolfenstein / alpha_s authorities that the parent bundles together.
+
+
+========================================================================================
+  TOTAL: PASS=30, FAIL=0
+========================================================================================
+
+----- stderr -----
+

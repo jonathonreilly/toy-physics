@@ -1,0 +1,111 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py
+runner_sha256: b11cd56dd254c3518e2d29713b2ad9f5ecd36cc130b33e885e617cf42505563b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.64
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+ONE_GENERATION_ANOMALY_SINGLET_COMPLETION_NARROW_THEOREM_NOTE_2026-05-10
+Goal: verify (R1)-(R4) closed forms satisfy anomaly equations
+parametric in n_color, plus framework n_color=3 sanity
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic n_color = n_color, a, b = LH eigenvalues
+  LH trace constraint (imported from sister narrow): b = -n_color * a
+  (R1) Y_uR  = a + 1
+  (R2) Y_dR  = a - 1
+  (R3) Y_eR  = b - 1
+  (R4) Y_nuR = b + 1 (neutral branch gives Y_nuR = 0 at b = -1)
+
+----------------------------------------------------------------------------------------
+Part 1: color SU(3)_c anomaly under closed forms
+----------------------------------------------------------------------------------------
+  [PASS (A)] color SU(3)_c anomaly vanishes identically  (color anomaly simplifies to 0)
+  [PASS (A)] color anomaly /n_color form: 2a - (Y_uR + Y_dR) = 0  (2a - (Y_uR + Y_dR) simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 2: mixed gauge-gravity anomaly under closed forms
+----------------------------------------------------------------------------------------
+  [PASS (A)] gauge-gravity anomaly vanishes before LH trace substitution  (gauge-gravity anomaly simplifies to 0)
+  [PASS (A)] gauge-gravity anomaly under LH trace b = -n_color a: vanishes identically  (grav_anom under trace = 0)
+
+----------------------------------------------------------------------------------------
+Part 3: cubic [U(1)_Y]^3 anomaly under closed forms
+----------------------------------------------------------------------------------------
+  [PASS (A)] cubic anomaly under LH trace b = -n_color a: vanishes identically  (cubic_anom under trace = 0)
+
+----------------------------------------------------------------------------------------
+Part 4: (R1)-(R4) framework instance n_color = 3, b = -1, a = 1/3
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework n_color=3: Y_uR = 4/3  (Y_uR = 4/3)
+  [PASS (A)] framework n_color=3: Y_dR = -2/3  (Y_dR = -2/3)
+  [PASS (A)] framework n_color=3: Y_eR = -2  (Y_eR = -2)
+  [PASS (A)] framework n_color=3: Y_nuR = 0 (neutral branch under b=-1)  (Y_nuR = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: anomalies vanish numerically at framework n_color = 3
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework n_color=3: (COLOR_ANOM) SU(3)_c anomaly = 0  (color_anom at framework = 0)
+  [PASS (A)] framework n_color=3: (GRAV_ANOM) gauge-gravity anomaly = 0  (grav_anom at framework = 0)
+  [PASS (A)] framework n_color=3: (CUBIC_ANOM) cubic [U(1)_Y]^3 anomaly = 0  (cubic_anom at framework = 0)
+
+----------------------------------------------------------------------------------------
+Part 6: broad-note hypercharge readouts at n_color = 3
+----------------------------------------------------------------------------------------
+  [PASS (A)] broad-note readout at framework n_color=3: Y_uR = 4/3  (Y_uR = 4/3; broad note uses (1,3)_{+4/3})
+  [PASS (A)] broad-note readout at framework n_color=3: Y_dR = -2/3  (Y_dR = -2/3; broad note uses (1,3)_{-2/3})
+  [PASS (A)] broad-note readout at framework n_color=3: Y_eR = -2  (Y_eR = -2; broad note uses (1,1)_{-2})
+  [PASS (A)] broad-note readout at framework n_color=3: Y_nuR = 0  (Y_nuR = 0; broad note uses (1,1)_{0})
+
+----------------------------------------------------------------------------------------
+Part 7: non-framework instance n_color = 5, b = -1, a = 1/5
+----------------------------------------------------------------------------------------
+  [PASS (A)] non-framework n_color=5: Y_uR = 6/5  (Y_uR = 6/5)
+  [PASS (A)] non-framework n_color=5: Y_dR = -4/5  (Y_dR = -4/5)
+  [PASS (A)] non-framework n_color=5: Y_eR = -2 (independent of n_color)  (Y_eR = -2)
+  [PASS (A)] non-framework n_color=5: Y_nuR = 0 (independent of n_color, neutral branch)  (Y_nuR = 0)
+  [PASS (A)] non-framework n_color=5: all three anomalies vanish  ((color_anom, grav_anom, cubic_anom) = (0, 0, 0))
+
+----------------------------------------------------------------------------------------
+Part 8: discrete e_R <-> nu_R relabelling branch is anomaly-consistent
+----------------------------------------------------------------------------------------
+  [PASS (A)] discrete branch e_R <-> nu_R: (GRAV_ANOM) still vanishes  (A3_swap = 0)
+  [PASS (A)] discrete branch e_R <-> nu_R: (CUBIC_ANOM) still vanishes  (A4_swap = 0)
+  [PASS (A)] discrete branch at framework n_color=3: Y_eR_swap = 0, Y_nuR_swap = -2  (swap: Y_eR = 0, Y_nuR = -2)
+
+----------------------------------------------------------------------------------------
+Part 9: (C1) sum of all hypercharges (gravitational trace) vanishes
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) gravitational-trace sum vanishes identically  (confirms mixed gauge-gravity anomaly is gravitational-trace identity (C1))
+
+----------------------------------------------------------------------------------------
+Part 10: (C2) sum of right-handed Y under (R1)-(R4)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C2) sum_{R} Y_R = 2a + 2b = 2a(1 - n_color)  (sum_RH under trace = 2*a*(1 - n_color))
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (R1)-(R4) closed forms for Y_uR, Y_dR, Y_eR, Y_nuR
+    Color SU(3)_c anomaly vanishes identically
+    Gauge-gravity anomaly vanishes under LH trace b = -n_color a
+    Cubic [U(1)_Y]^3 anomaly vanishes under LH trace
+    Framework n_color=3: (Y_uR, Y_dR, Y_eR, Y_nuR) = (4/3, -2/3, -2, 0)
+    Hypercharge readouts match broad-note rep-literal subscripts at n_color=3
+    Non-framework n_color=5: (Y_uR, Y_dR, Y_eR, Y_nuR) = (6/5, -4/5, -2, 0)
+    Discrete e_R <-> nu_R relabelling branch is anomaly-consistent
+    (C1), (C2) corollaries verified
+
+========================================================================================
+TOTAL: PASS=26, FAIL=0
+========================================================================================
+
+----- stderr -----
+
