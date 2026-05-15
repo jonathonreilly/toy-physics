@@ -15,30 +15,35 @@ status are set by the independent audit lane.
 `alpha = 0.5256`, R^2 = 0.9996 on `h <= 0.25`. Those numbers are used
 here as a comparison target only, not as audit authority.
 
-**Upstream bridge theorems (added 2026-05-11 in response to the
-`audited_conditional` verdict on this row):**
+**Upstream bridge diagnostics (added 2026-05-11 in response to the
+`audited_conditional` verdict on this row; each is itself a
+`bounded_theorem` source note, not a retained-grade theorem):**
 
 - [`docs/NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md)
-  — derives the full kernel `A(y_s -> y_d; h)` from blocked-slit propagation
-  with translation invariance verified to machine precision. Identifies
-  the correct slit length anchoring as `L_1 = L_total/3` (source-to-slit,
-  selection-filter interpretation), not `L_2 = 2 L_total/3` (slit-to-detector,
-  Huygens interpretation). Sharpens the residual to -1.85%.
+  — runner-backed identification of the full kernel `A(y_s -> y_d; h)` on
+  blocked-slit propagation. Translation invariance verified to machine
+  precision on the checked refinement window. Empirical length-anchoring
+  comparison: the `L_1 = L_total/3` source-to-slit reading matches PR #968's
+  `C_arm = 2.7107` to residual `-1.85%`, while the `L_2 = 2 L_total/3`
+  Huygens reading gives `+38.81%` — selection-filter interpretation is
+  sharper by ~4x.
 - [`docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md)
-  — closed-form finite-slit-aperture correction: complex-Gaussian truncated
-  convolution `psi_det(y) ~ exp(-y^2/(4 alpha_total)) [erf(u_b) - erf(u_a)]`.
-  NNLO predicts `alpha_eff = 0.5247`, |Delta alpha| = 0.0009 vs empirical
-  0.5256 (96% of LO gap closed). Per-h sigma_arm matches PR #968 to <= 0.3%
-  across the fit window.
+  — closed-form finite-slit-aperture NNLO correction: complex-Gaussian
+  truncated convolution `psi_det(y) ~ exp(-y^2/(4 alpha_total))
+  [erf(u_b) - erf(u_a)]`. NNLO predicts `alpha_eff = 0.5247`,
+  `|Delta alpha| = 0.0009` vs empirical `0.5256` (96% of LO gap closed under
+  the fitted comparison). Per-h sigma_arm matches PR #968 to <= 0.3% across
+  the fit window.
 - [`docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md)
   — diagnostic-fit artifact at the audit boundary: under `alpha = 1/2`
-  constrained fitting (the geodesic prediction), the per-h estimator
+  constrained fitting (the geodesic-scaling prediction), the per-h estimator
   `C_arm(h) = sigma_arm(h) / sqrt(h)` recovers the analytic value
-  pointwise with residual `0.504%` at h=0.03125 and `0.268%` at h=0.015625.
+  pointwise on the checked grid with residual `0.504%` at h=0.03125 and
+  `0.268%` at h=0.015625.
 
 See the "2026-05-11 audit-repair addendum" section near the end of this
-note for the consolidated repair statement and a sharper length-anchoring
-interpretation.
+note for the consolidated repair statement and the corrected length-
+anchoring interpretation.
 
 ## Claim
 
@@ -366,15 +371,26 @@ following load-bearing concern, quoted from the auditor's `repair_target`:
 > width from the actual blocked-slit propagation, and supply/audit the
 > diagnostic fit artifact as a direct dependency.
 
-Both repair targets are now present on `main` as independent source notes;
-this addendum cites them and consolidates the resulting picture.
+The "retained bridge theorem" branch of the auditor's `or` is not met by
+this addendum — the cited dependencies are themselves source-note
+`bounded_theorem` proposals, not retained-grade theorems. The
+"deterministic runner deriving the arm width from the actual blocked-slit
+propagation" branch IS met: the full-kernel runner backs a direct
+numerical identification of the blocked-slit propagation kernel
+(`A(y_s -> y_d; h)`) on the checked refinement window. The "diagnostic
+fit artifact" branch is also met by the alpha-constrained refit note.
+All three are now present on `main` as independent source notes; this
+addendum cites them and consolidates the resulting picture under their
+current source-note framing (numerical diagnostic, not retained theorem).
 
-**1. Blocked-slit propagation theorem.** The full-kernel identification
-note (`NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10`)
-derives `A(y_s -> y_d; h)` directly from the harness's blocked-slit
-propagation. Translation invariance under shifts of `y_s` is verified to
-machine precision (`sigma` and `c_2` spread across the `y_s` grid both
-exactly zero). The kernel structure is
+**1. Blocked-slit propagation runner-backed identification.** The
+full-kernel identification note
+(`NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10`)
+numerically identifies `A(y_s -> y_d; h)` directly from the harness's
+blocked-slit propagation on the checked grid. Translation invariance
+under shifts of `y_s` is verified to machine precision (`sigma` and `c_2`
+spread across the `y_s` grid both exactly zero on the checked window).
+The fitted kernel structure is
 
 ```text
 A(y_s -> y_d; h)  =  C_amp(h)  *  exp[-(y_d - y_s)^2 / (2 sigma(h)^2)]
@@ -383,20 +399,21 @@ A(y_s -> y_d; h)  =  C_amp(h)  *  exp[-(y_d - y_s)^2 / (2 sigma(h)^2)]
 
 with `sigma(h) ~ 4.61 sqrt(h)` and `c_2_infinity ~ 0.02999` (the latter
 matching the c_2 derivation note `NN_LATTICE_RESCALED_C2_DERIVATION_NOTE_2026-05-10`
-to 0.33%).
+to 0.33%) on the checked grid.
 
-**2. Length-anchoring interpretation correction.** The original step 8 of
+**2. Length-anchoring numerical correction.** The original step 8 of
 this note asserted that the slit "re-anchors the per-arm centroid"
 (Huygens secondary-point-source reading) and used `L_eff = L_2 = 2 L_total / 3`.
-The full-kernel note's cross-check finds that the empirical `C_arm = 2.7107`
-is matched by **`L_1 = L_total / 3` source-to-slit anchoring** to residual
-`-1.85%`, while the `L_2 = 2 L_total / 3` Huygens anchoring gives residual
-`+38.81%`. The physically correct reading is:
+The full-kernel note's empirical cross-check finds that PR #968's
+`C_arm = 2.7107` is matched by **`L_1 = L_total / 3` source-to-slit
+anchoring** to residual `-1.85%`, while the `L_2 = 2 L_total / 3` Huygens
+anchoring gives residual `+38.81%`. Under the runner-backed reading:
 
 > The narrow slit acts as a **selection filter** on the source's natural
-> angular spread at distance `L_1 = L_total/3`, not as a Huygens secondary
-> point-source. The per-arm width on the detector inherits the source-side
-> propagation length `L_1`, not the post-slit length `L_2`.
+> angular spread at distance `L_1 = L_total/3`, rather than as a Huygens
+> secondary point-source. The per-arm width on the detector inherits the
+> source-side propagation length `L_1`, not the post-slit length `L_2`.
+> This is a numerical-fit identification, not a derived theorem.
 
 Numerically, the `L_2` formula in this note's step 7 collapses to a value
 4x sharper under the `L_1` reading because `sqrt(L_1 / L_total) = sqrt(1/3)`
