@@ -115,4 +115,4 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16](DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md)
 - [pmns_active_four_real_source_from_transport_note](PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
 - [dm_neutrino_dirac_bridge_theorem_note_2026-04-15](DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
-- [dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18](DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md)
+- `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md` <!-- cycle-break 2026-05-15: forward reference (this 04-15 carrier note is upstream of the 04-18 side-conclusion); link backticked to break 49 dep cycles via dm_neutrino_source_surface_carrier_normal_form_theorem_note_2026-04-16 -->

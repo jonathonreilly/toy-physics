@@ -512,12 +512,15 @@ The runner verifies the canonical instance (`a = 1.5`, `b = 0.7`) at
 50-digit interval precision: commutator norm `|[H, U_{C_3}]| < 10^{-30}`,
 corner expectations all equal to within `10^{-30}`.
 
-Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
-the `C_3[111]` symmetry is the framework's **load-bearing preserved
-symmetry**, analogous to QCD `SU(3)` color or isospin `SU(2)`. The
-equal-expectation lemma is therefore proposed as a bounded structural
-no-go candidate within A_min rather than as an open demand for
-C_3-breaking dynamics. The framework's own prediction is equal
+The runner establishes the equal-expectation lemma directly on the
+declared finite operator family. A later non-load-bearing interpretation
+note, `C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`
+<!-- cycle-break 2026-05-15: forward ref backticked -->, records the
+repo-wide reading of `C_3[111]` as the framework's preserved symmetry.
+The equal-expectation lemma is therefore proposed as a bounded structural
+no-go candidate within the physical `Cl(3)` local algebra / `Z^3`
+spatial substrate baseline rather than as an open demand for
+`C_3`-breaking dynamics. The framework's own prediction is equal
 expectation under preserved `C_3[111]`, not an admitted observation.
 Independent audit decides whether this no-go candidate is retained-grade.
 
@@ -538,11 +541,13 @@ gives:
 - NQ ensures the orbit cannot decompose into smaller pieces, so no
   finer reduction is possible
 
-Per [`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`](C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md),
-the residual "which cyclic shift" is a **labeling convention**
-identical in nature to standard particle-physics conventions
-`{u, c, t}`, `{ν_1, ν_2, ν_3}`, `{K_S, K_L}`, etc. — consuming zero
-retained-grade content and not loading PDG data into a derivation step.
+The later non-load-bearing interpretation note
+`C3_SYMMETRY_PRESERVED_INTERPRETATION_NOTE_2026-05-08.md`
+<!-- cycle-break 2026-05-15: forward ref backticked --> records the
+residual "which cyclic shift" as a **labeling convention**, identical
+in nature to standard particle-physics conventions `{u, c, t}`,
+`{ν_1, ν_2, ν_3}`, `{K_S, K_L}`, etc. — consuming zero retained-grade
+content and not loading PDG data into a derivation step.
 
 This is a **partial reframe**, not a full positive derivation closure.
 Strict derivation closure of AC_φλ still requires either (a) an

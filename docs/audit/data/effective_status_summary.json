@@ -39,9 +39,9 @@
       "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 278,
+  "cycles_detected": 177,
   "effective_status_counts": {
-    "audited_conditional": 189,
+    "audited_conditional": 188,
     "audited_failed": 18,
     "audited_numerical_match": 15,
     "audited_renaming": 16,
@@ -60,7 +60,7 @@
     "retained_bounded": 310,
     "retained_no_go": 134,
     "retained_pending_chain": 3,
-    "unaudited": 1172
+    "unaudited": 1173
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

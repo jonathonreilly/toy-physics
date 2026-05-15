@@ -243,5 +243,5 @@ python3 scripts/frontier_neutrino_mass_reduction_to_dirac.py
 
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
-- [publication.ci3_z3.derivation_atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
+- `publication/ci3_z3/DERIVATION_ATLAS.md` <!-- cycle-break 2026-05-15: forward ref backticked -->
 - [publication.ci3_z3.publication_matrix](publication/ci3_z3/PUBLICATION_MATRIX.md)

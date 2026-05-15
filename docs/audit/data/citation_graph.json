@@ -3249,142 +3249,6 @@
       "to": "structural_no_go_survey_note"
     },
     {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_gamma_orbit_selected_line_closure_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_selected_line_cyclic_response_bridge_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_microscopic_scalar_selector_target_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_one_scalar_obstruction_triangulation_theorem_note_2026-04-18"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_cl3_selector_gap_note_2026-04-19"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_z3_scalar_potential_support_note_2026-04-19"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_c3_singlet_extension_reduction_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_c3_constant_singlet_reparameterization_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_eigenvalue_q23_surface_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_scale_selector_reparameterization_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_transport_gap_constant_no_go_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_weighted_character_source_axis_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_derivation_status_note"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_closure_recommendation_2026-04-22"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_loop_investigation_summary"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_physical_bridge_attempt_2026-04-22"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_explicit_calculations_note"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_axiom_native_support_batch_note_2026-04-22"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_closure_atlas_issues_flagged"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_brannen_geometry_dirac_support_note_2026-04-22"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_brannen_callan_harvey_candidate_note_2026-04-22"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_native_dimensionless_review_packet_2026-04-24"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_pointed_origin_exhaustion_theorem_note_2026-04-24"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_dimensionless_objection_closure_review_packet_2026-04-24"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24"
-    },
-    {
-      "from": "charged_lepton_koide_review_packet_2026-04-18",
-      "to": "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24"
-    },
-    {
       "from": "charged_lepton_mass_hierarchy_review_note_2026-04-17",
       "to": "charged_lepton_koide_review_packet_2026-04-18"
     },
@@ -6303,10 +6167,6 @@
     {
       "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
       "to": "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
-    },
-    {
-      "from": "dm_neutrino_hermitian_bridge_carrier_note_2026-04-15",
-      "to": "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
     },
     {
       "from": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
@@ -11127,10 +10987,6 @@
     {
       "from": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
       "to": "three_generation_observable_theorem_note"
-    },
-    {
-      "from": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
-      "to": "neutrino_dirac_z3_support_trichotomy_note"
     },
     {
       "from": "higher_order_structural_theorems_note",
@@ -16894,10 +16750,6 @@
     },
     {
       "from": "neutrino_mass_reduction_to_dirac_note",
-      "to": "publication.ci3_z3.derivation_atlas"
-    },
-    {
-      "from": "neutrino_mass_reduction_to_dirac_note",
       "to": "publication.ci3_z3.publication_matrix"
     },
     {
@@ -21147,10 +20999,6 @@
     {
       "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
       "to": "staggered_dirac_physical_species_direct_theorem_note_2026-05-07"
-    },
-    {
-      "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
-      "to": "c3_symmetry_preserved_interpretation_note_2026-05-08"
     },
     {
       "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
@@ -39540,43 +39388,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [
-        "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
-        "koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18",
-        "koide_gamma_orbit_observable_selector_generator_line_note_2026-04-18",
-        "koide_gamma_orbit_selected_line_closure_note_2026-04-18",
-        "koide_selected_line_cyclic_response_bridge_note_2026-04-18",
-        "koide_microscopic_scalar_selector_target_note_2026-04-18",
-        "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18",
-        "koide_one_scalar_obstruction_triangulation_theorem_note_2026-04-18",
-        "koide_cl3_selector_gap_note_2026-04-19",
-        "koide_z3_scalar_potential_support_note_2026-04-19",
-        "koide_c3_singlet_extension_reduction_theorem_note_2026-04-20",
-        "koide_c3_constant_singlet_reparameterization_theorem_note_2026-04-20",
-        "koide_selected_slice_spectral_completion_and_minimal_local_spectral_law_no_go_note_2026-04-20",
-        "koide_eigenvalue_q23_surface_theorem_note_2026-04-20",
-        "koide_scale_selector_reparameterization_theorem_note_2026-04-20",
-        "koide_transport_gap_constant_no_go_note_2026-04-20",
-        "koide_weighted_character_source_axis_theorem_note_2026-04-20",
-        "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
-        "koide_qubit_lattice_dim_algebraic_closure_note_2026-04-20",
-        "koide_a1_derivation_status_note",
-        "koide_a1_closure_recommendation_2026-04-22",
-        "koide_a1_loop_investigation_summary",
-        "koide_a1_physical_bridge_attempt_2026-04-22",
-        "koide_explicit_calculations_note",
-        "koide_axiom_native_support_batch_note_2026-04-22",
-        "koide_closure_atlas_issues_flagged",
-        "koide_brannen_geometry_dirac_support_note_2026-04-22",
-        "koide_brannen_callan_harvey_candidate_note_2026-04-22",
-        "koide_native_dimensionless_review_packet_2026-04-24",
-        "koide_pointed_origin_exhaustion_theorem_note_2026-04-24",
-        "koide_dimensionless_objection_closure_review_packet_2026-04-24",
-        "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
-        "koide_a1_fractional_topology_no_go_synthesis_note_2026-04-24",
-        "koide_a1_o13_cheeger_simons_rz_no_go_note_2026-04-24"
-      ],
-      "note_hash": "7a5613ac23a1a1244c79c23163b3c88b4fbbfc9f38426672607aed1eed0674a4",
+      "deps": [],
+      "note_hash": "ca130565f5121264ba5bfcfb481bd798ed42541a39aa154dc9f016f928f0a5bf",
       "path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
       "runner_path": null,
       "title": "Charged-Lepton Koide Support Packet (2026-04-18)"
@@ -43404,10 +43217,9 @@
       "deps": [
         "dm_neutrino_exact_h_source_surface_theorem_note_2026-04-16",
         "pmns_active_four_real_source_from_transport_note",
-        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
-        "dm_neutrino_source_surface_carrier_side_conclusion_note_2026-04-18"
+        "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
       ],
-      "note_hash": "4ce79182dbcb3ce526bc9b0d36ef1f44b265b77df06d165f008b4f45d0bf338a",
+      "note_hash": "696b94bd47fbb29b29c9fe28be37aaf21dba3ef09293aa23140b0c60bf5cf836",
       "path": "docs/DM_NEUTRINO_HERMITIAN_BRIDGE_CARRIER_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_hermitian_bridge_carrier.py",
       "title": "DM Neutrino Hermitian Bridge Carrier"
@@ -49531,10 +49343,9 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
-        "three_generation_observable_theorem_note",
-        "neutrino_dirac_z3_support_trichotomy_note"
+        "three_generation_observable_theorem_note"
       ],
-      "note_hash": "b2a9acfacbc5ab788b92a2c1c412eb23721c0824d54f5f41bb4974693facb23f",
+      "note_hash": "dab0b4e17461affc88e9780e4c7d03c44b85b24d9fafc7e83b4c2d033515f449",
       "path": "docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py",
       "title": "Higgs `Z_3` Charge Gauge-Redundancy Theorem for PMNS"
@@ -56090,10 +55901,9 @@
       "claim_type_seed_hint": "positive_theorem",
       "deps": [
         "charged_lepton_two_higgs_canonical_reduction_note",
-        "publication.ci3_z3.derivation_atlas",
         "publication.ci3_z3.publication_matrix"
       ],
-      "note_hash": "513e40b8aaa7c32689adf8bebd2b669355bcd35ab3de7b77a962b0865c41036a",
+      "note_hash": "eab019355d21aa029c7934ca3c2ee9ee0c608bffb31d67c0b1c538529c0f1a90",
       "path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
       "title": "Neutrino Mass Reduction To The Dirac Lane"
@@ -64475,10 +64285,9 @@
         "staggered_dirac_realization_gate_note_2026-05-03",
         "staggered_dirac_grassmann_forcing_theorem_note_2026-05-07",
         "staggered_dirac_physical_species_direct_theorem_note_2026-05-07",
-        "c3_symmetry_preserved_interpretation_note_2026-05-08",
         "a3_route5_no_proper_quotient_sharpened_obstruction_note_2026-05-08_r5"
       ],
-      "note_hash": "0a777c4ac609def571b7cb88138f059428ee4bffd096bf4b3c4837dcb1f4ddeb",
+      "note_hash": "7b3cf9016a13589a54bf76ac8f5c37ffa4a7d6754aea33ba2a3ddb8e1156f257",
       "path": "docs/STAGGERED_DIRAC_SUBSTEP4_AC_NARROW_BOUNDED_NOTE_2026-05-07_substep4ac.md",
       "runner_path": "scripts/cl3_staggered_dirac_substep4_ac_check_2026_05_07_substep4ac.py",
       "title": "Staggered-Dirac Substep 4 \u2014 AC Narrowing (Atomic Decomposition, Bounded)"
@@ -70437,6 +70246,7 @@
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
     "charged_lepton_koide_cone_algebraic_equivalence_narrow_theorem_note_2026-05-10",
     "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+    "charged_lepton_koide_review_packet_2026-04-18",
     "charged_lepton_lane6_theorem_plan_note_2026-04-28",
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
     "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
@@ -71083,10 +70893,10 @@
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8908,
-    "leaf_count": 618,
+    "edge_count": 8870,
+    "leaf_count": 621,
     "node_count": 2210,
-    "root_count": 770,
+    "root_count": 771,
     "runners_with_path": 1829
   }
 }
