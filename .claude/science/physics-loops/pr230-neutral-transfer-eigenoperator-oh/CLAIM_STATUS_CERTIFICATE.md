@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block102_z3_heat_kernel_neutral_transfer_attempt`.
+Current block: `block103_z3_heat_kernel_scale_selector_no_go`.
 
 ```yaml
-actual_current_surface_status: exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent
+actual_current_surface_status: exact negative boundary / Z3 heat-kernel scale and time selectors do not derive the PR230 physical neutral transfer
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block102 gives a real finite Z3 heat-kernel primitive witness, but it does not derive same-surface PR230 physical transfer/action authority, does not select the heat time/scale, and does not supply H4 source/canonical-Higgs coupling. No retained/proposed-retained closure is authorized."
+proposal_allowed_reason: "Block103 shows the Z3 heat-kernel family has a continuum of symmetry/cone/semigroup/reversible primitive members and no current-surface selector for heat time or diffusion scale. It supplies no physical neutral transfer/action authority, canonical O_H, H4 source/canonical-Higgs coupling, or retained/proposed-retained closure."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,13 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block103 records the Z3 heat-kernel scale-selector no-go as an exact
+   negative boundary. The C3 heat-kernel family is a valid mathematical
+   semigroup for every `tau>0`, but symmetry, cone, semigroup, reversibility,
+   entropy, and spectral-gap criteria do not select a finite physical heat
+   time or diffusion scale. Generator scaling is interchangeable with heat
+   time unless a same-surface action supplies the coefficient, and H4
+   source/canonical-Higgs coupling remains absent.
 0. Block102 records the Z3 heat-kernel neutral-transfer attempt as exact
    mathematical support only. The C3 Dirichlet-form heat kernel is primitive
    for every `t>0`, but the actual PR230 surface does not identify it as the

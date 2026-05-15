@@ -1,6 +1,7 @@
 # Opportunity Queue
 
-Campaign mode queue after block102 Z3 heat-kernel neutral-transfer attempt,
+Campaign mode queue after block103 Z3 heat-kernel scale-selector no-go,
+block102 Z3 heat-kernel neutral-transfer attempt,
 block101 post-Block100 completion/reopen audit,
 block100 W/Z explicit-`v` authority firewall, and block99 complete higher-shell
 finite-packet monotonicity boundary.
@@ -16,11 +17,15 @@ finite-packet monotonicity boundary.
 | 7 | Schur `C_x|s` higher-shell / scalar-LSZ support | Low | 4 | Complete 63/63 packet plus Block99 monotonicity gate | Medium | Medium | Support-only / shortcut closed | Block99 consumes the complete 63/63 packet and all tested finite scalar/Schur proxies fail the necessary Stieltjes divided-difference signs. Do not replay finite-row promotion; reopen only with strict Schur pole derivative rows and FV/IR authority or a physical bridge artifact. |
 
 No global stop is justified, but the refreshed queue does not authorize another
-current-surface finite-row shortcut gate, package-`v` W/Z shortcut, or path-only
-remote-reopen shortcut. Block102 adds a genuine finite-group Z3 heat-kernel
-primitive witness, but it is mathematical support only: no current PR230 action
-selects the heat time/scale as physical transfer, and H4 source/canonical-Higgs
-coupling remains absent. Block101 verifies the final chunk state is complete at
+current-surface finite-row shortcut gate, package-`v` W/Z shortcut, path-only
+remote-reopen shortcut, or heat-kernel scale selector shortcut. Block103 closes
+the reversible heat-kernel time/scale selector: symmetry, cone, semigroup,
+reversibility, entropy, and spectral-gap criteria leave a continuum or a
+boundary/external selector, not a finite PR230 physical transfer. Block102 adds
+a genuine finite-group Z3 heat-kernel primitive witness, but it is mathematical
+support only: no current PR230 action selects the heat time/scale as physical
+transfer, and H4 source/canonical-Higgs coupling remains absent. Block101
+verifies the final chunk state is complete at
 `63/63` with active `[]` and planned `[]`, while no current or fetched remote
 strict reopen artifact is admitted. Block99 closes the complete higher-shell
 packet as strict scalar-LSZ/Schur authority: the finite rows are schema-clean

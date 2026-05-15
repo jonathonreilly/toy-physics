@@ -1,5 +1,35 @@
 # Review History
 
+## Block103
+
+Local review run on 2026-05-15 05:35 UTC.
+
+Scope:
+
+- `docs/YT_PR230_Z3_HEAT_KERNEL_SCALE_SELECTOR_NO_GO_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_z3_heat_kernel_scale_selector_no_go.py`
+- `outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json`
+- aggregate runners/certificates consuming the new scale-selector boundary
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | Runner checks a continuum of sampled `tau>0` heat kernels, semigroup law, generator-scale reparametrization, entropy/gap monotonicity, parent gates, and future-artifact absence. |
+| Physics Claim Boundary | OPEN / NO CLOSURE | The heat-kernel time/diffusion scale is not selected by current PR230 symmetry/cone/semigroup/reversibility data; H4 source/canonical-Higgs coupling remains absent. |
+| Imports / Support | CLEAN / DISCLOSED | No observed selector, `H_unit`, `yt_ward_identity`, plaquette/u0 chain, `kappa_s=1`, `c2=1`, `Z_match=1`, heat-time convention, or entropy/gap action principle is imported. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_z3_heat_kernel_scale_selector_no_go.py
+# OK
+python3 scripts/frontier_yt_pr230_z3_heat_kernel_scale_selector_no_go.py
+# SUMMARY: PASS=13 FAIL=0
+```
+
 ## Block102
 
 Local review run on 2026-05-15 05:25 UTC.

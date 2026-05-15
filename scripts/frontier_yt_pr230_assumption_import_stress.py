@@ -167,6 +167,9 @@ def main() -> int:
         "z3_heat_kernel_neutral_transfer_attempt": load(
             "outputs/yt_pr230_z3_heat_kernel_neutral_transfer_attempt_2026-05-15.json"
         ),
+        "z3_heat_kernel_scale_selector_no_go": load(
+            "outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json"
+        ),
         "source_coordinate_transport_completion_attempt": load(
             "outputs/yt_pr230_source_coordinate_transport_completion_attempt_2026-05-06.json"
         ),
@@ -456,6 +459,8 @@ def main() -> int:
         "same-surface neutral transfer/action or off-diagonal generator",
         "Z3 heat-kernel neutral-transfer attempt",
         "not proof selectors until a same-surface action selects the heat time and supplies H4 source/canonical-Higgs coupling",
+        "Z3 heat-kernel scale-selector no-go",
+        "not proof selectors until a same-surface action fixes the heat time/diffusion scale plus H4 source/canonical-Higgs coupling",
         "Origin-main EW M-residual CMT packet",
         "CMT/u0/Fierz channel bookkeeping is not proof selectors",
         "Two-source taste-radial action source vertex",
@@ -1074,6 +1079,34 @@ def main() -> int:
         "z3-heat-kernel-neutral-transfer-support-not-h3h4",
         z3_heat_kernel_support_not_h3h4,
         z3_heat_kernel.get("actual_current_surface_status"),
+    )
+    z3_heat_kernel_scale_selector = certificates["z3_heat_kernel_scale_selector_no_go"]
+    z3_heat_kernel_scale_selector_blocks_shortcut = (
+        "Z3 heat-kernel scale and time selectors do not derive"
+        in str(z3_heat_kernel_scale_selector.get("actual_current_surface_status"))
+        and z3_heat_kernel_scale_selector.get("proposal_allowed") is False
+        and z3_heat_kernel_scale_selector.get(
+            "z3_heat_kernel_scale_selector_no_go_passed"
+        )
+        is True
+        and z3_heat_kernel_scale_selector.get("heat_kernel_scale_time_not_selected")
+        is True
+        and z3_heat_kernel_scale_selector.get(
+            "same_surface_physical_action_selects_heat_time"
+        )
+        is False
+        and z3_heat_kernel_scale_selector.get("strict_neutral_h3_authority_passed")
+        is False
+        and z3_heat_kernel_scale_selector.get(
+            "strict_h4_source_canonical_higgs_coupling_passed"
+        )
+        is False
+        and z3_heat_kernel_scale_selector.get("pr230_closure_authorized") is False
+    )
+    report(
+        "z3-heat-kernel-scale-selector-blocks-shortcut",
+        z3_heat_kernel_scale_selector_blocks_shortcut,
+        z3_heat_kernel_scale_selector.get("actual_current_surface_status"),
     )
     source_transport_completion = certificates["source_coordinate_transport_completion_attempt"]
     report(
@@ -2268,6 +2301,7 @@ def main() -> int:
             "does not treat Koide/lepton Z3 as a quark-bilinear generation-action certificate",
             "does not treat Z3 symmetry averaging or a mathematical lazy matrix as a PR230 physical transfer",
             "does not treat a finite-group Z3 heat kernel as PR230 physical transfer without a same-surface action selecting its heat time and H4 source/canonical-Higgs coupling",
+            "does not treat heat-kernel entropy, spectral gap, semigroup structure, or generator scale as PR230 physical transfer without a same-surface action fixing heat time/diffusion scale plus H4 source/canonical-Higgs coupling",
             "does not treat the two-source taste-radial chart as canonical O_H or as production source-Higgs rows",
             "does not treat the two-source taste-radial action source vertex as canonical O_H or measured C_sx/C_xx rows",
             "does not treat the two-source taste-radial row contract as production C_sx/C_xx rows or pole evidence",
@@ -2298,6 +2332,7 @@ def main() -> int:
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
         "z3_heat_kernel_neutral_transfer_support_not_h3h4": z3_heat_kernel_support_not_h3h4,
+        "z3_heat_kernel_scale_selector_blocks_shortcut": z3_heat_kernel_scale_selector_blocks_shortcut,
         "wz_v_authority_firewall_blocks_package_v_import": wz_v_authority_firewall_blocks,
         "post_block100_completion_reopen_audit_blocks_path_only_reopen": post_block100_completion_reopen_blocks,
         "pass_count": PASS_COUNT,

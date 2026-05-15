@@ -1,0 +1,340 @@
+{
+  "actual_current_surface_status": "exact negative boundary / Z3 heat-kernel scale and time selectors do not derive the PR230 physical neutral transfer",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "closure_achieved": false,
+  "conditional_surface_status": "If a future same-surface action fixes the diffusion coefficient or heat time and separately supplies H4 source/canonical-Higgs coupling, the Block102 heat-kernel primitive witness can be reused as mathematical support.  That selector is absent on the actual current surface.",
+  "continuum_of_compatible_heat_kernels": true,
+  "entropy_extremum_is_boundary_or_external_selector": true,
+  "exact_next_action": "A neutral-route reopen now requires a same-surface physical action, transfer operator, or off-diagonal generator that fixes the heat time/diffusion scale, plus H4 source/canonical-Higgs coupling.  Otherwise pursue accepted O_H/action with strict C_ss/C_sH/C_HH pole rows, strict W/Z response with an allowed absolute pin, or strict Schur/scalar-LSZ pole authority.",
+  "fail_count": 0,
+  "forbidden_firewall": {
+    "claims_retained_or_proposed_retained_closure": false,
+    "identifies_taste_triplet_or_source_with_canonical_oh": false,
+    "sets_c2_equal_one": false,
+    "sets_diffusion_scale_equal_one_by_convention": false,
+    "sets_heat_time_equal_one_by_convention": false,
+    "sets_kappa_s_equal_one": false,
+    "sets_z_match_equal_one": false,
+    "treats_entropy_or_gap_as_action_principle": false,
+    "treats_z3_heat_kernel_as_pr230_physical_transfer": false,
+    "uses_alpha_lm_plaquette_or_u0": false,
+    "uses_hunit_matrix_element_readout": false,
+    "uses_observed_top_mass_or_yukawa_as_selector": false,
+    "uses_reduced_cold_pilots_as_production_evidence": false,
+    "uses_yt_ward_identity_as_authority": false
+  },
+  "generator_scale_reparametrization_witness": true,
+  "generator_scale_witness": {
+    "approx_generator_tau_1": [
+      [
+        -1.9999997002972947,
+        0.9999998499636102,
+        0.9999998499636102
+      ],
+      [
+        0.9999998499636102,
+        -1.9999997002972947,
+        0.9999998499636102
+      ],
+      [
+        0.9999998499636102,
+        0.9999998499636102,
+        -1.9999997002972947
+      ]
+    ],
+    "approx_generator_tau_2": [
+      [
+        -3.999998799963933,
+        1.9999994001670038,
+        1.9999994001670038
+      ],
+      [
+        1.9999994001670038,
+        -3.999998799963933,
+        1.9999994001670038
+      ],
+      [
+        1.9999994001670038,
+        1.9999994001670038,
+        -3.999998799963933
+      ]
+    ],
+    "max_abs_error_generator_tau2_minus_2_tau1": 6.006306563222097e-07
+  },
+  "heat_kernel_is_pr230_physical_neutral_transfer": false,
+  "heat_kernel_scale_rows": [
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.9071386509500385,
+          0.04643067452498073,
+          0.04643067452498073
+        ],
+        [
+          0.04643067452498073,
+          0.9071386509500385,
+          0.04643067452498073
+        ],
+        [
+          0.04643067452498073,
+          0.04643067452498073,
+          0.9071386509500385
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.8607079764250578,
+      "primitive": true,
+      "row_entropy": 0.3734750086429087,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.1392920235749422,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 0.05,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.7915261858606483,
+          0.10423690706967592,
+          0.10423690706967592
+        ],
+        [
+          0.10423690706967592,
+          0.7915261858606483,
+          0.10423690706967592
+        ],
+        [
+          0.10423690706967592,
+          0.10423690706967592,
+          0.7915261858606483
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.6872892787909722,
+      "primitive": true,
+      "row_entropy": 0.6564305921166976,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.31271072120902776,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 0.125,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.6482443684940098,
+          0.1758778157529951,
+          0.1758778157529951
+        ],
+        [
+          0.1758778157529951,
+          0.6482443684940098,
+          0.1758778157529951
+        ],
+        [
+          0.1758778157529951,
+          0.1758778157529951,
+          0.6482443684940098
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.4723665527410147,
+      "primitive": true,
+      "row_entropy": 0.892345099044968,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.5276334472589853,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 0.25,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.4820867734322865,
+          0.2589566132838567,
+          0.2589566132838567
+        ],
+        [
+          0.2589566132838567,
+          0.4820867734322865,
+          0.2589566132838567
+        ],
+        [
+          0.2589566132838567,
+          0.2589566132838567,
+          0.4820867734322865
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.22313016014842982,
+      "primitive": true,
+      "row_entropy": 1.0514953685989399,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.7768698398515702,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 0.5,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.36652471224524263,
+          0.3167376438773787,
+          0.3167376438773787
+        ],
+        [
+          0.3167376438773787,
+          0.36652471224524263,
+          0.3167376438773787
+        ],
+        [
+          0.3167376438773787,
+          0.3167376438773787,
+          0.36652471224524263
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.049787068367863944,
+      "primitive": true,
+      "row_entropy": 1.096171743473527,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.950212931632136,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 1.0,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.33498583478444427,
+          0.3325070826077779,
+          0.3325070826077779
+        ],
+        [
+          0.3325070826077779,
+          0.33498583478444427,
+          0.3325070826077779
+        ],
+        [
+          0.3325070826077779,
+          0.3325070826077779,
+          0.33498583478444427
+        ]
+      ],
+      "nontrivial_eigenvalue": 0.0024787521766663585,
+      "primitive": true,
+      "row_entropy": 1.0986061495135873,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.9975212478233336,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 2.0,
+      "uniform_detailed_balance": true
+    },
+    {
+      "column_stochastic": true,
+      "commutes_with_z3_cycle": true,
+      "matrix": [
+        [
+          0.33333742947490225,
+          0.3333312852625489,
+          0.3333312852625489
+        ],
+        [
+          0.3333312852625489,
+          0.33333742947490225,
+          0.3333312852625489
+        ],
+        [
+          0.3333312852625489,
+          0.3333312852625489,
+          0.33333742947490225
+        ]
+      ],
+      "nontrivial_eigenvalue": 6.14421235332821e-06,
+      "primitive": true,
+      "row_entropy": 1.0986122886303584,
+      "row_stochastic": true,
+      "spectral_gap_discrete": 0.9999938557876467,
+      "strictly_positive": true,
+      "symmetric": true,
+      "tau": 4.0,
+      "uniform_detailed_balance": true
+    }
+  ],
+  "heat_kernel_scale_time_not_selected": true,
+  "hypothetical_axiom_status": "Adding a new axiom that tau is a specified physical neutral-transfer time would select one member of the heat-kernel family, but this would be a new action/normalization premise rather than a PR230 derivation.",
+  "parent_statuses": {
+    "campaign_status": "open / active campaign continuing after current shortcut blocks",
+    "full_positive_assembly": "open / full positive PR230 closure assembly gate not passed",
+    "neutral_h3h4_aperture": "bounded-support / neutral primitive H3/H4 aperture checkpoint; H1/H2 support and 63 C_sx/C_xx chunks do not supply physical neutral transfer or source-canonical-Higgs coupling",
+    "post_block100_completion_reopen": "open / post-Block100 completion-reopen audit: positive closure not achieved and no current/fetched strict reopen artifact is admitted",
+    "retained_route": "open / retained closure not yet reached",
+    "same_surface_z3_taste_triplet": "exact-support / same-surface Z3 taste-triplet artifact; physical neutral transfer still absent",
+    "z3_heat_kernel_attempt": "exact-support / Z3 heat-kernel primitive transfer is mathematical support only; PR230 physical H3/H4 closure remains absent",
+    "z3_lazy_selector_no_go": "exact negative boundary / Z3 lazy selector shortcuts do not derive the PR230 physical neutral transfer",
+    "z3_positive_cone_support": "exact-support / Z3-triplet positive-cone H2 support; physical neutral transfer still absent"
+  },
+  "pass_count": 13,
+  "physical_diffusion_scale_authority_present": false,
+  "physical_heat_time_authority_present": false,
+  "pr230_closure_authorized": false,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "The current surface supplies no physical heat-time unit, diffusion coefficient, neutral transfer operator, off-diagonal generator, canonical O_H identity, or source-Higgs pole rows.  Symmetry, cone, semigroup, reversibility, entropy, and gap criteria do not select a finite physical transfer without importing a new action principle.",
+  "same_surface_physical_action_selects_heat_time": false,
+  "semigroup_checks": [
+    {
+      "max_abs_error_KaKb_minus_Ka_plus_b": 1.1102230246251565e-16,
+      "tau_a": 0.125,
+      "tau_b": 0.375
+    },
+    {
+      "max_abs_error_KaKb_minus_Ka_plus_b": 0.0,
+      "tau_a": 0.25,
+      "tau_b": 0.5
+    },
+    {
+      "max_abs_error_KaKb_minus_Ka_plus_b": 5.551115123125783e-17,
+      "tau_a": 1.0,
+      "tau_b": 2.0
+    }
+  ],
+  "semigroup_law_holds_for_continuum": true,
+  "spectral_gap_extremum_is_boundary_or_external_selector": true,
+  "strict_future_artifact_presence": {
+    "canonical_oh_certificate": false,
+    "neutral_offdiagonal_generator_certificate": false,
+    "neutral_primitive_cone_certificate": false,
+    "same_surface_neutral_transfer_operator": false,
+    "source_higgs_cross_rows": false,
+    "source_higgs_production_certificate": false,
+    "wz_response_rows": false
+  },
+  "strict_h4_source_canonical_higgs_coupling_passed": false,
+  "strict_neutral_h3_authority_passed": false,
+  "strict_non_claims": [
+    "does not claim retained or proposed_retained top-Yukawa closure",
+    "does not select heat time or diffusion scale by convention",
+    "does not treat entropy or spectral gap as a PR230 action principle",
+    "does not treat the finite-group heat kernel as physical PR230 transfer",
+    "does not write a neutral primitive-cone certificate",
+    "does not identify the Z3 taste triplet, O_s, or O_sp with canonical O_H",
+    "does not use H_unit, yt_ward_identity, observed targets, alpha_LM, plaquette, or u0",
+    "does not set kappa_s, c2, Z_match, g2, v, heat time, or diffusion scale to one"
+  ],
+  "z3_heat_kernel_scale_selector_no_go_passed": true
+}

@@ -1,11 +1,49 @@
 # Handoff
 
-Checkpoint: 2026-05-15 01:25 EDT
+Checkpoint: 2026-05-15 01:35 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block103 Z3 Heat-Kernel Scale-Selector No-Go
+
+Block103 closes the heat-kernel scale/time shortcut left by Block102. The
+C3/Z3 family `K_tau=exp(-tau Delta)` satisfies the same symmetry, cone,
+semigroup, reversibility, stochasticity, and primitive constraints for a
+continuum of `tau>0`. Rescaling `Delta -> lambda Delta` is equivalent to
+rescaling heat time, so the current PR230 surface cannot select a physical
+diffusion scale without an action coefficient. Entropy and spectral-gap
+criteria move toward the uniform-projector boundary unless imported as an
+external action principle.
+
+Artifacts:
+
+- `docs/YT_PR230_Z3_HEAT_KERNEL_SCALE_SELECTOR_NO_GO_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_z3_heat_kernel_scale_selector_no_go.py`
+- `outputs/yt_pr230_z3_heat_kernel_scale_selector_no_go_2026-05-15.json`
+
+Validation:
+
+```text
+Z3 heat-kernel scale-selector no-go PASS=13 FAIL=0
+retained route PASS=324 FAIL=0
+campaign status PASS=426 FAIL=0
+full positive closure assembly PASS=199 FAIL=0
+positive closure completion audit PASS=78 FAIL=0
+assumption stress PASS=110 FAIL=0
+```
+
+Honest status: exact negative boundary. No retained or `proposed_retained`
+proposal is authorized.
+
+Exact next action: reopen the neutral route only with a same-surface physical
+action, transfer operator, or off-diagonal generator that fixes the heat
+time/diffusion scale plus H4 source/canonical-Higgs coupling. Otherwise pursue
+accepted `O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows, strict W/Z
+response rows with an allowed absolute pin, or strict Schur/scalar-LSZ pole
+authority.
 
 ## Block102 Z3 Heat-Kernel Neutral-Transfer Attempt
 
