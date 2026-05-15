@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_substep4_ratchet_named_primitives_2026_05_10_s4ratchet.py
+runner_sha256: c8f9f7a80546a058ddab4ecadadd48bf0ace47592ffdb66757742a1b05bb1ee4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
 Substep-4 ratchet via named primitives meta check
 note: docs/SUBSTEP4_RATCHET_NAMED_PRIMITIVES_META_NOTE_2026-05-10_s4ratchet.md
 
@@ -64,3 +72,6 @@ PASS: P3 ratchet implication stated
 
 === TOTAL: PASS=60, FAIL=0 ===
 Substep-4 ratchet via named primitives check passed: AC_phi and AC_phi_lambda are named primitives matching the BAE+P campaign-terminal inventory; no new axiom; no theorem promotion; audit-lane authority preserved.
+
+----- stderr -----
+
