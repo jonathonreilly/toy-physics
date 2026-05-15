@@ -17145,6 +17145,38 @@
       "to": "neutrino_majorana_nur_charge2_primitive_reduction_note"
     },
     {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
       "from": "newtonian_distance_law_confirmed",
       "to": "valley_linear_wide_tail_note"
     },
@@ -56231,6 +56263,26 @@
       "runner_path": "scripts/frontier_neutrino_two_amplitude_last_mile.py",
       "title": "Neutrino Two-Amplitude Last-Mile Reduction"
     },
+    "newphysics_np_muon_g2_note_2026-05-10_npg2": {
+      "claim_id": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (Pauli/Cl(3)-structural anchor for the 1-loop universal piece a_l = \u03b1/(2\u03c0); full prediction of the muon g-2 anomaly is **bounded by named admissions**)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
+        "complete_prediction_chain_2026_04_15",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+        "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02",
+        "minimal_axioms_2026-05-03",
+        "conventions_unification_companion_note_2026-05-08",
+        "physical_lattice_foundational_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "8aedbd7aec387dc3d8a0926e9a94ecf8cf6a535db6fbc1af7d44d8a1599e8930",
+      "path": "docs/NEWPHYSICS_NP_MUON_G2_NOTE_2026-05-10_npG2.md",
+      "runner_path": "scripts/cl3_newphysics_np_muon_g2_2026_05_10_npG2.py",
+      "title": "New-Physics Probe \u2014 Muon Anomalous Magnetic Moment (npG2)"
+    },
     "newton_derivation_note": {
       "claim_id": "newton_derivation_note",
       "claim_type_author_hint": null,
@@ -71068,7 +71120,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 357,
+      "bounded_theorem": 358,
       "meta": 74,
       "no_go": 45,
       "none": 1552,
@@ -71076,17 +71128,17 @@
       "positive_theorem": 145
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 811,
+      "bounded_theorem": 812,
       "meta": 74,
       "no_go": 150,
       "none": 444,
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8908,
+    "edge_count": 8916,
     "leaf_count": 618,
-    "node_count": 2210,
+    "node_count": 2211,
     "root_count": 770,
-    "runners_with_path": 1829
+    "runners_with_path": 1830
   }
 }
