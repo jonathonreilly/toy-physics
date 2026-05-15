@@ -56409,7 +56409,7 @@
         "nn_lattice_rescaled_c2_derivation_note_2026-05-10",
         "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
       ],
-      "note_hash": "05ee29e37ee2bd8c6eba063425bdb2b5f3b7e1729105b199aa3dc929a3bbae14",
+      "note_hash": "60735dd60d5b2e4f9a9d639fac3a4eeabe1a4ad12e79cc02850b81b2a3c56b2e",
       "path": "docs/NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
       "runner_path": "scripts/lattice_nn_rescaled_full_kernel_identification.py",
       "title": "NN Lattice Rescaled-Lane Full Kernel Identification A(y_s -> y_d)"
@@ -56420,7 +56420,7 @@
       "claim_type_author_hint_raw": "no_go (bounded numerical no-go for the Schr\u00f6dinger",
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "347e5260325b26f685d4c73d1717c59e0b6c485b8374cfce890063dc4bddc452",
+      "note_hash": "041b3fc6eb1c685fd0d64c951869589051bb67f8c86903cef32ec1446c1d5139",
       "path": "docs/NN_LATTICE_RESCALED_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
       "runner_path": "scripts/lattice_nn_rescaled_kernel_identification.py",
       "title": "NN Lattice Rescaled-Lane Kernel Identification"
@@ -56436,7 +56436,7 @@
         "lattice_nn_continuum_note",
         "nn_lattice_rescaled_rg_gravity_saturation_note_2026-05-10"
       ],
-      "note_hash": "44229a7be1f1b43816a5bdd05009038c9797746da4b0a2c88416322be26c9e72",
+      "note_hash": "2673544a6b82baf6b37b85176591c2337b11ed479fa338d0c5139542e32b488b",
       "path": "docs/NN_LATTICE_RESCALED_OPERATOR_CAUCHY_CONVERGENCE_NOTE_2026-05-10.md",
       "runner_path": "scripts/lattice_nn_rescaled_operator_cauchy.py",
       "title": "NN Lattice Rescaled-Lane Response-Vector Cauchy Certificate"

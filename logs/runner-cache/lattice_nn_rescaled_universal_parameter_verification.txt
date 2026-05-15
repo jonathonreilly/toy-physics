@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_nn_rescaled_universal_parameter_verification.py
-runner_sha256: 6d472f111906d08c3f3fd7d9caf70a80ae1a74c6984c1da996e39fb404b3543d
+runner_sha256: 43bf300c4c708e0959c5dce04605742116625b027631e12439d939da5c74ca1f
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 7.45
+elapsed_sec: 7.77
 status: ok
 ----- stdout -----
 ====================================================================================================
@@ -40,23 +40,23 @@ Pipeline (i) -- slit-detector arm width sigma_arm(h):
   ------------------------------------------------------------------------------------------------
    0.25000   +3.3530   -3.2921    1.3993    1.3872      2.732020    1.366010    +2.439%   0.1s
    0.12500   +3.1949   -3.1881    0.9572    0.9552      2.666787    0.942852    +1.520%   0.2s
-   0.06250   +3.1034   -3.1033    0.6691    0.6691      2.650867    0.662717    +0.970%   0.9s
+   0.06250   +3.1034   -3.1033    0.6691    0.6691      2.650867    0.662717    +0.970%   1.0s
 
   fit sigma_arm(h) = C_arm * h^alpha on 3 points:
     C_arm_obs (fit) = 2.915702    (h->0 fit constant)
     alpha_obs       = +0.532173   (geodesic predicts 0.5)
     R^2             = 0.9997
   per-h coherent: max |sigma_obs - sigma_pred| / sigma_pred = 2.439%
-  arm-pipeline runtime: 1.2s
+  arm-pipeline runtime: 1.3s
 
 Pipeline (ii) -- single-source no-slit c2(h):
          h        c2_obs   phase R^2    c2_pred(h)    reldiff   time
   ---------------------------------------------------------------------------
    0.25000      0.022487      1.0000      0.022396    +0.407%   0.0s
    0.12500      0.023224      1.0000      0.023168    +0.242%   0.2s
-   0.06250      0.023401      1.0000      0.023363    +0.160%   0.7s
+   0.06250      0.023401      1.0000      0.023363    +0.160%   0.8s
   c2_obs (finest h = 0.06250): 0.023401
-  c2-pipeline runtime: 0.9s
+  c2-pipeline runtime: 1.0s
 
 Cross-check (predicted vs measured):
   C_arm: PRIMARY (per-h coherent vs per-h sigma):
@@ -132,21 +132,21 @@ Pipeline (i) -- slit-detector arm width sigma_arm(h):
   ------------------------------------------------------------------------------------------------
    0.25000   +3.4570   -3.3438    1.6133    1.5962      3.157206    1.578603    +2.198%   0.1s
    0.12500   +3.2656   -3.2424    1.1065    1.1009      3.071730    1.086021    +1.890%   0.4s
-   0.06250   +3.1437   -3.1427    0.7717    0.7713      3.050996    0.762749    +1.167%   1.4s
+   0.06250   +3.1437   -3.1427    0.7717    0.7713      3.050996    0.762749    +1.167%   1.5s
 
   fit sigma_arm(h) = C_arm * h^alpha on 3 points:
     C_arm_obs (fit) = 3.363640    (h->0 fit constant)
     alpha_obs       = +0.531996   (geodesic predicts 0.5)
     R^2             = 0.9998
   per-h coherent: max |sigma_obs - sigma_pred| / sigma_pred = 2.198%
-  arm-pipeline runtime: 1.9s
+  arm-pipeline runtime: 2.0s
 
 Pipeline (ii) -- single-source no-slit c2(h):
          h        c2_obs   phase R^2    c2_pred(h)    reldiff   time
   ---------------------------------------------------------------------------
    0.25000      0.019153      1.0000      0.019109    +0.233%   0.1s
    0.12500      0.019783      1.0000      0.019768    +0.080%   0.3s
-   0.06250      0.019934      1.0000      0.019934    -0.000%   1.1s
+   0.06250      0.019934      1.0000      0.019934    -0.000%   1.2s
   c2_obs (finest h = 0.06250): 0.019934
   c2-pipeline runtime: 1.5s
 
