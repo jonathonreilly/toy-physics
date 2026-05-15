@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/lattice_nn_rescaled_full_kernel_identification.py
-runner_sha256: 3458906d14a0c8001cfe6dc5c4a5f3f21ad1aedf4d78fa521e6c49140f6b8fc3
+runner_sha256: a2101647f5490f37cd7a32c187e191b8e078578f31a79c27633d6ab1ca91cf6c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 4.37
+elapsed_sec: 4.45
 status: ok
 ----- stdout -----
 ====================================================================================================
@@ -40,9 +40,9 @@ PRIMARY SWEEP
     0.1250   +6.00   +6.0000    -0.0000     1.5344   1.0000   +0.029676   1.0000    +6.0000   +0.0000    0.2s
     0.0625   -6.00   -6.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -6.0000   +0.0000    0.7s
     0.0625   -3.00   -3.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -3.0000   +0.0000    0.6s
-    0.0625   +0.00   +0.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -0.0000   -0.0000    0.6s
-    0.0625   +3.00   +3.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +3.0000   -0.0000    0.6s
-    0.0625   +6.00   +6.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +6.0000   +0.0000    0.6s
+    0.0625   +0.00   +0.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    -0.0000   -0.0000    0.7s
+    0.0625   +3.00   +3.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +3.0000   -0.0000    0.7s
+    0.0625   +6.00   +6.0000    -0.0000     1.0774   1.0000   +0.029886   1.0000    +6.0000   +0.0000    0.7s
 
 ====================================================================================================
 TRANSLATION-INVARIANCE SUMMARY (across y_s, at fixed h)
@@ -111,11 +111,12 @@ SLIT-ANCHORED CROSS-CHECK (connects to PR #968)
 VERDICT
 ====================================================================================================
 
-BOUNDED IDENTIFICATION: the rescaled NN harness's full kernel
-A(y_s -> y_d) is translation-invariant Gaussian-magnitude with
-quadratic phase, both depending only on the displacement u = y_d - y_s.
+BOUNDED NUMERICAL KERNEL-SHAPE FIT: on this checked window the
+rescaled NN harness's field-free no-slit response A(y_s -> y_d)
+is fitted as translation-invariant Gaussian-magnitude with
+quadratic phase, both depending only on u = y_d - y_s.
 
-  Closed form (on this scoped harness, fits to within tolerance):
+  Fitted shape (on this scoped harness, matches to within tolerance):
 
       A(y_s -> y_d; h) = C_amp(h)
                         * exp[-(y_d - y_s)^2 / (2 sigma^2(h))]

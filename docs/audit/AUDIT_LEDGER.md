@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 103 |
-| **retained_no_go** | 134 |
+| **retained_no_go** | 133 |
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1173 |
+| unaudited | 1174 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
@@ -41,13 +41,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 519 |
+| `audited_clean` | 518 |
 | `audited_conditional` | 188 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1286 |
+| `unaudited` | 1287 |
 
 | claim_type | count |
 |---|---:|
@@ -408,7 +408,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_lane4_sr2_pfaffian_scalar_two_point_boundary_note_2026-04-29` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `newton_persistent_pattern_control_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `newtonian_distance_law_confirmed` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
-| `nn_lattice_rescaled_kernel_identification_note_2026-05-10` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | C | - |
 | `nonlabel_grown_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `nonlabel_grown_drift_basin_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
@@ -7688,19 +7687,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** "The per-arm width on the detector is therefore set by L_2, not L_total" with L_eff = L_2 = 2 L_total / 3 in the C_arm formula.  _(class `F`)_
 - **chain closes:** False — The saddle algebra is internally consistent once L_eff is assumed, but the restricted packet does not derive that the actual blocked-slit detector arm width is governed only by post-slit propagation length L_2. The diagnostic fit constants used for the residual and per-h checks are also embedded rather than supplied as a retained one-hop authority or recomputed from the harness.
 - **rationale:** Issue: the load-bearing L_eff = L_2 bridge is asserted and then hard-coded in the runner; the runner only evaluates the resulting closed form against embedded diagnostic constants. Why this blocks: without a retained finite-slit/post-slit propagation theorem or a direct harness computation, a hostile reviewer can reject the length identification and the comparison target is not independently established in the restricted packet. Repair target: add a retained bridge theorem or deterministic runner deriving the arm width from the actual blocked-slit propagation, and supply/audit the diagnostic fit artifact as a direct dependency. Claim boundary until fixed: the note is an internally checked closed-form heuristic conditional on the L_2 bridge and embedded fit values.
-- **auditor confidence:** high
-
-### `nn_lattice_rescaled_kernel_identification_note_2026-05-10`
-
-- **Note:** [`NN_LATTICE_RESCALED_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md`](../../docs/NN_LATTICE_RESCALED_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md)
-- **claim_type:** `no_go`
-- **claim_scope:** On the deterministic-rescale NN harness with BETA=0.8, K_PHYS=5.0, PHYS_L=40, single source, no slits, no blocked nodes, and no field, the completed runner through h=0.0625 rules out a clean Schrödinger free-particle propagator fit to the measured detector amplitude.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_no_go**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e1332-bc17-7022-aefc-cec263a353e8`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The computed central-window detector amplitude is Gaussian in magnitude and quadratic in phase, but the phase-derived and width-derived Schrödinger effective masses disagree by 1453% at h=0.0625.  _(class `C`)_
-- **chain closes:** True — The runner source constructs the stated NN lattice, propagates the single-source amplitude from the stated per-edge rule, fits the detector magnitude and phase, and computes the incompatible effective masses without importing unlisted authorities or hard-coding sigma/c2. Closure is bounded to the measured harness and parameter values, not to a universal continuum PDE identification beyond this finite refinement ladder.
-- **rationale:** The source note's no-go is supported by a completed first-principles harness computation: Gaussian magnitude and quadratic phase are recovered with high fit quality, while the single-mass Schrödinger identification fails the independent parameter check at the finest h. The runner hard-codes only the scoped harness constants and candidate thresholds, not the observed fitted values or the mismatch. Clean status is for the bounded numerical no-go through h=0.0625; the asymptotic h->0 language should remain scoped as numerical extrapolation rather than an audited positive continuum theorem.
 - **auditor confidence:** high
 
 ### `nonlabel_grown_basin_note`
