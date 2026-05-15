@@ -1,0 +1,128 @@
+===== runner cache v1 =====
+runner: scripts/frontier_plaquette_hierarchy_polynomial_boundedness_narrow.py
+runner_sha256: ce555305606fe3efc00fe05661c421ba71d3f17ae1b96de540608e6b52b6a4d4
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: plaquette-hierarchy polynomial-boundedness
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: (T1) leading-term asymptotic  p(t) / t^d -> a_d for d >= 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] deg=1 polynomial 3*t + 7: p(t)/t^1 -> a_1 = 3 as t -> +oo  (sympy.limit = 3)
+  [PASS (A)] deg=2 polynomial -2*t**2 + 5*t - 1: p(t)/t^2 -> a_2 = -2 as t -> +oo  (sympy.limit = -2)
+  [PASS (A)] deg=3 polynomial t**3 - 4*t**2 + 11: p(t)/t^3 -> a_3 = 1 as t -> +oo  (sympy.limit = 1)
+  [PASS (A)] deg=4 polynomial 5*t**4/2 + t**3: p(t)/t^4 -> a_4 = 5/2 as t -> +oo  (sympy.limit = 5/2)
+  [PASS (A)] deg=5 polynomial -t**5 + 8*t**2 - 3*t: p(t)/t^5 -> a_5 = -1 as t -> +oo  (sympy.limit = -1)
+
+----------------------------------------------------------------------------------------
+Part 2: (T2) finite-limit forces constant — limit at +oo is +/-oo for d >= 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] deg=1 polynomial 3*t + 7: lim p(t) at +oo = oo (UNBOUNDED)  (sympy.limit = oo, a_d sign = +)
+  [PASS (A)] deg=2 polynomial -2*t**2 + 5*t - 1: lim p(t) at +oo = -oo (UNBOUNDED)  (sympy.limit = -oo, a_d sign = -)
+  [PASS (A)] deg=3 polynomial t**3 - 4*t**2 + 11: lim p(t) at +oo = oo (UNBOUNDED)  (sympy.limit = oo, a_d sign = +)
+  [PASS (A)] deg=4 polynomial 5*t**4/2 + t**3: lim p(t) at +oo = oo (UNBOUNDED)  (sympy.limit = oo, a_d sign = +)
+  [PASS (A)] deg=5 polynomial -t**5 + 8*t**2 - 3*t: lim p(t) at +oo = -oo (UNBOUNDED)  (sympy.limit = -oo, a_d sign = -)
+
+----------------------------------------------------------------------------------------
+Part 3: (T3) two-distinct-value obstruction at (a, b) = (0, 1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] deg=0 (constant) with p(0) = 0: lim = 0 != 1, so obstruction holds  (forced p(t) = 0, lim = 0)
+  [PASS (A)] deg=1 p(t) = 1 * t (p(0) = 0): lim at +oo = oo (not finite, so not 1)  (a_1 = 1, lim = oo)
+  [PASS (A)] deg=1 p(t) = -1 * t (p(0) = 0): lim at +oo = -oo (not finite, so not 1)  (a_1 = -1, lim = -oo)
+  [PASS (A)] deg=1 p(t) = 2 * t (p(0) = 0): lim at +oo = oo (not finite, so not 1)  (a_1 = 2, lim = oo)
+  [PASS (A)] deg=1 p(t) = 1/5 * t (p(0) = 0): lim at +oo = oo (not finite, so not 1)  (a_1 = 1/5, lim = oo)
+  [PASS (A)] deg=2 p(t) = 0*t + 1*t^2 (p(0) = 0): lim = oo (not finite)  (a_2 = 1, lim = oo)
+  [PASS (A)] deg=2 p(t) = 1*t + 1*t^2 (p(0) = 0): lim = oo (not finite)  (a_2 = 1, lim = oo)
+  [PASS (A)] deg=2 p(t) = 0*t + -1*t^2 (p(0) = 0): lim = -oo (not finite)  (a_2 = -1, lim = -oo)
+  [PASS (A)] deg=2 p(t) = -5*t + 2*t^2 (p(0) = 0): lim = oo (not finite)  (a_2 = 2, lim = oo)
+  [PASS (A)] deg=3 p(t) = t^3 (p(0) = 0): lim = +oo (not finite)  (lim = oo)
+  [PASS (A)] deg=4 p(t) = t^4 (p(0) = 0): lim = +oo (not finite)  (lim = oo)
+  [PASS (A)] deg=5 p(t) = t^5 (p(0) = 0): lim = +oo (not finite)  (lim = oo)
+
+----------------------------------------------------------------------------------------
+Part 4: (T4) boundedness corollary — non-constant polynomial unbounded
+----------------------------------------------------------------------------------------
+  [PASS (A)] deg=1 polynomial 3*t + 7: |p(t)| grows from |p(100)|=307 to |p(10000)|=30007 (unbounded)  (vals at t in [1, 10, 100, 1000, 10000] = ['10', '37', '307', '3007', '30007'])
+  [PASS (A)] deg=2 polynomial -2*t**2 + 5*t - 1: |p(t)| grows from |p(100)|=19501 to |p(10000)|=199950001 (unbounded)  (vals at t in [1, 10, 100, 1000, 10000] = ['2', '151', '19501', '1995001', '199950001'])
+  [PASS (A)] deg=3 polynomial t**3 - 4*t**2 + 11: |p(t)| grows from |p(100)|=960011 to |p(10000)|=999600000011 (unbounded)  (vals at t in [1, 10, 100, 1000, 10000] = ['8', '611', '960011', '996000011', '999600000011'])
+  [PASS (A)] deg=4 polynomial 5*t**4/2 + t**3: |p(t)| grows from |p(100)|=251000000 to |p(10000)|=25001000000000000 (unbounded)  (vals at t in [1, 10, 100, 1000, 10000] = ['7/2', '26000', '251000000', '2501000000000', '25001000000000000'])
+  [PASS (A)] deg=5 polynomial -t**5 + 8*t**2 - 3*t: |p(t)| grows from |p(100)|=9999920300 to |p(10000)|=99999999999200030000 (unbounded)  (vals at t in [1, 10, 100, 1000, 10000] = ['4', '99230', '9999920300', '999999992003000', '99999999999200030000'])
+
+----------------------------------------------------------------------------------------
+Part 5: Negative control — constant polynomial DOES satisfy (T2) and (T3) trivially
+----------------------------------------------------------------------------------------
+  [PASS (A)] constant p(t) = 0: lim at +oo = 0 (finite, agrees with (T2) deg = 0)  (lim = 0)
+  [PASS (A)] constant p(t) = 0: p(0) = 0 = lim, so a = b, (T3) obstruction does NOT apply  (p(0) = 0, lim = 0)
+  [PASS (A)] constant p(t) = 1: lim at +oo = 1 (finite, agrees with (T2) deg = 0)  (lim = 1)
+  [PASS (A)] constant p(t) = 1: p(0) = 1 = lim, so a = b, (T3) obstruction does NOT apply  (p(0) = 1, lim = 1)
+  [PASS (A)] constant p(t) = 7: lim at +oo = 7 (finite, agrees with (T2) deg = 0)  (lim = 7)
+  [PASS (A)] constant p(t) = 7: p(0) = 7 = lim, so a = b, (T3) obstruction does NOT apply  (p(0) = 7, lim = 7)
+  [PASS (A)] constant p(t) = -3: lim at +oo = -3 (finite, agrees with (T2) deg = 0)  (lim = -3)
+  [PASS (A)] constant p(t) = -3: p(0) = -3 = lim, so a = b, (T3) obstruction does NOT apply  (p(0) = -3, lim = -3)
+  [PASS (A)] constant p(t) = 1/2: lim at +oo = 1/2 (finite, agrees with (T2) deg = 0)  (lim = 1/2)
+  [PASS (A)] constant p(t) = 1/2: p(0) = 1/2 = lim, so a = b, (T3) obstruction does NOT apply  (p(0) = 1/2, lim = 1/2)
+
+----------------------------------------------------------------------------------------
+Part 6: structural Poly-algebra checks — degree, leading coefficient
+----------------------------------------------------------------------------------------
+  [PASS (A)] Poly(3*t + 7, t).degree() = 1  (sympy.Poly degree = 1)
+  [PASS (A)] Poly(3*t + 7, t).LC() = 3  (sympy.Poly LC = 3)
+  [PASS (A)] Poly(-2*t**2 + 5*t - 1, t).degree() = 2  (sympy.Poly degree = 2)
+  [PASS (A)] Poly(-2*t**2 + 5*t - 1, t).LC() = -2  (sympy.Poly LC = -2)
+  [PASS (A)] Poly(t**3 - 4*t**2 + 11, t).degree() = 3  (sympy.Poly degree = 3)
+  [PASS (A)] Poly(t**3 - 4*t**2 + 11, t).LC() = 1  (sympy.Poly LC = 1)
+  [PASS (A)] Poly(5*t**4/2 + t**3, t).degree() = 4  (sympy.Poly degree = 4)
+  [PASS (A)] Poly(5*t**4/2 + t**3, t).LC() = 5/2  (sympy.Poly LC = 5/2)
+  [PASS (A)] Poly(-t**5 + 8*t**2 - 3*t, t).degree() = 5  (sympy.Poly degree = 5)
+  [PASS (A)] Poly(-t**5 + 8*t**2 - 3*t, t).LC() = -1  (sympy.Poly LC = -1)
+
+----------------------------------------------------------------------------------------
+Part 7: symbolic identity  p(t) - a_d * t^d  has degree < d  for d >= 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] deg=1 polynomial 3*t + 7: remainder p - a_d*t^1 has degree 0 < 1  (remainder = 7, deg = 0)
+  [PASS (A)] deg=2 polynomial -2*t**2 + 5*t - 1: remainder p - a_d*t^2 has degree 1 < 2  (remainder = 5*t - 1, deg = 1)
+  [PASS (A)] deg=3 polynomial t**3 - 4*t**2 + 11: remainder p - a_d*t^3 has degree 2 < 3  (remainder = 11 - 4*t**2, deg = 2)
+  [PASS (A)] deg=4 polynomial 5*t**4/2 + t**3: remainder p - a_d*t^4 has degree 3 < 4  (remainder = t**3, deg = 3)
+  [PASS (A)] deg=5 polynomial -t**5 + 8*t**2 - 3*t: remainder p - a_d*t^5 has degree 2 < 5  (remainder = 8*t**2 - 3*t, deg = 2)
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let p(t) = a_0 + a_1 t + ... + a_d t^d be a real polynomial in R[t]
+    of degree exactly d (with a_d != 0 when d >= 1).
+
+  CONCLUSION:
+    (T1)  d >= 1  =>  p(t) / t^d  ->  a_d  as t -> +oo  (so |p(t)| -> +oo).
+    (T2)  lim_{t -> +oo} p(t) exists and is finite  =>  d = 0  (p constant).
+    (T3)  Two-distinct-value obstruction at (a, b) with a != b:
+              p(0) = a  AND  lim_{t -> +oo} p(t) = b  (finite)
+              ==>  no such polynomial exists (in any degree).
+    (T4)  |p(t)| <= M  on [0, +oo)  =>  d = 0  (p constant).
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over R[t]. No Wilson plaquette /
+    gauge group / Haar measure / source-deformed partition function /
+    physical Cl(3) local algebra / Z^3 spatial substrate input is consumed.
+
+  This narrow theorem isolates the polynomial-algebra fact from the
+  parent's physical Wilson source-surface framing. The finite-limit-
+  forces-constant fact and its two-endpoint obstruction can be
+  reviewed independently of any lattice-gauge authority.
+
+
+========================================================================================
+  TOTAL: PASS=52, FAIL=0
+========================================================================================
+
+----- stderr -----
+
