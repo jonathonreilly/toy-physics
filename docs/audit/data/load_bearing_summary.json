@@ -2,11 +2,16 @@
   "criticality_counts": {
     "critical": 1062,
     "high": 57,
+<<<<<<< HEAD
     "leaf": 800,
     "medium": 291
+=======
+    "leaf": 802,
+    "medium": 287
+>>>>>>> c3b3f31ff (koide: anti-commuting operator → LCC derivation theorem)
   },
   "flagship_signal_used": false,
-  "node_count": 2210,
+  "node_count": 2211,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
