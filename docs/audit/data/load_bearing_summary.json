@@ -2,11 +2,15 @@
   "criticality_counts": {
     "critical": 1062,
     "high": 57,
+<<<<<<< HEAD
     "leaf": 804,
+=======
+    "leaf": 802,
+>>>>>>> 860486536 (koide: lightcone primitive (operator-level NSC equivalent))
     "medium": 287
   },
   "flagship_signal_used": false,
-  "node_count": 2210,
+  "node_count": 2211,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,

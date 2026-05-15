@@ -1,0 +1,90 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_lightcone_primitive.py
+runner_sha256: ff091d5ca3773ab8e0f044897b41a39ddc2e779e2b499e3d2562b2987d345d44
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.50
+status: ok
+----- stdout -----
+==============================================================================
+KOIDE LIGHTCONE PRIMITIVE — OPERATOR-COEFFICIENT EQUIVALENT
+==============================================================================
+
+Verifies the algebraic equivalence:
+  Q(v) = 2/3 (scalar Koide on eigenvalues)
+    ⟺  a² = |b|² + |c|²    (LCC on Z_3-equivariant operator coefficients)
+
+Operator parametrization: A = a I + b R + b* R² (Hermitian, Z_3-equivariant)
+Eigenvalue parametrization: v_g = a + 2β cos(φ + 2π g/3), b = β e^{iφ}
+
+LCC is the null cone in (1, 2)-signature: a² - x² - y² = 0
+with x = √2 Re(b), y = √2 Im(b).
+
+
+==============================================================================
+PART 1: 3-CYCLE PERMUTATION MATRIX R
+==============================================================================
+  [PASS] R is a 3×3 permutation matrix (det = 1)  (det(R) = 1)
+  [PASS] R^3 = I (R generates Z_3)  (R^3 == I_3)
+  [PASS] R^2 = R^T (R^{-1} = R^T = R²; R is orthogonal)  (R² == R^T)
+  [PASS] Characteristic polynomial of R is x^3 - 1 (eigenvalues are cube roots of unity)  (char_poly = x**3 - 1)
+
+==============================================================================
+PART 2: Z_3-EQUIVARIANT HERMITIAN OPERATOR A = aI + bR + b* R²
+==============================================================================
+  [PASS] A is Hermitian when c = b* (sympy.simplify on A - A†)  (A - A† == 0 verified)
+  [PASS] A commutes with R (Z_3-equivariance, A R = R A)  ([A, R] = 0 verified)
+
+==============================================================================
+PART 3: EIGENVALUE PARAMETRIZATION v_g = a + 2β cos(φ + 2πg/3)
+==============================================================================
+  [PASS] Eigenvalue λ_0 = a + 2β cos(φ + 2π·0/3)  (diff (after expand_complex + simplify) = 0)
+  [PASS] Eigenvalue λ_1 = a + 2β cos(φ + 2π·1/3)  (diff (after expand_complex + simplify) = 0)
+  [PASS] Eigenvalue λ_2 = a + 2β cos(φ + 2π·2/3)  (diff (after expand_complex + simplify) = 0)
+
+==============================================================================
+PART 4: SUM IDENTITIES (orthogonality of cosines on Z_3)
+==============================================================================
+  [PASS] Σ_{g=0,1,2} cos(φ + 2π g / 3) = 0 (orthogonality)  (sum (after trigsimp + simplify) = 0)
+  [PASS] Σ_{g=0,1,2} cos²(φ + 2π g / 3) = 3/2 (Plancherel-style)  (sum = 3/2)
+  [PASS] Σ v_g = 3a (from cosine orthogonality)  (Σ v_g = 3*a)
+  [PASS] Σ v_g² = 3a² + 6β²  (Σ v_g² = 3*a**2 + 6*beta**2)
+
+==============================================================================
+PART 5: KOIDE RATIO Q(v) = 1/3 + (2/3)(β/a)²
+==============================================================================
+  [PASS] Q(v) = 1/3 + (2/3)(β/a)² (sympy.simplify)  (Q = (a**2 + 2*beta**2)/(3*a**2))
+
+==============================================================================
+PART 6: MAIN EQUIVALENCE — Q = 2/3 ⟺ LCC (a² = |b|² + |c|²)
+==============================================================================
+  [PASS] Q - 2/3 (scaled by 3a²) reduces to 2β² - a² (sympy.expand)  (residual = -a**2 + 2*beta**2)
+  [PASS] Koide_residual + LCC_residual = 0 (they are negatives, same solution set)  (residual = 0)
+  [PASS] Q = 2/3 ⟺ a² = 2β² = |b|² + |c|² (the Lightcone Condition)  (scaled Koide residual = - LCC residual; same vanishing surface)
+
+==============================================================================
+PART 7: FOOT 45° EQUIVALENT FORM
+==============================================================================
+  [PASS] At LCC, cos²(angle(v, (1,1,1))) = 1/2 (i.e., angle = 45°)  (cos²(angle) at LCC = 1/2)
+
+==============================================================================
+PART 8: NULL CONE INTERPRETATION (a² - x² - y² = 0)
+==============================================================================
+  [PASS] (√2 Re b)² + (√2 Im b)² = 2β² = |b|² + |c|² (with c = b*)  (x² + y² = 2*beta**2)
+  [PASS] (1, 2)-signature null cone a² - x² - y² = 0 at LCC  (a² - x² - y² at LCC = 0)
+  [PASS] Signature (+, -, -) is one timelike + two spacelike directions  ((a, x, y) live in R^{1,2} Minkowski-like space)
+
+==============================================================================
+SUMMARY CLASS-A ASSERTIONS
+==============================================================================
+  [PASS] R^3 = I (sympy.Eq verified)
+  [PASS] Q(v) = 1/3 + (2/3)(β/a)² (sympy.simplify verified)
+  [PASS] Q = 2/3  ⟹  β² = a²/2  (sympy.solve verified)
+  [PASS] LCC (a² = |b|² + |c|² = 2β²) holds at the Q = 2/3 surface (sympy.simplify verified)
+
+==============================================================================
+KOIDE LIGHTCONE PRIMITIVE VERIFICATION: PASS=21 FAIL=0
+==============================================================================
+
+----- stderr -----
+
