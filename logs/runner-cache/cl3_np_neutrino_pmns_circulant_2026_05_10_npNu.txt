@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_np_neutrino_pmns_circulant_2026_05_10_npNu.py
+runner_sha256: 289d6215db9140d431b023477af2f3c12751c61ee3a00e7e697d2ec5e604c1b8
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
 
 ----------------------------------------------------------------------------------------
 Part 1: circulant eigenvalue formula (Pattern A, KOIDE_CIRCULANT_CHARACTER_BRIDGE)
@@ -163,7 +171,7 @@ PMNS angles:
   - Retained PMNS package's affine H(m, delta, q_+) construction is
     structurally REQUIRED to fix this (already retained)
 
-Status: BOUNDED probe with 4 named admissions. Not retained.
+Status: BOUNDED probe with 7 named admissions. Not retained.
 Open derivation targets surfaced: rho_nu selection, delta_nu derivation,
 m_3 circulant-side scale, U_nu = DFT_3 over-mixing fix.
 
@@ -172,3 +180,6 @@ m_3 circulant-side scale, U_nu = DFT_3 over-mixing fix.
   TOTAL: PASS=17, FAIL=0
 ========================================================================================
 PASS=17 FAIL=0
+
+----- stderr -----
+
