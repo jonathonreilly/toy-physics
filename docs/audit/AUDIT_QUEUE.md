@@ -1,13 +1,13 @@
 # Audit Queue
 
-**Total pending:** 1178
+**Total pending:** 1179
 **Ready (all deps already at retained-grade or metadata tiers):** 3
 
 By criticality:
 - `critical`: 736
-- `high`: 33
-- `medium`: 148
-- `leaf`: 261
+- `high`: 34
+- `medium`: 152
+- `leaf`: 257
 
 Auditor (current best Codex GPT model at maximum reasoning by default) should pull from the top of this list. Critical claims require cross-confirmation by a second independent clean-room auditor before `audited_clean` lands.
 
@@ -68,7 +68,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 ## Citation cycle break targets
 
-178 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
+183 citation cycles in the graph. Each cycle permanently blocks every member from `retained` until one node is re-audited with explicit cycle-break instructions or a 'see also' edge is stripped. Top 25 below; full list in `data/audit_queue.json` under `cycle_break_targets`.
 
 | # | cycle_id | length | max_desc | primary break target | criticality | audit_status |
 |---:|---|---:|---:|---|---|---|

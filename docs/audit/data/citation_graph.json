@@ -17069,6 +17069,18 @@
       "to": "lattice_nn_deterministic_rescale_note"
     },
     {
+      "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+      "to": "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10"
+    },
+    {
+      "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+      "to": "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10"
+    },
+    {
+      "from": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10",
+      "to": "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10"
+    },
+    {
       "from": "nn_lattice_rescaled_c_arm_nlo_saddle_note_2026-05-10",
       "to": "nn_lattice_rescaled_c_arm_derivation_note_2026-05-10"
     },
@@ -56155,9 +56167,12 @@
       "claim_type_author_hint_raw": "bounded_theorem (leading coherent-saddle support for the",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "lattice_nn_deterministic_rescale_note"
+        "lattice_nn_deterministic_rescale_note",
+        "nn_lattice_rescaled_full_kernel_identification_note_2026-05-10",
+        "nn_lattice_rescaled_c_arm_nnlo_saddle_note_2026-05-10",
+        "nn_lattice_rescaled_c_arm_alpha_constrained_refit_note_2026-05-10"
       ],
-      "note_hash": "e28e25a04b6f1978e6119bb5fbe5ebc61a6caed11385f2bfb0b6e0a5ce140dfb",
+      "note_hash": "58a08b6114e145fc8c3d8a3ace83d94f9d3b951bc099cecfe9f52b6d6ca053c3",
       "path": "docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md",
       "runner_path": "scripts/lattice_nn_rescaled_C_arm_derivation.py",
       "title": "Rescaled NN Lattice C_arm Coherent-Saddle Support Note"
@@ -70893,8 +70908,8 @@
       "open_gate": 117,
       "positive_theorem": 614
     },
-    "edge_count": 8870,
-    "leaf_count": 621,
+    "edge_count": 8873,
+    "leaf_count": 619,
     "node_count": 2210,
     "root_count": 771,
     "runners_with_path": 1829
