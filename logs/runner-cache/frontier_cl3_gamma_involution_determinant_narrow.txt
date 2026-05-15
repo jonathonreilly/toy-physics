@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cl3_gamma_involution_determinant_narrow.py
+runner_sha256: 19d4078185477c26b23359bae0c2fc31a7384a5b5bc8f8b03a6a714a03b4b603
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.38
+status: ok
+----- stdout -----
+========================================================================
+Cl(3) γ-involution determinant identity — narrow theorem runner
+========================================================================
+
+[Part 1] γ-involution = symplectic adjoint (cofactor)
+[symplectic symbolic] γ(M) = adj(M):  PASS
+
+[Part 2] γ-norm determinant identity (symbolic)
+[gamma-norm symbolic] M·γ(M) = det(M)·I_2:  PASS
+[gamma-norm symbolic] ⟨M·γ(M)⟩_0 = det(M):  PASS
+
+[Part 3] γ-norm determinant identity (numerical, 10 random M)
+[gamma-norm numerical] |M|_γ = √|det(M)| on 10 random M: 10/10 PASS
+
+[Part 4] γ on vector grade (σ_i, I_2)
+[vector grade] γ(σ_0=I_2) = +σ_0=I_2:  PASS
+[vector grade] γ(σ_1) = -σ_1:  PASS
+[vector grade] γ(σ_2) = -σ_2:  PASS
+[vector grade] γ(σ_3) = -σ_3:  PASS
+
+[Part 5] γ on bivector grade (σ_i σ_j, i≠j)
+[bivector grade] γ(σ_1σ_2) = -σ_1σ_2:  PASS
+[bivector grade] γ(σ_1σ_3) = -σ_1σ_3:  PASS
+[bivector grade] γ(σ_2σ_1) = -σ_2σ_1:  PASS
+[bivector grade] γ(σ_2σ_3) = -σ_2σ_3:  PASS
+[bivector grade] γ(σ_3σ_1) = -σ_3σ_1:  PASS
+[bivector grade] γ(σ_3σ_2) = -σ_3σ_2:  PASS
+
+[Part 6] γ on pseudoscalar
+[pseudoscalar grade] γ(σ_1σ_2σ_3) = +σ_1σ_2σ_3: PASS
+
+[Part 7] γ action on full Cl(3) 8-element basis
+[basis grade] γ(I_2) = +I_2:  PASS
+[basis grade] γ(σ_1) = -σ_1:  PASS
+[basis grade] γ(σ_2) = -σ_2:  PASS
+[basis grade] γ(σ_3) = -σ_3:  PASS
+[basis grade] γ(σ_1 σ_2) = -σ_1 σ_2:  PASS
+[basis grade] γ(σ_1 σ_3) = -σ_1 σ_3:  PASS
+[basis grade] γ(σ_2 σ_3) = -σ_2 σ_3:  PASS
+[basis grade] γ(ω = σ_1σ_2σ_3) = +ω = σ_1σ_2σ_3:  PASS
+
+[Part 8] Per-element γ-norm vs per-determinant readout boundary
+[readout boundary] block-diagonal |det|^{1/2} = ∏|M_i|_γ: 5/5 PASS
+[readout boundary] hopping → det(D_hop) ≠ det(M_1)·det(M_2):  PASS  (gap = -27/16)
+
+========================================================================
+SUMMARY: PASS=8 FAIL=0 TOTAL=8
+  PASS   symplectic-adjoint
+  PASS   gamma-norm-symbolic
+  PASS   gamma-norm-numerical
+  PASS   vector-grade
+  PASS   bivector-grade
+  PASS   pseudoscalar-grade
+  PASS   basis-grade
+  PASS   readout-boundary
+========================================================================
+
+----- stderr -----
+
