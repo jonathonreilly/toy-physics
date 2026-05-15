@@ -65,6 +65,16 @@ chain already imposes:
   axiom; it is the action-class scope inherited from the existing
   ambiguity row.
 
+  **Admission status of the single-plaquette class itself.** The
+  single-plaquette class is currently *admitted*, not derived from
+  A1+A2 — Wilson is an imported convention (per
+  [`BRIDGE_GAP_ACTION_FORM_UNIQUENESS_NO_GO_NOTE_2026-05-06.md`](BRIDGE_GAP_ACTION_FORM_UNIQUENESS_NO_GO_NOTE_2026-05-06.md)
+  and `G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18`),
+  and Heat-Kernel / Manton are jointly-admissible alternatives, not
+  framework derivations. Therefore the no-go below is **conditional
+  on this action-class admission**: it forecloses `F̃F` *within the
+  admitted class*, not across all conceivable lattice action classes.
+
 The Cl(3) → su(3) chain provides the canonical generators
 `T_a` with `Tr(T_a T_b) = delta_{ab}/2` from
 [`G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md`](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
@@ -291,33 +301,44 @@ Any single-plaquette action term reduces to a single field-strength
 factor per site at the relevant order (Step 2) and cannot express
 the bilinear two-plane structure of (13). QED.
 
-**Corollary (single-plaquette action class is structurally
-`theta_bare = 0`).** Within the single-plaquette action class
+**Corollary (single-plaquette action class cannot encode `F̃F` at
+leading order).** Within the single-plaquette action class
 `S(U) = sum_P f(U_P)` with `f` a real-valued class function on
-SU(3), no bare CP-odd theta-term `(theta_bare g^2 / 32 pi^2)
-integral F̃F` can appear in the continuum-limit action. The lattice
-class-function basis admits at most cubic-or-higher CP-odd
-contributions at order `a^6`, which are *not* the topological
-density. Hence the bare `theta` slot is structurally zero on
-this action class:
+SU(3), no `F̃F` coupling can appear at leading `O(a^4)` in the
+continuum-limit action. The lattice class-function basis admits
+CP-odd contributions only at order `a^6` (cubic-in-F, single-plane),
+which are *not* the topological density. Equivalently, the `F̃F`
+slot is structurally absent from this action class as an
+**action-form admissibility statement**:
 
 ```text
-    theta_bare  ==  0  on the single-plaquette action class.       (10)
+    no F̃F coupling encodable by single-plaquette f(U_P) at
+    leading O(a^4).                                                 (10)
 ```
+
+**This is NOT a derivation of `theta_QCD = 0` in QCD.** Under the
+admitted single-plaquette action-class scope (above), the bare-θ
+slot has no place in the action; this is the *dual* statement to
+"no CP-odd action-form admissible," not a dynamical-selection
+result. A multi-plaquette generalization (clover-style two-plaquette
+correlators) can, *a priori*, encode `F̃F` at leading order and is
+the named open boundary of this note.
 
 ## What this closes and what it does not
 
-**Closes (within the single-plaquette action class scope):**
+**Closes (within the admitted single-plaquette action class scope):**
 
 - The first Path A repair target from the parent's audit verdict
   ("retained operator-basis / action-surface theorem deriving from
   Cl(3)/Z^3 primitives ... that no gauge-invariant CP-odd theta term
-  is an admissible action slot") — *bounded to* the single-plaquette
-  class.
+  is an admissible action slot") — *bounded to* the admitted
+  single-plaquette class. The closure is conditional on the
+  action-class admission, not a derivation of the action-class itself
+  from A1+A2.
 - The structural origin of the parent runner's "no bare theta slot"
-  support item: equation (10) gives a *derivation* of this premise
-  from A1+A2 + single-plaquette class, rather than taking it as
-  part of the action-class definition.
+  support item: equation (10) gives an *action-form admissibility*
+  derivation from A1+A2 + the admitted single-plaquette class,
+  rather than taking it as part of the action-class definition.
 
 **Does not close:**
 
@@ -331,9 +352,12 @@ this action class:
   This is the second Path A repair target and is explicitly *not*
   addressed by this note.
 - Dynamical selection of `theta = 0` versus evaluation of a
-  `theta`-free surface. Equation (10) shows the bare theta is
-  structurally absent from the single-plaquette action class; this
-  is an action-class derivation, not a dynamical-selection statement.
+  `theta`-free surface. Equation (10) shows that no `F̃F` coupling
+  can be encoded by single-plaquette `f(U_P)` at leading `O(a^4)`;
+  equivalently, the bare-θ slot is structurally absent from the
+  admitted single-plaquette action class as an action-form
+  admissibility statement. This is **NOT** a derivation of
+  `theta_QCD = 0` and **NOT** a dynamical-selection statement.
 
 The audit row of the parent strong-CP note remains
 `audited_conditional` until the independent audit lane reviews this
@@ -392,16 +416,18 @@ runner_path: scripts/frontier_np_strong_cp_theta_obstruction.py
 runner_cache: logs/runner-cache/frontier_np_strong_cp_theta_obstruction.txt
 proposed_claim_type: bounded_theorem
 claim_scope: |
-  On the framework's Cl(3)/Z^3 (A1+A2) primitives, within the
-  single-plaquette action class S(U) = sum_P f(U_P) shared by every
-  action functional surviving the action-form-uniqueness no-go
-  (Wilson, Heat-Kernel, Manton), no CP-odd topological theta-term
-  can appear at leading order in the continuum expansion. The leading
-  imaginary trace Im tr U_P is structurally O(a^6) and cubic in F,
-  not the O(a^4) bilinear F̃F that defines the topological density;
-  the lattice topological density is intrinsically a two-plaquette
-  construct. Hence theta_bare == 0 on the single-plaquette action
-  class.
+  Conditional on the (admitted, not derived) single-plaquette action
+  class S(U) = sum_P f(U_P) shared by every action functional
+  surviving the action-form-uniqueness no-go (Wilson, Heat-Kernel,
+  Manton), no F̃F coupling can be encoded at leading O(a^4) in the
+  continuum expansion. The leading imaginary trace Im tr U_P is
+  structurally O(a^6) and cubic in F, not the O(a^4) bilinear F̃F
+  that defines the topological density; the lattice topological
+  density is intrinsically a two-plaquette (clover) construct.
+  Equivalently, the bare-θ slot is structurally absent from the
+  admitted single-plaquette action class as an action-form
+  admissibility statement. This is NOT a derivation of theta_QCD = 0
+  in QCD.
 bounded_scope: |
   This note does NOT address multi-plaquette CP-odd operators
   (e.g. clover-style two-plaquette correlators). It does NOT
