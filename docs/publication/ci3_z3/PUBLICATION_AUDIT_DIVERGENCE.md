@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 439 |
-| critical | `audited_conditional` | 61 |
+| critical | `unaudited` | 437 |
+| critical | `audited_conditional` | 63 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 5 |
 | medium | `unaudited` | 3 |
@@ -51,7 +51,7 @@ publication tables phrase it.
 | critical | `bminusl_anomaly_freedom_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `broad_gravity_derivation_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `charged_lepton_koide_cone_algebraic_equivalence_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
-| critical | `charged_lepton_koide_review_packet_2026-04-18` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `charged_lepton_koide_review_packet_2026-04-18` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `charged_lepton_mass_hierarchy_review_note_2026-04-17` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `ckm_a_squared_below_w2_y_quantum_closure_theorem_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
@@ -337,7 +337,7 @@ publication tables phrase it.
 | critical | `neutrino_majorana_staircase_blindness_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `neutrino_majorana_z3_nonactivation_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `neutrino_mass_derived_note` | `unaudited` | `unaudited` | DERIVATION_VALIDATION_MAP.md |
-| critical | `neutrino_mass_reduction_to_dirac_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
+| critical | `neutrino_mass_reduction_to_dirac_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `neutrino_retained_lanes_review_packet_2026-04-16` | `unaudited` | `unaudited` | PUBLICATION_MATRIX.md |
 | critical | `neutrino_retained_observable_bounds_theorem_note_2026-04-24` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `neutrino_retained_status_note_2026-04-16` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |

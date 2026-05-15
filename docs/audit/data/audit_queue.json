@@ -1,9 +1,9 @@
 {
   "by_criticality": {
-    "critical": 736,
+    "critical": 734,
     "high": 34,
-    "leaf": 262,
-    "medium": 153
+    "leaf": 260,
+    "medium": 152
   },
   "cycle_break_target_count": 183,
   "cycle_break_targets": [
@@ -761,7 +761,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 420,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -967,7 +967,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['neutrino_retained_status_note_2026-04-16', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 420,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -1210,7 +1210,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 420,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -1281,7 +1281,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['publication.ci3_z3.claims_table', 'publication.ci3_z3.derivation_atlas', 'publication.ci3_z3.derivation_validation_map', 'publication.ci3_z3.gravity_publication_package_summary_2026-04-15', 'publication.ci3_z3.publication_matrix'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 420,
       "primary_break_target": "neutrino_mass_reduction_to_dirac_note",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -3749,51 +3749,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "default_positive_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 14,
-      "effective_status": "unaudited",
-      "load_bearing_score": 15.728,
-      "note_path": "docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 423
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "neutrino_mass_reduction_to_dirac_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "charged_lepton_two_higgs_canonical_reduction_note",
-        "publication.ci3_z3.publication_matrix"
-      ],
-      "direct_in_degree": 13,
-      "effective_status": "unaudited",
-      "load_bearing_score": 15.218,
-      "note_path": "docs/NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_neutrino_mass_reduction_to_dirac.py",
-      "transitive_descendants": 420
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -24475,27 +24430,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.67,
-      "note_path": "docs/NN_LATTICE_RESCALED_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/lattice_nn_rescaled_kernel_identification.py",
-      "transitive_descendants": 8
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mesoscopic_surrogate_source_2d_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -28614,48 +28548,6 @@
       "ready": false,
       "runner_path": "scripts/frontier_yt_right_handed_species_dependence.py",
       "transitive_descendants": 2
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_anticommuting_operator_derivation_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_anticommuting_operator_derivation.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_lightcone_primitive_theorem_note_2026-05-10",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_LIGHTCONE_PRIMITIVE_THEOREM_NOTE_2026-05-10.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_lightcone_primitive.py",
-      "transitive_descendants": 0
     },
     {
       "audit_independence_required": "any_non_self",
@@ -35802,6 +35694,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 5,
-  "total_pending": 1185
+  "ready_count": 0,
+  "total_pending": 1180
 }
