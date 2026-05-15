@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_radian_unit_convention_reclassification_2026_05_10_radianconv.py
+runner_sha256: abf7429f689473770705402c635343a5b9321593e0aec83a97cc43e2b0e1af8b
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.09
+status: ok
+----- stdout -----
 Radian-unit-convention reclassification check
 note: docs/RADIAN_UNIT_CONVENTION_RECLASSIFICATION_SHARPENED_NOTE_2026-05-10_radianconv.md
 
@@ -52,3 +60,6 @@ PASS: comparison table to landed conventions present
 
 TOTAL: PASS=48 FAIL=0
 Radian-unit-convention reclassification check passed: P reclassified as unit convention under Conventions Unification (PR #729) pattern, conditional / SHARPENED, no retained theorem promoted, no new axiom, no PDG input, BAE remains bounded.
+
+----- stderr -----
+

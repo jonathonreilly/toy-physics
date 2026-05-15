@@ -1,0 +1,103 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_lh_traceless_eigenvalue_ratio_exact_2026_05_10.py
+runner_sha256: b3c463077a6e5d635741b253ec4d8999d72a45aad996de32c8c609132f0fe76f
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.67
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+LH_TRACELESS_EIGENVALUE_RATIO_NARROW_THEOREM_NOTE_2026-05-10
+Goal: sympy-symbolic verification of (R1)-(R4) over abstract n_color,
+then concrete sweep over n_color in {1, 2, 3, 4, 5, 7, 9, 11, 12}
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  symbolic n_color = n_color, eigenvalues a, b real
+  trace equation (L1): 2 n_color a + 2 b = 0
+
+----------------------------------------------------------------------------------------
+Part 1: (R1) parametric eigenvalue ratio a : b = 1 : (-n_color)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R1) parametric: b = -n_color * a forced by (L1)  (b_solved = -a*n_color)
+  [PASS (A)] (R1) parametric: a / b = -1 / n_color (equivalent ratio form)  (a/b + 1/n_color simplifies to 0)
+
+----------------------------------------------------------------------------------------
+Part 2: (R2) convention b = -1 fixes a = 1/n_color
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R2) parametric: under b = -1 convention, a = 1 / n_color  (a = 1/n_color)
+
+----------------------------------------------------------------------------------------
+Part 3: (R3) closed-form Q(u_L), Q(d_L) parametric in n_color
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R3) Q(u_L) parametric: (n_color + 1) / (2 n_color)  (Q(u_L) = (n_color + 1)/(2*n_color))
+  [PASS (A)] (R3) Q(d_L) parametric: (1 - n_color) / (2 n_color)  (Q(d_L) = (1 - n_color)/(2*n_color))
+
+----------------------------------------------------------------------------------------
+Part 4: (C1), (C2) derivable corollaries
+----------------------------------------------------------------------------------------
+  [PASS (A)] (C1) Q(u_L) - Q(d_L) = 1 (independent of n_color)  (Q_uL - Q_dL = 1)
+  [PASS (A)] (C2) Q(u_L) + Q(d_L) = a = 1/n_color  (Q_uL + Q_dL = 1/n_color)
+
+----------------------------------------------------------------------------------------
+Part 5: (R4) reduced-denominator parity rule via concrete sweep
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R4) at n_color = 1 (odd): d_red = 1 (got Q_uL denom 1, Q_dL denom 1)  (Q_uL = 1, Q_dL = 0)
+  [PASS (A)] (R4) at n_color = 2 (even): d_red = 4 (got Q_uL denom 4, Q_dL denom 4)  (Q_uL = 3/4, Q_dL = -1/4)
+  [PASS (A)] (R4) at n_color = 3 (odd): d_red = 3 (got Q_uL denom 3, Q_dL denom 3)  (Q_uL = 2/3, Q_dL = -1/3)
+  [PASS (A)] (R4) at n_color = 4 (even): d_red = 8 (got Q_uL denom 8, Q_dL denom 8)  (Q_uL = 5/8, Q_dL = -3/8)
+  [PASS (A)] (R4) at n_color = 5 (odd): d_red = 5 (got Q_uL denom 5, Q_dL denom 5)  (Q_uL = 3/5, Q_dL = -2/5)
+  [PASS (A)] (R4) at n_color = 7 (odd): d_red = 7 (got Q_uL denom 7, Q_dL denom 7)  (Q_uL = 4/7, Q_dL = -3/7)
+  [PASS (A)] (R4) at n_color = 9 (odd): d_red = 9 (got Q_uL denom 9, Q_dL denom 9)  (Q_uL = 5/9, Q_dL = -4/9)
+  [PASS (A)] (R4) at n_color = 11 (odd): d_red = 11 (got Q_uL denom 11, Q_dL denom 11)  (Q_uL = 6/11, Q_dL = -5/11)
+  [PASS (A)] (R4) at n_color = 12 (even): d_red = 24 (got Q_uL denom 24, Q_dL denom 24)  (Q_uL = 13/24, Q_dL = -11/24)
+
+----------------------------------------------------------------------------------------
+Part 6: framework instance n_color = 3 rational closed form
+----------------------------------------------------------------------------------------
+  [PASS (A)] framework n_color = 3: a = 1/3  (a = 1/3)
+  [PASS (A)] framework n_color = 3: Q(u_L) = 2/3  (Q(u_L) = 2/3)
+  [PASS (A)] framework n_color = 3: Q(d_L) = -1/3  (Q(d_L) = -1/3)
+  [PASS (A)] framework n_color = 3: reduced denominator = 3 (odd-parity branch)  (confirms d_red(3) = n_color = 3 directly)
+
+----------------------------------------------------------------------------------------
+Part 7: parity-branch counterfactual at n_color = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual at n_color = 2 (even): reduced denominator = 4 != 2  (Q(u_L) = 3/4, Q(d_L) = -1/4)
+  [PASS (A)] counterfactual at n_color = 4 (even): reduced denominator = 8  (Q(u_L) = 5/8, Q(d_L) = -3/8)
+
+----------------------------------------------------------------------------------------
+Part 8: parity rule via sympy gcd identity
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 1 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 2 is 1  (gcd_uL = 1, gcd_dL = 1)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 3 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 4 is 1  (gcd_uL = 1, gcd_dL = 1)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 5 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 7 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 9 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 11 is 2  (gcd_uL = 2, gcd_dL = 2)
+  [PASS (A)] (R4) gcd(n_color + 1, 2 n_color) at n_color = 12 is 1  (gcd_uL = 1, gcd_dL = 1)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (R1) parametric eigenvalue ratio a:b = 1:(-n_color)
+    (R2) under b = -1 convention, a = 1/n_color
+    (R3) Q(u_L), Q(d_L) closed forms parametric in n_color
+    (R4) reduced-denominator parity rule, sweep across both parities
+    (C1), (C2) sum/difference corollaries
+    Framework n_color = 3 instance: (a, Q(u_L), Q(d_L)) = (1/3, 2/3, -1/3)
+    Counterfactual: parity-even branch (n_color = 2, 4) reduces differently
+    Parity rule via sympy gcd identity across both parities
+
+========================================================================================
+TOTAL: PASS=31, FAIL=0
+========================================================================================
+
+----- stderr -----
+
