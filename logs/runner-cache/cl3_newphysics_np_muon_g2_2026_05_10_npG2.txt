@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/cl3_newphysics_np_muon_g2_2026_05_10_npG2.py
+runner_sha256: 7a6d301c2238da8586e42527ec2a7739b3d36db28dbf1ee84a32eec7b9de477c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.83
+status: ok
+----- stdout -----
 ==============================================================================
 New-physics probe: muon anomalous magnetic moment (npG2) -- verification
 ==============================================================================
@@ -73,3 +81,6 @@ Section 7: Synthesis
 ==============================================================================
 === TOTAL: PASS=40, FAIL=0 ===
 ==============================================================================
+
+----- stderr -----
+
