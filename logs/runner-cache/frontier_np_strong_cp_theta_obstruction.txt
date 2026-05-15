@@ -1,0 +1,44 @@
+==============================================================================
+Strong-CP Single-Plaquette F-Tilde-F Operator-Class Obstruction
+==============================================================================
+
+CLAIM: Within the single-plaquette action class S(U) = sum_P f(U_P)
+       with f : SU(3) -> R a class function, no CP-odd topological
+       theta-term is admissible at leading order. Im tr U_P is
+       O(a^6) and cubic-in-F (single-plane), NOT the O(a^4)
+       bilinear F̃F (two-plane) topological density.
+
+[1] Canonical su(3) generator algebra
+  [PASS] All su(3) generators are traceless  (max |tr T_a| = 0.00e+00)
+  [PASS] Tr(T_a T_b) = delta_{ab}/2 (canonical normalization)  (max deviation = 1.11e-16)
+
+[2] Class-function reality on single-plaquette actions
+  [PASS] Wilson single-plaquette action is real on random SU(3) inputs  (max |Im S_W| = 0.00e+00)
+  [PASS] Heat-kernel surrogate single-plaquette action is real on random SU(3) inputs  (max |Im S_HK| = 0.00e+00)
+
+[3] CP transformation flips sign of Im tr U_P, preserves Re tr U_P
+  [PASS] Re tr U_P is CP-even (Re tr U = Re tr U*)  (max |Re(U)-Re(U*)| = 0.00e+00)
+  [PASS] Im tr U_P is CP-odd (Im tr U + Im tr U* = 0)  (max |Im(U)+Im(U*)| = 0.00e+00)
+
+[4] Small-a scaling: Im tr U_P ~ a^6 (cubic-in-F), not a^4 (F-tilde-F)
+  [PASS] Im tr U_P scales as a^6 (slope of log|Im| vs log a near 6, NOT 4)  (mean slope = 6.000; target 6.0; F-tilde-F target 4.0)
+  [PASS] Im tr U_P scaling exponent is bounded away from 4 (the F-tilde-F scale)  (mean slope = 6.000 >> 4.0)
+
+[5] Im tr U_P single-plane content matches -(a^6 g^3 / 6) tr F^3
+  [PASS] Im tr U_P fits a single-plane cubic-in-F (coefficient near 1)  (slope = 1.0000; relative residual = 4.864e-07)
+  [PASS] Cubic-fit relative residual is small (single-plane, cubic-in-F dominates)  (residual = 4.864e-07)
+
+[6] F-tilde-F is intrinsically two-plane / multi-plaquette
+  [PASS] Single-plane cubic-in-F proxy CANNOT fit two-plane F-tilde-F density (residual ~1)  (single-plane cubic fit to F-tilde-F density: residual = 0.942 (close to 1 = no fit))
+  [PASS] F-tilde-F density scales as a^4 (slope of log|F̃F| vs log a near 4)  (slope = 4.000; target 4.0)
+
+[7] No single-plaquette CP-odd term can reproduce F-tilde-F at leading order
+  [PASS] No single-plaquette linear combination of Im tr U_P fits F-tilde-F density  (best linear-fit relative residual = 0.963 (close to 1 = no fit))
+
+==============================================================================
+PASS=13  FAIL=0
+==============================================================================
+
+All structural identities verified: within the single-plaquette action
+class, no CP-odd topological theta-term is admissible at leading order.
+theta_bare == 0 structurally on this action class.
