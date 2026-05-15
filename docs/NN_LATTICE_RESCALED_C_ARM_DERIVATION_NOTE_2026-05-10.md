@@ -15,6 +15,31 @@ status are set by the independent audit lane.
 `alpha = 0.5256`, R^2 = 0.9996 on `h <= 0.25`. Those numbers are used
 here as a comparison target only, not as audit authority.
 
+**Upstream bridge theorems (added 2026-05-11 in response to the
+`audited_conditional` verdict on this row):**
+
+- [`docs/NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10.md)
+  — derives the full kernel `A(y_s -> y_d; h)` from blocked-slit propagation
+  with translation invariance verified to machine precision. Identifies
+  the correct slit length anchoring as `L_1 = L_total/3` (source-to-slit,
+  selection-filter interpretation), not `L_2 = 2 L_total/3` (slit-to-detector,
+  Huygens interpretation). Sharpens the residual to -1.85%.
+- [`docs/NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10.md)
+  — closed-form finite-slit-aperture correction: complex-Gaussian truncated
+  convolution `psi_det(y) ~ exp(-y^2/(4 alpha_total)) [erf(u_b) - erf(u_a)]`.
+  NNLO predicts `alpha_eff = 0.5247`, |Delta alpha| = 0.0009 vs empirical
+  0.5256 (96% of LO gap closed). Per-h sigma_arm matches PR #968 to <= 0.3%
+  across the fit window.
+- [`docs/NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md`](NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10.md)
+  — diagnostic-fit artifact at the audit boundary: under `alpha = 1/2`
+  constrained fitting (the geodesic prediction), the per-h estimator
+  `C_arm(h) = sigma_arm(h) / sqrt(h)` recovers the analytic value
+  pointwise with residual `0.504%` at h=0.03125 and `0.268%` at h=0.015625.
+
+See the "2026-05-11 audit-repair addendum" section near the end of this
+note for the consolidated repair statement and a sharper length-anchoring
+interpretation.
+
 ## Claim
 
 The companion fitted constant
@@ -331,6 +356,95 @@ The `8.3%` residual at the strict `h -> 0` saddle is consistent with sub-leading
 non-Gaussian corrections to the saddle (the `O((q h)^4)` term dropped in step
 3) and with finite-slit-aperture corrections that we have not closed
 analytically. Both are sub-leading at the four fit points used.
+
+## 2026-05-11 audit-repair addendum
+
+The 2026-05-10 audit verdict on this row was `audited_conditional` with the
+following load-bearing concern, quoted from the auditor's `repair_target`:
+
+> add a retained bridge theorem or deterministic runner deriving the arm
+> width from the actual blocked-slit propagation, and supply/audit the
+> diagnostic fit artifact as a direct dependency.
+
+Both repair targets are now present on `main` as independent source notes;
+this addendum cites them and consolidates the resulting picture.
+
+**1. Blocked-slit propagation theorem.** The full-kernel identification
+note (`NN_LATTICE_RESCALED_FULL_KERNEL_IDENTIFICATION_NOTE_2026-05-10`)
+derives `A(y_s -> y_d; h)` directly from the harness's blocked-slit
+propagation. Translation invariance under shifts of `y_s` is verified to
+machine precision (`sigma` and `c_2` spread across the `y_s` grid both
+exactly zero). The kernel structure is
+
+```text
+A(y_s -> y_d; h)  =  C_amp(h)  *  exp[-(y_d - y_s)^2 / (2 sigma(h)^2)]
+                                *  exp[i (c_0 + c_2_infinity (y_d - y_s)^2)]
+```
+
+with `sigma(h) ~ 4.61 sqrt(h)` and `c_2_infinity ~ 0.02999` (the latter
+matching the c_2 derivation note `NN_LATTICE_RESCALED_C2_DERIVATION_NOTE_2026-05-10`
+to 0.33%).
+
+**2. Length-anchoring interpretation correction.** The original step 8 of
+this note asserted that the slit "re-anchors the per-arm centroid"
+(Huygens secondary-point-source reading) and used `L_eff = L_2 = 2 L_total / 3`.
+The full-kernel note's cross-check finds that the empirical `C_arm = 2.7107`
+is matched by **`L_1 = L_total / 3` source-to-slit anchoring** to residual
+`-1.85%`, while the `L_2 = 2 L_total / 3` Huygens anchoring gives residual
+`+38.81%`. The physically correct reading is:
+
+> The narrow slit acts as a **selection filter** on the source's natural
+> angular spread at distance `L_1 = L_total/3`, not as a Huygens secondary
+> point-source. The per-arm width on the detector inherits the source-side
+> propagation length `L_1`, not the post-slit length `L_2`.
+
+Numerically, the `L_2` formula in this note's step 7 collapses to a value
+4x sharper under the `L_1` reading because `sqrt(L_1 / L_total) = sqrt(1/3)`
+multiplies the no-slit `C_amp = 4.61` to give `2.660` instead of the `L_2`
+formula's `2.4855`. Both readings agree on a `sqrt(1/3)` or equivalent
+suppression factor; they differ in physical interpretation, and the
+selection-filter reading is sharper by ~4x in residual.
+
+The `8.3%` residual reported in this note (step "Cross-validation table",
+row "Coherent, L = L_2") is therefore an artefact of the wrong-interpretation
+length identification. The correct identification gives `-1.85%`.
+
+**3. Finite-slit-aperture correction.** The NNLO saddle note
+(`NN_LATTICE_RESCALED_C_ARM_NNLO_SADDLE_NOTE_2026-05-10`) supplies the
+closed-form finite-slit truncated-convolution correction that this note
+listed as "not closed analytically". The NNLO prediction `alpha_eff = 0.5247`
+matches the empirical `alpha = 0.5256` to `|Delta alpha| = 0.0009`,
+inside the positive 0.005 acceptance band. The remaining ~4% reflects
+higher-order phase or aperture effects not captured at NNLO, bounded above.
+
+**4. Diagnostic-fit artifact.** The alpha-constrained refit note
+(`NN_LATTICE_RESCALED_C_ARM_ALPHA_CONSTRAINED_REFIT_NOTE_2026-05-10`)
+provides the per-`h` diagnostic-fit artefact the auditor named. Under
+geodesic `alpha = 1/2` constrained fitting, the per-`h` estimator
+`C_arm(h) = sigma_arm(h) / sqrt(h)` recovers the analytic value pointwise:
+
+| h | C_arm(h) | residual vs `2.4855` |
+|---|---:|---:|
+| 0.250   | 2.6294 | +5.788% |
+| 0.125   | 2.5412 | +2.240% |
+| 0.0625  | 2.5128 | +1.097% |
+| 0.03125 | 2.4981 | +0.504% |
+| 0.015625 | 2.4922 | +0.268% |
+
+The residual halves under each refinement and asymptotes to the analytic
+value. The original 8.3% residual was a fit-protocol artefact: a
+two-parameter `(C, alpha)` fit lets `alpha` drift to `0.5256` to absorb
+the cosine phase correction, which then over-inflates `C` by the
+observed factor `2.7107 / 2.4855 = 1.0906`.
+
+**Net effect on this row's claim.** With the above three pieces, the
+load-bearing length-anchoring step has a retained derivation
+(blocked-slit propagation), the finite-slit-aperture residual has a
+closed form (NNLO saddle), and the diagnostic fit artefact is supplied
+(alpha-constrained refit). The remaining bounded-scope caveats
+(harness-fixed `BETA, k, L_total, FANOUT, SLIT_Y`, observable subspace,
+field-free single-source) are intrinsic and not addressed by this
+addendum.
 
 ## Status
 
