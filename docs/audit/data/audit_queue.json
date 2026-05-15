@@ -1,9 +1,9 @@
 {
   "by_criticality": {
-    "critical": 739,
+    "critical": 737,
     "high": 33,
     "leaf": 259,
-    "medium": 150
+    "medium": 147
   },
   "cycle_break_target_count": 279,
   "cycle_break_targets": [
@@ -6489,29 +6489,6 @@
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "decoherence_action_independence_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "valley_linear_action_note"
-      ],
-      "direct_in_degree": 2,
-      "effective_status": "unaudited",
-      "load_bearing_score": 9.804,
-      "note_path": "docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/decoherence_action_independence.py",
-      "transitive_descendants": 446
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -10067,29 +10044,6 @@
       "ready": false,
       "runner_path": "scripts/retarded_field_delay_proxy_probe.py",
       "transitive_descendants": 481
-    },
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "poisson_self_gravity_loop_note",
-      "claim_scope": "Bounded Poisson-like self-gravity loop control on the exact h=0.25 lattice family, using the documented quick audit subset: exact epsilon=0 reduction, frozen-field Born floor, weak-field TOWARD sign, loop/inst ratio band, and near-linear mass-law exponent hard bars.",
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "audited_pending_cross_confirmation",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "deps": [
-        "minimal_source_driven_field_probe_note"
-      ],
-      "direct_in_degree": 7,
-      "effective_status": "audit_in_progress",
-      "load_bearing_score": 12.41,
-      "note_path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
-      "queue_reason": "audit_in_progress",
-      "ready": false,
-      "runner_path": "scripts/poisson_self_gravity_loop.py",
-      "transitive_descendants": 480
     },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
@@ -27300,83 +27254,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "complex_selectivity_compare_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "second_grown_family_complex_note",
-        "alt_connectivity_family_sign_note",
-        "third_grown_family_sign_note",
-        "fourth_family_quadrant_note",
-        "claude_complex_action_grown_companion_note",
-        "alt_connectivity_family_complex_failure_note",
-        "second_grown_family_complex_boundary_note",
-        "minimal_axioms_2026-05-03",
-        "alt_connectivity_family_fm_transfer_note"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 5.748,
-      "note_path": "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/COMPLEX_SELECTIVITY_COMPARE.py",
-      "transitive_descendants": 18
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "mirror_2d_validation_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_program_synthesis"
-      ],
-      "direct_in_degree": 3,
-      "effective_status": "unaudited",
-      "load_bearing_score": 4.959,
-      "note_path": "docs/MIRROR_2D_VALIDATION_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/mirror_2d_validation.py",
-      "transitive_descendants": 10
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "mirror_2d_gravity_law_note",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "deps": [
-        "mirror_program_synthesis"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 3.822,
-      "note_path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/mirror_2d_validation.py",
-      "transitive_descendants": 9
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "mesoscopic_surrogate_source_2d_note",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38461,6 +38338,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 4,
-  "total_pending": 1181
+  "ready_count": 0,
+  "total_pending": 1176
 }
