@@ -1,11 +1,50 @@
 # Handoff
 
-Checkpoint: 2026-05-15 00:17 EDT
+Checkpoint: 2026-05-15 00:41 EDT
 
 Branch: `claude/yt-direct-lattice-correlator-2026-04-30`
 
 Base / landing path: draft PR #230 head
 `claude/yt-direct-lattice-correlator-2026-04-30`
+
+## Block100 W/Z Explicit-v Authority Firewall
+
+Block100 consumes the completed higher-shell chunk state and tests the W/Z
+explicit-`v` absolute-normalization shortcut. The strict PR230 explicit-`v`
+authority certificate is absent. The package hierarchy value
+`v=246.282818290129 GeV` is visible, but its derivation uses forbidden
+`alpha_LM` / plaquette / `u0` / `M_Pl * alpha_LM^16` normalization surfaces, so
+it is rejected as a load-bearing W/Z absolute pin.
+
+Artifacts:
+
+- `docs/YT_PR230_WZ_V_AUTHORITY_FIREWALL_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_wz_v_authority_firewall.py`
+- `outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json`
+
+Validation:
+
+```text
+W/Z v authority firewall PASS=12 FAIL=0
+campaign status PASS=423 FAIL=0
+assumption stress PASS=107 FAIL=0
+retained route PASS=321 FAIL=0
+full positive closure assembly PASS=196 FAIL=0
+positive closure completion audit PASS=75 FAIL=0
+```
+
+Honest status: exact negative boundary / PR230 W/Z explicit-`v` authority is
+absent, and package hierarchy `v` cannot be used as a W/Z absolute-normalization
+pin. The result preserves the claim firewall: no accepted W/Z action, no
+production W/Z rows, no same-source top rows, no matched covariance, no strict
+non-observed `g2`, no `delta_perp`, no final W-response rows, no physical
+`kappa_s`, and no retained or `proposed_retained` top-Yukawa closure.
+
+Exact next action: do not use package hierarchy `v` as a shortcut. W/Z closure
+requires a strict non-forbidden explicit-`v` certificate, strict non-observed
+`g2`, or canonical source-response normalization, plus the full same-source W/Z
+response packet. The cleanest source-Higgs route remains accepted same-surface
+`O_H`/action plus strict `C_ss/C_sH/C_HH` pole rows.
 
 ## Block99 Higher-Shell Complete-Packet Monotonicity Boundary
 

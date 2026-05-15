@@ -1,14 +1,14 @@
 # Claim Status Certificate
 
-Current block: `block99_schur_higher_shell_complete_packet_monotonicity_gate`.
+Current block: `block100_wz_v_authority_firewall`.
 
 ```yaml
-actual_current_surface_status: exact negative boundary / block99 complete 63/63 higher-shell finite rows fail necessary Stieltjes complete-monotonicity sign tests for strict scalar-LSZ/Schur pole authority; no retained/proposed_retained closure
+actual_current_surface_status: exact negative boundary / block100 PR230 W/Z explicit-v authority absent; package hierarchy v rejected as load-bearing W/Z absolute pin; no retained/proposed_retained closure
 conditional_surface_status: source-Higgs support if a future accepted same-surface EW/Higgs action certifies canonical O_H and supplies physical Euclidean C_ss/C_sH/C_HH(tau) pole rows with Gram/FV/IR authority; W/Z support if a future strict packet supplies accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp authority, and final W-response rows
 hypothetical_axiom_status: null
 admitted_observation_status: null
 proposal_allowed: false
-proposal_allowed_reason: "Block99 is an exact negative boundary for finite higher-shell row promotion only, not a retained/proposed-retained theorem. The completed 63/63 finite rows fail the necessary Stieltjes complete-monotonicity shortcut and still remain same-source C_ss plus taste-radial C_sx/C_xx support under the unratified second-source certificate. They do not supply canonical O_H, strict C_sH/C_HH pole rows, isolated-pole Schur A/B/C rows, FV/IR authority, W/Z response rows, strict g2, matched covariance, physical kappa_s, or aggregate retained-route approval."
+proposal_allowed_reason: "Block100 is an exact negative boundary for the W/Z explicit-v shortcut only, not a retained/proposed-retained theorem. The strict PR230 explicit-v authority certificate is absent, and package hierarchy v is rejected because its visible derivation traverses forbidden alpha_LM / plaquette / u0 / M_Pl*alpha_LM^16 normalization surfaces. W/Z still lacks accepted action, production W/Z rows, same-source top rows, matched covariance, strict non-observed g2, delta_perp, and final W-response authority; source-Higgs and scalar-LSZ routes still lack canonical O_H, strict C_sH/C_HH pole rows, FV/IR authority, and physical kappa_s."
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -17,6 +17,14 @@ Retained-proposal certificate result: fail.
 
 Reason:
 
+0. Block100 records the W/Z explicit-`v` authority firewall as an exact
+   negative boundary. The strict PR230 explicit-`v` authority certificate is
+   absent; package hierarchy `v=246.282818290129 GeV` is rejected as a
+   load-bearing W/Z absolute pin because its visible derivation traverses
+   forbidden `alpha_LM` / plaquette / `u0` / `M_Pl * alpha_LM^16` surfaces.
+   The W/Z route still lacks accepted action, production W/Z rows, same-source
+   top rows, matched covariance, strict non-observed `g2`, `delta_perp`, and
+   final W-response authority.
 0. Block99 records the complete higher-shell finite packet as an exact negative
    boundary for the finite-row promotion shortcut. All `63/63` chunk rows and
    checkpoints are schema-clean and the finite inverse-block identity check is

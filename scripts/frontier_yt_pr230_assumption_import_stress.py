@@ -329,6 +329,9 @@ def main() -> int:
         "schur_higher_shell_complete_packet_monotonicity": load(
             "outputs/yt_pr230_schur_higher_shell_complete_packet_monotonicity_gate_2026-05-15.json"
         ),
+        "wz_v_authority_firewall": load(
+            "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json"
+        ),
         "negative_route_applicability_review": load(
             "outputs/yt_pr230_negative_route_applicability_review_2026-05-06.json"
         ),
@@ -1914,6 +1917,27 @@ def main() -> int:
         and bool(higher_shell_complete_packet.get("failing_complete_monotonicity_fields")),
         higher_shell_complete_packet.get("actual_current_surface_status"),
     )
+    wz_v_firewall = certificates["wz_v_authority_firewall"]
+    wz_v_authority_firewall_blocks = (
+        "PR230 W/Z explicit-v authority absent"
+        in str(wz_v_firewall.get("actual_current_surface_status"))
+        and wz_v_firewall.get("proposal_allowed") is False
+        and wz_v_firewall.get("wz_v_authority_firewall_passed") is True
+        and wz_v_firewall.get("v_authority_gate_passed") is False
+        and wz_v_firewall.get("package_v_surface", {}).get(
+            "rejected_as_pr230_load_bearing_input"
+        )
+        is True
+        and wz_v_firewall.get("strict_non_claims", {}).get(
+            "used_alpha_lm_plaquette_or_u0_as_authority"
+        )
+        is False
+    )
+    report(
+        "wz-v-authority-firewall-blocks-package-v-import",
+        wz_v_authority_firewall_blocks,
+        wz_v_firewall.get("actual_current_surface_status"),
+    )
     schur_one_pole_scout = certificates["schur_x_given_source_one_pole_scout"]
     report(
         "schur-x-given-source-one-pole-scout-not-authority",
@@ -2225,8 +2249,10 @@ def main() -> int:
             "does not treat FMS or gauge-invariant-field literature as same-surface PR230 O_H/source-overlap/kappa_s proof",
             "does not treat a higher-shell Schur production contract as row evidence, complete monotonicity, pole authority, FV/IR authority, or y_t closure",
             "does not treat complete 63/63 higher-shell finite-row monotonicity diagnostics as strict scalar-LSZ, Schur pole-row, FV/IR, canonical O_H, or y_t authority",
+            "does not treat package hierarchy v as a PR230 W/Z absolute-normalization pin",
             "does not close future source-Higgs, W/Z, Schur, rank-one, scalar-LSZ, or production routes",
         ],
+        "wz_v_authority_firewall_blocks_package_v_import": wz_v_authority_firewall_blocks,
         "pass_count": PASS_COUNT,
         "fail_count": FAIL_COUNT,
     }

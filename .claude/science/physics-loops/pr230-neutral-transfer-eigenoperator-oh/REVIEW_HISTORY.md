@@ -1,5 +1,51 @@
 # Review History
 
+## Block100
+
+Local review run on 2026-05-15 04:41 UTC.
+
+Scope:
+
+- `docs/YT_PR230_WZ_V_AUTHORITY_FIREWALL_NOTE_2026-05-15.md`
+- `scripts/frontier_yt_pr230_wz_v_authority_firewall.py`
+- `outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json`
+- aggregate runners/certificates consuming the new boundary
+- `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/`
+
+Review results:
+
+| Reviewer | Disposition | Notes |
+|---|---|---|
+| Code / Runner | PASS | New runner verifies strict explicit-`v` authority is absent, rejects package hierarchy `v` as a PR230 W/Z absolute pin, and preserves W/Z packet-root requirements. |
+| Physics Claim Boundary | EXACT NEGATIVE BOUNDARY / NO CLOSURE | Package hierarchy `v` uses forbidden normalization surfaces and cannot replace accepted action, W/Z rows, strict `g2`, covariance, `delta_perp`, or source normalization. |
+| Imports / Support | CLEAN / DISCLOSED | No observed selector, `H_unit`, `yt_ward_identity`, plaquette/u0 chain, `kappa_s=1`, `c2=1`, or `Z_match=1` is used. |
+| Nature Retention | OPEN | No retained or `proposed_retained` wording is authorized. |
+
+Checks:
+
+```bash
+python3 -m py_compile scripts/frontier_yt_pr230_wz_v_authority_firewall.py scripts/frontier_yt_pr230_campaign_status_certificate.py scripts/frontier_yt_pr230_assumption_import_stress.py scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py scripts/frontier_yt_retained_closure_route_certificate.py scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# OK
+python3 scripts/frontier_yt_pr230_wz_v_authority_firewall.py
+# SUMMARY: PASS=12 FAIL=0
+python3 scripts/frontier_yt_retained_closure_route_certificate.py
+# SUMMARY: PASS=321 FAIL=0
+python3 scripts/frontier_yt_pr230_campaign_status_certificate.py
+# SUMMARY: PASS=423 FAIL=0
+python3 scripts/frontier_yt_pr230_full_positive_closure_assembly_gate.py
+# SUMMARY: PASS=196 FAIL=0
+python3 scripts/frontier_yt_pr230_positive_closure_completion_audit.py
+# SUMMARY: PASS=75 FAIL=0
+python3 scripts/frontier_yt_pr230_assumption_import_stress.py
+# SUMMARY: PASS=107 FAIL=0
+git diff --check
+# OK
+bash docs/audit/scripts/run_pipeline.sh
+# OK, 5 known warnings
+python3 docs/audit/scripts/audit_lint.py --strict
+# OK, 5 known warnings
+```
+
 ## Block99
 
 Local review run on 2026-05-15 04:17 UTC.

@@ -93,6 +93,7 @@ PARENTS = {
     "electroweak_g2_certificate_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
     "wz_g2_generator_casimir_normalization_no_go": "outputs/yt_wz_g2_generator_casimir_normalization_no_go_2026-05-05.json",
     "wz_g2_authority_firewall": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json",
+    "pr230_wz_v_authority_firewall": "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
     "wz_g2_response_self_normalization_no_go": "outputs/yt_wz_g2_response_self_normalization_no_go_2026-05-05.json",
     "pr230_wz_mass_response_self_normalization_no_go": "outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json",
     "wz_g2_bare_running_bridge_attempt": "outputs/yt_pr230_wz_g2_bare_running_bridge_attempt_2026-05-05.json",
@@ -3915,6 +3916,26 @@ def main() -> int:
         and certs["wz_g2_authority_firewall"].get("g2_authority_gate_passed") is False,
         statuses["wz_g2_authority_firewall"],
     )
+    wz_v_authority_firewall_blocks = (
+        "PR230 W/Z explicit-v authority absent"
+        in statuses["pr230_wz_v_authority_firewall"]
+        and certs["pr230_wz_v_authority_firewall"].get("proposal_allowed") is False
+        and certs["pr230_wz_v_authority_firewall"].get(
+            "wz_v_authority_firewall_passed"
+        )
+        is True
+        and certs["pr230_wz_v_authority_firewall"].get("v_authority_gate_passed")
+        is False
+        and certs["pr230_wz_v_authority_firewall"].get(
+            "package_v_surface", {}
+        ).get("rejected_as_pr230_load_bearing_input")
+        is True
+    )
+    report(
+        "pr230-wz-v-authority-firewall-blocks",
+        wz_v_authority_firewall_blocks,
+        statuses["pr230_wz_v_authority_firewall"],
+    )
     report(
         "wz-g2-response-self-normalization-no-go-blocks",
         "WZ response-only g2 self-normalization no-go"
@@ -4517,6 +4538,7 @@ def main() -> int:
         "neutral_primitive_route_completion_blocks": neutral_primitive_route_completion_blocks,
         "neutral_rank_one_bypass_post_block37_blocks": neutral_rank_one_bypass_post_block37_blocks,
         "wz_mass_response_self_normalization_no_go_blocks": wz_mass_response_self_normalization_no_go_blocks,
+        "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
         "hs_logdet_scalar_action_normalization_no_go_blocks": hs_logdet_scalar_action_normalization_no_go_blocks,
         "native_scalar_action_lsz_route_exhaustion_blocks": native_scalar_action_lsz_route_exhaustion_blocks,
         "wz_absolute_authority_route_exhaustion_blocks": wz_absolute_authority_route_exhaustion_blocks,
@@ -4575,6 +4597,7 @@ def main() -> int:
             "does not treat a formal HS/logdet auxiliary scalar rewrite as canonical O_H or scalar LSZ authority",
             "does not treat current native scalar/action/LSZ route exhaustion as a permanent no-go against future primitives",
             "does not treat current W/Z absolute-authority route exhaustion as permanent no-go or as closure",
+            "does not treat package hierarchy v as PR230 W/Z absolute-normalization authority",
             "does not treat complete FH-LSZ target time series as same-surface neutral transfer or C_sH/C_HH pole rows",
             "does not treat MC configuration-index target time series as Euclidean transfer, OS kernel, Krylov generator, or source-Higgs pole evidence",
             "does not treat ordinary top/scalar-source tau correlators or reduced source-Higgs smoke as strict C_sH/C_HH production pole evidence",

@@ -88,6 +88,7 @@ PARENTS = {
     "wz_mass_fit_response_row_builder": "outputs/yt_wz_mass_fit_response_row_builder_2026-05-04.json",
     "top_wz_matched_covariance_builder": "outputs/yt_top_wz_matched_covariance_certificate_builder_2026-05-04.json",
     "electroweak_g2_builder": "outputs/yt_electroweak_g2_certificate_builder_2026-05-05.json",
+    "wz_v_authority_firewall": "outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json",
     "source_higgs_readiness": "outputs/yt_source_higgs_production_readiness_gate_2026-05-04.json",
     "source_higgs_gram": "outputs/yt_source_higgs_gram_purity_gate_2026-05-02.json",
     "schur_kprime_rows": "outputs/yt_schur_kprime_row_absence_guard_2026-05-03.json",
@@ -1258,6 +1259,19 @@ def main() -> int:
         certs["source_higgs_readiness"].get("source_higgs_launch_ready") is not True
         and "missing O_H certificate" in parent_statuses["source_higgs_readiness"]
     )
+    wz_v_authority_firewall_blocks = (
+        "PR230 W/Z explicit-v authority absent"
+        in parent_statuses["wz_v_authority_firewall"]
+        and certs["wz_v_authority_firewall"].get("proposal_allowed") is False
+        and certs["wz_v_authority_firewall"].get("wz_v_authority_firewall_passed")
+        is True
+        and certs["wz_v_authority_firewall"].get("v_authority_gate_passed")
+        is False
+        and certs["wz_v_authority_firewall"].get("package_v_surface", {}).get(
+            "rejected_as_pr230_load_bearing_input"
+        )
+        is True
+    )
     wz_open = (
         certs["wz_same_source_action"].get("same_source_ew_action_ready") is not True
         and certs["wz_mass_fit_response_row_builder"].get("strict_wz_mass_fit_response_row_builder_passed")
@@ -1265,6 +1279,7 @@ def main() -> int:
         and certs["top_wz_matched_covariance_builder"].get("strict_top_wz_matched_covariance_builder_passed")
         is not True
         and certs["electroweak_g2_builder"].get("strict_electroweak_g2_certificate_passed") is not True
+        and wz_v_authority_firewall_blocks
     )
     schur_open = certs["schur_kprime_rows"].get("current_schur_kernel_rows_present") is not True
     neutral_open = certs["neutral_primitive_cone"].get("primitive_cone_certificate_gate_passed") is not True
@@ -1348,6 +1363,7 @@ def main() -> int:
     report("scalar-lsz-route-open", lsz_open, "strict Stieltjes/Pade moment-threshold certificate absent")
     report("source-higgs-route-open", source_higgs_open, parent_statuses["source_higgs_readiness"])
     report("same-source-wz-route-open", wz_open, "same-source EW action/WZ rows/covariance/g2 inputs absent")
+    report("wz-v-authority-firewall-blocks", wz_v_authority_firewall_blocks, parent_statuses["wz_v_authority_firewall"])
     report("wz-smoke-promotion-blocked", smoke_promotion_blocked, parent_statuses["wz_smoke_promotion_no_go"])
     report("schur-route-open", schur_open, parent_statuses["schur_kprime_rows"])
     report("neutral-rank-route-open", neutral_open, parent_statuses["neutral_primitive_cone"])
@@ -1499,6 +1515,7 @@ def main() -> int:
             "wz_response_ratio_identifiability_contract_not_closure": wz_response_ratio_identifiability_contract_not_closure,
             "wz_same_source_action_minimal_certificate_cut_open": wz_same_source_action_minimal_certificate_cut_open,
             "wz_accepted_action_response_root_checkpoint_blocks": wz_accepted_action_response_root_checkpoint_blocks,
+            "wz_v_authority_firewall_blocks": wz_v_authority_firewall_blocks,
             "canonical_oh_wz_common_action_cut_open": canonical_oh_wz_common_action_cut_open,
             "canonical_oh_accepted_action_stretch_blocks_current_stack": canonical_oh_accepted_action_stretch_blocks_current_stack,
             "post_fms_source_overlap_necessity_blocks_current_inference": post_fms_source_overlap_necessity_blocks_current_inference,
@@ -1532,6 +1549,7 @@ def main() -> int:
             "does not claim retained or proposed_retained y_t closure",
             "does not treat completed chunks as scalar-LSZ or source-overlap authority",
             "does not treat W/Z smoke rows as production response rows",
+            "does not treat package hierarchy v as PR230 W/Z absolute-normalization authority",
             "does not treat Z3 H2 positive-cone support as physical neutral transfer or primitive irreducibility",
             "does not treat the same-surface neutral multiplicity-one intake gate as accepted O_H authority",
             "does not treat the current additive top source as a no-independent-top radial spurion",

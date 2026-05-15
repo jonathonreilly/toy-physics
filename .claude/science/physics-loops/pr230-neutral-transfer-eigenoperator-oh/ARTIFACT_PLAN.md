@@ -1,5 +1,26 @@
 # Artifact Plan
 
+Block100 artifacts:
+
+| Artifact | Path | Status |
+|---|---|---|
+| Runner | `scripts/frontier_yt_pr230_wz_v_authority_firewall.py` | Created; PASS=12 FAIL=0 |
+| Certificate | `outputs/yt_pr230_wz_v_authority_firewall_2026-05-15.json` | Created |
+| Boundary note | `docs/YT_PR230_WZ_V_AUTHORITY_FIREWALL_NOTE_2026-05-15.md` | Created |
+| Loop pack | `.claude/science/physics-loops/pr230-neutral-transfer-eigenoperator-oh/` | Updated |
+
+Follow-on artifact target after block100:
+
+```text
+outputs/yt_electroweak_v_authority_certificate_2026-05-12.json
+```
+
+or a strict non-observed `g2` certificate / canonical source-response
+normalization certificate. Any W/Z route still also needs accepted action,
+production W/Z rows, same-source top rows, matched covariance, `delta_perp`,
+and final W-response authority. Package hierarchy `v` is not a PR230 W/Z
+absolute-normalization pin.
+
 Block01 artifacts:
 
 | Artifact | Path | Status |

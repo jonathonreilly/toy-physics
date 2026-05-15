@@ -1,0 +1,88 @@
+{
+  "actual_current_surface_status": "exact negative boundary / PR230 W/Z explicit-v authority absent; package hierarchy v is rejected as a load-bearing W/Z absolute pin",
+  "admitted_observation_status": null,
+  "audit_required_before_effective_retained": true,
+  "bare_retained_allowed": false,
+  "block68_wz_identifiability": {
+    "current_absolute_pin_present": false,
+    "explicit_v_root_absent": true,
+    "path": "outputs/yt_pr230_block68_strict_wz_neutral_transfer_obstruction_2026-05-12.json",
+    "rank_with_explicit_v_pin": 6,
+    "required_wz_roots_absent": {
+      "accepted_same_source_ew_higgs_action": true,
+      "delta_perp_certificate": true,
+      "matched_top_wz_covariance_certificate": true,
+      "production_wz_mass_fit_rows": true,
+      "production_wz_response_rows": true,
+      "same_source_top_response_rows": true,
+      "strict_non_observed_g2_certificate": true
+    }
+  },
+  "conditional_surface_status": "conditional-support only if a future strict non-forbidden explicit-v authority certificate is supplied together with accepted same-source EW/Higgs action, production W/Z and same-source top response rows, matched covariance, delta_perp, and final W-response authority",
+  "exact_next_action": "Supply outputs/yt_electroweak_v_authority_certificate_2026-05-12.json from an allowed non-observed, non-alpha_LM/plaquette/u0 authority, or replace the W/Z absolute pin with a strict non-observed g2 certificate or canonical source-response normalization. Then rerun the W/Z physical-response packet and full PR230 assembly gates.",
+  "explicit_v_authority_certificate": {
+    "path": "outputs/yt_electroweak_v_authority_certificate_2026-05-12.json",
+    "present": false,
+    "strict_candidate_valid": false
+  },
+  "fail_count": 0,
+  "hypothetical_axiom_status": null,
+  "other_absolute_pin_boundaries": {
+    "g2_firewall": {
+      "blocked": true,
+      "path": "outputs/yt_wz_g2_authority_firewall_2026-05-05.json"
+    },
+    "wz_absolute_authority_route_exhaustion": {
+      "blocked": true,
+      "path": "outputs/yt_pr230_wz_absolute_authority_route_exhaustion_after_block41_2026-05-12.json"
+    },
+    "wz_mass_response_self_normalization": {
+      "blocked": true,
+      "path": "outputs/yt_pr230_wz_mass_response_self_normalization_no_go_2026-05-12.json"
+    }
+  },
+  "package_v_surface": {
+    "documents_read": [
+      "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+      "docs/MINIMAL_AXIOMS_2026-04-11.md",
+      "docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md"
+    ],
+    "forbidden_dependencies_found": [
+      "M_Pl * alpha_LM^16",
+      "alpha_LM",
+      "plaquette",
+      "u_0"
+    ],
+    "observed_v_comparator_present": true,
+    "package_v_present": true,
+    "rejected_as_pr230_load_bearing_input": true,
+    "rejection_reasons": [
+      "PR230 firewall forbids alpha_LM / plaquette / u0 as load-bearing proof input",
+      "an observed v comparator is not an authority or selector for top-Yukawa closure",
+      "static electroweak v does not identify the substrate source coordinate",
+      "explicit v alone does not supply accepted action, W/Z rows, covariance, delta_perp, or W-response authority"
+    ]
+  },
+  "pass_count": 12,
+  "proposal_allowed": false,
+  "proposal_allowed_reason": "No strict explicit-v authority certificate is present. The visible package v value depends on hierarchy/observable-principle surfaces containing alpha_LM, plaquette/u0, and observed-comparator context, which PR230 may not use as load-bearing proof input.",
+  "static_v_source_identity_boundary": {
+    "manifest": "outputs/yt_fh_gauge_mass_response_manifest_2026-05-02.json",
+    "observable_gap": "outputs/yt_fh_gauge_mass_response_observable_gap_2026-05-02.json",
+    "static_v_not_source_identity": true
+  },
+  "strict_non_claims": {
+    "claimed_retained_or_proposed_retained": false,
+    "set_v_g2_c2_zmatch_or_kappa_by_unit_convention": false,
+    "treated_static_v_as_source_identity": false,
+    "treated_wz_smoke_as_production": false,
+    "used_alpha_lm_plaquette_or_u0_as_authority": false,
+    "used_hunit_matrix_element_readout": false,
+    "used_observed_top_mass_or_yt_selector": false,
+    "used_observed_v_as_authority": false,
+    "used_package_v_as_authority": false,
+    "used_yt_ward_identity": false
+  },
+  "v_authority_gate_passed": false,
+  "wz_v_authority_firewall_passed": true
+}
