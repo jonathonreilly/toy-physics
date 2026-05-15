@@ -1,0 +1,148 @@
+===== runner cache v1 =====
+runner: scripts/frontier_g_bare_constraint_vs_convention_restatement_abstract_identity_narrow.py
+runner_sha256: be7acd31740ed965cb36f8e09ee223dcf1f6d30a4b527759d6f7ff55c9eda4e9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.47
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Pattern A narrow theorem: g_bare constraint-vs-convention restatement abstract identity
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+T0 (setup): the relation β · g² = K is a single polynomial equation in three positive variables
+----------------------------------------------------------------------------------------
+  [PASS (A)] F := β · g² - K is a single polynomial in (g, β, K)  (F = -K + beta*g**2)
+  [PASS (A)] F has total degree 3 in (g, β, K) (degree 2 in g, 1 in β, 1 in K)  (degree = 3)
+
+----------------------------------------------------------------------------------------
+(T1) One-axis admission (S_K): solution curve β = K / g² over R_{>0}
+----------------------------------------------------------------------------------------
+  [PASS (A)] substituting β = K/g² into F gives 0 symbolically (T1 parameterization)  (F|_{β = K/g²} = 0)
+  [PASS (A)] (T1) at (g, K) = (1/2, 2): β = K/g² = 8, β·g² = K (exact)  (β·g² = 2)
+  [PASS (A)] (T1) at (g, K) = (1, 6): β = K/g² = 6, β·g² = K (exact)  (β·g² = 6)
+  [PASS (A)] (T1) at (g, K) = (2, 8): β = K/g² = 2, β·g² = K (exact)  (β·g² = 8)
+  [PASS (A)] (T1) at (g, K) = (3, 18): β = K/g² = 2, β·g² = K (exact)  (β·g² = 18)
+  [PASS (A)] (T1) at (g, K) = (5/7, 50/49): β = K/g² = 2, β·g² = K (exact)  (β·g² = 50/49)
+
+----------------------------------------------------------------------------------------
+(T2) Two-axis admission (S_Kβ): g = sqrt(K / β) uniquely determined
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T2) at (K, β) = (2, 1/2): g² = K/β = 4 and β·g² = K (exact)  (β·g² = 2, K = 2)
+  [PASS (A)] (T2) at (K, β) = (2, 1/2): exactly one positive g satisfies β·g² = K  (positive solutions: [2])
+  [PASS (A)] (T2) at (K, β) = (6, 6): g² = K/β = 1 and β·g² = K (exact)  (β·g² = 6, K = 6)
+  [PASS (A)] (T2) at (K, β) = (6, 6): exactly one positive g satisfies β·g² = K  (positive solutions: [1])
+  [PASS (A)] (T2) at (K, β) = (2, 2): g² = K/β = 1 and β·g² = K (exact)  (β·g² = 2, K = 2)
+  [PASS (A)] (T2) at (K, β) = (2, 2): exactly one positive g satisfies β·g² = K  (positive solutions: [1])
+  [PASS (A)] (T2) at (K, β) = (12, 3): g² = K/β = 4 and β·g² = K (exact)  (β·g² = 12, K = 12)
+  [PASS (A)] (T2) at (K, β) = (12, 3): exactly one positive g satisfies β·g² = K  (positive solutions: [2])
+  [PASS (A)] (T2) at (K, β) = (3, 1/4): g² = K/β = 12 and β·g² = K (exact)  (β·g² = 3, K = 3)
+  [PASS (A)] (T2) at (K, β) = (3, 1/4): exactly one positive g satisfies β·g² = K  (positive solutions: [2*sqrt(3)])
+  [PASS (A)] (T2) at (K, β) = (50/49, 50/49): g² = K/β = 1 and β·g² = K (exact)  (β·g² = 50/49, K = 50/49)
+  [PASS (A)] (T2) at (K, β) = (50/49, 50/49): exactly one positive g satisfies β·g² = K  (positive solutions: [1])
+  [PASS (A)] (T2) at (K, β) = (72, 8): g² = K/β = 9 and β·g² = K (exact)  (β·g² = 72, K = 72)
+  [PASS (A)] (T2) at (K, β) = (72, 8): exactly one positive g satisfies β·g² = K  (positive solutions: [3])
+
+----------------------------------------------------------------------------------------
+(T2 symmetric) Two-axis admission (S_Kg): β = K / g² uniquely determined
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T2 sym) at (K, g) = (2, 1): β = K/g² = 2 and β·g² = K (exact)  (β·g² = 2, K = 2)
+  [PASS (A)] (T2 sym) at (K, g) = (6, 1): β = K/g² = 6 and β·g² = K (exact)  (β·g² = 6, K = 6)
+  [PASS (A)] (T2 sym) at (K, g) = (8, 2): β = K/g² = 2 and β·g² = K (exact)  (β·g² = 8, K = 8)
+  [PASS (A)] (T2 sym) at (K, g) = (12, 1): β = K/g² = 12 and β·g² = K (exact)  (β·g² = 12, K = 12)
+  [PASS (A)] (T2 sym) at (K, g) = (3, 1): β = K/g² = 3 and β·g² = K (exact)  (β·g² = 3, K = 3)
+  [PASS (A)] (T2 sym) at (K, g) = (50/49, 5/7): β = K/g² = 2 and β·g² = K (exact)  (β·g² = 50/49, K = 50/49)
+
+----------------------------------------------------------------------------------------
+(T3) Rank disambiguation: free-parameter count = 2 - r
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T3) r = 0 ⇒ 2 free parameters (surface)
+  [PASS (A)] (T3) r = 1 ⇒ 1 free parameter (curve)
+  [PASS (A)] (T3) r = 2 ⇒ 0 free parameters (point: forced constraint)
+  [PASS (A)] (T3) at r = 1: variable is a 'convention' (free on 1-parameter curve)  (free params at r=1: 1)
+  [PASS (A)] (T3) at r = 2: variable is a 'constraint' (uniquely determined, 0 free params)  (free params at r=2: 0)
+
+----------------------------------------------------------------------------------------
+(T3) Dimension match: counted from polynomial-equation rank
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T3) ambient dim 3, eqn rank 1 ⇒ solution dim = 2 (matches T4)  (3 - 1 = 2)
+  [PASS (A)] (T3) at r = 0: solution dim = 2 - 0 = 2
+  [PASS (A)] (T3) at r = 1: solution dim = 2 - 1 = 1
+  [PASS (A)] (T3) at r = 2: solution dim = 2 - 2 = 0
+
+----------------------------------------------------------------------------------------
+(T4) Zero-axis admission: 2-parameter solution surface
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T4) at (g, β) = (1, 1): K = β·g² = 1, β·g² = K (exact)  (β·g² = 1)
+  [PASS (A)] (T4) at (g, β) = (1/2, 3): K = β·g² = 3/4, β·g² = K (exact)  (β·g² = 3/4)
+  [PASS (A)] (T4) at (g, β) = (2, 1/2): K = β·g² = 2, β·g² = K (exact)  (β·g² = 2)
+  [PASS (A)] (T4) at (g, β) = (3, 7): K = β·g² = 63, β·g² = K (exact)  (β·g² = 63)
+  [PASS (A)] (T4) at (g, β) = (5/7, 11/13): K = β·g² = 275/637, β·g² = K (exact)  (β·g² = 275/637)
+  [PASS (A)] (T4) at (g, β) = (1/3, 9): K = β·g² = 1, β·g² = K (exact)  (β·g² = 1)
+
+----------------------------------------------------------------------------------------
+Round-trip consistency: substituting derived value back recovers (1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] round-trip (K, β) = (2, 1/2): g² = 4, β·g² = 2 = K  (β·g² = 2, K = 2)
+  [PASS (A)] round-trip (K, β) = (6, 6): g² = 1, β·g² = 6 = K  (β·g² = 6, K = 6)
+  [PASS (A)] round-trip (K, β) = (8, 2): g² = 4, β·g² = 8 = K  (β·g² = 8, K = 8)
+  [PASS (A)] round-trip (K, β) = (72, 8): g² = 9, β·g² = 72 = K  (β·g² = 72, K = 72)
+
+----------------------------------------------------------------------------------------
+Negative case: a non-solution triple violates (1)
+----------------------------------------------------------------------------------------
+  [PASS (A)] negative case (g, β, K) = (1, 6, 12): β·g² = 6 ≠ K = 12  (|β·g² - K| = 6 != 0)
+  [PASS (A)] negative case (g, β, K) = (2, 1, 2): β·g² = 4 ≠ K = 2  (|β·g² - K| = 2 != 0)
+
+----------------------------------------------------------------------------------------
+Independence check: zero load-bearing physical input
+----------------------------------------------------------------------------------------
+  [PASS (A)] note declares 'Does NOT identify (g, β, K) with the lattice gauge bare coupling'
+  [PASS (A)] note declares zero load-bearing dependencies
+  [PASS (A)] note explicitly disclaims Cl(3), SU(N_c), Wilson, Gell-Mann input
+
+----------------------------------------------------------------------------------------
+Narrow theorem summary
+----------------------------------------------------------------------------------------
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let (g, β, K) ∈ R_{>0}^3 be abstract symbolic positive reals
+    connected by the single polynomial relation
+        β · g² = K.                                                       (1)
+
+  CONCLUSION:
+    (T1) Under (S_K) — K admitted as fixed positive constant, (g, β) free:
+         solution set = 1-parameter curve { (g, K/g²) : g > 0 }.
+
+    (T2) Under (S_Kβ) — (K, β) admitted as fixed positive constants:
+         g = sqrt(K/β) is uniquely determined (single-valued algebraic
+         constraint). Symmetric (S_Kg): β = K/g² uniquely determined.
+
+    (T3) Rank disambiguation: free-parameter count = 2 - r where r is
+         the number of admitted scalars. r=1 ⇒ convention (1 free param);
+         r=2 ⇒ constraint (0 free params). The constraint-vs-convention
+         status of any single variable is a function of admission rank,
+         and is mathematically ill-posed until r is specified.
+
+    (T4) Under zero-axis admission, solution set = 2-parameter surface
+         { (g, β, β·g²) : g, β > 0 }.
+
+  Audit-lane class:
+    (A) — pure polynomial algebra over R_{>0}. No physical Cl(3) local
+    algebra / Wilson / SU(N_c) / Gell-Mann / physical bare-coupling
+    identification.
+
+  This narrow theorem isolates the algebraic constraint-vs-convention
+  disambiguation from any physical g_bare / Wilson / Cl(3) framing.
+
+
+========================================================================================
+  TOTAL: PASS=52, FAIL=0
+========================================================================================
+
+----- stderr -----
+

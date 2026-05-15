@@ -1,3 +1,11 @@
+===== runner cache v1 =====
+runner: scripts/frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py
+runner_sha256: 1c9cf80915388a8f92aaba814a80f08959b1abbdb2114a6eba0a6a428de0ac92
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.52
+status: ok
+----- stdout -----
 
 ========================================================================================
  frontier_gauge_vacuum_plaquette_finite_tensor_word_packet.py
@@ -147,3 +155,6 @@
  check, not a separate load-bearing property). The parent's broader
  matrix-element identity z_(p,q)^env = <chi, T^L eta> is NOT claimed
  here; this is a split-note bounded packet only.
+
+----- stderr -----
+
