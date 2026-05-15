@@ -1,0 +1,105 @@
+===== runner cache v1 =====
+runner: scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py
+runner_sha256: ff81f270a1bb38a0dfc9ac4e730790a2f9ae6e0ef79df3c6e660649a72bdea2c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.88
+status: ok
+----- stdout -----
+
+========================================================================
+NEWPHYSICS NP-CKM-Wolfenstein — P-Heavy-A circulant Cabibbo No-Go
+Source theorem runner; PR #1044 P-Heavy-A primitive (sector-dependent
+rho-Koide circulants on C_3[111]) cannot reproduce CKM structure.
+========================================================================
+
+========================================================================
+Test 1: Z_3 DFT diagonalizes every 3x3 Hermitian circulant
+========================================================================
+  PASS  F diagonalizes H (a=1.0, rho=1.4142, delta=0.2222)
+  PASS  F diagonalizes H (a=1.0, rho=1.76, delta=2.1729)
+  PASS  F diagonalizes H (a=1.0, rho=1.545, delta=4.3022)
+  PASS  F diagonalizes H (a=2.0, rho=0.5, delta=1.0000)
+  PASS  F diagonalizes H (a=1.0, rho=2.4999, delta=0.5000)
+  PASS  F diagonalizes H (a=0.5, rho=1.0, delta=-0.3000)
+
+========================================================================
+Test 2: V_CKM = U_up^H U_down is permutation x phase
+========================================================================
+
+|V_CKM| (P-Heavy-A up-type x down-type fits):
+  +7.356946e-16  +1.000000e+00  +2.864961e-16
+  +8.587605e-18  +2.849621e-16  +1.000000e+00
+  +1.000000e+00  +8.352418e-16  +1.453727e-16
+
+  PASS  V is unitary (each row sums to 1)
+  PASS  Row 0 has one |V_ij|=1 and two |V_ij|=0 (permutation pattern)
+  PASS  Row 1 has one |V_ij|=1 and two |V_ij|=0 (permutation pattern)
+  PASS  Row 2 has one |V_ij|=1 and two |V_ij|=0 (permutation pattern)
+  PASS  V is exactly a permutation matrix (no continuous mixing)
+
+========================================================================
+Test 3: No-go is parameter-free across the P-Heavy-A admission
+========================================================================
+  PASS  Random parameter sweep: V is permutation to within numerical precision
+
+========================================================================
+Test 4: Wolfenstein (lambda, A, rho_W, eta_W, J) forced to 0/trivial
+========================================================================
+
+  Predicted |V_us| = 1.000000e+00    (PDG ~ 0.22500)
+  Predicted |V_cb| = 1.000000e+00    (PDG ~ 0.04210)
+  Predicted |V_ub| = 2.864961e-16    (PDG ~ 0.00370)
+  Predicted |V_td| = 1.000000e+00    (PDG ~ 0.00855)
+  Predicted |V_ts| = 8.352418e-16    (PDG ~ 0.04138)
+  Predicted Wolfenstein lambda = 1.000000e+00    (PDG ~ 0.22500)
+  Predicted Wolfenstein A      = 1.0              (PDG ~ 0.826)
+  Predicted Jarlskog J         = 4.073387e-32    (PDG ~ 3.08e-5)
+
+  PASS  Predicted |V_us| is 0 or 1 (not 0.22500)
+  PASS  Predicted lambda is far from PDG 0.22500
+  PASS  Predicted Jarlskog J = 0 (not 3.08e-5)
+  PASS  Predicted Jarlskog J is far from PDG 3.08e-5
+
+========================================================================
+Test 5: Sector-dependent Fourier-to-generation map is discrete
+========================================================================
+  PASS  All 36 (P_up, P_dn) pairs give permutation V
+  PASS  Permutation-freedom yields exactly 6 distinct |V_CKM| patterns (= S_3)
+
+========================================================================
+Test 6: lambda ~ 0.225 unreachable for any P-Heavy-A admission
+========================================================================
+  PASS  max |V[0,1]| over (rho_up, delta_up, rho_dn, delta_dn) grid is 0 or 1
+  PASS  PDG lambda = 0.22500 cannot be reached on P-Heavy-A admission
+
+========================================================================
+Test 7: H_up and H_dn always commute (algebraic theorem)
+========================================================================
+  PASS  [H_up, H_dn] = 0 for all P-Heavy-A pairs (algebraic)
+
+  [H_up, H_dn] = 0 implies they have a common orthonormal eigenbasis,
+  which here is the Z_3 Fourier basis F. Hence U_up and U_dn span the
+  same flag of eigenspaces, and V_CKM = U_up^H U_dn is a permutation
+  matrix dressed by overall phases.
+
+========================================================================
+Test 8: Charged-lepton Brannen-Rivero shares C_3[111]
+========================================================================
+  PASS  F diagonalizes charged-lepton Brannen-Rivero circulant
+
+  This consistency observation matches DM_NEUTRINO_CKM_TEXTURE_TRANSFER_NO_GO
+  (2026-04-15): same-eigenbasis structure foreclosed neutrino sector earlier.
+
+========================================================================
+Density-of-rationals control: cannot fit lambda from {0,1} discrete set
+========================================================================
+  PASS  PDG lambda is at distance >= 0.22500 from the discrete admissible set
+  PASS  PDG |V_cb| is at distance >= 0.0421 from discrete admissible set
+
+========================================================================
+TOTAL: PASS=24, FAIL=0
+========================================================================
+
+----- stderr -----
+

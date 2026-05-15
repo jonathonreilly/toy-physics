@@ -14040,6 +14040,54 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_two_amplitude_last_mile.py"
     },
+    "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm": {
+      "assert_count": 2,
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 17,
+        "D": 18
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py"
+    },
+    "newphysics_np_muon_g2_note_2026-05-10_npg2": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 19
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_newphysics_np_muon_g2_2026_05_10_npG2.py"
+    },
+    "newphysics_np_neutrino_pmns_note_2026-05-10_npnu": {
+      "assert_count": 2,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 39
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/cl3_np_neutrino_pmns_circulant_2026_05_10_npNu.py"
+    },
+    "newphysics_np_strong_cp_theta_note_2026-05-10_npcp": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 34,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_np_strong_cp_theta_obstruction.py"
+    },
     "newton_derivation_top4_bridge_note": {
       "assert_count": 0,
       "counts": {
@@ -25466,6 +25514,51 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py": {
+      "assert_count": 2,
+      "claims": [
+        "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 0,
+        "C": 17,
+        "D": 18
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_newphysics_np_muon_g2_2026_05_10_npG2.py": {
+      "assert_count": 2,
+      "claims": [
+        "newphysics_np_muon_g2_note_2026-05-10_npg2"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 19
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/cl3_np_neutrino_pmns_circulant_2026_05_10_npNu.py": {
+      "assert_count": 2,
+      "claims": [
+        "newphysics_np_neutrino_pmns_note_2026-05-10_npnu"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 3,
+        "D": 39
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/cl3_per_site_hilbert_dim_two_check.py": {
@@ -37255,6 +37348,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_np_strong_cp_theta_obstruction.py": {
+      "assert_count": 1,
+      "claims": [
+        "newphysics_np_strong_cp_theta_note_2026-05-10_npcp"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 34,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_observable_generator_additivity_from_cluster_decomposition.py": {
       "assert_count": 1,
       "claims": [
@@ -47949,12 +48057,12 @@
     "dominant_class_distribution": {
       "A": 156,
       "B": 175,
-      "C": 688,
-      "D": 276,
+      "C": 689,
+      "D": 279,
       "none": 417
     },
-    "runners_classified": 1712,
-    "runners_with_C": 877,
-    "runners_with_D": 499
+    "runners_classified": 1716,
+    "runners_with_C": 880,
+    "runners_with_D": 502
   }
 }

@@ -16997,6 +16997,146 @@
       "to": "neutrino_majorana_nur_charge2_primitive_reduction_note"
     },
     {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_atlas_axiom_closure_note"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "three_generation_structure_note"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "ckm_magnitudes_structural_counts_theorem_note_2026-04-25"
+    },
+    {
+      "from": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "to": "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "complete_prediction_chain_2026_04_15"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "conventions_unification_companion_note_2026-05-08"
+    },
+    {
+      "from": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "to": "physical_lattice_foundational_interpretation_note_2026-05-08"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_circulant_character_derivation_note_2026-04-18"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_mass_derived_note"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_retained_observable_bounds_theorem_note_2026-04-24"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "charged_lepton_koide_review_packet_2026-04-18"
+    },
+    {
+      "from": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "to": "neutrino_retained_status_note_2026-04-16"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "strong_cp_theta_zero_note"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "to": "g_bare_structural_normalization_theorem_note_2026-04-18"
+    },
+    {
       "from": "newtonian_distance_law_confirmed",
       "to": "valley_linear_wide_tail_note"
     },
@@ -56075,6 +56215,89 @@
       "runner_path": "scripts/frontier_neutrino_two_amplitude_last_mile.py",
       "title": "Neutrino Two-Amplitude Last-Mile Reduction"
     },
+    "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm": {
+      "claim_id": "newphysics_np_ckm_wolfenstein_note_2026-05-10_npckm",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go (source theorem)",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "primitive_p_heavyq_species_proposal_note_2026-05-10_ppheavyq",
+        "ckm_atlas_axiom_closure_note",
+        "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
+        "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
+        "minimal_axioms_2026-04-11",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "three_generation_structure_note",
+        "ckm_magnitudes_structural_counts_theorem_note_2026-04-25",
+        "dm_neutrino_ckm_texture_transfer_no_go_note_2026-04-15"
+      ],
+      "note_hash": "8804b6e8f2bb2a5529a0675c21639714336846b5cb18cd590e53be0f861c92ec",
+      "path": "docs/NEWPHYSICS_NP_CKM_WOLFENSTEIN_NOTE_2026-05-10_npCKM.md",
+      "runner_path": "scripts/cl3_newphysics_np_ckm_wolfenstein_2026_05_10_npCKM.py",
+      "title": "NEWPHYSICS NP-CKM-Wolfenstein \u2014 P-Heavy-A Circulant Cabibbo No-Go"
+    },
+    "newphysics_np_muon_g2_note_2026-05-10_npg2": {
+      "claim_id": "newphysics_np_muon_g2_note_2026-05-10_npg2",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (Pauli/Cl(3)-structural anchor for the 1-loop universal piece a_l = \u03b1/(2\u03c0); full prediction of the muon g-2 anomaly is **bounded by named admissions**)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cl3_pauli_irrep_uniqueness_narrow_theorem_note_2026-05-10",
+        "complete_prediction_chain_2026_04_15",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "atomic_lane2_qed_running_dependency_firewall_note_2026-04-30",
+        "higgs_mass_from_axiom_status_correction_audit_note_2026-05-02",
+        "minimal_axioms_2026-05-03",
+        "conventions_unification_companion_note_2026-05-08",
+        "physical_lattice_foundational_interpretation_note_2026-05-08"
+      ],
+      "note_hash": "bbf1538db66b41057c0b077ec94d3adf0904786449fe020d1f5f36a4429d6af6",
+      "path": "docs/NEWPHYSICS_NP_MUON_G2_NOTE_2026-05-10_npG2.md",
+      "runner_path": "scripts/cl3_newphysics_np_muon_g2_2026_05_10_npG2.py",
+      "title": "New-Physics Probe \u2014 Muon Anomalous Magnetic Moment (npG2)"
+    },
+    "newphysics_np_neutrino_pmns_note_2026-05-10_npnu": {
+      "claim_id": "newphysics_np_neutrino_pmns_note_2026-05-10_npnu",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (new-physics probe; numerical hypothesis test)",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "brannen_amplitude_equipartition_bae_rename_meta_note_2026-05-09",
+        "koide_circulant_character_derivation_note_2026-04-18",
+        "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
+        "dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+        "neutrino_mass_derived_note",
+        "neutrino_retained_observable_bounds_theorem_note_2026-04-24",
+        "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+        "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
+        "minimal_axioms_2026-05-03",
+        "charged_lepton_koide_review_packet_2026-04-18",
+        "neutrino_retained_status_note_2026-04-16"
+      ],
+      "note_hash": "301c28b3581a542ad967dae8fd35f5f5aec3668eb76e6cb0330a33fb8df28f5f",
+      "path": "docs/NEWPHYSICS_NP_NEUTRINO_PMNS_NOTE_2026-05-10_npNu.md",
+      "runner_path": "scripts/cl3_np_neutrino_pmns_circulant_2026_05_10_npNu.py",
+      "title": "New-Physics Probe \u2014 Neutrino PMNS Circulant Ansatz (npNu)"
+    },
+    "newphysics_np_strong_cp_theta_note_2026-05-10_npcp": {
+      "claim_id": "newphysics_np_strong_cp_theta_note_2026-05-10_npcp",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (new-physics source note; bridge derivation for the",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "strong_cp_theta_zero_note",
+        "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10",
+        "bridge_gap_action_form_uniqueness_no_go_note_2026-05-06",
+        "minimal_axioms_2026-05-03",
+        "g_bare_structural_normalization_theorem_note_2026-04-18"
+      ],
+      "note_hash": "5b77ee3dd0d8ce8822cc64af804e134942f5a0254b62607c361e952d4f19194f",
+      "path": "docs/NEWPHYSICS_NP_STRONG_CP_THETA_NOTE_2026-05-10_npCP.md",
+      "runner_path": "scripts/frontier_np_strong_cp_theta_obstruction.py",
+      "title": "Strong-CP Single-Plaquette F-Tilde-F Operator-Class Obstruction"
+    },
     "newton_derivation_note": {
       "claim_id": "newton_derivation_note",
       "claim_type_author_hint": null,
@@ -70917,25 +71140,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 357,
+      "bounded_theorem": 360,
       "meta": 74,
-      "no_go": 45,
+      "no_go": 46,
       "none": 1552,
       "open_gate": 37,
       "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 811,
+      "bounded_theorem": 814,
       "meta": 74,
-      "no_go": 150,
+      "no_go": 151,
       "none": 444,
       "open_gate": 117,
       "positive_theorem": 616
     },
-    "edge_count": 8873,
-    "leaf_count": 621,
-    "node_count": 2212,
+    "edge_count": 8908,
+    "leaf_count": 623,
+    "node_count": 2216,
     "root_count": 773,
-    "runners_with_path": 1831
+    "runners_with_path": 1835
   }
 }
