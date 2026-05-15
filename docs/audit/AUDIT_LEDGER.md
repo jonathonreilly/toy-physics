@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1176 |
+| unaudited | 1177 |
 | audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 184 |
+| ~~audited_conditional~~ | 183 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 519 |
-| `audited_conditional` | 184 |
+| `audited_conditional` | 183 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1289 |
+| `unaudited` | 1290 |
 
 | claim_type | count |
 |---|---:|
@@ -64,11 +64,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `critical` | 1058 |
 | `high` | 56 |
-| `medium` | 254 |
-| `leaf` | 733 |
+| `medium` | 258 |
+| `leaf` | 729 |
 
 - **Retained pending chain closure:** 3
-- **Citation cycles detected:** 278
+- **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
 
@@ -770,7 +770,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_vs_central_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `neutrino_mass_reduction_to_dirac_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
-| `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -7631,19 +7630,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The safe wording is that the widened W = 12, h = 0.25 replay gives a far-tail fit of b^(-1.17) on the tested z >= 5 window, is a strong finite-lattice replay, and is not a universal theorem.  _(class `B`)_
 - **chain closes:** True — The source note explicitly narrows the historical headline to the retained bounded wide-tail replay note. The completed replay log matches the dependency note's frozen values; the live short-budget run timed out just before completion and is not used as negative evidence.
 - **rationale:** The audited claim is the bounded finite-window replay statement, not the broader historical headline. The one-hop dependency is retained_bounded, and the completed runner log reports Born=4.82e-15, k=0=+0.000000, 9/9 TOWARD rows, peak-tail b^(-1.07) with R^2=0.990, and far-tail b^(-1.17) with R^2=0.997, matching the source and dependency notes. Residual risk is only asymptotic/generalization risk, which the source note explicitly excludes.
-- **auditor confidence:** high
-
-### `nn_lattice_rescaled_c_arm_derivation_note_2026-05-10`
-
-- **Note:** [`NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md`](../../docs/NN_LATTICE_RESCALED_C_ARM_DERIVATION_NOTE_2026-05-10.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Bounded closed-form coherent-saddle estimate for the rescaled NN harness C_arm constant at fixed harness parameters, including the post-slit L_eff = L_2 identification and comparison to the embedded diagnostic fit values.
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
-- **auditor:** `codex-audit-loop-019e1330-bd14-7781-b577-5400622f75b5`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** "The per-arm width on the detector is therefore set by L_2, not L_total" with L_eff = L_2 = 2 L_total / 3 in the C_arm formula.  _(class `F`)_
-- **chain closes:** False — The saddle algebra is internally consistent once L_eff is assumed, but the restricted packet does not derive that the actual blocked-slit detector arm width is governed only by post-slit propagation length L_2. The diagnostic fit constants used for the residual and per-h checks are also embedded rather than supplied as a retained one-hop authority or recomputed from the harness.
-- **rationale:** Issue: the load-bearing L_eff = L_2 bridge is asserted and then hard-coded in the runner; the runner only evaluates the resulting closed form against embedded diagnostic constants. Why this blocks: without a retained finite-slit/post-slit propagation theorem or a direct harness computation, a hostile reviewer can reject the length identification and the comparison target is not independently established in the restricted packet. Repair target: add a retained bridge theorem or deterministic runner deriving the arm width from the actual blocked-slit propagation, and supply/audit the diagnostic fit artifact as a direct dependency. Claim boundary until fixed: the note is an internally checked closed-form heuristic conditional on the L_2 bridge and embedded fit values.
 - **auditor confidence:** high
 
 ### `nn_lattice_rescaled_kernel_identification_note_2026-05-10`
