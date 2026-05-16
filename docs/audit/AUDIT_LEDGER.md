@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 309 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1202 |
+| unaudited | 1201 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 181 |
+| ~~audited_conditional~~ | 182 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 519 |
-| `audited_conditional` | 181 |
+| `audited_conditional` | 182 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1315 |
+| `unaudited` | 1314 |
 
 | claim_type | count |
 |---|---:|
@@ -737,6 +737,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `gravity_sign_audit_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `h0125_wider_w4_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `hard_geometry_head_to_head_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5431,6 +5432,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within the narrowed scope, the runner stdout matches the note's signs and classifications for every ratified row. The z=2, z=4, z=6, and z=7 dense rows are explicitly outside the audited scope and are not ratified here.
 - **rationale:** The scoped claim is an algebraic sign-interpretation over runner-computed observables, and the supplied runner computes the relevant rows rather than printing fixed classifications. No one-hop authorities are listed, so no dependency-retention blocker is available inside the restricted packet. Clean status applies only to the narrowed z=3 and z=5 dense rows plus the other printed runner rows; the broader z=2..6 dense table is not part of this verdict.
 - **auditor confidence:** medium
+
+### `gravity_sign_audit_2026-04-10`
+
+- **Note:** [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../../docs/GRAVITY_SIGN_AUDIT_2026-04-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the restricted computational claim that the provided runner instantiates identity, parity, and lapse Hamiltonians and reports different well/hill responses on the configured 1D external-potential test.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-131838-c475b364-gravity_sign_audit_2026--001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The corrected scalar/lapse couplings are taken to be H_diag = (m + Phi) * epsilon(x) and H_grav = sqrt(N) * H_flat * sqrt(N), and under those chosen couplings the configured external-potential runner splits well from hill.  _(class `E`)_
+- **chain closes:** False — The runner computes dynamics under the supplied coupling definitions, but the packet does not derive the parity/lapse coupling from the baseline axiom or provide a retained cited authority. The missing step is the bridge from Cl(3) on Z^3 or another retained input to the asserted staggered scalar/lapse coupling.
+- **rationale:** The runner is substantive: it builds Hamiltonians, evolves states, and computes centroid, force, width, and graph diagnostics rather than merely printing constants. However, the load-bearing coupling choice is introduced as an imported or stipulated structure in the restricted packet, not derived from the stated baseline axiom, and the note itself admits that this bridge remains open. Therefore the bounded numerical split is supported only conditional on the asserted parity/lapse coupling identification.
+- **open / conditional deps cited:**
+  - `STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`
+  - `MINIMAL_AXIOMS_2026-05-03.md`
+  - `staggered_dirac_realization_gate_note_2026-05-03`
+- **auditor confidence:** high
 
 ### `growing_graph_dynamic_limit_diagnostic_note`
 
