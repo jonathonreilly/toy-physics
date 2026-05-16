@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 734,
+    "critical": 733,
     "high": 34,
     "leaf": 260,
     "medium": 152
@@ -3749,31 +3749,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "minimal_axioms_2026-05-03",
-        "staggered_dirac_realization_gate_note_2026-05-03",
-        "minimal_axioms_2026-04-11"
-      ],
-      "direct_in_degree": 19,
-      "effective_status": "unaudited",
-      "load_bearing_score": 19.118,
-      "note_path": "docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/axiom_first_cl3_per_site_uniqueness_check.py",
-      "transitive_descendants": 785
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -35695,5 +35670,5 @@
     }
   ],
   "ready_count": 0,
-  "total_pending": 1180
+  "total_pending": 1179
 }

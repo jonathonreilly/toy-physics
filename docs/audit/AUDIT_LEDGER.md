@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1176 |
+| unaudited | 1175 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 190 |
+| ~~audited_conditional~~ | 191 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 520 |
-| `audited_conditional` | 190 |
+| `audited_conditional` | 191 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1289 |
+| `unaudited` | 1288 |
 
 | claim_type | count |
 |---|---:|
@@ -641,6 +641,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `asymmetry_persistence_mass_window_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `asymmetry_persistence_pilot_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `audit_dm_gv_runner_stale_path_cleanup_block_two_note_2026-05-01` | meta | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -1431,6 +1432,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's closure rests on the reported verification that the eight edited runners now give 'Total: 89 PASS / 0 FAIL across the cluster' after stale read paths were removed or redirected.  _(class `A`)_
 - **chain closes:** False — The restricted packet contains only the note's self-report plus the Block One companion note; it does not include the Block Two runner sources, diffs, current stdout, or SHA-pinned caches needed to verify the path edits, preserved checks, or PASS=89 FAIL=0 accounting. Block One supports the general hygiene pattern but is not evidence that the eight Block Two runners were actually repaired.
 - **rationale:** Issue: the load-bearing PASS=89 FAIL=0 and stale-path cleanup assertions are artifact claims with no supplied runner source, diff, stdout, or cache in the restricted packet. Why this blocks: the auditor cannot verify that stale reads were actually removed/redirected, that no load-bearing checks were dropped, or that the reported pass totals came from executable runners. Repair target: provide the eight current runner sources plus completed stdout or SHA-pinned runner-cache logs for the exact revision under audit. Claim boundary until fixed: this may be treated only as an unaudited audit-hygiene note describing intended cleanup, not as verified runner repair.
+- **auditor confidence:** high
+
+### `axiom_first_cl3_per_site_uniqueness_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_CL3_PER_SITE_UNIQUENESS_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** A1-only classification of complex finite-dimensional representations of real Cl(3,0): two non-isomorphic faithful 2-dimensional chirality irreps and direct-sum decomposition into them.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-030634-3e88c9ef-axiom_first_cl3_per_site-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The central pseudoscalar splits the complexification as Cl(3) ⊗_R C ≅ M_2(C) ⊕ M_2(C), with the two summands indexed by ω = ±i, so finite-dimensional complex representations decompose into copies of the two 2-dimensional chirality irreps.  _(class `A`)_
+- **chain closes:** False — The in-scope algebraic U1-U3 argument closes on A1 and standard finite-dimensional representation theory. The restricted packet nevertheless includes an open-gate cited authority for the out-of-scope U4 physical Hilbert-space bridge, so the full cited-authority chain is not retained-grade under the rubric.
+- **rationale:** The load-bearing mathematics is a genuine algebraic closure: Cl(3,0) is identified as M_2(C) over R, its complexification splits by the central pseudoscalar, and Wedderburn/Schur give exactly the two 2-dimensional chirality irreps and semisimple decomposition. The runner source performs algebraic matrix checks and illustrative sanity checks consistent with the note, though it does not itself prove the full classification. Under the audit rubric, however, the packet cites the staggered-Dirac realization gate, which is explicitly open, so retained-grade closure cannot propagate through the full cited packet even though U4 is declared out of scope.
+- **open / conditional deps cited:**
+  - `STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md`
 - **auditor confidence:** high
 
 ### `axiom_first_cluster_decomposition_theorem_note_2026-04-29`
