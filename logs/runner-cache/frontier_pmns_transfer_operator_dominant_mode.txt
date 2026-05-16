@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_transfer_operator_dominant_mode.py
-runner_sha256: 96f93384bf180700dbacbdade4856b5bf61231d7b242ce4264d9dbfe4c6e3f57
+runner_sha256: 567a6d4d685e7af7801c1762f4c74d08f667c7fa0c409738c664727d94ad1b6f
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.06
+elapsed_sec: 0.09
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -15,48 +15,76 @@ Question:
   of the active microscopic PMNS data from corner-to-corner transport?
 
 ========================================================================================
-PART 1: THE ALIGNED HW=1 TRANSFER KERNEL HAS EXACT DOMINANT AND SUBDOMINANT MODES
+PART 1: THE NATIVE TRANSFER KERNEL IS BUILT FROM THE PRIMITIVE T_act
 ========================================================================================
-  [PASS (A)] The transfer kernel is Hermitian  (Hermitian error=0.00e+00)
-  [PASS (A)] The transfer kernel is positive on the chosen aligned patch  (eigenvalues=[1.7, 0.5, 0.5])
+  [PASS (A)] T_kernel is Hermitian by construction  (Hermitian error=0.00e+00)
+  [PASS (A)] T_kernel is C3-equivariant by construction  (C3 equivariance error=0.00e+00)
+  [PASS (A)] T_kernel lies in span{I, C + C^2} (C3 even sector)  (span error=0.00e+00)
+  [INFO] Microscopic input  (x=[0.9, 0.9, 0.9], y=[0.4, 0.4, 0.4], delta=0.0)
+  [INFO] Constructed T_kernel diagonal entry  (1.800000)
+  [INFO] Constructed T_kernel off-diagonal entry  (0.400000)
+
+========================================================================================
+PART 2: SPECTRUM OF T_kernel(T_act) RECOVERS THE SEED PAIR
+========================================================================================
+  [PASS (A)] T_kernel is positive on this aligned patch  (eigenvalues=[2.6, 1.4, 1.4])
   [PASS (A)] The dominant eigenvector is the symmetric hw=1 mode  (|<u0,v0>|=1.000000000000)
-  [PASS (A)] The two orthogonal modes are exactly degenerate  (lambda_- split=2.78e-16)
-  [PASS (A)] The dominant and subdominant eigenvalues match the exact seed formulas  (vals=[1.7, 0.5, 0.5])
+  [PASS (A)] The two orthogonal eigenvalues are exactly degenerate  (lambda_- split=8.88e-16)
+  [PASS (A)] Eigenvalues match (2 xbar + 2 ybar, 2 xbar - ybar) of T_kernel  (vals=[2.6, 1.4, 1.4])
+  [PASS (A)] The dominant + subdominant eigenvalues measure xbar exactly  (measured xbar = (lam_+ + 2 lam_-)/6 = 0.900000000000)
+  [PASS (A)] The dominant + subdominant eigenvalues measure ybar exactly  (measured ybar = (lam_+ - lam_-)/3 = 0.400000000000)
+  [INFO] (xbar, ybar) read from spectrum of T_kernel(T_act)  (0.900000, 0.400000)
 
 ========================================================================================
-PART 2: THE SEED PAIR IS RECONSTRUCTED EXACTLY FROM THE TRANSFER MODES
+PART 3: T_kernel ENCODES THE SAME ORBIT MOMENTS USED IN PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK
 ========================================================================================
-  [PASS (A)] The transfer kernel reconstructs xbar exactly  (reconstructed=0.900000000000)
-  [PASS (A)] The transfer kernel reconstructs ybar exactly  (reconstructed=0.400000000000)
-  [INFO] The dominant-mode law fixes the aligned active seed pair  ((xbar,ybar)=(0.900000,0.400000))
+  [PASS (A)] (aligned weak-axis patch) T_kernel diagonal entry = 2 Re(t_even)  (diag=1.80000000, 2 Re(t_even)=1.80000000)
+  [PASS (A)] (aligned weak-axis patch) T_kernel hop entry = Re(t_fwd) + Re(t_bwd)  (hop=0.40000000, Re(t_fwd)+Re(t_bwd)=0.40000000)
+  [PASS (A)] (generic off-aligned sample) T_kernel diagonal entry = 2 Re(t_even)  (diag=1.80000000, 2 Re(t_even)=1.80000000)
+  [PASS (A)] (generic off-aligned sample) T_kernel hop entry = Re(t_fwd) + Re(t_bwd)  (hop=0.39233043, Re(t_fwd)+Re(t_bwd)=0.39233043)
+  [INFO] T_kernel(T_act) is the orbit-averaged Hermitization of the same
+         corner-transport primitive used in PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK.
 
 ========================================================================================
-PART 3: THIS ROUTE IS BLIND TO THE ZERO-SUM CORNER-BREAKING CARRIER
+PART 4: T_kernel HAS AN EXACT KERNEL ON THE 5-REAL OFF-SEED BREAKING CARRIER
 ========================================================================================
-  [PASS (A)] The two off-seed microscopic samples are genuinely different  (operator distance=0.198494)
-  [PASS (A)] Their dominant-mode transfer projections collapse to the same aligned seed kernel  (projection errors=(1.36e-16, 1.36e-16))
-  [INFO] The transfer-operator route fixes the aligned seed pair but not the breaking carrier  (zero-sum off-seed carrier is outside the transfer image)
+  [PASS (A)] The two primitive corner-transport operators are genuinely different  (|T_act_1 - T_act_2|=0.198494)
+  [PASS (A)] Their dynamically constructed transfer kernels coincide  (|T_kernel_1 - T_kernel_2|=0.00e+00)
+  [PASS (A)] Both spectral measurements return the same seed pair  (rec_1=(0.8999999999999999, 0.3999999999999997), rec_2=(0.8999999999999999, 0.3999999999999997))
+  [PASS (A)] Each spectral measurement matches the shared seed pair (xbar, ybar)  (rec_1=(0.8999999999999999, 0.3999999999999997), true=(0.900000, 0.400000))
+  [INFO] T_kernel(T_act) has a genuine kernel on the 5-real off-seed corner-
+         breaking carrier (zero-sum xi, eta directions on the aligned patch).
 
 ========================================================================================
-PART 4: THE WEAK-AXIS SEED PATCH IS RECOVERED EXACTLY
+PART 5: WEAK-AXIS SEED PATCH RECOVERY IS A SPECTRAL MEASUREMENT, NOT A SUPPLIED LAW
 ========================================================================================
-  [PASS (A)] The aligned active block gives the exact transfer kernel on the seed patch  (transfer error=0.00e+00)
-  [INFO] The transfer kernel reproduces the existing weak-axis seed law structurally  (dominant and subdominant modes reconstruct the seed pair)
+  [PASS (A)] (xbar=0.9, ybar=0.4) T_kernel matches the aligned weak-axis seed form exactly  (error=0.00e+00)
+  [PASS (A)] (xbar=0.9, ybar=0.4) spectral seed-pair measurement matches  (measured=(0.90000000, 0.40000000))
+  [PASS (A)] (xbar=1.1, ybar=0.25) T_kernel matches the aligned weak-axis seed form exactly  (error=0.00e+00)
+  [PASS (A)] (xbar=1.1, ybar=0.25) spectral seed-pair measurement matches  (measured=(1.10000000, 0.25000000))
+  [PASS (A)] (xbar=0.55, ybar=0.1) T_kernel matches the aligned weak-axis seed form exactly  (error=0.00e+00)
+  [PASS (A)] (xbar=0.55, ybar=0.1) spectral seed-pair measurement matches  (measured=(0.55000000, 0.10000000))
+  [INFO] Across all three samples, T_kernel is constructed only from primitive
+         corner-transport amplitudes; the seed pair emerges as a spectrum
+         readout of T_kernel(T_act), not as a supplied input to it.
 
 ========================================================================================
 RESULT
 ========================================================================================
-  Positive native transfer-operator law:
-    - on the aligned hw=1 active patch, the transfer kernel has an
-      exact dominant symmetric mode and one degenerate orthogonal mode
-    - those two modes reconstruct the active seed pair (xbar, ybar)
-    - the aligned weak-axis seed patch is recovered exactly
+  Positive native dynamical law on the aligned hw=1 active patch:
+    - the transfer kernel T_kernel(T_act) is constructed from primitive
+      corner-transport amplitudes (x_i, y_i, delta) by Hermitization +
+      C3 orbit-averaging, with no (xbar, ybar) input
+    - the dominant + subdominant eigenvalues of T_kernel measure the
+      aligned seed pair (xbar, ybar) of T_act exactly
+    - the same construction agrees with the orbit moments used in
+      PMNS_CORNER_TRANSPORT_ACTIVE_BLOCK_NOTE
 
   Boundary:
-    - the route does not determine the 5-real off-seed corner-breaking
-      source
+    - T_kernel has an exact kernel on the 5-real off-seed corner-breaking
+      carrier; the route does not determine that source
 
-PASS=10  FAIL=0
+PASS=23  FAIL=0
 
 ----- stderr -----
 
