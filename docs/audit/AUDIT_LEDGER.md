@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1200 |
+| unaudited | 1199 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 184 |
+| ~~audited_conditional~~ | 185 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 520 |
-| `audited_conditional` | 184 |
+| `audited_conditional` | 185 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1313 |
+| `unaudited` | 1312 |
 
 | claim_type | count |
 |---|---:|
@@ -738,6 +738,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_lane_head_to_head_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gluon_tree_level_masslessness_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravitational_wave_probe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | F | - |
+| `graviton_mass_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | F | - |
 | `gravity_law_cleanup_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `gravity_sign_audit_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `growing_graph_expansion_skeptic_audit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -5408,6 +5409,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Under the configured probe parameters, the mean phase delta from the static v=0 baseline is monotonic in v_z, with small-|v| deltas approximately antisymmetric and the |v|=0.5 antisymmetry failing.  _(class `C`)_
 - **chain closes:** True — The retained bounded claim follows on its own restricted terms: the supplied runner source computes the reported phases from the configured DAG, propagator, imposed source trajectory, and static baseline, and the cached stdout matches the note's table. No GR, Shapiro, or self-consistent moving-source bridge is closed or claimed within the retained scope.
 - **rationale:** For the bounded diagnostic actually retained, the runner is not a constant-printing or hard-coded expected-value script; it constructs the configured grown families, propagates amplitudes, computes phases, and subtracts the v=0 baseline. The output supports monotonic increase in v_z, approximate antisymmetry only at |v|=0.2, and failure of full antisymmetry at |v|=0.5, matching the revised note. The broader gravitomagnetic/Shapiro and self-consistent moving-source claims are explicitly excluded, so they are not part of the audited closure.
+- **auditor confidence:** high
+
+### `graviton_mass_derived_note`
+
+- **Note:** [`GRAVITON_MASS_DERIVED_NOTE.md`](../../docs/GRAVITON_MASS_DERIVED_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the conditional spectral arithmetic from an imported S^3 TT Lichnerowicz spectrum, the imported bridge m_g^2 c^2/hbar^2 = lambda_2^TT, and the imported R = c/H_0 scale to the stated mass, Higuchi ratio, Compton wavelength, and Lambda relation.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-132855-f8041b52-graviton_mass_derived_no-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The KK-style compactness/rest-mass bridge identifies the lowest TT Lichnerowicz eigenvalue with graviton rest mass, m_g^2 c^2 / hbar^2 = lambda_2^TT = 6/R^2.  _(class `F`)_
+- **chain closes:** False — The arithmetic closes once the TT spectrum, mass-identification bridge, and R = c/H_0 are admitted. In the restricted packet, the mass-identification bridge is not supplied as a cited authority or derived from the axiom, so the claimed chain does not close internally.
+- **rationale:** The runner computes the stated algebra and numerical conversions, but it does not instantiate the underlying framework operators or derive the TT spectrum or mass bridge from first principles. The source note explicitly imports the key bridge from a sister theorem that is named but not included in the restricted authority packet. The numerical value also depends on the admitted observed H_0 scale through R = c/H_0, so the companion claim remains bounded/conditional rather than clean.
+- **open / conditional deps cited:**
+  - `GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
+  - `GRAVITON_MASS_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `gravity_full_self_consistency_note`
