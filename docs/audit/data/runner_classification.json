@@ -3144,6 +3144,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py"
     },
+    "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 19,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow.py"
+    },
     "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10": {
       "assert_count": 0,
       "counts": {
@@ -18948,6 +18960,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_strc_lo_collinearity_theorem.py"
     },
+    "strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16": {
+      "assert_count": 2,
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_strong_cp_rp_cannot_forbid_cp_odd_imaginary_no_go_2026_05_16.py"
+    },
     "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10": {
       "assert_count": 2,
       "counts": {
@@ -23625,6 +23649,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/audit_companion_strong_cp_rp_cannot_forbid_cp_odd_imaginary_no_go_2026_05_16.py": {
+      "assert_count": 2,
+      "claims": [
+        "strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 6,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
       "exists": true
     },
     "scripts/audit_companion_su2_weak_beta_coefficient_narrow_exact_2026_05_10.py": {
@@ -28935,6 +28974,21 @@
         "D": 0
       },
       "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/frontier_connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 19,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
       "dominant_class": "A",
       "exists": true
     },
@@ -48566,16 +48620,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 208,
+    "decoration_candidates": 209,
     "dominant_class_distribution": {
-      "A": 162,
+      "A": 164,
       "B": 180,
       "C": 695,
       "D": 280,
       "none": 418
     },
-    "runners_classified": 1735,
+    "runners_classified": 1737,
     "runners_with_C": 888,
-    "runners_with_D": 507
+    "runners_with_D": 508
   }
 }

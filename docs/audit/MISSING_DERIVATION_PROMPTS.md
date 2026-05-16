@@ -2662,7 +2662,7 @@ _8 rows in this category._
 
 ### `su3_casimir_fundamental_theorem_note_2026-05-02`
 
-**Note:** [docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md](docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md)  |  **Descendants:** 811  |  **Class:** A
+**Note:** [docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md](docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md)  |  **Descendants:** 812  |  **Class:** A
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/SU3_CASIMIR_FUNDAMENTAL_THEOREM_NOTE_2026-05-02.md.
@@ -2896,12 +2896,12 @@ drive.
 
 Auditor judged that the chain needs a new theorem for a physical carrier, readout, unit map, boundary condition, sector choice, normalization, or observable bridge. To close: derive the missing bridge from retained primitives so the audited claim no longer asserts it.
 
-_27 rows in this category._
+_28 rows in this category._
 
 
 ### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
 
-**Note:** [docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)  |  **Descendants:** 920  |  **Class:** F
+**Note:** [docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)  |  **Descendants:** 921  |  **Class:** F
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md.
@@ -2930,7 +2930,7 @@ drive.
 
 ### `left_handed_charge_matching_note`
 
-**Note:** [docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md](docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)  |  **Descendants:** 870  |  **Class:** A
+**Note:** [docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md](docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)  |  **Descendants:** 871  |  **Class:** A
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md.
@@ -2959,7 +2959,7 @@ drive.
 
 ### `rconn_derived_note`
 
-**Note:** [docs/RCONN_DERIVED_NOTE.md](docs/RCONN_DERIVED_NOTE.md)  |  **Descendants:** 856  |  **Class:** F
+**Note:** [docs/RCONN_DERIVED_NOTE.md](docs/RCONN_DERIVED_NOTE.md)  |  **Descendants:** 857  |  **Class:** F
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/RCONN_DERIVED_NOTE.md.
@@ -2988,7 +2988,7 @@ drive.
 
 ### `observable_principle_from_axiom_note`
 
-**Note:** [docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)  |  **Descendants:** 829  |  **Class:** A
+**Note:** [docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)  |  **Descendants:** 830  |  **Class:** A
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md.
@@ -3046,7 +3046,7 @@ drive.
 
 ### `axiom_first_lattice_noether_theorem_note_2026-04-29`
 
-**Note:** [docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md](docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)  |  **Descendants:** 800  |  **Class:** A
+**Note:** [docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md](docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md)  |  **Descendants:** 801  |  **Class:** A
 
 ```
 Use the physics-loop skill to close the conditional audit on docs/AXIOM_FIRST_LATTICE_NOETHER_THEOREM_NOTE_2026-04-29.md.
@@ -3094,6 +3094,35 @@ From R(double)=2 eps dz_+ + O(eps^2) and R(plus)=eps dz_+ + O(eps^2), the note c
 
 Auditor's repair target (canonical class + action):
 missing_bridge_theorem: prove or certify row-wise lower bounds on detector-layer intensity and on the first-order plus-source response dz_+ for the second grown family, and state the same hypothesis for cross-family inheritance.
+
+Goal: close the chain so a re-audit of this same note can land
+audited_clean at retained-grade. Use the physics-loop skill to iterate.
+Do not over-prescribe approach — explore the framework, let the skill
+drive.
+```
+
+
+### `gravity_sign_audit_2026-04-10`
+
+**Note:** [docs/GRAVITY_SIGN_AUDIT_2026-04-10.md](docs/GRAVITY_SIGN_AUDIT_2026-04-10.md)  |  **Descendants:** 787  |  **Class:** E
+
+```
+Use the physics-loop skill to close the conditional audit on docs/GRAVITY_SIGN_AUDIT_2026-04-10.md.
+
+Current audit state:
+- audit_status: audited_conditional
+- claim_type: bounded_theorem
+- load_bearing_step_class: E
+- claim_scope: Audited only the restricted computational claim that the provided runner instantiates identity, parity, and lapse Hamiltonians and reports different well/hill responses on the configured 1D external-potential test.
+
+Auditor's verdict_rationale:
+The runner is substantive: it builds Hamiltonians, evolves states, and computes centroid, force, width, and graph diagnostics rather than merely printing constants. However, the load-bearing coupling choice is introduced as an imported or stipulated structure in the restricted packet, not derived from the stated baseline axiom, and the note itself admits that this bridge remains open. Therefore the bounded numerical split is supported only conditional on the asserted parity/lapse coupling identification.
+
+Auditor-quoted load-bearing step:
+The corrected scalar/lapse couplings are taken to be H_diag = (m + Phi) * epsilon(x) and H_grav = sqrt(N) * H_flat * sqrt(N), and under those chosen couplings the configured external-potential runner splits well from hill.
+
+Auditor's repair target (canonical class + action):
+missing_bridge_theorem: provide a restricted retained derivation of the parity/lapse scalar coupling from the baseline Cl(3) on Z^3 framework, or include a retained cited authority that closes exactly that bridge.
 
 Goal: close the chain so a re-audit of this same note can land
 audited_clean at retained-grade. Use the physics-loop skill to iterate.

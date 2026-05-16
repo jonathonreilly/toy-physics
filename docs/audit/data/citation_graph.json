@@ -4821,6 +4821,34 @@
       "to": "sign_portability_invariant_note"
     },
     {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "to": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10"
+    },
+    {
       "from": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
       "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
     },
@@ -21571,6 +21599,10 @@
     {
       "from": "strc_lo_collinearity_theorem_note_2026-04-19",
       "to": "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19"
+    },
+    {
+      "from": "strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16",
+      "to": "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10"
     },
     {
       "from": "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10",
@@ -41567,6 +41599,25 @@
       "path": "docs/CONNES_KREIMER_BIRKHOFF_FACTORIZATION_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-10.md",
       "runner_path": "scripts/frontier_connes_kreimer_birkhoff_factorization_external_narrow.py",
       "title": "Connes-Kreimer Birkhoff Factorization \u2014 External Narrow Theorem"
+    },
+    "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16": {
+      "claim_id": "connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow_no_go_note_2026-05-16",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "connes_kreimer_partial_sum_rb_b4_external_bounded_note_2026-05-10",
+        "wilson_bz_corner_hamming_staircase_closed_form_note_2026-05-09",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "plaquette_self_consistency_note",
+        "observable_principle_from_axiom_note",
+        "connes_kreimer_birkhoff_factorization_external_narrow_theorem_note_2026-05-10",
+        "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10"
+      ],
+      "note_hash": "851efacafb65c3d2d68ac69d9fbc06ad7b23bb1961110d8e0a423fe6d0c4e55b",
+      "path": "docs/CONNES_KREIMER_BOOLEAN_LATTICE_IDEMPOTENT_RB_SUBSTRATE_NARROW_NO_GO_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow.py",
+      "title": "Connes-Kreimer Boolean-Lattice Idempotent-RB Substrate \u2014 Narrow No-Go"
     },
     "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10": {
       "claim_id": "connes_kreimer_bridge_16fold_blocking_no_go_theorem_note_2026-05-10",
@@ -65415,6 +65466,19 @@
       "runner_path": "scripts/frontier_strc_lo_collinearity_theorem.py",
       "title": "STRC-LO / BICAC Theorem from Exact 1(+)5 Channel Completeness"
     },
+    "strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16": {
+      "claim_id": "strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "reflection_positivity_gauge_half_cauchy_schwarz_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "73108d45039fb6529bd0205bb60e3c872e7f1bb7e6fcf38fa6066c5c80653074",
+      "path": "docs/STRONG_CP_RP_HALF_CANNOT_FORBID_CP_ODD_IMAGINARY_NO_GO_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_strong_cp_rp_cannot_forbid_cp_odd_imaginary_no_go_2026_05_16.py",
+      "title": "Reflection-Positivity Half-Square Identity Cannot Forbid CP-Odd Imaginary Action Additions (No-Go)"
+    },
     "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10": {
       "claim_id": "strong_cp_theta_zero_audited_scope_narrow_bounded_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -71683,7 +71747,7 @@
       "bounded_theorem": 388,
       "decoration": 1,
       "meta": 74,
-      "no_go": 49,
+      "no_go": 51,
       "none": 1534,
       "open_gate": 40,
       "positive_theorem": 150
@@ -71692,15 +71756,15 @@
       "bounded_theorem": 834,
       "decoration": 1,
       "meta": 74,
-      "no_go": 154,
+      "no_go": 156,
       "none": 444,
       "open_gate": 119,
       "positive_theorem": 610
     },
-    "edge_count": 8968,
-    "leaf_count": 630,
-    "node_count": 2236,
+    "edge_count": 8976,
+    "leaf_count": 629,
+    "node_count": 2238,
     "root_count": 776,
-    "runners_with_path": 1854
+    "runners_with_path": 1856
   }
 }
