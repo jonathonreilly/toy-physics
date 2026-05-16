@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 307 |
 | _retained_pending_chain_ | 4 |
 | open_gate | 15 |
-| unaudited | 1205 |
+| unaudited | 1204 |
 | meta | 113 |
-| ~~audited_numerical_match~~ | 14 |
+| ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 13 |
 | ~~audited_conditional~~ | 182 |
 | ~~audited_failed~~ | 20 |
@@ -46,9 +46,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_conditional` | 182 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 64 |
-| `audited_numerical_match` | 14 |
+| `audited_numerical_match` | 15 |
 | `audited_renaming` | 13 |
-| `unaudited` | 1318 |
+| `unaudited` | 1317 |
 
 | claim_type | count |
 |---|---:|
@@ -902,6 +902,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `hierarchy_dimensional_compression_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `koide_gamma_orbit_exponential_value_law_candidate_note_2026-04-18` | positive_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `monopole_derived_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
+| `quark_cp_carrier_completion_note_2026-04-18` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_e_channel_endpoint_quotient_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `quark_endpoint_ratio_chain_law_note_2026-04-19` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-gpt-5.5 | G | - |
 | `source_resolved_exact_green_self_consistent_note` | bounded_theorem | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | judicial_review | codex-gpt-5.5 | G | - |
@@ -8433,6 +8434,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The positive-parent square-root dictionary is exact, but the current bank does not derive a physical quark positive parent and does not identify the square-root spectrum with quark Yukawa amplitudes.  _(class `B`)_
 - **chain closes:** True — The runner verifies exact positive-parent algebra, non-predictivity without parent/readout selection, the missing typed-edge graph, import firewall, and boundary classification with PASS=54 FAIL=0. These checks support the current-bank no-go that P1 remains support-only for Lane 3.
 - **rationale:** The no-go closes: finite-dimensional square-root algebra is exact, but by itself it can represent arbitrary positive generation-amplitude triples once a parent is supplied. The runner verifies that the current bank lacks both the physical quark positive parent and the readout theorem from square-root spectrum to quark Yukawa amplitudes, while excluding observed masses, fitted Yukawas, CKM mass input, and charged-lepton parent import. Residual risk is only future drift: a later parent/readout theorem would reopen this boundary.
+- **auditor confidence:** high
+
+### `quark_cp_carrier_completion_note_2026-04-18`
+
+- **Note:** [`QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md`](../../docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded numerical existence-of-fit for one complex determinant-neutral 1-3 carrier per quark sector against imported mass-ratio and CKM/J comparator targets.
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-130301-818d9f16-quark_cp_carrier_complet-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given imported comparator targets, two complex carrier coefficients xi_u and xi_d are solved numerically to reproduce the target surface to about 1% or better while keeping arg det(M_u M_d)=0 mod 2pi.  _(class `G`)_
+- **chain closes:** True — The runner performs a real numerical optimization, builds Hermitian mass matrices, diagonalizes them, computes CKM observables, and checks the determinant phase. The chain closes only as a tuned bounded numerical match, not as a first-principles derivation of xi_u, xi_d, the carrier slot, or the comparator targets.
+- **rationale:** The note honestly frames the result as a numerical existence-of-fit using imported observation/atlas comparator targets and solved carrier coefficients. The runner is not a trivial printout: it computes matrices, diagonalizes them, evaluates CKM quantities, and verifies the reported tolerances. However, the load-bearing parameters xi_u and xi_d are tuned degrees of freedom, and the targets are external comparators rather than derived framework outputs. This is therefore class G and supports audited_numerical_match, not audited_clean.
 - **auditor confidence:** high
 
 ### `quark_e_channel_endpoint_quotient_law_note_2026-04-19`
