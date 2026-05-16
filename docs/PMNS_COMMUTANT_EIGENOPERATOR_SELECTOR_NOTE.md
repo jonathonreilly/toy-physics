@@ -40,17 +40,25 @@ non-`Cl(3)` corner-distinguishing example.
 
 > **Bounded algebraic statement.** On the `hw=1` corner orbit `{X1, X2, X3}`,
 > the corner-trace profile `v = (tr P_i^* M P_i)_{i=1,2,3}` of any operator
-> `M` admits the canonical decomposition into C3 irreps:
+> `M` (literal complex trace, no Hermitianization) admits the canonical
+> decomposition into C3 irreps:
 >
 > ```
 > v_0 = (v_1 + v_2 + v_3) / 3                           (C3-trivial rep)
 > v_+ = (v_1 + ω v_2 + ω^2 v_3) / 3                     (C3-fundamental rep, +)
 > v_- = (v_1 + ω^2 v_2 + ω v_3) / 3                     (C3-fundamental rep, -)
 > ```
-> with `ω = exp(2πi/3)`. For real `M`, `v_- = conj(v_+)`. The runner verifies
-> that the odd modes `(v_+, v_-)` vanish on the projected `Cl(3)` basis, hence
-> on its span by linearity, and that they are nonzero on the demonstrated
-> projected non-`Cl(3)` commutant generator.
+> with `ω = exp(2πi/3)`. For Hermitian `M`, `v_i` is real for each `i`, and
+> the two odd modes satisfy `v_- = conj(v_+)`. The runner verifies, on the
+> literal complex profile `v_i = tr(P_i^* M P_i)`, that the odd modes
+> `(v_+, v_-)` vanish on the projected `Cl(3)` basis (hence on its span by
+> linearity), and that they are nonzero on the demonstrated Hermitian
+> projected non-`Cl(3)` commutant generator. The demonstrated generator is
+> chosen to be Hermitian so the literal complex profile is real and the
+> conjugate-pair relation holds on the example; the choice is consistent
+> because the commutant of a Hermitian gamma set is closed under Hermitian
+> conjugation, so the projected commutant always admits a Hermitian
+> representative outside the projected `Cl(3)` span.
 
 This is a one-way scope statement. Nonzero odd mode certifies that a generator
 is outside the projected `Cl(3)` span, but zero odd mode is not claimed to
@@ -76,10 +84,14 @@ note for a PMNS-physical readout must supply that bridge separately.
 Start from the exact `Cl(3)` on `Z^3` generation boundary:
 
 - build the projected commutant on each `hw=1` corner
-- pick a projected commutant generator outside the projected `Cl(3)` span
+- pick a Hermitian projected commutant generator outside the projected
+  `Cl(3)` span (such a representative exists because the commutant of a
+  Hermitian gamma set is closed under Hermitian conjugation)
 - lift that projected eigenoperator back to the ambient taste space
-- compute the real corner-trace profile `v = (tr_i M)_{i=1,2,3}` on
-  `X_1, X_2, X_3`
+- compute the literal complex corner-trace profile
+  `v = (tr P_i^* M P_i)_{i=1,2,3}` on `X_1, X_2, X_3` (no Hermitianization
+  of the projected operator; the Hermiticity of `M` makes each `v_i`
+  numerically real on the example)
 - decompose `v` into the C3 Fourier modes `(v_0, v_+, v_-)`
 
 For the corner profile `v = (v_1, v_2, v_3)`, define
