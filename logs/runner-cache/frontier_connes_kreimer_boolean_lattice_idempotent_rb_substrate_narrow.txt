@@ -1,0 +1,67 @@
+===== runner cache v1 =====
+runner: scripts/frontier_connes_kreimer_boolean_lattice_idempotent_rb_substrate_narrow.py
+runner_sha256: fe8959e5e12a958c4c847010d5ac4564b83342c97aada6760b666c63d1b5950e
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.41
+status: ok
+----- stdout -----
+============================================================================
+CONNES-KREIMER BOOLEAN-LATTICE IDEMPOTENT-RB SUBSTRATE NARROW NO-GO
+============================================================================
+
+[PASS] T1.a: Boolean lattice 2^[4] cardinality is 16
+[PASS] T1.b: Hamming multiplicity tuple matches (1,4,6,4,1)
+[PASS] T1.c: multiplicities equal binomial(4, k) for k=0..4
+[PASS] T1.d: S_4 orbits coincide with Hamming-weight level sets (5 orbits)
+[PASS] T2.a: candidate phi_a sum over corners = (1+alpha)^4 (binomial)
+[PASS] T2.b: Sigma_{n in 2^[4]} hw(n) = 32 (binomial-weighted sum)
+[PASS] T2.c: Pi_{n in 2^[4]} alpha^hw(n) = alpha^32 (substrate exponent 32)
+[PASS] T2.d: Pi_{n in 2^[4]} alpha = alpha^16 (uniform char: tautological)
+[PASS] T2.e: framework target exponent is 16, substrate-natural exponent is 32 (exponent mismatch 32 vs 16)
+[PASS] T3.a: pole-part projector on canonical test extracts 1/z slot
+[PASS] T3.b: pole-part projector is idempotent (pi^2 = pi)
+[PASS] T4.a: weight +1 Rota-Baxter identity pi(a)pi(b) = pi(pi(a)b + a pi(b) - ab)
+[PASS] T5.a: depth-1 Birkhoff phi_- = -pi(phi)
+[PASS] T5.b: depth-1 Birkhoff phi_+ = (id - pi)(phi)
+[PASS] T5.c: depth-1 reconstruction phi_-^{*-1} * phi_+ matches at order 0
+[PASS] T6.a: substrate-derived product Pi alpha^{hw(n)} = alpha^32 (NOT alpha^16)
+[PASS] T6.b: framework target alpha_LM^16 does NOT match alpha^32 (framework=16, substrate-natural=32)
+[PASS] T6.c: substrate-derived sum Sigma alpha^hw(n) = (1+alpha)^4 NOT alpha^16
+[PASS] T7.a: uniform-decoration product Pi_{16} alpha = alpha^16 (tautological)
+[PASS] T7.b: a non-uniform substrate decoration requires distinguishing corners (Hamming-class differentiation is required for non-tautology)
+[PASS] T7.c: substrate-natural decoration phi(point_S) = alpha^hw(S) yields exponent 32, not 16 (NON-tautology fails: wrong exponent) (Confirms G4 — substrate-natural decoration produces wrong exponent)
+[PASS] T8.a: alpha_LM^16 ≈ 2.0857e-17 (framework hierarchy target) (alpha_LM^16 = 2.0857e-17)
+[PASS] T8.b: alpha_LM^32 = (alpha_LM^16)^2 ≈ 4.35e-34 (substrate-natural exponent) (alpha_LM^32 = 4.3501e-34)
+[PASS] T8.c: ratio alpha_LM^32 / alpha_LM^16 = alpha_LM^16 (gap is 16 powers) (the substrate-natural CK readout differs from the framework target by an additional 16 powers of alpha_LM)
+[PASS] T9.a: hep-th/0006199 is by Markopoulou (NOT Kastler) (Round 2 attribution fix confirmed via arXiv abstract)
+[PASS] T9.b: Markopoulou hep-th/0006199 uses partition-based Hopf algebra (NOT H_R of rooted trees in CK sense), not 4D staggered substrate (Markopoulou: 1D Ising / (1+1) spin foam / 2D Z_2 irregular)
+[PASS] T9.c: arXiv:2005.04265 is by Borinsky-Dunne (NOT Borinsky-Broadhurst) (Round 2 attribution fix confirmed via arXiv abstract)
+[PASS] T9.d: Borinsky-Dunne does NOT define CK character phi: H_R -> A_trans-series (BD reduces DSE to ODEs via Hopf algebra; resurgent trans-series is the output, not a Rota-Baxter target)
+[PASS] T10.a: note avoids forbidden overclaim language
+[PASS] T10.b: note declares no_go claim type
+[PASS] T10.c: note uses corrected substrate identification (Boolean lattice 2^[4])
+[PASS] T10.d: note uses corrected attributions (Markopoulou, Borinsky-Dunne)
+[PASS] T11.a: G1 alone blocks (Sigma hw(n) = 32 != 16) (exponent mismatch confirmed in T2 and T6)
+[PASS] T11.b: G2 alone blocks (Manchon II.5.1 needs idempotent projector + splitting) (partial-sum P_strict is not the required idempotent projection; imported pole projector is scaffolding)
+[PASS] T11.c: G3 alone blocks (Boolean lattice incidence Hopf algebra != H_R) (Schmitt incidence Hopf algebra has different coproduct (intervals not cuts))
+[PASS] T11.d: G4 blocks the declared natural candidate families (uniform = tautological encoding; Hamming-derived non-uniform = wrong exponent)
+[PASS] T11.e: (G1 OR G2 OR G3 OR G4) holds
+[PASS] T12.a: Round 2 R2-A1 (Markopoulou not 4D staggered) — confirmed correct, no new closure path opened
+[PASS] T12.b: Round 2 R2-A2 (B_4 binary tree wrong, Boolean lattice 2^[4] correct) — substrate corrected but G1 (exponent mismatch) still blocks
+[PASS] T12.c: Round 2 R2-A3 (Borinsky-Dunne does not supply CK char) — confirmed correct, no new closure path opened
+[PASS] T12.d: Round 2 R2-A4 (partial-sum RB tautological readout, P_strict(_)_1 = 0) — sharpened: Manchon II.5.1 needs idempotent projector + splitting (non-idempotent partial-sum is not the required projection)
+[PASS] T13.a: Sigma hw(n) = 32 invariant under canonical-surface perturbation (structural identity independent of alpha_LM value)
+[PASS] T13.b: Sigma_{n in 2^[3]} hw(n) = 12 (binomial-weighted: d * 2^{d-1}) (general identity: Sigma_{n in 2^[d]} hw(n) = d * 2^{d-1})
+[PASS] T13.c: Sigma_{n in 2^[d]} hw(n) = d * 2^{d-1}; at d=4 gives 32
+[PASS] T14.a: runner output is deterministic at sympy + Fraction + Decimal precision
+[PASS] T14.b: runner does NOT consume PDG / observed comparators (only framework substrate inputs (P_avg, alpha_LM, BZ-corner identity))
+[PASS] T14.c: runner does NOT introduce new repo vocabulary (canonical CK / Hopf / Boolean-lattice terms only)
+
+============================================================================
+TOTAL: PASS=47 FAIL=0
+============================================================================
+VERDICT: sharpened narrow no_go on the CK bridge for the framework's 16-fold staggered taste-blocking composition; four independent obstructions, each independently sufficient
+
+----- stderr -----
+

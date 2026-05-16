@@ -1,0 +1,59 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_strong_cp_rp_cannot_forbid_cp_odd_imaginary_no_go_2026_05_16.py
+runner_sha256: ad45e22a5c53cb45bb372e4e5473f50d1276207b7026c31eb9104d8185f08562
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 1.16
+status: ok
+----- stdout -----
+==============================================================================
+RP Half-Square Identity Cannot Forbid CP-Odd Imaginary Action - Audit Companion
+==============================================================================
+
+Verifies: adding S_CP = i c h with c != 0 and h real Theta-anti-invariant
+          to a Theta-invariant real half-action S_+ does NOT break the
+          retained RP norm-square identity. The CP-odd imaginary phase
+          cancels in the reflected expectation of every reflection-
+          Hermitian observable, because Theta-anti-invariance of h flips
+          its sign under the Theta-orbit pairing that the reflected
+          expectation enforces. Retained RP is structurally insensitive
+          to CP-odd imaginary contamination of the topological-charge type.
+
+=== Carrier X = Z/6, c = 0.5 ===
+
+  [PASS] [N=6] Theta^2 = id
+  [PASS] [N=6] Theta-invariance of S_+ (sympy exact)
+  [PASS] [N=6] Theta-anti-invariance of h (sympy exact)
+  [PASS] [N=6] Symmetric mod RE = original RE for all basis F (sympy exact)
+  [PASS] [N=6] Single-side modified RE is real for all basis F and tested c  (max |Im| = 5.37e-16)
+  [PASS] [N=6] Single-side modified RE -> original RE as c -> 0
+  [PASS] [N=6] Real-part suppression is approx. quadratic in c at small c
+  [PASS] [N=6] Orbit-level identity (B): single-side orbit = 2 cos(c h(k)) exp(-2 S+(k)) |F(k)|²  (max orbit |err| = 2.78e-15)
+
+=== Carrier X = Z/10, c = 0.5 ===
+
+  [PASS] [N=10] Theta^2 = id
+  [PASS] [N=10] Theta-invariance of S_+ (sympy exact)
+  [PASS] [N=10] Theta-anti-invariance of h (sympy exact)
+  [PASS] [N=10] Symmetric mod RE = original RE for all basis F (sympy exact)
+  [PASS] [N=10] Single-side modified RE is real for all basis F and tested c  (max |Im| = 2.41e-16)
+  [PASS] [N=10] Single-side modified RE -> original RE as c -> 0
+  [PASS] [N=10] Real-part suppression is approx. quadratic in c at small c
+  [PASS] [N=10] Orbit-level identity (B): single-side orbit = 2 cos(c h(k)) exp(-2 S+(k)) |F(k)|²  (max orbit |err| = 1.16e-15)
+
+==============================================================================
+PASS=16  FAIL=0
+==============================================================================
+
+All checks passed. On the cited retained Theta-invariant real RP half-action
+carrier, a CP-odd imaginary addition S_CP = i c h (c != 0, h real
+Theta-anti-invariant) does NOT break the symmetric half-square reflected
+expectation's real non-negativity; the single-side diagnostic remains real.
+This realises the
+narrow no-go: the 'no bare θ slot' premise of strong_cp_theta_zero_note
+cannot be derived from retained RP alone. Reusable negative evidence: a
+different ingredient (closed-form Z_Q positivity, action-class
+tightening, or measure-theoretic primitive) is needed to close the gap.
+
+----- stderr -----
+
