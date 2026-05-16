@@ -220,6 +220,83 @@ This same upstream gap also blocks promotion of the companion notes
 `KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md`,
 which use the same admitted reduced carrier.
 
+### 8.1 Candidate upstream supplier notes (graph-bookkeeping only)
+
+The audit-stated repair target is a `missing_bridge_theorem` (class A,
+short algebraic bridge): a retained upstream theorem deriving the
+physical charged-lepton observable carrier/readout and the
+`D_red = I_2` normalization from retained upstream framework inputs.
+
+Four candidate supplier notes already exist on disk in this branch;
+their respective load-bearing inferences target the two halves of the
+audit-named bridge (carrier identification and baseline normalization)
+on the admitted normalized reduced carrier used in this note. They are
+recorded here only as graph-bookkeeping dependency edges so the audit
+citation graph can track them. Their current audit status does not
+propagate retention to this row:
+
+1. `OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md`
+   — block-local uniqueness of the source-derivative content of the
+   admissible scalar generator on an invertible real anti-Hermitian
+   Dirac block, anchored on the retained
+   `CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md`
+   structural fact. Targets the audit-named bridge between the
+   generator `W = log|det(D+J)| - log|det D|` and any admissible
+   scalar generator on a real-D block, including the reduced
+   two-generator carrier here once that block is admitted.
+2. `KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md`
+   — structural composition of OP Theorems 1+2 with
+   physical-lattice-necessity §9 (locality is structural content of
+   the framework, not a parameterization choice), the canonical
+   trace-preserving local descent uniqueness, and the
+   `K = 0 ⇔ Y = I_2 ⇔ Q = 2/3` criterion. Targets the audit-named
+   reduced-carrier identification half by forcing the framework's
+   physical local scalar observables to read through the descent
+   `E_loc`, which lands on the normalized `Y = I_2` baseline.
+3. `KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md`
+   — exact rank/kernel quotient of the linear second-order readout
+   map `L : R^4 → Diag_3(R)`, `L(W) = P_{T_1} Γ_1 W Γ_1 P_{T_1}` on
+   the retained `Γ_1 / T_1` grammar. Establishes that the readout
+   map factors through the species-resolving diagonal carrier with a
+   unique unreachable slot, supplying the algebraic skeleton of the
+   two-generator block reduction used in this note's Sections 1–2.
+4. `KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md`
+   — exact uniqueness of the scale-free `C_3`-invariant selector
+   ratio on the admitted second-order returned carrier (no nontrivial
+   scale-free invariant at linear order; exactly one nontrivial
+   ratio at quadratic order). Supplies the carrier-side uniqueness
+   matching the source-side restriction proved in this note.
+
+The audit-status of these candidate suppliers as currently recorded in
+`docs/audit/data/audit_ledger.json` is independently determined. Two
+of the four (`OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md`
+and the underlying `CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md`)
+are already at `retained_bounded` effective status. The remaining two
+suppliers are at lower status and contribute to the bridge only
+conditionally on their independent audit retention.
+
+The combined load-bearing inference of the supplier chain is:
+
+> on the framework's accepted substrate, the physical local scalar
+> observables must read through the canonical descent `E_loc` to the
+> diagonal carrier; the source-derivative content of any admissible
+> scalar generator on a real-D block coincides with that of
+> `W = log|det(D+J)| - log|det D|` up to overall scale; the readout
+> map `L` factors through the species-resolving diagonal target; and
+> the normalized scale-free selector on the admitted carrier is
+> already unique. The reduced two-generator block carrier with
+> baseline `D_red = I_2` is therefore the framework-forced reading,
+> rather than a free admitted choice.
+
+That inference is the audit-named missing bridge for this row.
+
+This subsection does not promote this row's `audit_status` or the
+suppliers' status. Only the independent audit lane can do that. The
+load-bearing physical-identification bridge in the auditor's
+`verdict_rationale` remains open until at least one of the candidate
+supplier chains is itself audited at retained-grade and the
+composition is independently judged to close the bridge.
+
 ## 9. Boundaries
 
 This note does **not**:
@@ -232,3 +309,12 @@ This note does **not**:
   inputs;
 - close the physical `Q = 2/3` bridge;
 - touch the separate `delta = 2/9` Brannen-phase bridge.
+
+## 10. Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10](OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md)
+- [koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29](KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md)
+- [koide_q_readout_factorization_theorem_2026-04-22](KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md)
+- [koide_q_minimal_scale_free_selector_note_2026-04-22](KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md)
