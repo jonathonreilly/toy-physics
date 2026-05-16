@@ -2,7 +2,10 @@
 
 **Date:** 2026-04-12 (originally); 2026-05-10 (audit-narrowing as
 `audited_conditional`: explicit `claim_type: meta` framing as
-inventory-only under named upstream pending derivation rows).
+inventory-only under named upstream pending derivation rows);
+2026-05-16 (upstream-state citation refresh: parenthetical audit-state
+labels for the named one-hop authority surfaces updated to match the
+live ledger; no inventory rows or counts changed).
 **Purpose:** document counting every assumption in the framework. The
 point is to be explicit about what is assumed versus what is derived.
 **Claim type:** meta
@@ -28,34 +31,52 @@ in-note closure):**
 
 The D-row "derived" labels in this note are summary annotations for the
 following authority surfaces, each of which carries its own audit verdict
-on `main`. None is closed in this note:
+on `main`. None is closed in this note. **Live ledger audit states as of
+the 2026-05-16 refresh are recorded below; see `audit_ledger.json` rows
+for canonical state:**
 
 - D1 (complex amplitudes) / D2 (linear superposition) / D3 (Born rule):
   related surface
   [`BORN_RULE_ANALYSIS_2026-04-11.md`](BORN_RULE_ANALYSIS_2026-04-11.md)
-  (`audit_status: unaudited`). Cited as related, not as authority
-  closure.
+  (`audit_status: audited_failed`; `claim_type: bounded_theorem`;
+  `load_bearing_step_class: A`; `chain_closes: false`). Cited as
+  related, not as authority closure. **The current `audited_failed`
+  state means the D1/D2/D3 inventory labels in this note are not
+  upstream-supported on `main`; this note records that explicitly and
+  does not promote them.**
 - D5 (Poisson field equation) / Poisson uniqueness:
   related surface
   [`POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md`](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md)
-  (`audit_status: unaudited`). Cited as related, not as authority
-  closure.
+  (`audit_status: unaudited`; `claim_type: bounded_theorem`). Cited as
+  related, not as authority closure.
 - D6 (valley-linear action) / D7 (coupling normalization) / D8
   (conformal metric):
   related surfaces
-  [`VALLEY_LINEAR_ACTION_NOTE.md`](VALLEY_LINEAR_ACTION_NOTE.md),
-  [`VALLEY_LINEAR_ROBUSTNESS_NOTE.md`](VALLEY_LINEAR_ROBUSTNESS_NOTE.md),
+  [`VALLEY_LINEAR_ACTION_NOTE.md`](VALLEY_LINEAR_ACTION_NOTE.md)
+  (`audit_status: audited_clean`; `intrinsic_status: retained_bounded`;
+  `chain_closes: true`),
+  [`VALLEY_LINEAR_ROBUSTNESS_NOTE.md`](VALLEY_LINEAR_ROBUSTNESS_NOTE.md)
+  (`audit_status: audited_clean`; `intrinsic_status: retained_bounded`;
+  `chain_closes: true`),
   [`VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
-  (each `audit_status: unaudited`). Cited as related, not as authority
-  closure.
+  (`audit_status: unaudited`). Cited as related, not as authority
+  closure. The two `audited_clean` rows close at retained-bounded grade
+  on their own audit lanes; the synthesis surface remains `unaudited`.
 
 **Admitted-context derivation gap (real, not import-redirect):**
 
 This note explicitly admits that the D1–D10 reductions listed below are
-**not** closed in-note. None of the related authority surfaces named
-above currently carries an `audited_clean` retained-grade derivation on
-`main`; there is therefore **no** upstream authority closure for the
-reduction labels used in Part 1.
+**not** closed in-note. As of the 2026-05-16 live-ledger refresh, two of
+the named one-hop authority surfaces (`valley_linear_action_note`,
+`valley_linear_robustness_note`) carry `audited_clean` /
+`retained_bounded` verdicts on their own audit rows; two
+(`poisson_exhaustive_uniqueness_note`,
+`valley_linear_continuum_synthesis_note`) remain `unaudited`; and one
+(`born_rule_analysis_2026-04-11`) is `audited_failed`. There is
+therefore **no uniform upstream authority closure** across all D-row
+labels used in Part 1; some surfaces are partially closed, one is
+actively failed, and the meta-inventory must be read with that mixed
+state in mind.
 
 The note's contribution is the **inventory**: naming each ingredient,
 recording the legacy inventory rows it is (heuristically) reduced to, and
@@ -335,6 +356,18 @@ inventory only.
   law constraints; each is recorded with a separate authority surface
   (see Audit boundary)."
 - "The framework has zero continuous free parameters."
+
+**Current-state caveat (2026-05-16):** The upstream surfaces are
+**mixed**, not uniformly closed. Two of the five named one-hop rows
+(`valley_linear_action_note`, `valley_linear_robustness_note`) carry
+`audited_clean` / `retained_bounded` verdicts; two
+(`poisson_exhaustive_uniqueness_note`,
+`valley_linear_continuum_synthesis_note`) are `unaudited`; and
+`born_rule_analysis_2026-04-11` is `audited_failed`. The Part 7 "Do
+say" wording above is therefore **not** currently warranted as a
+package statement; the meta-inventory below records the inventory under
+this mixed state, and any publication-level claim must enumerate which
+upstream surfaces have or have not closed.
 
 **Do not say:**
 - "Two axioms derive all of gravity." (Omits the dimensional choice and
