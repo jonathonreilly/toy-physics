@@ -56921,6 +56921,17 @@
       "runner_path": "scripts/frontier_nonlinear_born_gravity.py",
       "title": "Nonlinear Propagator Breaks Born Rule and Gravity Simultaneously"
     },
+    "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16": {
+      "claim_id": "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "94071618327a8ab6f42b575a0b70a08f98c3341a9f61201820f91f8ce5d57c55",
+      "path": "docs/NSPT_HIGH_ORDER_LATTICE_ALPHA_N_COEFFICIENT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_nspt_high_order_lattice_alpha_N_coefficient_external_narrow.py",
+      "title": "NSPT High-Order Lattice \u03b1^N Coefficient \u2014 External Narrow Theorem"
+    },
     "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10": {
       "claim_id": "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10",
       "claim_type_author_hint": "bounded_theorem",
@@ -71285,6 +71296,7 @@
     "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
     "nonlabel_grown_basin_note",
     "nonlinear_born_gravity_note",
+    "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16",
     "observable_principle_from_axiom_note",
     "oh_schur_boundary_action_note",
     "ollivier_einstein_proxy_note_2026-04-11",
@@ -71568,7 +71580,7 @@
       "no_go": 48,
       "none": 1536,
       "open_gate": 40,
-      "positive_theorem": 149
+      "positive_theorem": 150
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 831,
@@ -71577,12 +71589,12 @@
       "no_go": 153,
       "none": 445,
       "open_gate": 119,
-      "positive_theorem": 609
+      "positive_theorem": 610
     },
     "edge_count": 8954,
-    "leaf_count": 630,
-    "node_count": 2232,
-    "root_count": 774,
-    "runners_with_path": 1850
+    "leaf_count": 631,
+    "node_count": 2233,
+    "root_count": 775,
+    "runners_with_path": 1851
   }
 }
