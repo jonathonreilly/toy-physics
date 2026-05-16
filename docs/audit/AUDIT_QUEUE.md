@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | unaudited | critical | 783 | 12.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
+| 1 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | audit_in_progress | critical | 783 | 12.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
 | 2 | `s3_boundary_link_theorem_note` | bounded_theorem | unaudited | critical | 783 | 12.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_boundary_link_theorem.py` |
 | 3 | `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | unaudited | critical | 783 | 11.62 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_commutant_eigenoperator_selector.py` |
 | 4 | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | bounded_theorem | unaudited | critical | 782 | 15.61 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` |
