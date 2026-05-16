@@ -245,3 +245,106 @@ mirrors the live cite-chain pattern used by the
 `DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` cluster
 (commit `8e84f0c23`) and the PMNS active-source cluster (commit
 `be5a06dbf`).
+
+## Auditor-targeted load-bearing step (post-repair)
+
+The 2026-05-05 audit verdict
+(`pmns_selector_three_identity_support_note_2026-04-21`,
+`audited_conditional`, `chain_closes=False`,
+`load_bearing_step_class=G`) named two specific gaps in its
+`notes_for_re_audit_if_any` field:
+
+> `missing_bridge_theorem: provide retained derivations of delta * q_+
+> = Q_Koide and det(H) = E2, plus runner source/stdout if the
+> numerical uniqueness and PMNS checks are to be audited.`
+
+This post-repair section addresses the auditable scope (not the two
+upstream missing-bridge derivations), in the spirit of the
+science-fix-loop honest-demote pattern:
+
+### Runner source/stdout surfaced
+
+The runner source is at the canonical relative path
+
+```text
+scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py
+```
+
+and the runner stdout the 2026-05-05 audit panel could not see is
+preserved verbatim in the canonical runner-cache file
+
+```text
+logs/runner-cache/frontier_pmns_selector_three_identity_support_2026_04_21.txt
+```
+
+with `runner_sha256 = ce0ff2b2a137179000b030399ebba85aa7e7ab25a7e71dd39613e59645bd4e11`,
+`exit_code = 0`, `status = ok`, and the same `PASS=19, FAIL=0`
+breakdown (`A=5`, `B=4`, `C=9`, `D=1`) the note reports above. The
+cache stdout block is the verbatim runner output, so the next auditor
+can read it without re-executing the runner.
+
+### Load-bearing step (narrowed for re-audit)
+
+For the next auditor, the load-bearing step of the **retainable scope
+of this note** is narrowed to the **conditional support statement**:
+
+> **Conditional support statement (load-bearing).** If one assumes the
+> two candidate selector laws `delta * q_+ = Q_Koide` and
+> `det(H) = E2` on the retained affine Hermitian chart `H(m, delta,
+> q_+)`, then the three-equation system
+> `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`, `det(H) = E2`
+> has a numerically recovered interior chamber point
+> `(m_*, delta_*, q_+*) = (2/3, 0.9330511..., 0.7145018...)`, the
+> recovered point preserves the `H_base` chamber signature
+> `(1, 0, 2)`, and the PMNS observables extracted from
+> `H(m_*, delta_*, q_+*)` lie in the runner's NuFit 5.3 normal-ordering
+> `1 sigma` bands; a bounded multi-start search of 60 random starts
+> in the audited box returns one chamber cluster.
+
+That conditional statement is **closed by the runner** (`PASS=19,
+FAIL=0`; cache stdout above). The class-A chart-side identities
+(`SELECTOR^2 = Q_Koide`, `2*SELECTOR/sqrt(3) = E2`, `Tr(H_base) = 0`,
+`Tr(H) = m`, Hermiticity of `H` on real chart coordinates) are exact
+finite-dimensional algebra on the retained chart; the class-B
+numerical solution, class-C chamber/PMNS checks, and class-D
+multi-start chamber-cluster evidence are reproducible from the
+committed runner.
+
+### Out-of-scope claims (not load-bearing)
+
+The following claims are **not** part of the load-bearing chain of the
+narrowed conditional support statement, and remain open obligations
+exactly as the note already records in `## Why this is support, not
+closure` and `## What would promote this package`:
+
+1. A retained-grade derivation of `delta * q_+ = Q_Koide` from
+   framework structure. This is one of the two missing-bridge targets
+   named by the audit. The conditional support statement above
+   assumes it as a candidate selector law.
+2. A retained-grade derivation of `det(H) = E2` from framework
+   structure. This is the second missing-bridge target. The
+   conditional support statement above assumes it as a candidate
+   selector law.
+3. A theorem-grade basin-uniqueness argument replacing the bounded
+   multi-start chamber-cluster evidence. The conditional support
+   statement above only reports the multi-start chamber-cluster
+   evidence (class C/D), not a uniqueness theorem.
+4. The broader PMNS/DM gate. The conditional support statement above
+   is restricted to the current active-chamber working surface and
+   does not by itself settle remaining source-sheet / selector-side
+   structure elsewhere in the package.
+
+### Honest framing for re-audit
+
+This note is **not** a retained PMNS selector closure theorem. It is
+a **support proposal** with two upstream proposed selector laws that
+are explicitly imported, not derived. The narrowed conditional support
+statement above is the load-bearing claim a re-audit should evaluate;
+the two missing-bridge derivations and the basin-uniqueness theorem
+remain open in their own right and are tracked in
+`## Audit dependency repair links` and `## What would promote this
+package`.
+
+The right effective-status reading remains `audited_conditional`
+support, not retained closure, until at least the two missing-bridge
+derivations and the basin-uniqueness theorem land separately.
