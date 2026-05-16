@@ -1,31 +1,36 @@
-# Koide Z_3-Equivariant Anti-Commuting Operator No-Go
+# Koide Z_3-Equivariant Anti-Commuting Operator — Subalgebra Disjointness
 
 **Date:** 2026-05-16
 
-**Type:** no_go
-**Claim scope:** for any 3×3 Hermitian operator H on R^3 that
-(i) is Z_3-equivariant (commutes with the cyclic shift R = the 3-cycle
-permutation matrix), AND
-(ii) anti-commutes with the Z_3 character grading
-`Γ_χ = (2/3) J − I` (where J is the rank-1 all-ones matrix),
-necessarily H = 0.
+**Type:** exact_support
+**Claim scope:** the subspace of Hermitian operators on R^3 commuting
+with the cyclic shift R intersects the subspace of Hermitian operators
+anti-commuting with `Γ_χ = (2/3) J − I` only at H = 0.
 
 **Status authority:** independent audit lane only. This source note
 does not set or predict an audit outcome; later status is generated
 by the audit pipeline after independent review.
 
-This is a **pure algebraic no-go** that closes a specific candidate
-realization of the retained anti-commuting operator family of
-`KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md`:
-namely, **no element of the 2-dim anti-commuting family is
-Z_3-equivariant (other than H = 0)**.
+This is a **pure algebraic subalgebra-disjointness identity** that
+extends the §6.1 negative observation in
+`KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md`
+from one specific operator `(R - R^T)/i` to the full 3-dim circulant
+algebra `⟨I, R, R²⟩`.
 
-As a corollary, **no Connes-Lott style finite spectral triple on
-`Cl(3) ⋊ Z_3` with Z_3-equivariant Yukawa Dirac D can realize the
-required anti-commuting Hermitian H of the Level 4 theorem.** The
-Connes first-order condition forces D on the 3-generation triplet
-to be Z_3-equivariant on both sides, and the present no-go then
-forces D = 0 on that subspace.
+**Scope clarification:** this note does NOT claim to close standard
+Connes-Lott style spectral triple constructions in general. It
+addresses ONLY the literal identification of the Connes-Lott Z_2
+chirality grading `γ_CL = diag(I, −I)` (on `H_L ⊕ H_R`) with the Z_3
+character grading `Γ_χ` (on a single `R³` generation factor) — a
+hybrid identification that no standard NCG construction uses. The
+generic Connes-Lott structure with `H = R³ ⊗ (H_L ⊕ H_R)`,
+`γ_CL = I ⊗ σ_3`, and `Γ_χ` as a SEPARATE grading on the `R³`
+factor is NOT addressed by this note. See §4 for the precise scoping.
+
+**Primary runner:** [`scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py`](./../scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py)
+
+**Lane:** 6 — charged-lepton mass workstream context only; closure
+not claimed.
 
 **Primary runner:** [`scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py`](./../scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py)
 
@@ -136,77 +141,81 @@ on a finite group), so the only solution is `a = b = c = 0`.
 
 Therefore H = 0. ∎
 
-## 3. Equivalent statements
+## 3. Equivalent algebraic reformulation
 
-The theorem admits four equivalent reformulations:
+The theorem statement
+`comm(R) ∩ anticomm(Γ_χ) = {0}  inside  Sym(R³)`
+is equivalent (via the Z_3 discrete Fourier transform of §2.4) to
+the linear algebra statement that the 3×3 Z_3 character matrix `F`
+applied to the circulant coefficient triple `(a, b, c)` together
+with the non-zero Γ_χ eigenvalue triple `(+1, −1, −1)` admits no
+non-trivial common solution. The geometric content is that the
+2-dim anti-commuting family of
+`KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10` is
+**disjoint from** the 3-dim circulant algebra `⟨I, R, R²⟩` (their
+intersection is only at H = 0).
 
-(a) Algebraic: `comm(R) ∩ anticomm(Γ_χ) = {0}` inside `Sym(R³)`.
+## 4. Scope-narrow Connes-Lott observation
 
-(b) Fourier: in the Z_3 character basis, H is diagonal (by Z_3-equivariance)
-    and Γ_χ is diagonal with non-zero entries; their anti-commutator
-    diagonal vanishes only when H itself is zero.
+This section records a SCOPE-NARROW observation about a specific
+(forced) Connes-Lott identification. It does NOT close generic
+Connes-Lott constructions.
 
-(c) Geometric: the 2-dim anti-commuting family
-    `{H = (1/3)(1⊗h + h⊗1) : h ∈ R³, Σh = 0}` of
-    `KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10`
-    is **disjoint from** the 3-dim circulant algebra
-    `⟨I, R, R²⟩` (intersection only at H = 0).
+**Observation.** Consider a finite spectral triple `(A, H_st, D, γ, J)`
+where one IMPOSES BOTH of these constraints:
+1. The Yukawa Dirac D on a single 3-generation factor `R³` is
+   Z_3-equivariant: `[D, R] = 0` (e.g., because `A = Cl(3) ⋊ Z_3`
+   acts via its regular representation on `R³` and the first-order
+   condition forces D into the commutant of R).
+2. The spectral-triple grading γ acts on the same `R³` factor as
+   the Z_3 character grading `Γ_χ = (2/3) J − I`, with the
+   constraint `{D, Γ_χ} = 0`.
 
-(d) Categorical: the Z_3-equivariant subcategory of `Sym(R³)` (as a
-    `R[Z_3]`-module) and the Γ_χ-anti-commuting subcategory have
-    trivial intersection.
+Then by the main theorem, **D = 0** on that `R³` factor.
 
-## 4. Connes-Lott corollary
+**What this observation does NOT exclude.** The standard
+Connes-Lott structure for fermion generations is `H_st = R³ ⊗ (H_L ⊕ H_R)`
+(generation factor `R³` tensored with left-right doubling
+`H_L ⊕ H_R`), with `γ_CL = I_3 ⊗ σ_3` acting on the chirality
+factor — NOT on the generation factor. In such constructions,
+`γ_CL ≠ Γ_χ`; the Z_2 chirality grading and the Z_3 character
+grading live in different tensor factors. The off-diagonal Yukawa
+acts on the generation factor `R³` and is unconstrained by
+chirality anti-commutation — the L4 anti-commutation `{·, Γ_χ}=0`
+on the generation factor would be a SEPARATE condition, not the
+spectral-triple anti-commutation hypothesis.
 
-**Corollary (Connes-Lott Z_3-Equivariant Yukawa No-Go).**
+**Escape hatches.** To recover a non-zero D realizing the L4
+anti-commuting form, one must either:
+- (I) drop the Z_3-equivariance of D on a single `R³` factor — but
+  then "framework primitivity via Z_3 group action" is lost and the
+  specific h becomes an external input, or
+- (II) use a multi-factor Hilbert space where the spectral-triple
+  γ-grading lives on a factor distinct from where Γ_χ acts. The
+  main theorem then does not apply, and a separate bridge theorem
+  is needed to connect Connes-Lott anti-commutation to the L4
+  hypothesis.
 
-Let `(A, H, D, γ, J)` be a finite spectral triple with:
-- `A = Cl(3) ⋊ Z_3` (or any algebra containing the Z_3 group action),
-- `H = R³ ⊕ R³` (Connes-Lott left-right structure),
-- `D = [[0, M], [M†, 0]]` (off-diagonal Yukawa, `M ∈ Mat_3(C)`),
-- `γ = diag(I, −I)` (Z_2 chiral grading).
+Both directions are open. The present note closes ONLY the literal
+single-factor identification γ = Γ_χ + Z_3-equivariance.
 
-Suppose:
-1. The first-order condition `[[D, a], b°] = 0` for all `a, b ∈ A`
-   forces M to be Z_3-equivariant: `[M, R] = 0`.
-2. We attempt to identify `γ` on a single `R³` factor with `Γ_χ` (i.e.,
-   we ask that the restriction of D to `R³ ⊕ R³` anti-commute with
-   `Γ_χ ⊕ Γ_χ` instead of `diag(I, −I)`).
+## 5. What this support note does NOT establish
 
-Then **D = 0**, i.e., the Connes-Lott Yukawa structure is trivial.
-
-**Proof:** By assumption (1), M is a 3×3 circulant. By the main
-theorem with the identification (2), `{M, Γ_χ} = 0` forces M = 0,
-hence D = 0. □
-
-The corollary shows the natural Connes-Lott candidate construction
-for realizing the Level 4 anti-commuting H is **structurally
-incompatible** with Z_3-equivariance. To recover a non-trivial D
-matching the Level 4 H, one must either:
-(I) drop Z_3-equivariance on D (losing "framework primitivity" via
-the Z_3 group action — h becomes an external input), OR
-(II) reinterpret the spectral-triple γ-grading as NOT being identified
-with Γ_χ (in which case Level 4's anti-commutation hypothesis does
-not directly apply, and one needs a separate bridge theorem).
-
-Both alternatives are open research directions; this no-go closes
-only the direct identification.
-
-## 5. What this no-go does NOT establish
-
-- A no-go on Level 5 globally. Other spectral-triple constructions
-  (e.g., dropping Z_3-equivariance on D, twisted/modular spectral
-  triples per Connes-Moscovici 2008, or alternative gradings) are
-  not ruled out by this theorem.
-- A retirement of any retained Koide chain theorem (Levels 1-4
-  remain audit-ratified).
+- A no-go on Level 5 globally. Standard Connes-Lott constructions
+  with tensored Hilbert space `R³ ⊗ (H_L ⊕ H_R)` (chirality grading
+  on a SEPARATE factor from Γ_χ) are NOT addressed.
+- A no-go on twisted/modular spectral triples (Connes-Moscovici
+  2008), Chamseddine-Connes spectral action variants, staggered-Dirac
+  taste cube routes, or Hilbert-space-extension constructions.
+- A retirement of any retained Koide chain theorem. Levels 1-4
+  (Z_3 character norm split, Lightcone Primitive, Anti-Commuting
+  Operator) remain audit-ratified on main.
 - A claim about Lane 6 closure.
-- A statement about the staggered-Dirac taste cube route (which is
-  not Z_3-equivariant in the sense of this theorem).
 
-The theorem rules out ONLY the direct identification of the
-spectral-triple γ-grading with `Γ_χ` while preserving Z_3-equivariance
-of D.
+The note establishes ONLY the narrow algebraic identity
+`comm(R) ∩ anticomm(Γ_χ) = {0}` inside `Sym(R³)`, plus its
+scope-narrow corollary about the literal single-factor identification
+γ = Γ_χ + Z_3-equivariance of the Dirac.
 
 ## 6. Falsifiers
 
@@ -243,19 +252,22 @@ charged-lepton mass derivation.
 
 ## 9. Boundary
 
-This is a NARROW POSITIVE NO-GO THEOREM. It establishes that the
-intersection of two subspaces of `Sym(R^3)` is trivial:
+This is a NARROW EXACT SUPPORT IDENTITY. It establishes the
+algebraic subalgebra-intersection fact:
 
 > `comm(R) ∩ anticomm(Γ_χ) = {0}`   inside   `Sym(R³)`
 
-equivalently that the discrete Fourier transform on Z_3 is invertible
-applied to circulant coefficients required to vanish by anti-commutation
-with a non-degenerate circulant Γ_χ.
+equivalently that the Z_3 discrete Fourier transform is invertible
+applied to circulant coefficients required to vanish via product
+with the non-degenerate circulant Γ_χ.
 
-The CONNECTION to spectral-triple constructions is a corollary
-(§4): the natural Connes-Lott structure on `Cl(3) ⋊ Z_3` with
-Z_3-equivariant Yukawa is structurally incompatible with
-identifying the Z_2 chirality grading with `Γ_χ`.
+The CONNECTION to spectral-triple constructions is a SCOPE-NARROW
+observation (§4): the LITERAL single-factor identification of the
+Connes-Lott Z_2 chirality grading with Γ_χ, combined with
+Z_3-equivariance of the Yukawa Dirac, forces the Dirac to zero.
+This does NOT close standard multi-factor Connes-Lott constructions
+where γ_CL and Γ_χ live in distinct tensor factors. Such
+constructions remain open research targets.
 
 A class-A runner verifies the algebraic core symbolically and
 exhibits explicit Z_3 Fourier transforms of (a, b, c) showing the

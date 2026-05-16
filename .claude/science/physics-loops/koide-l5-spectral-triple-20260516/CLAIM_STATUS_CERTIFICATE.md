@@ -12,27 +12,36 @@
 - **Cached output:** `logs/runner-cache/frontier_koide_z3_equivariant_anticommuting_no_go.txt`
 - **Verification:** 20 PASS / 0 FAIL, dominant_class A (20 class-A pattern hits)
 
-## Status fields
+## Status fields (after hostile review DEMOTE)
 
 ```yaml
-actual_current_surface_status: no-go
-target_claim_type: no_go
+actual_current_surface_status: exact-support
+target_claim_type: exact_support
 conditional_surface_status: null
 hypothetical_axiom_status: null
 admitted_observation_status: null
 claim_type_reason: |
-  Purely algebraic theorem on subalgebra intersection inside Sym(R^3):
-  comm(R) ∩ anticomm(Γ_χ) = {0}. Verified by sympy on symbolic
-  (a, b, c) coefficients with explicit Z_3 Fourier diagonalization.
-  No PDG inputs, no fitted selectors, no admitted unit conventions
-  load-bearing for the main theorem.
+  Hostile review verdict: DEMOTE. Main theorem (subalgebra
+  disjointness comm(R) ∩ anticomm(Γ_χ) = {0} in Sym(R^3)) is true
+  and clean, but is borderline-reconstructable from L3+L4+Schur
+  orthogonality. The §4 Connes-Lott corollary as originally framed
+  was found to kill a hybrid γ_CL = Γ_χ identification that no
+  standard NCG construction uses (strawman closure).
 
-  The Connes-Lott corollary (§4) is CONDITIONAL on the admitted
-  Connes first-order condition forcing M to be Z_3-equivariant
-  (admitted import: standard NCG machinery, hep-th/9606001). The
-  corollary's status is therefore bounded_theorem at most when
-  considered standalone; but the MAIN theorem is purely algebraic
-  and independent of any NCG import.
+  Edits applied 2026-05-16 after review:
+  - Type demoted from no_go to exact_support.
+  - §3 trimmed from four "equivalent reformulations" to one
+    algebraic + geometric statement.
+  - §4 rewritten as scope-narrow observation acknowledging that
+    standard multi-factor Connes-Lott constructions (where γ_CL
+    and Γ_χ live in distinct tensor factors) are NOT addressed.
+  - §5 and §9 retitled to reflect support-tier scope.
+
+  Remaining value: a clean exact-support algebraic identity that
+  extends L4 §6.1's specific (R - R^T)/i observation to the full
+  3-dim circulant algebra, useful as a precise scoping for which
+  spectral-triple route variants are immediately closed by literal
+  identification of gradings.
 audit_required_before_effective_retained: true
 bare_retained_allowed: false
 ```
@@ -136,18 +145,51 @@ external.
   Z_3-equivariance of D.
 - Lane 6 closure — no claim made.
 
+## Hostile review record
+
+**Reviewer:** internal special-forces hostile reviewer (cycle-1 review)
+**Verdict:** DEMOTE
+**Findings:**
+- V3 borderline-reconstructable: main theorem is a paragraph-length
+  corollary of L3 (Lightcone Primitive) + L4 (Anti-Commuting) + Schur
+  orthogonality.
+- V2 borderline new content: the Z_3 Fourier diagonalization argument
+  is canonical, not novel.
+- §3 four reformulations were theatrical; one suffices.
+- §4 Connes-Lott corollary as originally framed killed a strawman.
+  The hybrid γ_CL = Γ_χ identification is not what any NCG
+  practitioner uses; the standard multi-factor construction is
+  unaffected.
+- Runner integrity: 20/0 PASS, all class-A, no hidden imports for
+  the core algebra.
+
+**Disposition applied:** demote to exact_support, trim §3, rewrite
+§4 as scope-narrow observation. Edits committed; certificate updated.
+
 ## Next cycle plan
 
-Per Deep Work Rules: this is the FIRST no-go cycle. Continue with
-constructive routes / stretch attempts. Options:
+Per Deep Work Rules: this is the FIRST cycle (resulting in a
+demoted exact-support artifact). The next cycle MAY be a stretch
+attempt or another constructive route.
 
-- **Cycle 2 candidate A:** Consolidate R1, R3, R4, R5 obstructions
-  into a SURVEY no-go note. (Risk: thin content per route; may be
-  better as project memory than as retained note.)
-- **Cycle 2 candidate B:** Stretch attempt on the staggered-Dirac
-  taste cube route (NG-3, marked "research-level open" in L4 §6.2).
-  This route does NOT require Z_3-equivariance and is independent
-  of the present no-go.
-- **Cycle 2 candidate C:** Stretch attempt on a fundamentally
-  different gradation: e.g., the parity grading from the retained
-  CPT/parity-operator notes.
+Options for Cycle 2:
+
+- **Cycle 2 candidate A (recommended):** Stretch attempt on the
+  staggered-Dirac taste cube route (NG-3, marked "research-level
+  open" in L4 §6.2). This route does NOT require Z_3-equivariance
+  on a single R³ factor and is genuinely independent of the present
+  support identity.
+- **Cycle 2 candidate B:** Direct construction attempt on the
+  multi-factor Connes-Lott structure `R³ ⊗ (H_L ⊕ H_R)` where γ_CL
+  and Γ_χ live in distinct tensor factors. The bridge theorem
+  needed to connect Connes-Lott anti-commutation to L4 would be a
+  genuine new derivation.
+- **Cycle 2 candidate C:** Twisted/modular spectral triple
+  (Connes-Moscovici 2008) route R5 from the loop's
+  ROUTE_PORTFOLIO.md — needs Tomita-Takesaki modular machinery as
+  admitted import; outcome bounded_theorem at best.
+
+Candidate A is preferred: most independent of the present cycle,
+matches the user's "honest next step" framing of "research-level
+open" routes, and avoids piling more thin scope-narrow content on
+the same parent-row family (corollary-churn / cluster-cap concerns).
