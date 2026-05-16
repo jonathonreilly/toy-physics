@@ -3,37 +3,66 @@
 CKM Mass-Basis NNI: V_ub from Schur Complement + Mass-Ratio Suppression
 ========================================================================
 
-STATUS: BOUNDED -- V_ub closed within PDG tolerance via mass-basis NNI
-        normalization applied to the Schur complement.
+STATUS: BOUNDED, historical / diagnostic only. Re-audited 2026-05-16 under
+        ledger row work_history.ckm.ckm_mass_basis_nni_note (status
+        audited_numerical_match, class G).
 
-THEOREM:
-  The Schur complement gives c_13^eff = c_12 * c_23 in the geometric-mean
-  NNI normalization. But the geometric-mean NNI coefficients are O(1),
-  while the physical CKM elements involve mass-ratio suppressions.
+WHAT THIS RUNNER CERTIFIES (the scoped bounded statement, axiom-free):
 
-  The conversion from geometric-mean NNI to mass-eigenvalue NNI is:
-    c_ij^phys = c_ij^geom * sqrt(m_i / m_j)   for i < j
+  Let m_1 < m_2 < m_3 be any positive reals (three abstract eigenvalues)
+  and let (c_12, c_23) be any geometric-mean NNI off-diagonal coefficients
+  in the Hermitian NNI mass matrix M_ij = c_ij * sqrt(m_i * m_j).
 
-  This is the standard NNI normalization (Branco, Lavoura, Silva --
-  "CP Violation," Chapter 6).
+  Define the mass-eigenvalue NNI normalization (Branco-Lavoura-Silva,
+  "CP Violation", Ch. 6):
 
-  Applying this to all three off-diagonal CKM elements:
-    |V_us| ~ c_12^phys ~ c_12^geom * sqrt(m_d/m_s)   [or up-sector analog]
-    |V_cb| ~ c_23^phys ~ c_23^geom * sqrt(m_s/m_b)
-    |V_ub| ~ c_13^phys ~ c_13^geom * sqrt(m_d/m_b)
-           = c_12 * c_23 * sqrt(m_d/m_b)              [Schur complement]
+      c_ij^phys = c_ij^geom * sqrt(m_i / m_j)        for i < j.
 
-  The factor-6 gap between the naive Schur complement and PDG |V_ub| is
-  closed by this mass-ratio normalization.
+  Then the following four identities hold IDENTICALLY in (m_i, c_ij),
+  for arbitrary positive masses and coefficients:
 
-  The mass ratios themselves come from the EWSB cascade
-  (frontier_ewsb_generation_cascade.py), so the normalization uses
-  ONLY framework inputs.
+    (T1) Chain rule: sqrt(m_1/m_3) = sqrt(m_1/m_2) * sqrt(m_2/m_3).
+    (T2) Schur-complement closure in the geometric basis,
+         c_13^geom = c_12 * c_23 (the structural Schur identity).
+    (T3) The geom -> phys map is multiplicatively closed under (T1):
+         c_13^phys = c_12^phys * c_23^phys.
+    (T4) The gap-closure ratio is exactly the (1,3) mass-ratio:
+         c_13^phys / c_13^geom = sqrt(m_1/m_3),
+         independent of the choice of c_12, c_23.
 
-BUILDS ON:
-  - frontier_ckm_schur_complement.py: c_13 = c_12 * c_23 (geometric NNI)
-  - frontier_ckm_wolfenstein_cascade.py: lambda, A from EWSB cascade
-  - frontier_ewsb_generation_cascade.py: mass hierarchy from EWSB
+  Identities (T1)-(T4) are pure algebra. They are the only theorem-grade
+  content of this runner and they require no quark-mass or PDG input.
+
+WHAT THIS RUNNER IMPORTS (and therefore does NOT derive):
+
+  The runner also ILLUSTRATES (T4) numerically against an external
+  calibration block. The illustration uses:
+
+    - PDG 2024 quark masses (M_UP, M_CHARM, ... ): external import.
+    - "Fitted" geometric-mean NNI coefficients C12_*, C23_*: numerical
+      fits taken from frontier_ckm_schur_complement.py, themselves
+      calibrated against observed CKM mixing angles.
+    - PDG 2024 CKM comparators (V_US_PDG, ...): external import.
+
+  The auditor (codex-cli-gpt-5.5, 2026-05-05) correctly flagged that any
+  agreement of |V_ub|_pred with PDG in the calibrated block is a
+  numerical match under imported inputs, NOT a first-principles closure.
+  This patch keeps the calibrated block for diagnostic continuity but
+  brackets it as an imports-dependent illustration, separates it from
+  the structural identities (T1)-(T4), and removes the earlier prose
+  that asserted "all mass ratios are framework-derived."
+
+BUILDS ON (citation, not load-bearing for the source theorems above):
+  - scripts/frontier_ckm_schur_complement.py  (provides the geometric
+    Schur identity and the fitted O(1) coefficients used in the
+    calibrated illustration block).
+
+OPEN FRONTIER (NOT addressed by this patch):
+  - A retained derivation of the geometric-mean NNI coefficients
+    (c_12, c_23) from framework axioms.
+  - A retained derivation of the up/down quark mass hierarchies.
+  - Either would be required to upgrade the calibrated illustration
+    block from numerical match to a first-principles closure.
 
 PStack experiment: frontier-ckm-mass-basis-nni
 Self-contained: numpy + scipy.
@@ -80,55 +109,64 @@ def check(name, condition, detail="", kind="EXACT"):
 
 
 # =============================================================================
-# Physical constants
+# Constants
+#
+# IMPORTANT: every numerical constant below is an EXTERNAL IMPORT.
+# These are NOT derived by this runner or by retained framework axioms.
+# They are used ONLY in the calibrated illustration block (Parts 1, 2, 4,
+# 5, 6, 7); the structural identity block (Part 0) ignores them entirely
+# and uses arbitrary symbolic masses + coefficients drawn at random.
 # =============================================================================
 
 PI = np.pi
 
-# Quark masses (PDG, MSbar at 2 GeV for light; pole for heavy)
-M_UP = 2.16e-3        # GeV
-M_CHARM = 1.27         # GeV
-M_TOP = 172.76         # GeV
-M_DOWN = 4.67e-3       # GeV
-M_STRANGE = 0.0934     # GeV
-M_BOTTOM = 4.18        # GeV
+# ---- External import: PDG 2024 quark masses ----
+# Source: Particle Data Group, "Review of Particle Physics," Prog. Theor.
+# Exp. Phys. 2024, 083C01 (and 2024 partial update). MSbar at 2 GeV for
+# light quarks; MSbar at m_q for charm/bottom; pole mass for top.
+M_UP = 2.16e-3         # GeV  -- PDG 2024 import
+M_CHARM = 1.27         # GeV  -- PDG 2024 import
+M_TOP = 172.76         # GeV  -- PDG 2024 import
+M_DOWN = 4.67e-3       # GeV  -- PDG 2024 import
+M_STRANGE = 0.0934     # GeV  -- PDG 2024 import
+M_BOTTOM = 4.18        # GeV  -- PDG 2024 import
 
-# EW parameters
-SIN2_TW = 0.231
-C_F = 4.0 / 3.0
-N_C = 3
+# (Note: prior revisions of this runner carried a block of unused
+# EW/Planck-scale parameters (SIN2_TW, C_F, N_C, ALPHA_S_PL, ALPHA_2_PL,
+# M_PL, V_EW) that were referenced only in a prose commentary asserting
+# an EWSB-cascade origin for the mass hierarchy. The auditor flagged
+# that commentary as unsupported; the unused constants and the prose
+# were removed in the 2026-05-16 patch.)
 
-# Planck-scale gauge couplings (1-loop RG evolution)
-ALPHA_S_PL = 0.020     # alpha_s at M_Pl
-ALPHA_2_PL = 0.025     # alpha_2 (SU(2)_L) at M_Pl
+# ---- External import: PDG 2024 CKM comparators ----
+LAMBDA_PDG = 0.2243    # PDG 2024 import
+A_PDG = 0.790          # PDG 2024 import
+RHO_BAR_PDG = 0.141    # PDG 2024 import
+ETA_BAR_PDG = 0.357    # PDG 2024 import
+V_US_PDG = 0.2243      # PDG 2024 import
+V_CB_PDG = 0.0422      # PDG 2024 import
+V_UB_PDG = 0.00382     # PDG 2024 import
+J_PDG = 3.08e-5        # PDG 2024 import
+DELTA_PDG_DEG = 65.5   # degrees -- PDG 2024 import
 
-# Scales
-M_PL = 1.22e19        # Planck mass (GeV)
-V_EW = 246.0          # EW VEV (GeV)
-
-# PDG CKM (2024)
-LAMBDA_PDG = 0.2243
-A_PDG = 0.790
-RHO_BAR_PDG = 0.141
-ETA_BAR_PDG = 0.357
-V_US_PDG = 0.2243
-V_CB_PDG = 0.0422
-V_UB_PDG = 0.00382
-J_PDG = 3.08e-5
-DELTA_PDG_DEG = 65.5   # degrees
-
-# Tolerances
+# PDG 2024 1-sigma uncertainties (used for sigma reporting; not for any
+# load-bearing tolerance gate in the source theorems T1-T4)
 V_US_ERR = 0.0008
 V_CB_ERR = 0.0011
 V_UB_ERR = 0.00024
 J_ERR = 0.12e-5
 
-# NNI fitted coefficients from geometric-mean normalization
-# (from frontier_ckm_schur_complement.py)
-C12_U_FIT = 1.48
-C23_U_FIT = 0.65
-C12_D_FIT = 0.91
-C23_D_FIT = 0.65
+# ---- External import: fitted O(1) geometric-mean NNI coefficients ----
+# These are the up- and down-sector coefficients quoted in
+# scripts/frontier_ckm_schur_complement.py (constants C12_U_FIT etc.,
+# lines ~139-142 of that file). That ancestor runner itself fits them
+# against observed CKM mixing angles; they are not derived from any
+# retained axiom in the present package. They appear here ONLY as
+# numerical inputs to the calibrated illustration block.
+C12_U_FIT = 1.48       # imported from frontier_ckm_schur_complement.py
+C23_U_FIT = 0.65       # imported from frontier_ckm_schur_complement.py
+C12_D_FIT = 0.91       # imported from frontier_ckm_schur_complement.py
+C23_D_FIT = 0.65       # imported from frontier_ckm_schur_complement.py
 
 
 # =============================================================================
@@ -188,29 +226,140 @@ def extract_wolfenstein(V):
 
 
 # =============================================================================
-# PART 1: Mass-ratio suppressions from the EWSB cascade
+# PART 0: SOURCE THEOREMS T1-T4 (structural identities, axiom-free)
+#
+# Everything in this block is pure algebra over arbitrary positive masses
+# and arbitrary geometric-mean coefficients. NO PDG inputs are used.
+# These identities are the only theorem-grade content of this runner.
+# =============================================================================
+
+def part0_source_theorems(rng_seed: int = 20260516, n_random: int = 200):
+    """
+    Verify the four structural identities (T1)-(T4) at machine precision
+    over n_random random triples (m_1, m_2, m_3) with 0 < m_1 < m_2 < m_3
+    and random positive geometric-mean coefficients (c_12, c_23).
+
+    These checks do NOT use any PDG quark mass, any PDG CKM value, or
+    any fitted NNI coefficient. They certify pure algebraic identities.
+    """
+    print("\n" + "=" * 72)
+    print("PART 0: SOURCE THEOREMS T1-T4  (structural, axiom-free)")
+    print("=" * 72)
+    print("  No PDG inputs are read in this block.")
+    print(f"  Sampling {n_random} random ordered mass triples and coefficient pairs.")
+    print(f"  rng_seed = {rng_seed}")
+
+    rng = np.random.default_rng(rng_seed)
+
+    worst_T1 = 0.0
+    worst_T2 = 0.0
+    worst_T3 = 0.0
+    worst_T4 = 0.0
+
+    for _ in range(n_random):
+        # Draw 3 positive masses across many decades and sort ascending
+        masses = np.sort(10.0 ** rng.uniform(-4.0, 3.0, size=3))
+        m1, m2, m3 = masses[0], masses[1], masses[2]
+
+        # Draw arbitrary positive O(1) coefficients
+        c12 = rng.uniform(0.1, 3.0)
+        c23 = rng.uniform(0.1, 3.0)
+
+        # (T1) chain rule for sqrt(m_i/m_j)
+        r12 = np.sqrt(m1 / m2)
+        r23 = np.sqrt(m2 / m3)
+        r13 = np.sqrt(m1 / m3)
+        err_T1 = abs(r13 - r12 * r23) / r13
+        worst_T1 = max(worst_T1, err_T1)
+
+        # (T2) Schur-complement closure in the geometric basis
+        # For our purposes "Schur" means: c_13^geom is the structural
+        # combination c_12 * c_23 that the rank-1 Schur reduction of
+        # a Hermitian NNI mass matrix generates in the (1,3) block.
+        c13_geom = c12 * c23
+        # Trivially "verified" by construction; the nontrivial check is
+        # that the geometric-mean off-diagonal magnitude inherits the
+        # product structure under sqrt(m_i*m_j) normalization.
+        M13_geom = c13_geom * np.sqrt(m1 * m3)
+        M12_geom = c12 * np.sqrt(m1 * m2)
+        M23_geom = c23 * np.sqrt(m2 * m3)
+        # Structural identity: M_13^geom / (M_12^geom * M_23^geom) =
+        # sqrt(m_1*m_3) / (sqrt(m_1*m_2) * sqrt(m_2*m_3)) = 1/m_2.
+        expected_ratio = 1.0 / m2
+        actual_ratio = M13_geom / (M12_geom * M23_geom)
+        err_T2 = abs(actual_ratio - expected_ratio) / abs(expected_ratio)
+        worst_T2 = max(worst_T2, err_T2)
+
+        # (T3) geom -> phys map closed under the chain rule:
+        # c_13^phys = c_13^geom * sqrt(m_1/m_3) = c_12*c_23*sqrt(m_1/m_3)
+        # c_12^phys * c_23^phys = c_12*sqrt(m_1/m_2) * c_23*sqrt(m_2/m_3)
+        #                       = c_12 * c_23 * sqrt(m_1/m_3)  (by T1)
+        c12_phys = c12 * r12
+        c23_phys = c23 * r23
+        c13_phys = c13_geom * r13
+        prod = c12_phys * c23_phys
+        err_T3 = abs(c13_phys - prod) / abs(c13_phys)
+        worst_T3 = max(worst_T3, err_T3)
+
+        # (T4) gap-closure ratio is exactly sqrt(m_1/m_3)
+        gap = c13_phys / c13_geom
+        err_T4 = abs(gap - r13) / r13
+        worst_T4 = max(worst_T4, err_T4)
+
+    print(f"\n  Worst relative deviation across {n_random} random triples:")
+    print(f"    T1 (chain rule):              {worst_T1:.3e}")
+    print(f"    T2 (geom Schur normalization): {worst_T2:.3e}")
+    print(f"    T3 (geom -> phys closure):     {worst_T3:.3e}")
+    print(f"    T4 (gap = sqrt(m_1/m_3)):      {worst_T4:.3e}")
+
+    check("T1: chain rule sqrt(m1/m3) = sqrt(m1/m2)*sqrt(m2/m3) holds identically",
+          worst_T1 < 1e-12,
+          f"worst relative deviation = {worst_T1:.3e}")
+    check("T2: geom Schur identity M_13^geom * m_2 = M_12^geom * M_23^geom",
+          worst_T2 < 1e-12,
+          f"worst relative deviation = {worst_T2:.3e}")
+    check("T3: c_13^phys = c_12^phys * c_23^phys for arbitrary masses/coefficients",
+          worst_T3 < 1e-12,
+          f"worst relative deviation = {worst_T3:.3e}")
+    check("T4: gap-closure ratio c_13^phys/c_13^geom = sqrt(m_1/m_3) identically",
+          worst_T4 < 1e-12,
+          f"worst relative deviation = {worst_T4:.3e}")
+
+    return {
+        'worst_T1': worst_T1, 'worst_T2': worst_T2,
+        'worst_T3': worst_T3, 'worst_T4': worst_T4,
+    }
+
+
+# =============================================================================
+# PART 1: Calibrated illustration -- mass-ratio suppressions from PDG masses
+#
+# IMPORTS PDG quark masses. The numbers in this block are not derived;
+# they are the application of identity (T1) to imported values for the
+# purpose of computing the imported-vs-imported illustration in Parts
+# 4-7. Nothing here lifts the bounded status of the note.
 # =============================================================================
 
 def part1_mass_ratios():
     """
-    Compute the mass-ratio suppression factors that convert geometric-mean
-    NNI coefficients to mass-eigenvalue NNI coefficients.
+    Compute the mass-ratio factors that (T4) identifies as the gap-closure
+    ratio between geometric-mean and mass-eigenvalue NNI bases.
 
-    The conversion is:
-      c_ij^phys = c_ij^geom * sqrt(m_i / m_j)   for i < j
-
-    This is the standard NNI normalization (Branco-Lavoura-Silva, Ch. 6).
+    All numerical values are functions of the PDG 2024 quark masses
+    imported at the top of this file. No derivation is claimed.
     """
     print("\n" + "=" * 72)
-    print("PART 1: Mass-Ratio Suppression Factors")
+    print("PART 1: Mass-Ratio Suppression Factors (PDG-imported illustration)")
     print("=" * 72)
+    print("  This block evaluates identity (T1) at imported PDG 2024 masses.")
+    print("  All input numbers are external imports; see header.")
 
     # --- Up sector mass ratios ---
     r_uc = np.sqrt(M_UP / M_CHARM)
     r_ct = np.sqrt(M_CHARM / M_TOP)
     r_ut = np.sqrt(M_UP / M_TOP)
 
-    print(f"\n  Up-sector mass ratios:")
+    print(f"\n  Up-sector mass ratios (from imported PDG masses):")
     print(f"    sqrt(m_u/m_c) = sqrt({M_UP:.4f}/{M_CHARM:.2f}) = {r_uc:.5f}")
     print(f"    sqrt(m_c/m_t) = sqrt({M_CHARM:.2f}/{M_TOP:.2f}) = {r_ct:.5f}")
     print(f"    sqrt(m_u/m_t) = sqrt({M_UP:.4f}/{M_TOP:.2f}) = {r_ut:.6f}")
@@ -220,34 +369,28 @@ def part1_mass_ratios():
     r_sb = np.sqrt(M_STRANGE / M_BOTTOM)
     r_db = np.sqrt(M_DOWN / M_BOTTOM)
 
-    print(f"\n  Down-sector mass ratios:")
+    print(f"\n  Down-sector mass ratios (from imported PDG masses):")
     print(f"    sqrt(m_d/m_s) = sqrt({M_DOWN:.4f}/{M_STRANGE:.4f}) = {r_ds:.5f}")
     print(f"    sqrt(m_s/m_b) = sqrt({M_STRANGE:.4f}/{M_BOTTOM:.2f}) = {r_sb:.5f}")
     print(f"    sqrt(m_d/m_b) = sqrt({M_DOWN:.4f}/{M_BOTTOM:.2f}) = {r_db:.6f}")
 
-    # --- Verify chain rule: sqrt(m_i/m_k) = sqrt(m_i/m_j) * sqrt(m_j/m_k) ---
-    print(f"\n  Chain rule verification:")
+    # --- (T1) chain-rule sanity check on the imported numbers ---
+    print(f"\n  (T1) sanity check at imported values:")
     print(f"    Up:   sqrt(m_u/m_c) * sqrt(m_c/m_t) = {r_uc * r_ct:.6f}")
     print(f"          sqrt(m_u/m_t)                  = {r_ut:.6f}")
-    check("Chain rule: sqrt(m_u/m_t) = sqrt(m_u/m_c) * sqrt(m_c/m_t)",
+    check("(T1) holds at PDG imported up-sector masses",
           abs(r_ut - r_uc * r_ct) / r_ut < 1e-10,
           f"difference = {abs(r_ut - r_uc * r_ct):.2e}")
 
     print(f"    Down: sqrt(m_d/m_s) * sqrt(m_s/m_b) = {r_ds * r_sb:.6f}")
     print(f"          sqrt(m_d/m_b)                  = {r_db:.6f}")
-    check("Chain rule: sqrt(m_d/m_b) = sqrt(m_d/m_s) * sqrt(m_s/m_b)",
+    check("(T1) holds at PDG imported down-sector masses",
           abs(r_db - r_ds * r_sb) / r_db < 1e-10,
           f"difference = {abs(r_db - r_ds * r_sb):.2e}")
 
-    # --- EWSB cascade origin of mass ratios ---
-    print(f"\n  EWSB cascade interpretation:")
-    print(f"    The mass hierarchy m_t >> m_c >> m_u comes from loop suppressions:")
-    print(f"    m_c/m_t ~ g^2/(16pi^2) ~ 1/300  (1-loop)")
-    print(f"    m_u/m_c ~ g^2/(16pi^2) ~ 1/300  (2-loop)")
-    loop_factor = ALPHA_S_PL * C_F / (4 * PI)
-    print(f"    alpha_s * C_F / (4pi) = {loop_factor:.5f}")
-    print(f"    Actual m_c/m_t = {M_CHARM/M_TOP:.5f} = 1/{M_TOP/M_CHARM:.0f}")
-    print(f"    Actual m_u/m_c = {M_UP/M_CHARM:.5f} = 1/{M_CHARM/M_UP:.0f}")
+    print(f"\n  NOTE: this block does NOT claim a framework derivation of")
+    print(f"  the quark mass hierarchy. It is an imports-dependent")
+    print(f"  illustration of the structural identities certified in Part 0.")
 
     return {
         'r_uc': r_uc, 'r_ct': r_ct, 'r_ut': r_ut,
@@ -261,17 +404,18 @@ def part1_mass_ratios():
 
 def part2_mass_basis_coefficients(mass_ratios):
     """
-    Convert geometric-mean NNI coefficients to mass-eigenvalue basis.
+    Evaluate the mass-eigenvalue normalization map on the imported O(1)
+    geometric-mean coefficients (C12_*_FIT, C23_*_FIT) and imported
+    PDG quark masses. The factorization checks at the end re-verify
+    identity (T3) at the imported values.
 
-      c_ij^phys = c_ij^geom * sqrt(m_i / m_j)
-
-    The geometric-mean coefficients are O(1) because they normalize
-    by sqrt(m_i * m_j). The mass-eigenvalue coefficients carry the
-    physical suppression hierarchy.
+    Everything here is an imports-dependent illustration of Part 0.
     """
     print("\n" + "=" * 72)
-    print("PART 2: Mass-Eigenvalue NNI Coefficients")
+    print("PART 2: Mass-Eigenvalue NNI Coefficients (calibrated illustration)")
     print("=" * 72)
+    print("  Inputs: imported C12_*_FIT, C23_*_FIT (fitted O(1) values from")
+    print("    scripts/frontier_ckm_schur_complement.py) and imported PDG masses.")
 
     r_uc = mass_ratios['r_uc']
     r_ct = mass_ratios['r_ct']
@@ -315,13 +459,13 @@ def part2_mass_basis_coefficients(mass_ratios):
     print(f"\n  Factorization check (c_13^phys = c_12^phys * c_23^phys):")
     print(f"    Up:   c_12^phys * c_23^phys = {c12_u_phys:.5f} * {c23_u_phys:.5f} = {c13_u_product:.6f}")
     print(f"          c_13^phys             = {c13_u_phys:.6f}")
-    check("c_13^phys = c_12^phys * c_23^phys (up)",
+    check("(T3) holds at imported up-sector inputs: c_13^phys = c_12^phys * c_23^phys",
           abs(c13_u_phys - c13_u_product) / c13_u_phys < 1e-10,
           f"ratio = {c13_u_product/c13_u_phys:.10f}")
 
     print(f"    Down: c_12^phys * c_23^phys = {c12_d_phys:.5f} * {c23_d_phys:.5f} = {c13_d_product:.6f}")
     print(f"          c_13^phys             = {c13_d_phys:.6f}")
-    check("c_13^phys = c_12^phys * c_23^phys (down)",
+    check("(T3) holds at imported down-sector inputs: c_13^phys = c_12^phys * c_23^phys",
           abs(c13_d_phys - c13_d_product) / c13_d_phys < 1e-10,
           f"ratio = {c13_d_product/c13_d_phys:.10f}")
 
@@ -639,19 +783,19 @@ def part5_gap_closure_scan(mass_ratios, coeffs):
 
 def part6_wolfenstein(mass_ratios, coeffs, ckm_results):
     """
-    Show that the mass-basis NNI with Schur complement reproduces the
-    Wolfenstein parametrization:
+    Numerically check that the mass-basis NNI evaluated at the imported
+    down-sector inputs reproduces a Wolfenstein-like hierarchy
+    V_us ~ lambda, V_cb ~ A*lambda^2, V_ub ~ A*lambda^3.
 
-      V_us ~ lambda
-      V_cb ~ A * lambda^2
-      V_ub ~ A * lambda^3 * (rho - i*eta)
-
-    The key: V_ub ~ c_12 * c_23 * sqrt(m_1/m_3) ~ lambda^3 * A * sqrt(m_u/m_c)
-    This IS the Wolfenstein hierarchy, derived from the Schur complement
-    plus mass-ratio normalization.
+    This is NOT a derivation of the Wolfenstein parametrization from
+    framework axioms. It is a numerical correspondence between the
+    imported PDG mass ratios and the conventional Wolfenstein powers,
+    conditional on the imported fitted O(1) coefficients C12_D_FIT,
+    C23_D_FIT. The structural content reduces to identity (T3) at the
+    down-sector imported values.
     """
     print("\n" + "=" * 72)
-    print("PART 6: Wolfenstein Identification")
+    print("PART 6: Wolfenstein Correspondence (imports-dependent)")
     print("=" * 72)
 
     c12_d_phys = coeffs['c12_d_phys']
@@ -680,13 +824,14 @@ def part6_wolfenstein(mass_ratios, coeffs, ckm_results):
     #           = c_12^phys * c_23^phys  [chain rule!]
     # So c_13^phys = c_12^phys * c_23^phys = lambda * A*lambda^2 = A*lambda^3
 
-    print(f"\n  Schur complement chain in mass basis:")
+    print(f"\n  Schur chain in mass basis (identity T3 at down-sector imports):")
     print(f"    c_13^phys = c_12^phys * c_23^phys  [chain rule for sqrt(m_i/m_j)]")
     print(f"    = {c12_d_phys:.5f} * {c23_d_phys:.5f} = {c12_d_phys * c23_d_phys:.6f}")
-    print(f"    = lambda * (A * lambda^2) = A * lambda^3")
-    print(f"    This IS the Wolfenstein hierarchy for V_ub.")
+    print(f"    = lambda_est * (A_est * lambda_est^2) = A_est * lambda_est^3")
+    print(f"    Numerical correspondence to a Wolfenstein-like hierarchy,")
+    print(f"    conditional on the imported fitted coefficients and PDG masses.")
 
-    check("Wolfenstein identification: c_13^phys = A * lambda^3",
+    check("Numerical Wolfenstein correspondence at imported inputs: c_13^phys ~ A*lambda^3",
           abs(c13_d_phys - vub_wolf) / V_UB_PDG < 0.5,
           f"c_13^phys = {c13_d_phys:.6f}, A*lambda^3 = {vub_wolf:.6f}",
           kind="BOUNDED")
@@ -698,7 +843,7 @@ def part6_wolfenstein(mass_ratios, coeffs, ckm_results):
     print(f"    lambda^3 ~ (m_d/m_s)^{3/2:.1f} = {(M_DOWN/M_STRANGE)**1.5:.6f} * (c_12^geom)^3")
     print(f"    A*lambda^3 includes extra sqrt(m_s/m_b) from c_23")
 
-    check("Wolfenstein lambda ~ sqrt(m_d/m_s) * c_12^geom",
+    check("lambda_est = sqrt(m_d/m_s) * C12_D_FIT (algebraic check at imports)",
           abs(lam_est / (mass_ratios['r_ds'] * C12_D_FIT) - 1.0) < 0.01,
           f"lambda/(r_ds*c12) = {lam_est/(mass_ratios['r_ds'] * C12_D_FIT):.4f}",
           kind="EXACT")
@@ -772,11 +917,17 @@ def part7_scorecard(ckm_results, gap_results):
 
 def main():
     print("=" * 72)
-    print("CKM Mass-Basis NNI: V_ub from Schur Complement + Mass-Ratio Suppression")
+    print("CKM Mass-Basis NNI: structural identities + calibrated illustration")
     print("=" * 72)
-    print("  Closing the factor-6 gap in V_ub via mass-eigenvalue NNI normalization")
+    print("  Source theorems (T1-T4) are pure algebra and use no imports.")
+    print("  Parts 1-7 are an imports-dependent illustration (PDG masses,")
+    print("  PDG CKM, fitted O(1) coefficients from the Schur runner).")
     print()
 
+    # ---- Source theorems: axiom-free structural identities ----
+    part0_results = part0_source_theorems()
+
+    # ---- Imports-dependent illustration ----
     mass_ratios = part1_mass_ratios()
     coeffs = part2_mass_basis_coefficients(mass_ratios)
     analytic = part3_full_ckm(mass_ratios, coeffs)
@@ -792,6 +943,17 @@ def main():
     print(f"  Total checks: {PASS_COUNT + FAIL_COUNT}")
     print(f"  Passed: {PASS_COUNT} ({EXACT_PASS} exact, {BOUNDED_PASS} bounded)")
     print(f"  Failed: {FAIL_COUNT} ({EXACT_FAIL} exact, {BOUNDED_FAIL} bounded)")
+    print()
+    print(f"  Source theorems T1-T4 worst relative deviations:")
+    print(f"    T1 = {part0_results['worst_T1']:.3e}")
+    print(f"    T2 = {part0_results['worst_T2']:.3e}")
+    print(f"    T3 = {part0_results['worst_T3']:.3e}")
+    print(f"    T4 = {part0_results['worst_T4']:.3e}")
+    print()
+    print(f"  Scope reminder: T1-T4 are axiom-free algebraic identities.")
+    print(f"  Parts 1-7 numerical agreement with PDG is an imports-conditional")
+    print(f"  illustration (audited 2026-05-05 as audited_numerical_match,")
+    print(f"  class G; see docs/work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md).")
 
     if FAIL_COUNT > 0:
         print(f"\n  WARNING: {FAIL_COUNT} check(s) failed")
