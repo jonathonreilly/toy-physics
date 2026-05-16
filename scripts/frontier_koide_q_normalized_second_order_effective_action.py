@@ -38,11 +38,14 @@ source-free on this carrier.
 from __future__ import annotations
 
 import sys
+from pathlib import Path
 
 import sympy as sp
 
 
 PASSES: list[tuple[str, bool, str]] = []
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def record(name: str, ok: bool, detail: str = "") -> None:
@@ -204,6 +207,51 @@ def main() -> int:
         "E.4 therefore the normalized effective-action minimum gives exact Koide Q = 2/3",
         sp.simplify(q_expr.subs(kappa, 2) - sp.Rational(2, 3)) == 0,
         f"Q = {sp.simplify(q_expr.subs(kappa, 2))}",
+    )
+
+    section("F. Audit dependency-graph bookkeeping (no status promotion)")
+
+    # The audit lane named a missing_bridge_theorem repair target for the
+    # source-free physical law K = 0 on this admitted carrier. A subsequent
+    # campaign has filed three candidate supplier notes (see Section 11.1 of
+    # the markdown). This block records the dependency-graph edges as on-disk
+    # facts. It does not audit the suppliers' physical claims and it does not
+    # promote this row's audit_status; only the independent audit lane sets
+    # effective_status.
+    candidate_suppliers = [
+        (
+            "F.1 KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md exists on disk",
+            REPO_ROOT
+            / "docs"
+            / "KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md",
+            "Trace-preserving local descent uniqueness E_loc(X) = (Tr X / 3) I "
+            "annihilates the reduced traceless Z coordinate.",
+        ),
+        (
+            "F.2 KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md exists on disk",
+            REPO_ROOT
+            / "docs"
+            / "KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md",
+            "K = 0 <=> Y = I_2 <=> z = 0 <=> Q = 2/3 criterion equivalence "
+            "on the admitted normalized reduced carrier.",
+        ),
+        (
+            "F.3 KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md exists on disk",
+            REPO_ROOT
+            / "docs"
+            / "KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md",
+            "Structural composition OP T1+T2 + physical-lattice-necessity locality "
+            "+ canonical descent + CRIT, targeting the source-free half.",
+        ),
+    ]
+    for name, path, detail in candidate_suppliers:
+        record(name, path.exists(), detail)
+
+    record(
+        "F.4 this section is graph-bookkeeping only and asserts no status promotion",
+        True,
+        "Audit lane independently sets effective_status; runner pass count "
+        "alone never promotes a row beyond audited_conditional.",
     )
 
     section("Summary")

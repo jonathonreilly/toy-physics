@@ -360,6 +360,54 @@ Until at least one such retained upstream chain is supplied, the row
 remains a bounded internal-algebra `open_gate` note on the admitted
 carrier rather than a `Q = 2/3` closure.
 
+### 11.1 Candidate upstream supplier notes (graph-bookkeeping only)
+
+A subsequent campaign has filed three candidate upstream supplier
+notes that together target the audit-stated source-free half (item 2
+above) on the admitted normalized reduced carrier. They are recorded
+here only as graph-bookkeeping edges so the audit citation graph can
+track them; their current audit status does not propagate retention
+to this row:
+
+1. `KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md`
+   — proves uniqueness of the trace-preserving local descent
+   `E_loc : A -> D^C3` on the `C3`-commutant source algebra
+   `A = span{I, Z}`, and shows that this descent annihilates the
+   reduced traceless `Z` coordinate modulo a common scalar shift.
+2. `KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+   — establishes the criterion equivalence
+   `K = 0 <=> Y = I_2 <=> z = 0 <=> Q = 2/3`
+   on the admitted normalized reduced carrier used in this note.
+3. `KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md`
+   — composes the canonical-descent uniqueness with the observable
+   principle's source-domain restriction
+   (`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`) and the structural
+   locality content of `PHYSICAL_LATTICE_NECESSITY_NOTE.md` §9 to
+   target the source-free half on the admitted carrier.
+
+The audit-status of these candidate suppliers as currently recorded
+in `docs/audit/data/audit_ledger.json` is independently determined.
+Two of the three suppliers (the canonical-descent theorem and the
+OP-locality closure note) reduce the load-bearing inference to:
+
+> the framework's physical local scalar observables on a background
+> in the projected `C3`-commutant must be read after canonical local
+> descent `E_loc`, which kills the reduced traceless `Z` coordinate
+> and hence picks out `K = 0` on the admitted normalized reduced
+> carrier.
+
+That inference is the audit-named missing bridge for this row's
+source-free half. The third supplier (`CRIT`) closes the bridge
+between `K = 0` and `Q = 2/3` on the admitted carrier, which is
+itself reproduced internally by this note's Sections 5–6 (see
+table in Section 10).
+
+This subsection does not promote this row's `audit_status` or the
+suppliers' status. Only the independent audit lane can do that. The
+load-bearing physical bridge in the auditor's verdict_rationale
+remains open until at least one of the candidate supplier chains is
+itself audited at retained-grade.
+
 ## 12. Boundaries
 
 This note does **not**:
@@ -379,3 +427,6 @@ This note does **not**:
 This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
 
 - [koide_q_reduced_observable_restriction_theorem_2026-04-22](KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)
+- [koide_q_source_domain_canonical_descent_theorem_note_2026-04-25](KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md)
+- [koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25](KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md)
+- [koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29](KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md)
