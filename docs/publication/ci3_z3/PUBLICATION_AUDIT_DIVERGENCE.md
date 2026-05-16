@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 445 |
-| critical | `audited_conditional` | 56 |
+| critical | `unaudited` | 444 |
+| critical | `audited_conditional` | 57 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 4 |
 | medium | `unaudited` | 2 |
@@ -273,7 +273,7 @@ publication tables phrase it.
 | critical | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | `audited_conditional` | `audited_conditional` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `koide_eigenvalue_q23_surface_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_explicit_calculations_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
-| critical | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
+| critical | `koide_frobenius_isotype_split_uniqueness_note_2026-04-21` | `audited_conditional` | `audited_conditional` | RESULTS_INDEX.md |
 | critical | `koide_full_lattice_schur_inheritance_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_gamma_orbit_positive_one_clock_semigroup_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `koide_gamma_orbit_selected_line_closure_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
