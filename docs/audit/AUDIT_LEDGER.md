@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1173 |
+| unaudited | 1172 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 193 |
+| ~~audited_conditional~~ | 194 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 520 |
-| `audited_conditional` | 193 |
+| `audited_conditional` | 194 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1286 |
+| `unaudited` | 1285 |
 
 | claim_type | count |
 |---|---:|
@@ -713,6 +713,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_strong_cp_gamma_transfer_no_go_note_2026-04-15` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `electrostatics_grown_sign_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `emergent_geometry_growth_note_2026-04-10` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `emergent_lorentz_invariance_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `evolving_network_prototype_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `exponent_derivation` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `family_companion_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
@@ -3967,6 +3968,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The qualitative finding survives: the matter-coupled grown graph has a higher effective dimension and a denser peak shell than the uniform control, with hardened k=4 multi-seed G-sweep support claimed for robustness.  _(class `C`)_
 - **chain closes:** False — The supplied primary runner closes only a single-seed qualitative comparison and has no PASS-classified checks. The note's broader robustness and alternative-control claims rely on companion runners/caches that are named but not supplied in the restricted packet.
 - **rationale:** Issue: the note's retained-strength statements depend on unsupplied companion G-sweep, multi-seed, and alternative-control runner artifacts, while the supplied runner only shows one seed against a uniform-in-box control. Why this blocks: a hostile reviewer cannot verify seed robustness, the k=4 retained operating point, or that the geometry difference is isolated from control-design differences. Repair target: provide and audit the companion runner sources/stdout or split this into a narrow single-seed runner claim. Claim boundary until fixed: the supplied runner supports only that this seed and control produce a higher fitted d_eff and peak radial density for the matter-coupled case.
+- **auditor confidence:** high
+
+### `emergent_lorentz_invariance_note`
+
+- **Note:** [`EMERGENT_LORENTZ_INVARIANCE_NOTE.md`](../../docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Conditional bounded audit of the free staggered cubic Z^3 structural-dispersion result, cubic-harmonic angular signature, and Planck-suppressed LV estimate assuming CPT, parity-protection, and Planck-pin bridge premises.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-031130-7dcb5886-emergent_lorentz_invaria-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** If exact CPT, tree-level parity protection, and the Planck pin a ~ 1/M_Planck are supplied, the staggered Z^3 dispersion has leading Lorentz-violating correction -(a^2/3) sum_i p_i^4, so the first non-isotropic correction is dimension-6 and suppressed as (E/M_Planck)^2.  _(class `C`)_
+- **chain closes:** False — The structural dispersion and cubic-harmonic calculation close on the runner's own free-lattice support surface, but the physical conclusion still imports conditional or unprovided bridge authorities. The missing closed step is retained-grade closure of exact CPT/SME lift, parity-protection against dimension-5 LV in the relevant EFT, and the hierarchy-scale pin a ~ 1/M_Planck.
+- **rationale:** The runner does substantive computation for the dispersion expansion, finite-lattice checks, and cubic-harmonic signature, so the load-bearing structural step is not mere renaming. However, every cited authority provided in the restricted packet is marked audited_conditional, and the Planck-pin authority is cited but not provided as a closed retained-grade dependency. The source note correctly narrows itself to an IF-conditional support surface, so this is conditional rather than failed.
+- **open / conditional deps cited:**
+  - `CPT_EXACT_NOTE.md`
+  - `PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`
+  - `PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md`
+  - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`
+  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`
 - **auditor confidence:** high
 
 ### `emergent_product_law_audit_2026-04-11`
