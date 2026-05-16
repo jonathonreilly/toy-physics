@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 308 |
+| **retained_bounded** | 309 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1202 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 518 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 519 |
 | `audited_conditional` | 181 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
@@ -115,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
-| `s3_boundary_link_theorem_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -467,6 +465,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_causality_probe_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `retarded_field_compact_refinement_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `s1_rep_dimension_readoff_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
+| `s3_boundary_link_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `s3_mass_matrix_no_go_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `s3_taste_cube_decomposition_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `s3_time_constructed_support_tensor_primitive_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
@@ -8705,6 +8704,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** From the definitions n_pair = p, n_color = c, and A^2 := n_pair / n_color, the forced closed form is A^2 = p / c.  _(class `A`)_
 - **chain closes:** True — The chain closes inside the scoped assumptions: D1-D3 explicitly define the read-offs and product, and R1-R4 plus C1-C3 are immediate algebraic consequences. No excluded physical bridge, gauge identification, PDG comparator, or derivation of the framework instance (2, 3) is needed for this bounded claim.
 - **rationale:** The note is narrowly scoped as an implication from explicit operational definitions, not as a derivation of those definitions or of the framework values. The runner hard-codes the stipulated read-offs, but for this claim that is not a defect because those read-offs are the stated hypotheses; it then verifies the quotient, product, corollaries, and example substitutions at exact symbolic precision. Within that boundary, the algebra is closed and there are no open dependency edges.
+- **auditor confidence:** high
+
+### `s3_boundary_link_theorem_note`
+
+- **Note:** [`S3_BOUNDARY_LINK_THEOREM_NOTE.md`](../../docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Bounded R=2..10 verification that every actual boundary vertex link of B_R is a PL 2-disk, plus the finite Proposition Z octahedral K_simp(P) subset certificate; unrestricted all-R cubical-ball closure is out of scope.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-judicial-gpt-5.5-20260516-s3-boundary-link`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** None  _(class `C`)_
+- **chain closes:** True — The note explicitly scopes the cubical-ball disk theorem as bounded for R=2..10 and separately closes the 256-subset local K_simp(P) certificate. The runner source actually constructs the cubical balls, actual vertex links, integer and mod-2 homology checks, boundary-component checks, vertex-link manifoldness checks, and exhaustive subset enumeration rather than merely printing constants. The open large-coordinate bridge lemma affects the unrestricted all-R theorem, not the scoped bounded theorem under review.
+- **rationale:** The note explicitly scopes the cubical-ball disk theorem as bounded for R=2..10 and separately closes the 256-subset local K_simp(P) certificate. The runner source actually constructs the cubical balls, actual vertex links, integer and mod-2 homology checks, boundary-component checks, vertex-link manifoldness checks, and exhaustive subset enumeration rather than merely printing constants. The open large-coordinate bridge lemma affects the unrestricted all-R theorem, not the scoped bounded theorem under review.
 - **auditor confidence:** high
 
 ### `s3_cap_uniqueness_note`
