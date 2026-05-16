@@ -41832,16 +41832,16 @@
     },
     "cosmology_scale_identification_and_reduction_note": {
       "claim_id": "cosmology_scale_identification_and_reduction_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "cosmological_constant_spectral_gap_identity_theorem_note",
         "s3_cap_uniqueness_note"
       ],
-      "note_hash": "81bcce3266b1e848650b68afd4559c8d7bc44fb92bd588e0368c3389f5f4c5d6",
+      "note_hash": "d6aa29c6b0da8a1b63b8552a9d0610ab38df9e32488b8b84482267a2b4f8ba7d",
       "path": "docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_cosmology_scale_identification.py",
       "title": "Cosmology Scale Identification and Reduction"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
@@ -71744,11 +71744,11 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 388,
+      "bounded_theorem": 389,
       "decoration": 1,
       "meta": 74,
       "no_go": 51,
-      "none": 1534,
+      "none": 1533,
       "open_gate": 40,
       "positive_theorem": 150
     },
@@ -71765,6 +71765,6 @@
     "leaf_count": 629,
     "node_count": 2238,
     "root_count": 776,
-    "runners_with_path": 1856
+    "runners_with_path": 1857
   }
 }

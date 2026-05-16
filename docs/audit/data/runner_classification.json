@@ -3300,6 +3300,18 @@
       "dominant_class": "A",
       "runner": "scripts/frontier_cosmology_open_number_reduction.py"
     },
+    "cosmology_scale_identification_and_reduction_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_cosmology_scale_identification.py"
+    },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
       "assert_count": 1,
       "counts": {
@@ -29158,6 +29170,21 @@
       "dominant_class": "A",
       "exists": true
     },
+    "scripts/frontier_cosmology_scale_identification.py": {
+      "assert_count": 1,
+      "claims": [
+        "cosmology_scale_identification_and_reduction_note"
+      ],
+      "counts": {
+        "A": 8,
+        "B": 0,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py": {
       "assert_count": 1,
       "claims": [
@@ -48622,14 +48649,14 @@
   "stats": {
     "decoration_candidates": 209,
     "dominant_class_distribution": {
-      "A": 164,
+      "A": 165,
       "B": 180,
       "C": 695,
       "D": 280,
       "none": 418
     },
-    "runners_classified": 1737,
+    "runners_classified": 1738,
     "runners_with_C": 888,
-    "runners_with_D": 508
+    "runners_with_D": 509
   }
 }

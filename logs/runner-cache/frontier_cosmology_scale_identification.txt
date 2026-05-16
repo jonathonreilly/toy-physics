@@ -1,0 +1,42 @@
+===== runner cache v1 =====
+runner: scripts/frontier_cosmology_scale_identification.py
+runner_sha256: b40522d1a59311c73832dfe1ff8b18c1e5ebcfb00c10d5e21ea78a6645057fe9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.04
+status: ok
+----- stdout -----
+Cosmology Lane: Scale Identification and Matter-Bridge Reduction
+========================================================================
+H_0                = 67.4 km/s/Mpc
+H_0 (SI)           = 2.184285e-18 s^-1
+Lambda_obs         = 1.105600e-52 m^-2
+R_Lambda           = sqrt(3/Lambda) = 1.647258e+26 m
+R_Hubble(now)      = c/H_0          = 1.372497e+26 m
+H_inf              = c/R_Lambda     = 1.819948e-18 s^-1
+Omega_Lambda(obs)  = 0.685000
+Omega_Lambda(from Lambda,H0) = 0.694224
+Omega_Lambda(from H_inf/H0) = 0.694224
+Omega_Lambda(from radii)    = 0.694224
+rho_Lambda/rho_crit        = 0.694224
+Omega_m(required)          = 0.305685
+Omega_m(current derived)   = 0.313665
+Omega_Lambda(current derived) = 0.686244
+
+[PASS] de Sitter scale identification: on the de Sitter vacuum sector, Lambda = 3 H_inf^2 / c^2 = 3 / R_Lambda^2 exactly
+[PASS] w = -1 from fixed gap: fixed R_Lambda means rho_Lambda is constant, so d ln rho_Lambda / d ln a = 0 and w = -1
+[PASS] present Omega_Lambda from scale ratio: Omega_Lambda = Lambda c^2 / (3 H_0^2) = H_inf^2/H_0^2 = (R_H(now)/R_Lambda)^2
+[PASS] observed Omega_Lambda consistency: the observed Lambda and H_0 already imply the same O(1) vacuum fraction
+[PASS] matter-bridge reduction: once the vacuum scale is fixed, the remaining present-day closure problem is just Omega_m (plus tiny Omega_r)
+[PASS] current derived Omega_m feeds Omega_Lambda: the bounded DM/baryon chain already lands close to the required matter fraction
+[PASS] no separate w blocker remains: w = -1 and Lambda now live on the same fixed-gap/de-Sitter scale surface, not on separate cosmology routes
+
+Reduction
+- Exact internal piece: Lambda = 3/R^2 on retained S^3.
+- Exact vacuum-sector scale piece: R_Lambda = c/H_inf on the de Sitter sector.
+- Remaining active cosmology blocker: matter-content closure behind Omega_m, i.e. the DM relic bridge.
+
+SUMMARY: PASS=7 FAIL=0
+
+----- stderr -----
+
