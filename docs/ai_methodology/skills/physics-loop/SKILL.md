@@ -358,6 +358,40 @@ For publication-facing or quantitative work, also inspect
    branches whose marginal repo value was review-prep rather than new science.
    Do not repeat that failure mode.
 
+   **NO-GO DISCIPLINE GATE (mandatory pre-PR self-review for negative claims).**
+   The V1-V5 Promotion Value Gate above prevents overclaiming POSITIVE results.
+   The symmetric counterpart, the N1-N8 No-Go Discipline Gate, prevents
+   overclaiming NEGATIVE results. Run the `no-go-discipline` skill BEFORE
+   shipping any cycle artifact, PR body, source note, runner, or review verdict
+   that asserts a `no_go`, `stretch_attempt_negative`, `bounded_with_named_walls`,
+   or derived-no-go-boundary result. Answer N1-N8 IN WRITING in the cycle's
+   `CLAIM_STATUS_CERTIFICATE.md` (or a dedicated `NO_GO_DISCIPLINE_CHECKLIST.md`)
+   and include the checklist in the PR body so the audit lane and reviewers
+   can see exactly which alternative routes were tested.
+
+   | # | Check | Failure condition |
+   |---|---|---|
+   | N1 | Alternative route enumeration: name ≥5 distinct attack routes against the no-go, each with what it would attempt, why it fails (with retained-authority citation), and `ATTEMPTED` vs `RULED OUT BY PRIOR` marker. | Fewer than 5 distinct routes named — the no-go is premature. |
+   | N2 | Wall-independence audit: pairwise table for all named walls/admissions; collapse any wall that follows from another. | Source-note presents walls as independent when one follows from another. |
+   | N3 | Hidden-wall scan: grep the proof for "we assume", "by construction", "bridge context", "naturally", "standard QFT", "registered", "canonical"; classify each hit as cited authority, hidden admission, or non-load-bearing context. | Any hidden admission found that should have been promoted to an explicit wall. |
+   | N4 | Residual matching: for every prior no-go/wall/campaign cited as a witness, verify the residual matches exactly. Drop non-matching citations. | Witness count after dropping non-matches falls below what the claim needs. |
+   | N5 | Rhetoric audit: phrases of the form "X is not a Y-fact" must be checked at per-element / per-site / per-mode / per-block / lattice-wide resolutions; narrow the phrase to the resolutions actually tested. | Over-broad phrase not verified at every named resolution. |
+   | N6 | Partial-closure path scan: per `feedback_no_new_axioms.md`, a labeling-convention ratification or definition refactor is NOT a new axiom — it is the import-retirement path. Scan for existing reframings, meta-notes, controlled-vocabulary entries, or in-flight PRs that close the wall via convention. | Partial-closure path found but the no-go calls it "new axiom required." |
+   | N7 | Steelman: write the strongest possible one-paragraph argument AGAINST your own no-go, in hostile-reviewer voice, citing the strongest counter-authority. | A convincing steelman can be written — the no-go is premature; demote and ship the steelman as next cycle's target. |
+   | N8 | Cross-cycle echo: search `NO_GO_LEDGER.md` and `docs/` for structurally similar prior walls; check if any have since been retired and by what mechanism. | A structurally similar prior wall was retired by a mechanism not considered for the current wall. |
+
+   If any failure condition is hit, demote to one of: `partial-attempt-with-named-untested-routes`,
+   `partial-narrowing`, `bounded-with-corrected-wall-count`, or
+   `stretch-attempt-with-honest-residual`. Record the failing checklist items
+   in `NO_GO_LEDGER.md`. Do not weaken the gate by lowering the failure
+   thresholds — a correctly scoped narrow no-go passes N1-N8 by being narrow.
+
+   See [`docs/ai_methodology/skills/no-go-discipline/SKILL.md`](../no-go-discipline/SKILL.md)
+   for the full skill plus archetypal failure-mode case studies from the
+   2026-05-10 v-scale-planck-convention campaign (three out of four cycles
+   overclaimed; the case studies are the canonical examples N1-N8 is designed
+   to catch).
+
    **Source-note hygiene as a separate, lower-volume lane.** Pattern C
    tightenings (correcting `proposed_retained` / `DERIVED` / `EXACT` author-side
    labels that conflict with the audit-lane verdict) are real housekeeping the

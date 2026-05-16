@@ -189,6 +189,28 @@ locally and report that limitation.
   no unmatched observed target, and clear falsifiers/open gates. Output
   `RETAINED`, `RETAINED SUPPORT`, `BOUNDED`, `OPEN`, `NO-GO`, or `REJECT`.
 
+- `NoGoDisciplineReviewer`
+  Scrutinize negative claims with the same rigor as positive ones. Trigger
+  this reviewer whenever changed content includes a `no_go`, `stretch_attempt`,
+  `bounded_with_named_walls`, or derived-no-go-boundary artifact, or when any
+  other reviewer in this fanout outputs `NO-GO` / `BOUNDED` / `OVERCLAIM` on
+  a negative claim. The reviewer must invoke the `no-go-discipline` skill
+  and walk N1-N8 against the branch content (see
+  [`docs/ai_methodology/skills/no-go-discipline/SKILL.md`](../no-go-discipline/SKILL.md)):
+  N1 alternative-route enumeration (≥5 distinct routes), N2
+  wall-independence audit, N3 hidden-wall scan, N4 residual matching,
+  N5 rhetoric audit (per-element / per-mode / per-block / lattice-wide
+  resolutions), N6 partial-closure path scan (convention-reframe vs new
+  axiom), N7 steelman, N8 cross-cycle echo. Output `PASS` (negative claim
+  honestly scoped) or `FAIL` with the failing checklist items named and the
+  narrowest demoted claim proposed (`partial-attempt-with-named-untested-routes`,
+  `partial-narrowing`, `bounded-with-corrected-wall-count`, or
+  `stretch-attempt-with-honest-residual`). The reviewer must not approve a
+  no-go that has not been stress-tested against the framework's full
+  authority surface — under-tested negative claims are at least as harmful
+  as overclaimed positive ones because they foreclose investigation paths
+  permanently.
+
 - `RepoGovernanceReviewer`
   Check placement and authority surfaces. Ensure live findings route through
   `docs/repo/ACTIVE_REVIEW_QUEUE.md`, long packets go under
@@ -249,6 +271,10 @@ Rules:
   independent audit worker.
 - Do not approve new bare letter-number science names. Require explicit names
   from CONTROLLED_VOCABULARY, with shorthand only as a parenthetical alias.
+- Do not approve a `NO-GO` or `BOUNDED with named walls` recommendation
+  without running `no-go-discipline` N1-N8 against the branch content. An
+  unscrutinized negative claim forecloses investigation paths permanently and
+  is at least as harmful as an overclaimed positive.
 ````
 
 ## Consolidate Findings
@@ -262,6 +288,7 @@ Present one iteration summary:
 ### Physics Claim Boundary: RETAINED | SUPPORT | BOUNDED | OPEN | REJECT
 ### Imports / Support: CLEAN | DISCLOSED | DEMOTE | FAIL
 ### Nature Retention: RETAINED | RETAINED SUPPORT | BOUNDED | OPEN | NO-GO | REJECT
+### No-Go Discipline: PASS | FAIL | NOT APPLICABLE
 ### Repo Governance: PASS | FIX | QUEUE | ARCHIVE
 ### Audit Compatibility: PASS | FIX | BLOCKED | NOT APPLICABLE
 ### Methodology Skill: PASS | FIX | SKIPPED
@@ -271,6 +298,7 @@ Classify every finding:
 
 - `BUG`
 - `OVERCLAIM`
+- `NO_GO_OVERCLAIM`
 - `IMPORTED_VALUE`
 - `SUPPORT_ONLY_DEMOTION`
 - `MISSING_ARTIFACT`
