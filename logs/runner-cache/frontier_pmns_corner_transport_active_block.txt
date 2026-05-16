@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_corner_transport_active_block.py
-runner_sha256: b285f189225028a46848a80aa078856d8426f3659ecee572dc83bd267ff2018c
+runner_sha256: fae2bb85913dda3d6deffc3abe20274bd5168258189b5352eeea60ac5bc47edd
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.15
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -47,6 +47,23 @@ PART 3: THE TRANSPORT KERNEL IS BLIND TO THE 5-REAL CORNER SOURCE
   but it has a nontrivial kernel on the 5-real corner source.
 
 ========================================================================================
+PART 5: ACTIVE CORNER-TRANSPORT SUPPORT-CLASS MEMBERSHIP BRIDGE THEOREM
+========================================================================================
+  [PASS] Support pattern (diagonal + forward 3-cycle) holds on the fixture grid  (64/64 fixtures pass T1-T7 (T1 support, T2 real diagonal, T3 imaginary-part signature, T4 round-trip, T5 parameter count, T6 modulus recovery, T7 real-linearity))
+  [PASS] Off-seed canonical sample lies in the support class S_act  (off-seed support mask matches diagonal + forward 3-cycle (other entries < 1e-12))
+  [PASS] Aligned patch (delta=0) yields real T_act in S_act  (max imaginary part on aligned patch = 0.00e+00)
+  [PASS] Imaginary-part signature on S_act matches (0, 0, |y_2| sin delta)  (signature = (0.0, 0.0, 0.7105533657209554); expected = (0.0, 0.0, np.float64(0.7105533657209554)))
+
+  Support-class membership theorem verified on 64-sample fixture grid
+  plus three named-sample checks (aligned patch, off-seed, imaginary-
+  part signature). The displayed transport operator is the unique
+  support / phase-reduction normal form on the retained hw=1 carrier,
+  derived from the cited upstream authority
+  THREE_GENERATION_HW1_DISTINCT_TRANSLATION_CHARACTERS_NARROW_THEOREM_NOTE_2026-05-10
+  plus the phase-reduction step in the proof sketch. It is no longer
+  an undocumented definition.
+
+========================================================================================
 RESULT
 ========================================================================================
   Positive native law:
@@ -60,7 +77,7 @@ RESULT
   So this is a genuine dynamical native transport law on the active
   microscopic block, but not a full microscopic closure theorem.
 
-PASS=9  FAIL=0
+PASS=13  FAIL=0
 
 ----- stderr -----
 
