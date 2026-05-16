@@ -19,12 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 105 |
-| **retained_no_go** | 134 |
+| **retained_no_go** | 135 |
 | **retained_bounded** | 311 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1194 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 522 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 523 |
 | `audited_conditional` | 187 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
@@ -114,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `koide_a1_physical_bridge_attempt_2026-04-22` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -331,6 +329,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `i3_zero_exact_theorem_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5 | A | - |
 | `independent_generators_heldout_note` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5 | C | - |
 | `inverse_problem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
+| `koide_a1_physical_bridge_attempt_2026-04-22` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_anticommuting_operator_derivation_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_circulant_character_bridge_narrow_theorem_note_2026-05-09` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
@@ -6137,6 +6136,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The algebra from the assumed quartic V(Phi) to A1 closes. The missing step is a retained derivation that the physical charged-lepton effective action actually contains this specific V(Phi), or equivalently that the charged-lepton packet extremizes the stated block functional.
 - **rationale:** Issue: the runner and note assume or import the specific Koide-Nishiura quartic potential as the effective charged-lepton potential. Why this blocks: the algebraic minimum at A1 is valid only after that physical potential/readout bridge is supplied, and the note explicitly says all current bridge mechanisms fail. Repair target: prove from retained Cl(3)/Z^3 structure that the charged-lepton effective action contains V(Phi) = [2(tr Phi)^2 - 3tr(Phi^2)]^2, or derive the block-total extremum as a retained primitive. Claim boundary until fixed: this is a conditional variational route to A1, not an axiom-native derivation of the charged-lepton Koide relation.
 - **auditor confidence:** high
+
+### `koide_a1_physical_bridge_attempt_2026-04-22`
+
+- **Note:** [`KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md`](../../docs/KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Bounded no-go that the four specified mechanisms do not close the A1 physical-source bridge on the stated Herm_circ(3) carrier.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-134508-478c05e7-koide_a1_physical_bridge-001`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** For each of the four named mechanisms, the stated extremum or max-entropy condition selects a point different from A1, or requires an additional constraint not supplied.  _(class `A`)_
+- **chain closes:** True — Within the bounded scope, the note gives algebraic mismatch checks for all four attempted mechanisms. The missing physical-source bridge remains open, but that is the negative conclusion being audited.
+- **rationale:** The audited claim is not a global physical no-go and does not assert that A1 has been physically derived. It asserts only that four named candidate mechanisms fail to select the A1 extremum, and that follows from the algebraic comparisons stated in the source note. Runner stdout and source were unavailable, so this verdict rests on the note text rather than executable artifact verification.
+- **auditor confidence:** medium
 
 ### `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24`
 
