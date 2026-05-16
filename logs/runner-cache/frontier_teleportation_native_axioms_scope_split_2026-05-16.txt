@@ -1,0 +1,31 @@
+PASS  parent_note_planning_status: Parent note is labeled planning / candidate theory artifact, not retained framework promotion.
+PASS  parent_a4_candidate_only: Parent note labels A4 native resource genesis as candidate only in the evidence map.
+PASS  parent_theorem4_six_factor_product: Parent Theorem 4 names the full six-factor product for nature-grade closure.
+PASS  parent_blocker_present::durable: Parent blocker list contains: durable Bell measurement / record creation.
+PASS  parent_blocker_present::derived: Parent blocker list contains: derived 3D+1 record channel.
+PASS  parent_blocker_present::scalable: Parent blocker list contains: scalable native resource generation.
+PASS  parent_blocker_present::apparatus-level: Parent blocker list contains: apparatus-level retained-axis readout / correction.
+PASS  parent_blocker_present::physical: Parent blocker list contains: physical robustness / noise / leakage / control / finite resources.
+PASS  parent_blocker_present::operational: Parent blocker list contains: operational Bell-frame calibration.
+PASS  parent_blocker_present::conservation: Parent blocker list contains: conservation ledgers / no-transfer accounting.
+PASS  parent_strongest_statement_b_surface_only: Parent note's strongest current statement is restricted to audited finite surfaces and does not promote the lane.
+PASS  companion_runner_references_parent: Companion runner frontier_teleportation_axiom_closure_checks.py exists and references the parent note.
+PASS  harness_index_parked_hold_language: Canonical harness index already files the lane as parked planning with nature-grade HOLD; no index update is asserted.
+PASS  split_note_planning_scope: Scope-split source theorem note exists and self-labels as planning bridge with nature-grade HOLD.
+PASS  t2_bell_xor_psi_plus_resource: Bell-frame XOR rule maps (Phi+ outcome | Psi+ resource) -> (0,1) i.e. X-only correction.
+PASS  t2_framed_vs_fixed_fidelity: Cited finite-surface fidelities: framed >= 0.99 and fixed Phi+ < 0.5, as recorded by the parent note.
+PASS  t3_pre_record_input_independence: Cited pairwise pre-record input distance is at numerical zero (parent: 2.498e-16).
+PASS  a3_manhattan_distance_identity: Manhattan distance recomputes to 7, matching cited 7.
+PASS  a3_manhattan_delivery_tick_identity: Manhattan delivery tick recomputes to 11, matching cited 11 (= alice_tick + L1).
+PASS  split_names_surface_b_and_n: Scope-split note explicitly names surfaces B and N.
+PASS  split_does_not_claim_n_closure: Scope-split note does not claim any nature-grade closure.
+PASS  split_does_not_promote_lane: Scope-split note explicitly declines lane promotion and adds no new physics axiom.
+
+SUMMARY: PASS=22 FAIL=0 TOTAL=22
+
+SCOPE: This runner verifies the structural scope split between
+  B = finite-bookkeeping consistency on audited surfaces, and
+  N = nature-grade closure (HOLD).
+It does NOT promote the teleportation lane, does NOT close any
+nature-grade blocker, and does NOT modify the canonical harness
+index. The parent note remains at planning / candidate status.
