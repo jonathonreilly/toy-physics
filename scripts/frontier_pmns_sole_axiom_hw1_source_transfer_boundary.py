@@ -2,23 +2,43 @@
 """Sole-axiom hw=1 source/transfer boundary for the PMNS lane.
 
 Question:
-  If we derive the canonical hw=1 source/transfer pack itself from the sole
-  axiom Cl(3) on Z^3, do the native source insertions and graph-first cycle
-  frame produce a nontrivial PMNS pack?
+  For the canonical hw=1 sector operator admitted from the upstream PMNS
+  authority chain, does the algebraic projector resolution on the Cl(3) / Z^3
+  joint character triplet, followed by native source insertion and
+  graph-first forward transport, generate a pack accepted by the retained
+  PMNS closure stack?
 
 Answer:
   No.
 
-  On the hw=1 triplet:
+  Load-bearing algebraic identity (Class A):
+    sum_i P_i I_3 P_i = sum_i P_i = I_3,
+  where P_i are the joint character projectors built from the Z^3 hw=1
+  translation involutions.  Under the carrier-construction admission named
+  in docs/PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md
+  (Admitted-context inputs), this gives D_act = D_pass = I_3 on the hw=1
+  triplet, hence:
     - the sole-axiom active resolvent is the identity
     - the sole-axiom passive resolvent is a scalar multiple of the identity
-    - source insertion through the native site projectors therefore yields only
-      the basis columns e1,e2,e3 up to a scalar passive weight
+    - source insertion through the native site projectors yields only the
+      basis columns e1,e2,e3 up to a scalar passive weight
     - graph-first forward transport fixes the frame E12,E23,E31 exactly, but
       contributes no nontrivial value data
 
-  So even the strongest canonical sole-axiom hw=1 source/transfer pack remains
-  support-only / frame-only and is rejected by the PMNS closure stack.
+  So even the canonical hw=1 source/transfer pack, under the admitted
+  carrier-construction identification, remains support-only / frame-only and
+  is rejected locally and by the PMNS closure stack.
+
+  Scope:
+    - the carrier-construction identification (the active/passive sector
+      operators on the hw=1 triplet are taken to be sum_i P_i I_3 P_i in the
+      zero-input free configuration) is admitted from the upstream PMNS
+      authority chain.  Same admission as the sibling
+      frontier_pmns_sole_axiom_free_point_identity_block_2026-05-16.py runner.
+    - the close_from_lower_level_observables import is from a
+      support / audited_conditional helper; the local
+      one-sided-minimal-PMNS rejection check is load-bearing for the
+      "rejected by closure stack" conclusion.
 """
 
 from __future__ import annotations
@@ -297,9 +317,74 @@ def part1_clifford_lattice_sources_and_graph_first_cycle_frame_are_exact() -> No
           np.allclose(np.stack([b1, b2, b3]), np.stack([e(0, 1), e(1, 2), e(2, 0)]), atol=1e-12))
 
 
-def part2_sole_axiom_source_insertions_give_only_trivial_response_columns() -> tuple[list[np.ndarray], list[np.ndarray]]:
+def part2_load_bearing_algebraic_identity_on_projectors() -> None:
+    """Class A algebraic identity step-by-step on the joint character projectors.
+
+    The load-bearing step quoted by the 2026-05-05 auditor verdict was:
+
+      "The sole-axiom active/passive blocks are therefore exactly (I3, I3),
+       so source insertion and graph-first transfer only produce the trivial
+       free pack."
+
+    Under the carrier-construction admission named in the source note's
+    `Admitted-context inputs` section (i.e. the active/passive sector
+    operators on the hw=1 triplet in the zero-input free configuration are
+    sum_i P_i I_3 P_i), this step reduces to the algebraic identity
+
+      sum_i P_i I_3 P_i  =  sum_i P_i  =  I_3.
+
+    This part verifies that identity stepwise on the projectors computed in
+    PART 1 from Cl(3) on Z^3 hw=1 data, with no assertion of a target value.
+    """
     print("\n" + "=" * 88)
-    print("PART 2: SOLE-AXIOM SOURCE INSERTIONS GIVE ONLY TRIVIAL RESPONSE COLUMNS")
+    print("PART 2: LOAD-BEARING ALGEBRAIC IDENTITY ON THE JOINT CHARACTER PROJECTORS")
+    print("=" * 88)
+
+    packet = instantiate_cl3_z3_hw1_packet()
+    p1, p2, p3 = packet["projectors"]  # type: ignore[assignment]
+
+    # Step 2a: P_i are projections (idempotent) on the hw=1 triplet.
+    for label, projector in (("P_1", p1), ("P_2", p2), ("P_3", p3)):
+        check(f"{label} is idempotent: {label}^2 = {label}",
+              np.linalg.norm(projector @ projector - projector) < 1e-12)
+
+    # Step 2b: P_i are mutually orthogonal.
+    for label_left, projector_left, label_right, projector_right in (
+        ("P_1", p1, "P_2", p2),
+        ("P_2", p2, "P_3", p3),
+        ("P_1", p1, "P_3", p3),
+    ):
+        check(f"{label_left} {label_right} = 0 (mutual orthogonality)",
+              np.linalg.norm(projector_left @ projector_right) < 1e-12)
+
+    # Step 2c: I_3 P_i = P_i  (since I_3 is the identity on the hw=1 triplet).
+    for label, projector in (("P_1", p1), ("P_2", p2), ("P_3", p3)):
+        check(f"I_3 {label} = {label}",
+              np.linalg.norm(I3 @ projector - projector) < 1e-12)
+
+    # Step 2d: P_i I_3 P_i = P_i P_i = P_i  (idempotency).
+    for label, projector in (("P_1", p1), ("P_2", p2), ("P_3", p3)):
+        check(f"{label} I_3 {label} = {label}",
+              np.linalg.norm(projector @ I3 @ projector - projector) < 1e-12)
+
+    # Step 2e: sum_i P_i I_3 P_i = sum_i P_i.
+    lhs_summand = sum((projector @ I3 @ projector for projector in (p1, p2, p3)), np.zeros((3, 3), dtype=complex))
+    rhs_summand = sum((p1, p2, p3), np.zeros((3, 3), dtype=complex))
+    check("sum_i P_i I_3 P_i = sum_i P_i  (stepwise expansion equality)",
+          np.linalg.norm(lhs_summand - rhs_summand) < 1e-12)
+
+    # Step 2f: sum_i P_i = I_3  (the joint character projectors resolve the identity).
+    check("sum_i P_i = I_3  (projector resolution of identity)",
+          np.linalg.norm(rhs_summand - I3) < 1e-12)
+
+    # Step 2g: chain the identities → sum_i P_i I_3 P_i = I_3.
+    check("sum_i P_i I_3 P_i = I_3  (load-bearing algebraic identity)",
+          np.linalg.norm(lhs_summand - I3) < 1e-12)
+
+
+def part3_sole_axiom_source_insertions_give_only_trivial_response_columns() -> tuple[list[np.ndarray], list[np.ndarray]]:
+    print("\n" + "=" * 88)
+    print("PART 3: SOLE-AXIOM SOURCE INSERTIONS GIVE ONLY TRIVIAL RESPONSE COLUMNS")
     print("=" * 88)
 
     lam_act = 0.31
@@ -334,11 +419,11 @@ def part2_sole_axiom_source_insertions_give_only_trivial_response_columns() -> t
     return active_cols, passive_cols
 
 
-def part3_graph_first_transfer_adds_only_frame_support_not_value_data(
+def part4_graph_first_transfer_adds_only_frame_support_not_value_data(
     active_cols: list[np.ndarray],
 ) -> None:
     print("\n" + "=" * 88)
-    print("PART 3: GRAPH-FIRST TRANSFER ADDS ONLY FRAME SUPPORT, NOT VALUE DATA")
+    print("PART 4: GRAPH-FIRST TRANSFER ADDS ONLY FRAME SUPPORT, NOT VALUE DATA")
     print("=" * 88)
 
     transported_cols = [CYCLE @ col for col in active_cols]
@@ -356,12 +441,12 @@ def part3_graph_first_transfer_adds_only_frame_support_not_value_data(
           f"transported={np.round(transported_matrix, 6)}")
 
 
-def part4_the_canonical_sole_axiom_pack_is_rejected_by_the_pmns_closure_stack(
+def part5_the_canonical_sole_axiom_pack_is_rejected_by_the_pmns_closure_stack(
     active_cols: list[np.ndarray],
     passive_cols: list[np.ndarray],
 ) -> None:
     print("\n" + "=" * 88)
-    print("PART 4: THE CANONICAL SOLE-AXIOM PACK IS REJECTED BY THE PMNS STACK")
+    print("PART 5: THE CANONICAL SOLE-AXIOM PACK IS REJECTED BY THE PMNS STACK")
     print("=" * 88)
 
     _active_kernel, active_block = derive_active_block_from_response_columns(active_cols, 0.31)
@@ -381,9 +466,9 @@ def part4_the_canonical_sole_axiom_pack_is_rejected_by_the_pmns_closure_stack(
     check("So native source insertion and graph-first transfer do not evade the sole-axiom free boundary", True)
 
 
-def part5_circularity_guard() -> None:
+def part6_circularity_guard() -> None:
     print("\n" + "=" * 88)
-    print("PART 5: CIRCULARITY GUARD")
+    print("PART 6: CIRCULARITY GUARD")
     print("=" * 88)
 
     ok, bad = circularity_guard(
@@ -399,30 +484,39 @@ def main() -> int:
     print("=" * 88)
     print()
     print("Question:")
-    print("  If we derive the canonical hw=1 source/transfer pack itself from the")
-    print("  sole axiom Cl(3) on Z^3, do the native source insertions and")
-    print("  graph-first transfer frame produce a nontrivial PMNS pack?")
+    print("  For the canonical hw=1 sector operator admitted from the upstream")
+    print("  PMNS authority chain, does the algebraic projector resolution on the")
+    print("  Cl(3) / Z^3 joint character triplet, followed by native source")
+    print("  insertion and graph-first forward transport, generate a pack")
+    print("  accepted by the retained PMNS closure stack?")
 
     part1_clifford_lattice_sources_and_graph_first_cycle_frame_are_exact()
-    active_cols, passive_cols = part2_sole_axiom_source_insertions_give_only_trivial_response_columns()
-    part3_graph_first_transfer_adds_only_frame_support_not_value_data(active_cols)
-    part4_the_canonical_sole_axiom_pack_is_rejected_by_the_pmns_closure_stack(active_cols, passive_cols)
-    part5_circularity_guard()
+    part2_load_bearing_algebraic_identity_on_projectors()
+    active_cols, passive_cols = part3_sole_axiom_source_insertions_give_only_trivial_response_columns()
+    part4_graph_first_transfer_adds_only_frame_support_not_value_data(active_cols)
+    part5_the_canonical_sole_axiom_pack_is_rejected_by_the_pmns_closure_stack(active_cols, passive_cols)
+    part6_circularity_guard()
 
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Exact sole-axiom source/transfer boundary:")
+    print("  Load-bearing algebraic identity (Class A) on Cl(3)/Z^3 hw=1 projectors:")
+    print("    sum_i P_i I_3 P_i = sum_i P_i = I_3")
+    print()
+    print("  Under the carrier-construction admission (see Admitted-context")
+    print("  inputs in the source note), this gives D_act = D_pass = I_3 on the")
+    print("  hw=1 triplet, hence:")
     print("    - native source insertions give only the basis columns e1,e2,e3")
     print("      up to the passive scalar resolvent weight")
     print("    - graph-first forward transport fixes only the cycle frame")
     print("      E12,E23,E31")
-    print("    - the resulting canonical hw=1 source/transfer pack is still the")
+    print("    - the resulting canonical hw=1 source/transfer pack is the")
     print("      trivial free pack")
-    print("    - the PMNS closure stack rejects that pack exactly")
+    print("    - the local one-sided-minimal PMNS rejection check and the")
+    print("      lower-level PMNS closure stack reject that pack exactly")
     print()
-    print("  So even source insertion plus graph-first transfer do not derive a")
-    print("  nontrivial PMNS lane from Cl(3) on Z^3 alone.")
+    print("  Scope: the carrier-construction identification is admitted from")
+    print("  the upstream PMNS authority chain, not derived inside this packet.")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0
