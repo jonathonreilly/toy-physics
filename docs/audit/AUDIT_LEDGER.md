@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 307 |
+| **retained_bounded** | 308 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1201 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 517 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 518 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
@@ -114,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -353,6 +351,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
@@ -6484,6 +6483,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact intersection is only the common scalar: onsite local functions cap End_C3(V) = span{I}; onsite source functions erase Z, while the retained central/projected commutant source grammar keeps it visible.  _(class `A`)_
 - **chain closes:** True — The scoped no-go closes as exact finite-dimensional algebra: C diag(a,b,c) C^(-1)=diag(a,b,c) forces a=b=c, while Z=P_plus-P_perp commutes with C, squares to I, is not diagonal in the site basis, and the onsite/commutant intersection is only span{I}. With the note's stated reduced-carrier readout, the admitted commutant value z=-1/3 gives Q=1, so the current commutant/projected source grammar does not force Q=2/3.
 - **rationale:** The load-bearing result is not a numerical Koide fit or a physical-source closure claim; it is the source-domain separation and no-go that the broader commutant/projected grammar leaves a non-onsite Z direction available. The cached runner completed successfully and verifies the finite C3 matrix algebra, the onsite/commutant intersection, the non-onsite nature of Z, and the counterdomain value z=-1/3 -> Q=1. The runner also includes documentation guardrails confirming the note explicitly rejects native retained Q closure and identifies the remaining source-domain theorem. Residual risk is confined to any later attempt to promote the onsite source domain to the physical undeformed charged-lepton source domain, which this scoped claim explicitly does not assert.
+- **auditor confidence:** high
+
+### `koide_q_readout_factorization_theorem_2026-04-22`
+
+- **Note:** [`KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the bounded linear-algebraic quotient theorem for the stated first-live second-order readout map L : R^4 -> Diag_3(R), not the conditional admissibility-implies-kernel-invariance extension.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-130906-385d2fc2-koide_q_readout_factoriz-001`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The readout map is exactly L(u,v,w,z)=diag(u,v,w), with the z slot mapped to zero.  _(class `A`)_
+- **chain closes:** True — Given the stated single-slot images, the rank, kernel, image, fiber, and quotient claims follow by elementary linear algebra. The broader selector-admissibility factorization is explicitly excluded from the theorem under audit.
+- **rationale:** The bounded claim is a direct algebraic closure from the explicitly defined map and its computed matrix L = [[1,0,0,0],[0,1,0,0],[0,0,1,0]]. The runner source does instantiate the relevant projectors and Γ_1 action to check the stated single-slot images, then verifies the kernel, quotient fibers, covariance, and invariant quadratic family. The note cleanly separates the unproved admissibility-implies-constancy statement as conditional, so that open extension does not contaminate the bounded theorem.
 - **auditor confidence:** high
 
 ### `koide_q_second_order_support_batch_note_2026-04-22`
