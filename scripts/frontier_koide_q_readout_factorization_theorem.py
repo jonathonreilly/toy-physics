@@ -4,18 +4,22 @@ Science-only theorem candidate:
 first-live second-order readout factorization for the charged-lepton Q route.
 
 Purpose:
-  tighten the remaining reviewer objection that the second-order returned
-  carrier is only a plausible selector home. This runner proves the precise
-  quotient statement available on the retained Γ_1 / T_1 grammar:
+  prove the precise rank/kernel quotient statement available on the retained
+  Γ_1 / T_1 grammar:
 
     the first-live second-order readout map from reachable intermediate-state
     weights to the species block has rank 3, one-dimensional kernel carried by
     the unreachable slot, and image equal to the full diagonal species space.
 
-  Therefore every admissible first-live bosonic species-resolving selector
-  factors uniquely through the exact returned operator
-
-      R_{Γ1}(W) = P_{T_1} Γ_1 W Γ_1 P_{T_1}.
+  Scope (narrowed, scope_too_broad repair):
+    this runner only verifies the linear-algebraic quotient/kernel structure
+    of the readout map L : R^4 -> Diag_3 together with its C_3 covariance and
+    the resulting reduction of C_3-invariant quadratic scalars on Diag_3. It
+    does NOT prove that local bosonic first-live species-resolving
+    C_3-covariant admissibility forces every admissible scalar to be constant
+    on span(e_z); that admissibility-implies-kernel-invariance step is the
+    conditional extension recorded in the note and requires its own
+    theorem-and-runner check.
 """
 
 from __future__ import annotations
@@ -170,7 +174,7 @@ def main() -> int:
         "All first-live species data are classified exactly by diag(u,v,w).",
     )
 
-    section("C. C3 covariance and selector factorization")
+    section("C. C3 covariance and quadratic invariants on the image")
 
     p_species = sp.Matrix([[0, 0, 1], [1, 0, 0], [0, 1, 0]])
     p_slots = sp.Matrix(
@@ -203,14 +207,24 @@ def main() -> int:
         dict=True,
     )
     record(
-        "C.2 every C3-covariant quadratic scalar on the first-live sector is already a scalar on diag(u,v,w)",
+        "C.2 every C3-invariant quadratic scalar on Diag_3 is a scalar on diag(u,v,w)",
         len(q_sol) == 1,
         f"invariant quadratic family = {q_mat.subs(q_sol[0])}",
     )
-    record(
-        "C.3 every admissible first-live bosonic species-resolving selector factors uniquely through the returned operator",
-        True,
-        "Within the retained Γ_1/T_1 grammar, there is no extra first-live species datum beyond R_{Γ1}(W).",
+
+    section(
+        "D. Conditional extension (NOT VERIFIED HERE) - "
+        "admissibility-implies-kernel-invariance"
+    )
+    print(
+        "The broader claim that local bosonic first-live species-resolving\n"
+        "C_3-covariant admissibility forces every admissible scalar selector\n"
+        "to be constant on span(e_z) is NOT verified by this runner. It is\n"
+        "recorded as a conditional extension in the source note and would\n"
+        "require its own theorem-and-runner check. Until then, the bounded\n"
+        "theorem of this runner is only the linear-algebraic quotient/kernel\n"
+        "structure of L together with its C_3 covariance and the C_3-invariant\n"
+        "quadratic family on Diag_3."
     )
 
     section("Summary")
@@ -224,10 +238,17 @@ def main() -> int:
 
     print()
     if n_pass == n_total:
-        print("VERDICT: on the retained Γ_1 / T_1 grammar, the first-live second-order")
-        print("readout is the exact quotient of intermediate weights by the unreachable")
-        print("slot, with image equal to diag(u,v,w). So every admissible first-live")
-        print("bosonic selector factors uniquely through the returned operator.")
+        print("VERDICT (bounded): on the retained Γ_1 / T_1 grammar, the first-live")
+        print("second-order readout map L : R^4 -> Diag_3 has rank 3 and kernel")
+        print("span(e_z), so R^4 / span(e_z) ≅ Diag_3. The map intertwines the")
+        print("species 3-cycle with the reachable-slot 3-cycle, and every")
+        print("C_3-invariant quadratic scalar on Diag_3 is a scalar on diag(u,v,w).")
+        print()
+        print("NOT VERIFIED HERE: that admissibility (local + bosonic + first-live +")
+        print("species-resolving + C_3-covariant) by itself forces every admissible")
+        print("scalar selector to be constant on span(e_z). That step is recorded")
+        print("as a conditional extension in the source note and requires its own")
+        print("theorem-and-runner check.")
         print()
         print("This is science-only and does not modify the repo's authority surfaces.")
         return 0

@@ -104,6 +104,10 @@ admissibility hypothesis.
 > first-live species-resolving `C_3`-covariant admissibility forces constancy
 > on `span(e_z)`. Until that step is proved separately, the content below is
 > recorded only as a conditional extension of the bounded theorem above.
+> The companion runner mirrors this scope split: sections A-C verify the
+> bounded theorem, and section D explicitly records that the
+> admissibility-implies-kernel-invariance step is **not** verified by the
+> runner.
 
 Within the retained scope:
 
