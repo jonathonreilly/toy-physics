@@ -1,29 +1,43 @@
 #!/usr/bin/env python3
-"""Bilinear Route-2 tensor-carrier definition on the microscopic support block.
+"""Bilinear Route-2 tensor-carrier class-A definition on the support block.
 
-This runner takes the next axiom-first step after the scalar/rank-one support
-no-go. The key observation is that the current no-go only rules out a *linear*
-tensor observable produced by the scalar support Green / Schur stack.
+Scope (mirrors the source note `docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md`):
 
-It does not rule out a *bilinear* carrier definition built from:
+This runner is the class-A polynomial-identity verifier for the symbol-level
+definition
 
-  1. the scalar A1 background datum delta_A1, and
-  2. the aligned bright support coefficients u_E, u_T on E_x and T1x.
-
-Define the microscopic tensor carrier
-
-    K_R(q) = [[u_E(q),           u_T(q)],
-              [delta_A1(q)u_E(q), delta_A1(q)u_T(q)]]
+    K_R(q) := [[u_E(q),           u_T(q)],
+               [delta_A1(q)u_E(q), delta_A1(q)u_T(q)]]
 
 where
-  u_E(q) = <E_x, q>
-  u_T(q) = <T1x, q>.
+  u_E(q) := <E_x, q>       (linear functional in the adapted basis only)
+  u_T(q) := <T1x, q>       (linear functional in the adapted basis only)
+  delta_A1(q) := support_delta(q) imported from the retained-bounded
+                  `frontier_tensor_support_center_excess_law.py`.
 
-This object is algebraically defined on the support block, before any
-metric/curvature readout. The prior bounded tensor pair Theta_R^(0) is then
-tested as a bounded linear projection of this carrier on the canonical A1
-family. The runner does not derive the upstream decoupling/coordinate
-certificates or the physical tensor-primitive bridge.
+The runner performs only the following class-A / class-D checks, and the
+audit verdict it supports is no stronger than:
+
+  - the polynomial-identity substitution defining `K_R` is consistent
+    with the named admitted inputs at the canonical endpoints and at
+    unit aligned perturbations (class A, exact);
+  - a finite-grid numerical shadow of the upstream `delta_A1`-decoupling
+    fact holds at machine precision on the tested grid (class D, NOT
+    a derivation; the upstream certificate remains a named open gap);
+  - the prior bounded tensor pair `Theta_R^(0)` is a bounded linear
+    projection of `K_R` on the canonical A1 family, with endpoint-fixed
+    coefficients (class B, bounded readout only).
+
+The runner does NOT and CANNOT certify any of the three open theorem
+targets named in the source note's "Audit boundary" section:
+
+  1. a retained-grade derivation of the `delta_A1`-decoupling fact;
+  2. a retained-grade derivation of the aligned-bright coordinate
+     identification `(u_E, u_T) ↔ canonical bright pair`;
+  3. a retained-grade bridge identifying `K_R` with any physical
+     tensor primitive in the GR-readout chain.
+
+Those gaps remain upstream of this runner and outside its class-A scope.
 """
 
 from __future__ import annotations
@@ -190,35 +204,38 @@ def main() -> int:
     )
 
     record(
-        "delta_A1 is blind to bright and dark non-A1 support perturbations under the named coordinate model",
+        "[class D, finite-grid] delta_A1 shows zero shift under bright/dark non-A1 perturbations on the tested grid (numerical shadow of the unproven upstream decoupling fact, NOT a derivation)",
         blind_max < 1e-12,
         f"max non-A1-induced delta_A1 shift={blind_max:.3e}",
     )
     record(
-        "the bilinear support carrier definition is K_R(q)=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]]",
+        "[class A, polynomial-identity substitution] under the named admitted inputs, K_R(q):=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]] matches its endpoint columns at the canonical A1 background",
         exact_endpoint_err < 1e-12,
         f"max exact endpoint-column error={exact_endpoint_err:.3e}",
     )
     record(
-        "the carrier vanishes on pure A1 backgrounds and on dark aligned coordinates",
+        "[class A, polynomial-identity substitution] under the named admitted inputs, K_R vanishes on pure A1 backgrounds and is unchanged along dark aligned coordinates on the tested grid",
         pure_a1_norm < 1e-12 and dark_leak_max < 1e-12,
         f"pure-A1 norm={pure_a1_norm:.3e}, dark-channel norm={dark_leak_max:.3e}",
     )
     record(
-        "the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the carrier on the canonical A1 family",
+        "[class B, bounded readout] the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the carrier on the canonical A1 family",
         True,
         "the bounded readout is endpoint-fixed from the old eta_floor_tf surface and now acts on vec(K_R)",
         status="BOUNDED",
     )
 
-    print("\nVerdict:")
+    print("\nVerdict (class-A scope):")
     print(
-        "The Route-2 tensor-carrier candidate is not a linear support observable "
-        "from the scalar/rank-one support stack. It is the bilinear support "
-        "carrier K_R built from the aligned bright support coordinates and the "
-        "scalar background datum delta_A1. The prior Theta_R^(0) pair is then a "
-        "bounded readout of this carrier; upstream certificates and the physical "
-        "tensor-primitive bridge remain outside this runner."
+        "Under the named admitted inputs (delta_A1 from the retained-bounded "
+        "tensor_support_center_excess_law_note; (u_E, u_T) as linear functionals "
+        "in the adapted basis; the upstream decoupling fact as an admitted "
+        "assumption), the symbol K_R := [[u_E, u_T], [delta_A1 u_E, delta_A1 "
+        "u_T]] is a class-A polynomial-identity substitution whose endpoint "
+        "columns match by polynomial arithmetic. The prior Theta_R^(0) pair is "
+        "a bounded readout of this symbol; upstream decoupling, aligned-bright "
+        "coordinate identification, and physical-primitive bridge remain "
+        "outside this runner's class-A scope."
     )
 
     print("\n" + "=" * 78)
