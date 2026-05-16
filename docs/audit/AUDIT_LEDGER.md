@@ -19,11 +19,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | effective_status | count |
 |---|---:|
 | **retained** | 105 |
-| **retained_no_go** | 135 |
+| **retained_no_go** | 136 |
 | **retained_bounded** | 314 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1184 |
+| unaudited | 1183 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -43,13 +43,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 526 |
+| `audited_clean` | 527 |
 | `audited_conditional` | 193 |
 | `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1297 |
+| `unaudited` | 1296 |
 
 | claim_type | count |
 |---|---:|
@@ -541,6 +541,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_self_consistent_two_body_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `staggered_test_mass_companion_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_two_field_wave_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
+| `strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | A | - |
 | `structured_chokepoint_bridge_extension_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `structured_chokepoint_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
 | `structured_mirror_bornsafe_scan_note` | no_go | ~~audited_clean~~ | **retained_no_go** | cross_family | codex-gpt-5.5 | C | - |
@@ -10323,6 +10324,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The wave-field hardening still closes the interaction, norm, and bounded-field story cleanly, but it does not close the full state-family battery and it does not give universal contraction on this operating point.  _(class `C`)_
 - **chain closes:** True — The runner directly computes the scalar wave field coupled to staggered matter and reproduces the note's hard scores of 4/5, 5/5, 4/5 plus width ratios 1.0047, 1.0019, and 0.9923. The note's bounded conclusion matches the current corrected output.
 - **rationale:** The claim is scoped to a bounded corrected wave-field prototype, not retained universal robustness. Current output confirms W1-W4 on all three families, W6 only on growing, and width response as a diagnostic rather than a gate. Residual risk is limited to the stated lack of universal contraction, full state-family robustness, larger-graph battery, and retarded-field closure.
+- **auditor confidence:** high
+
+### `strong_cp_rp_half_cannot_forbid_cp_odd_imaginary_no_go_note_2026-05-16`
+
+- **Note:** [`STRONG_CP_RP_HALF_CANNOT_FORBID_CP_ODD_IMAGINARY_NO_GO_NOTE_2026-05-16.md`](../../docs/STRONG_CP_RP_HALF_CANNOT_FORBID_CP_ODD_IMAGINARY_NO_GO_NOTE_2026-05-16.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the finite/compact measured-space no-go that the retained Θ-invariant RP half-square identity is insensitive to real Θ-anti-invariant CP-odd imaginary half-action additions in the reflected expectation tested on reflection-Hermitian observables.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_no_go**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-140246-20260516T140246Z-bb7a3856-strong_cp_rp_half_cannot-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** By Θ-anti-invariance of h, h(Θx)+h(x)=0, so exp(-i c (h(x)+h(Θx)))=1 and the modified reflected expectation equals the original RP norm-square.  _(class `A`)_
+- **chain closes:** True — The conclusion follows algebraically from the retained bounded RP identity plus the explicitly admitted Θ-anti-invariance of h and reflection-Hermiticity of F. No external physics convention, numerical comparator, or unretained upstream authority is needed for the scoped no-go.
+- **rationale:** The load-bearing step is a direct algebraic cancellation of the CP-odd phase under Θ-pairing. The cited upstream authority is retained_bounded, and the source note does not require stronger continuum claims or external data. The runner genuinely checks the finite-carrier algebra rather than hard-coding a contested numerical value, though the proof itself is already symbolic.
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
