@@ -1,7 +1,7 @@
 # Newtonian Mass Scaling from Four Principles (bounded family-law note)
 
-**Date:** 2026-04-04
-**Status:** hold. Additivity now strengthens Principle 3 on the proposed_retained ordered-lattice family, but persistent-pattern inertia remains open.
+**Date:** 2026-04-04 (scope-documentation refresh 2026-05-16)
+**Status:** open_gate (audited_clean as an open gate). Additivity strengthens Principle 3 on the proposed_retained ordered-lattice family, and the 2026-05-07 multistage compact-object bridge operationally satisfies the *self-sourcing* half of Principle 3 on the audit-clean `top4` family; the residual gate is the *external-field* generator-invariant inertial-mass step on a persistent compact-object family. See the new "Open Gate Scope" section below for the precise audit boundary.
 
 ## The Claim
 
@@ -193,3 +193,102 @@ then `p = 1` is selected and the Newtonian mass-scaling law follows on that
 family. The open step in the current project is still the persistent-pattern
 version of that extensive one-parameter mass principle, so this remains a
 hold rather than a mainline closure."
+
+## Open Gate Scope (scope-documentation, 2026-05-16)
+
+This note is audited as an `open_gate` row. The intent of this section is to
+fix the precise scope of the open step so that re-audit can re-confirm the
+gate at the same boundary or recognise a narrower residual.
+
+### What is closed inside this note
+
+| Sub-claim | Status | Authority |
+|---|---|---|
+| Principle 1 (linear propagator → Born `I_3 = 0`) | closed on all tested actions `p in [0.5, 2.0]` to `< 5e-15` | this note, Numerical Evidence table |
+| Principle 2 (phase valley → attraction; hill → repulsion; zero coupling → no gravity) | closed on the retained ordered-lattice family | this note, Principle 2 section |
+| Principle 3a (amplitude-scaling invariance on test-particle family) | retained_bounded | [`EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md) |
+| Principle 3b (valley-linear additivity of source composition on weak-field test-particle family, 3D and 2D ordered-lattice cross-check) | retained_bounded | this note, Numerical Evidence table; sibling additivity notes |
+| Principle 3c (operational extensivity of `s` on the audit-clean `top4` multistage compact-object family under self-sourcing: persistence, `alpha = 1`, stage-stable `kappa`) | bounded conditional bridge, support tier | [`NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md`](NEWTON_DERIVATION_TOP4_BRIDGE_NOTE.md), [`scripts/newton_derivation_top4_bridge_runner.py`](../scripts/newton_derivation_top4_bridge_runner.py) |
+| Principle 4 (momentum conservation forces `p = 1` *given* Principle 3) | closed algebraically | this note, Principle 4 section |
+
+### What remains open (the gate)
+
+The gate guarding promotion of this note to retained Newtonian-derivation
+status is the **external-field generator-invariant inertial-mass step on a
+persistent compact-object family**. Concretely, the missing theorem has the
+form:
+
+> Let `O` be a persistent compact pattern admitted by the audit-clean
+> `top4` multistage floor. Let `f_ext` be a weak field sourced by a
+> *different* persistent compact pattern `O'` on the same retained
+> ordered-lattice family. Then the linear response of `O` to `f_ext`,
+> measured as the centroid shift per unit source strength, is invariant
+> under change of `O`'s internal width within the admissible compact-object
+> band `{top3, top4, top5}`.
+
+This is exactly the "persistent-pattern inertial mass equal to source
+charge" step that Principle 3 needs as a *physical* (not test-particle)
+theorem. Until this step is registered, the chain
+"Born + valley + linearity + momentum conservation `→ F ∝ M_1 M_2 / r^(d-2)`"
+cannot be promoted from "bounded conditional on the retained ordered-lattice
+family" to "retained Newtonian derivation".
+
+### Why the gate is still open after the existing bridge
+
+The 2026-05-07 bridge note operationally satisfies Principle 3 on the
+multistage compact-object family, but only under *self-sourcing* — the same
+object both sources and responds to the field. The bridge therefore
+discharges the "extensivity of the response coefficient in `s`" half of
+Principle 3, but not the "generator-invariance of inertial mass across
+different persistent patterns" half. The two halves are independent:
+self-source extensivity is consistent with the response coefficient depending
+on the internal width of the responder, which would violate the
+equivalence-principle reading required for two-body Newtonian momentum
+conservation in Principle 4.
+
+The negative authority that fixes the residual is
+[`MATTER_INERTIAL_CLOSURE_NOTE.md`](MATTER_INERTIAL_CLOSURE_NOTE.md): on
+Gaussian persistent packets under a uniform linear field, equivalence-
+principle slopes differ by 123% across packet widths. The open question is
+whether the audit-clean multistage compact-object family escapes that
+no-go (because its persistence band is much tighter than free Gaussian
+packets) or whether the same wave-mechanical dispersion mechanism recurs.
+
+### Smallest experiment that would close the gate
+
+A future closure attempt should:
+
+1. Build the external-field probe by sourcing `f_ext` from a separate
+   `top4` multistage compact-object placement at a fixed offset.
+2. Sweep the responder's internal width over `{top3, top4, top5}` on the
+   same admissibility floor.
+3. Measure the response slope (centroid shift per unit `s_source`) at
+   each width.
+4. PASS criterion: response slope is invariant across `{top3, top4, top5}`
+   to within the same `ALPHA_BAND = [0.95, 1.05]` and within the same
+   `OVERLAP_THRESHOLD = 0.90` already used by the audit-clean floor.
+
+Until such a probe exists and either PASSes the equivalence-principle gate
+or fails it cleanly, this note must remain audited as `open_gate` and
+must not be cited as a closed Newtonian derivation. A FAIL is informative:
+it would extend `matter_inertial_closure_note`'s no-go from free Gaussian
+packets to the multistage compact-object family, and would force the
+closure path to one of the structural alternatives listed in that note
+(soliton-like persistent objects, modified action, or geometry-independent
+coupling).
+
+### Audit boundary statement
+
+The audited scope of this note is therefore:
+
+> On the retained ordered-lattice family, the algebra of Principles 1, 2,
+> 3a, 3b, 3c (self-sourcing), and 4 selects `p = 1` and the Newtonian
+> mass-scaling law as a *bounded conditional theorem*. The open gate is the
+> external-field generator-invariant inertial-mass step on a persistent
+> compact-object family, specifically the response-slope-invariance test
+> across `{top3, top4, top5}` under a field sourced by a separate
+> `top4` multistage compact object. The negative authority
+> `matter_inertial_closure_note` fixes the residual at the
+> equivalence-principle level for free Gaussian packets; this note's open
+> step is whether that no-go also recurs on the multistage compact-object
+> family.
