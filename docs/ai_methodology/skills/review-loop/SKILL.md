@@ -189,6 +189,28 @@ locally and report that limitation.
   no unmatched observed target, and clear falsifiers/open gates. Output
   `RETAINED`, `RETAINED SUPPORT`, `BOUNDED`, `OPEN`, `NO-GO`, or `REJECT`.
 
+- `NoGoDisciplineReviewer`
+  Scrutinize negative claims with the same rigor as positive ones. Trigger
+  this reviewer whenever changed content includes a `no_go`, `stretch_attempt`,
+  `bounded_with_named_walls`, or derived-no-go-boundary artifact, or when any
+  other reviewer in this fanout outputs `NO-GO` / `BOUNDED` / `OVERCLAIM` on
+  a negative claim. The reviewer must invoke the `no-go-discipline` skill
+  and walk N1-N8 against the branch content (see
+  [`docs/ai_methodology/skills/no-go-discipline/SKILL.md`](../no-go-discipline/SKILL.md)):
+  N1 alternative-route enumeration (≥5 distinct routes), N2
+  wall-independence audit, N3 hidden-wall scan, N4 residual matching,
+  N5 rhetoric audit (per-element / per-mode / per-block / lattice-wide
+  resolutions), N6 partial-closure path scan (convention-reframe vs new
+  axiom), N7 steelman, N8 cross-cycle echo. Output `PASS` (negative claim
+  honestly scoped) or `FAIL` with the failing checklist items named and the
+  narrowest demoted claim proposed (`partial-attempt-with-named-untested-routes`,
+  `partial-narrowing`, `bounded-with-corrected-wall-count`, or
+  `stretch-attempt-with-honest-residual`). The reviewer must not approve a
+  no-go that has not been stress-tested against the framework's full
+  authority surface — under-tested negative claims are at least as harmful
+  as overclaimed positive ones because they foreclose investigation paths
+  permanently.
+
 - `RepoGovernanceReviewer`
   Check placement and authority surfaces. Ensure live findings route through
   `docs/repo/ACTIVE_REVIEW_QUEUE.md`, long packets go under
@@ -249,6 +271,10 @@ Rules:
   independent audit worker.
 - Do not approve new bare letter-number science names. Require explicit names
   from CONTROLLED_VOCABULARY, with shorthand only as a parenthetical alias.
+- Do not approve a `NO-GO` or `BOUNDED with named walls` recommendation
+  without running `no-go-discipline` N1-N8 against the branch content. An
+  unscrutinized negative claim forecloses investigation paths permanently and
+  is at least as harmful as an overclaimed positive.
 ````
 
 ## Consolidate Findings
@@ -262,6 +288,7 @@ Present one iteration summary:
 ### Physics Claim Boundary: RETAINED | SUPPORT | BOUNDED | OPEN | REJECT
 ### Imports / Support: CLEAN | DISCLOSED | DEMOTE | FAIL
 ### Nature Retention: RETAINED | RETAINED SUPPORT | BOUNDED | OPEN | NO-GO | REJECT
+### No-Go Discipline: PASS | FAIL | NOT APPLICABLE
 ### Repo Governance: PASS | FIX | QUEUE | ARCHIVE
 ### Audit Compatibility: PASS | FIX | BLOCKED | NOT APPLICABLE
 ### Methodology Skill: PASS | FIX | SKIPPED
@@ -271,6 +298,7 @@ Classify every finding:
 
 - `BUG`
 - `OVERCLAIM`
+- `NO_GO_OVERCLAIM`
 - `IMPORTED_VALUE`
 - `SUPPORT_ONLY_DEMOTION`
 - `MISSING_ARTIFACT`
@@ -461,6 +489,36 @@ commit the regenerated files. When the audit workflow template is installed
 as `.github/workflows/audit.yml`, PR runs enforce the same gate and the nightly
 cron refreshes main; review-loop must not let a branch reach merge with
 pipeline-derived files out of date with the source notes.
+
+8. **No-Go Discipline PASS gate (hard).** Before issuing review-loop PASS,
+   identify any artifact on the branch that ships a negative claim:
+
+```bash
+# Source notes whose claim_type is no_go, or whose Status / Type line
+# names walls / admissions / "conditional on" content
+git diff --name-only origin/main...HEAD -- 'docs/*NO_GO*.md' 'docs/*BOUNDED*.md' \
+                                           'docs/*STRETCH_ATTEMPT*.md' \
+                                           'docs/*OBSTRUCTION*.md'
+# Audit-data rows whose verdict_rationale or claim_type record walls
+git diff origin/main...HEAD -- docs/audit/data/audit_ledger.json \
+  | grep -E '"claim_type": "no_go"|"verdict_rationale".*wall|"verdict_rationale".*admission'
+# Any source note touched on this branch whose body contains negative-claim shape
+git diff origin/main...HEAD -- 'docs/*.md' \
+  | grep -E 'structurally undecidable|no retained primitive|requires new axiom|cannot be derived from A_min|conditional on .* walls?'
+```
+
+For every match, the NoGoDisciplineReviewer must output `PASS` (N1-N8 walk
+complete and no failure condition hit) before review-loop issues PASS. A
+`FAIL` from NoGoDisciplineReviewer blocks PASS regardless of how other
+reviewers voted. An unscrutinized no-go that ships through review cements
+the overclaim at audit time and forecloses investigation paths permanently.
+
+If NoGoDisciplineReviewer outputs FAIL, apply the narrowest honest fix per
+Fix Policy step 2 (demote to a narrower honest claim that passes N1-N8) and
+re-review. Do not weaken the gate to PASS the branch.
+
+This gate is independent of the Pipeline-clean PASS gate above; both must
+pass for review-loop to issue PASS.
 
 The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
 write `audit_status`, `audited_clean`, or other audit verdicts. If the branch

@@ -25745,6 +25745,14 @@
       "to": "down_type_mass_ratio_ckm_dual_note"
     },
     {
+      "from": "ai_methodology.skills.audit-loop.skill",
+      "to": "ai_methodology.skills.no-go-discipline.skill"
+    },
+    {
+      "from": "ai_methodology.skills.no-go-discipline.skill",
+      "to": "ai_methodology.skills.no-go-discipline.references.case-studies"
+    },
+    {
       "from": "ai_methodology.skills.physics-loop.skill",
       "to": "ai_methodology.skills.physics-loop.references.assumption-import-audit"
     },
@@ -25758,11 +25766,19 @@
     },
     {
       "from": "ai_methodology.skills.physics-loop.skill",
+      "to": "ai_methodology.skills.no-go-discipline.skill"
+    },
+    {
+      "from": "ai_methodology.skills.physics-loop.skill",
       "to": "ai_methodology.skills.physics-loop.references.literature-bridge-protocol"
     },
     {
       "from": "ai_methodology.skills.physics-loop.skill",
       "to": "ai_methodology.skills.physics-loop.references.long-running-execution"
+    },
+    {
+      "from": "ai_methodology.skills.review-loop.skill",
+      "to": "ai_methodology.skills.no-go-discipline.skill"
     },
     {
       "from": "lanes.active_working_lanes_2026-04-26",
@@ -37065,8 +37081,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "b3f36f2bdcd179956de191b6ee4b26351dbcf82ff297714eb2e7e8b142b81d17",
+      "deps": [
+        "ai_methodology.skills.no-go-discipline.skill"
+      ],
+      "note_hash": "9754288ce24836e0f4e906bcccf4960599bd2ac4e887e32f77042a234db14b6b",
       "path": "docs/ai_methodology/skills/audit-loop/SKILL.md",
       "runner_path": null,
       "title": "Audit Loop"
@@ -37081,6 +37099,30 @@
       "path": "docs/ai_methodology/skills/methodology-paper-synthesizer/SKILL.md",
       "runner_path": null,
       "title": "Methodology Paper Synthesizer"
+    },
+    "ai_methodology.skills.no-go-discipline.references.case-studies": {
+      "claim_id": "ai_methodology.skills.no-go-discipline.references.case-studies",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [],
+      "note_hash": "35d3e9b6c6f0d81707324b786044259c60fa66a07960aedb694390f50d66dd29",
+      "path": "docs/ai_methodology/skills/no-go-discipline/references/case-studies.md",
+      "runner_path": null,
+      "title": "No-Go Discipline \u2014 Case Studies"
+    },
+    "ai_methodology.skills.no-go-discipline.skill": {
+      "claim_id": "ai_methodology.skills.no-go-discipline.skill",
+      "claim_type_author_hint": null,
+      "claim_type_author_hint_raw": null,
+      "claim_type_seed_hint": null,
+      "deps": [
+        "ai_methodology.skills.no-go-discipline.references.case-studies"
+      ],
+      "note_hash": "8ecc536fdbcae254393635ea52a29ff43214b48324fe2fc585efb6084ff83fa9",
+      "path": "docs/ai_methodology/skills/no-go-discipline/SKILL.md",
+      "runner_path": null,
+      "title": "No-Go Discipline"
     },
     "ai_methodology.skills.physics-claim-reviewer.skill": {
       "claim_id": "ai_methodology.skills.physics-claim-reviewer.skill",
@@ -37157,10 +37199,11 @@
         "ai_methodology.skills.physics-loop.references.assumption-import-audit",
         "ai_methodology.skills.physics-loop.references.route-patterns",
         "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
+        "ai_methodology.skills.no-go-discipline.skill",
         "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
         "ai_methodology.skills.physics-loop.references.long-running-execution"
       ],
-      "note_hash": "4c7b41dc9a2d0c2aa82d6504d0829984118577c4534788688ec3c71b872e9a83",
+      "note_hash": "5bb6401f75aedad3884148c40eaa533d6c4f9573c3d8e750e6dfaf6375a28a4d",
       "path": "docs/ai_methodology/skills/physics-loop/SKILL.md",
       "runner_path": null,
       "title": "Physics Loop"
@@ -37170,8 +37213,10 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": null,
-      "deps": [],
-      "note_hash": "8c7a6ae10c11493a9e1cccd33f8e4944f3338ea5635b69e367f3af3742bd94c1",
+      "deps": [
+        "ai_methodology.skills.no-go-discipline.skill"
+      ],
+      "note_hash": "ee952b9805bfd0cc88929e2c2c8019008668c200497d726b2f7cc1bf2033df0f",
       "path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "runner_path": null,
       "title": "Review Loop"
@@ -70450,15 +70495,14 @@
     "ai_methodology.repo_trajectory_and_governance_evidence_2026-04-25",
     "ai_methodology.skills.ai-physics-lane-builder.skill",
     "ai_methodology.skills.audit-loop.references.nature-grade-rubric",
-    "ai_methodology.skills.audit-loop.skill",
     "ai_methodology.skills.methodology-paper-synthesizer.skill",
+    "ai_methodology.skills.no-go-discipline.references.case-studies",
     "ai_methodology.skills.physics-claim-reviewer.skill",
     "ai_methodology.skills.physics-loop.references.abstract-algebraic-core-extraction",
     "ai_methodology.skills.physics-loop.references.assumption-import-audit",
     "ai_methodology.skills.physics-loop.references.literature-bridge-protocol",
     "ai_methodology.skills.physics-loop.references.long-running-execution",
     "ai_methodology.skills.physics-loop.references.route-patterns",
-    "ai_methodology.skills.review-loop.skill",
     "ai_methodology.skills.reviewer-backpressure-integrator.skill",
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
     "alpha_s_tadpole_improvement_vertex_power_narrow_theorem_note_2026-05-10",
@@ -71153,7 +71197,7 @@
       "bounded_theorem": 360,
       "meta": 74,
       "no_go": 46,
-      "none": 1552,
+      "none": 1554,
       "open_gate": 37,
       "positive_theorem": 147
     },
@@ -71161,14 +71205,14 @@
       "bounded_theorem": 814,
       "meta": 74,
       "no_go": 151,
-      "none": 444,
+      "none": 446,
       "open_gate": 117,
       "positive_theorem": 616
     },
-    "edge_count": 8910,
+    "edge_count": 8914,
     "leaf_count": 623,
-    "node_count": 2216,
-    "root_count": 773,
+    "node_count": 2218,
+    "root_count": 772,
     "runners_with_path": 1835
   }
 }
