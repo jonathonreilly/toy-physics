@@ -11,12 +11,78 @@
 ## Cited authority
 
 The runner imports the exact-lattice / amplitude-propagation primitives
-from [`scripts/minimal_source_driven_field_probe.py`](/Users/jonreilly/Projects/Physics/scripts/minimal_source_driven_field_probe.py),
-audited under [`MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
-(audited_clean / retained_bounded). The lattice geometry, amplitude
-propagation, and field-update conventions are inherited from that note;
-this loop adds only the amplitude-sourced screened Poisson kernel and
-the outer fixed-point self-consistency loop.
+from `scripts/minimal_source_driven_field_probe.py`, described in
+`docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`. That sister note is
+currently `audited_conditional` (not retained-grade), so the inherited
+primitives are recorded below as **explicit bounded admissions**, not
+as load-bearing retained dependencies. This loop adds only the
+amplitude-sourced screened Poisson kernel and the outer fixed-point
+self-consistency loop on top of those admissions.
+
+The dep runner is included in the restricted audit packet alongside
+`scripts/poisson_self_gravity_loop.py` so the auditor can inspect both
+the inherited exact-lattice construction and the loop layered on top.
+
+## Bounded admissions
+
+The finite numerical control claim in this note rests on the following
+inherited primitives, listed here as explicit bounded admissions so this
+row does not transit a retained edge through the upstream
+`minimal_source_driven_field_probe_note` while that sister note remains
+`audited_conditional`. None of (BA-1) through (BA-3) is a new physical
+axiom; each is a fully specified construction in the dep runner.
+
+(BA-1) **Exact 3D lattice geometry at `h = 0.25`, `W = 3`, `L = 6`.**
+The lattice is the exact-lattice family `Lattice3D.build(NL_PHYS, PW, H)`
+constructed in `scripts/minimal_source_driven_field_probe.py`, with the
+node map, layer-start indexing, and neighbour offsets used unchanged by
+the Poisson loop runner. The interior 5-node source patch centred at
+`z = 2.5` is selected from this lattice via the helper
+`_source_cluster_nodes` in `scripts/poisson_self_gravity_loop.py`.
+
+(BA-2) **Exact-lattice forward amplitude propagation.** The forward
+propagator `_propagate_from_sources` reuses the offset table `lat.offsets`
+and lattice-action factor `L * (1.0 - lf)` defined in the dep runner. The
+weak-field bound enters only through the local field-update half-step
+`lf = 0.5 * (sf[si] + df[di])` and the per-offset weight `w / (L * L)`.
+
+(BA-3) **Two-detector observables on the same lattice.** The
+detector-plane centroid `_centroid_z` and the integrated detector
+probability `_detector_prob` read the terminal-layer amplitude window
+defined by `lat.layer_start[lat.nl - 1]` from the dep runner; both are
+finite sums over the `lat.npl` detector cells.
+
+(BA-1)–(BA-3) are bounded inputs in this audit row: the runner is the
+authoritative reference for each construction, the dep runner is shipped
+in the restricted packet, and the cached certificates at
+`logs/runner-cache/poisson_self_gravity_loop.txt` and
+`logs/runner-cache/minimal_source_driven_field_probe.txt` pin the exact
+sources used. The finite hard-bar checks in this note are defined
+strictly on top of (BA-1)–(BA-3); the bounded-control claim does not
+inherit any retained-grade status from the sister note.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named
+by the 2026-05-16 runner-artifact audit repair so the audit citation
+graph can track the dep runner as part of this row's restricted packet.
+It does not promote this note or change the audited claim scope: the
+inherited primitives are recorded above as bounded admissions
+(BA-1)–(BA-3), not as load-bearing retained chain transit through the
+sister note.
+
+- [minimal_source_driven_field_probe_note](MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md)
+
+Companion artifacts (backticked so the citation-graph builder does not
+parse them as note-level dep edges; they are file references, not note
+references):
+
+- `scripts/minimal_source_driven_field_probe.py` — dep runner; included
+  in the restricted packet for this row.
+- `logs/runner-cache/minimal_source_driven_field_probe.txt` — cached
+  certificate for the dep runner, SHA-pinned to its current source.
+- `logs/runner-cache/poisson_self_gravity_loop.txt` — cached certificate
+  for the primary runner, SHA-pinned to `scripts/poisson_self_gravity_loop.py`.
 
 ## Audit modes
 
