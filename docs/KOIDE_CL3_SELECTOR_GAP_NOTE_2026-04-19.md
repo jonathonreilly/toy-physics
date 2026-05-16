@@ -1,7 +1,7 @@
 # Koide Cl(3) → SM Embedding — Selector Gap Note
 
 **Date:** 2026-04-19
-**Status:** exact negative-result / support note on current `main` — the Cl(3) doublet/Kramers route is sharpened and exhausted cleanly, but the charged-lepton package remains bounded
+**Status:** open selector-gap inventory / support note on current `main` — the listed Cl(3) doublet/Kramers, baryon-Schur, SU(3)-coupling, and degeneracy probes are recorded as conditional candidate routes (not retained exhaustions), and the charged-lepton package remains bounded
 
 ---
 
@@ -53,7 +53,18 @@ assignment carries them.
 
 ## Summary
 
-The Cl(3) → SM embedding (from `frontier/cl3-sm-embedding`) was fully deployed against the charged-lepton selector gap: m_V ≈ -0.433 (V_eff minimum) vs m_* ≈ -1.161 (physical selected point). No Cl(3)-algebraic route closes the gap. The blocker is documented here.
+This note records, as an *open selector-gap inventory*, the candidate
+Cl(3) → SM embedding routes (from `frontier/cl3-sm-embedding`) probed
+against the charged-lepton selector gap: m_V ≈ -0.433 (V_eff minimum)
+vs m_* ≈ -1.161 (physical selected point). Per the prior independent
+audit, no *retained* in-repo dependency chain in this note exhausts
+the space of Cl(3)-algebraic routes: each listed §3a/§3b/§3c/§3d
+sub-route and the §5 open-route inventory is recorded as a *conditional
+candidate* pending direct retained dependencies or runners. The
+global "no Cl(3)-algebraic route closes the gap" closure-statement is
+*not* loadbearing on the cited one-hop authority, and is left as an
+*open gate* (see the "Per-route conditional perimeter" section below
+for the per-route dependency posture).
 
 **Audit perimeter narrowing (2026-05-10):** the global "no Cl(3)
 algebraic route closes the gap" closure-statement is *not* loadbearing
@@ -104,7 +115,13 @@ This follows from an algebraic cancellation: **E1 = 2·SELECTOR** at the Koide s
 
 ---
 
-## 3. Routes Exhausted
+## 3. Candidate Routes Probed (Conditional)
+
+Per the audit perimeter narrowing above, the four sub-routes below are
+recorded as *probed candidates* rather than retained exhaustions; each
+remains conditional pending a direct retained dependency or runner
+beyond the parent V_eff coefficient assignment (cf. the per-route
+conditional perimeter table below).
 
 ### 3a. Doublet A equal-diagonal → m_DA = -√(2/3) ≈ -0.816
 
@@ -114,7 +131,10 @@ Gap: |m_DA − m_*| ≈ 0.344 (30%). The doublet A condition does not reproduce 
 
 The baryon (111) state at hw=3 is external to the 3×3 H matrix. The baryon-to-hw=1 coupling is S₃-symmetric (the baryon is totally symmetric; hw=1 states are S₃ permuted). Any Schur complement integrating out the baryon contributes **ΔK ∝ −I₃**, which is m-independent and shifts the potential by a constant — the critical-point equation is unchanged.
 
-**Status: exact negative closeout on this candidate route.**
+**Status: conditional negative-result claim on this candidate route,
+pending a direct retained derivation of the S₃-symmetric
+baryon-to-hw=1 coupling structure (the S₃ argument is structural but
+is not, in this note, carried by a one-hop retained authority).**
 
 ### 3c. SU(3) Coupling Modifications
 
@@ -143,7 +163,7 @@ The eigenvalues of H_sel(m_*) are (−2.507, −0.848, +2.195) — all distinct.
 | m_pos (positivity threshold) | ≈ −1.2958 | kappa = −1/√3, algebraic |
 | m_* (physical selected point) | ≈ −1.1605 | H_* witness kappa_* ≈ −0.608 |
 
-The physical m_* currently lies between m_pos and m_DA, selected by the phenomenological H_* witness ratio kappa_* ≈ −0.608. No Cl(3)-algebraic derivation of kappa_* has been found.
+The physical m_* currently lies between m_pos and m_DA, selected by the phenomenological H_* witness ratio kappa_* ≈ −0.608. No Cl(3)-algebraic derivation of kappa_* is recorded in this note's retained one-hop authority; see §5(c) for the open kappa_* derivation problem.
 
 ---
 
@@ -167,15 +187,21 @@ The one-clock semigroup (gamma_orbit note) provides a positive witness: `H_* = H
 
 ## Status
 
-| Claim | Status |
-|-------|--------|
-| Cl⁺(3) R-sector = two j=1/2 Kramers doublets | Proved (structural) |
-| m_DA = −√(2/3) from doublet A equal-diagonal | Proved exact |
-| E1 = 2·SELECTOR → \|H_frozen[0,2]\| = GAMMA = 1/2 | Proved exact (algebraic cancellation) |
-| Baryon Schur complement ∝ −I₃ (m-independent) | Proved (S₃ symmetry + T_m variation check) |
-| SU(3) coupling modifications miss m_* by > 5% | Confirmed numerically |
-| No eigenvalue degeneracy crossing at m_* | Confirmed numerically |
-| m_* = −1.1605 NOT derivable from Cl(3) alone | Honest gap — remains open |
+Per the audit perimeter narrowing above, the "in-note" statuses below
+record what the local algebra and runner show; none of the §1-§4 rows
+is independently carried by a retained one-hop authority in this note,
+so each is conditional pending a direct retained dependency or runner.
+The global closure-statement is held open.
+
+| Claim | In-note status (conditional) |
+|-------|------------------------------|
+| Cl⁺(3) R-sector = two j=1/2 Kramers doublets | Structural identification (conditional pending direct retained dep/runner) |
+| m_DA = −√(2/3) from doublet A equal-diagonal | Algebraic claim (conditional pending direct retained dep/runner) |
+| E1 = 2·SELECTOR → \|H_frozen[0,2]\| = GAMMA = 1/2 | Algebraic cancellation claim (conditional pending direct retained dep/runner) |
+| Baryon Schur complement ∝ −I₃ (m-independent) | Structural claim from S₃ symmetry + T_m variation check (conditional pending retained 4×4 derivation) |
+| SU(3) coupling modifications miss m_* by > 5% | Numeric claim (conditional pending retained Cl(3)→SM-embedding theorem) |
+| No eigenvalue degeneracy crossing at m_* | Numeric claim (conditional pending direct retained runner) |
+| m_* = −1.1605 NOT derivable from Cl(3) alone (global closure-statement) | Open gate — *not* a retained closed bounded theorem in this note; held open per audit perimeter narrowing pending §5 open-route closures |
 
 ## main
 
@@ -204,7 +230,7 @@ the parent mass-tower note.
 | §4 m_* from H_* witness | kappa_* ≈ −0.608, m_* ≈ −1.1605 | parent note marks H_* witness as G1 phenomenological pin, **not** Cl(3)-derived | Conditional pending first-principles kappa_* derivation (open) |
 | §5 Open routes (a),(b),(c) | full 4×4, transport 4π/√6, kappa_* derivation | explicitly open / no derivation | Open-gate inventory only |
 
-The §6 "global Cl(3) alone cannot derive m_*" closure-statement is
+The global "Cl(3) alone cannot derive m_*" closure-statement is
 treated, per the prior feedback, as an *open selector-gap inventory*,
 not as a closed bounded theorem. Promotion would require either a
 retained theorem excluding the §5 open routes or direct retained
