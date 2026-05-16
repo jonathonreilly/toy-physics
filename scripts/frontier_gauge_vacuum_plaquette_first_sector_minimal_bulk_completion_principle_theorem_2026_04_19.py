@@ -11,10 +11,28 @@ on the first-symmetric support. Inside the exact Wilson factorized class
 admissible extensions are the nonnegative conjugation-symmetric full packets
 extending that retained data.
 
-For the explicit witness tails used by the source note, the zero extension is
-the coefficientwise least extension and minimizes the sampled positive
-bulk-tail functionals. The universal Loewner-minimal theorem for arbitrary
-admissible tails is not checked here and remains an open derivation gap.
+This runner certifies bounded, witness-restricted facts only:
+
+1. The retained packet `rho_ret` produced by the local `completed_sector_data`
+   import is normalized, conjugation-symmetric, and zero on the `(1,1)`
+   slot.  No substring import of upstream prose is used to substantiate this
+   property; the assertions are verified directly on the numeric packet.
+
+2. The zero-extension `rho_0` of `rho_ret` to all higher weights produces a
+   self-adjoint, conjugation-symmetric transfer matrix on the truncated
+   dominant-weight box.  This existence-of-one-explicit-extension fact is
+   verified by direct numeric computation on the transfer.
+
+3. For the two explicit witness tails A and B and for a randomized sweep of
+   admissible nonnegative tails inside the cone, the inequality
+   `rho_0 + delta >= rho_0` holds coefficientwise; this is the algebraic
+   identity `delta >= 0 ==> rho_0 + delta >= rho_0` and is what the runner
+   actually checks.  The runner does **not** claim universal Loewner
+   monotonicity for arbitrary admissible tails: that universal step is
+   recorded in the source note as an open derivation gap.
+
+4. For the two named witness tails A and B, the Loewner increment is PSD,
+   and the four sampled positive bulk-tail functionals strictly increase.
 """
 
 from __future__ import annotations
@@ -60,10 +78,6 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
     return condition
 
 
-def read(rel_path: str) -> str:
-    return (ROOT / rel_path).read_text()
-
-
 def retained_packet() -> tuple[np.ndarray, float]:
     v_min, _z_min = completed_sector_data()
     z00 = float(v_min[0])
@@ -87,6 +101,30 @@ def add_tail(
     for w, val in updates.items():
         rho[index[w]] += float(val)
     return rho
+
+
+def random_nonneg_tail(
+    weights: list[tuple[int, int]],
+    index: dict[tuple[int, int], int],
+    rng: np.random.Generator,
+) -> np.ndarray:
+    """Sample a conjugation-symmetric nonnegative tail on the non-retained
+    weights.  Conjugation symmetry: `(p,q)` and `(q,p)` share the same
+    coefficient."""
+    retained = {index[w] for w in RETAINED_SUPPORT}
+    delta = np.zeros(len(weights), dtype=float)
+    visited = set()
+    for i, (p, q) in enumerate(weights):
+        if i in retained or i in visited:
+            continue
+        value = float(rng.uniform(0.0, 0.05))
+        delta[i] = value
+        j = index[(q, p)]
+        if j != i:
+            delta[j] = value
+            visited.add(j)
+        visited.add(i)
+    return delta
 
 
 def tail_metrics(
@@ -125,8 +163,6 @@ def main() -> int:
     print("  one bounded zero-extension witness inside the factorized cone, while")
     print("  the universal Loewner/completion principle remains open?")
 
-    truncated_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md")
-    extension_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md")
     rho_ret, z00 = retained_packet()
     _jmat, weights, index = build_recurrence_matrix(5)
     rho0 = zero_extension(weights, index, rho_ret)
@@ -150,40 +186,77 @@ def main() -> int:
     print(f"  witness tail B metrics                      = {mb}")
     print()
 
+    # Check 1: numeric properties of the retained packet, computed locally
+    # (no substring import of upstream prose).
+    rho_00 = float(rho_ret[0])
+    rho_10 = float(rho_ret[1])
+    rho_01 = float(rho_ret[2])
+    rho_11 = float(rho_ret[3])
     check(
-        "The truncated-packet theorem already fixes one exact retained packet rho_ret from the completed first-sector triple",
-        "rho_ret" in truncated_note and "completed first-sector triple" in truncated_note,
+        "Retained packet rho_ret is normalized, conjugation-symmetric, zero on (1,1), nonnegative on (1,0)/(0,1)",
+        abs(rho_00 - 1.0) < 1.0e-12
+        and abs(rho_10 - rho_01) < 1.0e-12
+        and rho_10 >= 0.0
+        and rho_01 >= 0.0
+        and abs(rho_11) < 1.0e-12,
+        f"(rho_00,rho_10,rho_01,rho_11)=({rho_00:.6f},{rho_10:.6f},{rho_01:.6f},{rho_11:.6f})",
     )
+
+    # Check 2: the zero-extension produces a self-adjoint, conjugation-symmetric
+    # transfer on the truncated dominant-weight box (verified by direct numeric
+    # symmetry, not by substring matching against an upstream note).
+    sym_err = float(np.max(np.abs(t0 - t0.T)))
+    conj_err = 0.0
+    for i, (p, q) in enumerate(weights):
+        j = index[(q, p)]
+        conj_err = max(conj_err, abs(float(rho0[i]) - float(rho0[j])))
     check(
-        "The zero-extension theorem already proves that rho_ret admits one explicit full nonnegative conjugation-symmetric extension inside the canonical Wilson factorized class",
-        "Extend it by zero" in extension_note and "factorized class" in extension_note,
+        "Zero-extension transfer t0 is self-adjoint and the underlying packet is conjugation-symmetric on the truncated box",
+        sym_err < 1.0e-10 and conj_err < 1.0e-12,
+        f"(sym_err,conj_err)=({sym_err:.3e},{conj_err:.3e})",
     )
+
+    # Check 3: the two named witness tails add nonzero higher-weight mass.
     check(
-        "The explicit witness tails add nonzero higher-weight mass above the retained packet",
+        "The two explicit witness tails A and B add nonzero higher-weight mass above the retained packet",
         ma["tail_support"] > 0 and mb["tail_support"] > 0
         and ma["tail_mass"] > 0.0 and mb["tail_mass"] > 0.0,
         f"(supportA,supportB,massA,massB)=({ma['tail_support']},{mb['tail_support']},{ma['tail_mass']:.3e},{mb['tail_mass']:.3e})",
     )
+
+    # Check 4: witness-restricted coefficientwise minimality.  The runner does
+    # NOT claim universal coefficientwise uniqueness across all admissible
+    # extensions.  This is the witness-restricted statement: the two named
+    # tails are nonneg and dominate rho_0 coefficientwise.
     check(
-        "Among admissible nonnegative extensions, the zero extension is the unique coefficientwise least element",
+        "On the two named witness tails A and B, the zero extension is coefficientwise <= the extended packet (witness-restricted, not universal)",
         m0["tail_mass"] == 0.0 and ma["tail_min"] >= -1.0e-14 and mb["tail_min"] >= -1.0e-14,
         f"(tail_mass0,tail_minA,tail_minB)=({m0['tail_mass']:.3e},{ma['tail_min']:.3e},{mb['tail_min']:.3e})",
     )
+
+    # Check 5: PSD Loewner increment on the two named witness tails.
+    eig_a = float(np.min(np.linalg.eigvalsh(delta_a)))
+    eig_b = float(np.min(np.linalg.eigvalsh(delta_b)))
     check(
-        "The two explicit witness tails produce positive-semidefinite Loewner increments",
-        float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
-        and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12,
-        f"(eigminA,eigminB)=({float(np.min(np.linalg.eigvalsh(delta_a))):.3e},{float(np.min(np.linalg.eigvalsh(delta_b))):.3e})",
+        "The two explicit witness tails A and B produce positive-semidefinite Loewner increments (witness-restricted, not universal)",
+        eig_a > -1.0e-12 and eig_b > -1.0e-12,
+        f"(eigminA,eigminB)=({eig_a:.3e},{eig_b:.3e})",
     )
+
+    # Check 6: for the two named witness tails, the zero extension is Loewner-
+    # minimal relative to those tested positive increments.  Witness-restricted.
     check(
-        "For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested positive increments",
-        float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
-        and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12
+        "For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested increments (witness-restricted, not universal)",
+        eig_a > -1.0e-12
+        and eig_b > -1.0e-12
         and m0["tail_mass"] == 0.0,
-        f"||T_A-T_0||={np.linalg.norm(delta_a):.3e}",
+        f"||T_A-T_0||={np.linalg.norm(delta_a):.3e}, ||T_B-T_0||={np.linalg.norm(delta_b):.3e}",
     )
+
+    # Check 7: the zero extension minimizes the sampled positive bulk-tail
+    # functionals: total mass, weighted mass, squared l2 mass, support size.
     check(
-        "The zero extension minimizes the sampled positive bulk-tail functionals: total mass, weighted mass, squared l2 mass, and support size",
+        "The zero extension minimizes the four sampled positive bulk-tail functionals on the two witness tails (witness-restricted, not universal)",
         ma["tail_mass"] > 0.0
         and mb["tail_mass"] > 0.0
         and ma["tail_dim_mass"] > 0.0
@@ -192,19 +265,47 @@ def main() -> int:
         and mb["tail_l2_sq"] > 0.0
         and ma["tail_support"] > 0
         and mb["tail_support"] > 0,
-        f"(massA,massB)=({ma['tail_mass']:.3e},{mb['tail_mass']:.3e})",
+        f"(massA,massB,dimMassA,dimMassB)=({ma['tail_mass']:.3e},{mb['tail_mass']:.3e},{ma['tail_dim_mass']:.3e},{mb['tail_dim_mass']:.3e})",
+    )
+
+    # Check 8: algebraic coefficientwise step on a randomized sweep of
+    # admissible nonneg conjugation-symmetric tails.  This certifies the
+    # algebraic identity `delta >= 0 ==> rho_0 + delta >= rho_0` rather than
+    # universal Loewner monotonicity, which is recorded as an open gap.
+    rng = np.random.default_rng(20260516)
+    n_samples = 64
+    coeff_min_violations = 0
+    nonneg_violations = 0
+    for _ in range(n_samples):
+        delta = random_nonneg_tail(weights, index, rng)
+        if float(np.min(delta)) < -1.0e-14:
+            nonneg_violations += 1
+        rho_sample = rho0 + delta
+        m_sample = tail_metrics(rho_sample, rho0, weights, index)
+        if m_sample["tail_min"] < -1.0e-14:
+            coeff_min_violations += 1
+    check(
+        "Randomized sweep (n=64) of admissible nonneg conjugation-symmetric tails: delta >= 0 implies rho_0 + delta >= rho_0 coefficientwise",
+        coeff_min_violations == 0 and nonneg_violations == 0,
+        f"(coeff_violations,nonneg_violations)=({coeff_min_violations},{nonneg_violations})",
     )
 
     print("\n" + "=" * 118)
     print("RESULT")
     print("=" * 118)
     print("  Bounded witness result:")
-    print("    - rho_ret has an explicit zero extension in the canonical factorized class")
-    print("    - the two witness positive tails remain above that zero extension")
+    print("    - rho_ret is a normalized, conjugation-symmetric, (1,1)-zero packet")
+    print("      (numeric properties checked directly, no substring import)")
+    print("    - the zero-extension produces a self-adjoint, conjugation-symmetric")
+    print("      transfer on the truncated dominant-weight box (numeric check)")
+    print("    - the two witness positive tails remain above the zero extension")
     print("      in coefficient order and in the tested Loewner increments")
-    print("    - the zero extension minimizes the sampled positive tail functionals")
-    print("    - the universal Loewner-minimal theorem for arbitrary admissible tails")
-    print("      remains an open derivation gap")
+    print("    - the zero extension minimizes the four sampled positive tail")
+    print("      functionals on the two witness tails")
+    print("    - randomized sweep certifies the algebraic identity")
+    print("      delta >= 0 ==> rho_0 + delta >= rho_0 coefficientwise")
+    print("    - the universal Loewner-minimal theorem for arbitrary admissible")
+    print("      tails remains an open derivation gap (NOT closed by this runner)")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
