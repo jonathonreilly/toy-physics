@@ -1,7 +1,31 @@
 # Cosmology Scale Identification and Reduction
 
-**Date:** 2026-04-15
-**Status:** bounded/conditional cosmology-lane synthesis on `main`
+**Date:** 2026-04-15 (audit-prep runner-registration + cite-chain rigorize 2026-05-16)
+**Status:** bounded/conditional cosmology-lane synthesis on `main`. Current ledger
+`audit_status: unaudited`, `effective_status: unaudited`, `claim_type:
+bounded_theorem` (previous `audited_conditional` verdict from 2026-05-05
+was invalidated when criticality increased and the row is queued for
+re-audit; the prior verdict's `missing_bridge_theorem` repair target
+drives this rigorize pass). Bounded scope is unchanged; runner
+registration + extended cite-chain are graph-bookkeeping only.
+**Primary runner:** `scripts/frontier_cosmology_scale_identification.py`
+**Claim type:** bounded_theorem
+**Claim scope:** the algebraic reduction recorded in §§1–3 — `Lambda = 3/R_Lambda^2 = 3 H_inf^2/c^2`,
+`d ln rho_Lambda / d ln a = 0 ==> w = -1`, and `Omega_Lambda = (H_inf/H_0)^2 = (R_H(now)/R_Lambda)^2` —
+on the post-closure GR/QG surface, treating the upstream same-surface scale identification and
+matter-content bridge as cite-chain dependencies (see "Audit dependency repair links" below) rather
+than as first-principles closures within this packet.
+**Upstream authorities (current ledger statuses, not assertions of retainedness):**
+[`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+(unaudited),
+[`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md)
+(audited_conditional),
+[`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+(unaudited),
+[`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
+(unaudited),
+[`DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`](DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
+(unaudited).
 
 ## Verdict
 
@@ -142,61 +166,142 @@ bounded synthesis reducing `Lambda`, `w = -1`, and present-day
 `Omega_Lambda` to a fixed-gap de Sitter scale identification plus an
 explicitly-open matter-content bridge.
 
-One-hop authorities cited:
+One-hop authorities cited (extended 2026-05-16 to also wire the
+matter-content bridge candidate authority that reduces `Omega_m` to the
+single ratio `H_inf/H_0`):
 
 - [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
-  — currently `audited_conditional` (audit row:
+  — current ledger status `unaudited` (audit row:
   `cosmological_constant_spectral_gap_identity_theorem_note`). This is
-  the upstream conditional authority for the fixed-gap-to-de-Sitter
+  the upstream candidate authority for the fixed-gap-to-de-Sitter
   scale matching `Lambda = 3/R_Lambda^2 = 3 H_inf^2 / c^2` used in §1
-  of this note.
-- [`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md) — currently
-  `audited_conditional` (audit row: `s3_cap_uniqueness_note`). This is
-  the upstream conditional authority for the topology side of the
+  of this note. That note carries a two-leg structural identity proof
+  (Leg A vacuum-Einstein trace contraction; Leg B Lichnerowicz-Obata)
+  meeting at `3/R^2`, and its companion runner reports PASS=22/0.
+- [`S3_CAP_UNIQUENESS_NOTE.md`](S3_CAP_UNIQUENESS_NOTE.md) — current
+  ledger status `audited_conditional` (audit row: `s3_cap_uniqueness_note`).
+  This is the upstream conditional authority for the topology side of the
   retained `lambda_1(S^3_R) = 3/R^2` spectral-gap input cited in §1.
-- The `Omega_m` matter-content bridge required to promote present-day
-  `Omega_Lambda` is explicitly named as an open registration target in
-  §"Honest Remaining Gap" item 2. No retained one-hop authority for
-  the matter-content side is currently registered. The audit verdict's
-  `missing_bridge_theorem` flag for `Omega_m` corresponds to this
-  acknowledged open dependency rather than a missing citation.
+- [`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+  — current ledger status `unaudited` (audit row:
+  `omega_lambda_matter_bridge_theorem_note_2026-04-22`). This is the
+  upstream candidate authority for the §3 matter-content bridge: it
+  derives the exact structural identity `Omega_Lambda = (H_inf/H_0)^2`
+  on the same-surface retained vacuum sector, and under flat FRW
+  collapses `Omega_m = 1 - (H_inf/H_0)^2 - Omega_r` to a single open
+  ratio `H_inf/H_0`. Its companion runner is
+  `scripts/frontier_omega_lambda_matter_bridge.py`. This citation
+  reduces the `missing_bridge_theorem` repair target for `Omega_m`
+  from "no upstream authority cited" to "one upstream authority cited,
+  itself currently `unaudited`, that collapses the bridge to a single
+  open ratio". The remaining un-discharged piece is a retained derivation
+  of `H_inf/H_0` (or equivalently `R_Lambda H_0 / c`), which is
+  explicitly named as the open registration target in §"Honest Remaining
+  Gap" item 1.
+- [`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
+  — current ledger status `unaudited` (audit row:
+  `cosmological_constant_result_2026-04-12`). This is the upstream
+  bounded numerical companion for the cosmological-constant value used
+  as the comparator anchor in the runner's `LAMBDA_OBS` and
+  `OMEGA_LAMBDA_OBS` inputs. The bounded numerical comparison is
+  unaffected by this rigorize pass.
+- [`DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`](DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
+  — current ledger status `unaudited` (audit row:
+  `dark_energy_eos_retained_corollary_theorem_note`). This is the
+  upstream candidate authority for the §2 `w = -1` corollary; it is
+  the same-surface EOS face of the fixed-gap vacuum-scale theorem.
 - The `H_inf` versus observed `H_0` first-principles matching (§"Honest
-  Remaining Gap" item 1) is also explicitly named as an open
-  registration target. It is not closed by the cited spectral-gap
-  authority; the cited authority closes the same-surface algebraic
-  identification but not the asymptotic-vs-present-day Hubble matching.
+  Remaining Gap" item 1) remains the residual `missing_bridge_theorem`
+  registration target after the §3 matter-content bridge candidate
+  authority above is cited. The cited matter-bridge authority collapses
+  `Omega_m` to that single ratio but does not derive the ratio itself.
 
-Because both cited one-hop authorities are themselves
-`audited_conditional`, this note's effective status is capped at
-`audited_conditional` under the standard cite-chain rule, matching the
-live audit verdict. The two open registration targets above are real
-gaps and remain class D (gap) entries; they are flagged explicitly so
-later audit sweeps can wire them to retained authorities once those
-authorities exist.
+Because the cited one-hop authorities are themselves either
+`audited_conditional` or `unaudited`, this note's effective status is
+capped at `audited_conditional` under the standard cite-chain rule,
+matching the live audit verdict. The residual single-ratio gap above
+is a real open class D (gap) entry and is flagged explicitly so later
+audit sweeps can wire it to a retained authority once one exists.
 
 ## Honest auditor read
 
-The 2026-05-05 audit recorded this row as `audited_conditional` with the
-substantive observation that the algebraic reduction is internally
+The 2026-05-05 audit recorded this row as `audited_conditional` (since
+invalidated by a criticality bump and currently re-queued as
+`unaudited`) with two specific complaints:
+
+1. "No cited authority or runner is provided, so the claimed same-surface
+   identification cannot be verified as a retained first-principles
+   derivation."
+2. The matter-content bridge for `Omega_m` is left open without an
+   explicit upstream registration.
+
+This rigorize pass (2026-05-16) addresses (1) by adding a `**Primary
+runner:**` header line so the audit citation-graph extractor picks up
+`scripts/frontier_cosmology_scale_identification.py` as the row's
+registered runner artifact (live runner reports PASS=7/0, see "Runner
+results" section below), and by explicitly naming five upstream
+candidate authorities in the header + cite-chain section. It addresses
+(2) by adding
+[`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+as the one-hop matter-bridge candidate authority — this collapses the
+matter-content bridge to a single open ratio `H_inf/H_0` on the same-
+surface vacuum sector, which is the strongest available upstream
+authority on the current package surface.
+
+The substantive observation that the algebraic reduction is internally
 consistent — `Lambda = 3/R_Lambda^2`, `rho_Lambda` constant gives
 `w = -1`, and `Omega_Lambda = H_inf^2/H_0^2` follows under flatness —
-but the same-surface scale identification and the matter-content bridge
-are imported rather than derived from retained primitives within the
-restricted packet. The cite-chain repair above wires the two
-structurally available upstream conditional authorities
-(`cosmological_constant_spectral_gap_identity_theorem_note`,
-`s3_cap_uniqueness_note`) and explicitly registers the matter-content
-bridge and `H_inf`/`H_0` matching as open registration targets. Effective
-status remains `audited_conditional`. The note's audit_status is
-unchanged by this addendum.
+is unchanged by this pass. None of the cited upstream candidate
+authorities currently carry a retained-grade ledger status; effective
+status remains `audited_conditional` under the cite-chain rule, and the
+note's `audit_status` is unchanged. The residual gap (a retained
+derivation of `H_inf/H_0`) is unchanged and remains an explicit class D
+(gap) entry.
 
 ## Scope of this rigorization
 
-This rigorization is class B (graph-bookkeeping citation) plus class D
-(gap registration). It does not change any algebraic content or the
-load-bearing step classification. It records the upstream authorities
-the audit verdict expected and explicitly registers the two open
-matter-content / asymptotic-Hubble bridges. Mirrors the live
-cite-chain pattern used by the
+This rigorization is class B (graph-bookkeeping citation + runner
+registration) plus class D (residual-gap registration). It does not
+change any algebraic content, claim type, or load-bearing step
+classification. It addresses the two specific complaints in the audit
+verdict's `verdict_rationale` field (no runner cited; no matter-bridge
+authority cited) by registering an existing live runner and an existing
+candidate authority. Mirrors the live cite-chain pattern used by the
 `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md` cluster
-(commit `02ad4fadd`).
+(commit `02ad4fadd`) and the runner-registration header pattern used by
+[`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+and
+[`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`](OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md).
+
+## Runner results
+
+`scripts/frontier_cosmology_scale_identification.py` (the registered
+primary runner) verifies seven algebraic checks on the post-closure
+GR/QG surface, using the observed `H_0 = 67.4 km/s/Mpc`, `Lambda_obs =
+1.1056 x 10^-52 m^-2`, `Omega_Lambda_obs = 0.685`, and the current
+derived `Omega_b = 0.0492`, `Omega_DM/Omega_b = 5.3753`, `Omega_r =
+9.15 x 10^-5` as inputs:
+
+1. **de Sitter scale identification** — `Lambda = 3 H_inf^2 / c^2 = 3 /
+   R_Lambda^2` exactly (algebraic identity in `R_Lambda`).
+2. **`w = -1` from fixed gap** — fixed `R_Lambda` means
+   `d ln rho_Lambda / d ln a = 0` and hence `w = -1` exactly.
+3. **present `Omega_Lambda` from scale ratio** — three equivalent forms
+   `Lambda c^2 / (3 H_0^2)`, `(H_inf/H_0)^2`, `(R_H(now)/R_Lambda)^2`,
+   and `rho_Lambda / rho_crit` all agree to machine precision.
+4. **observed `Omega_Lambda` consistency** — the algebraic form lands
+   within 2% of the Planck 2018 `Omega_Lambda = 0.685` anchor when
+   evaluated at the observed inputs.
+5. **matter-bridge reduction** — the flat-FRW identity
+   `Omega_m = 1 - Omega_Lambda - Omega_r` holds exactly.
+6. **current derived `Omega_m` feeds `Omega_Lambda`** — the current
+   bounded DM/baryon chain derives `Omega_m = 0.3137` and hence
+   `Omega_Lambda = 0.6862`, within `5 x 10^-3` of the Planck anchor.
+7. **no separate `w` blocker remains** — `w = -1` and `Lambda` live on
+   the same fixed-gap/de-Sitter scale surface; they are not independent
+   blockers.
+
+Result: `SUMMARY: PASS=7 FAIL=0`. The runner verifies the algebraic
+identities the note relies on; it does not (and is not intended to)
+derive the same-surface scale matching or the matter-content bridge
+from first principles. Those remain the cite-chain dependencies above.
