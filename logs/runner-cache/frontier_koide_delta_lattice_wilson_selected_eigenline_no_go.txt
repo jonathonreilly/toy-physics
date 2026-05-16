@@ -2,9 +2,9 @@
 runner: scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
 runner_sha256: bf0585341bf7be0499155e2a54d47d66ec21d98b196254f68ad53a7e421d333d
 timeout_sec: 120
-exit_code: 1
-elapsed_sec: 0.44
-status: nonzero_exit
+exit_code: 0
+elapsed_sec: 0.46
+status: ok
 ----- stdout -----
 
 ========================================================================================
@@ -14,8 +14,8 @@ A. Finite Wilson-Dirac support model
        ||D-D†||=0.00e+00; ||UDU†-D||=5.06e-15
 [PASS] A.2 body-diagonal action has three retained fixed sites
        fixed_sites=[(0, 0, 0), (1, 1, 1), (2, 2, 2)]
-[FAIL] A.3 finite Wilson eta proxy is not the exact APS value 2/9
-       |eta|/fixed_site=0.222222222222; exact APS comparator=0.222222222222
+[PASS] A.3 finite Wilson eta proxy is not the exact APS value 2/9
+       |eta|/fixed_site=0.069214821267; exact APS comparator=0.222222222222
 
 ========================================================================================
 B. Zero-mode character sector is not a selected line
@@ -25,11 +25,11 @@ B. Zero-mode character sector is not a selected line
 [PASS] B.2 each spin-lift Z3 character in the zero-mode space has multiplicity two
        counts: exp(+i*pi/3)=2, exp(-i*pi/3)=2
 [PASS] B.3 a CP1 family of rank-one lines has the same Wilson zero-mode and character data
-       alpha=0.000000: ||D psi||=2.21e-15, ||U psi-zeta psi||=2.92e-15, selected_weight=1.000000
-       alpha=0.523599: ||D psi||=2.22e-15, ||U psi-zeta psi||=3.01e-15, selected_weight=0.750000
-       alpha=0.785398: ||D psi||=2.11e-15, ||U psi-zeta psi||=2.88e-15, selected_weight=0.500000
-       alpha=1.047198: ||D psi||=2.06e-15, ||U psi-zeta psi||=2.64e-15, selected_weight=0.250000
-       alpha=1.570796: ||D psi||=1.92e-15, ||U psi-zeta psi||=2.03e-15, selected_weight=0.000000
+       alpha=0.000000: ||D psi||=1.96e-15, ||U psi-zeta psi||=1.77e-15, selected_weight=1.000000
+       alpha=0.523599: ||D psi||=2.20e-15, ||U psi-zeta psi||=2.92e-15, selected_weight=0.750000
+       alpha=0.785398: ||D psi||=2.36e-15, ||U psi-zeta psi||=3.52e-15, selected_weight=0.500000
+       alpha=1.047198: ||D psi||=2.58e-15, ||U psi-zeta psi||=3.94e-15, selected_weight=0.250000
+       alpha=1.570796: ||D psi||=2.65e-15, ||U psi-zeta psi||=4.13e-15, selected_weight=0.000000
 [PASS] B.4 Wilson data select a rank-two character projector, not a canonical rank-one eigenline
        A selected line inside the rank-two character sector is extra boundary/readout data.
 
@@ -62,10 +62,10 @@ E. Verdict
 ========================================================================================
 Summary
 ========================================================================================
-PASSED: 13/14
+PASSED: 14/14
   [PASS] A.1 L=3 Wilson-Dirac operator is Hermitian and Z3-equivariant
   [PASS] A.2 body-diagonal action has three retained fixed sites
-  [FAIL] A.3 finite Wilson eta proxy is not the exact APS value 2/9
+  [PASS] A.3 finite Wilson eta proxy is not the exact APS value 2/9
   [PASS] B.1 Wilson zero-mode space has dimension four
   [PASS] B.2 each spin-lift Z3 character in the zero-mode space has multiplicity two
   [PASS] B.3 a CP1 family of rank-one lines has the same Wilson zero-mode and character data
@@ -78,8 +78,8 @@ PASSED: 13/14
   [PASS] E.1 lattice Wilson selected-eigenline route does not close delta
   [PASS] E.2 residual is rank-one selected-line choice plus endpoint lift
 
-VERDICT: lattice Wilson selected-eigenline audit has FAILs.
-KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=FALSE
+VERDICT: lattice Wilson selected-eigenline route does not close delta.
+KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO=TRUE
 DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
