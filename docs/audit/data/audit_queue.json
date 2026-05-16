@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 732,
+    "critical": 731,
     "high": 34,
     "leaf": 260,
     "medium": 152
@@ -3749,29 +3749,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
-      "claim_scope": null,
-      "claim_type": "no_go",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cpt_exact_note"
-      ],
-      "direct_in_degree": 1,
-      "effective_status": "unaudited",
-      "load_bearing_score": 10.1,
-      "note_path": "docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_parity_operator_basis_dimension5_lv_no_go.py",
-      "transitive_descendants": 775
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -35647,5 +35624,5 @@
     }
   ],
   "ready_count": 0,
-  "total_pending": 1178
+  "total_pending": 1177
 }

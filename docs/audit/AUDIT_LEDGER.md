@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1174 |
+| unaudited | 1173 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 192 |
+| ~~audited_conditional~~ | 193 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 520 |
-| `audited_conditional` | 192 |
+| `audited_conditional` | 193 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1287 |
+| `unaudited` | 1286 |
 
 | claim_type | count |
 |---|---:|
@@ -778,6 +778,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `nn_lattice_rescaled_kernel_identification_note_2026-05-10` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
+| `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `persistent_object_blended_readout_outer_transfer_sweep_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
@@ -7942,6 +7943,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At detector NL=30, overlap(origin, z=2) = 0.42 (distinguishable), and gravitational deflections range from +0.0085 to +0.0296 across packets z in {-2,0,1,2,3}, demonstrating that packet identity carries physics; width converges toward propagator natural mode with 17% residual.  _(class `C`)_
 - **chain closes:** True — The bounded Tier A claim closes by direct numerical measurement on packet_memory.py: overlap matrix, NL-scaling of overlap, and per-packet gravitational deflection. Tier B is honestly reported as partial; Tier C is honestly reported as open. No tier is over-promoted.
 - **rationale:** Within the 'detector-readable packet memory' bounded scope (Tier A positive, Tier B partial, Tier C open), the chain closes by direct measurement. The note correctly disclaims persistent localized objects beyond the centroid-memory regime, matching the bounded interpretation.
+- **auditor confidence:** high
+
+### `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02`
+
+- **Note:** [`PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md`](../../docs/PARITY_OPERATOR_BASIS_DIMENSION5_LV_NO_GO_THEOREM_NOTE_2026-05-02.md)
+- **claim_type:** `no_go`
+- **claim_scope:** Audited the bounded no-go claim that the four listed single-flavor local dimension-5 SME-style fermion-bilinear LV structures with an unpaired spatial index are P-odd on the staggered Cl(3)/Z^3 even-torus framework.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-031007-77669d3a-parity_operator_basis_di-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Each candidate dimension-5 SME-style LV bilinear has net combined staggered-parity weight -1, so its P-symmetric projection vanishes and a P-symmetric action requires c_O = 0.  _(class `A`)_
+- **chain closes:** False — The parity-weight counting is an algebraic check, but the restricted packet's only upstream framework authority is CPT_EXACT_NOTE with effective_status audited_conditional and explicit pending/open bridge language. The closure therefore depends on a non-retained upstream parity/CPT framework authority.
+- **rationale:** The runner performs real finite algebraic checks rather than merely printing constants: it builds the staggered hopping operator, gamma matrices, parity weights, and P-symmetric projections, giving 11 class-A passes and no external comparator checks. The load-bearing step is algebraic parity classification of the four covered operator representatives. However, the only cited authority is marked audited_conditional and contains explicit audit-pending/open bridge language, so retained status cannot propagate through this dependency. The audit therefore cannot land audited_clean under the tie-breaking and conditional-dependency rules.
+- **open / conditional deps cited:**
+  - `CPT_EXACT_NOTE.md`
 - **auditor confidence:** high
 
 ### `persistent_inertial_object_probe_note`
