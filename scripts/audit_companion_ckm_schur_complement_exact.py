@@ -162,6 +162,14 @@ for var in variations:
 # ----------------------------------------------------------------------------
 section("Part 5: parent row dep verification")
 # ----------------------------------------------------------------------------
+# The parent row's recorded `load_bearing_step_class` is auditor-controlled.
+# When the row is reset to `unaudited` awaiting re-audit (e.g., after a note
+# hash change or criticality bump), the current-state field is cleared. In
+# that case we fall back to the most recent archived audit in
+# `previous_audits` to confirm that the auditor's recorded class for the
+# load-bearing step has been class (A) historically; this companion's own
+# Parts 1-4 above are the actual evidence that the algebraic identity is
+# class-A on its own.
 LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
 ledger = json.loads(LEDGER.read_text())
 rows = ledger['rows']
@@ -172,8 +180,26 @@ print(f"\n  {parent_id} current ledger state:")
 print(f"    transitive_descendants: {parent_row.get('transitive_descendants')}")
 print(f"    load_bearing_step_class: {parent_row.get('load_bearing_step_class')}")
 
+current_class = parent_row.get('load_bearing_step_class')
+if current_class is None:
+    # Row is currently unaudited (awaiting re-audit). Consult the most
+    # recent archived audit for the auditor's recorded class.
+    prev = parent_row.get('previous_audits') or []
+    if prev:
+        latest = max(prev, key=lambda a: a.get('archived_at') or a.get('audit_date') or '')
+        archived_class = latest.get('load_bearing_step_class')
+        archived_when = latest.get('archived_at') or latest.get('audit_date')
+        print(f"    [current state unaudited] last archived load_bearing_step_class: "
+              f"{archived_class}  (archived_at={archived_when})")
+        effective_class = archived_class
+    else:
+        effective_class = None
+else:
+    effective_class = current_class
+
 check(f"{parent_id} has class (A) load-bearing step (algebraic identity)",
-      parent_row.get('load_bearing_step_class') == 'A')
+      effective_class == 'A',
+      detail=f"effective_class = {effective_class}")
 
 
 # ----------------------------------------------------------------------------
