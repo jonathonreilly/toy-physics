@@ -5961,25 +5961,25 @@
   "queue": [
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
       "claim_id": "pmns_graph_axis_to_active_lane_bridge_note",
-      "claim_scope": null,
+      "claim_scope": "Audited the finite-dimensional bridge from the selected hw=1 graph-axis residual S_3 transposition to the corresponding permutation action on Herm(V_1), in particular P_23 after relabeling the selected axis to e_1.",
       "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
+      "claim_type_provenance": "audited_pending_cross_confirmation",
       "criticality": "critical",
       "criticality_rank": 3,
-      "cross_confirmation_status": null,
+      "cross_confirmation_status": "awaiting_second",
       "deps": [
         "z2_hw1_mass_matrix_parametrization_note",
         "site_phase_cube_shift_intertwiner_note",
         "graph_first_selector_derivation_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unaudited",
+      "effective_status": "audit_in_progress",
       "load_bearing_score": 10.117,
       "note_path": "docs/PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md",
-      "queue_reason": "unaudited",
+      "queue_reason": "audit_in_progress",
       "ready": true,
       "runner_path": "scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py",
       "transitive_descendants": 784

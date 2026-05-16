@@ -15,7 +15,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
-| 1 | `pmns_graph_axis_to_active_lane_bridge_note` | bounded_theorem | unaudited | critical | 784 | 10.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py` |
+| 1 | `pmns_graph_axis_to_active_lane_bridge_note` | bounded_theorem | audit_in_progress | critical | 784 | 10.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py` |
 | 2 | `hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16` | positive_theorem | unaudited | critical | 783 | 10.12 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_hierarchy_matsubara_free_energy_density_narrow.py` |
 | 3 | `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | unaudited | critical | 782 | 12.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_q_readout_factorization_theorem.py` |
 | 4 | `s3_boundary_link_theorem_note` | bounded_theorem | unaudited | critical | 782 | 12.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_s3_boundary_link_theorem.py` |
