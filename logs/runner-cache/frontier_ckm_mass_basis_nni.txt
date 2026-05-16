@@ -1,50 +1,69 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_ckm_mass_basis_nni.py
-runner_sha256: b1588dc14d0b3d846b9ea652ccad2b5b112656d9718d782dc1d71534431be8f0
+runner_sha256: 545453b4272f2665125efb9b5dd41036759d638f9d8d1c9ebcf8e602443fa7bd
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.75
+elapsed_sec: 0.34
 status: ok
 ----- stdout -----
 ========================================================================
-CKM Mass-Basis NNI: V_ub from Schur Complement + Mass-Ratio Suppression
+CKM Mass-Basis NNI: structural identities + calibrated illustration
 ========================================================================
-  Closing the factor-6 gap in V_ub via mass-eigenvalue NNI normalization
+  Source theorems (T1-T4) are pure algebra and use no imports.
+  Parts 1-7 are an imports-dependent illustration (PDG masses,
+  PDG CKM, fitted O(1) coefficients from the Schur runner).
 
 
 ========================================================================
-PART 1: Mass-Ratio Suppression Factors
+PART 0: SOURCE THEOREMS T1-T4  (structural, axiom-free)
 ========================================================================
+  No PDG inputs are read in this block.
+  Sampling 200 random ordered mass triples and coefficient pairs.
+  rng_seed = 20260516
 
-  Up-sector mass ratios:
+  Worst relative deviation across 200 random triples:
+    T1 (chain rule):              3.375e-16
+    T2 (geom Schur normalization): 5.407e-16
+    T3 (geom -> phys closure):     3.875e-16
+    T4 (gap = sqrt(m_1/m_3)):      1.741e-16
+  [PASS] T1: chain rule sqrt(m1/m3) = sqrt(m1/m2)*sqrt(m2/m3) holds identically  (worst relative deviation = 3.375e-16)
+  [PASS] T2: geom Schur identity M_13^geom * m_2 = M_12^geom * M_23^geom  (worst relative deviation = 5.407e-16)
+  [PASS] T3: c_13^phys = c_12^phys * c_23^phys for arbitrary masses/coefficients  (worst relative deviation = 3.875e-16)
+  [PASS] T4: gap-closure ratio c_13^phys/c_13^geom = sqrt(m_1/m_3) identically  (worst relative deviation = 1.741e-16)
+
+========================================================================
+PART 1: Mass-Ratio Suppression Factors (PDG-imported illustration)
+========================================================================
+  This block evaluates identity (T1) at imported PDG 2024 masses.
+  All input numbers are external imports; see header.
+
+  Up-sector mass ratios (from imported PDG masses):
     sqrt(m_u/m_c) = sqrt(0.0022/1.27) = 0.04124
     sqrt(m_c/m_t) = sqrt(1.27/172.76) = 0.08574
     sqrt(m_u/m_t) = sqrt(0.0022/172.76) = 0.003536
 
-  Down-sector mass ratios:
+  Down-sector mass ratios (from imported PDG masses):
     sqrt(m_d/m_s) = sqrt(0.0047/0.0934) = 0.22361
     sqrt(m_s/m_b) = sqrt(0.0934/4.18) = 0.14948
     sqrt(m_d/m_b) = sqrt(0.0047/4.18) = 0.033425
 
-  Chain rule verification:
+  (T1) sanity check at imported values:
     Up:   sqrt(m_u/m_c) * sqrt(m_c/m_t) = 0.003536
           sqrt(m_u/m_t)                  = 0.003536
-  [PASS] Chain rule: sqrt(m_u/m_t) = sqrt(m_u/m_c) * sqrt(m_c/m_t)  (difference = 4.34e-19)
+  [PASS] (T1) holds at PDG imported up-sector masses  (difference = 4.34e-19)
     Down: sqrt(m_d/m_s) * sqrt(m_s/m_b) = 0.033425
           sqrt(m_d/m_b)                  = 0.033425
-  [PASS] Chain rule: sqrt(m_d/m_b) = sqrt(m_d/m_s) * sqrt(m_s/m_b)  (difference = 6.94e-18)
+  [PASS] (T1) holds at PDG imported down-sector masses  (difference = 6.94e-18)
 
-  EWSB cascade interpretation:
-    The mass hierarchy m_t >> m_c >> m_u comes from loop suppressions:
-    m_c/m_t ~ g^2/(16pi^2) ~ 1/300  (1-loop)
-    m_u/m_c ~ g^2/(16pi^2) ~ 1/300  (2-loop)
-    alpha_s * C_F / (4pi) = 0.00212
-    Actual m_c/m_t = 0.00735 = 1/136
-    Actual m_u/m_c = 0.00170 = 1/588
+  NOTE: this block does NOT claim a framework derivation of
+  the quark mass hierarchy. It is an imports-dependent
+  illustration of the structural identities certified in Part 0.
 
 ========================================================================
-PART 2: Mass-Eigenvalue NNI Coefficients
+PART 2: Mass-Eigenvalue NNI Coefficients (calibrated illustration)
 ========================================================================
+  Inputs: imported C12_*_FIT, C23_*_FIT (fitted O(1) values from
+    scripts/frontier_ckm_schur_complement.py) and imported PDG masses.
 
   Up sector (geometric-mean -> mass-eigenvalue):
     c_12^geom = 1.480
@@ -65,10 +84,10 @@ PART 2: Mass-Eigenvalue NNI Coefficients
   Factorization check (c_13^phys = c_12^phys * c_23^phys):
     Up:   c_12^phys * c_23^phys = 0.06104 * 0.05573 = 0.003402
           c_13^phys             = 0.003402
-  [PASS] c_13^phys = c_12^phys * c_23^phys (up)  (ratio = 1.0000000000)
+  [PASS] (T3) holds at imported up-sector inputs: c_13^phys = c_12^phys * c_23^phys  (ratio = 1.0000000000)
     Down: c_12^phys * c_23^phys = 0.20348 * 0.09716 = 0.019771
           c_13^phys             = 0.019771
-  [PASS] c_13^phys = c_12^phys * c_23^phys (down)  (ratio = 1.0000000000)
+  [PASS] (T3) holds at imported down-sector inputs: c_13^phys = c_12^phys * c_23^phys  (ratio = 1.0000000000)
 
 ========================================================================
 PART 3: Full CKM from Mass-Basis NNI Coefficients
@@ -162,7 +181,7 @@ PART 5: Gap Closure -- Geometric-Mean to Mass-Basis
     Brentq failed -- V_ub does not cross PDG in range
 
 ========================================================================
-PART 6: Wolfenstein Identification
+PART 6: Wolfenstein Correspondence (imports-dependent)
 ========================================================================
 
   Wolfenstein from mass-basis NNI:
@@ -170,19 +189,20 @@ PART 6: Wolfenstein Identification
     A       ~ c_23^phys / lambda^2 = 2.3466  (PDG: 0.79)
     A*lambda^3 = 0.019771  (PDG V_ub: 0.00382)
 
-  Schur complement chain in mass basis:
+  Schur chain in mass basis (identity T3 at down-sector imports):
     c_13^phys = c_12^phys * c_23^phys  [chain rule for sqrt(m_i/m_j)]
     = 0.20348 * 0.09716 = 0.019771
-    = lambda * (A * lambda^2) = A * lambda^3
-    This IS the Wolfenstein hierarchy for V_ub.
-  [PASS] [BOUNDED] Wolfenstein identification: c_13^phys = A * lambda^3  (c_13^phys = 0.019771, A*lambda^3 = 0.019771)
+    = lambda_est * (A_est * lambda_est^2) = A_est * lambda_est^3
+    Numerical correspondence to a Wolfenstein-like hierarchy,
+    conditional on the imported fitted coefficients and PDG masses.
+  [PASS] [BOUNDED] Numerical Wolfenstein correspondence at imported inputs: c_13^phys ~ A*lambda^3  (c_13^phys = 0.019771, A*lambda^3 = 0.019771)
 
   Mass-ratio origin of each Wolfenstein power:
     lambda   ~ sqrt(m_d/m_s) = 0.22361 * c_12^geom
     lambda^2 ~ (m_d/m_s)     = 0.05000 * (c_12^geom)^2
     lambda^3 ~ (m_d/m_s)^1.5 = 0.011180 * (c_12^geom)^3
     A*lambda^3 includes extra sqrt(m_s/m_b) from c_23
-  [PASS] Wolfenstein lambda ~ sqrt(m_d/m_s) * c_12^geom  (lambda/(r_ds*c12) = 1.0000)
+  [PASS] lambda_est = sqrt(m_d/m_s) * C12_D_FIT (algebraic check at imports)  (lambda/(r_ds*c12) = 1.0000)
 
 ========================================================================
 SCORECARD: Mass-Basis NNI vs PDG
@@ -210,11 +230,20 @@ SCORECARD: Mass-Basis NNI vs PDG
 ========================================================================
 FINAL SUMMARY
 ========================================================================
-  Total checks: 12
-  Passed: 12 (7 exact, 5 bounded)
+  Total checks: 16
+  Passed: 16 (11 exact, 5 bounded)
   Failed: 0 (0 exact, 0 bounded)
 
+  Source theorems T1-T4 worst relative deviations:
+    T1 = 3.375e-16
+    T2 = 5.407e-16
+    T3 = 3.875e-16
+    T4 = 1.741e-16
+
+  Scope reminder: T1-T4 are axiom-free algebraic identities.
+  Parts 1-7 numerical agreement with PDG is an imports-conditional
+  illustration (audited 2026-05-05 as audited_numerical_match,
+  class G; see docs/work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md).
+
   All checks passed.
-
 ----- stderr -----
-
