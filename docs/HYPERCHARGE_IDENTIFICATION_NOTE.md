@@ -235,6 +235,56 @@ chain-consequent charges, uniqueness, GUT trace) and explicitly labels
 the matter-sector identifications as **chain consequents under the
 LHCM matter assignment**, not as internal claims.
 
+## Auditor responsiveness (2026-05-02 verdict → 2026-05-05 rewrite map)
+
+The most recent independent audit (2026-05-02, `codex-audit-loop:fresh-
+2026-05-02-hypercharge-mcclintock`, terminal second pass with first audit
+2026-04-30) returned `audited_renaming` on this note with the following
+verdict-rationale (verbatim, archived in the ledger row):
+
+> Issue: the load-bearing step identifies the symmetric/antisymmetric
+> commutant sectors with SM Q_L/L_L and names the unique traceless U(1)
+> as hypercharge after choosing conventional normalization. Why this
+> blocks: the runner verifies exact algebra and downstream consistency
+> after that carrier identification, but it does not derive the SM
+> fermion-sector map or hypercharge normalization from independent
+> premises. Repair target: provide a retained theorem constructing the
+> physical map from the C^8 taste sectors to SM left-handed fermion
+> representations and deriving the allowed normalization/readout without
+> importing the target labels.
+
+The 2026-05-05 rewrite is the response. The mapping between the verdict
+complaints and the present note structure is:
+
+| Auditor complaint (2026-05-02) | Where the rewrite addresses it |
+|---|---|
+| "load-bearing step identifies Sym²/Anti² sectors with SM Q_L/L_L" | Moved to chain link **L2**, cited to LHCM matter-assignment note. No internal sector identification appears in this note's load-bearing chain. |
+| "names the unique traceless U(1) as hypercharge after choosing conventional normalization" | Normalization α = 1/3 is moved to chain link **L3** and explicitly admitted as the SM convention `Y(L_L) = −1`. The note does not claim to derive α. |
+| "runner verifies … after carrier identification" | The runner is restructured so every block is tagged `[STRUCTURAL]` (alpha-free, no SM-target import), `[CHAIN-L2]` (uses LHCM matter assignment), `[CHAIN-L3]` (uses admitted α = 1/3), or `[CONSISTENCY]`. The `[STRUCTURAL]` blocks alone do not perform any SM-Y identification. |
+| "does not derive the SM fermion-sector map … from independent premises" | The fermion-sector map is **not** claimed to be derived in this note. It is chained to the LHCM matter-assignment note's SU(3)-representation theorem. This note's load-bearing surface is the chain-assembly statement, not an independent sector-map derivation. |
+| Repair target: "retained theorem constructing the physical map … without importing the target labels" | The structural ratio half is supplied by the retained narrow ratio theorem (which is itself audited_clean / retained_bounded). The matter-assignment half is supplied by the LHCM matter-assignment note (separate audit row). This note's role is now strictly the chain-assembly point. |
+
+What this note's load-bearing surface is, in one sentence: *under the
+two cited chain links (L1 structural ratio, retained; L2 LHCM matter
+assignment, separate audit row) and the explicitly admitted SM
+convention (L3 α = 1/3), the unique traceless U(1) in the gl(3)+gl(1)
+commutant of {SU(2)_weak, SWAP_{23}} reproduces the SM hypercharge
+pattern on the LH-doublet surface.* This is the auditor's stated "safe
+statement" elevated to the load-bearing chain itself.
+
+What this note is **not** claiming, post-rewrite:
+
+- to derive the (Sym², Anti²) ↔ (color triplet, color singlet)
+  assignment (that is L2, chained out);
+- to derive α = 1/3 (that is L3, explicitly admitted as SM convention);
+- to derive the Gell-Mann–Nishijima relation Q = T₃ + Y/2 (admitted as
+  SM-convention bridge in the Part 3 / Part 9 runner blocks);
+- to perform full SM anomaly cancellation (requires RH sector, chained
+  out to the RH-sector anomaly-cancellation companion note);
+- to retain LHCM as a whole (LHCM repair item (2) remains open and is
+  the well-known α-normalization gap; this note inherits that openness
+  through L3).
+
 ## Files
 
 - [`scripts/frontier_hypercharge_identification.py`](../scripts/frontier_hypercharge_identification.py):
