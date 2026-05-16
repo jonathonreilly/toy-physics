@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 312 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1189 |
+| unaudited | 1188 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 191 |
+| ~~audited_conditional~~ | 192 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 524 |
-| `audited_conditional` | 191 |
+| `audited_conditional` | 192 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1302 |
+| `unaudited` | 1301 |
 
 | claim_type | count |
 |---|---:|
@@ -783,6 +783,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `neutrino_mass_reduction_to_dirac_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `newton_law_derived_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `nn_lattice_rescaled_kernel_identification_note_2026-05-10` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | D | - |
 | `observable_principle_from_axiom_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `one_parameter_reduced_shell_law_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -7885,6 +7886,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The Born rule and attractive Newtonian gravity are both consequences of linear amplitude superposition, so nonlinear propagators that give I_3 != 0 also flip the gravitational force sign.  _(class `G`)_
 - **chain closes:** False — The runner demonstrates behavior for two selected nonlinear update rules on a chosen finite 2D lattice with chosen normalization and analytic 1/r phase prescription. It does not derive the broad theorem that amplitude nonlinearity generally determines the Born rule and attractive Newtonian gravity.
 - **rationale:** The numerical runner is not a first-principles derivation from the stated framework axiom; it is a toy simulation at chosen lattice sizes, propagation kernels, nonlinearities, normalizations, and field coupling. Its stdout also overstates the mass-law claim: beta remains near 1 for the nonlinear cases, while the asserted gravity failure is mainly the selected sign response. The source note’s universal conclusion does not follow from the restricted packet even if the reported runner values are accepted.
+- **auditor confidence:** high
+
+### `nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`NSPT_HIGH_ORDER_LATTICE_ALPHA_N_COEFFICIENT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/NSPT_HIGH_ORDER_LATTICE_ALPHA_N_COEFFICIENT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Audited the narrow claim that external NSPT formalism yields determinate finite-order lattice-observable coefficient series and that SU(3) Wilson-plaquette coefficients have been published through order 20, with no framework-substrate or hierarchy-closure bridge claimed.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-135713-20260516T135713Z-c08e21a9-nspt_high_order_lattice_-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For the SU(3) Wilson plaquette this NSPT iteration has been carried out to n = 20, producing explicit c_n for n = 1, ..., 20 and demonstrating that integer-order alpha^N coefficients of lattice observables are a determinate, published computation.  _(class `D`)_
+- **chain closes:** False — The toy formal-series algebra checked by the runner closes, but the load-bearing published SU(3) NSPT coefficient claim is not established from any provided authority. The missing step is a supplied retained-grade source or runner verification of the actual Di Renzo-Onofri/Horsley NSPT computation through n = 20.
+- **rationale:** Issue: the source note relies on external NSPT literature for the actual SU(3) Wilson-plaquette n = 20 coefficient computation, but the restricted packet provides no cited authority text and the runner only checks scalar/toy algebra plus boundary strings. Why this blocks: the audited conclusion that the high-order lattice coefficients are a determinate published computation cannot be derived from the toy surrogate checks alone. Repair target: provide the one-hop authority text or an independent runner that verifies the actual published coefficient computation within the restricted packet. Claim boundary until fixed: the note may safely record formal power-series and Cauchy-product algebra, but not audited closure of the external published NSPT coefficient claim.
 - **auditor confidence:** high
 
 ### `observable_principle_from_axiom_note`
