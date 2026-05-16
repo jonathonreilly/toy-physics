@@ -132,6 +132,34 @@ pair law itself is not yet derived on the DM branch.
 
 It is an interface theorem plus a diagnostic transplant.
 
+## Conditional structure (explicit)
+
+This note's content factors into one closed algebraic step plus two named open
+dependencies. The runner's Parts 1 and 4 make this structure executable, so the
+conditional shape is legible from the runner output rather than masked by
+unconditional bottom-line assertions.
+
+- **Closed (algebraic):** given any positive-definite Hermitian pair
+  `(H_nu, H_e)`, the flavored transport packet
+  `P_i(alpha) = |U_PMNS(alpha,i)|^2` is doubly stochastic, phase-insensitive,
+  and pair-readable. The runner's Part 1 verifies this on the canonical pair
+  plus eight deterministic random Hermitian pairs (72 rephasing samples in
+  total) at numerical-zero accuracy.
+- **Open (carrier authority):** the active neutrino lane fixes the Hermitian
+  pair `((H_nu,H_e), s)` as the remaining full target carrier. The positive
+  PMNS pair law from `Cl(3)` on `Z^3` is not derived in this note. The
+  runner's Part 4 leaves this dependency explicitly unresolved (its
+  resolution string begins with `open:`).
+- **Open (physical column authority):** a theorem on the active neutrino
+  lane selecting which PMNS column is the physical `N1` transport column.
+  This selection is not derived in this note. The runner's Part 4 leaves
+  this dependency explicitly unresolved (its resolution string begins with
+  `open:`).
+
+The diagnostic `eta/eta_obs` values reported in Parts 2 and 3 are columnwise
+readouts of the algebraic interface on two canonical sample pairs; they do
+not load-bear on the open dependencies.
+
 ## Command
 
 ```bash
