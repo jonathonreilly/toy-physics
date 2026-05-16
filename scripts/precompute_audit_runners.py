@@ -23,6 +23,11 @@ Modes:
       Refresh stale caches only for runners that are git-staged (for
       pre-commit hook use).
 
+  precompute_audit_runners.py --pr-diff origin/main
+      Cover only runners changed in this branch vs <base-ref>. PR-scoped
+      analog of --staged-only; intended for the audit-lane PR CI check
+      so unrelated PRs don't fail on pre-existing main-branch drift.
+
   precompute_audit_runners.py --check-only
       Do not execute anything; exit 1 with a list of stale caches if any
       exist. Used by CI gate and `--staged-only --check-only` pre-commit.
@@ -103,6 +108,43 @@ def collect_runners_from_staged() -> list[str]:
         return []
     known_runners = set(collect_runners_from_ledger())
     return [p for p in staged if p in known_runners]
+
+
+# Helpers that, if changed, can invalidate every cache header at once.
+# runner_cache.py owns the cache file format and the runner SHA-256
+# computation — a change there can make every existing cache header
+# semantically wrong. precompute_audit_runners.py is intentionally NOT
+# in this set: it's an orchestrator, and changes to enumeration or
+# dispatch logic don't invalidate the cache files themselves.
+_CACHE_INVALIDATORS = {
+    "scripts/runner_cache.py",
+}
+
+
+def collect_runners_from_pr_diff(base_ref: str) -> list[str]:
+    """Return runners changed in this branch vs <base_ref>.
+
+    Uses three-dot diff so we compare against the merge-base — intervening
+    commits on the base branch don't pollute the diff. Filters changed
+    scripts/*.py files down to those actually registered as runners in
+    the ledger (matches `collect_runners_from_staged` semantics; helpers
+    like runner_cache.py / precompute itself are excluded). If a
+    cache-invalidator helper changed, escalates to the full ledger
+    because every cache header is potentially stale.
+    """
+    res = subprocess.run(
+        ["git", "diff", "--name-only", "--diff-filter=ACMR",
+         f"{base_ref}...HEAD"],
+        cwd=REPO_ROOT, capture_output=True, text=True, check=False,
+    )
+    changed = [s for s in res.stdout.split("\n")
+               if s.startswith("scripts/") and s.endswith(".py")]
+    if any(c in _CACHE_INVALIDATORS for c in changed):
+        return collect_runners_from_ledger()
+    if not changed:
+        return []
+    known_runners = set(collect_runners_from_ledger())
+    return [p for p in changed if p in known_runners]
 
 
 # --- git helpers for direct-to-main commits ---
@@ -201,6 +243,12 @@ def main() -> int:
                    help="Do not execute anything. Exit 1 if any cache is "
                         "stale, with a list of which runners need refresh. "
                         "Used by CI and --staged-only --check-only.")
+    p.add_argument("--pr-diff", default="",
+                   help="Cover only runners changed vs <base-ref> "
+                        "(e.g. 'origin/main'). PR-scoped analog of "
+                        "--staged-only; used by the audit-lane PR CI "
+                        "check. Falls back to the full ledger if a "
+                        "cache-invalidator helper changed.")
     p.add_argument("--runners", default="",
                    help="Comma-separated runner paths to refresh "
                         "(overrides queue/ledger/staged collection).")
@@ -223,8 +271,9 @@ def main() -> int:
                    help="Maximum cache files per commit (default 200).")
     args = p.parse_args()
 
-    # --check-only and --staged-only never push.
-    if args.check_only or args.staged_only:
+    # --check-only, --staged-only, and --pr-diff never push: the first
+    # is read-only, the latter two run from a non-main branch.
+    if args.check_only or args.staged_only or args.pr_diff:
         args.push_mode = "none"
 
     # Branch + cleanliness guard for direct-to-main pushes.
@@ -251,6 +300,9 @@ def main() -> int:
     elif args.staged_only:
         runners = collect_runners_from_staged()
         source = "git-staged"
+    elif args.pr_diff:
+        runners = collect_runners_from_pr_diff(args.pr_diff)
+        source = f"pr-diff vs {args.pr_diff}"
     elif args.all:
         runners = collect_runners_from_ledger()
         source = "full ledger"
