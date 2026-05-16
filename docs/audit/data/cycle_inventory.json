@@ -18,10 +18,10 @@
       "max_transitive_descendants": 773,
       "nodes": [
         {
-          "audit_status": "unaudited",
+          "audit_status": "audited_conditional",
           "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
           "claim_type": "positive_theorem",
-          "effective_status": "unaudited",
+          "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
           "transitive_descendants": 773

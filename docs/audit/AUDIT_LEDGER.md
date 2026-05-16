@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1172 |
+| unaudited | 1171 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 194 |
+| ~~audited_conditional~~ | 195 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 520 |
-| `audited_conditional` | 194 |
+| `audited_conditional` | 195 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1285 |
+| `unaudited` | 1284 |
 
 | claim_type | count |
 |---|---:|
@@ -645,6 +645,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `axiom_first_cluster_decomposition_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `axiom_first_coleman_mermin_wagner_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `axiom_first_lattice_noether_theorem_note_2026-04-29` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
+| `axiom_first_reflection_positivity_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `b_independence_mechanism_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | B | - |
 | `beyond_lattice_qcd_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `bh_entropy_rt_ratio_widom_no_go_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -1495,6 +1496,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The internal Noether manipulation and runner exhibits are algebraic checks on the admitted staggered carrier, so class A is appropriate. However the restricted packet explicitly says the staggered-Dirac/Grassmann carrier is an open gate and is imported as an admitted context input rather than derived from the provided axioms. Under the rubric, an explicit unclosed carrier import requires audited_conditional even if the bounded identity closes on that carrier.
 - **open / conditional deps cited:**
   - `MINIMAL_AXIOMS_2026-05-03.md`
+- **auditor confidence:** high
+
+### `axiom_first_reflection_positivity_theorem_note_2026-04-29`
+
+- **Note:** [`AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md`](../../docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Reflection positivity R1-R4 for the canonical staggered action plus Wilson plaquette, with the staggered+Wilson sector relying on determinant positivity only closed on the symmetric-canonical M_W = r*d*I subsurface.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-031243-bd424a2b-axiom_first_reflection_p-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** For positivity of the combined measure, the fermion determinant must also be non-negative configuration-by-configuration, with Step 3a/bridge supplying det(M_KS + M_W + mI) >= 0.  _(class `A`)_
+- **chain closes:** False — The staggered-only determinant argument closes algebraically, but the full staggered+Wilson claim imports determinant positivity from an unaudited bridge that is explicitly limited to a symmetric-canonical subsurface. The OS/STW/MP factorisation identities and the full Wilson-sector positivity are not closed by the restricted packet.
+- **rationale:** The cited bridge authority is marked unaudited and itself states that it proves only the symmetric-canonical M_W = r*d*I case, leaving broader Wilson-term cases open. The parent note’s own honest-status section also concedes that the full staggered+Wilson extension is runner-supported rather than closed-form. The runner performs finite structural/toy checks and selected determinant tests, but it does not establish configuration-by-configuration SU(3) determinant positivity for the broader claimed surface.
+- **open / conditional deps cited:**
+  - `STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md`
 - **auditor confidence:** high
 
 ### `b_independence_mechanism_note`

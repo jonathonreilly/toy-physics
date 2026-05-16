@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 730,
+    "critical": 729,
     "high": 34,
     "leaf": 260,
     "medium": 152
@@ -17,7 +17,7 @@
       "instruction": "Re-audit this node with the prompt instruction that its co-cycle citations ['staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05'] are informational/'see also' references, not load-bearing dependencies. If the chain truly closes without those citations, return audited_clean and name the non-load-bearing co-cycle links in the rationale; a separate source-graph repair pass must then strip or rewrite those markdown links before effective_status can leave retained_pending_chain. Otherwise return audited_conditional with repair_class=missing_dependency_edge naming the node that should be promoted upstream.",
       "max_transitive_descendants": 773,
       "primary_break_target": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "primary_break_target_audit_status": "unaudited",
+      "primary_break_target_audit_status": "audited_conditional",
       "primary_break_target_criticality": "critical",
       "repair_class": "cycle_break_required"
     },
@@ -3749,29 +3749,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "axiom_first_reflection_positivity_theorem_note_2026-04-29",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
-      ],
-      "direct_in_degree": 31,
-      "effective_status": "unaudited",
-      "load_bearing_score": 25.096,
-      "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/axiom_first_reflection_positivity_check.py",
-      "transitive_descendants": 773
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -35599,5 +35576,5 @@
     }
   ],
   "ready_count": 0,
-  "total_pending": 1176
+  "total_pending": 1175
 }
