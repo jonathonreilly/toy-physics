@@ -1,0 +1,109 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_bae_block_total_frobenius_derivation_narrow.py
+runner_sha256: 54fd7eea05252a8fb611b777cad5523becea89b52b15ccfa595827cb91ddc164
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.70
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+BAE_BLOCK_TOTAL_FROBENIUS_DERIVATION_NARROW_THEOREM_NOTE_2026-05-16
+Goal: sympy-symbolic verification that F1-extremum locus = BAE locus
+on Herm_circ(3), conditional on F1 canonicality hypothesis.
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: symbolic setup
+----------------------------------------------------------------------------------------
+  H = a I + b C + bbar C^2 =
+Matrix([[a, I*b_im + b_re, -I*b_im + b_re], [-I*b_im + b_re, a, I*b_im + b_re], [I*b_im + b_re, -I*b_im + b_re, a]])
+  [PASS (A)] C^3 = I (cyclic identity)  (C generates the cyclic group of order 3)
+  [PASS (A)] H is Hermitian (i.e. H^dagger = H)  (circulant Hermitian on a real + complex pair (b, bbar))
+
+----------------------------------------------------------------------------------------
+Part 1: block-total Frobenius identities (E+) and (Eperp)
+----------------------------------------------------------------------------------------
+  [PASS (A)] tr(H) = 3a (cyclic shifts have zero trace)  (tr(H) = 3*a)
+  [PASS (A)] (E+): E_+(H) = ||pi_+(H)||_F^2 = 3 a^2  (E_+ - 3a^2 = 0)
+  [PASS (A)] (Eperp): E_perp(H) = ||pi_perp(H)||_F^2 = 6 |b|^2  (E_perp - 6|b|^2 = 0)
+  [PASS (A)] <pi_+(H), pi_perp(H)>_F = 0 (orthogonal isotypic decomposition)  (inner product reduces to 0)
+
+----------------------------------------------------------------------------------------
+Part 2: F1 Lagrange extremum (T1 / CP / KAPPA)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T1/CP): F1 Lagrange extremum is at E_+ = E_perp = E_tot/2  (sols = [{E_p: E_tot/2, E_q: E_tot/2, mu_lag: 2/E_tot}])
+  [PASS (A)] (KAPPA): 3 a^2 = 6 |b|^2 reduces to a^2 = 2 |b|^2  (sols(a^2) = [2*b_sq_sym])
+  [PASS (A)] (KAPPA): kappa = a^2 / |b|^2 = 2 at the F1 extremum  (kappa = 2)
+
+----------------------------------------------------------------------------------------
+Part 3: kappa = 2 <=> |b|^2/a^2 = 1/2 (T2 / KB)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T2/KB) forward: kappa = 2 implies |b|^2/a^2 = 1/2  (BAE form at kappa=2: 1/2)
+  [PASS (A)] (T2/KB) reverse: |b|^2/a^2 = 1/2 implies kappa = 2  (kappa at BAE: 2)
+
+----------------------------------------------------------------------------------------
+Part 4: F1 Hessian negative-definite at critical point (T3)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (T3): d^2 F1 / dt^2 |_{t=E_tot/2} = -8/E_tot^2 < 0 (negative definite)  (d^2 F1 / dt^2 = -8/E_tot**2)
+  [PASS (A)] (T3): unconstrained F1 Hessian diagonals at critical point: -4/E_tot^2  (Hess_pp = -4/E_tot**2, Hess_qq = -4/E_tot**2, Hess_pq = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: LOCUS set equality (T2 chain)
+----------------------------------------------------------------------------------------
+  [PASS (A)] LOCUS sample on-locus (a^2 = 2, |b|^2 = 1): kappa = 2 and |b|^2/a^2 = 1/2  (kappa = 2, BAE = 1/2)
+  [PASS (A)] LOCUS sample off-locus (a^2 = 1, |b|^2 = 1): kappa = 1 != 2 and BAE = 1 != 1/2  (kappa = 1, BAE = 1)
+  [PASS (A)] LOCUS sample off-locus (a^2 = 1, |b|^2 = 2): kappa = 1/2 and BAE = 2 (mirror)  (kappa = 1/2, BAE = 2)
+
+----------------------------------------------------------------------------------------
+Part 6: counterfactual — F3 extremum at kappa = 1 (NOT BAE)
+----------------------------------------------------------------------------------------
+  [PASS (A)] counterfactual: F3 extremum at (E_+, E_perp) = (E_tot/3, 2 E_tot/3)  (sols = [{E_p: E_tot/3, E_q: 2*E_tot/3, mu_lag: 3/E_tot}])
+  [PASS (A)] counterfactual: F3 extremum gives kappa = 1 (NOT 2 = BAE)  (F3 extremum kappa = 1)
+  [PASS (A)] counterfactual: F3 extremum gives |b|^2/a^2 = 1 (NOT 1/2 = BAE)  (BAE at F3 extremum = 1 (off the BAE locus))
+
+----------------------------------------------------------------------------------------
+Part 7: review-hygiene checks on the source note
+----------------------------------------------------------------------------------------
+  [PASS (A)] source note exists at expected path  (BAE_BLOCK_TOTAL_FROBENIUS_DERIVATION_NARROW_THEOREM_NOTE_2026-05-16.md)
+  [PASS (A)] Status authority line present
+  [PASS (A)] claim_type bounded_theorem present in note
+  [PASS (A)] Open derivation gap (F1-vs-F3) preserved
+  [PASS (A)] does NOT claim positive closure of BAE
+  [PASS (A)] does NOT discharge the F1 canonicality hypothesis
+  [PASS (A)] no new axiom admission
+  [PASS (A)] no new repo vocabulary
+  [PASS (A)] cites koide_kappa_block_total_frobenius_algebraic upstream
+  [PASS (A)] cites primitive_p_bae_m1_m2_duality upstream
+  [PASS (A)] cites BAE 30-probe campaign synthesis for the Open gap
+  [PASS (A)] uses markdown-link form for upstream citations
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (E+)   E_+(H) = 3 a^2 parametric in (a, b)
+    (Eperp) E_perp(H) = 6 |b|^2 parametric in (a, b)
+    Frobenius orthogonality: <pi_+, pi_perp>_F = 0
+    (T1/CP) F1 Lagrange extremum at E_+ = E_perp = E_tot/2
+    (KAPPA) F1 extremum locus reduces to kappa = 2
+    (T2/KB) kappa = 2 <=> |b|^2/a^2 = 1/2 (BAE)
+    (T3)    F1 Hessian negative-definite at critical point
+    (LOCUS) on-locus + off-locus sample identifications
+    Counterfactual: F3 extremum at kappa = 1 (NOT BAE)
+    Review-hygiene: note structure, claim type, citations,
+                    open-gap preservation, no-new-axiom.
+
+  This audit-companion verifies the locus identification F1-extremum = BAE
+  algebraically, conditional on the F1 canonicality hypothesis H_F1, which
+  is explicitly NOT discharged. The retention of
+  koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10
+  ratifies the F1-extremum algebra; the F1-vs-F3 weighting selection remains
+  the genuinely open atom per the 30-probe BAE campaign terminal synthesis.
+
+========================================================================================
+TOTAL: PASS=31, FAIL=0
+========================================================================================
+
+----- stderr -----
+

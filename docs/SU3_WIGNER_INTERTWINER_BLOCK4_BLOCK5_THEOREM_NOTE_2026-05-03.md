@@ -1,8 +1,10 @@
-# SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict
+# SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Diagnostics
 
 **Date:** 2026-05-03
 **Claim type:** bounded_theorem
-**Status:** bounded support theorem — finite-box engine staging + orientation verification, unaudited.
+**Status:** bounded support theorem — finite-box engine staging (Block 4) and L_s=2 PBC orientation diagnostics (Block 5), unaudited.
+
+**Scope narrowing 2026-05-16 (science-fix, scope_too_broad repair).** The load-bearing claim is narrowed to the finite combinatorial / algebraic core: Block 4 L_s=3 PBC cube partition staging (trivial sector exact, single-irrep character coefficient, 4-fold Haar singlet basis import, per-plaquette `(8,8,8,8)` cyclical-trace tensor structure, full-cube contraction-scope analysis) and Block 5 L_s=2 PBC orientation diagnostics (all-forward plaquette/link enumeration, standard-Wilson `+d1+d2-d1-d2` link-multiplicity degeneracy at L_s=2 PBC). The bridge-gap closure limb — including the imported P_candidate, the bridge-support target, the epsilon_witness threshold, and the "no L_s=2 PBC convention closes the bridge gap" verdict — is explicitly NOT part of the load-bearing claim; it carries through only conditionally on the unaudited open-gate row (see Section 3.1 and the "Audit-conditional scope narrowing 2026-05-10" subsection at the end of this note).
 **Primary runners:**
   - Block 4: `scripts/frontier_su3_wigner_l3_cube_partition.py`
   - Block 5: `scripts/frontier_su3_wigner_l2_cube_orientation_verification.py`
@@ -24,30 +26,34 @@ intertwiner engine campaign that began with Blocks 1-3:
   scope (worst intermediate ~ 8^9 = 134M complex entries, ~2 GB) is
   documented.
 
-- **Block 5** independently verifies the framework's existing L_s=2 PBC
-  candidate ansatz from `frontier_su3_cube_index_graph_shortcut_open_gate.py`
-  and applies the **standard Wilson +d1+d2-d1-d2 plaquette traversal**
-  (with daggers on the return legs). Block 5 finds:
-  - The all-forward L_s=2 PBC convention gives `P = 0.4291049969`,
-    **543x epsilon_witness below** the bridge-support target 0.5935;
-  - Standard Wilson on L_s=2 PBC exhibits structural link-multiplicity
-    degeneracies that prevent it from being a clean primitive at this
+- **Block 5** enumerates the L_s=2 PBC cube plaquette/link structure
+  under two natural Wilson plaquette conventions:
+  - **All-forward `+d1+d2+d1+d2`:** 12 unique unordered plaquettes,
+    24 directed links, each link in exactly 2 plaquettes, index graph
+    with 48 nodes / 48 edges / 8 connected components. This enumeration
+    is independently recomputed inside the Block 5 runner.
+  - **Standard Wilson `+d1+d2-d1-d2`:** exhibits structural link-
+    multiplicity degeneracies `{1: 4, 2: 8, 3: 4, 4: 4}` (24 forward
+    leg occurrences and 24 backward leg occurrences) that prevent
+    direct application of the source-sector factorization at this
     finite volume.
 
-**Combined verdict:** the multi-week L_s ≥ 3 Wigner-Racah engine work
-is the next required route for this exact-cube program. The Block 1-4
-infrastructure (CG decomposition, 4-fold Haar
-projector, L_s=3 cube geometry, partition staging) is the correct
-foundation. Block 5 is the closing artifact for the L_s=2 sub-campaign
-and the explicit motivation for the L_s ≥ 3 engineering effort.
+**Narrowed bounded verdict (Block 4 staging + Block 5 orientation
+diagnostics):** the finite combinatorial / algebraic Block 4 partition-
+staging facts and the L_s=2 PBC orientation/index-graph enumeration are
+checkable from the Blocks 1-3 retained packet plus the supplied runners.
+This narrowed verdict makes no L_s=2 PBC bridge-gap closure claim.
 
-This finding is **consistent with the gauge-scalar temporal observable
-bridge no-go theorem**
-(`GAUGE_SCALAR_TEMPORAL_OBSERVABLE_BRIDGE_NO_GO_THEOREM_NOTE_2026-05-03.md`;
-contextual reference, not a load-bearing dependency):
-within the current Wilson-framework primitive stack, BRIDGE is not
-derivable; to escape the no-go, additional primitives (the exact L_s ≥ 3
-cube Wigner-Racah Perron data) must be added.
+**Audit-conditional bridge-gap limb (NOT load-bearing here).** The
+numerical comparison `|P_all-forward,L=2 - bridge_target|`, the closing
+verdict "no L_s=2 PBC convention closes the bridge gap", and the
+"L_s ≥ 3 Wigner-Racah work is the next required route" motivation all
+rely on imported constants from the unaudited open-gate row
+`su3_cube_index_graph_shortcut_open_gate_note_2026-05-03`
+(`P_CANDIDATE_REPORTED`, `BRIDGE_SUPPORT_TARGET`, `EPSILON_WITNESS`).
+These are reported here for cross-reference only and are NOT part of the
+load-bearing audited claim. See Section 3.1 for the per-item conditional
+breakdown.
 
 ## 1. Block 4 — L_s=3 cube partition function infrastructure
 
@@ -198,13 +204,14 @@ epsilon_witness:                                    3.030e-04
 SUMMARY: THEOREM PASS=4 SUPPORT=1 FAIL=0
 ```
 
-## 3. Combined theorem statement
+## 3. Combined theorem statement (narrowed 2026-05-16)
 
-**Bounded support theorem (SU(3) Wigner-Racah engine Blocks 4+5).** The
-runners
+**Bounded support theorem (narrowed, SU(3) Wigner-Racah engine Blocks
+4+5).** The runners
 `scripts/frontier_su3_wigner_l3_cube_partition.py` and
 `scripts/frontier_su3_wigner_l2_cube_orientation_verification.py`
-deliver:
+deliver the following load-bearing facts (each independently checkable
+from the Blocks 1-3 retained packet plus pure `numpy + scipy.special`):
 
 (a) The L_s=3 PBC cube partition function trivial sector
 `Z_(0,0)(L=3 cube, beta=6) = c_(0,0)(6)^81 = 2.99 x 10^43` exactly, the
@@ -215,39 +222,79 @@ per-plaquette `(8,8,8,8)` cyclical-trace tensor;
 (b) The L_s=3 contraction-scope analysis: 81 plaquettes × 81 links,
 worst intermediate 8^9 ~ 2 GB, expected runtime 10-180 minutes with
 a memory-aware contraction-order optimizer (not available within the
-`numpy + scipy.special` only constraint);
+`numpy + scipy.special` only constraint); the full L_s=3 contraction
+is explicitly deferred and out of audited scope;
 
-(c) Independent verification that the framework's L_s=2 PBC candidate
-ansatz `T_lambda = d_lambda^(-16)` (giving `P_candidate = 0.4291`) is
-consistent with the all-forward plaquette traversal index graph;
+(c) The all-forward L_s=2 PBC plaquette enumeration recomputed inside
+the Block 5 runner: 12 unique unordered plaquettes, 24 unique directed
+links, each link in exactly 2 plaquettes, index graph with 48 nodes /
+48 edges / 8 connected components;
 
 (d) The structural finding that the **standard Wilson +d1+d2-d1-d2
-plaquette convention has degenerate link multiplicities on L_s=2 PBC**,
-preventing direct application of the source-sector factorization at
-that finite volume;
+plaquette convention has degenerate link multiplicities
+`{1: 4, 2: 8, 3: 4, 4: 4}` on L_s=2 PBC**, preventing direct
+application of the source-sector factorization at that finite volume.
 
-(e) The numerical comparison `|P_all-forward,L=2 - bridge_target| =
-0.16 = 543 x epsilon_witness`, plus the standard-Wilson L_s=2
-degeneracy, demonstrating that the tested L_s=2 PBC surfaces do not
-close the gauge-scalar temporal observable bridge gap.
+**Narrowed verdict (load-bearing here):** the Block 1-4 partition-
+staging infrastructure (CG decomposition, 4-fold Haar projector, L_s=3
+cube geometry, partition staging) plus the Block 5 L_s=2 PBC
+orientation/index-graph diagnostics form a consistent finite
+combinatorial / algebraic core. This narrowed verdict makes no
+bridge-gap closure claim; in particular it does NOT claim that "no
+L_s=2 PBC convention closes the bridge gap" and does NOT load-bear on
+the "L_s ≥ 3 Wigner-Racah work is the next required route" motivation
+beyond the engineering-cost statement in (b).
 
-**Verdict:** L_s ≥ 3 Wigner-Racah engine work is the next required
-route for this exact-cube program. The Block 1-4 infrastructure is the
-correct foundation; the L_s=2 PBC sub-campaign is now narrowed by
-Block 5 because the all-forward candidate misses badly and the standard
-Wilson convention is degenerate at this finite volume.
+### 3.1 Audit-conditional bridge-gap limb (NOT load-bearing)
+
+The following items rely on numerical constants imported from the
+unaudited open-gate row
+`su3_cube_index_graph_shortcut_open_gate_note_2026-05-03`
+(`P_CANDIDATE_REPORTED = 0.4291049969`,
+`BRIDGE_SUPPORT_TARGET = 0.5935306800`,
+`EPSILON_WITNESS = 3.03e-4`,
+`P_TRIV_REFERENCE`, `P_LOC_REFERENCE`). They are recorded here for
+cross-reference only; they are NOT promoted by this note's narrowed
+audit scope and they carry the open-gate conditional until that row is
+itself audited:
+
+(e-conditional) The numerical equality `P_all-forward(L=2) = 0.4291049969`
+(re-used as the imported `P_CANDIDATE_REPORTED`; independent computation
+of the Perron value lives in the open-gate row's runner, not in the
+Block 5 runner).
+
+(f-conditional) The numerical comparison `|P_all-forward,L=2 -
+bridge_target| = 0.16 = 543 x epsilon_witness`, which depends on
+imported `BRIDGE_SUPPORT_TARGET` and `EPSILON_WITNESS`.
+
+(g-conditional) The closing verdict "no L_s=2 PBC convention closes
+the gauge-scalar temporal observable bridge gap" and the motivational
+statement that "L_s ≥ 3 Wigner-Racah engine work is the next required
+route", both of which carry the open-gate conditional via (f).
 
 ## 4. Scope
 
-### 4.1 In scope (this PR)
+### 4.1 In scope (this PR, narrowed 2026-05-16)
 
 - L_s=3 cube partition function trivial-sector exact, (1,1)-sector
   character coefficient, 4-fold Haar singlet basis import, plaquette
-  tensor structure, full-cube scope analysis (Block 4).
-- L_s=2 cube orientation verification: all-forward convention matches
-  candidate; standard Wilson convention exhibits degeneracies (Block 5).
-- Closing verdict for the L_s=2 PBC sub-campaign: no L_s=2 convention
-  closes the bridge gap.
+  tensor structure, full-cube contraction-scope analysis (Block 4).
+- L_s=2 PBC cube orientation/index-graph enumeration: all-forward
+  convention `+d1+d2+d1+d2` recomputed by the Block 5 runner (12
+  plaquettes, 24 directed links, 48-node index graph with 8 connected
+  components); standard Wilson `+d1+d2-d1-d2` convention exhibits link-
+  multiplicity degeneracies `{1: 4, 2: 8, 3: 4, 4: 4}` at L_s=2 PBC
+  (Block 5).
+
+### 4.1.1 Explicitly NOT in scope of the narrowed claim
+
+- Any verdict that "no L_s=2 PBC convention closes the bridge gap".
+  This relies on imported open-gate constants (see Section 3.1) and is
+  not load-bearing here.
+- The numerical equality `P_all-forward(L=2) = 0.4291049969` and the
+  bridge-gap inequality `|P_all-forward,L=2 - bridge_target| =
+  543 x epsilon_witness`. Both re-use imported constants and are
+  reported for cross-reference only.
 
 ### 4.2 Out of scope
 
@@ -286,34 +333,44 @@ deps:
   - gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03
   - su3_cube_index_graph_shortcut_open_gate_note_2026-05-03
 verdict_rationale_template: |
-  Bounded support theorem closing the L_s=2 PBC sub-campaign.
+  Bounded support theorem (narrowed 2026-05-16): Block 4 L_s=3 PBC
+  cube partition staging plus Block 5 L_s=2 PBC orientation/index-
+  graph diagnostics. Does NOT load-bear on any bridge-gap closure
+  conclusion or the "no L_s=2 PBC convention closes the bridge gap"
+  verdict; those are split out as an explicit audit-conditional limb
+  carrying the open-gate row's conditional (see Section 3.1).
 
-  Block 4 (L_s=3 PBC cube partition staging): trivial sector
-  Z_(0,0)(L=3, beta=6) = c_(0,0)(6)^81 EXACT, (1,1) sector character
-  coefficient c_(1,1)(6) computed, 4-fold Haar singlet basis of V^4
-  rank 8 verified (Block 2 algorithm), per-plaquette (8,8,8,8) tensor
-  structure encoded, full-cube contraction scope analysis (worst
-  intermediate 2 GB at 8^9). 5/5 PASS, 0 FAIL.
+  Block 4 (L_s=3 PBC cube partition staging, load-bearing):
+  trivial sector Z_(0,0)(L=3, beta=6) = c_(0,0)(6)^81 EXACT, (1,1)
+  sector character coefficient c_(1,1)(6) computed, 4-fold Haar
+  singlet basis of V^4 rank 8 verified (Block 2 algorithm), per-
+  plaquette (8,8,8,8) tensor structure encoded, full-cube contraction
+  scope analysis (worst intermediate 2 GB at 8^9; full contraction
+  deferred). 5/5 PASS, 0 FAIL.
 
-  Block 5 (L_s=2 PBC cube orientation verification): all-forward
-  traversal verified to match candidate runner exactly (12 plaquettes,
-  24 links, 48-node index graph with 8 connected components, P_candidate
-  = 0.4291). Standard Wilson +d1+d2-d1-d2 traversal verified to have
-  degenerate link multiplicities {1:4, 2:8, 3:4, 4:4} on L_s=2 PBC,
-  preventing direct application of source-sector factorization. P-value
-  gap to bridge target = 0.16 = 543 x epsilon_witness for the
-  all-forward candidate. 4/4 PASS, 1 SUPPORT, 0 FAIL.
+  Block 5 (L_s=2 PBC cube orientation/index-graph diagnostics,
+  load-bearing core only): all-forward `+d1+d2+d1+d2` plaquette/link
+  enumeration recomputed inside the runner (12 plaquettes, 24
+  directed links, 48-node index graph with 8 connected components).
+  Standard Wilson `+d1+d2-d1-d2` traversal at L_s=2 PBC verified to
+  have degenerate link multiplicities {1:4, 2:8, 3:4, 4:4},
+  preventing direct application of source-sector factorization at
+  that finite volume. Combinatorial / algebraic core: 4/4 PASS,
+  1 SUPPORT, 0 FAIL.
 
-  Combined verdict: L_s>=3 Wigner-Racah engine work is the next
-  required route for this exact-cube program. Block 1-4 infrastructure
-  is the correct foundation. The L_s=2 PBC sub-campaign is narrowed by
-  this Block 5 verdict.
+  Audit-conditional limb (NOT load-bearing here): the P_candidate
+  value 0.4291049969, the bridge-support target 0.5935306800, the
+  epsilon_witness 3.03e-4, and the closing "no L_s=2 PBC convention
+  closes the bridge gap" verdict are imported from / depend on the
+  unaudited open-gate row
+  su3_cube_index_graph_shortcut_open_gate_note_2026-05-03 and are
+  recorded here for cross-reference only.
 
   This PR does not close or promote the gauge-scalar bridge parent
-  chain. It is consistent with the gauge-scalar bridge no-go theorem
-  (gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03)
-  in identifying L_s>=3 cube Wigner-Racah Perron data as the route to
-  escape the no-go.
+  chain. The cross-reference to the gauge-scalar bridge no-go
+  theorem (gauge_scalar_temporal_observable_bridge_no_go_theorem_note_2026-05-03)
+  is contextual and not a load-bearing dependency of the narrowed
+  claim.
 
   No forbidden imports (numpy + scipy.special only).
 ```
@@ -482,4 +539,6 @@ This subsection is informational reuse-discipline only; it does not
 promote the audit verdict, does not alter the recorded
 `load_bearing_step_class: B`, and does not amend the audit JSON
 ledger.
-- [su3_cube_index_graph_shortcut_open_gate_note_2026-05-03](SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md)
+- `su3_cube_index_graph_shortcut_open_gate_note_2026-05-03`
+  (`SU3_CUBE_INDEX_GRAPH_SHORTCUT_OPEN_GATE_NOTE_2026-05-03.md`; context-only
+  open-gate reference, not a load-bearing dependency of the narrowed claim)

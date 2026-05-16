@@ -1489,6 +1489,14 @@
       "to": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30"
     },
     {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality"
+    },
+    {
       "from": "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -14025,6 +14033,18 @@
       "to": "koide_q_reduced_observable_restriction_theorem_2026-04-22"
     },
     {
+      "from": "koide_q_normalized_second_order_effective_action_theorem_2026-04-22",
+      "to": "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_normalized_second_order_effective_action_theorem_2026-04-22",
+      "to": "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_normalized_second_order_effective_action_theorem_2026-04-22",
+      "to": "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
+    },
+    {
       "from": "koide_q_no_hidden_source_audit_2026-04-22",
       "to": "koide_q_reduced_observable_restriction_theorem_2026-04-22"
     },
@@ -18809,10 +18829,6 @@
       "to": "poisson_self_gravity_loop_note"
     },
     {
-      "from": "poisson_self_gravity_loop_note",
-      "to": "minimal_source_driven_field_probe_note"
-    },
-    {
       "from": "poisson_self_gravity_mechanism_note",
       "to": "poisson_self_gravity_loop_note"
     },
@@ -21153,6 +21169,22 @@
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
     {
+      "from": "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16",
+      "to": "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16",
+      "to": "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16",
+      "to": "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -21635,10 +21667,6 @@
     {
       "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
       "to": "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
-    },
-    {
-      "from": "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
-      "to": "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
     },
     {
       "from": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
@@ -38384,6 +38412,20 @@
       "runner_path": "scripts/frontier_background_independence.py",
       "title": "Background Independence: Effective Geometry Differs from Input Graph"
     },
+    "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16": {
+      "claim_id": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+        "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality"
+      ],
+      "note_hash": "1795c18f20ec34192cdf80fc33c8cf616e79767063856a2121cec4002824eaa7",
+      "path": "docs/BAE_BLOCK_TOTAL_FROBENIUS_DERIVATION_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_bae_block_total_frobenius_derivation_narrow.py",
+      "title": "BAE Block-Total-Frobenius Derivation Narrow Theorem"
+    },
     "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent": {
       "claim_id": "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent",
       "claim_type_author_hint": "bounded_theorem",
@@ -38630,7 +38672,7 @@
         "dispersion_relation_note",
         "architecture_note_directional_measure"
       ],
-      "note_hash": "37693e8164de2208bb8b2deb2016a0da003bfec3c9cfede72198c8a99700455c",
+      "note_hash": "ee2617aafdce32d85fcf423b58f9e54a5c238a130c5f8fcef1b7dc92b98b0c34",
       "path": "docs/BORN_SCATTERING_COMPARISON_NOTE.md",
       "runner_path": "scripts/gaussian_beam_eikonal.py",
       "title": "Born/Eikonal Scattering Comparison with Lattice Lensing"
@@ -51437,13 +51479,13 @@
     },
     "koide_cl3_selector_gap_note_2026-04-19": {
       "claim_id": "koide_cl3_selector_gap_note_2026-04-19",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
       "deps": [
         "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19"
       ],
-      "note_hash": "022076262174eeaf1755bce600e20f04827ed2c9956ec6ec035c6ed4ebc11c08",
+      "note_hash": "8e1b251c19b36f9a7698e3dae790fcc3f04cbd9a8e4fc567f80f6c304f57470b",
       "path": "docs/KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md",
       "runner_path": null,
       "title": "Koide Cl(3) \u2192 SM Embedding \u2014 Selector Gap Note"
@@ -52158,13 +52200,16 @@
     },
     "koide_q_normalized_second_order_effective_action_theorem_2026-04-22": {
       "claim_id": "koide_q_normalized_second_order_effective_action_theorem_2026-04-22",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
       "deps": [
-        "koide_q_reduced_observable_restriction_theorem_2026-04-22"
+        "koide_q_reduced_observable_restriction_theorem_2026-04-22",
+        "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25",
+        "koide_q_background_zero_z_erasure_criterion_theorem_note_2026-04-25",
+        "koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29"
       ],
-      "note_hash": "83059cebfcafb701c31af2807f871bc8611f7de9788ff51cd673b4bcf89a9606",
+      "note_hash": "c2d7f0d0f8a1cf76cfa2e8b92a58aa3512313bf38e133a6bbf015b644450ac48",
       "path": "docs/KOIDE_Q_NORMALIZED_SECOND_ORDER_EFFECTIVE_ACTION_THEOREM_2026-04-22.md",
       "runner_path": "scripts/frontier_koide_q_normalized_second_order_effective_action.py",
       "title": "Koide Q From The Normalized Second-Order Effective Action"
@@ -52861,6 +52906,17 @@
       "path": "docs/KOIDE_Y_SUBSTRATE_ANOMALY_FORCING_NOTE_2026-05-08_probeY_substrate_anomaly.md",
       "runner_path": "scripts/cl3_koide_y_substrate_anomaly_2026_05_08_probeY_substrate_anomaly.py",
       "title": "Probe Y-Substrate-Anomaly: Bounded Anomaly-Forcing Boundary"
+    },
+    "koide_z3_equivariant_anticommuting_no_go_note_2026-05-16": {
+      "claim_id": "koide_z3_equivariant_anticommuting_no_go_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "246d2896378034c89fc472a61cb9dbcdec59a733bb4ee8e6a1a6b80b2e73b3ab",
+      "path": "docs/KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py",
+      "title": "Koide Z_3-Equivariant Anti-Commuting Operator \u2014 Subalgebra Disjointness"
     },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "claim_id": "koide_z3_joint_projector_identity_note_2026-04-19",
@@ -58056,7 +58112,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "06c3604178d84d16b84535cee53f3219a2fda1594298cf1276508a73b774289c",
+      "note_hash": "e29bd8fd293845493287abd9e14fbe8bbeb99c57f93529b03accfdb54a738cfa",
       "path": "docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md",
       "runner_path": "scripts/frontier_pmns_commutant_eigenoperator_selector.py",
       "title": "PMNS Commutant Eigenoperator Selector"
@@ -58608,10 +58664,8 @@
       "claim_type_author_hint": null,
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [
-        "minimal_source_driven_field_probe_note"
-      ],
-      "note_hash": "c93d108d781aa9e320c3389054d6deadd393c48e237ea47f497571d0b49fdd4e",
+      "deps": [],
+      "note_hash": "5692bb7df4f6e5ad5376a29ceaed8d68515d303396d1ce9bc83ed57740d82936",
       "path": "docs/POISSON_SELF_GRAVITY_LOOP_NOTE.md",
       "runner_path": "scripts/poisson_self_gravity_loop.py",
       "title": "Poisson Self-Gravity Loop Note"
@@ -62600,14 +62654,14 @@
     },
     "s3_boundary_link_theorem_note": {
       "claim_id": "s3_boundary_link_theorem_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": "Constructive combinatorial proof + computational verification (R=2..10)",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "e6df00aecce43be85ce9c02c8ea8b28f00003638bea5e70ac7f1b61a411134e8",
+      "note_hash": "b2b7abcbea872ba162821364de48eb8728ffa7d3fc150f09fccd0662872c89ea",
       "path": "docs/S3_BOUNDARY_LINK_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_s3_boundary_link_theorem.py",
-      "title": "S^3 Boundary-Link Disk Theorem"
+      "title": "S^3 Boundary-Link Disk Bounded Certificate"
     },
     "s3_cap_uniqueness_note": {
       "claim_id": "s3_cap_uniqueness_note",
@@ -64675,6 +64729,34 @@
       "runner_path": null,
       "title": "Staggered-Dirac Realization Gate Note"
     },
+    "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16": {
+      "claim_id": "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
+        "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "136ddf67f84afbfcfca350523367614b69d4b03a3bceab2b837cd9444dd49ff5",
+      "path": "docs/STAGGERED_DIRAC_SUBSTEP1_GRASSMANN_FORCING_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_staggered_dirac_substep1_grassmann_forcing_bridge_2026_05_16.py",
+      "title": "Staggered-Dirac Substep 1 \u2014 Grassmann Forcing Bridge Narrow Theorem"
+    },
+    "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16": {
+      "claim_id": "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
+        "cl3_complexification_split_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "c54a55a7ebd6424671ebb1d385c0e5fedc22759d03741fc01d2a5dc87a1f909d",
+      "path": "docs/STAGGERED_DIRAC_SUBSTEP3_SPECIES_REDUCTION_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_staggered_dirac_substep3_species_reduction_bridge_2026_05_16.py",
+      "title": "Staggered-Dirac Substep 3 \u2014 Species Reduction Bridge Narrow Theorem"
+    },
     "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac": {
       "claim_id": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
       "claim_type_author_hint": "bounded_theorem",
@@ -65466,13 +65548,12 @@
       "deps": [
         "su3_wigner_intertwiner_block1_theorem_note_2026-05-03",
         "su3_wigner_intertwiner_block2_theorem_note_2026-05-03",
-        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03",
-        "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
+        "su3_wigner_intertwiner_block3_theorem_note_2026-05-03"
       ],
-      "note_hash": "2e03e44b6a449454805af7e90b2a13c1491207f0ce114ca15090b892930bf1d9",
+      "note_hash": "7affd6de3df983d9b87d4c54b96ac97237b894bc7cd794eb49e480bbc26a7f94",
       "path": "docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md",
       "runner_path": "scripts/frontier_su3_wigner_l3_cube_partition.py",
-      "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Verdict"
+      "title": "SU(3) Wigner Engine Blocks 4+5: L_s=3 Partition Staging + L_s=2 Orientation Diagnostics"
     },
     "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04": {
       "claim_id": "su3_wigner_l3_cube_haar_mc_negative_result_2026-05-04",
@@ -68308,7 +68389,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "positive_theorem",
       "deps": [],
-      "note_hash": "c9d64849e660d590004df819302356421e55c088b4ce07b5e64e1c118c3e5b43",
+      "note_hash": "a2ce85eb188153d077b039e050ee465fbc53bc95c0ec6bb92fa9edd87168aac2",
       "path": "docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md",
       "runner_path": "scripts/wave_static_direct_probe.py",
       "title": "Wave Static Direct-Comparator Fine Check"
@@ -70947,6 +71028,7 @@
     "koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios",
     "koide_y_s4b_rge_tier_downgrade_correction_note_2026-05-10",
     "koide_y_substrate_anomaly_forcing_note_2026-05-08_probey_substrate_anomaly",
+    "koide_z3_equivariant_anticommuting_no_go_note_2026-05-16",
     "koide_z3_joint_projector_identity_note_2026-04-19",
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19",
     "lattice_3d_dense_spent_delay_z2_z5_support_note_2026-04-30",
@@ -71053,6 +71135,7 @@
     "pmns_oriented_cycle_channel_value_law_note",
     "pmns_transfer_operator_dominant_mode_note",
     "pmns_uniform_scalar_deformation_boundary_note",
+    "poisson_self_gravity_loop_note",
     "poisson_self_gravity_loop_v3_note",
     "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality",
     "primitive_p_bae_m1_trace_degeneracy_correction_note_2026-05-10",
@@ -71290,25 +71373,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 363,
+      "bounded_theorem": 368,
       "meta": 74,
       "no_go": 47,
-      "none": 1553,
-      "open_gate": 37,
+      "none": 1550,
+      "open_gate": 39,
       "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 817,
+      "bounded_theorem": 821,
       "meta": 74,
       "no_go": 152,
       "none": 446,
-      "open_gate": 117,
-      "positive_theorem": 615
+      "open_gate": 119,
+      "positive_theorem": 613
     },
-    "edge_count": 8926,
-    "leaf_count": 623,
-    "node_count": 2221,
-    "root_count": 773,
-    "runners_with_path": 1838
+    "edge_count": 8933,
+    "leaf_count": 625,
+    "node_count": 2225,
+    "root_count": 775,
+    "runners_with_path": 1842
   }
 }

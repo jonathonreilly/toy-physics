@@ -1,0 +1,88 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_staggered_dirac_substep3_species_reduction_bridge_2026_05_16.py
+runner_sha256: 46a705a8dab78b873861e997a54cd1bd1cf6849017bbd8c1d38ba01e06014a6c
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.55
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+STAGGERED_DIRAC_SUBSTEP3_SPECIES_REDUCTION_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16
+Goal: sympy verification of arithmetic factorization 16 = 4 * 4
+      and spinor-count match to Cl(3,0) ⊗_R C chirality pair (2, 2)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 1: (R1) d = 4 corner cardinality = 16 (cited upstream)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R1) cardinality of corner set {0, pi}^4 equals 16  (|{0, pi}^4| = 16)
+  [PASS (A)] (R1) corner cardinality matches 2^d = 2^4 = 16  (2^4 = 16)
+  [PASS (A)] (R1) every corner in {0, pi}^4 is a zero of sum sin^2(k_mu)  (zero corners = 16/16)
+
+----------------------------------------------------------------------------------------
+Part 2: (R2) arithmetic factorization 16 = 4 * 4 = 2^2 * 2^2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R2) 16 = 4 * 4 (integer arithmetic)
+  [PASS (A)] (R2) 4 = 2^(d/2) at d = 4 (taste-count factor)  (2^(d/2) = 4)
+  [PASS (A)] (R2) factorization 2^d = 2^(d/2) * 2^(d/2) at d = 4
+
+----------------------------------------------------------------------------------------
+Part 3: (R3) Cl(3,0) ⊗_R C chirality-pair dim 2 + 2 = 4
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R3) positive-chirality realisation: ω = σ_1 σ_2 σ_3 = +i I_2
+  [PASS (A)] (R3) in positive-chirality realisation, e_+ = I_2 (projects to V_+ summand)
+  [PASS (A)] (R3) in positive-chirality realisation, e_- = 0 (V_- summand absent in this rep)
+  [PASS (A)] (R3) parity-conjugate realisation: ω = -σ_1 (-σ_2)(-σ_3) = -i I_2
+  [PASS (A)] (R3) chirality-pair dim sum 2 + 2 = 4 matches N_spinor at d = 4  ((dim V_+, dim V_-) = (2, 2), sum = 4; 2^(d/2) at d=4 = 4)
+  [PASS (A)] (R3) block-diagonal C^4 realisation has rank 4 (full)
+
+----------------------------------------------------------------------------------------
+Part 4: (R3) Cl(3,0) ⊗_R C algebra dim = 8
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R3) dim_C (M_2(C) ⊕ M_2(C)) = 4 + 4 = 8
+
+----------------------------------------------------------------------------------------
+Part 5: (R4) Hamming-weight count on {0, π}^4
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R4) Hamming-weight distribution on {0, π}^4 equals binom(4, k)  (observed = {0: 1, 1: 4, 2: 6, 3: 4, 4: 1}, expected = {0: 1, 1: 4, 2: 6, 3: 4, 4: 1})
+  [PASS (A)] (R4) Hamming-weight counts sum to 2^d = 16  (sum binom(4, k) = 16)
+
+----------------------------------------------------------------------------------------
+Part 6: (R4) Taste-count factor decoupled from Cl(3) algebra
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R4) Cl(3) chirality-pair sum 2+2=4 matches N_spinor (not N_taste)  (chirality sum = 4; N_taste = N_spinor = 4)
+  [PASS (A)] (R4) taste-count factor is the lattice-block Hamming-weight count = 4
+
+----------------------------------------------------------------------------------------
+Part 7: (R5) Regulator dependence disclosure
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R5) naive count 16 is distinct from staggered/wilson/overlap/DW counts  (counts = {'naive': 16, 'wilson': 1, 'staggered': 4, 'domain_wall': 1, 'overlap': 1})
+  [PASS (A)] (R5) arithmetic 16 = 4 * 4 does NOT force any specific regulator
+
+----------------------------------------------------------------------------------------
+Part 8: (R5) Counterfactual at d = 6 (factorization generalizes)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R5) at d = 6, 2^6 = 64 corners
+  [PASS (A)] (R5) at d = 6, factorization is 8 * 8 = 64  (8 * 8 = 64)
+  [PASS (A)] (R5) generic even-d factorization 2^d = 2^(d/2) * 2^(d/2)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (R1) d = 4 corner cardinality = 16 (cited upstream naive theorem)
+    (R2) arithmetic factorization 16 = 4 * 4 = 2^2 * 2^2 at d = 4
+    (R3) Cl(3,0) ⊗_R C chirality-pair dim (2, 2), sum = 4
+    (R3) match to N_spinor = 2^(d/2) = 4 at d = 4
+    (R4) Hamming-weight distribution = binom(4, k) summing to 16
+    (R4) taste-count factor 4 is lattice-block fact, not Cl(3) algebra fact
+    (R5) regulator-dependence disclosed: naive 16 != staggered 4, etc.
+    (R5) factorization generalizes to even d (d = 6 gives 8 * 8)
+
+========================================================================================
+TOTAL: PASS=22, FAIL=0
+========================================================================================
+
+----- stderr -----
+

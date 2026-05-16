@@ -73,20 +73,37 @@ jobs:
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: python3 docs/audit/scripts/repair_missing_dependency_edges.py --apply
 
-      - name: Check runner cache freshness (PR only)
+      - name: Check runner cache freshness (PR only, diff-scoped)
         if: github.event_name == 'pull_request'
         run: |
           # Every runner under scripts/ must have a SHA-pinned cache at
           # logs/runner-cache/<stem>.txt whose header sha matches the
           # current runner. The audit lane consumes this cache; stale
           # caches mean the auditor sees outdated evidence.
-          if ! python3 scripts/precompute_audit_runners.py --all --check-only; then
+          #
+          # PRs check ONLY runners changed in this branch vs the base
+          # ref, so an unrelated PR doesn't inherit pre-existing drift
+          # on main. The nightly cron step below catches main-branch
+          # drift separately. (--pr-diff escalates to the full ledger
+          # if a cache-invalidator helper changed.)
+          base="origin/${{ github.base_ref }}"
+          git fetch --no-tags origin "+${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}"
+          if ! python3 scripts/precompute_audit_runners.py --pr-diff "$base" --check-only; then
             echo
-            echo "::error::Runner cache is stale for one or more runners."
+            echo "::error::Runner cache is stale for one or more runners CHANGED IN THIS PR."
             echo "::error::Refresh locally with:"
-            echo "::error::  python3 scripts/precompute_audit_runners.py --all"
+            echo "::error::  python3 scripts/precompute_audit_runners.py --pr-diff $base"
             echo "::error::then commit logs/runner-cache/."
             exit 1
+          fi
+
+      - name: Report main-branch cache drift (cron/manual, warning only)
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          # Full-ledger freshness check on main. Emits a warning if
+          # drift exists; the cron's refresh step below will fix it.
+          if ! python3 scripts/precompute_audit_runners.py --all --check-only; then
+            echo "::warning::Pre-existing cache drift on main; the nightly refresh below should clear it."
           fi
 
       - name: Run audit pipeline

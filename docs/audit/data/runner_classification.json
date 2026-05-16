@@ -1104,6 +1104,18 @@
       "dominant_class": null,
       "runner": "scripts/backreaction_poisson.py"
     },
+    "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 47,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_bae_block_total_frobenius_derivation_narrow.py"
+    },
     "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent": {
       "assert_count": 0,
       "counts": {
@@ -11844,6 +11856,18 @@
       "dominant_class": "B",
       "runner": "scripts/cl3_koide_y_substrate_anomaly_2026_05_08_probeY_substrate_anomaly.py"
     },
+    "koide_z3_equivariant_anticommuting_no_go_note_2026-05-16": {
+      "assert_count": 0,
+      "counts": {
+        "A": 19,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py"
+    },
     "koide_z3_joint_projector_identity_note_2026-04-19": {
       "assert_count": 1,
       "counts": {
@@ -15329,7 +15353,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 8,
+        "C": 10,
         "D": 0
       },
       "decoration_candidate": false,
@@ -16866,7 +16890,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 4
+        "D": 9
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -18491,6 +18515,30 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/probe_three_states_direct_derivation.py"
+    },
+    "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_staggered_dirac_substep1_grassmann_forcing_bridge_2026_05_16.py"
+    },
+    "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/audit_companion_staggered_dirac_substep3_species_reduction_bridge_2026_05_16.py"
     },
     "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac": {
       "assert_count": 6,
@@ -23060,6 +23108,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/audit_companion_bae_block_total_frobenius_derivation_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 47,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/audit_companion_charged_lepton_koide_cone_algebraic.py": {
       "assert_count": 1,
       "claims": [
@@ -23358,6 +23421,36 @@
       },
       "decoration_candidate": false,
       "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_staggered_dirac_substep1_grassmann_forcing_bridge_2026_05_16.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_staggered_dirac_substep3_species_reduction_bridge_2026_05_16.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/audit_companion_su2_weak_beta_coefficient_narrow_exact_2026_05_10.py": {
@@ -36150,6 +36243,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_koide_z3_equivariant_anticommuting_no_go.py": {
+      "assert_count": 0,
+      "claims": [
+        "koide_z3_equivariant_anticommuting_no_go_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 19,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "exists": true
+    },
     "scripts/frontier_koide_z3_joint_projector_identity.py": {
       "assert_count": 1,
       "claims": [
@@ -38022,7 +38130,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 8,
+        "C": 10,
         "D": 0
       },
       "decoration_candidate": false,
@@ -39395,7 +39503,7 @@
         "A": 0,
         "B": 0,
         "C": 0,
-        "D": 4
+        "D": 9
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -48134,16 +48242,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 204,
+    "decoration_candidates": 206,
     "dominant_class_distribution": {
-      "A": 157,
+      "A": 160,
       "B": 177,
       "C": 689,
-      "D": 279,
+      "D": 280,
       "none": 417
     },
-    "runners_classified": 1719,
+    "runners_classified": 1723,
     "runners_with_C": 880,
-    "runners_with_D": 503
+    "runners_with_D": 505
   }
 }

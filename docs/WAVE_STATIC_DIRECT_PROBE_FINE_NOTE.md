@@ -71,5 +71,5 @@ This note does **not** claim:
 
 It only says:
 
-> at the retained fine point `H = 0.25`, on the actual moving-source lane,
+> at the quoted fine point `H = 0.25`, on the actual moving-source lane,
 > the direct static comparator does not beat `dIeq`.

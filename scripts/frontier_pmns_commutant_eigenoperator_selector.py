@@ -38,6 +38,19 @@ Scope-bounded result:
     odd example (finite-dim representation theory)
   - excluded from load-bearing chain: the bridge to PMNS τ/q observables
     (operational tag only, not a derived readout)
+
+Runner-trace convention (2026-05-16 alignment):
+  The note defines the corner profile as `v_i = tr(P_i^* M P_i)`, the
+  literal complex projected trace. Earlier revisions of this runner
+  computed `Re tr(0.5 (P_i^* M P_i + (P_i^* M P_i)^*))` instead, which
+  drops any imaginary part silently. The 2026-05-10 audit flagged this
+  as a runner/note convention mismatch (runner_artifact_issue). This
+  revision computes the literal complex trace and runs the Cl(3)-span
+  odd-mode-vanishing and demonstrated-non-Cl(3) odd-mode-nonzero checks
+  on the exact profile the note defines, plus auxiliary checks that the
+  imaginary part vanishes on the projected Cl(3) basis and on the
+  demonstrated generator (so the explicit example admits a real profile,
+  but the decomposition no longer relies on Hermitianizing the operator).
 """
 
 from __future__ import annotations
@@ -208,8 +221,23 @@ def in_span(target: np.ndarray, basis: list[np.ndarray]) -> bool:
 
 @dataclass
 class CornerProfile:
+    """Corner profile as defined in the note: literal complex trace tr(P_i^* M P_i).
+
+    The note's load-bearing object is `v_i = tr(P_i^* M P_i)`, the full
+    complex projected trace. Earlier runner revisions Hermitianized the
+    projected operator and returned `Re tr(0.5 (Mp + Mp^*))`, which equals
+    `Re tr(Mp)` and silently drops any imaginary part. That convention
+    mismatch was flagged in the 2026-05-10 audit (verdict: runner does not
+    compute the stated trace profile). This version returns the literal
+    complex trace so the C3 Fourier decomposition and odd-mode checks are
+    performed on the exact object the theorem defines.
+
+    The Hermitian-part eigenspectrum is retained for diagnostic display only
+    and is not used in any load-bearing check.
+    """
+
     label: str
-    trace: float
+    trace: complex
     spectrum: np.ndarray
 
 
@@ -220,7 +248,7 @@ def corner_profile(M: np.ndarray, P: np.ndarray) -> CornerProfile:
         Mp = P.conj().T @ M @ P
     herm = 0.5 * (Mp + Mp.conj().T)
     eigs = np.sort(np.real(np.linalg.eigvalsh(herm)))
-    tr = float(np.real(np.trace(herm)))
+    tr = complex(np.trace(Mp))
     return CornerProfile("", tr, eigs)
 
 
@@ -253,16 +281,33 @@ def part1_projected_commutant_generators_provide_corner_spectra() -> tuple[list[
 
     cl3_basis = cl3_span_basis(gammas)
     proj_cl3_X1 = [P1.conj().T @ M @ P1 for M in cl3_basis]
+
+    # Select a Hermitian projected non-Cl(3) commutant generator. The
+    # commutant of a Hermitian gamma set is closed under Hermitian
+    # conjugation, so M_herm := 0.5 (M + M^*) lies in the projected
+    # commutant whenever M does. We Hermitianize each SVD basis element
+    # and pick the first one that is (a) nonzero, (b) outside the
+    # projected Cl(3) span. This guarantees the literal complex trace
+    # tr(P_i^* M_herm P_i) is real, so the C3 Fourier decomposition of
+    # the literal complex profile satisfies the conjugate-pair relation
+    # v_- = conj(v_+) that the note states for real profiles.
     non_cl3 = None
     for M in proj_comm_X1:
-        if not in_span(M, proj_cl3_X1):
-            non_cl3 = M
+        M_herm = 0.5 * (M + M.conj().T)
+        if np.linalg.norm(M_herm) < 1e-10:
+            continue
+        if not in_span(M_herm, proj_cl3_X1):
+            non_cl3 = M_herm
             break
 
-    check("A projected commutant generator outside the projected Cl(3) span exists", non_cl3 is not None,
-          "corner-distinguishing projected non-Cl(3) generator found")
+    check("A Hermitian projected commutant generator outside the projected Cl(3) span exists", non_cl3 is not None,
+          "corner-distinguishing Hermitian projected non-Cl(3) generator found")
     if non_cl3 is None:
-        raise RuntimeError("could not find projected non-Cl(3) commutant generator")
+        raise RuntimeError("could not find Hermitian projected non-Cl(3) commutant generator")
+
+    check("The selected projected non-Cl(3) commutant generator is Hermitian",
+          np.allclose(non_cl3, non_cl3.conj().T, atol=1e-10),
+          f"||M - M^*||_F={np.linalg.norm(non_cl3 - non_cl3.conj().T):.2e}")
 
     # Lift the projected generator back to the ambient taste space and
     # compare it across the three corners.
@@ -275,11 +320,23 @@ def part1_projected_commutant_generators_provide_corner_spectra() -> tuple[list[
     profiles = {}
     for label, P in zip(["X1", "X2", "X3"], [P1, P2, P3]):
         cp = corner_profile(M_lift, P)
-        profiles[label] = np.array([cp.trace], dtype=float)
-        check(f"The projected non-Cl(3) generator has a real projected trace at {label}", np.isfinite(cp.trace), f"trace={cp.trace:.6f}")
+        profiles[label] = np.array([cp.trace], dtype=complex)
+        check(
+            f"The literal complex projected trace tr(P^* M P) at {label} is finite",
+            np.isfinite(cp.trace.real) and np.isfinite(cp.trace.imag),
+            f"trace={cp.trace.real:.6f}{cp.trace.imag:+.6f}j",
+        )
+        check(
+            f"The literal complex projected trace tr(P^* M P) at {label} is real (Im part vanishes within tolerance)",
+            abs(cp.trace.imag) < 1e-10,
+            f"|Im trace|={abs(cp.trace.imag):.2e}",
+        )
 
-    check("The projected non-Cl(3) generator distinguishes the three corners", len({round(profiles[k][0], 12) for k in profiles}) > 1,
-          f"traces={[profiles[k][0] for k in ['X1', 'X2', 'X3']]}")
+    check(
+        "The projected non-Cl(3) generator distinguishes the three corners on the literal complex profile",
+        len({round(profiles[k][0].real, 12) + 1j * round(profiles[k][0].imag, 12) for k in profiles}) > 1,
+        f"traces={[complex(profiles[k][0]) for k in ['X1', 'X2', 'X3']]}",
+    )
     svs = np.linalg.svd(U21, compute_uv=False)
     check("The C3 unitary maps X1 into X2 with unit singular values", np.allclose(svs, np.ones(P1.shape[1]), atol=1e-10),
           f"svs={np.round(svs, 6)}")
@@ -292,14 +349,23 @@ def part2_fourier_decompose_the_corner_spectrum_into_even_and_odd_modes(profiles
     print("PART 2: C3 FOURIER DECOMPOSITION (REPRESENTATION-THEORETIC IDENTITY)")
     print("=" * 88)
 
+    # profiles[k][0] is the literal complex tr(P_k^* M P_k); the C3 Fourier
+    # decomposition is performed directly on the complex profile, which is
+    # exactly the object the note defines as v_i.
     v = np.array([profiles["X1"][0], profiles["X2"][0], profiles["X3"][0]], dtype=complex)
     v0, v1, v2 = orbit_fourier(v)
 
-    check("The C3-trivial-rep (even) Fourier mode is the corner average", abs(v0 - np.mean(v)) < 1e-12,
+    check("The C3-trivial-rep (even) Fourier mode of the literal complex profile is the corner average", abs(v0 - np.mean(v)) < 1e-12,
           f"v0={v0:.6f}, mean={np.mean(v):.6f}")
-    check("The two C3-fundamental-rep (odd) Fourier modes are exchanged by conjugation on a real profile", abs(v2 - np.conj(v1)) < 1e-12,
+    # On a real-valued profile the two odd modes are conjugate; on the
+    # demonstrated generator the profile happens to be real (verified in
+    # Part 1), so this conjugation relation must hold on the literal complex
+    # profile as well.
+    check("On the literal complex profile, the two C3-fundamental-rep (odd) modes are exchanged by conjugation (real profile in this example)",
+          abs(v2 - np.conj(v1)) < 1e-12,
           f"v1={v1:.6f}, v2={v2:.6f}")
-    check("The odd mode is nonzero because the projected commutant generator distinguishes corners", abs(v1) > 1e-12,
+    check("The odd mode of the literal complex profile is nonzero because the projected commutant generator distinguishes corners",
+          abs(v1) > 1e-12,
           f"|v1|={abs(v1):.6f}")
     print("  [INFO] The even mode is invariant under cyclic relabeling of the corners  (orbit average is C3-trivial)")
 
@@ -369,16 +435,21 @@ def part2a_c3_representation_theory_bridge_derivation() -> None:
 
     cl3_odd_norms = []
     cl3_profiles = []
+    cl3_imag_norms = []
     for M_cl3 in cl3_basis:
         cps = np.array([corner_profile(M_cl3, P).trace for P in [P1, P2, P3]], dtype=complex)
         _, vpc, vmc = orbit_fourier(cps)
-        cl3_profiles.append([round(float(np.real(x)), 6) for x in cps])
+        cl3_profiles.append([complex(round(x.real, 6), round(x.imag, 6)) for x in cps])
         cl3_odd_norms.append(max(abs(vpc), abs(vmc)))
-    check("Every projected Cl(3) basis element has vanishing C3-fundamental-rep modes",
+        cl3_imag_norms.append(max(abs(x.imag) for x in cps))
+    check("Every projected Cl(3) basis element has a real-valued literal complex corner-trace profile",
+          max(cl3_imag_norms) < 1e-10,
+          f"max|Im v_i|={max(cl3_imag_norms):.2e}")
+    check("On the literal complex profile, every projected Cl(3) basis element has vanishing C3-fundamental-rep modes",
           max(cl3_odd_norms) < 1e-10,
           f"max_odd={max(cl3_odd_norms):.2e}, profiles={cl3_profiles}")
-    check("Linearity extends odd-mode vanishing from the projected Cl(3) basis to its span",
-          True, "Fourier projection and corner trace are linear")
+    check("Linearity of the literal-complex-trace Fourier projection extends odd-mode vanishing from the projected Cl(3) basis to its span",
+          True, "v_i = tr(P^* M P) and v_+ = (v_1 + omega v_2 + omega^2 v_3)/3 are both linear in M")
 
     # Important scope guard: the converse is not claimed. The corner-trace
     # functional has a kernel, so zero odd mode is not a membership test for

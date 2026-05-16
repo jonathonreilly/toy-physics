@@ -1,0 +1,92 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_staggered_dirac_substep1_grassmann_forcing_bridge_2026_05_16.py
+runner_sha256: 187444382c824455196466275d1e8c36098d63f81cfc96f57d9576d8fb26699d
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.77
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+STAGGERED_DIRAC_SUBSTEP1_GRASSMANN_FORCING_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16
+Goal: sympy verification of (D1)-(D4) Grassmann-vs-bosonic dichotomy
+      given Cl(3) faithful-irrep dim = 2 and Berezin determinant identity
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: Cl(3) faithful-irrep carrier dim_C V = 2 (cited upstream)
+----------------------------------------------------------------------------------------
+  sigma_1 acts on C^2; carrier dim = 2
+  sigma_2 acts on C^2; carrier dim = 2
+  sigma_3 acts on C^2; carrier dim = 2
+  [PASS (A)] Cl(3) faithful complex irrep carrier dim_C V = 2 (from upstream)  (dim(V) = 2)
+  [PASS (A)] Cl(3) generator relations {sigma_i, sigma_j} = 2 delta_{ij} I exact
+
+----------------------------------------------------------------------------------------
+Part 1: (D1) per-site bosonic Fock truncation dims grow without bound
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D1) bosonic H_x^B[N_max=1] has dim = 2  (dim = N_max + 1 = 2)
+  [PASS (A)] (D1) bosonic H_x^B[N_max=2] has dim = 3  (dim = N_max + 1 = 3)
+  [PASS (A)] (D1) bosonic H_x^B[N_max=5] has dim = 6  (dim = N_max + 1 = 6)
+  [PASS (A)] (D1) bosonic H_x^B[N_max=10] has dim = 11  (dim = N_max + 1 = 11)
+  [PASS (A)] (D1) bosonic H_x^B[N_max=100] has dim = 101  (dim = N_max + 1 = 101)
+  [PASS (A)] (D1) for all N_max >= 2, bosonic dim N_max+1 > Cl(3) faithful-irrep dim 2
+
+----------------------------------------------------------------------------------------
+Part 2: (D2) per-site Grassmann Fock has dim_C = 2
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D2) Grassmann per-site Fock dim_C H_x^G = 2 (basis: |0>, chibar|0>)  (fock_states = ['|0>', 'chibar|0>'])
+  [PASS (A)] (D2) algebraic chi_x^2 = 0 nilpotency (cited upstream Berezin narrow)
+  [PASS (A)] (D2) algebraic chibar_x^2 = 0 nilpotency (cited upstream Berezin narrow)
+
+----------------------------------------------------------------------------------------
+Part 3: (D2) match to dim_C V = 2 (upstream Cl(3) faithful irrep)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D2) dim_C H_x^G = dim_C V (both = 2)  (H_x^G = 2, V = 2)
+
+----------------------------------------------------------------------------------------
+Part 4: (D3) two-candidate comparison
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D3) the explicit comparison set has exactly 2 candidates  (candidates = ['Grassmann', 'bosonic'])
+  [PASS (A)] (D3) Grassmann per-site dim matches Cl(3) faithful irrep dim_C V = 2
+  [PASS (A)] (D3) bosonic per-site dim incompatible with Cl(3) faithful irrep dim 2  (bosonic dim = infinity)
+
+----------------------------------------------------------------------------------------
+Part 5: (D4) Berezin scalar-finite-determinant readout at N=1..4
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D4) Z_F[M] = det(M) at N=1
+  [PASS (A)] (D4) Z_F[M] = det(M) at N=2
+  [PASS (A)] (D4) Z_F[M] = det(M) at N=3
+  [PASS (A)] (D4) Z_F[M] = det(M) at N=4
+
+----------------------------------------------------------------------------------------
+Part 6: (D4) bosonic single-mode infinite-tower diverges from Grassmann
+----------------------------------------------------------------------------------------
+  [PASS (A)] (D4) Grassmann (1 + exp(-m)) != bosonic 1/(1-exp(-m)) on single mode  (diff at m=log(2): -1/2 (G=3/2, B=2))
+  [PASS (A)] (D4) Grassmann trace at m=log(2) equals 3/2
+  [PASS (A)] (D4) bosonic trace at m=log(2) equals 2
+
+----------------------------------------------------------------------------------------
+Part 7: counter-example — drop nilpotency, lose dim-2 readout
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf) without nilpotency, per-site monomial truncation grows: k+1 for k=0..10  (truncated dims = {0: 1, 1: 2, 2: 3, 3: 4, 5: 6, 10: 11})
+  [PASS (A)] (cf) commuting candidate per-site dim incompatible with Cl(3) faithful dim 2 at any k >= 2
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision:
+    (D1) Bosonic per-site Fock truncated dim grows without bound
+    (D2) Grassmann per-site Fock dim = 2 (via nilpotency chi_x^2 = 0)
+    (D2) dim_C H_x^G = dim_C V = 2 match to Cl(3) faithful-irrep dim
+    (D3) Explicit two-candidate comparison {G, B}
+    (D4) Z_F[M] = det(M) at N = 1, 2, 3, 4 (cited upstream Berezin identity)
+    (D4) Grassmann/bosonic single-mode traces structurally distinct
+    Counterfactual: dropping nilpotency loses the dim-2 readout
+
+========================================================================================
+TOTAL: PASS=24, FAIL=0
+========================================================================================
+
+----- stderr -----
+

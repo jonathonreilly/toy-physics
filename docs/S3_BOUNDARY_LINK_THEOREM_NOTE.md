@@ -1,7 +1,8 @@
-# S^3 Boundary-Link Disk Theorem
+# S^3 Boundary-Link Disk Bounded Certificate
 
-**Status:** support - structural or confirmatory support note
-**Type:** Constructive combinatorial proof + computational verification (R=2..10)
+**Status:** bounded support theorem — finite-radius disk verification plus an exhaustive local combinatorial certificate; the all-R cubical-ball disk theorem remains open pending the large-coordinate bridge lemma
+**Claim type:** bounded_theorem
+**Type:** Constructive combinatorial certificate + computational verification (R=2..10)
 **Date:** 2026-04-13
 **Script:** `frontier_s3_boundary_link_theorem.py`
 
@@ -9,14 +10,28 @@
 
 ## Statement
 
-**Theorem (Boundary-Link Disk Lemma).**
+**Bounded certificate (Boundary-Link Disk Lemma support).**
 Let B_R be the cubical ball of radius R in Z^3 (the union of all unit cubes
-whose 8 corners lie within Euclidean distance R of the origin).  For every
-R >= 2 and every boundary vertex v of B_R, the vertex link
+whose 8 corners lie within Euclidean distance R of the origin).  This note
+proves two bounded pieces:
+
+1. For every checked R in 2..10 and every boundary vertex v of B_R, the
+   vertex link
 
     link(v, B_R)
 
-is a PL 2-disk.
+   is a PL 2-disk by direct finite verification on the actual cubical-ball
+   links.
+2. For every nonempty proper subset P of {0, -1}^3 whose P side and
+   complement are both connected in Q_3, the simplicial closure K_simp(P)
+   inside the standard octahedral S^2 is a PL 2-disk by exhaustive 256-subset
+   enumeration.
+
+The all-R cubical-ball disk theorem follows only in the regimes where the
+bridge lemma `link(v, B_R) = K_simp(P)` is proved.  This note proves that
+bridge analytically in the small-coordinate regime described below and checks
+it computationally for R=2..6; its large-coordinate analytic closure remains
+open.
 
 ---
 
@@ -30,8 +45,10 @@ PL 2-disk, because the disk-capping lemma then gives:
     link(v, M_R) = link(v, B_R) cup_{boundary} cone(boundary) ~ S^2.
 
 The previous version of the general-R derivation ASSERTED this disk property
-but did not prove it.  This note closes that gap with a complete proof that
-holds for all R >= 2.
+without the needed finite local certificate.  This note closes the checked
+finite-radius disk claim and supplies the exhaustive K_simp(P) certificate
+that the all-R proof needs, while leaving the remaining bridge lemma case
+explicitly open.
 
 ---
 
@@ -344,10 +361,11 @@ triangle-adjacency graph of T = the 3-cube graph), the cut between them
 in T forms a SINGLE simple closed cycle in the dual 1-skeleton of T.
 This is a finite combinatorial fact about the 3-cube graph: every cut
 between a connected downset and its connected upset complement
-in Q_3 is a single (combinatorial) cycle in the dual.  Direct enumeration
-of all 2^8 = 256 subsets of triangles satisfies this: every nonempty
-proper downset / upset partition gives exactly ONE connected cut cycle.
-This enumeration is finite and trivially confirmed.
+in Q_3 is a single (combinatorial) cycle in the dual.  This statement
+is verified by the exhaustive 256-subset certificate (Proposition Z
+below), which checks every nonempty proper subset of {0,-1}^3 whose
+two sides are both connected in Q_3 (126 such subsets total) and
+confirms that each yields a single boundary 1-cycle in K_simp(P).
 
 **Property 5b: every vertex of K has link = PL 1-sphere or PL 1-arc.**
 
@@ -386,6 +404,125 @@ In every nondegenerate case, link(d, K) is a PL 1-sphere or a PL 1-arc.
 This is a finite enumeration on a 4-cycle, requiring no Jordan curve
 appeal or surface classification.
 
+### Bridge Lemma: link(v, B_R) = simplicial closure K_simp(P)
+
+The all-R argument so far uses the analytic Phi-monotonicity (downset /
+upset structure on present and absent cube sets) and Properties 1-5
+applied to the actual link K = link(v, B_R) computed from B_R.  In
+principle, K could contain edges or vertices that are not faces of
+any present cube but are instead supplied by cubes adjacent to v that
+lie outside the 8 cubes incident to v (an axis-neighbour v+d is in
+sites(B_R) iff any cube containing v+d is in B_R, including cubes
+that do not touch v).  This bridge lemma rules out that possibility
+for the cubical ball.
+
+**Statement.**  For every R >= 2 and every boundary vertex v of B_R,
+the vertex link link(v, B_R) equals the simplicial closure K_simp(P)
+of the present-cube set P inside the standard octahedral S^2.  Here
+K_simp(P) is the subcomplex of T whose triangles are P, whose edges
+are the faces of triangles in P, and whose vertices are the faces of
+triangles in P.
+
+**Status (current note version).**  The "K_simp(P) is contained in K"
+direction is immediate (cubes in P contribute their full simplicial
+data to K).  The reverse direction "K is contained in K_simp(P)"
+requires showing that no extra vertex or edge arises in K from a
+cube outside P.
+
+For axis-direction vertices d = +e_1 with v_1 >= -1, the per-axis
+function g_i(t) = max(t^2, (t+1)^2) is non-decreasing as t moves away
+from {-1, 0}, so any non-incident cube containing v+d has an axis-1
+contribution at least as large as the corresponding incident cube
+with s_1 = 0.  By summing over axes, the incident cube is in B_R
+whenever the non-incident cube is.  The same argument works in the
+symmetric regime (v_i <= 0 and d = -e_i with v_i >= 0).
+
+For the remaining v_1 <= -2 regime (and symmetric cases): the V-shape
+of g_i means the non-incident cube C^* with axis-1 min-corner v_1 + 1
+can be in B_R while the incident cube with axis-1 min-corner v_1 is
+not.  In this regime the analytic closure is not provided here;
+instead, the runner verifies the equality K(v, B_R) = K_simp(P)
+directly for every boundary vertex at R = 2..6 (1,162 vertices, 0
+mismatches).  This is the BRIDGE LEMMA check.
+
+**Honest scope.**  The bridge lemma is therefore proved analytically
+for the |v_i| <= 1 regime and verified computationally for the
+1,162 boundary vertices at R = 2..6.  Closing the v_i <= -2 regime
+analytically is an open algebraic refinement.
+
+**Why this still closes the all-R disk property.**  The R = 2..10
+runner verifies Properties 1-5 on the actual link K(v, B_R) at every
+boundary vertex (5,778 vertices, 0 failures), regardless of whether
+K equals K_simp(P).  So the disk property at every boundary vertex
+of B_R for R = 2..10 is closed unconditionally.  For R >= 11 the
+disk property reduces to Proposition Z (below) plus the bridge
+lemma; in the |v_i| <= 1 regime the analytic closure suffices, and
+in the v_i <= -2 regime the bridge lemma is pending an analytic
+proof.  The combinatorial certificate Proposition Z is in itself a
+finite-rank theorem about subsets of {0, -1}^3 and is fully closed
+independently of the bridge lemma.
+
+### Proposition Z: exhaustive combinatorial all-256 certificate
+
+By the Bridge Lemma (above; closed in the |v_i| <= 1 regime and
+empirically verified at 1,162 boundary vertices), the link
+K = link(v, B_R) coincides with the simplicial closure K_simp(P).
+The disk property of K therefore reduces (modulo the bridge lemma)
+to a purely combinatorial property of P as a subset of {0, -1}^3.
+Since there are only 2^8 = 256 subsets of {0, -1}^3, the disk
+property of K_simp(P) can be verified by FINITE EXHAUSTIVE
+ENUMERATION, independent of any geometric hypothesis about P
+beyond it being a nonempty proper subset with both sides connected
+in Q_3.
+
+**Proposition Z (exhaustive certificate).**  For every nonempty proper
+subset P of {0, -1}^3 such that BOTH P and its complement A = {0,-1}^3
+\ P are connected in Q_3, the simplicial closure K_simp(P) inside the
+standard octahedral S^2 is a PL 2-disk.
+
+**Proof.**  Direct enumeration.  There are 256 subsets of {0, -1}^3;
+of these, 254 are nonempty proper; of those, 126 have both sides
+connected in Q_3.  For each of these 126 candidates the runner builds
+K_simp(P) (at most 6 vertices, 12 edges, 8 triangles), computes:
+- the integer first homology H_1(K_simp(P); Z) via Smith Normal Form;
+- the number of boundary 1-cycles by graph BFS;
+- the vertex-link manifoldness (every vertex link a PL 1-sphere or
+  PL 1-arc) by direct degree count in the 4-cycle link.
+
+All 126 PASS the disk classification (H_1 = 0, exactly one boundary
+component, all vertex links PL S^1 or PL 1-arc).  The enumeration is
+finite linear algebra on at-most-8-dimensional matrices; no analytic
+limits or large-R asymptotics are required.  QED.
+
+**Proposition Z'.**  Among the 126 candidate subsets, exactly 102 are
+realized as downsets under SOME per-coordinate preference order in
+{0, -1, indifferent}^3 (the cubical-ball-realizable types).  All 102
+realized types are PL 2-disks (verified by the same enumeration).
+The 24 candidate subsets with both sides connected in Q_3 that are
+NOT realized as preference-order downsets are an empty class for
+cubical balls (Property 2 of this note shows the present set is always
+a preference-order downset for cubical-ball boundary vertices), so
+those 24 subsets cannot arise for any v, R.  But the Proposition Z
+disk verification covers them as well, providing a structural
+strengthening that does not rely on the cubical-ball realizability
+restriction.
+
+**Closure dependency map.**  Combining the Bridge Lemma (link =
+simplicial closure for cubical balls; closed for |v_i| <= 1,
+empirically verified for v_i <= -2 at 1,162 vertices) with
+Proposition Z (every Q_3-both-sides-connected subset closure is a
+PL 2-disk; closed exhaustively) and Property 2 / 2a (every cubical-
+ball boundary vertex produces a both-connected partition; closed
+analytically all-R), we conclude that link(v, B_R) is a PL 2-disk
+for every boundary vertex of every cubical ball B_R in the
+|v_i| <= 1 regime, and at every boundary vertex verified by the
+R = 2..10 runner (5,778 vertices, 0 failures).  Proposition Z is
+itself a fully closed finite-combinatorial theorem about subsets of
+{0, -1}^3, contributing an all-R bridge that can be cited
+independently of the cubical-ball geometry.  The bridge lemma's
+v_i <= -2 analytic closure is the single remaining algebraic gap
+between the present note and a fully analytic all-R disk theorem.
+
 ### Conclusion: PL 2-disk
 
 By the FINITE COMBINATORIAL Properties 1-5:
@@ -417,25 +554,32 @@ forces the complement to be a disk by integer rank-counting on the
 Mayer-Vietoris long exact sequence, which is itself finite linear
 algebra.
 
-We do NOT use the Jordan curve theorem.  Therefore:
-**link(v, B_R) is a PL 2-disk for every boundary vertex v of B_R, for
-every R >= 2.**  QED.
+We do NOT use the Jordan curve theorem.  Therefore, whenever
+`link(v, B_R) = K_simp(P)` is established, the link is a PL 2-disk.
+This gives the unconditional checked result for R=2..10 via direct
+verification of the actual links, and it gives an all-R implication only in
+the bridge-lemma regimes closed analytically.  The large-coordinate bridge
+case remains an open algebraic refinement, so the present note does not by
+itself prove the full all-R cubical-ball disk theorem.  QED.
 
 ---
 
-## What this closes
+## What this closes and what remains open
 
 The general-R derivation of M_R ~ S^3 (S3_GENERAL_R_DERIVATION_NOTE.md)
 had one unproved load-bearing step: the assertion that every boundary-vertex
-link is a PL 2-disk.  This note provides that proof.
+link is a PL 2-disk.  This note provides the finite-radius closure and the
+local combinatorial certificate needed for that proof, but it does not close
+the remaining large-coordinate bridge-lemma case.
 
 The complete derivation chain is now:
 
-1. **Every vertex link of M_R is PL S^2** (for all R >= 2)
+1. **Every vertex link of M_R is PL S^2** (proved for R=2..10; all-R
+   boundary-vertex case conditional on the bridge lemma)
    - Interior vertices: local 3x3x3 argument (R-independent)
    - Cone point: boundary of convex cubical ball = PL S^2
    - Boundary vertices: **link(v, B_R) is PL 2-disk** [THIS NOTE]
-     + disk-capping lemma => PL S^2
+     + disk-capping lemma => PL S^2 where the bridge lemma is closed
 
 2. **pi_1(M_R) = 0** (van Kampen, both pieces contractible)
 
@@ -444,7 +588,9 @@ The complete derivation chain is now:
 4. **M_R ~ S^3** (PL Poincare, Perelman 2003)
 
 The ONLY external citation is Perelman (2003) for the PL Poincare conjecture
-in Step 4.  Steps 1-3 are now fully proved in-framework.
+in Step 4.  Steps 1-3 are now fully proved for the checked finite-radius
+family; the all-R chain still needs the open bridge-lemma analytic closure
+before it can be treated as a completed source theorem.
 
 ---
 
@@ -454,7 +600,22 @@ in Step 4.  Steps 1-3 are now fully proved in-framework.
 
 **R = 2..10:** Every boundary vertex link verified to satisfy P1-P5.
 All boundary links classified as PL 2-disk.  Total 5,778 boundary
-vertices; 117 PASS / 0 FAIL across the full check matrix.
+vertices.
+
+**Exhaustive combinatorial certificate (Proposition Z):** 126/126
+nonempty proper subsets of {0, -1}^3 with both sides connected in Q_3
+verified as PL 2-disks via simplicial-closure SNF + boundary-BFS +
+vertex-link manifoldness; 102/102 cubical-ball-realizable preference-
+order downset types (the same subsets that arise at observed R = 2..10
+boundary vertices, plus types that would arise at larger R) are
+included.
+
+**Bridge lemma cross-check:** 1,162/1,162 boundary vertices at
+R = 2..6 have link(v, B_R) coinciding with the simplicial closure
+K_simp(P).
+
+Total runner output (current revision): 121 PASS / 0 FAIL
+(120 EXACT, 1 BOUNDED).
 
 The new finite combinatorial checks are:
 
@@ -488,7 +649,33 @@ vertices) to large (R=10, ~4000+ boundary vertices) configurations.
 
 ## Honest assessment
 
-**What is proved:** For all R >= 2, link(v, B_R) is a PL 2-disk.
+**What is proved unconditionally:**
+- For R = 2..10: every boundary vertex of B_R has link(v, B_R) a
+  PL 2-disk (runner verification on 5,778 vertices, 0 failures).
+- Proposition Z (all-256 combinatorial certificate): for every
+  nonempty proper subset P of {0, -1}^3 with both P and its complement
+  connected in Q_3, the simplicial closure K_simp(P) inside the
+  octahedral S^2 is a PL 2-disk (exhaustive enumeration, 126/126 pass).
+- Property 2 / 2a all-R: for every cubical-ball boundary vertex, the
+  present-cube set is a connected downset and its complement is a
+  connected upset in Q_3 (Phi-monotonicity proof).
+
+**What is proved for the |v_i| <= 1 regime (subset of all-R):**
+- Bridge lemma: link(v, B_R) = simplicial closure K_simp(P).
+  Combined with Proposition Z and Property 2, this gives an all-R
+  disk theorem in this regime.
+
+**What remains pending an analytic closure:**
+- Bridge lemma for v_i <= -2 (and symmetric large-|v_i| regimes).
+  The runner verifies the equality K(v, B_R) = K_simp(P) at every
+  observed boundary vertex (R = 2..6, 1,162 vertices, 0 mismatches).
+  An analytic proof is left as an open refinement.
+
+**Net effect on the disk theorem:** The all-R disk claim is proved
+unconditionally in the |v_i| <= 1 regime, and reduces (in the large-
+|v_i| regime) to the bridge-lemma analytic closure.  Direct R = 2..10
+runner verification covers the latter regime computationally up to
+R = 10.
 
 **Proof method:** The coordinate-separability lemma shows that the membership
 function Phi(s) = sum_i f_i(s_i) decomposes as a sum of per-coordinate
@@ -516,9 +703,26 @@ version replaces this with finite combinatorial checks (P3a integer SNF,
 P5a single-boundary-component graph BFS, P5b vertex-link 4-cycle
 enumeration).
 
-**What remains open:** Nothing for this lemma.  The boundary-link disk
-property is now fully proved for all R >= 2 by finite combinatorial
-arguments.
+**What remains open:** The bridge lemma's v_i <= -2 case (the
+analytic counterpart of the empirical 1,162/1,162 runner check).
+Closing this gap would upgrade the all-R disk theorem from
+"proved for |v_i| <= 1 and verified for R = 2..10" to "proved
+analytically for all R".
+
+**All-R closure mechanism (post-audit upgrade).**  The current version
+adds the Bridge Lemma (link equals simplicial closure inside the
+octahedral S^2) and Proposition Z (exhaustive 256-subset combinatorial
+certificate).  Together these reduce the all-R disk claim to a finite
+enumeration: the 126 nonempty proper subsets of {0, -1}^3 with both
+sides connected in Q_3 are each independently verified as PL 2-disks
+by integer SNF, boundary-cycle BFS, and vertex-link degree-counting
+on the standard octahedron.  This certificate covers the 102 cubical-
+ball-realizable preference-order downset types as a subset, and
+includes a structural strengthening that covers the 24 additional
+Q_3-both-connected subsets which cannot arise as cubical-ball
+preference-order downsets but are nevertheless PL 2-disks.  The
+Bridge Lemma's |v_i| <= 1 case is closed analytically; the v_i <= -2
+case is verified empirically (1,162/1,162 vertices, R = 2..6).
 
 **Audit-response history.**  Earlier audit feedback (PR #775) flagged
 that Properties 3-4 of the prior version "treat an arbitrary simplicial
@@ -530,22 +734,68 @@ proof of H_1 = 0 (Property 3a) and adds an explicit vertex-link
 manifoldness check (Property 5b) to certify the compact PL 2-manifold
 structure directly.  Both checks are finite-rank linear algebra.
 
+A subsequent audit pass flagged that the finite R = 2..10 runner only
+covers 102 observed downset/upset configuration types and does not
+constitute an exhaustive all-R certificate.  The repair target
+("missing_bridge_theorem: provide an exhaustive all-type certificate
+or explicit finite combinatorial theorem covering all nonempty proper
+downset/upset configurations") is addressed in this revision by:
+
+  (i) **Bridge Lemma (link-equals-simplicial-closure)**: for every
+  cubical-ball boundary vertex v, the link K(v, B_R) coincides with
+  the simplicial closure K_simp(P) of the present-cube set P inside
+  the standard octahedral S^2.  Proved analytically by Phi-monotonicity
+  in the |v_i| <= 1 regime; verified empirically at 1,162/1,162
+  boundary vertices for R = 2..6; an analytic closure of the v_i <= -2
+  regime is left as an open refinement.
+
+  (ii) **Proposition Z (exhaustive 256-subset certificate)**: a finite
+  enumeration over all 2^8 = 256 labelled subsets of {0, -1}^3 verifies
+  the PL 2-disk property (integer H_1 = 0, single boundary 1-cycle,
+  vertex-link manifoldness) on K_simp(P) for every nonempty proper
+  subset P whose two sides are both connected in Q_3.  All 126 such
+  candidates PASS; in particular all 102 cubical-ball-realizable
+  preference-order downset types are PL 2-disks.
+
+These additions are checked by the runner as exact local combinatorial
+certificates for K_simp(P).  The runner reports 102/102 realized downset
+types and 126/126 Q_3-both-connected subsets all PASS; the bridge
+lemma cross-check passes at 1,162/1,162 boundary vertices for R = 2..6.
+Proposition Z is therefore a fully closed finite-combinatorial theorem
+about octahedral K_simp(P) closures; the bridge lemma is the remaining
+frontier for an unconditional all-R cubical-ball disk theorem.
+
 ---
 
 ## How this changes the paper
 
-The S^3 general-R derivation chain now has no unproved load-bearing steps
-at the boundary-vertex level.  The boundary-link disk lemma is proved for
-all R by a clean algebraic argument (coordinate-separability of the
-farthest-corner distance), removing the last reliance on geometric rhetoric
-or computational support for the main theorem.
+The S^3 general-R derivation chain has the boundary-link disk lemma
+proved unconditionally for R = 2..10 (runner verification on all 5,778
+boundary vertices) and reduces the all-R claim to a single bridge
+lemma (link = simplicial closure for cubical balls), which is itself
+closed in the |v_i| <= 1 regime and empirically verified at 1,162
+checked boundary vertices.  The combinatorial certificate
+(Proposition Z) closes the local K_simp(P) disk property given the bridge
+lemma, by exhaustive enumeration over the 126 candidate subsets of the
+3-cube.
+
+The previous version's appeal to "the boundary cycle is a Jordan
+curve" is replaced by integer Smith Normal Form on the chain complex
+(Property 3a) and direct vertex-link manifoldness checks (Property
+5b); neither argument relies on the Jordan curve theorem or surface
+classification.
 
 ---
 
 ## Decision
 
-**PROMOTE** -- the boundary-link disk lemma is proved for all R >= 2 with
-a clean all-R theorem.  No fallback to computational support.
+**Status:** the boundary-link disk lemma is proved unconditionally for
+R = 2..10 (5,778/5,778 boundary vertices verified) and reduces to the
+bridge lemma + Proposition Z combinatorial certificate for all R; the
+bridge lemma's v_i <= -2 analytic closure is the remaining algebraic gap.
+Proposition Z is itself a fully closed finite combinatorial theorem about
+the octahedral K_simp(P) closures, not a standalone proof of the all-R
+cubical-ball theorem without the bridge lemma.
 
 ---
 

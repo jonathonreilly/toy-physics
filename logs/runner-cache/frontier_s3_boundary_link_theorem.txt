@@ -1,17 +1,18 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_s3_boundary_link_theorem.py
-runner_sha256: bb621c8cf62accb4ce15e555ccba0205c06cf888e19970ead08334a05ce52e6b
+runner_sha256: 0b3adc684b6221e288ca797322e588c4068262f01128f18459c82d6bdd2c77fe
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 7.29
+elapsed_sec: 5.59
 status: ok
 ----- stdout -----
 ======================================================================
-  S^3 BOUNDARY-LINK DISK THEOREM: VERIFICATION + MECHANISM TESTS
+  S^3 BOUNDARY-LINK DISK BOUNDED CERTIFICATE: VERIFICATION
 ======================================================================
 
-  Theorem: For all R >= 2, every boundary vertex v of B_R has
-           link(v, B_R) = PL 2-disk.
+  Bounded claim: for R=2..10, every boundary vertex v of B_R has
+                 link(v, B_R) = PL 2-disk; all-R remains
+                 conditional on the bridge lemma in the large-coordinate regime.
 
   This script tests BOTH the conclusion AND the proof mechanism.
 
@@ -194,19 +195,39 @@ status: ok
   [PASS] [EXACT] R=10 MECHANISM: absent set connected in Q_3  (1610/1610)
 
 ======================================================================
-  FINITE TYPE ENUMERATION (bounded support)
+  FINITE TYPE ENUMERATION (observed R=2..10 sample)
 ======================================================================
   Distinct (present, absent) configurations on {0,-1}^3 across R=2..10: 102
   All such configurations are nonempty proper downsets in Q_3.
   All produce H_1 = 0 over Z (verified above).
   All produce single-boundary-component PL 2-disk.
-  TYPE BOUND: at most 2^8 = 256 labelled subsets of {0,-1}^3.
-  This run reports the subset types that actually occur for
-  R=2..10; larger-R exhaustion remains part of the analytic proof,
-  not something certified by this bounded enumeration alone.
-  Empirical: 102 distinct configurations observed at R=2..10,
-  all PASS the H_1=0 + manifoldness + single-boundary checks.
   [PASS] [BOUNDED] FINITE TYPE ENUMERATION: observed R=2..10 configurations verified  (102 observed labelled types; all checked in the finite-radius run)
+
+======================================================================
+  EXHAUSTIVE COMBINATORIAL CERTIFICATE (all-R bridge)
+======================================================================
+  Enumerating all 2^8 = 256 subsets of {0,-1}^3; for each
+  nonempty-proper subset whose two sides are both connected in
+  Q_3, verify K_simp(P) inside the octahedral S^2 is a PL 2-disk
+  (integer H_1 = 0, single boundary 1-cycle, vertex-link
+  manifoldness).  No appeal to R-truncation; finite enumeration.
+  Total subsets enumerated:                256
+  Nonempty proper subsets:                 254
+  Realized as downset by some preference   102
+  order (cubical-ball-realizable types):
+  Both P and A connected in Q_3:           126
+  Of realized: PL 2-disk:                  102/102
+  Of both-connected: PL 2-disk:            126/126
+  [PASS] [EXACT] EXHAUSTIVE CERTIFICATE: every preference-order downset/upset type yields a PL 2-disk  (102/102 realized cubical-ball downset types are PL 2-disks (finite octahedral SNF + boundary-BFS + vertex-link check))
+  [PASS] [EXACT] EXHAUSTIVE CERTIFICATE: every Q_3-both-sides-connected subset yields a PL 2-disk (structural strengthening)  (126/126 Q_3-connected-both subsets are PL 2-disks; covers the realized downset types and a structural superset)
+
+======================================================================
+  BRIDGE CROSS-CHECK: link(v, B_R) = simplicial closure K_simp(P)
+======================================================================
+  R range checked: 2..6
+  Matches:    1162
+  Mismatches: 0
+  [PASS] [BOUNDED] BRIDGE LEMMA: K(v, B_R) coincides with simplicial closure K_simp(P) for every observed boundary vertex  (1162 match / 0 mismatch; supports the analytic Phi-monotonicity bridge proof in the note)
 
 ======================================================================
   SUMMARY
@@ -216,9 +237,9 @@ status: ok
   All disk:          5778/5778
   Failures:          0
 
-  PASS: 118   FAIL: 0
-  EXACT: 117   BOUNDED: 1
-  Time: 6.8s
+  PASS: 121   FAIL: 0
+  EXACT: 119   BOUNDED: 2
+  Time: 5.4s
 
   RESULT: ALL CHECKS PASS
 

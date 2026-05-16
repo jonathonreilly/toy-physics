@@ -19,10 +19,11 @@ If dS is materially more stable than dIeq under H refinement, the exact
 discrete static comparator route is promising. If not, the comparator route is
 probably closing and the flagship should shift toward direct dM observables.
 
-Current review-safe default evidence is the coarse/medium ladder
-H={0.5, 0.35}. The fine point H=0.25 remains an optional validation run and
-is expensive enough on the current workstation that it should not be treated
-as retained default evidence.
+Default H ladder is H = {0.5, 0.35, 0.25} so the cache always includes the
+quoted fine point H = 0.25 that docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md
+uses. The fine point dominates wall-clock (~4 minutes on the current
+workstation, ~5-6 minutes for the full sweep); AUDIT_TIMEOUT_SEC is declared
+below so the precompute orchestrator allows it to complete.
 """
 
 from __future__ import annotations
@@ -33,6 +34,12 @@ import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent))
+
+# Heavy compute: the fine point H=0.25 alone takes ~4 minutes wall-clock
+# (NL=60 layers, 41x41 static Poisson solve with up to 20k SOR sweeps per
+# distinct source z). Full default sweep H={0.5,0.35,0.25} fits inside the
+# declared budget; default 120s would time out.
+AUDIT_TIMEOUT_SEC = 600
 
 from wave_retardation_continuum_limit import (
     BETA,
@@ -165,8 +172,12 @@ def main():
         "--hs",
         type=float,
         nargs="*",
-        default=[0.5, 0.35],
-        help="H values to run. Default: 0.5 0.35 (H=0.25 optional and expensive)",
+        default=[0.5, 0.35, 0.25],
+        help=(
+            "H values to run. Default ladder 0.5 0.35 0.25 covers the "
+            "coarse, medium, and quoted fine points; the fine point H=0.25 reproduces "
+            "the negative quoted in docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md."
+        ),
     )
     args = parser.parse_args()
 

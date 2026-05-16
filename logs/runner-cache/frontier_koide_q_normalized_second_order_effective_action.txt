@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_koide_q_normalized_second_order_effective_action.py
-runner_sha256: 65243494b35d26953f5386343ba346a2282a33905e1ee61623cb080d35c20ea7
+runner_sha256: 236e47f6b58510befdb0a01e4a7479d92ad69cf51cf1813d93bc17ecce07582d
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.76
+elapsed_sec: 0.77
 status: ok
 ----- stdout -----
 
@@ -60,9 +60,21 @@ E. Exact Koide consequence
        Q = 2/3
 
 ========================================================================================
+F. Audit dependency-graph bookkeeping (no status promotion)
+========================================================================================
+[PASS] F.1 KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md exists on disk
+       Trace-preserving local descent uniqueness E_loc(X) = (Tr X / 3) I annihilates the reduced traceless Z coordinate.
+[PASS] F.2 KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md exists on disk
+       K = 0 <=> Y = I_2 <=> z = 0 <=> Q = 2/3 criterion equivalence on the admitted normalized reduced carrier.
+[PASS] F.3 KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md exists on disk
+       Structural composition OP T1+T2 + physical-lattice-necessity locality + canonical descent + CRIT, targeting the source-free half.
+[PASS] F.4 this section is graph-bookkeeping only and asserts no status promotion
+       Audit lane independently sets effective_status; runner pass count alone never promotes a row beyond audited_conditional.
+
+========================================================================================
 Summary
 ========================================================================================
-PASSED: 18/18
+PASSED: 22/22
   [PASS] A.1 trace normalization sends the positive block carrier to Tr(Y) = 2
   [PASS] A.2 the normalized carrier is exactly scale-free under common positive rescaling
   [PASS] A.3 equality on the normalized carrier is equivalent to equality of the original block powers
@@ -81,6 +93,10 @@ PASSED: 18/18
   [PASS] E.2 equal block power is exactly 2 r0^2 = r1^2 + r2^2
   [PASS] E.3 in circulant variables this is exactly a^2 = 2|b|^2, i.e. kappa = 2
   [PASS] E.4 therefore the normalized effective-action minimum gives exact Koide Q = 2/3
+  [PASS] F.1 KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md exists on disk
+  [PASS] F.2 KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md exists on disk
+  [PASS] F.3 KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md exists on disk
+  [PASS] F.4 this section is graph-bookkeeping only and asserts no status promotion
 
 VERDICT: on the exact first-live second-order carrier, the
 source-free normalized effective-action route lands at Y = I_2.

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_commutant_eigenoperator_selector.py
-runner_sha256: 6145b57c896bf028dd1594f62221ab2070a723f9a78e826c1947f37864aea6ba
+runner_sha256: 6acc2d58b21ce9a96fe37ed1354a361d634147986d6f98cac74e139958ff2adf
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.14
+elapsed_sec: 0.20
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -35,19 +35,23 @@ PART 1: PROJECTED COMMUTANT GENERATORS PROVIDE CORNER SPECTRA
   [PASS (A)] The projected commutant at X1 has dimension 4
   [PASS (A)] The projected commutant at X2 has dimension 4
   [PASS (A)] The projected commutant at X3 has dimension 4
-  [PASS (A)] A projected commutant generator outside the projected Cl(3) span exists  (corner-distinguishing projected non-Cl(3) generator found)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X1  (trace=1.659016)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X2  (trace=0.829508)
-  [PASS (A)] The projected non-Cl(3) generator has a real projected trace at X3  (trace=0.829508)
-  [PASS (A)] The projected non-Cl(3) generator distinguishes the three corners  (traces=[np.float64(1.6590157818996238), np.float64(0.8295078909498119), np.float64(0.8295078909498119)])
+  [PASS (A)] A Hermitian projected commutant generator outside the projected Cl(3) span exists  (corner-distinguishing Hermitian projected non-Cl(3) generator found)
+  [PASS (A)] The selected projected non-Cl(3) commutant generator is Hermitian  (||M - M^*||_F=0.00e+00)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X1 is finite  (trace=1.659016+0.000000j)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X1 is real (Im part vanishes within tolerance)  (|Im trace|=3.08e-33)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X2 is finite  (trace=0.829508+0.000000j)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X2 is real (Im part vanishes within tolerance)  (|Im trace|=3.47e-18)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X3 is finite  (trace=0.829508+0.000000j)
+  [PASS (A)] The literal complex projected trace tr(P^* M P) at X3 is real (Im part vanishes within tolerance)  (|Im trace|=0.00e+00)
+  [PASS (A)] The projected non-Cl(3) generator distinguishes the three corners on the literal complex profile  (traces=[(1.6590157818996238+3.0814879110195774e-33j), (0.8295078909498119+3.469446951953614e-18j), (0.8295078909498119+0j)])
   [PASS (A)] The C3 unitary maps X1 into X2 with unit singular values  (svs=[1. 1. 1. 1.])
 
 ========================================================================================
 PART 2: C3 FOURIER DECOMPOSITION (REPRESENTATION-THEORETIC IDENTITY)
 ========================================================================================
-  [PASS (A)] The C3-trivial-rep (even) Fourier mode is the corner average  (v0=1.106011+0.000000j, mean=1.106011+0.000000j)
-  [PASS (A)] The two C3-fundamental-rep (odd) Fourier modes are exchanged by conjugation on a real profile  (v1=0.276503+0.000000j, v2=0.276503+0.000000j)
-  [PASS (A)] The odd mode is nonzero because the projected commutant generator distinguishes corners  (|v1|=0.276503)
+  [PASS (A)] The C3-trivial-rep (even) Fourier mode of the literal complex profile is the corner average  (v0=1.106011+0.000000j, mean=1.106011+0.000000j)
+  [PASS (A)] On the literal complex profile, the two C3-fundamental-rep (odd) modes are exchanged by conjugation (real profile in this example)  (v1=0.276503+0.000000j, v2=0.276503+0.000000j)
+  [PASS (A)] The odd mode of the literal complex profile is nonzero because the projected commutant generator distinguishes corners  (|v1|=0.276503)
   [INFO] The even mode is invariant under cyclic relabeling of the corners  (orbit average is C3-trivial)
 
   This is the exact C3 representation-theoretic decomposition:
@@ -66,8 +70,9 @@ PART 2a: C3 REPRESENTATION-THEORY BRIDGE (DERIVATION)
   [PASS (A)] C3 characters e_+ and e_- are orthogonal  (<e_+|e_->=0.000000-0.000000j)
   [PASS (A)] On a C3-symmetric profile, the even mode equals the constant value  (v0=2.500000+0.000000j)
   [PASS (A)] On a C3-symmetric profile, the C3-fundamental-rep modes vanish identically  (|v_+|=2.96e-16, |v_-|=2.96e-16)
-  [PASS (A)] Every projected Cl(3) basis element has vanishing C3-fundamental-rep modes  (max_odd=4.68e-16, profiles=[[4.0, 4.0, 4.0], [-0.0, 0.0, 0.0], [0.0, -0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])
-  [PASS (A)] Linearity extends odd-mode vanishing from the projected Cl(3) basis to its span  (Fourier projection and corner trace are linear)
+  [PASS (A)] Every projected Cl(3) basis element has a real-valued literal complex corner-trace profile  (max|Im v_i|=0.00e+00)
+  [PASS (A)] On the literal complex profile, every projected Cl(3) basis element has vanishing C3-fundamental-rep modes  (max_odd=4.68e-16, profiles=[[(4+0j), (4+0j), (4+0j)], [(-0+0j), 0j, 0j], [0j, (-0+0j), 0j], [0j, 0j, 0j], [0j, 0j, 0j], [0j, 0j, 0j], [0j, 0j, 0j], [0j, 0j, 0j]])
+  [PASS (A)] Linearity of the literal-complex-trace Fourier projection extends odd-mode vanishing from the projected Cl(3) basis to its span  (v_i = tr(P^* M P) and v_+ = (v_1 + omega v_2 + omega^2 v_3)/3 are both linear in M)
 
   Bridge derivation summary:
     (i)  C3 character orthogonality: e_0, e_+, e_- are pairwise orthogonal
@@ -158,7 +163,7 @@ RESULT (NARROWED SCOPE)
     - tau := (sign(Re v_+) < 0)
     - any PMNS-physical observable identification
 
-PASS=28  FAIL=0
+PASS=33  FAIL=0
 
 ----- stderr -----
 
