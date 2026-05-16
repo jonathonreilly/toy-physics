@@ -2899,6 +2899,35 @@ Auditor judged that the chain needs a new theorem for a physical carrier, readou
 _27 rows in this category._
 
 
+### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
+
+**Note:** [docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)  |  **Descendants:** 920  |  **Class:** F
+
+```
+Use the physics-loop skill to close the conditional audit on docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md.
+
+Current audit state:
+- audit_status: audited_conditional
+- claim_type: open_gate
+- load_bearing_step_class: F
+- claim_scope: Audited the claimed finite-box residual-environment identification and runner-backed replacement of the prior witness by computed normalized single-link Wilson coefficients at beta = 6, not an all-weight environment-compression theorem.
+
+Auditor's verdict_rationale:
+The computation does improve the finite-box support by replacing a hand-picked witness with Bessel-determinant Wilson coefficients, but the load-bearing identification of those coefficients with the residual unmarked spatial environment remains an asserted bridge. The cited companion is retained_bounded and explicitly does not close the parent residual-environment gate. Retained status cannot propagate through this open identification, so the strongest supported verdict is conditional.
+
+Auditor-quoted load-bearing step:
+After stripping the marked half-slice multipliers and the exact normalized mixed-kernel local factor, what remains is exactly the compression of the unmarked spatial Wilson environment on the marked source sector, called R_beta^env.
+
+Auditor's repair target (canonical class + action):
+missing_bridge_theorem: prove, or runner-certify, that the stripped residual source-sector operator equals the compressed unmarked spatial Wilson environment beyond the finite inserted coefficient table.
+
+Goal: close the chain so a re-audit of this same note can land
+audited_clean at retained-grade. Use the physics-loop skill to iterate.
+Do not over-prescribe approach — explore the framework, let the skill
+drive.
+```
+
+
 ### `left_handed_charge_matching_note`
 
 **Note:** [docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md](docs/LEFT_HANDED_CHARGE_MATCHING_NOTE.md)  |  **Descendants:** 870  |  **Class:** A
@@ -3065,35 +3094,6 @@ From R(double)=2 eps dz_+ + O(eps^2) and R(plus)=eps dz_+ + O(eps^2), the note c
 
 Auditor's repair target (canonical class + action):
 missing_bridge_theorem: prove or certify row-wise lower bounds on detector-layer intensity and on the first-order plus-source response dz_+ for the second grown family, and state the same hypothesis for cross-family inheritance.
-
-Goal: close the chain so a re-audit of this same note can land
-audited_clean at retained-grade. Use the physics-loop skill to iterate.
-Do not over-prescribe approach — explore the framework, let the skill
-drive.
-```
-
-
-### `gravity_sign_audit_2026-04-10`
-
-**Note:** [docs/GRAVITY_SIGN_AUDIT_2026-04-10.md](docs/GRAVITY_SIGN_AUDIT_2026-04-10.md)  |  **Descendants:** 787  |  **Class:** B
-
-```
-Use the physics-loop skill to close the conditional audit on docs/GRAVITY_SIGN_AUDIT_2026-04-10.md.
-
-Current audit state:
-- audit_status: audited_conditional
-- claim_type: bounded_theorem
-- load_bearing_step_class: B
-- claim_scope: Configured sign-coupling diagnostic only: in the current 1D exact-lattice external-potential runner, imported parity and lapse scalar couplings distinguish a well from a hill, while the old identity coupling remains a negative control. This excludes a retained repository derivation of the parity/lapse coupling and excludes universal irregular-graph directional closure.
-
-Auditor's verdict_rationale:
-Issue: the note's decisive coupling identification is admitted from external literature rather than derived from retained one-hop repository authorities, and the source also states that the graph-native irregular directional observable is not closed. Why this blocks: a bounded runner split under an imported parity/lapse coupling cannot promote the row to a retained gravity-sign theorem for the framework. Repair target: supply a retained restricted-packet theorem deriving the parity/lapse scalar coupling from repository axioms, then separately close a graph-native same-surface directional observable for the irregular families. Claim boundary until fixed: the configured exact-lattice external-potential diagnostic supports a bounded negative-control result for identity coupling and a parity/lapse well-vs-hill split, but not a universal retained gravity-sign claim.
-
-Auditor-quoted load-bearing step:
-Under the corrected parity and lapse couplings, well vs hill are distinguishable in the exact-lattice external-potential test, but the coupling identification is imported and the irregular graph directional observable remains open.
-
-Auditor's repair target (canonical class + action):
-missing_bridge_theorem — derive the parity/lapse staggered scalar coupling from retained repository primitives, then audit the irregular graph directional observable lane as a separate bounded or universal claim.
 
 Goal: close the chain so a re-audit of this same note can land
 audited_clean at retained-grade. Use the physics-loop skill to iterate.

@@ -1,0 +1,77 @@
+===== runner cache v1 =====
+runner: scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py
+runner_sha256: ede7ddeba9934da9a9c699bd7e6e1fb494cdb9c1781fbfb9a5d28bd4cf95f818
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+# Staggered scalar parity / lapse coupling external narrow theorem runner
+# Source note: docs/STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md
+
+==============================================================================
+T1: staggered sign epsilon(x) = (-1)^{sum_i x_i} alternates between NN sites
+==============================================================================
+  [PASS] epsilon(x) in {-1, +1} for 1D sites x = 0..7
+         eps_1d = [1, -1, 1, -1, 1, -1, 1, -1]
+  [PASS] epsilon flips between every nearest-neighbour pair in 1D
+  [PASS] epsilon flips between NN sites on 3D cubic lattice (axis-aligned)
+         violations = []
+
+==============================================================================
+T2: parity-coupled diagonal (m + Phi(x)) * epsilon(x) hand-check
+==============================================================================
+  [PASS] computed (m + Phi(x)) * eps(x) matches hand values at x = 0..3
+         computed = [Fraction(2, 5), Fraction(-1, 10), Fraction(7, 10), Fraction(-3, 10)], hand = [Fraction(2, 5), Fraction(-1, 10), Fraction(7, 10), Fraction(-3, 10)]
+
+==============================================================================
+T3: lapse Hamiltonian sqrt(N) H_flat sqrt(N) Hermitian for real Phi >= -m
+==============================================================================
+  [PASS] test H_flat is Hermitian (real symmetric)
+  [PASS] sqrt(N) H_flat sqrt(N) is Hermitian (entry-by-entry equality)
+  [PASS] H_grav[0][1] = H_grav[1][0] = 1/4 (specific spot-check)
+         H_grav[0][1] = 1/4, H_grav[1][0] = 1/4
+
+==============================================================================
+T4: per-site identity H_diag^{parity}(x) - H_diag^{identity,+}(x) = Phi(x) * (eps(x) - 1)
+==============================================================================
+  [PASS] per-site identity holds on all 5 sites for the test profile
+         matches phi*(eps-1): 0 on even sites, -2*phi on odd sites
+
+==============================================================================
+T5: (P) diagonal flips sign by epsilon; (I) diagonal does not
+==============================================================================
+  [PASS] parity diagonal alternates: (P)[x] = -(P)[x+1]
+         parity = [Fraction(1, 2), Fraction(-1, 2), Fraction(1, 2), Fraction(-1, 2), Fraction(1, 2), Fraction(-1, 2)]
+  [PASS] identity diagonal does NOT alternate by eps when Phi is constant
+         identity = [Fraction(1, 2), Fraction(-3, 10), Fraction(1, 2), Fraction(-3, 10), Fraction(1, 2), Fraction(-3, 10)]
+
+==============================================================================
+T6: lapse coupling reduces to H_flat at Phi(x) = 0
+==============================================================================
+  [PASS] sqrt(N) H_flat sqrt(N) with N(x)=1 equals H_flat exactly
+
+==============================================================================
+T7: well (Phi<0) vs hill (Phi>0) under (P) gives sub-lattice-distinguishable shifts that (I) does not
+==============================================================================
+  [PASS] under (P), odd-site diagonal is GREATER for well than hill (Phi*(eps=-1) widens hill)
+         parity well = -1/5, parity hill = -2/5
+  [PASS] under (I), odd-site diagonal is LESS for well than hill (opposite ordering)
+         identity well = -2/5, identity hill = -1/5
+  [PASS] under (P), even-site diagonal is GREATER for hill than well (different sub-lattice ordering than odd)
+         parity even well = 1/5, parity even hill = 2/5
+
+==============================================================================
+T8: source-note boundary
+==============================================================================
+  [PASS] note declares bounded_theorem
+  [PASS] note has Boundary section
+  [PASS] note contains required disclaimers / references
+         all required disclaimers present
+  [PASS] note avoids assertion-form over-claims (axiom-forcing, universal-graph, trajectory-sign, retained-status)
+         no asserting-form over-claims found
+
+=== TOTAL: PASS=18, FAIL=0 ===
+
+----- stderr -----
+

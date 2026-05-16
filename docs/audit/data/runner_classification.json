@@ -18852,6 +18852,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_staggered_newton_reproduction.py"
     },
+    "staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py"
+    },
     "staggered_self_consistent_two_body_note_2026-04-11": {
       "assert_count": 0,
       "counts": {
@@ -40669,6 +40681,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py": {
+      "assert_count": 1,
+      "claims": [
+        "staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_staggered_self_consistent_two_body.py": {
       "assert_count": 0,
       "claims": [
@@ -48542,13 +48569,13 @@
     "decoration_candidates": 208,
     "dominant_class_distribution": {
       "A": 162,
-      "B": 179,
+      "B": 180,
       "C": 695,
       "D": 280,
       "none": 418
     },
-    "runners_classified": 1734,
-    "runners_with_C": 887,
+    "runners_classified": 1735,
+    "runners_with_C": 888,
     "runners_with_D": 507
   }
 }

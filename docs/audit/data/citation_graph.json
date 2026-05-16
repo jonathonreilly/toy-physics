@@ -48703,11 +48703,11 @@
     },
     "gravity_sign_audit_2026-04-10": {
       "claim_id": "gravity_sign_audit_2026-04-10",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a459d6a15bf830a0ea997d48335794ec5a2123f570b81eaac3910c6ea3aa5257",
+      "note_hash": "f332a8aeb1f14d0e22e4cce87a4c7ea4d7fb34eb4138477cc9f489e547887ecd",
       "path": "docs/GRAVITY_SIGN_AUDIT_2026-04-10.md",
       "runner_path": "scripts/frontier_correct_coupling.py",
       "title": "Gravity Sign Audit \u2014 Corrected Assessment"
@@ -65266,6 +65266,17 @@
       "runner_path": "scripts/frontier_staggered_newton_reproduction.py",
       "title": "Staggered Newton Reproduction on an Open 3D Lattice"
     },
+    "staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16": {
+      "claim_id": "staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "aee9633b540507a672db261b275d957998046c5bdb495d9f1d7a1f5aef813d67",
+      "path": "docs/STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py",
+      "title": "Staggered Scalar Parity / Lapse Coupling \u2014 External Narrow Theorem"
+    },
     "staggered_self_consistent_two_body_note_2026-04-11": {
       "claim_id": "staggered_self_consistent_two_body_note_2026-04-11",
       "claim_type_author_hint": null,
@@ -71532,6 +71543,7 @@
     "staggered_layered_backreaction_note",
     "staggered_newton_blocking_sensitivity_note_2026-04-11",
     "staggered_newton_reproduction_note_2026-04-11",
+    "staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16",
     "staggered_self_consistent_two_body_note_2026-04-11",
     "staggered_test_mass_companion_note_2026-04-11",
     "staggered_two_field_wave_note",
@@ -71668,27 +71680,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 386,
+      "bounded_theorem": 388,
       "decoration": 1,
       "meta": 74,
       "no_go": 49,
-      "none": 1535,
+      "none": 1534,
       "open_gate": 40,
       "positive_theorem": 150
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 832,
+      "bounded_theorem": 834,
       "decoration": 1,
       "meta": 74,
       "no_go": 154,
-      "none": 445,
+      "none": 444,
       "open_gate": 119,
       "positive_theorem": 610
     },
     "edge_count": 8968,
-    "leaf_count": 629,
-    "node_count": 2235,
-    "root_count": 775,
-    "runners_with_path": 1853
+    "leaf_count": 630,
+    "node_count": 2236,
+    "root_count": 776,
+    "runners_with_path": 1854
   }
 }

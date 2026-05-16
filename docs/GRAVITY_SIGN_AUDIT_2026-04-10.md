@@ -3,6 +3,7 @@
 **Date:** 2026-04-10
 **Revised:** 2026-04-10 (after spot-check verification)
 **Audit-status note added:** 2026-05-10
+**Claim type:** bounded_theorem
 
 **Purpose:** Determine whether the TOWARD gravity results across all retained harnesses
 are genuine physical predictions or tautological consequences of sign conventions.
@@ -15,7 +16,7 @@ so it supports the narrow statement that the chosen couplings (parity and
 lapse) distinguish well from hill in the configured 1D external-potential
 test. The verdict flagged a missing bridge theorem: the load-bearing
 identification of the parity / lapse coupling is asserted from the
-literature (Zache 2020; Dempsey 2025) and not derived from the repository
+literature (Zache 2022; Dempsey 2025) and not derived from the repository
 axioms inside the audit packet, and the irregular-graph directional
 observable scope is honestly admitted as a separate open lane.
 
@@ -28,11 +29,25 @@ observable scope is honestly admitted as a separate open lane.
 Admitted-context inputs (carrier framework, not derived in this note):
 
 - the parity coupling `H_diag = (m + Phi) * epsilon(x)` — imported from
-  Zache et al. 2020 and Dempsey et al. 2025 as the literature-correct
-  staggered-fermion scalar coupling
+  Zache et al. 2022 and Dempsey et al. 2025 as the literature-correct
+  staggered-fermion scalar coupling; the algebraic form and the
+  per-site distinction from the additive identity coupling is now
+  recorded as a one-hop ledger cite-form source-theorem note in
+  `STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`
+  (paired runner
+  `scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py`,
+  18/18 PASS). That source-theorem note carries only the lattice-algebraic
+  form of (P) and (L); it does NOT derive the parity coupling from the
+  baseline physical `Cl(3)` local algebra on `Z^3` spatial substrate
+  (see the current minimal-input ledger `MINIMAL_AXIOMS_2026-05-03.md`),
+  and it does NOT close the open
+  `staggered_dirac_realization_gate_note_2026-05-03` gate, which is the
+  strictly stronger question of whether the baseline framework forces
+  the staggered formulation itself.
 - the Hermitian lapse coupling
   `H_grav = sqrt(N) * H_flat * sqrt(N)`, `N = 1 + Phi/m` — imported as
-  the full-GR scalar variant
+  the full-GR scalar variant, with the lattice-algebraic Hermitian
+  symmetrization recorded in the same source-theorem note above
 - the screened Poisson `(L + mu^2 I) Phi = G * rho` framework operator,
   and the retarded wave equation with `beta > 0`
 
@@ -50,10 +65,16 @@ Configured probe parameters (proxy thresholds, not derived):
   reporting `30/30`, `30/30`, `30/30` at `mu^2=0.1` and `28/30`, `30/30`,
   `28/30` at `mu^2=0.001` — recorded as bounded reopen, not universal closure
 
-Blocked-on: this row stays `audited_conditional` until either a retained
-restricted-packet derivation is supplied that fixes the staggered-fermion
-parity / lapse scalar coupling from the repository axioms, or the
-irregular-graph directional observable lane lands a graph-native
+Claim boundary from the 2026-05-04 audit: this row should be treated as
+no stronger than conditional until either a retained restricted-packet
+derivation is supplied that fixes the staggered-fermion parity / lapse
+scalar coupling from the baseline physical `Cl(3)` on `Z^3` framework
+(which is strictly stronger than the lattice-algebraic source-theorem cite-bridge
+landed on 2026-05-16 in
+`STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`,
+and which would require closing the open
+`staggered_dirac_realization_gate_note_2026-05-03` gate end-to-end), or
+the irregular-graph directional observable lane lands a graph-native
 sign-selective observable that closes the universal-portability gap on
 families beyond the audited centered core-packet surface. The bounded
 computational diagnostic — under the parity and lapse couplings, the
@@ -271,7 +292,7 @@ until it passes the two-metric gate across seeds and sizes.
 
 ### Option A: Derive the Coupling Sign ← PARTIALLY CLOSED
 
-The literature (Zache et al. 2020, Dempsey et al. 2025) shows that a scalar
+The literature (Zache et al. 2022, Dempsey et al. 2025) shows that a scalar
 potential in the staggered Hamiltonian must couple through the SAME parity
 factor ε(x) as the mass (both are 1⊗1 in spin-taste):
 
