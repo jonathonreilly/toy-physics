@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1201 |
+| unaudited | 1200 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 183 |
+| ~~audited_conditional~~ | 184 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 520 |
-| `audited_conditional` | 183 |
+| `audited_conditional` | 184 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1314 |
+| `unaudited` | 1313 |
 
 | claim_type | count |
 |---|---:|
@@ -698,6 +698,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_leptogenesis_pmns_even_response_sole_axiom_boundary_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_microscopic_d_last_mile_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_off_seed_triplet_sign_boundary_note_2026-04-16` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
+| `dm_leptogenesis_pmns_projector_interface_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_reduction_exhaustion_theorem_note_2026-04-16` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `dm_leptogenesis_pmns_selector_bank_cp_sheet_blindness_theorem_note_2026-04-16` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -3406,6 +3407,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the positive interior, gamma = (X + xi_1)(Y - eta_1 - eta_2) sin(delta) has positive prefactor, so gamma > 0 iff sin(delta) > 0, leaving sin(delta) > 0, E1 > 0, E2 > 0.  _(class `A`)_
 - **chain closes:** False — The internal algebraic sign equivalence closes on its own stated formulas, but the restricted packet does not close the imported premises that these formulas are the authoritative mainline triplet channels or that constructive witnesses are exactly gamma > 0, E1 > 0, E2 > 0.
 - **rationale:** The runner performs algebraic reconstruction and equality checks, and its core sign argument is class A rather than a first-principles compute. However, it imports upstream code modules and framework definitions that are not supplied as cited retained authorities in the restricted packet. The note is also explicitly framed as a support/comparator-lane open target, so the audited result is a conditional algebraic boundary, not an independently closed positive theorem.
+- **auditor confidence:** high
+
+### `dm_leptogenesis_pmns_projector_interface_note_2026-04-16`
+
+- **Note:** [`DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md`](../../docs/DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the bounded algebraic interface from a supplied Hermitian lepton pair to phase-insensitive PMNS projector columns, plus the reported diagnostic transport readouts on two canonical sample pairs.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-132645-90049e80-dm_leptogenesis_pmns_pro-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given any positive-definite Hermitian pair (H_nu,H_e), diagonalize H_nu and H_e, form U_PMNS = U_e^dag U_nu, and define P_i(alpha)=|U_PMNS(alpha,i)|^2 as the flavored transport packet.  _(class `A`)_
+- **chain closes:** False — The algebraic pair-to-projector interface closes, but the restricted packet does not close the carrier authority or the theorem selecting the physical N1 transport column. Those dependencies are explicitly left open in the note and runner.
+- **rationale:** The runner genuinely checks the class-A algebraic facts that U_PMNS is unitary, |U_PMNS|^2 is doubly stochastic, and the projector packet is rephasing-invariant for sampled Hermitian pairs. The numerical eta readouts are computed diagnostics on chosen canonical sample pairs, not first-principles closure of the PMNS pair law or physical column selection. Because the note explicitly imports and leaves unresolved the carrier authority and physical-column authority, the full route-choice conclusion remains conditional rather than clean.
 - **auditor confidence:** high
 
 ### `dm_leptogenesis_pmns_reduced_surface_selector_support_note_2026-04-16`
