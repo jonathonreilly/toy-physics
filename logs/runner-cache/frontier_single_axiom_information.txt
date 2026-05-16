@@ -3,7 +3,7 @@ runner: scripts/frontier_single_axiom_information.py
 runner_sha256: e396c9206ce21e4dea6160d9db272e4c889d0c0ce932bf60e6b11ab821d62c33
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.94
+elapsed_sec: 0.67
 status: ok
 ----- stdout -----
 ========================================================================

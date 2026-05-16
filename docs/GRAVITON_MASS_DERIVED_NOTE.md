@@ -2,6 +2,7 @@
 
 **Script:** `scripts/frontier_graviton_mass_derived.py`
 **Date:** 2026-04-12 (audit-status note added 2026-05-10)
+**Claim type:** bounded_theorem
 **Status:** bounded conditional spectral-arithmetic companion — exact
 algebra from the cited continuum Lichnerowicz TT eigenvalues on `S^3` to
 a numerical `m_g^2 c^2 / hbar^2 = 6/R^2` value, conditional on (i) the
@@ -15,36 +16,58 @@ this packet.
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
 
-## Audit-status note (2026-05-10)
+## Audit-status note (2026-05-10, bridge-closure addendum 2026-05-16)
 
-The audit verdict (`audited_renaming`, `chain_closes=false`) confirmed
-that the runner correctly evaluates the stated arithmetic, ratio bounds,
-the Higuchi-bound check, the Compton-wavelength conversion, and the
-`Lambda` relation, but flagged that the load-bearing physical bridge —
-the identification between the lowest compact-spatial TT Lichnerowicz
-eigenvalue on `S^3` and a graviton mass term in a Lorentzian effective
-action — is asserted, not derived from the framework operators.
+The 2026-05-10 audit verdict (`audited_renaming`, `chain_closes=false`)
+confirmed that the runner correctly evaluates the stated arithmetic,
+ratio bounds, the Higuchi-bound check, the Compton-wavelength conversion,
+and the `Lambda` relation, but flagged that the load-bearing physical
+bridge — the identification between the lowest compact-spatial TT
+Lichnerowicz eigenvalue on `S^3` and a graviton mass term — was asserted,
+not derived from the framework operators **inside this packet**.
 
-> "the runner computes the stated arithmetic ... but does not
-> instantiate the underlying framework operators or derive the mass
-> identification from first principles ... missing_bridge_theorem."
+**Bridge-closure addendum (2026-05-16).** Since the original audit, the
+retained sister theorem
+`GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
+(runner `scripts/frontier_graviton_mass_spectral_gap_identity.py`,
+PASS=31/FAIL=0) has been landed on `main`. That theorem derives the
+bridge `m_g^2 c^2 / hbar^2 = lambda_2^TT` from the standard
+Kaluza-Klein compactness rest-mass identification on `PL S^3 x R`: each
+TT modal amplitude reduces to a 1+0D oscillator equation
+`(d^2/dt^2 + c^2 lambda_l^TT) a_l = 0`, and the rest-energy
+`E_l = hbar omega_l = hbar c sqrt(lambda_l^TT)` at zero linear momentum
+on the compact slice gives `m_l^2 c^2 / hbar^2 = lambda_l^TT`. The
+audit's "missing bridge theorem" is therefore now retained upstream;
+this note carries the bridge as a derived input (Step 3 below) rather
+than as an asserted identity, and the chain through Steps 1-4 closes
+conditional only on the still-bounded `R = c/H_0` cosmology-scale
+identification (unchanged).
 
-Admitted-context inputs (carrier framework, not derived in this note):
+Inherited/derived inputs (now distinguished from the still-bounded
+cosmology input):
 
 - the continuum Lichnerowicz operator `Delta_L` on symmetric TT rank-2
   tensors on a round `S^3` of radius `R`, with eigenvalues
   `lambda_l^TT = [l(l+2) - 2] / R^2`, `l >= 2` (Higuchi 1987;
-  Deser & Nepomechie 1984; Gibbons & Hawking 1993)
+  Deser & Nepomechie 1984; Gibbons & Hawking 1993): standard spin-2
+  perturbation theory on an Einstein manifold; carried through the
+  retained `UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`
+  and used in the retained sister theorem (Leg A);
+- the KK-style compactness rest-mass identification
+  `m_g^2 c^2 / hbar^2 = lambda_2^TT`: **derived in the retained sister
+  theorem** (no longer an asserted bridge inside this packet); restated
+  in Step 3 below for self-containment;
+- the Higuchi unitarity inequality `m^2 >= 2 Lambda / 3`: standard
+  literature input (Higuchi 1987); checked, not derived, in this note
+  and in the sister theorem.
+
+Still-bounded cosmology input (unchanged):
+
 - the spatial topology / radius identification `R = c/H_0` with observed
-  `H_0 = 67.4 km/s/Mpc`, used here as a cosmology input on equal footing
-  with the bounded/conditional companion `Lambda` row, not as a derived
-  framework quantity
-- the asserted physical bridge `m_g^2 c^2 / hbar^2 = lambda_2^TT` from
-  the lowest compact-spatial TT eigenvalue to a graviton mass term —
-  imported from massive-gravity literature on de Sitter and not derived
-  inside the audit packet
-- the Higuchi unitarity inequality `m^2 >= 2 Lambda / 3` and the
-  Vainshtein-radius conversion (cited but not derived)
+  `H_0 = 67.4 km/s/Mpc` — this is the cosmology-scale input on equal
+  footing with the bounded/conditional companion `Lambda` row, and is
+  what keeps the numerical `m_g ~ 3.52 x 10^-33 eV` value in the
+  bounded continuation rather than at retained grade.
 
 Operationally narrowed claim (configured spectral arithmetic):
 
@@ -65,10 +88,12 @@ following **algebra**:
 
 Retracted claims (not preserved inside this packet):
 
-- the framing as a derivation of a "graviton mass from S^3 topology" —
-  retracted to a conditional spectral arithmetic statement; the physical
-  identification of `lambda_2^TT` with a graviton mass term is an
-  imported bridge, not a derivation;
+- the framing as a fully internal derivation of a "graviton mass from
+  `S^3` topology with no upstream bridge" — retracted in favor of the
+  current split: the KK-style compactness bridge is now derived in the
+  retained sister theorem (above), and the numerical value
+  `m_g ~ 3.52 x 10^-33 eV` is the bounded continuation that depends on
+  the still-bounded `R = c/H_0` cosmology-scale input;
 - the "topological mass (not Fierz-Pauli) so vDVZ does not apply"
   argument — the underlying claim that compact-spatial Lichnerowicz
   curvature coupling avoids the vDVZ discontinuity at the quantum level
@@ -78,13 +103,26 @@ Retracted claims (not preserved inside this packet):
   numerical value contingent on the imported spectral bridge and the
   cosmology-scale `R = c/H_0` input.
 
-Blocked-on: this row stays `audited_renaming` until either a retained
-restricted-packet derivation is supplied that fixes the bridge from the
-compact-spatial TT Lichnerowicz eigenvalue to a Lorentzian effective
-graviton mass term inside the framework, or the row is moved to a
-manuscript-surface companion (with explicit "imported bridge" labels)
-and removed from the theorem-grade audit lane. The bounded conditional
-spectral arithmetic above is unaffected by this status note.
+Bridge status (post-2026-05-16): the audit's "missing bridge theorem"
+has been supplied upstream by the retained sister theorem
+`GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
+(KK compactness rest-mass identification on `PL S^3 x R`, runner
+PASS=31/FAIL=0). The structural identity
+`m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)` is therefore
+retained on the upstream theorem surface for every `R > 0`. **This
+companion note remains the bounded/conditional numerical continuation**:
+the numerical value `m_g ~ 3.52 x 10^-33 eV` continues to depend on the
+still-bounded `R = c/H_0` cosmology-scale identification (the same
+cosmology input that keeps the numerical `Lambda` row bounded), so it
+does not promote to retained grade on this companion surface. The
+bounded conditional spectral arithmetic in items 1-5 above is unchanged.
+
+Re-audit hand-off: the appropriate re-audit framing for this note is
+"audited_clean bounded numerical companion downstream of the retained
+structural identity in `GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE`,
+with the still-bounded `R = c/H_0` cosmology-scale input as the only
+remaining import-class admission" — the bridge that flagged this row
+`audited_renaming` is no longer asserted inside the packet.
 
 ## Assumptions
 
@@ -154,16 +192,43 @@ The lowest TT mode is l=2:
 There are no l=0 or l=1 TT modes because trace-free symmetric rank-2
 tensors on S^3 require at least quadrupolar angular dependence.
 
-### Step 3: Mass identification
+### Step 3: Mass identification (KK-style compactness; derived in sister theorem)
 
-On S^3 with no additional mass term, the effective mass-squared of the
-graviton is set by the eigenvalue:
+The bridge from the lowest TT Lichnerowicz eigenvalue `lambda_2^TT = 6/R^2`
+to the effective graviton rest-mass-squared is derived inside the retained
+sister theorem
+`GRAVITON_MASS_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`
+(proof, "Mass identification (KK-style compactness)"), not asserted inside
+this packet. The standalone retained derivation is restated here for
+self-containment:
+
+On `PL S^3 x R` with retained round `S^3` spatial topology of radius `R`,
+the linearized Einstein equations restricted to TT metric perturbations
+decompose under harmonic analysis on `S^3` into a family of decoupled
+1+0D oscillator equations for the modal amplitudes,
+
+    (d^2 / dt^2 + c^2 lambda_l^TT) a_l(t) = 0,
+
+one per spatial TT harmonic. The angular frequency of each mode is
+`omega_l = c sqrt(lambda_l^TT)`. In the standard compactness / Kaluza-
+Klein identification for a free field on a compact spatial slice, the
+1+0D effective rest-mass-squared per mode is
+`m_l^2 c^2 / hbar^2 = lambda_l^TT` (equivalently `E_l = hbar omega_l`
+at vanishing linear momentum on the compact slice). Applied to the
+lowest TT mode at `l = 2`:
 
     m_g^2 c^2 / hbar^2 = lambda_2^TT = 6/R^2
 
 Therefore:
 
     m_g = hbar * sqrt(6) / (c R)
+
+This is the same KK-style rest-mass identification carried by the
+retained sister theorem; the present note inherits it as a derived input
+rather than an admitted bridge. The separate question of whether this
+compactness rest-mass behaves at the quantum level exactly like a
+4D-effective-theory Fierz-Pauli mass (the vDVZ issue) is **not** part of
+this bridge and remains a qualitatively-bounded item in Step 5.
 
 ### Step 4: Numerical evaluation
 

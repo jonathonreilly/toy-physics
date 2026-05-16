@@ -4561,11 +4561,11 @@
       "runner": "scripts/frontier_dm_leptogenesis_pmns_oriented_phase_sheet_selector_theorem.py"
     },
     "dm_leptogenesis_pmns_projector_interface_note_2026-04-16": {
-      "assert_count": 1,
+      "assert_count": 2,
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 5,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
@@ -8140,8 +8140,8 @@
       "assert_count": 1,
       "counts": {
         "A": 0,
-        "B": 1,
-        "C": 13,
+        "B": 0,
+        "C": 8,
         "D": 0
       },
       "decoration_candidate": false,
@@ -10872,6 +10872,18 @@
       "dominant_class": null,
       "runner": "scripts/frontier_koide_dimensionless_objection_closure_review.py"
     },
+    "koide_dimensionless_objection_toy_conditional_algebraic_checks_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_koide_dimensionless_objection_toy_conditional_algebraic_checks.py"
+    },
     "koide_dweh_cyclic_compression_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -10911,10 +10923,10 @@
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21": {
       "assert_count": 0,
       "counts": {
-        "A": 42,
+        "A": 47,
         "B": 0,
         "C": 0,
-        "D": 4
+        "D": 5
       },
       "decoration_candidate": false,
       "dominant_class": "A",
@@ -15420,6 +15432,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py"
     },
+    "pmns_graph_axis_to_active_lane_bridge_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py"
+    },
     "pmns_graph_commutant_cycle_value_boundary_note": {
       "assert_count": 1,
       "counts": {
@@ -15473,7 +15497,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 16,
+        "C": 26,
         "D": 0
       },
       "decoration_candidate": false,
@@ -19644,6 +19668,18 @@
       "dominant_class": "C",
       "runner": "scripts/frontier_teleportation_microscopic_closure.py"
     },
+    "teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_teleportation_native_axioms_scope_split_2026-05-16.py"
+    },
     "teleportation_native_axioms_theory_note": {
       "assert_count": 0,
       "counts": {
@@ -20363,6 +20399,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_universal_gr_invariant_nonlinear_completion.py"
+    },
+    "universal_gr_isotropic_schur_localization_note": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_universal_gr_isotropic_schur_localization.py"
     },
     "universal_gr_polarization_frame_bundle_attempt": {
       "assert_count": 1,
@@ -23310,6 +23358,21 @@
       "assert_count": 1,
       "claims": [
         "fermion_parity_pauli_tensor_involution_narrow_theorem_note_2026-05-10"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
+    "scripts/audit_companion_koide_dimensionless_objection_toy_conditional_algebraic_checks.py": {
+      "assert_count": 1,
+      "claims": [
+        "koide_dimensionless_objection_toy_conditional_algebraic_checks_narrow_theorem_note_2026-05-16"
       ],
       "counts": {
         "A": 0,
@@ -30048,14 +30111,14 @@
       "exists": true
     },
     "scripts/frontier_dm_leptogenesis_pmns_projector_interface.py": {
-      "assert_count": 1,
+      "assert_count": 2,
       "claims": [
         "dm_leptogenesis_pmns_projector_interface_note_2026-04-16"
       ],
       "counts": {
         "A": 0,
         "B": 1,
-        "C": 5,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
@@ -33242,8 +33305,8 @@
       ],
       "counts": {
         "A": 0,
-        "B": 1,
-        "C": 13,
+        "B": 0,
+        "C": 8,
         "D": 0
       },
       "decoration_candidate": false,
@@ -35482,10 +35545,10 @@
         "koide_frobenius_isotype_split_uniqueness_note_2026-04-21"
       ],
       "counts": {
-        "A": 42,
+        "A": 47,
         "B": 0,
         "C": 0,
-        "D": 4
+        "D": 5
       },
       "decoration_candidate": false,
       "dominant_class": "A",
@@ -38261,6 +38324,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_graph_axis_to_active_lane_bridge_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py": {
       "assert_count": 1,
       "claims": [
@@ -38329,7 +38407,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 16,
+        "C": 26,
         "D": 0
       },
       "decoration_candidate": false,
@@ -41413,6 +41491,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_teleportation_native_axioms_scope_split_2026-05-16.py": {
+      "assert_count": 1,
+      "claims": [
+        "teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": true,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_teleportation_native_record_apparatus.py": {
       "assert_count": 0,
       "claims": [
@@ -42039,6 +42132,21 @@
         "A": 0,
         "B": 3,
         "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_universal_gr_isotropic_schur_localization.py": {
+      "assert_count": 1,
+      "claims": [
+        "universal_gr_isotropic_schur_localization_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 17,
         "D": 0
       },
       "decoration_candidate": false,
@@ -48350,16 +48458,16 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 206,
+    "decoration_candidates": 207,
     "dominant_class_distribution": {
       "A": 161,
-      "B": 177,
-      "C": 692,
+      "B": 178,
+      "C": 694,
       "D": 280,
-      "none": 417
+      "none": 418
     },
-    "runners_classified": 1727,
-    "runners_with_C": 883,
+    "runners_classified": 1731,
+    "runners_with_C": 885,
     "runners_with_D": 506
   }
 }

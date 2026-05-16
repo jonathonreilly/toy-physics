@@ -1,13 +1,32 @@
-# DM Neutrino `K00` Bosonic Normalization Theorem
+# DM Neutrino `K00` Bosonic Normalization Theorem (Conditional)
 
 **Date:** 2026-04-15  
-**Status:** exact diagonal-normalization theorem on the refreshed `main`-derived DM lane  
+  - status line narrowed 2026-05-16 per 2026-05-05 audit-lane verdict
+    (`audited_renaming`, class F, leaf criticality, audit row:
+    `dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15`)
+**Claim type:** bounded_theorem
+**Status:** bounded conditional diagonal-normalization selector on the
+upstream DM-neutrino source packet — IF the unique additive CPT-even
+bosonic-observable principle is taken as the physical local scalar
+observable selector (observable-principle premise), AND IF the source
+amplitudes `tau_E = tau_T = 1/2` are taken from the upstream
+source-oriented branch (source-amplitude premise), THEN the algebraic
+checks close and the heavy-basis diagonal normalization is `K00 = 2`.
+The observable-principle premise is currently registered as
+`audited_conditional` on the audit lane (upstream:
+[`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md));
+the source-amplitude premise enters via two `unaudited` upstream
+authorities (see the audit dependency repair links section below). Not
+yet a retained-grade baseline-framework diagonal-normalization theorem; the
+runner verifies the algebraic identifications, not the load-bearing
+coefficient law or the source-amplitude branch values.
 **Script:** `scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py`
 
 ## Framework sentence
 
-In this note, "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
-Everything else is a derived atlas row.
+In this note, the baseline physical framework is `Cl(3)` local algebra on the
+`Z^3` spatial substrate. Everything else is a derived atlas row or an admitted
+lane premise.
 
 ## Question
 
@@ -20,7 +39,14 @@ be fixed canonically from the same single-axiom source-response machinery?
 
 ## Bottom line
 
-Yes.
+Conditionally yes — `K00 = 2` follows from the algebra below once the
+upstream observable-principle premise and the upstream source-amplitude
+premise are accepted as inputs. The runner-checked content (Parts 1-4
+below) is exact finite-dimensional matrix algebra. The two physical
+inputs that promote the algebra to the numerical value `K00 = 2` are
+imported from upstream authorities, not derived inside the restricted
+runner packet of this note. The audit lane records this as
+`audited_renaming` rather than `audited_clean` for that reason.
 
 The target functional `K00` has exact Frobenius-dual generator
 
@@ -31,20 +57,64 @@ weak mode `tau_+ = tau_E + tau_T` lives on the row-sum generator
 
 `J2 = [[1,1],[1,1]]`.
 
-Since `F00` is isospectral to `(1/2) J2`, the unique additive CPT-even bosonic
-observable fixes the coefficient law
+Since `F00` is isospectral to `(1/2) J2`, **and assuming the unique
+additive CPT-even bosonic-observable principle as the local scalar
+observable selector**, the coefficient law is
 
 `K00 = 2 tau_+`.
 
-On the exact source-oriented branch,
+**Assuming the upstream source-oriented branch** then sets
 
 - `tau_E = 1/2`
 - `tau_T = 1/2`
 - `tau_+ = 1`
 
-so the exact heavy-basis diagonal normalization is
+so the heavy-basis diagonal normalization is
 
 `K00 = 2`.
+
+Both italicised premises are explicitly admitted inputs of this
+conditional packet; neither is derived inside this note or its runner.
+
+## Honest conditional scope
+
+The two load-bearing imports of this conditional packet, each named by
+the 2026-05-05 audit verdict, are:
+
+1. **Observable-principle premise** (audit class F load-bearing): the
+   identification of physical local scalar observables with exact
+   source-response coefficients of the unique additive CPT-even scalar
+   generator `W[J] = log|det(D+J)| - log|det D|`. This is the premise
+   that turns isospectrality of `F00` with `(1/2) J2` into the
+   coefficient identity `K00 = 2 tau_+`. Upstream authority:
+   [`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+   (currently `audited_conditional`).
+
+2. **Source-amplitude premise** (audit class F load-bearing): the
+   values `tau_E = tau_T = 1/2` of the source amplitudes. The runner
+   hard-codes these and does not derive them from `Cl(3)` on `Z^3`.
+   Upstream authority candidates are
+   [`DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md)
+   (currently `unaudited`; supplies `tau_+ = tau_E + tau_T` on the
+   row-sum generator `J2` but not the individual magnitudes) and
+   [`DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_TRIPLET_CHARACTER_SOURCE_THEOREM_NOTE_2026-04-15.md)
+   (currently `unaudited`; that note itself explicitly disclaims
+   deriving the magnitude of `gamma`, `delta`, `rho`, and by extension
+   `tau_E`, `tau_T`).
+
+Because neither of the two premises is currently retained, the
+endpoint `K00 = 2` is not a retained number. It is a conditional value
+that the algebra below carries forward exactly once those two
+upstream gaps close. The conditional structure here matches the live
+pattern of the sister theorem
+[`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+(headline "Bosonic Normalization Theorem (Conditional)"), which makes
+the same observable-principle premise explicit. The path from
+`audited_renaming` to `audited_conditional` for this row is upstream
+closure of the source-amplitude premise; the path from
+`audited_conditional` to `audited_clean`/retained additionally requires
+the observable-principle premise to lift past its own conditional
+verdict.
 
 ## Exact target formula
 
@@ -87,27 +157,24 @@ forcing
 
 `K00 = 2 tau_+`.
 
-## Consequence
+## Consequence (conditional on the two upstream premises)
 
-This closes the diagonal normalization that the exact-source diagnostic left
-open.
-
-The refreshed branch no longer has:
-
-- open odd transfer coefficient
-- open even transfer vector
-- open source amplitudes
-- open heavy-basis diagonal normalization
-
-At this point the exact source-side package is
+Conditional on the observable-principle premise and the
+source-amplitude premise (see "Honest conditional scope" above), the
+diagonal-normalization slot the exact-source diagnostic left open is
+filled by `K00 = 2`. Within this conditional packet the source-side
+package is
 
 - `gamma = 1/2`
 - `E1 = sqrt(8/3)`
 - `E2 = sqrt(8)/3`
 - `K00 = 2`
 
-which is the full exact kernel input for the standard coherent leptogenesis
-sum on the retained benchmark.
+which is the conditional kernel input that the downstream coherent
+leptogenesis sum currently consumes. The downstream sum inherits the
+conditional status of both upstream premises through the cite-chain
+rule and is not itself retained at the value `K00 = 2` until the two
+upstream gaps named above close.
 
 ## Command
 
@@ -220,3 +287,20 @@ matches the live cite-chain pattern used by the
 `DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
 (commit `8e84f0c23`) and the `DM_NEUTRINO_SCHUR_SUPPRESSION_THEOREM_NOTE_2026-04-15.md`
 cluster rigorize (commit `02ad4fadd`).
+
+## Scope of this 2026-05-16 honest demotion
+
+The 2026-05-16 follow-up edit (this revision) does not add or change
+any algebraic content, runner code, or load-bearing step classification
+either. It narrows the headline status line, the Question/Bottom-line
+framing, and the Consequence section to make the two load-bearing
+upstream premises (observable-principle premise; source-amplitude
+premise) explicit at the top of the note rather than only at the
+graph-bookkeeping addendum, and to make the conditional nature of the
+endpoint `K00 = 2` explicit in the headline. It matches the conditional
+headline pattern of the sister theorem
+`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`
+(headline "(Conditional)"). It does not edit the runner, the runner
+cache, the audit ledger JSONs, the publication matrix, or any
+verdict-bearing audit artefact. The note's `audit_status` is unchanged
+and must be re-set by the audit lane, not by this edit.

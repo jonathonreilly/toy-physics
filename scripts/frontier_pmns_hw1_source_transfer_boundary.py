@@ -42,6 +42,8 @@ from pmns_lower_level_utils import (
     classify_tau_and_q_from_response_columns,
     derive_active_block_from_response_columns,
     derive_passive_block_from_response_columns,
+    effective_block_from_sector_operator,
+    masses_and_pmns_from_pair,
     passive_operator,
     passive_response_columns_from_sector_operator,
     recover_passive_coeffs,
@@ -195,8 +197,16 @@ def part3_passive_source_response_columns_fix_q_and_ai() -> None:
 
 def part4_combined_pack_recovers_the_retained_pair_and_downstream_closure() -> None:
     print("\n" + "=" * 88)
-    print("PART 4: THE COMBINED PACK RECOVERS THE RETAINED PAIR AND DOWNSTREAM CLOSURE")
+    print("PART 4: PACK-TO-RETAINED-PMNS BRIDGE VS INDEPENDENT SCHUR CERTIFICATE")
     print("=" * 88)
+    print("  Bridge theorem (this part):")
+    print("    The map (active source-response columns, passive source-response columns)")
+    print("    -> (D_0^trip, D_-^trip, H_nu, H_e, m_nu, m_e, |PMNS|) computed via")
+    print("    response-column inversion equals the same map computed via the direct")
+    print("    Schur-complement effective block + Hermitian eigendecomposition.")
+    print("    The Schur path does not call any response-column helper, so equality")
+    print("    is an independent proof certificate, not a self-comparison.")
+    print()
 
     lam_act = 0.31
     lam_pass = 0.27
@@ -212,19 +222,57 @@ def part4_combined_pack_recovers_the_retained_pair_and_downstream_closure() -> N
         passive_operator(np.array([0.07, 0.11, 0.23], dtype=complex), 2),
         seed=7311,
     )
+
+    # Lane A: pack-derived closure via response-column inversion.
     pack = hw1_source_transfer_pack(neutral_sector, charge_sector, lam_act, lam_pass)
-    closure = close_from_lower_level_observables(pack["active_columns"], pack["passive_columns"], lam_act, lam_pass)
-    ref = close_from_lower_level_observables(pack["active_columns"], pack["passive_columns"], lam_act, lam_pass)
+    closure = close_from_lower_level_observables(
+        pack["active_columns"], pack["passive_columns"], lam_act, lam_pass
+    )
+
+    # Lane B: independent Schur certificate. Build the retained pair directly from
+    # the sector operators via the Schur-complement effective-block formula, then
+    # run the downstream Hermitian eigen-closure on that independently constructed
+    # pair. This path never calls derive_*_block_from_response_columns or
+    # close_from_lower_level_observables, so it is not a self-comparison of the
+    # response-column helper.
+    neutral_block_ref = effective_block_from_sector_operator(neutral_sector)
+    charge_block_ref = effective_block_from_sector_operator(charge_sector)
+    if pack["tau"] == 0:
+        d0_ref, dm_ref = neutral_block_ref, charge_block_ref
+    else:
+        d0_ref, dm_ref = charge_block_ref, neutral_block_ref
+    ref = masses_and_pmns_from_pair(d0_ref, dm_ref)
 
     check("The source-transfer pack derives tau and q without PMNS-side inputs",
           pack["tau"] in (0, 1) and isinstance(pack["q"], int),
           f"tau={pack['tau']}, q={pack['q']}")
-    check("The combined pack reconstructs the retained pair exactly",
-          np.linalg.norm(closure["D_0^trip"] - ref["D_0^trip"]) < 1e-12
-          and np.linalg.norm(closure["D_-^trip"] - ref["D_-^trip"]) < 1e-12)
-    check("The combined pack recovers the downstream Hermitian data exactly",
-          np.linalg.norm(closure["H_nu"] - ref["H_nu"]) < 1e-12
-          and np.linalg.norm(closure["H_e"] - ref["H_e"]) < 1e-12)
+    check("Bridge: pack-derived D_0^trip equals the independent Schur D_0^trip",
+          np.linalg.norm(closure["D_0^trip"] - d0_ref) < 1e-12,
+          f"||delta||={np.linalg.norm(closure['D_0^trip'] - d0_ref):.2e}")
+    check("Bridge: pack-derived D_-^trip equals the independent Schur D_-^trip",
+          np.linalg.norm(closure["D_-^trip"] - dm_ref) < 1e-12,
+          f"||delta||={np.linalg.norm(closure['D_-^trip'] - dm_ref):.2e}")
+    check("Bridge: pack-derived H_nu equals the independent Schur H_nu",
+          np.linalg.norm(closure["H_nu"] - ref["H_nu"]) < 1e-12,
+          f"||delta||={np.linalg.norm(closure['H_nu'] - ref['H_nu']):.2e}")
+    check("Bridge: pack-derived H_e equals the independent Schur H_e",
+          np.linalg.norm(closure["H_e"] - ref["H_e"]) < 1e-12,
+          f"||delta||={np.linalg.norm(closure['H_e'] - ref['H_e']):.2e}")
+    check("Bridge: pack-derived neutrino masses equal the independent Schur masses",
+          np.linalg.norm(closure["m_nu"] - ref["m_nu"]) < 1e-10,
+          f"||delta||={np.linalg.norm(closure['m_nu'] - ref['m_nu']):.2e}")
+    check("Bridge: pack-derived charged-lepton masses equal the independent Schur masses",
+          np.linalg.norm(closure["m_e"] - ref["m_e"]) < 1e-10,
+          f"||delta||={np.linalg.norm(closure['m_e'] - ref['m_e']):.2e}")
+    check("Bridge: pack-derived |PMNS| equals the independent Schur |PMNS|",
+          np.linalg.norm(np.abs(closure["pmns"]) - np.abs(ref["pmns"])) < 1e-10,
+          f"||delta||={np.linalg.norm(np.abs(closure['pmns']) - np.abs(ref['pmns'])):.2e}")
+    check("Bridge: branch label agrees with the independent Schur branch",
+          closure["branch"] == ref["branch"],
+          f"branch={closure['branch']}")
+    check("Bridge: sheet label agrees with the independent Schur sheet",
+          closure["sheet"] == ref["sheet"],
+          f"sheet={closure['sheet']}")
 
 
 def part5_transfer_only_is_blind_to_the_five_real_corner_source() -> None:

@@ -3,7 +3,7 @@ runner: scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py
 runner_sha256: 8b8b98dba24c272ca88174ccece3e643bb97bd78d5f8518ce384c8e7b91eb8f3
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.07
+elapsed_sec: 0.19
 status: ok
 ----- stdout -----
 ========================================================================================

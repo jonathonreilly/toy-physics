@@ -1,6 +1,6 @@
 # Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion Principle
 
-**Date:** 2026-04-19 (originally); 2026-05-10 (scope-narrowed per audit verdict)
+**Date:** 2026-04-19 (originally); 2026-05-10 (scope-narrowed per audit verdict); 2026-05-16 (substring-import mechanism removed from runner per audit verdict)
 **Claim type:** bounded_theorem
 **Status authority:** independent audit lane only.
 **Primary runner:** [`scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py`](../scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py)
@@ -33,7 +33,12 @@ This note is restricted to the runner-tested witness families:
   the `(2,0) + (0,2)` witness with mass `0.05 + 0.05` and the
   `(2,1) + (1,2) + (2,2)` witness with mass `0.03 + 0.03 + 0.02`;
 - the four positive bulk-tail functionals listed above (total tail
-  mass, weighted tail mass, squared `l2` mass, support size).
+  mass, weighted tail mass, squared `l2` mass, support size);
+- a randomized sweep (n = 64) of admissible nonnegative
+  conjugation-symmetric tails inside the cone, used solely to certify
+  the algebraic identity `delta >= 0 ==> rho_0 + delta >= rho_0`
+  coefficientwise. The sweep does **not** certify universal Loewner
+  monotonicity.
 
 For these explicit witness families the runner certifies coefficient-
 order minimality of `rho_0` and a positive-semidefinite Loewner
@@ -60,28 +65,38 @@ is **not** closed by this note.
 
 ## Dependencies
 
-These citations are the upstream authorities the runner inspects via
-substring import. The substring import is not a closed-input mechanism;
-the auditor verdict explicitly noted "those imported premises cannot
-count as closed inputs". The dependencies are therefore tracked here as
-conditional-dependency citations. The current effective status of each
-upstream is tracked by the audit ledger; this note does not promote any
-of them.
+The runner does **not** import upstream notes via substring matching on
+prose. The previous audit verdict explicitly flagged that mechanism as
+not establishing closed inputs, and that mechanism has been removed.
+The numeric facts used by the runner are now verified directly on the
+packet and on the transfer matrix:
+
+- `rho_ret` is consumed as the numeric vector returned by the local
+  Python helper `completed_sector_data` (an in-tree Python module
+  import). The runner directly checks that this vector is normalized,
+  conjugation-symmetric, nonnegative on `(1,0)/(0,1)`, and zero on
+  `(1,1)`.
+- The local-factor diagonal used in the transfer assembly is consumed
+  from the in-tree Python helper `local_factor_diagonal`. The runner
+  directly checks that the assembled zero-extension transfer is
+  self-adjoint on the truncated dominant-weight box.
+
+The two source notes that originally provided this material are still
+the conceptual references for the underlying retained packet and
+factorized-class existence, and remain conditional-dependency citations
+for that conceptual role; they are NOT treated as closed retained-grade
+inputs by this note. The current effective status of each upstream is
+tracked by the audit ledger; this note does not promote any of them.
 
 - [GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md)
-  for the retained first-sector packet `rho_ret = (1, 0.267139..., 0.267139..., 0)`.
+  for the conceptual retained first-sector packet
+  `rho_ret = (1, 0.267139..., 0.267139..., 0)`.
 - [GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md](GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md)
-  for the existence of one explicit factorized-class extension of `rho_ret`
-  by zero on every higher weight, providing the local-factor diagonal
-  used by the runner.
-- The historical tail-underdetermination note that the runner inspects
-  by substring lives at
-  `archive_unlanded/gauge-vacuum-plaquette-missing-runners-2026-04-30/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md`;
-  this note records that the conditional dependency is on archived
-  prose, not on a live retained-grade authority.
+  for the conceptual existence of one explicit factorized-class
+  extension of `rho_ret` by zero on every higher weight, providing the
+  local-factor diagonal used by the runner.
 
-These are imported authorities for a bounded theorem. The row's
-effective status is set by the independent audit lane.
+The row's effective status is set by the independent audit lane.
 
 ## Verification
 
@@ -94,9 +109,9 @@ PYTHONPATH=scripts python3 scripts/frontier_gauge_vacuum_plaquette_first_sector_
 Expected:
 
 ```text
-PASS=7 FAIL=0
+PASS=8 FAIL=0
 ```
 
-The seven runner checks certify the witness-family-restricted
+The eight runner checks certify the witness-family-restricted
 statement above; they do not certify the universal Loewner-monotonicity
 step that the audit verdict flagged as the load-bearing failure.

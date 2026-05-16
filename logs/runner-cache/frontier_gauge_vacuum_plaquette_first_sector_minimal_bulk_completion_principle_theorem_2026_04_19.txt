@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py
-runner_sha256: 52bd6a9d83f8fcf7e0263724dbe6b4f090cc4b073990c9cb7cf4279bd1229b74
+runner_sha256: 0cd4dd2cd40a18d52651737a7d8837f59acfd465136b525b13ea1f9e8f6eb4cf
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 9.40
+elapsed_sec: 9.48
 status: ok
 ----- stdout -----
 ======================================================================================================================
@@ -21,26 +21,33 @@ Question:
   witness tail A metrics                      = {'tail_min': 0.0, 'tail_max': 0.05, 'tail_mass': 0.1, 'tail_l2_sq': 0.005000000000000001, 'tail_dim_mass': 0.6000000000000001, 'tail_support': 2}
   witness tail B metrics                      = {'tail_min': 0.0, 'tail_max': 0.03, 'tail_mass': 0.08, 'tail_l2_sq': 0.0021999999999999997, 'tail_dim_mass': 1.44, 'tail_support': 3}
 
-  [PASS] The truncated-packet theorem already fixes one exact retained packet rho_ret from the completed first-sector triple
-  [PASS] The zero-extension theorem already proves that rho_ret admits one explicit full nonnegative conjugation-symmetric extension inside the canonical Wilson factorized class
-  [PASS] The explicit witness tails add nonzero higher-weight mass above the retained packet  ((supportA,supportB,massA,massB)=(2,3,1.000e-01,8.000e-02))
-  [PASS] Among admissible nonnegative extensions, the zero extension is the unique coefficientwise least element  ((tail_mass0,tail_minA,tail_minB)=(0.000e+00,0.000e+00,0.000e+00))
-  [PASS] The two explicit witness tails produce positive-semidefinite Loewner increments  ((eigminA,eigminB)=(-1.096e-16,-3.212e-16))
-  [PASS] For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested positive increments  (||T_A-T_0||=2.606e-04)
-  [PASS] The zero extension minimizes the sampled positive bulk-tail functionals: total mass, weighted mass, squared l2 mass, and support size  ((massA,massB)=(1.000e-01,8.000e-02))
+  [PASS] Retained packet rho_ret is normalized, conjugation-symmetric, zero on (1,1), nonnegative on (1,0)/(0,1)  ((rho_00,rho_10,rho_01,rho_11)=(1.000000,0.267140,0.267140,0.000000))
+  [PASS] Zero-extension transfer t0 is self-adjoint and the underlying packet is conjugation-symmetric on the truncated box  ((sym_err,conj_err)=(2.220e-16,0.000e+00))
+  [PASS] The two explicit witness tails A and B add nonzero higher-weight mass above the retained packet  ((supportA,supportB,massA,massB)=(2,3,1.000e-01,8.000e-02))
+  [PASS] On the two named witness tails A and B, the zero extension is coefficientwise <= the extended packet (witness-restricted, not universal)  ((tail_mass0,tail_minA,tail_minB)=(0.000e+00,0.000e+00,0.000e+00))
+  [PASS] The two explicit witness tails A and B produce positive-semidefinite Loewner increments (witness-restricted, not universal)  ((eigminA,eigminB)=(-1.096e-16,-3.212e-16))
+  [PASS] For the two explicit witness tails, the zero extension is Loewner-minimal relative to those tested increments (witness-restricted, not universal)  (||T_A-T_0||=2.606e-04, ||T_B-T_0||=5.437e-06)
+  [PASS] The zero extension minimizes the four sampled positive bulk-tail functionals on the two witness tails (witness-restricted, not universal)  ((massA,massB,dimMassA,dimMassB)=(1.000e-01,8.000e-02,6.000e-01,1.440e+00))
+  [PASS] Randomized sweep (n=64) of admissible nonneg conjugation-symmetric tails: delta >= 0 implies rho_0 + delta >= rho_0 coefficientwise  ((coeff_violations,nonneg_violations)=(0,0))
 
 ======================================================================================================================
 RESULT
 ======================================================================================================================
   Bounded witness result:
-    - rho_ret has an explicit zero extension in the canonical factorized class
-    - the two witness positive tails remain above that zero extension
+    - rho_ret is a normalized, conjugation-symmetric, (1,1)-zero packet
+      (numeric properties checked directly, no substring import)
+    - the zero-extension produces a self-adjoint, conjugation-symmetric
+      transfer on the truncated dominant-weight box (numeric check)
+    - the two witness positive tails remain above the zero extension
       in coefficient order and in the tested Loewner increments
-    - the zero extension minimizes the sampled positive tail functionals
-    - the universal Loewner-minimal theorem for arbitrary admissible tails
-      remains an open derivation gap
+    - the zero extension minimizes the four sampled positive tail
+      functionals on the two witness tails
+    - randomized sweep certifies the algebraic identity
+      delta >= 0 ==> rho_0 + delta >= rho_0 coefficientwise
+    - the universal Loewner-minimal theorem for arbitrary admissible
+      tails remains an open derivation gap (NOT closed by this runner)
 
-PASS=7 FAIL=0
+PASS=8 FAIL=0
 
 ----- stderr -----
 

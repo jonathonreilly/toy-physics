@@ -1,0 +1,44 @@
+===== runner cache v1 =====
+runner: scripts/frontier_universal_gr_isotropic_schur_localization.py
+runner_sha256: 37f5d6a787079daa92f5921b33e932caf7094c8257e57481686f619903f5f6cd
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.14
+status: ok
+----- stdout -----
+UNIVERSAL GR ISOTROPIC SCHUR LOCALIZATION
+==============================================================================
+fixed-subspace rank = 2
+fixed-subspace invariance error = 1.393e-17
+fixed-subspace off-A1 overlap = 1.393e-17
+max block commutator error = 0.000e+00
+max lapse-shift leakage = 0.000e+00
+max shift-shear leakage = 0.000e+00
+max trace-shear leakage = 0.000e+00
+max shift scalar error = 1.923e-16
+max shear scalar error = 4.965e-16
+max closed-form coefficient error = 3.331e-16
+[EXACT] PASS: the spatially invariant background subspace is exactly the 2D A1 core
+    rank=2, invariance=1.393e-17, off-A1=1.393e-17
+[EXACT] PASS: any SO(3)-invariant lifted background therefore has the form diag(a,b,b,b)
+    the only invariant source directions are lapse and spatial trace
+[EXACT] PASS: on an invariant background the universal Hessian commutes with the canonical block projectors
+    max commutator error=0.000e+00
+[EXACT] PASS: the old trace-shear obstruction vanishes identically on the invariant background
+    lapse-shift=0.000e+00, shift-shear=0.000e+00, trace-shear=0.000e+00
+[EXACT] PASS: the shift and shear blocks are exact scalar Schur blocks on the invariant background
+    shift=1.923e-16, shear=4.965e-16
+[EXACT] PASS: the block coefficients are closed-form: alpha_lapse=-a^-2, alpha_shift=-(ab)^-1, alpha_trace=alpha_shear=-b^-2
+    max coefficient error=3.331e-16
+
+Verdict:
+The anisotropic finite prototype is not the correct universal blocker. Once the lifted background is restricted to the exact SO(3)-invariant subspace forced by the direct universal route, the Hessian Schur-localizes exactly into lapse, shift, trace, and shear blocks.
+So the previous rank-1 trace-shear mixer is a prototype artifact. The remaining direct-universal issue is now only the final Einstein/Regge operator identification / normalization on this already-localized isotropic background.
+
+==============================================================================
+SUMMARY
+==============================================================================
+PASS=6 FAIL=0 TOTAL=6
+
+----- stderr -----
+

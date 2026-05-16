@@ -227,42 +227,57 @@ The pair (G, U) cannot be factored: changing G changes U, and vice versa.
 Under the four admitted-context inputs, the "graph-unitary" (`G`, `U`)
 package is **operationally renamed** as a single mathematical object:
 a sparse Hermitian operator `H` on a finite set `S`. From the admitted
-`H` together with the admitted readout and extraction conventions:
+`H` together with the admitted readout and extraction conventions, the
+runner mechanically records the four numerical consequences listed in
+"What was tested":
 
-1. **Graph**: the nonzero pattern of `H` defines edges (under the
-   admitted "support = edges" extraction rule).
-2. **Unitary**: `exp(iHt)` is unitary (admitted Hermitian-exponentiation
-   readout).
-3. **Current**: `J_ij = 2 Im(ψ_i* H_ij ψ_j)` is locally conserved
-   (admitted readout).
-4. **Locality**: for small `t`, `U` inherits the admitted sparsity.
-5. **Physics**: the spectrum of `H` determines the observables read out
-   under the admitted convention.
+1. **Graph readout**: the nonzero pattern of `H` defines edges (under
+   the admitted "support = edges" extraction rule; Test 1).
+2. **Unitary readout**: `exp(iHt)` is unitary (admitted Hermiticity of
+   `H` plus admitted Hermitian-exponentiation readout; Test 1).
+3. **Current readout**: `J_ij = 2 Im(ψ_i* H_ij ψ_j)` is locally
+   conserved (admitted readout convention; Test 1).
+4. **Empirical locality concentration**: the mean `|U_ij|` ratio
+   on-graph vs off-graph grows with `N` (admitted sparsity of `H` plus
+   admitted readout convention; Test 1's "locality ratio" column).
+   This is an empirical concentration ratio, not a literal sparsity
+   inheritance claim on `U`.
 
 This is a definitional renaming of the original two-axiom package
 (graph + unitary) into a single verbal axiom plus four admitted
 auxiliary inputs. The renaming is class-F (audit-recorded), with the
 admitted inputs bearing the load. The verbal axiom alone does **not**
 force sparsity, Hermiticity, locality, or the specific Hamiltonian
-structure.
+structure. The locality and dissipation comparators (Tests 2 and 3)
+and the irreducibility comparator (Test 4) are model-demonstration
+checks over chosen graphs and dissipation rates inside the admitted-
+input scope; they are not first-principles derivations of those
+admitted inputs from the verbal axiom.
 
 ## What this is
 
 A numerical demonstration that, given the four admitted inputs above,
 the phrase "conserved information flow on a network" can be used as a
 single verbal renaming of the graph-plus-unitary package. Under the
-admitted inputs, the runner verifies four numerical consequences:
+admitted inputs, the runner verifies four numerical consequences (Test
+1 in §"What was tested"):
 
-- A graph (from the admitted "Hamiltonian-support = edges" extraction
-  rule applied to the admitted sparse `H`)
-- Unitary dynamics (from the admitted Hermiticity of `H` plus the
+- A graph readout (from the admitted "Hamiltonian-support = edges"
+  extraction rule applied to the admitted sparse `H`)
+- Unitary readout (from the admitted Hermiticity of `H` plus the
   admitted Hermitian-exponentiation readout convention)
-- Locality (from the admitted sparsity, probed empirically across
-  three chosen graph models)
+- A locally-conserved Schrödinger current `J_ij = 2 Im(ψ_i* H_ij ψ_j)`
+  (from the admitted readout convention)
+- An empirical on-graph vs off-graph concentration ratio for `|U_ij|`
+  (the "locality ratio" column; admitted sparsity plus admitted
+  readout)
 
-The four tests confirm that, **inside the admitted-input scope**,
-removing any component (the graph, the unitarity, or the coupling
-between them) breaks the operational consequences.
+The model-demonstration comparators (Tests 2, 3, 4) confirm that,
+**inside the admitted-input scope**, removing any component (the
+graph, the unitarity, or the coupling between them) breaks the
+operational consequences. These comparators are not first-principles
+derivations of sparsity, Hermiticity, locality, or the specific
+Hamiltonian structure from the verbal axiom.
 
 ## What this is not (audit-boundary recording)
 

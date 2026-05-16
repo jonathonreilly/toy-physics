@@ -3,7 +3,7 @@ runner: scripts/frontier_dark_energy_eos.py
 runner_sha256: 9c0fe8c52f6b6ae6a95722d484e7a1cf9871162dd3e9199c5504c21c247a3963
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.23
+elapsed_sec: 0.85
 status: ok
 ----- stdout -----
 Dark Energy Equation of State from Graph Spectral Gap
@@ -393,7 +393,7 @@ SYNTHESIS: Dark Energy Equation of State from the Framework
     Framework prediction: final results will confirm w = -1
 
 
-Total runtime: 1.1s
+Total runtime: 0.7s
 
 ========================================================================
 VERDICT

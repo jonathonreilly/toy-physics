@@ -1,26 +1,40 @@
 # Constructive UV-Localized Bridge Class for `y_t`
 
-**Date:** 2026-04-15
-**Status:** bounded support note
+**Date:** 2026-04-15 (demoted 2026-05-16)
+**Claim type:** bounded_theorem
+**Status:** bounded numerical-match note (tuned fit to imported endpoint)
+**Audit class:** G — load-bearing step is a numerical match, not a derivation
 **Primary runner:** `scripts/frontier_yt_constructive_uv_bridge.py`
 
-## Role
+## Scope (honest framing)
 
-This note upgrades the branch from pure exclusions to a real candidate bridge
-class.
+This note is **not** a derivation that the interacting lattice bridge belongs
+to a UV-localized class. It is a bounded *consistency check*: given an
+imported physical endpoint `y_t(v) = 0.9176`, three endpoint-preserving
+profile families (logistic, error-function, smoothstep) can each be tuned
+within a narrow UV-localized window so that their best fit reproduces the
+imported endpoint with cross-family spread `<= 0.0252%`.
 
-The previous scans established:
+The endpoint `y_t(v) = 0.9176` is imported, not derived. The runner's best
+rows are explicitly chosen by minimizing deviation from that imported target.
+Tunable parameters are the bridge center fraction and width; both are scanned
+on a 9x9 grid inside a pre-selected UV-localized window.
 
-- broad / diffuse bridges fail
-- only a narrow UV-localized window is viable
+This is therefore an `audited_numerical_match` result in the project's audit
+taxonomy, not a closed first-principles derivation. The remaining structural
+gap is recorded below in "What remains open".
+
+## Previous-scan context (informational)
+
+Earlier scans established:
+
+- broad / diffuse bridges fail to reproduce the imported endpoint
+- only a narrow UV-localized window admits any fit
 - subleading EW-side deformations do not rescue diffuse bridges
 
-The remaining question was whether that narrow UV-localized window still hides
-large shape ambiguity.
+These results are taken as background; this note does not re-derive them.
 
-## Result
-
-Inside that UV-localized window, the answer is no.
+## Numerical result
 
 The runner builds three independent endpoint-preserving bridge families:
 
@@ -29,57 +43,61 @@ The runner builds three independent endpoint-preserving bridge families:
 3. smoothstep
 
 Each family scans the UV-localized window and selects its best fit to the
-accepted endpoint `y_t(v)=0.9176`.
+imported endpoint `y_t(v)=0.9176`.
 
-All three families land essentially on the same answer:
+After best-fit selection per family:
 
-- each best fit stays within `0.05%` of the accepted endpoint
-- the best-fit center fractions lie in the same narrow range
-- the best-fit widths lie in the same narrow range
-- the normalized bridge area is stable across families
+- each best fit stays within `0.0252%` of the imported endpoint
+- the best-fit center fractions lie in `[0.965, 0.975]`
+- the best-fit widths lie in `[0.017, 0.020]`
+- the normalized bridge area is stable across families (spread `9.65%`)
 
-So the accepted endpoint is not an artifact of a single hand-chosen profile.
+The honest interpretation of this is that, **conditional on** the imported
+endpoint and **conditional on** restricting to the pre-selected UV-localized
+window and these three profile families, the per-family best fit is not very
+sensitive to the choice of profile family. It does not establish that the
+imported endpoint is shape-independent in a non-tuned sense.
 
-## Meaning
+## Meaning (bounded)
 
-This gives the branch a constructive candidate bridge class:
+The bounded claim this note licenses is narrow:
 
-> a UV-localized endpoint-preserving bridge family exists, and once the bridge
-> is forced into that class, the accepted low-energy endpoint is effectively
-> shape-stable.
+> *Conditional on* the imported endpoint `y_t(v)=0.9176` and *conditional on*
+> restricting to a pre-selected UV-localized window with three chosen
+> endpoint-preserving profile families, the per-family best fit reproduces the
+> imported endpoint with cross-family spread `<= 0.0252%`.
 
-That is materially stronger than the earlier state, where the branch only knew
-how to say what *fails*.
+It does not establish that the interacting lattice bridge actually belongs to
+the UV-localized class, nor that the UV-localized class is uniquely selected
+by any axiom in the framework. The result is a tuned-fit consistency check,
+not a derivation.
 
-## What remains open
+## What remains open (load-bearing gaps)
 
-This still does **not** make `y_t` unbounded.
+To upgrade this row from `audited_numerical_match` to `audited_clean`, the
+following structural gaps must be closed, none of which the present runner
+addresses:
 
-The remaining gap is now sharper:
+1. derive the endpoint `y_t(v) = 0.9176` from the framework axioms rather
+   than importing it as a target;
+2. derive why the interacting lattice bridge must lie in the chosen
+   UV-localized window, rather than asserting this window from prior scans;
+3. derive why the three profile families chosen here exhaust (or fairly
+   sample) the admissible bridge class, rather than treating them as
+   convenient analytic placeholders.
 
-- not endpoint numerics
-- not broad profile ambiguity
-- not broad EW-side operator ambiguity
+All three are operator/theorem problems and are out of scope for this note.
+The note therefore stops at the bounded numerical-match claim and does not
+attempt to upgrade beyond it.
 
-The remaining gap is:
+## Audit history
 
-> derive why the exact interacting lattice bridge belongs to this
-> UV-localized constructive class.
-
-That is an operator/theorem problem, not a curve-fitting problem.
-
-## Honest auditor read
-
-The 2026-05-04 audit recorded this row as `audited_numerical_match`. The
-honest read is that the runner's three-family scan is a numerical match
-within a tuned constructive class against the imported physical endpoint
-`y_t(v) = 0.9176`, not a first-principles derivation that the exact
-interacting lattice bridge belongs to the UV-localized class. The note
-already states the remaining derivation gap explicitly above.
-
-This addendum is graph-bookkeeping only. It does not change the
-numerical match status, does not promote the row, and does not add new
-content to the constructive-class result.
+The 2026-05-04 audit recorded this row as `audited_numerical_match` with
+Class-G load-bearing step. The 2026-05-16 demotion edit (this revision)
+rewrites the "Scope", "Result", and "Meaning" sections of this note so the
+headline framing matches the auditor verdict instead of relying on a
+trailing addendum. No runner, audit-data, or publication file is changed by
+the demotion; the bounded numerical-match status is preserved.
 
 ## Audit dependency repair links
 

@@ -6197,6 +6197,10 @@
       "to": "dm_neutrino_triplet_character_source_theorem_note_2026-04-15"
     },
     {
+      "from": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
+      "to": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15"
+    },
+    {
       "from": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
       "to": "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16"
     },
@@ -18569,6 +18573,18 @@
       "to": "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
     },
     {
+      "from": "pmns_graph_axis_to_active_lane_bridge_note",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
+      "from": "pmns_graph_axis_to_active_lane_bridge_note",
+      "to": "site_phase_cube_shift_intertwiner_note"
+    },
+    {
+      "from": "pmns_graph_axis_to_active_lane_bridge_note",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
       "from": "pmns_graph_commutant_cycle_value_boundary_note",
       "to": "pmns_graph_first_axis_alignment_note"
     },
@@ -18583,6 +18599,10 @@
     {
       "from": "pmns_graph_commutant_cycle_value_boundary_note",
       "to": "pmns_oriented_cycle_reduced_channel_nonselection_note"
+    },
+    {
+      "from": "pmns_graph_first_axis_alignment_note",
+      "to": "pmns_graph_axis_to_active_lane_bridge_note"
     },
     {
       "from": "pmns_graph_first_axis_alignment_note",
@@ -22651,6 +22671,14 @@
     {
       "from": "universal_gr_invariant_nonlinear_completion_note",
       "to": "universal_gr_isotropic_glue_operator_note"
+    },
+    {
+      "from": "universal_gr_isotropic_schur_localization_note",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "universal_gr_isotropic_schur_localization_note",
+      "to": "universal_gr_a1_invariant_section_note"
     },
     {
       "from": "universal_gr_lorentzian_signature_extension_note",
@@ -41935,14 +41963,14 @@
     },
     "dark_energy_eos_note": {
       "claim_id": "dark_energy_eos_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "bounded_theorem",
+      "claim_type_author_hint": "decoration",
+      "claim_type_author_hint_raw": "decoration",
+      "claim_type_seed_hint": "decoration",
       "deps": [],
-      "note_hash": "0655d42b4b88e9013e5f16a27fb582390a4379f900e8273d8ae0c0d3d388dfc2",
+      "note_hash": "675b53d7897b75fe91ec214ecb7118cf492c5d930d7ea5a44f51f681f435efc8",
       "path": "docs/DARK_ENERGY_EOS_NOTE.md",
       "runner_path": "scripts/frontier_dark_energy_eos.py",
-      "title": "Conditional EoS Algebra from a Fixed S^3 Spectral Gap"
+      "title": "Decoration: Numerical / Lattice / Evolution-Model Companion to the Retained Dark-Energy EOS Corollary"
     },
     "dark_energy_eos_retained_corollary_theorem_note": {
       "claim_id": "dark_energy_eos_retained_corollary_theorem_note",
@@ -43182,11 +43210,11 @@
     },
     "dm_leptogenesis_pmns_projector_interface_note_2026-04-16": {
       "claim_id": "dm_leptogenesis_pmns_projector_interface_note_2026-04-16",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "29f62591a4a637d9709ee13cf8bd77bea63a0f7a50609b5e8cbf1738d9399e68",
+      "note_hash": "66102a7fec13dd6505986cd533962d6c9fe59e69b000880a1a50cc26b6514e46",
       "path": "docs/DM_LEPTOGENESIS_PMNS_PROJECTOR_INTERFACE_NOTE_2026-04-16.md",
       "runner_path": "scripts/frontier_dm_leptogenesis_pmns_projector_interface.py",
       "title": "DM Leptogenesis PMNS Projector Interface"
@@ -43591,18 +43619,19 @@
     },
     "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_k00_bosonic_normalization_theorem_note_2026-04-15",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "observable_principle_from_axiom_note",
         "dm_neutrino_weak_even_swap_reduction_theorem_note_2026-04-15",
-        "dm_neutrino_triplet_character_source_theorem_note_2026-04-15"
+        "dm_neutrino_triplet_character_source_theorem_note_2026-04-15",
+        "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15"
       ],
-      "note_hash": "8b409d9b57e05016d51c4232f86653f87b828eacfb5a51ead5d10afa9b5e1f92",
+      "note_hash": "0da6e7549d1178d541f97e6fb3fbaac473ca0db14f7c7111e6ae5c89b2b4c906",
       "path": "docs/DM_NEUTRINO_K00_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_k00_bosonic_normalization_theorem.py",
-      "title": "DM Neutrino `K00` Bosonic Normalization Theorem"
+      "title": "DM Neutrino `K00` Bosonic Normalization Theorem (Conditional)"
     },
     "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17": {
       "claim_id": "dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
@@ -47682,7 +47711,7 @@
         "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
         "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19"
       ],
-      "note_hash": "b3226ff9164fa559787bb92407fa4876d49105e6aa4b0c5dc612f3186e6143e0",
+      "note_hash": "9beedd7f1028a63355eed5f9bbe46d74142b926fee0b779cc5a40f3e90b3d42d",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_PRINCIPLE_THEOREM_NOTE_2026-04-19.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion Principle"
@@ -48436,11 +48465,11 @@
     },
     "graviton_mass_derived_note": {
       "claim_id": "graviton_mass_derived_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a0f5de69e7e7e66adef135ab2a6e3658025324c7c9d1fe256b060394184d9689",
+      "note_hash": "200b72fc7afebc482dd2fe19f52f983678c4654abbb91d8a2c6800bd00ee8d0f",
       "path": "docs/GRAVITON_MASS_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_graviton_mass_derived.py",
       "title": "Lichnerowicz TT Spectral Arithmetic on S^3 with Imported Hubble Radius"
@@ -50524,11 +50553,11 @@
     },
     "koide_a1_physical_bridge_attempt_2026-04-22": {
       "claim_id": "koide_a1_physical_bridge_attempt_2026-04-22",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "73d11fc93c00a3b66145a7234768a04c76b39933eb2430c104eead7ff0594f77",
+      "note_hash": "88e5251df56d4d614237f721542fe32b1c320336e5e3c5cbb3f6f8a606f45e4f",
       "path": "docs/KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md",
       "runner_path": null,
       "title": "A1 Physical Bridge \u2014 theoretical attempt"
@@ -51697,6 +51726,17 @@
       "runner_path": "scripts/frontier_koide_dimensionless_objection_closure_review.py",
       "title": "Koide Dimensionless Objection-Closure Review Packet"
     },
+    "koide_dimensionless_objection_toy_conditional_algebraic_checks_narrow_theorem_note_2026-05-16": {
+      "claim_id": "koide_dimensionless_objection_toy_conditional_algebraic_checks_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "f32ccb2ff4fc715e518f820038d64b010b7c1d00a39eac0aa3b5504f809a63c5",
+      "path": "docs/KOIDE_DIMENSIONLESS_OBJECTION_TOY_CONDITIONAL_ALGEBRAIC_CHECKS_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_koide_dimensionless_objection_toy_conditional_algebraic_checks.py",
+      "title": "Koide Dimensionless Objection \u2014 Toy Conditional Algebraic Checks Narrow Theorem"
+    },
     "koide_dweh_cyclic_compression_note_2026-04-18": {
       "claim_id": "koide_dweh_cyclic_compression_note_2026-04-18",
       "claim_type_author_hint": null,
@@ -51744,7 +51784,7 @@
       "claim_type_author_hint_raw": "bounded_theorem (conditional AM-GM result; not a uniqueness theorem).",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a8215395bae071c98d7658ce85a64eab71a110fd6bc5dba1649e066cec8b4bb1",
+      "note_hash": "8c2ec2bea26bba2dcb5a06946f9f4c5c25594f45631b781f0e4585eb7e1d0a44",
       "path": "docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md",
       "runner_path": "scripts/frontier_koide_frobenius_isotype_split_uniqueness.py",
       "title": "Koide AM-GM Result Conditional on a Fixed Frobenius Normalization"
@@ -58261,6 +58301,21 @@
       "runner_path": "scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py",
       "title": "PMNS as `f(H(m, delta, q_+))` \u2014 Bounded P3 Package"
     },
+    "pmns_graph_axis_to_active_lane_bridge_note": {
+      "claim_id": "pmns_graph_axis_to_active_lane_bridge_note",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "z2_hw1_mass_matrix_parametrization_note",
+        "site_phase_cube_shift_intertwiner_note",
+        "graph_first_selector_derivation_note"
+      ],
+      "note_hash": "8553fe0b6ba602ecda8a067e1aea727a3cf622a8d67374fd6dedc7ec7f4dce75",
+      "path": "docs/PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md",
+      "runner_path": "scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py",
+      "title": "PMNS Graph-Axis -> Active Hermitian Lane Bridge"
+    },
     "pmns_graph_commutant_cycle_value_boundary_note": {
       "claim_id": "pmns_graph_commutant_cycle_value_boundary_note",
       "claim_type_author_hint": null,
@@ -58279,16 +58334,17 @@
     },
     "pmns_graph_first_axis_alignment_note": {
       "claim_id": "pmns_graph_first_axis_alignment_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
+        "pmns_graph_axis_to_active_lane_bridge_note",
         "z2_hw1_mass_matrix_parametrization_note",
         "site_phase_cube_shift_intertwiner_note",
         "graph_first_selector_derivation_note",
         "pmns_graph_first_cycle_frame_support_note"
       ],
-      "note_hash": "29c72bd4e69f949ae7cea64e3f56a8accee73f482ea2309f5c07240db251c6c9",
+      "note_hash": "1b6a42f541eefc87d84f6b3e665542febbc598de4afbbf27dbe2ac0da21e0d30",
       "path": "docs/PMNS_GRAPH_FIRST_AXIS_ALIGNMENT_NOTE.md",
       "runner_path": "scripts/frontier_pmns_graph_first_axis_alignment.py",
       "title": "PMNS Graph-First Axis Alignment"
@@ -58321,11 +58377,11 @@
     },
     "pmns_hw1_source_transfer_boundary_note": {
       "claim_id": "pmns_hw1_source_transfer_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "8b70fb887d534f6be37f5e1cbd6c01f5e66b8c1c788a97b1633fa4c402835b0c",
+      "note_hash": "80830908642fc3a19b78720fb9e9dd1de5cbc150b694be28ab1fcc74271319bf",
       "path": "docs/PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_pmns_hw1_source_transfer_boundary.py",
       "title": "PMNS HW1 Source-Transfer Boundary"
@@ -64085,7 +64141,7 @@
         "minimal_axioms_2026-04-11",
         "single_axiom_hilbert_note"
       ],
-      "note_hash": "676c4bf2e6b43839b020866a71f59a86b829f1c4786c61ef8cbc2acd60331144",
+      "note_hash": "d6a4ddfd3dc2fa4592ce8633d1f1e87e5f3e494d15cea38a96c13590228e76cb",
       "path": "docs/SINGLE_AXIOM_INFORMATION_NOTE.md",
       "runner_path": "scripts/frontier_single_axiom_information.py",
       "title": "Sparse Hermitian H + Hermitian-Exponentiation Readout + Locality Empirical Probe: Operational Reduction Note"
@@ -66178,6 +66234,17 @@
       "runner_path": "scripts/frontier_teleportation_microscopic_closure.py",
       "title": "Teleportation Microscopic Closure Candidate Note"
     },
+    "teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16": {
+      "claim_id": "teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16",
+      "claim_type_author_hint": "open_gate",
+      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_seed_hint": "open_gate",
+      "deps": [],
+      "note_hash": "cdcefea5b25b876e7346b9ffa2c0cadc100692a96fa6768b2ac17230f92493b8",
+      "path": "docs/TELEPORTATION_NATIVE_AXIOMS_SCOPE_SPLIT_SOURCE_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_teleportation_native_axioms_scope_split_2026-05-16.py",
+      "title": "Teleportation Native Axioms Scope Split \u2014 Source Theorem Note"
+    },
     "teleportation_native_axioms_theory_note": {
       "claim_id": "teleportation_native_axioms_theory_note",
       "claim_type_author_hint": null,
@@ -67183,13 +67250,16 @@
     },
     "universal_gr_isotropic_schur_localization_note": {
       "claim_id": "universal_gr_isotropic_schur_localization_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "f1824029195ac26e2016c88b405da580edc1be55313297e72d51b729be99ddae",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "observable_principle_from_axiom_note",
+        "universal_gr_a1_invariant_section_note"
+      ],
+      "note_hash": "1f7c8801f30c5704b44f64d313ce79811c66916443881f4b296b9d7d6bf8e004",
       "path": "docs/UNIVERSAL_GR_ISOTROPIC_SCHUR_LOCALIZATION_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_universal_gr_isotropic_schur_localization.py",
       "title": "Universal GR Isotropic Schur Localization on `PL S^3 x R`"
     },
     "universal_gr_lambda_bypass_note": {
@@ -69752,14 +69822,14 @@
     },
     "yt_constructive_uv_bridge_note": {
       "claim_id": "yt_constructive_uv_bridge_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "yt_interacting_bridge_locality_note",
         "yt_bridge_operator_closure_note"
       ],
-      "note_hash": "29e01edbf2197fb27eb68d9d3b53848e2160b4f94d09e48dd2d834388ded7a4e",
+      "note_hash": "1de817a69fc4cad581a9c6a50b952a44053a8d719e39dc1cd0885d3591cdb689",
       "path": "docs/YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md",
       "runner_path": "scripts/frontier_yt_constructive_uv_bridge.py",
       "title": "Constructive UV-Localized Bridge Class for `y_t`"
@@ -71118,6 +71188,7 @@
     "koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24",
     "koide_delta_marked_relative_cobordism_no_go_note_2026-04-24",
     "koide_dimensionless_objection_closure_review_packet_2026-04-24",
+    "koide_dimensionless_objection_toy_conditional_algebraic_checks_narrow_theorem_note_2026-05-16",
     "koide_dweh_cyclic_compression_note_2026-04-18",
     "koide_frobenius_isotype_split_uniqueness_note_2026-04-21",
     "koide_gamma_orbit_selector_bridge_note_2026-04-18",
@@ -71393,6 +71464,7 @@
     "teleportation_logical_readout_audit",
     "teleportation_measurement_record_note",
     "teleportation_microscopic_closure_note",
+    "teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16",
     "teleportation_native_axioms_theory_note",
     "teleportation_nature_grade_push_note",
     "teleportation_no_signaling_audit",
@@ -71423,7 +71495,6 @@
     "universal_gr_complement_canonical_note",
     "universal_gr_invariant_frame_obstruction_note",
     "universal_gr_isotropic_glue_operator_note",
-    "universal_gr_isotropic_schur_localization_note",
     "universal_gr_lambda_bypass_note",
     "universal_gr_lorentzian_global_atlas_closure_note",
     "universal_gr_polarization_frame_bundle_attempt",
@@ -71491,25 +71562,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 375,
+      "bounded_theorem": 384,
+      "decoration": 1,
       "meta": 74,
-      "no_go": 47,
-      "none": 1545,
-      "open_gate": 39,
+      "no_go": 48,
+      "none": 1536,
+      "open_gate": 40,
       "positive_theorem": 149
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 827,
+      "bounded_theorem": 831,
+      "decoration": 1,
       "meta": 74,
-      "no_go": 152,
+      "no_go": 153,
       "none": 445,
-      "open_gate": 118,
-      "positive_theorem": 613
+      "open_gate": 119,
+      "positive_theorem": 609
     },
-    "edge_count": 8947,
-    "leaf_count": 628,
-    "node_count": 2229,
-    "root_count": 773,
-    "runners_with_path": 1846
+    "edge_count": 8954,
+    "leaf_count": 630,
+    "node_count": 2232,
+    "root_count": 774,
+    "runners_with_path": 1850
   }
 }

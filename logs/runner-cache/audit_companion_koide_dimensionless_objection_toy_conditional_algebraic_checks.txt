@@ -1,0 +1,95 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_koide_dimensionless_objection_toy_conditional_algebraic_checks.py
+runner_sha256: 3d85afb90da9457805cb6cc133bf6e1f53eada15f38eb43c6bfff62fefd058b3
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.05
+status: ok
+----- stdout -----
+========================================================================================
+Koide dimensionless objection - toy conditional algebraic checks
+(Pattern A narrow companion runner)
+========================================================================================
+
+----------------------------------------------------------------------------------------
+(T1) Q zero-background identity under (A1)
+----------------------------------------------------------------------------------------
+  [PASS] Q(0, 0) = 2/3  (Q=2/3)
+
+----------------------------------------------------------------------------------------
+(T2) Q common-source invariance under (A1)
+----------------------------------------------------------------------------------------
+  [PASS] Q(s, 0) = 2/3 at s = 1/5  (Q=2/3)
+  [PASS] Q(s, 0) = 2/3 at s = 3/7  (Q=2/3)
+  [PASS] Q(s, 0) = 2/3 at s = -1/11  (Q=2/3)
+
+----------------------------------------------------------------------------------------
+(T3) Q traceless-background departure under (A1)
+----------------------------------------------------------------------------------------
+  [PASS] Q(0, z) != 2/3 at z = 1/3  (Q=1)
+  [PASS] Q(0, z) != 2/3 at z = 2/5  (Q=10/9)
+  [PASS] Q(0, z) != 2/3 at z = -1/7  (Q=7/12)
+  [PASS] Q(0, 1/4) = 8/9 (exact)  (Q=8/9)
+  [PASS] Q(0, -1/4) = 8/15 (exact)  (Q=8/15)
+
+----------------------------------------------------------------------------------------
+(T4) Z survives under (A2)
+----------------------------------------------------------------------------------------
+  [PASS] Z^2 = I componentwise  (Z^2=(1, 1))
+  [PASS] <Z>(w) = 2 w - 1 at w = 1/3  (<Z>=-1/3)
+  [PASS] <Z>(w) = 2 w - 1 at w = 2/7  (<Z>=-3/7)
+  [PASS] <Z>(w) = 2 w - 1 at w = 4/5  (<Z>=3/5)
+  [PASS] <Z>(1/2) = 0  (<Z>=0)
+
+----------------------------------------------------------------------------------------
+(T5) Selected-line endpoint dimensionality under (A3)
+----------------------------------------------------------------------------------------
+  [PASS] dim End(L_chi) = 1
+  [PASS] dim End(V) = 4
+  [PASS] P_chi^2 = P_chi  (P_chi^2=(1, 0))
+  [PASS] selected channel weight = 1
+  [PASS] spectator channel weight = 0
+
+----------------------------------------------------------------------------------------
+(T6) delta selected-line conditional value under (A3)+(A4)+(A5)
+----------------------------------------------------------------------------------------
+  [PASS] delta(0, 0) = 2/9  (delta=2/9)
+
+----------------------------------------------------------------------------------------
+(T7) delta ambient countermodels under (A5)
+----------------------------------------------------------------------------------------
+  [PASS] closing endpoint (s_chi=0, c=0) -> delta = 2/9  (delta=2/9)
+  [PASS] spectator endpoint (s_chi=1, c=0) -> delta = 0  (delta=0)
+  [PASS] mixed endpoint (s_chi=1/2, c=0) -> delta = 1/9  (delta=1/9)
+  [PASS] shifted endpoint (s_chi=0, c=1/9) -> delta = 1/3  (delta=1/3)
+
+----------------------------------------------------------------------------------------
+(T8) Q retained-only blocker in-toy under (A1)+(A2)
+----------------------------------------------------------------------------------------
+  [PASS] exists z != 0 with Q(0, z) != 2/3  (Q=8/9)
+  [PASS] exists non-midpoint w with <Z>(w) != 0  (<Z>=1/3)
+  [PASS] in-toy: '[observable completeness on (A1)+(A2)] => Q = 2/3' fails
+
+----------------------------------------------------------------------------------------
+(T9) delta retained-only blocker in-toy under (A5)
+----------------------------------------------------------------------------------------
+  [PASS] at least two distinct delta values reachable from (A5) alone  (|values|=4, values=[Fraction(0, 1), Fraction(1, 9), Fraction(2, 9), Fraction(1, 3)])
+  [PASS] in-toy: '(A5) alone => delta = 2/9' fails
+
+========================================================================================
+SUMMARY: PASS=29 FAIL=0
+PASSED: 29/29
+========================================================================================
+KOIDE_DIMENSIONLESS_OBJECTION_TOY_CONDITIONAL_ALGEBRAIC_CHECKS=TRUE
+ADMISSIONS_USED=A1_A2_A3_A4_A5
+ETA_APS_ADMITTED=2/9
+IF_A1_THEN_Q_AT_ZERO_BACKGROUND_EQUALS_2_OVER_3=TRUE
+IF_A1_AND_Z_NONZERO_THEN_Q_NOT_EQUAL_2_OVER_3=TRUE
+IF_A2_THEN_Z_LABEL_SURVIVES_OBSERVABLE_COMPLETENESS=TRUE
+IF_A3_A4_A5_AND_SELECTED_LINE_LOCAL_THEN_DELTA_EQUALS_2_OVER_9=TRUE
+IF_A5_ALONE_THEN_DELTA_NOT_PINNED_TO_2_OVER_9=TRUE
+RETAINED_GRADE_CLOSURE_ASSERTED=FALSE
+RETAINED_GRADE_NO_GO_ASSERTED=FALSE
+
+----- stderr -----
+

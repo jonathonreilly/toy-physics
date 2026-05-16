@@ -1,5 +1,6 @@
 # PMNS Graph-First Axis Alignment
 
+**Claim type:** bounded_theorem
 **Status:** bounded - bounded or caveated result note
 **Script:** [`frontier_pmns_graph_first_axis_alignment.py`](../scripts/frontier_pmns_graph_first_axis_alignment.py)
 
@@ -102,6 +103,22 @@ aligned Hermitian core form.
 
 One-hop authority candidates cited:
 
+- [`PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md`](PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md)
+  — audit row: `pmns_graph_axis_to_active_lane_bridge_note`. Newly added
+  bridge-theorem source authority deriving, on existing repo-canonical
+  objects, that the graph-side residual `Z_2` stabilizer of the selected
+  `hw=1` cube axis restricts on the `hw=1` carrier `V_1 = span(X_1, X_2, X_3)`
+  to the standard permutation matrix `P_23` (after relabeling so the
+  selected axis is `e_1`), so that imposing residual-`Z_2` invariance on a
+  Hermitian operator `H : V_1 -> V_1` is the identity `P_23 H P_23 = H`
+  rather than an extra premise. This is the bridge step named by the prior
+  2026-05-11 `missing_bridge_theorem` audit feedback. Runner
+  `scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py` exercises the
+  six tensor-factor permutation unitaries, their conjugation action on the
+  cube-shift triplet, the carrier invariance of `V_1`, the restriction
+  identity `T_sigma|_{V_1} = P_sigma`, and the equivalence between
+  residual-`Z_2` invariance on `V_1` and `P_23 H P_23 = H` (`PASS=87
+  FAIL=0` on the present worktree). Independent audit owns chain impact.
 - [`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
   — audit row:
   `z2_hw1_mass_matrix_parametrization_note`. Sibling source authority
@@ -140,15 +157,19 @@ One-hop authority candidates cited:
 Open class D registration targets named by prior 2026-05-05 audit
 feedback as `missing_bridge_theorem`:
 
-- A retained source-note theorem deriving the bridge from the selected
-  `hw=1` graph axis and its residual `Z_2` stabilizer to mandatory
-  `P_23` invariance on the active Hermitian triplet lane remains
-  required to lift the bounded-grade alignment conclusion to chain
-  closure. The prior feedback notes
-  states this explicitly:
-  `missing_bridge_theorem: provide a retained theorem deriving the map
-  from the selected hw=1 graph axis and its residual Z2 stabilizer to
-  mandatory P23 invariance on the active Hermitian triplet lane`.
+- The prior feedback notes stated the missing-bridge target
+  explicitly: `missing_bridge_theorem: provide a retained theorem
+  deriving the map from the selected hw=1 graph axis and its residual
+  Z2 stabilizer to mandatory P23 invariance on the active Hermitian
+  triplet lane`. The newly added
+  [`PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md`](PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md)
+  source theorem (paired runner
+  `scripts/frontier_pmns_graph_axis_to_active_lane_bridge.py`) supplies
+  this bridge as an explicit unitary-restriction identity on
+  repo-canonical objects, with no new physical premise. Independent
+  audit decides whether this source addition lifts the present note's
+  effective status; this addendum does not request promotion or
+  verdict change.
 
 ## Honest auditor read
 
