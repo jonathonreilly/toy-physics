@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 310 |
+| **retained_bounded** | 311 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1197 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 520 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 521 |
 | `audited_conditional` | 186 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
@@ -114,7 +113,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -285,6 +283,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
+| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `global_coherence_held_out2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
@@ -5230,6 +5229,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `CL3_COLOR_AUTOMORPHISM_THEOREM.md`
 - **decoration parent:** `cl3_color_automorphism_theorem`
+- **auditor confidence:** high
+
+### `generation_axiom_boundary_note`
+
+- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Local finite-dimensional H_hw=1 algebra check for the supplied translation-character projectors and C3 cycle generator only.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-133430-d60516a8-generation_axiom_boundar-001`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The supplied translation-character projectors together with the C3 cycle generator generate the full 9-dimensional M_3(C) algebra on H_hw=1 and have scalar commutant.  _(class `A`)_
+- **chain closes:** True — Within the stated bounded scope, the runner explicitly constructs the 3x3 generators, computes the generated algebra dimension as 9, and computes scalar commutant dimension 1. The note excludes physical-species, substrate-fundamentality, and historical-memo conclusions.
+- **rationale:** The load-bearing step is a finite-dimensional algebraic closure check on explicitly supplied 3x3 operators, not a numerical fit, external comparison, or renaming. The source code performs actual linear-algebra computations for rank, generated algebra dimension, and commutant dimension rather than merely printing expected constants. Under the note's narrow scope, the conclusion follows on its own terms.
 - **auditor confidence:** high
 
 ### `geometry_lane_head_to_head_note`

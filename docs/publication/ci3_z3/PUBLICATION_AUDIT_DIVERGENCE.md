@@ -22,11 +22,10 @@ publication tables phrase it.
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 4 |
 | medium | `unaudited` | 2 |
-| critical | `audit_in_progress` | 1 |
 | critical | `audited_failed` | 1 |
 | critical | `open_gate` | 1 |
 
-**Total non-retained-grade rows in publication tables:** 517
+**Total non-retained-grade rows in publication tables:** 516
 
 ## Per-row breakdown
 
@@ -225,7 +224,6 @@ publication tables phrase it.
 | critical | `gauge_vacuum_plaquette_spatial_environment_tensor_transfer_theorem_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_spatial_environment_transfer_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `gauge_vacuum_plaquette_susceptibility_flow_theorem_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
-| critical | `generation_axiom_boundary_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `gr_class_expansion_finite_rank_target_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `grav_decoherence_derived_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `graviton_mass_derived_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
