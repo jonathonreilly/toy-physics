@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 135 |
-| **retained_bounded** | 313 |
+| **retained_bounded** | 314 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1186 |
+| unaudited | 1185 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -43,13 +43,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 525 |
+| `audited_clean` | 526 |
 | `audited_conditional` | 192 |
 | `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1299 |
+| `unaudited` | 1298 |
 
 | claim_type | count |
 |---|---:|
@@ -524,6 +524,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
 | `staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
+| `staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_graph_failure_map_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
@@ -10072,6 +10073,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Within the explicitly two-candidate framing, if a candidate must match dim_C V = 2, then the bosonic Fock candidate is ruled out by infinite per-site dimension while the Grassmann candidate remains and has the Berezin det(M) readout.  _(class `A`)_
 - **chain closes:** True — Within the bounded scope, D1-D4 follow from retained or retained_bounded cited inputs plus standard finite algebra and harmonic-oscillator/Fock facts. The physical U4 lattice-Hilbert-space bridge is explicitly out of scope and is not consumed by the audited claim.
 - **rationale:** The load-bearing step is a genuine algebraic closure over independent retained-grade inputs: Cl(3) faithful complex irreps have dimension 2, Grassmann nilpotency gives a two-state per-site module, and bosonic canonical Fock space is infinite-dimensional. The Berezin determinant part is directly supplied by the retained_bounded Berezin authority and rechecked by the runner via exact symbolic determinant computations. The runner source performs finite symbolic checks rather than merely printing pass constants, though it correctly treats the two-candidate framing as a scoped premise rather than a universal classification.
+- **auditor confidence:** high
+
+### `staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`STAGGERED_DIRAC_SUBSTEP3_SPECIES_REDUCTION_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/STAGGERED_DIRAC_SUBSTEP3_SPECIES_REDUCTION_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the abstract d = 4 arithmetic factorization of the naive 16-corner count and its spinor-dimension match to the retained Cl(3,0) complexification split, including the explicit boundary that no framework-specific staggered/Kogut-Susskind reduction is derived.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-140139-20260516T140139Z-ecb56578-staggered_dirac_substep3-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** At d = 4, the upstream naive-lattice count gives 2^4 = 16, and integer arithmetic factors this as 16 = 4 · 4, with the spinor factor matching the cited Cl(3,0) complexification chirality-pair dimension dim_C V_+ + dim_C V_- = 2 + 2 = 4.  _(class `A`)_
+- **chain closes:** True — The narrow claim follows from the two retained cited authorities plus standard integer arithmetic and finite-dimensional linear algebra. The framework-specific 4-taste staggered realization remains open, but the note explicitly excludes that stronger claim from scope.
+- **rationale:** The load-bearing work is a genuine class-A algebraic closure over independent retained-grade inputs: the retained naive theorem supplies the 16-corner count, and the retained Cl(3,0) split supplies the 2 + 2 chirality-pair dimension. The note does not assert the open staggered-realization bridge; it explicitly records that the taste reduction and regulator/substrate selection are not closed here. The runner source performs exact symbolic/enumerative checks consistent with the note rather than merely printing constants.
 - **auditor confidence:** high
 
 ### `staggered_fermion_card_2026-04-10`
