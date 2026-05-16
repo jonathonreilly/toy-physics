@@ -3,7 +3,7 @@ runner: scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py
 runner_sha256: ce0ff2b2a137179000b030399ebba85aa7e7ab25a7e71dd39613e59645bd4e11
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 1.13
+elapsed_sec: 0.94
 status: ok
 ----- stdout -----
 ========================================================================
