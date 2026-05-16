@@ -1,16 +1,82 @@
 # y_t Bridge: EW Coupling Derivation and Sensitivity Analysis
 
-**Date:** 2026-04-14
-**Status:** superseded_by `COMPLETE_PREDICTION_CHAIN_2026_04_15.md`
+**Date:** 2026-04-14 (demoted 2026-05-16)
+**Claim type:** bounded_theorem
+**Status:** bounded numerical-match scan (target-conditioned `taste_weight` scan against observed `sin^2(theta_W)(M_Z)` plus comparator checks)
+**Audit class:** G — load-bearing step is a target-conditioned numerical scan against observed EW comparators, not a derivation from the restricted packet
+**Superseded by (historical):** `COMPLETE_PREDICTION_CHAIN_2026_04_15.md` for the headline `y_t` chain; the present note is retained as a target-conditioned EW-bridge support scan, not a closed derivation
+**Primary runner:** `scripts/frontier_yt_ew_coupling_derivation.py`
+**Supporting runner (informational):** `scripts/frontier_yt_qfp_insensitivity.py` (QFP insensitivity proxy)
 
-> **WARNING:** This note predates the derivation of g_2 (from g_2²=1/4),
-> g_Y (from g_Y²=1/5), the color projection √(8/9) on y_t, and the
-> full CW lambda derivation. It lists g_2 and lambda as IMPORTED —
-> both are now DERIVED. See the complete prediction chain for current
-> status. Do NOT use the import table below for promotion decisions.
-**Scripts:**
-- `scripts/frontier_yt_ew_coupling_derivation.py` (EW coupling derivation)
-- `scripts/frontier_yt_qfp_insensitivity.py` (QFP insensitivity, 14/14 PASS)
+## Scope (honest framing)
+
+This note is **not** a derivation that the EW coupling bridge `g_1(v)`,
+`g_2(v)` and the SM-RGE surrogate used in the `y_t` chain are framework-native
+closures of the restricted packet. It is a bounded *target-conditioned
+numerical scan*: given (i) the imported observed value
+`sin^2(theta_W)(M_Z) = 0.23122`, (ii) the imported physical EW masses
+`(M_Z, M_W, M_T, M_B, M_C)`, (iii) a pre-selected one-parameter Hamming-weight
+taste-threshold staircase `m_k = alpha_LM^{k/2} * M_Pl` with degeneracies
+`(1, 4, 6, 4, 1)`, (iv) a SM-like 2-loop Machacek-Vaughn gauge RGE used as
+the surrogate transport from `v` to `M_Z`, and (v) the Coupling Map Theorem
+input `alpha_s(v) = 0.1033` injected at the boundary, the runner scans the
+scalar `taste_weight in linspace(0, 2, 41)` plus a fine refinement on a
+single decisive parameter and reports the value that minimizes
+`|sin^2_pred(M_Z) - sin^2_obs(M_Z)|` across the scan.
+
+The runner's PASS rows are:
+
+1. `sin^2(theta_W)(M_Z) within 1% of observed` — a comparator against the
+   observed `sin^2(theta_W)(M_Z) = 0.23122` AT the `taste_weight = 0.390`
+   selected by minimizing the same comparator;
+2. `1/alpha_EM(M_Z) within 15% of observed` — a comparator against
+   `1/alpha_EM_obs = 127.951` that lands at `143.584` (`+12.22%` deviation),
+   explicitly tagged "BOUNDED" in the runner because the absolute
+   normalization is set by `g_Y^2 = 1/5` and not re-derived;
+3. `alpha_s(M_Z) within 10% of observed` — a comparator against
+   `alpha_s_obs(M_Z) = 0.1179` that lands at `0.1062` (`-9.93%` deviation),
+   inherited from the CMT input `alpha_s(v) = 0.1033`;
+4. `Bare couplings require zero imports` — an assertion that `g_3^2 = 1`,
+   `g_2^2 = 1/4`, `g_Y^2 = 1/5` come from Cl(3) lattice geometry, not an
+   independent derivation step in this runner;
+5. `alpha_s(v) from CMT (framework-derived, not imported)` — an assertion
+   pointing at an upstream theorem, not an independent derivation step;
+6. `Taste_weight has physical interpretation` — a range check
+   `0.01 < best_tw < 3.0`, not a derivation of the selected value
+   `taste_weight = 0.390`;
+7. `2-loop running used for v -> M_Z` — an assertion that the surrogate
+   transport is integrated, not a derivation that the SM RGE is the
+   framework's own RG flow above `v`;
+8. `Gap reduced from 3.4% to < 1%` — a comparator describing the same scan
+   that the `taste_weight` parameter was tuned against.
+
+The decisive load-bearing parameter `taste_weight = 0.390` is **selected
+by minimizing the residual against the observed comparator
+`sin^2(theta_W)(M_Z)`**, and the runner's own commentary records that
+`taste_weight = 0.390 requires a physical derivation from the taste-gauge
+coupling structure` (Part 9 status line). Several PASS rows are comparator
+checks against the same observed quantities the scan is tuned against, and
+the remaining PASS rows are assertions that constants are framework-derived
+rather than independent computations in this runner.
+
+This is therefore an `audited_numerical_match` / class-G proxy in the
+project's audit taxonomy, not a closed first-principles derivation of the
+EW coupling bridge from the restricted packet. The remaining structural
+gaps the source note itself acknowledges
+(`g_2(v)`, `lambda(v)`, `kappa_EW`, and a rigorous SM-RGE surrogate
+theorem) are recorded below in "What remains open (load-bearing gaps)".
+
+> **Historical WARNING (retained):** This note predates the
+> `COMPLETE_PREDICTION_CHAIN_2026_04_15.md` package which carries the
+> promoted quantitative rows. That package adjusts the framing of `g_2`,
+> `g_Y`, the color projection `sqrt(8/9)` on `y_t`, and the CW `lambda`
+> route. The Import Status Table below is the **pre-2026-04-15 framing**
+> of this note and is retained for historical context only; it does
+> **not** describe the promoted package, does **not** describe the audit
+> status of this note as a target-conditioned scan, and must **not** be
+> used for promotion decisions. The promoted `g_2` / `lambda` framing in
+> the complete-prediction-chain package is itself a separate audit
+> object and is out of scope for this note.
 
 ## Purpose
 
@@ -218,34 +284,56 @@ lattice RG / taste-staircase evolution"
    subdominant in the y_t beta and do not contaminate the prediction.
    [EW_COUPLING_DERIVATION_NOTE.md]
 
-### The argument for SM RGE validity above v
+### The argument for SM RGE validity above v (status: bounded plausibility, not derivation)
 
 The SM RGE beta function coefficients are algebraic functions of group
-theory constants derived from Cl(3):
+theory constants whose values agree with Cl(3) representation content:
 
 - b_3 = -(11/3 C_A - 4/3 T_F n_f) with C_A = 3, T_F = 1/2, n_f = 6
 - b_2 = 22/3 - n_doublets/3 - n_H/6 with n_doublets = 12, n_H = 1
 - b_1 = 41/10 from hypercharge assignments
 - beta_{y_t} coefficients: all from SU(3)xSU(2)xU(1) Casimirs
 
-The framework CONTAINS the SM as its low-energy EFT. The SM RGE is
-the perturbative approximation of the framework's own RG flow. Using
-the derived RGE to transfer a derived BC is self-consistent.
+The framing **"the framework CONTAINS the SM as its low-energy EFT, the
+SM RGE is the perturbative approximation of the framework's own RG flow,
+and using the derived RGE to transfer a derived BC is self-consistent"**
+is a *consistency plausibility statement*, not a derivation. What this
+note actually licenses is the weaker pair:
 
-The QFP insensitivity theorem bounds the error from using this
-perturbative approximation instead of the exact lattice taste-staircase
-at O(3%), comparable to the 2-loop truncation uncertainty.
+1. The numerical SM RGE coefficients used in the runner match the values
+   one would write down from SU(3) x SU(2) x U(1) Casimirs computed in
+   the Cl(3) representation content;
+2. The QFP insensitivity proxy (`YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`,
+   itself a target-conditioned support note) reports that the headline
+   `y_t(v)` is stable at `O(3%)` against scans over `(g_1, g_2,
+   lambda)` and the 2-loop truncation budget.
 
-### What remains for full closure
+It does **not** license the stronger claim that the SM RGE *is* the
+unique perturbative limit of the lattice RG flow above `v`, that the
+"O(3%)" budget bounds the *true* RGE-vs-taste-staircase deviation
+(as opposed to the deviation under the same scan ansatz), or that the
+EW coupling bridge `g_1(v)`, `g_2(v)` are framework-native from the
+restricted packet.
 
-1. **g_2(v) derivation**: Currently the largest remaining import in the
-   y_t chain after alpha_s and y_t themselves. Deriving it requires
-   SU(2) non-perturbative matching (CMT analogue or SU(2) MC).
+### What remains for full closure (still open)
 
-2. **Rigorous surrogate theorem**: The QFP + coefficient-tracing
-   argument establishes bounded validity. A rigorous proof that the
-   SM RGE is the UNIQUE perturbative limit of the lattice RG flow
-   would close this definitively.
+1. **`g_2(v)` derivation**: Currently the largest remaining import in the
+   `y_t` chain after `alpha_s` and `y_t` themselves. Deriving it requires
+   SU(2) non-perturbative matching (CMT analogue or SU(2) MC). This note
+   does not close it.
+
+2. **Rigorous SM-RGE surrogate theorem**: The QFP-proxy plus
+   coefficient-matching argument above establishes bounded plausibility,
+   not derivation. A rigorous proof that the SM RGE is the unique
+   perturbative limit of the lattice RG flow above `v` (or a derivation
+   of an explicit error functional bounding the deviation from the exact
+   lattice taste-staircase) is required and not present in this note.
+
+3. **`kappa_EW` derivation**: The EW readout coefficient `kappa_EW` is
+   not fixed by the Fierz arithmetic of the restricted packet; the older
+   "zero-import g_1(v)" wording in Part 1 is retained as route history,
+   not as a license that `g_1(v)` is closed from the restricted packet
+   alone.
 
 ---
 
@@ -268,36 +356,118 @@ at O(3%), comparable to the 2-loop truncation uncertainty.
 | m_t                 | 169.4 GeV | DERIVED   | y_t(v) * v / sqrt(2)             |
 | alpha_s(M_Z)        | 0.1181    | DERIVED   | 2-loop QCD running from v        |
 
-### Honest summary
+### Honest summary (re-framed 2026-05-16)
 
-The y_t chain has 2 remaining imports: g_2(v) and lambda(v). Both are
-subdominant (g_2 contributes <7.4% to y_t over extreme scan range;
-lambda < 0.03%). The prediction m_t = 169.4 GeV is controlled by
-alpha_s(v) [DERIVED] and the Ward BC [DERIVED].
+The y_t chain has 2 remaining imports of physical origin in this note's
+framing: `g_2(v)` and `lambda(v)`. The runner's QFP scan reports that
+the headline `y_t(v)` is stable at the several-percent level against
+scans over these two parameters; this is a *target-conditioned stability
+report*, not a derivation that `g_2(v)` and `lambda(v)` are negligible
+in the framework-native (rather than scan) sense.
 
-The backward Ward prediction carries a ~3% systematic from using the
-SM RGE as the interpolation above v. This is bounded by the QFP
-insensitivity theorem and is comparable to the 2-loop truncation error.
+The backward Ward prediction carries a `~3%` *scan-budgeted* systematic
+from using the SM RGE as the interpolation above `v` under the QFP scan
+ansatz. This is bounded by the QFP insensitivity scan and is comparable
+to the 2-loop truncation error *under the same scan*. It is **not** a
+bound on the true RGE-vs-taste-staircase deviation, which would require
+the rigorous surrogate theorem listed below in "What remains open".
 
-## Honest auditor read
+The "DERIVED" labels on `g_1_GUT(v) = 0.590` and the SM RGE coefficients
+in the Import Status Table above are the pre-2026-04-15 framing of this
+note (see the historical WARNING in the Scope section); they should be
+read as "the route computes these from upstream theorems" rather than
+"this note's runner re-derives them as audit-load-bearing steps".
+
+## What remains open (load-bearing gaps)
+
+To upgrade this row from `audited_numerical_match` to a clean derivation,
+the following structural gaps must be closed; none of the present runner
+PASS rows close any of them:
+
+1. **Derive `taste_weight`**: the decisive parameter
+   `taste_weight = 0.390` is selected in the runner by minimizing
+   `|sin^2_pred(M_Z) - sin^2_obs(M_Z)|` over a 41-point coarse + fine
+   scan. To upgrade to a derivation, `taste_weight` must come from the
+   taste-gauge coupling structure (orbit decomposition of the BZ-corner
+   tastes under SU(3)_color and SU(2)_L), not from minimizing residual
+   against the observed EW comparator the same scan reports on.
+
+2. **Derive the staircase scheme**: the one-parameter Hamming-weight
+   staircase `m_k = alpha_LM^{k/2} * M_Pl` with degeneracies
+   `(1, 4, 6, 4, 1)` and the rule "each extra taste adds one
+   generation-equivalent of matter" is pre-selected, not derived. The
+   runner's own commentary records two alternative readings of the
+   taste matter content (1/3-gen-per-taste partner mixing vs.
+   full-gen-per-taste copying) without selecting between them.
+
+3. **Derive `g_2(v)`**: the runner emits `g_2(v) = 0.611` from the
+   target-conditioned taste-staircase scan, which is `-5.48%` below the
+   observed-at-`v` value `0.646`. The Part-2 obstruction "SU(2) Landau
+   pole prevents direct CMT extension" is recorded but no SU(2)
+   non-perturbative bridge (SU(2) plaquette MC, SU(2) taste-staircase
+   matching formula, or SU(3)<->SU(2) group-theory relation) is supplied.
+
+4. **Derive `lambda(v)`**: the Coleman-Weinberg estimate
+   `lambda_CW = 3 y_t^4 / (8 pi^2) = 0.034` is `~3.8x` below the
+   observed `lambda(v) = 0.129`. The note treats this as "the right
+   order of magnitude" but does not derive the gauge-boson-loop and
+   higher-order contributions that would close the gap.
+
+5. **Derive `kappa_EW`**: the EW readout coefficient is not fixed by
+   the Fierz arithmetic of the restricted packet, so the older
+   "zero-import g_1(v)" Part-1 framing reduces to "matching-rule
+   conditional at the physical scale" rather than a closure.
+
+6. **Derive the SM-RGE surrogate**: a rigorous proof that the SM RGE
+   is the unique perturbative limit of the lattice RG flow above `v`,
+   or an explicit error functional bounding the deviation from the
+   exact lattice taste-staircase that is independent of the QFP scan
+   ansatz, is required.
+
+7. **Derive the absolute `1/alpha_EM(M_Z)` normalization**: the runner
+   emits `1/alpha_EM(M_Z) = 143.6` against the observed `127.951`
+   (`+12.22%`), explicitly tagged "BOUNDED" because the absolute
+   normalization is set by the pre-selected `g_Y^2 = 1/5`. A derivation
+   of the absolute normalization (rather than only the
+   `sin^2(theta_W)(M_Z)` ratio that is comparator-tuned via
+   `taste_weight`) is required.
+
+All seven are operator/theorem problems and are out of scope for this
+note. The note therefore stops at the bounded target-conditioned
+numerical-scan claim and does not attempt to upgrade beyond it.
+
+## Audit history
 
 The 2026-05-05 audit recorded this row as `audited_numerical_match` with
-the substantive observation that the runner computes a taste-threshold
-scan, but the decisive parameter `taste_weight` is selected by
-minimizing error against the observed `sin^2(theta_W)(M_Z)`, and several
-PASS checks are comparator checks against observed `sin^2`, `alpha_EM`,
-and `alpha_s` rather than independent computations. The note itself
-acknowledges remaining imported or open pieces above (`g_2(v)`,
-`lambda(v)`, `kappa_EW`, and a rigorous SM-RGE surrogate theorem). The
-honest read is that the EW coupling bridge and SM-RGE surrogate used in
-the `y_t` chain are a numerical match on tuned inputs against observed
-EW comparators, not a first-principles closure from the restricted
-packet alone.
+Class-G load-bearing step, with the substantive observation that the
+runner computes a taste-threshold scan but the decisive parameter
+`taste_weight` is selected by minimizing error against the observed
+`sin^2(theta_W)(M_Z)`, and several PASS checks are comparator checks
+against observed `sin^2`, `alpha_EM`, and `alpha_s` rather than
+independent computations. The note itself already acknowledged remaining
+imported or open pieces above (`g_2(v)`, `lambda(v)`, `kappa_EW`, and a
+rigorous SM-RGE surrogate theorem).
 
-This addendum is graph-bookkeeping only. It does not change the
-numerical match status, does not promote the row, and does not modify
-the Import Status Table, the QFP sensitivity budget, or the closure
-arguments above.
+The 2026-05-16 demotion edit (this revision) rewrites the headline
+"Status", adds an explicit "Scope (honest framing)" block enumerating
+the eight PASS rows and the five load-bearing imports, demotes the
+"SM-RGE validity" sub-argument in Part 5 from a closure assertion to a
+bounded plausibility statement, re-frames the "Honest summary" so the
+QFP `~3%` budget reads as a scan-budgeted statement rather than a true
+RGE-vs-taste-staircase bound, and lists seven structural gaps under
+"What remains open (load-bearing gaps)" that must close to upgrade this
+row to a clean derivation. The runner output is unchanged
+(`scripts/frontier_yt_ew_coupling_derivation.py`, 10 PASS / 0 FAIL,
+elapsed 0.7s in the cached run), the Import Status Table is preserved
+for historical context with an in-table-adjacent re-framing in "Honest
+summary", and the current audit status is owned by the regenerated
+audit pipeline and the next independent re-audit. This brings the
+headline framing of this note into agreement with the parallel
+2026-05-16 demotions of sister `YT_*_NOTE` rows
+(`YT_BRIDGE_ACTION_INVARIANT_NOTE.md` in iter22,
+`YT_BRIDGE_MOMENT_CLOSURE_NOTE.md` in iter23,
+`YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md`, and
+`YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md`).
 
 ## Audit dependency repair links
 
