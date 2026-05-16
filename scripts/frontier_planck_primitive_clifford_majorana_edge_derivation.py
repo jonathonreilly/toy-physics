@@ -1,19 +1,30 @@
 #!/usr/bin/env python3
 """
-Primitive Clifford-Majorana edge derivation runner.
+Primitive Clifford-Majorana edge consistency-check runner (bounded scope).
 
 Authority note:
     docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md
 
-This runner checks the proposed retained construction theorem:
+Scope clarification (after two prior `audited_renaming` verdicts):
+    This runner verifies an explicit algebraic CONSISTENCY-OF-CONSTRUCTION
+    on the ADMITTED rank-four carrier K = P_A H_cell. The carrier itself
+    is NOT derived by this runner; it is admitted from the cited upstream
+    link-local first-variation candidate authority (unaudited candidate).
+    The runner hard-codes rank(P_A) = 4 and an explicit Cl_4(C) realization
+    on C^4 by construction. Therefore PASS means the construction is
+    internally consistent given the admitted carrier, NOT that the
+    substrate forces P_A.
+
+This runner checks, given the admitted carrier:
 
   * the retained spatial Cl(3) / SU(2) bivector content embeds as the
     spatial even subalgebra of a four-axis primitive coframe;
   * the anomaly-forced time axis extends that Cl(3) block to Cl_4(C);
-  * the rank-four primitive active packet is the unique irreducible complex
-    Cl_4 module;
-  * oriented Majorana pairs are exactly the two-mode CAR edge carrier;
-  * the resulting edge carrier cross-checks c_Widom = c_cell = 1/4.
+  * on the admitted rank-four carrier the construction realizes the
+    unique irreducible complex Cl_4 module (algebraic consistency, not
+    substrate-forcing);
+  * oriented Majorana pairs realize the two-mode CAR edge carrier;
+  * the construction cross-checks c_Widom = c_cell = 1/4.
 
 Exit code: 0 on full PASS, 1 on any FAIL.
 
@@ -154,11 +165,19 @@ def transverse_laplacian(qs: tuple[float, ...]) -> float:
 
 def main() -> int:
     print("=" * 78)
-    print("PLANCK PRIMITIVE CLIFFORD-MAJORANA EDGE DERIVATION")
+    print("PLANCK PRIMITIVE CLIFFORD-MAJORANA EDGE CONSISTENCY CHECK")
+    print("(bounded scope: P_A carrier admitted from upstream candidate authority)")
     print("=" * 78)
     print()
-    print("Question: do the retained Cl(3) bivectors plus anomaly-forced")
-    print("time axis construct the primitive Cl_4(C) / two-mode CAR edge?")
+    print("Question (narrowed after two audited_renaming verdicts):")
+    print("  GIVEN the admitted carrier K = P_A H_cell (rank 4), do the")
+    print("  retained Cl(3) bivectors plus anomaly-forced time axis admit")
+    print("  an explicit Cl_4(C) / two-mode CAR construction on K that is")
+    print("  algebraically consistent and cross-validates c_Widom = c_cell?")
+    print()
+    print("Not in scope: substrate forcing of P_A (see SUBSTRATE_TO_P_A_FORCING")
+    print("and FIRST_ORDER_COFRAME_UNCONDITIONALITY no-gos; conditional repair")
+    print("route in PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING is unaudited).")
     print()
 
     gamma = clifford_generators()
@@ -370,10 +389,16 @@ def main() -> int:
     if FAIL_BLOCKS == 0:
         print()
         print(
-            "Verdict: PASS. The explicit retained-content construction gives "
-            "the primitive Cl_4(C) module on P_A H_cell, realizes F(C^2) by "
-            "oriented Majorana pairing, and cross-checks c_Widom=c_cell=1/4 "
-            "in natural lattice units. Audit ratification remains separate."
+            "Verdict: PASS (bounded scope). GIVEN the admitted carrier "
+            "K = P_A H_cell, the explicit Cl_4(C) construction on C^4 is "
+            "algebraically consistent: it realizes the irreducible complex "
+            "Cl_4 module, the two-mode CAR algebra F(C^2) by oriented "
+            "Majorana pairing, and cross-checks c_Widom=c_cell=1/4. "
+            "This is a renaming-class consistency theorem, not a "
+            "substrate-forcing derivation of P_A. Substrate-to-P_A "
+            "provenance remains conditional on the cited unaudited "
+            "link-local first-variation candidate authority. Audit "
+            "ratification remains separate."
         )
         return 0
     return 1

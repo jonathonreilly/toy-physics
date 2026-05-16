@@ -4,6 +4,34 @@
 **Status:** audited_renaming audit verdict; chain does not close
 **Runner:** `scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py`
 
+```yaml
+claim_type_author_hint: bounded_theorem
+claim_scope: "Algebraic consistency theorem: GIVEN the rank-four carrier
+  K = P_A H_cell as an admitted upstream-conditional input from the cited
+  link-local first-variation candidate authority, the explicit Hermitian
+  generator set {Gamma_t, Gamma_n, Gamma_tau1, Gamma_tau2} on C^4 realizes
+  the irreducible complex Cl_4(C) module, the two-mode CAR algebra
+  F(C^2) by oriented Majorana pairing, and the consistency identity
+  c_Widom = c_cell = 1/4. The note does NOT derive the substrate-to-P_A
+  selection; that step is sourced as conditional provenance to
+  PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM (unaudited
+  candidate) and remains the named open premise."
+admitted_premises:
+  - "P_A = Hamming-weight-one projector on H_cell is the active block
+    carrier (admitted from upstream conditional authority; not derived
+    here; see SUBSTRATE_TO_P_A_FORCING_THEOREM and
+    FIRST_ORDER_COFRAME_UNCONDITIONALITY_NO_GO for the symmetry-only
+    no-go boundaries)."
+  - "Complex Hilbert structure on H_cell (sourced to I3_ZERO_EXACT_THEOREM
+    as the retained pairwise-interference/Born surface)."
+status_authority: "Independent audit lane only. This note self-classifies
+  the load-bearing step as a renaming-class consistency check, not a
+  substrate forcing derivation. Two prior independent audits returned
+  audited_renaming with load_bearing_step_class F; this self-classification
+  aligns the claim type with those prior verdicts. Re-audit at any time
+  may revise both the class and the audit verdict."
+```
+
 ## Cited authorities (one-hop deps)
 
 This note records explicit one-hop authority citations for the renaming-gap
@@ -151,7 +179,16 @@ The theorem does not use `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`, does not
 use `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, and does not use any
 `alpha_LM = alpha_bare/u_0` decoration chain.
 
-## Theorem Statement
+## Theorem Statement (consistency, given the admitted P_A carrier)
+
+This is an algebraic consistency theorem on a stipulated carrier. The
+substrate-to-`P_A` selection step is NOT derived in this note; it is
+admitted as an upstream-conditional input from the cited link-local
+first-variation candidate authority (see header `admitted_premises` and
+the "Substrate-to-`P_A` provenance" paragraph in §3 below). The two prior
+independent audits returned `audited_renaming` precisely on this step.
+What follows is the explicit module realization on the admitted carrier
+and its CAR identification — neither more, nor less.
 
 Let
 
@@ -159,11 +196,11 @@ Let
 H_cell ~= C^2_t otimes C^2_x otimes C^2_y otimes C^2_z ~= C^16
 ```
 
-be the time-locked primitive event cell, and let `P_A` be the Hamming-weight
-one primitive boundary packet:
+be the time-locked primitive event cell, and ADMIT (not derive) the
+Hamming-weight-one primitive boundary packet as the active carrier:
 
 ```text
-K = P_A H_cell,        dim K = rank(P_A) = 4.
+K = P_A H_cell,        dim K = rank(P_A) = 4    [ADMITTED carrier].
 ```
 
 For a selected oriented primitive face, write the primitive coframe as
@@ -579,10 +616,19 @@ does not accept the complex Hilbert packet as retained input, the correct
 verdict is `audited_conditional`; the construction does not hide that issue in
 the CAR pairing step.
 
-## Audit Verdict
+## Audit Verdict and Self-Narrowing
 
 This note originally self-declared `proposed_retained` and requested an
-independent audit of the load-bearing step:
+independent audit of the load-bearing step. Two independent audits
+returned `audited_renaming` with `load_bearing_step_class = F`. In light
+of that, the note now self-classifies its claim type as a bounded
+algebraic consistency theorem on the admitted P_A carrier (see header
+`claim_type_author_hint: bounded_theorem` and the renamed Theorem
+Statement section). This self-narrowing does not promote audit status;
+the status authority remains the independent audit lane, and re-audit
+may revise both the class and the verdict.
+
+The original audit-loop question was:
 
 > Are the retained native `Cl(3)` / `SU(2)` bivectors, graph-first `SU(3)`
 > gauge surface, anomaly-forced single time axis, and rank-four
