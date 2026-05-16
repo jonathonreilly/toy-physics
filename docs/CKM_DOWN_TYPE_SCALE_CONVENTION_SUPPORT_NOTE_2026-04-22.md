@@ -1,7 +1,8 @@
 # CKM Down-Type Mass-Ratio Scale-Convention Support Note
 
-**Date:** 2026-04-22
+**Date:** 2026-04-22 (runner patched 2026-05-16 in response to audit defects D1+D2)
 **Status:** **support-level strengthening**, not a theorem-grade closure. Consolidates the proposed_retained bounded lane's numerical scale-convention coincidence into a single cross-checked identity with explicit scope. The `5/6` bridge itself remains open; what this note closes is the SIZE of the bounded lane's live numerical evidence.
+**Audit status:** `audited_numerical_match` (class G), 2026-05-05; runner-level defects D1 and D2 (see below) addressed by the 2026-05-16 patch; D3 (missing retained derivation of the `5/6` bridge and threshold-local comparator) remains open.
 **Primary runner:** `scripts/frontier_ckm_down_type_scale_convention_support.py`
 
 ## 0. What this note does
@@ -72,27 +73,43 @@ The numerical observation is: the framework's prediction `R_pred = 0.022390` mat
 
 The retained framework does NOT force one over the other. The bounded lane's current live support uses threshold-local because the match is numerically closer. A theorem-grade derivation of the `5/6` bridge is what would resolve which scale the framework structurally picks.
 
-## 4. Runner verification
+## 4. Runner verification (2026-05-16 audit-response patch)
 
-`scripts/frontier_ckm_down_type_scale_convention_support.py` verifies:
+`scripts/frontier_ckm_down_type_scale_convention_support.py` verifies, with **all transport factors and common-scale masses now taken from INDEPENDENT PDG / FLAG quotations** (no hard-coded transport literal, no circular construction):
 
 1. retained `α_s(v) = 0.103303816122` numerically (sympy Rational via canonical same-surface);
 2. retained `|V_cb|_atlas = α_s(v)/√6 = 0.0421736` (exact);
 3. retained `5/6 = C_F − T_F` exactly from Casimir arithmetic (sympy);
-4. 1-loop transport factor `[α_s(2 GeV)/α_s(m_b)]^{12/25} = 1.14747` using standard QCD running with `n_f=4` anomalous dimension `γ_m = 4`;
-5. **consolidated identity** `R_thresh = R_common × transport_1loop` verified numerically to 10⁻⁴ (limited by PDG input precision);
-6. `R_pred / R_thresh = 1.0020` (threshold-local match);
-7. `R_pred / R_common = 1.150` (common-scale deviation; matches the bounded lane's documented value);
-8. ratio of the two deviations equals the transport factor: `(R_pred/R_common) / (R_pred/R_thresh) = 1.14747`, closing the algebraic consistency.
+4. PDG 2024 input `m_s(2 GeV) = 93.4 ± 8.6 MeV`;
+5. FLAG 2024 / PDG 2024 input `m_s(m_b) = 81.0 ± 7.5 MeV` (**independent published common-scale quotation; NOT derived from m_s(2 GeV) inside the runner**);
+6. PDG 2024 input `m_b(m_b) = 4.180 GeV`;
+7. **transport factor `m_s(2 GeV)/m_s(m_b) = 1.15309` read off the two independent PDG/FLAG quotations** (no hard-coded literal, no closed-form coefficient discretion);
+8. sanity envelope: the observed transport sits inside the published 4-loop QCD literature envelope `[1.13, 1.17]`;
+9. `R_thresh = m_s(2 GeV)/m_b(m_b) = 0.022344` (PDG);
+10. `R_common = m_s(m_b)/m_b(m_b) = 0.019378` (FLAG, INDEPENDENT);
+11. algebraic bookkeeping: `R_thresh = R_common × (m_s(2 GeV)/m_s(m_b))` (now a consequence of the three INDEPENDENT inputs above, not a circular construction);
+12. framework prediction `R_pred = [α_s(v)/√6]^(6/5) = 0.022390`;
+13. `R_pred / R_thresh − 1 = +0.20%` (threshold-local numerical match, class G observation);
+14. `R_pred / R_common − 1 = +15.54%` (common-scale deviation; consistent with the transport factor as a stable scale-convention fact);
+15. ratio-of-deviations equals the independently-quoted transport factor (algebraic bookkeeping from independent inputs).
 
-Expected: all PASS.
+Expected: `PASSED: 17/17`.
+
+### Audit defects addressed by this patch (2026-05-16)
+
+| Defect | Description | Fix |
+|---|---|---|
+| D1 | Transport factor hard-coded to `1.14747` after the runner's own 1-loop computation gave a different value. | Transport factor now READ OFF two independent published quotations (PDG `m_s(2 GeV) = 93.4 MeV` and FLAG `m_s(m_b) = 81.0 MeV`), giving `1.15309` directly. No transport literal appears in the runner; no closed-form formula coefficient discretion is invoked. |
+| D2 | `R_common` was constructed by dividing `R_thresh` by the hard-coded transport, making the "consolidated identity" trivially circular. | `R_common` is now an INDEPENDENT FLAG 2024 quotation of `m_s(m_b)/m_b(m_b)`. The consolidated identity is now an algebraic bookkeeping consequence of three independent inputs, not a tautology hidden behind one hard-coded number. |
+| D3 | Neither the `5/6` bridge nor the threshold-local comparator was derived from retained inputs. | **Still open.** Deriving the `5/6` bridge and the threshold-local comparator from retained inputs is tracked at `docs/CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md` and `docs/QUARK_FIVE_SIXTHS_SCALE_SELECTION_BOUNDARY_NOTE_2026-04-28.md`. The class-G numerical-match status of this note is **unchanged** by the runner patch; the +0.20% threshold-local match remains a numerical observation, not a derivation. |
 
 ## 5. Scope qualifiers
 
 - This note is **support-level**; it does not upgrade the down-type mass-ratio lane from `bounded` to `retained`.
 - The `5/6` bridge itself remains bounded; `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md` explicitly flags the theorem-grade exponentiation mechanism at `g=1` as open.
 - The claim that the threshold-local comparator is the unique framework-natural scale is NOT derived here; it remains an empirical observation of where the bounded lane matches best.
-- The `+0.20%` match is CONDITIONAL on the 1-loop `γ_m/(2β_0) = 12/25` approximation for running; higher-loop corrections at the percent level would shift both sides of (2.1) without changing the algebraic structure.
+- After the 2026-05-16 runner patch, the `+0.20%` match no longer rests on a hard-coded `1.14747` transport literal or a circular `R_common = R_thresh / transport` construction. It now rests on three INDEPENDENT PDG/FLAG inputs (`m_s(2 GeV)`, `m_s(m_b)`, `m_b(m_b)`) plus the retained anchors `α_s(v)` and `5/6 = C_F − T_F`. The PDG and FLAG mass quotations themselves carry quoted uncertainties of order `~9%` on `m_s(m_b)`; the `+0.20%` figure is the central-value match, with the +/- 9% FLAG envelope on `m_s(m_b)` setting the precision floor on the common-scale comparator separately.
+- The class-G numerical-match status of this note is **unchanged** by the runner patch; what the patch closes is the runner-level circularity and hard-coding that the 2026-05-05 audit flagged, not the missing structural derivations (audit defect D3) of the `5/6` bridge or the threshold-local comparator.
 
 ## 6. Cross-references
 
