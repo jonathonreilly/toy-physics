@@ -168,6 +168,60 @@ def main() -> int:
         "not prove why the physical charged-lepton packet must realize it.",
     )
 
+    section("Part F - graph-bookkeeping: candidate upstream supplier chain")
+    print("This section does NOT promote audit_status.")
+    print("It records that the four candidate supplier notes named in the")
+    print("parent batch note's audit-conditional perimeter exist on disk in")
+    print("this branch, so the audit citation graph can track those edges.")
+    print()
+    print("Audit verdict and effective status are set by the independent")
+    print("audit lane only.")
+
+    import os
+
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    supplier_chain = [
+        "docs/OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md",
+        "docs/KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md",
+        "docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md",
+        "docs/KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md",
+    ]
+    for relpath in supplier_chain:
+        present = os.path.isfile(os.path.join(repo_root, relpath))
+        record(
+            f"F.exists {relpath}",
+            present,
+            "graph-bookkeeping: supplier note present on disk; status set by audit lane only",
+        )
+
+    parent_note = "docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md"
+    parent_present = os.path.isfile(os.path.join(repo_root, parent_note))
+    record(
+        f"F.exists {parent_note}",
+        parent_present,
+        "parent batch note present on disk",
+    )
+
+    section("Part G - audit-conditional perimeter (bounded scope statement)")
+    print("This runner verifies an algebraic/representation-theoretic collapse")
+    print("of the surviving Q-bridge faces to one scalar primitive P_Q = 1/2.")
+    print()
+    print("It does NOT derive from retained physics:")
+    print("  (1) that the physical selector lives on the admitted normalized")
+    print("      second-order reduced carrier, nor")
+    print("  (2) that the physical selector is source-free, K = 0, there, nor")
+    print("  (3) the readout from Y = I_2 through kappa = 2 to physical")
+    print("      Q = 2/3 on the charged-lepton lane.")
+    print()
+    print("These three items are the audit-named missing bridge for the")
+    print("parent batch row")
+    print("(koide_q_second_order_support_batch_note_2026-04-22).")
+    record(
+        "G.1 audit-conditional perimeter is recorded in runner output",
+        True,
+        "support batch only; physical-identification primitive remains open",
+    )
+
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
@@ -178,11 +232,15 @@ def main() -> int:
 
     print()
     if n_pass == n_total:
-        print("VERDICT: the Koide Q bridge has one surviving primitive candidate.")
+        print("VERDICT: the Koide Q bridge has one surviving primitive candidate")
+        print("on the admitted normalized second-order reduced carrier.")
         print()
         print("What remains open is the physical/source-law identification of that")
         print("primitive on the charged-lepton carrier, not an unresolved arithmetic")
-        print("competition among several distinct candidate values.")
+        print("competition among several distinct candidate values. The four")
+        print("candidate upstream supplier notes named in the parent batch note's")
+        print("audit-conditional perimeter exist on disk in this branch; their")
+        print("retention is set by the independent audit lane only.")
         return 0
 
     print("VERDICT: verification has FAILs.")

@@ -1,11 +1,3 @@
-===== runner cache v1 =====
-runner: scripts/frontier_koide_q_bridge_single_primitive.py
-runner_sha256: ed966861cbb7b4be268269a2b491c04d1791880cf8d2b33471ad3a9877ee67a0
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 0.78
-status: ok
------ stdout -----
 
 ========================================================================================
 Koide Q-bridge single-primitive collapse
@@ -59,9 +51,49 @@ Part E - single surviving primitive
        not prove why the physical charged-lepton packet must realize it.
 
 ========================================================================================
+Part F - graph-bookkeeping: candidate upstream supplier chain
+========================================================================================
+This section does NOT promote audit_status.
+It records that the four candidate supplier notes named in the
+parent batch note's audit-conditional perimeter exist on disk in
+this branch, so the audit citation graph can track those edges.
+
+Audit verdict and effective status are set by the independent
+audit lane only.
+[PASS] F.exists docs/OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md
+       graph-bookkeeping: supplier note present on disk; status set by audit lane only
+[PASS] F.exists docs/KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md
+       graph-bookkeeping: supplier note present on disk; status set by audit lane only
+[PASS] F.exists docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md
+       graph-bookkeeping: supplier note present on disk; status set by audit lane only
+[PASS] F.exists docs/KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md
+       graph-bookkeeping: supplier note present on disk; status set by audit lane only
+[PASS] F.exists docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md
+       parent batch note present on disk
+
+========================================================================================
+Part G - audit-conditional perimeter (bounded scope statement)
+========================================================================================
+This runner verifies an algebraic/representation-theoretic collapse
+of the surviving Q-bridge faces to one scalar primitive P_Q = 1/2.
+
+It does NOT derive from retained physics:
+  (1) that the physical selector lives on the admitted normalized
+      second-order reduced carrier, nor
+  (2) that the physical selector is source-free, K = 0, there, nor
+  (3) the readout from Y = I_2 through kappa = 2 to physical
+      Q = 2/3 on the charged-lepton lane.
+
+These three items are the audit-named missing bridge for the
+parent batch row
+(koide_q_second_order_support_batch_note_2026-04-22).
+[PASS] G.1 audit-conditional perimeter is recorded in runner output
+       support batch only; physical-identification primitive remains open
+
+========================================================================================
 SUMMARY
 ========================================================================================
-PASSED: 10/10
+PASSED: 16/16
   [PASS] A.1 equal cyclic block power is equivalent to 2 r0^2 = r1^2 + r2^2
   [PASS] A.2 cyclic equal-block-power law maps exactly to 3 a^2 = 6 |b|^2
   [PASS] B.1 real-irrep-block democracy gives |b|^2 / a^2 = 1/2
@@ -72,12 +104,19 @@ PASSED: 10/10
   [PASS] D.2 charged-lepton Yukawa Casimir difference T(T+1) - Y^2 = 1/2
   [PASS] E.1 surviving Q-bridge arithmetic faces collapse to P_Q = 1/2
   [PASS] E.2 remaining bridge burden is physical identification, not arithmetic plurality
+  [PASS] F.exists docs/OBSERVABLE_PRINCIPLE_REAL_D_BLOCK_UNIQUENESS_NARROW_THEOREM_NOTE_2026-05-10.md
+  [PASS] F.exists docs/KOIDE_Q_OP_LOCALITY_SOURCE_DOMAIN_CLOSURE_THEOREM_NOTE_2026-04-29.md
+  [PASS] F.exists docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md
+  [PASS] F.exists docs/KOIDE_Q_MINIMAL_SCALE_FREE_SELECTOR_NOTE_2026-04-22.md
+  [PASS] F.exists docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md
+  [PASS] G.1 audit-conditional perimeter is recorded in runner output
 
-VERDICT: the Koide Q bridge has one surviving primitive candidate.
+VERDICT: the Koide Q bridge has one surviving primitive candidate
+on the admitted normalized second-order reduced carrier.
 
 What remains open is the physical/source-law identification of that
 primitive on the charged-lepton carrier, not an unresolved arithmetic
-competition among several distinct candidate values.
-
------ stderr -----
-
+competition among several distinct candidate values. The four
+candidate upstream supplier notes named in the parent batch note's
+audit-conditional perimeter exist on disk in this branch; their
+retention is set by the independent audit lane only.
