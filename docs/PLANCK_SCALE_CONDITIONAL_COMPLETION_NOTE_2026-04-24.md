@@ -1,15 +1,55 @@
 # Planck-Scale Conditional Completion Note
 
-**Date:** 2026-04-24
+**Date:** 2026-04-24 (narrowed 2026-05-16)
 **Status:** proposed_retained support / conditional completion packet, not an
 unqualified minimal-stack derivation. Audit verdict: `audited_conditional`
 (status authority is the independent audit lane).
+**Claim type (author-proposed):** `conditional_theorem` (narrowed from
+`positive_theorem` per the auditor's 2026-05-05 repair target —
+"missing_bridge_theorem: ... or a restricted packet citing such a theorem.")
+The note packages the conditional algebraic implication
+"(BP) ⇒ a/l_P = 1"; it does not claim to derive (BP). Status authority
+remains the independent audit lane.
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
 **Companion support runner:**
 `scripts/frontier_planck_boundary_density_extension.py`
 **Companion no-go runners:**
 `scripts/frontier_planck_finite_response_nogo.py`,
 `scripts/frontier_planck_parent_source_hidden_character_nogo.py`
+
+## Restricted Claim Statement (2026-05-16 narrowing)
+
+The note's load-bearing claim, as packaged for audit consumption, is the
+**conditional algebraic implication**:
+
+```text
+PREMISE (BP): the primitive one-step boundary/worldtube count is the
+              microscopic carrier of the standard gravitational
+              area/action density.
+
+CONSEQUENCE:  on the primitive event cell, with c_cell = Tr(rho_cell P_A)
+              = 1/4 (rank-four Hamming-weight-one projector on the
+              source-free counting trace), and equating same-surface
+              densities
+                  c_cell / a^2  =  1 / (4 l_P^2),
+              algebra gives
+                  a / l_P  =  1.
+```
+
+This is a conditional algebraic theorem of the form `BP ⇒ (a/l_P = 1)`.
+The note does **not** claim to derive `(BP)` from the retained minimal
+stack. The audit verdict `audited_conditional` is acknowledged as the
+correct verdict at retained grade for this restricted statement; the
+named open bridge premise `(BP)` is listed in the Remaining Blockers
+section.
+
+The 2026-05-10 substrate-to-carrier round produced three independent
+source-note proposals (P1/P2/P3 — see "Bounded support narrowing the
+bridge premise" below) that **narrow** the `(BP)` problem into named
+bounded sub-theorems with explicit cited-content load-bearing inputs.
+None of those proposals is audited yet, so this note continues to treat
+`(BP)` as an open named premise. The bounded supports are cited here as
+narrowing structure, not as a closure of `(BP)`.
 
 ## Cited authorities (one-hop deps)
 
@@ -65,6 +105,52 @@ authority chain explicit. The named open premise (BP) — gravitational
 boundary/action density identified with the first-order coframe carrier — is
 unchanged: this note does not claim to derive (BP) and the audit verdict
 remains `audited_conditional`.
+
+## Bounded support narrowing the bridge premise (post-2026-05-10)
+
+The 2026-05-10 substrate-to-carrier round produced three independent
+source-note proposals that decompose the previously-bundled `(BP)` premise
+into named bounded / positive sub-theorems on cited-content surfaces.
+These are cited here as **bounded narrowings** of the bridge premise,
+not as closures of it. None is audited yet; each carries
+`effective_status: unaudited` at the time of this narrowing edit, and
+status authority remains the independent audit lane.
+
+- [`PLANCK_SUBSTRATE_TO_CARRIER_FORCING_BOUNDED_NOTE_2026-05-10_planckP1.md`](PLANCK_SUBSTRATE_TO_CARRIER_FORCING_BOUNDED_NOTE_2026-05-10_planckP1.md)
+  (P1, `bounded_theorem` candidate) — independent reflection-positivity
+  (RP) route selecting `P_A` from the 17 rank-four equivariant
+  projector classes. Under RP1+RP2 admissions, the OS Cauchy-Schwarz
+  field-degree-one vacuum-reachable sector selects `P_A` uniquely. This
+  narrows the **substrate-to-`P_A`** sub-question of (BP) but does not
+  derive (BP).
+- [`PLANCK_HIDDEN_CHARACTER_DELTA_ZERO_POSITIVE_THEOREM_NOTE_2026-05-10_planckP2.md`](PLANCK_HIDDEN_CHARACTER_DELTA_ZERO_POSITIVE_THEOREM_NOTE_2026-05-10_planckP2.md)
+  (P2, `positive_theorem` candidate) — source-free state
+  `rho_cell = I_16/16` collapses every Schur scalar reading to a function
+  of the operator trace alone, forcing the affine hidden direction
+  `delta` to be zero on the source-free counting trace. This closes the
+  **parent-source hidden-character** sub-question of (BP) on the
+  source-free state surface, but does not derive (BP).
+- [`PLANCK_ORIENTATION_PRINCIPLE_BOUNDED_NOTE_2026-05-10_planckP3.md`](PLANCK_ORIENTATION_PRINCIPLE_BOUNDED_NOTE_2026-05-10_planckP3.md)
+  (P3, `bounded_theorem` candidate) — the action-level temporal-axis
+  Z_2 grading `Theta_RP := (-1)^{n_t}` breaks the Hodge `P_1 <-> P_3`
+  degeneracy via asymmetric eigenspace dimensions. Combined with the
+  cited single-clock theorem, this uniquely selects `P_1` as the
+  first-order orientation carrier over `P_3`. This narrows the
+  **orientation** sub-question of (BP) but does not derive (BP).
+- [`PLANCK_FROM_STRUCTURE_PATH_OPENING_META_NOTE_2026-05-10.md`](PLANCK_FROM_STRUCTURE_PATH_OPENING_META_NOTE_2026-05-10.md)
+  (path-opening meta) — records the audit-honest synthesis of P1+P2+P3
+  plus the G_Newton self-consistency bounded sharpening, and the
+  conditional path on which the conventional scale anchor row reaches
+  zero pending audit ratification of P1+P2+P3 plus closure of the
+  substep-4 staggered-Dirac realization gate. The phrase "path-opening,
+  not closure" is load-bearing on the meta note.
+
+Synthesis: (BP) is no longer a wholesale gap, but a structured trio of
+named bounded narrowings. Under independent audit ratification of
+P1+P2+P3 plus the substep-4 ratchet, (BP) becomes derivable on the
+cited-content surface. Until then this note's `(BP) ⇒ a/l_P = 1`
+implication stays explicitly conditional and the audit verdict
+`audited_conditional` is correct at retained grade.
 
 ## Purpose
 

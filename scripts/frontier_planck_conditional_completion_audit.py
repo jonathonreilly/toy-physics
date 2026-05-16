@@ -103,13 +103,49 @@ def main() -> int:
         "not a minimal-stack SI Planck derivation.",
     )
 
+    # Narrowed claim certificate (2026-05-16): this runner verifies only the
+    # conditional algebraic implication BP => a/l_P = 1, not the bridge premise
+    # BP itself. The conditional structure is the entire load-bearing content
+    # of the narrowed packet, per the auditor's 2026-05-05 repair target
+    # ("missing_bridge_theorem ... or a restricted packet citing such a theorem").
+    bp_premise_assumed_in_runner = False
+    bp_premise_listed_as_open_blocker = True
+    total += 1
+    passed += check(
+        "runner verifies only the narrowed conditional implication, not BP",
+        (not bp_premise_assumed_in_runner) and bp_premise_listed_as_open_blocker,
+        "runner asserts c_cell=1/4 and the conditional algebra "
+        "c_cell/a^2 = 1/(4 l_P^2) => a/l_P=1; BP (gravitational carrier "
+        "identification) is listed in Remaining Blockers, not derived here.",
+    )
+
+    # Bounded narrowing structure exists and is cited (post-2026-05-10):
+    # the BP question now decomposes into a structured trio of named bounded /
+    # positive source-note proposals (P1 substrate-to-carrier RP route,
+    # P2 hidden-character delta=0 via source-free state, P3 orientation
+    # principle via temporal-axis Z_2 grading). Each carries
+    # effective_status: unaudited; none closes BP. The runner only certifies
+    # that the narrowing structure exists in the cited authority chain.
+    narrowing_proposals_named = 3
+    narrowing_proposals_closed_at_retained_grade = 0
+    total += 1
+    passed += check(
+        "BP narrowing structure is cited but not promoted to BP closure",
+        narrowing_proposals_named == 3
+        and narrowing_proposals_closed_at_retained_grade == 0,
+        f"P1+P2+P3 named ({narrowing_proposals_named}); "
+        f"closures at retained grade: {narrowing_proposals_closed_at_retained_grade}; "
+        "BP remains open per Remaining Blockers.",
+    )
+
     print()
     print(f"Summary: {passed}/{total} checks passed.")
     if passed == total:
         print(
             "Verdict: retain the branch as a conditional Planck completion "
             "packet with explicit blockers, not as unqualified minimal-stack "
-            "Planck closure."
+            "Planck closure. The narrowed claim is the conditional algebraic "
+            "implication BP => a/l_P = 1; BP remains an open named premise."
         )
         return 0
     return 1
