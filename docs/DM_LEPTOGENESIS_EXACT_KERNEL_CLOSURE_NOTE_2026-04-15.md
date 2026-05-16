@@ -111,13 +111,25 @@ level on the refreshed branch. What is now established:
 
 This note's substantive content is:
 
-(i)   the exact source-and-CP-channel package, and
-(ii)  the exact `epsilon_1 / epsilon_DI = 0.928` ratio.
+(i)   the exact source-and-CP-channel package (imported from upstream
+      support theorems, not re-derived in this packet), and
+(ii)  the exact `epsilon_1 / epsilon_DI = 0.928` ratio that follows from
+      (i) plus the retained benchmark constants.
 
-Both (i) and (ii) are PASS in the runner. The headline `eta/eta_obs ≈ 1`
-percent-level closure is **not** retained; the runner's classified-pass
-output confirms `eta/eta_obs ≈ 0.558`. The note no longer claims percent-
-level eta closure on this benchmark.
+Both (i) and (ii) are PASS in the runner. As of the 2026-05-16 audit
+class-E repair (science-fix-loop iter18), all nine runner checks are
+self-classified as **class D conditional-on-imported-upstream**, not
+class C standalone-derivation. There are zero class-C standalone
+checks in this runner. This matches the audit verdict that the
+load-bearing source-package values (`gamma = 1/2`, `E1 = sqrt(8/3)`,
+`E2 = sqrt(8)/3`, `K00 = 2`) are imported from upstream conditional
+authorities rather than derived from `Cl(3)` on `Z^3` inside the
+restricted packet.
+
+The headline `eta/eta_obs ≈ 1` percent-level closure is **not**
+retained; the runner's classified-pass output confirms
+`eta/eta_obs ≈ 0.558`. The note no longer claims percent-level eta
+closure on this benchmark.
 
 ## Audit dependency repair links
 
@@ -171,9 +183,23 @@ not change the verdict. The honest classification of this note remains:
   are the candidate authorities; this note inherits their conditional
   effective status until those rows reach `audited_clean`.
 
+The 2026-05-16 follow-up edit (science-fix-loop iter18, this revision)
+extends the honest classification into the runner itself. Previously,
+Parts 1 and 2 of the runner classified their six checks as class C
+(standalone derivation), even though their load-bearing values were
+imported rather than derived. The 2026-05-05 audit specifically
+recorded this mismatch as the load-bearing reason the row could not
+lift to `audited_clean`. The iter18 edit reclassifies all nine runner
+checks as class D conditional-on-imported-upstream and adds the
+explicit upstream authority citations in both the module docstring and
+the per-check detail strings, so that future audit passes see exactly
+which upstream rows the conditional bounded claim depends on. The
+runner now has zero class-C standalone checks, matching the honest
+read above. The numeric outputs are unchanged.
+
 This addendum is graph-bookkeeping only. It does not promote the note,
 does not modify the runner numerics, and does not introduce any new
-vocabulary.
+vocabulary. The audit lane still owns the verdict.
 
 ## Command
 

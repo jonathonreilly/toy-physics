@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_leptogenesis_exact_kernel_closure.py
-runner_sha256: 94002a85a7e2faaecf2ba1d335ed0a46f8a0e2688d3b58d405e7edd36249de47
+runner_sha256: f340704db0346d1942782c49ac00c5ba6bbb91be201a5fd9cd420a094042d8aa
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.76
+elapsed_sec: 0.53
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -11,18 +11,30 @@ DM LEPTOGENESIS EXACT-KERNEL CLOSURE
 ========================================================================================
 
 ========================================================================================
-PART 1: THE EXACT SOURCE AND DIAGONAL PACKAGE IS CLOSED
+PART 1: IMPORTED SOURCE AND DIAGONAL PACKAGE (UPSTREAM-CONDITIONAL)
 ========================================================================================
-  [C] PASS: The exact source package fixes gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3  ((gamma,E1,E2)=(0.500000,1.632993161855,0.942809041582))
-  [C] PASS: The exact diagonal normalization theorem fixes K00 = 2  (K00=2.000000000000)
-  [C] PASS: The exact heavy-basis CP tensor channels are fixed  ((cp1,cp2)=(-0.544331053952,0.314269680527))
+  (These four source-package values are imported from upstream
+   support theorems, not re-derived from Cl(3) on Z^3 inside this
+   restricted packet. Per the 2026-05-05 audit verdict the
+   corresponding checks are class D conditional-on-import, not
+   class C standalone-derivation. See the module docstring for
+   the explicit upstream authority citations.)
+  [D] PASS: Imported (upstream-conditional): odd source gamma = 1/2 and even responses E1 = sqrt(8/3), E2 = sqrt(8)/3  ((gamma,E1,E2)=(0.500000,1.632993161855,0.942809041582)  [upstream: _codd_bosonic_normalization_theorem_note_2026-04-15, _veven_bosonic_normalization_theorem_note_2026-04-15])
+  [D] PASS: Imported (upstream-conditional): exact diagonal normalization K00 = 2  (K00=2.000000000000  [upstream: _k00_bosonic_normalization_theorem_note_2026-04-15])
+  [D] PASS: Derived from imports: exact heavy-basis CP tensor channels cp1 = -2 gamma E1 / 3, cp2 = 2 gamma E2 / 3  ((cp1,cp2)=(-0.544331053952,0.314269680527))
 
 ========================================================================================
-PART 2: THE STANDARD COHERENT KERNEL NOW GIVES AN EXACT EPSILON_1
+PART 2: COHERENT KERNEL EPSILON_1 (CONDITIONAL ON IMPORTED PART 1)
 ========================================================================================
-  [C] PASS: The exact coherent sum stays below the Davidson-Ibarra ceiling  (epsilon_1/DI=0.927620920920)
-  [C] PASS: The exact coherent sum lands at 0.9276209209 of the DI ceiling  (ratio=0.927620920920)
-  [C] PASS: So the old 0.30 suppression is gone once the exact K00 normalization is restored  (ratio=0.927620920920)
+  (The numeric epsilon_1 here is downstream arithmetic on the
+   imported (cp1, cp2, K00) of Part 1. The retained benchmark
+   constants (k_A = 7, k_B = 8, eps/B = alpha_LM / 2) are
+   themselves admitted retained-fit inputs, not derived inside
+   this packet. The corresponding checks are therefore class D
+   conditional-on-imported-Part-1, not class C standalone.)
+  [D] PASS: Downstream arithmetic on imported (cp1, cp2, K00): epsilon_1 stays below the Davidson-Ibarra ceiling  (epsilon_1/DI=0.927620920920)
+  [D] PASS: Downstream arithmetic on imported (cp1, cp2, K00): epsilon_1 / epsilon_DI = 0.9276209209  (ratio=0.927620920920)
+  [D] PASS: Downstream arithmetic on imported (cp1, cp2, K00): old 0.30 suppression is gone once K00 = 2 is consumed  (ratio=0.927620920920)
 
   epsilon_1 = 2.457619879584e-06
   epsilon_DI = 2.649379530107e-06
@@ -31,7 +43,7 @@ PART 2: THE STANDARD COHERENT KERNEL NOW GIVES AN EXACT EPSILON_1
 ========================================================================================
 PART 3: THE EXACT KERNEL ON THE CONSISTENT RETAINED-FIT BENCHMARK
 ========================================================================================
-  [C] PASS: The retained washout benchmark still lies in the strong-washout regime  (K=47.235979629898)
+  [D] PASS: Downstream arithmetic on imported K00 and retained washout benchmark: still in strong-washout regime  (K=47.235979629898)
   [D] PASS: The retained-fit benchmark no longer lands near observation once K00 is used consistently in the washout path  (eta/eta_obs=0.557874966110)
   [D] PASS: Numerically the exact kernel gives eta/eta_obs = 0.5578749661... on the consistent retained-fit benchmark  (ratio=0.557874966110)
 
@@ -42,6 +54,13 @@ PART 3: THE EXACT KERNEL ON THE CONSISTENT RETAINED-FIT BENCHMARK
 
 ========================================================================================
 SUMMARY: classified_pass=9 fail=0
+CLASS BREAKDOWN: class D: 9
+AUDIT NOTE: this runner has zero class-C standalone-derivation checks.
+All checks are class-D conditional-on-imported-upstream. The imported
+source-package values (gamma=1/2, E1=sqrt(8/3), E2=sqrt(8)/3, K00=2)
+come from the upstream support theorems named in the module docstring.
+This honest self-classification is the audit class-E repair recorded
+by the 2026-05-16 science-fix-loop iter18 pass.
 ========================================================================================
 
 ----- stderr -----
