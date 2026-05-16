@@ -50109,6 +50109,17 @@
       "runner_path": null,
       "title": "K Dependence Review-Safe Note"
     },
+    "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11": {
+      "claim_id": "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "634b2c916acaeb067a4ed7b468a87923c19aa5e9ec08f6ba92eddd950ded7e93",
+      "path": "docs/KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_kms_fermionic_brydges_majorant_external_narrow.py",
+      "title": "Kroschinsky-Marchetti-Salmhofer Fermionic Brydges Majorant \u2014 External Narrow Theorem"
+    },
     "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08": {
       "claim_id": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
       "claim_type_author_hint": "meta",
@@ -70753,6 +70764,7 @@
     "interest_map",
     "inverse_problem_note",
     "k_dependence_review_safe_note",
+    "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11",
     "koide_a1_closure_recommendation_2026-04-22",
     "koide_a1_loop_final_status_2026-04-22",
     "koide_a1_physical_bridge_attempt_2026-04-22",
@@ -71145,7 +71157,7 @@
       "no_go": 46,
       "none": 1552,
       "open_gate": 37,
-      "positive_theorem": 147
+      "positive_theorem": 148
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 814,
@@ -71153,12 +71165,12 @@
       "no_go": 151,
       "none": 444,
       "open_gate": 117,
-      "positive_theorem": 616
+      "positive_theorem": 617
     },
     "edge_count": 8908,
-    "leaf_count": 623,
-    "node_count": 2216,
-    "root_count": 773,
-    "runners_with_path": 1835
+    "leaf_count": 624,
+    "node_count": 2217,
+    "root_count": 774,
+    "runners_with_path": 1836
   }
 }

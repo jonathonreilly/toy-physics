@@ -1,0 +1,66 @@
+# KMS fermionic Brydges majorant external theorem runner
+# Source note: docs/KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md
+
+==============================================================================
+T1: scalar majorant ODE closed-form (b=0 case)
+==============================================================================
+  [PASS] scalar majorant y(l) = y0/(1 - a l y0) at (a,y0,l)=(1/4, 1/3, 1)
+         y_l=4/11, expected=4/11
+
+==============================================================================
+T2: small-data integrability threshold
+==============================================================================
+  [PASS] small-data y0 = 1/10 evolved to l=2 stays bounded (a y0 l = 1/20 < 1)
+         1 - a l y0 = 19/20
+  [PASS] large-data y0 = 5 evolved to l=2 blows up (a y0 l = 5/2 > 1)
+         1 - a l y0 = -3/2
+
+==============================================================================
+T3: composition of per-scale exponential b-factor
+==============================================================================
+  [PASS] linear (a=0) flow composes multiplicatively across 3 scales
+         y3=7/4, expected=7/4
+
+==============================================================================
+T4: zero-action fixed point of Polchinski quadratic form
+==============================================================================
+  [PASS] y=0 is a fixed point: dy/dl|_{y=0} = 0 for any (a, b)
+         dy/dl(0; a=1/5, b=1/7) = 0
+
+==============================================================================
+T5: substrate independence (scalar / diagonal toy)
+==============================================================================
+  [PASS] majorant ODE structure dy/dl = a y^2 + b y depends only on (a, b)
+         rhs1=25/288, rhs2=59/288
+
+==============================================================================
+T6: finite-dimensional diagonal toy (polymer projection)
+==============================================================================
+  [PASS] diagonal sub-block components stay bounded under per-component majorant
+         y_l = [Fraction(4, 39), Fraction(4, 79), Fraction(4, 119)]
+
+==============================================================================
+T7: sharpness at small-data threshold
+==============================================================================
+  [PASS] below threshold (l=7): bounded
+         1 - a l y0 = 1/8
+  [PASS] at threshold (l=8): denom = 0 (closed-form blowup)
+         1 - a l y0 = 0
+  [PASS] above threshold (l=9): denom < 0 (closed-form sign-flipped)
+         1 - a l y0 = -1/8
+
+==============================================================================
+T8: BBF polymer norm positivity (structural)
+==============================================================================
+  [PASS] BBF-norm surrogate sum_j w_j |c_j| is non-negative for non-negative w_j
+         bbf_surrogate=274/165
+
+==============================================================================
+T9: source-note boundary
+==============================================================================
+  [PASS] note declares positive_theorem
+  [PASS] note declares external scope
+  [PASS] note avoids framework bridge and status overclaims
+         boundary disclaimers intact
+
+=== TOTAL: PASS=14, FAIL=0 ===
