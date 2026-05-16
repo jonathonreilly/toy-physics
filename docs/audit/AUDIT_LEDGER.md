@@ -23,7 +23,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 312 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1188 |
+| unaudited | 1187 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -37,6 +37,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | 1 |
 | `decoration_under_linear_response_true_kubo_note` | 1 |
 | `decoration_under_moving_source_retarded_portability_note` | 1 |
+| `decoration_under_pmns_oriented_cycle_channel_value_law_note` | 1 |
 | `decoration_under_wide_lattice_h2t_distance_law_note` | 1 |
 
 | audit_status | count |
@@ -44,20 +45,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audit_in_progress` | 1 |
 | `audited_clean` | 524 |
 | `audited_conditional` | 192 |
-| `audited_decoration` | 16 |
+| `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1301 |
+| `unaudited` | 1300 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 927 |
-| `decoration` | 17 |
+| `decoration` | 18 |
 | `meta` | 116 |
 | `no_go` | 232 |
 | `open_gate` | 109 |
-| `positive_theorem` | 726 |
+| `positive_theorem` | 725 |
 
 | criticality | count |
 |---|---:|
@@ -843,6 +844,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | cross_family | codex-gpt-5.5 | A | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `kubo_range_of_validity_note` | decoration | ~~audited_decoration~~ | `decoration_under_linear_response_true_kubo_note` | cross_family | codex-gpt-5.5 | A | `linear_response_true_kubo_note` |
 | `lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10` | decoration | ~~audited_decoration~~ | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | cross_family | codex-gpt-5.5 | A | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
+| `pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16` | decoration | ~~audited_decoration~~ | `decoration_under_pmns_oriented_cycle_channel_value_law_note` | cross_family | codex-gpt-5.5 | A | `pmns_oriented_cycle_channel_value_law_note` |
 | `su3_adjoint_casimir_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | fresh_context | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `wide_lattice_h2t_skeptic_audit_note` | decoration | ~~audited_decoration~~ | `decoration_under_wide_lattice_h2t_distance_law_note` | cross_family | codex-gpt-5.5 | B | `wide_lattice_h2t_distance_law_note` |
 | `yukawa_color_projection_theorem` | decoration | ~~audited_decoration~~ | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | cross_family | codex-gpt-5.5 | A | `ew_current_fierz_channel_decomposition_note_2026-05-01` |
@@ -8470,6 +8472,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Exact C3 covariance collapses the oriented forward-cycle channel to A_fwd = sigma C; at the sole-axiom free point sigma = 0; and on the graph-first selected-axis route the residual antiunitary condition A_fwd = P23 A_fwd^dagger P23 fixes c1 = conjugate(c3), c2 real.  _(class `A`)_
 - **chain closes:** False — The retained channel-value-law dependency supplies the oriented-cycle observable law, and the runner verifies the C3/fixed-locus algebra with PASS=8/FAIL=0. The chain does not close because the graph-first residual antiunitary condition and the sole-axiom free-point identity block are imported premises rather than retained one-hop bridge theorems.
 - **rationale:** Issue: the C3 and residual fixed-locus algebra is exact, but the graph-first residual antiunitary condition and the free-point active block I_3 are asserted as premises in this restricted packet. Why this blocks: retained selection-structure status would require retained bridge theorems deriving those premises from the sole axiom/graph-first route, not just finite-dimensional checks after they are assumed. Repair target: add retained source notes proving the graph-first residual antiunitary reduction on the oriented forward-cycle channel and the sole-axiom free-point identity-block result. Claim boundary until fixed: the row is a bounded conditional algebraic reduction of the oriented-cycle channel, not a retained value-selection theorem.
+- **auditor confidence:** high
+
+### `pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`PMNS_SOLE_AXIOM_FREE_POINT_IDENTITY_BLOCK_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/PMNS_SOLE_AXIOM_FREE_POINT_IDENTITY_BLOCK_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Audited only the finite-dimensional algebraic bridge that the defined active operator equals I_3 at x=(1,1,1), y=(0,0,0), and therefore diag(A_act C^dagger) and sigma vanish.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** `decoration_under_pmns_oriented_cycle_channel_value_law_note`  (reason: `decoration_parent_retained`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-135819-20260516T135819Z-b9388aad-pmns_sole_axiom_free_poi-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Substituting x = (1,1,1) and y = (0,0,0) into A_act(x,y,delta) makes the deformation term vanish, so A_act = I_3 for all delta.  _(class `A`)_
+- **chain closes:** True — Within the stated active-operator construction and the retained oriented-cycle coefficient law, the identity block and vanishing coefficients follow by direct matrix algebra. The proof does not attempt to derive the active-operator construction itself from the sole axiom.
+- **rationale:** The load-bearing step is a valid class A algebraic substitution in the supplied construction, and the cited coefficient law is marked retained. However, the audit packet contains no first-principles derivation and no external comparator checks; it reduces to one retained parent law plus standard finite-dimensional matrix algebra. Under the tie-breaking rule, a zero-D purely algebraic bridge of this kind is classified as audited_decoration rather than audited_clean.
+- **decoration parent:** `pmns_oriented_cycle_channel_value_law_note`
 - **auditor confidence:** high
 
 ### `pmns_transfer_operator_dominant_mode_note`
