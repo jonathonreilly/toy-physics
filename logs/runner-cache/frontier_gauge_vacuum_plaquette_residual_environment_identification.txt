@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py
-runner_sha256: 4855e17b0a089eea5c4949a1ccb5d3b21d2cff90cec93c49e584c08c46ff6b0a
+runner_sha256: ec3694ad6999b9bcd83b20269afec4834d8817f4e0cb0ed6e525161d1e37cbee
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.30
+elapsed_sec: 0.31
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -15,16 +15,19 @@ Exact already-fixed pieces
   half-slice multiplier min eig         = 0.267545894076
   local-factor min/max                  = 8.821392463568e-26, 1.000000000000
 
-Residual environment witness
-  environment coeff min/max             = 0.045049202394, 1.000000000000
-  environment swap error                = 0.000e+00
+Computed residual environment coefficients (Bessel-determinant, finite box)
+  rho_(0,0)(6)                          = 1.0000000000000000
+  rho coeff min/max                     = 5.449846699832e-07, 1.000000000000
+  rho swap error                        = 2.776e-17
   local/environment commutator          = 0.000e+00
+  R_6^env chi_(p,q) = rho_(p,q) chi err = 0.000e+00
+  max |rho_computed - prior_witness|    = 4.205e-01
 
-Resulting factorized transfer witness
+Resulting factorized transfer (computed rho, no witness injection)
   transfer symmetry error               = 2.220e-16
-  transfer swap error                   = 4.441e-16
-  minimum transfer entry                = 3.125305e-13
-  Perron <J>                            = 0.444159191495
+  transfer swap error                   = 5.551e-16
+  minimum transfer entry                = 1.152789e-13
+  Perron <J>                            = 0.435521983684
 
   [PASS] [THEOREM] the explicit plaquette source operator J is self-adjoint and conjugation-symmetric on the source sector
          the accepted source operator is one exact self-adjoint six-neighbor recurrence
@@ -32,17 +35,21 @@ Resulting factorized transfer witness
          min eigenvalue=0.267546
   [PASS] [THEOREM] the normalized mixed-kernel local factor D_6^loc is explicit, positive, diagonal, and conjugation-symmetric
          min diagonal entry=8.821392e-26
-  [PASS] [THEOREM] once the marked half-slice and local mixed-kernel factors are stripped, the residual open datum sits in a positive conjugation-symmetric environment operator R_6^env
-         the remaining factor can be isolated as a separate diagonal conjugation-symmetric environment operator beyond D_6^loc
-  [PASS] [SUPPORT] the factorized environment-dressed transfer witness remains positivity-improving on the truncated source sector
-         minimum matrix entry=3.125e-13
-  [PASS] [SUPPORT] the residual environment operator is a genuinely separate reusable plaquette tool rather than a hidden mixed-kernel correction
-         the mixed kernel is already fixed by D_6^loc; the environment operator is now isolated as its own source-sector object
-  [PASS] [SUPPORT] once R_6^env is fixed, the remaining framework-point data reduce again to the Perron moments of the explicit factorized operator
-         Perron <J> = 0.444159
+  [PASS] [THEOREM] the residual environment factor R_6^env is built from the computed normalized single-link Wilson character coefficients rho_(p,q)(6) (Bessel-determinant identity), not from a hand-picked witness sequence
+         rho_(0,0)(6)=1.000000000000, min rho=5.449847e-07, max |rho - prior_witness|=4.205e-01
+  [PASS] [THEOREM] R_6^env acts diagonally on the marked-plaquette class-function basis with R_6^env chi_(p,q) = rho_(p,q)(6) chi_(p,q) using the computed Wilson coefficients
+         eigen-action error = 0.000e+00
+  [PASS] [THEOREM] with the computed rho_env replacing the prior witness, the factorized framework-point law exp(3 J) D_6^loc R_6^env exp(3 J) is self-adjoint, conjugation-symmetric, and positivity-improving on the truncated source sector
+         rho_swap=2.776e-17, [D,R]=0.000e+00, transfer_sym=2.220e-16, transfer_swap=5.551e-16, min entry=1.153e-13
+  [PASS] [SUPPORT] the residual environment operator R_6^env is structurally distinct from the local mixed-kernel factor D_6^loc and is isolated as its own source-sector object
+         the mixed kernel is fixed by D_6^loc; R_6^env supplies the still-open environment-compression coefficients
+  [PASS] [SUPPORT] with the computed rho_env, the factorized transfer Perron expectation <J> is positive on the truncated source sector
+         Perron <J> = 0.435522
+  [PASS] [SUPPORT] the computed canonical single-link Wilson coefficients used here for rho_env on this finite box match those independently computed by the companion runner frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py (same Bessel-determinant identity)
+         rho_(0,0)(6)=1 exactly is the normalization both runners share; companion runner cross-checks against Weyl integration to ~1e-14
 
 ==============================================================================
-SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+SUMMARY: THEOREM PASS=6 SUPPORT=3 FAIL=0
 ==============================================================================
 
 ----- stderr -----

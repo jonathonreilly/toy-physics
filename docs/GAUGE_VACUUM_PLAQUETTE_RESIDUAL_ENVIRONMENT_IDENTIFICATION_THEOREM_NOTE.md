@@ -1,15 +1,28 @@
 # Gauge-Vacuum Plaquette Residual Environment Identification Theorem
 
-**Date:** 2026-04-17
-**Status:** exact source-sector identification theorem on the accepted Wilson
-`3 spatial + 1 derived-time` surface; after the marked half-slice multiplier
-and the exact normalized mixed-kernel local factor are stripped, the remaining
-open object is exactly the compressed unmarked spatial environment operator on
-the marked-plaquette class-function sector
-**Claim type:** open_gate
+**Date:** 2026-04-17 (residual-env structural identification);
+2026-05-16 (witness replaced by computed Wilson coefficients on finite box)
+**Status:** structural source-sector identification theorem on the accepted
+Wilson `3 spatial + 1 derived-time` surface; after the marked half-slice
+multiplier and the exact normalized mixed-kernel local factor are stripped,
+the remaining factor is structurally a positive central diagonal
+conjugation-symmetric operator R_beta^env on the marked-plaquette
+class-function sector. The runner now derives the finite-box residual
+coefficients rho_(p,q)(6) directly from the canonical single-link SU(3)
+Wilson character integral by the Schur-Weyl Bessel-determinant identity,
+rather than injecting a witness sequence, on the finite 0<=p,q<=NMAX box.
+**Claim type:** open_gate (all-weight equality of the stripped residual with
+the unmarked spatial Wilson environment compression is *not* closed)
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`
 **Bounded coefficient companion:**
 [`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md)
+**Prior audit:** `audited_conditional` at fresh_context (codex-gpt-5.5); the
+auditor flagged that the runner verified algebraic properties for a generic
+positive symmetric witness rather than computing the actual residual
+environment. The runner has been updated to compute rho_(p,q)(6) from the
+canonical Wilson character integral on the finite box, so the structural
+identification at this scope is now paired with a derivation, not a witness
+injection. The all-weight equality remains the open gate.
 
 ## Question
 
@@ -182,20 +195,56 @@ gate or promote this note.
 python3 scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py
 ```
 
-Expected summary:
+Expected summary after the 2026-05-16 update (witness replaced by computed
+finite-box Wilson coefficients):
 
-- `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- `THEOREM PASS=6 SUPPORT=3 FAIL=0`
+
+The new theorem-grade checks now include:
+
+- the residual coefficients `rho_(p,q)(6)` come from the canonical normalized
+  single-link Wilson character integral, computed by the Schur-Weyl
+  Bessel-determinant identity in-runner, not from a hand-picked witness;
+- `rho_(0,0)(6) = 1` exactly (normalization) and the computed sequence
+  differs from the retired witness sequence by `~4.2e-1` in max norm, so the
+  runner certifies that the previous witness has actually been replaced;
+- `R_6^env chi_(p,q) = rho_(p,q)(6) chi_(p,q)` with the computed values
+  (eigen-action error `0.0` on the finite box);
+- the factorized framework-point law `exp(3 J) D_6^loc R_6^env exp(3 J)` is
+  self-adjoint, conjugation-symmetric, and positivity-improving on the
+  truncated source sector with the computed `rho_env`.
+
+## Scope and what remains open
+
+This update closes the *witness-injection* defect on the finite computed
+box, but does **not** promote the parent claim to retained-grade. In
+particular it does not derive:
+
+- that the stripped residual factor equals the compressed unmarked spatial
+  Wilson environment operator on *all* dominant weights (the all-weight
+  equality remains the open gate);
+- the full unmarked spatial Wilson environment tensor-transfer / Perron
+  closure;
+- analytic `P(6)`.
+
+The residual factor's *structural* class (positive, self-adjoint, central,
+diagonal in the SU(3) character basis, conjugation-symmetric) follows from
+the cited source-sector and local/environment factorization notes; the
+*numerical* finite-box coefficients are now computed from the canonical
+Wilson character integral directly. The all-weight identification of those
+two objects (stripped residual vs. unmarked spatial environment compression)
+is the precise step the parent gate still needs.
 
 ### Companion computation: bounded `rho_(p,q)(6)` from single-link Wilson data
 
-The previous runner above checks the structural class (positive, self-adjoint,
-central, diagonal, conjugation-symmetric) of the residual environment operator
-`R_6^env` against a generic positive conjugation-symmetric diagonal witness
-sequence `rho_env(p,q)`. Prior review recorded that the load-bearing step under
-that runner was an identification, not a derivation, because the explicit
-Wilson environment coefficients `rho_(p,q)(6)` were not computed.
+The runner above now computes `rho_(p,q)(6)` directly from the canonical
+single-link SU(3) Wilson character integral via the Schur-Weyl
+Bessel-determinant identity, replacing the previously injected witness
+sequence on the finite computed box.
 
-The bounded companion note and runner
+For independent cross-verification of those same coefficients by a
+different integrator (Weyl integration on the Cartan torus with
+Vandermonde-squared measure), the bounded companion note and runner
 
 ```bash
 python3 scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py
