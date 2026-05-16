@@ -1,11 +1,3 @@
-===== runner cache v1 =====
-runner: scripts/frontier_pmns_hw1_source_transfer_boundary.py
-runner_sha256: 30afb985cd653e4f593ee16a83bb7ce31b928a707aecab6ed0516b409e4a876e
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 0.09
-status: ok
------ stdout -----
 ========================================================================================
 PMNS HW1 SOURCE-TRANSFER BOUNDARY
 ========================================================================================
@@ -36,11 +28,26 @@ PART 3: PASSIVE SOURCE-RESPONSE COLUMNS FIX q AND a_i
   [PASS] The passive coefficients a_i are fixed by the derived passive block  (a=[0.07+0.j 0.11+0.j 0.23+0.j])
 
 ========================================================================================
-PART 4: THE COMBINED PACK RECOVERS THE RETAINED PAIR AND DOWNSTREAM CLOSURE
+PART 4: PACK-TO-RETAINED-PMNS BRIDGE VS INDEPENDENT SCHUR CERTIFICATE
 ========================================================================================
+  Bridge theorem (this part):
+    The map (active source-response columns, passive source-response columns)
+    -> (D_0^trip, D_-^trip, H_nu, H_e, m_nu, m_e, |PMNS|) computed via
+    response-column inversion equals the same map computed via the direct
+    Schur-complement effective block + Hermitian eigendecomposition.
+    The Schur path does not call any response-column helper, so equality
+    is an independent proof certificate, not a self-comparison.
+
   [PASS] The source-transfer pack derives tau and q without PMNS-side inputs  (tau=0, q=2)
-  [PASS] The combined pack reconstructs the retained pair exactly
-  [PASS] The combined pack recovers the downstream Hermitian data exactly
+  [PASS] Bridge: pack-derived D_0^trip equals the independent Schur D_0^trip  (||delta||=1.15e-15)
+  [PASS] Bridge: pack-derived D_-^trip equals the independent Schur D_-^trip  (||delta||=7.06e-20)
+  [PASS] Bridge: pack-derived H_nu equals the independent Schur H_nu  (||delta||=2.39e-15)
+  [PASS] Bridge: pack-derived H_e equals the independent Schur H_e  (||delta||=1.11e-20)
+  [PASS] Bridge: pack-derived neutrino masses equal the independent Schur masses  (||delta||=5.44e-16)
+  [PASS] Bridge: pack-derived charged-lepton masses equal the independent Schur masses  (||delta||=1.39e-17)
+  [PASS] Bridge: pack-derived |PMNS| equals the independent Schur |PMNS|  (||delta||=1.92e-15)
+  [PASS] Bridge: branch label agrees with the independent Schur branch  (branch=neutrino-active)
+  [PASS] Bridge: sheet label agrees with the independent Schur sheet  (sheet=1)
 
 ========================================================================================
 PART 5: TRANSFER-ONLY DATA ARE BLIND TO THE FIVE-REAL CORNER SOURCE
@@ -69,7 +76,4 @@ RESULT
     - the current exact bank still does not derive the source/transfer
       pack itself from Cl(3) on Z^3 alone
 
-PASS=15 FAIL=0
-
------ stderr -----
-
+PASS=22 FAIL=0
