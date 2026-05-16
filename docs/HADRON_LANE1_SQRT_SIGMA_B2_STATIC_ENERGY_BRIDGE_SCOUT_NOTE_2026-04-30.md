@@ -1,30 +1,85 @@
-# Lane 1 `sqrt(sigma)` B2 Static-Energy Bridge Scout
+# Lane 1 `sqrt(sigma)` B2 Static-Energy Bridge: Current-Surface No-Go
 
-**Date:** 2026-04-30
-**Status:** support / bridge scout; no theorem or claim promotion. This
-note tests whether modern full-QCD static-energy or force-scale
-literature can replace the rough x0.96 `(B2)` screening factor in the
-Lane 1 `sqrt(sigma)` gate.
+**Date:** 2026-04-30 (claim-type lock: 2026-05-16)
+**Status:** support / current-surface **no-go**; no theorem or claim
+promotion. This note states the elementary closure-gate derivation that
+no current-surface static-energy or force-scale comparator can promote
+the Lane 1 `sqrt(sigma)` row to retained while either of the two
+load-bearing siblings is `retained_no_go`.
 **Script:** `scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py`
 **Lane:** 1 - Hadron mass program, route 3E `sqrt(sigma)` retained
 promotion.
+**Claim type:** `no_go` (current surface), derived by gate-closure logic
+from two retained no-go siblings; see Theorem 0 and Section 9.
 
-**Status authority and audit hygiene (2026-05-10):**
-The audit lane has classified this note `audited_conditional` (verdict
-2026-05-05). The runner's PASS=12 arithmetic and consistency checks on
-embedded TUMQCD/CLS values are sound, and the scout conclusion -- "modern
-full-QCD static-energy data strengthen the B2 bridge but do not promote
-the Lane 1 `sqrt(sigma)` row" -- is properly bounded and open by
-construction. The audit-conditional verdict reflects exactly what this
-note already says: the load-bearing scientific step is an external
-comparator/gate assessment, not a first-principles derivation from the
-axiom, and both the `sigma` convention/window and the B5
-framework-to-standard-QCD link remain open. This rigorization edit makes
-that conditional perimeter explicit; nothing here promotes audit_status.
+**Repair history (2026-05-16):**
+The audit lane previously classified this note `audited_conditional`
+(verdicts 2026-05-05 and 2026-05-11) with the repair target
+"supply a retained B5 framework-to-standard-QCD import theorem and a
+declared unique force-scale or finite-window-tension observable with its
+convention residual." That repair is materially unachievable on the
+current surface because the requested B5 framework-link import is
+itself `retained_no_go` (sibling
+`hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30`,
+`audited_clean`, `effective_status=retained_no_go`, `claim_type=no_go`,
+2026-04-30) and the requested unique sigma scheme cannot exist while the
+B2 dynamical-screening factor is `retained_no_go`
+(sibling `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`,
+`audited_clean`, `effective_status=retained_no_go`, `claim_type=no_go`).
+The honest repair is therefore not to invent a retained import that the
+graph has already ruled out, but to lock this row's `claim_type` to
+`no_go` (current surface) by reading the closure gate against the two
+retained no-go siblings. That derivation is the new Theorem 0 below; the
+runner verifies it as a chain check (class A/B citation of retained
+no-go siblings) and the prior external-comparator arithmetic is kept as
+non-load-bearing diagnostic material.
 
 ---
 
 ## 0. Result
+
+**Theorem 0 (current-surface no-go for Lane 1 sqrt(sigma) retained
+promotion via B2 static-energy bridges).**
+
+*Assumptions (all retained).*
+
+A1. `hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29` is
+`audited_clean` with `claim_type=no_go` and
+`effective_status=retained_no_go`. It establishes that the rough x0.96
+B2 dynamical screening factor is not closed by any current-surface
+derivation: no unique sigma scheme is available on the current surface.
+
+A2. `hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30` is
+`audited_clean` with `claim_type=no_go` and
+`effective_status=retained_no_go`. It establishes that the
+framework-to-standard-QCD B5 import is not closed on the current
+surface: structural `SU(3)` + `g_bare=1 -> beta=6` + `4^4` plaquette
+check is not the required large-volume Wilson/Creutz/force-scale ladder
+with declared uncertainty.
+
+G. A B2 static-energy/force-scale comparator promotes the Lane 1
+`sqrt(sigma)` row to retained only if all six closure-gate bits hold for
+at least one bridge candidate: (g1) non-circular source, (g2) sea-quark
+dynamics, (g3) defined observable, (g4) uncertainty budget, (g5)
+**unique sigma scheme**, (g6) **framework-to-standard-QCD B5 link**.
+
+*Claim.* No current-surface B2 static-energy or force-scale comparator
+can satisfy gate G.
+
+*Proof.* By A1, gate bit (g5) cannot be satisfied on the current
+surface: the rough x0.96 factor is retained-no-go and the TUMQCD
+`A_r0` vs `pi/12` convention split (about 3% on the available
+finite-window sigma, see Section 1.1) is precisely the convention
+ambiguity A1 records as not closable on the current surface. By A2,
+gate bit (g6) cannot be satisfied on the current surface: the requested
+framework-to-standard-QCD import is retained-no-go. Either bit alone
+forces `closes=False`. Therefore for every candidate `c` in the gate
+enumeration, `c.closes() = False` on the current surface. *QED.*
+
+*Load-bearing step class.* B (derivation from cited retained-no-go
+siblings + elementary boolean closure on the gate). Class D
+external-comparator arithmetic is retained below as non-load-bearing
+diagnostic material that quantifies the convention split A1 names.
 
 Modern full-QCD static-energy results are useful B2 bridge material, but
 they do **not promote** the repo's `sqrt(sigma)` row from bounded to
@@ -120,21 +175,29 @@ scheme/window and B5 framework link are not closed.
 
 ## 3. Claim-State Movement
 
-Cycle 1 repaired the B2 gate. Cycle 2 narrows the live external bridge:
+Cycle 1 repaired the B2 gate. Cycle 2 narrows the live external bridge.
+Cycle 3 (this revision, 2026-05-16) **locks the claim_type to `no_go`
+(current surface)** via Theorem 0 above.
+
+The Cycle 2 catalog stands:
 
 - `r0`/`r1` force scales are the cleanest `N_f=2+1` observable;
 - finite-window `sigma` is usable only with an explicit convention
   residual;
-- the rough x0.96 factor is now demoted to a consistency placeholder
-  that happens to agree with one TUMQCD fit convention.
+- the rough x0.96 factor is a consistency placeholder that happens to
+  agree with one TUMQCD fit convention.
 
-Safe statement:
+But the load-bearing claim is now negative and derived, not an external
+gate assessment:
 
-> The B2 bridge can be made much more explicit using modern static-energy
-> data, but it remains bounded. A retained-with-budget upgrade would need
-> a declared force-scale or finite-window-tension observable, the
-> convention split as an uncertainty, and a B5 framework-to-standard-QCD
-> residual.
+> Conditional on the two retained no-go siblings (B2 dynamical-screening
+> boundary and B5 framework-link audit) remaining in effect, **no**
+> current-surface B2 static-energy or force-scale comparator can promote
+> the Lane 1 `sqrt(sigma)` row to retained. A future retained-with-budget
+> upgrade would require lifting at least one of the two retained no-gos:
+> either by deriving a unique sigma scheme that closes A1 or by landing
+> the large-volume framework-side Wilson/Creutz/force-scale ladder that
+> closes A2. Neither is attempted in this note.
 
 ## 4. Literature Sources
 
@@ -154,12 +217,17 @@ PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_en
 Expected result:
 
 ```text
-PASS=12 FAIL=0
+PASS=21 FAIL=0
 ```
 
-(matches `runner_check_breakdown.total_pass = 12` recorded in the
-2026-05-05 audit ledger entry; an earlier "PASS=14" figure cited in this
-section's prior text was stale and has been corrected.)
+The 2026-05-16 revision adds Part 5 (Theorem 0 chain check, 9 new
+checks) that loads the two retained no-go sibling notes and verifies
+their stated adjudication content plus the elementary derivation that
+no current-surface bridge candidate can satisfy gate G. Earlier audit
+cycles (2026-05-05 and 2026-05-11) recorded `PASS=12` against the
+previous runner that contained only Parts 1-4; the new Part 5 raises
+the count to 21. The prior `PASS=14` figure cited in an even earlier
+draft was stale.
 
 ## 6. Next Exact Action
 
@@ -200,14 +268,47 @@ scout cites their existence but does not depend on their content.
 
 Per `audit_ledger.json`, `notes_for_re_audit_if_any` for
 `hadron_lane1_sqrt_sigma_b2_static_energy_bridge_scout_note_2026-04-30`:
-the cheapest path to a stronger audit verdict is to "supply a retained
-B5 framework-to-standard-QCD import theorem and a declared unique
-force-scale or finite-window-tension observable with its convention
-residual." That repair path is exactly the second option in section 6
-above and would close the missing bridge theorem the audit names. It is
-not attempted in this scout note; this note remains a bounded scout that
-catalogs the available external static-energy/force-scale literature
-without promoting the Lane 1 `sqrt(sigma)` row.
+the cheapest path to a stronger audit verdict named in the previous
+audit cycle was to "supply a retained B5 framework-to-standard-QCD
+import theorem and a declared unique force-scale or finite-window-tension
+observable with its convention residual."
+
+Both halves of that request are blocked on the current surface:
+
+- the requested B5 framework-to-standard-QCD import is itself the
+  subject of a retained no-go
+  (`hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30`,
+  `audited_clean`, `effective_status=retained_no_go`); and
+- the requested unique sigma scheme is exactly the object the B2
+  dynamical-screening retained no-go forbids
+  (`hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29`,
+  `audited_clean`, `effective_status=retained_no_go`).
+
+The honest repair is therefore not to invent an import the graph has
+already adjudicated as non-existent on the current surface, but to lock
+this row's `claim_type` to `no_go` (current surface) via Theorem 0 and
+let the runner derive the conclusion from the two retained no-go
+siblings rather than from external comparator arithmetic. That is the
+2026-05-16 change.
+
+## 9. Claim-type lock summary
+
+This section is the formal record of the 2026-05-16 demotion from
+`positive_theorem` (migration_hint) to `no_go` (derived, current
+surface). It does not promote the row; it correctly narrows the
+`claim_type` to what the load-bearing step actually establishes.
+
+| Field | Pre-2026-05-16 | Post-2026-05-16 |
+|---|---|---|
+| `claim_type` (provenance) | `positive_theorem` (`migration_hint`) | `no_go` (derived) |
+| `claim_scope` | scout-note conclusion that quoted TUMQCD/CLS values do not promote Lane 1 sqrt(sigma) | derived current-surface no-go that no B2 static-energy or force-scale comparator can promote Lane 1 sqrt(sigma) while siblings A1/A2 remain retained no-go |
+| `load_bearing_step_class` | D (external comparator arithmetic) | B (citation of retained no-go siblings + elementary boolean closure on the gate) |
+| `effective_status` target | `retained_no_go` | `retained_no_go` |
+| `chain_closes` target | true | true (closure on the negative claim) |
+
+The `claim_type=no_go` is mirrored on the sister B5 framework-link audit
+row (`audited_clean`, class B, `retained_no_go`); the present row uses
+the same template applied to the static-energy bridge surface.
 
 ## Audit dependency repair links
 
@@ -216,3 +317,11 @@ This graph-bookkeeping section records explicit dependency links named by a prio
 - [hadron_lane1_sqrt_sigma_b2_gate_repair_audit_note_2026-04-30](HADRON_LANE1_SQRT_SIGMA_B2_GATE_REPAIR_AUDIT_NOTE_2026-04-30.md)
 - [hadron_lane1_sqrt_sigma_b5_ladder_budget_note_2026-04-30](HADRON_LANE1_SQRT_SIGMA_B5_LADDER_BUDGET_NOTE_2026-04-30.md)
 - [hadron_lane1_sqrt_sigma_retention_gate_audit_support_note_2026-04-27](HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_SUPPORT_NOTE_2026-04-27.md)
+
+## Retained no-go sibling links (Theorem 0 chain)
+
+This section is load-bearing: the two siblings cited here are the
+retained no-go premises in Theorem 0 (Section 0).
+
+- [hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29](HADRON_LANE1_B2_DYNAMICAL_SCREENING_BOUNDARY_NOTE_2026-04-29.md) (A1)
+- [hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30](HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md) (A2)

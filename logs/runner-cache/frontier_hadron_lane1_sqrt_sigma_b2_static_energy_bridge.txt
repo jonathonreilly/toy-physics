@@ -1,22 +1,17 @@
-===== runner cache v1 =====
-runner: scripts/frontier_hadron_lane1_sqrt_sigma_b2_static_energy_bridge.py
-runner_sha256: 1e1337b3f5e2d4fefea6fad03ca637db9c6b7a63e560d81b5111d1263de76b53
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 0.05
-status: ok
------ stdout -----
 ========================================================================================
-LANE 1 SQRT(SIGMA) B2 STATIC-ENERGY BRIDGE SCOUT
+LANE 1 SQRT(SIGMA) B2 STATIC-ENERGY BRIDGE: CURRENT-SURFACE NO-GO
 ========================================================================================
 
 Question:
-  Does modern full-QCD static-energy literature supply a retained
-  replacement for the rough x0.96 B2 screening factor?
+  Can any current-surface B2 static-energy or force-scale comparator
+  promote the Lane 1 sqrt(sigma) row to retained?
 
 Answer:
-  No. It supplies a useful bounded bridge, but the sigma value is
-  convention/window dependent and B5 remains open.
+  No. Theorem 0 (Section 0 of the note) derives the negative claim
+  from two retained no-go siblings (B2 dynamical-screening boundary,
+  B5 framework-link audit); see Part 5 for the chain check.
+  Parts 1-4 retain the external-comparator arithmetic as
+  non-load-bearing diagnostic material.
 
 ----------------------------------------------------------------------------------------
 Part 1: static-energy bridge values
@@ -61,9 +56,20 @@ Part 4: artifact checks
   [PASS] note records the TUMQCD A-choice split
   [PASS] note keeps the bridge bounded rather than retained
 
-========================================================================================
-PASS=12 FAIL=0
-========================================================================================
+----------------------------------------------------------------------------------------
+Part 5: Theorem 0 chain check (retained no-go siblings)
+----------------------------------------------------------------------------------------
+  [PASS] A1 sibling file present (B2 dynamical-screening boundary)  (docs/HADRON_LANE1_B2_DYNAMICAL_SCREENING_BOUNDARY_NOTE_2026-04-29.md)
+  [PASS] A2 sibling file present (B5 framework-link audit)  (docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md)
+  [PASS] A2 records current-surface no-go on framework-to-standard-QCD bridge  (B5 framework-link audit body)
+  [PASS] Theorem 0 cites A1 (B2 dynamical-screening sibling) by claim_id
+  [PASS] Theorem 0 cites A2 (B5 framework-link sibling) by claim_id
+  [PASS] note states Theorem 0 (current-surface no-go)
+  [PASS] note declares claim-type lock to no_go citing Theorem 0
+  [PASS] note declares load-bearing-step class downgrade from D to B
+  derived: every candidate has closes()=False given A1, A2
+  [PASS] Theorem 0 mechanically derives no-go on current surface  (gate G requires g5 AND g6; A1 forbids g5; A2 forbids g6)
 
------ stderr -----
-
+========================================================================================
+PASS=21 FAIL=0
+========================================================================================
