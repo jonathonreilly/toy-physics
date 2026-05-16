@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_leptogenesis_full_microscopic_reduction.py
-runner_sha256: 3256f2c112d15d1080afa61b787c1a24fb2006cd6dad08a1e02406c971c5ccdc
+runner_sha256: 23db981a03a1fb602da5ec4dbaae91b4cdb9a634abd059cd944672b050dff598
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.97
+elapsed_sec: 0.53
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -13,17 +13,17 @@ DM LEPTOGENESIS FULL MICROSCOPIC REDUCTION
 ========================================================================================
 PART 1: FULL D GIVES THE CHARGED SECTOR AND ITS PROJECTED SOURCE LAW
 ========================================================================================
-  [PASS] The supplied microscopic operator preserves charge exactly  (commutator=0.00e+00)
-  [PASS] From full D, the charge -1 lepton sector D_- is extracted canonically  (shape=(5, 5))
-  [PASS] The charged projected source law factors exactly through L_e = Schur_{E_e}(D_-)  (full D -> D_- -> L_e)
-  [PASS] On the canonical charged-lepton-active sample, this Schur value is the desired H_e target  (err=2.57e-16)
+  [PASS] [class E engineered-target] The block-diagonal D returned by build_full_charge_preserving_operator commutes with Q exactly  (commutator=0.00e+00 (engineered: D is built block-diagonal on the charge eigenspaces))
+  [PASS] [class D conditional-on-supplied-D] Given the engineered D, the charge -1 active+spectator block D_- has the canonical 5x5 shape  (shape=(5, 5))
+  [PASS] [class D conditional-on-supplied-D] The charged projected source law factors exactly through L_e = Schur_{E_e}(D_-) (algebraic Schur identity)  (full D -> D_- -> L_e (Schur complement identity; holds for any D with the assumed block structure))
+  [PASS] [class E engineered-target] On the canonical sample, the Schur value L_e equals canonical_h(...) by construction of build_full_charge_preserving_operator(target_le)  (err=2.57e-16 (target-fit: D_- = block(am, bm, fm) with am = target_le + bm fm^-1 bm^H, so Schur(D_-) = target_le by construction))
 
 ========================================================================================
 PART 2: FROM L_e TO THE PACKET AND ETA
 ========================================================================================
-  [PASS] The charged projected Hermitian responses reconstruct H_e exactly  (err=1.96e-17)
-  [PASS] On N_e, H_e determines the PMNS packet exactly  (col sums=[1. 1. 1.])
-  [PASS] The exact DM selector then picks the same middle near-closing column  (eta_vals=[0.82075559 0.9895127  0.92061708])
+  [PASS] [class D conditional-on-supplied-D] Hermitian-basis trace responses on L_e reconstruct the same matrix (algebraic basis identity)  (err=1.96e-17)
+  [PASS] [class D conditional-on-supplied-D] The PMNS left-diagonalizer columns sum to one (unitary identity given H_e Hermitian)  (col sums=[1. 1. 1.])
+  [PASS] [class E engineered-target] The DM selector picks the middle column with eta/eta_obs = 0.9895127046, which is the deterministic image of the engineered target_le through the imported transport package  (eta_vals=[0.82075559 0.9895127  0.92061708] (this value is fixed once target_le = canonical_h(0.24,0.38,1.07;0.09,0.22,0.61;1.10); it is not a derivation of the canonical sample from Cl(3) on Z^3))
 
   recovered N_e packet from full D:
 [[0.915868 0.071267 0.012865]
@@ -33,18 +33,36 @@ PART 2: FROM L_e TO THE PACKET AND ETA
 ========================================================================================
 PART 3: BOTTOM LINE
 ========================================================================================
-  [PASS] Supplying full charge-preserving D is sufficient to recover the PMNS-assisted near-closing DM value algorithmically  (D -> D_- -> dW_e^H -> H_e -> packet -> eta)
-  [PASS] So the old 5.297x one-flavor miss collapses to a 1.0106x residual miss on the full-D PMNS-assisted route  (misses=(5.297004933778,1.010598444417))
-  [PASS] The remaining sole-axiom PMNS-assisted DM target is therefore only the actual microscopic value law of D from Cl(3) on Z^3  (not transport, not projector selection, not PMNS pair reconstruction)
+  [PASS] [class D conditional-on-supplied-D] If a charge-preserving D with the required Schur structure is supplied, the algebraic chain D -> D_- -> dW_e^H -> H_e -> packet -> eta is deterministic  (conditional framing: this does not derive D from Cl(3) on Z^3)
+  [PASS] [class D arithmetic-of-engineered-numbers] Given the engineered target_le's selected eta = 0.9895127046, miss-factor algebra gives (5.297, 1.0106) on the one-flavor and PMNS-assisted routes  (misses=(5.297004933778,1.010598444417) (both are arithmetic of the engineered target_le and the imported one-flavor literature value 0.188785929502))
+  [PASS] [class D framing] The remaining sole-axiom PMNS-assisted DM target is the actual microscopic value law of D from Cl(3) on Z^3 (per the auditor's recorded repair note)  (not transport, not projector selection, not PMNS pair reconstruction; framing claim, not a derivation)
 
-  Full-D reduction read:
-    - old exact one-flavor miss: 5.297x
-    - full-D PMNS-assisted miss: 1.0106x
+  Full-D reduction read (post-iter30 honest scoping):
+    - old exact one-flavor miss: 5.297x  (literature, imported)
+    - full-D PMNS-assisted miss: 1.0106x  (engineered-target image)
     - remaining exact target: actual microscopic value law of D
+    - audit row class: G load-bearing under the 2026-05-05 audit;
+      runner is class D (conditional) + class E (engineered-target),
+      zero class C standalone derivations from Cl(3) on Z^3
 
 ========================================================================================
 SUMMARY: PASS=10 FAIL=0
 ========================================================================================
+
+CLASS BREAKDOWN (post-iter30 honest scoping):
+  class C standalone-from-Cl(3) on Z^3 : 0
+  class D conditional-on-supplied-D     : 7
+  class E engineered-target identities  : 3
+
+Audit note: the 2026-05-05 cross-family audit recorded this row as
+audited_numerical_match (terminal_audit, class G load-bearing). The
+downstream Schur/packet/selector chain is algebraically correct given
+a supplied D whose Schur complement equals the canonical target, but
+build_full_charge_preserving_operator(target_le) engineers exactly
+such a D from the target. An axiom-level derivation of D from Cl(3)
+on Z^3 (or equivalently of canonical_h on the canonical sample)
+remains the open theorem that would close the row, per the auditor's
+recorded repair note. The audit lane still owns the verdict.
 
 ----- stderr -----
 
