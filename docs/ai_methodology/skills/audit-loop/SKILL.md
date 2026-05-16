@@ -16,6 +16,7 @@ Use this skill to audit one claim at a time from the repository audit queue and 
 - Do not read broad publication framing while judging the claim. Use the source note, one-hop cited authorities, runner, runner output, and the audit rubric.
 - Preserve fresh-context integrity. Do not read prior audit rationales, previous audit entries, rendered `AUDIT_LEDGER.md` history, PR text, publication framing, or downstream summaries while judging a claim.
 - Do not grant `audited_clean` unless the derivation closes without hidden premises, unsupported physical identifications, circular dependency, or tuned comparator matching.
+- Apply the No-Go Discipline gate (`no-go-discipline` skill, checks N1-N8) before recording any verdict on a row with `claim_type: no_go`, a `bounded_theorem` whose source note names walls/admissions, or an `audited_conditional` whose `verdict_rationale` would name walls. Negative-claim overclaims foreclose investigation paths permanently and require the same scrutiny as positive-claim overclaims. If any N1-N8 check fails on the source note, choose the more conservative non-clean verdict whose `verdict_rationale` reflects the honest narrower claim scope; do not record `audited_clean`, and do not transcribe the source note's inflated wall list into the ledger.
 - If the author family appears to be Codex and the current auditor is Codex, do not let the current context self-ratify a clean result. Restart the claim in a distinct restricted-input sub-agent when sub-agents are available, and record a clean result only as `independence: fresh_context` with a distinct `auditor` identity if `apply_audit.py` accepts it. If no sub-agent is available, skip clean application and report that a non-Codex, human, or fresh-context agent audit is required.
 - Do not stop after producing an audit JSON unless the user explicitly asks for a dry run, no-apply, or JSON-only result. If the user asks to "return JSON" as part of an audit-loop task, treat that as the required verdict format and still apply, verify, commit, and push the audit result according to this skill.
 
@@ -112,6 +113,7 @@ Answer these before choosing a verdict:
 - Is this an independent theorem, or algebraic decoration of an upstream claim?
 - Are numerical values current with the runner and the source note?
 - Would a hostile specialist be able to reject the conclusion without making a mistake?
+- If the claim is a `no_go`, a wall-naming `bounded_theorem`, or its rationale would cite walls: have at least 5 distinct attack routes against the no-go been considered (N1)? Are the named walls actually independent (N2)? Are any hidden in "bridge context" / "we assume" / "standard QFT" / "registered" prose (N3)? Do cited witness residuals match the claim's residual (N4)? Are "X is not a Y-fact" phrases verified at every named resolution (N5)? Is the "needs new axiom" framing actually a convention-reframe / labeling ratification (N6)? Can a steelman against the no-go be made convincing (N7)? Has a structurally similar prior wall been retired by a mechanism not considered here (N8)? See `no-go-discipline` skill.
 
 ## Verdict Rules
 
@@ -125,6 +127,16 @@ Use the audit-lane verdict enum exactly:
 - `audited_failed`: chain is wrong, stale relative to the runner, mismatches the observable, contradicts dependencies, or does not close on its own terms.
 
 When in doubt, choose the more conservative non-clean verdict.
+
+For claims with `claim_type: no_go`, `bounded_theorem` whose source note names walls/admissions, or any verdict that would record walls in `verdict_rationale`, apply the No-Go Discipline gate (`no-go-discipline` skill, N1-N8) before recording. Any FAIL forbids `audited_clean`; instead, choose the non-clean verdict whose `verdict_rationale` reflects the corrected narrower claim scope. Specifically:
+
+- if N1 fails (fewer than 5 distinct attack routes considered against the no-go), record `audited_conditional` with `notes_for_re_audit_if_any: scope_too_broad — alternative attack routes not exhausted`;
+- if N2/N3 fails (walls not independent, or hidden walls promoted), record `audited_conditional` with the collapsed/expanded honest wall list;
+- if N4 fails (witness-residual mismatch in cited authorities), record `audited_conditional` with `notes_for_re_audit_if_any: missing_dependency_edge — cited witness residual does not match the claim residual`;
+- if N5/N6 fails (over-broad phrasing, or convention-reframe misclassified as new axiom), record `audited_renaming` if the failure is purely scope/framing, or `audited_conditional` with a sharper wall list;
+- if N7/N8 fails (convincing steelman exists, or prior-wall retirement mechanism not considered), record `audited_conditional` with `notes_for_re_audit_if_any: scope_too_broad — named alternative not foreclosed`.
+
+See [`docs/ai_methodology/skills/no-go-discipline/SKILL.md`](../no-go-discipline/SKILL.md). The audit lane must not transcribe a source note's inflated no-go into the ledger as `audited_clean` — that cements the overclaim and forecloses investigation paths permanently.
 
 ## Required Failure Handoff
 

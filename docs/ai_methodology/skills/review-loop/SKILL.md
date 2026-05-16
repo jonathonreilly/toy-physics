@@ -490,6 +490,36 @@ as `.github/workflows/audit.yml`, PR runs enforce the same gate and the nightly
 cron refreshes main; review-loop must not let a branch reach merge with
 pipeline-derived files out of date with the source notes.
 
+8. **No-Go Discipline PASS gate (hard).** Before issuing review-loop PASS,
+   identify any artifact on the branch that ships a negative claim:
+
+```bash
+# Source notes whose claim_type is no_go, or whose Status / Type line
+# names walls / admissions / "conditional on" content
+git diff --name-only origin/main...HEAD -- 'docs/*NO_GO*.md' 'docs/*BOUNDED*.md' \
+                                           'docs/*STRETCH_ATTEMPT*.md' \
+                                           'docs/*OBSTRUCTION*.md'
+# Audit-data rows whose verdict_rationale or claim_type record walls
+git diff origin/main...HEAD -- docs/audit/data/audit_ledger.json \
+  | grep -E '"claim_type": "no_go"|"verdict_rationale".*wall|"verdict_rationale".*admission'
+# Any source note touched on this branch whose body contains negative-claim shape
+git diff origin/main...HEAD -- 'docs/*.md' \
+  | grep -E 'structurally undecidable|no retained primitive|requires new axiom|cannot be derived from A_min|conditional on .* walls?'
+```
+
+For every match, the NoGoDisciplineReviewer must output `PASS` (N1-N8 walk
+complete and no failure condition hit) before review-loop issues PASS. A
+`FAIL` from NoGoDisciplineReviewer blocks PASS regardless of how other
+reviewers voted. An unscrutinized no-go that ships through review cements
+the overclaim at audit time and forecloses investigation paths permanently.
+
+If NoGoDisciplineReviewer outputs FAIL, apply the narrowest honest fix per
+Fix Policy step 2 (demote to a narrower honest claim that passes N1-N8) and
+re-review. Do not weaken the gate to PASS the branch.
+
+This gate is independent of the Pipeline-clean PASS gate above; both must
+pass for review-loop to issue PASS.
+
 The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
 write `audit_status`, `audited_clean`, or other audit verdicts. If the branch
 introduces retained-grade `claim_type` rows, report those claim IDs in the
