@@ -92,6 +92,15 @@ jobs:
       - name: Run audit pipeline
         run: bash docs/audit/scripts/run_pipeline.sh
 
+      - name: Regenerate conditional-prompt snapshot (cron/manual only)
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        # MISSING_DERIVATION_PROMPTS.md is the static snapshot the
+        # science-fix-loop reads. Without this refresh it drifts from the
+        # live ledger, causing wasted attempts on rows that have already
+        # been re-audited. PR runs deliberately skip this step so they
+        # don't trip the "Check pipeline diff" guard below.
+        run: python3 docs/audit/scripts/generate_conditional_prompts.py
+
       - name: Check pipeline diff (PR runs only)
         if: github.event_name == 'pull_request'
         run: |
@@ -150,6 +159,7 @@ jobs:
             git reset --hard origin/main
             python3 docs/audit/scripts/repair_missing_dependency_edges.py --apply
             bash docs/audit/scripts/run_pipeline.sh
+            python3 docs/audit/scripts/generate_conditional_prompts.py
             commit_if_needed || exit 0
           done
 
