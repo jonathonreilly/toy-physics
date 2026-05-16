@@ -21,9 +21,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained** | 105 |
 | **retained_no_go** | 133 |
 | **retained_bounded** | 307 |
-| _retained_pending_chain_ | 4 |
+| _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1204 |
+| unaudited | 1203 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 13 |
@@ -44,20 +44,20 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audit_in_progress` | 1 |
 | `audited_clean` | 517 |
 | `audited_conditional` | 182 |
-| `audited_decoration` | 15 |
+| `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 13 |
-| `unaudited` | 1317 |
+| `unaudited` | 1316 |
 
 | claim_type | count |
 |---|---:|
 | `bounded_theorem` | 926 |
-| `decoration` | 16 |
+| `decoration` | 17 |
 | `meta` | 116 |
 | `no_go` | 229 |
 | `open_gate` | 109 |
-| `positive_theorem` | 728 |
+| `positive_theorem` | 727 |
 
 | criticality | count |
 |---|---:|
@@ -66,7 +66,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 259 |
 | `leaf` | 748 |
 
-- **Retained pending chain closure:** 4
+- **Retained pending chain closure:** 5
 - **Citation cycles detected:** 241
 
 ### Runner classification (static heuristic)
@@ -822,6 +822,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_perron_reduction_theorem_note` | decoration | ~~audited_decoration~~ | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | fresh_context | codex-gpt-5.5 | A | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` |
 | `gellmann_completeness_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_cl3_color_automorphism_theorem` | cross_family | codex-gpt-5.5 | A | `cl3_color_automorphism_theorem` |
 | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_hierarchy_matsubara_decomposition_note` | judicial_review | codex-gpt-5.5 | A | `hierarchy_matsubara_decomposition_note` |
+| `hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16` | decoration | ~~audited_decoration~~ | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02` |
 | `koide_cyclic_wilson_3_response_narrow_theorem_note_2026-05-02` | decoration | ~~audited_decoration~~ | `decoration_under_koide_dweh_cyclic_compression_note_2026-04-18` | cross_family | codex-gpt-5.5 | A | `koide_dweh_cyclic_compression_note_2026-04-18` |
 | `kubo_range_of_validity_note` | decoration | ~~audited_decoration~~ | `decoration_under_linear_response_true_kubo_note` | cross_family | codex-gpt-5.5 | A | `linear_response_true_kubo_note` |
 | `lh_doublet_eigenvalue_ratio_proof_walk_lattice_independence_bounded_note_2026-05-10` | decoration | ~~audited_decoration~~ | `decoration_under_lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | cross_family | codex-gpt-5.5 | A | `lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02` |
@@ -5772,6 +5773,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The decisive step is algebraic once the staggered dispersion, mean-field factorization, APBC momenta, and taste degeneracy are admitted. The restricted packet cites a single retained_bounded parent authority that already states the same determinant formula, and the runner performs symbolic checks of this algebra without any external comparator. Under the explicit tie-breaker, a zero-D class-A chain that reduces to one parent claim plus standard mathematics is audited_decoration rather than audited_clean.
 - **rationale:** The decisive step is algebraic once the staggered dispersion, mean-field factorization, APBC momenta, and taste degeneracy are admitted. The restricted packet cites a single retained_bounded parent authority that already states the same determinant formula, and the runner performs symbolic checks of this algebra without any external comparator. Under the explicit tie-breaker, a zero-D class-A chain that reduces to one parent claim plus standard mathematics is audited_decoration rather than audited_clean.
 - **decoration parent:** `hierarchy_matsubara_decomposition_note`
+- **auditor confidence:** high
+
+### `hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `decoration`
+- **claim_scope:** Audited the algebraic derivation of the per-matrix-entry Matsubara free-energy density formula from the supplied determinant identity at L_s = 2 with mean-field factorization.
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** _retained_pending_chain_  (reason: `decoration_waiting_on:hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-130436-3eff71a3-hierarchy_matsubara_free-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Apply the per-matrix-entry normalization to the retained determinant log difference, so 4/(8 L_t) times the Matsubara log sum reduces to (1/(2 L_t)) Sum_omega ln(1 + m^2/[u_0^2(3+sin^2 omega)]).  _(class `A`)_
+- **chain closes:** True — Within the restricted packet, the formula follows by substituting m=0 in the cited determinant identity, subtracting real logarithms, and applying n_matrix=8 L_t. No additional physical identification or external input is needed for this scoped algebraic statement.
+- **rationale:** The load-bearing work is entirely class A algebra over the upstream Matsubara determinant formula plus the stated per-matrix-entry normalization. The runner source performs symbolic log and prefactor checks plus numerical matrix cross-checks; it does not use external comparators. Because the chain reduces to a single upstream parent determinant/decomposition claim and standard mathematics, the conservative rubric classifies it as audited_decoration rather than audited_clean.
+- **decoration parent:** `hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02`
 - **auditor confidence:** high
 
 ### `hierarchy_seven_eighths_riemann_dirichlet_dimensional_anchor_narrow_theorem_note_2026-05-10`
