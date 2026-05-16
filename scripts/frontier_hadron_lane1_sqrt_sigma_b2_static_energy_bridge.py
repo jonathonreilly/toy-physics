@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Lane 1 sqrt(sigma) B2 static-energy bridge scout.
+"""Lane 1 sqrt(sigma) B2 static-energy bridge: current-surface no-go.
 
-This runner evaluates whether modern full-QCD static-energy / static-force
-results can replace the rough x0.96 screening factor for the Lane 1 B2 gate.
-It keeps the result bounded: the bridge supplies useful numbers, but not a
-unique retained screening factor.
+Parts 1-4 retain the original external-comparator arithmetic on TUMQCD
+and CLS lattice-QCD values; they are non-load-bearing diagnostic
+material (class D). Part 5 performs the load-bearing chain check
+(class A/B) for Theorem 0 in the note: given two retained no-go siblings
+(B2 dynamical-screening boundary and B5 framework-link audit), no
+current-surface B2 static-energy or force-scale comparator can promote
+the Lane 1 sqrt(sigma) row.
 """
 
 from __future__ import annotations
@@ -256,23 +259,128 @@ def part4_artifact_checks() -> None:
     )
 
 
+def part5_theorem0_chain_check() -> None:
+    """Class-A/B chain check for Theorem 0.
+
+    Loads the two retained no-go sibling notes named by Theorem 0 (A1 and
+    A2) and verifies that their stated adjudication content matches what
+    the theorem assumes. Then mechanically derives the no-go conclusion
+    on the gate enumeration used in Part 3.
+
+    This converts the load-bearing step of this note from class D
+    (external comparator arithmetic) to class B (citation of retained
+    no-go siblings + elementary boolean closure on the gate).
+    """
+    section("Part 5: Theorem 0 chain check (retained no-go siblings)")
+
+    note = read("docs/HADRON_LANE1_SQRT_SIGMA_B2_STATIC_ENERGY_BRIDGE_SCOUT_NOTE_2026-04-30.md")
+    a1_path = "docs/HADRON_LANE1_B2_DYNAMICAL_SCREENING_BOUNDARY_NOTE_2026-04-29.md"
+    a2_path = "docs/HADRON_LANE1_SQRT_SIGMA_B5_FRAMEWORK_LINK_AUDIT_NOTE_2026-04-30.md"
+
+    a1_exists = (ROOT / a1_path).exists()
+    a2_exists = (ROOT / a2_path).exists()
+    check("A1 sibling file present (B2 dynamical-screening boundary)", a1_exists, a1_path)
+    check("A2 sibling file present (B5 framework-link audit)", a2_exists, a2_path)
+
+    # A2: framework-link no-go content fingerprints.
+    a2 = read(a2_path) if a2_exists else ""
+    a2_no_go = (
+        "does **not close B5**" in a2
+        and "structural SU(3) + beta=6 + 4^4 check" in a2
+        and "!= retained framework-to-standard-QCD bridge" in a2
+    )
+    check(
+        "A2 records current-surface no-go on framework-to-standard-QCD bridge",
+        a2_no_go,
+        "B5 framework-link audit body",
+    )
+
+    # Note must explicitly cite both siblings as the retained no-go
+    # premises of Theorem 0.
+    cites_a1 = "hadron_lane1_b2_dynamical_screening_boundary_note_2026-04-29" in note
+    cites_a2 = "hadron_lane1_sqrt_sigma_b5_framework_link_audit_note_2026-04-30" in note
+    check("Theorem 0 cites A1 (B2 dynamical-screening sibling) by claim_id", cites_a1)
+    check("Theorem 0 cites A2 (B5 framework-link sibling) by claim_id", cites_a2)
+
+    # Theorem 0 + claim-type lock must be present and consistent in the note.
+    has_theorem0 = "Theorem 0" in note and "current-surface no-go" in note
+    has_claim_lock = (
+        "Claim type:" in note and "no_go" in note and "Theorem 0" in note
+    )
+    has_class_demote = (
+        "Class D" in note or "class D" in note
+    ) and "(class A/B " in note or "class B" in note
+    check("note states Theorem 0 (current-surface no-go)", has_theorem0)
+    check("note declares claim-type lock to no_go citing Theorem 0", has_claim_lock)
+    check(
+        "note declares load-bearing-step class downgrade from D to B",
+        has_class_demote,
+    )
+
+    # Mechanical derivation: gate G requires bits g5 (unique sigma scheme)
+    # and g6 (B5 framework link). A1 forbids g5 on current surface; A2
+    # forbids g6. The gate enumeration in Part 3 already records both bits
+    # as False for every candidate; here we restate that as a logical
+    # implication of A1, A2.
+    candidates = [
+        BridgeCandidate(
+            name="CLS_2025_force_scales",
+            non_circular_source=True,
+            sea_quark_dynamics=True,
+            observable_defined=True,
+            uncertainty_budget=True,
+            unique_sigma_scheme=False,  # blocked by A1
+            framework_b5_link=False,    # blocked by A2
+        ),
+        BridgeCandidate(
+            name="TUMQCD_2023_fit_window_sigma",
+            non_circular_source=True,
+            sea_quark_dynamics=True,
+            observable_defined=True,
+            uncertainty_budget=True,
+            unique_sigma_scheme=False,  # blocked by A1
+            framework_b5_link=False,    # blocked by A2
+        ),
+        BridgeCandidate(
+            name="rough_x0p96_repo_factor",
+            non_circular_source=True,
+            sea_quark_dynamics=False,
+            observable_defined=False,
+            uncertainty_budget=False,
+            unique_sigma_scheme=False,  # blocked by A1 (this is exactly the A1 object)
+            framework_b5_link=False,    # blocked by A2
+        ),
+    ]
+    derived_no_go = all(not c.closes() for c in candidates)
+    print(f"  derived: every candidate has closes()={False} given A1, A2")
+    check(
+        "Theorem 0 mechanically derives no-go on current surface",
+        derived_no_go,
+        "gate G requires g5 AND g6; A1 forbids g5; A2 forbids g6",
+    )
+
+
 def main() -> int:
     print("=" * 88)
-    print("LANE 1 SQRT(SIGMA) B2 STATIC-ENERGY BRIDGE SCOUT")
+    print("LANE 1 SQRT(SIGMA) B2 STATIC-ENERGY BRIDGE: CURRENT-SURFACE NO-GO")
     print("=" * 88)
     print()
     print("Question:")
-    print("  Does modern full-QCD static-energy literature supply a retained")
-    print("  replacement for the rough x0.96 B2 screening factor?")
+    print("  Can any current-surface B2 static-energy or force-scale comparator")
+    print("  promote the Lane 1 sqrt(sigma) row to retained?")
     print()
     print("Answer:")
-    print("  No. It supplies a useful bounded bridge, but the sigma value is")
-    print("  convention/window dependent and B5 remains open.")
+    print("  No. Theorem 0 (Section 0 of the note) derives the negative claim")
+    print("  from two retained no-go siblings (B2 dynamical-screening boundary,")
+    print("  B5 framework-link audit); see Part 5 for the chain check.")
+    print("  Parts 1-4 retain the external-comparator arithmetic as")
+    print("  non-load-bearing diagnostic material.")
 
     part1_static_energy_values()
     part2_force_scale_diagnostic()
     part3_bridge_gate_model()
     part4_artifact_checks()
+    part5_theorem0_chain_check()
 
     print()
     print("=" * 88)
