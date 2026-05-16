@@ -20,15 +20,15 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 308 |
-| _retained_pending_chain_ | 3 |
+| **retained_bounded** | 306 |
+| _retained_pending_chain_ | 4 |
 | open_gate | 15 |
 | unaudited | 1201 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
 | ~~audited_conditional~~ | 183 |
-| ~~audited_failed~~ | 19 |
+| ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -41,11 +41,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 516 |
 | `audited_conditional` | 183 |
 | `audited_decoration` | 15 |
-| `audited_failed` | 63 |
+| `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
 | `unaudited` | 1314 |
@@ -66,7 +66,7 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `medium` | 260 |
 | `leaf` | 746 |
 
-- **Retained pending chain closure:** 3
+- **Retained pending chain closure:** 4
 - **Citation cycles detected:** 241
 
 ### Runner classification (static heuristic)
@@ -113,8 +113,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
-| `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
-| `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
+| `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -842,6 +841,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `chiral_split_mass_gravity_note` | open_gate | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | G | - |
 | `circulant_parity_cp_tensor_narrow_theorem_note_2026-05-02` | positive_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `cl4c_carrier_axiom_consequence_map_note_2026-04-28` | no_go | ~~audited_failed~~ | **retained_no_go** | weak | codex-gpt-5 | A | - |
+| `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `critical_exponents_topology_note_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `dirac_v4_convergence_note` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `distance_law_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
@@ -2656,6 +2656,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** The runner genuinely constructs the staggered lattice operators and verifies the algebraic identities C H C = -H, P H P = -H, and C P H P C = H on L=4,6,8; these are class A algebraic checks, not hard-coded stdout. However, the source note’s broader physical Hermitian Hamiltonian and SME-zero claim explicitly depends on docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md. That cited bridge is labeled audited_conditional, and the rubric requires audited_conditional when a load-bearing cited authority is not retained-grade.
 - **open / conditional deps cited:**
   - `PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`
+- **auditor confidence:** high
+
+### `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10`
+
+- **Note:** [`CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md`](../../docs/CPT_EXACT_REAL_ANTI_HERMITIAN_D_NARROW_THEOREM_NOTE_2026-05-10.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The conditional algebraic CPT invariance of a real anti-Hermitian D under C,P,T satisfying (1)-(3), including the stated Hermitian-lift commutator and scalar antiunitary-square claim.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-judicial-cpt-20260516`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** Theta D Theta^{-1} = C P (TDT) P C = C(PDP)C = C(-D)C = D, with C3 using Theta^2 = (CP)^2.  _(class `A`)_
+- **chain closes:** False — The C1 composite-invariance proof and C2 Hermitian-lift commutator are valid class-A algebra under the stated premises. The full audited claim, however, includes C3 as a theorem conclusion, and the abstract premises only imply Theta^2 = (CP)^2, not that (CP)^2 is a scalar ±I unless extra C,P algebra such as commutation or anticommutation is assumed. The runner checks favorable concrete examples but does not prove the universal scalar-square assertion for arbitrary real involutory C and P satisfying the listed premises. Therefore the second audit correctly identifies a closure failure within the stated claim scope.
+- **rationale:** The C1 composite-invariance proof and C2 Hermitian-lift commutator are valid class-A algebra under the stated premises. The full audited claim, however, includes C3 as a theorem conclusion, and the abstract premises only imply Theta^2 = (CP)^2, not that (CP)^2 is a scalar ±I unless extra C,P algebra such as commutation or anticommutation is assumed. The runner checks favorable concrete examples but does not prove the universal scalar-square assertion for arbitrary real involutory C and P satisfying the listed premises. Therefore the second audit correctly identifies a closure failure within the stated claim scope.
 - **auditor confidence:** high
 
 ### `critical_exponents_topology_note_2026-04-10`
