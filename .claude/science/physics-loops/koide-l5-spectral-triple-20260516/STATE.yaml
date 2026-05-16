@@ -1,0 +1,41 @@
+loop_slug: koide-l5-spectral-triple-20260516
+goal: Construct or rule out Cl(3)/Z³ spectral triple realizing the required anti-commuting Hermitian H for Koide closure
+target_status: best-honest-status
+runtime_budget: 12h
+runtime_used: 0h
+cycle_count: 0
+block_count: 0
+started_at: "2026-05-16T07:10Z"
+last_checkpoint: "2026-05-16T07:10Z"
+
+initial_state:
+  user_view: "PR #1137 + PR #1142 stated OPEN"
+  actual_state: "Both PRs CLOSED 2026-05-15T13:20; work salvaged to main"
+  retained_on_main:
+    - koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10
+    - koide_lightcone_primitive_theorem_note_2026-05-10
+    - koide_anticommuting_operator_derivation_theorem_note_2026-05-10
+  literal_exit_criterion_a: "MET (Level 4 retained with 2-dim characterization)"
+
+active_route: null  # set by Cycle 1 after agent fan-out synthesis
+hard_residual: |
+  Construct a Connes-style spectral triple (A, H, D) on Cl(3)/Z³ Frobenius
+  finite algebra such that:
+    (1) Dirac D self-adjoint, anti-commutes with γ-grading
+    (2) γ-grading IS the Z_3 character grading Γ_χ
+    (3) Restriction of D (or its square root, or related Hermitian op) to the
+        3-generation triplet has the form H = (1/3)(1⊗h + h⊗1), Σh=0, h≠0
+    (4) Lepton mass-square-root vector v is an eigenvector of H with λ≠0
+    (5) The specific h is derived from framework primitives, not fitted
+
+negative_evidence:
+  - "Cl(3) bivectors (R-R^T)/i COMMUTE with Γ_χ (not anti-commute) — excluded"
+  - "Staggered Dirac taste operators: research-level open, no construction yet"
+  - "Real Hermitian anti-commuting H has spectrum {-λ, 0, +λ} — singular"
+
+cycle_log: []
+review_findings: []
+pr_status: []
+
+next_exact_action: "Dispatch 5-agent parallel attack on spectral-triple construction angles"
+stop_condition: null
