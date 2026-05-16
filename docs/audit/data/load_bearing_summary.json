@@ -19,8 +19,8 @@
     {
       "claim_id": "minimal_axioms_2026-05-03",
       "criticality": "critical",
-      "load_bearing_score": 48.199,
-      "transitive_descendants": 830
+      "load_bearing_score": 48.221,
+      "transitive_descendants": 843
     },
     {
       "claim_id": "three_generation_observable_theorem_note",
@@ -31,20 +31,20 @@
     {
       "claim_id": "observable_principle_from_axiom_note",
       "criticality": "critical",
-      "load_bearing_score": 43.344,
-      "transitive_descendants": 649
+      "load_bearing_score": 43.683,
+      "transitive_descendants": 821
     },
     {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
-      "load_bearing_score": 40.393,
-      "transitive_descendants": 950
+      "load_bearing_score": 40.422,
+      "transitive_descendants": 969
     },
     {
       "claim_id": "minimal_axioms_2026-04-11",
       "criticality": "critical",
-      "load_bearing_score": 39.7,
-      "transitive_descendants": 831
+      "load_bearing_score": 39.723,
+      "transitive_descendants": 844
     },
     {
       "claim_id": "staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac",
@@ -73,8 +73,8 @@
     {
       "claim_id": "native_gauge_closure_note",
       "criticality": "critical",
-      "load_bearing_score": 32.372,
-      "transitive_descendants": 936
+      "load_bearing_score": 32.401,
+      "transitive_descendants": 955
     },
     {
       "claim_id": "ckm_cp_phase_structural_identity_theorem_note_2026-04-24",
@@ -103,8 +103,8 @@
     {
       "claim_id": "anomaly_forces_time_theorem",
       "criticality": "critical",
-      "load_bearing_score": 30.527,
-      "transitive_descendants": 737
+      "load_bearing_score": 30.598,
+      "transitive_descendants": 774
     },
     {
       "claim_id": "three_generation_structure_note",

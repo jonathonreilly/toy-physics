@@ -8325,6 +8325,14 @@
       "to": "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
     },
     {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "planck_scale_lane_status_note_2026-04-23"
+    },
+    {
+      "from": "emergent_lorentz_invariance_note",
+      "to": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25"
+    },
+    {
       "from": "em_coupling_from_ewsb_note_2026-05-02",
       "to": "ewsb_pattern_from_higgs_y_note_2026-05-02"
     },
@@ -45698,9 +45706,11 @@
       "deps": [
         "cpt_exact_note",
         "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30",
-        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02"
+        "parity_operator_basis_dimension5_lv_no_go_theorem_note_2026-05-02",
+        "planck_scale_lane_status_note_2026-04-23",
+        "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25"
       ],
-      "note_hash": "490d19fc7acba33aa032d7297573ddb981be8f381b12c97a6e95b9df0535d817",
+      "note_hash": "8d42cacaa81cfc2276bdc8b08076cab15c8234a67ea381c0ec8fd2d7261c7b7c",
       "path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
       "runner_path": "scripts/frontier_emergent_lorentz_invariance.py",
       "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)"
@@ -71155,7 +71165,7 @@
       "open_gate": 117,
       "positive_theorem": 616
     },
-    "edge_count": 8908,
+    "edge_count": 8910,
     "leaf_count": 623,
     "node_count": 2216,
     "root_count": 773,

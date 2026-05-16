@@ -13,35 +13,56 @@
       "staggered_wilson_det_positivity_bridge_theorem_note_2026-05-05"
     ],
     [
+      "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+      "lorentz_kernel_positive_closure_note",
+      "emergent_lorentz_invariance_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_scale_conditional_completion_note_2026-04-24",
+      "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+      "area_law_native_car_semantics_tightening_note_2026-04-25",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    ],
+    [
+      "emergent_lorentz_invariance_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_scale_conditional_completion_note_2026-04-24",
+      "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+      "area_law_native_car_semantics_tightening_note_2026-04-25",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    ],
+    [
+      "lorentz_kernel_positive_closure_note",
+      "emergent_lorentz_invariance_note",
+      "planck_scale_lane_status_note_2026-04-23",
+      "planck_scale_conditional_completion_note_2026-04-24",
+      "planck_boundary_density_extension_theorem_note_2026-04-24",
+      "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+      "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+      "area_law_native_car_semantics_tightening_note_2026-04-25",
+      "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+      "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+      "anomaly_forces_time_theorem",
+      "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+    ],
+    [
       "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
       "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
       "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03"
-    ],
-    [
-      "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
-      "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
-      "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
-      "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
-      "su3_tensor_network_engine_roadmap_note_2026-05-03",
-      "gauge_scalar_bridge_3plus1_native_tube_staging_gate_2026-05-03"
-    ],
-    [
-      "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
-      "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
-      "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
-      "su3_cube_perron_solve_combined_theorem_note_2026-05-03",
-      "su3_tensor_network_engine_roadmap_note_2026-05-03"
-    ],
-    [
-      "gauge_vacuum_plaquette_tensor_transfer_perron_solve_note",
-      "su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03",
-      "su3_cube_index_graph_shortcut_open_gate_note_2026-05-03",
-      "su3_cube_perron_solve_combined_theorem_note_2026-05-03"
     ]
   ],
-  "cycles_detected": 182,
+  "cycles_detected": 185,
   "effective_status_counts": {
-    "audited_conditional": 195,
+    "audited_conditional": 194,
     "audited_failed": 18,
     "audited_numerical_match": 15,
     "audited_renaming": 16,
@@ -60,7 +81,7 @@
     "retained_bounded": 310,
     "retained_no_go": 133,
     "retained_pending_chain": 3,
-    "unaudited": 1171
+    "unaudited": 1172
   },
   "retained_pending_chain_count": 3,
   "retained_pending_chain_examples": [

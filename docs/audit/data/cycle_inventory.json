@@ -1,5 +1,5 @@
 {
-  "cycle_count": 183,
+  "cycle_count": 186,
   "cycles": [
     {
       "cycle_id": "cycle-0001",
@@ -15,7 +15,7 @@
         }
       ],
       "length": 2,
-      "max_transitive_descendants": 773,
+      "max_transitive_descendants": 786,
       "nodes": [
         {
           "audit_status": "audited_conditional",
@@ -24,7 +24,7 @@
           "effective_status": "audited_conditional",
           "note_path": "docs/AXIOM_FIRST_REFLECTION_POSITIVITY_THEOREM_NOTE_2026-04-29.md",
           "title": "Axiom-First Reflection Positivity for the Canonical CL3-on-Z3 Action",
-          "transitive_descendants": 773
+          "transitive_descendants": 786
         },
         {
           "audit_status": "unaudited",
@@ -33,13 +33,514 @@
           "effective_status": "unaudited",
           "note_path": "docs/STAGGERED_WILSON_DET_POSITIVITY_BRIDGE_THEOREM_NOTE_2026-05-05.md",
           "title": "Staggered + Wilson Determinant-Positivity Bridge Theorem Note",
-          "transitive_descendants": 773
+          "transitive_descendants": 786
         }
       ],
       "requires_lemma_extraction": false
     },
     {
       "cycle_id": "cycle-0002",
+      "decision": null,
+      "edges": [
+        {
+          "from": "emergent_lorentz_invariance_note",
+          "to": "planck_scale_lane_status_note_2026-04-23"
+        },
+        {
+          "from": "planck_scale_lane_status_note_2026-04-23",
+          "to": "planck_scale_conditional_completion_note_2026-04-24"
+        },
+        {
+          "from": "planck_scale_conditional_completion_note_2026-04-24",
+          "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+        },
+        {
+          "from": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+        },
+        {
+          "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
+        },
+        {
+          "from": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
+        },
+        {
+          "from": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "to": "anomaly_forces_time_theorem"
+        },
+        {
+          "from": "anomaly_forces_time_theorem",
+          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+        },
+        {
+          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "to": "emergent_lorentz_invariance_note"
+        }
+      ],
+      "length": 11,
+      "max_transitive_descendants": 774,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "emergent_lorentz_invariance_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
+          "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_lane_status_note_2026-04-23",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
+          "title": "Planck-Scale Lane Status Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
+          "title": "Planck-Scale Conditional Completion Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
+          "title": "Planck Boundary-Density Extension Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Source-Unit Normalization Support Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
+          "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
+          "title": "Area-Law Native CAR Semantics Tightening Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "anomaly_forces_time_theorem",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
+          "transitive_descendants": 774
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0003",
+      "decision": null,
+      "edges": [
+        {
+          "from": "lorentz_kernel_positive_closure_note",
+          "to": "emergent_lorentz_invariance_note"
+        },
+        {
+          "from": "emergent_lorentz_invariance_note",
+          "to": "planck_scale_lane_status_note_2026-04-23"
+        },
+        {
+          "from": "planck_scale_lane_status_note_2026-04-23",
+          "to": "planck_scale_conditional_completion_note_2026-04-24"
+        },
+        {
+          "from": "planck_scale_conditional_completion_note_2026-04-24",
+          "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+        },
+        {
+          "from": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+        },
+        {
+          "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
+        },
+        {
+          "from": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
+        },
+        {
+          "from": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "to": "anomaly_forces_time_theorem"
+        },
+        {
+          "from": "anomaly_forces_time_theorem",
+          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+        },
+        {
+          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "to": "lorentz_kernel_positive_closure_note"
+        }
+      ],
+      "length": 12,
+      "max_transitive_descendants": 774,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_kernel_positive_closure_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
+          "title": "Lorentz Kernel Positive Closure Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "emergent_lorentz_invariance_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
+          "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_lane_status_note_2026-04-23",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
+          "title": "Planck-Scale Lane Status Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
+          "title": "Planck-Scale Conditional Completion Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
+          "title": "Planck Boundary-Density Extension Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Source-Unit Normalization Support Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
+          "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
+          "title": "Area-Law Native CAR Semantics Tightening Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "anomaly_forces_time_theorem",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
+          "transitive_descendants": 774
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0004",
+      "decision": null,
+      "edges": [
+        {
+          "from": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+          "to": "lorentz_kernel_positive_closure_note"
+        },
+        {
+          "from": "lorentz_kernel_positive_closure_note",
+          "to": "emergent_lorentz_invariance_note"
+        },
+        {
+          "from": "emergent_lorentz_invariance_note",
+          "to": "planck_scale_lane_status_note_2026-04-23"
+        },
+        {
+          "from": "planck_scale_lane_status_note_2026-04-23",
+          "to": "planck_scale_conditional_completion_note_2026-04-24"
+        },
+        {
+          "from": "planck_scale_conditional_completion_note_2026-04-24",
+          "to": "planck_boundary_density_extension_theorem_note_2026-04-24"
+        },
+        {
+          "from": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "to": "planck_source_unit_normalization_support_theorem_note_2026-04-25"
+        },
+        {
+          "from": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "to": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25"
+        },
+        {
+          "from": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "to": "area_law_native_car_semantics_tightening_note_2026-04-25"
+        },
+        {
+          "from": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "to": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "to": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30"
+        },
+        {
+          "from": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "to": "anomaly_forces_time_theorem"
+        },
+        {
+          "from": "anomaly_forces_time_theorem",
+          "to": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03"
+        },
+        {
+          "from": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "to": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01"
+        }
+      ],
+      "length": 13,
+      "max_transitive_descendants": 774,
+      "nodes": [
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_microcausality_lieb_robinson_theorem_note_2026-05-01",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_MICROCAUSALITY_LIEB_ROBINSON_THEOREM_NOTE_2026-05-01.md",
+          "title": "Axiom-First Microcausality / Lieb-Robinson Bound on A_min",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "lorentz_kernel_positive_closure_note",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md",
+          "title": "Lorentz Kernel Positive Closure Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "emergent_lorentz_invariance_note",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/EMERGENT_LORENTZ_INVARIANCE_NOTE.md",
+          "title": "Emergent Lorentz Invariance from the Cubic Z\u00b3 Lattice (Conditional)",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_lane_status_note_2026-04-23",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md",
+          "title": "Planck-Scale Lane Status Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
+          "title": "Planck-Scale Conditional Completion Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_boundary_density_extension_theorem_note_2026-04-24",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md",
+          "title": "Planck Boundary-Density Extension Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
+          "title": "Planck Source-Unit Normalization Support Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_primitive_car_edge_identification_theorem_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md",
+          "title": "Area-Law Primitive CAR Edge Identification Theorem Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "area_law_native_car_semantics_tightening_note_2026-04-25",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md",
+          "title": "Area-Law Native CAR Semantics Tightening Note",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING_THEOREM_NOTE_2026-04-30.md",
+          "title": "Planck Link-Local First-Variation P_A Forcing Theorem",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "anomaly_forces_time_theorem",
+          "claim_type": "bounded_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+          "title": "Anomaly Cancellation Forces 3+1 Spacetime",
+          "transitive_descendants": 774
+        },
+        {
+          "audit_status": "unaudited",
+          "claim_id": "axiom_first_single_clock_codimension1_evolution_theorem_note_2026-05-03",
+          "claim_type": "positive_theorem",
+          "effective_status": "unaudited",
+          "note_path": "docs/AXIOM_FIRST_SINGLE_CLOCK_CODIMENSION1_EVOLUTION_THEOREM_NOTE_2026-05-03.md",
+          "title": "Axiom-First Single-Clock Codimension-1 Unitary Evolution on Cl(3) \u2297 Z^3",
+          "transitive_descendants": 774
+        }
+      ],
+      "requires_lemma_extraction": false
+    },
+    {
+      "cycle_id": "cycle-0005",
       "decision": null,
       "edges": [
         {
@@ -89,7 +590,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0003",
+      "cycle_id": "cycle-0006",
       "decision": null,
       "edges": [
         {
@@ -152,7 +653,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0004",
+      "cycle_id": "cycle-0007",
       "decision": null,
       "edges": [
         {
@@ -228,7 +729,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0005",
+      "cycle_id": "cycle-0008",
       "decision": null,
       "edges": [
         {
@@ -317,7 +818,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0006",
+      "cycle_id": "cycle-0009",
       "decision": null,
       "edges": [
         {
@@ -354,7 +855,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0007",
+      "cycle_id": "cycle-0010",
       "decision": null,
       "edges": [
         {
@@ -391,7 +892,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0008",
+      "cycle_id": "cycle-0011",
       "decision": null,
       "edges": [
         {
@@ -428,7 +929,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0009",
+      "cycle_id": "cycle-0012",
       "decision": null,
       "edges": [
         {
@@ -465,7 +966,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0010",
+      "cycle_id": "cycle-0013",
       "decision": null,
       "edges": [
         {
@@ -515,7 +1016,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0011",
+      "cycle_id": "cycle-0014",
       "decision": null,
       "edges": [
         {
@@ -565,7 +1066,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0012",
+      "cycle_id": "cycle-0015",
       "decision": null,
       "edges": [
         {
@@ -615,7 +1116,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0013",
+      "cycle_id": "cycle-0016",
       "decision": null,
       "edges": [
         {
@@ -678,7 +1179,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0014",
+      "cycle_id": "cycle-0017",
       "decision": null,
       "edges": [
         {
@@ -741,7 +1242,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0015",
+      "cycle_id": "cycle-0018",
       "decision": null,
       "edges": [
         {
@@ -804,7 +1305,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0016",
+      "cycle_id": "cycle-0019",
       "decision": null,
       "edges": [
         {
@@ -919,7 +1420,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0017",
+      "cycle_id": "cycle-0020",
       "decision": null,
       "edges": [
         {
@@ -956,7 +1457,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0018",
+      "cycle_id": "cycle-0021",
       "decision": null,
       "edges": [
         {
@@ -993,7 +1494,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0019",
+      "cycle_id": "cycle-0022",
       "decision": null,
       "edges": [
         {
@@ -1043,7 +1544,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0020",
+      "cycle_id": "cycle-0023",
       "decision": null,
       "edges": [
         {
@@ -1080,7 +1581,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0021",
+      "cycle_id": "cycle-0024",
       "decision": null,
       "edges": [
         {
@@ -1130,7 +1631,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0022",
+      "cycle_id": "cycle-0025",
       "decision": null,
       "edges": [
         {
@@ -1193,7 +1694,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0023",
+      "cycle_id": "cycle-0026",
       "decision": null,
       "edges": [
         {
@@ -1282,7 +1783,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0024",
+      "cycle_id": "cycle-0027",
       "decision": null,
       "edges": [
         {
@@ -1384,7 +1885,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0025",
+      "cycle_id": "cycle-0028",
       "decision": null,
       "edges": [
         {
@@ -1499,7 +2000,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0026",
+      "cycle_id": "cycle-0029",
       "decision": null,
       "edges": [
         {
@@ -1627,7 +2128,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0027",
+      "cycle_id": "cycle-0030",
       "decision": null,
       "edges": [
         {
@@ -1755,7 +2256,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0028",
+      "cycle_id": "cycle-0031",
       "decision": null,
       "edges": [
         {
@@ -1896,7 +2397,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0029",
+      "cycle_id": "cycle-0032",
       "decision": null,
       "edges": [
         {
@@ -1933,7 +2434,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0030",
+      "cycle_id": "cycle-0033",
       "decision": null,
       "edges": [
         {
@@ -1983,7 +2484,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0031",
+      "cycle_id": "cycle-0034",
       "decision": null,
       "edges": [
         {
@@ -2033,7 +2534,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0032",
+      "cycle_id": "cycle-0035",
       "decision": null,
       "edges": [
         {
@@ -2096,7 +2597,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0033",
+      "cycle_id": "cycle-0036",
       "decision": null,
       "edges": [
         {
@@ -2159,7 +2660,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0034",
+      "cycle_id": "cycle-0037",
       "decision": null,
       "edges": [
         {
@@ -2196,7 +2697,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0035",
+      "cycle_id": "cycle-0038",
       "decision": null,
       "edges": [
         {
@@ -2233,7 +2734,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0036",
+      "cycle_id": "cycle-0039",
       "decision": null,
       "edges": [
         {
@@ -2270,7 +2771,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0037",
+      "cycle_id": "cycle-0040",
       "decision": null,
       "edges": [
         {
@@ -2307,7 +2808,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0038",
+      "cycle_id": "cycle-0041",
       "decision": null,
       "edges": [
         {
@@ -2344,7 +2845,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0039",
+      "cycle_id": "cycle-0042",
       "decision": null,
       "edges": [
         {
@@ -2381,7 +2882,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0040",
+      "cycle_id": "cycle-0043",
       "decision": null,
       "edges": [
         {
@@ -2418,7 +2919,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0041",
+      "cycle_id": "cycle-0044",
       "decision": null,
       "edges": [
         {
@@ -2455,7 +2956,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0042",
+      "cycle_id": "cycle-0045",
       "decision": null,
       "edges": [
         {
@@ -2492,7 +2993,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0043",
+      "cycle_id": "cycle-0046",
       "decision": null,
       "edges": [
         {
@@ -2529,7 +3030,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0044",
+      "cycle_id": "cycle-0047",
       "decision": null,
       "edges": [
         {
@@ -2566,7 +3067,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0045",
+      "cycle_id": "cycle-0048",
       "decision": null,
       "edges": [
         {
@@ -2603,7 +3104,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0046",
+      "cycle_id": "cycle-0049",
       "decision": null,
       "edges": [
         {
@@ -2640,7 +3141,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0047",
+      "cycle_id": "cycle-0050",
       "decision": null,
       "edges": [
         {
@@ -2677,7 +3178,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0048",
+      "cycle_id": "cycle-0051",
       "decision": null,
       "edges": [
         {
@@ -2714,7 +3215,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0049",
+      "cycle_id": "cycle-0052",
       "decision": null,
       "edges": [
         {
@@ -2751,7 +3252,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0050",
+      "cycle_id": "cycle-0053",
       "decision": null,
       "edges": [
         {
@@ -2788,7 +3289,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0051",
+      "cycle_id": "cycle-0054",
       "decision": null,
       "edges": [
         {
@@ -2825,7 +3326,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0052",
+      "cycle_id": "cycle-0055",
       "decision": null,
       "edges": [
         {
@@ -2862,7 +3363,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0053",
+      "cycle_id": "cycle-0056",
       "decision": null,
       "edges": [
         {
@@ -2899,7 +3400,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0054",
+      "cycle_id": "cycle-0057",
       "decision": null,
       "edges": [
         {
@@ -2949,7 +3450,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0055",
+      "cycle_id": "cycle-0058",
       "decision": null,
       "edges": [
         {
@@ -2999,7 +3500,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0056",
+      "cycle_id": "cycle-0059",
       "decision": null,
       "edges": [
         {
@@ -3049,7 +3550,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0057",
+      "cycle_id": "cycle-0060",
       "decision": null,
       "edges": [
         {
@@ -3099,7 +3600,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0058",
+      "cycle_id": "cycle-0061",
       "decision": null,
       "edges": [
         {
@@ -3149,7 +3650,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0059",
+      "cycle_id": "cycle-0062",
       "decision": null,
       "edges": [
         {
@@ -3199,7 +3700,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0060",
+      "cycle_id": "cycle-0063",
       "decision": null,
       "edges": [
         {
@@ -3249,7 +3750,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0061",
+      "cycle_id": "cycle-0064",
       "decision": null,
       "edges": [
         {
@@ -3299,7 +3800,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0062",
+      "cycle_id": "cycle-0065",
       "decision": null,
       "edges": [
         {
@@ -3349,7 +3850,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0063",
+      "cycle_id": "cycle-0066",
       "decision": null,
       "edges": [
         {
@@ -3399,7 +3900,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0064",
+      "cycle_id": "cycle-0067",
       "decision": null,
       "edges": [
         {
@@ -3449,7 +3950,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0065",
+      "cycle_id": "cycle-0068",
       "decision": null,
       "edges": [
         {
@@ -3512,7 +4013,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0066",
+      "cycle_id": "cycle-0069",
       "decision": null,
       "edges": [
         {
@@ -3575,7 +4076,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0067",
+      "cycle_id": "cycle-0070",
       "decision": null,
       "edges": [
         {
@@ -3638,7 +4139,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0068",
+      "cycle_id": "cycle-0071",
       "decision": null,
       "edges": [
         {
@@ -3701,7 +4202,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0069",
+      "cycle_id": "cycle-0072",
       "decision": null,
       "edges": [
         {
@@ -3764,7 +4265,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0070",
+      "cycle_id": "cycle-0073",
       "decision": null,
       "edges": [
         {
@@ -3827,7 +4328,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0071",
+      "cycle_id": "cycle-0074",
       "decision": null,
       "edges": [
         {
@@ -3890,7 +4391,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0072",
+      "cycle_id": "cycle-0075",
       "decision": null,
       "edges": [
         {
@@ -3953,7 +4454,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0073",
+      "cycle_id": "cycle-0076",
       "decision": null,
       "edges": [
         {
@@ -4016,7 +4517,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0074",
+      "cycle_id": "cycle-0077",
       "decision": null,
       "edges": [
         {
@@ -4079,7 +4580,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0075",
+      "cycle_id": "cycle-0078",
       "decision": null,
       "edges": [
         {
@@ -4155,7 +4656,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0076",
+      "cycle_id": "cycle-0079",
       "decision": null,
       "edges": [
         {
@@ -4231,7 +4732,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0077",
+      "cycle_id": "cycle-0080",
       "decision": null,
       "edges": [
         {
@@ -4307,7 +4808,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0078",
+      "cycle_id": "cycle-0081",
       "decision": null,
       "edges": [
         {
@@ -4383,7 +4884,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0079",
+      "cycle_id": "cycle-0082",
       "decision": null,
       "edges": [
         {
@@ -4459,7 +4960,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0080",
+      "cycle_id": "cycle-0083",
       "decision": null,
       "edges": [
         {
@@ -4548,7 +5049,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0081",
+      "cycle_id": "cycle-0084",
       "decision": null,
       "edges": [
         {
@@ -4637,7 +5138,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0082",
+      "cycle_id": "cycle-0085",
       "decision": null,
       "edges": [
         {
@@ -4726,7 +5227,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0083",
+      "cycle_id": "cycle-0086",
       "decision": null,
       "edges": [
         {
@@ -4815,7 +5316,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0084",
+      "cycle_id": "cycle-0087",
       "decision": null,
       "edges": [
         {
@@ -4917,7 +5418,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0085",
+      "cycle_id": "cycle-0088",
       "decision": null,
       "edges": [
         {
@@ -5019,7 +5520,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0086",
+      "cycle_id": "cycle-0089",
       "decision": null,
       "edges": [
         {
@@ -5121,7 +5622,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0087",
+      "cycle_id": "cycle-0090",
       "decision": null,
       "edges": [
         {
@@ -5236,7 +5737,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0088",
+      "cycle_id": "cycle-0091",
       "decision": null,
       "edges": [
         {
@@ -5351,7 +5852,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0089",
+      "cycle_id": "cycle-0092",
       "decision": null,
       "edges": [
         {
@@ -5466,7 +5967,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0090",
+      "cycle_id": "cycle-0093",
       "decision": null,
       "edges": [
         {
@@ -5581,7 +6082,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0091",
+      "cycle_id": "cycle-0094",
       "decision": null,
       "edges": [
         {
@@ -5709,7 +6210,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0092",
+      "cycle_id": "cycle-0095",
       "decision": null,
       "edges": [
         {
@@ -5837,7 +6338,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0093",
+      "cycle_id": "cycle-0096",
       "decision": null,
       "edges": [
         {
@@ -5978,7 +6479,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0094",
+      "cycle_id": "cycle-0097",
       "decision": null,
       "edges": [
         {
@@ -6119,7 +6620,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0095",
+      "cycle_id": "cycle-0098",
       "decision": null,
       "edges": [
         {
@@ -6260,7 +6761,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0096",
+      "cycle_id": "cycle-0099",
       "decision": null,
       "edges": [
         {
@@ -6414,7 +6915,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0097",
+      "cycle_id": "cycle-0100",
       "decision": null,
       "edges": [
         {
@@ -6568,7 +7069,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0098",
+      "cycle_id": "cycle-0101",
       "decision": null,
       "edges": [
         {
@@ -6722,7 +7223,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0099",
+      "cycle_id": "cycle-0102",
       "decision": null,
       "edges": [
         {
@@ -6889,7 +7390,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0100",
+      "cycle_id": "cycle-0103",
       "decision": null,
       "edges": [
         {
@@ -7056,7 +7557,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0101",
+      "cycle_id": "cycle-0104",
       "decision": null,
       "edges": [
         {
@@ -7223,7 +7724,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0102",
+      "cycle_id": "cycle-0105",
       "decision": null,
       "edges": [
         {
@@ -7390,7 +7891,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0103",
+      "cycle_id": "cycle-0106",
       "decision": null,
       "edges": [
         {
@@ -7557,7 +8058,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0104",
+      "cycle_id": "cycle-0107",
       "decision": null,
       "edges": [
         {
@@ -7724,7 +8225,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0105",
+      "cycle_id": "cycle-0108",
       "decision": null,
       "edges": [
         {
@@ -7904,7 +8405,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0106",
+      "cycle_id": "cycle-0109",
       "decision": null,
       "edges": [
         {
@@ -8084,7 +8585,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0107",
+      "cycle_id": "cycle-0110",
       "decision": null,
       "edges": [
         {
@@ -8264,7 +8765,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0108",
+      "cycle_id": "cycle-0111",
       "decision": null,
       "edges": [
         {
@@ -8444,7 +8945,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0109",
+      "cycle_id": "cycle-0112",
       "decision": null,
       "edges": [
         {
@@ -8637,7 +9138,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0110",
+      "cycle_id": "cycle-0113",
       "decision": null,
       "edges": [
         {
@@ -8830,7 +9331,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0111",
+      "cycle_id": "cycle-0114",
       "decision": null,
       "edges": [
         {
@@ -9036,7 +9537,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0112",
+      "cycle_id": "cycle-0115",
       "decision": null,
       "edges": [
         {
@@ -9242,7 +9743,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0113",
+      "cycle_id": "cycle-0116",
       "decision": null,
       "edges": [
         {
@@ -9448,7 +9949,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0114",
+      "cycle_id": "cycle-0117",
       "decision": null,
       "edges": [
         {
@@ -9654,7 +10155,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0115",
+      "cycle_id": "cycle-0118",
       "decision": null,
       "edges": [
         {
@@ -9860,7 +10361,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0116",
+      "cycle_id": "cycle-0119",
       "decision": null,
       "edges": [
         {
@@ -10066,7 +10567,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0117",
+      "cycle_id": "cycle-0120",
       "decision": null,
       "edges": [
         {
@@ -10285,7 +10786,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0118",
+      "cycle_id": "cycle-0121",
       "decision": null,
       "edges": [
         {
@@ -10517,7 +11018,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0119",
+      "cycle_id": "cycle-0122",
       "decision": null,
       "edges": [
         {
@@ -10749,7 +11250,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0120",
+      "cycle_id": "cycle-0123",
       "decision": null,
       "edges": [
         {
@@ -10994,7 +11495,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0121",
+      "cycle_id": "cycle-0124",
       "decision": null,
       "edges": [
         {
@@ -11239,7 +11740,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0122",
+      "cycle_id": "cycle-0125",
       "decision": null,
       "edges": [
         {
@@ -11484,7 +11985,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0123",
+      "cycle_id": "cycle-0126",
       "decision": null,
       "edges": [
         {
@@ -11729,7 +12230,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0124",
+      "cycle_id": "cycle-0127",
       "decision": null,
       "edges": [
         {
@@ -11987,7 +12488,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0125",
+      "cycle_id": "cycle-0128",
       "decision": null,
       "edges": [
         {
@@ -12245,7 +12746,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0126",
+      "cycle_id": "cycle-0129",
       "decision": null,
       "edges": [
         {
@@ -12503,7 +13004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0127",
+      "cycle_id": "cycle-0130",
       "decision": null,
       "edges": [
         {
@@ -12761,7 +13262,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0128",
+      "cycle_id": "cycle-0131",
       "decision": null,
       "edges": [
         {
@@ -13019,7 +13520,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0129",
+      "cycle_id": "cycle-0132",
       "decision": null,
       "edges": [
         {
@@ -13277,7 +13778,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0130",
+      "cycle_id": "cycle-0133",
       "decision": null,
       "edges": [
         {
@@ -13535,7 +14036,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0131",
+      "cycle_id": "cycle-0134",
       "decision": null,
       "edges": [
         {
@@ -13793,7 +14294,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0132",
+      "cycle_id": "cycle-0135",
       "decision": null,
       "edges": [
         {
@@ -14051,7 +14552,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0133",
+      "cycle_id": "cycle-0136",
       "decision": null,
       "edges": [
         {
@@ -14309,7 +14810,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0134",
+      "cycle_id": "cycle-0137",
       "decision": null,
       "edges": [
         {
@@ -14567,7 +15068,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0135",
+      "cycle_id": "cycle-0138",
       "decision": null,
       "edges": [
         {
@@ -14838,7 +15339,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0136",
+      "cycle_id": "cycle-0139",
       "decision": null,
       "edges": [
         {
@@ -15109,7 +15610,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0137",
+      "cycle_id": "cycle-0140",
       "decision": null,
       "edges": [
         {
@@ -15380,7 +15881,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0138",
+      "cycle_id": "cycle-0141",
       "decision": null,
       "edges": [
         {
@@ -15651,7 +16152,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0139",
+      "cycle_id": "cycle-0142",
       "decision": null,
       "edges": [
         {
@@ -15922,7 +16423,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0140",
+      "cycle_id": "cycle-0143",
       "decision": null,
       "edges": [
         {
@@ -16193,7 +16694,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0141",
+      "cycle_id": "cycle-0144",
       "decision": null,
       "edges": [
         {
@@ -16464,7 +16965,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0142",
+      "cycle_id": "cycle-0145",
       "decision": null,
       "edges": [
         {
@@ -16735,7 +17236,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0143",
+      "cycle_id": "cycle-0146",
       "decision": null,
       "edges": [
         {
@@ -17006,7 +17507,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0144",
+      "cycle_id": "cycle-0147",
       "decision": null,
       "edges": [
         {
@@ -17290,7 +17791,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0145",
+      "cycle_id": "cycle-0148",
       "decision": null,
       "edges": [
         {
@@ -17574,7 +18075,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0146",
+      "cycle_id": "cycle-0149",
       "decision": null,
       "edges": [
         {
@@ -17858,7 +18359,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0147",
+      "cycle_id": "cycle-0150",
       "decision": null,
       "edges": [
         {
@@ -18155,7 +18656,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0148",
+      "cycle_id": "cycle-0151",
       "decision": null,
       "edges": [
         {
@@ -18452,7 +18953,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0149",
+      "cycle_id": "cycle-0152",
       "decision": null,
       "edges": [
         {
@@ -18749,7 +19250,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0150",
+      "cycle_id": "cycle-0153",
       "decision": null,
       "edges": [
         {
@@ -19059,7 +19560,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0151",
+      "cycle_id": "cycle-0154",
       "decision": null,
       "edges": [
         {
@@ -19369,7 +19870,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0152",
+      "cycle_id": "cycle-0155",
       "decision": null,
       "edges": [
         {
@@ -19692,7 +20193,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0153",
+      "cycle_id": "cycle-0156",
       "decision": null,
       "edges": [
         {
@@ -20028,7 +20529,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0154",
+      "cycle_id": "cycle-0157",
       "decision": null,
       "edges": [
         {
@@ -20364,7 +20865,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0155",
+      "cycle_id": "cycle-0158",
       "decision": null,
       "edges": [
         {
@@ -20427,7 +20928,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0156",
+      "cycle_id": "cycle-0159",
       "decision": null,
       "edges": [
         {
@@ -20503,7 +21004,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0157",
+      "cycle_id": "cycle-0160",
       "decision": null,
       "edges": [
         {
@@ -20540,7 +21041,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0158",
+      "cycle_id": "cycle-0161",
       "decision": null,
       "edges": [
         {
@@ -20603,7 +21104,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0159",
+      "cycle_id": "cycle-0162",
       "decision": null,
       "edges": [
         {
@@ -20640,7 +21141,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0160",
+      "cycle_id": "cycle-0163",
       "decision": null,
       "edges": [
         {
@@ -20677,7 +21178,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0161",
+      "cycle_id": "cycle-0164",
       "decision": null,
       "edges": [
         {
@@ -20740,7 +21241,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0162",
+      "cycle_id": "cycle-0165",
       "decision": null,
       "edges": [
         {
@@ -20777,7 +21278,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0163",
+      "cycle_id": "cycle-0166",
       "decision": null,
       "edges": [
         {
@@ -20814,7 +21315,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0164",
+      "cycle_id": "cycle-0167",
       "decision": null,
       "edges": [
         {
@@ -20890,7 +21391,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0165",
+      "cycle_id": "cycle-0168",
       "decision": null,
       "edges": [
         {
@@ -20953,7 +21454,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0166",
+      "cycle_id": "cycle-0169",
       "decision": null,
       "edges": [
         {
@@ -21016,7 +21517,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0167",
+      "cycle_id": "cycle-0170",
       "decision": null,
       "edges": [
         {
@@ -21079,7 +21580,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0168",
+      "cycle_id": "cycle-0171",
       "decision": null,
       "edges": [
         {
@@ -21155,7 +21656,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0169",
+      "cycle_id": "cycle-0172",
       "decision": null,
       "edges": [
         {
@@ -21231,7 +21732,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0170",
+      "cycle_id": "cycle-0173",
       "decision": null,
       "edges": [
         {
@@ -21307,7 +21808,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0171",
+      "cycle_id": "cycle-0174",
       "decision": null,
       "edges": [
         {
@@ -21409,7 +21910,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0172",
+      "cycle_id": "cycle-0175",
       "decision": null,
       "edges": [
         {
@@ -21537,7 +22038,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0173",
+      "cycle_id": "cycle-0176",
       "decision": null,
       "edges": [
         {
@@ -21678,7 +22179,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0174",
+      "cycle_id": "cycle-0177",
       "decision": null,
       "edges": [
         {
@@ -21715,7 +22216,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0175",
+      "cycle_id": "cycle-0178",
       "decision": null,
       "edges": [
         {
@@ -21752,7 +22253,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0176",
+      "cycle_id": "cycle-0179",
       "decision": null,
       "edges": [
         {
@@ -21802,7 +22303,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0177",
+      "cycle_id": "cycle-0180",
       "decision": null,
       "edges": [
         {
@@ -21852,7 +22353,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0178",
+      "cycle_id": "cycle-0181",
       "decision": null,
       "edges": [
         {
@@ -21902,7 +22403,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0179",
+      "cycle_id": "cycle-0182",
       "decision": null,
       "edges": [
         {
@@ -21939,7 +22440,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0180",
+      "cycle_id": "cycle-0183",
       "decision": null,
       "edges": [
         {
@@ -21976,7 +22477,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0181",
+      "cycle_id": "cycle-0184",
       "decision": null,
       "edges": [
         {
@@ -22013,7 +22514,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0182",
+      "cycle_id": "cycle-0185",
       "decision": null,
       "edges": [
         {
@@ -22050,7 +22551,7 @@
       "requires_lemma_extraction": false
     },
     {
-      "cycle_id": "cycle-0183",
+      "cycle_id": "cycle-0186",
       "decision": null,
       "edges": [
         {
@@ -22089,9 +22590,9 @@
   ],
   "length_counts": {
     "10": 5,
-    "11": 3,
-    "12": 6,
-    "13": 4,
+    "11": 4,
+    "12": 7,
+    "13": 5,
     "14": 2,
     "15": 6,
     "16": 1,

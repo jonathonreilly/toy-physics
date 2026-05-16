@@ -341,3 +341,10 @@ contains bounded bridge-support checks for CPT (Part 6b) and parity
 (Part 6c) on its own staggered Hamiltonian, and a citation block
 (Part 6d) for the Planck pin. Items 1-3 remain audit-pipeline
 decisions on the upstream notes themselves.
+
+## Audit dependency repair links
+
+This graph-bookkeeping section records explicit dependency links named by a prior conditional audit so the audit citation graph can track them. It does not promote this note or change the audited claim scope.
+
+- [planck_scale_lane_status_note_2026-04-23](PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+- [planck_target3_clifford_phase_bridge_theorem_note_2026-04-25](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
