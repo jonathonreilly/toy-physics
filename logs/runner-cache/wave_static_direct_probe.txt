@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/wave_static_direct_probe.py
-runner_sha256: 886d222f59f88c1081fe8783a820fd314f31490b4506b486ea7c362df8bb4bff
-timeout_sec: 120
+runner_sha256: 2faea9677482360b7124e717fd8e3bfd6eae6422c770b40a26a4a21ed75c6fdb
+timeout_sec: 600
 exit_code: 0
-elapsed_sec: 85.53
+elapsed_sec: 273.95
 status: ok
 ----- stdout -----
 ====================================================================================================
@@ -34,13 +34,25 @@ WAVE STATIC DIRECT-COMPARATOR PROBE
   rel_IeqS = 45.71%
   worst static residual = 1.997e-10
 
+[fine] H=0.25
+  NL=60
+  dM   = +0.007212
+  dI   = +0.012743
+  dIeq = +0.005542
+  dS   = +0.011563  (direct static solve)
+  rel_MI   = 43.40%
+  rel_MIeq = 23.16%
+  rel_MS   = 37.62%
+  rel_IeqS = 52.07%
+  worst static residual = 2.000e-10
+
 ====================================================================================================
 LAST-STEP STABILITY
 ====================================================================================================
-  Δ(rel_MI)   = 0.1929
-  Δ(rel_MIeq) = 0.4467
-  Δ(rel_MS)   = 0.0329
-  Δ(rel_IeqS) = 0.1915
+  Δ(rel_MI)   = 0.3388
+  Δ(rel_MIeq) = 0.0629
+  Δ(rel_MS)   = 0.1457
+  Δ(rel_IeqS) = 0.0636
 
 ----- stderr -----
 
