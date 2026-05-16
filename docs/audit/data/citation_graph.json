@@ -6089,6 +6089,14 @@
       "to": "neutrino_majorana_residual_sharing_split_theorem_note"
     },
     {
+      "from": "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16",
+      "to": "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16",
+      "to": "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
       "to": "observable_principle_from_axiom_note"
     },
@@ -10285,6 +10293,10 @@
       "to": "hierarchy_effective_potential_endpoint_note"
     },
     {
+      "from": "hierarchy_effective_potential_endpoint_note",
+      "to": "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16"
+    },
+    {
       "from": "hierarchy_formula_honest_status_note_2026-05-10",
       "to": "hierarchy_bosonic_bilinear_selector_note"
     },
@@ -10443,6 +10455,14 @@
     {
       "from": "hierarchy_matsubara_determinant_ratio_narrow_theorem_note_2026-05-10",
       "to": "minimal_axioms_2026-05-03"
+    },
+    {
+      "from": "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16",
+      "to": "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02"
+    },
+    {
+      "from": "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16",
+      "to": "hierarchy_matsubara_decomposition_note"
     },
     {
       "from": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
@@ -14099,6 +14119,18 @@
     {
       "from": "koide_q_op_uniqueness_source_domain_support_note_2026-04-25",
       "to": "koide_q_so2_phase_erasure_support_note_2026-04-25"
+    },
+    {
+      "from": "koide_q_reduced_observable_restriction_theorem_2026-04-22",
+      "to": "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "koide_q_reduced_observable_restriction_theorem_2026-04-22",
+      "to": "koide_q_readout_factorization_theorem_2026-04-22"
+    },
+    {
+      "from": "koide_q_reduced_observable_restriction_theorem_2026-04-22",
+      "to": "koide_q_minimal_scale_free_selector_note_2026-04-22"
     },
     {
       "from": "koide_q_second_order_reviewer_stress_test_note_2026-04-22",
@@ -18569,6 +18601,18 @@
       "to": "pmns_graph_first_cycle_frame_support_note"
     },
     {
+      "from": "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16",
+      "to": "pmns_graph_first_axis_alignment_note"
+    },
+    {
+      "from": "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16",
+      "to": "z2_hw1_mass_matrix_parametrization_note"
+    },
+    {
+      "from": "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
       "from": "pmns_lower_level_end_to_end_closure_note",
       "to": "pmns_active_four_real_source_from_transport_note"
     },
@@ -18759,6 +18803,10 @@
     {
       "from": "pmns_sigma_zero_nogo_note",
       "to": "pmns_uniform_scalar_deformation_boundary_note"
+    },
+    {
+      "from": "pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16",
+      "to": "pmns_oriented_cycle_channel_value_law_note"
     },
     {
       "from": "pmns_sole_axiom_hw1_source_transfer_boundary_note",
@@ -19923,6 +19971,10 @@
     {
       "from": "s3_time_bilinear_tensor_action_note",
       "to": "s3_time_spacetime_tensor_primitive_note"
+    },
+    {
+      "from": "s3_time_bilinear_tensor_primitive_note",
+      "to": "tensor_support_center_excess_law_note"
     },
     {
       "from": "s3_time_bilinear_tensor_primitive_note",
@@ -24310,19 +24362,23 @@
     },
     {
       "from": "yt_color_projection_correction_note",
-      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
-    },
-    {
-      "from": "yt_color_projection_correction_note",
-      "to": "rconn_derived_note"
-    },
-    {
-      "from": "yt_color_projection_correction_note",
       "to": "yt_ew_color_projection_theorem"
     },
     {
       "from": "yt_color_projection_correction_note",
       "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "yt_color_projection_correction_note",
+      "to": "ew_current_matching_rule_open_gate_note_2026-05-03"
+    },
+    {
+      "from": "yt_color_projection_correction_note",
+      "to": "ew_current_fierz_channel_decomposition_note_2026-05-01"
+    },
+    {
+      "from": "yt_color_projection_correction_note",
+      "to": "rconn_derived_note"
     },
     {
       "from": "yt_constructive_uv_bridge_note",
@@ -43355,6 +43411,20 @@
       "runner_path": "scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py",
       "title": "DM Neutrino Atmospheric-Scale Theorem"
     },
+    "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16": {
+      "claim_id": "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10",
+        "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "fba9e9a38a107a6db49c4a6663461a03a4e12a21e624beaf882edf740f96084e",
+      "path": "docs/DM_NEUTRINO_BOSONIC_NORMALIZATION_OBSERVABLE_PRINCIPLE_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_dm_neutrino_bosonic_normalization_observable_principle_bridge_exact_2026_05_16.py",
+      "title": "DM Neutrino Bosonic Normalization \u2014 Observable-Principle Bridge Narrow Theorem"
+    },
     "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15": {
       "claim_id": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
       "claim_type_author_hint": null,
@@ -49068,11 +49138,13 @@
     },
     "hierarchy_effective_potential_endpoint_note": {
       "claim_id": "hierarchy_effective_potential_endpoint_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem \u2014 class-A algebraic",
       "claim_type_seed_hint": "bounded_theorem",
-      "deps": [],
-      "note_hash": "32188208178055c0d4ea5f2a6b9a943ad80d2ac484bb4e9cbbee8cf92abbbce0",
+      "deps": [
+        "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16"
+      ],
+      "note_hash": "7202d5a14638d601da928121b085827bf0b5fc4e5646bcf49910e5d5d9a44b90",
       "path": "docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md",
       "runner_path": "scripts/frontier_hierarchy_effective_potential_endpoint.py",
       "title": "Hierarchy Effective-Potential Endpoint Note"
@@ -49209,6 +49281,20 @@
       "path": "docs/HIERARCHY_MATSUBARA_DETERMINANT_RATIO_NARROW_THEOREM_NOTE_2026-05-10.md",
       "runner_path": "scripts/frontier_hierarchy_matsubara_determinant_ratio_narrow.py",
       "title": "Hierarchy Matsubara Determinant Ratio \u2014 Narrow Algebraic Theorem"
+    },
+    "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16": {
+      "claim_id": "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (proposed; audit-lane to ratify)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "hierarchy_matsubara_determinant_narrow_theorem_note_2026-05-02",
+        "hierarchy_matsubara_decomposition_note"
+      ],
+      "note_hash": "40b92dad8801b9fb05e9c84779e0d14d7530e5d367d954cb1154aa34f9188a0b",
+      "path": "docs/HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_hierarchy_matsubara_free_energy_density_narrow.py",
+      "title": "Hierarchy Matsubara Free-Energy Density - Narrow Algebraic Theorem"
     },
     "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10": {
       "claim_id": "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10",
@@ -50062,7 +50148,7 @@
         "lh_doublet_traceless_abelian_eigenvalue_ratio_narrow_theorem_note_2026-05-02",
         "graph_first_su3_integration_note"
       ],
-      "note_hash": "3975457ba950c917518c70d77032447c3cafc1b778df071c008ffc93720c8d4a",
+      "note_hash": "d5e819713d1fb2b68bf0f27de2d4fd4ebe37fca50634d34250d0991148c05a67",
       "path": "docs/HYPERCHARGE_IDENTIFICATION_NOTE.md",
       "runner_path": "scripts/frontier_hypercharge_identification.py",
       "title": "Hypercharge U(1)_Y Identification from the Commutant"
@@ -52286,11 +52372,15 @@
     },
     "koide_q_reduced_observable_restriction_theorem_2026-04-22": {
       "claim_id": "koide_q_reduced_observable_restriction_theorem_2026-04-22",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
-      "deps": [],
-      "note_hash": "c83b80ba4d763477407e5dae4447457413b57a5afb5747a6621d825c4aee3c29",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10",
+        "koide_q_readout_factorization_theorem_2026-04-22",
+        "koide_q_minimal_scale_free_selector_note_2026-04-22"
+      ],
+      "note_hash": "116e849dc4b5803324cfed50e3771440d915005c71a527a9d1cc9dcbc5056103",
       "path": "docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md",
       "runner_path": "scripts/frontier_koide_q_reduced_observable_restriction_theorem.py",
       "title": "Koide Q Reduced Observable Restriction Theorem"
@@ -57621,9 +57711,9 @@
     },
     "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30": {
       "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "planck_link_local_first_variation_p_a_forcing_theorem_note_2026-04-30",
         "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
@@ -57635,7 +57725,7 @@
         "anomaly_forces_time_theorem",
         "i3_zero_exact_theorem_note"
       ],
-      "note_hash": "584e8b8f08d3c2fd1ace763c632bd9b274beab3c9a2dafb44ce3672365c228a4",
+      "note_hash": "95f90de1935c8093354af4b75ba375c03367fa0183e27a33cbef3814be5f7572",
       "path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
       "runner_path": "scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py",
       "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem"
@@ -57989,14 +58079,14 @@
     },
     "pmns_active_four_real_source_from_transport_note": {
       "claim_id": "pmns_active_four_real_source_from_transport_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "open_gate",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "pmns_lower_level_end_to_end_closure_note",
         "pmns_corner_transport_active_block_note"
       ],
-      "note_hash": "f3f997e65e462ebb922c1d6e13709a7fc2c62977c295e12b539c7ebbbfce737a",
+      "note_hash": "3bc548dfaf42ef4d6b36e8029e36e9031384ce5f6233ef68e6f43dbd2b9ab6cb",
       "path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
       "runner_path": "scripts/frontier_pmns_active_four_real_source_from_transport.py",
       "title": "PMNS Active Four-Real Source From Transport"
@@ -58071,9 +58161,9 @@
     },
     "pmns_c3_nontrivial_current_boundary_note": {
       "claim_id": "pmns_c3_nontrivial_current_boundary_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "pmns_c3_character_holonomy_closure_note",
         "pmns_c3_character_mode_reduction_note",
@@ -58081,7 +58171,7 @@
         "pmns_selector_current_stack_zero_law_note",
         "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21"
       ],
-      "note_hash": "bca4a2b21e32b3e8515ee2239164e679a6d9984086257bc53459ab85b2b3426c",
+      "note_hash": "55981451722122026ae8fe64156a66d7ecb4d242a030785d266d4aa94fc0b68c",
       "path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_pmns_c3_nontrivial_current_boundary.py",
       "title": "PMNS `C3` Nontrivial-Character Current Boundary"
@@ -58213,6 +58303,21 @@
       "path": "docs/PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md",
       "runner_path": "scripts/frontier_pmns_graph_first_cycle_frame_support.py",
       "title": "PMNS Graph-First Cycle Frame Support"
+    },
+    "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16": {
+      "claim_id": "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (narrow algebraic bridge)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "pmns_graph_first_axis_alignment_note",
+        "z2_hw1_mass_matrix_parametrization_note",
+        "graph_first_selector_derivation_note"
+      ],
+      "note_hash": "e091587a78fc6e61e5b9ce0da1bc5250dc6e6bcda96b5837e3d959d2e8ec821b",
+      "path": "docs/PMNS_GRAPH_FIRST_RESIDUAL_ANTIUNITARY_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_pmns_graph_first_residual_antiunitary_2026-05-16.py",
+      "title": "PMNS Graph-First Residual Antiunitary on the Oriented Cycle Channel \u2014 Narrow Bridge Theorem"
     },
     "pmns_hw1_source_transfer_boundary_note": {
       "claim_id": "pmns_hw1_source_transfer_boundary_note",
@@ -58511,6 +58616,19 @@
       "path": "docs/PMNS_SIGMA_ZERO_NOGO_NOTE.md",
       "runner_path": "scripts/frontier_pmns_sigma_zero_no_go.py",
       "title": "PMNS Sigma-Zero No-Go"
+    },
+    "pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16": {
+      "claim_id": "pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem (narrow algebraic bridge)",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [
+        "pmns_oriented_cycle_channel_value_law_note"
+      ],
+      "note_hash": "9f91f3c7313c68ca721e8e0ffc77fa2ad9d3173cefccd7e004c150ff22c3d39c",
+      "path": "docs/PMNS_SOLE_AXIOM_FREE_POINT_IDENTITY_BLOCK_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_pmns_sole_axiom_free_point_identity_block_2026-05-16.py",
+      "title": "PMNS Sole-Axiom Free-Point Identity-Block \u2014 Narrow Bridge Theorem"
     },
     "pmns_sole_axiom_hw1_source_transfer_boundary_note": {
       "claim_id": "pmns_sole_axiom_hw1_source_transfer_boundary_note",
@@ -62721,10 +62839,10 @@
         "s3_time_transfer_matrix_bridge_note",
         "s3_time_spacetime_tensor_primitive_note"
       ],
-      "note_hash": "e909571ba7753359f0fe09aed6ff636592b9e2a9a403fc8255d8977446b95fd2",
+      "note_hash": "db355e01075d5c6d7a0701b1928a7aca0eab9d30a2fe102517ec271fbc806cda",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_ACTION_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_bilinear_tensor_action.py",
-      "title": "Route 2 Exact Tensorized Action from the Bilinear Carrier"
+      "title": "Route 2 Tensorized Action from the Bilinear Carrier (definition-only)"
     },
     "s3_time_bilinear_tensor_primitive_note": {
       "claim_id": "s3_time_bilinear_tensor_primitive_note",
@@ -62732,11 +62850,12 @@
       "claim_type_author_hint_raw": "open_gate",
       "claim_type_seed_hint": "open_gate",
       "deps": [
+        "tensor_support_center_excess_law_note",
         "s3_time_spacetime_tensor_primitive_note",
         "s3_time_transfer_matrix_bridge_note",
         "oh_schur_boundary_action_note"
       ],
-      "note_hash": "254db49742b8a97669147cd8d12ed79922211655283f47fee9b07753554b1386",
+      "note_hash": "1aa7d4d90be30f085f193d5ad341937967e070b7b4b6edaa9b4dddc6958d259c",
       "path": "docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md",
       "runner_path": "scripts/frontier_s3_time_bilinear_tensor_primitive.py",
       "title": "Route 2 Bilinear Tensor Carrier (Definition-Only)"
@@ -69616,19 +69735,20 @@
     },
     "yt_color_projection_correction_note": {
       "claim_id": "yt_color_projection_correction_note",
-      "claim_type_author_hint": "positive_theorem",
-      "claim_type_author_hint_raw": "positive_theorem",
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
-        "ew_current_fierz_channel_decomposition_note_2026-05-01",
-        "rconn_derived_note",
         "yt_ew_color_projection_theorem",
-        "yukawa_color_projection_theorem"
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_rule_open_gate_note_2026-05-03",
+        "ew_current_fierz_channel_decomposition_note_2026-05-01",
+        "rconn_derived_note"
       ],
-      "note_hash": "22fda90c192be61cd5fefcdcd5c3a5ce66a50d1ddbd88558aeb104ab6636b16d",
+      "note_hash": "5cfd0bf4735e34a9a3ae12dee1c114f61c7650567ec2204ac9d37a742bc161d9",
       "path": "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
-      "title": "Color-Singlet Projection Correction to y_t"
+      "title": "Bounded Conditional Form of the Color-Singlet Projection Factor on y_t"
     },
     "yt_constructive_uv_bridge_note": {
       "claim_id": "yt_constructive_uv_bridge_note",
@@ -70960,7 +71080,6 @@
     "hard_geometry_local_note",
     "hierarchy_dimensional_compression_note",
     "hierarchy_dimensional_fourth_root_compression_narrow_theorem_note_2026-05-10",
-    "hierarchy_effective_potential_endpoint_note",
     "hierarchy_joint_riemann_dirichlet_dimensional_fourth_root_narrow_theorem_note_2026-05-10",
     "hierarchy_lt4_klein_four_sin_squared_uniformity_narrow_theorem_note_2026-05-10",
     "hierarchy_matsubara_decomposition_note",
@@ -71017,7 +71136,6 @@
     "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24",
     "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
     "koide_q_readout_factorization_theorem_2026-04-22",
-    "koide_q_reduced_observable_restriction_theorem_2026-04-22",
     "koide_q_second_order_support_batch_note_2026-04-22",
     "koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10",
     "koide_reviewer_stress_test_note_2026-04-21",
@@ -71373,25 +71491,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 368,
+      "bounded_theorem": 375,
       "meta": 74,
       "no_go": 47,
-      "none": 1550,
+      "none": 1545,
       "open_gate": 39,
-      "positive_theorem": 147
+      "positive_theorem": 149
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 821,
+      "bounded_theorem": 827,
       "meta": 74,
       "no_go": 152,
-      "none": 446,
-      "open_gate": 119,
+      "none": 445,
+      "open_gate": 118,
       "positive_theorem": 613
     },
-    "edge_count": 8933,
-    "leaf_count": 625,
-    "node_count": 2225,
-    "root_count": 775,
-    "runners_with_path": 1842
+    "edge_count": 8947,
+    "leaf_count": 628,
+    "node_count": 2229,
+    "root_count": 773,
+    "runners_with_path": 1846
   }
 }

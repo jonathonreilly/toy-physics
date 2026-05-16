@@ -1,17 +1,25 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_planck_primitive_clifford_majorana_edge_derivation.py
-runner_sha256: dc9d5ef86f1e61306cebe8fe0a38c60bbe5653967176ffa2ea059e4b86e6233d
+runner_sha256: f2a94dd30edf146532e1b61e29f7bf8a558cac050c3e96f7c4a80cbe36238a6c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.08
+elapsed_sec: 0.13
 status: ok
 ----- stdout -----
 ==============================================================================
-PLANCK PRIMITIVE CLIFFORD-MAJORANA EDGE DERIVATION
+PLANCK PRIMITIVE CLIFFORD-MAJORANA EDGE CONSISTENCY CHECK
+(bounded scope: P_A carrier admitted from upstream candidate authority)
 ==============================================================================
 
-Question: do the retained Cl(3) bivectors plus anomaly-forced
-time axis construct the primitive Cl_4(C) / two-mode CAR edge?
+Question (narrowed after two audited_renaming verdicts):
+  GIVEN the admitted carrier K = P_A H_cell (rank 4), do the
+  retained Cl(3) bivectors plus anomaly-forced time axis admit
+  an explicit Cl_4(C) / two-mode CAR construction on K that is
+  algebraically consistent and cross-validates c_Widom = c_cell?
+
+Not in scope: substrate forcing of P_A (see SUBSTRATE_TO_P_A_FORCING
+and FIRST_ORDER_COFRAME_UNCONDITIONALITY no-gos; conditional repair
+route in PLANCK_LINK_LOCAL_FIRST_VARIATION_P_A_FORCING is unaudited).
 
 [PASS (C)] 1. explicit Hermitian Cl_4 generators on C^4: Hermitian=0.00e+00, square=0.00e+00, Clifford=0.00e+00
 [PASS (C)] 2. generated algebra is faithful and irreducible: span rank=16=dim M_4(C), commutant dimension=1
@@ -24,7 +32,7 @@ time axis construct the primitive Cl_4(C) / two-mode CAR edge?
 
 Summary: PASS=8  FAIL=0
 
-Verdict: PASS. The explicit retained-content construction gives the primitive Cl_4(C) module on P_A H_cell, realizes F(C^2) by oriented Majorana pairing, and cross-checks c_Widom=c_cell=1/4 in natural lattice units. Audit ratification remains separate.
+Verdict: PASS (bounded scope). GIVEN the admitted carrier K = P_A H_cell, the explicit Cl_4(C) construction on C^4 is algebraically consistent: it realizes the irreducible complex Cl_4 module, the two-mode CAR algebra F(C^2) by oriented Majorana pairing, and cross-checks c_Widom=c_cell=1/4. This is a renaming-class consistency theorem, not a substrate-forcing derivation of P_A. Substrate-to-P_A provenance remains conditional on the cited unaudited link-local first-variation candidate authority. Audit ratification remains separate.
 
 ----- stderr -----
 

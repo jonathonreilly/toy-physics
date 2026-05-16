@@ -17,11 +17,11 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 440 |
-| critical | `audited_conditional` | 62 |
+| critical | `unaudited` | 443 |
+| critical | `audited_conditional` | 60 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 5 |
-| medium | `unaudited` | 3 |
+| medium | `unaudited` | 2 |
 | critical | `audited_failed` | 1 |
 | critical | `open_gate` | 1 |
 
@@ -239,7 +239,7 @@ publication tables phrase it.
 | critical | `hadronic_charges_from_quark_y_note_2026-05-02` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `hierarchy_bosonic_bilinear_selector_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `hierarchy_dimensional_compression_note` | `audited_numerical_match` | `audited_numerical_match` | DERIVATION_ATLAS.md |
-| critical | `hierarchy_effective_potential_endpoint_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
+| critical | `hierarchy_effective_potential_endpoint_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md |
 | critical | `higgs_mass_derived_note` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `higgs_mass_retention_analysis_note_2026-04-18` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `higgs_mechanism_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
@@ -289,11 +289,12 @@ publication tables phrase it.
 | critical | `koide_q_delta_linking_relation_theorem_note_2026-04-20` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
 | critical | `koide_q_eq_3delta_identity_note_2026-04-21` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, RESULTS_INDEX.md |
+| critical | `koide_q_minimal_scale_free_selector_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | critical | `koide_q_no_hidden_source_audit_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_normalized_second_order_effective_action_theorem_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_op_locality_source_domain_closure_theorem_note_2026-04-29` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `koide_q_readout_factorization_theorem_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
-| critical | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
+| critical | `koide_q_reduced_observable_restriction_theorem_2026-04-22` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `koide_q_second_order_support_batch_note_2026-04-22` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `koide_q_so2_phase_erasure_support_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
 | critical | `koide_q_source_domain_canonical_descent_theorem_note_2026-04-25` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, RESULTS_INDEX.md |
@@ -549,5 +550,4 @@ publication tables phrase it.
 | critical | `yt_ward_identity_derivation_theorem` | `unaudited` | `unaudited` | CLAIMS_TABLE.md, DERIVATION_ATLAS.md, DERIVATION_VALIDATION_MAP.md, FULL_CLAIM_LEDGER.md, PUBLICATION_MATRIX.md, QUANTITATIVE_SUMMARY_TABLE.md, RESULTS_INDEX.md, USABLE_DERIVED_VALUES_INDEX.md |
 | critical | `yt_zero_import_authority_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | medium | `dm_selector_shifted_relative_action_recovered_packet_closure_theorem_note_2026-04-21` | `unaudited` | `unaudited` | FULL_CLAIM_LEDGER.md |
-| medium | `koide_q_minimal_scale_free_selector_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
 | medium | `koide_q_second_order_reviewer_stress_test_note_2026-04-22` | `unaudited` | `unaudited` | RESULTS_INDEX.md |

@@ -1586,7 +1586,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_active_four_real_source_from_transport_note",
-          "claim_type": "open_gate",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md",
           "title": "PMNS Active Four-Real Source From Transport",
@@ -7149,7 +7149,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
@@ -7321,7 +7321,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "pmns_c3_nontrivial_current_boundary_note",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md",
           "title": "PMNS `C3` Nontrivial-Character Current Boundary",
@@ -8780,7 +8780,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",
@@ -9461,7 +9461,7 @@
         {
           "audit_status": "unaudited",
           "claim_id": "planck_primitive_clifford_majorana_edge_derivation_theorem_note_2026-04-30",
-          "claim_type": "positive_theorem",
+          "claim_type": "bounded_theorem",
           "effective_status": "unaudited",
           "note_path": "docs/PLANCK_PRIMITIVE_CLIFFORD_MAJORANA_EDGE_DERIVATION_THEOREM_NOTE_2026-04-30.md",
           "title": "Planck Primitive Clifford-Majorana Edge Derivation Theorem",

@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_pmns_active_four_real_source_from_transport.py
-runner_sha256: da4f121c83aab178147364709a38fa04a518fab63579f672518299f0d2a0cac9
+runner_sha256: 4142d1a974e63b4fdf54d17f681cd13962cca9879dddd6d7929b37b961a65d7c
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.12
+elapsed_sec: 0.18
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -36,6 +36,20 @@ PART 3: CIRCULARITY GUARD
   [PASS] The lower-level active derivation function takes no PMNS-side target values as inputs  (bad=[])
 
 ========================================================================================
+PART 4: ACTIVE-BLOCK READOUT BRIDGE THEOREM (stand-alone algebra)
+========================================================================================
+  [PASS] T1: active block is supported exactly on diagonal + forward 3-cycle (no other entries)
+  [PASS] T2: diagonal of B is purely real (Im(diag(B)) = 0 exactly)
+  [PASS] T3: lower-level transport places the phase only on the wrap-around cycle entry B[2,0]
+  [PASS] T4: centered diagonal residual (xi_1, xi_2, xi_3) sums to 0 and rebuilds diag(B) exactly
+  [PASS] T5: centered real-part cycle residual (rho_1, rho_2, rho_3) sums to 0 and matches Re(c_i) - Re(sigma)
+  [PASS] T6: imaginary-part signature is (Im(c_0), Im(c_1), Im(c_2)) = (0, 0, 3 Im(sigma)) -- exactly one imaginary DOF
+  [PASS] T7: active-block real DOFs (3 + 3 + 1 = 7) equals coordinate real DOFs (1 + 2 + 2 + 2 = 7)  (block=7, coord=7)
+  [PASS] T8: pairwise distinct blocks yield pairwise distinct coordinate vectors (no collisions on grid)  (min |dB|=3.292e-01, min |dCoord|=1.846e-01)
+  [PASS] T9: forward + inverse readout is identity on all 64 fixtures (max round-trip error <= 1e-12)  (max |B - B_rec|=6.684e-16)
+  [PASS] T10: readout map (xbar, sigma, source) is real-linear in B on the active-support subspace  (max linearity error=2.021e-16)
+
+========================================================================================
 RESULT
 ========================================================================================
   Exact lower-level active completion:
@@ -43,11 +57,17 @@ RESULT
     - xbar and sigma are the derived native means
     - the residual active 4-real source is read exactly from that profile
 
+  Active-block readout bridge theorem (Part 4) verified as stand-alone
+  finite-dimensional algebra: the forward readout map
+    B  ->  (xbar, sigma, xi_1, xi_2, rho_1, rho_2)
+  is a real-linear bijection on the 7-DOF active-support subspace, and
+  the inverse reconstruction is exact on the entire fixture grid.
+
   So the 4-real source is no longer an extra unresolved object on the
   lower-level active transport chain. The remaining sole-axiom gap is
   the derivation of that transport profile from Cl(3) on Z^3 alone.
 
-PASS=7 FAIL=0
+PASS=17 FAIL=0
 
 ----- stderr -----
 

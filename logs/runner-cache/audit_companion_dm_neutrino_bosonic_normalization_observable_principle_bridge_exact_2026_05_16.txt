@@ -1,0 +1,120 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_dm_neutrino_bosonic_normalization_observable_principle_bridge_exact_2026_05_16.py
+runner_sha256: 9db312193949c234df5a655bd21c81d15fefdc3bdd8dd89a0472388cc8c30da1
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.62
+status: ok
+----- stdout -----
+========================================================================================
+Audit companion (exact-symbolic) for
+DM_NEUTRINO_BOSONIC_NORMALIZATION_OBSERVABLE_PRINCIPLE_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16
+Goal: sympy verification of the bridge-selection algebra forcing
+      sqrt(Tr Y^† Y / Tr Γ_1^† Γ_1) = 1/sqrt(2) on C^16
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Part 0: canonical (γ_5, Γ_1) representation on C^16
+----------------------------------------------------------------------------------------
+  [PASS (A)] G0 is Hermitian (G0 = G0^†)
+  [PASS (A)] G1 is Hermitian
+  [PASS (A)] G1^2 = I_{16} (Hermitian involution)
+  [PASS (A)] γ_5 Hermitian
+  [PASS (A)] γ_5^2 = I_{16}
+  [PASS (A)] {γ_5, G1} = 0 (anticommutation)
+  [PASS (A)] P_L^2 = P_L (projector)
+  [PASS (A)] P_R^2 = P_R (projector)
+  [PASS (A)] P_L + P_R = I_{16}
+  [PASS (A)] P_L * P_R = 0 (orthogonal projectors)
+  [PASS (A)] Tr P_L = 8 (half-rank chirality split)  (Tr P_L = 8)
+  [PASS (A)] Tr P_R = 8
+
+----------------------------------------------------------------------------------------
+Part 1: bridge definition Y = P_R Γ_1 P_L and identities (X3.N), (X3.H)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (X3.N) Y^2 = 0 on C^16
+  [PASS (A)] (X3.H) Y + Y^† = Γ_1 on C^16
+  [PASS (A)] i(Y - Y^†) is Hermitian (pseudoscalar companion)
+
+----------------------------------------------------------------------------------------
+Part 2: trace ratios (X3.T1), (X3.T2)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (X3.T1) Tr(Γ_1^† Γ_1) = 16  (Tr(Γ_1^† Γ_1) = 16)
+  [PASS (A)] (X3.T2) Tr(Y^† Y) = 8  (Tr(Y^† Y) = 8)
+  [PASS (A)] Step 6: Y^† Y = P_L (chiral-projector identity)
+
+----------------------------------------------------------------------------------------
+Part 3: determinant identities (DZ), (DG) symbolic in (m, j)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (DZ) det(m I_{16} + j Y) = m^{16} identically in j  (det(m I + j Y) = m**16)
+  [PASS (A)] (DZ) j-power coefficients of det(m I + j Y) above j^0 all vanish  (nonzero higher-order coeffs: [])
+  [PASS (A)] (DG) det(m I_{16} + j Γ_1) = (m^2 - j^2)^8  (det form = (j**2 - m**2)**8)
+  [PASS (A)] Γ_1 has eigenvalue +1 with multiplicity 8  (multiplicities: {-1: 8, 1: 8})
+  [PASS (A)] Γ_1 has eigenvalue -1 with multiplicity 8
+
+----------------------------------------------------------------------------------------
+Part 4: (WG) W[j Γ_1] = 8 log|1 - j^2/m^2| at exact rationals
+----------------------------------------------------------------------------------------
+  [PASS (A)] (WG) W[j Γ_1] = 8 log|1 - j^2/m^2| at (m, j) = (1, 1/10)  (W=log(9227446944279201/10000000000000000), target=log(9227446944279201/10000000000000000))
+  [PASS (A)] (WG) W[j Γ_1] = 8 log|1 - j^2/m^2| at (m, j) = (1, 1/4)  (W=log(2562890625/4294967296), target=log(2562890625/4294967296))
+  [PASS (A)] (WG) W[j Γ_1] = 8 log|1 - j^2/m^2| at (m, j) = (1, 1/3)  (W=log(16777216/43046721), target=log(16777216/43046721))
+  [PASS (A)] (WZ) W[j Y] = 0 at (m, j) = (1, 1/10)  (W[jY] = 0)
+  [PASS (A)] (WZ) W[j Y] = 0 at (m, j) = (1, 1/4)  (W[jY] = 0)
+  [PASS (A)] (WZ) W[j Y] = 0 at (m, j) = (1, 1/3)  (W[jY] = 0)
+
+----------------------------------------------------------------------------------------
+Part 5: (R) bridge ratio = 1/sqrt(2); (R1) active-space ratio = 1
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R) sqrt(Tr Y^† Y / Tr Γ_1^† Γ_1) = 1/sqrt(2)  (ratio = sqrt(2)/2)
+  [PASS (A)] (R1) active-space ratio Tr Y^† Y / Tr P_L = 1 (comparator)  (active = 1)
+  [PASS (A)] (R1) active-space comparator non-admissible because W[j Y] ≡ 0 in j  (Y is in kernel of the (X1) source-response on real-D blocks)
+
+----------------------------------------------------------------------------------------
+Part 6: (R2) pseudoscalar companion algebra and orthogonality
+----------------------------------------------------------------------------------------
+  [PASS (A)] (R2.a) (i(Y - Y^†))^2 = I_{16}
+  [PASS (A)] (R2.b) Tr(Γ_1^† · i(Y - Y^†)) = 0 (trace-orthogonality of scalar/pseudoscalar)  (overlap = 0)
+  [PASS (A)] (R2.c) Tr((i(Y - Y^†))^† · i(Y - Y^†)) = 16 (same magnitude as Γ_1)  (Tr(pseudo^† pseudo) = 16)
+
+----------------------------------------------------------------------------------------
+Part 7: counterfactual — non-anticommuting Γ̃_1 breaks (X3.H)
+----------------------------------------------------------------------------------------
+  [PASS (A)] (cf.a) Γ̃_1 = γ_5 commutes with γ_5 instead of anticommuting
+  [PASS (A)] (cf.b) Y_tilde = P_R γ_5 P_L = 0 (chiral projector orthogonality)
+  [PASS (A)] (cf.c) (Y_tilde + Y_tilde^†) ≠ γ_5: (X3.H) breaks without anticommutation  (confirms {γ_5, Γ_1} = 0 is load-bearing for the bridge identity)
+  [PASS (A)] (cf.d) Γ̃_1 = I_{16} (commutes with γ_5) ⇒ Y_tilde = 0
+
+----------------------------------------------------------------------------------------
+Part 8: cross-check — (X1) source-derivative consistency on Γ_1
+----------------------------------------------------------------------------------------
+  [PASS (A)] ∂_j W[j Γ_1] at (m, j) = (1, 0) = 0 (parity)  (∂_j W = 0)
+  [PASS (A)] ∂²_j W[j Γ_1] at (m, j) = (1, 0) = -16 (curvature consistent with (DG))  (∂²_j W = -16)
+  [PASS (A)] ∂²_j W[j Y] at j = 0 = 0 (Y is in kernel of source-response)  (follows from W[jY] ≡ 0 identically in j)
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  Verified at exact sympy precision on the canonical C^16 representation:
+    (X3.N) Y^2 = 0 (chiral nilpotency)
+    (X3.H) Y + Y^† = Γ_1 (Hermitian completion via anticommutation)
+    (X3.T1) Tr(Γ_1^† Γ_1) = 16
+    (X3.T2) Tr(Y^† Y) = 8 (= Tr P_L)
+    (DZ) det(m I + j Y) = m^{16} identically in j (Y nilpotent)
+    (DG) det(m I + j Γ_1) = (m^2 - j^2)^8 (Hermitian involution)
+    (WG) W[j Γ_1] = 8 log|1 - j^2/m^2| at exact rationals
+    (WZ) W[j Y] = 0 at exact rationals
+    (R)  sqrt(Tr Y^† Y / Tr Γ_1^† Γ_1) = 1/sqrt(2)
+    (R1) active-space comparator = 1 is non-admissible because
+         Y is in the kernel of the (X1) source-response on real-D blocks
+    (R2) pseudoscalar companion is anti-Hermitian-completion partner;
+         trace-orthogonal to Γ_1 and same magnitude
+    Counterfactual: candidate Γ̃_1 commuting with γ_5 forces Y_tilde = 0
+                     and (X3.H) breaks — anticommutation is load-bearing
+    (X1) source-derivative consistency: ∂²_j W[j Γ_1]|_0 = -16, ∂²_j W[j Y]|_0 = 0
+
+========================================================================================
+TOTAL: PASS=42, FAIL=0
+========================================================================================
+
+----- stderr -----
+

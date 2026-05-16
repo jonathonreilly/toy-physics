@@ -4776,6 +4776,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py"
     },
+    "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 37,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
+      "dominant_class": "A",
+      "runner": "scripts/audit_companion_dm_neutrino_bosonic_normalization_observable_principle_bridge_exact_2026_05_16.py"
+    },
     "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15": {
       "assert_count": 0,
       "counts": {
@@ -9407,6 +9419,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_hierarchy_matsubara_determinant_ratio_narrow.py"
+    },
+    "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16": {
+      "assert_count": 0,
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_hierarchy_matsubara_free_energy_density_narrow.py"
     },
     "hierarchy_matsubara_quartic_coefficient_ratio_narrow_theorem_note_2026-05-10": {
       "assert_count": 0,
@@ -15269,7 +15293,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 6,
+        "C": 10,
         "D": 0
       },
       "decoration_candidate": false,
@@ -15431,6 +15455,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_graph_first_cycle_frame_support.py"
+    },
+    "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 13,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_graph_first_residual_antiunitary_2026-05-16.py"
     },
     "pmns_hw1_source_transfer_boundary_note": {
       "assert_count": 1,
@@ -15683,6 +15719,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_pmns_sigma_zero_no_go.py"
+    },
+    "pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_pmns_sole_axiom_free_point_identity_block_2026-05-16.py"
     },
     "pmns_sole_axiom_hw1_source_transfer_boundary_note": {
       "assert_count": 1,
@@ -23240,6 +23288,21 @@
         "D": 0
       },
       "decoration_candidate": true,
+      "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_dm_neutrino_bosonic_normalization_observable_principle_bridge_exact_2026_05_16.py": {
+      "assert_count": 1,
+      "claims": [
+        "dm_neutrino_bosonic_normalization_observable_principle_bridge_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 37,
+        "B": 0,
+        "C": 0,
+        "D": 5
+      },
+      "decoration_candidate": false,
       "dominant_class": "A",
       "exists": true
     },
@@ -34296,6 +34359,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hierarchy_matsubara_free_energy_density_narrow.py": {
+      "assert_count": 0,
+      "claims": [
+        "hierarchy_matsubara_free_energy_density_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 4,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_matsubara_quartic_coefficient_ratio_narrow.py": {
       "assert_count": 0,
       "claims": [
@@ -38025,7 +38103,7 @@
       "counts": {
         "A": 0,
         "B": 0,
-        "C": 6,
+        "C": 10,
         "D": 0
       },
       "decoration_candidate": false,
@@ -38222,6 +38300,21 @@
         "A": 0,
         "B": 0,
         "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_pmns_graph_first_residual_antiunitary_2026-05-16.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_graph_first_residual_antiunitary_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 13,
         "D": 0
       },
       "decoration_candidate": false,
@@ -38523,6 +38616,21 @@
         "A": 0,
         "B": 0,
         "C": 1,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_pmns_sole_axiom_free_point_identity_block_2026-05-16.py": {
+      "assert_count": 1,
+      "claims": [
+        "pmns_sole_axiom_free_point_identity_block_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 6,
         "D": 0
       },
       "decoration_candidate": false,
@@ -48244,14 +48352,14 @@
   "stats": {
     "decoration_candidates": 206,
     "dominant_class_distribution": {
-      "A": 160,
+      "A": 161,
       "B": 177,
-      "C": 689,
+      "C": 692,
       "D": 280,
       "none": 417
     },
-    "runners_classified": 1723,
-    "runners_with_C": 880,
-    "runners_with_D": 505
+    "runners_classified": 1727,
+    "runners_with_C": 883,
+    "runners_with_D": 506
   }
 }

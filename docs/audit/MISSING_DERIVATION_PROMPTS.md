@@ -2925,7 +2925,7 @@ drive.
 
 Auditor judged that the chain needs a new theorem for a physical carrier, readout, unit map, boundary condition, sector choice, normalization, or observable bridge. To close: derive the missing bridge from retained primitives so the audited claim no longer asserts it.
 
-_36 rows in this category._
+_34 rows in this category._
 
 
 ### `gauge_vacuum_plaquette_residual_environment_identification_theorem_note`
@@ -3450,35 +3450,6 @@ drive.
 ```
 
 
-### `hierarchy_effective_potential_endpoint_note`
-
-**Note:** [docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md](docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md)  |  **Descendants:** 779  |  **Class:** A
-
-```
-Use the physics-loop skill to close the conditional audit on docs/HIERARCHY_EFFECTIVE_POTENTIAL_ENDPOINT_NOTE.md.
-
-Current audit state:
-- audit_status: audited_conditional
-- claim_type: bounded_theorem
-- load_bearing_step_class: A
-- claim_scope: Class-A endpoint algebra from the imported Matsubara free-energy density formula: small-m coefficient, A_2, A_4, A_inf, A_inf/A_2, and the dimension-4 endpoint-band comparator calculation.
-
-Auditor's verdict_rationale:
-Issue: the load-bearing endpoint algebra starts from an imported Matsubara free-energy density formula, and the endpoint-band comparison also relies on an unproved dimension-4 insertion into the physical electroweak scale map. Why this blocks: the runner's 7/0 checks show the algebra and arithmetic are internally correct, but they do not derive either bridge from retained inputs. Repair target: provide a retained derivation of the Matsubara free-energy density formula and a separate retained dimension-4 insertion theorem for the det -> v map. Claim boundary until fixed: this row may safely report the conditional class-A endpoint algebra and endpoint-band comparator arithmetic, not a closed hierarchy theorem.
-
-Auditor-quoted load-bearing step:
-Given the imported Matsubara free-energy density formula, the runner extracts A_2, A_4, A_inf, A_inf/A_2, and C_inf^(4D) as endpoint algebraic identities and checks the observed prefactor lies in the endpoint band.
-
-Auditor's repair target (canonical class + action):
-missing_bridge_theorem: provide retained Bridge 1 deriving the Matsubara free-energy density formula and retained Bridge 2 deriving the dimension-4 endpoint insertion into the electroweak scale map.
-
-Goal: close the chain so a re-audit of this same note can land
-audited_clean at retained-grade. Use the physics-loop skill to iterate.
-Do not over-prescribe approach — explore the framework, let the skill
-drive.
-```
-
-
 ### `newton_law_derived_note`
 
 **Note:** [docs/NEWTON_LAW_DERIVED_NOTE.md](docs/NEWTON_LAW_DERIVED_NOTE.md)  |  **Descendants:** 779  |  **Class:** A
@@ -3732,35 +3703,6 @@ Under the native zero-section identifications z = 0, spectator = 0, c = 0, the r
 
 Auditor's repair target (canonical class + action):
 missing_bridge_theorem: prove within the restricted retained packet that the physical Brannen endpoint is the whole real nontrivial Z3 primitive, the determinant-line endpoint readout is unit-preserving/based, and the charged-lepton scalar readout is the zero-source coefficient.
-
-Goal: close the chain so a re-audit of this same note can land
-audited_clean at retained-grade. Use the physics-loop skill to iterate.
-Do not over-prescribe approach — explore the framework, let the skill
-drive.
-```
-
-
-### `koide_q_reduced_observable_restriction_theorem_2026-04-22`
-
-**Note:** [docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md](docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md)  |  **Descendants:** 778  |  **Class:** A
-
-```
-Use the physics-loop skill to close the conditional audit on docs/KOIDE_Q_REDUCED_OBSERVABLE_RESTRICTION_THEOREM_2026-04-22.md.
-
-Current audit state:
-- audit_status: audited_conditional
-- claim_type: bounded_theorem
-- load_bearing_step_class: A
-- claim_scope: Bounded algebraic restriction of the observable principle to the admitted normalized two-generator second-order block carrier.
-
-Auditor's verdict_rationale:
-Issue: the exact W_red and dual-action algebra is performed after assuming the normalized two-generator reduced carrier and D_red = I_2 baseline. Why this blocks: a retained physical Q bridge needs a retained theorem identifying this reduced block algebra as the physical charged-lepton observable carrier, rather than the unreduced 1⊕2 vector-slot carrier or another readout. Repair target: derive the reduced two-generator carrier and D_red = I_2 normalization from retained upstream framework/charged-lepton inputs. Claim boundary until fixed: the row is a bounded algebraic support theorem for the admitted reduced carrier, not a retained physical-identification theorem.
-
-Auditor-quoted load-bearing step:
-On the admitted reduced two-generator block algebra with D_red = I_2 and K = diag(k_+, k_perp), the observable-principle restriction is exactly W_red(K) = log det(I_2 + K) = log(1+k_+) + log(1+k_perp), with Legendre dual K_* = Y^(-1) - I and S_eff(Y) = Tr(Y) - log det(Y) - 2.
-
-Auditor's repair target (canonical class + action):
-missing_bridge_theorem: provide a retained theorem deriving the physical charged-lepton observable carrier/readout and D_red = I_2 normalization from the upstream framework.
 
 Goal: close the chain so a re-audit of this same note can land
 audited_clean at retained-grade. Use the physics-loop skill to iterate.

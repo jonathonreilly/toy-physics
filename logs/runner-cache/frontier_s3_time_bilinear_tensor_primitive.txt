@@ -1,16 +1,16 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_s3_time_bilinear_tensor_primitive.py
-runner_sha256: d6dc0b2129ec1f165da9e5b8985dd382919d181412be265fc91494f74e5b1d96
+runner_sha256: 743c8e4f922044494cc10e0665da3de02f21a4be8d300d13f0e7651ff7cbbe84
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 24.26
+elapsed_sec: 15.04
 status: ok
 ----- stdout -----
 Route 2 bilinear tensor-carrier definition
 ==============================================================================
 A1 background endpoints under the named coordinates:
   delta_A1(e0) = 1.666666666667e-01
-  delta_A1(s/sqrt(6)) = -1.387778780781e-17
+  delta_A1(s/sqrt(6)) = 0.000000000000e+00
 r=0.00, amp=0.02, along    E_x: |delta shift|=5.551e-17
 r=0.00, amp=0.02, along    T1x: |delta shift|=0.000e+00
 r=0.00, amp=0.02, along E_perp: |delta shift|=0.000e+00
@@ -24,48 +24,48 @@ r=0.00, amp=0.10, along    T1z: |delta shift|=0.000e+00
 r=0.50, amp=0.02, along    E_x: |delta shift|=0.000e+00
 r=0.50, amp=0.02, along    T1x: |delta shift|=0.000e+00
 r=0.50, amp=0.02, along E_perp: |delta shift|=0.000e+00
-r=0.50, amp=0.02, along    T1y: |delta shift|=1.388e-17
+r=0.50, amp=0.02, along    T1y: |delta shift|=0.000e+00
 r=0.50, amp=0.02, along    T1z: |delta shift|=0.000e+00
 r=0.50, amp=0.10, along    E_x: |delta shift|=1.388e-17
 r=0.50, amp=0.10, along    T1x: |delta shift|=0.000e+00
 r=0.50, amp=0.10, along E_perp: |delta shift|=1.388e-17
 r=0.50, amp=0.10, along    T1y: |delta shift|=1.388e-17
 r=0.50, amp=0.10, along    T1z: |delta shift|=0.000e+00
-r=1.50, amp=0.02, along    E_x: |delta shift|=0.000e+00
+r=1.50, amp=0.02, along    E_x: |delta shift|=5.551e-17
 r=1.50, amp=0.02, along    T1x: |delta shift|=1.388e-17
-r=1.50, amp=0.02, along E_perp: |delta shift|=2.776e-17
+r=1.50, amp=0.02, along E_perp: |delta shift|=0.000e+00
 r=1.50, amp=0.02, along    T1y: |delta shift|=1.388e-17
-r=1.50, amp=0.02, along    T1z: |delta shift|=2.776e-17
-r=1.50, amp=0.10, along    E_x: |delta shift|=0.000e+00
-r=1.50, amp=0.10, along    T1x: |delta shift|=0.000e+00
-r=1.50, amp=0.10, along E_perp: |delta shift|=2.776e-17
-r=1.50, amp=0.10, along    T1y: |delta shift|=2.776e-17
+r=1.50, amp=0.02, along    T1z: |delta shift|=0.000e+00
+r=1.50, amp=0.10, along    E_x: |delta shift|=1.388e-17
+r=1.50, amp=0.10, along    T1x: |delta shift|=2.776e-17
+r=1.50, amp=0.10, along E_perp: |delta shift|=0.000e+00
+r=1.50, amp=0.10, along    T1y: |delta shift|=0.000e+00
 r=1.50, amp=0.10, along    T1z: |delta shift|=1.388e-17
-r=0.00: Ex-column err=1.110e-16, T1x-column err=2.220e-16
+r=0.00: Ex-column err=0.000e+00, T1x-column err=2.220e-16
 r=0.25: Ex-column err=1.110e-16, T1x-column err=2.220e-16
 r=0.50: Ex-column err=1.110e-16, T1x-column err=2.220e-16
 r=1.00: Ex-column err=1.110e-16, T1x-column err=2.220e-16
 r=1.50: Ex-column err=1.110e-16, T1x-column err=2.220e-16
-r=2.00: Ex-column err=6.939e-17, T1x-column err=2.220e-16
+r=2.00: Ex-column err=5.551e-17, T1x-column err=2.220e-16
 
 Bounded projection coefficients from Theta_R^(0) endpoints:
-  gamma_E = -2.010572657265e-04 + (-1.057053906426e-03) delta_A1
+  gamma_E = -2.010571874025e-04 + (-1.057054376395e-03) delta_A1
   gamma_T = +4.031967723697e-04 + (-4.032091965809e-04) delta_A1
 
 Bounded readout law:
   Theta_R^(0) = P_R^(0) vec(K_R)
   with diagonal endpoint-fixed coefficients above
-[EXACT] PASS: delta_A1 is blind to bright and dark non-A1 support perturbations under the named coordinate model
+[EXACT] PASS: [class D, finite-grid] delta_A1 shows zero shift under bright/dark non-A1 perturbations on the tested grid (numerical shadow of the unproven upstream decoupling fact, NOT a derivation)
     max non-A1-induced delta_A1 shift=5.551e-17
-[EXACT] PASS: the bilinear support carrier definition is K_R(q)=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]]
+[EXACT] PASS: [class A, polynomial-identity substitution] under the named admitted inputs, K_R(q):=[[u_E,u_T],[delta_A1 u_E, delta_A1 u_T]] matches its endpoint columns at the canonical A1 background
     max exact endpoint-column error=2.220e-16
-[EXACT] PASS: the carrier vanishes on pure A1 backgrounds and on dark aligned coordinates
+[EXACT] PASS: [class A, polynomial-identity substitution] under the named admitted inputs, K_R vanishes on pure A1 backgrounds and is unchanged along dark aligned coordinates on the tested grid
     pure-A1 norm=6.939e-18, dark-channel norm=6.939e-18
-[BOUNDED] PASS: the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the carrier on the canonical A1 family
+[BOUNDED] PASS: [class B, bounded readout] the prior bounded tensor pair Theta_R^(0) is a bounded linear projection of the carrier on the canonical A1 family
     the bounded readout is endpoint-fixed from the old eta_floor_tf surface and now acts on vec(K_R)
 
-Verdict:
-The Route-2 tensor-carrier candidate is not a linear support observable from the scalar/rank-one support stack. It is the bilinear support carrier K_R built from the aligned bright support coordinates and the scalar background datum delta_A1. The prior Theta_R^(0) pair is then a bounded readout of this carrier; upstream certificates and the physical tensor-primitive bridge remain outside this runner.
+Verdict (class-A scope):
+Under the named admitted inputs (delta_A1 from the retained-bounded tensor_support_center_excess_law_note; (u_E, u_T) as linear functionals in the adapted basis; the upstream decoupling fact as an admitted assumption), the symbol K_R := [[u_E, u_T], [delta_A1 u_E, delta_A1 u_T]] is a class-A polynomial-identity substitution whose endpoint columns match by polynomial arithmetic. The prior Theta_R^(0) pair is a bounded readout of this symbol; upstream decoupling, aligned-bright coordinate identification, and physical-primitive bridge remain outside this runner's class-A scope.
 
 ==============================================================================
 SUMMARY

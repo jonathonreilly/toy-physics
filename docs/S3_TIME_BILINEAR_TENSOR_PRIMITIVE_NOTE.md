@@ -2,7 +2,12 @@
 
 **Date:** 2026-04-14 (originally); 2026-05-04 (first audit-narrowing as
 `audited_renaming`); 2026-05-10 (audit-narrowing refresh: explicit
-class-A definition framing under named admitted inputs).
+class-A definition framing under named admitted inputs); 2026-05-16
+(science-fix renaming-repair: wire the missing retained-bounded
+upstream `TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md` as the actual
+`delta_A1` source, sharpen all load-bearing language to class-A
+polynomial-identity substitution, and tag the finite-grid decoupling
+check as class-D shadow rather than derivation).
 **Branch:** `codex/review-active`
 **Status:** class-A definition only — the bilinear microscopic carrier
 `K_R(q)` is **defined** as a 2x2 matrix of polynomial expressions in the
@@ -31,6 +36,16 @@ the explicit class-A definition framing.
 
 **Cited authorities (one-hop deps; cited, not closed in this note):**
 
+- [`TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`](TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md)
+  (`claim_type: bounded_theorem`, `effective_status: retained_bounded`,
+  `audit_status: audited_clean`) — the actual retained-grade source of
+  the scalar background datum `delta_A1(q) = phi_support(center)/Q -
+  phi_support(arm_mean)/Q` used as a named admitted input here. The
+  runner imports its `support_delta` helper directly. Cited as the
+  authority closure for the `delta_A1` symbol only; it does **not**
+  close the `delta_A1`-decoupling, aligned-bright coordinate, or
+  physical-primitive-bridge gaps (those remain open and explicitly
+  named below).
 - [`S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md`](S3_TIME_SPACETIME_TENSOR_PRIMITIVE_NOTE.md)
   (`claim_type: bounded_theorem`, `intrinsic_status: unaudited`) — the
   related Route-2 tensor-primitive surface this note identified as a
@@ -103,13 +118,15 @@ seven-site star support is **defined** as a 2x2 matrix of polynomial
 expressions in `(delta_A1(q), u_E(q), u_T(q))` and the runner verifies
 the corresponding endpoint-column identities to numerical zero.
 
-This note's load-bearing step is the definitional substitution
+This note's load-bearing step is the class-A polynomial-identity
+substitution
 
 > `K_R(q) := [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]]`,
 
 evaluated at the canonical `A1` background and at unit aligned
-perturbations. This is class-A polynomial algebra in the named admitted
-inputs.
+perturbations. Both substitution and evaluation are polynomial-identity
+arithmetic in the named admitted inputs; no theorem of existence,
+uniqueness, or physical interpretation is asserted by this step.
 
 This note **does not derive** any of the following, which are the three
 upstream gaps already named in the audit boundary above and re-listed
@@ -140,10 +157,21 @@ On the seven-site star support, taking the decoupling fact as an assumed
 upstream input:
 
 - the exact scalar background datum is
-  - `delta_A1(q) = phi_support(center)/Q - phi_support(arm_mean)/Q`
-- the exact aligned bright coordinates are
-  - `u_E(q) = <E_x, q>`
-  - `u_T(q) = <T1x, q>`
+  - `delta_A1(q) = phi_support(center)/Q - phi_support(arm_mean)/Q`,
+    supplied as a named admitted input by the retained-bounded note
+    [`TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`](TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md)
+    (see the runner's `support_delta` import from the corresponding
+    `frontier_tensor_support_center_excess_law.py`).
+- the linear aligned bright coordinate symbols are
+  - `u_E(q) := <E_x, q>`
+  - `u_T(q) := <T1x, q>`
+
+  Both are defined in this note as linear functionals of `q` against
+  fixed basis vectors `E_x, T1x` from `build_adapted_basis()` in
+  `frontier_same_source_metric_ansatz_scan.py`. Whether `(u_E, u_T)`
+  coincide with the canonical aligned-bright coordinates of any bright/
+  dark decomposition is **not** asserted by this note; that is the
+  second upstream gap.
 
 The key exact decoupling fact (assumed here; requires its own upstream
 certificate):
@@ -151,79 +179,104 @@ certificate):
 > `delta_A1` is exactly blind to all non-`A1` perturbations, including
 > `E_x`, `T1x`, `E_perp`, `T1y`, and `T1z`.
 
-So the scalar background coordinate and the aligned bright coordinates factor
-cleanly.
+This is **not** derived in this note. The runner verifies a numerical
+shadow of it (`blind_max < 1e-12` on a finite test set) but a numerical
+check on a finite grid is class-D evidence, not a class-C derivation;
+the upstream certificate remains the first open gap. So under the named
+admitted inputs, the scalar background coordinate and the aligned
+bright coordinates factor cleanly.
 
-## Definition of the primitive
+## Class-A definitional substitution (no primitive theorem asserted)
 
-Define the exact microscopic tensor carrier
+Under the named admitted inputs `(delta_A1, u_E, u_T)`, define the
+bilinear carrier symbol
 
-`K_R(q) = [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]]`.
+`K_R(q) := [[u_E(q), u_T(q)], [delta_A1(q) u_E(q), delta_A1(q) u_T(q)]]`.
 
 Equivalently, as a 4-vector:
 
-`vec K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`.
+`vec K_R(q) := (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`.
 
-This carrier is:
+The symbol `K_R` denotes nothing more than the right-hand-side polynomial
+expression. Under the named admitted inputs, `K_R(q)`:
 
-- algebraically defined under the named inputs
-- microscopic
-- support-side
-- prior to any metric/curvature readout
+- is algebraically defined by polynomial-identity substitution
+- inherits "microscopic, support-side" framing from the named inputs only
+- has no asserted relation to any metric/curvature readout by this note
 
-## Endpoint identity under the named inputs
+The section title says "no primitive theorem asserted" because this note
+does **not** prove that this symbol is a physical tensor primitive on
+the support block; that bridge is one of the three open gaps named in
+the "Audit boundary" section above.
+
+## Endpoint identity under the named inputs (class-A polynomial substitution)
 
 For the canonical `A1` background family
 
 `q_A1(r) = (e0 + r s) / (1 + sqrt(6) r)`
 
-the exact background scalar is
+the background scalar formula is
 
-`delta_A1(r) = 1 / (6 (1 + sqrt(6) r))`.
+`delta_A1(r) = 1 / (6 (1 + sqrt(6) r))`
 
-For unit aligned perturbations, the carrier columns are exact:
+as derived in the retained-bounded
+[`TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md`](TENSOR_SUPPORT_CENTER_EXCESS_LAW_NOTE.md)
+and imported as a named admitted input here.
+
+For unit aligned perturbations along the basis vectors `E_x, T1x`
+(taken as named admitted inputs from the adapted basis, not derived as
+canonical bright coordinates here), the polynomial-identity columns of
+the symbol `K_R` are:
 
 - `K_R(q_A1 + E_x) - K_R(q_A1) = [[1,0],[delta_A1(r),0]]`
 - `K_R(q_A1 + T1x) - K_R(q_A1) = [[0,1],[0,delta_A1(r)]]`
 
-So the endpoint coefficient identity holds on the carrier itself:
+These identities follow by polynomial substitution from the symbol's
+definition; they do not assert that `(E_x, T1x)` are the physical
+aligned-bright coordinates of any bright/dark decomposition. The
+endpoint coefficient values, under the named admitted inputs, are:
 
 - at `e0`: bright column = `(1, 1/6)`
 - at `s / sqrt(6)`: bright column = `(1, 0)`
 
-## Relation to the old bounded prototype
+## Relation to the old bounded prototype (class-B bounded readout)
 
 The prior bounded tensor pair
 
 `Theta_R^(0)(q) = (gamma_E(q), gamma_T(q))`
 
-is not the exact primitive. It is a bounded linear readout of the exact
-carrier.
+is treated by this note as a class-B bounded linear projection of the
+class-A `K_R` symbol on the canonical `A1` family. The "exact primitive"
+language used in earlier drafts of this note is **not** asserted here;
+no positive theorem of primitive-ness for `K_R` is claimed.
 
-On the canonical `A1` family, the current bounded projection is
+On the canonical `A1` family, the bounded projection is
 
 - `gamma_E = a_E u_E + b_E delta_A1 u_E`
 - `gamma_T = a_T u_T + b_T delta_A1 u_T`
 
-with the coefficients `a_E, b_E, a_T, b_T` fixed by the two bounded endpoint
-values already measured from the old `eta_floor_tf` pipeline.
+with the coefficients `a_E, b_E, a_T, b_T` fixed by the two endpoint
+values measured from the old `eta_floor_tf` pipeline. This is a
+class-B bounded readout (endpoint-fitted, not first-principles); the
+identification of `K_R` with the underlying physical tensor primitive
+is the third upstream gap and is **not** closed by the readout.
 
-So the exact carrier is now separated cleanly from the bounded numerical
-readout.
+## What this changes (scope-restricted)
 
-## What this changes
+This note supplies a class-A definitional substitution for the symbol
+`K_R` under the named admitted inputs. It does **not**:
 
-This narrows the earlier blocker:
+- close any of the three upstream derivations named in the audit
+  boundary section above,
+- close the physical tensor-primitive bridge to GR readout,
+- narrow the Route-2 blocker "Route 2 lacks any exact microscopic tensor
+  primitive" — that blocker remains open at the physical-primitive
+  level. Only the symbol-level substitution is supplied here.
 
-> “Route 2 lacks any exact microscopic tensor primitive.”
-
-The note supplies a definition-only bilinear carrier candidate. It does not
-close the upstream derivations or the physical tensor-primitive bridge.
-
-What remains open is narrower:
-
-> identify the exact bilinear carrier `K_R` with the final Einstein/Regge
-> tensor dynamics law on the current restricted class.
+What remains open is the same set of upstream theorem targets named in
+the "Audit boundary" section; identification of `K_R` with any physical
+tensor primitive in the GR-readout chain is outside this note's class-A
+scope.
 
 ## Bottom line (scope-bounded)
 

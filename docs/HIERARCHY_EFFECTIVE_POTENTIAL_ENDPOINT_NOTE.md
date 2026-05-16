@@ -8,7 +8,7 @@ missing bridge theorems (the Matsubara free-energy formula itself + the
 dimension-4 normalization insertion into the electroweak scale map).
 **Date:** 2026-04-13 (originally); 2026-05-10 (audit-narrowing refresh:
 explicit class-A conditional framing under named imported authority).
-**Claim type (in-note framing):** bounded_theorem — class-A algebraic
+**Claim type:** bounded_theorem — class-A algebraic
 extraction of `A_2`, `A_4`, `A_inf`, and `C_inf^(4D)` from the imported
 Matsubara free-energy density formula. The pre-refresh audit-ledger row
 recorded `claim_type: bounded_theorem` with a conditional verdict; this
@@ -56,17 +56,25 @@ The audit's `notes_for_re_audit_if_any`:
 > normalization into the electroweak scale map.*
 
 This note adopts the explicit class-A conditional framing. The two named
-missing bridge theorems are listed in §"Imported authorities and missing
-bridges" below; each is a real upstream gap, not an import-redirect. The
-load-bearing step is `(imported Matsubara free-energy density formula) ⇒
-(A_2, A_4, A_inf, C_inf^(4D)) algebraic identities`, evaluated mechanically
-by the runner.
+missing bridge theorems are listed in §"Cited authorities" below.
+Bridge 1 is now supplied (pending audit-lane re-audit) by the
+2026-05-16 narrow theorem; Bridge 2 remains a real upstream gap, not an
+import-redirect. The load-bearing step is `(retained-pending-re-audit
+Matsubara free-energy density formula from Bridge 1) ⇒ (A_2, A_4, A_inf,
+C_inf^(4D)) algebraic identities`, evaluated mechanically by the runner.
 
-**Imported authorities (cited, not re-derived in this note):**
+**Cited authorities (now upstream-retained, not imported here):**
 
 1. The exact Matsubara free-energy density formula
    `Delta f(L_t, m) = (1 / (2 L_t)) sum_omega ln(1 + m^2 / [u_0^2 (3 + sin^2 omega)])`
-   — taken as input. The runner encodes this expression directly.
+   — **Bridge 1 now derived** as a class-A specialization of the retained
+   Matsubara determinant identity in
+   [`HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md`](HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md)
+   (paired runner SCORECARD `26/0`). The independent audit lane will
+   evaluate that note's load-bearing class and any later status. This
+   endpoint note treats the formula as upstream-retained pending audit;
+   the runner here continues to encode the explicit closed-form
+   expression for its own algebraic checks.
 2. Canonical `u_0` from
    [`scripts/canonical_plaquette_surface.py`](../scripts/canonical_plaquette_surface.py)
    — used in PART 4 only for comparator scoring against the observed
@@ -76,24 +84,25 @@ by the runner.
    "endpoint band" scoring claim only, not for any in-scope algebraic
    identity.
 
-**Named missing bridge theorems (audit-recorded; both required for full
-hierarchy closure):**
+**Remaining named bridge theorem (Bridge 2 still open):**
 
-- **Bridge 1 — Matsubara free-energy derivation.** Derive the exact
-  Matsubara free-energy density formula from the framework axiom set, so
-  the small-m expansion below is no longer conditional on an imported
-  starting expression.
+- **Bridge 1 — Matsubara free-energy derivation.** Closed (pending
+  audit-lane re-audit) by
+  [`HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md`](HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md).
 - **Bridge 2 — Dimension-4 insertion theorem.** Derive the bridge that
   inserts the exact dimension-4 temporal normalization
   `C_inf^(4D) = (3/4)^(1/8)` (or a derived function of the exact
   endpoint pair `(A_2, A_inf)`) into the physical electroweak scale map
   `det -> v`, including the sign and placement of the correction.
+  **Still open** in this note's scope.
 
-Until at least Bridge 1 is supplied, the small-m endpoint algebra below
-remains a class-A extraction conditional on the imported formula.
-Until at least Bridge 2 is supplied, the comparator-scored "endpoint
-band" claim in §"Why this matters" is comparator evidence, not closure
-of the physical insertion map.
+With Bridge 1 now derived (pending re-audit), the small-m endpoint
+algebra below upgrades from "conditional on an unstated import" to
+"conditional on the retained-grade narrow theorem of 2026-05-16",
+without otherwise changing the in-scope class-A algebra. Until
+Bridge 2 is supplied, the comparator-scored "endpoint band" claim in
+§"Why this matters" remains comparator evidence, not closure of the
+physical insertion map.
 
 ## Question (scope-narrowed)
 
@@ -161,9 +170,9 @@ That is much sharper than the old "maybe a prefactor" language.
 
 ## What is closed inside the audited scope (class-A conditional algebra)
 
-Conditional on the imported Matsubara free-energy density formula
-(§"Imported authorities and missing bridges" above), the following are
-exact algebraic identities, verified by the runner:
+Conditional on the (now retained-pending-re-audit) Matsubara free-energy
+density formula from Bridge 1 (§"Cited authorities" above), the following
+are exact algebraic identities, verified by the runner:
 
 1. the small-m effective-potential coefficient `A(L_t)` is exact
 2. the `L_t = 2` endpoint coefficient `A_2 = 1/(8 u_0^2)` is exact
@@ -175,8 +184,8 @@ formula; none of them re-derives the starting formula itself.
 
 ## What remains open (named missing bridge theorems)
 
-This still does **not** close the full hierarchy theorem. The two named
-missing bridges from the audit are restated below.
+This still does **not** close the full hierarchy theorem. After the
+2026-05-16 Bridge 1 source theorem, only **Bridge 2** remains open.
 
 The remaining Part 3 question is now:
 
@@ -191,35 +200,43 @@ Equivalently:
 3. whether the remaining `~0.22%` difference is then just the plaquette / `u_0`
    input uncertainty
 
-This question is the audit's **Bridge 2** (dimension-4 insertion theorem).
-The Matsubara free-energy density formula itself remains the audit's
-**Bridge 1**.
+This question is the audit's **Bridge 2** (dimension-4 insertion theorem)
+and remains open. The audit's **Bridge 1** (retained derivation of the
+Matsubara free-energy density formula) is closed by
+[`HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md`](HIERARCHY_MATSUBARA_FREE_ENERGY_DENSITY_NARROW_THEOREM_NOTE_2026-05-16.md)
+pending audit-lane re-audit.
 
 ## Honest conclusion
 
 The hierarchy route is still **not fully closed**. The prior audit feedback
-recorded this row as conditional on two named bridge theorems; after this
-source edit, the independent audit lane owns any current verdict.
+recorded this row as conditional on two named bridge theorems; after the
+2026-05-16 Bridge 1 source theorem and this source refresh, the
+independent audit lane owns any current verdict on both Bridge 1 and
+this endpoint row.
 
-But the open surface is now very tight:
+The open surface is now even tighter than before:
 
 - the exponent `16` is structural
-- the temporal algebra is exact (class-A, conditional on Bridge 1)
+- the temporal algebra is exact (class-A, conditional on Bridge 1, which
+  is now derived pending audit)
 - the relevant intensive endpoint normalization is exact (class-A,
-  conditional on Bridge 1)
+  conditional on Bridge 1, which is now derived pending audit)
 
-So the two remaining theorems are:
+So the one remaining theorem is:
 
-- **Bridge 1.** A retained derivation of the Matsubara free-energy
-  density formula from the framework axiom set.
 - **Bridge 2.** The physical selection / insertion of the exact
   dimension-4 temporal normalization into the electroweak scale map,
   including sign and placement.
+
+(**Bridge 1** — a retained derivation of the Matsubara free-energy
+density formula — is supplied by the new 2026-05-16 narrow theorem,
+pending audit-lane re-audit.)
 
 This note does **not**:
 
 - modify the parent audit-ledger row;
 - promote any current or prior audit verdict;
-- derive the Matsubara free-energy density formula from the axiom;
+- itself derive the Matsubara free-energy density formula from the
+  axiom (that is the job of the cited Bridge 1 narrow theorem);
 - supply a retained insertion theorem from `det -> v`;
 - extend the audited scope beyond the class-A endpoint algebra.

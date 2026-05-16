@@ -1,0 +1,72 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_sole_axiom_free_point_identity_block_2026-05-16.py
+runner_sha256: b63147e8751d3d859577802a0b71d30c74093046e81cff103a1bd307b82285a9
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.08
+status: ok
+----- stdout -----
+========================================================================================
+PMNS SOLE-AXIOM FREE-POINT IDENTITY-BLOCK NARROW BRIDGE THEOREM
+========================================================================================
+
+Construction:
+  A_act(x, y, delta) = diag(x) + diag(y_eff) @ C
+                   y_eff = (y_1, y_2, y_3 * exp(i*delta))
+
+Free point: x = (1,1,1), y = (0,0,0), delta arbitrary in R.
+
+========================================================================================
+PART 1: A_act((1,1,1), (0,0,0), delta) = I_3  for all delta
+========================================================================================
+  [PASS] A_act((1,1,1), (0,0,0), delta=0.0000) equals I_3  (||A - I_3|| = 0.00e+00)
+  [PASS] A_act((1,1,1), (0,0,0), delta=0.5000) equals I_3  (||A - I_3|| = 0.00e+00)
+  [PASS] A_act((1,1,1), (0,0,0), delta=1.0000) equals I_3  (||A - I_3|| = 0.00e+00)
+  [PASS] A_act((1,1,1), (0,0,0), delta=-1.7000) equals I_3  (||A - I_3|| = 0.00e+00)
+  [PASS] A_act((1,1,1), (0,0,0), delta=3.1416) equals I_3  (||A - I_3|| = 0.00e+00)
+  [PASS] A_act((1,1,1), (0,0,0), delta=6.2832) equals I_3  (||A - I_3|| = 0.00e+00)
+
+========================================================================================
+PART 2: oriented forward-cycle coefficients vanish at the free point
+========================================================================================
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=0.0000  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=0.5000  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=1.0000  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=-1.7000  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=3.1416  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+  [PASS] (c_1,c_2,c_3) = (0,0,0)  at delta=6.2832  (coeffs=[0.+0.j 0.+0.j 0.+0.j])
+
+========================================================================================
+PART 3: sigma = (c_1 + c_2 + c_3) / 3 is exactly 0 at the free point
+========================================================================================
+  [PASS] sigma = 0  at delta=0.0000  (sigma=0j)
+  [PASS] sigma = 0  at delta=0.5000  (sigma=0j)
+  [PASS] sigma = 0  at delta=1.0000  (sigma=0j)
+  [PASS] sigma = 0  at delta=-1.7000  (sigma=0j)
+  [PASS] sigma = 0  at delta=3.1416  (sigma=0j)
+  [PASS] sigma = 0  at delta=6.2832  (sigma=0j)
+
+========================================================================================
+PART 4: NEGATIVE CONTROL — away from the free point, A_act != I_3
+========================================================================================
+  [PASS] off-free-point A_act differs from I_3 (negative control)  (||A_off - I_3|| = 0.3742)
+  [PASS] off-free-point oriented-cycle coefficients are nonzero (negative control)  (coeffs=[ 0.3     +0.j       -0.2     +0.j        0.092106+0.038942j])
+
+========================================================================================
+RESULT
+========================================================================================
+  Sole-axiom free-point identity-block narrow bridge theorem:
+    A_act((1,1,1), (0,0,0), delta) = I_3  for all delta
+    (c_1, c_2, c_3) = (0, 0, 0)
+    sigma = 0
+  closes the load-bearing step in
+    docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md
+  that asserts 'A = I_3 at the sole-axiom free point, hence sigma = 0'.
+  Carrier derivation of the active-operator construction itself
+  is out of scope and remains with the upstream retained hw=1
+  authority chain.
+
+PASS=20 FAIL=0
+
+----- stderr -----
+

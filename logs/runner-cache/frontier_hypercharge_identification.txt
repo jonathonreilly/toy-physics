@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_hypercharge_identification.py
-runner_sha256: f01733c5956397422fe3961e0755746963dbbc0cdd78bdd44a9aa4150df4b8b2
+runner_sha256: eb1e3d37c589abb192fc559a2dc0ffb80bfcd0e8940cafe9e388186c1190f750
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.31
+elapsed_sec: 0.19
 status: ok
 ----- stdout -----
 ========================================================================
@@ -58,6 +58,31 @@ PART 2: Commutation relations  [STRUCTURAL]
 
   Y commutes with BOTH SU(2) and SU(3) -- it is a valid U(1) gauge
   generator in the Standard Model sense.
+
+------------------------------------------------------------------------
+AUDIT CHECKPOINT 1 (after STRUCTURAL Parts 1-2):
+------------------------------------------------------------------------
+  Verified STRUCTURALLY (no SM-target import; alpha-free where stated):
+    * gl(3)+gl(1) commutant decomposition exists [upstream retained]
+    * Y_alpha = alpha (P_sym - 3 P_anti) is the UNIQUE traceless U(1)
+      generator in the commutant, up to scale [Part 1 STRUCTURAL]
+    * eigenvalue ratio on (Sym^2, Anti^2) sub-blocks = +1 : (-3)
+      [Part 1 STRUCTURAL; cited from narrow ratio theorem]
+    * [Y, S_i] = [Y, SWAP_23] = [Y, T_a] = 0 for all weak, perm,
+      and color generators [Part 2 STRUCTURAL]
+
+  NOT yet performed at this checkpoint (deferred to chain L2 + L3):
+    * any identification of (Sym^2, Anti^2) sub-blocks with SM quark
+      or lepton doublets
+    * any choice of absolute scale alpha
+    * any SM electric-charge readout via Q = T_3 + Y/2
+
+  The chain claim of this note is precisely that, ONCE chain L2
+  (LHCM matter assignment, separate audit row) and chain L3 (admitted
+  SM convention alpha = 1/3) are layered on top of these structural
+  facts, the SM hypercharge pattern follows. The next parts perform
+  that layering and tag every block accordingly.
+------------------------------------------------------------------------
 
 ========================================================================
 PART 3: Electric charge Q = T_3 + Y/2  [CHAIN-L2 + CHAIN-L3 + admitted GMN]
@@ -337,6 +362,16 @@ FINAL SUMMARY  (chain-claim verification)
       repair item (2); admitted as SM convention here
     * Internal SM-Y identification step; the rewrite removes it from
       the load-bearing chain and routes matter assignment through L2
+
+  AUDITOR RESPONSIVENESS MAP (cross-reference to source note):
+    Auditor (2026-05-02) verdict-rationale items mapped to chain links:
+      [carrier identification    ] -> CHAIN-L2 (LHCM matter assignment)
+      [conventional normalization] -> CHAIN-L3 (admitted SM convention)
+      [carrier-after identification problem] -> the load-bearing surface
+        is now the chain-assembly statement itself; the structural
+        ratio half is retained_bounded via the narrow ratio theorem
+    See docs/HYPERCHARGE_IDENTIFICATION_NOTE.md section 'Auditor
+    responsiveness' for the full complaint-to-rewrite table.
 ========================================================================
 
 ----- stderr -----
