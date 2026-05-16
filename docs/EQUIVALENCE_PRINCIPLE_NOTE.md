@@ -27,6 +27,30 @@ that packaging cannot be audited from the allowed packet, and the
 right fix on the package surface is to retract those numerical claims
 from this note rather than attach a runner that does not exist.
 
+## Auditable structural content
+
+For an auditor reading this note as a `claim_type: meta` surface, the
+single structural fact this note establishes is the **retraction
+record itself**. There is no positive theorem, no bounded numerical
+observation, no runner, no fit, and no derivation attached. The
+verifiable content is exhausted by:
+
+1. The list of retracted claims (next section), which is verifiable by
+   diff against earlier note hashes registered in
+   `docs/audit/data/audit_ledger.json` under `previous_audits`.
+2. The standing assertion that the strong equivalence principle
+   remains an **open derivation gap** on the discrete framework
+   surface.
+3. The instruction to downstream notes (see "Current stance") to
+   either drop the citation, supply an independent derivation, or
+   carry the dependency as an open gap.
+4. The cross-reference to the audit-lane handoff at
+   [docs/audit/worker_lanes/03_equivalence_principle.md](audit/worker_lanes/03_equivalence_principle.md).
+
+Items (1)-(4) are all package-surface facts an auditor can verify by
+inspection of files in the repository, with no external runner, no
+upstream authority, and no numerical input required.
+
 ## Retraction
 
 The following claims that appeared in earlier drafts of this note are
