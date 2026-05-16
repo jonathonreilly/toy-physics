@@ -1489,6 +1489,34 @@
       "to": "hubble_lane5_c1_narrow_route_nogo_cluster_2026-04-30"
     },
     {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09"
+    },
+    {
+      "from": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "to": "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent",
       "to": "minimal_axioms_2026-05-03"
     },
@@ -38336,6 +38364,25 @@
       "runner_path": "scripts/frontier_background_independence.py",
       "title": "Background Independence: Effective Geometry Differs from Input Graph"
     },
+    "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16": {
+      "claim_id": "bae_block_total_frobenius_derivation_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "koide_bae_30_probe_campaign_terminal_synthesis_meta_note_2026-05-09",
+        "koide_kappa_block_total_frobenius_algebraic_narrow_theorem_note_2026-05-10",
+        "primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality",
+        "koide_bae_probe_f1_canonical_functional_bounded_obstruction_note_2026-05-09_probe18",
+        "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent",
+        "koide_circulant_character_bridge_narrow_theorem_note_2026-05-09",
+        "koide_circulant_q_two_thirds_algebraic_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "edab523a03c54aae21d9d4b52ef3eec806088c39e185b692658d75f5067d8915",
+      "path": "docs/BAE_BLOCK_TOTAL_FROBENIUS_DERIVATION_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_bae_block_total_frobenius_derivation_narrow.py",
+      "title": "BAE Block-Total-Frobenius Derivation Narrow Theorem"
+    },
     "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent": {
       "claim_id": "bae_max_entropy_retained_bounded_obstruction_note_2026-05-10_baemaxent",
       "claim_type_author_hint": "bounded_theorem",
@@ -71194,7 +71241,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 360,
+      "bounded_theorem": 361,
       "meta": 74,
       "no_go": 46,
       "none": 1554,
@@ -71202,17 +71249,17 @@
       "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 814,
+      "bounded_theorem": 815,
       "meta": 74,
       "no_go": 151,
       "none": 446,
       "open_gate": 117,
       "positive_theorem": 616
     },
-    "edge_count": 8914,
-    "leaf_count": 623,
-    "node_count": 2218,
+    "edge_count": 8921,
+    "leaf_count": 620,
+    "node_count": 2219,
     "root_count": 772,
-    "runners_with_path": 1835
+    "runners_with_path": 1836
   }
 }
