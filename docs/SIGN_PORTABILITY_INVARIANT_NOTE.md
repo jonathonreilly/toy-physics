@@ -7,6 +7,7 @@
 
 - [`scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py`](/Users/jonreilly/Projects/Physics/scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py)
 - [`logs/2026-04-06-sign-portability-invariant.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-06-sign-portability-invariant.txt)
+- registered runner-cache output: [`logs/runner-cache/SIGN_PORTABILITY_INVARIANT_COMPARE.txt`](/Users/jonreilly/Projects/Physics/logs/runner-cache/SIGN_PORTABILITY_INVARIANT_COMPARE.txt)
 - first-principles derivation within one family (load-bearing dependency for the four gates):
   [`docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md`](/Users/jonreilly/Projects/Physics/docs/SIGN_PORTABILITY_INVARIANT_FAMILY_SECOND_GROWN_DERIVATION_THEOREM_NOTE_2026-05-09.md)
 - retained family notes: [`archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/archive_unlanded/grown-transfer-stale-runners-2026-04-30/GROWN_TRANSFER_BASIN_NOTE.md), [`docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md), [`docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md), [`docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md), [`docs/FOURTH_FAMILY_QUADRANT_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
@@ -149,16 +150,63 @@ descendants):
 
 - A tier-ratifiable portability theorem.
 - An independent order parameter beyond the cross-family comparison.
-- That the cited family notes are audit-clean dependencies (none are
-  registered as one-hop deps).
+- That the in-family derivation theorem note is itself fully
+  unconditional: per the audit ledger that theorem is
+  `audited_conditional` on a row-wise lower bound for the detector
+  denominator and the plus-source linear response (G4 conditional).
+  Block 1 of the runner therefore verifies G1/G2/G3/G4 numerically at
+  the working source strength but does not promote the theorem note
+  beyond its own conditional status.
+
+## Audit dependency repair links
+
+The one-hop dependencies of this note are now registered in the audit
+ledger as the following claim ids (see
+[`docs/audit/data/audit_ledger.json`](/Users/jonreilly/Projects/Physics/docs/audit/data/audit_ledger.json)).
+Their current effective audit statuses are listed alongside; the
+cross-family comparison block of the runner reads the same family
+runner-cache outputs that their own runners produce.
+
+| dep claim_id | family runner | runner-cache file | effective status |
+| --- | --- | --- | --- |
+| `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | (this runner, derivation block) | n/a (in-process) | audited_conditional (G4 lower-bound) |
+| `alt_connectivity_family_basin_note` | `scripts/ALT_CONNECTIVITY_FAMILY_BASIN.py` | `logs/runner-cache/ALT_CONNECTIVITY_FAMILY_SIGN_SWEEP.txt` | retained_bounded |
+| `second_grown_family_sign_note` | `scripts/SECOND_GROWN_FAMILY_SIGN_SWEEP.py` | `logs/runner-cache/SECOND_GROWN_FAMILY_SIGN_SWEEP.txt` | retained_bounded |
+| `third_grown_family_sign_note` | `scripts/THIRD_GROWN_FAMILY_SIGN_SWEEP.py` | `logs/runner-cache/THIRD_GROWN_FAMILY_SIGN_SWEEP.txt` | retained_bounded |
+| `fourth_family_quadrant_note` | `scripts/FOURTH_FAMILY_QUADRANT_SWEEP.py` | `logs/runner-cache/FOURTH_FAMILY_QUADRANT_SWEEP.txt` | retained_bounded |
+| `fifth_family_radial_boundary_note` | `scripts/FIFTH_FAMILY_RADIAL_FAILURE_AUDIT.py` | `logs/runner-cache/FIFTH_FAMILY_RADIAL_SWEEP.txt` | retained_bounded |
+
+The "Grown transfer basin" entry in the cross-family table above is
+verified via the dated log
+`logs/2026-04-06-nonlabel-grown-drift-basin-sweep.txt` (the
+runner-cache file `GROWN_TRANSFER_BASIN_SWEEP.txt` exists but is
+empty in the current cache); the underlying basin authority is the
+`grown_transfer_basin_note` row in the audit ledger, which is
+referenced by the artifact chain but the relevant rows are also
+recoverable from `alt_connectivity_family_basin_note` and the second
+grown family. The cross-family threshold check in Block 2 is therefore
+identical regardless of which path is used to populate the basin row.
 
 ## What would close this lane (Path A future work)
 
 Promoting from bounded conditional to retained would require:
 
-1. Registering the comparison runner/log.
-2. Adding the family and holdout notes as one-hop dependencies with
-   their current audit statuses.
-3. Making the runner assert common thresholds for zero-source
+1. ~~Registering the comparison runner/log.~~ Done: the runner
+   `scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py` is the registered
+   runner for this note in the audit ledger, with cached output at
+   `logs/runner-cache/SIGN_PORTABILITY_INVARIANT_COMPARE.txt`.
+2. ~~Adding the family and holdout notes as one-hop dependencies with
+   their current audit statuses.~~ Done: the six dependencies above
+   are the audit ledger `deps` list for this row.
+3. ~~Making the runner assert common thresholds for zero-source
    cancellation, neutral same-point cancellation, antisymmetry,
-   unit-slope tolerance, and basin/seed exclusions.
+   unit-slope tolerance, and basin/seed exclusions.~~ Done: Block 2
+   of the runner reads each family's per-row records and asserts the
+   four common gates `ZERO_TOL=1e-12`, `NEUTRAL_TOL=1e-12`,
+   `ANTISYM_TOL=5e-3`, `EXP_TOL=5e-3`, with rejected rows surfaced
+   as explicit basin/seed exclusions per family.
+4. Closing the residual G4 lower-bound condition on the in-family
+   derivation theorem note (an open item on that note, not on this
+   one). Until that lower-bound is supplied, the cross-family
+   unit-slope corollary remains conditional on the same nonzero
+   linear response assumption.
