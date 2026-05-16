@@ -1,0 +1,53 @@
+===== runner cache v1 =====
+runner: scripts/frontier_bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow.py
+runner_sha256: 86f9b65aace7ff407d843bc986c226fcbf7cd3570ad3564e7a7271b0333087b2
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.20
+status: ok
+----- stdout -----
+============================================================================
+GOUEZEL-KARLSSON DETERMINISTIC-COCYCLE NARROW NO-GO RUNNER (ROUND 3)
+============================================================================
+[PASS] T1: Gouezel-Karlsson Thm 1.1 requires (Omega, P, T) ergodic base (arXiv:1509.07733 / JEMS 22 (2020))
+[PASS] T2a: alpha_LM matches canonical same-surface value (alpha_LM=0.090668)
+[PASS] T2b: alpha_LM is a contraction input (0 < alpha_LM < 1)
+[PASS] T2c: u_0 = <P>^(1/4) and alpha_LM = alpha_bare / u_0 (u_0~=0.8777)
+[PASS] T3a: Z_16-periodic embedding probability measure sums to 1
+[PASS] T3b: cyclic shift T(k) = (k+1) mod 16 is ergodic (orbit covers Omega)
+[PASS] T4a: time-average Lyapunov A = log(alpha_LM) under 1D scalar carrier (A=-2.400553, log(alpha_LM)=-2.400553)
+[PASS] T4b: A = log(alpha_LM) is tautological under 1D scalar carrier (||T_k||_op = alpha_LM is the construction's own input)
+[PASS] T5a: 1D scalar carrier has only one eigenvalue per T_k (no gap) (spectral gap lambda_1 - lambda_2 is undefined)
+[PASS] T6a: 1D scalar carrier definition contains alpha_LM (by construction) (non-tautology gate FAILS for the 1D scalar carrier)
+[PASS] T6b: symbolic operator norm of T_k = alpha*Id_1 equals |alpha| (any alpha in (0,1) satisfies the identity, not just alpha_LM)
+[PASS] T6c: counterexample alpha=1/2, N=16 also satisfies (1/2)^16 identity ((1/2)^16 = 1.525879e-05; identity does not select alpha_LM)
+[PASS] T7a: ||Pi_16||_op = alpha_LM^16 under 1D scalar carrier (alpha_LM^16 ~= 2.085701e-17)
+[PASS] T7b: Round 2 elementary equality reproduced consistently
+[PASS] T8a: marginal eigenvalue at canonical surface (c=1) is O(1), not alpha_LM (lambda_marginal ~= 3.7351)
+[PASS] T8b: gap |lambda_marginal - alpha_LM| is O(3.6), not zero (gap ~= 3.6444)
+[PASS] T8c: tree-level marginal eigenvalue = 1, not alpha_LM (G3 K3 inheritance)
+[PASS] T9: sensitivity <P>+0.0001 marginal still O(1) (lambda_marginal~3.735)
+[PASS] T9: sensitivity <P>-0.0001 marginal still O(1) (lambda_marginal~3.735)
+[PASS] T10a: note explicitly disclaims hierarchy formula closure
+[PASS] T10b: note explicitly disclaims framework note status changes
+[PASS] T10c: note explicitly disclaims promotion / demotion of other notes
+[PASS] T11a: Round 2 note admits 1D scalar carrier (still open) (Round 3 does not close this admission)
+[PASS] T11b: Round 2 note admits alpha_LM/N=16 as imported (still open) (Round 3 does not close this admission)
+[PASS] T12a: framework staircase length N=16 is finite (not asymptotic)
+[PASS] T12b: tautological case (||T_k||=c constant) gives exact (1/n)log||Pi_n|| = log(c) (exact equality only because ||T_k||=c is the construction's input)
+[PASS] T12c: non-tautological case (||T_k|| varies) gives finite-N error != 0 (finite-N exact equality fails when ||T_k|| varies)
+[PASS] T13a: (G1) blocks — Gouezel-Karlsson ergodic-base requirement
+[PASS] T13b: (G2) blocks — Filip / Karlsson-Ledrappier inherit ergodic base
+[PASS] T13c: (G3) blocks — no substrate-canonical operator (K3 inheritance)
+[PASS] T13d: (G4) blocks — asymptotic-vs-finite-N distinction
+[PASS] T13e: joint sufficiency disjunction (G1) OR (G2) OR (G3) OR (G4) holds
+[PASS] T13f: obstructions are independent (each independently sufficient)
+[PASS] T14a: identity ||Pi_N||_op = alpha^N holds for all alpha in (0,1) (identity does not select alpha_LM)
+[PASS] T14b: identity ||Pi_N||_op = alpha^N holds for any finite N (identity does not select N=16)
+============================================================================
+TOTAL: PASS=35 FAIL=0
+============================================================================
+VERDICT: bridge identification 'Gouezel-Karlsson / Filip / Karlsson-Ledrappier deterministic-cocycle MET = lambda_1 = log(alpha_LM)' is structurally blocked at four independent levels (G1)-(G4); Round 2 admissions persist.
+
+----- stderr -----
+

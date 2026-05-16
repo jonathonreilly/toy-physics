@@ -1637,6 +1637,38 @@
       "to": "architecture_note_directional_measure"
     },
     {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
       "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
     },
@@ -38792,6 +38824,26 @@
       "runner_path": "scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py",
       "title": "Bougerol-Lacroix / Oseledets MET - External Narrow Theorem"
     },
+    "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16": {
+      "claim_id": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+        "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10",
+        "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+        "plaquette_self_consistency_note",
+        "observable_principle_from_axiom_note",
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "f6a647d48ac4ca20d31d1449e125ba85b3b96e7643396b1056dbac2e95150e1d",
+      "path": "docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_GOUEZEL_KARLSSON_DETERMINISTIC_COCYCLE_NARROW_NO_GO_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow.py",
+      "title": "Bougerol-Lacroix Staggered Blocking - Gouezel-Karlsson Deterministic Cocycle Narrow No-Go"
+    },
     "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10": {
       "claim_id": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
       "claim_type_author_hint": "no_go",
@@ -71602,7 +71654,7 @@
       "bounded_theorem": 385,
       "decoration": 1,
       "meta": 74,
-      "no_go": 48,
+      "no_go": 49,
       "none": 1536,
       "open_gate": 40,
       "positive_theorem": 149
@@ -71611,15 +71663,15 @@
       "bounded_theorem": 832,
       "decoration": 1,
       "meta": 74,
-      "no_go": 153,
+      "no_go": 154,
       "none": 445,
       "open_gate": 119,
       "positive_theorem": 609
     },
-    "edge_count": 8959,
-    "leaf_count": 630,
-    "node_count": 2233,
+    "edge_count": 8967,
+    "leaf_count": 628,
+    "node_count": 2234,
     "root_count": 774,
-    "runners_with_path": 1851
+    "runners_with_path": 1852
   }
 }
