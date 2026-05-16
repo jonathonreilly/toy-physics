@@ -17,11 +17,12 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 446 |
+| critical | `unaudited` | 445 |
 | critical | `audited_conditional` | 56 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 4 |
 | medium | `unaudited` | 2 |
+| critical | `audit_in_progress` | 1 |
 | critical | `audited_failed` | 1 |
 | critical | `open_gate` | 1 |
 
@@ -374,7 +375,7 @@ publication tables phrase it.
 | critical | `pmns_c3_character_mode_reduction_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_c3_nontrivial_current_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_chart_constants_retention_stretch_attempt_note_2026-05-03` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
-| critical | `pmns_commutant_eigenoperator_selector_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `pmns_commutant_eigenoperator_selector_note` | `audit_in_progress` | `audit_in_progress` | DERIVATION_ATLAS.md |
 | critical | `pmns_corner_transport_active_block_note` | `audited_renaming` | `audited_renaming` | DERIVATION_ATLAS.md |
 | critical | `pmns_current_bank_value_selection_nogo_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17` | `unaudited` | `unaudited` | RESULTS_INDEX.md |
