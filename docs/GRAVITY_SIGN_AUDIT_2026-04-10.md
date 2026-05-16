@@ -29,10 +29,23 @@ Admitted-context inputs (carrier framework, not derived in this note):
 
 - the parity coupling `H_diag = (m + Phi) * epsilon(x)` — imported from
   Zache et al. 2020 and Dempsey et al. 2025 as the literature-correct
-  staggered-fermion scalar coupling
+  staggered-fermion scalar coupling; the algebraic form and the
+  per-site distinction from the additive identity coupling is now
+  recorded as a one-hop ledger cite-form source-theorem note in
+  `STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`
+  (paired runner
+  `scripts/frontier_staggered_scalar_parity_lapse_coupling_external_narrow.py`,
+  18/18 PASS). That source-theorem note carries only the lattice-algebraic
+  form of (P) and (L); it does NOT derive the parity coupling from the
+  restored framework axiom set (A1 + A2; see
+  `MINIMAL_AXIOMS_2026-05-03.md`), and it does NOT close the open
+  `staggered_dirac_realization_gate_note_2026-05-03` gate, which is the
+  strictly stronger question of whether A1 + A2 forces the staggered
+  formulation itself.
 - the Hermitian lapse coupling
   `H_grav = sqrt(N) * H_flat * sqrt(N)`, `N = 1 + Phi/m` — imported as
-  the full-GR scalar variant
+  the full-GR scalar variant, with the lattice-algebraic Hermitian
+  symmetrization recorded in the same source-theorem note above
 - the screened Poisson `(L + mu^2 I) Phi = G * rho` framework operator,
   and the retarded wave equation with `beta > 0`
 
@@ -52,8 +65,13 @@ Configured probe parameters (proxy thresholds, not derived):
 
 Blocked-on: this row stays `audited_conditional` until either a retained
 restricted-packet derivation is supplied that fixes the staggered-fermion
-parity / lapse scalar coupling from the repository axioms, or the
-irregular-graph directional observable lane lands a graph-native
+parity / lapse scalar coupling from the repository axioms (which is
+strictly stronger than the lattice-algebraic source-theorem cite-bridge
+landed on 2026-05-16 in
+`STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`,
+and which would require closing the open
+`staggered_dirac_realization_gate_note_2026-05-03` gate end-to-end), or
+the irregular-graph directional observable lane lands a graph-native
 sign-selective observable that closes the universal-portability gap on
 families beyond the audited centered core-packet surface. The bounded
 computational diagnostic — under the parity and lapse couplings, the
