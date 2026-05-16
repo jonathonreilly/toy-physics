@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 306 |
+| **retained_bounded** | 307 |
 | _retained_pending_chain_ | 4 |
 | open_gate | 15 |
 | unaudited | 1207 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 14 |
 | ~~audited_renaming~~ | 13 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 516 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 517 |
 | `audited_conditional` | 180 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 64 |
@@ -115,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
-| `pmns_graph_axis_to_active_lane_bridge_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -443,6 +441,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
+| `pmns_graph_axis_to_active_lane_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `primitive_p_bae_m1_m2_duality_note_2026-05-10_ppbae_duality` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
@@ -8142,6 +8141,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the active hw=1 triplet, the direct corner-to-corner transport matrix is T_act = diag(x_1, x_2, x_3) + diag(y_1, y_2, y_3 e^{i delta}) C.  _(class `E`)_
 - **chain closes:** False — The algebra after T_act is specified is straightforward, but the restricted packet does not derive the active corner-transport operator itself from the stated axiom. The missing step is the native construction of this T_act form from Cl(3) on Z^3 rather than taking it as the defining input.
 - **rationale:** The runner performs real algebraic checks on the provided transport matrix and its orbit averages, including the branch-bit sign flip and the nontrivial kernel example. However, it does not derive the direct corner-to-corner transport matrix from the axiom; it defines that operator form in code and verifies consequences. With no cited upstream authority closing the operator construction, the load-bearing step is a definition rather than a first-principles native theorem.
+- **auditor confidence:** high
+
+### `pmns_graph_axis_to_active_lane_bridge_note`
+
+- **Note:** [`PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md`](../../docs/PMNS_GRAPH_AXIS_TO_ACTIVE_LANE_BRIDGE_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Finite-dimensional bridge identifying the graph-axis residual Z_2 stabilizer on the hw=1 carrier V_1 with the corresponding permutation action on Herm(V_1), specifically P_23 after relabeling the selected axis to e_1.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-125636-8e54e1e9-pmns_graph_axis_to_activ-001`  (codex-gpt-5.5; independence=fresh_context)
+- **load-bearing step:** The residual Z_2 stabilizer of the selected graph axis acts on V_1 by the restriction T_{tau_k}|_{V_1}=P_{tau_k}, so Z_2-invariance of H is exactly P_{tau_k} H P_{tau_k}=H, giving P_23 H P_23=H for k=1.  _(class `A`)_
+- **chain closes:** True — The tensor-factor permutation unitary is explicitly defined, its restriction to V_1 is computed as the standard permutation matrix, and invariance of a Hermitian operator under that Z_2 action is exactly conjugation invariance by that matrix. The cited retained inputs supply the carrier and residual stabilizer; the bridge itself is algebraic.
+- **rationale:** The load-bearing step is a genuine algebraic identity over the provided finite-dimensional objects, not a definition substitution or numerical match. The runner constructs the shifts, tensor-factor permutation unitaries, V_1 basis, restriction blocks, and Hermitian invariance checks directly, with PASS=87 FAIL=0. The claim is bounded to the structural bridge and explicitly avoids active-sector assignment or PMNS value selection.
 - **auditor confidence:** high
 
 ### `pmns_graph_first_cycle_frame_support_note`
