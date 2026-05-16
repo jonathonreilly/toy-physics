@@ -7,20 +7,25 @@
 
 ## Question
 
-Does the current exact DM bank already furnish a theorem-grade selector on the
-live same-surface numerator interval?
+Does the current exact DM packet already furnish a theorem-grade selector on
+the live same-surface numerator interval?
 
-## Answer
+## Honest packet-scope answer
 
-No.
+Not within the supplied packet.
 
-The current exact DM bank gives two exact same-surface endpoint observables:
+The current exact DM packet gives two exact same-surface endpoint coupling
+observables, both derived from the common surface ingredient
+`alpha_bare = 1/(4 pi)` and the canonical plaquette `0.5934`:
 
-- `alpha_lo = alpha_LM = alpha_bare/u_0 = 0.090667836017286`
-- `alpha_hi = alpha_short = -log(P_1)/c_1 = 0.092264992618360`
+- `alpha_lo = alpha_LM    = alpha_bare / u_0                 = 0.090667836017286`
+- `alpha_hi = alpha_short = -log(1 - c_1 * alpha_bare) / c_1 = 0.092264992618360`
 
-Those exact endpoints induce distinct certified DM outputs on the corrected
-same-surface thermal map:
+These two endpoints are distinct exact reals and both sit strictly above the
+common ingredient `alpha_bare`, so they are two genuinely distinct retained
+constructions on the same surface, not relabelings of a single observable. The
+cited certified same-surface thermal authority sends those exact endpoints to
+non-overlapping certified DM ratio intervals:
 
 - `R(alpha_lo) in [5.442019867867, 5.442019867931]`
 - `R(alpha_hi) in [5.482855571890, 5.482855571936]`
@@ -30,30 +35,57 @@ and therefore
 - `Omega_DM(alpha_lo) in [0.267709052538, 0.267709052541]`
 - `Omega_DM(alpha_hi) in [0.269717881594, 0.269717881596]`
 
-So the current bank gives an interval, not a selector.
+So the current packet exhibits a two-element same-surface endpoint set that
+lands disjoint certified DM ratio intervals. It does not, within this packet,
+exhibit a selector between them.
 
-## Why This Closes The Current-Bank Question
+## What this note proves (constructive content)
 
-The same-surface DM lane already has:
+The runner verifies, by exact arithmetic on the cited authority outputs:
 
-1. exact endpoint observables;
-2. an exact structural prefactor `R_base = 31/9`;
-3. a certified same-surface thermal evaluation/bounding result that sends those
-   endpoints to distinct outputs.
+1. the two endpoint coupling values are well-defined exact reals;
+2. they are distinct from each other and both strictly above the common
+   ingredient `alpha_bare`, so they are two genuinely distinct same-surface
+   constructions and not the same observable in disguise;
+3. via the cited certified thermal authority, they map to non-overlapping
+   certified DM ratio intervals (so *if* a selector exists within a larger
+   packet, it must land one endpoint and exclude the other).
 
-What it does **not** have is any further exact scale-selection law on that DM
-lane. So there is no theorem-grade current-bank selector closure.
+## What this note does not prove (packet-scope completeness declaration)
+
+The runner explicitly does **not** prove the metatheoretical claim that no
+selector exists. The earlier version of this runner asserted that absence with
+two literal-`True` checks, and prior audit feedback correctly flagged those
+literals as the load-bearing weakness of the note. The repaired runner removes
+those literals and replaces the absence claim with a print-only **packet-scope
+completeness declaration**:
+
+> Within the supplied retained packet (the framework axiom Cl(3) on Z^3
+> together with the cited same-surface thermal authorities recorded below), no
+> additional exact same-surface DM scale-selection datum is supplied. Any
+> selector that lands one of the two endpoints therefore requires a retained
+> authority outside the current packet.
+
+This is a statement about *what is in the current packet*, which is a
+verifiable scope claim. It is not, and is not represented as, a proof that no
+such authority can ever be added in a larger packet.
 
 ## Consequence
 
-The current-bank DM selector question is now settled:
-
-- **current bank:** no selector closure
-- **next honest science target:** theorem-grade evaluation or bounding of the
-  current-bank DM lane is now satisfied on this branch
-- **remaining honest science target:** whether the current bank itself can
-  supply a selector, or whether the one-scalar DM-side family must remain an
-  admitted extension
+- **current packet:** exhibits two distinct same-surface endpoint observables
+  with non-overlapping certified DM outputs, and supplies no further exact
+  same-surface scale-selection datum;
+- **current packet selector closure:** does not exist within this packet (this
+  is a packet-scope declaration, not a metatheoretical no-go);
+- **next honest science target:** if a constructive obstruction theorem
+  modelled on the same-signature/different-output pattern used by
+  `DM_NEUTRINO_SOURCE_BANK_Z3_DOUBLET_BLOCK_SELECTION_OBSTRUCTION_THEOREM_NOTE_2026-04-16.md`
+  can be derived for the DM same-surface endpoint pair from Cl(3) on Z^3, this
+  note's packet-scope declaration can be promoted to a no-go theorem against a
+  specified class of selector inputs;
+- **remaining honest science target:** whether such an obstruction theorem
+  exists for the DM same-surface lane, or whether the one-scalar DM-side
+  family must remain an admitted extension.
 
 ## Command
 
@@ -121,19 +153,59 @@ depends on the unproved completeness premise that the current DM bank
 has no further exact scale-selection datum, and that the runner asserts
 that premise with literal `True` checks while importing endpoint / map
 machinery from modules not provided in the restricted packet. The
-cite-chain repair above wires the certified endpoints, sensitivity
-boundary, and converged-selector support side, while registering the
-completeness / absence premise itself as the open class D upstream gap.
-Closing that gap is the path to a stronger chain; local rewriting of
-this note does not by itself close that gap.
+earlier rigorize wired the certified-endpoints / sensitivity / converged
+support side and registered the completeness premise as an open
+class D upstream gap, but it deliberately left the two literal `True`
+checks in place in the runner and left the note's load-bearing claim
+phrased as a metatheoretical no-go ("no theorem-grade current-bank
+selector closure exists"). That phrasing made the runner output formally
+incompatible with the actually-supplied content.
+
+The current repair (2026-05-16) addresses that load-bearing weakness by
+demoting both the runner content and the note phrasing to what the
+restricted packet actually supplies:
+
+- the two prior `check(name, True, ...)` literals in PART 3 are removed;
+- PART 3 is replaced with four arithmetic distinctness checks that the
+  runner can actually verify (endpoint distinctness from each other, and
+  from the common ingredient `alpha_bare`, plus the non-overlap of the
+  certified DM ratio intervals);
+- the metatheoretical absence claim is replaced by an explicit
+  print-only **packet-scope completeness declaration** that says only
+  what the restricted packet contains, not what no future packet could
+  contain;
+- the note's "Honest packet-scope answer" / "What this note proves" /
+  "What this note does not prove" sections now match the runner output
+  one-to-one.
+
+This addresses the class E load-bearing-step gap on its own terms: the
+load-bearing step is no longer "no selector exists" (an absence claim
+the runner cannot prove); it is the arithmetic distinctness of two
+exact endpoint reals and the non-overlap of their certified DM ratio
+intervals (both runner-checked from cited authority outputs), plus a
+packet-scope declaration whose verifiable scope is exactly the supplied
+retained packet.
+
+Closing the remaining upstream gap — promoting this packet-scope
+declaration to a constructive obstruction theorem against a specified
+class of selector inputs — would model on the same-signature /
+different-output pattern of
+`DM_NEUTRINO_SOURCE_BANK_Z3_DOUBLET_BLOCK_SELECTION_OBSTRUCTION_THEOREM_NOTE_2026-04-16.md`,
+which provides exactly that kind of constructive obstruction on the
+neutrino source side. Local rewriting of this note does not by itself
+supply such an obstruction; it removes the formal overreach in this
+note and registers the obstruction itself as the next constructive
+target.
 
 ## Scope of this rigorization
 
-This rigorization is class B (graph-bookkeeping citation) with an
-explicit class D upstream gap registration. It does not change any
-algebraic content, runner output, or load-bearing step classification.
-It records the upstream authorities the prior feedback requested and
-matches the live cite-chain pattern used by the
-`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md` rigorize
-(commit `8e84f0c23`, PR #899) and the `dm_neutrino` bosonic candidates
-trio (commit `7bb12badd`, PR #926).
+This rigorization is class C (load-bearing-step demotion to verifiable
+arithmetic plus an explicit packet-scope declaration). It replaces the
+two prior literal-`True` runner checks that audit feedback flagged as
+the load-bearing weakness with four arithmetic distinctness checks on
+the cited authority outputs, removes the metatheoretical absence claim
+from the runner-checked tier, and rewords the note so that its
+"answer", "what is proved", and "what is not proved" sections match the
+runner output one-to-one. The cite chain and prior class D upstream gap
+registration above remain in place. Independent audit owns any current
+verdict or effective status after this source change.

@@ -5,26 +5,36 @@ Framework convention:
   "axiom" means only the single framework axiom Cl(3) on Z^3.
 
 Purpose:
-  Close the last current-bank DM selector question as far as the corrected
-  continuum support map honestly allows.
+  Record, on the corrected continuum support map, what the current restricted
+  retained packet does and does not supply for the DM same-surface numerator
+  selector question.
 
 Question:
-  Does the current exact DM bank already furnish a theorem-grade selector for
+  Does the current exact DM packet already furnish a theorem-grade selector for
   the live same-surface numerator interval?
 
-Answer:
-  No.
+Honest packet-scope answer:
+  Not within the supplied packet.
 
-Honest content:
-  1. the current bank furnishes two exact same-surface endpoint observables
-     on the DM lane:
-        alpha_lo = alpha_LM = alpha_bare/u_0
-        alpha_hi = alpha_short = -log(P_1)/c_1
-  2. the corrected continuum same-surface DM support map sends those exact
-     endpoints to distinct support outputs;
-  3. the current bank has no further exact scale-selection datum on that DM
-     lane;
-  4. therefore current-bank DM numerator selector closure does not exist.
+Constructive content (runner-checked):
+  1. the current packet furnishes two exact same-surface endpoint observables
+     on the DM lane, both derived from the common surface ingredient
+     ``alpha_bare = 1/(4 pi)`` via the canonical plaquette ``0.5934``:
+        alpha_lo = alpha_LM    = alpha_bare / u_0
+        alpha_hi = alpha_short = -log(1 - c_1 * alpha_bare) / c_1
+  2. the cited certified same-surface thermal authority sends those exact
+     endpoints to certified non-overlapping DM ratio intervals;
+  3. the two endpoint coupling values are distinct exact reals and both sit
+     strictly above their common ingredient, so they are two genuinely
+     distinct retained constructions on the same surface (not relabelings).
+
+Packet-scope completeness declaration (print-only, not a runner-checked
+existence claim):
+  Within the supplied retained packet, no additional exact same-surface DM
+  scale-selection datum is supplied. Any selector that lands one of the two
+  endpoints therefore requires a retained authority outside the current
+  packet. This is a packet-scope declaration; it is not a metatheoretical
+  proof of non-existence over all conceivable future retained data.
 """
 
 from __future__ import annotations
@@ -117,33 +127,79 @@ def part2_distinct_dm_certified_outputs(alpha_lo: float, alpha_hi: float) -> tup
     return r_lo_hi, r_hi_lo, omega_dm_lo_hi, omega_dm_hi_lo
 
 
-def part3_no_current_bank_selector(alpha_lo: float, alpha_hi: float, r_lo_hi: float, r_hi_lo: float) -> None:
+def part3_packet_scope_endpoint_distinctness(
+    alpha_lo: float,
+    alpha_hi: float,
+    r_lo_hi: float,
+    r_hi_lo: float,
+) -> None:
+    """Constructive packet-scope distinctness of the two same-surface endpoints.
+
+    This part replaces two prior literal-True checks that prior audit feedback
+    correctly flagged as load-bearing assertions of bank completeness/absence.
+    The constructive content here is:
+
+      (a) the two endpoint coupling values are not equal to each other and are
+          not equal to the common ingredient ``alpha_bare`` they are both
+          derived from, so they are two genuinely distinct retained
+          constructions on the same surface;
+      (b) the corresponding certified DM ratio intervals do not overlap, so
+          *if* a selector exists it must land one endpoint and exclude the
+          other.
+
+    The decisive packet-scope statement is a *packet-completeness declaration*,
+    not a runner-checked theorem: within the supplied retained packet (the
+    framework axiom Cl(3) on Z^3 together with the cited authorities recorded
+    in the note's audit-dependency section), no further exact same-surface DM
+    scale-selection datum is supplied, so any selector that lands either
+    endpoint requires a retained authority outside the current packet.
+    """
+
     print("\n" + "=" * 88)
-    print("PART 3: NO CURRENT-BANK SELECTOR")
+    print("PART 3: PACKET-SCOPE ENDPOINT DISTINCTNESS")
     print("=" * 88)
 
+    from canonical_plaquette_surface import CANONICAL_ALPHA_BARE
+
+    alpha_bare = float(CANONICAL_ALPHA_BARE)
+
     check(
-        "The current DM lane has no further exact scale-selection datum beyond the two same-surface endpoints",
-        True,
-        "the lane carries an interval, not a theorem selecting an interior or endpoint value",
+        "The two same-surface endpoints are distinct exact reals (alpha_lo != alpha_hi)",
+        alpha_lo != alpha_hi,
+        f"alpha_hi - alpha_lo = {(alpha_hi - alpha_lo):.15e}",
     )
     check(
-        "Common annihilation-coefficient cancellation does not select between the exact endpoints",
+        "Neither endpoint coincides with the common ingredient alpha_bare = 1/(4 pi)",
+        (alpha_lo != alpha_bare) and (alpha_hi != alpha_bare),
+        f"alpha_bare={alpha_bare:.15f}, alpha_lo - alpha_bare={(alpha_lo - alpha_bare):.15e}, "
+        f"alpha_hi - alpha_bare={(alpha_hi - alpha_bare):.15e}",
+    )
+    check(
+        "Both endpoints sit strictly above the common ingredient (so they are not just a relabeling of alpha_bare)",
+        alpha_lo > alpha_bare and alpha_hi > alpha_bare,
+        "alpha_lo and alpha_hi are both strict positive perturbations of alpha_bare on the same surface",
+    )
+    check(
+        "The certified DM ratio intervals at the two endpoints do not overlap",
         r_hi_lo > r_lo_hi,
-        "cancellation reduces the ratio dependence to the selected coupling but does not pick the coupling",
-    )
-    check(
-        "Therefore theorem-grade current-bank DM numerator selector closure does not exist",
-        True,
-        f"exact endpoints remain distinct: alpha_lo={alpha_lo:.15f}, alpha_hi={alpha_hi:.15f}",
+        f"R_lo_hi={r_lo_hi:.12f}, R_hi_lo={r_hi_lo:.12f}",
     )
 
     print()
-    print("  CURRENT-BANK DM SELECTOR STATUS:")
-    print("    - exact same-surface endpoints: present")
-    print("    - distinct DM support outputs: present")
-    print("    - exact value-selection law between them: absent")
-    print("    - conclusion: current-bank DM selector closure does not exist")
+    print("  CURRENT-PACKET ENDPOINT STRUCTURE:")
+    print("    - two distinct exact same-surface endpoint observables: alpha_lo, alpha_hi")
+    print(f"        alpha_lo  = alpha_bare / u_0                  = {alpha_lo:.15f}")
+    print(f"        alpha_hi  = -log(1 - c_1 * alpha_bare) / c_1  = {alpha_hi:.15f}")
+    print(f"    - common ingredient alpha_bare = 1/(4 pi)       = {alpha_bare:.15f}")
+    print("    - certified DM ratio intervals at the two endpoints do not overlap")
+    print()
+    print("  PACKET-SCOPE COMPLETENESS DECLARATION (not a runner-checked existence claim):")
+    print("    Within the supplied retained packet (Cl(3) on Z^3 plus the cited")
+    print("    same-surface thermal authorities), no additional exact same-surface")
+    print("    DM scale-selection datum is supplied. Any selector that lands one")
+    print("    of the two endpoints therefore requires a retained authority")
+    print("    outside the current packet. This is a packet-scope declaration,")
+    print("    not a metatheoretical proof of non-existence.")
 
 
 def main() -> int:
@@ -153,7 +209,7 @@ def main() -> int:
 
     alpha_lo, alpha_hi = part1_exact_current_bank_endpoints()
     r_lo_hi, r_hi_lo, _omega_dm_lo_hi, _omega_dm_hi_lo = part2_distinct_dm_certified_outputs(alpha_lo, alpha_hi)
-    part3_no_current_bank_selector(alpha_lo, alpha_hi, r_lo_hi, r_hi_lo)
+    part3_packet_scope_endpoint_distinctness(alpha_lo, alpha_hi, r_lo_hi, r_hi_lo)
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
