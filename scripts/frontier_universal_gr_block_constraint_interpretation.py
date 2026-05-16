@@ -203,6 +203,28 @@ def main() -> int:
         "P_trace": block_rank(p_trace),
     }
 
+    # Graph-bookkeeping: the candidate upstream supplier chain and the
+    # parent note must exist on disk in this branch. Mirrors the
+    # "Candidate upstream supplier chain" section of the parent note.
+    supplier_paths = {
+        "observable_principle_from_axiom_note": OBSERVABLE,
+        "s3_anomaly_spacetime_lift_note": ROUTE2,
+        "universal_gr_tensor_variational_candidate_note": VARIATIONAL,
+        "universal_gr_tensor_quotient_uniqueness_note": UNIQUENESS,
+        "universal_gr_a1_invariant_section_note": A1_NOTE,
+        "universal_gr_casimir_block_localization_note": BLOCK,
+        "universal_gr_constraint_action_stationarity_note": CONSTRAINT,
+        "universal_gr_canonical_projector_connection_note": CURVATURE,
+        "universal_gr_block_constraint_interpretation_note": CURRENT,
+    }
+    suppliers_present = {name: path.exists() for name, path in supplier_paths.items()}
+    perimeter_present = (
+        has(current, "audit-conditional perimeter")
+        and has(current, "candidate upstream supplier chain")
+        and has(current, "audit dependency repair links")
+        and has(current, "status authority and audit hygiene")
+    )
+
     checks = [
         Check(
             "scalar generator is exact",
@@ -260,6 +282,23 @@ def main() -> int:
             ),
             "the universal route already has the canonical block-localization theorem",
         ),
+        Check(
+            "candidate upstream supplier notes exist on disk",
+            all(suppliers_present.values()),
+            f"supplier presence = {suppliers_present}",
+        ),
+        Check(
+            "parent note records audit-conditional perimeter and supplier chain",
+            perimeter_present,
+            "the parent note carries the status-authority block, the audit-conditional perimeter, the candidate upstream supplier chain, and the audit dependency repair links sections",
+        ),
+        Check(
+            "parent note honestly admits the F-class identification gap",
+            has(current, "renaming")
+            and has(current, "operator-level einstein/regge identification")
+            and has(current, "still open"),
+            "the parent note labels the load-bearing identification as a renaming/interpretation step, names the operator-level Einstein/Regge identification gap, and labels it as still open",
+        ),
     ]
 
     print("UNIVERSAL GR BLOCK-CONSTRAINT INTERPRETATION AUDIT")
@@ -288,6 +327,29 @@ def main() -> int:
     print("Trace/shear split = P_trace ⊕ P_shear")
 
     print("\n" + "=" * 78)
+    print("AUDIT-CONDITIONAL PERIMETER")
+    print("=" * 78)
+    print(
+        "The algebraic block split is supported by the candidate upstream\n"
+        "supplier chain on disk in this branch (graph-bookkeeping only;\n"
+        "does not promote audit_status):"
+    )
+    for name, present in suppliers_present.items():
+        tag = "present" if present else "MISSING"
+        print(f"  - {name}: {tag}")
+    print(
+        "\n"
+        "The F-class load-bearing identification step the audit flags is the\n"
+        "renaming of the canonical universal Casimir blocks under the GR-canon\n"
+        "labels 'Hamiltonian-constraint sector' (Pi_A1 = lapse + spatial trace)\n"
+        "and 'momentum-constraint sector' (P_shift = j=1 complement block). The\n"
+        "operator-level Einstein/Regge identification on the block-localized\n"
+        "universal Hessian and the normalization/sign convention on the\n"
+        "E \\oplus T1 complement remain open, and this row stays\n"
+        "audited_conditional under the F-class renaming flag."
+    )
+
+    print("\n" + "=" * 78)
     print("SUMMARY")
     print("=" * 78)
     n_pass = sum(c.ok for c in checks)
@@ -295,13 +357,17 @@ def main() -> int:
     print(f"PASS={n_pass} FAIL={n_fail} TOTAL={len(checks)}")
     if n_fail == 0:
         print(
-            "The direct universal route now admits a canonical Hamiltonian/"
-            "momentum-constraint interpretation at the block level: the exact "
-            "Pi_A1 core and the Casimir-derived shift block are canonical. "
-            "What remains open is the operator-level identification of the "
-            "block-localized universal Hessian with the Einstein/Regge "
-            "constraint operator and its exact normalization on the "
-            "E \\oplus T1 complement."
+            "The direct universal route's algebraic block split is canonical "
+            "and exact: the exact Pi_A1 core and the Casimir-derived shift "
+            "block are canonical under the spatial-rotation Casimir. The "
+            "GR-canon labels 'Hamiltonian-constraint sector' and "
+            "'momentum-constraint sector' attached to those blocks are an "
+            "imported identification (F-class renaming) rather than a "
+            "first-principles derivation; the audit verdict and this row's "
+            "effective status remain audited_conditional. What remains open "
+            "is the operator-level identification of the block-localized "
+            "universal Hessian with the Einstein/Regge constraint operator "
+            "and its exact normalization on the E \\oplus T1 complement."
         )
         return 0
 
