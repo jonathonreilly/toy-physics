@@ -1,0 +1,86 @@
+==============================================================================
+KOIDE Z_3-EQUIVARIANT ANTI-COMMUTING OPERATOR NO-GO RUNNER
+==============================================================================
+Verifies docs/KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16.md
+
+
+==============================================================================
+PART 1: SETUP — R CYCLIC SHIFT, R^3 = I, J = I + R + R²
+==============================================================================
+  [PASS] [A] R^3 = I
+  [PASS] [A] I + R + R² = J (all-ones)
+  [PASS] [A] R^T = R²
+
+==============================================================================
+PART 2: Γ_χ IS A CIRCULANT
+==============================================================================
+  Γ_χ = (2/3) J - I = 
+  Matrix([[-1/3, 2/3, 2/3], [2/3, -1/3, 2/3], [2/3, 2/3, -1/3]])
+  Expected: (-1/3) I + (2/3) R + (2/3) R² = 
+  Matrix([[-1/3, 2/3, 2/3], [2/3, -1/3, 2/3], [2/3, 2/3, -1/3]])
+  [PASS] [A] Γ_χ = (-1/3) I + (2/3) R + (2/3) R²  (circulant)
+  [PASS] [A] [Γ_χ, R] = 0  (Γ_χ commutes with R since both circulant)
+  [PASS] [A] [Γ_χ, R²] = 0
+
+==============================================================================
+PART 3: CIRCULANT H = a I + b R + c R² COMMUTES WITH Γ_χ
+==============================================================================
+  H = a I + b R + c R² (symbolic Z_3-equivariant Hermitian)
+  Note: H is Hermitian iff coefficient of R^T = coefficient of R
+        i.e., c = b for real Hermitian; this restricts to a 2-param
+        Hermitian subspace inside the 3-param circulant algebra.
+  [PASS] [A] [H, Γ_χ] = 0  for all (a, b, c)  (commutative circulant algebra)
+  [PASS] [A] [H, R] = 0  for all (a, b, c)  (Z_3-equivariance of circulants)
+
+==============================================================================
+PART 4: {H, Γ_χ} REDUCES TO 2 H Γ_χ (BOTH CIRCULANT)
+==============================================================================
+  [PASS] [A] {H, Γ_χ} = 2 H Γ_χ  (since [H, Γ_χ] = 0)
+  Therefore {H, Γ_χ} = 0  ⟺  H Γ_χ = 0  for Z_3-equivariant H
+
+==============================================================================
+PART 5: Z_3 FOURIER BASIS — H Γ_χ = 0 FORCES a = b = c = 0
+==============================================================================
+  H eigenvalues in Z_3 Fourier basis: [a + b + c, a + b*exp(2*I*pi/3) + c*exp(-2*I*pi/3), a + b*exp(-2*I*pi/3) + c*exp(2*I*pi/3)]
+  Γ_χ eigenvalues in Z_3 Fourier basis: [1, -1, -1]
+  H Γ_χ component-wise: [a + b + c, -a - (-1)**(2/3)*b + (-1)**(1/3)*c, -a + (-1)**(1/3)*b - (-1)**(2/3)*c]
+  Solutions over R: [{a: 0, b: 0, c: 0}]
+  [PASS] [A] Z_3 Fourier system forces a = b = c = 0  (unique solution = [{a: 0, b: 0, c: 0}])
+  [PASS] [A] Z_3 character matrix F has non-zero determinant (Schur orthogonality)  (det(F) = 3*(-1)**(1/3)*(-1 - (-1)**(1/3)))
+
+==============================================================================
+PART 6: EXPLICIT EXAMPLES — NON-TRIVIAL CIRCULANTS DON'T ANTI-COMMUTE
+==============================================================================
+  [PASS] [A] {R, Γ_χ} ≠ 0  (R alone does not anti-commute)  ({R, Γ_χ} = [[4/3, 4/3, -2/3], [-2/3, 4/3, 4/3], [4/3, -2/3, 4/3]])
+  [PASS] [A] {R - R², Γ_χ} ≠ 0  (anti-Hermitian circulant)  ({R-R², Γ_χ} = [[0, 2, -2], [-2, 0, 2], [2, -2, 0]])
+  For H = (R+R²)/2 (real symmetric circulant):
+    {H, Γ_χ} = [[4/3, 1/3, 1/3], [1/3, 4/3, 1/3], [1/3, 1/3, 4/3]]
+  [PASS] [A] {(R+R²)/2, Γ_χ} ≠ 0  (Hermitian circulant)
+
+==============================================================================
+PART 7: CONNES-LOTT COROLLARY — Z_3-EQUIVARIANT YUKAWA FORCED TO ZERO
+==============================================================================
+  [PASS] [A] M = α I + β R + γ R² is Z_3-equivariant: [M, R] = 0
+  [PASS] [A] {M, Γ_χ} = 2 M Γ_χ  (M circulant ⟹ [M, Γ_χ] = 0)
+  Solutions of M Γ_χ = 0 over C: [{alpha: 0, beta: 0, gamma_M: 0}]
+  [PASS] [A] Connes-Lott Yukawa M forced to M = 0 by Z_3-equiv + γ↔Γ_χ identification  (unique solution = [{alpha: 0, beta: 0, gamma_M: 0}])
+
+==============================================================================
+PART 8: 2-DIM ANTI-COMMUTING FAMILY DISJOINT FROM CIRCULANTS
+==============================================================================
+  [PASS] [A] H = (1/3)(1⊗h + h⊗1) is real symmetric
+  [PASS] [A] {H, Γ_χ} = 0 when Σh = 0  (retained L4 theorem)
+  [H, R] = 0 equations under Σh = 0: [h1/3 + 2*h2/3, h1/3 - h2/3, 4*h1/3 + 2*h2/3, -2*h1/3 + 2*h2/3, -2*h1/3 - h2/3, h1/3 + 2*h2/3, -2*h1/3 - h2/3, -2*h1/3 - 4*h2/3, h1/3 - h2/3]
+  Solutions: [{h1: 0, h2: 0}]
+  [PASS] [A] [H, R] = 0  +  Σh = 0  ⟹  h = 0  (anti-commuting family disjoint from circulants)  (unique solution = [{h1: 0, h2: 0}])
+
+==============================================================================
+SUMMARY: 20 PASS / 0 FAIL
+Class-A pattern hits: 20
+==============================================================================
+
+VERDICT:
+  ALGEBRAIC NO-GO VERIFIED — Z_3-equivariance + {·,Γ_χ}=0 forces H=0
+  Connes-Lott corollary: off-diagonal Yukawa block forced to zero
+  2-dim anti-commuting family disjoint from circulant algebra
+  dominant_class: A (20 class-A pattern hits)
