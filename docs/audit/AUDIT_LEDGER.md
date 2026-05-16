@@ -24,11 +24,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1193 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 187 |
+| ~~audited_conditional~~ | 188 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,9 +41,9 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
+| `audit_in_progress` | 1 |
 | `audited_clean` | 523 |
-| `audited_conditional` | 187 |
+| `audited_conditional` | 188 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
@@ -115,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
-| `wave_static_direct_probe_fine_note` | no_go | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -819,6 +817,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `universality_classifier_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `vector_sector_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wave_retarded_gravity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `wave_static_direct_probe_fine_note` | no_go | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | C | - |
 | `wave_static_matrixfree_shared_geometry_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `wide_family_h0125_bridge_reopen_audit` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
@@ -11594,6 +11593,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The runner performs a finite-grid static Poisson solve and retarded/static propagation comparison at the stated H, source position, and PW values, then computes the relative moves reported in the note. The conclusion follows for this bounded computational case.
 - **rationale:** The note makes a bounded negative stability claim, and the provided runner output matches the reported dS, rel_MS, residuals, and boundary-move percentages. The runner source does not merely print constants; it constructs the static solve, calls the wave/beam machinery, computes dM and dS, and derives rel_MS and relative moves from those values. No cited upstream authority is required for the narrow statement that this particular computation shows material finite-box sensitivity.
 - **auditor confidence:** medium
+
+### `wave_static_direct_probe_fine_note`
+
+- **Note:** [`WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md`](../../docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md)
+- **claim_type:** `no_go`
+- **claim_scope:** At H = 0.25 on the specified moving-source Lane 6 setup, the runner computes rel_MS = 37.62% and rel_MIeq = 23.16%, so the direct discrete static comparator dS does not outperform dIeq on that fine point.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-135235-20260516T135212Z-11944e97-wave_static_direct_probe-judicial`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** At the quoted fine point H = 0.25, on the actual moving-source lane, the direct static comparator does not beat dIeq because rel_MS = 37.62% is worse than rel_MIeq = 23.16%.  _(class `C`)_
+- **chain closes:** False — The runner is not a mere printout or definition substitution: it constructs fields, solves the direct static Poisson comparator, propagates the beam, and computes the reported relative mismatches, so class C is the best fit for the numerical load-bearing step. However, the restricted packet does not include the imported wave_retardation_continuum_limit module that supplies the physical constants, geometry, beam DAG/readout, wave/static comparators, and accepted normalizations. Those are load-bearing boundary/readout dependencies for the exact moving-source lane, so the no-go conclusion is supported only conditionally within the imported setup rather than closed from the packet alone.
+- **rationale:** The runner is not a mere printout or definition substitution: it constructs fields, solves the direct static Poisson comparator, propagates the beam, and computes the reported relative mismatches, so class C is the best fit for the numerical load-bearing step. However, the restricted packet does not include the imported wave_retardation_continuum_limit module that supplies the physical constants, geometry, beam DAG/readout, wave/static comparators, and accepted normalizations. Those are load-bearing boundary/readout dependencies for the exact moving-source lane, so the no-go conclusion is supported only conditionally within the imported setup rather than closed from the packet alone.
+- **open / conditional deps cited:**
+  - `scripts/wave_retardation_continuum_limit.py`
+- **auditor confidence:** judicial
 
 ### `wave_static_fixed_beam_boundary_sensitivity_note`
 
