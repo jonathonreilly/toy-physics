@@ -15,10 +15,13 @@ space alone.
 **Claim type (in-note framing):** bounded operational note —
 `(local d, local Hermitian H, Born readout, "support = edges"
 extraction rule)` ⇒ four runner-verified numerical consequences.
-The audit ledger records `claim_type: positive_theorem` with verdict
-`audited_renaming`; this in-note framing narrows the operational
-scope to match the renaming verdict, without proposing any audit-side
-`claim_type` revision.
+The audit ledger now records `claim_type: bounded_theorem` (audited,
+2026-05-11) with verdict `audited_renaming`; this in-note framing is
+aligned with the current audited `bounded_theorem` row and the
+renaming verdict, and does not propose any further audit-side
+`claim_type` revision. The earlier 2026-05-05 audit row recorded
+`claim_type: positive_theorem`; the 2026-05-11 re-audit moved the row
+to `bounded_theorem`, matching this note's scope-narrowed framing.
 **Status authority:** independent audit lane only.
 **Authority role:** records that the four numerical consequences follow
 from `(H = ⊗_i H_i, local Hermitian H, Born readout)` as a class-E
@@ -34,10 +37,13 @@ paper package, whose framework statement remains `Cl(3)` on `Z^3` with
 the audited package boundary recorded in
 `docs/MINIMAL_AXIOMS_2026-04-11.md`.
 
-## Audit boundary (2026-05-10 refresh of 2026-05-05 verdict)
+## Audit boundary (2026-05-10 refresh of 2026-05-05 verdict; 2026-05-11 re-audit confirmed `audited_renaming` and updated `claim_type` to `bounded_theorem`)
 
 The 2026-05-05 audit recorded the verdict `audited_renaming` (load-
-bearing-step class E, criticality `critical`). The audit's
+bearing-step class E, criticality `critical`). The 2026-05-11 re-audit
+confirmed `audited_renaming` and updated the ledger `claim_type` from
+`positive_theorem` to `bounded_theorem`, matching the scope-narrowed
+operational framing adopted here. The 2026-05-05 audit's
 `chain_closure_explanation`:
 
 > *The chain does not close from the single axiom alone because the
