@@ -39,7 +39,135 @@ not claimed.
 
 ---
 
-## 1. Theorem statement
+## 1. Assumptions exercise (Elon first-principles)
+
+### 1.1 Framework context cited as background
+
+| Item | Content | Role here |
+|---|---|---|
+| Z1 | `R = cyclic shift` on R^3 (Z_3 generator) | cited from `KOIDE_LIGHTCONE_PRIMITIVE_THEOREM_NOTE_2026-05-10` (retained) |
+| Z2 | `Γ_χ = (2/3) J − I` with spectrum {+1, −1, −1} | cited from `KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10` (retained) |
+| Z3 | Circulant algebra `⟨I, R, R²⟩` is 3-dim commutative (the commutant of R) | standard rep theory of Z_3; cited |
+| Z4 | Schur orthogonality of Z_3 characters (1, ω, ω² with ω = e^{2πi/3}) | standard; cited |
+| Z5 | L4 2-dim anti-commuting family H = (1/3)(1⊗h + h⊗1), Σh = 0 | cited from L4 §3 (retained) |
+
+### 1.2 The four assumptions in this no-go note
+
+| Label | Statement |
+|---|---|
+| A1 | "Z_3-equivariant Yukawa Dirac" is the natural framework primitivity condition imposed by an algebra `A ⊇ Z_3` acting via the regular representation on R^3. |
+| A2 | The Connes-Lott corollary (§4) addresses a candidate construction actually proposed in NCG, not a strawman identification. |
+| A3 | The subalgebra-intersection identity `comm(R) ∩ anticomm(Γ_χ) = {0}` is new content not derivable from L4 §3 + Schur orthogonality alone. |
+| A4 | The Connes first-order condition (admitted import) is the right NCG axiom to invoke for the corollary. |
+
+### 1.3 Hostile engagement with each assumption
+
+**A1 — "Z_3-equivariant Yukawa is the natural framework primitivity condition."**
+
+For an algebra `A = Cl(3) ⋊ Z_3` (or any algebra containing the Z_3 cyclic
+group action on the 3-generation triplet), Connes' first-order condition
+`[[D, a], b°] = 0` does force the Yukawa block M to commute with the
+Z_3 action when both A and A° act via the regular rep. So Z_3-equivariance
+is a CONSEQUENCE of the framework primitive choice (algebra A) plus
+NCG axioms — not an independent assumption.
+
+**Hostile verdict on A1:** The framing as "natural primitivity condition"
+is accurate IF you choose A ⊇ Z_3. If you choose A = Cl(3) only (no
+explicit Z_3 in the algebra), the Z_3-equivariance of M is NOT forced
+by first-order condition — M becomes a generic Hermitian 3×3 matrix
+constrained only by Cl(3) action. In this alternative framework choice,
+the present no-go does not apply.
+
+**A2 — "Connes-Lott corollary is not a strawman."**
+
+The Cycle 1 hostile reviewer's primary objection was that the §4
+corollary kills a hybrid identification γ_CL = Γ_χ where γ_CL is the
+Connes-Lott Z_2 chirality grading on `H_L ⊕ H_R` and Γ_χ is the Z_3
+character grading on a single R^3 generation factor. These ARE
+different gradings on different Hilbert spaces in standard NCG.
+
+The §4 corollary as currently scoped (post-demotion edit) explicitly
+acknowledges this: it closes ONLY the literal single-factor
+identification, NOT standard multi-factor Connes-Lott constructions.
+
+**Hostile verdict on A2:** Scope-narrow observation, not a strawman in
+the demoted form. The corollary is now correctly framed as documenting
+ONE specific (forced) identification that fails — useful as scoping
+for future constructions, not as a no-go for generic Connes-Lott.
+
+**A3 — "Subalgebra-intersection identity is new content."**
+
+The Cycle 2 sibling note (`KOIDE_BLOCK_DIAGONAL_OBSTRUCTION_NOTE_2026-05-16`)
+strengthens this Cycle 1 result and exposes the underlying structural
+mechanism: Sym(R³) decomposes as `V_block ⊕ V_off` where V_off is the
+L4 anti-commuting family. The Z_3-equivariant subspace lies in V_block,
+so the intersection with V_off is {0}.
+
+This makes Cycle 1's identity a SPECIAL CASE of Cycle 2's direct-sum
+decomposition observation, which is itself a structural restatement of
+L4 §3's "H mixes singlet and doublet" insight.
+
+**Hostile verdict on A3:** The identity is correct but is reconstructable
+from L4 §3 + standard direct-sum decomposition of Sym(R³). Marginal new
+content; the hostile reviewer's V3 demote concern is confirmed by this
+analysis.
+
+**A4 — "Connes first-order condition is the right NCG axiom."**
+
+The first-order condition `[[D, a], b°] = 0` is a standard NCG axiom
+(hep-th/9606001 et seq.) governing Dirac operators in spectral triples.
+Invoking it in the §4 corollary is appropriate, but it makes the
+corollary CONDITIONAL on accepting this admitted import.
+
+**Hostile verdict on A4:** The corollary's `bounded_theorem` status
+(conditional on NCG axioms) is honest. The main theorem (§2) does not
+use this import; it is purely algebraic.
+
+### 1.4 Elon first-principles — what is the obstruction, really?
+
+**Stripping all framework conventions, what is the structural content?**
+
+The space `Sym(R³)` is 6 real-dim. Γ_χ ∈ Sym(R³) has spectrum
+{+1, −1, −1} with eigenspaces s (1-dim) and D (2-dim). This induces
+the direct-sum decomposition
+
+```text
+   Sym(R³)  =  V_block  ⊕  V_off
+   dim 6    =  dim 4    ⊕  dim 2
+```
+
+The anti-commutation condition `{H, Γ_χ} = 0` is equivalent to
+`H ∈ V_off`.
+
+The Z_3 regular rep on R^3 preserves s and D (since R acts as 1 on s
+and as a rotation by 2π/3 on D). So Z_3-equivariant H is automatically
+in `V_block` (more precisely, in the 3-dim circulant subalgebra ⊆ V_block).
+
+Cycle 1's theorem: "Z_3-equivariant + {H, Γ_χ}=0 ⟹ H=0" is then
+literally "circulant ∩ V_off = {0}", a consequence of the direct-sum
+decomposition `V_block ⊕ V_off`.
+
+The Z_3 Fourier diagonalization argument in §2.4-2.5 is one specific
+way to verify this direct-sum decomposition explicitly — but the
+underlying mechanism is **just the spectral decomposition of Γ_χ**,
+not anything specifically about Z_3 character theory.
+
+**Conclusion of the Elon strip-down.** Cycle 1 is a Z_3-specialization
+of the more general Cycle 2 direct-sum decomposition observation, which
+itself is implicit in L4 §3's "H mixes singlet and doublet" statement.
+
+The genuine new content delivered by Cycle 1 is:
+- An explicit Z_3 Fourier verification (§2.4-2.5) of the direct-sum
+  intersection
+- The scope-narrow §4 observation about the literal single-factor
+  γ_CL = Γ_χ identification
+
+These are exact-support level contributions, consistent with the
+hostile reviewer's DEMOTE verdict. They are useful for documentation
+of the structural geometry but do not constitute a novel
+positive_theorem advance.
+
+## 2. Theorem statement
 
 **Theorem (Z_3-Equivariance and Γ_χ-Anti-Commutation Are Incompatible).**
 
@@ -62,7 +190,7 @@ If both
 ```
 then H = 0.
 
-## 2. Proof
+## 3. Proof
 
 The proof is a direct consequence of the fact that Γ_χ lies in the
 commutative circulant algebra ⟨I, R, R²⟩.
@@ -141,7 +269,7 @@ on a finite group), so the only solution is `a = b = c = 0`.
 
 Therefore H = 0. ∎
 
-## 3. Equivalent algebraic reformulation
+## 4. Equivalent algebraic reformulation
 
 The theorem statement
 `comm(R) ∩ anticomm(Γ_χ) = {0}  inside  Sym(R³)`
@@ -155,7 +283,7 @@ non-trivial common solution. The geometric content is that the
 **disjoint from** the 3-dim circulant algebra `⟨I, R, R²⟩` (their
 intersection is only at H = 0).
 
-## 4. Scope-narrow Connes-Lott observation
+## 5. Scope-narrow Connes-Lott observation
 
 This section records a SCOPE-NARROW observation about a specific
 (forced) Connes-Lott identification. It does NOT close generic
@@ -199,7 +327,7 @@ anti-commuting form, one must either:
 Both directions are open. The present note closes ONLY the literal
 single-factor identification γ = Γ_χ + Z_3-equivariance.
 
-## 5. What this support note does NOT establish
+## 6. What this support note does NOT establish
 
 - A no-go on Level 5 globally. Standard Connes-Lott constructions
   with tensored Hilbert space `R³ ⊗ (H_L ⊕ H_R)` (chirality grading
@@ -217,7 +345,7 @@ The note establishes ONLY the narrow algebraic identity
 scope-narrow corollary about the literal single-factor identification
 γ = Γ_χ + Z_3-equivariance of the Dirac.
 
-## 6. Falsifiers
+## 7. Falsifiers
 
 - A computational error in §2 (verified symbolically by the runner
   with `dominant_class: A`).
@@ -227,7 +355,7 @@ scope-narrow corollary about the literal single-factor identification
   (refuted by §2.5 via the invertibility of the Z_3 Fourier
   transform).
 
-## 7. Cross-references (non-load-bearing)
+## 8. Cross-references (non-load-bearing)
 
 - Anti-commuting H 2-dim family characterization:
   `KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md`
@@ -243,14 +371,14 @@ scope-narrow corollary about the literal single-factor identification
 - Connes-Moscovici twisted spectral triples (admitted import for
   alternative route R5): Connes-Moscovici 2008
 
-## 8. Lane 6 context
+## 9. Lane 6 context
 
 This no-go is graph-disconnected from the Lane 6 physics chain. It
 constrains the SPACE of candidate framework realizations of the
 Level 4 anti-commuting H — it does not assert any Koide closure or
 charged-lepton mass derivation.
 
-## 9. Boundary
+## 10. Boundary
 
 This is a NARROW EXACT SUPPORT IDENTITY. It establishes the
 algebraic subalgebra-intersection fact:

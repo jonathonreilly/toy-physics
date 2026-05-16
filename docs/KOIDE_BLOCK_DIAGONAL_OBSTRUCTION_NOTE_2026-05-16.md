@@ -59,7 +59,200 @@ not claimed.
 
 ---
 
-## 1. Theorem statement
+## 1. Assumptions exercise (Elon first-principles)
+
+### 1.1 Framework context cited as background
+
+| Item | Content | Role here |
+|---|---|---|
+| Z1 | `Γ_χ = (2/3) J − I` on R^3 with eigenvalues +1 (singlet) and −1 (doublet) | cited from `KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10` (retained); not re-ratified here |
+| Z2 | L4 2-dim anti-commuting family: H = (1/3)(1⊗h + h⊗1), Σh = 0 | cited; not re-ratified |
+| Z3 | Lightcone Primitive: Z_3-equivariant H = aI + bR + b*R² | cited from `KOIDE_LIGHTCONE_PRIMITIVE_THEOREM_NOTE_2026-05-10` (retained) |
+| Z4 | Cycle 1 (this campaign): Z_3-equivariant + {H, Γ_χ}=0 ⟹ H=0 | cited from `KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16` (exact_support, sibling cycle); not re-ratified |
+
+### 1.2 The four assumptions in this strengthening note
+
+| Label | Statement |
+|---|---|
+| A1 | "Block-diagonal in Γ_χ's eigenbasis" is a meaningful framework-level constraint distinct from Z_3-equivariance. |
+| A2 | The strictly-weaker hypothesis (relative to Cycle 1's Z_3-equivariance) closes off candidate framework realizations not closed by Cycle 1. |
+| A3 | The §4 algebra-equivariance corollary's three-case table represents meaningful breadth (not tautological breadth). |
+| A4 | The block-diagonality structural insight is new content distinct from L4's §3 statement "H mixes singlet and doublet". |
+
+### 1.3 Hostile engagement with each assumption
+
+**A1 — "Block-diagonality is a meaningful framework-level constraint."**
+
+The (s, D) decomposition is determined by Γ_χ's spectral decomposition.
+"Block-diagonal in (s, D)" means H ∈ End(s) ⊕ End(D), i.e., H preserves
+the Z_3-trivial vs Z_3-non-trivial sectors. ANY algebra A acting on R^3
+with `Γ_χ ∈ commutant(A)` automatically satisfies this (its commutant
+preserves Γ_χ's eigenspaces). So the framework correspondence is:
+
+```text
+   Block-diagonal in (s, D)  ⟺  Preserves the Z_3-trivial vs non-trivial sectors
+```
+
+This IS a meaningful framework primitive. But the immediate question:
+which framework primitives naturally produce H preserving this
+decomposition? Z_3-equivariance is one. The retained Lightcone
+Primitive note explicitly works in the Z_3-equivariant basis, so the
+"block-diagonal" framing is one decomposition step away from
+Lightcone-style retained content.
+
+**Hostile verdict on A1:** Constraint is meaningful but is a
+restatement of "preserves Γ_χ-eigenspaces", which is implicit in any
+discussion of Γ_χ. Not a new structural primitive.
+
+**A2 — "Strict generalization closes off candidate realizations not closed by Cycle 1."**
+
+The 3 extra real dimensions of H closed off (relative to Cycle 1) are:
+- Cycle 1 covers Z_3-equivariant H restricted to D = scalar (1-dim on D)
+- Cycle 2 covers block-diagonal H with H_D arbitrary in Sym(D) (3-dim on D)
+- Extra dimensions = 3 − 1 = 2 dims on D plus possibly something else,
+  for a total of 3 extra (per agent computation in the loop pack).
+
+Question: do any candidate framework realizations produce H block-diagonal
+in (s, D) but with H_D a NON-SCALAR symmetric 2×2 matrix? This would
+require the framework primitive A to act NON-SCALARLY on the doublet
+(i.e., A's commutant on D is larger than just scalars). But any algebra
+A with Γ_χ ∈ commutant(A) and `A ≠ trivial` necessarily has commutant
+that block-diagonalizes — the only question is whether commutant on D
+is scalars (Schur on D irreducible) or larger (D reducible under A).
+
+Concrete framework primitives:
+- A = Z_3 (regular rep): D irreducible, commutant on D = scalars (1-dim).
+  Cycle 1 covers this.
+- A = R ⊕ R (diagonal in (s, D)): D trivially reducible (= scalars × 2),
+  commutant on D = Mat_2(R) (3-dim). Cycle 2 newly covers this.
+- A = trivial (no action): everything is in commutant. Cycle 2 covers this.
+
+The "newly covered" cases (A = R ⊕ R or trivial) are framework primitives
+that DON'T act on R^3 in any non-trivial way — they're degenerate cases
+that don't provide framework primitivity. So they don't correspond to
+candidate Level 5 realizations.
+
+**Hostile verdict on A2:** The 3 extra dimensions are mathematically real
+but **physically vacuous**. No candidate framework realization sits in
+the "newly covered" region. The hostile reviewer's F-3 finding is
+confirmed.
+
+**A3 — "§4 three-case table represents meaningful breadth."**
+
+Each case (a/b/c) trivially satisfies the corollary hypothesis by
+construction. Case (a) = Cycle 1 verbatim. Cases (b), (c) are degenerate
+algebra choices (R ⊕ Mat_2(R), R ⊕ R) that pre-assume the (s, D)
+block-diagonal structure. None of the three cases probes the boundary
+"is Γ_χ ∈ commutant(A)?" — they all pre-suppose it.
+
+**Hostile verdict on A3:** Breadth without depth. The cases enumerate
+algebras of different sizes, all comfortably interior to the corollary
+hypothesis. None tests the corollary's edge.
+
+**A4 — "Block-diagonality insight is new content distinct from L4 §3."**
+
+L4 §3.2 (line 187-194) states: "the all-ones vector is NOT an
+eigenvector of H... The eigenvectors of H are different from the
+singlet/doublet decomposition under Γ_χ. This is exactly the property
+needed — H 'mixes' the singlet and doublet subspaces, which is what
+anti-commutation with Γ_χ requires."
+
+This IS the negation of block-diagonality in (s, D). L4 §3 says H mixes
+s ↔ D; Cycle 2 says block-diagonal H + anti-commute ⟹ H = 0. These are
+two formulations of the same structural fact.
+
+The deeper insight Cycle 2 surfaces is the **direct-sum decomposition of
+Sym(R^3) in (s, D)**:
+
+```text
+   Sym(R³)  =  (block-diagonal in (s, D))  ⊕  (off-block in (s, D))
+            =  [End(s) ⊕ Sym(D)]           ⊕  [singlet↔doublet exchange]
+            =  4 real-dim                  ⊕  2 real-dim
+```
+
+Anti-commutation with Γ_χ forces H into the off-block component. So:
+
+- Block-diagonal H + anti-commute = block-diagonal ∩ off-block = {0} (Cycle 2).
+- Anti-commuting Hermitian H = off-block component = 2 real-dim subspace (= L4 family).
+
+**Hostile verdict on A4:** The direct-sum decomposition Sym(R³) =
+(block) ⊕ (off-block) is the underlying mechanism for BOTH L4's 2-dim
+family characterization AND Cycle 2's obstruction. L4 §3.2 sees the
+"mixes singlet and doublet" half (off-block side); Cycle 2 §2 sees the
+"block-diagonal + anti-commute = 0" half (block-diagonal side). They
+are dual statements about the same subspace decomposition.
+
+This is a clean structural framing — but it does NOT add new content
+beyond L4 §3. It surfaces the underlying geometry that L4 §3 already
+identifies.
+
+### 1.4 Elon first-principles — what is the obstruction, really?
+
+**Stripping all framework conventions, what is the structural content?**
+
+The space `Sym(R³)` is 6 real-dim. Any operator `Γ_χ ∈ Sym(R³)` with
+spectrum `{+1, −1, −1}` (i.e., trace = −1, det = +1, characteristic
+polynomial `(λ−1)(λ+1)²`) has eigenspaces s (dim 1) and D (dim 2).
+
+This decomposition gives an orthogonal direct-sum decomposition:
+
+```text
+   Sym(R³)  =  V_block  ⊕  V_off
+   dim 6    =  dim 4    ⊕  dim 2
+   V_block  =  {H : H = H_s ⊕ H_D}  =  End(s) ⊕ Sym(D)
+   V_off    =  {H : H = X ⊕ X^T on (s, D) off-blocks}  =  Hom(s, D) symmetrized
+```
+
+Under this decomposition:
+
+```text
+   {H, Γ_χ}  =  2 (block component of H)  −  2 · (-1) · (block component)
+            =  ... (full formula yields)
+   {H, Γ_χ}  =  0   ⟺   H ∈ V_off
+```
+
+(Anti-commutation kills the block-diagonal part; only off-block H
+satisfies it.)
+
+Cycle 2's main theorem is then a one-line statement:
+
+```text
+   V_block ∩ V_off  =  {0}    (orthogonal direct-sum decomposition)
+```
+
+This is true by the very definition of direct sum. There is **no new
+mathematical content** beyond observing that Γ_χ's spectral decomposition
+gives a direct-sum decomposition of Sym(R³), and the L4 anti-commutator
+condition picks out one summand.
+
+**What is Cycle 1's theorem, really, in this framing?**
+
+The Z_3 regular rep on R^3 has the same eigenspaces s = trivial-character
+subspace, D = non-trivial character subspace. Z_3-equivariant H lives
+in `End_{Z_3}(R³) = End(s) ⊕ End_{Z_3}(D) = R ⊕ R[Z_3 \ {0}]^{R} = R ⊕
+ℂ ≅ R³` (the circulant algebra, 3 real-dim).
+
+Z_3-equivariant H is, in particular, block-diagonal in (s, D): the
+circulant algebra is contained in V_block. So Cycle 1's hypothesis is
+V_block ∩ V_off = {0} restricted to the circulant subspace of V_block.
+
+This is even tighter than Cycle 2's statement, but the underlying
+mechanism — direct-sum decomposition — is identical.
+
+**Conclusion of the Elon strip-down.** Both Cycle 1 and Cycle 2 are
+restatements of the trivial fact that a direct-sum decomposition has
+trivial intersection. The structural content lives in Γ_χ's spectral
+decomposition (= retained L4 setup) and the L4 §3 observation that the
+anti-commuting family lies in V_off. Cycles 1-2 add no new structural
+mechanism beyond what L4 already implicitly contains.
+
+**Implication for tier-setting.** The hostile reviewer's DEMOTE verdict
+is fully consistent with this Elon analysis. The notes' value is
+**exact-support documentation of the direct-sum decomposition that
+underlies L4's anti-commuting family characterization** — useful for
+structural clarity, not for novel positive_theorem content.
+
+## 2. Theorem statement
 
 **Theorem (Block-Diagonality Obstruction).**
 
@@ -80,7 +273,7 @@ Let `H ∈ Sym(R^3)` (Hermitian, real symmetric) such that:
 
 Then H = 0.
 
-## 2. Proof
+## 3. Proof
 
 In the eigenbasis of Γ_χ, write H block-diagonally:
 ```text
@@ -108,7 +301,7 @@ For (1.2) to hold component-by-component:
 
 Hence H = 0. ∎
 
-## 3. Comparison with Cycle 1's Z_3-Equivariant Result
+## 4. Comparison with Cycle 1's Z_3-Equivariant Result
 
 The Cycle 1 result (`KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16`)
 proved: H Z_3-equivariant (`[H, R] = 0`) + `{H, Γ_χ} = 0` ⟹ H = 0.
@@ -131,7 +324,7 @@ So the present theorem **closes more cases** than Cycle 1 with the
 same final conclusion `H = 0`. The proof is also shorter and
 basis-independent (no Z_3 Fourier transform needed).
 
-## 4. Algebra-Equivariance Reformulation
+## 5. Algebra-Equivariance Reformulation
 
 **Corollary 4.1 (General Algebra-Equivariance).**
 
@@ -157,7 +350,7 @@ theorem. □
 | R ⊕ Mat_2(R) (block diag in (s, D)) | Yes | Yes | No (Cor 4.1, m_s = 0, M_D = 0) |
 | Staggered taste shifts ⟨T_1, T_2, T_3⟩ on V_3 | Yes | No (Γ_χ non-diagonal in V_3 basis) | N/A on this basis |
 
-## 5. Implications across the 5-route fan-out
+## 6. Implications across the 5-route fan-out
 
 The corollary explains why several of the spectral-triple routes
 from the loop's `ROUTE_PORTFOLIO.md` hit obstructions:
@@ -184,7 +377,7 @@ consistent with both conditions but Koide-trivial).
 - R5 (twisted modular): non-Hermitian Dirac forced by Z_3 twist;
   outside the Z_2 anti-commutation hypothesis of the present theorem.
 
-## 6. What this support note does NOT establish
+## 7. What this support note does NOT establish
 
 - A no-go on Level 5 globally. Constructions where H is NOT
   block-diagonal in Γ_χ's eigenbasis remain open:
@@ -202,7 +395,7 @@ consistent with both conditions but Koide-trivial).
 - The R3, R4, R5 obstructions (which have their own structural
   reasons documented in the loop's `ROUTE_PORTFOLIO.md`).
 
-## 7. Falsifiers
+## 8. Falsifiers
 
 - A computational error in §2 (verified by the runner — 8 PASS / 0
   FAIL, all class-A).
@@ -213,7 +406,7 @@ consistent with both conditions but Koide-trivial).
   `Γ_χ ∈ commutant(A)` and a non-zero A-equivariant Hermitian H
   with `{H, Γ_χ} = 0`. Refuted by Cor 4.1.
 
-## 8. Cross-references (non-load-bearing)
+## 9. Cross-references (non-load-bearing)
 
 - Anti-commuting H 2-dim family characterization:
   `KOIDE_ANTICOMMUTING_OPERATOR_DERIVATION_THEOREM_NOTE_2026-05-10.md`
@@ -227,7 +420,7 @@ consistent with both conditions but Koide-trivial).
 - Chamseddine-Connes spectral triple machinery:
   hep-th/9606001 (admitted import)
 
-## 9. Boundary
+## 10. Boundary
 
 This is a NARROW EXACT SUPPORT IDENTITY. It establishes the
 block-diagonality obstruction:
