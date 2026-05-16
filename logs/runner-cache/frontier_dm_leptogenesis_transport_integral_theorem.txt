@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_leptogenesis_transport_integral_theorem.py
-runner_sha256: d6ff37bb03b91d10f7da803ee7da5dc48303da2f5a2714036a8caef3b1bb9900
+runner_sha256: 5a8cc34872065a4608ac77b2b059c6d55a9faa928c835c0e1d9b56f6880306ba
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.89
+elapsed_sec: 0.67
 status: ok
 ----- stdout -----
 ========================================================================================
@@ -11,29 +11,44 @@ DM LEPTOGENESIS TRANSPORT-INTEGRAL THEOREM
 ========================================================================================
 
 ========================================================================================
-PART 1: THE DIRECT TRANSPORT EQUATIONS ARE THE AUTHORITY OBJECT
+PART 1: UPSTREAM INPUTS TO THE BOLTZMANN ODE ARE THEOREM-NATIVE
 ========================================================================================
-  [PASS] The exact radiation branch uses the exact transport input K_H = 47.23597962989828  (K_H=47.235979629898)
-  [PASS] The old fit comparator remains kappa_fit = 0.01427162724743994  (kappa_fit=0.01427162724744)
-  [PASS] The transport authority path is now the direct Boltzmann solve rather than the fit  (kappa_axiom[H] is defined by the transport equations themselves)
+  [PASS] HRAD theorem: exact radiation branch is E_H(z) = 1 on Cl(3)/Z^3 (flatness chain)  (max|E_H(z)-1| over [0.5,10]=0.00e+00)
+  [PASS] HRAD theorem: K_H = m_tilde / m_* = 47.235979629... is theorem-native upstream  (K_H=47.235979629898)
+  [PASS] Equilibrium-conversion theorem: N_{N1}^eq(z) = 0.5 z^2 K_2(z), N_eq(0->) = 1  (N_eq(1e-3)=1.000000, N_eq(1)=0.812419)
+  [PASS] Structural form: D_H(z) = K_H z K_1(z)/K_2(z) / E_H(z)  (D_H(1.5) from module=33.673992857502 == K_H z K_1/K_2/E_H=33.673992857502)
+  [PASS] Structural form: W_H(z) = (1/4) K_H z^3 K_1(z) / E_H(z)  (W_H(1.5) from module=11.055390040093 == 0.25 K_H z^3 K_1/E_H=11.055390040093)
 
 ========================================================================================
-PART 2: THE FORMAL INTEGRAL MATCHES THE DIRECT TRANSPORT SOLVE
+PART 2: INTEGRATING-FACTOR IDENTITY (T3) = (T4) AS A DERIVED THEOREM
 ========================================================================================
-  [PASS] The direct exact-radiation transport solve gives kappa_axiom = 0.004829545290766509  (kappa_axiom=0.004829545290767)
-  [PASS] The exact formal transport integral reproduces the same value  ((direct,formal)=(0.004829545290767,0.004829546210191))
-  [PASS] So the fit is no longer needed on the exact radiation branch  (the transport solve and formal integral agree without any kappa-fit input)
+  [PASS] Direct ODE solve: kappa_axiom_direct = |N_{B-L}(z_max)| with N_{B-L}(0) = 0  (kappa_axiom_direct=0.004829545290767)
+  [PASS] Formal integral: integral_0^infty [-dN_{N1}/dz] exp(-int W_H) dz  (kappa_axiom_formal=0.004829546210191)
+  [PASS] DERIVED IDENTITY (T4): kappa_axiom_direct == kappa_axiom_formal at ODE/quadrature tolerance  (|direct-formal|/direct=1.90e-07)
 
 ========================================================================================
-PART 3: THE FIT OVERSTATES TRANSPORT ON THE EXACT RADIATION BRANCH
+PART 3: STRUCTURAL PERTURBATION: (T4) HOLDS OFF THE BENCHMARK K_H
 ========================================================================================
-  [PASS] The exact radiation transport branch gives eta/eta_obs = 0.18878592785084122  (eta/eta_obs=0.188785929502)
-  [PASS] The old fit overstates transport by a factor 2.955066473761705  (fit/direct=2.955066447917)
-  [PASS] Therefore kappa_fit(K) is only a diagnostic comparator, not the authority transport result  ((fit,direct)=(0.014271627247,0.004829545291))
+  [PASS] Direct solve at perturbed K_H' gives a different kappa_axiom_direct  (K_H'=47.283216, kappa_axiom_direct(K_H')=0.004823940131)
+  [PASS] Formal integral at perturbed K_H' tracks the new direct solve  (|direct-formal|/direct (K_H')=1.90e-07)
+  [PASS] Therefore (T4) is a structural property of the ODE, not benchmark-anchored  (the direct-vs.-formal equivalence (T3) = (T4) holds at both K_H and K_H')
 
 ========================================================================================
-SUMMARY: PASS=9 FAIL=0
+PART 4: RADIATION-BRANCH NUMERICAL WITNESSES (REPRODUCIBLE, NOT LOAD-BEARING)
 ========================================================================================
+  [PASS] Reproducibility: kappa_axiom[H_rad] = 0.004829545290766509 (ODE-computed)  (kappa_axiom[H_rad]=0.004829545290767)
+  [PASS] Late-time decoupling: N_{N1}(z_max=35) << N_{N1}^eq(z_min=1e-3)  (N_{N1}(1e-3)=1.000e+00, N_{N1}(35)=8.632e-14)
+  [PASS] Downstream eta readout: eta[H_rad]/eta_obs = 0.18878592785084122 (T5)  (eta/eta_obs=0.188785929502)
 
+========================================================================================
+PART 5: kappa_fit(K) IS DEMOTED TO A DIAGNOSTIC COMPARATOR
+========================================================================================
+  [PASS] Legacy fit kappa_fit(K_H) = (0.3/K)(log K)^0.6 = 0.01427162724743994  (kappa_fit=0.01427162724744)
+  [PASS] On the radiation branch, kappa_fit overshoots the ODE-computed kappa_axiom by ~2.955  (kappa_fit/kappa_axiom=2.955066447917)
+  [PASS] Plugging kappa_fit into the same factorization reproduces the legacy comparator ~0.5579  (eta_fit/eta_obs=0.557874966110)
+  [PASS] Therefore kappa_fit is retained only as a diagnostic comparator; authority path is the ODE solve  ((fit, direct)=(0.014271627247, 0.004829545291))
+
+========================================================================================
+SUMMARY: PASS=18 FAIL=0
+========================================================================================
 ----- stderr -----
-
