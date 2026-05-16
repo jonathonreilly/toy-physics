@@ -23,12 +23,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 308 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1203 |
+| unaudited | 1202 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
 | ~~audited_conditional~~ | 182 |
-| ~~audited_failed~~ | 18 |
+| ~~audited_failed~~ | 19 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
 | `decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | 1 |
@@ -45,10 +45,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | `audited_clean` | 516 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 15 |
-| `audited_failed` | 62 |
+| `audited_failed` | 63 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1316 |
+| `unaudited` | 1315 |
 
 | claim_type | count |
 |---|---:|
@@ -885,6 +885,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_nonlocal_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `staggered_backreaction_results_2026-04-10` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
 | `staggered_backreaction_scale_closure_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | C | - |
+| `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03` | bounded_theorem | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-gpt-5.5 | A | - |
 | `testable_predictions_map_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `three_family_card_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
 | `triage_no_promotion_note` | no_go | ~~audited_failed~~ | **retained_no_go** | cross_family | codex-gpt-5 | B | - |
@@ -10212,6 +10213,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
 - **rationale:** The restricted packet supports the shared clean bounded verdict: the cached runner exits 0 with PASS=7 FAIL=0 and constructs the finite geometry and slot maps directly rather than importing downstream contraction values or external comparators. The dependencies needed for the rank-8 four-fold Haar projector interpretation are retained-grade in the permitted operational metadata, and the ratified scope excludes Block 4/5 partition-function or physical verdict claims. The disagreement is only the load-bearing class: these checks are finite combinatorial/algebraic identity checks over declared lattice definitions, not a class C first-principles framework computation of a new physical number.
 - **auditor confidence:** high
+
+### `su3_wigner_intertwiner_block4_block5_theorem_note_2026-05-03`
+
+- **Note:** [`SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md`](../../docs/SU3_WIGNER_INTERTWINER_BLOCK4_BLOCK5_THEOREM_NOTE_2026-05-03.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the narrowed finite combinatorial/algebraic core: Block 4 trivial-sector coefficient staging, c_(1,1), rank-8 Haar singlet-basis import, stated plaquette tensor/scope estimates, and Block 5 L_s=2 orientation diagnostics as described in the note, excluding bridge-gap numerics and no-go conclusions.
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-124354-d4142792-su3_wigner_intertwiner_b-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The narrowed load-bearing claim is that Block 4 stages the L_s=3 PBC cube partition core, including the per-plaquette (8,8,8,8) cyclical-trace tensor, and Block 5 verifies the L_s=2 all-forward/standard-Wilson orientation diagnostics.  _(class `A`)_
+- **chain closes:** False — The Block 4 runner does not derive the claimed per-plaquette cyclical-trace tensor; it hard-codes T[i,i,i,i]=1 while its own comments acknowledge this is a simplification of the actual trace structure. The restricted packet also provides no Block 5 runner source/stdout, so the L_s=2 orientation diagnostics cannot be verified from runner artifacts here.
+- **rationale:** The narrowed scope properly excludes the imported bridge-target, epsilon, and P_candidate numerics, so those do not by themselves force a conditional verdict. However, the load-bearing Block 4 plaquette-tensor assertion is not established by the supplied code: the runner constructs the tensor by direct diagonal assignment rather than deriving the character trace tensor, and the comments mark this representation as a simplifying assertion. Because that tensor structure is explicitly in the narrowed theorem core, the chain does not close on its own terms.
+- **auditor confidence:** medium
 
 ### `substrate_to_p_a_forcing_theorem_note_2026-04-30`
 
