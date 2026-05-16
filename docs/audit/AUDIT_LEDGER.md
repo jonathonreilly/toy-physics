@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 314 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1185 |
+| unaudited | 1184 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 192 |
+| ~~audited_conditional~~ | 193 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -44,12 +44,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 526 |
-| `audited_conditional` | 192 |
+| `audited_conditional` | 193 |
 | `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1298 |
+| `unaudited` | 1297 |
 
 | claim_type | count |
 |---|---:|
@@ -811,6 +811,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sign_portability_invariant_family_second_grown_derivation_theorem_note_2026-05-09` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `spectral_trajectory_theorem_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `staggered_fermion_card_2026-04-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
+| `staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `strong_cp_theta_zero_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
 | `su3_casimir_fundamental_theorem_note_2026-05-02` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_native_axioms_theory_note` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -10270,6 +10271,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The computed 2x2x2 blocked-centroid acceleration follows an approximately inverse-square distance law on the audited d=3..6 surface, with per-side exponents near -2 and global exponent -1.982.  _(class `C`)_
 - **chain closes:** True — The included runner builds the stated staggered Hamiltonian, potential, free and gravitating evolutions, raw and blocked centroids, and distance-law fits; its cached output matches the note. The closure is bounded to the stated external source, open boundaries, calibration window, and blocked observable.
 - **rationale:** The runner is not a print-only or hard-coded numerical-match artifact: it computes the finite staggered-lattice evolution and fitted blocked-trajectory exponent from the stated operators and parameters. The note's load-bearing numerical claims match the completed runner output. The result is clean only as a bounded finite-surface computation; it does not establish self-consistent two-body closure, both-masses scaling, irregular-graph transfer, or a general staggered trajectory theorem.
+- **auditor confidence:** high
+
+### `staggered_scalar_parity_lapse_coupling_external_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/STAGGERED_SCALAR_PARITY_LAPSE_COUPLING_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the restricted-packet support for the claimed staggered scalar parity coupling, lapse symmetrization, and algebraic distinction from additive identity coupling.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-140213-20260516T140213Z-a07d670f-staggered_scalar_parity_-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given the staggered formulation, the literature-correct scalar background coupling is the parity coupling H_diag(x) = (m + Phi(x)) * epsilon(x), with the lapse form H_grav = sqrt(N) H_flat sqrt(N).  _(class `B`)_
+- **chain closes:** False — The algebraic identities about epsilon, Hermiticity, and the difference between (P) and (I) close internally. The load-bearing literature identification that the scalar background must couple as (m + Phi) epsilon is imported from external references that are not provided as retained-grade cited authorities in the restricted packet.
+- **rationale:** The runner genuinely checks the local algebraic consequences of the definitions with exact arithmetic, so those parts are class (A) and pass. However, the theorem’s substantive step is not the arithmetic but the external identification of the staggered scalar coupling as the parity coupling rather than the additive identity coupling. The packet provides no cited authority text for Zache et al. or Dempsey-Klich-Lopez, and the note explicitly does not derive the coupling from the baseline framework. The claim is therefore conditional on an unclosed external literature/import edge.
 - **auditor confidence:** high
 
 ### `staggered_self_consistent_two_body_note_2026-04-11`
