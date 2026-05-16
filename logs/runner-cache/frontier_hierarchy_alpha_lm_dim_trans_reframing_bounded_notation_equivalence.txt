@@ -1,0 +1,229 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence.py
+runner_sha256: a4262eb637ec0024a0b3ac7ba547a1906010eec61ba34cf26aaf687a5cd62c16
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.56
+status: ok
+----- stdout -----
+
+========================================================================
+Hierarchy alpha_LM^16 dim-trans reframing — bounded notation-equivalence
+Authority: HIERARCHY_ALPHA_LM_DIM_TRANS_REFRAMING_BOUNDED_NOTATION_EQUIVALENCE_NOTE_2026-05-16
+========================================================================
+
+========================================================================
+T1: identity alpha^N = exp(-c_eff/alpha), c_eff = N*alpha*ln(1/alpha)
+========================================================================
+  symbolic: alpha^N - exp(-c_eff/alpha) = 0 (expected 0)
+[PASS] T1a: symbolic identity alpha^N == exp(-c_eff/alpha)
+  alpha_LM           = 0.090667836017
+  N                  = 16
+  ln(1/alpha_LM)     = 2.400552604188
+  c_eff              = 3.482446557878
+  alpha_LM^N         = 2.085701e-17
+  exp(-c_eff/alpha_LM)= 2.085701e-17
+      a = 2.0857008000148865e-17  b = 2.0857008000148874e-17  |a - b|/|b| = 4.43e-16  rtol = 1e-12
+[PASS] T1b: numeric identity at canonical surface
+      a = 0.00010000000000000002  b = 9.999999999999991e-05  |a - b|/|b| = 1.08e-15  rtol = 1e-12
+[PASS] T1c: identity at rational test point (1/10, N=4)
+
+========================================================================
+T2: c_eff numerical evaluation
+========================================================================
+  <P>                = 0.5934
+  u_0 = <P>^(1/4)    = 0.877681381199
+  alpha_bare = 1/(4pi)= 0.079577471546
+  alpha_LM = alpha_bare/u_0 = 0.090667836017
+  ln(1/alpha_LM)     = 2.400552604188
+  c_eff = N*alpha_LM*ln(1/alpha_LM) = 3.482446557878
+  c_eff / alpha_LM   = 38.408841667007
+[PASS] T2: c_eff in (3, 4) and c_eff/alpha_LM matches N*ln(1/alpha_LM)
+
+========================================================================
+T3: comparison to published QFT c values for exp(-c/alpha)
+========================================================================
+  framework c_eff   = 3.4824  (at alpha_LM = 0.0907)
+  CW structure       : c = 1/(2 beta_0 g^2) [coupling-independent rational]
+  1-instanton 1-loop : c = 8 pi^2          = 78.9568
+  gaugino N_c=3      : c = 8 pi^2 / N_c    = 26.3189
+  gaugino N_c=1      : c = 8 pi^2          = 78.9568
+
+  alpha_LM*(1-0.010) = 0.089761  ->  c_eff = 3.462056
+  alpha_LM*(1-0.005) = 0.090214  ->  c_eff = 3.472270
+  alpha_LM*(1+0.000) = 0.090668  ->  c_eff = 3.482447
+  alpha_LM*(1+0.005) = 0.091121  ->  c_eff = 3.492587
+  alpha_LM*(1+0.010) = 0.091575  ->  c_eff = 3.502692
+  c_eff range over +-1% perturbation = 0.040636
+[PASS] T3: c_eff is coupling-dependent (NOT canonical exp(-c/alpha) form)
+
+========================================================================
+T4: substrate input for N = 16 factor
+========================================================================
+  2^d at d=3 (Z^3 spatial substrate) = 8
+  2^d at d=4 (Wick-rotated Z^4)      = 16
+  Hierarchy formula uses N = 16
+  Identification N = 2^4 requires Wick rotation Z^3 -> Z^4 (primitive P2)
+
+  Open primitive P2: Wick rotation Z^3 -> Z^4 not framework-derived
+  Companion no-go: regulator-dependence (Wilson:1, twisted-mass:2,
+                   staggered:4, domain-wall:1, overlap:1, naive: 2^d)
+  Closure path: STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03 (open)
+[PASS] T4: N=16 = 2^4 algebraic fact; substrate identification rides open P2
+
+========================================================================
+T5: substrate input for alpha_LM factor
+========================================================================
+  <P>          = 0.5934
+  u_0          = <P>^(1/4) = 0.877681381199
+  alpha_bare   = 1/(4 pi)  = 0.079577471546
+  alpha_LM     = alpha_bare/u_0 = 0.090667836017
+
+  alpha_LM^16              = 2.085701e-17
+  alpha_bare^16 * u_0^(-16) = 2.085701e-17
+
+  Open primitive P3: substitution u_0^16 -> alpha_LM^16 is algebraic,
+                     not a determinant identity from substrate
+[PASS] T5: alpha_LM = alpha_bare/u_0 algebraic chain; rides open P3
+
+========================================================================
+T6: substrate input for ln(1/alpha_LM) factor
+========================================================================
+  ln(1/alpha_LM)     = 2.400552604188
+
+  ln(x) is a universal function on R_>0; appears in:
+    - Shannon binary entropy h(p) = -p ln p - (1-p) ln(1-p),
+      with h(p) ~ p ln(1/p) at p << 1 (form match if alpha_LM<->p)
+    - large-deviation rate functions I(x) (Cramer)
+    - Erdos-Renyi giant-component threshold p_c ~ ln(n)/n
+    - Kac-Rice random-zero counts ~ alpha * ln(1/alpha)
+
+  In each case the identification of x with a substrate primitive
+  is substantive content. The listed primitives (Cl(3), Z^3,
+  Klein-four, <P>, u_0, alpha_bare, alpha_LM) do NOT contain any
+  inverse-coupling-log as a derived constant, and do NOT identify
+  alpha_LM with a probability or density.
+
+  Comparison of ln(1/alpha_LM) ~ 2.4002 to small-integer rationals / constants:
+               1 = 1.000000  rel diff = 140.0553%
+               2 = 2.000000  rel diff = 20.0276%
+               e = 2.718282  rel diff = 11.6886%
+              pi = 3.141593  rel diff = 23.5880%
+           ln(2) = 0.693147  rel diff = 246.3265%
+           ln(3) = 1.098612  rel diff = 118.5077%
+           ln(4) = 1.386294  rel diff = 73.1633%
+         ln(4pi) = 2.531024  rel diff = 5.1549%
+        8pi^2/24 = 3.289868  rel diff = 27.0320%
+
+  No small-integer/rational match within 1% (consistent with
+  ln(1/alpha_LM) being a universal function value, not a
+  substrate primitive).
+[PASS] T6: ln(1/alpha_LM) has no substrate-primitive identification within the listed primitives
+
+========================================================================
+T7: numerical hierarchy cross-check
+========================================================================
+  v from (H):     M_Pl * (7/8)^(1/4) * alpha_LM^16     = 246.282818 GeV
+  v from (H'):    M_Pl * (7/8)^(1/4) * exp(-c_eff/alpha_LM) = 246.282818 GeV
+  canonical chain published v                         = 246.282818 GeV
+  PDG v_obs (consumes primitive P4)                  = 246.220000 GeV
+      a = 246.28281829012917  b = 246.28281829012906  |a - b|/|b| = 4.62e-16  rtol = 1e-12
+[PASS] T7a: (H') == (H) numerically
+      a = 246.28281829012906  b = 246.282818290129  |a - b|/|b| = 2.31e-16  rtol = 1e-09
+[PASS] T7b: (H) reproduces canonical chain published value
+
+========================================================================
+T8: identity stability under perturbations
+========================================================================
+  alpha_LM*(1-0.050) = 0.086134  c_eff = 3.3790  rel diff = 1.68e-16  [OK]
+  alpha_LM*(1-0.010) = 0.089761  c_eff = 3.4621  rel diff = 2.60e-15  [OK]
+  alpha_LM*(1+0.000) = 0.090668  c_eff = 3.4824  rel diff = 4.43e-16  [OK]
+  alpha_LM*(1+0.010) = 0.091575  c_eff = 3.5027  rel diff = 1.89e-15  [OK]
+  alpha_LM*(1+0.050) = 0.095201  c_eff = 3.5823  rel diff = 2.71e-15  [OK]
+[PASS] T8: identity remains exact under +-5% alpha_LM perturbations
+
+========================================================================
+T9: substantive-vs-trivial check
+========================================================================
+
+  For Class A substrate-primitive closure of alpha_LM^16 via the
+  reframed exp(-c_eff/alpha_LM) form, BOTH conditions required:
+
+  (a) c_eff supplied as coupling-INDEPENDENT substrate constant
+      (matching CW/instanton/gaugino pattern where c is
+       determined by group theory or geometry alone).
+  (b) Two independent substrate derivations supplied:
+      - the integer 16 from substrate primitives (P2 open)
+      - alpha_LM * ln(1/alpha_LM) as a coupling-independent
+        block from substrate primitives (no derivation supplied)
+
+  c_eff at alpha_LM   = 3.482447
+  c_eff at 2*alpha_LM = 4.953816
+  (a) c_eff coupling-dependent: True
+
+  (b) substrate derivations of 16 and alpha*ln(1/alpha):
+      - 16 = 2^4 from substrate: open (P2; regulator-dependent)
+      - alpha*ln(1/alpha) as coupling-independent block: not
+        supplied within this packet's source authority
+
+  Verdict: reframing is TRIVIAL notation rewrite,
+           NOT substantive Class A closure of alpha_LM^16.
+[PASS] T9: reframing is notation rewrite; no Class A closure achieved
+
+========================================================================
+T10: source-note boundary check
+========================================================================
+
+  This packet consumes five one-hop markdown-linked authorities,
+  ALL load-bearing only for the honest-boundary statement of §7,
+  NOT for the algebraic identity (T1):
+    - HIERARCHY_FORMULA_HONEST_STATUS_NOTE_2026-05-10.md
+      (parent status statement)
+    - NAIVE_LATTICE_FERMION_TWO_POWER_D_SPECIES_COUNT_NARROW_THEOREM_NOTE_2026-05-10.md
+      (retained algebraic 2^d species count)
+    - HIERARCHY_ALPHA_LM_EXPONENT_SPECIES_COUNT_BRIDGE_REGULATOR_DEPENDENCE_NO_GO_NOTE_2026-05-10.md
+      (regulator-dependence no-go on 16=N_species)
+    - STAGGERED_DIRAC_REALIZATION_GATE_NOTE_2026-05-03.md (open gate)
+    - PLAQUETTE_SELF_CONSISTENCY_NOTE.md (canonical surface)
+
+  External literature cited in the note prose (NOT as framework
+  authority, no markdown link):
+    - Coleman-Weinberg PRD 7 (1973) 1888
+    - 't Hooft PRD 14 (1976) 3432
+    - Nilles hep-ph/9405345
+    - KKLT PRD 68 (2003) 046005
+    - RS PRL 83 (1999) 3370
+    - MacGregor hep-ph/0603201, hep-ph/0607233 (numerological)
+    - Horsley et al. arXiv:0910.2795 (NSPT to alpha^20)
+
+  Boundary invariants:
+    - no canonical chain note modified
+    - no honest-status note modified
+    - no audit ledger row directly altered (audit lane decides)
+    - no new substrate primitive introduced
+    - no closure of P1-P4 from honest-status note
+[PASS] T10: source-note boundary preserved (notation-equivalence packet only)
+
+========================================================================
+TOTAL: PASS=10 FAIL=0
+========================================================================
+
+VERDICT (source-side):
+  The reframing alpha_LM^16 = exp(-c_eff/alpha_LM) is a trivial
+  algebraic identity (Theorem T1). The framework's c_eff depends
+  on alpha_LM itself; canonical QFT exp(-c/alpha) hierarchies have
+  c independent of the coupling. Each factor of c_eff either
+  rides an open honest-status primitive (P2 for 16, P3 for
+  alpha_LM) or is a universal function whose substrate input is
+  not identified within the listed primitives. The reframing does NOT upgrade
+  (H) from bounded numerical match to substrate-primitive theorem.
+  alpha_LM^16 does NOT close at positive retained grade via this
+  path on the source authority surface of this packet.
+
+  See docs/HIERARCHY_ALPHA_LM_DIM_TRANS_REFRAMING_BOUNDED_NOTATION_EQUIVALENCE_NOTE_2026-05-16.md
+  for the full source-side statement. Audit lane sets effective
+  status.
+
+
+----- stderr -----
+

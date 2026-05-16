@@ -10209,6 +10209,26 @@
       "to": "asymmetry_persistence_mass_window_note"
     },
     {
+      "from": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "to": "hierarchy_formula_honest_status_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "to": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "to": "staggered_dirac_realization_gate_note_2026-05-03"
+    },
+    {
+      "from": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
       "from": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
       "to": "staggered_dirac_realization_gate_note_2026-05-03"
     },
@@ -49049,6 +49069,23 @@
       "runner_path": "scripts/hard_geometry_local_support_pilot.py",
       "title": "Hard Geometry Local Support Note"
     },
+    "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16": {
+      "claim_id": "hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem (notation-equivalence packet documenting a trivial",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "hierarchy_formula_honest_status_note_2026-05-10",
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10",
+        "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
+        "staggered_dirac_realization_gate_note_2026-05-03",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "90b7136100786e37c95b2440ea2aeedbd88e63cdfb6a85f9d5beb5a07eef81c5",
+      "path": "docs/HIERARCHY_ALPHA_LM_DIM_TRANS_REFRAMING_BOUNDED_NOTATION_EQUIVALENCE_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_hierarchy_alpha_lm_dim_trans_reframing_bounded_notation_equivalence.py",
+      "title": "Hierarchy `alpha_LM^16` Dimensional-Transmutation Reframing \u2014 Bounded Notation-Equivalence Note"
+    },
     "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10": {
       "claim_id": "hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go_note_2026-05-10",
       "claim_type_author_hint": "no_go",
@@ -71562,7 +71599,7 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 384,
+      "bounded_theorem": 385,
       "decoration": 1,
       "meta": 74,
       "no_go": 48,
@@ -71571,7 +71608,7 @@
       "positive_theorem": 149
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 831,
+      "bounded_theorem": 832,
       "decoration": 1,
       "meta": 74,
       "no_go": 153,
@@ -71579,10 +71616,10 @@
       "open_gate": 119,
       "positive_theorem": 609
     },
-    "edge_count": 8954,
+    "edge_count": 8959,
     "leaf_count": 630,
-    "node_count": 2232,
+    "node_count": 2233,
     "root_count": 774,
-    "runners_with_path": 1850
+    "runners_with_path": 1851
   }
 }
