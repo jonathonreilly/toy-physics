@@ -1,0 +1,145 @@
+===== runner cache v1 =====
+runner: scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow.py
+runner_sha256: 241b9a86483a5d2363a1720534e2336fafc367754d51c1e40d8fa521e4287096
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.42
+status: ok
+----- stdout -----
+# Hierarchy BBS staggered taste-blocking bridge KMS-substrate narrow no-go runner
+# Source note: docs/HIERARCHY_BBS_STAGGERED_TASTE_BLOCKING_BRIDGE_KMS_SUBSTRATE_NARROW_NO_GO_NOTE_2026-05-15.md
+
+==============================================================================
+T1: framework canonical surface inputs
+==============================================================================
+  [PASS] u_0^4 == <P> = 0.5934 (exact)
+         u_0^4 = 0.59340000000000000000000000000000000000000000000000000000000000000000000000000001
+  [PASS] alpha_bare = 1/(4 pi) ~ 0.07957747...
+         alpha_bare = 0.079577471545947667884441881686257181017229822870228224373833672029448398817113268
+  [PASS] alpha_LM = alpha_bare/u_0 ~ 0.0907
+         alpha_LM = 0.090667836017286308594419881194089065482228060562215009344882353960502320729782160
+  [PASS] g_s_lat = 1/sqrt(u_0) ~ 1.067 (strong-coupling Wilson regime)
+         g_s_lat = 1.0674107129850078935018132145556018378774773018110734164901748298059937302827423
+  [PASS] alpha_LM^16 ~ 2.086 x 10^-17
+         alpha_LM^16 = 2.0857008000148850344657342105975629197025632360105450695523970304811060632366862E-17
+
+==============================================================================
+T2: candidate Banach space + norm structural definition
+==============================================================================
+  [PASS] Banach contraction bound kappa^N x0 is GEOMETRIC in kappa
+         banach_bound = kappa**N*x0
+  [PASS] KMS majorant y_0/(1 - a l y_0) is RATIONAL in (a l y_0), NOT geometric
+         kms_bound = y0/(-a*l*y0 + 1)
+  [PASS] Banach kappa^N x0 != KMS y_0/(1 - a l y_0) generically (categorical mismatch)
+         operator-norm-linear-contraction != non-linear-scalar-majorant
+
+==============================================================================
+T3: blocking map T_k on a finite-dim toy (2x2 substrate)
+==============================================================================
+  [PASS] relevant eigenvalue at tree level: b^{d - Delta_rel} = b^2
+         lambda_rel = 4
+  [PASS] marginal eigenvalue at tree level: b^{d - Delta_marg} = b^0 = 1
+         lambda_marg = 1
+  [PASS] marginal eigenvalue at tree level remains 1 for b = 1/alpha_LM ~ 11.03
+         lambda_marg (canonical) = 1
+
+==============================================================================
+T4: Wilson-Kadanoff marginal eigenvalue at canonical surface
+==============================================================================
+  [PASS] lambda_marginal at one-loop ~ 1 + c g^2 ln b is O(1), >> alpha_LM
+         lambda_marg(1L) = 3.7351, alpha_LM = 0.0907
+  [PASS] |1 - lambda_marginal| at canonical is O(1), not alpha_LM-small
+         |1 - lambda_marg| = 2.7351, alpha_LM = 0.0907
+
+==============================================================================
+T5: spectral radius of T_k on toy 2x2 substrate
+==============================================================================
+  [PASS] spectral radius of toy 2x2 block at canonical b is >> alpha_LM
+         spec_rad = 100000000/822649, alpha_LM = 907/10000
+  [PASS] toy T_k does NOT satisfy ||T_k||_op <= alpha_LM (spectral radius >= 1)
+         strict contraction with kappa = alpha_LM is not supplied (spec_rad >= 1)
+
+==============================================================================
+T6: explicit gap between kappa_k and alpha_LM (K3 pinpoint)
+==============================================================================
+  [PASS] explicit gap |lambda_marg(1L) - alpha_LM| > 1 at canonical surface
+         gap = 3.6444
+         Pinpoint: marginal eigenvalue at one-loop is ~ 3.7351, not alpha_LM ~ 0.0907
+         The identification kappa_k = alpha_LM is not supplied at (K3).
+
+==============================================================================
+T7: KMS majorant scalar ODE closed-form (b=0 case)
+==============================================================================
+  [PASS] scalar majorant closed form y(l) = y_0/(1 - a l y_0)
+         y_l = 4/11, expected = 4/11
+  [PASS] small-data threshold l_* = 1/(a y_0) = 12 for (a,y_0)=(1/4, 1/3)
+         l_* = 12
+
+==============================================================================
+T8: KMS small-data hypothesis is not verified at framework canonical surface
+==============================================================================
+  [PASS] sum_{k=0}^{15} (1 + 2k)/3 = 256/3 exact
+         sum = 256/3
+  [PASS] cumulative perturbative coefficient ~ 2.594 (exceeds u_0 ~ 0.878)
+         cumulative = 2.594420
+  [PASS] cumulative > 1/g_s^2 (Landau-pole crossing inside 16-rung staircase)
+         cumulative = 2.5944 > 1/g_s^2 = 0.8777
+         KMS small-data y_0 < 1/(a l) hypothesis is not verified at framework canonical surface.
+
+==============================================================================
+T9: KMS continuous Polchinski flow != framework discrete 16-rung blocking
+==============================================================================
+  [PASS] continuous propagator exp(Delta_l L) defined symbolically
+         exp(Delta_l L_KMS) = exp(Delta_l*L_KMS)
+  [PASS] T_k is a discrete blocking operator (not infinitesimal-generator exponential)
+         no Trotter equivalence published for KMS fermionic + staggered substrate
+
+==============================================================================
+T10: tadpole improvement is a renormalisation scheme (NOT decoupling)
+==============================================================================
+  [PASS] note body does NOT invoke tadpole improvement as mean-field decoupling
+         tadpole improvement framing boundary observed
+  [PASS] note explicitly records the tadpole improvement boundary check
+         explicit boundary disclaimer present
+
+==============================================================================
+T11: cross-check alpha_LM^16 ~ 2.086 x 10^-17
+==============================================================================
+  [PASS] alpha_LM^16 ~ 2.0857 x 10^-17 (recomputed)
+         alpha_LM^16 = 2.0857008000148850344657342105975629197025632360105450695523970304811060632366862E-17
+  [PASS] log10(alpha_LM^16) = 16 * log10(alpha_LM) ~ -16.68
+         log10(alpha_LM^16) = -16.68074799227683
+
+==============================================================================
+T12: sensitivity to canonical inputs (<P> +/- 0.0001)
+==============================================================================
+  [PASS] <P> + 0.0001: cumulative coefficient still > u_0
+         cum = 2.5945, u_0 = 0.8777
+  [PASS] <P> - 0.0001: cumulative coefficient still > u_0
+         cum = 2.5944, u_0 = 0.8776
+
+==============================================================================
+T13: joint sufficiency of (K1)-(K4)
+==============================================================================
+  [PASS] (K1) OR (K2) OR (K3) OR (K4) holds (all four established)
+         each independently sufficient to block the bridge
+  [PASS] (K1) established: KMS majorant non-linear, not operator-norm
+  [PASS] (K2) established: small-data hypothesis not verified at canonical surface
+  [PASS] (K3) established: marginal eigenvalue O(1), not alpha_LM
+  [PASS] (K4) established: continuous Polchinski flow != discrete blocking
+
+==============================================================================
+T14: source-note boundary
+==============================================================================
+  [PASS] note declares no_go
+  [PASS] note declares status authority is independent audit lane only
+  [PASS] note body does NOT close hierarchy formula or promote any status
+         boundary disclaimers intact
+  [PASS] note explicitly cites the prior Round-1 BBS narrow no-go as dep
+  [PASS] note explicitly cites the retained BBS Banach contraction theorem as dep
+  [PASS] note explicitly mentions KMS arXiv:2404.06099 inline
+
+=== TOTAL: PASS=40, FAIL=0 ===
+
+----- stderr -----
+

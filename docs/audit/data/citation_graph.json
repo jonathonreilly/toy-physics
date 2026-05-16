@@ -10197,6 +10197,34 @@
       "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
     },
     {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
       "from": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
       "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
     },
@@ -48894,6 +48922,25 @@
       "runner_path": "scripts/frontier_hierarchy_alpha_lm_exponent_species_count_bridge_regulator_dependence_no_go.py",
       "title": "Hierarchy alpha_LM Exponent / Species-Count Bridge \u2014 Regulator-Dependence No-Go Note"
     },
+    "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15": {
+      "claim_id": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "bbs_rg_banach_contraction_external_narrow_theorem_note_2026-05-10",
+        "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
+        "observable_principle_from_axiom_note",
+        "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "plaquette_self_consistency_note",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+      ],
+      "note_hash": "d1af05d3c856c1b698e884dbc8792411c296f4345b307cf62f960137d3e224ab",
+      "path": "docs/HIERARCHY_BBS_STAGGERED_TASTE_BLOCKING_BRIDGE_KMS_SUBSTRATE_NARROW_NO_GO_NOTE_2026-05-15.md",
+      "runner_path": "scripts/frontier_hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow.py",
+      "title": "Hierarchy BBS Staggered Taste-Blocking Bridge \u2014 KMS-Substrate Narrow No-Go"
+    },
     "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10": {
       "claim_id": "hierarchy_bbs_staggered_taste_blocking_bridge_narrow_no_go_note_2026-05-10",
       "claim_type_author_hint": "no_go",
@@ -50183,6 +50230,17 @@
       "path": "docs/K_DEPENDENCE_REVIEW_SAFE_NOTE.md",
       "runner_path": null,
       "title": "K Dependence Review-Safe Note"
+    },
+    "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11": {
+      "claim_id": "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [],
+      "note_hash": "d9c8c93a687314f690177ca6760f77701e6680e717027c351721e724bc603bc1",
+      "path": "docs/KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md",
+      "runner_path": "scripts/frontier_kms_fermionic_brydges_majorant_external_narrow.py",
+      "title": "Kroschinsky-Marchetti-Salmhofer Fermionic Brydges Majorant \u2014 External Narrow Theorem"
     },
     "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08": {
       "claim_id": "koide_a1_11_probe_campaign_bounded_admission_meta_note_2026-05-08",
@@ -70844,6 +70902,7 @@
     "interest_map",
     "inverse_problem_note",
     "k_dependence_review_safe_note",
+    "kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11",
     "koide_a1_closure_recommendation_2026-04-22",
     "koide_a1_loop_final_status_2026-04-22",
     "koide_a1_physical_bridge_attempt_2026-04-22",
@@ -71231,25 +71290,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 362,
+      "bounded_theorem": 363,
       "meta": 74,
-      "no_go": 46,
+      "no_go": 47,
       "none": 1553,
       "open_gate": 37,
       "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 816,
+      "bounded_theorem": 817,
       "meta": 74,
-      "no_go": 151,
+      "no_go": 152,
       "none": 446,
       "open_gate": 117,
       "positive_theorem": 615
     },
-    "edge_count": 8919,
-    "leaf_count": 622,
-    "node_count": 2219,
-    "root_count": 772,
-    "runners_with_path": 1836
+    "edge_count": 8926,
+    "leaf_count": 623,
+    "node_count": 2221,
+    "root_count": 773,
+    "runners_with_path": 1838
   }
 }
