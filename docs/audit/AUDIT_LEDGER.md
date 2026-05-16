@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 311 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1193 |
+| unaudited | 1192 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 188 |
+| ~~audited_conditional~~ | 189 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 523 |
-| `audited_conditional` | 188 |
+| `audited_conditional` | 189 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1306 |
+| `unaudited` | 1305 |
 
 | claim_type | count |
 |---|---:|
@@ -750,6 +750,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_lattice_eigenvalue_ratio_narrow_theorem_note_2026-05-02` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `higher_symmetry_joint_validation_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `k_dependence_review_safe_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
+| `kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_a1_loop_final_status_2026-04-22` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_aps_block_by_block_forcing_note_2026-04-21` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `koide_cl3_selector_gap_note_2026-04-19` | open_gate | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
@@ -6123,6 +6124,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Kernel-generic absorption occurs under any nonzero field for gamma > 0, while only the localized 1/r gravity field produces the TOWARD -> AWAY deflection crossover.  _(class `C`)_
 - **chain closes:** False — The live runner supports the gravity-specific crossover and gamma=0.5 escape suppression, but it contradicts the source's stronger detector-escape claim for any gamma > 0: several nonzero-field rows at gamma=0.1 or 0.2 still have escape ratios above 1.
 - **rationale:** Issue: the source conflates link-level imaginary-action damping with the detector escape observable. The factor exp(-k gamma L f) is below 1 for f > 0 and gamma > 0, but the runner's detector escape ratios are still above 1 for UNIFORM f=0.005 at gamma=0.1 and 0.2, UNIFORM f=0.01 at gamma=0.1 and 0.2, and GRAVITY at gamma=0.1 and 0.2. Why this blocks: the retained separation claim says kernel-generic absorption occurs under any nonzero field at gamma > 0, but the measured observable used by the note only shows suppression at sufficiently large gamma in this setup. Repair target: distinguish local per-link attenuation from total detector escape, or add a theorem/runner proving a thresholded escape-suppression criterion across gamma and field families. Claim boundary until fixed: safely claim only that gamma=0.5 suppresses detector escape for the tested nonzero fields, and that the 1/r gravity field uniquely shows the tested TOWARD -> AWAY centroid crossover by gamma=0.2.
+- **auditor confidence:** high
+
+### `kms_fermionic_brydges_majorant_external_narrow_theorem_note_2026-05-11`
+
+- **Note:** [`KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md`](../../docs/KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the restricted-packet claim that the KMS external fermionic Polchinski/BBF majorant yields a scalar small-data majorant bound and its algebraic consequences.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-135450-20260516T135450Z-7bc49dc8-kms_fermionic_brydges_ma-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** There exist scale-dependent majorant coefficients M_l >= 0 and a Polchinski flow equation for which the BBF polymer norm satisfies d/dl ||V_l||_h <= a(l)||V_l||_h^2 + b(l)||V_l||_h with explicit, scale-integrable, non-negative a(l), b(l) derived from the Gram covariance decomposition.  _(class `A`)_
+- **chain closes:** False — The scalar ODE consequences are checked algebraically, but the actual KMS theorem and its hypotheses are not provided as a cited authority. The missing step is an in-packet verification that KMS Theorem 1 establishes the stated BBF norm inequality with integrable non-negative coefficients.
+- **rationale:** The runner genuinely checks elementary algebraic consequences of the scalar majorant ODE and source-note boundary language, but it does not verify the external KMS theorem itself. The load-bearing BBF polymer norm inequality is imported from an external paper that is referenced but not provided in the restricted packet. Therefore the bounded claim is conditional on that missing authority and its hypotheses, not cleanly derived from the supplied inputs.
+- **open / conditional deps cited:**
+  - `KMS_FERMIONIC_BRYDGES_MAJORANT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-11.md`
 - **auditor confidence:** high
 
 ### `koide_a1_loop_final_status_2026-04-22`
