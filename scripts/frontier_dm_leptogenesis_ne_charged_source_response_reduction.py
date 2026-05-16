@@ -6,9 +6,25 @@ Framework convention:
   "axiom" means only the single framework axiom Cl(3) on Z^3.
 
 Purpose:
-  Reduce the PMNS-assisted flavored DM problem to the charged-lepton projected
-  Hermitian source law dW_e^H, and quantify exactly how much of the old 5.3x
-  denominator miss survives once that object is supplied.
+  Record two pieces of content:
+
+  (A) Algebraic Schur-pushforward identities showing that, GIVEN a
+      charged-lepton projected Hermitian source law dW_e^H, the PMNS-assisted
+      flavored DM chain is algorithmic from there on (Parts 1 and 2). These
+      are exact at retained grade.
+
+  (B) A consistency check at a stipulated canonical N_e benchmark sample,
+      showing that the chain reproduces the same residual ~1.01x miss
+      already documented in the sibling LAST_MILE note's
+      ETA_NE_CANONICAL = 0.9895125971972334 (Part 3). This is NOT a
+      sole-axiom derivation: the canonical (x, y, delta) triple and the
+      target H_e are stipulated inputs, and the
+      build_charge_preserving_operator_with_target_le routine is a
+      construction-by-target, not a derivation of D_- from Cl(3) on Z^3.
+
+  See DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY_NOTE_2026-04-16.md
+  for the explicit negative boundary: the selected N_e column is not fixed
+  by the currently native PMNS data on its own.
 """
 
 from __future__ import annotations
@@ -35,6 +51,14 @@ from frontier_dm_leptogenesis_pmns_projector_interface import (
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
+
+# Stipulated benchmark values (NOT derived from the sole axiom).
+# These are the canonical N_e off-seed sample reused across sibling notes;
+# see DM_LEPTOGENESIS_PMNS_MICROSCOPIC_D_LAST_MILE for the published
+# benchmark and DM_LEPTOGENESIS_NE_ACTIVE_COLUMN_AXIOM_BOUNDARY for the
+# negative axiom-boundary result on the selected column.
+ETA_NE_CANONICAL_SIBLING = 0.9895125971972334
+ETA_ONE_FLAVOR_AUTHORITY = 0.188785929502
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -127,6 +151,14 @@ def transport_column_values(packet: np.ndarray) -> tuple[np.ndarray, np.ndarray]
 
 
 def build_charge_preserving_operator_with_target_le(target_le: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """Construct a charge-preserving operator whose charge -1 Schur complement
+    equals the supplied target_le.
+
+    This is a CONSTRUCTION-BY-TARGET, not a derivation of D_- from Cl(3) on Z^3.
+    Its purpose is to exhibit the algebraic Schur-pushforward identities of
+    Parts 1 and 2 on a concrete operator that realises a chosen H_e target,
+    not to evaluate D_- on the sole axiom.
+    """
     rng = np.random.default_rng(417)
     f0_raw = rng.normal(size=(2, 2)) + 1j * rng.normal(size=(2, 2))
     f0 = 0.5 * (f0_raw + f0_raw.conj().T) + 4.0 * np.eye(2, dtype=complex)
@@ -164,9 +196,14 @@ def build_charge_preserving_operator_with_target_le(target_le: np.ndarray) -> tu
 
 def part1_the_charged_hermitian_source_law_is_exact_schur_pushforward() -> np.ndarray:
     print("\n" + "=" * 88)
-    print("PART 1: THE CHARGED HERMITIAN SOURCE LAW IS EXACT SCHUR PUSHPFORWARD")
+    print("PART 1: THE CHARGED HERMITIAN SOURCE LAW IS EXACT SCHUR PUSHFORWARD")
     print("=" * 88)
+    print("  Algebraic identity (retained-grade). Inputs (target H_e) are")
+    print("  stipulated; this part does not derive H_e from the sole axiom.")
+    print()
 
+    # Stipulated canonical N_e off-seed benchmark (also used by the
+    # LAST_MILE sibling). NOT derived from Cl(3) on Z^3.
     h_e_target = canonical_h(
         np.array([0.24, 0.38, 1.07], dtype=float),
         np.array([0.09, 0.22, 0.61], dtype=float),
@@ -226,6 +263,9 @@ def part2_dweh_reconstructs_he_and_the_ne_packet(l_e: np.ndarray) -> np.ndarray:
     print("\n" + "=" * 88)
     print("PART 2: dW_e^H RECONSTRUCTS H_e AND THE N_e PACKET")
     print("=" * 88)
+    print("  Algebraic identity (retained-grade). Assumes dW_e^H is supplied;")
+    print("  this part does not derive it from the sole axiom.")
+    print()
 
     responses = [float(np.real(np.trace(x @ l_e))) for x in hermitian_basis()]
     h_e = reconstruct_h_from_responses(responses)
@@ -249,40 +289,53 @@ def part2_dweh_reconstructs_he_and_the_ne_packet(l_e: np.ndarray) -> np.ndarray:
     return packet
 
 
-def part3_the_pmns_assisted_miss_collapses_from_5p3x_to_1p01x(packet: np.ndarray) -> None:
+def part3_consistency_check_at_stipulated_canonical_sample(packet: np.ndarray) -> None:
     print("\n" + "=" * 88)
-    print("PART 3: THE PMNS-ASSISTED MISS COLLAPSES FROM 5.3x TO 1.01x")
+    print("PART 3: CONSISTENCY CHECK AT STIPULATED CANONICAL N_e SAMPLE")
     print("=" * 88)
+    print("  NOT a derivation. The canonical (x, y, delta) input used in Part 1")
+    print("  is the same off-seed benchmark as the LAST_MILE sibling note. This")
+    print("  part checks the two routines agree on the same stipulated input.")
+    print()
 
     _factors, eta_vals = transport_column_values(packet)
     best_idx = int(np.argmax(eta_vals))
-    one_flavor_eta_ratio = 0.188785929502
     pmns_eta_ratio = float(eta_vals[best_idx])
-    one_flavor_miss = 1.0 / one_flavor_eta_ratio
+    one_flavor_miss = 1.0 / ETA_ONE_FLAVOR_AUTHORITY
     pmns_miss = 1.0 / pmns_eta_ratio
-    improvement = pmns_eta_ratio / one_flavor_eta_ratio
+    improvement = pmns_eta_ratio / ETA_ONE_FLAVOR_AUTHORITY
 
     check(
-        "The charged-Hermitian PMNS-assisted route selects the same near-closing middle column",
+        "Selected column on this stipulated sample is the middle column "
+        "(matches the sibling LAST_MILE benchmark; column choice is not "
+        "sole-axiom-fixed, see the ACTIVE_COLUMN_AXIOM_BOUNDARY note)",
         best_idx == 1,
         f"eta_vals={np.round(eta_vals, 12)}",
     )
+    # Two-routine consistency tolerance. The LAST_MILE sibling and this runner
+    # use slightly different transport-driver code paths, so the value differs
+    # at the ~1e-7 level. The tolerance below records the actually observed
+    # cross-runner agreement on the same stipulated input; it is NOT a claim
+    # that the value is derived to that precision from the sole axiom.
+    cross_runner_tol = 5e-7
     check(
-        "The PMNS-assisted value is within about 1.05% of observation",
-        abs(pmns_eta_ratio - 1.0) < 0.011,
-        f"eta/eta_obs={pmns_eta_ratio:.12f}",
-    )
-    check(
-        "So the old exact one-flavor 5.3x miss collapses to about 1.01x once dW_e^H is supplied",
-        abs(pmns_miss - 1.0105984444173857) < 1e-9,
-        f"miss factors=({one_flavor_miss:.12f},{pmns_miss:.12f})",
+        "Computed eta/eta_obs on this stipulated sample agrees with the sibling "
+        "LAST_MILE benchmark ETA_NE_CANONICAL to numerical tolerance "
+        "(two-runner consistency check on the same stipulated input, NOT a "
+        "derivation of either number)",
+        abs(pmns_eta_ratio - ETA_NE_CANONICAL_SIBLING) < cross_runner_tol,
+        f"this={pmns_eta_ratio:.12f}, sibling={ETA_NE_CANONICAL_SIBLING:.12f}, "
+        f"|delta|={abs(pmns_eta_ratio - ETA_NE_CANONICAL_SIBLING):.2e}",
     )
 
     print()
-    print(f"  one-flavor exact miss factor = {one_flavor_miss:.12f}")
-    print(f"  PMNS-assisted dW_e^H miss factor = {pmns_miss:.12f}")
-    print(f"  improvement factor = {improvement:.12f}")
-    print(f"  residual percent low = {(1.0 - pmns_eta_ratio) * 100.0:.12f}%")
+    print("  Numbers at this stipulated sample (informational):")
+    print(f"    one-flavor authority eta ratio    = {ETA_ONE_FLAVOR_AUTHORITY:.12f}")
+    print(f"    one-flavor authority miss factor  = {one_flavor_miss:.12f}")
+    print(f"    PMNS-conditioned eta ratio        = {pmns_eta_ratio:.12f}")
+    print(f"    PMNS-conditioned miss factor      = {pmns_miss:.12f}")
+    print(f"    sample improvement factor         = {improvement:.12f}")
+    print("  None of these are derived from Cl(3) on Z^3.")
 
 
 def part4_bottom_line() -> None:
@@ -290,27 +343,23 @@ def part4_bottom_line() -> None:
     print("PART 4: BOTTOM LINE")
     print("=" * 88)
 
-    check(
-        "The PMNS-assisted flavored DM problem is now reduced to dW_e^H, not the raw PMNS five-real source",
-        True,
-        "dW_e^H -> H_e -> packet -> selected column -> eta",
-    )
-    check(
-        "What still remains is to evaluate the microscopic charge -1 operator D_- from Cl(3) on Z^3 and thus evaluate dW_e^H on the exact branch",
-        True,
-        "the remaining object is charged-sector microscopic evaluation, not transport or PMNS bookkeeping",
-    )
-    check(
-        "So compared to the old 5.3x miss, the live residual gap on this PMNS-assisted route is only about 1.01x",
-        True,
-        "about 1.05% low",
-    )
-
+    print("  Structural content (load-bearing, retained-grade):")
+    print("    - Part 1: dW_e^H is the exact charged-sector Schur pushforward")
+    print("      of the microscopic charge -1 source-response law.")
+    print("    - Part 2: dW_e^H reconstructs H_e exactly and H_e determines")
+    print("      the N_e transport packet.")
     print()
-    print("  Updated read:")
-    print("    - old exact one-flavor miss: 5.297x")
-    print("    - PMNS-assisted dW_e^H-conditioned miss: 1.0106x")
-    print("    - remaining exact target: evaluate dW_e^H from the sole axiom")
+    print("  Conditional / informational content (NOT load-bearing):")
+    print("    - Part 3: at a stipulated canonical (x, y, delta) benchmark,")
+    print("      the chain reproduces the sibling LAST_MILE value")
+    print(f"      eta/eta_obs ~= {ETA_NE_CANONICAL_SIBLING:.12f}.")
+    print("      This is consistency between two runners on the same stipulated")
+    print("      input, not a sole-axiom derivation. The selected N_e column")
+    print("      is not sole-axiom-fixed; see the ACTIVE_COLUMN_AXIOM_BOUNDARY")
+    print("      note.")
+    print()
+    print("  Frontier object (unchanged):")
+    print("    - evaluate dW_e^H (equivalently D_-) from Cl(3) on Z^3.")
 
 
 def main() -> int:
@@ -320,7 +369,7 @@ def main() -> int:
 
     l_e = part1_the_charged_hermitian_source_law_is_exact_schur_pushforward()
     packet = part2_dweh_reconstructs_he_and_the_ne_packet(l_e)
-    part3_the_pmns_assisted_miss_collapses_from_5p3x_to_1p01x(packet)
+    part3_consistency_check_at_stipulated_canonical_sample(packet)
     part4_bottom_line()
 
     print("\n" + "=" * 88)
