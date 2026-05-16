@@ -165,23 +165,46 @@ Power-law fit on b ∈ {3..6}: **I_geom ≈ 2.48 · b^(−1.28)**, R² = 0.999.
 | Steepening with b? | Yes | Yes |
 | L-dependent? | Yes (strongly) | **No** (Lane L++) |
 
-## The discrepancy
+## The discrepancy (open-gap diagnosis, NOT explained in this packet)
 
-The slope difference Δ = 0.15 is small but real. Three factors contribute:
+The slope difference `Δ = 0.15` between the runner-computed plane-wave
+eikonal slope and the imported lattice slope is **not explained** by
+any correction tested in this note. Three candidate explanations were
+considered, none of which the runner closes:
 
-1. **Gaussian beam profile**: The eikonal assumes a plane wave (zero transverse localization). The actual propagator has a Gaussian angular weight exp(−β·θ²) which localizes the beam transversely. A tighter beam averages less over the potential landscape, producing a steeper effective slope. The β sweep confirmed this: slope varies from −0.79 (β=0.1, wide beam) to −1.93 (β=20, narrow beam). At β=0.8, the lattice gives −1.43, which is steeper than the eikonal's −1.28 — exactly the right direction.
+1. **Gaussian beam profile (TESTED AND FALSIFIED below)**: A Gaussian
+   angular weight `exp(−β·θ²)` on the eikonal integral was tested in
+   both 2D and 3D forms at `β = 0.8`; both **worsen** the match
+   (`Δ = 1.08` and `Δ = 0.66` respectively, see the Beam-averaging
+   table). The β sweep does show the slope crosses `−1.43` at large
+   `β ≈ 10–20`, but at the audited `β = 0.8` the beam correction is
+   not in the right direction. The 2026-04-08 note text previously
+   asserted "β = 0.8 provides the specific correction that shifts
+   −1.28 → −1.43"; that earlier claim is **withdrawn** by this
+   PATH B pass — the runner output above refutes it.
 
-2. **Wave-mechanical corrections**: The eikonal is a classical-path approximation. Quantum corrections (diffraction around the potential) modify the slope. These corrections are of order λ/b where λ is the de Broglie wavelength.
+2. **Wave-mechanical corrections (NOT TESTED HERE)**: The eikonal is
+   a classical-path approximation; diffraction corrections of order
+   `λ/b` would modify the slope. No retained-grade derivation of the
+   relevant `λ` (which presumes a closed dispersion relation) is on
+   the surface in this packet, and no runner test is provided.
 
-3. **L-independence**: The eikonal prediction IS L-dependent (it's the same finite-path formula falsified by Lane L++). But the lattice measurement is L-independent at fine H. This is the deepest discrepancy — the eikonal predicts something the lattice doesn't do.
+3. **L-independence (UNEXPLAINED)**: The finite-path eikonal formula
+   used here IS strongly `L`-dependent, while the lattice measurement
+   is `L`-independent at fine `H`. This packet does not derive an
+   `L`-independent observable; it is one of the three explicit
+   audit-named open gaps deferred to future-work retained promotion.
 
-## Interpretation
+## Interpretation (under PATH B scope — diagnostic only, no structural claim)
 
-The eikonal prediction captures the **right functional form** (power law, steepening toward ≈ −1.4 at large b, finite-path transition regime) but **fails on the L-dependence**. This means:
-
-- The b-dependence is largely geometric (finite-path integral geometry)
-- The L-independence is a **wave-mechanical effect** beyond the eikonal — likely related to the Gaussian beam's effective transverse coherence length being the relevant scale, not the path length L
-- The Gaussian angular weight β=0.8 provides the specific correction that shifts −1.28 → −1.43
+Under PATH B, this note offers **no structural interpretation** of
+why the runner-computed plane-wave slope happens to land closer to
+the imported lattice slope than the beam-corrected variants tested.
+The earlier "right functional form" / "wave-mechanical effect"
+language is **withdrawn**; it overclaimed a structural mechanism
+that the runner does not establish. The remaining bounded statement
+is just the numerical observation in 'What this bounded numerical
+observation establishes' below.
 
 ## Beam-averaging corrections (BOTH TESTED AND FALSIFIED)
 
