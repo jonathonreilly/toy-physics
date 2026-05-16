@@ -1,11 +1,3 @@
-===== runner cache v1 =====
-runner: scripts/frontier_dm_leptogenesis_transport_decomposition_theorem.py
-runner_sha256: e6a784d623ae1c5fb456fb95b4f8ee2fa034d43ee0106cc24c889b54bef6ae5a
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 0.60
-status: ok
------ stdout -----
 ========================================================================================
 DM LEPTOGENESIS TRANSPORT-DECOMPOSITION THEOREM
 ========================================================================================
@@ -18,22 +10,31 @@ PART 1: THE EXACT UPSTREAM INPUTS ARE FROZEN
   [PASS] The exact coherent kernel remains epsilon_1/epsilon_DI = 0.9276209209197268  (ratio=0.927620920920)
 
 ========================================================================================
-PART 2: ETA SPLITS INTO BOOKKEEPING AND A SINGLE TRANSPORT FUNCTIONAL
+PART 2: ALGEBRAIC DERIVATION OF THE DECOMPOSITION
 ========================================================================================
-  [PASS] The late conversion factor is exact once s/n_gamma and d_N are closed  ((Clate,dN)=(7.039433661547,0.003901498367656))
-  [PASS] So eta[H] = C_late * C_sph * d_N * epsilon_1 * kappa_axiom[H]  (bookkeeping prefactor=9.734196079911e-03)
-  [PASS] This demotes kappa_fit(K) from authority path to diagnostic comparator  (the authority path is the direct transport functional kappa_axiom[H])
+  [PASS] Definition: kappa_axiom[H] := |N_{B-L}(infty;H)| with epsilon_1 factored out  (from solve_normalized_transport in dm_leptogenesis_exact_common)
+  [PASS] Step (b): Y_{B-L} = d_N * epsilon_1 * kappa_axiom[H]  (equilibrium-conversion theorem)  (d_N*epsilon_1=9.588400e-09)
+  [PASS] Step (c): Y_B = C_sph * Y_{B-L} = (28/79) * d_N * epsilon_1 * kappa_axiom[H]  (Y_B/kappa_axiom=3.398420e-09)
+  [PASS] Step (d): eta = Y_B * (s/n_gamma)  (entropy/photon conservation; equilibrium-conversion theorem)  (eta/kappa_axiom=2.392295e-08)
+  [PASS] Step (e): eta[H] = (s/n_gamma) * C_sph * d_N * epsilon_1 * kappa_axiom[H]  (prefactor (s/n_gamma)*C_sph*d_N=9.734196079911e-03, eta/kappa=2.392295e-08)
+  [PASS] Conclusion: kappa_axiom[H] is the unique remaining transport functional in eta[H]  (every other factor is a closed thermodynamic/source identity)
 
 ========================================================================================
-PART 3: THE OLD FIT BENCHMARK IS PRESERVED ONLY AS A COMPARATOR
+PART 3: kappa_axiom[H] AS A COMPUTED ODE OUTPUT ON THE RADIATION BRANCH
 ========================================================================================
-  [PASS] The legacy physically consistent fit benchmark remains eta/eta_obs = 0.557919848420251  (legacy fit ratio=0.557919848420)
-  [PASS] Using exact bookkeeping with the same fit gives eta/eta_obs = 0.557874966110017  (exact-bookkeeping fit ratio=0.557874966110)
-  [PASS] So the fit may be retained for comparison, but it is not the theorem-native transport law  (the fit remains a diagnostic comparator only)
+  [PASS] kappa_axiom[H_rad] is computed by solving the normalized transport ODE  (kappa_axiom_direct=0.004829545290767)
+  [PASS] The same value is reproduced by the exact formal transport integral  (|direct-formal|/direct=1.90e-07)
+  [PASS] The Boltzmann initial condition reproduces the z->0 relativistic-Majorana yield 1.0  (N_N1^eq(z=1e-3)=1.000000 -> the d_N normalization in step (b))
+  [PASS] Plugging the computed kappa_axiom into (*) gives the radiation-branch eta  (eta[H_rad]=1.155370e-10, eta/eta_obs=0.188785929502)
+  [PASS] Late-time decoupling: N_{N1}(z_max) is below 1e-6 of N_{N1}^eq(z_min)  (N_N1(z=1e-3)=1.000e+00, N_N1(z=35)=8.632e-14)
 
 ========================================================================================
-SUMMARY: PASS=9 FAIL=0
+PART 4: kappa_fit(K) IS DEMOTED TO A DIAGNOSTIC COMPARATOR
 ========================================================================================
+  [PASS] On the radiation branch, kappa_fit(K) overstates kappa_axiom by a factor ~2.955  (kappa_fit/kappa_axiom=2.955066447917)
+  [PASS] Plugging kappa_fit into the SAME (*) gives the comparator eta/eta_obs ~ 0.5579  (eta_fit/eta_obs=0.557874966110)
+  [PASS] So (*) holds with either kappa choice; only kappa_axiom is theorem-native  (kappa_fit is preserved as a diagnostic comparator, not as the authority path)
 
------ stderr -----
-
+========================================================================================
+SUMMARY: PASS=17 FAIL=0
+========================================================================================
