@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 135 |
-| **retained_bounded** | 312 |
+| **retained_bounded** | 313 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1187 |
+| unaudited | 1186 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -43,13 +43,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 524 |
+| `audited_clean` | 525 |
 | `audited_conditional` | 192 |
 | `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1300 |
+| `unaudited` | 1299 |
 
 | claim_type | count |
 |---|---:|
@@ -523,6 +523,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_shell_spectral_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `staggered_dag_note_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_dirac_realization_gate_note_2026-05-03` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | E | - |
+| `staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `staggered_fermion_card_2026-04-10` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `staggered_geometry_superposition_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `staggered_graph_failure_map_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | B | - |
@@ -10058,6 +10059,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** This note's load-bearing content is identity assignment only.  _(class `E`)_
 - **chain closes:** True — The scoped claim closes only as an audit-ledger parent identity for an explicitly open gate. The note does not claim to prove the staggered-Dirac realization; it explicitly records the missing proof steps and open obstructions.
 - **rationale:** The note is clean only under the open_gate scope: it defines a canonical parent object for an unresolved derivation target and repeatedly states that the substantive A1+A2-to-staggered-Dirac chain is not closed. There is no hidden theorem promotion, no runner-bearing numerical match, and no decoration claim. Residual risk is governance-only: a future theorem audit must not cite this clean open-gate verdict as proof of the staggered-Dirac realization itself.
+- **auditor confidence:** high
+
+### `staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16`
+
+- **Note:** [`STAGGERED_DIRAC_SUBSTEP1_GRASSMANN_FORCING_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md`](../../docs/STAGGERED_DIRAC_SUBSTEP1_GRASSMANN_FORCING_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the abstract algebraic two-candidate comparison: Grassmann per-site dim 2 matches the retained Cl(3) dim-two readout, bosonic Fock is infinite-dimensional, and the Grassmann quadratic partition gives det(M).
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-140024-20260516T140024Z-b8451320-staggered_dirac_substep1-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Within the explicitly two-candidate framing, if a candidate must match dim_C V = 2, then the bosonic Fock candidate is ruled out by infinite per-site dimension while the Grassmann candidate remains and has the Berezin det(M) readout.  _(class `A`)_
+- **chain closes:** True — Within the bounded scope, D1-D4 follow from retained or retained_bounded cited inputs plus standard finite algebra and harmonic-oscillator/Fock facts. The physical U4 lattice-Hilbert-space bridge is explicitly out of scope and is not consumed by the audited claim.
+- **rationale:** The load-bearing step is a genuine algebraic closure over independent retained-grade inputs: Cl(3) faithful complex irreps have dimension 2, Grassmann nilpotency gives a two-state per-site module, and bosonic canonical Fock space is infinite-dimensional. The Berezin determinant part is directly supplied by the retained_bounded Berezin authority and rechecked by the runner via exact symbolic determinant computations. The runner source performs finite symbolic checks rather than merely printing pass constants, though it correctly treats the two-candidate framing as a scoped premise rather than a universal classification.
 - **auditor confidence:** high
 
 ### `staggered_fermion_card_2026-04-10`

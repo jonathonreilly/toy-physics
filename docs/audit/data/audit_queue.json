@@ -2,7 +2,7 @@
   "by_criticality": {
     "critical": 735,
     "high": 34,
-    "leaf": 271,
+    "leaf": 270,
     "medium": 152
   },
   "cycle_break_target_count": 242,
@@ -30805,30 +30805,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_dirac_substep1_grassmann_forcing_bridge_narrow_theorem_note_2026-05-16",
-      "claim_scope": null,
-      "claim_type": "bounded_theorem",
-      "claim_type_provenance": "author_hint",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "deps": [
-        "cl3_faithful_irrep_dim_two_narrow_theorem_note_2026-05-10",
-        "spin_statistics_berezin_determinant_narrow_theorem_note_2026-05-10"
-      ],
-      "direct_in_degree": 0,
-      "effective_status": "unaudited",
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STAGGERED_DIRAC_SUBSTEP1_GRASSMANN_FORCING_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md",
-      "queue_reason": "unaudited",
-      "ready": true,
-      "runner_path": "scripts/audit_companion_staggered_dirac_substep1_grassmann_forcing_bridge_2026_05_16.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_dirac_substep3_species_reduction_bridge_narrow_theorem_note_2026-05-16",
       "claim_scope": null,
       "claim_type": "bounded_theorem",
@@ -38214,6 +38190,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 6,
-  "total_pending": 1192
+  "ready_count": 5,
+  "total_pending": 1191
 }
