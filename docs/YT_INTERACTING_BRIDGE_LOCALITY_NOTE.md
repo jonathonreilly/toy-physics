@@ -1,24 +1,41 @@
 # y_t Interacting Bridge Locality Proxy Note
 
-**Date:** 2026-04-15
-**Status:** bounded support note
+**Date:** 2026-04-15 (demoted 2026-05-16)
+**Claim type:** bounded_theorem
+**Status:** bounded numerical-match proxy (target-conditioned scan against imported endpoint)
+**Audit class:** G — load-bearing step is a target-conditioned numerical comparator, not a derivation
 **Primary runner:** `scripts/frontier_yt_interacting_bridge_locality.py`
 
-## Role
+## Scope (honest framing)
 
-This note is not the final `y_t` bridge theorem. It is a bounded support scan
-that sharpens the remaining target.
+This note is **not** a derivation that the exact interacting lattice bridge is
+forced into a UV-localized window. It is a bounded *target-conditioned*
+consistency scan: given an imported physical endpoint `y_t(v) = 0.9176` and a
+chosen smooth profile family that already preserves the exact endpoint data,
+the scan reports which profiles in that family reproduce the imported endpoint
+within `1%` versus which overshoot it by more than `5%`.
 
-The question is narrower:
+Three load-bearing inputs are imported, not derived inside this note:
 
-> If the exact lattice endpoint data are fixed, how diffuse can the remaining
-> interacting UV-to-IR bridge be before the accepted low-energy
-> `y_t(v) = 0.9176` endpoint is lost?
+1. the physical target `y_t(v) = 0.9176`,
+2. the SM-like reference transport anchored at the low-energy strong coupling
+   (one-loop QCD beta), and
+3. the chosen smooth sigmoid-blend profile family parameterized by
+   `(center_frac, width_frac)`.
 
-## Setup
+The runner's `1c` PASS — "profiles within 1% exist only in the UV-localized
+window `center >= 0.95`, `width <= 0.03`" — is therefore a statement about
+*this scanned family against this imported target*, not a statement that the
+exact interacting bridge is forced to lie in that window.
+
+This is therefore an `audited_numerical_match` / class-G proxy in the project's
+audit taxonomy, not a closed first-principles derivation of UV-localization.
+The remaining structural gaps are recorded below in "What remains open".
+
+## Previous-scan context (informational)
 
 The runner scans a family of smooth bridge profiles that all preserve the same
-endpoint data:
+exact endpoint data:
 
 - `g_3(v)` fixed by the coupling-map theorem
 - `g_3(M_Pl)` fixed by the lattice coupling
@@ -28,86 +45,104 @@ The family interpolates between:
 
 1. an SM-like transport anchored at the accepted low-energy strong coupling,
    and
-2. a lattice-side UV bridge profile satisfying the exact UV endpoint
+2. a lattice-side UV bridge profile satisfying the exact UV endpoint.
 
-So the scan does not ask whether the endpoints are right. It asks how the
-*shape* of the interacting bridge can vary while preserving the accepted
-low-energy answer.
+So the scan does not ask whether the endpoints are right. It asks, *for the
+imported physical target*, how the shape of a bridge inside this chosen
+sigmoid-blend family can vary while reproducing that target within `1%`.
 
-## Result
+## Numerical result
 
-The result is sharp:
+The runner reports, for the scanned profile family against the imported
+target `y_t(v) = 0.9176`:
 
-- diffuse / early bridge deformations overshoot the accepted `y_t(v)` badly
-- a viable smooth profile exists only when the lattice correction is confined
-  to a very narrow UV window near `M_Pl`
-- in the scanned family, `9 / 70` profiles land within `1%` of the accepted
-  central value, and all of them occur only for center fraction `>= 0.95` and
-  width fraction `<= 0.03`
-- by contrast, all diffuse / early profiles with center fraction `<= 0.85`
-  overshoot the accepted endpoint by more than `5%`
+- `9 / 70` profiles land within `1%` of the imported central value, and all of
+  them occur only for `center_frac >= 0.95` and `width_frac <= 0.03`
+- all early/diffuse profiles with `center_frac <= 0.85` overshoot the imported
+  target by more than `5%`
+- both `g_3(v)` and `g_3(M_Pl)` exact endpoints are preserved across all
+  scanned profiles by construction
+- the best smooth profile in the scan gives `y_t(v) = 0.9159` (`-0.18%` from
+  the imported target)
 
-That means the accepted low-energy `y_t` endpoint is **not** generic under
-arbitrary smooth bridge deformations.
+The honest interpretation is that, **conditional on** the imported endpoint
+target, **conditional on** the chosen sigmoid-blend profile family, and
+**conditional on** the SM-like reference background, only the profiles whose
+deformation is concentrated in a narrow UV-localized window near `M_Pl`
+reproduce the imported target within `1%`.
 
-## What this strengthens
+It does not establish that the exact interacting lattice bridge actually
+belongs to that UV-localized window, nor that this profile family fairly
+samples the admissible bridge class outside of it.
 
-This strengthens the live package story in one specific way:
+## Meaning (bounded)
 
-- the remaining bridge does not look like a broad unknown distortion across the
-  full `v -> M_Pl` interval
-- it looks much closer to an SM-like transport over most of that interval, with
-  the lattice correction concentrated near the UV endpoint
+The bounded claim this note licenses is narrow:
 
-So the current backward-Ward route is not being defended as “any arbitrary
-interpolation works.” The proxy instead says:
+> *Conditional on* the imported endpoint `y_t(v) = 0.9176`, *conditional on*
+> the chosen sigmoid-blend profile family parameterized by
+> `(center_frac, width_frac)`, and *conditional on* the SM-like reference
+> transport, the profiles in this family that reproduce the imported endpoint
+> within `1%` are exactly those with `center_frac >= 0.95` and
+> `width_frac <= 0.03`; profiles with `center_frac <= 0.85` overshoot the
+> imported endpoint by more than `5%`.
 
-> only a tightly UV-localized correction window preserves the accepted low-
-> energy endpoint inside this smooth bridge family.
+It does **not** establish:
 
-## What this does **not** prove
+- that the exact interacting lattice bridge is forced into that UV-localized
+  window,
+- that the current `~3%` bridge surrogate envelope disappears, or
+- that the operator-level interacting bridge theorem is closed.
 
-This note does not make `y_t` unbounded.
+A structurally consistent reason to expect UV-localization for *positive*
+bridge surplus on the accepted background is recorded separately in
+[YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md):
+the linearized endpoint-response kernel is positive and monotone increasing
+toward the IR, so equal-area surplus has less endpoint leverage when placed
+closer to the UV. That rearrangement statement is itself conditioned on the
+same accepted background and on positivity of the bridge surplus; it is not
+yet a derivation that the exact interacting lattice bridge is forced into the
+UV-localized window. The two notes are mutually supporting target-conditioned
+proxies, not a joint derivation.
 
-It does **not** yet prove:
+## What remains open (load-bearing gaps)
 
-- that the exact interacting lattice bridge is uniquely forced into that
-  UV-localized window
-- that the current `~3%` surrogate bound disappears
-- that the bridge theorem is closed
+To upgrade the locality conclusion from `audited_conditional` / class-G to
+`audited_clean`, the following structural gaps must be closed; none are
+addressed by the present runner:
 
-Those still require an operator-level interacting bridge theorem.
+1. derive the endpoint `y_t(v) = 0.9176` from the framework axioms rather
+   than importing it as the comparator target;
+2. derive why the interacting lattice bridge must lie in (or near) the
+   UV-localized window from operator content alone, rather than reading the
+   window off a target-conditioned scan;
+3. derive why the chosen sigmoid-blend profile family is representative of the
+   admissible smooth bridge class, rather than treating it as a convenient
+   analytic placeholder;
+4. derive the SM-like reference transport from a closed two-loop (or higher)
+   QCD beta on the framework's physical lattice surface, rather than using the
+   one-loop QCD beta as a proxy.
 
-## Why it matters anyway
+All four are operator/theorem problems and are out of scope for this note.
+The note therefore stops at the bounded target-conditioned consistency claim
+and does not attempt to upgrade beyond it.
 
-This materially narrows the remaining theorem target.
+## Audit history
 
-Before this scan, the residual could still be read as:
-
-- “some unknown smooth UV-to-IR bridge deformation”
-
-After this scan, the residual is sharper:
-
-- “a bridge that must remain SM-like over most of the interval and localize the
-  lattice correction near the UV endpoint”
-
-That is a smaller and more testable target.
-
-## Honest auditor read
-
-The 2026-05-05 audit recorded this row as `audited_conditional` with the
-substantive observation that the runner appears to compute the stated
-grid scan, but the conclusion depends on imported endpoint data, the
-accepted target value, one-loop transport choices, and the chosen
-bridge family. The restricted packet does not close the operator-level
-interacting bridge theorem or derive the endpoints from retained first
-principles. The note already states above that the result is a bounded
-support proxy, not the final bridge theorem.
-
-This addendum is graph-bookkeeping only. It does not change the
-conditional status, does not promote the row, and does not modify the
-profile-family scan numerics or the UV-localization conclusion's
-bounded scope.
+The 2026-05-02 audit recorded this row as `audited_numerical_match` with
+Class-G load-bearing step ("target-conditioned scan locality"). The 2026-05-05
+re-audit re-classified it as `audited_conditional` with Class-D load-bearing
+step on a `critical`-criticality re-audit, with the same substantive
+observation that the conclusion depends on imported endpoint data, the
+accepted target value, one-loop transport choices, and the chosen bridge
+family. The 2026-05-16 demotion edit (this revision) rewrites the headline
+"Scope", "Result", and "Meaning" sections so the framing matches the auditor
+verdict instead of relying on a trailing addendum. No runner, audit-data, or
+publication file is changed by the demotion; the bounded target-conditioned
+proxy status is preserved. This brings the headline framing of this note into
+agreement with the parallel 2026-05-16 demotion of its sister
+[YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md](YT_CONSTRUCTIVE_UV_BRIDGE_NOTE.md), which
+runs the same scope correction on the three-family endpoint-stability scan.
 
 ## Audit dependency repair links
 
@@ -125,3 +160,11 @@ change the audited claim scope.
 - [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
   for the QFP-stability bound on the SM-like transport over most of the
   interval.
+- [YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md](YT_BRIDGE_REARRANGEMENT_PRINCIPLE_NOTE.md)
+  for the structurally consistent rearrangement argument that, *conditional
+  on* the same accepted background and positive bridge surplus, equal-area
+  surplus near the UV gives the smallest endpoint response. This is a
+  target-conditioned structural support for why the UV-localized window of
+  the present scan is the smallest-response rearrangement, not an
+  independent derivation that the exact interacting bridge is forced into
+  that window.
