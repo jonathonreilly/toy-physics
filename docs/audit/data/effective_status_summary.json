@@ -82,12 +82,12 @@
     "decoration_under_pmns_oriented_cycle_channel_value_law_note": 1,
     "decoration_under_wide_lattice_h2t_distance_law_note": 1,
     "meta": 113,
-    "open_gate": 15,
+    "open_gate": 16,
     "retained": 105,
     "retained_bounded": 314,
     "retained_no_go": 136,
     "retained_pending_chain": 5,
-    "unaudited": 1183
+    "unaudited": 1182
   },
   "retained_pending_chain_count": 5,
   "retained_pending_chain_examples": [

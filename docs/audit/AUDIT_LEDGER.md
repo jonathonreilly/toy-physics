@@ -22,8 +22,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_no_go** | 136 |
 | **retained_bounded** | 314 |
 | _retained_pending_chain_ | 5 |
-| open_gate | 15 |
-| unaudited | 1183 |
+| open_gate | 16 |
+| unaudited | 1182 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -43,13 +43,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 527 |
+| `audited_clean` | 528 |
 | `audited_conditional` | 193 |
 | `audited_decoration` | 17 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1296 |
+| `unaudited` | 1295 |
 
 | claim_type | count |
 |---|---:|
@@ -579,6 +579,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `teleportation_logical_readout_audit` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_measurement_record_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
 | `teleportation_microscopic_closure_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
+| `teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16` | open_gate | ~~audited_clean~~ | open_gate | cross_family | codex-gpt-5.5 | A | - |
 | `teleportation_native_transport_theory_note` | open_gate | ~~audited_clean~~ | open_gate | fresh_context | codex-gpt-5.5 | A | - |
 | `teleportation_no_signaling_audit` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | B | - |
 | `teleportation_noise_fault_controls_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | C | - |
@@ -10890,6 +10891,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's working step is that the runner verifies native retained-axis stabilizers factor into logical Pauli stabilizers, their commuting projector-controlled Hamiltonian writes Bell record codewords, the pointer+bath overlap obeys epsilon_N <= exp(-kappa N), and native taste-apparatus generators commute with support ledgers.  _(class `C`)_
 - **chain closes:** True — The chain closes for the bounded model object because the note states the apparatus family and the live runner passes all native stabilizer, transducer, finite-time write, thermodynamic bound, ledger, and state-only boundary gates. It does not close any stronger nature-grade uniqueness, detector-engineering, or readout/preparation claim, but those are explicitly excluded from the audited scope.
 - **rationale:** The audited claim is best treated as a bounded theorem, not the seeded open_gate, because it presents a computed scoped apparatus result with explicit limitations rather than a standalone blocker. The C-class runner checks produce the relevant residuals, commutators, codeword-write property, distance/bound values, and ledger-class commutators, and all acceptance gates pass. The clean verdict applies only to the bounded retained-axis state-teleportation apparatus claim; it must not be read as nature-grade uniqueness, hardware detector closure, resource/readout scaling closure, matter transport, object transport, or FTL transport.
+- **auditor confidence:** high
+
+### `teleportation_native_axioms_scope_split_source_theorem_note_2026-05-16`
+
+- **Note:** [`TELEPORTATION_NATIVE_AXIOMS_SCOPE_SPLIT_SOURCE_THEOREM_NOTE_2026-05-16.md`](../../docs/TELEPORTATION_NATIVE_AXIOMS_SCOPE_SPLIT_SOURCE_THEOREM_NOTE_2026-05-16.md)
+- **claim_type:** `open_gate`
+- **claim_scope:** Audited only the structural scope split between finite bookkeeping consistency on the cited finite surface and held-open nature-grade closure; no nature-grade teleportation closure was audited.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** open_gate  (reason: `audited_open_gate`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-140322-20260516T140322Z-7a425895-teleportation_native_axi-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** The parent note's content factors into two disjoint claim surfaces: finite-bookkeeping consistency surface B on audited finite surfaces, and nature-grade closure surface N which remains HOLD until the named blockers are independently closed.  _(class `A`)_
+- **chain closes:** True — The structural split closes on its own limited terms: the runner checks that the parent/split notes label the finite surface, name the nature-grade blockers, decline promotion, and satisfy simple Bell-frame and Manhattan bookkeeping identities. It does not close any physical blocker in surface N.
+- **rationale:** The load-bearing step is a genuine class A structural/bookkeeping closure over the restricted claim scope, not a first-principles physics derivation. The runner source performs text-boundary checks plus simple algebraic identities and explicitly does not promote the teleportation lane or close nature-grade blockers. Because the claim is only the scope split and HOLD boundary, the conclusion follows within that planning-grade scope.
+- **open / conditional deps cited:**
+  - `TELEPORTATION_NATIVE_AXIOMS_THEORY_NOTE.md`
 - **auditor confidence:** high
 
 ### `teleportation_native_axioms_theory_note`
