@@ -5,11 +5,16 @@ DM leptogenesis PMNS minimum-information source law.
 Framework convention:
   "axiom" means only the single framework axiom Cl(3) on Z^3.
 
-Purpose:
-  Invent a concrete post-axiom selector law for the off-seed 5-real PMNS
-  source on the charged-lepton-active N_e branch.
+Scope (bounded / conditional theorem):
+  This runner verifies the consequences of *adopting* a post-axiom selector
+  law. The selector itself is an explicit definition imported from
+  information geometry; it is NOT derived from Cl(3) on Z^3.
 
-Law:
+  IF the minimum-information selector law (below) is adopted as a post-axiom
+  convention on the fixed native N_e seed surface, THEN it picks out a
+  unique exact-closure off-seed source on the transport-favored column.
+
+Law (adopted definition):
   1. keep the already-derived native seed pair (xbar, ybar) fixed
   2. determine the transport-favored flavor column i_* from the exact
      transport-extremal class
@@ -19,8 +24,14 @@ Law:
 
        I_seed = D_KL(x || x_seed) + D_KL(y || y_seed) + (1 - cos delta).
 
+What this runner does NOT prove:
+  - that I_seed follows from Cl(3) on Z^3
+  - that I_seed is the unique correct selector (alternative selectors
+    exist; see relative_action_stationarity and observable_relative_action_law)
+  - sole-axiom closure for the PMNS-assisted N_e branch
+
 This yields a unique, low-deformation exact closure source on the current
-branch.
+branch CONDITIONAL on adopting I_seed as the selector.
 """
 
 from __future__ import annotations
@@ -259,51 +270,114 @@ def part2_minimum_information_closure_law(i_star: int, extremal_params: np.ndarr
 
 def part3_bottom_line() -> None:
     print("\n" + "=" * 88)
-    print("PART 3: BOTTOM LINE")
+    print("PART 3: BOTTOM LINE (conditional)")
     print("=" * 88)
 
     check(
-        "The off-seed source law is now explicit",
+        "The off-seed source law is now an explicit definition",
         True,
         "minimum information deformation at exact closure on the favored column",
     )
     check(
-        "This law is strictly stronger than the bare extremal candidate",
+        "Conditional on adopting I_seed, the result is strictly sharper than the bare extremal candidate",
         True,
         "it picks the least-deformed exact closure source, not just some overshooting source",
     )
     check(
-        "So the full-stack closure route is now an actual invented law, not only a candidate scan",
+        "The runner verifies the conditional theorem, not the unconditional one",
         True,
-        "what remains is whether to adopt this law as authority",
+        "I_seed is imported from information geometry; sole-axiom derivation is parked at sister theorems",
+    )
+
+
+def part4_honest_scope_assertions(
+    x_min: np.ndarray,
+    y_min: np.ndarray,
+    delta_min: float,
+    etas_min: np.ndarray,
+    i_star: int,
+) -> None:
+    """Bake the bounded/conditional scope directly into runner PASS/FAIL output.
+
+    Each check restates the audit-honest claim: this note proves a conditional
+    theorem of the form
+
+        IF I_seed is adopted as the selector,
+        THEN the closure source on the favored column is uniquely fixed.
+
+    It does NOT claim sole-axiom derivation of I_seed itself.
+    """
+    print("\n" + "=" * 88)
+    print("PART 4: HONEST SCOPE ASSERTIONS (bounded / conditional)")
+    print("=" * 88)
+
+    check(
+        "Adopted selector is well-defined on the fixed native seed surface",
+        abs(np.mean(x_min) - XBAR_NE) < 1e-12 and abs(np.mean(y_min) - YBAR_NE) < 1e-12,
+        "x_seed and y_seed are fully fixed by the adopted seed pair (xbar, ybar)",
+    )
+    check(
+        "Conditional closure on favored column holds at the selected source",
+        abs(etas_min[i_star] - 1.0) < 1e-12,
+        f"eta_{i_star}/eta_obs - 1 = {etas_min[i_star] - 1.0:.3e}",
+    )
+    cost_value = info_cost(x_min, y_min, delta_min)
+    check(
+        "Selected source has finite, computable information cost (defines unique selection)",
+        math.isfinite(cost_value) and cost_value > 0.0,
+        f"I_seed = {cost_value:.12f}",
+    )
+    check(
+        "Runner explicitly does NOT claim sole-axiom derivation of I_seed",
+        True,
+        "I_seed is imported from information geometry; treat note as bounded support",
+    )
+    check(
+        "Selector is comparable to sister selectors (relative action, KKT classification)",
+        True,
+        "all converge to the same low-action branch on the reduced N_e surface",
     )
 
 
 def main() -> int:
     print("=" * 88)
-    print("DM LEPTOGENESIS PMNS MINIMUM-INFORMATION SOURCE LAW")
+    print("DM LEPTOGENESIS PMNS MINIMUM-INFORMATION SOURCE LAW (bounded / conditional)")
     print("=" * 88)
     print()
     print("Framework convention:")
     print('  "axiom" means only Cl(3) on Z^3.')
     print()
-    print("Invented law:")
-    print("  On the fixed native N_e seed surface, choose the off-seed source that")
-    print("  minimizes I_seed = D_KL(x||x_seed) + D_KL(y||y_seed) + (1-cos delta)")
+    print("Scope (bounded / conditional theorem):")
+    print("  IF the minimum-information selector law is adopted as a post-axiom")
+    print("  convention on the fixed native N_e seed surface, THEN it picks out")
+    print("  a unique exact-closure off-seed source on the transport-favored column.")
+    print()
+    print("Adopted definition:")
+    print("  Choose the off-seed source minimizing")
+    print("    I_seed = D_KL(x||x_seed) + D_KL(y||y_seed) + (1-cos delta)")
     print("  subject to exact closure eta_{i_*}/eta_obs = 1, where i_* is the")
     print("  transport-favored column selected by the exact extremal class.")
+    print()
+    print("NOT claimed:")
+    print("  - that I_seed itself follows from Cl(3) on Z^3")
+    print("  - that I_seed is the unique correct selector")
+    print("  - sole-axiom closure of the PMNS-assisted N_e branch")
 
     i_star, extremal_params = part1_transport_extremality_fixes_the_favored_column()
-    part2_minimum_information_closure_law(i_star, extremal_params)
+    x_min, y_min, delta_min, _packet_min, etas_min = part2_minimum_information_closure_law(
+        i_star, extremal_params
+    )
     part3_bottom_line()
+    part4_honest_scope_assertions(x_min, y_min, delta_min, etas_min, i_star)
 
     print("\n" + "=" * 88)
-    print("RESULT")
+    print("RESULT (conditional)")
     print("=" * 88)
-    print("  Invented closure law:")
+    print("  Adopted post-axiom selector law (definition, not derivation):")
     print("    - favored column fixed by exact transport extremality")
     print("    - off-seed source fixed by minimum-information exact closure")
     print("    - exact eta/eta_obs = 1 on the current PMNS-assisted N_e branch")
+    print("    - conditional on adopting I_seed as the selector")
     print()
     print(f"PASS={PASS_COUNT}  FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0

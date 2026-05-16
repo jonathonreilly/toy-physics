@@ -1,23 +1,33 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_dm_leptogenesis_pmns_mininfo_source_law.py
-runner_sha256: d9064ed07923d4b153469d27f09b6ea7b6dd6d767c50c2d42e6558f99e25f515
+runner_sha256: 01ba32280faa4a0598dcbefb32a6340b394b45b6e1cc8b2f24f5a494314b274b
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 5.11
+elapsed_sec: 1.87
 status: ok
 ----- stdout -----
 ========================================================================================
-DM LEPTOGENESIS PMNS MINIMUM-INFORMATION SOURCE LAW
+DM LEPTOGENESIS PMNS MINIMUM-INFORMATION SOURCE LAW (bounded / conditional)
 ========================================================================================
 
 Framework convention:
   "axiom" means only Cl(3) on Z^3.
 
-Invented law:
-  On the fixed native N_e seed surface, choose the off-seed source that
-  minimizes I_seed = D_KL(x||x_seed) + D_KL(y||y_seed) + (1-cos delta)
+Scope (bounded / conditional theorem):
+  IF the minimum-information selector law is adopted as a post-axiom
+  convention on the fixed native N_e seed surface, THEN it picks out
+  a unique exact-closure off-seed source on the transport-favored column.
+
+Adopted definition:
+  Choose the off-seed source minimizing
+    I_seed = D_KL(x||x_seed) + D_KL(y||y_seed) + (1-cos delta)
   subject to exact closure eta_{i_*}/eta_obs = 1, where i_* is the
   transport-favored column selected by the exact extremal class.
+
+NOT claimed:
+  - that I_seed itself follows from Cl(3) on Z^3
+  - that I_seed is the unique correct selector
+  - sole-axiom closure of the PMNS-assisted N_e branch
 
 ========================================================================================
 PART 1: TRANSPORT EXTREMALITY FIXES THE FAVORED COLUMN
@@ -55,21 +65,31 @@ PART 2: THE MINIMUM-INFORMATION CLOSURE LAW
   eta/eta_obs(min-law) = [1.         0.50519888 0.7823353 ]
 
 ========================================================================================
-PART 3: BOTTOM LINE
+PART 3: BOTTOM LINE (conditional)
 ========================================================================================
-  [PASS] The off-seed source law is now explicit  (minimum information deformation at exact closure on the favored column)
-  [PASS] This law is strictly stronger than the bare extremal candidate  (it picks the least-deformed exact closure source, not just some overshooting source)
-  [PASS] So the full-stack closure route is now an actual invented law, not only a candidate scan  (what remains is whether to adopt this law as authority)
+  [PASS] The off-seed source law is now an explicit definition  (minimum information deformation at exact closure on the favored column)
+  [PASS] Conditional on adopting I_seed, the result is strictly sharper than the bare extremal candidate  (it picks the least-deformed exact closure source, not just some overshooting source)
+  [PASS] The runner verifies the conditional theorem, not the unconditional one  (I_seed is imported from information geometry; sole-axiom derivation is parked at sister theorems)
 
 ========================================================================================
-RESULT
+PART 4: HONEST SCOPE ASSERTIONS (bounded / conditional)
 ========================================================================================
-  Invented closure law:
+  [PASS] Adopted selector is well-defined on the fixed native seed surface  (x_seed and y_seed are fully fixed by the adopted seed pair (xbar, ybar))
+  [PASS] Conditional closure on favored column holds at the selected source  (eta_0/eta_obs - 1 = 2.220e-16)
+  [PASS] Selected source has finite, computable information cost (defines unique selection)  (I_seed = 0.058549869343)
+  [PASS] Runner explicitly does NOT claim sole-axiom derivation of I_seed  (I_seed is imported from information geometry; treat note as bounded support)
+  [PASS] Selector is comparable to sister selectors (relative action, KKT classification)  (all converge to the same low-action branch on the reduced N_e surface)
+
+========================================================================================
+RESULT (conditional)
+========================================================================================
+  Adopted post-axiom selector law (definition, not derivation):
     - favored column fixed by exact transport extremality
     - off-seed source fixed by minimum-information exact closure
     - exact eta/eta_obs = 1 on the current PMNS-assisted N_e branch
+    - conditional on adopting I_seed as the selector
 
-PASS=12  FAIL=0
+PASS=17  FAIL=0
 
 ----- stderr -----
 
