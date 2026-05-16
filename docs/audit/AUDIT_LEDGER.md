@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 135 |
-| **retained_bounded** | 311 |
+| **retained_bounded** | 312 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1190 |
+| unaudited | 1189 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,13 +42,13 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 1 |
-| `audited_clean` | 523 |
+| `audited_clean` | 524 |
 | `audited_conditional` | 191 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1303 |
+| `unaudited` | 1302 |
 
 | claim_type | count |
 |---|---:|
@@ -360,6 +360,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_y_l1_ratios_wilson_integer_diff_note_2026-05-08_probey_l1_ratios` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | D | - |
 | `koide_y_substrate_anomaly_forcing_note_2026-05-08_probey_substrate_anomaly` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
+| `koide_z3_equivariant_anticommuting_no_go_note_2026-05-16` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_z3_joint_projector_identity_note_2026-04-19` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5 | C | - |
 | `koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `kubo_continuum_limit_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
@@ -6775,6 +6776,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Perturbative SU(N_c)^2 U(1), SU(2)^2 U(1), gravitational-U(1), and U(1)^3 anomaly cancellation, together with SU(2) Witten parity, does not by itself select the full Standard Model carrier sector.  _(class `A`)_
 - **chain closes:** True — The load-bearing statements follow by direct rational anomaly-trace algebra and the standard Witten even-doublet parity condition stated in the note. The result is negative and bounded to anomaly-only selection, so it does not require a retained substrate-to-carrier bridge to close.
 - **rationale:** The note does not claim anomaly cancellation is useless or derive an alternate carrier sector; it only rules out anomaly cancellation alone as forcing the listed choices. The runner verifies the exact-rational traces, Witten parity boundary, generation additivity, hypercharge homogeneity, vectorlike cancellation, and category separation from operator coefficients. Residual risk is the usual dependence on standard anomaly-bookkeeping conventions, which are explicit bounded mathematical inputs rather than hidden framework premises.
+- **auditor confidence:** high
+
+### `koide_z3_equivariant_anticommuting_no_go_note_2026-05-16`
+
+- **Note:** [`KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16.md`](../../docs/KOIDE_Z3_EQUIVARIANT_ANTICOMMUTING_NO_GO_NOTE_2026-05-16.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** The audited claim is the bounded algebraic identity comm(R) ∩ anticomm(Γ_χ) = {0} inside Sym(R^3), with only the narrow same-factor Γ_χ observation following from it.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-135639-20260516T135639Z-9e884f60-koide_z3_equivariant_ant-targeted`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Since H and Γ_χ are both circulant and commute, {H,Γ_χ}=0 reduces to HΓ_χ=0, and the Z_3 Fourier diagonalization with Γ_χ eigenvalues (+1,-1,-1) forces all circulant coefficients a,b,c to vanish.  _(class `A`)_
+- **chain closes:** True — The conclusion follows from finite-dimensional linear algebra using only the stated matrices R, J, Γ_χ and the commutation/anti-commutation hypotheses. No cited authority or external premise is needed for the algebraic intersection result.
+- **rationale:** The load-bearing step is a genuine algebraic identity check: R-commutation places H in the circulant algebra, Γ_χ is also circulant, and Fourier diagonalization shows HΓ_χ=0 has only the zero solution. The runner source actually constructs the matrices and symbolic equations with sympy rather than merely printing constants, and its 20 passes are class-A algebra checks. The note also correctly scopes the Connes-Lott language to the same-factor identification and does not claim a global no-go.
 - **auditor confidence:** high
 
 ### `koide_z3_joint_projector_identity_note_2026-04-19`
