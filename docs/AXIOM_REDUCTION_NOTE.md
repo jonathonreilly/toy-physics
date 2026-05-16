@@ -272,7 +272,7 @@ assumptions (Lorentz invariance, faithful embedding).
 | Step | What is derived | From what | Numerical evidence | Script |
 |------|----------------|-----------|-------------------|--------|
 | Born rule | I_3 = 0 at machine precision | Linear propagator (A2) | I_3/P < 10^-14 across 7 kernels, d=2,3,4 | `frontier_nonlinear_born_gravity.py` |
-| Nonlinear breaks both | I_3 >> 0 AND repulsive gravity | Quadratic/cubic propagator | I_3 = 0.19-0.24, force sign flips | `frontier_nonlinear_born_gravity.py` |
+| Two exhibited nonlinear examples (not a universal claim) | I_3 >> 0 AND centroid sign flip on the chosen 2D setup; mass-law beta stays near 1 in these runs (so mass law does NOT break, only the sign does) | Quadratic / cubic pointwise rules | I_3 = 0.19-0.24, centroid sign flips, beta = 0.99-1.0 | `frontier_nonlinear_born_gravity.py` |
 | Poisson uniqueness | nabla^2 is unique self-consistent operator | 21 operators tested | Only alpha=1 gives attractive, convergent field | `frontier_poisson_exhaustive_uniqueness.py` |
 | Poisson self-consistency | phi = (nabla^2)^(-1) rho converges | Propagator density sources field | 10-iteration convergence, susceptibility correlation 0.93 | `frontier_self_consistent_field_equation.py` |
 | Valley-linear selection | S = L(1-f) uniquely gives F proportional to M | Action sweep: 7 actions | f-power 0.5 -> F proportional to M^0.5; f-power 1 -> F proportional to M^1; f-power 2 -> F proportional to M^2 | `action_universality_probe.py` |

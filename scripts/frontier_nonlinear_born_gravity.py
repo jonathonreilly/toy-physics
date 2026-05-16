@@ -1,10 +1,24 @@
 #!/usr/bin/env python3
-"""Nonlinear propagator breaks Born rule AND gravity simultaneously.
+"""Nonlinear propagator: Born-rule and gravity-sign correlation on a 2D setup.
 
 ==========================================================================
-CLAIM: I_3 = 0 and beta = 1 are correlated -- both follow from linear
-amplitude superposition. Any nonlinearity that breaks the Born rule also
-destroys the mass law. Testing one tests the other.
+SCOPE (honest-demoted 2026-05-16; see docs/NONLINEAR_BORN_GRAVITY_NOTE.md)
+
+This runner exhibits TWO separate things:
+
+  (A) LINEAR DIRECTION (algebraic theorem):
+      Linear amplitude composition with the quadratic Born surface
+      P = |A|^2 gives I_3 = 0 to machine precision. This is the
+      retained theorem of docs/I3_ZERO_EXACT_THEOREM_NOTE.md and is
+      re-checked here as a sanity baseline.
+
+  (B) TWO NONLINEAR EXAMPLES (exhibited, not universal):
+      For two specific pointwise amplitude nonlinearities on the chosen
+      2D lattice / kernel / coupling, |I_3|/P is O(0.1) AND the centroid
+      deflection sign flips relative to the linear baseline.
+
+This is an exhibited correlation on a finite menu of two nonlinearities,
+not a universal "every nonlinearity breaks both" theorem.
 ==========================================================================
 
 Three propagator types on a lattice:
@@ -15,15 +29,14 @@ Three propagator types on a lattice:
 
 For each, measure:
   (a) I_3 (Sorkin parameter) via 3-slit test
-  (b) Mass exponent beta via self-consistent field + varying source
-  (c) Force sign (attractive vs repulsive)
-  (d) Distance exponent alpha
+  (b) Mass exponent beta via small mass sweep (note: beta stays ~1 even
+      for the nonlinear cases tested; mass law is NOT what breaks here)
+  (c) Centroid-shift sign relative to no-field baseline
+  (d) Apparent distance exponent alpha
 
-The gravity test uses the self-consistent coupling: the propagator
-density rho = |psi|^2 sources the Poisson field. For a LINEAR
-propagator, doubling the external mass doubles the field, which doubles
-the deflection => beta = 1. For a NONLINEAR propagator, the density
-responds nonlinearly to the field, breaking beta = 1.
+The gravity test couples the propagator to an analytic phi(x,y) = -M/r
+field via action S = L (1 - <phi>). It does NOT solve self-consistent
+back-reaction.
 
 PStack experiment: frontier-nonlinear-born-gravity
 """
@@ -477,44 +490,44 @@ def main():
               f"alpha = {r['alpha']:.2f}")
     print()
 
-    if born_ok_linear and grav_ok_linear and all_nonlinear_break_both:
-        print("  [PASS] Perfect correlation:")
-        print("    - Linear propagator: I_3 = 0, attractive gravity, beta = 1")
-        print("    - Nonlinear propagators: I_3 != 0, REPULSIVE gravity")
-        print()
-        print("  CONCLUSION:")
-        print("  The Born rule and attractive Newtonian gravity are both")
-        print("  consequences of linear amplitude superposition. Nonlinear")
-        print("  modifications that violate I_3 = 0 simultaneously flip the")
-        print("  gravitational force sign (attractive -> repulsive) and distort")
-        print("  the distance law. Conversely, measuring I_3 = 0 in a")
-        print("  gravitational field confirms both the quantum and gravitational")
-        print("  sectors of the framework.")
-        print()
-        print("  EXPERIMENTAL IMPLICATION:")
-        print("  The diamond NV Born-rule experiment (Sorkin test near a mass)")
-        print("  is framework-specific: it tests BOTH the Born rule AND gravity")
-        print("  at once. A single measurement constrains both sectors.")
-    elif born_ok_linear and lin['attractive']:
-        nl_break = all(results[m]['I3'] > 1e-6 for m in ['quadratic', 'cubic'])
-        nl_repulsive = all(not results[m]['attractive'] for m in ['quadratic', 'cubic'])
-        if nl_break and nl_repulsive:
-            print("  [PASS] Clear correlation via force sign:")
-            print("    - Linear:    I_3 = 0     -> ATTRACTIVE gravity")
-            print("    - Nonlinear: I_3 != 0    -> REPULSIVE gravity")
-            print()
-            print("  CONCLUSION:")
-            print("  The Born rule and attractive gravity are linked through")
-            print("  amplitude linearity. Breaking linearity breaks BOTH:")
-            print("  I_3 departs from zero AND the force flips sign.")
-            print()
-            print("  The diamond NV Born-rule experiment (Sorkin test near a mass)")
-            print("  simultaneously constrains the gravitational sector.")
-        else:
-            print("  [PARTIAL] Born rule test clean but gravity correlation")
-            print("  incomplete.")
-    else:
-        print("  [INCONCLUSIVE] Need larger lattice or different parameters.")
+    # Honest scope (see docs/NONLINEAR_BORN_GRAVITY_NOTE.md, demoted 2026-05-16):
+    # This runner exhibits ONE direction (linear -> I_3 = 0, the algebraic
+    # theorem of I3_ZERO_EXACT_THEOREM_NOTE.md) and exhibits, for TWO chosen
+    # pointwise nonlinearities on this specific 2D setup, that |I_3|/P is
+    # O(0.1) and the centroid-shift sign flips relative to the linear baseline.
+    # It does NOT establish a universal "any nonlinearity -> both broken"
+    # theorem, and beta stays near 1 for the nonlinear cases (so the mass
+    # law does not break here; only the sign does).
+    print("  Observed on the chosen 2D setup:")
+    print(f"    - Linear:    |I_3|/P = {lin['I3']:.2e}    "
+          f"attractive = {lin['attractive']}    beta = {lin['beta']:.3f}")
+    for mode in ['quadratic', 'cubic']:
+        r = results[mode]
+        sign_str = "toward (attractive)" if r['attractive'] else "away (sign flipped)"
+        print(f"    - {mode.capitalize():<10}|I_3|/P = {r['I3']:.2e}    "
+              f"centroid shift = {sign_str}    beta = {r['beta']:.3f}")
+    print()
+    print("  WHAT THIS DOES AND DOES NOT SHOW")
+    print()
+    print("  Shown:")
+    print("    (A) Linear amplitude composition with the Born surface gives")
+    print("        I_3 = 0 to machine precision (algebraic theorem; see")
+    print("        I3_ZERO_EXACT_THEOREM_NOTE.md).")
+    print("    (B) For the two specific pointwise nonlinearities tested on")
+    print("        this 2D lattice / kernel / coupling, |I_3|/P is far from")
+    print("        zero AND the deflection centroid-shift sign is opposite")
+    print("        to the linear baseline.")
+    print()
+    print("  NOT shown (do not rely on these wider claims):")
+    print("    (C) A universal 'every amplitude nonlinearity breaks both'")
+    print("        theorem. Only two nonlinearities are tested.")
+    print("    (D) Mass-law failure. beta remains within ~1% of 1.0 for the")
+    print("        nonlinear cases; the visible failure is the centroid sign,")
+    print("        not the mass scaling.")
+    print("    (E) A model-independent simultaneous Born/gravity test. The")
+    print("        Sorkin / mass coupling are tied to the framework's chosen")
+    print("        propagator and gravity-coupling conventions used elsewhere")
+    print("        in the repository.")
 
     print()
     print(f"Total runtime: {time.time() - t_start:.1f}s")
