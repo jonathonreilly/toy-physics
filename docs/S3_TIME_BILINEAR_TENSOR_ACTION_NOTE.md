@@ -1,9 +1,10 @@
-# Route 2 Exact Tensorized Action from the Bilinear Carrier
+# Route 2 Tensorized Action from the Bilinear Carrier (definition-only)
 
-**Date:** 2026-04-14 (originally); 2026-05-04 (audited_renaming scope-narrow)
+**Date:** 2026-04-14 (originally); 2026-05-04 (first audited_renaming scope-narrow); 2026-05-16 (title/header honesty pass)
 **Branch:** `codex/review-active`
 **Status:** **definition-only** of `I_TB` and `Xi_TB` from named upstream inputs `(I_R, K_R, Lambda_R, u_*)`. The construction's identification with the **physical tensor dynamics law** (Einstein/Regge) is open and conditional on the upstream certificates listed below.
 **Claim type:** open_gate
+**Audit classification (matches load-bearing step class E, definition):** `audited_renaming` is the expected verdict for this note in its current scope; the next re-audit will land `audited_clean` only when items 2 and 5 below become retained-grade.
 **Primary runner:** [`scripts/frontier_s3_time_bilinear_tensor_action.py`](../scripts/frontier_s3_time_bilinear_tensor_action.py) (PASS=4/0)
 
 ## Audit-driven scope narrowing (2026-05-04)
@@ -48,6 +49,29 @@ Items 1, 3, and 4 name existing current-main source surfaces but are not
 treated here as retained-grade closure. Items 2 and 5 remain load-bearing
 gaps for any future retained physical-dynamics claim.
 
+## Audit-driven title and header honesty pass (2026-05-16)
+
+The 2026-05-16 re-audit of this note carried verdict
+`audited_renaming` (class E, definition). The note's body had already been
+narrowed correctly on 2026-05-04 to a definition-only scope, but the
+*title* still read "Route 2 **Exact** Tensorized Action from the Bilinear
+Carrier" and the "Verdict" / "What this narrowed note closes" sections
+re-used phrases like "exact tensorized construction" that an out-of-scope
+reader could mis-read as a derivation claim. This pass:
+
+- removes "Exact" from the title and replaces it with "(definition-only)";
+- replaces remaining "exact" qualifiers inside the verdict / closure
+  bullets with "definition-only" / "definitional";
+- adds an explicit *Audit classification* line in the header so the next
+  auditor and the publication control-plane both see the load-bearing
+  step class (`E`, definition) and the matching verdict
+  (`audited_renaming`) on first read.
+
+No new theorem, new dependency edge, or new runner check is asserted by
+this pass. It is a wording-only repair of the audit-honesty surface; the
+underlying upstream-input and Einstein/Regge bridge gaps named below are
+unchanged.
+
 **Current upstream dep effective_status (per audit ledger as of the
 2026-05-04 `audited_renaming` salvage):**
 
@@ -75,22 +99,24 @@ This note **does not derive**:
   `PL S^3 x R`
 
 These three are the load-bearing bridge gaps flagged by the 2026-05-04
-audit. Until those certificates are on the retained-grade surface, "Route 2 has
-an exact tensorized action" is a **definitional statement under upstream
-inputs**, not a derived physical-dynamics theorem.
+audit. Until those certificates are on the retained-grade surface, any
+phrasing like "Route 2 has a tensorized action" is a **definitional
+statement under upstream inputs**, not a derived physical-dynamics
+theorem.
 
 ## Verdict (scope-narrowed)
 
-Once the exact bilinear support carrier `K_R` is admitted (under its own
-upstream-input conditional), Route 2 has an exact **definitional**
+Once the bilinear support carrier `K_R` is admitted (under its own
+upstream-input conditional), Route 2 has a **definition-only**
 tensorized construction. The Einstein/Regge identification — i.e., the
 step that turns `I_TB` into a physical tensor dynamics law — remains the
 open bridge.
 
-The exact scalar Schur backbone and exact Route-2 kinematic scaffold are
-already in hand, so they can be combined with `K_R` into a definitional
-tensorized action/coupling candidate. The construction itself is
-algebraically clean; the physical-meaning bridge is the gap.
+The scalar Schur backbone and Route-2 kinematic scaffold named here are
+algebraic objects with their own upstream-input conditionals, so they can
+be combined with `K_R` into a definition-only tensorized action / coupling
+candidate. The construction itself is algebraically clean; the
+physical-meaning bridge is the gap.
 
 ## Named inputs for the definition
 
@@ -102,7 +128,7 @@ each input is retained-grade on current main:
 - background `PL S^3 x R`
 - scalar Schur boundary action
   - `I_R(f ; j) = 1/2 f^T Lambda_R f - j^T f`
-- exact bilinear support carrier
+- bilinear support carrier (named input under its own upstream conditional)
   - `K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`
 
 ## Algebraic tensorized construction
@@ -145,17 +171,20 @@ On the current Route-2 build program:
 
 What is **not** yet closed is the last theorem:
 
-> prove that the exact tensorized carrier/action `K_R`, `I_TB`, and `Xi_TB`
-> are the Einstein/Regge tensor dynamics law on the current restricted class.
+> prove that the definition-only tensorized carrier / action `K_R`,
+> `I_TB`, and `Xi_TB` are the Einstein/Regge tensor dynamics law on the
+> current restricted class.
 
 So the blocker has moved from:
 
-- “there is no exact tensor primitive”
+- "there is no written tensor primitive"
 
 to:
 
-- “the exact carrier has not yet been identified uniquely with the GR tensor
-  law.”
+- "the named carrier has not yet been identified uniquely with the GR
+  tensor law, and items 2 and 5 of the upstream-input list above are
+  still required as retained-grade certificates before the construction
+  can carry that identification."
 
 ## Bottom line
 
