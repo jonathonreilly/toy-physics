@@ -9,6 +9,43 @@ Purpose:
   Collapse the PMNS-assisted DM repair route to the full microscopic
   charge-preserving operator D. If D is supplied, the exact chain to the
   near-closing flavored transport value is algorithmic.
+
+Audit-class honesty addendum (science-fix-loop iter30, 2026-05-16):
+  The 2026-05-05 cross-family audit verdict
+  (`audited_numerical_match`, terminal_audit) recorded that
+  `build_full_charge_preserving_operator(target_le)` engineers a charge-
+  preserving D so that `Schur_{E_e}(D_-) = target_le` by construction.
+  The downstream Schur/response/packet/selector checks are therefore
+  conditional algebraic identities given a supplied D whose charge -1
+  active Schur complement equals `canonical_h(...)`; they do not derive
+  D from Cl(3) on Z^3. The DM transport status terminal-synthesis meta
+  note (2026-05-10) places this row in the cluster's structural block:
+  no single-action win exists for the leaf, and repair requires an
+  independent axiom-level derivation of `canonical_h` / `D_-` per the
+  auditor's recorded repair note rather than target-fitting the Schur
+  complement.
+
+  Per the review-loop policy, this addendum is graph-bookkeeping only:
+  the runner's numerical outputs are unchanged. Each check below is
+  self-classified using the audit lane's check-class vocabulary:
+
+    class C  standalone derivation from Cl(3) on Z^3 with no imported
+             load-bearing values
+    class D  conditional-on-imported-upstream or conditional on a
+             supplied object that is not itself derived in this packet
+    class E  engineered-target / target-fit identity that holds by
+             construction of an input chosen to satisfy the conclusion
+
+  After this addendum, this runner's classified breakdown is:
+    class C : 0
+    class D : 7  (Schur factorization, response reconstruction, packet
+                  sum, selector, miss-factor algebra, framing claims)
+    class E : 3  (charge-commutator on the engineered D, the L_e = H_e
+                  equality, and the selector eta value that flows from
+                  the engineered target through deterministic transport)
+
+  The audit lane still owns the verdict. This runner does not promote
+  the note.
 """
 
 from __future__ import annotations
@@ -186,25 +223,25 @@ def part1_full_d_gives_the_charged_sector_and_its_projected_source_law() -> np.n
     j_m[:3, :3] = x_e
 
     check(
-        "The supplied microscopic operator preserves charge exactly",
+        "[class E engineered-target] The block-diagonal D returned by build_full_charge_preserving_operator commutes with Q exactly",
         np.linalg.norm(d @ q - q @ d) < 1e-12,
-        f"commutator={np.linalg.norm(d @ q - q @ d):.2e}",
+        f"commutator={np.linalg.norm(d @ q - q @ d):.2e} (engineered: D is built block-diagonal on the charge eigenspaces)",
     )
     check(
-        "From full D, the charge -1 lepton sector D_- is extracted canonically",
+        "[class D conditional-on-supplied-D] Given the engineered D, the charge -1 active+spectator block D_- has the canonical 5x5 shape",
         dm.shape == (5, 5),
         f"shape={dm.shape}",
     )
     check(
-        "The charged projected source law factors exactly through L_e = Schur_{E_e}(D_-)",
+        "[class D conditional-on-supplied-D] The charged projected source law factors exactly through L_e = Schur_{E_e}(D_-) (algebraic Schur identity)",
         abs(source_response(d, j_full) - source_response(dm, j_m)) < 1e-12
         and abs(source_response(dm, j_m) - source_response(l_e, x_e)) < 1e-12,
-        "full D -> D_- -> L_e",
+        "full D -> D_- -> L_e (Schur complement identity; holds for any D with the assumed block structure)",
     )
     check(
-        "On the canonical charged-lepton-active sample, this Schur value is the desired H_e target",
+        "[class E engineered-target] On the canonical sample, the Schur value L_e equals canonical_h(...) by construction of build_full_charge_preserving_operator(target_le)",
         np.linalg.norm(l_e - h_e_target) < 1e-12,
-        f"err={np.linalg.norm(l_e - h_e_target):.2e}",
+        f"err={np.linalg.norm(l_e - h_e_target):.2e} (target-fit: D_- = block(am, bm, fm) with am = target_le + bm fm^-1 bm^H, so Schur(D_-) = target_le by construction)",
     )
 
     return l_e
@@ -222,19 +259,19 @@ def part2_from_le_to_the_packet_and_eta(l_e: np.ndarray) -> None:
     best_idx = int(np.argmax(eta_vals))
 
     check(
-        "The charged projected Hermitian responses reconstruct H_e exactly",
+        "[class D conditional-on-supplied-D] Hermitian-basis trace responses on L_e reconstruct the same matrix (algebraic basis identity)",
         np.linalg.norm(h_e - l_e) < 1e-12,
         f"err={np.linalg.norm(h_e - l_e):.2e}",
     )
     check(
-        "On N_e, H_e determines the PMNS packet exactly",
+        "[class D conditional-on-supplied-D] The PMNS left-diagonalizer columns sum to one (unitary identity given H_e Hermitian)",
         np.linalg.norm(np.sum(packet, axis=0) - np.ones(3)) < 1e-12,
         f"col sums={np.round(np.sum(packet, axis=0), 6)}",
     )
     check(
-        "The exact DM selector then picks the same middle near-closing column",
+        "[class E engineered-target] The DM selector picks the middle column with eta/eta_obs = 0.9895127046, which is the deterministic image of the engineered target_le through the imported transport package",
         best_idx == 1 and abs(float(eta_vals[best_idx]) - 0.9895127046003488) < 2e-7,
-        f"eta_vals={np.round(eta_vals, 12)}",
+        f"eta_vals={np.round(eta_vals, 12)} (this value is fixed once target_le = canonical_h(0.24,0.38,1.07;0.09,0.22,0.61;1.10); it is not a derivation of the canonical sample from Cl(3) on Z^3)",
     )
 
     print()
@@ -253,27 +290,30 @@ def part3_bottom_line() -> None:
     pmns_miss = 1.0 / pmns_eta_ratio
 
     check(
-        "Supplying full charge-preserving D is sufficient to recover the PMNS-assisted near-closing DM value algorithmically",
+        "[class D conditional-on-supplied-D] If a charge-preserving D with the required Schur structure is supplied, the algebraic chain D -> D_- -> dW_e^H -> H_e -> packet -> eta is deterministic",
         True,
-        "D -> D_- -> dW_e^H -> H_e -> packet -> eta",
+        "conditional framing: this does not derive D from Cl(3) on Z^3",
     )
     check(
-        "So the old 5.297x one-flavor miss collapses to a 1.0106x residual miss on the full-D PMNS-assisted route",
+        "[class D arithmetic-of-engineered-numbers] Given the engineered target_le's selected eta = 0.9895127046, miss-factor algebra gives (5.297, 1.0106) on the one-flavor and PMNS-assisted routes",
         abs(one_flavor_miss - 5.297004933778214) < 1e-9
         and abs(pmns_miss - 1.0105984444173857) < 1e-9,
-        f"misses=({one_flavor_miss:.12f},{pmns_miss:.12f})",
+        f"misses=({one_flavor_miss:.12f},{pmns_miss:.12f}) (both are arithmetic of the engineered target_le and the imported one-flavor literature value 0.188785929502)",
     )
     check(
-        "The remaining sole-axiom PMNS-assisted DM target is therefore only the actual microscopic value law of D from Cl(3) on Z^3",
+        "[class D framing] The remaining sole-axiom PMNS-assisted DM target is the actual microscopic value law of D from Cl(3) on Z^3 (per the auditor's recorded repair note)",
         True,
-        "not transport, not projector selection, not PMNS pair reconstruction",
+        "not transport, not projector selection, not PMNS pair reconstruction; framing claim, not a derivation",
     )
 
     print()
-    print("  Full-D reduction read:")
-    print("    - old exact one-flavor miss: 5.297x")
-    print("    - full-D PMNS-assisted miss: 1.0106x")
+    print("  Full-D reduction read (post-iter30 honest scoping):")
+    print("    - old exact one-flavor miss: 5.297x  (literature, imported)")
+    print("    - full-D PMNS-assisted miss: 1.0106x  (engineered-target image)")
     print("    - remaining exact target: actual microscopic value law of D")
+    print("    - audit row class: G load-bearing under the 2026-05-05 audit;")
+    print("      runner is class D (conditional) + class E (engineered-target),")
+    print("      zero class C standalone derivations from Cl(3) on Z^3")
 
 
 def main() -> int:
@@ -288,6 +328,21 @@ def main() -> int:
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     print("=" * 88)
+    print()
+    print("CLASS BREAKDOWN (post-iter30 honest scoping):")
+    print("  class C standalone-from-Cl(3) on Z^3 : 0")
+    print("  class D conditional-on-supplied-D     : 7")
+    print("  class E engineered-target identities  : 3")
+    print()
+    print("Audit note: the 2026-05-05 cross-family audit recorded this row as")
+    print("audited_numerical_match (terminal_audit, class G load-bearing). The")
+    print("downstream Schur/packet/selector chain is algebraically correct given")
+    print("a supplied D whose Schur complement equals the canonical target, but")
+    print("build_full_charge_preserving_operator(target_le) engineers exactly")
+    print("such a D from the target. An axiom-level derivation of D from Cl(3)")
+    print("on Z^3 (or equivalently of canonical_h on the canonical sample)")
+    print("remains the open theorem that would close the row, per the auditor's")
+    print("recorded repair note. The audit lane still owns the verdict.")
     return 0 if FAIL_COUNT == 0 else 1
 
 
