@@ -49,7 +49,21 @@ cycle_log:
     initial_type: "no_go (positive_theorem)"
     review_verdict: "DEMOTE"
     final_type: "exact_support"
-    commit: "32b04ca24 (initial) + pending (demotion edits)"
+    commit: "32b04ca24 (initial) + 1e53f7b2d (demotion edits)"
+    pr: "#1176"
+  - cycle: 2
+    block: 2
+    date: "2026-05-16"
+    artifact: "docs/KOIDE_BLOCK_DIAGONAL_OBSTRUCTION_NOTE_2026-05-16.md"
+    runner: "scripts/frontier_koide_block_diagonal_obstruction.py"
+    cache: "logs/runner-cache/frontier_koide_block_diagonal_obstruction.txt"
+    verification: "18 PASS / 0 FAIL, dominant_class A (18 class-A hits)"
+    initial_type: "exact_support (proposed as strengthening of Cycle 1)"
+    review_verdict: "DEMOTE"
+    final_type: "exact_support"
+    commit: "pending"
+    pr: "pending"
+    notes: "Reviewer explicitly warned: 'Cycle 3 in this family would be churn by inspection'"
 
 review_findings:
   - cycle: 1
@@ -57,12 +71,23 @@ review_findings:
     verdict: "DEMOTE"
     rationale: "Main theorem reconstructable from L3+L4+Schur; §4 corollary killed strawman γ_CL=Γ_χ identification"
     edits_applied: "Type→exact_support; §3 trimmed; §4 rewritten as scope-narrow observation"
+  - cycle: 2
+    reviewer: "internal special-forces hostile reviewer"
+    verdict: "DEMOTE (with corollary-exhaustion warning)"
+    rationale: "V3 reconstruction sharper than Cycle 1; new dimensions physically vacuous; §4 corollary tautological breadth; further cycles in family flagged as churn"
+    edits_applied: "Added hostile-review front-matter to source note acknowledging demotion"
 
 pr_status:
   - branch: "physics-loop/koide-l5-spectral-triple-20260516"
     block: 1
+    pr_number: 1176
+    status: "open"
+    target_claim_type: "exact_support"
+  - branch: "physics-loop/koide-l5-spectral-triple-20260516"
+    block: 2
     pr_number: null  # pending push + creation
     status: "pending"
+    target_claim_type: "exact_support"
 
-next_exact_action: "Commit Cycle 1 demotion edits + push + open PR; then start Cycle 2 stretch attempt on staggered-Dirac taste cube"
-stop_condition: null
+next_exact_action: "Commit Cycle 2 + push + open PR #2; then write final campaign report and STOP"
+stop_condition: "corollary_exhaustion — Cycle 2 reviewer warning + queue refresh shows all remaining ranked opportunities are either churn or admits-imports (bounded_theorem ceiling, requires user direction)"

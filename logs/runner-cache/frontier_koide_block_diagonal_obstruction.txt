@@ -1,0 +1,81 @@
+==============================================================================
+KOIDE BLOCK-DIAGONALITY OBSTRUCTION RUNNER
+==============================================================================
+Verifies docs/KOIDE_BLOCK_DIAGONAL_OBSTRUCTION_NOTE_2026-05-16.md
+
+
+==============================================================================
+PART 1: SETUP — PROJECTORS P_s, P_D AND Γ_χ = P_s - P_D
+==============================================================================
+  [PASS] [A] P_s² = P_s  (P_s is a projector)
+  [PASS] [A] P_D² = P_D  (P_D is a projector)
+  [PASS] [A] P_s + P_D = I  (resolution of identity)
+  [PASS] [A] P_s · P_D = 0  (orthogonal projectors)
+  [PASS] [A] Γ_χ = P_s - P_D  (singlet/doublet spectral decomposition)
+
+==============================================================================
+PART 2: BLOCK-DIAGONAL HERMITIAN H — CONSTRAINTS
+==============================================================================
+  [PASS] [A] e_s · e_s = 1
+  [PASS] [A] e_s · e_d1 = 0  (singlet ⊥ doublet)
+  H block-diagonal structure (parameters h_s, h_d11, h_d12, h_d22)
+  [PASS] [A] [H, P_s] = 0  (block-diagonal H commutes with P_s)
+  [PASS] [A] [H, P_D] = 0  (block-diagonal H commutes with P_D)
+  [PASS] [A] {H, Γ_χ}|_{singlet} = 2 h_s
+  [PASS] [A] {H, Γ_χ}|_{doublet} = -2 H_D
+
+==============================================================================
+PART 3: FORCING H = 0  (h_s = 0 AND H_D = 0)
+==============================================================================
+  [PASS] [A] {H, Γ_χ} = 0 forces h_s = 0, h_d11 = 0, h_d12 = 0, h_d22 = 0  (unique solution = [{h_d11: 0, h_d12: 0, h_d22: 0, h_s: 0}])
+
+==============================================================================
+PART 4: ALGEBRA-EQUIVARIANCE COROLLARY 4.1
+==============================================================================
+  [PASS] [A] (a) A = Z_3 regular rep: Γ_χ ∈ commutant(A) (Γ_χ commutes with R)
+  (a) Cycle 1 verifies: A-equivariant H with {H, Γ_χ}=0 ⟹ H=0  ✓
+  (b) A = R ⊕ Mat_2(R): commutant = R ⊕ R (block scalars)
+      Any H = h_s · P_s + h_D · P_D in commutant has
+      {H, Γ_χ} = 2 h_s ⊕ -2 h_D · I_D = 0 ⟹ h_s = h_D = 0 ⟹ H = 0  ✓
+  [PASS] [A] (b) R ⊕ Mat_2(R) equivariance + {H, Γ_χ}=0 ⟹ H=0
+  (c) A = R · I_s ⊕ R · I_D: commutant = R ⊕ Mat_2(R) (non-commutative)
+      But H ∈ commutant is still block-diagonal in (s, D),
+      and block-by-block {·, Γ_χ}=0 forces h_s = 0, M_D = 0 ⟹ H = 0  ✓
+  [PASS] [A] (c) Diagonal A in (s, D) + {H, Γ_χ}=0 ⟹ H=0 (non-commutative commutant)
+
+==============================================================================
+PART 5: NON-BLOCK-DIAGONAL H — L4 FAMILY ESCAPES
+==============================================================================
+  [PASS] [A] L4 family H = (1/3)(1⊗h + h⊗1) Σh=0 satisfies {H, Γ_χ} = 0
+  [PASS] [A] L4 family generically NOT block-diagonal in (s, D)  ([H_L4, P_s] ≠ 0)
+  Confirms: the L4 anti-commuting family escapes the block-diagonality
+  obstruction precisely because its members are NOT block-diagonal in
+  (s, D). The Σh=0 constraint defines a 2-dim non-block-diagonal subspace
+  of anti-commuting Hermitian operators on R^3.
+
+==============================================================================
+PART 6: SO(3) PREMISE FAILS — Γ_χ ∉ COMMUTANT(SO(3))
+==============================================================================
+  [PASS] [A] Γ_χ does NOT commute with L_1  (SO(3) generator)  ([Γ_χ, L_1] = [[0, 2/3, -2/3], [2/3, 4/3, 0], [-2/3, 0, -4/3]])
+  [Γ_χ, L_2] = [[-4/3, -2/3, 0], [-2/3, 0, 2/3], [0, 2/3, 4/3]]  (also non-zero)
+  [Γ_χ, L_3] = [[4/3, 0, 2/3], [0, -4/3, -2/3], [2/3, -2/3, 0]]  (also non-zero)
+
+  Conclusion: SO(3) does not preserve the singlet/doublet
+  decomposition of Γ_χ (SO(3) acts irreducibly on R^3).
+  Hence Γ_χ ∉ commutant(SO(3)), and Cor 4.1's premise fails.
+  SO(3)-equivariant H commutes with all L_i, hence H = c · I
+  by Schur. {c · I, Γ_χ} = 2c · Γ_χ, zero iff c = 0.
+  So SO(3) route gives H = 0 by Schur, NOT by block-diagonality.
+
+==============================================================================
+SUMMARY: 18 PASS / 0 FAIL
+Class-A pattern hits: 18
+==============================================================================
+
+VERDICT:
+  BLOCK-DIAGONALITY OBSTRUCTION VERIFIED
+  Block-diagonal H in Γ_χ's eigenbasis + {H, Γ_χ}=0 ⟹ H=0
+  Strictly generalizes Cycle 1 Z_3-equivariant result
+  Algebra-equivariance corollary (Cor 4.1) tested across 3 algebra classes
+  L4 family escapes by being NON-block-diagonal (Σh=0 → off-diagonal h)
+  dominant_class: A (18 class-A pattern hits)
