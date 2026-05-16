@@ -16,7 +16,7 @@ Auditor (current best Codex GPT model at maximum reasoning by default) should pu
 | # | claim_id | claim_type | reason | criticality | desc | score | ready | indep required | runner |
 |---:|---|---|---|---|---:|---:|:---:|---|---|
 | 1 | `dark_energy_eos_note` | decoration | unaudited | critical | 782 | 11.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_dark_energy_eos.py` |
-| 2 | `generation_axiom_boundary_note` | bounded_theorem | unaudited | critical | 782 | 11.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_axiom_boundary.py` |
+| 2 | `generation_axiom_boundary_note` | bounded_theorem | audit_in_progress | critical | 782 | 11.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_generation_axiom_boundary.py` |
 | 3 | `koide_cl3_selector_gap_note_2026-04-19` | open_gate | unaudited | critical | 782 | 11.11 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
 | 4 | `koide_delta_lattice_wilson_selected_eigenline_no_go_note_2026-04-24` | no_go | unaudited | critical | 782 | 11.11 | Y | fresh_context_or_stronger_with_cross_confirmation | `scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py` |
 | 5 | `koide_a1_physical_bridge_attempt_2026-04-22` | no_go | unaudited | critical | 782 | 10.11 | Y | fresh_context_or_stronger_with_cross_confirmation | - |
