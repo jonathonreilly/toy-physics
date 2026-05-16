@@ -1,16 +1,12 @@
-===== runner cache v1 =====
-runner: scripts/frontier_koide_frobenius_isotype_split_uniqueness.py
-runner_sha256: 9e7cba5dc52366e5c7dcda1f3ae0597d3c5ff696d29aa5f8a88ef233a5ff9803
-timeout_sec: 120
-exit_code: 0
-elapsed_sec: 0.42
-status: ok
------ stdout -----
 
-  Forced pieces (each with executable PASS above):
-    (1) Frobenius form Tr(M^2) = canonical trace form (Ad-invariant, PD)
+  Conditional-chain pieces (each with executable PASS above):
+    (1) Frobenius form Tr(M^2) is Ad-invariant; PD Ad-invariant family
+        B_{α,β} = α Tr(AB) + β (tr A)(tr B) with α > 0, α + 3β > 0 has
+        β = 0 (Frobenius) as one member but contains other PD members
+        (β ≠ 0) that disagree with Frobenius on trace-bearing M. The
+        Frobenius normalization is ADMITTED, not derived.
     (2) P_0 = J/3 = unique rank-1 C_3-singlet Hermitian projector on C^3
-    (3) P_I(M) = (tr M / 3) I = unique matrix-space scalar projector
+    (3) P_I(M) = (tr M / 3) I = orthogonal projector under admitted Frobenius
     (4) E_+ = (tr M)^2 / 3 = ||P_I M||_F^2
     (5) E_perp = Tr(M^2) - E_+ = ||(I - P_I) M||_F^2
     (6) Positivity: E_+, E_perp >= 0 (strict at non-degenerate lepton masses)
@@ -18,13 +14,14 @@ status: ok
     (8) AM-GM max at E_+ = E_perp ⟹ kappa = 2 ⟹ Q = 2/3
 
 ========================================================================
-FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on fixed Frobenius normalization)
+FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on admitted Frobenius normalization)
 ========================================================================
 === (1) Frobenius form on Herm_circ(3) ===
   [PASS] 1a. Tr(M^2) = 3a^2 + 6|b|^2 = 3a^2 + 6(x^2+y^2): Tr(M^2) = 3*a**2 + 6*x**2 + 6*y**2
   [PASS] 1b. For Hermitian M, Tr(M^dagger M) = Tr(M^2) (symbolic identity): M = M^dagger ⟹ Tr(M^dagger M) = Tr(M^2)
-  [PASS] 1c. Frobenius form is Ad-invariant: Tr(U^†AU·U^†BU) = Tr(AB) for U in U(3): Tr(AB) = 16, Tr(conj) = 16
-  [PASS] 1d. Tested non-Tr alternative vanishes on a non-zero traceless matrix: Tr(X_tr) = 0; alternative form vanishes on non-zero traceless matrix
+  [PASS] 1c. Tr(AB) is Ad-invariant on Herm(3) (does not by itself imply uniqueness): Tr(AB) = 16, Tr(U^†AU · U^†BU) = 16
+  [PASS] 1d. Pure-(tr A)(tr B) alternative (β > 0, α = 0) vanishes on a traceless matrix: Tr(X_tr) = 0; pure-trace-product form is degenerate
+  [PASS] 1e. Counter-example: B_{α,β} = α·Tr(AB)+β·(tr A)(tr B) with α=β=1 is PD, Ad-invariant, and disagrees with Frobenius (β=0) on a trace-bearing M: Ad-invariant: True; α>0: True; α+3β>0: True; B_{α,β}(M,M)=22 vs Frobenius=6 (disagree: True)
 
 === (2) Singlet projector uniqueness ===
   [PASS] 2a. P_0^2 = P_0 (idempotent): P_0 is a projector
@@ -64,27 +61,26 @@ FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on fixed Frobenius normalizatio
 === (8) Composite forcing consistency ===
   [PASS] 8. COMPOSITE: conditional on fixed Frobenius normalization, AM-GM on log(E_+ · E_perp) gives kappa = 2 and Q = 2/3: chain (1)->(2)->(3)->(4)->(5)->(6)->(7)->(8) is gap-free and executable
 
-Total: 28 PASS, 0 FAIL
+Total: 29 PASS, 0 FAIL
 
 Verdict:
-  Conditional on the fixed Frobenius matrix-space normalization, the
-  AM-GM route has executable internal support:
-    Tr(M^2)    = canonical Frobenius form on matrix algebra
-    P_0 = J/3  = C_3-singlet Hermitian projector
-    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2
-    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2
+  Conditional on the ADMITTED Frobenius matrix-space normalization,
+  the AM-GM route has executable internal support:
+    Tr(M^2)    = Ad-invariant trace form (one member of the PD
+                 family B_{α,β} = α Tr(AB) + β (tr A)(tr B); the
+                 normalization β = 0 is admitted, not derived; the
+                 counter-example family is exhibited in (1e))
+    P_0 = J/3  = C_3-singlet Hermitian projector on C^3
+    E_+        = (tr M)^2/3 = ||P_I M||_F^2  [P_I on Herm(3)]
+    E_perp     = Tr(M^2) - E_+ = ||(I - P_I) M||_F^2
     pieces positive and additive (Pythagoras)
 
-  AM-GM then forces the extremum at E_+ = E_perp, giving
-  kappa = a^2/|b|^2 = 2 and Q = 2/3.
+  AM-GM then forces the conditional extremum at E_+ = E_perp,
+  giving kappa = a^2/|b|^2 = 2 and Q = 2/3.
 
-  Conclusion: this is executable internal support for the Koide Q route
-  under {Cl(3), Herm_circ(3), C_3 action} plus the fixed Frobenius
-  normalization convention.
-  The physical/source-law bridge from this extremum to the charged-lepton
-  packet remains a separate open item.
+  This is NOT a uniqueness theorem for the Frobenius normalization.
+  Both the open derivation gap (Frobenius β = 0 uniquely forced)
+  and the physical/source-law bridge to the charged-lepton packet
+  remain separate open items.
 
-  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=TRUE
-
------ stderr -----
-
+  FROBENIUS_ISOTYPE_SPLIT_CONDITIONAL_CHAIN=TRUE

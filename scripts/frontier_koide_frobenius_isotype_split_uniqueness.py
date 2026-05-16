@@ -1,36 +1,46 @@
 """
-Frobenius isotype split uniqueness on Herm_circ(3) (I1 strengthening).
+Conditional AM-GM result on Herm_circ(3) inside an admitted Frobenius split.
 
-Verifies that the decomposition
-  Tr(M^2) = E_+ + E_perp
+Scope (matches the narrowed note at
+docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md):
+
+The runner verifies the algebraic AM-GM chain
   E_+    = (tr M)^2 / 3        [scalar-subspace Frobenius energy]
   E_perp = Tr(M^2) - (tr M)^2/3 [traceless-subspace Frobenius energy]
-is FORCED by retained Cl(3)/Herm_circ(3) structure, not chosen.
+  E_+ + E_perp = Tr(M^2)        [Pythagoras]
+  max log(E_+ E_perp) at E_+ = E_perp = N/2  [AM-GM, strictly concave]
+giving kappa = a^2/|b|^2 = 2 and Q = 2/3 on the AM-GM-symmetric point.
 
-IMPORTANT CLARIFICATION: E_+ and E_perp use the MATRIX-SPACE projection
-onto scalar multiples of I (P_I: Herm(3) -> span{I}), NOT the vector-space
-C_3-singlet projection P_0 = J/3 on C^3. These are two different notions:
-  - P_0 = J/3 acts on C^3 vectors, projects onto (1,1,1)/sqrt(3).
-  - P_I acts on Herm(3) matrix space, projects onto multiples of identity.
-Both are structurally forced by the admitted matrix-space setup, but they serve
-different roles. This internal forcing does not by itself settle the separate
-physical/source-law bridge behind the Koide observable.
+It does NOT establish uniqueness of the Frobenius normalization itself.
+The general Ad-invariant symmetric bilinear form on Herm(3) is the
+TWO-parameter family
+  B_{α,β}(A, B) = α · Tr(AB) + β · (tr A)(tr B)
+with PD region α > 0 AND α + 3β > 0. Choosing β = 0 picks the Frobenius
+form, but PD + Ad-invariance alone leave β free, so the scalar/traceless
+isotype-scale RATIO is not fixed by retained Cl(3)/Herm_circ(3)
+structure. Test (1e) below exhibits an explicit PD Ad-invariant member
+of the family with β ≠ 0 that disagrees with the Frobenius form on a
+trace-bearing matrix.
 
-Specifically, each piece is forced:
-  (1) Tr(M^2) is the Frobenius inner product, forced by Cl(3) trace structure.
-  (2) P_0 = J/3 is the unique C_3-singlet vector-space projector on C^3.
-  (3) P_I : M -> (tr M / 3) * I is the unique matrix-space projector onto
-      scalar multiples of identity (Frobenius-orthogonal to traceless matrices).
-  (4) E_+ = ||P_I M||_F^2 = (tr M)^2 / 3 follows from matrix-space projection.
-  (5) E_perp = ||(I - P_I) M||_F^2 = Tr(M^2) - E_+ is the traceless-part
-      Frobenius squared.
-  (6) Both E_+ >= 0 and E_perp >= 0 (positivity, required for log AM-GM).
+What this runner verifies (each line is a PASS-counted symbolic check):
+  (1) Frobenius form Tr(M^2): trace identity, Hermitian self-adjoint
+      identity, Ad-invariance (1c), and the auditor-quoted PD/Ad-invariant
+      counter-example family B_{α,β} (1d degenerate boundary, 1e generic
+      PD member with β ≠ 0). No uniqueness claim is made.
+  (2) Singlet projector P_0 = J/3 is the unique C_3-singlet rank-1
+      Hermitian projector on C^3 (vector-space statement; separate from
+      the matrix-space Frobenius question above).
+  (3) P_I : M -> (tr M / 3) I as the orthogonal projection in the
+      admitted Frobenius inner product; E_+ = (tr M)^2 / 3 follows.
+  (4) E_perp = Tr(M^2) - E_+ is the traceless-part Frobenius squared.
+  (5) Both E_+ >= 0 and E_perp >= 0, with strict positivity at the
+      non-degenerate PDG charged-lepton interior point.
+  (6) Pythagoras: E_+ + E_perp = Tr(M^2) exactly.
+  (7) AM-GM extremum at E_+ = E_perp = N/2 ⟹ kappa = 2 ⟹ Q = 2/3.
+  (8) Composite consistency of (1)-(7) into the conditional chain.
 
-Combined with AM-GM under constraint E_+ + E_perp = N, extremum
-forces E_+ = E_perp ==> kappa = 2 ==> Q = 2/3.
-
-This runner is a RIGOROUS STRENGTHENING of the I1 claim by verifying
-each retained building block explicitly.
+This runner is the executable backing of the conditional AM-GM headline.
+It is NOT a uniqueness theorem for the Frobenius normalization.
 """
 import sympy as sp
 
@@ -102,46 +112,86 @@ ok("1b. For Hermitian M, Tr(M^dagger M) = Tr(M^2) (symbolic identity)",
    and sp.simplify(sp.trace(M_dagger * M) - sp.trace(M * M)) == 0,
    "M = M^dagger ⟹ Tr(M^dagger M) = Tr(M^2)")
 
-# The trace form B(A, B) = Tr(AB) is the canonical inner product on
-# matrix algebras: unique up to positive scale by bilinearity + Ad-invariance.
-# Executable uniqueness verification on Herm(3):
-# Any U(3)-invariant symmetric bilinear form on Herm(3) decomposes under
-# Herm(3) = R·I ⊕ su(3) (scalars ⊕ traceless). By Schur orthogonality, a
-# U(3)-invariant form restricts to at most one parameter per irreducible
-# isotype. The Frobenius form has Tr(I·I) = 3 on scalars and Tr(T·T) > 0
-# on su(3), and THE RATIO of the two scales IS fixed by Ad-invariance on
-# the full algebra. Verify: test against a random unitary U and show
-# Tr(U^dagger A U · U^dagger B U) = Tr(AB) symbolically for Hermitian A, B.
-# We use one generic SU(3) element: U = exp(i * t * X) with X traceless.
+# The trace form B(A, B) = Tr(AB) is one Ad-invariant symmetric bilinear
+# form on Herm(3). Under Herm(3) = R·I ⊕ su(3), Schur orthogonality forces
+# a U(3)-invariant form to act as one scalar per irreducible isotype, so
+# the GENERAL Ad-invariant symmetric bilinear form on Herm(3) is the
+# TWO-PARAMETER family
+#   B_{α,β}(A, B) = α · Tr(AB) + β · (tr A)(tr B),
+# where α controls the traceless (su(3)) isotype and (α + 3β) controls
+# the scalar (R·I) isotype. The ratio of the two isotype scales is NOT
+# fixed by Ad-invariance: β is free, and PD-ness only requires α > 0 and
+# α + 3β > 0. This runner does NOT close that 1-parameter freedom and the
+# note's headline scope is correspondingly demoted to a CONDITIONAL AM-GM
+# result inside an admitted Frobenius (β = 0) normalization.
+#
+# The two executable checks below register exactly that scope:
+#   1c. Tr(AB) is Ad-invariant (one direction; does NOT imply uniqueness).
+#   1d. The pure-(tr A)(tr B) alternative (β > 0, α = 0) is degenerate
+#       (zero on traceless), so PD excludes that single boundary point.
+#   1e. The full PD Ad-invariant FAMILY α·Tr + β·(tr)(tr) with α > 0 and
+#       α + 3β > 0 contains non-Frobenius members (β ≠ 0), so PD alone
+#       does NOT force β = 0. This is the auditor-quoted counter-example
+#       family, exhibited explicitly.
 t = sp.Symbol('t', real=True)
 # Representative of su(3): Gell-Mann-like traceless Hermitian
 X_tr = sp.Matrix([[1, 0, 0], [0, -1, 0], [0, 0, 0]])
-# U = cos(t) I - i sin(t) X + (cos(t) - 1) X^2 is more complex for general X.
-# Simpler: use U = diag(e^{it}, e^{-it}, 1) ∈ U(3) (with det = 1 if t = 0).
-# Actually for unitarity test, diag(e^{it_1}, e^{it_2}, e^{it_3}) works.
 t1, t2, t3 = sp.symbols('t1 t2 t3', real=True)
 U_diag = sp.diag(sp.exp(sp.I * t1), sp.exp(sp.I * t2), sp.exp(sp.I * t3))
-# Apply Ad-action to a sample Hermitian A: A = diag(1, 2, 3) — but this is
-# already diagonal so U Ad-acts trivially. Try off-diagonal.
 A_test = sp.Matrix([[1, sp.Rational(1, 2), 0], [sp.Rational(1, 2), 2, 0], [0, 0, 3]])
 B_test = sp.Matrix([[2, 0, 1], [0, 1, 0], [1, 0, 4]])
 trace_AB = sp.trace(A_test * B_test)
 A_conj = U_diag.T.conjugate() * A_test * U_diag
 B_conj = U_diag.T.conjugate() * B_test * U_diag
 trace_conj_AB = sp.simplify(sp.trace(A_conj * B_conj))
-ok("1c. Frobenius form is Ad-invariant: Tr(U^†AU·U^†BU) = Tr(AB) for U in U(3)",
+ok("1c. Tr(AB) is Ad-invariant on Herm(3) (does not by itself imply uniqueness)",
    sp.simplify(trace_conj_AB - trace_AB) == 0,
-   f"Tr(AB) = {trace_AB}, Tr(conj) = {trace_conj_AB}")
+   f"Tr(AB) = {trace_AB}, Tr(U^†AU · U^†BU) = {trace_conj_AB}")
 
-# Uniqueness (up to scale): any Ad-invariant bilinear form is c · Tr(AB)
-# for some c. Executable: compare two candidate forms B_1(A, B) = Tr(AB) and
-# B_2(A, B) = (tr A)(tr B) (both Ad-invariant). On Hermitian M, positive
-# definiteness of B_1 fixes c_1 > 0 uniquely up to scale; B_2 fails PD
-# (zero on traceless matrices), so only Tr(AB) is PD-canonical.
+# 1d. The pure-(tr A)(tr B) alternative (β > 0, α = 0) vanishes on
+# traceless matrices, so PD excludes that single boundary point of the
+# family. This does NOT exclude mixed PD members with β ≠ 0.
 B_2_on_traceless = sp.trace(X_tr) * sp.trace(X_tr)
-ok("1d. Tested non-Tr alternative vanishes on a non-zero traceless matrix",
+ok("1d. Pure-(tr A)(tr B) alternative (β > 0, α = 0) vanishes on a traceless matrix",
    sp.trace(X_tr) == 0 and B_2_on_traceless == 0,
-   f"Tr(X_tr) = {sp.trace(X_tr)}; alternative form vanishes on non-zero traceless matrix")
+   f"Tr(X_tr) = {sp.trace(X_tr)}; pure-trace-product form is degenerate")
+
+# 1e. The auditor-quoted counter-example family: exhibit an explicit
+# PD Ad-invariant form B_{α,β} with β ≠ 0, verify it is Ad-invariant on
+# the test pair (A_test, B_test), verify it is PD on Herm(3) by checking
+# the isotype scales (α > 0 on su(3); α + 3β > 0 on R·I), and verify it
+# disagrees with the Frobenius form on a generic Herm(3) matrix M_test
+# with non-zero trace. This is the registered counter-example to any
+# uniqueness reading of (1c) + (1d) alone.
+alpha_val = sp.Rational(1, 1)   # α = 1 > 0
+beta_val  = sp.Rational(1, 1)   # β = 1 ≠ 0, and α + 3β = 4 > 0
+
+def B_ab(A, B, alpha, beta):
+    return alpha * sp.trace(A * B) + beta * sp.trace(A) * sp.trace(B)
+
+B_ab_AB      = sp.simplify(B_ab(A_test, B_test, alpha_val, beta_val))
+B_ab_conj_AB = sp.simplify(B_ab(A_conj, B_conj, alpha_val, beta_val))
+ad_invariant_1e = sp.simplify(B_ab_AB - B_ab_conj_AB) == 0
+
+# PD diagnostic: pick a generic non-zero Hermitian H and check B_{α,β}(H, H) > 0.
+# For Hermitian H with trace τ and traceless part H_⊥, B_{α,β}(H, H) =
+#   α · (Tr(H_⊥^2) + τ^2 / 3) + β · τ^2
+#     = α · Tr(H_⊥^2) + (α/3 + β) · τ^2 .
+# Sufficient PD on Herm(3): α > 0 (traceless) AND (α + 3β)/3 > 0 ⟺ α + 3β > 0.
+pd_on_su3      = alpha_val > 0
+pd_on_scalarI  = (alpha_val + 3 * beta_val) > 0
+
+# Disagreement with Frobenius (β = 0) on a generic trace-bearing M_test.
+M_test = sp.Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 2]])  # Hermitian, tr = 4
+frob_MM = sp.trace(M_test * M_test)                    # = 1 + 1 + 4 = 6
+B_ab_MM = sp.simplify(B_ab(M_test, M_test, alpha_val, beta_val))
+disagrees = sp.simplify(B_ab_MM - frob_MM) != 0        # 6 + 16 vs 6
+
+ok("1e. Counter-example: B_{α,β} = α·Tr(AB)+β·(tr A)(tr B) with α=β=1 is "
+   "PD, Ad-invariant, and disagrees with Frobenius (β=0) on a trace-bearing M",
+   ad_invariant_1e and pd_on_su3 and pd_on_scalarI and disagrees,
+   f"Ad-invariant: {ad_invariant_1e}; α>0: {pd_on_su3}; α+3β>0: {pd_on_scalarI}; "
+   f"B_{{α,β}}(M,M)={B_ab_MM} vs Frobenius={frob_MM} (disagree: {disagrees})")
 
 # ==========================================================================
 # (2) Singlet projector P_0 = J/3 is the unique C_3-singlet projector
@@ -394,12 +444,18 @@ ok("7c. Q = (1 + 2/kappa)/d = 2/3 at kappa=2, d=3",
 log.append("\n=== (8) Composite forcing consistency ===")
 
 # Summary print (no PASS counting): each piece already has its own executable
-# PASS above. Here we state the chain for the reader, then verify composite.
+# PASS above. Here we state the conditional chain for the reader, then
+# verify composite. Note that (1) verifies Ad-invariance and exhibits the
+# auditor's counter-example family rather than claiming uniqueness.
 print("""
-  Forced pieces (each with executable PASS above):
-    (1) Frobenius form Tr(M^2) = canonical trace form (Ad-invariant, PD)
+  Conditional-chain pieces (each with executable PASS above):
+    (1) Frobenius form Tr(M^2) is Ad-invariant; PD Ad-invariant family
+        B_{α,β} = α Tr(AB) + β (tr A)(tr B) with α > 0, α + 3β > 0 has
+        β = 0 (Frobenius) as one member but contains other PD members
+        (β ≠ 0) that disagree with Frobenius on trace-bearing M. The
+        Frobenius normalization is ADMITTED, not derived.
     (2) P_0 = J/3 = unique rank-1 C_3-singlet Hermitian projector on C^3
-    (3) P_I(M) = (tr M / 3) I = unique matrix-space scalar projector
+    (3) P_I(M) = (tr M / 3) I = orthogonal projector under admitted Frobenius
     (4) E_+ = (tr M)^2 / 3 = ||P_I M||_F^2
     (5) E_perp = Tr(M^2) - E_+ = ||(I - P_I) M||_F^2
     (6) Positivity: E_+, E_perp >= 0 (strict at non-degenerate lepton masses)
@@ -440,7 +496,7 @@ ok("8. COMPOSITE: conditional on fixed Frobenius normalization, AM-GM on log(E_+
 # ==========================================================================
 
 print("=" * 72)
-print("FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on fixed Frobenius normalization)")
+print("FROBENIUS ISOTYPE SPLIT AM-GM CHECK (conditional on admitted Frobenius normalization)")
 print("=" * 72)
 for line in log:
     print(line)
@@ -449,24 +505,26 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Conditional on the fixed Frobenius matrix-space normalization, the")
-    print("  AM-GM route has executable internal support:")
-    print("    Tr(M^2)    = canonical Frobenius form on matrix algebra")
-    print("    P_0 = J/3  = C_3-singlet Hermitian projector")
-    print("    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2")
-    print("    E_perp     = Tr(M^2) - E_+ = ||P_perp M P_perp||_F^2")
+    print("  Conditional on the ADMITTED Frobenius matrix-space normalization,")
+    print("  the AM-GM route has executable internal support:")
+    print("    Tr(M^2)    = Ad-invariant trace form (one member of the PD")
+    print("                 family B_{α,β} = α Tr(AB) + β (tr A)(tr B); the")
+    print("                 normalization β = 0 is admitted, not derived; the")
+    print("                 counter-example family is exhibited in (1e))")
+    print("    P_0 = J/3  = C_3-singlet Hermitian projector on C^3")
+    print("    E_+        = (tr M)^2/3 = ||P_I M||_F^2  [P_I on Herm(3)]")
+    print("    E_perp     = Tr(M^2) - E_+ = ||(I - P_I) M||_F^2")
     print("    pieces positive and additive (Pythagoras)")
     print()
-    print("  AM-GM then forces the extremum at E_+ = E_perp, giving")
-    print("  kappa = a^2/|b|^2 = 2 and Q = 2/3.")
+    print("  AM-GM then forces the conditional extremum at E_+ = E_perp,")
+    print("  giving kappa = a^2/|b|^2 = 2 and Q = 2/3.")
     print()
-    print("  Conclusion: this is executable internal support for the Koide Q route")
-    print("  under {Cl(3), Herm_circ(3), C_3 action} plus the fixed Frobenius")
-    print("  normalization convention.")
-    print("  The physical/source-law bridge from this extremum to the charged-lepton")
-    print("  packet remains a separate open item.")
+    print("  This is NOT a uniqueness theorem for the Frobenius normalization.")
+    print("  Both the open derivation gap (Frobenius β = 0 uniquely forced)")
+    print("  and the physical/source-law bridge to the charged-lepton packet")
+    print("  remain separate open items.")
     print()
-    print("  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=TRUE")
+    print("  FROBENIUS_ISOTYPE_SPLIT_CONDITIONAL_CHAIN=TRUE")
 else:
-    print(f"  {FAIL} checks failed. Iter 2 retention needs stronger argument.")
-    print("  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=PARTIAL")
+    print(f"  {FAIL} checks failed. Conditional chain not closed.")
+    print("  FROBENIUS_ISOTYPE_SPLIT_CONDITIONAL_CHAIN=PARTIAL")
