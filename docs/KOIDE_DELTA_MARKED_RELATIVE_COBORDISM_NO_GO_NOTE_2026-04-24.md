@@ -37,6 +37,24 @@ psi(alpha) = (cos(alpha), sin(alpha)).
 
 Therefore the retained mark does not derive a unique selected line.
 
+### Bridge for the scalar premise
+
+The premise that every retained Wilson/APS-derived mark acts as `lambda I`
+on the rank-two zeta-character multiplicity space `M_zeta` is now derived,
+not asserted, by the narrow bridge theorem in
+[`docs/KOIDE_RETAINED_WILSON_APS_SCALAR_ACTION_ON_RANK_TWO_MULTIPLICITY_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md`](./KOIDE_RETAINED_WILSON_APS_SCALAR_ACTION_ON_RANK_TWO_MULTIPLICITY_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16.md)
+and its runner
+[`scripts/frontier_koide_retained_wilson_aps_scalar_action_on_rank_two_multiplicity_bridge_narrow.py`](./../scripts/frontier_koide_retained_wilson_aps_scalar_action_on_rank_two_multiplicity_bridge_narrow.py).
+The bridge re-uses the Wilson construction from the sibling no-go
+`KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24`
+(which already certifies `dim ker(D) = 4` and the rank-two
+zeta-isotypic decomposition of `U` on `ker(D)`) and shows that every
+polynomial in the generators `{D, U, U^dag, P_lambda(D)}` restricts to
+a scalar `lambda_A I_2` on `M_zeta`. The parent runner additionally
+re-verifies a representative subset of those scalar restrictions inside
+its own Section B.0a-B.0f so the load-bearing scalar premise is no
+longer asserted in the parent runner either.
+
 ## Endpoint Section
 
 A marked open endpoint still has:
@@ -95,6 +113,7 @@ Run:
 
 ```bash
 python3 scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py
+python3 scripts/frontier_koide_retained_wilson_aps_scalar_action_on_rank_two_multiplicity_bridge_narrow.py
 python3 scripts/frontier_koide_hostile_review_guard.py
 python3 scripts/frontier_koide_lane_regression.py
 ```

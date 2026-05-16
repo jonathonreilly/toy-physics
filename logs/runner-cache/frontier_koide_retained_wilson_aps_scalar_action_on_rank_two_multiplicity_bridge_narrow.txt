@@ -1,0 +1,134 @@
+===== runner cache v1 =====
+runner: scripts/frontier_koide_retained_wilson_aps_scalar_action_on_rank_two_multiplicity_bridge_narrow.py
+runner_sha256: 1f3a31d56186cd723b754039b04fb51a035df581b0c7067c1397517ae6f66141
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.26
+status: ok
+----- stdout -----
+========================================================================================
+Narrow bridge theorem: retained Wilson/APS algebra acts as scalar on M_zeta
+========================================================================================
+
+----------------------------------------------------------------------------------------
+r = 1.0: build sibling Wilson construction and M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.0: sibling D is Hermitian (||D - D^dag|| < tol)  (||D - D^dag|| = 0.00e+00)
+  [PASS (A)] r=1.0: sibling U intertwines D (||U D U^dag - D|| < tol)  (||U D U^dag - D|| = 5.06e-15)
+  [PASS (A)] r=1.0: ker(D) has dimension 4 (sibling B.1)  (dim ker(D) = 4)
+  [PASS (A)] r=1.0: M_zeta is rank-two zeta-eigenspace with zeta = exp(i pi/3)  (shape=(108, 2), zeta = (0.5000000000000001+0.8660254037844386j), expected = (0.5000000000000001+0.8660254037844386j))
+
+----------------------------------------------------------------------------------------
+r = 1.0: generators restrict to scalars on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.0: D|_{M_zeta} = 0 I_2  (D|_{M_zeta} = 
+[[-4.20149508e-18-2.32728033e-17j -4.12602502e-19+5.59387545e-19j]
+ [ 6.57238434e-18+2.56693941e-18j  6.87169180e-18-9.74510516e-18j]])
+  [PASS (A)] r=1.0: U|_{M_zeta} = zeta I_2 with zeta = exp(i pi/3)  (U|_{M_zeta} = 
+[[5.00000000e-01+8.66025404e-01j 3.12250226e-17-1.52655666e-16j]
+ [2.77555756e-17+0.00000000e+00j 5.00000000e-01+8.66025404e-01j]],  lam_U = (0.5000000000000009+0.8660254037844386j))
+  [PASS (A)] r=1.0: U^dag|_{M_zeta} = zeta_bar I_2  (U^dag|_{M_zeta} = 
+[[ 5.00000000e-01-8.66025404e-01j -1.35308431e-16+2.08166817e-17j]
+ [-6.24500451e-17-1.38777878e-16j  5.00000000e-01-8.66025404e-01j]],  lam_Udag = (0.5000000000000007-0.8660254037844384j))
+  [PASS (A)] r=1.0: U is unitary (U U^dag = I on full space)  (||U U^dag - I|| = 0.00e+00)
+
+----------------------------------------------------------------------------------------
+r = 1.0: spectral projectors of D restrict to scalars on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.0: every spectral projector P_lambda(D) is scalar on M_zeta  (all projectors scalar)
+
+----------------------------------------------------------------------------------------
+r = 1.0: polynomial words in retained generators are scalar on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.0: every sampled retained polynomial word is scalar on M_zeta  (13/13 retained polynomial words restrict to scalar I_2)
+
+----------------------------------------------------------------------------------------
+r = 1.0: countermodel — a NON-retained rank-one projector is NOT scalar on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.0: |line_0><line_0| restricts to diag(1, 0) on M_zeta, hence not scalar  (|line_0><line_0|_{M_zeta} = 
+[[ 1.00000000e+00+3.33066907e-16j -2.15105711e-16-4.17417836e-18j]
+ [ 4.76357178e-17-5.01332824e-17j  7.50700617e-18-1.73126912e-17j]],  is_scalar=False)
+  [PASS (A)] r=1.0: countermodel confirms the scalar property is non-trivial  (Some non-retained operators do distinguish the two copies of zeta; the retained ones do not.)
+
+----------------------------------------------------------------------------------------
+r = 1.425: build sibling Wilson construction and M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.425: sibling D is Hermitian (||D - D^dag|| < tol)  (||D - D^dag|| = 0.00e+00)
+  [PASS (A)] r=1.425: sibling U intertwines D (||U D U^dag - D|| < tol)  (||U D U^dag - D|| = 4.77e-15)
+  [PASS (A)] r=1.425: ker(D) has dimension 4 (sibling B.1)  (dim ker(D) = 4)
+  [PASS (A)] r=1.425: M_zeta is rank-two zeta-eigenspace with zeta = exp(i pi/3)  (shape=(108, 2), zeta = (0.5000000000000001+0.8660254037844386j), expected = (0.5000000000000001+0.8660254037844386j))
+
+----------------------------------------------------------------------------------------
+r = 1.425: generators restrict to scalars on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.425: D|_{M_zeta} = 0 I_2  (D|_{M_zeta} = 
+[[2.34997084e-16-5.83283480e-18j 1.75136260e-18+2.87963733e-18j]
+ [9.50088388e-18-3.09286624e-19j 1.92019920e-16-1.97972409e-17j]])
+  [PASS (A)] r=1.425: U|_{M_zeta} = zeta I_2 with zeta = exp(i pi/3)  (U|_{M_zeta} = 
+[[ 5.00000000e-01+8.66025404e-01j -1.26867427e-16-3.89261697e-16j]
+ [-2.73676805e-16-3.04501263e-16j  5.00000000e-01+8.66025404e-01j]],  lam_U = (0.5000000000000003+0.8660254037844385j))
+  [PASS (A)] r=1.425: U^dag|_{M_zeta} = zeta_bar I_2  (U^dag|_{M_zeta} = 
+[[ 5.00000000e-01-8.66025404e-01j -2.73676805e-16+3.04501263e-16j]
+ [-1.26867427e-16+3.89261697e-16j  5.00000000e-01-8.66025404e-01j]],  lam_Udag = (0.5000000000000002-0.8660254037844387j))
+  [PASS (A)] r=1.425: U is unitary (U U^dag = I on full space)  (||U U^dag - I|| = 0.00e+00)
+
+----------------------------------------------------------------------------------------
+r = 1.425: spectral projectors of D restrict to scalars on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.425: every spectral projector P_lambda(D) is scalar on M_zeta  (all projectors scalar)
+
+----------------------------------------------------------------------------------------
+r = 1.425: polynomial words in retained generators are scalar on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.425: every sampled retained polynomial word is scalar on M_zeta  (13/13 retained polynomial words restrict to scalar I_2)
+
+----------------------------------------------------------------------------------------
+r = 1.425: countermodel — a NON-retained rank-one projector is NOT scalar on M_zeta
+----------------------------------------------------------------------------------------
+  [PASS (A)] r=1.425: |line_0><line_0| restricts to diag(1, 0) on M_zeta, hence not scalar  (|line_0><line_0|_{M_zeta} = 
+[[ 1.00000000e+00+0.00000000e+00j -4.00544232e-16-8.47604337e-17j]
+ [-4.00544232e-16+8.47604337e-17j  1.67620016e-31-1.15906441e-39j]],  is_scalar=False)
+  [PASS (A)] r=1.425: countermodel confirms the scalar property is non-trivial  (Some non-retained operators do distinguish the two copies of zeta; the retained ones do not.)
+
+========================================================================================
+Bridge theorem summary
+========================================================================================
+
+  Narrow Pattern A theorem statement:
+
+  HYPOTHESIS:
+    Let D, U be the Wilson-Dirac operator and body-diagonal spin-lift
+    permutation built by `build_wilson_lattice(r)` in
+    `frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py`
+    for r in {1.0, 1.425}. Let V_0 = ker(D), and M_zeta the rank-two
+    zeta-eigenspace of U|_{V_0} with zeta = exp(i pi/3). Let
+    A := <{D, U, U^dag} union {P_lambda(D) : lambda in Spec(D)}>
+    be the retained Wilson/APS polynomial algebra.
+
+  CONCLUSION:
+    For every A in A, A|_{M_zeta} = lambda_A I_2 for some scalar
+    lambda_A in C.
+
+  Class:
+    (A) finite-dimensional operator algebra over C, with the explicit
+    Wilson construction re-used from the sibling no-go. No Koide /
+    charged-lepton mass / sqrt(m) / PDG / selection-principle physical
+    identification is consumed.
+
+  Consequence (for the parent no-go):
+    The parent runner
+    `frontier_koide_delta_marked_relative_cobordism_no_go.py` previously
+    asserted `retained_mark = lam * sp.eye(2)`. By the Scalar-on-M_zeta
+    theorem, every retained "derived boundary mark" automatically
+    restricts to such a scalar on M_zeta; the parent's downstream
+    commutator/expectation/countermodel algebra is therefore valid for
+    every retained mark, not just the asserted one.
+
+
+========================================================================================
+  TOTAL: PASS=24, FAIL=0
+========================================================================================
+PASS=24 FAIL=0
+
+----- stderr -----
+

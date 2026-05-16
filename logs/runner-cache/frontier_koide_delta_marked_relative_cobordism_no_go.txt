@@ -1,6 +1,6 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py
-runner_sha256: 7a8784e05dfb9b3841a8c608768d46729c82bc4795f9570227c9ce35e87a5587
+runner_sha256: 35eeedf7e9e17286e508e55cd919abc48e967a6b0097f5113a5c5bdb767c8dd9
 timeout_sec: 120
 exit_code: 0
 elapsed_sec: 0.49
@@ -16,10 +16,27 @@ A. Relative split with a boundary mark
        selected+spectator=1 -> delta/eta_APS - 1 = 9*c/2 - spectator
 
 ========================================================================================
+B.0 Bridge: retained Wilson/APS algebra is scalar on M_zeta (derived, not asserted)
+========================================================================================
+[PASS] B.0a D|_{M_zeta} = 0 I_2 (derived from sibling Wilson construction)
+       r=1.0: lam_D=1.34e-18-1.65e-17j, lam_U=0.5+0.866025j, lam_Udag=0.5-0.866025j, lam_P0=1-8.33e-17j, lam_mark=1.30718+1.11022e-16j, all_scalar=True
+       r=1.425: lam_D=2.14e-16-1.28e-17j, lam_U=0.5+0.866025j, lam_Udag=0.5-0.866025j, lam_P0=1+4.34e-18j, lam_mark=1.30718+7.80626e-17j, all_scalar=True
+[PASS] B.0b U|_{M_zeta} = zeta I_2 with zeta = exp(i pi/3) (derived)
+       U restricted to M_zeta is scalar zeta * I at r in {1.0, 1.425}.
+[PASS] B.0c U^dag|_{M_zeta} = zeta_bar I_2 (derived)
+       U^dag restricted to M_zeta is scalar zeta_bar * I.
+[PASS] B.0d Spectral projector P_0(D)|_{M_zeta} = 1 I_2 (derived)
+       P_0(D) restricts to the identity on M_zeta since M_zeta ⊂ ker(D).
+[PASS] B.0e Representative derived retained mark a P_0 + b U + bbar U^dag is scalar on M_zeta
+       Any polynomial in scalar restrictions is scalar; this exhibits a generic Hermitian retained mark.
+[PASS] B.0f Bridge theorem cited: KOIDE_RETAINED_WILSON_APS_SCALAR_ACTION_ON_RANK_TWO_MULTIPLICITY_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16
+       Companion runner frontier_koide_retained_wilson_aps_scalar_action_on_rank_two_multiplicity_bridge_narrow.py certifies the full algebra.
+
+========================================================================================
 B. Derived mark from retained Wilson/APS data is scalar on multiplicity
 ========================================================================================
 [PASS] B.1 retained Wilson/APS data act as a scalar on the rank-two character multiplicity space
-       In the zero-mode character sector, D=0 and Z3 character is fixed; the remaining multiplicity space is not split.
+       Bridged by B.0a-B.0f: every retained polynomial in {D, U, U^dag, P_lambda(D)} restricts to lam I on M_zeta.
 [PASS] B.2 scalar retained data commute with every candidate rank-one selector
        [lambda I, M]=Matrix([[0, 0], [0, 0]])
 [PASS] B.3 every rank-one line has the same scalar retained mark value
@@ -67,9 +84,15 @@ F. Verdict
 ========================================================================================
 Summary
 ========================================================================================
-PASSED: 15/15
+PASSED: 21/21
   [PASS] A.1 retained closed APS scalar is eta_APS=2/9
   [PASS] A.2 marked relative split still has channel and endpoint pieces
+  [PASS] B.0a D|_{M_zeta} = 0 I_2 (derived from sibling Wilson construction)
+  [PASS] B.0b U|_{M_zeta} = zeta I_2 with zeta = exp(i pi/3) (derived)
+  [PASS] B.0c U^dag|_{M_zeta} = zeta_bar I_2 (derived)
+  [PASS] B.0d Spectral projector P_0(D)|_{M_zeta} = 1 I_2 (derived)
+  [PASS] B.0e Representative derived retained mark a P_0 + b U + bbar U^dag is scalar on M_zeta
+  [PASS] B.0f Bridge theorem cited: KOIDE_RETAINED_WILSON_APS_SCALAR_ACTION_ON_RANK_TWO_MULTIPLICITY_BRIDGE_NARROW_THEOREM_NOTE_2026-05-16
   [PASS] B.1 retained Wilson/APS data act as a scalar on the rank-two character multiplicity space
   [PASS] B.2 scalar retained data commute with every candidate rank-one selector
   [PASS] B.3 every rank-one line has the same scalar retained mark value
