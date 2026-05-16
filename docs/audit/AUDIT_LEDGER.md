@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1175 |
+| unaudited | 1174 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
-| ~~audited_conditional~~ | 191 |
+| ~~audited_conditional~~ | 192 |
 | ~~audited_failed~~ | 18 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -42,12 +42,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | audit_status | count |
 |---|---:|
 | `audited_clean` | 520 |
-| `audited_conditional` | 191 |
+| `audited_conditional` | 192 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1288 |
+| `unaudited` | 1287 |
 
 | claim_type | count |
 |---|---:|
@@ -669,6 +669,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_selectivity_compare_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `complex_selectivity_predictor_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | B | - |
 | `continuum_limit_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
+| `cpt_exact_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `cross_family_universality_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
 | `cross_sector_a_squared_koide_vcb_bridge_promoted_via_v8_theorem_note_2026-04-29` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5 | B | - |
 | `cubic_coxeter_regge_deficit_vanishing_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
@@ -2637,6 +2638,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — Within that finite scoped sweep, the runner source computes the instantaneous and source-driven fields, zero-source reduction, sign counts, mean shifts, and log-log exponents, and the stdout matches the source note. The result does not establish any broader no-go for other coupled-field architectures, families, gain rules, or source laws.
 - **rationale:** The note is clean only as a bounded computational no-go. The runner does not hard-code the reported table; it constructs the fields over the generated families and computes the reduction check, sign survival, and fitted exponents, with no cited upstream dependency needed for the stated finite result. The source note accurately reports the runner output and keeps the safe conclusion to exact zero-source reduction, sign survival on sampled rows, and failure of clean linear scaling for this minimal architecture. Residual risk is scope control: it must not be cited as excluding unsampled architectures, parameters, DAG families, or a separately derived physical mass observable.
 - **auditor confidence:** medium
+
+### `cpt_exact_note`
+
+- **Note:** [`CPT_EXACT_NOTE.md`](../../docs/CPT_EXACT_NOTE.md)
+- **claim_type:** `positive_theorem`
+- **claim_scope:** Exact free staggered even-periodic lattice CPT invariance for the real anti-Hermitian D-level operator, with physical Hermitian H=iD and SME-zero sector imported through the cited bridge note.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-030850-19fdc1cd-cpt_exact_note-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Using C H C = -H, P H P = -H, and T acting by complex conjugation, CPT H (CPT)^{-1} = C P H P C = C(-H)C = H.  _(class `A`)_
+- **chain closes:** False — The D-level finite-lattice algebra closes on its own terms, but the full stated claim relies on the Hermitian-Hamiltonian/SME bridge. That cited authority is marked audited_conditional rather than retained-grade, so the physical-Hamiltonian and SME-zero conclusion is not closed by retained inputs in this packet.
+- **rationale:** The runner genuinely constructs the staggered lattice operators and verifies the algebraic identities C H C = -H, P H P = -H, and C P H P C = H on L=4,6,8; these are class A algebraic checks, not hard-coded stdout. However, the source note’s broader physical Hermitian Hamiltonian and SME-zero claim explicitly depends on docs/PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md. That cited bridge is labeled audited_conditional, and the rubric requires audited_conditional when a load-bearing cited authority is not retained-grade.
+- **open / conditional deps cited:**
+  - `PHYSICAL_HERMITIAN_HAMILTONIAN_AND_SME_BRIDGE_NOTE_2026-04-30.md`
+- **auditor confidence:** high
 
 ### `cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10`
 

@@ -1,6 +1,6 @@
 {
   "by_criticality": {
-    "critical": 733,
+    "critical": 732,
     "high": 34,
     "leaf": 260,
     "medium": 152
@@ -3749,29 +3749,6 @@
     }
   ],
   "queue": [
-    {
-      "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cpt_exact_note",
-      "claim_scope": null,
-      "claim_type": "positive_theorem",
-      "claim_type_provenance": "migration_hint",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "deps": [
-        "physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30"
-      ],
-      "direct_in_degree": 27,
-      "effective_status": "unaudited",
-      "load_bearing_score": 23.115,
-      "note_path": "docs/CPT_EXACT_NOTE.md",
-      "queue_reason": "unaudited",
-      "ready": false,
-      "runner_path": "scripts/frontier_cpt_exact.py",
-      "transitive_descendants": 783
-    },
     {
       "audit_independence_required": "fresh_context_or_stronger_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -35670,5 +35647,5 @@
     }
   ],
   "ready_count": 0,
-  "total_pending": 1179
+  "total_pending": 1178
 }
