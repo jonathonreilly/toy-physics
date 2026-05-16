@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py
-runner_sha256: 8e0afad9e7ac5e548edb6d935fd6667e55dd6cb57d72e05402d3b1ceb7cb339a
+runner_sha256: bbef1d4cbe15c1f3c6a8855da7ca059613f40649dadc2dd0a3360b2bad02d384
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.25
+elapsed_sec: 0.48
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -15,34 +15,41 @@ Exact already-fixed pieces
   half-slice multiplier min eig         = 0.267545894076
   local-factor min/max                  = 8.821392463568e-26, 1.000000000000
 
-Boundary environment character data
-  rho_env min/max                       = 0.040762203978, 1.000000000000
+Boundary environment witness (actually-computed single-link Wilson)
+  rho_env min/max                       = 0.000000544985, 1.000000000000
+  rho_env(0,0) (target 1.0)             = 1.000000000000
+  rho_env(1,0)                          = 4.225317396500e-01
+  rho_env(1,1)                          = 1.622597994799e-01
   z_(0,0)^env                           = 1.000000000000
-  environment swap error                = 0.000e+00
+  environment swap error                = 2.776e-17
   normalized coefficient consistency    = 0.000e+00
 
 Resulting factorized transfer witness
   transfer symmetry error               = 2.220e-16
-  transfer swap error                   = 4.441e-16
-  Perron <J>                            = 0.444585706524
+  transfer swap error                   = 5.551e-16
+  Perron <J>                            = 0.435521983684
 
   [PASS] [THEOREM] the explicit plaquette source operator J is self-adjoint and conjugation-symmetric on the source sector
          the accepted source operator is one exact self-adjoint six-neighbor recurrence
+  [PASS] [THEOREM] the bounded environment witness rho_env equals the actually-computed normalized single-link SU(3) Wilson boundary character coefficient rho_(p,q)(6) = c_(p,q)(6)/(d_(p,q) c_(0,0)(6))
+         max abs deviation from canonical single-link Wilson integral = 0.000e+00
+  [PASS] [THEOREM] the bounded environment witness is not the abstract exp(-0.24 (p+q) - 0.08 (p-q)^2) witness previously used (regression guard against witness-injection)
+         max abs distance from prior abstract witness = 4.565e-01
   [PASS] [THEOREM] after stripping the marked half-slice multipliers and the exact local factor, the residual environment data can be packaged as one conjugation-symmetric coefficient sequence rho_(p,q)(6)
-         min rho coefficient=0.040762
+         min rho coefficient=5.449847e-07
   [PASS] [THEOREM] the residual operator is exactly realizable as one normalized central boundary character measure Z_6^env
          Z_6^env(W) = z_(0,0)^env sum d_(p,q) rho_(p,q)(6) chi_(p,q)(W)
   [PASS] [THEOREM] the explicit framework-point factorized source-sector law reduces to exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)
          once rho_(p,q)(6) is fixed, the remaining operator is a concrete central boundary class function, not an abstract diagonal freedom
   [PASS] [SUPPORT] the environment character measure remains positivity-compatible on the truncated source sector
-         minimum normalized boundary coefficient=4.076e-02
+         minimum normalized boundary coefficient=5.450e-07
   [PASS] [SUPPORT] the boundary character measure is a reusable plaquette tool distinct from the already-fixed local mixed-kernel factor
          the remaining datum now sits in Z_6^env rather than D_6^loc
   [PASS] [SUPPORT] once Z_6^env is explicit, the remaining framework-point data reduce again to the Perron moments of one explicit factorized operator
-         Perron <J> = 0.444586
+         Perron <J> = 0.435522
 
 ==============================================================================
-SUMMARY: THEOREM PASS=4 SUPPORT=3 FAIL=0
+SUMMARY: THEOREM PASS=6 SUPPORT=3 FAIL=0
 ==============================================================================
 
 ----- stderr -----

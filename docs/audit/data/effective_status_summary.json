@@ -3,9 +3,9 @@
     "bounded_theorem": 926,
     "decoration": 16,
     "meta": 116,
-    "no_go": 228,
+    "no_go": 229,
     "open_gate": 109,
-    "positive_theorem": 727
+    "positive_theorem": 728
   },
   "cycle_examples": [
     [
@@ -68,10 +68,10 @@
   "cycles_detected": 241,
   "effective_status_counts": {
     "audit_in_progress": 1,
-    "audited_conditional": 183,
+    "audited_conditional": 180,
     "audited_failed": 20,
-    "audited_numerical_match": 15,
-    "audited_renaming": 14,
+    "audited_numerical_match": 14,
+    "audited_renaming": 13,
     "decoration_under_cl3_color_automorphism_theorem": 5,
     "decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01": 1,
     "decoration_under_gauge_vacuum_plaquette_transfer_operator_character_recurrence_note": 1,
@@ -87,7 +87,7 @@
     "retained_bounded": 306,
     "retained_no_go": 133,
     "retained_pending_chain": 4,
-    "unaudited": 1200
+    "unaudited": 1207
   },
   "retained_pending_chain_count": 4,
   "retained_pending_chain_examples": [

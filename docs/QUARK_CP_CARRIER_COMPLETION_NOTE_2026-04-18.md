@@ -1,15 +1,45 @@
 # Quark CP-Carrier Completion on the Live Mass-Ratio Lane
 
-**Date:** 2026-04-18
-**Status:** bounded one-primitive full-closure extension
+**Date:** 2026-04-18 (demoted 2026-05-16)
+**Status:** bounded numerical-match note (tuned fit to imported comparators)
+**Audit class:** G — load-bearing step is a numerical match, not a derivation
 **Primary runner:** `scripts/frontier_quark_cp_carrier_completion.py`
 
-This note is now complemented by a stronger reduced closure:
-`QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`.
-That newer note shows the full quark package can already be closed on a fixed
-projector ray with only two real sector amplitudes plus one shared phase.
-The present note remains the broader existence proof with freer complex
-sector-specific carriers.
+## Scope (honest framing)
+
+This note is **not** a derivation that sector-specific complex `1-3` quark
+carriers exist as a consequence of the retained framework. It is a bounded
+*existence-of-fit* check: given imported comparator targets
+
+```text
+(m_u/m_c, m_c/m_t, |V_us|, |V_cb|, |V_ub|, J)
+```
+
+drawn from observation/atlas conventions, two complex carrier coefficients
+`xi_u` and `xi_d` (four real numerical degrees of freedom in total) can be
+solved numerically to reproduce that target surface to about `1%` or better,
+while keeping `arg det(M_u M_d) = 0 mod 2pi` closed.
+
+The comparator targets are imported, not derived. The carrier coefficients
+`xi_u` and `xi_d` are solved by numerical optimization against those
+imported targets; they are not derived from any retained primitive. The
+chosen carrier slot (one determinant-neutral complex `1-3` carrier per
+sector, on top of the Schur-generated `1-3` term) is asserted by ansatz,
+not derived as the unique admissible extension of the minimal Schur-NNI
+carrier.
+
+This is therefore a Class-G numerical-match result in the project's audit
+taxonomy, not a closed first-principles derivation. The prior audit recorded
+this boundary as `audited_numerical_match`; after this source edit, independent
+re-audit owns the current status. The remaining structural gaps are recorded
+below in "What remains open (load-bearing gaps)".
+
+A scope-narrowing companion already records the same boundary explicitly:
+`QUARK_CP_CARRIER_COMPLETION_AUDITED_SCOPE_NARROW_BOUNDED_NOTE_2026-05-10.md`.
+A complementary reduced-closure attempt with fewer free parameters is in
+`QUARK_PROJECTOR_RAY_PHASE_COMPLETION_NOTE_2026-04-18.md`; that note
+continues to live as a separate bounded surface and is **not** load-bearing
+for the present note.
 
 ## Safe statement
 
@@ -28,7 +58,8 @@ This note adds the next bounded step:
 - require the full atlas target surface
   `(|V_us|, |V_cb|, |V_ub|, J)`.
 
-On that bounded extended surface there is a numerical full quark closure:
+On that bounded extended surface there is a numerical existence-of-fit at
+the comparator surface:
 
 - `m_u/m_c = 1.688494 x 10^-3`
 - `m_c/m_t = 7.400356 x 10^-3`
@@ -38,7 +69,10 @@ On that bounded extended surface there is a numerical full quark closure:
 - `J = 3.313653 x 10^-5`
 
 all within about `1%` or better of the chosen comparator/atlas targets, while
-`arg det(M_u M_d) = 0 mod 2pi` stays closed numerically.
+`arg det(M_u M_d) = 0 mod 2pi` stays closed numerically. The comparator
+values are imported from observation/atlas conventions and the carrier
+coefficients are solved numerically against them; this is a tuned-fit
+existence statement, not a derivation.
 
 So the live quark work can now be stated more sharply:
 
@@ -117,8 +151,67 @@ So the branch now has three aligned statements:
 
 - minimal surface: strong quark magnitudes, CP no-go;
 - bounded scan surface: `c13`/projector deformations can lift `J`;
-- bounded completion surface: an explicit complex `1-3` carrier closes the
-  full quark package numerically.
+- bounded completion surface: an explicit complex `1-3` carrier admits a
+  numerical fit to the imported comparator surface for the full quark
+  package.
+
+## What remains open (load-bearing gaps)
+
+To upgrade this row from numerical-match/support scope to a retained
+first-principles derivation, the following structural gaps must be closed,
+none of which the present runner addresses:
+
+1. **Derive the carrier coefficients `xi_u` and `xi_d`** from retained
+   primitives, including their normalization, readout convention, and
+   determinant-neutral constraint. The present note solves them numerically
+   against imported comparators.
+2. **Derive why the determinant-neutral complex `1-3` carrier is the unique
+   minimal admissible CP-carrier slot** beyond the Schur-NNI base, rather
+   than choosing it by ansatz. Other carrier slots (different index pairs,
+   different determinant-charge sectors, non-Hermitian completions) are
+   not ruled out by the present note.
+3. **Derive the comparator targets `(m_u/m_c, m_c/m_t, |V_us|, |V_cb|,
+   |V_ub|, J)`** from framework primitives, or supply an audited bridge that
+   maps the imported observational values onto framework-defined readouts.
+   The present note imports these values directly from atlas/observation
+   conventions.
+4. **Derive a small-correction interpretation**, or accept that the
+   completion is non-perturbative relative to the Schur `1-3` base
+   (`|xi_u|/c13_u^{base} ~ 102`, `|xi_d|/c13_d^{base} ~ 6.6`) and is
+   therefore not a retained small correction but a bounded completion
+   ansatz of comparable magnitude to the base term.
+
+All four are theorem/derivation problems and are out of scope for this
+note. The note therefore stops at the bounded numerical-match claim and
+does not attempt to upgrade beyond it.
+
+## Audit history
+
+The 2026-05-05 audit recorded this row as `audited_numerical_match` with
+Class-G load-bearing step. That is historical audit context; this source
+edit resets the row for independent re-audit. The auditor verdict was:
+
+> The load-bearing step is an optimized numerical completion using
+> explicit solved carrier coefficients and imported comparator targets.
+> The runner is not a trivial printout: it builds Hermitian mass matrices,
+> diagonalizes them, computes CKM observables, and checks the determinant
+> phase. However, the parameters xi_u and xi_d are tuned degrees of
+> freedom rather than derived from the stated axiom, and the success
+> criteria are external observation/atlas matches, so this is class G
+> rather than first-principles class C.
+
+The 2026-05-16 demotion edit (this revision) rewrites the title sub-line,
+adds a "Scope (honest framing)" lead-in, retitles the headline closure
+phrase as a numerical existence-of-fit, and enumerates the four
+load-bearing structural gaps that any future clean audit upgrade would have
+to close. The underlying runner output (`PASS=11, FAIL=0`) is unchanged;
+the current audit status is owned by the regenerated audit pipeline and the
+next independent re-audit.
+
+This demotion is graph-bookkeeping only. It does not change the numerical
+match status, does not promote the row, does not introduce new axioms,
+does not derive `xi_u` or `xi_d`, and does not alter the Schur-NNI
+minimal-surface CP no-go.
 
 ## Validation
 

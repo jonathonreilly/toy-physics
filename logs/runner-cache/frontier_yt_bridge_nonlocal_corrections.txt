@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_yt_bridge_nonlocal_corrections.py
-runner_sha256: d1726e23c80538e597a783228710b76b9763fe7fdf4ba58815060783142fd31f
+runner_sha256: 1bfb06f74977f22cabfcc25f2627c3f34b3594632710a9f391f72904e84e345f
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 7.26
+elapsed_sec: 0.65
 status: ok
 ----- stdout -----
 ==============================================================================
@@ -13,43 +13,52 @@ y_t BRIDGE NONLOCAL CORRECTIONS
 Quantify the residual nonlocal correction after extracting the affine
 local-Hessian model on the forced UV window.
 
+Load-bearing checks (2026-05-16 revision) are the family-agnostic
+Cauchy-Schwarz bound:
+    |<K_nonloc, phi>| <= ||K_nonloc||_2 * ||phi||_2
+Reference family numbers at a fixed center/width pair are reported
+as a non-load-bearing sanity comparison only.
+
 Forced UV window: x >= 0.95
   K_loc(x) = -6.172071e-02 x + 8.518429e-02
   pointwise affine-fit max relative error = 1.187562e-02
   residual operator norm ratio = 5.023669e-03
+  residual operator norm (absolute, L2) = 2.799075e-05
+  kernel L2 norm (absolute) = 5.571775e-03
 
-Best row per family:
-  shape              dev%    nonlocal/full   nonlocal/local
-  logistic        +0.0005     3.428195e-05     3.428077e-05
-  erf             +0.0145     2.052752e-04     2.053174e-04
-  smoothstep      +0.0057     1.027543e-03     1.028600e-03
+Reference family sanity rows (NOT load-bearing):
+  shape             ||phi||_2     |<K_nl,phi>|         CS bound       margin
+  logistic       1.253576e-01     2.180887e-08     3.508853e-06 9.937846e-01
+  erf            1.159898e-01     7.179715e-08     3.246642e-06 9.778857e-01
+  smoothstep     1.209949e-01     1.118624e-07     3.386739e-06 9.669705e-01
 
-Family-average integrated effect:
-  avg profile nonlocal/local = 4.262215e-04
-  avg profile L2 norm = 1.377377e-01
+These rows use the fixed reference center/width (0.975, 0.020) without any target-y_t
+filter or grid search. They confirm Cauchy-Schwarz is non-trivial
+(margin > 0) on every reference shape.
 
   [PASS] 1a-kernel-remains-nearly-affine-on-the-forced-uv-window: max relative affine-fit error = 1.187562e-02
   [PASS] 1b-nonlocal-residual-has-small-operator-norm: residual operator norm ratio = 5.023669e-03
-  [PASS] 1c-best-family-integrated-nonlocal-effect-is-tiny: max best-family |nonlocal|/|full| = 1.027543e-03
-  [PASS] 1d-best-family-nonlocal-piece-is-negligible-vs-local-piece: max best-family |nonlocal|/|local| = 1.028600e-03
-  [PASS] 1e-family-average-nonlocal-piece-remains-negligible: family-average |nonlocal|/|local| = 4.262215e-04
+  [PASS] 1c-cauchy-schwarz-bound-holds-on-all-reference-family-rows: min reference CS margin = 9.669705e-01
+  [PASS] 1d-residual-operator-norm-is-the-family-agnostic-control-constant: |K_nonloc|_2 = 2.799075e-05, ratio = 5.023669e-03
 
 ------------------------------------------------------------------------------
 Interpretation
 ------------------------------------------------------------------------------
-The local-Hessian selector already captures the leading forced-UV-window
-behavior. After subtracting its affine local model, the residual
-nonlocal correction is half-percent-level in operator norm and remains
-small when integrated against the viable bridge families.
+The load-bearing claim of this note is the Cauchy-Schwarz inequality
+|<K_nonloc, phi>| <= 2.799075e-05 * ||phi||_2
+for every profile phi in L^2 on the forced UV window x >= 0.95,
+given the standard SM inputs at M_Z and the derived V scale.
 
-So the nonlocal tail is bounded and numerically small on the branch
-families, but the result is still a bounded-support control statement,
-not a full unbounded theorem.
+The reference family rows above are a non-load-bearing sanity
+comparison and confirm Cauchy-Schwarz is non-trivial.
 
-The remaining gap is microscopic rather than structural.
+This remains a bounded-support control statement on the operator
+norm of the residual; it does not derive the operator-norm bound
+from the exact interacting bridge action, which remains the upstream
+review target.
 ==============================================================================
-FINAL TALLY: 5 PASS / 0 FAIL
-Elapsed: 6.99 s
+FINAL TALLY: 4 PASS / 0 FAIL
+Elapsed: 0.18 s
 ==============================================================================
 
 ----- stderr -----

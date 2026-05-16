@@ -5,13 +5,28 @@
 **Script:** [`scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py`](../scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py)
 **Runner sha256:** `cb0094804621a83d7319565b1b875f8affdbf05fdbe6ababfd47868cd7a7e61f`
 
-For a charge-preserving normal lower-level transport / Green /
-source-response kernel, the induced Nambu response has zero anomalous
-block on the `ΔL=2` Majorana channel.
+## Load-bearing statement (conditional, scope-narrowed)
 
-This is a lower-level dynamical support no-go for that kernel class, not
-a derivation that the full framework response layer is restricted to
-that class.
+**Conditional bounded no-go.** *If* the lower-level transport / Green /
+source-response kernel acting on the `ΔL=2` Majorana channel is of the
+charge-preserving normal block-diagonal class exhibited by the runner
+(i.e. of the form `block_diag(N, conj(N))` for an invertible Hermitian
+charge-preserving `N`), *then* the induced Nambu response has zero
+anomalous block on that channel and the induced Majorana pairing
+amplitude is identically zero.
+
+This is the exact, runner-matched statement that this note now asserts.
+The runner provides bounded numerical support (`PASS=5 FAIL=0` at
+`n = 1, 3, 5` with fixed seeds) for the conditional consequence.
+
+**What this note does *not* claim.** This note does **not** claim that
+the framework's lower-level response layer is in fact restricted to the
+charge-preserving normal class. That premise-side identification is a
+separate bridge theorem (see *Repair path*, route 1) that this note
+does not attempt and must not be read as carrying. Therefore, this note
+must not be cited as evidence that the framework forbids Majorana
+pairing on the `ΔL=2` channel; it only forbids it conditionally on the
+runner's exhibited kernel class.
 
 ## Prior feedback perimeter (2026-05-05)
 
@@ -82,22 +97,27 @@ layer is exactly that class).
 
 ## Repair path
 
-Two non-exclusive repair routes remain:
+This rigorization adopts the scope-narrowing route (route 2 below). The
+load-bearing statement at the top of this note is now the conditional
+implication that exactly matches the runner. The bridge theorem (route
+1) remains a separately-targeted future row and is not asserted by this
+note.
 
-1. **Bridge theorem route.** Provide a derivation that the
-   lower-level transport / Green / source-response layer on the framework lane
-   produces only kernels of the charge-preserving block-diagonal class
-   exhibited in the runner; combine with this note's induced-zero
-   demonstration to give the full bridge-then-block argument.
-2. **Scope-narrowing route.** Restate the load-bearing step as the
-   conditional implication "*if* the lower-level response layer is contained
-   in the charge-preserving normal-kernel class, *then* the induced
-   Nambu pairing block vanishes," matching the runner's exact content. This
-   leaves the bridge theorem as a separately-targeted future row rather than
-   an asserted property of this note.
+1. **Bridge theorem route (separate future row, not asserted here).**
+   Provide a derivation that the lower-level transport / Green /
+   source-response layer on the framework lane produces only kernels of
+   the charge-preserving block-diagonal class exhibited in the runner;
+   combine with this note's induced-zero demonstration to give the full
+   bridge-then-block argument.
+2. **Scope-narrowing route (adopted).** The load-bearing step is the
+   conditional implication "*if* the lower-level response layer is
+   contained in the charge-preserving normal-kernel class, *then* the
+   induced Nambu pairing block vanishes," matching the runner's exact
+   content. The bridge theorem is left as a separately-targeted future
+   row rather than an asserted property of this note.
 
-Both routes preserve the runner calculation. Independent audit owns
-any current verdict or effective status after this source change.
+The runner calculation is unchanged. Independent audit owns any current
+verdict or effective status after this source change.
 
 ## Verification
 

@@ -1,12 +1,36 @@
 #!/usr/bin/env python3
 """
-Exact spatial-environment character-measure witness for the plaquette transfer
-route on the accepted Wilson 3+1 surface.
+Bounded spatial-environment character-measure witness for the plaquette
+transfer route on the accepted Wilson 3+1 surface.
 
-This does not close analytic P(6). It sharpens the remaining object:
-the residual operator after stripping the marked half-slice multiplier and the
-exact normalized mixed-kernel local factor is exactly a normalized central
-boundary class function of the unmarked spatial Wilson environment.
+This does not close analytic P(6) and does not retain the operator-realization
+load-bearing step R_beta^env = C_(Z_beta^env), which still depends on the
+parent residual-environment identification theorem (currently
+audited_conditional). It sharpens the remaining object on the finite box
+NMAX = 5: after stripping the marked half-slice multiplier and the exact
+normalized mixed-kernel local factor, the residual operator is checked, as
+a bounded approximation, to be the normalized central boundary class function
+of the unmarked spatial Wilson environment.
+
+What this runner now does, that the prior witness-injection version did not:
+the residual diagonal data rho_env(p,q) is no longer a generic hard-coded
+positive conjugation-symmetric witness sequence
+(e.g. exp(-0.24 (p+q) - 0.08 (p-q)^2)). It is instead the actually-computed
+normalized single-link SU(3) Wilson boundary character coefficient
+  rho_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta)),
+  c_(p,q)(beta)   = int_{SU(3)} chi_(p,q)(U) exp((beta/3) Re tr U) dU,
+computed via the Schur-Weyl Bessel-determinant identity in the same way as
+the retained bounded sibling runner
+  scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py
+This is the canonical single-link Wilson boundary character at beta = 6 — one
+exact piece of the unmarked spatial Wilson environment — and it is therefore
+a single-link bounded witness for the residual environment compression, not
+the full multi-link tensor-transfer environment object.
+
+Bounded scope explicitly kept open:
+- the full unmarked spatial Wilson environment tensor-transfer coefficients
+- the parent residual-environment identification theorem (audited_conditional)
+- analytic closure of canonical P(6)
 """
 
 from __future__ import annotations
@@ -129,10 +153,21 @@ def main() -> int:
     )
     d_local = np.diag(local**4)
 
-    rho_env = np.array(
-        [np.exp(-0.24 * (p + q) - 0.08 * ((p - q) ** 2)) for p, q in weights],
-        dtype=float,
-    )
+    # Bounded environment witness: the actually-computed normalized single-link
+    # SU(3) Wilson boundary character coefficient
+    #   rho_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta)).
+    # This is the same canonical Wilson integral computed by the retained
+    # bounded sibling runner
+    #   scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py
+    # The prior version of this runner injected an arbitrary positive,
+    # conjugation-symmetric witness sequence
+    # exp(-0.24 (p+q) - 0.08 (p-q)^2). Replacing that witness with the
+    # actually-computed Wilson single-link coefficients makes this a single-
+    # link Wilson-derived bounded witness for the residual environment rather
+    # than a generic witness. It does NOT close the full multi-link unmarked
+    # spatial Wilson environment, the parent residual-environment
+    # identification theorem (audited_conditional), or analytic P(6).
+    rho_env = local.copy()
     z_env = np.array([dim_su3(p, q) * rho for (p, q), rho in zip(weights, rho_env)], dtype=float)
     r_env = np.diag(rho_env)
     transfer = multiplier @ d_local @ r_env @ multiplier
@@ -156,8 +191,11 @@ def main() -> int:
     print(f"  half-slice multiplier min eig         = {float(np.min(np.linalg.eigvalsh(multiplier))):.12f}")
     print(f"  local-factor min/max                  = {float(np.min(np.diag(d_local))):.12e}, {float(np.max(np.diag(d_local))):.12f}")
     print()
-    print("Boundary environment character data")
+    print("Boundary environment witness (actually-computed single-link Wilson)")
     print(f"  rho_env min/max                       = {rho_min:.12f}, {float(np.max(rho_env)):.12f}")
+    print(f"  rho_env(0,0) (target 1.0)             = {rho_env[index[(0, 0)]]:.12f}")
+    print(f"  rho_env(1,0)                          = {rho_env[index[(1, 0)]]:.12e}")
+    print(f"  rho_env(1,1)                          = {rho_env[index[(1, 1)]]:.12e}")
     print(f"  z_(0,0)^env                           = {z00:.12f}")
     print(f"  environment swap error                = {rho_sym:.3e}")
     print(f"  normalized coefficient consistency    = {coeff_norm:.3e}")
@@ -168,15 +206,42 @@ def main() -> int:
     print(f"  Perron <J>                            = {expectation:.12f}")
     print()
 
+    # Independent recomputation of the canonical single-link Wilson boundary
+    # character coefficient, used as a cross-check that the bounded witness in
+    # rho_env is the actually-computed canonical Wilson integral, not an
+    # arbitrary positive symmetric sequence.
+    rho_wilson_check = np.array(
+        [wilson_character_coefficient(p, q) / (dim_su3(p, q) * c00) for p, q in weights],
+        dtype=float,
+    )
+    rho_witness_is_wilson = float(np.max(np.abs(rho_env - rho_wilson_check)))
+    # Cross-check that the bounded witness is NOT one of the abstract
+    # positive-symmetric witness sequences previously used (regression guard).
+    rho_abstract_prior = np.array(
+        [np.exp(-0.24 * (p + q) - 0.08 * ((p - q) ** 2)) for p, q in weights],
+        dtype=float,
+    )
+    rho_witness_distinct_from_prior = float(np.max(np.abs(rho_env - rho_abstract_prior)))
+
     check(
         "the explicit plaquette source operator J is self-adjoint and conjugation-symmetric on the source sector",
         float(np.max(np.abs(jmat - jmat.T))) < 1.0e-15 and float(np.max(np.abs(swap @ jmat - jmat @ swap))) < 1.0e-12,
         detail="the accepted source operator is one exact self-adjoint six-neighbor recurrence",
     )
     check(
+        "the bounded environment witness rho_env equals the actually-computed normalized single-link SU(3) Wilson boundary character coefficient rho_(p,q)(6) = c_(p,q)(6)/(d_(p,q) c_(0,0)(6))",
+        rho_witness_is_wilson < 1.0e-15,
+        detail=f"max abs deviation from canonical single-link Wilson integral = {rho_witness_is_wilson:.3e}",
+    )
+    check(
+        "the bounded environment witness is not the abstract exp(-0.24 (p+q) - 0.08 (p-q)^2) witness previously used (regression guard against witness-injection)",
+        rho_witness_distinct_from_prior > 1.0e-3,
+        detail=f"max abs distance from prior abstract witness = {rho_witness_distinct_from_prior:.3e}",
+    )
+    check(
         "after stripping the marked half-slice multipliers and the exact local factor, the residual environment data can be packaged as one conjugation-symmetric coefficient sequence rho_(p,q)(6)",
         rho_sym < 1.0e-12 and rho_min > 0.0,
-        detail=f"min rho coefficient={rho_min:.6f}",
+        detail=f"min rho coefficient={rho_min:.6e}",
     )
     check(
         "the residual operator is exactly realizable as one normalized central boundary character measure Z_6^env",

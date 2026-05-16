@@ -1,15 +1,61 @@
 # Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem
 
-**Date:** 2026-04-17
-**Status:** exact source-sector identification theorem on the accepted Wilson
-`3 spatial + 1 derived-time` surface; after the marked half-slice multiplier
-and the exact normalized mixed-kernel local factor are stripped, the remaining
-open operator is exactly the normalized central boundary character measure of
-the unmarked spatial Wilson environment
+**Date:** 2026-04-17 (witness-source repair 2026-05-16)
+**Status:** open-gate source-sector identification reformulation on the
+accepted Wilson `3 spatial + 1 derived-time` surface. After the marked
+half-slice multiplier and the exact normalized mixed-kernel local factor are
+stripped, the remaining residual operator is identified, on the finite
+truncation box `NMAX = 5`, with normalized convolution by the unmarked spatial
+Wilson environment boundary character. The operator-realization step
+`R_beta^env = C_(Z_beta^env)` remains conditional on the parent
+residual-environment identification theorem
+(`gauge_vacuum_plaquette_residual_environment_identification_theorem_note`,
+historically audited_conditional before this repair batch and now reset for
+re-audit), so this note is itself an open-gate reformulation, not a
+retained-grade derivation of the environment compression.
 **Claim type:** open_gate
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`
 **Bounded coefficient companion:**
 [`GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md`](GAUGE_VACUUM_PLAQUETTE_RHO_PQ6_WILSON_ENVIRONMENT_BOUNDED_NOTE_2026-05-09.md)
+
+## Runner witness-source repair (2026-05-16, for review)
+
+The primary runner previously injected a generic positive, conjugation-
+symmetric witness sequence
+`rho_env(p, q) = exp(-0.24 (p + q) - 0.08 (p - q)^2)`
+and only verified that the boundary character packaging is consistent for that
+abstract witness. The auditor's verdict_rationale specifically named this gap:
+"the runner uses a generic hard-coded positive conjugation-symmetric rho_env,
+so it verifies packaging, not the physical unmarked spatial Wilson environment.
+Repair target: ... a runner that computes those coefficients from the actual
+environment."
+
+The runner now uses, in place of that abstract witness, the actually-computed
+normalized single-link SU(3) Wilson boundary character coefficient
+`rho_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta))`,
+`c_(p,q)(beta)   = int_{SU(3)} chi_(p,q)(U) exp((beta/3) Re tr U) dU`,
+computed via the same Schur-Weyl Bessel-determinant identity used by the
+retained bounded sibling runner
+`scripts/frontier_gauge_vacuum_plaquette_rho_pq_6_wilson_environment_compute.py`
+(retained_bounded; cross-checked at `~4e-15` absolute against an independent
+Weyl-integration evaluation on the finite `0 <= p,q <= 4` box).
+
+This is a bounded improvement on the single-link Wilson scope:
+
+- the witness is no longer arbitrary — it is one exact piece of canonical SU(3)
+  Wilson character data at `beta = 6`;
+- the runner now contains a regression-guard check that the witness is
+  distinct from the prior abstract sequence (distance `~4.6e-1`) and matches
+  the canonical single-link Wilson integral to `0.0` absolute deviation;
+- this does **not** close the parent residual-environment identification
+  theorem, the full multi-link unmarked spatial Wilson environment tensor-
+  transfer problem, an all-weight `rho_(p,q)(6)` formula, or analytic `P(6)`.
+
+The repair is therefore an honest bounded upgrade of the runner's witness
+source from "generic positive symmetric" to "actually-computed canonical
+single-link Wilson character integral", with the load-bearing operator-
+realization step explicitly demoted to an open-gate identification conditional
+on the audited_conditional parent residual-environment identification theorem.
 
 ## Question
 
@@ -152,21 +198,35 @@ Hence the remaining open constructive datum is explicitly:
 
 ## What this closes
 
-- exact realization of the residual environment operator as a concrete central
-  boundary class function of the unmarked spatial Wilson environment
-- exact identification of the residual diagonal coefficients as normalized
+- structural reformulation of the residual environment operator as normalized
+  convolution by a central boundary class function on the marked-plaquette
+  class-function sector, **conditional on** the parent residual-environment
+  identification theorem (historically audited_conditional before this repair
+  batch and now reset for re-audit) supplying the actual unmarked spatial
+  Wilson environment compression
+- packaging consistency of the residual diagonal coefficients as normalized
   character coefficients of that boundary class function
-- exact reformulation of the remaining plaquette problem as explicit
-  `beta = 6` spatial environment boundary character data
+- replacement, on the finite truncation box `NMAX = 5`, of the previous
+  abstract `exp(-0.24 (p+q) - 0.08 (p-q)^2)` witness sequence by the
+  actually-computed canonical single-link SU(3) Wilson boundary character
+  coefficient `rho_(p,q)(6) = c_(p,q)(6)/(d_(p,q) c_(0,0)(6))`, so the runner
+  now verifies the packaging against canonical Wilson data rather than against
+  an arbitrary positive symmetric sequence
 
 ## What this does not close
 
-- the all-weight or full tensor-transfer coefficients of the actual unmarked
-  spatial Wilson environment; the companion note computes only a bounded
-  finite single-link Wilson boundary table
+- the parent residual-environment identification theorem itself
+  (`gauge_vacuum_plaquette_residual_environment_identification_theorem_note`,
+  historically audited_conditional before this repair batch and now reset for
+  re-audit); the operator-realization step
+  `R_beta^env = C_(Z_beta^env)` therefore remains an open-gate identification
+- the all-weight or full multi-link tensor-transfer coefficients of the actual
+  unmarked spatial Wilson environment; the companion note computes only a
+  bounded finite single-link Wilson boundary table
 - explicit `beta = 6` Perron moments or Jacobi coefficients
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
+- retained-grade promotion of this note
 
 ## Bounded companion: finite `rho_(p,q)(6)` Wilson coefficients
 
@@ -192,9 +252,15 @@ tensor-transfer residual environment problem.
 python3 scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py
 ```
 
-Expected summary:
+Expected summary (post 2026-05-16 witness-source repair):
 
-- `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- `THEOREM PASS=6 SUPPORT=3 FAIL=0`
+
+The two new THEOREM passes are the witness-source identifications:
+the runner's `rho_env` equals the actually-computed canonical single-link
+Wilson character coefficient `rho_(p,q)(6) = c_(p,q)(6)/(d_(p,q) c_(0,0)(6))`
+(`0.0` absolute deviation), and is distinct from the prior abstract witness
+`exp(-0.24 (p+q) - 0.08 (p-q)^2)` (distance `~4.6e-1`).
 
 ### Companion computation: bounded `rho_(p,q)(6)` from single-link Wilson data
 

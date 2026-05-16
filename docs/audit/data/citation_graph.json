@@ -1637,6 +1637,38 @@
       "to": "architecture_note_directional_measure"
     },
     {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "observable_principle_from_axiom_note"
+    },
+    {
+      "from": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "to": "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
       "to": "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10"
     },
@@ -17259,6 +17291,10 @@
     {
       "from": "newton_derivation_note",
       "to": "newton_derivation_top4_bridge_note"
+    },
+    {
+      "from": "newton_derivation_note",
+      "to": "matter_inertial_closure_note"
     },
     {
       "from": "newton_derivation_top4_bridge_note",
@@ -38792,6 +38828,26 @@
       "runner_path": "scripts/frontier_bougerol_lacroix_oseledets_met_external_narrow.py",
       "title": "Bougerol-Lacroix / Oseledets MET - External Narrow Theorem"
     },
+    "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16": {
+      "claim_id": "bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow_no_go_note_2026-05-16",
+      "claim_type_author_hint": "no_go",
+      "claim_type_author_hint_raw": "no_go",
+      "claim_type_seed_hint": "no_go",
+      "deps": [
+        "bougerol_lacroix_staggered_blocking_submult_tautological_bound_bounded_theorem_note_2026-05-10",
+        "hierarchy_bbs_staggered_taste_blocking_bridge_kms_substrate_narrow_no_go_note_2026-05-15",
+        "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
+        "bougerol_lacroix_oseledets_met_external_narrow_theorem_note_2026-05-10",
+        "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
+        "plaquette_self_consistency_note",
+        "observable_principle_from_axiom_note",
+        "naive_lattice_fermion_two_power_d_species_count_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "f6a647d48ac4ca20d31d1449e125ba85b3b96e7643396b1056dbac2e95150e1d",
+      "path": "docs/BOUGEROL_LACROIX_STAGGERED_BLOCKING_GOUEZEL_KARLSSON_DETERMINISTIC_COCYCLE_NARROW_NO_GO_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_bougerol_lacroix_staggered_blocking_gouezel_karlsson_deterministic_cocycle_narrow.py",
+      "title": "Bougerol-Lacroix Staggered Blocking - Gouezel-Karlsson Deterministic Cocycle Narrow No-Go"
+    },
     "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10": {
       "claim_id": "bougerol_lacroix_staggered_blocking_lyapunov_bridge_no_go_note_2026-05-10",
       "claim_type_author_hint": "no_go",
@@ -48013,12 +48069,12 @@
     "gauge_vacuum_plaquette_residual_environment_identification_theorem_note": {
       "claim_id": "gauge_vacuum_plaquette_residual_environment_identification_theorem_note",
       "claim_type_author_hint": "open_gate",
-      "claim_type_author_hint_raw": "open_gate",
+      "claim_type_author_hint_raw": "open_gate (all-weight equality of the stripped residual with",
       "claim_type_seed_hint": "open_gate",
       "deps": [
         "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
       ],
-      "note_hash": "5893e7f1e916e8fec635956a214618315049965590540a32a6d41f3fe79d48ee",
+      "note_hash": "a43ee0a8128fef9fdca6cc3118929648ed99f56257fed576c3f0311cdb39941d",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py",
       "title": "Gauge-Vacuum Plaquette Residual Environment Identification Theorem"
@@ -48068,7 +48124,7 @@
       "deps": [
         "gauge_vacuum_plaquette_rho_pq6_wilson_environment_bounded_note_2026-05-09"
       ],
-      "note_hash": "651edabfa203e89d55e98d654723627cf42731c7cc00c4da31088f8767785c1b",
+      "note_hash": "0c0e388b10d1f9ed15335845eecf4bd9a8b812650ad2378fceb73727f5781839",
       "path": "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md",
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py",
       "title": "Gauge-Vacuum Plaquette Spatial Environment Character-Measure Theorem"
@@ -51736,7 +51792,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "no_go",
       "deps": [],
-      "note_hash": "657c6598075c959021520bfceb8124605cd3796d127c84fc07e747c67cfcce16",
+      "note_hash": "c2a2ee2a23a2afad2c578b2639c41664b7a98afb488f742f4d00d6b991877ae3",
       "path": "docs/KOIDE_DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_NO_GO_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py",
       "title": "Koide delta lattice Wilson selected-eigenline no-go"
@@ -56003,7 +56059,7 @@
         "neutrino_majorana_operator_axiom_first_note",
         "neutrino_majorana_canonical_local_block_note"
       ],
-      "note_hash": "8fda9469294e6201e9c90d7358bf21fd00857b79492a7aec069cb71cd951e7c9",
+      "note_hash": "e9ac3aec41e022eabc8a7930a6bf40313a48c4eb3ab8c91c71c64141a0ffeb9b",
       "path": "docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md",
       "runner_path": "scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py",
       "title": "Neutrino Majorana Lower-Level Pairing No-Go"
@@ -56661,9 +56717,10 @@
       "claim_type_seed_hint": "open_gate",
       "deps": [
         "equivalence_principle_harness_note",
-        "newton_derivation_top4_bridge_note"
+        "newton_derivation_top4_bridge_note",
+        "matter_inertial_closure_note"
       ],
-      "note_hash": "ca67ddd017a9b7681588228df57ddf502d45848deefe5243a9a24953eee3e2a0",
+      "note_hash": "3263a71da9781c0e19748cd9040368b16fad4588595f8d48b53e89c7d2ccba5d",
       "path": "docs/NEWTON_DERIVATION_NOTE.md",
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)"
@@ -56957,6 +57014,17 @@
       "path": "docs/NONLINEAR_BORN_GRAVITY_NOTE.md",
       "runner_path": "scripts/frontier_nonlinear_born_gravity.py",
       "title": "Nonlinear Propagator Breaks Born Rule and Gravity Simultaneously"
+    },
+    "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16": {
+      "claim_id": "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "positive_theorem",
+      "claim_type_author_hint_raw": "positive_theorem",
+      "claim_type_seed_hint": "positive_theorem",
+      "deps": [],
+      "note_hash": "94071618327a8ab6f42b575a0b70a08f98c3341a9f61201820f91f8ce5d57c55",
+      "path": "docs/NSPT_HIGH_ORDER_LATTICE_ALPHA_N_COEFFICIENT_EXTERNAL_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/frontier_nspt_high_order_lattice_alpha_N_coefficient_external_narrow.py",
+      "title": "NSPT High-Order Lattice \u03b1^N Coefficient \u2014 External Narrow Theorem"
     },
     "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10": {
       "claim_id": "observable_generator_additivity_from_cluster_decomposition_theorem_note_2026-05-10",
@@ -61816,7 +61884,7 @@
       "claim_type_author_hint_raw": null,
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "97604232f9e9b66b94b2ccd8e5b19a197080e2345a60ef5ae77d45ec02d62bce",
+      "note_hash": "e195545da0e692b6a293465025d48628e8e5bf326b8f4e8f17c0e82a6688079f",
       "path": "docs/QUARK_CP_CARRIER_COMPLETION_NOTE_2026-04-18.md",
       "runner_path": "scripts/frontier_quark_cp_carrier_completion.py",
       "title": "Quark CP-Carrier Completion on the Live Mass-Ratio Lane"
@@ -64164,7 +64232,7 @@
         "minimal_axioms_2026-04-11",
         "minimal_axioms_2026-05-03"
       ],
-      "note_hash": "2e9ee6e20454ab4962d5a98fa3cc96ad63e19b6a4fd512a0479cf086ed377fa8",
+      "note_hash": "111a543b633c08e6034ad79a399f49367a3df299e782b663075821ee445bb3f1",
       "path": "docs/SINGLE_AXIOM_HILBERT_NOTE.md",
       "runner_path": "scripts/frontier_single_axiom_hilbert.py",
       "title": "Local Tensor Product Hilbert Space + Local Hamiltonian + Born Readout: Operational Reduction Note"
@@ -69685,7 +69753,7 @@
         "yt_interacting_bridge_locality_note",
         "yt_bridge_action_invariant_note"
       ],
-      "note_hash": "a6604453c5e3e4ceafc88a24b9b95dbe9ccc9c4208f46dd3fbeedc6d3e920004",
+      "note_hash": "20f79d53251e131f2ed001271150cce86521dcf222755bc3f35bd4d4c671cbff",
       "path": "docs/YT_BRIDGE_NONLOCAL_CORRECTIONS_NOTE.md",
       "runner_path": "scripts/frontier_yt_bridge_nonlocal_corrections.py",
       "title": "`y_t` Bridge Nonlocal Corrections Note"
@@ -70131,8 +70199,8 @@
     },
     "yt_interacting_bridge_locality_note": {
       "claim_id": "yt_interacting_bridge_locality_note",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "yt_boundary_theorem",
@@ -70140,7 +70208,7 @@
         "yt_bridge_operator_closure_note",
         "yt_qfp_insensitivity_support_note"
       ],
-      "note_hash": "fcc9d5b442f8cc511fb071fc4edf3e369f2f50411808a3624226f9925ad1e373",
+      "note_hash": "3ebb8420201e6d05f24bc379d5c3da27d5996e540a85d281efc14e6fe94e1bad",
       "path": "docs/YT_INTERACTING_BRIDGE_LOCALITY_NOTE.md",
       "runner_path": "scripts/frontier_yt_interacting_bridge_locality.py",
       "title": "y_t Interacting Bridge Locality Proxy Note"
@@ -71322,6 +71390,7 @@
     "nn_lattice_rescaled_kernel_identification_note_2026-05-10",
     "nonlabel_grown_basin_note",
     "nonlinear_born_gravity_note",
+    "nspt_high_order_lattice_alpha_n_coefficient_external_narrow_theorem_note_2026-05-16",
     "observable_principle_from_axiom_note",
     "oh_schur_boundary_action_note",
     "ollivier_einstein_proxy_note_2026-04-11",
@@ -71599,27 +71668,27 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 385,
+      "bounded_theorem": 386,
       "decoration": 1,
       "meta": 74,
-      "no_go": 48,
-      "none": 1536,
+      "no_go": 49,
+      "none": 1535,
       "open_gate": 40,
-      "positive_theorem": 149
+      "positive_theorem": 150
     },
     "claim_type_seed_hint_counts": {
       "bounded_theorem": 832,
       "decoration": 1,
       "meta": 74,
-      "no_go": 153,
+      "no_go": 154,
       "none": 445,
       "open_gate": 119,
-      "positive_theorem": 609
+      "positive_theorem": 610
     },
-    "edge_count": 8959,
-    "leaf_count": 630,
-    "node_count": 2233,
-    "root_count": 774,
-    "runners_with_path": 1851
+    "edge_count": 8968,
+    "leaf_count": 629,
+    "node_count": 2235,
+    "root_count": 775,
+    "runners_with_path": 1853
   }
 }
