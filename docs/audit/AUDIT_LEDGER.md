@@ -20,11 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 309 |
+| **retained_bounded** | 310 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
 | unaudited | 1202 |
-| audit_in_progress | 1 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
@@ -42,8 +41,8 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audit_in_progress` | 2 |
-| `audited_clean` | 519 |
+| `audit_in_progress` | 1 |
+| `audited_clean` | 520 |
 | `audited_conditional` | 182 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
@@ -115,7 +114,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | claim_id | claim_type | audit_status | effective | independence | auditor_family | load-bearing class | decoration parent |
 |---|---|---|---|---|---|---|---|
 | `observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10` | bounded_theorem | audit_in_progress | _retained_pending_chain_ | cross_family | codex-gpt-5.5 | A | - |
-| `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | audit_in_progress | audit_in_progress | - | - | - | - |
 | `action_crossover_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `action_geometry_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | C | - |
 | `action_normalization_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | A | - |
@@ -444,6 +442,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `plaquette_hierarchy_polynomial_boundedness_narrow_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
+| `pmns_commutant_eigenoperator_selector_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | judicial_review | codex-gpt-5.5 | C | - |
 | `pmns_graph_axis_to_active_lane_bridge_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_channel_value_law_note` | positive_theorem | ~~audited_clean~~ | **retained** | fresh_context | codex-gpt-5.5 | A | - |
 | `pmns_uniform_scalar_deformation_boundary_note` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
@@ -8198,6 +8197,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the single-plaquette SU(3) Wilson integral J(beta), the displayed third-order Picard-Fuchs equation holds and its analytic Frobenius solution gives the physical integral.  _(class `A`)_
 - **chain closes:** False — The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
 - **rationale:** The second audit is the correct reading of the current source row. The finite runner closes a bounded symbolic/numerical certificate, but the source claim still asserts the exact Picard-Fuchs equation and Frobenius-branch identification for the physical SU(3) integral. That stronger statement requires a retained all-order proof companion or a narrowed row boundary before it can be clean. The load-bearing step remains class A because the disputed closure is an algebraic/symbolic ODE identity and branch-identification proof, not a first-principles numerical compute claim.
+- **auditor confidence:** high
+
+### `pmns_commutant_eigenoperator_selector_note`
+
+- **Note:** [`PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md`](../../docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited the narrowed finite-dimensional C3 Fourier decomposition of the hw=1 literal corner-trace profile, the one-way projected Cl(3)-span odd-mode vanishing certificate, and one demonstrated non-Cl(3) nonzero odd-mode example; PMNS q/tau observables are excluded.
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained_bounded**  (reason: `self`)
+- **auditor:** `codex-judicial-gpt-5.5-20260516-pmns-commutant`  (codex-gpt-5.5; independence=judicial_review)
+- **load-bearing step:** None  _(class `C`)_
+- **chain closes:** True — The C3 Fourier formulas themselves are algebraic, but the scoped claim also requires the projected Cl(3) basis profiles to have zero odd modes and a projected non-Cl(3) commutant generator with nonzero odd mode. Those are established by constructing the Cl(3) gamma matrices, eigenspace projectors, commutant basis, projected span, and literal trace profiles from the stated finite-dimensional axiom data, so the load-bearing closure materially depends on first-principles finite computation rather than only an abstract identity over already-provided inputs.
+- **rationale:** The C3 Fourier formulas themselves are algebraic, but the scoped claim also requires the projected Cl(3) basis profiles to have zero odd modes and a projected non-Cl(3) commutant generator with nonzero odd mode. Those are established by constructing the Cl(3) gamma matrices, eigenspace projectors, commutant basis, projected span, and literal trace profiles from the stated finite-dimensional axiom data, so the load-bearing closure materially depends on first-principles finite computation rather than only an abstract identity over already-provided inputs.
 - **auditor confidence:** high
 
 ### `pmns_corner_transport_active_block_note`
