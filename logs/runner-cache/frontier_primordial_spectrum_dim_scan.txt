@@ -1,0 +1,82 @@
+===== runner cache v1 =====
+runner: scripts/frontier_primordial_spectrum_dim_scan.py
+runner_sha256: 1f8d1d495d739d8495b825820a16328083dfe938db6310f705ce4f09a953342c
+timeout_sec: 180
+exit_code: 0
+elapsed_sec: 68.68
+status: ok
+----- stdout -----
+========================================================================
+PRIMORDIAL SPECTRUM dim-scan -- first-principles measurement runner
+========================================================================
+DIMENSIONS=[2, 3, 4], SEED_LIST=[11, 23, 37, 53, 71]
+L_INIT=8, N_GROWTH_FACTOR=4, K_ATTACH=4
+N_SNAPSHOTS_PER_DIM=5, N_BINS_K=12, KNEE_TRIM_FRAC=0.2
+
+Formula (*) under test (NOT inserted into measurement):
+  n_s(d, N_e) = 1 - 2/N_e + (d-3) / (d * N_e)
+
+--- Measuring n_s at d = 2 ---
+  seeds used         : 5 of 5
+  N_e_graph (mean)   : 1.386
+  n_s_meas           : 1.2073 +/- 0.2443
+  r2 (fit, mean)     : 0.246
+  formula(*) at d,Ne : -0.8034
+  residual (meas-pred): +2.0107
+  z-score |residual|/err: 8.23
+  -> REJECTS (*)
+
+--- Measuring n_s at d = 3 ---
+  seeds used         : 5 of 5
+  N_e_graph (mean)   : 1.386
+  n_s_meas           : -0.1647 +/- 0.3128
+  r2 (fit, mean)     : 0.357
+  formula(*) at d,Ne : -0.4427
+  residual (meas-pred): +0.2780
+  z-score |residual|/err: 0.89
+  -> CONSISTENT with (*)
+
+--- Measuring n_s at d = 4 ---
+  seeds used         : 5 of 5
+  N_e_graph (mean)   : 1.386
+  n_s_meas           : -0.2865 +/- 0.2814
+  r2 (fit, mean)     : 0.455
+  formula(*) at d,Ne : -0.2624
+  residual (meas-pred): -0.0241
+  z-score |residual|/err: 0.09
+  -> CONSISTENT with (*)
+
+========================================================================
+SUMMARY: measured n_s(d) vs contested formula (*)
+========================================================================
+    d   N_e_graph          n_s_meas    n_s_formula(*)    residual      z  label
+    2       1.386  +1.2073+/-0.2443           -0.8034     +2.0107   8.23  REJECTS
+    3       1.386  -0.1647+/-0.3128           -0.4427     +0.2780   0.89  CONSISTENT
+    4       1.386  -0.2865+/-0.2814           -0.2624     -0.0241   0.09  CONSISTENT
+
+class_breakdown: {'A': 1, 'B': 3, 'C': 0, 'D': 3, 'total_pass': 7}
+
+Completed in 68.5s
+
+========================================================================
+HONEST READ
+========================================================================
+This runner measures n_s(d) by direct simulation of stochastic
+graph growth in d = 2, 3, 4 spatial dimensions. The contested
+growth-noise correction formula
+  n_s(d, N_e) = 1 - 2/N_e + (d - 3) / (d * N_e)
+is NOT consulted by the measurement; it is evaluated only in the
+comparator block above to produce a residual against the
+measurement. Whether the measurement is consistent with the
+formula depends entirely on the printed z-scores. The finite
+lattice sizes used here are too small for precision n_s at the
++/- 0.005 Planck level, so a single-pass CONSISTENT label here
+is bounded support and not a retained-grade derivation; a
+REJECTS label would be load-bearing evidence against (*). The
+runner produces a class breakdown the audit ledger can consume
+as numerical evidence in the missing-bridge repair, complementing
+the per-dimension n_s scan against the d-dependence sign change
+predicted by (*).
+
+----- stderr -----
+
