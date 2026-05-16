@@ -1,0 +1,99 @@
+===== runner cache v1 =====
+runner: scripts/frontier_pmns_graph_first_residual_antiunitary_2026-05-16.py
+runner_sha256: 80b4bb71f370671eccca6eb514e1b82897ad03b783ac532a6cb0a9b996921b18
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.13
+status: ok
+----- stdout -----
+========================================================================================
+PMNS GRAPH-FIRST RESIDUAL ANTIUNITARY NARROW BRIDGE THEOREM
+========================================================================================
+
+Setting:
+  P_23 = swap of axes 2 and 3  (graph-first axis stabilizer)
+  A_fwd(c_1, c_2, c_3) = c_1 E_12 + c_2 E_23 + c_3 E_31
+  R[A] = P_23 @ A^dagger @ P_23
+
+========================================================================================
+PART 1: matrix-unit conjugation under P_23
+========================================================================================
+  [PASS] P_23 @ E_21 @ P_23 == E_31
+  [PASS] P_23 @ E_32 @ P_23 == E_23
+  [PASS] P_23 @ E_13 @ P_23 == E_12
+  [PASS] P_23 is self-adjoint (P_23 == P_23^dagger)
+  [PASS] P_23 is an involution (P_23 @ P_23 == I_3)
+
+========================================================================================
+PART 2: coordinate action  (c_1, c_2, c_3) -> (conj(c_3), conj(c_2), conj(c_1))
+========================================================================================
+  [PASS] R[A_fwd((1+0j),0j,0j)] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+  [PASS] R[A_fwd(0j,(1+0j),0j)] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+  [PASS] R[A_fwd(0j,0j,(1+0j))] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+  [PASS] R[A_fwd((0.7-0.3j),(0.4+0j),(0.7+0.3j))] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+  [PASS] R[A_fwd((1+0.2j),(-0.3+0.7j),(0.5-0.4j))] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+  [PASS] R[A_fwd((0.41+0.32j),(0.28+0.07j),(0.33-0.11j))] = A_fwd(conj(c_3), conj(c_2), conj(c_1))
+
+========================================================================================
+PART 3: R preserves the oriented forward-cycle channel
+========================================================================================
+  [PASS] R[A_fwd((1+0j),0j,0j)] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+  [PASS] R[A_fwd(0j,(1+0j),0j)] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+  [PASS] R[A_fwd(0j,0j,(1+0j))] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+  [PASS] R[A_fwd((0.7-0.3j),(0.4+0j),(0.7+0.3j))] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+  [PASS] R[A_fwd((1+0.2j),(-0.3+0.7j),(0.5-0.4j))] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+  [PASS] R[A_fwd((0.41+0.32j),(0.28+0.07j),(0.33-0.11j))] has support inside cycle channel  (||off-channel|| = 0.00e+00)
+
+========================================================================================
+PART 4: R is conjugate-linear  (antiunitary on the channel)
+========================================================================================
+  [PASS] R[alpha * A] = conj(alpha) * R[A]  for alpha = (2+0j)
+  [PASS] R[alpha * A] = conj(alpha) * R[A]  for alpha = (1-1j)
+  [PASS] R[alpha * A] = conj(alpha) * R[A]  for alpha = (-3.5+2.1j)
+
+========================================================================================
+PART 5: R is an involution  (R o R = id  on the cycle channel)
+========================================================================================
+  [PASS] R[R[A_fwd((1+0j),0j,0j)]] == A_fwd((1+0j),0j,0j)
+  [PASS] R[R[A_fwd(0j,(1+0j),0j)]] == A_fwd(0j,(1+0j),0j)
+  [PASS] R[R[A_fwd(0j,0j,(1+0j))]] == A_fwd(0j,0j,(1+0j))
+  [PASS] R[R[A_fwd((0.7-0.3j),(0.4+0j),(0.7+0.3j))]] == A_fwd((0.7-0.3j),(0.4+0j),(0.7+0.3j))
+  [PASS] R[R[A_fwd((1+0.2j),(-0.3+0.7j),(0.5-0.4j))]] == A_fwd((1+0.2j),(-0.3+0.7j),(0.5-0.4j))
+  [PASS] R[R[A_fwd((0.41+0.32j),(0.28+0.07j),(0.33-0.11j))]] == A_fwd((0.41+0.32j),(0.28+0.07j),(0.33-0.11j))
+
+========================================================================================
+PART 6: fixed locus is exactly  c_1 = conj(c_3),  c_2 real
+========================================================================================
+  [PASS] on the fixed locus  c_1=(1+0j), c_2=(0.5+0j), c_3=(1+0j):  R[A] = A
+  [PASS] on the fixed locus  c_1=(0.7-0.3j), c_2=0j, c_3=(0.7+0.3j):  R[A] = A
+  [PASS] on the fixed locus  c_1=(0.41+0.32j), c_2=(0.28+0j), c_3=(0.41-0.32j):  R[A] = A
+  [PASS] on the fixed locus  c_1=(-2+1.5j), c_2=(-0.7+0j), c_3=(-2-1.5j):  R[A] = A
+  [PASS] off fixed locus  c_1=(0.41+0.32j), c_2=(0.28+0.07j), c_3=(0.33-0.11j):  R[A] != A  (||R[A] - A|| = 0.3473)
+  [PASS] off fixed locus  c_1=(1+0.5j), c_2=0j, c_3=(1+0.5j):  R[A] != A  (||R[A] - A|| = 1.4142)
+  [PASS] off fixed locus  c_1=(1+0j), c_2=(0.5+0.1j), c_3=(1+0j):  R[A] != A  (||R[A] - A|| = 0.2000)
+
+========================================================================================
+PART 7: fixed locus is a 3-real-parameter family
+========================================================================================
+  [PASS] 64 random points in c_1=conj(c_3), c_2 real are all fixed  (in-locus fixed count = 64/64)
+  [PASS] generic random triples are not fixed (negative control)  (not-fixed count = 64/64)
+
+========================================================================================
+RESULT
+========================================================================================
+  Graph-first residual antiunitary narrow bridge theorem:
+    R[A] = P_23 @ A^dagger @ P_23
+    coordinate action: (c_1, c_2, c_3) -> (conj(c_3), conj(c_2), conj(c_1))
+    antiunitary and involutive on the oriented cycle channel
+    fixed locus: c_1 = conj(c_3),  c_2 real  (3 real parameters)
+  closes the load-bearing step in
+    docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md
+  that asserts  'A_fwd = P_23 A_fwd^dagger P_23 fixes
+  c_1 = conjugate(c_3), c_2 real'.
+  Carrier identification and axis-stabilizer-equals-P_23
+  are out of scope and remain with the cited one-hop authorities.
+
+PASS=35 FAIL=0
+
+----- stderr -----
+
