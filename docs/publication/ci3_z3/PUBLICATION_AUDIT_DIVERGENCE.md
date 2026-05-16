@@ -17,8 +17,8 @@ publication tables phrase it.
 
 | criticality | effective_status | count |
 |---|---|---:|
-| critical | `unaudited` | 443 |
-| critical | `audited_conditional` | 58 |
+| critical | `unaudited` | 442 |
+| critical | `audited_conditional` | 59 |
 | critical | `audited_numerical_match` | 8 |
 | critical | `audited_renaming` | 4 |
 | medium | `unaudited` | 2 |
@@ -380,7 +380,7 @@ publication tables phrase it.
 | critical | `pmns_graph_commutant_cycle_value_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_graph_first_axis_alignment_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_graph_first_cycle_frame_support_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
-| critical | `pmns_hw1_source_transfer_boundary_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
+| critical | `pmns_hw1_source_transfer_boundary_note` | `audited_conditional` | `audited_conditional` | DERIVATION_ATLAS.md |
 | critical | `pmns_lower_level_end_to_end_closure_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |
 | critical | `pmns_minimal_branch_nonselection_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md, RESULTS_INDEX.md |
 | critical | `pmns_oriented_cycle_reduced_channel_nonselection_note` | `unaudited` | `unaudited` | DERIVATION_ATLAS.md |

@@ -23,11 +23,11 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 | **retained_bounded** | 310 |
 | _retained_pending_chain_ | 5 |
 | open_gate | 15 |
-| unaudited | 1199 |
+| unaudited | 1198 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 14 |
-| ~~audited_conditional~~ | 185 |
+| ~~audited_conditional~~ | 186 |
 | ~~audited_failed~~ | 20 |
 | `decoration_under_cl3_color_automorphism_theorem` | 5 |
 | `decoration_under_ew_current_fierz_channel_decomposition_note_2026-05-01` | 1 |
@@ -43,12 +43,12 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | `audit_in_progress` | 1 |
 | `audited_clean` | 520 |
-| `audited_conditional` | 185 |
+| `audited_conditional` | 186 |
 | `audited_decoration` | 16 |
 | `audited_failed` | 64 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 14 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | claim_type | count |
 |---|---:|
@@ -782,6 +782,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `physical_hermitian_hamiltonian_and_sme_bridge_note_2026-04-30` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5 | D | - |
 | `plaquette_v1_picard_fuchs_ode_note_2026-05-05` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | judicial_review | codex-gpt-5.5 | A | - |
 | `pmns_graph_first_cycle_frame_support_note` | positive_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | E | - |
+| `pmns_hw1_source_transfer_boundary_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `pmns_oriented_cycle_selection_structure_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | A | - |
 | `poisson_self_gravity_loop_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-gpt-5.5 | C | - |
 | `poisson_self_gravity_loop_v3_note` | bounded_theorem | ~~audited_conditional~~ | ~~audited_conditional~~ | fresh_context | codex-gpt-5.5 | C | - |
@@ -8294,6 +8295,19 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Once one axis is selected, the graph-first SU(3) integration on that axis canonically fixes the selected-axis fiber/base split and residual swap, and the diagonal projectors transported by the canonical forward cycle give the ordered frame E12, E23, E31.  _(class `E`)_
 - **chain closes:** False — The runner hard-codes the forward cycle matrix and matrix units, and imports the selector and SU(3) basis machinery from unavailable modules. The missing step is a derivation inside the packet that graph-first SU(3) integration uniquely produces this cycle/frame rather than defining or assuming it.
 - **rationale:** The algebraic checks E11 C = E12, E22 C = E23, E33 C = E31 are valid once C and the matrix units are already fixed, but the canonical graph-first origin of C and the selected-axis SU(3) integration are not derived in the restricted packet. The runner also relies on imported modules not provided, so the claimed selector minima and graph-basis construction cannot be audited as first-principles compute here. This makes the result conditional on missing graph-first selector/integration definitions and bridge theorems, not a closed positive theorem from the supplied inputs.
+- **auditor confidence:** high
+
+### `pmns_hw1_source_transfer_boundary_note`
+
+- **Note:** [`PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md`](../../docs/PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- **claim_type:** `bounded_theorem`
+- **claim_scope:** Audited only the conditional pack-to-retained-PMNS bridge: supplied hw=1 source/transfer response columns reconstruct the retained pair and downstream Hermitian/PMNS data against the independent Schur path.
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `terminal_audit`)
+- **auditor:** `codex-cli-gpt-5.5-20260516-133018-14ca2f25-pmns_hw1_source_transfer-001`  (codex-gpt-5.5; independence=cross_family)
+- **load-bearing step:** Given the supplied active/passive hw=1 response-column pack, column inversion recovers the retained active/passive blocks and matches a direct Schur-complement retained-block certificate, so the downstream PMNS closure agrees.  _(class `A`)_
+- **chain closes:** True — The restricted packet supports the conditional bridge: the runner performs response-column inversion and compares it to a separate Schur-complement construction on the same supplied sector fixtures. It does not derive the source/transfer pack from Cl(3) on Z^3, and the note correctly leaves that as outside scope.
+- **rationale:** The load-bearing computation is an algebraic closure over supplied sector operators and response-column data, not a first-principles derivation from the sole axiom. The runner source hard-codes fixture active/passive blocks and proves that the response-column route agrees with a direct Schur route for those supplied inputs. That is adequate for the bounded interface theorem as stated, but retained status cannot propagate to the stronger axiom-first claim because the actual source/transfer pack remains an imported premise.
 - **auditor confidence:** high
 
 ### `pmns_oriented_cycle_channel_value_law_note`
