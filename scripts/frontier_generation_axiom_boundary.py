@@ -5,9 +5,10 @@ Generation Axiom Boundary: Local M_3(C) Observable-Algebra Reconstruction
 
 STATUS: bounded_theorem on the retained generation surface.
 
-CLAIM (in-scope):
+CLAIM (in-scope, the only thing this runner verifies):
   Local M_3(C) observable-algebra reconstruction on H_hw=1 from the
-  translation projectors and C3 cycle generator. Specifically:
+  supplied translation-character projectors and C3 cycle generator.
+  Specifically:
     - the three exact rank-one observable projectors on H_hw=1 correspond
       to the pairwise-distinct translation characters,
     - they generate the full 9-dimensional M_3(C) observable algebra,
@@ -15,13 +16,15 @@ CLAIM (in-scope):
       so no proper exact quotient kernel can be invariant under the
       retained observable algebra.
 
-OUT OF SCOPE (admitted-context):
+OUT OF SCOPE (admitted-context; NOT asserted, NOT checked by this runner):
   - the physical-species bridge from observable-separation to physically
     distinct species sectors,
   - the substrate-fundamentality question (lattice fundamental vs
     regulator-family surrogate),
   - the historical reduced-stack witness about the older five-item
-    implementation memo.
+    implementation memo (the runner contains no hard-coded historical
+    PASS check; every PASS line below is a finite-dimensional algebraic
+    computation on the supplied 3x3 generators).
   These belong to separate authority notes and are not asserted here.
 
 PStack experiment: frontier-generation-axiom-boundary

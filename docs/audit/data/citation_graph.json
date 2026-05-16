@@ -17433,6 +17433,10 @@
       "to": "cpt_exact_real_anti_hermitian_d_narrow_theorem_note_2026-05-10"
     },
     {
+      "from": "observable_principle_scale_invariant_source_response_narrow_theorem_note_2026-05-16",
+      "to": "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10"
+    },
+    {
       "from": "oh_static_constraint_lift_note",
       "to": "restricted_strong_field_closure_note"
     },
@@ -17859,6 +17863,22 @@
     {
       "from": "planck_scale_conditional_completion_note_2026-04-24",
       "to": "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+    },
+    {
+      "from": "planck_scale_conditional_completion_note_2026-04-24",
+      "to": "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1"
+    },
+    {
+      "from": "planck_scale_conditional_completion_note_2026-04-24",
+      "to": "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2"
+    },
+    {
+      "from": "planck_scale_conditional_completion_note_2026-04-24",
+      "to": "planck_orientation_principle_bounded_note_2026-05-10_planckp3"
+    },
+    {
+      "from": "planck_scale_conditional_completion_note_2026-04-24",
+      "to": "planck_from_structure_path_opening_meta_note_2026-05-10"
     },
     {
       "from": "planck_scale_lane_status_note_2026-04-23",
@@ -45816,7 +45836,7 @@
       "claim_type_author_hint_raw": "meta demotion (no positive theorem, no bounded numeric claim).",
       "claim_type_seed_hint": "meta",
       "deps": [],
-      "note_hash": "c9ce3c8620e7aefe980a771bd430666a5b33e0827f03d0c35f330fec259835d5",
+      "note_hash": "504e52e893e03048c714b1d83ab419868a200add35f9c78591df19e0ef4fce5e",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
       "title": "Equivalence Principle \u2014 Meta Demotion (No Measured-Exponent Claim)"
@@ -48037,7 +48057,7 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "a7c7c40a78732dd1e33d8b20e00c270966c51f957b090c633be7d62494766883",
+      "note_hash": "1b1d8c66f5858a649547369263f199d8e284918df16f95a38a9cefb4d90282fb",
       "path": "docs/GENERATION_AXIOM_BOUNDARY_NOTE.md",
       "runner_path": "scripts/frontier_generation_axiom_boundary.py",
       "title": "Generation Axiom Boundary Note"
@@ -52156,7 +52176,7 @@
       "claim_type_author_hint_raw": "bounded_theorem",
       "claim_type_seed_hint": "bounded_theorem",
       "deps": [],
-      "note_hash": "28e127c39e9af2b164c8ffd7eb1ac6be952d9d61155211f76f52094e56b31767",
+      "note_hash": "9be3d174854ec09d591c9e6b70d403b4df7544a40d96cb2132dce0b146c15d0c",
       "path": "docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md",
       "runner_path": "scripts/frontier_koide_q_readout_factorization_theorem.py",
       "title": "Koide Q Readout Factorization Theorem"
@@ -56708,6 +56728,19 @@
       "runner_path": "scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py",
       "title": "Observable Principle \u2014 Real-D-Block Generator Uniqueness Narrow Theorem"
     },
+    "observable_principle_scale_invariant_source_response_narrow_theorem_note_2026-05-16": {
+      "claim_id": "observable_principle_scale_invariant_source_response_narrow_theorem_note_2026-05-16",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "bounded_theorem",
+      "claim_type_seed_hint": "bounded_theorem",
+      "deps": [
+        "observable_principle_real_d_block_uniqueness_narrow_theorem_note_2026-05-10"
+      ],
+      "note_hash": "9c5e993502398f57f3a7d00d0915a3047e2edb4bd216071bebe28a0a4b366d7e",
+      "path": "docs/OBSERVABLE_PRINCIPLE_SCALE_INVARIANT_SOURCE_RESPONSE_NARROW_THEOREM_NOTE_2026-05-16.md",
+      "runner_path": "scripts/audit_companion_observable_principle_scale_invariant_source_response_exact_2026_05_16.py",
+      "title": "Observable Principle \u2014 Scale-Invariant Source-Response Narrow Theorem"
+    },
     "oh_schur_boundary_action_note": {
       "claim_id": "oh_schur_boundary_action_note",
       "claim_type_author_hint": null,
@@ -57510,9 +57543,9 @@
     },
     "planck_scale_conditional_completion_note_2026-04-24": {
       "claim_id": "planck_scale_conditional_completion_note_2026-04-24",
-      "claim_type_author_hint": null,
-      "claim_type_author_hint_raw": null,
-      "claim_type_seed_hint": "positive_theorem",
+      "claim_type_author_hint": "bounded_theorem",
+      "claim_type_author_hint_raw": "`bounded_theorem`",
+      "claim_type_seed_hint": "bounded_theorem",
       "deps": [
         "planck_boundary_density_extension_theorem_note_2026-04-24",
         "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25",
@@ -57520,9 +57553,13 @@
         "planck_source_unit_normalization_support_theorem_note_2026-04-25",
         "bh_quarter_wald_noether_framework_carrier_theorem_note_2026-04-29",
         "planck_finite_response_no_go_note_2026-04-24",
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+        "planck_parent_source_hidden_character_no_go_note_2026-04-24",
+        "planck_substrate_to_carrier_forcing_bounded_note_2026-05-10_planckp1",
+        "planck_hidden_character_delta_zero_positive_theorem_note_2026-05-10_planckp2",
+        "planck_orientation_principle_bounded_note_2026-05-10_planckp3",
+        "planck_from_structure_path_opening_meta_note_2026-05-10"
       ],
-      "note_hash": "4a01404267fe6ff8c25460bc3b79b96a337153e270d1080135afae6d7f633d58",
+      "note_hash": "19907aae3f35dee1f72354151d0f3fbca160c25dee2848c36dce03164338f1dd",
       "path": "docs/PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_planck_conditional_completion_audit.py",
       "title": "Planck-Scale Conditional Completion Note"
@@ -63329,7 +63366,7 @@
         "fourth_family_quadrant_note",
         "fifth_family_radial_boundary_note"
       ],
-      "note_hash": "d8c2cf5e2cc584b108b889ccef2a83f5ed2ca9b8ed7978a2bbded0576b9a211f",
+      "note_hash": "b9aaf4ca05b29056390c28481a4a18e7724f8537a999b258684d840d69b5b117",
       "path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
       "runner_path": "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py",
       "title": "Sign Portability Invariant Note"
@@ -71194,25 +71231,25 @@
   "schema_version": 1,
   "stats": {
     "claim_type_author_hint_counts": {
-      "bounded_theorem": 360,
+      "bounded_theorem": 362,
       "meta": 74,
       "no_go": 46,
-      "none": 1554,
+      "none": 1553,
       "open_gate": 37,
       "positive_theorem": 147
     },
     "claim_type_seed_hint_counts": {
-      "bounded_theorem": 814,
+      "bounded_theorem": 816,
       "meta": 74,
       "no_go": 151,
       "none": 446,
       "open_gate": 117,
-      "positive_theorem": 616
+      "positive_theorem": 615
     },
-    "edge_count": 8914,
-    "leaf_count": 623,
-    "node_count": 2218,
+    "edge_count": 8919,
+    "leaf_count": 622,
+    "node_count": 2219,
     "root_count": 772,
-    "runners_with_path": 1835
+    "runners_with_path": 1836
   }
 }

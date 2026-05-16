@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 |---|---:|
 | **retained** | 105 |
 | **retained_no_go** | 133 |
-| **retained_bounded** | 310 |
+| **retained_bounded** | 308 |
 | _retained_pending_chain_ | 3 |
 | open_gate | 15 |
-| unaudited | 1172 |
+| unaudited | 1175 |
 | meta | 113 |
 | ~~audited_numerical_match~~ | 15 |
 | ~~audited_renaming~~ | 16 |
@@ -41,39 +41,39 @@ Publication-facing tables MUST read `effective_status`; `claim_type` is the audi
 
 | audit_status | count |
 |---|---:|
-| `audited_clean` | 520 |
+| `audited_clean` | 518 |
 | `audited_conditional` | 194 |
 | `audited_decoration` | 15 |
 | `audited_failed` | 62 |
 | `audited_numerical_match` | 15 |
 | `audited_renaming` | 16 |
-| `unaudited` | 1285 |
+| `unaudited` | 1288 |
 
 | claim_type | count |
 |---|---:|
-| `bounded_theorem` | 910 |
+| `bounded_theorem` | 912 |
 | `decoration` | 15 |
 | `meta` | 116 |
 | `no_go` | 226 |
 | `open_gate` | 109 |
-| `positive_theorem` | 731 |
+| `positive_theorem` | 730 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 1056 |
-| `high` | 56 |
-| `medium` | 259 |
-| `leaf` | 736 |
+| `critical` | 1061 |
+| `high` | 55 |
+| `medium` | 258 |
+| `leaf` | 734 |
 
 - **Retained pending chain closure:** 3
-- **Citation cycles detected:** 185
+- **Citation cycles detected:** 242
 
 ### Runner classification (static heuristic)
 
-- runners classified: 1716
+- runners classified: 1717
 - runners with (C) first-principles compute hits: 880
 - runners with (D) external comparator hits: 502
-- decoration candidates (no C, no D): 202
+- decoration candidates (no C, no D): 203
 
 ## Top 25 by load-bearing score (topology only)
 
@@ -82,30 +82,30 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | # | claim_id | claim_type | criticality | desc | score | audit_status | effective |
 |---:|---|---|---|---:|---:|---|---|
 | 1 | `minimal_axioms_2026-05-03` | meta | critical | 843 | 48.22 | `unaudited` | meta |
-| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 493 | 45.45 | `unaudited` | unaudited |
+| 2 | `three_generation_observable_theorem_note` | bounded_theorem | critical | 808 | 46.16 | `unaudited` | unaudited |
 | 3 | `observable_principle_from_axiom_note` | bounded_theorem | critical | 821 | 43.68 | `audited_conditional` | ~~audited_conditional~~ |
 | 4 | `graph_first_su3_integration_note` | bounded_theorem | critical | 969 | 40.42 | `audited_clean` | **retained_bounded** |
-| 5 | `minimal_axioms_2026-04-11` | meta | critical | 844 | 39.72 | `unaudited` | meta |
-| 6 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 429 | 39.25 | `unaudited` | unaudited |
-| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 671 | 37.39 | `unaudited` | unaudited |
-| 8 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 420 | 35.72 | `unaudited` | unaudited |
-| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 592 | 34.21 | `unaudited` | unaudited |
-| 10 | `native_gauge_closure_note` | bounded_theorem | critical | 955 | 32.40 | `audited_clean` | **retained_bounded** |
-| 11 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 505 | 31.98 | `unaudited` | unaudited |
-| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 616 | 31.77 | `audited_clean` | **retained_bounded** |
-| 13 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 503 | 30.98 | `unaudited` | unaudited |
-| 14 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 420 | 30.72 | `unaudited` | unaudited |
+| 5 | `staggered_dirac_substep4_ac_narrow_bounded_note_2026-05-07_substep4ac` | bounded_theorem | critical | 774 | 40.10 | `unaudited` | unaudited |
+| 6 | `minimal_axioms_2026-04-11` | meta | critical | 844 | 39.72 | `unaudited` | meta |
+| 7 | `alpha_s_derived_note` | bounded_theorem | critical | 858 | 37.75 | `unaudited` | unaudited |
+| 8 | `koide_circulant_character_derivation_note_2026-04-18` | positive_theorem | critical | 774 | 36.60 | `unaudited` | unaudited |
+| 9 | `yt_ward_identity_derivation_theorem` | bounded_theorem | critical | 852 | 34.74 | `unaudited` | unaudited |
+| 10 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | positive_theorem | critical | 774 | 32.60 | `unaudited` | unaudited |
+| 11 | `native_gauge_closure_note` | bounded_theorem | critical | 955 | 32.40 | `audited_clean` | **retained_bounded** |
+| 12 | `yt_ew_color_projection_theorem` | bounded_theorem | critical | 871 | 32.27 | `audited_clean` | **retained_bounded** |
+| 13 | `charged_lepton_koide_cone_algebraic_equivalence_note` | positive_theorem | critical | 774 | 31.60 | `unaudited` | unaudited |
+| 14 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | positive_theorem | critical | 774 | 31.60 | `unaudited` | unaudited |
 | 15 | `anomaly_forces_time_theorem` | bounded_theorem | critical | 774 | 30.60 | `unaudited` | unaudited |
-| 16 | `three_generation_structure_note` | bounded_theorem | critical | 615 | 29.77 | `unaudited` | unaudited |
-| 17 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 435 | 29.27 | `unaudited` | unaudited |
-| 18 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 749 | 29.05 | `audited_clean` | **retained_bounded** |
-| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 733 | 28.02 | `audited_conditional` | ~~audited_conditional~~ |
-| 20 | `plaquette_self_consistency_note` | bounded_theorem | critical | 729 | 27.51 | `unaudited` | unaudited |
-| 21 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 493 | 27.45 | `unaudited` | unaudited |
-| 22 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 420 | 27.22 | `unaudited` | unaudited |
-| 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 542 | 27.09 | `unaudited` | unaudited |
-| 24 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 536 | 26.57 | `unaudited` | unaudited |
-| 25 | `cl3_sm_embedding_theorem` | positive_theorem | critical | 457 | 26.34 | `unaudited` | unaudited |
+| 16 | `three_generation_structure_note` | bounded_theorem | critical | 803 | 30.15 | `unaudited` | unaudited |
+| 17 | `staggered_dirac_bz_corner_forcing_theorem_note_2026-05-07` | bounded_theorem | critical | 779 | 30.11 | `unaudited` | unaudited |
+| 18 | `cl3_color_automorphism_theorem` | bounded_theorem | critical | 925 | 29.36 | `audited_clean` | **retained_bounded** |
+| 19 | `left_handed_charge_matching_note` | bounded_theorem | critical | 862 | 28.25 | `audited_conditional` | ~~audited_conditional~~ |
+| 20 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | positive_theorem | critical | 774 | 28.10 | `unaudited` | unaudited |
+| 21 | `dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16` | positive_theorem | critical | 774 | 28.10 | `unaudited` | unaudited |
+| 22 | `plaquette_self_consistency_note` | bounded_theorem | critical | 905 | 27.82 | `unaudited` | unaudited |
+| 23 | `ckm_atlas_axiom_closure_note` | positive_theorem | critical | 774 | 27.60 | `unaudited` | unaudited |
+| 24 | `cl3_sm_embedding_theorem` | positive_theorem | critical | 781 | 27.11 | `unaudited` | unaudited |
+| 25 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | positive_theorem | critical | 774 | 27.10 | `unaudited` | unaudited |
 
 
 ## Applied audits
@@ -282,7 +282,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_spectral_measure_theorem_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `gauge_vacuum_plaquette_transfer_operator_character_recurrence_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `gauge_wilson_isotropy_boundary_note_2026-05-04` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
-| `generation_axiom_boundary_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `global_coherence_held_out2_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | cross_family | codex-gpt-5.5 | C | - |
 | `global_coherence_off_scaffold_note` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | D | - |
@@ -351,7 +350,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_q_bridge_single_primitive_note_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5 | A | - |
 | `koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
-| `koide_q_readout_factorization_theorem_2026-04-22` | bounded_theorem | ~~audited_clean~~ | **retained_bounded** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_q_two_thirds_z3_character_norm_split_recasting_theorem_note_2026-05-10` | positive_theorem | ~~audited_clean~~ | **retained** | cross_family | codex-gpt-5.5 | A | - |
 | `koide_selected_line_local_radian_bridge_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
 | `koide_transport_gap_constant_no_go_note_2026-04-20` | no_go | ~~audited_clean~~ | **retained_no_go** | fresh_context | codex-gpt-5.5 | A | - |
@@ -5246,19 +5244,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **decoration parent:** `cl3_color_automorphism_theorem`
 - **auditor confidence:** high
 
-### `generation_axiom_boundary_note`
-
-- **Note:** [`GENERATION_AXIOM_BOUNDARY_NOTE.md`](../../docs/GENERATION_AXIOM_BOUNDARY_NOTE.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Local H_hw=1 finite-dimensional algebra check: the supplied translation-character projectors and C3 cycle generate full M_3(C) with scalar commutant; physical-species and substrate claims are excluded.
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e1271-d529-7323-93b6-40a7be2df501`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** the local exact M_3(C) observable algebra on H_hw=1 reconstructs from the supplied translation-projector + C3 cycle generators, with no input from the substrate-fundamentality premise  _(class `A`)_
-- **chain closes:** True — Within the audited scope, the only load-bearing inputs are the explicitly constructed local generators in the runner. The runner verifies rank-one projectors, full 9-dimensional generated algebra, and scalar commutant; excluded physical bridge claims are not needed for this bounded theorem.
-- **rationale:** Clean for the bounded algebraic scope. The runner source constructs the local diagonal translation operators and C3 cycle, derives the projectors, checks generated algebra dimension 9, and checks commutant dimension 1. These are finite-dimensional A-class algebra checks over supplied local inputs, not hidden physical-species or substrate-fundamentality derivations. The clean verdict does not extend beyond the note's explicit boundary.
-- **auditor confidence:** high
-
 ### `geometry_lane_head_to_head_note`
 
 - **Note:** [`GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md`](../../docs/GEOMETRY_LANE_HEAD_TO_HEAD_NOTE.md)
@@ -6595,19 +6580,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact intersection is only the common scalar: onsite local functions cap End_C3(V) = span{I}; onsite source functions erase Z, while the retained central/projected commutant source grammar keeps it visible.  _(class `A`)_
 - **chain closes:** True — The scoped no-go closes as exact finite-dimensional algebra: C diag(a,b,c) C^(-1)=diag(a,b,c) forces a=b=c, while Z=P_plus-P_perp commutes with C, squares to I, is not diagonal in the site basis, and the onsite/commutant intersection is only span{I}. With the note's stated reduced-carrier readout, the admitted commutant value z=-1/3 gives Q=1, so the current commutant/projected source grammar does not force Q=2/3.
 - **rationale:** The load-bearing result is not a numerical Koide fit or a physical-source closure claim; it is the source-domain separation and no-go that the broader commutant/projected grammar leaves a non-onsite Z direction available. The cached runner completed successfully and verifies the finite C3 matrix algebra, the onsite/commutant intersection, the non-onsite nature of Z, and the counterdomain value z=-1/3 -> Q=1. The runner also includes documentation guardrails confirming the note explicitly rejects native retained Q closure and identifies the remaining source-domain theorem. Residual risk is confined to any later attempt to promote the onsite source domain to the physical undeformed charged-lepton source domain, which this scoped claim explicitly does not assert.
-- **auditor confidence:** high
-
-### `koide_q_readout_factorization_theorem_2026-04-22`
-
-- **Note:** [`KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md`](../../docs/KOIDE_Q_READOUT_FACTORIZATION_THEOREM_2026-04-22.md)
-- **claim_type:** `bounded_theorem`
-- **claim_scope:** Exact rank/kernel quotient of the stated first-live second-order readout map L: R^4 -> Diag_3(R), namely rank 3, kernel span(e_z), and image Diag_3(R).
-- **audit_status:** ~~audited_clean~~
-- **effective_status:** **retained_bounded**  (reason: `self`)
-- **auditor:** `codex-audit-loop-019e128c-3481-7370-9223-9e60e2bff3e4`  (codex-gpt-5.5; independence=fresh_context)
-- **load-bearing step:** The exact single-slot images are diag(1,0,0), diag(0,1,0), diag(0,0,1), and 0, so L(u,v,w,z)=diag(u,v,w).  _(class `A`)_
-- **chain closes:** True — For the scoped bounded claim, the runner constructs the stated projectors/Gamma_1 action and verifies the four slot images; the rank, kernel, fibers, and quotient then follow by finite-dimensional linear algebra. The broader admissibility-implies-constancy/factorization language is explicitly outside the note's theorem and is not used for closure.
-- **rationale:** The scoped claim is a pure algebraic theorem about the explicitly displayed linear map L=[I_3 0]. With no cited dependencies, the source note and runner close rank 3, kernel span(e_z), full diagonal image, and the quotient/fiber statement directly. The runner's C.3/final selector-factorization language overstates beyond the bounded theorem, but the source note quarantines that as conditional, so it is not load-bearing for this audit.
 - **auditor confidence:** high
 
 ### `koide_q_reduced_observable_restriction_theorem_2026-04-22`

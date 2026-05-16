@@ -3,7 +3,7 @@ runner: scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py
 runner_sha256: 4a1d645c3c821e7fd4f18f5bc86711eb280defe206af014d28ce9e5b08f11635
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 8.75
+elapsed_sec: 6.49
 status: ok
 ----- stdout -----
 # Sign Portability Invariant Comparison

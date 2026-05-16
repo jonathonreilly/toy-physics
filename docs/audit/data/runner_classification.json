@@ -14376,6 +14376,18 @@
       "dominant_class": "A",
       "runner": "scripts/audit_companion_observable_principle_real_d_block_uniqueness_exact_2026_05_10.py"
     },
+    "observable_principle_scale_invariant_source_response_narrow_theorem_note_2026-05-16": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/audit_companion_observable_principle_scale_invariant_source_response_exact_2026_05_16.py"
+    },
     "oh_schur_boundary_action_note": {
       "assert_count": 1,
       "counts": {
@@ -15004,12 +15016,12 @@
       "assert_count": 0,
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "runner": "scripts/frontier_planck_conditional_completion_audit.py"
     },
     "planck_source_unit_normalization_support_theorem_note_2026-04-25": {
@@ -23202,6 +23214,21 @@
       },
       "decoration_candidate": true,
       "dominant_class": "A",
+      "exists": true
+    },
+    "scripts/audit_companion_observable_principle_scale_invariant_source_response_exact_2026_05_16.py": {
+      "assert_count": 0,
+      "claims": [
+        "observable_principle_scale_invariant_source_response_narrow_theorem_note_2026-05-16"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
       "exists": true
     },
     "scripts/audit_companion_one_generation_anomaly_singlet_completion_exact_2026_05_10.py": {
@@ -37610,12 +37637,12 @@
       ],
       "counts": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
         "D": 0
       },
-      "decoration_candidate": false,
-      "dominant_class": null,
+      "decoration_candidate": true,
+      "dominant_class": "B",
       "exists": true
     },
     "scripts/frontier_planck_finite_response_nogo.py": {
@@ -48053,15 +48080,15 @@
   },
   "schema_version": 1,
   "stats": {
-    "decoration_candidates": 202,
+    "decoration_candidates": 203,
     "dominant_class_distribution": {
       "A": 156,
-      "B": 175,
+      "B": 176,
       "C": 689,
       "D": 279,
       "none": 417
     },
-    "runners_classified": 1716,
+    "runners_classified": 1717,
     "runners_with_C": 880,
     "runners_with_D": 502
   }

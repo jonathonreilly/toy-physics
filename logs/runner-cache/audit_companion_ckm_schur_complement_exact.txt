@@ -1,0 +1,74 @@
+===== runner cache v1 =====
+runner: scripts/audit_companion_ckm_schur_complement_exact.py
+runner_sha256: 861d1555d450095ebabb16dc93d496b1bc2ffa724de856238afca94c37f4ef08
+timeout_sec: 120
+exit_code: 0
+elapsed_sec: 0.51
+status: ok
+----- stdout -----
+
+----------------------------------------------------------------------------------------
+Audit companion for ckm_schur_complement_theorem (td=147)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Part 1: NNI structure verification
+----------------------------------------------------------------------------------------
+  [PASS (A)] M_13 = 0 (NNI texture: generations 1 and 3 don't directly interact)  ()
+  [PASS (A)] M_31 = 0 (symmetric NNI)  ()
+  [PASS (A)] M_12 = c_12 √(m_1 m_2) (NNI geometric-mean normalization, off-diagonal 1-2)  ()
+  [PASS (A)] M_23 = c_23 √(m_2 m_3) (NNI geometric-mean normalization, off-diagonal 2-3)  ()
+
+----------------------------------------------------------------------------------------
+Part 2: Schur complement integrating out generation 2
+----------------------------------------------------------------------------------------
+
+  Schur complement M_eff =
+  Matrix([[m_1*(1 - c_12**2), -c_12*c_23*sqrt(m_1)*sqrt(m_3)], [-c_12*c_23*sqrt(m_1)*sqrt(m_3), m_3*(1 - c_23**2)]])
+  [PASS (A)] M_eff[1,3] = -c_12 · c_23 · √(m_1 m_3) (Schur complement off-diagonal)  (M_eff_13 = -c_12*c_23*sqrt(m_1)*sqrt(m_3))
+  [PASS (A)] c_13^eff = M_eff[1,3] / √(m_1 m_3) = -c_12 · c_23  (c_13^eff = -c_12*c_23)
+  [PASS (A)] |c_13^eff| = c_12 · c_23 (load-bearing step of parent theorem)  (|c_13^eff| = c_12*c_23)
+
+----------------------------------------------------------------------------------------
+Part 3: numerical verification with concrete rational values
+----------------------------------------------------------------------------------------
+  [PASS (A)] concrete: c_13^eff = -1/15 = -c_12 · c_23 at (c_12, c_23) = (1/5, 1/3)  (c_13^eff = -1/15, expected -1/15)
+
+----------------------------------------------------------------------------------------
+Part 4: independence of m_1, m_3 (only m_2 matters as the integrated-out scale)
+----------------------------------------------------------------------------------------
+  [PASS (A)] c_13^eff = -c_12 c_23 = -1/15 independent of (m_1, m_3) for {m_1: 7, m_3: 11}  (c_13^eff = -1/15)
+  [PASS (A)] c_13^eff = -c_12 c_23 = -1/15 independent of (m_1, m_3) for {m_1: 1/100, m_3: 100}  (c_13^eff = -1/15)
+
+----------------------------------------------------------------------------------------
+Part 5: audit-lane boundary
+----------------------------------------------------------------------------------------
+
+  Parts 1-4 above are the evidence for the class-A algebraic core: the Schur-complement identity is verified exactly over symbolic positive masses and coefficients. This companion does not read the audit ledger, previous audits, or effective-status history; the independent audit lane owns the parent row's verdict and load_bearing_step_class.
+
+----------------------------------------------------------------------------------------
+Audit-companion summary
+----------------------------------------------------------------------------------------
+
+  This companion provides EXACT rational verification (via sympy) of the
+  parent theorem's load-bearing step:
+
+      c_13^eff = c_12 · c_23
+
+  from Schur complement of the generation-2 block in the NNI mass matrix.
+  The companion does NOT verify the broader theorem's Wolfenstein cascade,
+  NNI coefficients, absolute s_23, or mass-ratio projection — those are
+  separate downstream claims.
+
+  Candidate load-bearing class for the checked core:
+    (A) — algebraic identity / Schur complement closure on abstract NNI
+    matrix structure. No external observed/fitted/literature input. The
+    audit lane owns the actual row classification.
+
+
+========================================================================================
+  TOTAL: PASS=10, FAIL=0
+========================================================================================
+
+----- stderr -----
+

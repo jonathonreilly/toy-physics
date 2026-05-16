@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_planck_conditional_completion_audit.py
-runner_sha256: f969bacf8fd9aeb29f601d00617ed7dd74ffe8939d530977a33bd7bce8d10883
+runner_sha256: 1c2447620dcc16ca2f3e624c9c613d76e23bd244064d2f7f9e061fcafccae277
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.03
+elapsed_sec: 0.04
 status: ok
 ----- stdout -----
 [PASS] primitive cell coefficient is 1/4: rank(P_A)/dim(H_cell) = 4/16 = 0.250000000000
@@ -14,9 +14,11 @@ status: ok
 [PASS] cosmic age alone does not determine the microscopic tick: two ticks give two counts: 4.350e+60 vs 2.175e+60
 [PASS] parent-source scalar equality has an affine hidden-character blocker: same carrier data can leave p_Schur = 0.350 instead of 0.250
 [PASS] safe status remains conditional support on main: landed result: exact c_cell plus conditional a/l_P=1; not a minimal-stack SI Planck derivation.
+[PASS] runner verifies only the narrowed conditional implication, not BP: runner asserts c_cell=1/4 and the conditional algebra c_cell/a^2 = 1/(4 l_P^2) => a/l_P=1; BP (gravitational carrier identification) is listed in Remaining Blockers, not derived here.
+[PASS] BP narrowing structure is cited but not promoted to BP closure: P1+P2+P3 named (3); closures at retained grade: 0; BP remains open per Remaining Blockers.
 
-Summary: 8/8 checks passed.
-Verdict: retain the branch as a conditional Planck completion packet with explicit blockers, not as unqualified minimal-stack Planck closure.
+Summary: 10/10 checks passed.
+Verdict: retain the branch as a conditional Planck completion packet with explicit blockers, not as unqualified minimal-stack Planck closure. The narrowed claim is the conditional algebraic implication BP => a/l_P = 1; BP remains an open named premise.
 
 ----- stderr -----
 

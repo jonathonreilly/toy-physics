@@ -17,9 +17,7 @@ review-friendly class-(A) breakdown evidence on the parent's load-bearing
 step.
 """
 
-from pathlib import Path
 import sys
-import json
 
 try:
     import sympy
@@ -27,8 +25,6 @@ try:
 except ImportError:
     print("FAIL: sympy required")
     sys.exit(1)
-
-ROOT = Path(__file__).resolve().parent.parent
 
 PASS = 0
 FAIL = 0
@@ -160,20 +156,16 @@ for var in variations:
 
 
 # ----------------------------------------------------------------------------
-section("Part 5: parent row dep verification")
+section("Part 5: audit-lane boundary")
 # ----------------------------------------------------------------------------
-LEDGER = ROOT / "docs" / "audit" / "data" / "audit_ledger.json"
-ledger = json.loads(LEDGER.read_text())
-rows = ledger['rows']
-
-parent_id = "ckm_schur_complement_theorem"
-parent_row = rows.get(parent_id, {})
-print(f"\n  {parent_id} current ledger state:")
-print(f"    transitive_descendants: {parent_row.get('transitive_descendants')}")
-print(f"    load_bearing_step_class: {parent_row.get('load_bearing_step_class')}")
-
-check(f"{parent_id} has class (A) load-bearing step (algebraic identity)",
-      parent_row.get('load_bearing_step_class') == 'A')
+print(
+    "\n  Parts 1-4 above are the evidence for the class-A algebraic core: "
+    "the Schur-complement identity is verified exactly over symbolic "
+    "positive masses and coefficients. This companion does not read the "
+    "audit ledger, previous audits, or effective-status history; the "
+    "independent audit lane owns the parent row's verdict and "
+    "load_bearing_step_class."
+)
 
 
 # ----------------------------------------------------------------------------
@@ -190,9 +182,10 @@ print("""
   NNI coefficients, absolute s_23, or mass-ratio projection — those are
   separate downstream claims.
 
-  Audit-lane class for the parent's load-bearing step:
+  Candidate load-bearing class for the checked core:
     (A) — algebraic identity / Schur complement closure on abstract NNI
-    matrix structure. No external observed/fitted/literature input.
+    matrix structure. No external observed/fitted/literature input. The
+    audit lane owns the actual row classification.
 """)
 
 

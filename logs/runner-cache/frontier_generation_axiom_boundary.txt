@@ -1,9 +1,9 @@
 ===== runner cache v1 =====
 runner: scripts/frontier_generation_axiom_boundary.py
-runner_sha256: 1a3666496c5078b8663515182957f4f81950c4a49b58d4a139cdc4944a4e561a
+runner_sha256: 3a674808d3379c7d743134c0bf946ee365dacf5045a36850087ce0e62fda59b9
 timeout_sec: 120
 exit_code: 0
-elapsed_sec: 0.18
+elapsed_sec: 0.12
 status: ok
 ----- stdout -----
 ========================================================================
